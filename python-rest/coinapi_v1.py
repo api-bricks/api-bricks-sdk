@@ -199,11 +199,11 @@ class CoinAPIv1:
     def with_header(self, header, value):
         old_headers = self.headers
         new_header = {header: value}
-        return CoinAPIv1(api_key, {**old_headers, **new_header})
+        return CoinAPIv1(self.api_key, {**old_headers, **new_header})
 
     def with_headers(self, additional_headers):
         old_headers = self.headers
-        return CoinAPIv1(api_key, {**old_headers, **additional_headers})
+        return CoinAPIv1(self.api_key, {**old_headers, **additional_headers})
 
     def metadata_list_exchanges(self):
         request = MetadataListExchangesRequest()
