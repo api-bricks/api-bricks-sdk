@@ -209,7 +209,7 @@ module CoinAPIv1
   module Transformers
     class << self
       def asset(a)
-        if a[:type_is_crypto] == 0
+        if a[:type_is_crypto] != 0
           a[:type_is_crypto] = true
         else
           a[:type_is_crypto] = false
