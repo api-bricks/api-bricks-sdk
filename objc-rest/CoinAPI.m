@@ -36,10 +36,9 @@
 {
     NSURL *url = [NSURL URLWithString:@"https://rest.coinapi.io/v1/exchanges"];
     
-    NSMutableURLRequest* request = [[NSMutableURLRequest alloc] initWithURL:url];
+    NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:100];
     [request setHTTPMethod: @"GET"];
     [request addValue:strAPIKey forHTTPHeaderField:@"X-CoinAPI-Key"] ;
-    request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:100];
     
     NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
     [[session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
@@ -52,10 +51,9 @@
 {
     NSURL *url = [NSURL URLWithString:@"https://rest.coinapi.io/v1/assets"];
     
-    NSMutableURLRequest* request = [[NSMutableURLRequest alloc] initWithURL:url];
+    NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:100];
     [request setHTTPMethod: @"GET"];
     [request addValue:strAPIKey forHTTPHeaderField:@"X-CoinAPI-Key"] ;
-    request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:100];
     
     NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
     [[session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
@@ -67,10 +65,9 @@
 {
     NSURL *url = [NSURL URLWithString:@"https://rest.coinapi.io/v1/symbols"];
     
-    NSMutableURLRequest* request = [[NSMutableURLRequest alloc] initWithURL:url];
+    NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:100];
     [request setHTTPMethod: @"GET"];
     [request addValue:strAPIKey forHTTPHeaderField:@"X-CoinAPI-Key"] ;
-    request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:100];
     
     NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
     [[session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
@@ -87,10 +84,9 @@
         url = [NSURL URLWithString:[NSString stringWithFormat:@"https://rest.coinapi.io/v1/exchangerate/%@/%@?time=%ld", asset_id_base, asset_id_quote, time]];
     }
     
-    NSMutableURLRequest* request = [[NSMutableURLRequest alloc] initWithURL:url];
+    NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:100];
     [request setHTTPMethod: @"GET"];
     [request addValue:strAPIKey forHTTPHeaderField:@"X-CoinAPI-Key"] ;
-    request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:100];
     
     NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
     [[session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
@@ -102,10 +98,9 @@
 {
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://rest.coinapi.io/v1/exchangerate/%@", asset_id_base]];
     
-    NSMutableURLRequest* request = [[NSMutableURLRequest alloc] initWithURL:url];
+    NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:100];
     [request setHTTPMethod: @"GET"];
     [request addValue:strAPIKey forHTTPHeaderField:@"X-CoinAPI-Key"] ;
-    request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:100];
     
     NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
     [[session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
@@ -119,10 +114,9 @@
 {
     NSURL *url = [NSURL URLWithString:@"https://rest.coinapi.io/v1/ohlcv/periods"];
     
-    NSMutableURLRequest* request = [[NSMutableURLRequest alloc] initWithURL:url];
+    NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:100];
     [request setHTTPMethod: @"GET"];
     [request addValue:strAPIKey forHTTPHeaderField:@"X-CoinAPI-Key"] ;
-    request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:100];
     
     NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
     [[session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
@@ -137,10 +131,9 @@
         url = [NSURL URLWithString:[NSString stringWithFormat:@"https://rest.coinapi.io/v1/ohlcv/%@/latest?period_id=%@&limit=%ld", symbol_id, period_id, limit]];
     }
     
-    NSMutableURLRequest* request = [[NSMutableURLRequest alloc] initWithURL:url];
+    NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:100];
     [request setHTTPMethod: @"GET"];
     [request addValue:strAPIKey forHTTPHeaderField:@"X-CoinAPI-Key"] ;
-    request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:100];
     
     NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
     [[session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
@@ -158,10 +151,9 @@
         url = [NSURL URLWithString:[NSString stringWithFormat:@"%@&limit=%ld", [url absoluteString], limit]];
     }
     
-    NSMutableURLRequest* request = [[NSMutableURLRequest alloc] initWithURL:url];
+    NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:100];
     [request setHTTPMethod: @"GET"];
     [request addValue:strAPIKey forHTTPHeaderField:@"X-CoinAPI-Key"] ;
-    request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:100];
     
     NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
     [[session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
@@ -181,10 +173,9 @@
         url = [NSURL URLWithString:[NSString stringWithFormat:@"%@?limit=%ld", [url absoluteString], limit]];
     }
     
-    NSMutableURLRequest* request = [[NSMutableURLRequest alloc] initWithURL:url];
+    NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:100];
     [request setHTTPMethod: @"GET"];
     [request addValue:strAPIKey forHTTPHeaderField:@"X-CoinAPI-Key"] ;
-    request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:100];
     
     NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
     [[session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
@@ -203,10 +194,9 @@
         url = [NSURL URLWithString:[NSString stringWithFormat:@"%@&limit=%ld", [url absoluteString], limit]];
     }
     
-    NSMutableURLRequest* request = [[NSMutableURLRequest alloc] initWithURL:url];
+    NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:100];
     [request setHTTPMethod: @"GET"];
     [request addValue:strAPIKey forHTTPHeaderField:@"X-CoinAPI-Key"] ;
-    request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:100];
     
     NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
     [[session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
@@ -223,10 +213,9 @@
         url = [NSURL URLWithString:[NSString stringWithFormat:@"https://rest.coinapi.io/v1/quotes/%@/current", symbol_id]];
     }
     
-    NSMutableURLRequest* request = [[NSMutableURLRequest alloc] initWithURL:url];
+    NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:100];
     [request setHTTPMethod: @"GET"];
     [request addValue:strAPIKey forHTTPHeaderField:@"X-CoinAPI-Key"] ;
-    request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:100];
     
     NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
     [[session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
@@ -245,10 +234,9 @@
         url = [NSURL URLWithString:[NSString stringWithFormat:@"%@&limit=%ld", [url absoluteString], limit]];
     }
     
-    NSMutableURLRequest* request = [[NSMutableURLRequest alloc] initWithURL:url];
+    NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:100];
     [request setHTTPMethod: @"GET"];
     [request addValue:strAPIKey forHTTPHeaderField:@"X-CoinAPI-Key"] ;
-    request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:100];
     
     NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
     [[session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
@@ -266,10 +254,9 @@
     if (limit > 0){
         url = [NSURL URLWithString:[NSString stringWithFormat:@"%@&limit=%ld", [url absoluteString], limit]];
     }
-    NSMutableURLRequest* request = [[NSMutableURLRequest alloc] initWithURL:url];
+    NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:100];
     [request setHTTPMethod: @"GET"];
     [request addValue:strAPIKey forHTTPHeaderField:@"X-CoinAPI-Key"] ;
-    request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:100];
     
     NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
     [[session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
@@ -286,10 +273,9 @@
         url = [NSURL URLWithString:[NSString stringWithFormat:@"https://rest.coinapi.io/v1/orderbooks/%@/current", symbol_id]];
     }
     
-    NSMutableURLRequest* request = [[NSMutableURLRequest alloc] initWithURL:url];
+    NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:100];
     [request setHTTPMethod: @"GET"];
     [request addValue:strAPIKey forHTTPHeaderField:@"X-CoinAPI-Key"] ;
-    request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:100];
     
     NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
     [[session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
@@ -305,10 +291,9 @@
         url = [NSURL URLWithString:[NSString stringWithFormat:@"%@?limit=%ld", [url absoluteString], limit]];
     }
     
-    NSMutableURLRequest* request = [[NSMutableURLRequest alloc] initWithURL:url];
+    NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:100];
     [request setHTTPMethod: @"GET"];
     [request addValue:strAPIKey forHTTPHeaderField:@"X-CoinAPI-Key"] ;
-    request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:100];
     
     NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
     [[session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
@@ -326,10 +311,9 @@
     if (limit > 0){
         url = [NSURL URLWithString:[NSString stringWithFormat:@"%@&limit=%ld", [url absoluteString], limit]];
     }
-    NSMutableURLRequest* request = [[NSMutableURLRequest alloc] initWithURL:url];
+    NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:100];
     [request setHTTPMethod: @"GET"];
     [request addValue:strAPIKey forHTTPHeaderField:@"X-CoinAPI-Key"] ;
-    request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:100];
     
     NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
     [[session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
@@ -346,10 +330,9 @@
         url = [NSURL URLWithString:[NSString stringWithFormat:@"%@?limit=%ld", [url absoluteString], limit]];
     }
     
-    NSMutableURLRequest* request = [[NSMutableURLRequest alloc] initWithURL:url];
+    NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:100];
     [request setHTTPMethod: @"GET"];
     [request addValue:strAPIKey forHTTPHeaderField:@"X-CoinAPI-Key"] ;
-    request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:100];
     
     NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
     [[session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
@@ -367,10 +350,9 @@
     if (limit > 0){
         url = [NSURL URLWithString:[NSString stringWithFormat:@"%@&limit=%ld", [url absoluteString], limit]];
     }
-    NSMutableURLRequest* request = [[NSMutableURLRequest alloc] initWithURL:url];
+    NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:100];
     [request setHTTPMethod: @"GET"];
     [request addValue:strAPIKey forHTTPHeaderField:@"X-CoinAPI-Key"] ;
-    request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:100];
     
     NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
     [[session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
