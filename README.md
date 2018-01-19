@@ -18,5 +18,6 @@ In this repository you can find libraries that will help you use our API with mi
  * PHP
  * Haskell
  * Objective-C
+ * Swift
 
 If you spot something wrong, feel free to make Pull Request with proposed changes or create an Issue on which we respond as soon as possible.
