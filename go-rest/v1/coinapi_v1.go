@@ -21,7 +21,7 @@ type Exchange struct {
 type Asset struct {
 	Asset_id       string `json:"asset_id"`
 	Name           string `json:"name"`
-	Type_is_crypto bool   `json:"type_is_crypto"`
+	Type_is_crypto int   `json:"type_is_crypto"`
 }
 
 type SymbolBase struct {
