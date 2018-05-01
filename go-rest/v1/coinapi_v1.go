@@ -546,7 +546,6 @@ func (sdk SDK) get_response_text(path string) (responseBody string, err error) {
 		}
 		return "", fmt.Errorf("Server responded with status code: %d", resp.StatusCode)
 	}
-	fmt.Println("response:", string(body))
 	return string(body), nil
 }
 
