@@ -2,11 +2,9 @@
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Net;
 using System.Net.Http;
-using System.Text;
-using System.Threading.Tasks;
+using csharp_rest.Exceptions;
 
 namespace csharp_rest {
     class CoinApi {
@@ -17,18 +15,62 @@ namespace csharp_rest {
             this.apikey = apikey;
         }
 
-        public T GetData<T>(string url) {
-            using (HttpClientHandler handler = new HttpClientHandler()) {
-                handler.AutomaticDecompression = DecompressionMethods.GZip | DecompressionMethods.Deflate;
-                using (HttpClient client = new HttpClient(handler, false)) {
+        private T GetData<T>(string url)
+        {
+            try
+            {
+                using (var handler = new HttpClientHandler())
+                {
+                    handler.AutomaticDecompression = DecompressionMethods.GZip | DecompressionMethods.Deflate;
+                    using (var client = new HttpClient(handler, false))
+                    {
+                        client.DefaultRequestHeaders.Add("X-CoinAPI-Key", apikey);
 
-                    client.DefaultRequestHeaders.Add("X-CoinAPI-Key", apikey);
+                        var response = client.GetAsync(WebUrl + url).Result;
 
-                    var responseFromServer = client.GetAsync(WebUrl + url).Result.Content.ReadAsStringAsync().Result;
-                    var dataFromServer = JsonConvert.DeserializeObject<T>(responseFromServer);
-                    return dataFromServer;
+                        if (!response.IsSuccessStatusCode) 
+                            RaiseError(response);
+
+                        return Deserialize<T>(response);
+                    }
                 }
             }
+            catch (CoinApiException)
+            {
+                throw;
+            }
+            catch (Exception e)
+            {
+                throw new CoinApiException("Unexpected error", e);
+            }
+        }
+
+        private static void RaiseError(HttpResponseMessage response)
+        {
+            var message = Deserialize<ErrorMessage>(response).message;
+
+            switch ((int) response.StatusCode)
+            {
+                case 400:
+                    throw new BadRequestException(message);
+                case 401:
+                    throw new UnauthorizedException(message);
+                case 403:
+                    throw new ForbiddenException(message);
+                case 429:
+                    throw new TooManyRequestsException(message);
+                case 550:
+                    throw new NoDataException(message);
+                default:
+                    throw new CoinApiException(message);
+            }
+        }
+
+        private static T Deserialize<T>(HttpResponseMessage responseMessage)
+        {
+            var responseString = responseMessage.Content.ReadAsStringAsync().Result;
+            var data = JsonConvert.DeserializeObject<T>(responseString);
+            return data;
         }
 
         public List<Exchange> Metadata_list_exchanges() {
