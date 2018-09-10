@@ -208,9 +208,13 @@ var COIN_API_SDK = (function () {
             return resp.data;
         });
     };
-    COIN_API_SDK.prototype.orderbooks_current_data_all = function () {
+    COIN_API_SDK.prototype.orderbooks_current_data_all = function (filter_symbol_id) {
+        if (filter_symbol_id === void 0) { filter_symbol_id = null; }
         var path = this.url + "/v1/orderbooks/current";
         var params = {};
+        if (filter_symbol_id) {
+            params.filter_symbol_id = filter_symbol_id;
+        }
         return axios.get(path, { headers: this.headers, transformResponse: transformResponse, params: params })
             .then(function (resp) {
             return resp.data;
