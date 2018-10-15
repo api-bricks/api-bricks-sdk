@@ -39,6 +39,9 @@ class MetadataListAssetsRequest:
         return '/assets'
 
 class MetadataListSymbolsRequest:
+    def __init__(self, query_parameters = dict()):
+        self.query_parameters = query_parameters
+        
     def endpoint(self):
         return '/symbols'
 
@@ -201,9 +204,11 @@ class CoinAPIv1:
         client = self.client_class(request.endpoint(), self.headers)
         return client.perform()
 
-    def metadata_list_symbols(self):
-        request = MetadataListSymbolsRequest()
-        client = self.client_class(request.endpoint(), self.headers)
+    def metadata_list_symbols(self, query_parameters = dict()):
+        request = MetadataListSymbolsRequest(query_parameters)
+        client = self.client_class(request.endpoint(),
+                                  self.headers,
+                                  request.query_parameters)
         return client.perform()
 
     def exchange_rates_get_specific_rate(self,
