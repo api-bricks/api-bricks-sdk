@@ -6,9 +6,6 @@ if (typeof window !== 'undefined') {
 }
 var axios = typeof window === 'undefined' ? require("axios") : window.axios;
 var ISO_8601 = /^(?:[1-9]\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)T(?:[01]\d|2[0-3]):[0-5]\d:[0-5]\d(?:\.\d{1,9})?(?:Z|[+-][01]\d:[0-5]\d)$/;
-function formatDate(d) {
-    return (d.getMonth() + 1) + '/' + d.getDate() + '/' + d.getFullYear();
-}
 var transformResponse = axios.defaults.transformResponse.concat(function (data) {
     var tmp = function (item) { return Object.keys(item).forEach(function (k) {
         // console.log(item[k], ISO_8601.test(item[k]))
