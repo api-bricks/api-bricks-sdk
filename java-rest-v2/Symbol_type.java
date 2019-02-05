@@ -16,6 +16,12 @@ public enum Symbol_type {
 	FUTURES,
 	
 	/** Option contract. FX Spot derivative contract where traders agree to trade right to require buy or sell of fx spot at agreed price on exercise date */
-	OPTION;
+	OPTION,
+	
+	/** Perpetual contract. FX Spot derivative contract where traders agree to trade fx spot continously without predetermined future delivery time **/
+	PERPETUAL,
+	
+	/** Index. Statistical composite that measures changes in the economy or markets. **/
+	INDEX;
 	
 }

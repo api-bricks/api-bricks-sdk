@@ -128,8 +128,8 @@ public class REST_methods implements Closeable {
 			String symbol_id = array.getJSONObject(i).getString("symbol_id");
 			String exchange_id = array.getJSONObject(i).getString("exchange_id");
 			Symbol_type symbol_type = Symbol_type.valueOf(array.getJSONObject(i).getString("symbol_type"));
-			String asset_id_base = array.getJSONObject(i).getString("asset_id_base");
-			String asset_id_quote = array.getJSONObject(i).getString("asset_id_quote");
+			String asset_id_base = array.getJSONObject(i).optString("asset_id_base");
+			String asset_id_quote = array.getJSONObject(i).optString("asset_id_quote");
 			if (symbol_type == Symbol_type.FUTURES) {
 				Instant future_delivery_time = Instant.parse(array.getJSONObject(i).getString("future_delivery_time"));
 				result[i] = new Symbol(
