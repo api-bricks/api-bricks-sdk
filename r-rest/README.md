@@ -1,7 +1,7 @@
 Initialise
 ```{r}
 library(httr)
-library(jsonline)
+library(jsonlite)
 ```
 
 Setup GET request to coinapi
