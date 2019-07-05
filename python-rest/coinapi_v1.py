@@ -23,7 +23,7 @@ class HTTPClient:
         raw_response = handler.read()
 
         if 'Accept-Encoding' in self.headers:
-            if self.headers['Accept-Encoding'] == 'deflat, gzip':
+            if self.headers['Accept-Encoding'] == 'deflate, gzip':
                 raw_response = gzip.decompress(raw_response)
 
         encoding = handler.info().get_content_charset('utf-8')
