@@ -39,6 +39,10 @@ public class CoinAPIWebSocketImpl implements CoinAPIWebSocket {
     private InvokeFunction ohlcvInvoke;
     private InvokeFunction volumeInvoke;
 
+    /**
+     *
+     * @param isSandbox
+     */
     public CoinAPIWebSocketImpl(Boolean isSandbox) {
 
         this.isSandbox = isSandbox;
@@ -84,6 +88,11 @@ public class CoinAPIWebSocketImpl implements CoinAPIWebSocket {
         processingMessages = Optional.of(new Thread(task));
     }
 
+    /**
+     *
+     * @param hello
+     * @throws IOException
+     */
     @Override
     public void sendHelloMessage(Hello hello) throws IOException {
 
@@ -127,6 +136,10 @@ public class CoinAPIWebSocketImpl implements CoinAPIWebSocket {
         }
     }
 
+    /**
+     *
+     * @throws IOException
+     */
     @Override
     public void closeConnect() throws IOException {
 
@@ -141,26 +154,46 @@ public class CoinAPIWebSocketImpl implements CoinAPIWebSocket {
         }
     }
 
+    /**
+     *
+     * @param function
+     */
     @Override
     public void setTradesInvoke(InvokeFunction function) {
         this.tradesInvoke = function;
     }
 
+    /**
+     *
+     * @param function
+     */
     @Override
     public void setQuotesInvoke(InvokeFunction function) {
         this.quotesInvoke = function;
     }
 
+    /**
+     *
+     * @param function
+     */
     @Override
     public void setBookInvoke(InvokeFunction function) {
         this.bookInvoke = function;
     }
 
+    /**
+     *
+     * @param function
+     */
     @Override
     public void setOHLCVInvoke(InvokeFunction function) {
         this.ohlcvInvoke = function;
     }
 
+    /**
+     *
+     * @param function
+     */
     @Override
     public void setVolumeInvoke(InvokeFunction function) {
         this.volumeInvoke = function;
