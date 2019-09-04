@@ -1,7 +1,6 @@
 from coinapi_rest_v1 import CoinAPIv1
 import datetime, sys
 
-#test_key = '90ea90db-d740-47ff-9053-baf62b8cc0ad'
 test_key = sys.argv[1]
 
 api = CoinAPIv1(test_key)

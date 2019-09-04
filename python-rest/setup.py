@@ -4,7 +4,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="coinapi_v1-pkg-svisstack",
+    name="coinapi.rest.v1",
     version="1.0",
     author="Tomasz Przybysz",
     author_email="tom.przybysz@gmail.com",
@@ -18,5 +18,5 @@ setuptools.setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
-    python_requires='>=3.6',
+    python_requires='>=3.0',
 )

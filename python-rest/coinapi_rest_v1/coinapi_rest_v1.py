@@ -268,7 +268,6 @@ class CoinAPIv1:
         client = self.client_class(request.endpoint(),
                                    self.headers,
                                    request.query_parameters)
-        print(client)
         return client.perform()
 
     def trades_historical_data(self,
