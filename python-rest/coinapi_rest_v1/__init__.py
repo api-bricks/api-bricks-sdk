@@ -1,0 +1,1 @@
+name = "coinapi.rest.v1"

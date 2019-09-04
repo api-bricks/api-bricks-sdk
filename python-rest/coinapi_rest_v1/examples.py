@@ -1,7 +1,8 @@
-from coinapi_v1 import CoinAPIv1
-import datetime
+from coinapi_rest_v1 import CoinAPIv1
+import datetime, sys
 
-test_key = 'YOUR_API_KEY_HERE'
+#test_key = '90ea90db-d740-47ff-9053-baf62b8cc0ad'
+test_key = sys.argv[1]
 
 api = CoinAPIv1(test_key)
 exchanges = api.metadata_list_exchanges()
@@ -16,7 +17,10 @@ assets = api.metadata_list_assets()
 print('Assets')
 for asset in assets:
     print('Asset ID: %s' % asset['asset_id'])
-    print('Asset name: %s' % asset['name'])
+    try:
+        print('Asset name: %s' % asset['name'])
+    except KeyError:
+        print('Can not find name')
     print('Asset type (crypto?): %s' % asset['type_is_crypto'])
 
 symbols = api.metadata_list_symbols()
@@ -25,8 +29,14 @@ for symbol in symbols:
     print('Symbol ID: %s' % symbol['symbol_id'])
     print('Exchange ID: %s' % symbol['exchange_id'])
     print('Symbol type: %s' % symbol['symbol_type'])
-    print('Asset ID base: %s' % symbol['asset_id_base'])
-    print('Asset ID quote: %s' % symbol['asset_id_quote'])
+    try:
+        print('Asset ID base: %s' % symbol['asset_id_base'])
+    except KeyError:
+        print('Can not find Asset ID base')
+    try:
+        print('Asset ID quote: %s' % symbol['asset_id_quote'])
+    except KeyError:
+        print('Can not find Asset ID quote')
 
     if (symbol['symbol_type'] == 'FUTURES'):
         print('Future delivery time: %s' % symbol['future_delivery_time'])
@@ -109,7 +119,7 @@ for data in latest_trades:
     print('Size: %s' % data['size'])
     print('Taker Side: %s' % data['taker_side'])
 
-latest_trades_doge = api.trades_latest_data_symbol('BITTREX_SPOT_BTC_DOGE')
+latest_trades_doge = api.trades_latest_data_symbol('BITTREX_SPOT_BTC_USD')
 
 for data in latest_trades_doge:
     print('Symbol ID: %s' % data['symbol_id'])
@@ -196,20 +206,20 @@ for quote in quotes_historical_data_btc_usd:
     print('Bid Price: %s' % quote['bid_price'])
     print('Bid Size: %s' % quote['bid_size'])
 
-orderbooks_current_data = api.orderbooks_current_data_all()
+# orderbooks_current_data = api.orderbooks_current_data_all()
 
-for data in orderbooks_current_data:
-    print('Symbol ID: %s' % data['symbol_id'])
-    print('Time Exchange: %s' % data['time_exchange'])
-    print('Time CoinAPI: %s' % data['time_coinapi'])
-    print('Asks:')
-    for ask in data['asks']:
-        print('- Price: %s' % ask['price'])
-        print('- Size: %s' % ask['size'])
-    print('Bids:')
-    for bid in data['bids']:
-        print('- Price: %s' % bid['price'])
-        print('- Size: %s' % bid['size'])
+# for data in orderbooks_current_data:
+#     print('Symbol ID: %s' % data['symbol_id'])
+#     print('Time Exchange: %s' % data['time_exchange'])
+#     print('Time CoinAPI: %s' % data['time_coinapi'])
+#     print('Asks:')
+#     for ask in data['asks']:
+#         print('- Price: %s' % ask['price'])
+#         print('- Size: %s' % ask['size'])
+#     print('Bids:')
+#     for bid in data['bids']:
+#         print('- Price: %s' % bid['price'])
+#         print('- Size: %s' % bid['size'])
 
 orderbooks_current_data_btc_usd = api.orderbooks_current_data_symbol('BITSTAMP_SPOT_BTC_USD')
 
