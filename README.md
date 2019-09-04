@@ -9,7 +9,9 @@ Welcome to the CoinAPI SDK. This repository contain SDK for our API documented a
 Language | Package manager | Protocol | Package name | Version/Link |
 --- | --- | --- | --- | --- |
 C# | NuGet | REST | CoinAPI.REST.V1 | ![Nuget](https://img.shields.io/nuget/v/CoinAPI.REST.v1) |
-Java | Maven | REST | io.coinapi.rest.v1 | ![Sonatype Nexus (Releases)](https://img.shields.io/nexus/r/io.coinapi.rest/v1?server=https%3A%2F%2Foss.sonatype.org) ![Sonatype Nexus (Snapshots)](https://img.shields.io/nexus/s/io.coinapi.rest/v1?server=https%3A%2F%2Foss.sonatype.org)|
+C# | NuGet | WebSocket | CoinAPI.WebSocket.V1 | ![Nuget](https://img.shields.io/nuget/v/CoinAPI.WebSocket.v1) |
+Java | Maven | REST | io.coinapi.rest.v1 | ![Sonatype Nexus (Releases)](https://img.shields.io/nexus/r/io.coinapi.rest/v1?server=https%3A%2F%2Foss.sonatype.org) |
+Java | Maven | WebSocket | io.coinapi.websocket.v1 | ![Sonatype Nexus (Releases)](https://img.shields.io/nexus/r/io.coinapi.websocket/v1?server=https%3A%2F%2Foss.sonatype.org) |
 
 ## Language coverage
 

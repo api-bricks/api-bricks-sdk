@@ -4,8 +4,7 @@
 
     <groupId>io.coinapi.websocket</groupId>
     <artifactId>v1</artifactId>
-    <version>1.1-SNAPSHOT</version>
-
+    <version>1.0</version>
 
     <organization>
         <name>MARMOT SOLUTIONS LTD</name>
@@ -17,7 +16,7 @@
         <developerConnection>scm:git:git@github.com:coinapi/coinapi-sdk.git</developerConnection>
         <url>https://github.com/coinapi/coinapi-sdk</url>
         <tag>HEAD</tag>
-    </scm>
+  </scm>
 
     <licenses>
         <license>
@@ -143,14 +142,41 @@
                     <groupId>org.sonatype.plugins</groupId>
                     <artifactId>nexus-staging-maven-plugin</artifactId>
                     <version>1.6.7</version>
-                    <extensions>true</extensions>
+<!--                    <extensions>true</extensions>-->
+                    <executions>
+                        <execution>
+                            <id>deploy</id>
+                            <phase>deploy</phase>
+                            <goals>
+                                <goal>deploy</goal>
+                            </goals>
+                        </execution>
+                    </executions>
                     <configuration>
                         <serverId>ossrh</serverId>
                         <nexusUrl>https://oss.sonatype.org/</nexusUrl>
-                        <autoReleaseAfterClose>true</autoReleaseAfterClose>
+<!--                        <autoReleaseAfterClose>true</autoReleaseAfterClose>-->
+                        <skipStaging>true</skipStaging>
                     </configuration>
                 </plugin>
-
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-javadoc-plugin</artifactId>
+                    <version>3.1.1</version>
+                    <configuration>
+                        <show>private</show>
+                        <nohelp>true</nohelp>
+                    </configuration>
+                    <executions>
+                        <execution>
+                            <id>attach-javadocs</id>
+                            <phase>deploy</phase>
+                            <goals>
+                                <goal>jar</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
             </plugins>
         </pluginManagement>
         <plugins>
@@ -177,6 +203,25 @@
             </activation>
             <build>
                 <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-source-plugin</artifactId>
+                        <version>3.0.1</version>
+                        <executions>
+                            <execution>
+                                <id>attach-sources</id>
+                                <goals>
+                                    <goal>jar</goal>
+                                </goals>
+                            </execution>
+                            <execution>
+                                <id>attach-javadoc</id>
+                                <goals>
+                                    <goal>jar</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-gpg-plugin</artifactId>
