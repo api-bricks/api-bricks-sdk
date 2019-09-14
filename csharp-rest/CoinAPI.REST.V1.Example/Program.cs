@@ -67,6 +67,15 @@ namespace CoinAPI.REST.V1.Example
                 Console.Write(Environment.NewLine);
             }
 
+            Console.WriteLine($"Symbols mapping for BCEX: ");
+            var mappingsList = coinApi.Metadata_symbol_mapping("BCEX");
+
+            foreach(var mapping in mappingsList)
+            {
+                Console.WriteLine($"symbol_id_exchange: {mapping.symbol_id_exchange}");
+                Console.WriteLine($"price_precision: {mapping.price_precision}");
+                Console.WriteLine($"size_precision: {mapping.size_precision}");
+            }
 
             Console.Write("Asset:");
             Console.Write(Environment.NewLine);

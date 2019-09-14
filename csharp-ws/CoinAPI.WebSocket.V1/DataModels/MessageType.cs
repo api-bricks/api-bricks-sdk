@@ -9,6 +9,7 @@
         trade,
         volume,
         ohlcv,
-        error
+        error,
+        exrate
     }
 }

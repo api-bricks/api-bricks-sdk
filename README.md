@@ -12,7 +12,7 @@ C# | NuGet | REST | CoinAPI.REST.V1 | ![Nuget](https://img.shields.io/nuget/v/Co
 C# | NuGet | WebSocket | CoinAPI.WebSocket.V1 | ![Nuget](https://img.shields.io/nuget/v/CoinAPI.WebSocket.v1) |
 Java | Maven | REST | io.coinapi.rest.v1 | ![Sonatype Nexus (Releases)](https://img.shields.io/nexus/r/io.coinapi.rest/v1?server=https%3A%2F%2Foss.sonatype.org) |
 Java | Maven | WebSocket | io.coinapi.websocket.v1 | ![Sonatype Nexus (Releases)](https://img.shields.io/nexus/r/io.coinapi.websocket/v1?server=https%3A%2F%2Foss.sonatype.org) |
-
+Python3 | PyPI | REST | coinapi.rest.v1 | ![PyPI](https://img.shields.io/pypi/v/coinapi.rest.v1) |
 ## Language coverage
 
 In this repository you can find libraries that will help you use our API with minimal development effort from languages like:

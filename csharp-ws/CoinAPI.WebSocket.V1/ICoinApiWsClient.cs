@@ -1,5 +1,4 @@
 ﻿using CoinAPI.WebSocket.V1.DataModels;
-using System.Threading.Tasks;
 
 namespace CoinAPI.WebSocket.V1
 {
@@ -8,6 +7,7 @@ namespace CoinAPI.WebSocket.V1
     public delegate void QuoteEventHandler(object sender, Quote item);
     public delegate void TradeEventHandler(object sender, Trade item);
     public delegate void VolumeEventHandler(object sender, Volume item);
+    public delegate void ExchangeRateHandler(object sneder, ExchangeRate item);
 
     public interface ICoinApiWsClient
     {
@@ -18,5 +18,6 @@ namespace CoinAPI.WebSocket.V1
         event QuoteEventHandler QuoteEvent;
         event TradeEventHandler TradeEvent;
         event VolumeEventHandler VolumeEvent;
+        event ExchangeRateHandler ExchangeRateEvent;
     }
 }

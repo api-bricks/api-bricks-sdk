@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Net;
 using System.Net.Http;
 using CoinAPI.REST.V1.Exceptions;
+using CoinAPI.REST.V1.DataModels;
 
 namespace CoinAPI.REST.V1 {
     public class CoinApiRestClient
@@ -89,6 +90,12 @@ namespace CoinAPI.REST.V1 {
         }
         public List<Symbol> Metadata_list_symbols() {
             return GetData<List<Symbol>>("/v1/symbols");
+        }
+
+        public List<SymbolMapping> Metadata_symbol_mapping(string idExchange)
+        {
+            var url = $"/v1/symbols/map/{idExchange}";
+            return GetData<List<SymbolMapping>>(url);
         }
 
         public Exchangerate Exchange_rates_get_specific_rate(string baseId, string quoteId, DateTime time) {
