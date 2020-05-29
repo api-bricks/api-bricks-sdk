@@ -1,5 +1,4 @@
 from websocket import create_connection
-import datetime
 import json
 
 test_key = 'YOUR_API_KEY'
@@ -12,9 +11,10 @@ class CoinAPIv1_subscribe(object):
     self.subscribe_data_type = ["trade", "quote", "book20"]
 
 ws = create_connection("wss://ws.coinapi.io/v1")
-sub = CoinAPIv1_subscribe(test_key);
+sub = CoinAPIv1_subscribe(test_key)
 ws.send(json.dumps(sub.__dict__))
 while True:
   msg =  ws.recv()
-  print(msg);
+  print(msg)
+  
 ws.close()
