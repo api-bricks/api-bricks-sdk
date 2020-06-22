@@ -1,4 +1,4 @@
-# CoinAPI-SDK
+# CoinAPI-SDK 
 
 ![GitHub language count](https://img.shields.io/github/languages/count/coinapi/coinapi-sdk)
 
