@@ -10,7 +10,7 @@
   "license": "MIT",
   "dependencies": {
     "@types/es6-promise": "0.0.32",
-    "axios": "^0.16.1"
+    "axios": "^0.19.2"
   },
   "repository": "https://github.com/coinapi/coinapi-sdk/tree/master/typescript-rest"
 }
