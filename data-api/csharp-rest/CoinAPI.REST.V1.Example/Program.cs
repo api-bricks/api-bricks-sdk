@@ -597,6 +597,84 @@ namespace CoinAPI.REST.V1.Example
                 Console.Write(Environment.NewLine);
             }
 
+            Console.Write("Orderbooks level 3 current data all:");
+            Console.Write(Environment.NewLine);
+            var orderbooks3_current_data = coinApiEndpointTester.Orderbooks3_current_data_all_filtered_bitstampAsync().GetAwaiter().GetResult().Data;
+            foreach (var item in orderbooks3_current_data)
+            {
+                Console.Write("symbol_id:" + item.symbol_id);
+                Console.Write(Environment.NewLine);
+                Console.Write("time_exchange:" + item.time_exchange);
+                Console.Write(Environment.NewLine);
+                Console.Write("time_coinapi:" + item.time_coinapi);
+                Console.Write(Environment.NewLine);
+
+                Console.Write("Asks:");
+                Console.Write(Environment.NewLine);
+                foreach (var itm in item.asks)
+                {
+                    Console.Write("id:" + itm.id);
+                    Console.Write(Environment.NewLine);
+                    Console.Write("price:" + itm.price);
+                    Console.Write(Environment.NewLine);
+                    Console.Write("size:" + itm.size);
+                    Console.Write(Environment.NewLine);
+
+                }
+                Console.Write("Bids:");
+                Console.Write(Environment.NewLine);
+                foreach (var itm in item.bids)
+                {
+                    Console.Write("id:" + itm.id);
+                    Console.Write(Environment.NewLine);
+                    Console.Write("price:" + itm.price);
+                    Console.Write(Environment.NewLine);
+                    Console.Write("size:" + itm.size);
+                    Console.Write(Environment.NewLine);
+
+                }
+
+                Console.Write("--------------------------------------------------------------------------------------------------------");
+                Console.Write(Environment.NewLine);
+            }
+
+            Console.Write("Orderbooks level 3 current data symbol:");
+            Console.Write(Environment.NewLine);
+            var orderbooks3_current_data_btc_usd = coinApiEndpointTester.Orderbooks3_current_data_symbolAsync("BITSTAMP_SPOT_BTC_USD").GetAwaiter().GetResult().Data;
+            Console.Write("symbol_id:" + orderbooks3_current_data_btc_usd.symbol_id);
+            Console.Write(Environment.NewLine);
+            Console.Write("time_exchange:" + orderbooks3_current_data_btc_usd.time_exchange);
+            Console.Write(Environment.NewLine);
+            Console.Write("time_coinapi:" + orderbooks3_current_data_btc_usd.time_coinapi);
+            Console.Write(Environment.NewLine);
+
+            Console.Write("Asks:");
+            Console.Write(Environment.NewLine);
+            foreach (var itm in orderbooks3_current_data_btc_usd.asks)
+            {
+                Console.Write("id:" + itm.id);
+                Console.Write(Environment.NewLine);
+                Console.Write("price:" + itm.price);
+                Console.Write(Environment.NewLine);
+                Console.Write("size:" + itm.size);
+                Console.Write(Environment.NewLine);
+
+            }
+            Console.Write("Bids:");
+            Console.Write(Environment.NewLine);
+            foreach (var itm in orderbooks3_current_data_btc_usd.bids)
+            {
+                Console.Write("id:" + itm.id);
+                Console.Write(Environment.NewLine);
+                Console.Write("price:" + itm.price);
+                Console.Write(Environment.NewLine);
+                Console.Write("size:" + itm.size);
+                Console.Write(Environment.NewLine);
+            }
+
+            Console.Write("--------------------------------------------------------------------------------------------------------");
+            Console.Write(Environment.NewLine);
+
 
             Console.WriteLine("=== END ===");
             Console.ReadLine();

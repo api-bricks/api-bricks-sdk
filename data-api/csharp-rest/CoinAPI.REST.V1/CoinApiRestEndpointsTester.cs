@@ -55,7 +55,7 @@ namespace CoinAPI.REST.V1.Example
 
         public Task<EndpointCheckResult<ExchangeCurrentrate>> Exchange_rates_get_all_current_ratesAsync(string baseId, bool invert = false)
         {
-            return HandleCheck(CoinApiEndpointUrls.ExchangeRate(baseId, invert), _coinApi.Exchange_rates_get_all_current_ratesAsync (baseId, invert));
+            return HandleCheck(CoinApiEndpointUrls.ExchangeRate(baseId, invert), _coinApi.Exchange_rates_get_all_current_ratesAsync(baseId, invert));
         }
 
         public Task<EndpointCheckResult<List<Period>>> Ohlcv_list_all_periodsAsync()
@@ -70,7 +70,7 @@ namespace CoinAPI.REST.V1.Example
 
         public Task<EndpointCheckResult<List<OHLCV>>> Ohlcv_historical_dataAsync(string symbolId, string periodId, DateTime start)
         {
-            return HandleCheck(CoinApiEndpointUrls.Ohlcv_HistoricalData(symbolId, periodId, start.ToString(DateFormat)), _coinApi.Ohlcv_historical_dataAsync (symbolId, periodId, start));
+            return HandleCheck(CoinApiEndpointUrls.Ohlcv_HistoricalData(symbolId, periodId, start.ToString(DateFormat)), _coinApi.Ohlcv_historical_dataAsync(symbolId, periodId, start));
         }
         public Task<EndpointCheckResult<List<Trade>>> Trades_latest_data_allAsync()
         {
@@ -132,8 +132,16 @@ namespace CoinAPI.REST.V1.Example
             return HandleCheck(CoinApiEndpointUrls.Orderbooks_HistoricalData(symbolId, start.ToString(DateFormat)), _coinApi.Orderbooks_historical_dataAsync(symbolId, start));
         }
 
-  
 
+        public Task<EndpointCheckResult<List<Orderbook3>>> Orderbooks3_current_data_all_filtered_bitstampAsync()
+        {
+            return HandleCheck(CoinApiEndpointUrls.Orderbooks3_CurrentFilteredBitstamp(), _coinApi.Orderbooks3_current_data_all_filtered_bitstampAsync());
+        }
+
+        public Task<EndpointCheckResult<Orderbook3>> Orderbooks3_current_data_symbolAsync(string symbolId)
+        {
+            return HandleCheck(CoinApiEndpointUrls.Orderbooks3_Current(symbolId), _coinApi.Orderbooks3_current_data_symbolAsync(symbolId));
+        }
 
         private async Task<EndpointCheckResult<T>> HandleCheck<T>(string endpoint, Task<T> data)
         {

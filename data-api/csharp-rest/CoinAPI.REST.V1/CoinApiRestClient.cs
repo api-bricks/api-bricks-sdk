@@ -322,6 +322,15 @@ namespace CoinAPI.REST.V1
             return GetData<List<Orderbook>>(CoinApiEndpointUrls.Orderbooks_HistoricalData(symbolId, start.ToString(DateFormat), limit));
         }
 
+        public Task<List<Orderbook3>> Orderbooks3_current_data_all_filtered_bitstampAsync()
+        {
+            return GetData<List<Orderbook3>>(CoinApiEndpointUrls.Orderbooks3_CurrentFilteredBitstamp());
+        }
+
+        public Task<Orderbook3> Orderbooks3_current_data_symbolAsync(string symbolId)
+        {
+            return GetData<Orderbook3>(CoinApiEndpointUrls.Orderbooks3_Current(symbolId));
+        }
     }
 
 }
