@@ -14,6 +14,12 @@ coinAPIWebSocket.setTradesInvoke(message -> {
     System.out.println(trades.getUuid());
 });
 
+// definition of a method that processes errors
+coinAPIWebSocket.setErrorInvoke(message -> {
+    Error error = (Error) message;
+    System.out.println(error.getMessage());
+});
+
 // open a websocket connection
 coinAPIWebSocket.sendHelloMessage(hello);
 

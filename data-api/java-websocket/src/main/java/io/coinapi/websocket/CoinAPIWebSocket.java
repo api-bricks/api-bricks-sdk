@@ -15,4 +15,5 @@ public interface CoinAPIWebSocket {
     void setBookInvoke(InvokeFunction function);
     void setOHLCVInvoke(InvokeFunction function);
     void setVolumeInvoke(InvokeFunction function);
+    void setErrorInvoke(InvokeFunction function);
 }

@@ -4,6 +4,7 @@ import com.dslplatform.json.DslJson;
 import io.coinapi.websocket.exception.NotImplementedException;
 import io.coinapi.websocket.interfaces.InvokeFunction;
 import io.coinapi.websocket.model.*;
+import io.coinapi.websocket.model.Error;
 import org.glassfish.tyrus.client.ClientManager;
 
 import javax.websocket.*;
@@ -38,6 +39,7 @@ public class CoinAPIWebSocketImpl implements CoinAPIWebSocket {
     private InvokeFunction bookInvoke;
     private InvokeFunction ohlcvInvoke;
     private InvokeFunction volumeInvoke;
+    private InvokeFunction errorInvoke;
 
     /**
      *
@@ -76,7 +78,7 @@ public class CoinAPIWebSocketImpl implements CoinAPIWebSocket {
                                 handle(message, Volume.class, volumeInvoke);
                                 break;
                             case error:
-                                System.out.println("error message: " + message);
+                                handle(message, Error.class, errorInvoke);
                                 break;
                         }
                     } catch (Exception e) {
@@ -198,6 +200,13 @@ public class CoinAPIWebSocketImpl implements CoinAPIWebSocket {
     public void setVolumeInvoke(InvokeFunction function) {
         this.volumeInvoke = function;
     }
+
+    /**
+     *
+     * @param function
+     */
+    @Override
+    public void setErrorInvoke(InvokeFunction function) { this.errorInvoke = function; }
 
     private void handle(String message, Class deserializeClass, InvokeFunction invokeFunction) throws IOException, NotImplementedException {
 

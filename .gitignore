@@ -3,3 +3,5 @@
 ################################################################################
 
 /csharp-ws/CoinApi.WEBSOCKET/.vs/CoinApi.WEBSOCKET/v16
+.idea
+**/target

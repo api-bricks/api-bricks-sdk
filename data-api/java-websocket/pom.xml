@@ -255,12 +255,12 @@
         <dependency>
             <groupId>org.glassfish.tyrus.ext</groupId>
             <artifactId>tyrus-client-java8</artifactId>
-            <version>1.15</version>
+            <version>1.17</version>
         </dependency>
         <dependency>
             <groupId>org.glassfish.tyrus</groupId>
             <artifactId>tyrus-container-grizzly-client</artifactId>
-            <version>1.15</version>
+            <version>1.17</version>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
