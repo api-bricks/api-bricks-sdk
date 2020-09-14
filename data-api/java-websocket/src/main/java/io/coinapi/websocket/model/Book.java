@@ -56,6 +56,7 @@ public class Book extends MessageBase {
         return isSnapshot;
     }
 
+    @JsonAttribute(name = "is_snapshot")
     public void setSnapshot(Boolean snapshot) {
         isSnapshot = snapshot;
     }
