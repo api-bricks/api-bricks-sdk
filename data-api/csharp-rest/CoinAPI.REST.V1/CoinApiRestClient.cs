@@ -11,18 +11,18 @@ using System.Linq;
 
 namespace CoinAPI.REST.V1 {
     public class CoinApiRestClient
-    {
+    {              
         private string apikey;
-        private string dateFormat = "yyyy-MM-ddTHH:mm:ss.fff";
+        public string DateFormat => "yyyy-MM-ddTHH:mm:ss.fff";
         private string WebUrl = "http://hdc1-enc-02-bay-01.bbxt.svisstack.com:800";
 
         public CoinApiRestClient(string apikey, bool sandbox = false)
         {
             this.apikey = apikey;
-			if (sandbox)
-			{
-				WebUrl = "https://rest-sandbox.coinapi.io";
-			}
+            if (sandbox)
+            {
+                WebUrl = "https://rest-sandbox.coinapi.io";
+            }
         }
 
         public CoinApiRestClient(string apikey, string url)
@@ -64,7 +64,7 @@ namespace CoinAPI.REST.V1 {
                         }
                         Debug.WriteLine(link);
 
-                        if (!response.IsSuccessStatusCode) 
+                        if (!response.IsSuccessStatusCode)
                             RaiseError(response);
 
                         return Deserialize<T>(response);
@@ -109,219 +109,235 @@ namespace CoinAPI.REST.V1 {
             return data;
         }
 
-        public List<Exchange> Metadata_list_exchanges() {
-            return GetData<List<Exchange>>("/v1/exchanges");
+        public List<Exchange> Metadata_list_exchanges()
+        {
+            return GetData<List<Exchange>>(CoinApiEndpointUrls.Exchanges());
         }
 
-        public List<Asset> Metadata_list_assets() {
-            return GetData<List<Asset>>("/v1/assets");
+        public List<Asset> Metadata_list_assets()
+        {
+            return GetData<List<Asset>>(CoinApiEndpointUrls.Assets());
         }
 
-        public List<Symbol> Metadata_list_symbols() {
-            return GetData<List<Symbol>>("/v1/symbols");
+        public List<Symbol> Metadata_list_symbols()
+        {
+            return GetData<List<Symbol>>(CoinApiEndpointUrls.Symbols());
         }
 
         public List<Symbol> Metadata_list_symbols_exchange(string exchangeId)
         {
-            return GetData<List<Symbol>>($"/v1/symbols/{exchangeId}");
+            return GetData<List<Symbol>>(CoinApiEndpointUrls.Symbols(exchangeId));
         }
 
         public List<Icon> Metadata_list_assets_icons(int iconSize)
         {
-            return GetData<List<Icon>>($"/v1/assets/icons/{iconSize}");
+            return GetData<List<Icon>>(CoinApiEndpointUrls.Assests_Icons(iconSize));
         }
 
         public List<Icon> Metadata_list_exchanges_icons(int iconSize)
         {
-            return GetData<List<Icon>>($"/v1/exchanges/icons/{iconSize}");
+            return GetData<List<Icon>>(CoinApiEndpointUrls.Exchanges_Icons(iconSize));
         }
 
         public List<SymbolMapping> Metadata_symbol_mapping(string idExchange)
         {
-            var url = $"/v1/symbols/map/{idExchange}";
+            var url = CoinApiEndpointUrls.Symbols_Map(idExchange);
             return GetData<List<SymbolMapping>>(url);
         }
 
-        public Exchangerate Exchange_rates_get_specific_rate(string baseId, string quoteId, DateTime time) {
-            var url = string.Format("/v1/exchangerate/{0}/{1}?time={2}", baseId, quoteId, time.ToString(dateFormat));
+        public Exchangerate Exchange_rates_get_specific_rate(string baseId, string quoteId, DateTime time)
+        {
+            var url = CoinApiEndpointUrls.ExchangeRateSpecific(baseId, quoteId, time.ToString(DateFormat));
             return GetData<Exchangerate>(url);
         }
-        public Exchangerate Exchange_rates_get_specific_rate(string baseId, string quoteId) {
-            var url = string.Format("/v1/exchangerate/{0}/{1}", baseId, quoteId);
+        public Exchangerate Exchange_rates_get_specific_rate(string baseId, string quoteId)
+        {
+            var url = CoinApiEndpointUrls.ExchangeRateSpecific(baseId, quoteId);
             return GetData<Exchangerate>(url);
         }
 
-        public ExchangeCurrentrate Exchange_rates_get_all_current_rates(string baseId, bool invert = false) {
-            var url = string.Format("/v1/exchangerate/{0}?invert={1}", baseId, invert);
+        public ExchangeCurrentrate Exchange_rates_get_all_current_rates(string baseId, bool invert = false)
+        {
+            var url = CoinApiEndpointUrls.ExchangeRate(baseId, invert);
             return GetData<ExchangeCurrentrate>(url);
         }
 
-        public List<Period> Ohlcv_list_all_periods() {
-            var url = "/v1/ohlcv/periods";
-            return GetData<List<Period>>(url);
+        public List<Period> Ohlcv_list_all_periods()
+        {
+            return GetData<List<Period>>(CoinApiEndpointUrls.Ohlcv_Periods());
         }
 
 
-        public List<OHLCV> Ohlcv_latest_data(string symbolId, string periodId, int limit) {
-            var url = string.Format("/v1/ohlcv/{0}/latest?period_id={1}&limit={2}", symbolId, periodId, limit);
+        public List<OHLCV> Ohlcv_latest_data(string symbolId, string periodId, int limit)
+        {
+            var url = CoinApiEndpointUrls.Ohlcv_LatestData(symbolId, periodId, limit);
             return GetData<List<OHLCV>>(url);
         }
-        public List<OHLCV> Ohlcv_latest_data(string symbolId, string periodId) {
-            var url = string.Format("/v1/ohlcv/{0}/latest?period_id={1}", symbolId, periodId);
+        public List<OHLCV> Ohlcv_latest_data(string symbolId, string periodId)
+        {
+            var url = CoinApiEndpointUrls.Ohlcv_LatestData(symbolId, periodId);
             return GetData<List<OHLCV>>(url);
         }
 
         public List<OHLCV> Ohlcv_latest_asset_data(string assetBase, string assetQuote, string periodId)
         {
-            var url = string.Format("/v1/ohlcv/{0}/{1}/latest?period_id={2}", assetBase, assetQuote, periodId);
+            var url = CoinApiEndpointUrls.Ohlcv_Asset_Latest(assetBase, assetQuote, periodId);
             return GetData<List<OHLCV>>(url);
         }
 
-        public List<OHLCV> Ohlcv_historical_data(string symbolId, string periodId, DateTime start, DateTime end, int limit) {
-            var url = string.Format("/v1/ohlcv/{0}/history?period_id={1}&time_start={2}&time_end={3}&limit={4}", symbolId, periodId, start.ToString(dateFormat), end.ToString(dateFormat), limit);
+        public List<OHLCV> Ohlcv_historical_data(string symbolId, string periodId, DateTime start, DateTime end, int limit)
+        {
+            var url = CoinApiEndpointUrls.Ohlcv_HistoricalData(symbolId, periodId, start.ToString(DateFormat), end.ToString(DateFormat), limit);
             return GetData<List<OHLCV>>(url);
         }
-        public List<OHLCV> Ohlcv_historical_data(string symbolId, string periodId, DateTime start, DateTime end) {
-            var url = string.Format("/v1/ohlcv/{0}/history?period_id={1}&time_start={2}&time_end={3}", symbolId, periodId, start.ToString(dateFormat), end.ToString(dateFormat));
+        public List<OHLCV> Ohlcv_historical_data(string symbolId, string periodId, DateTime start, DateTime end)
+        {
+            var url = CoinApiEndpointUrls.Ohlcv_HistoricalData(symbolId, periodId, start.ToString(DateFormat), end.ToString(DateFormat));
             return GetData<List<OHLCV>>(url);
         }
-        public List<OHLCV> Ohlcv_historical_data(string symbolId, string periodId, DateTime start, int limit) {
-            var url = string.Format("/v1/ohlcv/{0}/history?period_id={1}&time_start={2}&limit={3}", symbolId, periodId, start.ToString(dateFormat), limit);
+        public List<OHLCV> Ohlcv_historical_data(string symbolId, string periodId, DateTime start, int limit)
+        {
+            var url = CoinApiEndpointUrls.Ohlcv_HistoricalData(symbolId, periodId, start.ToString(DateFormat), limit);
             return GetData<List<OHLCV>>(url);
         }
-        public List<OHLCV> Ohlcv_historical_data(string symbolId, string periodId, DateTime start) {
-            var url = string.Format("/v1/ohlcv/{0}/history?period_id={1}&time_start={2}", symbolId, periodId, start.ToString(dateFormat));
+        public List<OHLCV> Ohlcv_historical_data(string symbolId, string periodId, DateTime start)
+        {
+            var url = CoinApiEndpointUrls.Ohlcv_HistoricalData(symbolId, periodId, start.ToString(DateFormat));
             return GetData<List<OHLCV>>(url);
         }
 
-        public List<Trade> Trades_latest_data_all() {
-            var url = "/v1/trades/latest";
-            return GetData<List<Trade>>(url);
+        public List<Trade> Trades_latest_data_all()
+        {
+            return GetData<List<Trade>>(CoinApiEndpointUrls.Trades_Latest());
         }
-        public List<Trade> Trades_latest_data_all(int limit) {
-            var url = string.Format("/v1/trades/latest?limit={0}", limit);
-            return GetData<List<Trade>>(url);
-        }
-
-
-        public List<Trade> Trades_latest_data_symbol(string symbolId) {
-            var url = string.Format("/v1/trades/{0}/latest", symbolId);
-            return GetData<List<Trade>>(url);
-        }
-        public List<Trade> Trades_latest_data_symbol(string symbolId, int limit) {
-            var url = string.Format("/v1/trades/{0}/latest?limit={1}", symbolId, limit);
-            return GetData<List<Trade>>(url);
+        public List<Trade> Trades_latest_data_all(int limit)
+        {
+            return GetData<List<Trade>>(CoinApiEndpointUrls.Trades_Latest(limit));
         }
 
-        public List<Trade> Trades_historical_data(string symbolId, DateTime start, DateTime end, int limit) {
-            var url = string.Format("/v1/trades/{0}/history?time_start={1}&time_end={2}&limit={3}", symbolId, start.ToString(dateFormat), end.ToString(dateFormat), limit);
-            return GetData<List<Trade>>(url);
+
+        public List<Trade> Trades_latest_data_symbol(string symbolId)
+        {
+            return GetData<List<Trade>>(CoinApiEndpointUrls.Trades_LatestSymbol(symbolId));
         }
-        public List<Trade> Trades_historical_data(string symbolId, DateTime start) {
-            var url = string.Format("/v1/trades/{0}/history?time_start={1}", symbolId, start.ToString(dateFormat));
-            return GetData<List<Trade>>(url);
-        }
-        public List<Trade> Trades_historical_data(string symbolId, DateTime start, DateTime end) {
-            var url = string.Format("/v1/trades/{0}/history?time_start={1}&time_end={2}", symbolId, start.ToString(dateFormat), end.ToString(dateFormat));
-            return GetData<List<Trade>>(url);
-        }
-        public List<Trade> Trades_historical_data(string symbolId, DateTime start, int limit) {
-            var url = string.Format("/v1/trades/{0}/history?time_start={1}&limit={2}", symbolId, start.ToString(dateFormat), limit);
-            return GetData<List<Trade>>(url);
+        public List<Trade> Trades_latest_data_symbol(string symbolId, int limit)
+        {
+            return GetData<List<Trade>>(CoinApiEndpointUrls.Trades_LatestSymbol(symbolId, limit));
         }
 
-        public List<Quote> Quotes_current_data_all() {
-            var url = "/v1/quotes/current";
-            return GetData<List<Quote>>(url);
+        public List<Trade> Trades_historical_data(string symbolId, DateTime start, DateTime end, int limit)
+        {
+
+            return GetData<List<Trade>>(CoinApiEndpointUrls.Trades_HistoricalData(symbolId, start.ToString(DateFormat), end.ToString(DateFormat), limit));
+        }
+        public List<Trade> Trades_historical_data(string symbolId, DateTime start)
+        {
+            return GetData<List<Trade>>(CoinApiEndpointUrls.Trades_HistoricalData(symbolId, start.ToString(DateFormat)));
+        }
+        public List<Trade> Trades_historical_data(string symbolId, DateTime start, DateTime end)
+        {
+
+            return GetData<List<Trade>>(CoinApiEndpointUrls.Trades_HistoricalData(symbolId, start.ToString(DateFormat), end.ToString(DateFormat)));
+        }
+        public List<Trade> Trades_historical_data(string symbolId, DateTime start, int limit)
+        {
+            return GetData<List<Trade>>(CoinApiEndpointUrls.Trades_HistoricalData(symbolId, start.ToString(DateFormat), limit));
         }
 
-        public Quote Quotes_current_data_symbol(string symbolId) {
-            var url = string.Format("/v1/quotes/{0}/current", symbolId);
-            return GetData<Quote>(url);
+        public List<Quote> Quotes_current_data_all()
+        {
+
+            return GetData<List<Quote>>(CoinApiEndpointUrls.Quotes_Current());
         }
 
-        public List<Quote> Quotes_latest_data_all() {
-            var url = "/v1/quotes/latest";
-            return GetData<List<Quote>>(url);
-        }
-        public List<Quote> Quotes_latest_data_all(int limit) {
-            var url = string.Format("/v1/quotes/latest?limit={0}", limit);
-            return GetData<List<Quote>>(url);
+        public Quote Quotes_current_data_symbol(string symbolId)
+        {
+
+            return GetData<Quote>(CoinApiEndpointUrls.Quotes_CurrentSymbol(symbolId));
         }
 
-        public List<Quote> Quotes_latest_data_symbol(string symbolId) {
-            var url = string.Format("/v1/quotes/{0}/latest", symbolId);
-            return GetData<List<Quote>>(url);
+        public List<Quote> Quotes_latest_data_all()
+        {
+            return GetData<List<Quote>>(CoinApiEndpointUrls.Quotes_Latest());
         }
-        public List<Quote> Quotes_latest_data_symbol(string symbolId, int limit) {
-            var url = string.Format("/v1/quotes/{0}/latest?limit={1}", symbolId, limit);
-            return GetData<List<Quote>>(url);
-        }
-
-        public List<Quote> Quotes_historical_data(string symbolId, DateTime start, DateTime end, int limit) {
-            var url = string.Format("/v1/quotes/{0}/history?time_start={1}&time_end={2}&limit={3}", symbolId, start.ToString(dateFormat), end.ToString(dateFormat), limit);
-            return GetData<List<Quote>>(url);
-
-        }
-        public List<Quote> Quotes_historical_data(string symbolId, DateTime start) {
-            var url = string.Format("/v1/quotes/{0}/history?time_start={1}", symbolId, start.ToString(dateFormat));
-            return GetData<List<Quote>>(url);
-        }
-        public List<Quote> Quotes_historical_data(string symbolId, DateTime start, DateTime end) {
-            var url = string.Format("/v1/quotes/{0}/history?time_start={1}&time_end={2}", symbolId, start.ToString(dateFormat), end.ToString(dateFormat));
-            return GetData<List<Quote>>(url);
-        }
-        public List<Quote> Quotes_historical_data(string symbolId, DateTime start, int limit) {
-            var url = string.Format("/v1/quotes/{0}/history?time_start={1}&limit={2}", symbolId, start.ToString(dateFormat), limit);
-            return GetData<List<Quote>>(url);
-
-        }
-        public List<Orderbook> Orderbooks_current_data_all_filtered_bitstamp() {
-            var url = "/v1/orderbooks/current?filter_symbol_id=BITSTAMP";
-            return GetData<List<Orderbook>>(url);
+        public List<Quote> Quotes_latest_data_all(int limit)
+        {
+            return GetData<List<Quote>>(CoinApiEndpointUrls.Quotes_Latest(limit));
         }
 
-        public Orderbook Orderbooks_current_data_symbol(string symbolId) {
-            var url = string.Format("/v1/orderbooks/{0}/current", symbolId);
-            return GetData<Orderbook>(url);
+        public List<Quote> Quotes_latest_data_symbol(string symbolId)
+        {
+            return GetData<List<Quote>>(CoinApiEndpointUrls.Quotes_LatestSymbol(symbolId));
+        }
+        public List<Quote> Quotes_latest_data_symbol(string symbolId, int limit)
+        {
+
+            return GetData<List<Quote>>(CoinApiEndpointUrls.Quotes_LatestSymbol(symbolId, limit));
         }
 
-        public List<Orderbook> Orderbooks_last_data(string symbolId, int limit) {
-            var url = string.Format("/v1/orderbooks/{0}/latest?limit={1}", symbolId, limit);
-            return GetData<List<Orderbook>>(url);
-        }
-        public List<Orderbook> Orderbooks_last_data(string symbolId) {
-            var url = string.Format("/v1/orderbooks/{0}/latest", symbolId);
-            return GetData<List<Orderbook>>(url);
+        public List<Quote> Quotes_historical_data(string symbolId, DateTime start, DateTime end, int limit)
+        {
+            return GetData<List<Quote>>(CoinApiEndpointUrls.Quotes_HistoricalData(symbolId, start.ToString(DateFormat), end.ToString(DateFormat), limit));
         }
 
-        public List<Orderbook> Orderbooks_historical_data(string symbolId, DateTime start, DateTime end, int limit) {
-            var url = string.Format("/v1/orderbooks/{0}/history?time_start={1}&time_end={2}&limit={3}", symbolId, start.ToString(dateFormat), end.ToString(dateFormat), limit);
-            return GetData<List<Orderbook>>(url);
+        public List<Quote> Quotes_historical_data(string symbolId, DateTime start)
+        {
+            return GetData<List<Quote>>(CoinApiEndpointUrls.Quotes_HistoricalData(symbolId, start.ToString(DateFormat)));
         }
-        public List<Orderbook> Orderbooks_historical_data(string symbolId, DateTime start) {
-            var url = string.Format("/v1/orderbooks/{0}/history?time_start={1}", symbolId, start.ToString(dateFormat));
-            return GetData<List<Orderbook>>(url);
+
+        public List<Quote> Quotes_historical_data(string symbolId, DateTime start, DateTime end)
+        {
+            return GetData<List<Quote>>(CoinApiEndpointUrls.Quotes_HistoricalData(symbolId, start.ToString(DateFormat), end.ToString(DateFormat)));
         }
-        public List<Orderbook> Orderbooks_historical_data(string symbolId, DateTime start, DateTime end) {
-            var url = string.Format("/v1/orderbooks/{0}/history?time_start={1}&time_end={2}", symbolId, start.ToString(dateFormat), end.ToString(dateFormat));
-            return GetData<List<Orderbook>>(url);
+        public List<Quote> Quotes_historical_data(string symbolId, DateTime start, int limit)
+        {
+            return GetData<List<Quote>>(CoinApiEndpointUrls.Quotes_HistoricalData(symbolId, start.ToString(DateFormat), limit));
+
         }
-        public List<Orderbook> Orderbooks_historical_data(string symbolId, DateTime start, int limit) {
-            var url = string.Format("/v1/orderbooks/{0}/history?time_start={1}&limit={2}", symbolId, start.ToString(dateFormat), limit);
-            return GetData<List<Orderbook>>(url);
+        public List<Orderbook> Orderbooks_current_data_all_filtered_bitstamp()
+        {
+            return GetData<List<Orderbook>>(CoinApiEndpointUrls.Orderbooks_CurrentFilteredBitstamp());
+        }
+
+        public Orderbook Orderbooks_current_data_symbol(string symbolId)
+        {
+            return GetData<Orderbook>(CoinApiEndpointUrls.Orderbooks_CurrentSymbol(symbolId));
+        }
+
+        public List<Orderbook> Orderbooks_last_data(string symbolId, int limit)
+        {
+            return GetData<List<Orderbook>>(CoinApiEndpointUrls.Orderbooks_LatestData(symbolId, limit));
+        }
+        public List<Orderbook> Orderbooks_last_data(string symbolId)
+        {
+            return GetData<List<Orderbook>>(CoinApiEndpointUrls.Orderbooks_LatestData(symbolId));
+        }
+
+        public List<Orderbook> Orderbooks_historical_data(string symbolId, DateTime start, DateTime end, int limit)
+        {
+            return GetData<List<Orderbook>>(CoinApiEndpointUrls.Orderbooks_HistoricalData(symbolId, start.ToString(DateFormat), end.ToString(DateFormat), limit));
+        }
+        public List<Orderbook> Orderbooks_historical_data(string symbolId, DateTime start)
+        {
+            return GetData<List<Orderbook>>(CoinApiEndpointUrls.Orderbooks_HistoricalData(symbolId, start.ToString(DateFormat)));
+        }
+        public List<Orderbook> Orderbooks_historical_data(string symbolId, DateTime start, DateTime end)
+        {
+            return GetData<List<Orderbook>>(CoinApiEndpointUrls.Orderbooks_HistoricalData(symbolId, start.ToString(DateFormat), end.ToString(DateFormat)));
+        }
+        public List<Orderbook> Orderbooks_historical_data(string symbolId, DateTime start, int limit)
+        {
+            return GetData<List<Orderbook>>(CoinApiEndpointUrls.Orderbooks_HistoricalData(symbolId, start.ToString(DateFormat), limit));
         }
 
         public List<Orderbook3> Orderbooks3_current_data_all_filtered_bitstamp()
         {
-            var url = "/v1/orderbooks3/current?filter_symbol_id=BITSTAMP";
-            return GetData<List<Orderbook3>>(url);
+            return GetData<List<Orderbook3>>(CoinApiEndpointUrls.Orderbooks3_CurrentFilteredBitstamp());
         }
 
         public Orderbook3 Orderbooks3_current_data_symbol(string symbolId)
         {
-            var url = string.Format("/v1/orderbooks3/{0}/current", symbolId);
-            return GetData<Orderbook3>(url);
+            return GetData<Orderbook3>(CoinApiEndpointUrls.Orderbooks3_Current(symbolId));
         }
     }
 
