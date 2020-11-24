@@ -10,5 +10,6 @@ public enum MessageTypeEnum {
     ohlcv,
     volume,
     hearbeat,
-    error
+    error,
+    reconnect
 }

@@ -40,6 +40,7 @@ public class CoinAPIWebSocketImpl implements CoinAPIWebSocket {
     private InvokeFunction ohlcvInvoke;
     private InvokeFunction volumeInvoke;
     private InvokeFunction errorInvoke;
+    private InvokeFunction reconnectInvoke;
 
     /**
      *
@@ -79,6 +80,9 @@ public class CoinAPIWebSocketImpl implements CoinAPIWebSocket {
                                 break;
                             case error:
                                 handle(message, Error.class, errorInvoke);
+                                break;
+                            case reconnect:
+                                handle(message, Reconnect.class, reconnectInvoke);
                                 break;
                         }
                     } catch (Exception e) {
@@ -207,6 +211,13 @@ public class CoinAPIWebSocketImpl implements CoinAPIWebSocket {
      */
     @Override
     public void setErrorInvoke(InvokeFunction function) { this.errorInvoke = function; }
+
+    /**
+     *
+     * @param function
+     */
+    @Override
+    public void setReconnectInvoke(InvokeFunction function) { this.reconnectInvoke = function; }
 
     private void handle(String message, Class deserializeClass, InvokeFunction invokeFunction) throws IOException, NotImplementedException {
 
