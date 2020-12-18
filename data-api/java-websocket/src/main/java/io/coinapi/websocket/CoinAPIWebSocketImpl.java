@@ -31,6 +31,7 @@ public class CoinAPIWebSocketImpl implements CoinAPIWebSocket {
     private ClientManager client;
     private Optional<Session> connection = Optional.empty();
     private Optional<Thread> processingMessages;
+    private volatile boolean running = true;
 
     private Queue messagesQueue = new LinkedBlockingDeque();
 
@@ -52,7 +53,7 @@ public class CoinAPIWebSocketImpl implements CoinAPIWebSocket {
         client = ClientManager.createClient();
 
         Runnable task = () -> {
-            while (true) {
+            while (running) {
                 if (messagesQueue.size() > 0) {
                     String message = (String) messagesQueue.remove();
                     InputStream stream = new ByteArrayInputStream(message.getBytes());
@@ -155,6 +156,7 @@ public class CoinAPIWebSocketImpl implements CoinAPIWebSocket {
         }
 
         if (processingMessages.isPresent() && processingMessages.get().isAlive()) {
+            running = false;
             processingMessages.get().interrupt();
             System.out.println("processingMessage thread interrupt");
         }
