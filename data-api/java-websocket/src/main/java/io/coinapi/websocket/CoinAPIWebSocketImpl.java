@@ -213,21 +213,25 @@ public class CoinAPIWebSocketImpl implements CoinAPIWebSocket {
      * @param function
      */
     @Override
-    public void setErrorInvoke(InvokeFunction function) { this.errorInvoke = function; }
+    public void setErrorInvoke(InvokeFunction function) { 
+        this.errorInvoke = function; 
+    }
 
     /**
      *
      * @param function
      */
     @Override
-    public void setReconnectInvoke(InvokeFunction function) { this.reconnectInvoke = function; }
+    public void setReconnectInvoke(InvokeFunction function) { 
+        this.reconnectInvoke = function; 
+    }
 
     private void handle(String message, Class deserializeClass, InvokeFunction invokeFunction) throws IOException, NotImplementedException {
 
         Object deserialize = json.deserialize(deserializeClass, new ByteArrayInputStream(message.getBytes()));
 
         if (invokeFunction == null) {
-            throw new NotImplementedException();
+            return;
         }
         invokeFunction.preprocesMessages((MessageBase) deserialize);
     }
