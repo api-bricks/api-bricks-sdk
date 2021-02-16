@@ -53,7 +53,7 @@ public class Book extends MessageBase {
     }
 
     public Boolean getSnapshot() {
-        return isSnapshot.equalsIgnoreCase("true);
+        return isSnapshot.equalsIgnoreCase("true");
     }
 
     @JsonAttribute(name = "is_snapshot")
