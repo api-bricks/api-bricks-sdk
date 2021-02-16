@@ -4,7 +4,7 @@
 
     <groupId>io.coinapi.websocket</groupId>
     <artifactId>v1</artifactId>
-    <version>1.6</version>
+    <version>1.7</version>
 
     <organization>
         <name>COINAPI LTD</name>
