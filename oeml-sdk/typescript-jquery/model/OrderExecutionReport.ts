@@ -82,23 +82,33 @@ export interface OrderExecutionReport {
      */
     amount_filled: number;
 
+    /**
+     * Calculated average price of all fills on this order.
+     */
+    avg_px?: number;
+
     status: models.OrdStatus;
 
     /**
      * Timestamped history of order status changes.
      */
-    time_order: Array<Array<string>>;
+    status_history?: Array<Array<string>>;
 
     /**
-     * Error message
+     * Error message.
      */
     error_message?: string;
+
+    /**
+     * Relay fill information on working orders.
+     */
+    fills?: Array<models.Fills>;
 
 }
 export namespace OrderExecutionReport {
     export enum ExecInstEnum {
-        MAKERORCANCEL = <any> 'MAKER_OR_CANCEL',
-        AUCTIONONLY = <any> 'AUCTION_ONLY',
-        INDICATIONOFINTEREST = <any> 'INDICATION_OF_INTEREST'
+        MakerOrCancel = <any> 'MAKER_OR_CANCEL',
+        AuctionOnly = <any> 'AUCTION_ONLY',
+        IndicationOfInterest = <any> 'INDICATION_OF_INTEREST'
     }
 }

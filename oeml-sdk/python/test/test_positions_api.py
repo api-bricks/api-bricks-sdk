@@ -1,5 +1,3 @@
-# coding: utf-8
-
 """
     OEML - REST API
 
@@ -11,20 +9,17 @@
 """
 
 
-from __future__ import absolute_import
-
 import unittest
 
 import openapi_client
 from openapi_client.api.positions_api import PositionsApi  # noqa: E501
-from openapi_client.rest import ApiException
 
 
 class TestPositionsApi(unittest.TestCase):
     """PositionsApi unit test stubs"""
 
     def setUp(self):
-        self.api = openapi_client.api.positions_api.PositionsApi()  # noqa: E501
+        self.api = PositionsApi()  # noqa: E501
 
     def tearDown(self):
         pass

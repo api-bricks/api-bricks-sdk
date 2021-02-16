@@ -25,11 +25,17 @@ void position_free(position_t *position) {
         return ;
     }
     listEntry_t *listEntry;
-    free(position->exchange_id);
-    list_ForEach(listEntry, position->data) {
-        position_data_free(listEntry->data);
+    if (position->exchange_id) {
+        free(position->exchange_id);
+        position->exchange_id = NULL;
     }
-    list_free(position->data);
+    if (position->data) {
+        list_ForEach(listEntry, position->data) {
+            position_data_free(listEntry->data);
+        }
+        list_free(position->data);
+        position->data = NULL;
+    }
     free(position);
 }
 

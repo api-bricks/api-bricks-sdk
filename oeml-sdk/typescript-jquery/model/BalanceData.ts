@@ -56,8 +56,8 @@ export interface BalanceData {
 }
 export namespace BalanceData {
     export enum LastUpdatedByEnum {
-        INITIALIZATION = <any> 'INITIALIZATION',
-        BALANCEMANAGER = <any> 'BALANCE_MANAGER',
-        EXCHANGE = <any> 'EXCHANGE'
+        Initialization = <any> 'INITIALIZATION',
+        BalanceManager = <any> 'BALANCE_MANAGER',
+        Exchange = <any> 'EXCHANGE'
     }
 }

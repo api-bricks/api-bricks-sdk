@@ -1,4 +1,4 @@
-/* 
+/*
  * OEML - REST API
  *
  * This section will provide necessary information about the `CoinAPI OEML REST API` protocol. This API is also available in the Postman application: <a href=\"https://postman.coinapi.io/\" target=\"_blank\">https://postman.coinapi.io/</a>       
@@ -21,7 +21,7 @@ using CoinAPI.OMS.API.SDK.Client;
 using System.Reflection;
 using Newtonsoft.Json;
 
-namespace CoinAPI.OMS.API.SDK.Test
+namespace CoinAPI.OMS.API.SDK.Test.Model
 {
     /// <summary>
     ///  Class for testing OrdSide
@@ -52,8 +52,8 @@ namespace CoinAPI.OMS.API.SDK.Test
         [Fact]
         public void OrdSideInstanceTest()
         {
-            // TODO uncomment below to test "IsInstanceOfType" OrdSide
-            //Assert.IsInstanceOfType<OrdSide> (instance, "variable 'instance' is a OrdSide");
+            // TODO uncomment below to test "IsType" OrdSide
+            //Assert.IsType<OrdSide>(instance);
         }
 
 

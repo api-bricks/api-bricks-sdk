@@ -1,4 +1,4 @@
-﻿namespace CoinAPI.REST.V1.Example
+﻿namespace CoinAPI.REST.V1
 {
     public enum CoinApiCheckStatusCode
     {

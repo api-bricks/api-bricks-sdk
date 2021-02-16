@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace CoinAPI.REST.V1.Example
+namespace CoinAPI.REST.V1
 {
     public class CoinApiRestEndpointsTester
     {
@@ -35,7 +35,7 @@ namespace CoinAPI.REST.V1.Example
 
         public Task<EndpointCheckResult<List<Exchange>>> Metadata_list_exchangesAsync()
         {
-            return HandleCheck(CoinApiEndpointUrls.Exchanges(), _coinApi.Metadata_list_exchanges());
+            return HandleCheck(CoinApiEndpointUrls.Exchanges(), _coinApi.Metadata_list_exchangesAsync());
         }
 
         public Task<EndpointCheckResult<List<Asset>>> Metadata_list_assetsAsync()

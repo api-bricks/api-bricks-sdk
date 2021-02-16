@@ -17,14 +17,14 @@
 export type OrdStatus = 'RECEIVED' | 'ROUTING' | 'ROUTED' | 'NEW' | 'PENDING_CANCEL' | 'PARTIALLY_FILLED' | 'FILLED' | 'CANCELED' | 'REJECTED';
 
 export const OrdStatus = {
-    RECEIVED: 'RECEIVED' as OrdStatus,
-    ROUTING: 'ROUTING' as OrdStatus,
-    ROUTED: 'ROUTED' as OrdStatus,
-    NEW: 'NEW' as OrdStatus,
-    PENDINGCANCEL: 'PENDING_CANCEL' as OrdStatus,
-    PARTIALLYFILLED: 'PARTIALLY_FILLED' as OrdStatus,
-    FILLED: 'FILLED' as OrdStatus,
-    CANCELED: 'CANCELED' as OrdStatus,
-    REJECTED: 'REJECTED' as OrdStatus
+    Received: 'RECEIVED' as OrdStatus,
+    Routing: 'ROUTING' as OrdStatus,
+    Routed: 'ROUTED' as OrdStatus,
+    New: 'NEW' as OrdStatus,
+    PendingCancel: 'PENDING_CANCEL' as OrdStatus,
+    PartiallyFilled: 'PARTIALLY_FILLED' as OrdStatus,
+    Filled: 'FILLED' as OrdStatus,
+    Canceled: 'CANCELED' as OrdStatus,
+    Rejected: 'REJECTED' as OrdStatus
 };
 

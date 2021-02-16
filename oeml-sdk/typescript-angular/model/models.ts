@@ -1,5 +1,6 @@
 export * from './balance';
 export * from './balanceData';
+export * from './fills';
 export * from './message';
 export * from './ordSide';
 export * from './ordStatus';

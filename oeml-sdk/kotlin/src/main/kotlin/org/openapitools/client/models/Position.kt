@@ -14,6 +14,7 @@ package org.openapitools.client.models
 import org.openapitools.client.models.PositionData
 
 import com.squareup.moshi.Json
+
 /**
  * 
  * @param exchangeId Exchange identifier used to identify the routing destination.
@@ -25,6 +26,6 @@ data class Position (
     @Json(name = "exchange_id")
     val exchangeId: kotlin.String? = null,
     @Json(name = "data")
-    val data: kotlin.Array<PositionData>? = null
+    val data: kotlin.collections.List<PositionData>? = null
 )
 

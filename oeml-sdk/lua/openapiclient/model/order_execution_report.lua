@@ -19,7 +19,7 @@ local function cast_order_execution_report(t)
 	return setmetatable(t, order_execution_report_mt)
 end
 
-local function new_order_execution_report(exchange_id, client_order_id, symbol_id_exchange, symbol_id_coinapi, amount_order, price, side, order_type, time_in_force, expire_time, exec_inst, client_order_id_format_exchange, exchange_order_id, amount_open, amount_filled, status, time_order, error_message)
+local function new_order_execution_report(exchange_id, client_order_id, symbol_id_exchange, symbol_id_coinapi, amount_order, price, side, order_type, time_in_force, expire_time, exec_inst, client_order_id_format_exchange, exchange_order_id, amount_open, amount_filled, avg_px, status, status_history, error_message, fills)
 	return cast_order_execution_report({
 		["exchange_id"] = exchange_id;
 		["client_order_id"] = client_order_id;
@@ -36,9 +36,11 @@ local function new_order_execution_report(exchange_id, client_order_id, symbol_i
 		["exchange_order_id"] = exchange_order_id;
 		["amount_open"] = amount_open;
 		["amount_filled"] = amount_filled;
+		["avg_px"] = avg_px;
 		["status"] = status;
-		["time_order"] = time_order;
+		["status_history"] = status_history;
 		["error_message"] = error_message;
+		["fills"] = fills;
 	})
 end
 

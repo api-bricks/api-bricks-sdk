@@ -43,14 +43,14 @@ Please follow the [installation procedure](#installation--usage) and then run th
 import 'package:openapi/api.dart';
 
 
-var api_instance = BalancesApi();
-var exchangeId = KRAKEN; // String | Filter the balances to the specific exchange.
+final api_instance = BalancesApi();
+final exchangeId = KRAKEN; // String | Filter the balances to the specific exchange.
 
 try {
-    var result = api_instance.v1BalancesGet(exchangeId);
+    final result = api_instance.v1BalancesGet(exchangeId);
     print(result);
 } catch (e) {
-    print("Exception when calling BalancesApi->v1BalancesGet: $e\n");
+    print('Exception when calling BalancesApi->v1BalancesGet: $e\n');
 }
 
 ```
@@ -74,6 +74,7 @@ Class | Method | HTTP request | Description
 
  - [Balance](doc//Balance.md)
  - [BalanceData](doc//BalanceData.md)
+ - [Fills](doc//Fills.md)
  - [Message](doc//Message.md)
  - [OrdSide](doc//OrdSide.md)
  - [OrdStatus](doc//OrdStatus.md)

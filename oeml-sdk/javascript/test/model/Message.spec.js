@@ -56,25 +56,25 @@
 
     it('should have the property type (base name: "type")', function() {
       // uncomment below and update the code to test the property type
-      //var instane = new OemlRestApi.Message();
+      //var instance = new OemlRestApi.Message();
       //expect(instance).to.be();
     });
 
     it('should have the property severity (base name: "severity")', function() {
       // uncomment below and update the code to test the property severity
-      //var instane = new OemlRestApi.Message();
+      //var instance = new OemlRestApi.Message();
       //expect(instance).to.be();
     });
 
     it('should have the property exchangeId (base name: "exchange_id")', function() {
       // uncomment below and update the code to test the property exchangeId
-      //var instane = new OemlRestApi.Message();
+      //var instance = new OemlRestApi.Message();
       //expect(instance).to.be();
     });
 
     it('should have the property message (base name: "message")', function() {
       // uncomment below and update the code to test the property message
-      //var instane = new OemlRestApi.Message();
+      //var instance = new OemlRestApi.Message();
       //expect(instance).to.be();
     });
 

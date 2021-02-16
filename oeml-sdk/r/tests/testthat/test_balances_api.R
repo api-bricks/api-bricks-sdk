@@ -10,7 +10,7 @@ test_that("V1BalancesGet", {
   # base path: https://13d16e9d-d8b1-4ef4-bc4a-ed8156b2b159.mock.pstmn.io
   # Get balances
   # Get current currency balance from all or single exchange.
-  # @param character  exchange.id  Filter the balances to the specific exchange.  (optional)
+  # @param exchange.id character Filter the balances to the specific exchange. (optional)
   # @return [array[Balance]]
 
   # uncomment below to test the operation

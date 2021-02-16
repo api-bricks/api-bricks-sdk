@@ -139,7 +139,7 @@ data V1OrdersGet
 -- | /Optional Param/ "exchange_id" - Filter the open orders to the specific exchange.
 instance HasOptionalParam V1OrdersGet ExchangeId where
   applyOptionalParam req (ExchangeId xs) =
-    req `setQuery` toQuery ("exchange_id", Just xs)
+    req `addQuery` toQuery ("exchange_id", Just xs)
 -- | @application/json@
 instance Produces V1OrdersGet MimeJSON
 -- | @appliction/json@

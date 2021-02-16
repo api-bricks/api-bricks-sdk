@@ -1,5 +1,3 @@
-# coding: utf-8
-
 """
     OEML - REST API
 
@@ -11,14 +9,14 @@
 """
 
 
-from __future__ import absolute_import
-
+import sys
 import unittest
-import datetime
 
 import openapi_client
-from openapi_client.models.message import Message  # noqa: E501
-from openapi_client.rest import ApiException
+from openapi_client.model.severity import Severity
+globals()['Severity'] = Severity
+from openapi_client.model.message import Message
+
 
 class TestMessage(unittest.TestCase):
     """Message unit test stubs"""
@@ -29,27 +27,11 @@ class TestMessage(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def make_instance(self, include_optional):
-        """Test Message
-            include_option is a boolean, when False only required
-            params are included, when True both required and
-            optional params are included """
-        # model = openapi_client.models.message.Message()  # noqa: E501
-        if include_optional :
-            return Message(
-                type = 'message', 
-                severity = 'INFO', 
-                exchange_id = 'KRAKEN', 
-                message = 'Ok'
-            )
-        else :
-            return Message(
-        )
-
     def testMessage(self):
         """Test Message"""
-        inst_req_only = self.make_instance(include_optional=False)
-        inst_req_and_optional = self.make_instance(include_optional=True)
+        # FIXME: construct object with mandatory attributes with example values
+        # model = Message()  # noqa: E501
+        pass
 
 
 if __name__ == '__main__':

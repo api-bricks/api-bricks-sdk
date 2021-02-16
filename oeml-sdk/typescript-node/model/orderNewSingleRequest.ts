@@ -10,7 +10,7 @@
  * Do not edit the class manually.
  */
 
-import { RequestFile } from '../api';
+import { RequestFile } from './models';
 import { OrdSide } from './ordSide';
 import { OrdType } from './ordType';
 import { TimeInForce } from './timeInForce';
@@ -121,8 +121,8 @@ export class OrderNewSingleRequest {
 
 export namespace OrderNewSingleRequest {
     export enum ExecInstEnum {
-        MAKERORCANCEL = <any> 'MAKER_OR_CANCEL',
-        AUCTIONONLY = <any> 'AUCTION_ONLY',
-        INDICATIONOFINTEREST = <any> 'INDICATION_OF_INTEREST'
+        MakerOrCancel = <any> 'MAKER_OR_CANCEL',
+        AuctionOnly = <any> 'AUCTION_ONLY',
+        IndicationOfInterest = <any> 'INDICATION_OF_INTEREST'
     }
 }

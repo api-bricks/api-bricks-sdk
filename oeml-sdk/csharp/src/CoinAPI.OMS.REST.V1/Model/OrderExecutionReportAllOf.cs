@@ -47,10 +47,12 @@ namespace CoinAPI.OMS.REST.V1.Model
         /// <param name="exchangeOrderId">Unique identifier of the order assigned by the exchange or executing system..</param>
         /// <param name="amountOpen">Quantity open for further execution. &#x60;amount_open&#x60; &#x3D; &#x60;amount_order&#x60; - &#x60;amount_filled&#x60; (required).</param>
         /// <param name="amountFilled">Total quantity filled. (required).</param>
+        /// <param name="avgPx">Calculated average price of all fills on this order..</param>
         /// <param name="status">status (required).</param>
-        /// <param name="timeOrder">Timestamped history of order status changes. (required).</param>
-        /// <param name="errorMessage">Error message.</param>
-        public OrderExecutionReportAllOf(string clientOrderIdFormatExchange = default(string), string exchangeOrderId = default(string), decimal amountOpen = default(decimal), decimal amountFilled = default(decimal), OrdStatus status = default(OrdStatus), List<List<string>> timeOrder = default(List<List<string>>), string errorMessage = default(string))
+        /// <param name="statusHistory">Timestamped history of order status changes..</param>
+        /// <param name="errorMessage">Error message..</param>
+        /// <param name="fills">Relay fill information on working orders..</param>
+        public OrderExecutionReportAllOf(string clientOrderIdFormatExchange = default(string), string exchangeOrderId = default(string), decimal amountOpen = default(decimal), decimal amountFilled = default(decimal), decimal avgPx = default(decimal), OrdStatus status = default(OrdStatus), List<List<string>> statusHistory = default(List<List<string>>), string errorMessage = default(string), List<Fills> fills = default(List<Fills>))
         {
             // to ensure "clientOrderIdFormatExchange" is required (not null)
             if (clientOrderIdFormatExchange == null)
@@ -92,18 +94,11 @@ namespace CoinAPI.OMS.REST.V1.Model
                 this.Status = status;
             }
             
-            // to ensure "timeOrder" is required (not null)
-            if (timeOrder == null)
-            {
-                throw new InvalidDataException("timeOrder is a required property for OrderExecutionReportAllOf and cannot be null");
-            }
-            else
-            {
-                this.TimeOrder = timeOrder;
-            }
-            
             this.ExchangeOrderId = exchangeOrderId;
+            this.AvgPx = avgPx;
+            this.StatusHistory = statusHistory;
             this.ErrorMessage = errorMessage;
+            this.Fills = fills;
         }
         
         /// <summary>
@@ -134,20 +129,34 @@ namespace CoinAPI.OMS.REST.V1.Model
         [DataMember(Name="amount_filled", EmitDefaultValue=true)]
         public decimal AmountFilled { get; set; }
 
+        /// <summary>
+        /// Calculated average price of all fills on this order.
+        /// </summary>
+        /// <value>Calculated average price of all fills on this order.</value>
+        [DataMember(Name="avg_px", EmitDefaultValue=false)]
+        public decimal AvgPx { get; set; }
+
 
         /// <summary>
         /// Timestamped history of order status changes.
         /// </summary>
         /// <value>Timestamped history of order status changes.</value>
-        [DataMember(Name="time_order", EmitDefaultValue=true)]
-        public List<List<string>> TimeOrder { get; set; }
+        [DataMember(Name="status_history", EmitDefaultValue=false)]
+        public List<List<string>> StatusHistory { get; set; }
 
         /// <summary>
-        /// Error message
+        /// Error message.
         /// </summary>
-        /// <value>Error message</value>
+        /// <value>Error message.</value>
         [DataMember(Name="error_message", EmitDefaultValue=false)]
         public string ErrorMessage { get; set; }
+
+        /// <summary>
+        /// Relay fill information on working orders.
+        /// </summary>
+        /// <value>Relay fill information on working orders.</value>
+        [DataMember(Name="fills", EmitDefaultValue=false)]
+        public List<Fills> Fills { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -161,9 +170,11 @@ namespace CoinAPI.OMS.REST.V1.Model
             sb.Append("  ExchangeOrderId: ").Append(ExchangeOrderId).Append("\n");
             sb.Append("  AmountOpen: ").Append(AmountOpen).Append("\n");
             sb.Append("  AmountFilled: ").Append(AmountFilled).Append("\n");
+            sb.Append("  AvgPx: ").Append(AvgPx).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
-            sb.Append("  TimeOrder: ").Append(TimeOrder).Append("\n");
+            sb.Append("  StatusHistory: ").Append(StatusHistory).Append("\n");
             sb.Append("  ErrorMessage: ").Append(ErrorMessage).Append("\n");
+            sb.Append("  Fills: ").Append(Fills).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -174,7 +185,7 @@ namespace CoinAPI.OMS.REST.V1.Model
         /// <returns>JSON string presentation of the object</returns>
         public virtual string ToJson()
         {
-            return JsonConvert.SerializeObject(this, Formatting.Indented);
+            return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
 
         /// <summary>
@@ -219,20 +230,31 @@ namespace CoinAPI.OMS.REST.V1.Model
                     this.AmountFilled.Equals(input.AmountFilled))
                 ) && 
                 (
+                    this.AvgPx == input.AvgPx ||
+                    (this.AvgPx != null &&
+                    this.AvgPx.Equals(input.AvgPx))
+                ) && 
+                (
                     this.Status == input.Status ||
                     (this.Status != null &&
                     this.Status.Equals(input.Status))
                 ) && 
                 (
-                    this.TimeOrder == input.TimeOrder ||
-                    this.TimeOrder != null &&
-                    input.TimeOrder != null &&
-                    this.TimeOrder.SequenceEqual(input.TimeOrder)
+                    this.StatusHistory == input.StatusHistory ||
+                    this.StatusHistory != null &&
+                    input.StatusHistory != null &&
+                    this.StatusHistory.SequenceEqual(input.StatusHistory)
                 ) && 
                 (
                     this.ErrorMessage == input.ErrorMessage ||
                     (this.ErrorMessage != null &&
                     this.ErrorMessage.Equals(input.ErrorMessage))
+                ) && 
+                (
+                    this.Fills == input.Fills ||
+                    this.Fills != null &&
+                    input.Fills != null &&
+                    this.Fills.SequenceEqual(input.Fills)
                 );
         }
 
@@ -253,12 +275,16 @@ namespace CoinAPI.OMS.REST.V1.Model
                     hashCode = hashCode * 59 + this.AmountOpen.GetHashCode();
                 if (this.AmountFilled != null)
                     hashCode = hashCode * 59 + this.AmountFilled.GetHashCode();
+                if (this.AvgPx != null)
+                    hashCode = hashCode * 59 + this.AvgPx.GetHashCode();
                 if (this.Status != null)
                     hashCode = hashCode * 59 + this.Status.GetHashCode();
-                if (this.TimeOrder != null)
-                    hashCode = hashCode * 59 + this.TimeOrder.GetHashCode();
+                if (this.StatusHistory != null)
+                    hashCode = hashCode * 59 + this.StatusHistory.GetHashCode();
                 if (this.ErrorMessage != null)
                     hashCode = hashCode * 59 + this.ErrorMessage.GetHashCode();
+                if (this.Fills != null)
+                    hashCode = hashCode * 59 + this.Fills.GetHashCode();
                 return hashCode;
             }
         }

@@ -8,8 +8,11 @@
 
 #' @docType class
 #' @title OrderExecutionReportAllOf
+#'
 #' @description OrderExecutionReportAllOf Class
+#'
 #' @format An \code{R6Class} generator object
+#'
 #' @field client_order_id_format_exchange  character 
 #'
 #' @field exchange_order_id  character [optional]
@@ -18,12 +21,15 @@
 #'
 #' @field amount_filled  numeric 
 #'
+#' @field avg_px  numeric [optional]
+#'
 #' @field status  \link{OrdStatus} 
 #'
-#' @field time_order  list( \link{array[character]} ) 
+#' @field status_history  list( \link{array[character]} ) [optional]
 #'
 #' @field error_message  character [optional]
 #'
+#' @field fills  list( \link{Fills} ) [optional]
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -35,10 +41,14 @@ OrderExecutionReportAllOf <- R6::R6Class(
     `exchange_order_id` = NULL,
     `amount_open` = NULL,
     `amount_filled` = NULL,
+    `avg_px` = NULL,
     `status` = NULL,
-    `time_order` = NULL,
+    `status_history` = NULL,
     `error_message` = NULL,
-    initialize = function(`client_order_id_format_exchange`, `amount_open`, `amount_filled`, `status`, `time_order`, `exchange_order_id`=NULL, `error_message`=NULL, ...){
+    `fills` = NULL,
+    initialize = function(
+        `client_order_id_format_exchange`, `amount_open`, `amount_filled`, `status`, `exchange_order_id`=NULL, `avg_px`=NULL, `status_history`=NULL, `error_message`=NULL, `fills`=NULL, ...
+    ) {
       local.optional.var <- list(...)
       if (!missing(`client_order_id_format_exchange`)) {
         stopifnot(is.character(`client_order_id_format_exchange`), length(`client_order_id_format_exchange`) == 1)
@@ -54,18 +64,26 @@ OrderExecutionReportAllOf <- R6::R6Class(
         stopifnot(R6::is.R6(`status`))
         self$`status` <- `status`
       }
-      if (!missing(`time_order`)) {
-        stopifnot(is.vector(`time_order`), length(`time_order`) != 0)
-        sapply(`time_order`, function(x) stopifnot(R6::is.R6(x)))
-        self$`time_order` <- `time_order`
-      }
       if (!is.null(`exchange_order_id`)) {
         stopifnot(is.character(`exchange_order_id`), length(`exchange_order_id`) == 1)
         self$`exchange_order_id` <- `exchange_order_id`
       }
+      if (!is.null(`avg_px`)) {
+        self$`avg_px` <- `avg_px`
+      }
+      if (!is.null(`status_history`)) {
+        stopifnot(is.vector(`status_history`), length(`status_history`) != 0)
+        sapply(`status_history`, function(x) stopifnot(R6::is.R6(x)))
+        self$`status_history` <- `status_history`
+      }
       if (!is.null(`error_message`)) {
         stopifnot(is.character(`error_message`), length(`error_message`) == 1)
         self$`error_message` <- `error_message`
+      }
+      if (!is.null(`fills`)) {
+        stopifnot(is.vector(`fills`), length(`fills`) != 0)
+        sapply(`fills`, function(x) stopifnot(R6::is.R6(x)))
+        self$`fills` <- `fills`
       }
     },
     toJSON = function() {
@@ -86,17 +104,25 @@ OrderExecutionReportAllOf <- R6::R6Class(
         OrderExecutionReportAllOfObject[['amount_filled']] <-
           self$`amount_filled`
       }
+      if (!is.null(self$`avg_px`)) {
+        OrderExecutionReportAllOfObject[['avg_px']] <-
+          self$`avg_px`
+      }
       if (!is.null(self$`status`)) {
         OrderExecutionReportAllOfObject[['status']] <-
           self$`status`$toJSON()
       }
-      if (!is.null(self$`time_order`)) {
-        OrderExecutionReportAllOfObject[['time_order']] <-
-          lapply(self$`time_order`, function(x) x$toJSON())
+      if (!is.null(self$`status_history`)) {
+        OrderExecutionReportAllOfObject[['status_history']] <-
+          lapply(self$`status_history`, function(x) x$toJSON())
       }
       if (!is.null(self$`error_message`)) {
         OrderExecutionReportAllOfObject[['error_message']] <-
           self$`error_message`
+      }
+      if (!is.null(self$`fills`)) {
+        OrderExecutionReportAllOfObject[['fills']] <-
+          lapply(self$`fills`, function(x) x$toJSON())
       }
 
       OrderExecutionReportAllOfObject
@@ -115,17 +141,24 @@ OrderExecutionReportAllOf <- R6::R6Class(
       if (!is.null(OrderExecutionReportAllOfObject$`amount_filled`)) {
         self$`amount_filled` <- OrderExecutionReportAllOfObject$`amount_filled`
       }
+      if (!is.null(OrderExecutionReportAllOfObject$`avg_px`)) {
+        self$`avg_px` <- OrderExecutionReportAllOfObject$`avg_px`
+      }
       if (!is.null(OrderExecutionReportAllOfObject$`status`)) {
         statusObject <- OrdStatus$new()
         statusObject$fromJSON(jsonlite::toJSON(OrderExecutionReportAllOfObject$status, auto_unbox = TRUE, digits = NA))
         self$`status` <- statusObject
       }
-      if (!is.null(OrderExecutionReportAllOfObject$`time_order`)) {
-        self$`time_order` <- ApiClient$new()$deserializeObj(OrderExecutionReportAllOfObject$`time_order`, "array[array[character]]", loadNamespace("openapi"))
+      if (!is.null(OrderExecutionReportAllOfObject$`status_history`)) {
+        self$`status_history` <- ApiClient$new()$deserializeObj(OrderExecutionReportAllOfObject$`status_history`, "array[array[character]]", loadNamespace("openapi"))
       }
       if (!is.null(OrderExecutionReportAllOfObject$`error_message`)) {
         self$`error_message` <- OrderExecutionReportAllOfObject$`error_message`
       }
+      if (!is.null(OrderExecutionReportAllOfObject$`fills`)) {
+        self$`fills` <- ApiClient$new()$deserializeObj(OrderExecutionReportAllOfObject$`fills`, "array[Fills]", loadNamespace("openapi"))
+      }
+      self
     },
     toJSONString = function() {
       jsoncontent <- c(
@@ -157,6 +190,13 @@ OrderExecutionReportAllOf <- R6::R6Class(
                 ',
         self$`amount_filled`
         )},
+        if (!is.null(self$`avg_px`)) {
+        sprintf(
+        '"avg_px":
+          %d
+                ',
+        self$`avg_px`
+        )},
         if (!is.null(self$`status`)) {
         sprintf(
         '"status":
@@ -164,12 +204,12 @@ OrderExecutionReportAllOf <- R6::R6Class(
         ',
         jsonlite::toJSON(self$`status`$toJSON(), auto_unbox=TRUE, digits = NA)
         )},
-        if (!is.null(self$`time_order`)) {
+        if (!is.null(self$`status_history`)) {
         sprintf(
-        '"time_order":
+        '"status_history":
         [%s]
 ',
-        paste(sapply(self$`time_order`, function(x) jsonlite::toJSON(x$toJSON(), auto_unbox=TRUE, digits = NA)), collapse=",")
+        paste(sapply(self$`status_history`, function(x) jsonlite::toJSON(x$toJSON(), auto_unbox=TRUE, digits = NA)), collapse=",")
         )},
         if (!is.null(self$`error_message`)) {
         sprintf(
@@ -177,6 +217,13 @@ OrderExecutionReportAllOf <- R6::R6Class(
           "%s"
                 ',
         self$`error_message`
+        )},
+        if (!is.null(self$`fills`)) {
+        sprintf(
+        '"fills":
+        [%s]
+',
+        paste(sapply(self$`fills`, function(x) jsonlite::toJSON(x$toJSON(), auto_unbox=TRUE, digits = NA)), collapse=",")
         )}
       )
       jsoncontent <- paste(jsoncontent, collapse = ",")
@@ -188,10 +235,13 @@ OrderExecutionReportAllOf <- R6::R6Class(
       self$`exchange_order_id` <- OrderExecutionReportAllOfObject$`exchange_order_id`
       self$`amount_open` <- OrderExecutionReportAllOfObject$`amount_open`
       self$`amount_filled` <- OrderExecutionReportAllOfObject$`amount_filled`
+      self$`avg_px` <- OrderExecutionReportAllOfObject$`avg_px`
       self$`status` <- OrdStatus$new()$fromJSON(jsonlite::toJSON(OrderExecutionReportAllOfObject$status, auto_unbox = TRUE, digits = NA))
-      self$`time_order` <- ApiClient$new()$deserializeObj(OrderExecutionReportAllOfObject$`time_order`, "array[array[character]]", loadNamespace("openapi"))
+      self$`status_history` <- ApiClient$new()$deserializeObj(OrderExecutionReportAllOfObject$`status_history`, "array[array[character]]", loadNamespace("openapi"))
       self$`error_message` <- OrderExecutionReportAllOfObject$`error_message`
+      self$`fills` <- ApiClient$new()$deserializeObj(OrderExecutionReportAllOfObject$`fills`, "array[Fills]", loadNamespace("openapi"))
       self
     }
   )
 )
+

@@ -10,15 +10,15 @@
  * Do not edit the class manually.
  */
 
-import { RequestFile } from '../api';
+import { RequestFile } from './models';
 
 /**
 * Order time in force options are documented in the separate section: <a href=\"#oeml-order-params-tif\">OEML / Starter Guide / Order parameters / Time in force</a> 
 */
 export enum TimeInForce {
-    GOODTILLCANCEL = <any> 'GOOD_TILL_CANCEL',
-    GOODTILLTIMEEXCHANGE = <any> 'GOOD_TILL_TIME_EXCHANGE',
-    GOODTILLTIMEOMS = <any> 'GOOD_TILL_TIME_OMS',
-    FILLORKILL = <any> 'FILL_OR_KILL',
-    IMMEDIATEORCANCEL = <any> 'IMMEDIATE_OR_CANCEL'
+    GoodTillCancel = <any> 'GOOD_TILL_CANCEL',
+    GoodTillTimeExchange = <any> 'GOOD_TILL_TIME_EXCHANGE',
+    GoodTillTimeOms = <any> 'GOOD_TILL_TIME_OMS',
+    FillOrKill = <any> 'FILL_OR_KILL',
+    ImmediateOrCancel = <any> 'IMMEDIATE_OR_CANCEL'
 }

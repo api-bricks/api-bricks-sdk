@@ -9,24 +9,30 @@
        'exchange_order_id' => binary(),
        'amount_open' := integer(),
        'amount_filled' := integer(),
+       'avg_px' => integer(),
        'status' := openapi_ord_status:openapi_ord_status(),
-       'time_order' := list(),
-       'error_message' => binary()
+       'status_history' => list(),
+       'error_message' => binary(),
+       'fills' => list()
      }.
 
 encode(#{ 'client_order_id_format_exchange' := ClientOrderIdFormatExchange,
           'exchange_order_id' := ExchangeOrderId,
           'amount_open' := AmountOpen,
           'amount_filled' := AmountFilled,
+          'avg_px' := AvgPx,
           'status' := Status,
-          'time_order' := TimeOrder,
-          'error_message' := ErrorMessage
+          'status_history' := StatusHistory,
+          'error_message' := ErrorMessage,
+          'fills' := Fills
         }) ->
     #{ 'client_order_id_format_exchange' => ClientOrderIdFormatExchange,
        'exchange_order_id' => ExchangeOrderId,
        'amount_open' => AmountOpen,
        'amount_filled' => AmountFilled,
+       'avg_px' => AvgPx,
        'status' => Status,
-       'time_order' => TimeOrder,
-       'error_message' => ErrorMessage
+       'status_history' => StatusHistory,
+       'error_message' => ErrorMessage,
+       'fills' => Fills
      }.

@@ -72,10 +72,10 @@ private class OASBalanceDataTest {
     @isTest
     private static void maintainRenamedProperties() {
         OASBalanceData balanceData = new OASBalanceData();
-        Map<String, String> propertyMappings = balanceData.getPropertyMappings();
-        System.assertEquals('assetIdExchange', propertyMappings.get('asset_id_exchange'));
-        System.assertEquals('assetIdCoinapi', propertyMappings.get('asset_id_coinapi'));
-        System.assertEquals('lastUpdatedBy', propertyMappings.get('last_updated_by'));
-        System.assertEquals('rateUsd', propertyMappings.get('rate_usd'));
+        Map<String, String> x-property-mappings = balanceData.getx-property-mappings();
+        System.assertEquals('assetIdExchange', x-property-mappings.get('asset_id_exchange'));
+        System.assertEquals('assetIdCoinapi', x-property-mappings.get('asset_id_coinapi'));
+        System.assertEquals('lastUpdatedBy', x-property-mappings.get('last_updated_by'));
+        System.assertEquals('rateUsd', x-property-mappings.get('rate_usd'));
     }
 }

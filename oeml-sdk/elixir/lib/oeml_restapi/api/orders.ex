@@ -25,7 +25,7 @@ defmodule OEML-RESTAPI.Api.Orders do
   {:ok, %OEML-RESTAPI.Model.Message{}} on success
   {:error, info} on failure
   """
-  @spec v1_orders_cancel_all_post(Tesla.Env.client, OEML-RESTAPI.Model.OrderCancelAllRequest.t, keyword()) :: {:ok, OEML-RESTAPI.Model.Message.t} | {:error, Tesla.Env.t}
+  @spec v1_orders_cancel_all_post(Tesla.Env.client, OEML-RESTAPI.Model.OrderCancelAllRequest.t, keyword()) :: {:ok, OEML-RESTAPI.Model.Message.t} | {:ok, OEML-RESTAPI.Model.ValidationError.t} | {:error, Tesla.Env.t}
   def v1_orders_cancel_all_post(connection, order_cancel_all_request, _opts \\ []) do
     %{}
     |> method(:post)
@@ -54,7 +54,7 @@ defmodule OEML-RESTAPI.Api.Orders do
   {:ok, %OEML-RESTAPI.Model.OrderExecutionReport{}} on success
   {:error, info} on failure
   """
-  @spec v1_orders_cancel_post(Tesla.Env.client, OEML-RESTAPI.Model.OrderCancelSingleRequest.t, keyword()) :: {:ok, OEML-RESTAPI.Model.OrderExecutionReport.t} | {:error, Tesla.Env.t}
+  @spec v1_orders_cancel_post(Tesla.Env.client, OEML-RESTAPI.Model.OrderCancelSingleRequest.t, keyword()) :: {:ok, OEML-RESTAPI.Model.OrderExecutionReport.t} | {:ok, OEML-RESTAPI.Model.Message.t} | {:ok, OEML-RESTAPI.Model.ValidationError.t} | {:error, Tesla.Env.t}
   def v1_orders_cancel_post(connection, order_cancel_single_request, _opts \\ []) do
     %{}
     |> method(:post)
@@ -83,7 +83,7 @@ defmodule OEML-RESTAPI.Api.Orders do
   {:ok, [%OrderExecutionReport{}, ...]} on success
   {:error, info} on failure
   """
-  @spec v1_orders_get(Tesla.Env.client, keyword()) :: {:ok, list(OEML-RESTAPI.Model.OrderExecutionReport.t)} | {:error, Tesla.Env.t}
+  @spec v1_orders_get(Tesla.Env.client, keyword()) :: {:ok, OEML-RESTAPI.Model.Message.t} | {:ok, list(OEML-RESTAPI.Model.OrderExecutionReport.t)} | {:error, Tesla.Env.t}
   def v1_orders_get(connection, opts \\ []) do
     optional_params = %{
       :"exchange_id" => :query
@@ -114,7 +114,7 @@ defmodule OEML-RESTAPI.Api.Orders do
   {:ok, %OEML-RESTAPI.Model.OrderExecutionReport{}} on success
   {:error, info} on failure
   """
-  @spec v1_orders_post(Tesla.Env.client, OEML-RESTAPI.Model.OrderNewSingleRequest.t, keyword()) :: {:ok, OEML-RESTAPI.Model.OrderExecutionReport.t} | {:error, Tesla.Env.t}
+  @spec v1_orders_post(Tesla.Env.client, OEML-RESTAPI.Model.OrderNewSingleRequest.t, keyword()) :: {:ok, OEML-RESTAPI.Model.OrderExecutionReport.t} | {:ok, OEML-RESTAPI.Model.Message.t} | {:ok, OEML-RESTAPI.Model.ValidationError.t} | {:error, Tesla.Env.t}
   def v1_orders_post(connection, order_new_single_request, _opts \\ []) do
     %{}
     |> method(:post)
@@ -144,7 +144,7 @@ defmodule OEML-RESTAPI.Api.Orders do
   {:ok, %OEML-RESTAPI.Model.OrderExecutionReport{}} on success
   {:error, info} on failure
   """
-  @spec v1_orders_status_client_order_id_get(Tesla.Env.client, String.t, keyword()) :: {:ok, OEML-RESTAPI.Model.OrderExecutionReport.t} | {:error, Tesla.Env.t}
+  @spec v1_orders_status_client_order_id_get(Tesla.Env.client, String.t, keyword()) :: {:ok, OEML-RESTAPI.Model.OrderExecutionReport.t} | {:ok, OEML-RESTAPI.Model.Message.t} | {:error, Tesla.Env.t}
   def v1_orders_status_client_order_id_get(connection, client_order_id, _opts \\ []) do
     %{}
     |> method(:get)

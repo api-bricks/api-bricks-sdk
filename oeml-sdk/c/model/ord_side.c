@@ -33,9 +33,9 @@ fail:
     return NULL;
 }
 
-ord_side_ord_side_e ord_side_ord_side_parseFromJSON(cJSON *ord_sideJSON) {
-    ord_side_ord_side_e *ord_side = NULL;
-    ord_side_ord_side_e ord_sideVariable;
+oeml___rest_api_ord_side__e ord_side_ord_side_parseFromJSON(cJSON *ord_sideJSON) {
+    oeml___rest_api_ord_side__e *ord_side = NULL;
+    oeml___rest_api_ord_side__e ord_sideVariable;
     cJSON *ord_sideVar = cJSON_GetObjectItemCaseSensitive(ord_sideJSON, "ord_side");
     if(!cJSON_IsString(ord_sideVar) || (ord_sideVar->valuestring == NULL)){
         goto end;

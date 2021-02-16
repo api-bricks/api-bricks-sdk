@@ -59,7 +59,7 @@ class OAIHttpRequestWorker : public QObject {
     Q_OBJECT
 
 public:
-    explicit OAIHttpRequestWorker(QObject *parent = nullptr);
+    explicit OAIHttpRequestWorker(QObject *parent = nullptr, QNetworkAccessManager *manager = nullptr);
     virtual ~OAIHttpRequestWorker();
 
     QByteArray response;
@@ -96,13 +96,11 @@ private:
     bool isRequestCompressionEnabled;
     int  httpResponseCode;
 
-    void on_manager_timeout(QNetworkReply *reply);
+    void on_reply_timeout(QNetworkReply *reply);
+    void on_reply_finished(QNetworkReply *reply);
     void process_response(QNetworkReply *reply);
     QByteArray decompress(const QByteArray& data);
     QByteArray compress(const QByteArray& input, int level, OAICompressionType compressType);
- 
-private slots:
-    void on_manager_finished(QNetworkReply *reply);
 };
 
 } // namespace OpenAPI

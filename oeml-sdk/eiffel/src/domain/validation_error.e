@@ -14,12 +14,7 @@ note
 	EIS:"Eiffel openapi generator", "src=https://openapi-generator.tech", "protocol=uri"
 class VALIDATION_ERROR 
 
-inherit
 
-  ANY
-      redefine
-          out 
-      end
 
 
 feature --Access
@@ -28,8 +23,8 @@ feature --Access
       
     title: detachable STRING_32 
       
-    status: REAL_32 
-      
+ 	status: REAL_32 
+    	 
     trace_id: detachable STRING_32 
       
     errors: detachable STRING_32 
@@ -80,7 +75,7 @@ feature -- Change Element
 
  feature -- Status Report
 
-    out: STRING
+    output: STRING
           -- <Precursor>
       do
         create Result.make_empty

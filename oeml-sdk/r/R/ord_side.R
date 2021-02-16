@@ -8,35 +8,58 @@
 
 #' @docType class
 #' @title OrdSide
+#'
 #' @description OrdSide Class
+#'
 #' @format An \code{R6Class} generator object
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
 #' @export
 OrdSide <- R6::R6Class(
-  'OrdSide',
-  public = list(
-    initialize = function(, ...){
-      local.optional.var <- list(...)
-    },
-    toJSON = function() {
-      OrdSideObject <- list()
+    "OrdSide",
+    public = list(
+        initialize = function(...) {
+            local.optional.var <- list(...)
+            val <- unlist(local.optional.var)
+            enumvec <- .parse_OrdSide()
 
-      OrdSideObject
-    },
-    fromJSON = function(OrdSideJson) {
-      OrdSideObject <- jsonlite::fromJSON(OrdSideJson)
-    },
-    toJSONString = function() {
-      jsoncontent <- c(
-      )
-      jsoncontent <- paste(jsoncontent, collapse = ",")
-      paste('{', jsoncontent, '}', sep = "")
-    },
-    fromJSONString = function(OrdSideJson) {
-      OrdSideObject <- jsonlite::fromJSON(OrdSideJson)
-      self
-    }
-  )
+            stopifnot(length(val) == 1L)
+
+            if (!val %in% enumvec)
+                stop("Use one of the valid values: ",
+                    paste0(enumvec, collapse = ", "))
+            private$value <- val
+        },
+        toJSON = function() {
+            jsonlite::toJSON(private$value, auto_unbox = TRUE)
+        },
+        fromJSON = function(OrdSideJson) {
+            private$value <- jsonlite::fromJSON(OrdSideJson,
+                simplifyVector = FALSE)
+            self
+        },
+        toJSONString = function() {
+            as.character(jsonlite::toJSON(private$value,
+                auto_unbox = TRUE))
+        },
+        fromJSONString = function(OrdSideJson) {
+            private$value <- jsonlite::fromJSON(OrdSideJson,
+                simplifyVector = FALSE)
+            self
+        }
+    ),
+    private = list(
+        value = NULL
+    )
 )
+
+# add to utils.R
+.parse_OrdSide <- function(vals) {
+    res <- gsub("^\\[|\\]$", "",
+        "[BUY, SELL]"
+    )
+    unlist(strsplit(res, ", "))
+}
+
+

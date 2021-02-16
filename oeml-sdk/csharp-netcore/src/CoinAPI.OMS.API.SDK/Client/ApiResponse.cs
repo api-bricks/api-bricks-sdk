@@ -1,4 +1,4 @@
-/* 
+/*
  * OEML - REST API
  *
  * This section will provide necessary information about the `CoinAPI OEML REST API` protocol. This API is also available in the Postman application: <a href=\"https://postman.coinapi.io/\" target=\"_blank\">https://postman.coinapi.io/</a>       
@@ -64,7 +64,7 @@ namespace CoinAPI.OMS.API.SDK.Client
     public class ApiResponse<T> : IApiResponse
     {
         #region Properties
-        
+
         /// <summary>
         /// Gets or sets the status code (HTTP status code)
         /// </summary>
@@ -112,12 +112,12 @@ namespace CoinAPI.OMS.API.SDK.Client
         /// <summary>
         /// The raw content
         /// </summary>
-        public string RawContent { get;}
-        
+        public string RawContent { get; }
+
         #endregion Properties
-        
+
         #region Constructors
-        
+
         /// <summary>
         /// Initializes a new instance of the <see cref="ApiResponse{T}" /> class.
         /// </summary>

@@ -14,12 +14,7 @@ note
 	EIS:"Eiffel openapi generator", "src=https://openapi-generator.tech", "protocol=uri"
 class POSITION 
 
-inherit
 
-  ANY
-      redefine
-          out 
-      end
 
 
 feature --Access
@@ -50,7 +45,7 @@ feature -- Change Element
 
  feature -- Status Report
 
-    out: STRING
+    output: STRING
           -- <Precursor>
       do
         create Result.make_empty

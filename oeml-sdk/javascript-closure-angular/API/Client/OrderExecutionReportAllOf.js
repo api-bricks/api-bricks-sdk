@@ -35,6 +35,13 @@ API.Client.OrderExecutionReportAllOf.prototype.amountOpen;
 API.Client.OrderExecutionReportAllOf.prototype.amountFilled;
 
 /**
+ * Calculated average price of all fills on this order.
+ * @type {!number}
+ * @export
+ */
+API.Client.OrderExecutionReportAllOf.prototype.avgPx;
+
+/**
  * @type {!API.Client.OrdStatus}
  * @export
  */
@@ -45,12 +52,19 @@ API.Client.OrderExecutionReportAllOf.prototype.status;
  * @type {!Array<!Array<!string>>}
  * @export
  */
-API.Client.OrderExecutionReportAllOf.prototype.timeOrder;
+API.Client.OrderExecutionReportAllOf.prototype.statusHistory;
 
 /**
- * Error message
+ * Error message.
  * @type {!string}
  * @export
  */
 API.Client.OrderExecutionReportAllOf.prototype.errorMessage;
+
+/**
+ * Relay fill information on working orders.
+ * @type {!Array<!API.Client.Fills>}
+ * @export
+ */
+API.Client.OrderExecutionReportAllOf.prototype.fills;
 

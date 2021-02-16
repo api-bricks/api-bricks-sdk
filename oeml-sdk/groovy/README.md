@@ -8,7 +8,7 @@ This Groovy package, using the [http-builder-ng library](https://http-builder-ng
 
 - API version: v1
 - Package version: v1
-- Build date: 2020-09-18T23:23:31.200Z[Etc/UTC]
+- Build date: 2021-01-13T14:55:50.043Z[Etc/UTC]
 - Build package: org.openapitools.codegen.languages.GroovyClientCodegen
 For more information, please visit [https://www.coinapi.io](https://www.coinapi.io)
 
@@ -36,7 +36,7 @@ Then, run:
 
 ```groovy
 def apiInstance = new BalancesApi()
-def exchangeId = KRAKEN // String | Filter the balances to the specific exchange.
+def exchangeId = "KRAKEN" // String | Filter the balances to the specific exchange.
 
 apiInstance.v1BalancesGet(exchangeId)
     {

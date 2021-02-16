@@ -31,10 +31,22 @@ void validation_error_free(validation_error_t *validation_error) {
         return ;
     }
     listEntry_t *listEntry;
-    free(validation_error->type);
-    free(validation_error->title);
-    free(validation_error->trace_id);
-    free(validation_error->errors);
+    if (validation_error->type) {
+        free(validation_error->type);
+        validation_error->type = NULL;
+    }
+    if (validation_error->title) {
+        free(validation_error->title);
+        validation_error->title = NULL;
+    }
+    if (validation_error->trace_id) {
+        free(validation_error->trace_id);
+        validation_error->trace_id = NULL;
+    }
+    if (validation_error->errors) {
+        free(validation_error->errors);
+        validation_error->errors = NULL;
+    }
     free(validation_error);
 }
 

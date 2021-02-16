@@ -25,11 +25,17 @@ void balance_free(balance_t *balance) {
         return ;
     }
     listEntry_t *listEntry;
-    free(balance->exchange_id);
-    list_ForEach(listEntry, balance->data) {
-        balance_data_free(listEntry->data);
+    if (balance->exchange_id) {
+        free(balance->exchange_id);
+        balance->exchange_id = NULL;
     }
-    list_free(balance->data);
+    if (balance->data) {
+        list_ForEach(listEntry, balance->data) {
+            balance_data_free(listEntry->data);
+        }
+        list_free(balance->data);
+        balance->data = NULL;
+    }
     free(balance);
 }
 

@@ -44,6 +44,13 @@ describe("order_execution_report_all_of", function()
     end)
   end)
 
+  -- unit tests for the property 'avg_px'
+  describe("property avg_px test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
   -- unit tests for the property 'status'
   describe("property status test", function()
     it("should work", function()
@@ -51,8 +58,8 @@ describe("order_execution_report_all_of", function()
     end)
   end)
 
-  -- unit tests for the property 'time_order'
-  describe("property time_order test", function()
+  -- unit tests for the property 'status_history'
+  describe("property status_history test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
@@ -60,6 +67,13 @@ describe("order_execution_report_all_of", function()
 
   -- unit tests for the property 'error_message'
   describe("property error_message test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for the property 'fills'
+  describe("property fills test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)

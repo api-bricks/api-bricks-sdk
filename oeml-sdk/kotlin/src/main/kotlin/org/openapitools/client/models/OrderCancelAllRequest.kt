@@ -13,6 +13,7 @@ package org.openapitools.client.models
 
 
 import com.squareup.moshi.Json
+
 /**
  * Cancel all orders request object.
  * @param exchangeId Identifier of the exchange from which active orders should be canceled.

@@ -26,7 +26,7 @@ namespace CoinAPI.WebSocket.V1.Tests
             };
             var timeout = TimeSpan.FromSeconds(10);
 
-            using (var wsClient = new CoinApiWsClientReconnect(false))
+            using (var wsClient = new CoinApiWsClientReconnect(true))
             {
                 wsClient.Error += (s, e) => Debug.WriteLine(e.Message);
 

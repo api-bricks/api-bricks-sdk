@@ -8,8 +8,11 @@
 
 #' @docType class
 #' @title BalanceData
+#'
 #' @description BalanceData Class
+#'
 #' @format An \code{R6Class} generator object
+#'
 #' @field asset_id_exchange  character [optional]
 #'
 #' @field asset_id_coinapi  character [optional]
@@ -26,7 +29,6 @@
 #'
 #' @field traded  numeric [optional]
 #'
-#'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
 #' @export
@@ -41,7 +43,9 @@ BalanceData <- R6::R6Class(
     `last_updated_by` = NULL,
     `rate_usd` = NULL,
     `traded` = NULL,
-    initialize = function(`asset_id_exchange`=NULL, `asset_id_coinapi`=NULL, `balance`=NULL, `available`=NULL, `locked`=NULL, `last_updated_by`=NULL, `rate_usd`=NULL, `traded`=NULL, ...){
+    initialize = function(
+        `asset_id_exchange`=NULL, `asset_id_coinapi`=NULL, `balance`=NULL, `available`=NULL, `locked`=NULL, `last_updated_by`=NULL, `rate_usd`=NULL, `traded`=NULL, ...
+    ) {
       local.optional.var <- list(...)
       if (!is.null(`asset_id_exchange`)) {
         stopifnot(is.character(`asset_id_exchange`), length(`asset_id_exchange`) == 1)
@@ -139,6 +143,7 @@ BalanceData <- R6::R6Class(
       if (!is.null(BalanceDataObject$`traded`)) {
         self$`traded` <- BalanceDataObject$`traded`
       }
+      self
     },
     toJSONString = function() {
       jsoncontent <- c(
@@ -216,3 +221,4 @@ BalanceData <- R6::R6Class(
     }
   )
 )
+

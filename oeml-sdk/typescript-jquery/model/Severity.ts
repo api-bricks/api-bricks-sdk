@@ -19,7 +19,7 @@ import * as models from './models';
     * Severity of the message.
     */
 export enum Severity {
-    INFO = <any> 'INFO',
-    WARNING = <any> 'WARNING',
-    ERROR = <any> 'ERROR'
+    Info = <any> 'INFO',
+    Warning = <any> 'WARNING',
+    Error = <any> 'ERROR'
 }

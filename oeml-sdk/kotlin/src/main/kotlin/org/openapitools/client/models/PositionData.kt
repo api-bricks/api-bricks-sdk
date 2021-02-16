@@ -14,6 +14,7 @@ package org.openapitools.client.models
 import org.openapitools.client.models.OrdSide
 
 import com.squareup.moshi.Json
+
 /**
  * The Position object.
  * @param symbolIdExchange Exchange symbol.

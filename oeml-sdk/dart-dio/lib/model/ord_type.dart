@@ -1,4 +1,4 @@
-        import 'package:built_collection/built_collection.dart';
+import 'package:built_collection/built_collection.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -6,9 +6,9 @@ part 'ord_type.g.dart';
 
 class OrdType extends EnumClass {
 
-  /// Order types are documented in the separate section: &lt;a href&#x3D;\&quot;#oeml-order-params-type\&quot;&gt;OEML / Starter Guide / Order parameters / Order type&lt;/a&gt; 
-  @BuiltValueEnumConst(wireName: "LIMIT")
-  static const OrdType lIMIT = _$lIMIT;
+  /// Order types are documented in the separate section: <a href=\"#oeml-order-params-type\">OEML / Starter Guide / Order parameters / Order type</a> 
+  @BuiltValueEnumConst(wireName: r'LIMIT')
+  static const OrdType LIMIT = _$LIMIT;
 
   static Serializer<OrdType> get serializer => _$ordTypeSerializer;
 

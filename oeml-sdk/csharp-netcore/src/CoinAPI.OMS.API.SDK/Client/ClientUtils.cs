@@ -1,4 +1,4 @@
-/* 
+/*
  * OEML - REST API
  *
  * This section will provide necessary information about the `CoinAPI OEML REST API` protocol. This API is also available in the Postman application: <a href=\"https://postman.coinapi.io/\" target=\"_blank\">https://postman.coinapi.io/</a>       
@@ -11,6 +11,7 @@
 
 using System;
 using System.Collections;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -35,7 +36,7 @@ namespace CoinAPI.OMS.API.SDK.Client
         }
 
         /// <summary>
-        /// Convert params to key/value pairs. 
+        /// Convert params to key/value pairs.
         /// Use collectionFormat to properly format lists and collections.
         /// </summary>
         /// <param name="collectionFormat">The swagger-supported collection format, one of: csv, tsv, ssv, pipes, multi</param>
@@ -60,7 +61,7 @@ namespace CoinAPI.OMS.API.SDK.Client
 
             return parameters;
         }
-        
+
         /// <summary>
         /// If parameter is DateTime, output in a formatted string (default ISO 8601), customizable with Configuration.DateTime.
         /// If parameter is a list, join the list with ",".
@@ -88,7 +89,7 @@ namespace CoinAPI.OMS.API.SDK.Client
             if (obj is ICollection collection)
                 return string.Join(",", collection.Cast<object>());
 
-            return Convert.ToString(obj);
+            return Convert.ToString(obj, CultureInfo.InvariantCulture);
         }
 
         /// <summary>

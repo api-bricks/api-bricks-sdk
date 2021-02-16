@@ -30,20 +30,32 @@ void main() {
       // TODO
     });
 
+    // Calculated average price of all fills on this order.
+    // num avgPx (default value: null)
+    test('to test the property `avgPx`', () async {
+      // TODO
+    });
+
     // OrdStatus status (default value: null)
     test('to test the property `status`', () async {
       // TODO
     });
 
     // Timestamped history of order status changes.
-    // List<List<String>> timeOrder (default value: const [])
-    test('to test the property `timeOrder`', () async {
+    // List<List<String>> statusHistory (default value: const [])
+    test('to test the property `statusHistory`', () async {
       // TODO
     });
 
-    // Error message
+    // Error message.
     // String errorMessage (default value: null)
     test('to test the property `errorMessage`', () async {
+      // TODO
+    });
+
+    // Relay fill information on working orders.
+    // List<Fills> fills (default value: const [])
+    test('to test the property `fills`', () async {
       // TODO
     });
 

@@ -107,7 +107,7 @@ No authorization required
 
 <a name="v1OrdersGet"></a>
 # **v1OrdersGet**
-> kotlin.Array&lt;OrderExecutionReport&gt; v1OrdersGet(exchangeId)
+> kotlin.collections.List&lt;OrderExecutionReport&gt; v1OrdersGet(exchangeId)
 
 Get open orders
 
@@ -122,7 +122,7 @@ Get last execution reports for open orders across all or single exchange.
 val apiInstance = OrdersApi()
 val exchangeId : kotlin.String = KRAKEN // kotlin.String | Filter the open orders to the specific exchange.
 try {
-    val result : kotlin.Array<OrderExecutionReport> = apiInstance.v1OrdersGet(exchangeId)
+    val result : kotlin.collections.List<OrderExecutionReport> = apiInstance.v1OrdersGet(exchangeId)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling OrdersApi#v1OrdersGet")
@@ -141,7 +141,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**kotlin.Array&lt;OrderExecutionReport&gt;**](OrderExecutionReport.md)
+[**kotlin.collections.List&lt;OrderExecutionReport&gt;**](OrderExecutionReport.md)
 
 ### Authorization
 

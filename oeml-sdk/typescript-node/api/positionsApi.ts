@@ -10,8 +10,9 @@
  * Do not edit the class manually.
  */
 
-import localVarRequest = require('request');
-import http = require('http');
+
+import localVarRequest from 'request';
+import http from 'http';
 
 /* tslint:disable:no-unused-locals */
 import { Message } from '../model/message';
@@ -91,7 +92,7 @@ export class PositionsApi {
      * @summary Get open positions
      * @param exchangeId Filter the balances to the specific exchange.
      */
-    public async v1PositionsGet (exchangeId?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: Array<Position>;  }> {
+    public async v1PositionsGet (exchangeId?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<Position>;  }> {
         const localVarPath = this.basePath + '/v1/positions';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -137,7 +138,7 @@ export class PositionsApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: Array<Position>;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: Array<Position>;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);

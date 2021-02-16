@@ -72,8 +72,7 @@ private class OASMessageTest {
     @isTest
     private static void maintainRenamedProperties() {
         OASMessage message = new OASMessage();
-        Map<String, String> propertyMappings = message.getPropertyMappings();
-        System.assertEquals('r_type', propertyMappings.get('type'));
-        System.assertEquals('exchangeId', propertyMappings.get('exchange_id'));
+        Map<String, String> x-property-mappings = message.getx-property-mappings();
+        System.assertEquals('exchangeId', x-property-mappings.get('exchange_id'));
     }
 }

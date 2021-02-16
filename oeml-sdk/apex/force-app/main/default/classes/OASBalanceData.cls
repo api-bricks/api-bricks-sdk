@@ -82,6 +82,39 @@ public class OASBalanceData implements OAS.MappedProperties {
         return propertyMappings;
     }
 
+    private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'asset_id_exchange' => 'assetIdExchange',
+        'asset_id_coinapi' => 'assetIdCoinapi',
+        'last_updated_by' => 'lastUpdatedBy',
+        'rate_usd' => 'rateUsd'
+    };
+
+    public Map<String, String> getPropertyMappings() {
+        return propertyMappings;
+    }
+
+    private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'asset_id_exchange' => 'assetIdExchange',
+        'asset_id_coinapi' => 'assetIdCoinapi',
+        'last_updated_by' => 'lastUpdatedBy',
+        'rate_usd' => 'rateUsd'
+    };
+
+    public Map<String, String> getPropertyMappings() {
+        return propertyMappings;
+    }
+
+    private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'asset_id_exchange' => 'assetIdExchange',
+        'asset_id_coinapi' => 'assetIdCoinapi',
+        'last_updated_by' => 'lastUpdatedBy',
+        'rate_usd' => 'rateUsd'
+    };
+
+    public Map<String, String> getPropertyMappings() {
+        return propertyMappings;
+    }
+
     public static OASBalanceData getExample() {
         OASBalanceData balanceData = new OASBalanceData();
           balanceData.assetIdExchange = 'XBT';

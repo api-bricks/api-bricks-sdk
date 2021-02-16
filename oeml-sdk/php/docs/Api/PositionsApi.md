@@ -1,16 +1,17 @@
 # OpenAPI\Client\PositionsApi
 
-All URIs are relative to *https://13d16e9d-d8b1-4ef4-bc4a-ed8156b2b159.mock.pstmn.io*
+All URIs are relative to https://13d16e9d-d8b1-4ef4-bc4a-ed8156b2b159.mock.pstmn.io.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**v1PositionsGet**](PositionsApi.md#v1PositionsGet) | **GET** /v1/positions | Get open positions
+[**v1PositionsGet()**](PositionsApi.md#v1PositionsGet) | **GET** /v1/positions | Get open positions
 
 
+## `v1PositionsGet()`
 
-## v1PositionsGet
-
-> \OpenAPI\Client\Model\Position[] v1PositionsGet($exchange_id)
+```php
+v1PositionsGet($exchange_id): \OpenAPI\Client\Model\Position[]
+```
 
 Get open positions
 
@@ -21,6 +22,7 @@ Get current open positions across all or single exchange.
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 
 
 $apiInstance = new OpenAPI\Client\Api\PositionsApi(
@@ -36,11 +38,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling PositionsApi->v1PositionsGet: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -57,9 +57,8 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json, appliction/json
+- **Accept**: `application/json`, `appliction/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
-

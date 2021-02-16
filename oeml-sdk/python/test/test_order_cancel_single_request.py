@@ -1,5 +1,3 @@
-# coding: utf-8
-
 """
     OEML - REST API
 
@@ -11,14 +9,12 @@
 """
 
 
-from __future__ import absolute_import
-
+import sys
 import unittest
-import datetime
 
 import openapi_client
-from openapi_client.models.order_cancel_single_request import OrderCancelSingleRequest  # noqa: E501
-from openapi_client.rest import ApiException
+from openapi_client.model.order_cancel_single_request import OrderCancelSingleRequest
+
 
 class TestOrderCancelSingleRequest(unittest.TestCase):
     """OrderCancelSingleRequest unit test stubs"""
@@ -29,27 +25,11 @@ class TestOrderCancelSingleRequest(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def make_instance(self, include_optional):
-        """Test OrderCancelSingleRequest
-            include_option is a boolean, when False only required
-            params are included, when True both required and
-            optional params are included """
-        # model = openapi_client.models.order_cancel_single_request.OrderCancelSingleRequest()  # noqa: E501
-        if include_optional :
-            return OrderCancelSingleRequest(
-                exchange_id = 'KRAKEN', 
-                exchange_order_id = '3456456754', 
-                client_order_id = '6ab36bc1-344d-432e-ac6d-0bf44ee64c2b'
-            )
-        else :
-            return OrderCancelSingleRequest(
-                exchange_id = 'KRAKEN',
-        )
-
     def testOrderCancelSingleRequest(self):
         """Test OrderCancelSingleRequest"""
-        inst_req_only = self.make_instance(include_optional=False)
-        inst_req_and_optional = self.make_instance(include_optional=True)
+        # FIXME: construct object with mandatory attributes with example values
+        # model = OrderCancelSingleRequest()  # noqa: E501
+        pass
 
 
 if __name__ == '__main__':

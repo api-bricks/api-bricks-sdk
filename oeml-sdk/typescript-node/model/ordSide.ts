@@ -10,12 +10,12 @@
  * Do not edit the class manually.
  */
 
-import { RequestFile } from '../api';
+import { RequestFile } from './models';
 
 /**
 * Side of order. 
 */
 export enum OrdSide {
-    BUY = <any> 'BUY',
-    SELL = <any> 'SELL'
+    Buy = <any> 'BUY',
+    Sell = <any> 'SELL'
 }

@@ -33,9 +33,9 @@ fail:
     return NULL;
 }
 
-severity_severity_e severity_severity_parseFromJSON(cJSON *severityJSON) {
-    severity_severity_e *severity = NULL;
-    severity_severity_e severityVariable;
+oeml___rest_api_severity__e severity_severity_parseFromJSON(cJSON *severityJSON) {
+    oeml___rest_api_severity__e *severity = NULL;
+    oeml___rest_api_severity__e severityVariable;
     cJSON *severityVar = cJSON_GetObjectItemCaseSensitive(severityJSON, "severity");
     if(!cJSON_IsString(severityVar) || (severityVar->valuestring == NULL)){
         goto end;

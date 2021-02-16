@@ -4,7 +4,7 @@
 
 defmodule OEML-RESTAPI.Model.OrdStatus do
   @moduledoc """
-  Order statuses and the lifecycle are documented in the separate section: &lt;a href&#x3D;\&quot;#oeml-order-lifecycle\&quot;&gt;OEML / Starter Guide / Order Lifecycle&lt;/a&gt; 
+  Order statuses and the lifecycle are documented in the separate section: <a href=\"#oeml-order-lifecycle\">OEML / Starter Guide / Order Lifecycle</a> 
   """
 
   @derive [Poison.Encoder]

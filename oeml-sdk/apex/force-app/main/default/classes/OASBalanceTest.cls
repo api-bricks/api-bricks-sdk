@@ -72,8 +72,8 @@ private class OASBalanceTest {
     @isTest
     private static void maintainRenamedProperties() {
         OASBalance balance = new OASBalance();
-        Map<String, String> propertyMappings = balance.getPropertyMappings();
-        System.assertEquals('exchangeId', propertyMappings.get('exchange_id'));
+        Map<String, String> x-property-mappings = balance.getx-property-mappings();
+        System.assertEquals('exchangeId', x-property-mappings.get('exchange_id'));
     }
 
     @isTest

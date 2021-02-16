@@ -10,7 +10,7 @@ test_that("V1OrdersCancelAllPost", {
   # base path: https://13d16e9d-d8b1-4ef4-bc4a-ed8156b2b159.mock.pstmn.io
   # Cancel all orders request
   # This request cancels all open orders on single specified exchange.
-  # @param OrderCancelAllRequest  order.cancel.all.request  OrderCancelAllRequest object. 
+  # @param order.cancel.all.request OrderCancelAllRequest OrderCancelAllRequest object.
   # @return [Message]
 
   # uncomment below to test the operation
@@ -22,7 +22,7 @@ test_that("V1OrdersCancelPost", {
   # base path: https://13d16e9d-d8b1-4ef4-bc4a-ed8156b2b159.mock.pstmn.io
   # Cancel order request
   # Request cancel for an existing order. The order can be canceled using the &#x60;client_order_id&#x60; or &#x60;exchange_order_id&#x60;.
-  # @param OrderCancelSingleRequest  order.cancel.single.request  OrderCancelSingleRequest object. 
+  # @param order.cancel.single.request OrderCancelSingleRequest OrderCancelSingleRequest object.
   # @return [OrderExecutionReport]
 
   # uncomment below to test the operation
@@ -34,7 +34,7 @@ test_that("V1OrdersGet", {
   # base path: https://13d16e9d-d8b1-4ef4-bc4a-ed8156b2b159.mock.pstmn.io
   # Get open orders
   # Get last execution reports for open orders across all or single exchange.
-  # @param character  exchange.id  Filter the open orders to the specific exchange.  (optional)
+  # @param exchange.id character Filter the open orders to the specific exchange. (optional)
   # @return [array[OrderExecutionReport]]
 
   # uncomment below to test the operation
@@ -46,7 +46,7 @@ test_that("V1OrdersPost", {
   # base path: https://13d16e9d-d8b1-4ef4-bc4a-ed8156b2b159.mock.pstmn.io
   # Send new order
   # This request creating new order for the specific exchange.
-  # @param OrderNewSingleRequest  order.new.single.request  OrderNewSingleRequest object. 
+  # @param order.new.single.request OrderNewSingleRequest OrderNewSingleRequest object.
   # @return [OrderExecutionReport]
 
   # uncomment below to test the operation
@@ -58,7 +58,7 @@ test_that("V1OrdersStatusClientOrderIdGet", {
   # base path: https://13d16e9d-d8b1-4ef4-bc4a-ed8156b2b159.mock.pstmn.io
   # Get order execution report
   # Get the last order execution report for the specified order. The requested order does not need to be active or opened.
-  # @param character  client.order.id  The unique identifier of the order assigned by the client. 
+  # @param client.order.id character The unique identifier of the order assigned by the client.
   # @return [OrderExecutionReport]
 
   # uncomment below to test the operation

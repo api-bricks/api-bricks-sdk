@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 import { OrdStatus } from './ordStatus';
+import { Fills } from './fills';
 
 
 /**
@@ -32,14 +33,22 @@ export interface OrderExecutionReportAllOf {
      * Total quantity filled.
      */
     amount_filled: number;
+    /**
+     * Calculated average price of all fills on this order.
+     */
+    avg_px?: number;
     status: OrdStatus;
     /**
      * Timestamped history of order status changes.
      */
-    time_order: Array<Array<string>>;
+    status_history?: Array<Array<string>>;
     /**
-     * Error message
+     * Error message.
      */
     error_message?: string;
+    /**
+     * Relay fill information on working orders.
+     */
+    fills?: Array<Fills>;
 }
 

@@ -34,7 +34,7 @@ try {
     var result = api_instance.v1OrdersCancelAllPost(orderCancelAllRequest);
     print(result);
 } catch (e) {
-    print("Exception when calling OrdersApi->v1OrdersCancelAllPost: $e\n");
+    print('Exception when calling OrdersApi->v1OrdersCancelAllPost: $e\n');
 }
 ```
 
@@ -77,7 +77,7 @@ try {
     var result = api_instance.v1OrdersCancelPost(orderCancelSingleRequest);
     print(result);
 } catch (e) {
-    print("Exception when calling OrdersApi->v1OrdersCancelPost: $e\n");
+    print('Exception when calling OrdersApi->v1OrdersCancelPost: $e\n');
 }
 ```
 
@@ -103,7 +103,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1OrdersGet**
-> List<OrderExecutionReport> v1OrdersGet(exchangeId)
+> BuiltList<OrderExecutionReport> v1OrdersGet(exchangeId)
 
 Get open orders
 
@@ -120,7 +120,7 @@ try {
     var result = api_instance.v1OrdersGet(exchangeId);
     print(result);
 } catch (e) {
-    print("Exception when calling OrdersApi->v1OrdersGet: $e\n");
+    print('Exception when calling OrdersApi->v1OrdersGet: $e\n');
 }
 ```
 
@@ -128,11 +128,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **exchangeId** | **String**| Filter the open orders to the specific exchange. | [optional] [default to null]
+ **exchangeId** | **String**| Filter the open orders to the specific exchange. | [optional] 
 
 ### Return type
 
-[**List<OrderExecutionReport>**](OrderExecutionReport.md)
+[**BuiltList<OrderExecutionReport>**](OrderExecutionReport.md)
 
 ### Authorization
 
@@ -163,7 +163,7 @@ try {
     var result = api_instance.v1OrdersPost(orderNewSingleRequest);
     print(result);
 } catch (e) {
-    print("Exception when calling OrdersApi->v1OrdersPost: $e\n");
+    print('Exception when calling OrdersApi->v1OrdersPost: $e\n');
 }
 ```
 
@@ -206,7 +206,7 @@ try {
     var result = api_instance.v1OrdersStatusClientOrderIdGet(clientOrderId);
     print(result);
 } catch (e) {
-    print("Exception when calling OrdersApi->v1OrdersStatusClientOrderIdGet: $e\n");
+    print('Exception when calling OrdersApi->v1OrdersStatusClientOrderIdGet: $e\n');
 }
 ```
 
@@ -214,7 +214,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **clientOrderId** | **String**| The unique identifier of the order assigned by the client. | [default to null]
+ **clientOrderId** | **String**| The unique identifier of the order assigned by the client. | 
 
 ### Return type
 

@@ -30,7 +30,7 @@ public class Example {
     defaultClient.setBasePath("https://13d16e9d-d8b1-4ef4-bc4a-ed8156b2b159.mock.pstmn.io");
 
     BalancesApi apiInstance = new BalancesApi(defaultClient);
-    String exchangeId = KRAKEN; // String | Filter the balances to the specific exchange.
+    String exchangeId = "KRAKEN"; // String | Filter the balances to the specific exchange.
     try {
       List<Balance> result = apiInstance.v1BalancesGet(exchangeId);
       System.out.println(result);

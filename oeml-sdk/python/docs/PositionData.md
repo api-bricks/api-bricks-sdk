@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **leverage** | **float** | Leverage for this position reported by the exchange. | [optional] 
 **cross_margin** | **bool** | Is cross margin mode enable for this position? | [optional] 
 **liquidation_price** | **float** | Liquidation price. If mark price will reach this value, the position will be liquidated. | [optional] 
-**raw_data** | [**object**](.md) |  | [optional] 
+**raw_data** | **{str: (bool, date, datetime, dict, float, int, list, str, none_type)}** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

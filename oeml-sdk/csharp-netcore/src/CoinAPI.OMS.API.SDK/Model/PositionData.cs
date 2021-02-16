@@ -1,4 +1,4 @@
-/* 
+/*
  * OEML - REST API
  *
  * This section will provide necessary information about the `CoinAPI OEML REST API` protocol. This API is also available in the Postman application: <a href=\"https://postman.coinapi.io/\" target=\"_blank\">https://postman.coinapi.io/</a>       
@@ -10,16 +10,17 @@
 
 
 using System;
-using System.Linq;
-using System.IO;
-using System.Text;
-using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Linq;
+using System.IO;
 using System.Runtime.Serialization;
+using System.Text;
+using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = CoinAPI.OMS.API.SDK.Client.OpenAPIDateConverter;
 
@@ -28,13 +29,13 @@ namespace CoinAPI.OMS.API.SDK.Model
     /// <summary>
     /// The Position object.
     /// </summary>
-    [DataContract]
-    public partial class PositionData :  IEquatable<PositionData>, IValidatableObject
+    [DataContract(Name = "Position_data")]
+    public partial class PositionData : IEquatable<PositionData>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets Side
         /// </summary>
-        [DataMember(Name="side", EmitDefaultValue=false)]
+        [DataMember(Name = "side", EmitDefaultValue = false)]
         public OrdSide? Side { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="PositionData" /> class.
@@ -62,67 +63,67 @@ namespace CoinAPI.OMS.API.SDK.Model
             this.LiquidationPrice = liquidationPrice;
             this.RawData = rawData;
         }
-        
+
         /// <summary>
         /// Exchange symbol.
         /// </summary>
         /// <value>Exchange symbol.</value>
-        [DataMember(Name="symbol_id_exchange", EmitDefaultValue=false)]
+        [DataMember(Name = "symbol_id_exchange", EmitDefaultValue = false)]
         public string SymbolIdExchange { get; set; }
 
         /// <summary>
         /// CoinAPI symbol.
         /// </summary>
         /// <value>CoinAPI symbol.</value>
-        [DataMember(Name="symbol_id_coinapi", EmitDefaultValue=false)]
+        [DataMember(Name = "symbol_id_coinapi", EmitDefaultValue = false)]
         public string SymbolIdCoinapi { get; set; }
 
         /// <summary>
         /// Calculated average price of all fills on this position.
         /// </summary>
         /// <value>Calculated average price of all fills on this position.</value>
-        [DataMember(Name="avg_entry_price", EmitDefaultValue=false)]
+        [DataMember(Name = "avg_entry_price", EmitDefaultValue = false)]
         public decimal AvgEntryPrice { get; set; }
 
         /// <summary>
         /// The current position quantity.
         /// </summary>
         /// <value>The current position quantity.</value>
-        [DataMember(Name="quantity", EmitDefaultValue=false)]
+        [DataMember(Name = "quantity", EmitDefaultValue = false)]
         public decimal Quantity { get; set; }
 
         /// <summary>
         /// Unrealised profit or loss (PNL) of this position.
         /// </summary>
         /// <value>Unrealised profit or loss (PNL) of this position.</value>
-        [DataMember(Name="unrealized_pnl", EmitDefaultValue=false)]
+        [DataMember(Name = "unrealized_pnl", EmitDefaultValue = false)]
         public decimal UnrealizedPnl { get; set; }
 
         /// <summary>
         /// Leverage for this position reported by the exchange.
         /// </summary>
         /// <value>Leverage for this position reported by the exchange.</value>
-        [DataMember(Name="leverage", EmitDefaultValue=false)]
+        [DataMember(Name = "leverage", EmitDefaultValue = false)]
         public decimal Leverage { get; set; }
 
         /// <summary>
         /// Is cross margin mode enable for this position?
         /// </summary>
         /// <value>Is cross margin mode enable for this position?</value>
-        [DataMember(Name="cross_margin", EmitDefaultValue=false)]
+        [DataMember(Name = "cross_margin", EmitDefaultValue = false)]
         public bool CrossMargin { get; set; }
 
         /// <summary>
         /// Liquidation price. If mark price will reach this value, the position will be liquidated.
         /// </summary>
         /// <value>Liquidation price. If mark price will reach this value, the position will be liquidated.</value>
-        [DataMember(Name="liquidation_price", EmitDefaultValue=false)]
+        [DataMember(Name = "liquidation_price", EmitDefaultValue = false)]
         public decimal LiquidationPrice { get; set; }
 
         /// <summary>
         /// Gets or Sets RawData
         /// </summary>
-        [DataMember(Name="raw_data", EmitDefaultValue=false)]
+        [DataMember(Name = "raw_data", EmitDefaultValue = false)]
         public Object RawData { get; set; }
 
         /// <summary>
@@ -146,14 +147,14 @@ namespace CoinAPI.OMS.API.SDK.Model
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
         public virtual string ToJson()
         {
-            return JsonConvert.SerializeObject(this, Formatting.Indented);
+            return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
 
         /// <summary>

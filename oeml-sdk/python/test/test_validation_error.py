@@ -1,5 +1,3 @@
-# coding: utf-8
-
 """
     OEML - REST API
 
@@ -11,14 +9,12 @@
 """
 
 
-from __future__ import absolute_import
-
+import sys
 import unittest
-import datetime
 
 import openapi_client
-from openapi_client.models.validation_error import ValidationError  # noqa: E501
-from openapi_client.rest import ApiException
+from openapi_client.model.validation_error import ValidationError
+
 
 class TestValidationError(unittest.TestCase):
     """ValidationError unit test stubs"""
@@ -29,28 +25,11 @@ class TestValidationError(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def make_instance(self, include_optional):
-        """Test ValidationError
-            include_option is a boolean, when False only required
-            params are included, when True both required and
-            optional params are included """
-        # model = openapi_client.models.validation_error.ValidationError()  # noqa: E501
-        if include_optional :
-            return ValidationError(
-                type = 'https://tools.ietf.org/html/rfc7231#section-6.5.1', 
-                title = 'One or more validation errors occurred.', 
-                status = 400, 
-                trace_id = 'd200e8b5-4271a5461ce5342f', 
-                errors = '0'
-            )
-        else :
-            return ValidationError(
-        )
-
     def testValidationError(self):
         """Test ValidationError"""
-        inst_req_only = self.make_instance(include_optional=False)
-        inst_req_and_optional = self.make_instance(include_optional=True)
+        # FIXME: construct object with mandatory attributes with example values
+        # model = ValidationError()  # noqa: E501
+        pass
 
 
 if __name__ == '__main__':

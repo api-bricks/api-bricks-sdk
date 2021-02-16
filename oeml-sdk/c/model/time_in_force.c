@@ -33,9 +33,9 @@ fail:
     return NULL;
 }
 
-time_in_force_time_in_force_e time_in_force_time_in_force_parseFromJSON(cJSON *time_in_forceJSON) {
-    time_in_force_time_in_force_e *time_in_force = NULL;
-    time_in_force_time_in_force_e time_in_forceVariable;
+oeml___rest_api_time_in_force__e time_in_force_time_in_force_parseFromJSON(cJSON *time_in_forceJSON) {
+    oeml___rest_api_time_in_force__e *time_in_force = NULL;
+    oeml___rest_api_time_in_force__e time_in_forceVariable;
     cJSON *time_in_forceVar = cJSON_GetObjectItemCaseSensitive(time_in_forceJSON, "time_in_force");
     if(!cJSON_IsString(time_in_forceVar) || (time_in_forceVar->valuestring == NULL)){
         goto end;

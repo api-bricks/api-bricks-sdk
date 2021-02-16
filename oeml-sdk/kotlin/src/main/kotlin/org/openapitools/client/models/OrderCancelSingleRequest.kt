@@ -13,6 +13,7 @@ package org.openapitools.client.models
 
 
 import com.squareup.moshi.Json
+
 /**
  * Cancel single order request object.
  * @param exchangeId Exchange identifier used to identify the routing destination.

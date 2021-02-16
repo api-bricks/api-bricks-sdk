@@ -56,13 +56,13 @@
 
     it('should have the property exchangeId (base name: "exchange_id")', function() {
       // uncomment below and update the code to test the property exchangeId
-      //var instane = new OemlRestApi.Balance();
+      //var instance = new OemlRestApi.Balance();
       //expect(instance).to.be();
     });
 
     it('should have the property data (base name: "data")', function() {
       // uncomment below and update the code to test the property data
-      //var instane = new OemlRestApi.Balance();
+      //var instance = new OemlRestApi.Balance();
       //expect(instance).to.be();
     });
 

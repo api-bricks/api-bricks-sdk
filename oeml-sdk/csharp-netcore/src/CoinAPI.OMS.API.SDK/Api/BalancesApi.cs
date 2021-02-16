@@ -1,4 +1,4 @@
-/* 
+/*
  * OEML - REST API
  *
  * This section will provide necessary information about the `CoinAPI OEML REST API` protocol. This API is also available in the Postman application: <a href=\"https://postman.coinapi.io/\" target=\"_blank\">https://postman.coinapi.io/</a>       
@@ -36,7 +36,7 @@ namespace CoinAPI.OMS.API.SDK.Api
         /// <exception cref="CoinAPI.OMS.API.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="exchangeId">Filter the balances to the specific exchange. (optional)</param>
         /// <returns>List&lt;Balance&gt;</returns>
-        List<Balance> V1BalancesGet (string exchangeId = default(string));
+        List<Balance> V1BalancesGet(string exchangeId = default(string));
 
         /// <summary>
         /// Get balances
@@ -47,7 +47,7 @@ namespace CoinAPI.OMS.API.SDK.Api
         /// <exception cref="CoinAPI.OMS.API.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="exchangeId">Filter the balances to the specific exchange. (optional)</param>
         /// <returns>ApiResponse of List&lt;Balance&gt;</returns>
-        ApiResponse<List<Balance>> V1BalancesGetWithHttpInfo (string exchangeId = default(string));
+        ApiResponse<List<Balance>> V1BalancesGetWithHttpInfo(string exchangeId = default(string));
         #endregion Synchronous Operations
     }
 
@@ -65,8 +65,9 @@ namespace CoinAPI.OMS.API.SDK.Api
         /// </remarks>
         /// <exception cref="CoinAPI.OMS.API.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="exchangeId">Filter the balances to the specific exchange. (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;Balance&gt;</returns>
-        System.Threading.Tasks.Task<List<Balance>> V1BalancesGetAsync (string exchangeId = default(string));
+        System.Threading.Tasks.Task<List<Balance>> V1BalancesGetAsync(string exchangeId = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Get balances
@@ -76,8 +77,9 @@ namespace CoinAPI.OMS.API.SDK.Api
         /// </remarks>
         /// <exception cref="CoinAPI.OMS.API.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="exchangeId">Filter the balances to the specific exchange. (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;Balance&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<Balance>>> V1BalancesGetAsyncWithHttpInfo (string exchangeId = default(string));
+        System.Threading.Tasks.Task<ApiResponse<List<Balance>>> V1BalancesGetWithHttpInfoAsync(string exchangeId = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -100,7 +102,7 @@ namespace CoinAPI.OMS.API.SDK.Api
         /// Initializes a new instance of the <see cref="BalancesApi"/> class.
         /// </summary>
         /// <returns></returns>
-        public BalancesApi() : this((string) null)
+        public BalancesApi() : this((string)null)
         {
         }
 
@@ -145,11 +147,11 @@ namespace CoinAPI.OMS.API.SDK.Api
         /// <param name="client">The client interface for synchronous API access.</param>
         /// <param name="asyncClient">The client interface for asynchronous API access.</param>
         /// <param name="configuration">The configuration object.</param>
-        public BalancesApi(CoinAPI.OMS.API.SDK.Client.ISynchronousClient client,CoinAPI.OMS.API.SDK.Client.IAsynchronousClient asyncClient, CoinAPI.OMS.API.SDK.Client.IReadableConfiguration configuration)
+        public BalancesApi(CoinAPI.OMS.API.SDK.Client.ISynchronousClient client, CoinAPI.OMS.API.SDK.Client.IAsynchronousClient asyncClient, CoinAPI.OMS.API.SDK.Client.IReadableConfiguration configuration)
         {
-            if(client == null) throw new ArgumentNullException("client");
-            if(asyncClient == null) throw new ArgumentNullException("asyncClient");
-            if(configuration == null) throw new ArgumentNullException("configuration");
+            if (client == null) throw new ArgumentNullException("client");
+            if (asyncClient == null) throw new ArgumentNullException("asyncClient");
+            if (configuration == null) throw new ArgumentNullException("configuration");
 
             this.Client = client;
             this.AsynchronousClient = asyncClient;
@@ -180,7 +182,7 @@ namespace CoinAPI.OMS.API.SDK.Api
         /// Gets or sets the configuration object
         /// </summary>
         /// <value>An instance of the Configuration</value>
-        public CoinAPI.OMS.API.SDK.Client.IReadableConfiguration Configuration {get; set;}
+        public CoinAPI.OMS.API.SDK.Client.IReadableConfiguration Configuration { get; set; }
 
         /// <summary>
         /// Provides a factory method hook for the creation of exceptions.
@@ -204,10 +206,10 @@ namespace CoinAPI.OMS.API.SDK.Api
         /// <exception cref="CoinAPI.OMS.API.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="exchangeId">Filter the balances to the specific exchange. (optional)</param>
         /// <returns>List&lt;Balance&gt;</returns>
-        public List<Balance> V1BalancesGet (string exchangeId = default(string))
+        public List<Balance> V1BalancesGet(string exchangeId = default(string))
         {
-             CoinAPI.OMS.API.SDK.Client.ApiResponse<List<Balance>> localVarResponse = V1BalancesGetWithHttpInfo(exchangeId);
-             return localVarResponse.Data;
+            CoinAPI.OMS.API.SDK.Client.ApiResponse<List<Balance>> localVarResponse = V1BalancesGetWithHttpInfo(exchangeId);
+            return localVarResponse.Data;
         }
 
         /// <summary>
@@ -216,7 +218,7 @@ namespace CoinAPI.OMS.API.SDK.Api
         /// <exception cref="CoinAPI.OMS.API.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="exchangeId">Filter the balances to the specific exchange. (optional)</param>
         /// <returns>ApiResponse of List&lt;Balance&gt;</returns>
-        public CoinAPI.OMS.API.SDK.Client.ApiResponse< List<Balance> > V1BalancesGetWithHttpInfo (string exchangeId = default(string))
+        public CoinAPI.OMS.API.SDK.Client.ApiResponse<List<Balance>> V1BalancesGetWithHttpInfo(string exchangeId = default(string))
         {
             CoinAPI.OMS.API.SDK.Client.RequestOptions localVarRequestOptions = new CoinAPI.OMS.API.SDK.Client.RequestOptions();
 
@@ -242,7 +244,7 @@ namespace CoinAPI.OMS.API.SDK.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get< List<Balance> >("/v1/balances", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<List<Balance>>("/v1/balances", localVarRequestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -258,12 +260,12 @@ namespace CoinAPI.OMS.API.SDK.Api
         /// </summary>
         /// <exception cref="CoinAPI.OMS.API.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="exchangeId">Filter the balances to the specific exchange. (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;Balance&gt;</returns>
-        public async System.Threading.Tasks.Task<List<Balance>> V1BalancesGetAsync (string exchangeId = default(string))
+        public async System.Threading.Tasks.Task<List<Balance>> V1BalancesGetAsync(string exchangeId = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-             CoinAPI.OMS.API.SDK.Client.ApiResponse<List<Balance>> localVarResponse = await V1BalancesGetAsyncWithHttpInfo(exchangeId);
-             return localVarResponse.Data;
-
+            CoinAPI.OMS.API.SDK.Client.ApiResponse<List<Balance>> localVarResponse = await V1BalancesGetWithHttpInfoAsync(exchangeId, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
         }
 
         /// <summary>
@@ -271,8 +273,9 @@ namespace CoinAPI.OMS.API.SDK.Api
         /// </summary>
         /// <exception cref="CoinAPI.OMS.API.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="exchangeId">Filter the balances to the specific exchange. (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;Balance&gt;)</returns>
-        public async System.Threading.Tasks.Task<CoinAPI.OMS.API.SDK.Client.ApiResponse<List<Balance>>> V1BalancesGetAsyncWithHttpInfo (string exchangeId = default(string))
+        public async System.Threading.Tasks.Task<CoinAPI.OMS.API.SDK.Client.ApiResponse<List<Balance>>> V1BalancesGetWithHttpInfoAsync(string exchangeId = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             CoinAPI.OMS.API.SDK.Client.RequestOptions localVarRequestOptions = new CoinAPI.OMS.API.SDK.Client.RequestOptions();
@@ -285,13 +288,14 @@ namespace CoinAPI.OMS.API.SDK.Api
                 "application/json",
                 "appliction/json"
             };
-            
-            foreach (var _contentType in _contentTypes)
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", _contentType);
-            
-            foreach (var _accept in _accepts)
-                localVarRequestOptions.HeaderParameters.Add("Accept", _accept);
-            
+
+
+            var localVarContentType = CoinAPI.OMS.API.SDK.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+
+            var localVarAccept = CoinAPI.OMS.API.SDK.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+
             if (exchangeId != null)
             {
                 localVarRequestOptions.QueryParameters.Add(CoinAPI.OMS.API.SDK.Client.ClientUtils.ParameterToMultiMap("", "exchange_id", exchangeId));
@@ -300,7 +304,7 @@ namespace CoinAPI.OMS.API.SDK.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<List<Balance>>("/v1/balances", localVarRequestOptions, this.Configuration);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<Balance>>("/v1/balances", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {

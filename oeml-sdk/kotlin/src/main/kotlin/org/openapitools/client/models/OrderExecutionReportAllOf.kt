@@ -11,18 +11,22 @@
 */
 package org.openapitools.client.models
 
+import org.openapitools.client.models.Fills
 import org.openapitools.client.models.OrdStatus
 
 import com.squareup.moshi.Json
+
 /**
  * The order execution report message.
  * @param clientOrderIdFormatExchange The unique identifier of the order assigned by the client converted to the exchange order tag format for the purpose of tracking it.
  * @param amountOpen Quantity open for further execution. `amount_open` = `amount_order` - `amount_filled`
  * @param amountFilled Total quantity filled.
  * @param status 
- * @param timeOrder Timestamped history of order status changes.
  * @param exchangeOrderId Unique identifier of the order assigned by the exchange or executing system.
- * @param errorMessage Error message
+ * @param avgPx Calculated average price of all fills on this order.
+ * @param statusHistory Timestamped history of order status changes.
+ * @param errorMessage Error message.
+ * @param fills Relay fill information on working orders.
  */
 
 data class OrderExecutionReportAllOf (
@@ -37,14 +41,20 @@ data class OrderExecutionReportAllOf (
     val amountFilled: java.math.BigDecimal,
     @Json(name = "status")
     val status: OrdStatus,
-    /* Timestamped history of order status changes. */
-    @Json(name = "time_order")
-    val timeOrder: kotlin.Array<kotlin.Array<kotlin.String>>,
     /* Unique identifier of the order assigned by the exchange or executing system. */
     @Json(name = "exchange_order_id")
     val exchangeOrderId: kotlin.String? = null,
-    /* Error message */
+    /* Calculated average price of all fills on this order. */
+    @Json(name = "avg_px")
+    val avgPx: java.math.BigDecimal? = null,
+    /* Timestamped history of order status changes. */
+    @Json(name = "status_history")
+    val statusHistory: kotlin.collections.List<kotlin.collections.List<kotlin.String>>? = null,
+    /* Error message. */
     @Json(name = "error_message")
-    val errorMessage: kotlin.String? = null
+    val errorMessage: kotlin.String? = null,
+    /* Relay fill information on working orders. */
+    @Json(name = "fills")
+    val fills: kotlin.collections.List<Fills>? = null
 )
 

@@ -10,7 +10,8 @@
  * Do not edit the class manually.
  */
 
-import { RequestFile } from '../api';
+import { RequestFile } from './models';
+import { Fills } from './fills';
 import { OrdSide } from './ordSide';
 import { OrdStatus } from './ordStatus';
 import { OrdType } from './ordType';
@@ -73,15 +74,23 @@ export class OrderExecutionReport {
     * Total quantity filled.
     */
     'amountFilled': number;
+    /**
+    * Calculated average price of all fills on this order.
+    */
+    'avgPx'?: number;
     'status': OrdStatus;
     /**
     * Timestamped history of order status changes.
     */
-    'timeOrder': Array<Array<string>>;
+    'statusHistory'?: Array<Array<string>>;
     /**
-    * Error message
+    * Error message.
     */
     'errorMessage'?: string;
+    /**
+    * Relay fill information on working orders.
+    */
+    'fills'?: Array<Fills>;
 
     static discriminator: string | undefined = undefined;
 
@@ -162,19 +171,29 @@ export class OrderExecutionReport {
             "type": "number"
         },
         {
+            "name": "avgPx",
+            "baseName": "avg_px",
+            "type": "number"
+        },
+        {
             "name": "status",
             "baseName": "status",
             "type": "OrdStatus"
         },
         {
-            "name": "timeOrder",
-            "baseName": "time_order",
+            "name": "statusHistory",
+            "baseName": "status_history",
             "type": "Array<Array<string>>"
         },
         {
             "name": "errorMessage",
             "baseName": "error_message",
             "type": "string"
+        },
+        {
+            "name": "fills",
+            "baseName": "fills",
+            "type": "Array<Fills>"
         }    ];
 
     static getAttributeTypeMap() {
@@ -184,8 +203,8 @@ export class OrderExecutionReport {
 
 export namespace OrderExecutionReport {
     export enum ExecInstEnum {
-        MAKERORCANCEL = <any> 'MAKER_OR_CANCEL',
-        AUCTIONONLY = <any> 'AUCTION_ONLY',
-        INDICATIONOFINTEREST = <any> 'INDICATION_OF_INTEREST'
+        MakerOrCancel = <any> 'MAKER_OR_CANCEL',
+        AuctionOnly = <any> 'AUCTION_ONLY',
+        IndicationOfInterest = <any> 'INDICATION_OF_INTEREST'
     }
 }

@@ -14,12 +14,7 @@ note
 	EIS:"Eiffel openapi generator", "src=https://openapi-generator.tech", "protocol=uri"
 class ORDER_EXECUTION_REPORT_ALL_OF 
 
-inherit
 
-  ANY
-      redefine
-          out 
-      end
 
 
 feature --Access
@@ -28,16 +23,20 @@ feature --Access
       -- The unique identifier of the order assigned by the client converted to the exchange order tag format for the purpose of tracking it.
     exchange_order_id: detachable STRING_32 
       -- Unique identifier of the order assigned by the exchange or executing system.
-    amount_open: REAL_32 
-      -- Quantity open for further execution. `amount_open` = `amount_order` - `amount_filled`
-    amount_filled: REAL_32 
-      -- Total quantity filled.
+ 	amount_open: REAL_32 
+    	 -- Quantity open for further execution. `amount_open` = `amount_order` - `amount_filled`
+ 	amount_filled: REAL_32 
+    	 -- Total quantity filled.
+ 	avg_px: REAL_32 
+    	 -- Calculated average price of all fills on this order.
     status: detachable ORD_STATUS 
       
-    time_order: detachable LIST [LIST [STRING_32]] 
+    status_history: detachable LIST [LIST [STRING_32]] 
       -- Timestamped history of order status changes.
     error_message: detachable STRING_32 
-      -- Error message
+      -- Error message.
+    fills: detachable LIST [FILLS] 
+      -- Relay fill information on working orders.
 
 feature -- Change Element  
  
@@ -73,6 +72,14 @@ feature -- Change Element
         amount_filled_set: amount_filled = a_name		
       end
 
+    set_avg_px (a_name: like avg_px)
+        -- Set 'avg_px' with 'a_name'.
+      do
+        avg_px := a_name
+      ensure
+        avg_px_set: avg_px = a_name		
+      end
+
     set_status (a_name: like status)
         -- Set 'status' with 'a_name'.
       do
@@ -81,12 +88,12 @@ feature -- Change Element
         status_set: status = a_name		
       end
 
-    set_time_order (a_name: like time_order)
-        -- Set 'time_order' with 'a_name'.
+    set_status_history (a_name: like status_history)
+        -- Set 'status_history' with 'a_name'.
       do
-        time_order := a_name
+        status_history := a_name
       ensure
-        time_order_set: time_order = a_name		
+        status_history_set: status_history = a_name		
       end
 
     set_error_message (a_name: like error_message)
@@ -97,10 +104,18 @@ feature -- Change Element
         error_message_set: error_message = a_name		
       end
 
+    set_fills (a_name: like fills)
+        -- Set 'fills' with 'a_name'.
+      do
+        fills := a_name
+      ensure
+        fills_set: fills = a_name		
+      end
+
 
  feature -- Status Report
 
-    out: STRING
+    output: STRING
           -- <Precursor>
       do
         create Result.make_empty
@@ -125,14 +140,19 @@ feature -- Change Element
           Result.append (l_amount_filled.out)
           Result.append ("%N")    
         end  
+        if attached avg_px as l_avg_px then
+          Result.append ("%Navg_px:")
+          Result.append (l_avg_px.out)
+          Result.append ("%N")    
+        end  
         if attached status as l_status then
           Result.append ("%Nstatus:")
           Result.append (l_status.out)
           Result.append ("%N")    
         end  
-        if attached time_order as l_time_order then
-          across l_time_order as ic loop
-            Result.append ("%N time_order:")
+        if attached status_history as l_status_history then
+          across l_status_history as ic loop
+            Result.append ("%N status_history:")
             Result.append (ic.item.out)
             Result.append ("%N")
           end
@@ -142,6 +162,13 @@ feature -- Change Element
           Result.append (l_error_message.out)
           Result.append ("%N")    
         end  
+        if attached fills as l_fills then
+          across l_fills as ic loop
+            Result.append ("%N fills:")
+            Result.append (ic.item.out)
+            Result.append ("%N")
+          end
+        end 
       end
 end
 

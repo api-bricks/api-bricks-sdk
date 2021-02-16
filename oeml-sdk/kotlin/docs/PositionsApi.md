@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="v1PositionsGet"></a>
 # **v1PositionsGet**
-> kotlin.Array&lt;Position&gt; v1PositionsGet(exchangeId)
+> kotlin.collections.List&lt;Position&gt; v1PositionsGet(exchangeId)
 
 Get open positions
 
@@ -24,7 +24,7 @@ Get current open positions across all or single exchange.
 val apiInstance = PositionsApi()
 val exchangeId : kotlin.String = KRAKEN // kotlin.String | Filter the balances to the specific exchange.
 try {
-    val result : kotlin.Array<Position> = apiInstance.v1PositionsGet(exchangeId)
+    val result : kotlin.collections.List<Position> = apiInstance.v1PositionsGet(exchangeId)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling PositionsApi#v1PositionsGet")
@@ -43,7 +43,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**kotlin.Array&lt;Position&gt;**](Position.md)
+[**kotlin.collections.List&lt;Position&gt;**](Position.md)
 
 ### Authorization
 

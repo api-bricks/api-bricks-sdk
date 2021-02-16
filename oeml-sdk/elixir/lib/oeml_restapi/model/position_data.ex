@@ -40,7 +40,6 @@ defimpl Poison.Decoder, for: OEML-RESTAPI.Model.PositionData do
   def decode(value, options) do
     value
     |> deserialize(:"side", :struct, OEML-RESTAPI.Model.OrdSide, options)
-    |> deserialize(:"raw_data", :struct, OEML-RESTAPI.Model.Map, options)
   end
 end
 

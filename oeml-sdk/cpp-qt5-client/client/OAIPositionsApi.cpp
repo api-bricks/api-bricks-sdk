@@ -12,7 +12,7 @@
 
 #include "OAIPositionsApi.h"
 #include "OAIHelpers.h"
-
+#include "OAIServerConfiguration.h"
 #include <QJsonArray>
 #include <QJsonDocument>
 
@@ -24,10 +24,45 @@ OAIPositionsApi::OAIPositionsApi(const QString &scheme, const QString &host, int
       _port(port),
       _basePath(basePath),
       _timeOut(timeOut),
+      _manager(nullptr),
       isResponseCompressionEnabled(false),
-      isRequestCompressionEnabled(false) {}
+      isRequestCompressionEnabled(false) {
+      initializeServerConfigs();
+      }
 
 OAIPositionsApi::~OAIPositionsApi() {
+}
+
+void OAIPositionsApi::initializeServerConfigs(){
+
+//Default server
+QList<OAIServerConfiguration> defaultConf = QList<OAIServerConfiguration>();
+//varying endpoint server 
+QList<OAIServerConfiguration> serverConf = QList<OAIServerConfiguration>();
+defaultConf.append(OAIServerConfiguration(
+    "https://13d16e9d-d8b1-4ef4-bc4a-ed8156b2b159.mock.pstmn.io",
+    "No description provided",
+    QMap<QString, OAIServerVariable>()));
+_serverConfigs.insert("v1PositionsGet",defaultConf);
+_serverIndices.insert("v1PositionsGet",0);
+
+
+}
+
+/**
+* returns 0 on success and -1, -2 or -3 on failure.
+* -1 when the variable does not exist and -2 if the value is not defined in the enum and -3 if the operation or server index is not found 
+*/
+int OAIPositionsApi::setDefaultServerValue(int serverIndex, const QString &operation, const QString &variable, const QString &value){
+    auto it = _serverConfigs.find(operation);
+    if(it != _serverConfigs.end() && serverIndex < it.value().size() ){
+      return _serverConfigs[operation][serverIndex].setDefaultValue(variable,value);
+    }
+    return -3;
+}
+void OAIPositionsApi::setServerIndex(const QString &operation, int serverIndex){
+    if(_serverIndices.contains(operation) && serverIndex < _serverConfigs.find(operation).value().size() )
+        _serverIndices[operation] = serverIndex;
 }
 
 void OAIPositionsApi::setScheme(const QString &scheme) {
@@ -42,6 +77,22 @@ void OAIPositionsApi::setPort(int port) {
     _port = port;
 }
 
+void OAIPositionsApi::setApiKey(const QString &apiKeyName, const QString &apiKey){
+    _apiKeys.insert(apiKeyName,apiKey);
+}
+
+void OAIPositionsApi::setBearerToken(const QString &token){
+    _bearerToken = token;
+}
+
+void OAIPositionsApi::setUsername(const QString &username) {
+    _username = username;
+}
+
+void OAIPositionsApi::setPassword(const QString &password) {
+    _password = password;
+}
+
 void OAIPositionsApi::setBasePath(const QString &basePath) {
     _basePath = basePath;
 }
@@ -52,6 +103,10 @@ void OAIPositionsApi::setTimeOut(const int timeOut) {
 
 void OAIPositionsApi::setWorkingDirectory(const QString &path) {
     _workingDirectory = path;
+}
+
+void OAIPositionsApi::setNetworkAccessManager(QNetworkAccessManager* manager) {
+    _manager = manager;  
 }
 
 void OAIPositionsApi::addHeaders(const QString &key, const QString &value) {
@@ -71,12 +126,8 @@ void OAIPositionsApi::abortRequests(){
 }
 
 void OAIPositionsApi::v1PositionsGet(const QString &exchange_id) {
-    QString fullPath = QString("%1://%2%3%4%5")
-                           .arg(_scheme)
-                           .arg(_host)
-                           .arg(_port ? ":" + QString::number(_port) : "")
-                           .arg(_basePath)
-                           .arg("/v1/positions");
+    QString fullPath = QString(_serverConfigs["v1PositionsGet"][_serverIndices.value("v1PositionsGet")].URL()+"/v1/positions");
+
 
     if (fullPath.indexOf("?") > 0)
         fullPath.append("&");
@@ -84,7 +135,7 @@ void OAIPositionsApi::v1PositionsGet(const QString &exchange_id) {
         fullPath.append("?");
     fullPath.append(QUrl::toPercentEncoding("exchange_id")).append("=").append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(exchange_id)));
 
-    OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this);
+    OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
     worker->setWorkingDirectory(_workingDirectory);
     OAIHttpRequestInput input(fullPath, "GET");

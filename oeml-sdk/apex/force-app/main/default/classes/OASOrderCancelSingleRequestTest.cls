@@ -72,9 +72,9 @@ private class OASOrderCancelSingleRequestTest {
     @isTest
     private static void maintainRenamedProperties() {
         OASOrderCancelSingleRequest orderCancelSingleRequest = new OASOrderCancelSingleRequest();
-        Map<String, String> propertyMappings = orderCancelSingleRequest.getPropertyMappings();
-        System.assertEquals('exchangeId', propertyMappings.get('exchange_id'));
-        System.assertEquals('exchangeOrderId', propertyMappings.get('exchange_order_id'));
-        System.assertEquals('clientOrderId', propertyMappings.get('client_order_id'));
+        Map<String, String> x-property-mappings = orderCancelSingleRequest.getx-property-mappings();
+        System.assertEquals('exchangeId', x-property-mappings.get('exchange_id'));
+        System.assertEquals('exchangeOrderId', x-property-mappings.get('exchange_order_id'));
+        System.assertEquals('clientOrderId', x-property-mappings.get('client_order_id'));
     }
 }

@@ -8,6 +8,7 @@ export(ApiResponse)
 # Models
 export(Balance)
 export(BalanceData)
+export(Fills)
 export(Message)
 export(OrdSide)
 export(OrdStatus)

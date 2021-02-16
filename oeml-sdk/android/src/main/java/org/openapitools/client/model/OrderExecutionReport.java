@@ -15,6 +15,7 @@ package org.openapitools.client.model;
 import java.math.BigDecimal;
 import java.util.*;
 import java.util.Date;
+import org.openapitools.client.model.Fills;
 import org.openapitools.client.model.OrdSide;
 import org.openapitools.client.model.OrdStatus;
 import org.openapitools.client.model.OrdType;
@@ -63,12 +64,16 @@ public class OrderExecutionReport {
   private BigDecimal amountOpen = null;
   @SerializedName("amount_filled")
   private BigDecimal amountFilled = null;
+  @SerializedName("avg_px")
+  private BigDecimal avgPx = null;
   @SerializedName("status")
   private OrdStatus status = null;
-  @SerializedName("time_order")
-  private List<List<String>> timeOrder = null;
+  @SerializedName("status_history")
+  private List<List<String>> statusHistory = null;
   @SerializedName("error_message")
   private String errorMessage = null;
+  @SerializedName("fills")
+  private List<Fills> fills = null;
 
   /**
    * Exchange identifier used to identify the routing destination.
@@ -233,6 +238,17 @@ public class OrderExecutionReport {
   }
 
   /**
+   * Calculated average price of all fills on this order.
+   **/
+  @ApiModelProperty(value = "Calculated average price of all fills on this order.")
+  public BigDecimal getAvgPx() {
+    return avgPx;
+  }
+  public void setAvgPx(BigDecimal avgPx) {
+    this.avgPx = avgPx;
+  }
+
+  /**
    **/
   @ApiModelProperty(required = true, value = "")
   public OrdStatus getStatus() {
@@ -245,23 +261,34 @@ public class OrderExecutionReport {
   /**
    * Timestamped history of order status changes.
    **/
-  @ApiModelProperty(required = true, value = "Timestamped history of order status changes.")
-  public List<List<String>> getTimeOrder() {
-    return timeOrder;
+  @ApiModelProperty(value = "Timestamped history of order status changes.")
+  public List<List<String>> getStatusHistory() {
+    return statusHistory;
   }
-  public void setTimeOrder(List<List<String>> timeOrder) {
-    this.timeOrder = timeOrder;
+  public void setStatusHistory(List<List<String>> statusHistory) {
+    this.statusHistory = statusHistory;
   }
 
   /**
-   * Error message
+   * Error message.
    **/
-  @ApiModelProperty(value = "Error message")
+  @ApiModelProperty(value = "Error message.")
   public String getErrorMessage() {
     return errorMessage;
   }
   public void setErrorMessage(String errorMessage) {
     this.errorMessage = errorMessage;
+  }
+
+  /**
+   * Relay fill information on working orders.
+   **/
+  @ApiModelProperty(value = "Relay fill information on working orders.")
+  public List<Fills> getFills() {
+    return fills;
+  }
+  public void setFills(List<Fills> fills) {
+    this.fills = fills;
   }
 
 
@@ -289,9 +316,11 @@ public class OrderExecutionReport {
         (this.exchangeOrderId == null ? orderExecutionReport.exchangeOrderId == null : this.exchangeOrderId.equals(orderExecutionReport.exchangeOrderId)) &&
         (this.amountOpen == null ? orderExecutionReport.amountOpen == null : this.amountOpen.equals(orderExecutionReport.amountOpen)) &&
         (this.amountFilled == null ? orderExecutionReport.amountFilled == null : this.amountFilled.equals(orderExecutionReport.amountFilled)) &&
+        (this.avgPx == null ? orderExecutionReport.avgPx == null : this.avgPx.equals(orderExecutionReport.avgPx)) &&
         (this.status == null ? orderExecutionReport.status == null : this.status.equals(orderExecutionReport.status)) &&
-        (this.timeOrder == null ? orderExecutionReport.timeOrder == null : this.timeOrder.equals(orderExecutionReport.timeOrder)) &&
-        (this.errorMessage == null ? orderExecutionReport.errorMessage == null : this.errorMessage.equals(orderExecutionReport.errorMessage));
+        (this.statusHistory == null ? orderExecutionReport.statusHistory == null : this.statusHistory.equals(orderExecutionReport.statusHistory)) &&
+        (this.errorMessage == null ? orderExecutionReport.errorMessage == null : this.errorMessage.equals(orderExecutionReport.errorMessage)) &&
+        (this.fills == null ? orderExecutionReport.fills == null : this.fills.equals(orderExecutionReport.fills));
   }
 
   @Override
@@ -312,9 +341,11 @@ public class OrderExecutionReport {
     result = 31 * result + (this.exchangeOrderId == null ? 0: this.exchangeOrderId.hashCode());
     result = 31 * result + (this.amountOpen == null ? 0: this.amountOpen.hashCode());
     result = 31 * result + (this.amountFilled == null ? 0: this.amountFilled.hashCode());
+    result = 31 * result + (this.avgPx == null ? 0: this.avgPx.hashCode());
     result = 31 * result + (this.status == null ? 0: this.status.hashCode());
-    result = 31 * result + (this.timeOrder == null ? 0: this.timeOrder.hashCode());
+    result = 31 * result + (this.statusHistory == null ? 0: this.statusHistory.hashCode());
     result = 31 * result + (this.errorMessage == null ? 0: this.errorMessage.hashCode());
+    result = 31 * result + (this.fills == null ? 0: this.fills.hashCode());
     return result;
   }
 
@@ -338,9 +369,11 @@ public class OrderExecutionReport {
     sb.append("  exchangeOrderId: ").append(exchangeOrderId).append("\n");
     sb.append("  amountOpen: ").append(amountOpen).append("\n");
     sb.append("  amountFilled: ").append(amountFilled).append("\n");
+    sb.append("  avgPx: ").append(avgPx).append("\n");
     sb.append("  status: ").append(status).append("\n");
-    sb.append("  timeOrder: ").append(timeOrder).append("\n");
+    sb.append("  statusHistory: ").append(statusHistory).append("\n");
     sb.append("  errorMessage: ").append(errorMessage).append("\n");
+    sb.append("  fills: ").append(fills).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

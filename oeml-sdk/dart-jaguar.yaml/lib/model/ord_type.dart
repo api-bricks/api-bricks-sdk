@@ -9,7 +9,7 @@ class OrdType {
   const OrdType._internal(this.value);
 
   /// Order types are documented in the separate section: &lt;a href&#x3D;\&quot;#oeml-order-params-type\&quot;&gt;OEML / Starter Guide / Order parameters / Order type&lt;/a&gt; 
-  static const OrdType lIMIT_ = const OrdType._internal("LIMIT");
+  static const OrdType LIMIT = const OrdType._internal('LIMIT');
 }
 
 class OrdTypeFieldProcessor implements FieldProcessor<OrdType, String> {
@@ -17,7 +17,7 @@ class OrdTypeFieldProcessor implements FieldProcessor<OrdType, String> {
 
     OrdType deserialize(String data) {
         switch (data) {
-            case "LIMIT": return OrdType.lIMIT_;
+            case 'LIMIT': return OrdType.LIMIT;
             default: throw('Unknown enum value to decode: $data');
         }
     }

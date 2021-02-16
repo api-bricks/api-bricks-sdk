@@ -15,6 +15,7 @@
 
 typedef struct order_execution_report_all_of_t order_execution_report_all_of_t;
 
+#include "fills.h"
 #include "ord_status.h"
 
 // Enum  for order_execution_report_all_of
@@ -32,8 +33,10 @@ typedef struct order_execution_report_all_of_t {
     char *exchange_order_id; // string
     double amount_open; //numeric
     double amount_filled; //numeric
-    list_t *time_order; //primitive container
+    double avg_px; //numeric
+    list_t *status_history; //primitive container
     char *error_message; // string
+    list_t *fills; //nonprimitive container
 
 } order_execution_report_all_of_t;
 
@@ -42,8 +45,10 @@ order_execution_report_all_of_t *order_execution_report_all_of_create(
     char *exchange_order_id,
     double amount_open,
     double amount_filled,
-    list_t *time_order,
-    char *error_message
+    double avg_px,
+    list_t *status_history,
+    char *error_message,
+    list_t *fills
 );
 
 void order_execution_report_all_of_free(order_execution_report_all_of_t *order_execution_report_all_of);

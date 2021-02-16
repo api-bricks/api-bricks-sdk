@@ -24,9 +24,9 @@ case class OrderNewSingleRequest (
   /* CoinAPI symbol. One of the properties (`symbol_id_exchange`, `symbol_id_coinapi`) is required to identify the market for the new order. */
   symbolIdCoinapi: Option[String] = None,
   /* Order quantity. */
-  amountOrder: Double,
+  amountOrder: BigDecimal,
   /* Order price. */
-  price: Double,
+  price: BigDecimal,
   side: OrdSide,
   orderType: OrdType,
   timeInForce: TimeInForce,

@@ -1,16 +1,17 @@
 # OpenAPI\Client\BalancesApi
 
-All URIs are relative to *https://13d16e9d-d8b1-4ef4-bc4a-ed8156b2b159.mock.pstmn.io*
+All URIs are relative to https://13d16e9d-d8b1-4ef4-bc4a-ed8156b2b159.mock.pstmn.io.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**v1BalancesGet**](BalancesApi.md#v1BalancesGet) | **GET** /v1/balances | Get balances
+[**v1BalancesGet()**](BalancesApi.md#v1BalancesGet) | **GET** /v1/balances | Get balances
 
 
+## `v1BalancesGet()`
 
-## v1BalancesGet
-
-> \OpenAPI\Client\Model\Balance[] v1BalancesGet($exchange_id)
+```php
+v1BalancesGet($exchange_id): \OpenAPI\Client\Model\Balance[]
+```
 
 Get balances
 
@@ -21,6 +22,7 @@ Get current currency balance from all or single exchange.
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 
 
 $apiInstance = new OpenAPI\Client\Api\BalancesApi(
@@ -36,11 +38,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling BalancesApi->v1BalancesGet: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -57,9 +57,8 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json, appliction/json
+- **Accept**: `application/json`, `appliction/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
-

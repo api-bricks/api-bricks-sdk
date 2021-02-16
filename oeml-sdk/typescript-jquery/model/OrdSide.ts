@@ -19,6 +19,6 @@ import * as models from './models';
     * Side of order. 
     */
 export enum OrdSide {
-    BUY = <any> 'BUY',
-    SELL = <any> 'SELL'
+    Buy = <any> 'BUY',
+    Sell = <any> 'SELL'
 }

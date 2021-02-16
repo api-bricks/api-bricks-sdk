@@ -9,6 +9,7 @@
 
 
 #include <string>
+#include "Fills.h"
 #include "OrdStatus.h"
 #include <list>
 #include "Object.h"
@@ -75,6 +76,13 @@ public:
 	/*! \brief Set Total quantity filled.
 	 */
 	void setAmountFilled(long long  amount_filled);
+	/*! \brief Get Calculated average price of all fills on this order.
+	 */
+	long long getAvgPx();
+
+	/*! \brief Set Calculated average price of all fills on this order.
+	 */
+	void setAvgPx(long long  avg_px);
 	/*! \brief Get 
 	 */
 	OrdStatus getStatus();
@@ -84,27 +92,36 @@ public:
 	void setStatus(OrdStatus  status);
 	/*! \brief Get Timestamped history of order status changes.
 	 */
-	std::list<std::list> getTimeOrder();
+	std::list<std::list> getStatusHistory();
 
 	/*! \brief Set Timestamped history of order status changes.
 	 */
-	void setTimeOrder(std::list <std::list> time_order);
-	/*! \brief Get Error message
+	void setStatusHistory(std::list <std::list> status_history);
+	/*! \brief Get Error message.
 	 */
 	std::string getErrorMessage();
 
-	/*! \brief Set Error message
+	/*! \brief Set Error message.
 	 */
 	void setErrorMessage(std::string  error_message);
+	/*! \brief Get Relay fill information on working orders.
+	 */
+	std::list<Fills> getFills();
+
+	/*! \brief Set Relay fill information on working orders.
+	 */
+	void setFills(std::list <Fills> fills);
 
 private:
 	std::string client_order_id_format_exchange;
 	std::string exchange_order_id;
 	long long amount_open;
 	long long amount_filled;
+	long long avg_px;
 	OrdStatus status;
-	std::list <std::list>time_order;
+	std::list <std::list>status_history;
 	std::string error_message;
+	std::list <Fills>fills;
 	void __init();
 	void __cleanup();
 

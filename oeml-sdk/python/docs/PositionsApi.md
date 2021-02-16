@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **v1_positions_get**
-> list[Position] v1_positions_get(exchange_id=exchange_id)
+> Positions v1_positions_get()
 
 Get open positions
 
@@ -17,10 +17,11 @@ Get current open positions across all or single exchange.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import openapi_client
-from openapi_client.rest import ApiException
+from openapi_client.api import positions_api
+from openapi_client.model.positions import Positions
+from openapi_client.model.message import Message
 from pprint import pprint
 # Defining the host is optional and defaults to https://13d16e9d-d8b1-4ef4-bc4a-ed8156b2b159.mock.pstmn.io
 # See configuration.py for a list of all supported configuration parameters.
@@ -32,14 +33,16 @@ configuration = openapi_client.Configuration(
 # Enter a context with an instance of the API client
 with openapi_client.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.PositionsApi(api_client)
-    exchange_id = 'KRAKEN' # str | Filter the balances to the specific exchange. (optional)
+    api_instance = positions_api.PositionsApi(api_client)
+    exchange_id = "KRAKEN" # str | Filter the balances to the specific exchange. (optional)
 
+    # example passing only required values which don't have defaults set
+    # and optional values
     try:
         # Get open positions
         api_response = api_instance.v1_positions_get(exchange_id=exchange_id)
         pprint(api_response)
-    except ApiException as e:
+    except openapi_client.ApiException as e:
         print("Exception when calling PositionsApi->v1_positions_get: %s\n" % e)
 ```
 
@@ -47,11 +50,11 @@ with openapi_client.ApiClient() as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **exchange_id** | **str**| Filter the balances to the specific exchange. | [optional] 
+ **exchange_id** | **str**| Filter the balances to the specific exchange. | [optional]
 
 ### Return type
 
-[**list[Position]**](Position.md)
+[**Positions**](Positions.md)
 
 ### Authorization
 

@@ -57,9 +57,18 @@ void position_data_free(position_data_t *position_data) {
         return ;
     }
     listEntry_t *listEntry;
-    free(position_data->symbol_id_exchange);
-    free(position_data->symbol_id_coinapi);
-    object_free(position_data->raw_data);
+    if (position_data->symbol_id_exchange) {
+        free(position_data->symbol_id_exchange);
+        position_data->symbol_id_exchange = NULL;
+    }
+    if (position_data->symbol_id_coinapi) {
+        free(position_data->symbol_id_coinapi);
+        position_data->symbol_id_coinapi = NULL;
+    }
+    if (position_data->raw_data) {
+        object_free(position_data->raw_data);
+        position_data->raw_data = NULL;
+    }
     free(position_data);
 }
 

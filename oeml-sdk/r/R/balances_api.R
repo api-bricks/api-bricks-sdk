@@ -56,7 +56,7 @@
 #'
 #' }
 #' @importFrom R6 R6Class
-#' @importFrom caTools base64encode
+#' @importFrom base64enc base64encode
 #' @export
 BalancesApi <- R6::R6Class(
   'BalancesApi',
@@ -91,6 +91,7 @@ BalancesApi <- R6::R6Class(
 
       queryParams['exchange_id'] <- exchange.id
 
+      body <- NULL
       urlPath <- "/v1/balances"
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),

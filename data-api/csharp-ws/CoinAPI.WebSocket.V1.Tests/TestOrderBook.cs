@@ -19,10 +19,10 @@ namespace CoinAPI.WebSocket.V1.Tests
             {
                 apikey = System.Guid.Parse(config["TestApiKey"]),
                 subscribe_data_type = new string[] { "book" },
-                subscribe_filter_symbol_id = new string[] { "BITSTAMP_SPOT_BTC_USD", "GEMINI_SPOT_BTC_USD COINBASE_SPOT_BTC_USD" }
+                subscribe_filter_symbol_id = new string[] { "BITSTAMP_SPOT_BTC_USD", "GEMINI_SPOT_BTC_USD", "COINBASE_SPOT_BTC_USD" }
             };
 
-            using(var wsClient = new CoinApiWsClient(false))
+            using(var wsClient = new CoinApiWsClient(true))
             {
                 var mre = new ManualResetEvent(false);
                 wsClient.OrderBookEvent += (s, i) =>

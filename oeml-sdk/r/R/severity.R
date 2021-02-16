@@ -8,35 +8,58 @@
 
 #' @docType class
 #' @title Severity
+#'
 #' @description Severity Class
+#'
 #' @format An \code{R6Class} generator object
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
 #' @export
 Severity <- R6::R6Class(
-  'Severity',
-  public = list(
-    initialize = function(, ...){
-      local.optional.var <- list(...)
-    },
-    toJSON = function() {
-      SeverityObject <- list()
+    "Severity",
+    public = list(
+        initialize = function(...) {
+            local.optional.var <- list(...)
+            val <- unlist(local.optional.var)
+            enumvec <- .parse_Severity()
 
-      SeverityObject
-    },
-    fromJSON = function(SeverityJson) {
-      SeverityObject <- jsonlite::fromJSON(SeverityJson)
-    },
-    toJSONString = function() {
-      jsoncontent <- c(
-      )
-      jsoncontent <- paste(jsoncontent, collapse = ",")
-      paste('{', jsoncontent, '}', sep = "")
-    },
-    fromJSONString = function(SeverityJson) {
-      SeverityObject <- jsonlite::fromJSON(SeverityJson)
-      self
-    }
-  )
+            stopifnot(length(val) == 1L)
+
+            if (!val %in% enumvec)
+                stop("Use one of the valid values: ",
+                    paste0(enumvec, collapse = ", "))
+            private$value <- val
+        },
+        toJSON = function() {
+            jsonlite::toJSON(private$value, auto_unbox = TRUE)
+        },
+        fromJSON = function(SeverityJson) {
+            private$value <- jsonlite::fromJSON(SeverityJson,
+                simplifyVector = FALSE)
+            self
+        },
+        toJSONString = function() {
+            as.character(jsonlite::toJSON(private$value,
+                auto_unbox = TRUE))
+        },
+        fromJSONString = function(SeverityJson) {
+            private$value <- jsonlite::fromJSON(SeverityJson,
+                simplifyVector = FALSE)
+            self
+        }
+    ),
+    private = list(
+        value = NULL
+    )
 )
+
+# add to utils.R
+.parse_Severity <- function(vals) {
+    res <- gsub("^\\[|\\]$", "",
+        "[INFO, WARNING, ERROR]"
+    )
+    unlist(strsplit(res, ", "))
+}
+
+

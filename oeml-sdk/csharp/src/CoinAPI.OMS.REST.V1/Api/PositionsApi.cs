@@ -12,6 +12,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Threading;
 using RestSharp;
 using CoinAPI.OMS.REST.V1.Client;
 using CoinAPI.OMS.REST.V1.Model;
@@ -55,8 +56,9 @@ namespace CoinAPI.OMS.REST.V1.Api
         /// </remarks>
         /// <exception cref="CoinAPI.OMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="exchangeId">Filter the balances to the specific exchange. (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of List&lt;Position&gt;</returns>
-        System.Threading.Tasks.Task<List<Position>> V1PositionsGetAsync (string exchangeId = default(string));
+        System.Threading.Tasks.Task<List<Position>> V1PositionsGetAsync (string exchangeId = default(string), CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Get open positions
@@ -66,8 +68,9 @@ namespace CoinAPI.OMS.REST.V1.Api
         /// </remarks>
         /// <exception cref="CoinAPI.OMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="exchangeId">Filter the balances to the specific exchange. (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (List&lt;Position&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<Position>>> V1PositionsGetAsyncWithHttpInfo (string exchangeId = default(string));
+        System.Threading.Tasks.Task<ApiResponse<List<Position>>> V1PositionsGetWithHttpInfoAsync (string exchangeId = default(string), CancellationToken cancellationToken = default(CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -248,10 +251,11 @@ namespace CoinAPI.OMS.REST.V1.Api
         /// </summary>
         /// <exception cref="CoinAPI.OMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="exchangeId">Filter the balances to the specific exchange. (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of List&lt;Position&gt;</returns>
-        public async System.Threading.Tasks.Task<List<Position>> V1PositionsGetAsync (string exchangeId = default(string))
+        public async System.Threading.Tasks.Task<List<Position>> V1PositionsGetAsync (string exchangeId = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<List<Position>> localVarResponse = await V1PositionsGetAsyncWithHttpInfo(exchangeId);
+             ApiResponse<List<Position>> localVarResponse = await V1PositionsGetWithHttpInfoAsync(exchangeId, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -261,8 +265,9 @@ namespace CoinAPI.OMS.REST.V1.Api
         /// </summary>
         /// <exception cref="CoinAPI.OMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="exchangeId">Filter the balances to the specific exchange. (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (List&lt;Position&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<Position>>> V1PositionsGetAsyncWithHttpInfo (string exchangeId = default(string))
+        public async System.Threading.Tasks.Task<ApiResponse<List<Position>>> V1PositionsGetWithHttpInfoAsync (string exchangeId = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
 
             var localVarPath = "/v1/positions";
@@ -293,7 +298,7 @@ namespace CoinAPI.OMS.REST.V1.Api
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
+                localVarPathParams, localVarHttpContentType, cancellationToken);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 

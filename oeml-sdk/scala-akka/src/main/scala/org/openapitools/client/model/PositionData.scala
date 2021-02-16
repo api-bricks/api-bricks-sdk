@@ -19,18 +19,18 @@ case class PositionData (
   /* CoinAPI symbol. */
   symbolIdCoinapi: Option[String] = None,
   /* Calculated average price of all fills on this position. */
-  avgEntryPrice: Option[Double] = None,
+  avgEntryPrice: Option[BigDecimal] = None,
   /* The current position quantity. */
-  quantity: Option[Double] = None,
+  quantity: Option[BigDecimal] = None,
   side: Option[OrdSide] = None,
   /* Unrealised profit or loss (PNL) of this position. */
-  unrealizedPnl: Option[Double] = None,
+  unrealizedPnl: Option[BigDecimal] = None,
   /* Leverage for this position reported by the exchange. */
-  leverage: Option[Double] = None,
+  leverage: Option[BigDecimal] = None,
   /* Is cross margin mode enable for this position? */
   crossMargin: Option[Boolean] = None,
   /* Liquidation price. If mark price will reach this value, the position will be liquidated. */
-  liquidationPrice: Option[Double] = None,
+  liquidationPrice: Option[BigDecimal] = None,
   rawData: Option[Any] = None
 ) extends ApiModel
 

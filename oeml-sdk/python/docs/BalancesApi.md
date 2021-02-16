@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **v1_balances_get**
-> list[Balance] v1_balances_get(exchange_id=exchange_id)
+> Balances v1_balances_get()
 
 Get balances
 
@@ -17,10 +17,11 @@ Get current currency balance from all or single exchange.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import openapi_client
-from openapi_client.rest import ApiException
+from openapi_client.api import balances_api
+from openapi_client.model.message import Message
+from openapi_client.model.balances import Balances
 from pprint import pprint
 # Defining the host is optional and defaults to https://13d16e9d-d8b1-4ef4-bc4a-ed8156b2b159.mock.pstmn.io
 # See configuration.py for a list of all supported configuration parameters.
@@ -32,14 +33,16 @@ configuration = openapi_client.Configuration(
 # Enter a context with an instance of the API client
 with openapi_client.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.BalancesApi(api_client)
-    exchange_id = 'KRAKEN' # str | Filter the balances to the specific exchange. (optional)
+    api_instance = balances_api.BalancesApi(api_client)
+    exchange_id = "KRAKEN" # str | Filter the balances to the specific exchange. (optional)
 
+    # example passing only required values which don't have defaults set
+    # and optional values
     try:
         # Get balances
         api_response = api_instance.v1_balances_get(exchange_id=exchange_id)
         pprint(api_response)
-    except ApiException as e:
+    except openapi_client.ApiException as e:
         print("Exception when calling BalancesApi->v1_balances_get: %s\n" % e)
 ```
 
@@ -47,11 +50,11 @@ with openapi_client.ApiClient() as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **exchange_id** | **str**| Filter the balances to the specific exchange. | [optional] 
+ **exchange_id** | **str**| Filter the balances to the specific exchange. | [optional]
 
 ### Return type
 
-[**list[Balance]**](Balance.md)
+[**Balances**](Balances.md)
 
 ### Authorization
 

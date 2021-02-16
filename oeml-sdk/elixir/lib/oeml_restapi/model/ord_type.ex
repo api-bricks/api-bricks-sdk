@@ -4,7 +4,7 @@
 
 defmodule OEML-RESTAPI.Model.OrdType do
   @moduledoc """
-  Order types are documented in the separate section: &lt;a href&#x3D;\&quot;#oeml-order-params-type\&quot;&gt;OEML / Starter Guide / Order parameters / Order type&lt;/a&gt; 
+  Order types are documented in the separate section: <a href=\"#oeml-order-params-type\">OEML / Starter Guide / Order parameters / Order type</a> 
   """
 
   @derive [Poison.Encoder]

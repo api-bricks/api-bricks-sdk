@@ -107,14 +107,29 @@ void order_new_single_request_free(order_new_single_request_t *order_new_single_
         return ;
     }
     listEntry_t *listEntry;
-    free(order_new_single_request->exchange_id);
-    free(order_new_single_request->client_order_id);
-    free(order_new_single_request->symbol_id_exchange);
-    free(order_new_single_request->symbol_id_coinapi);
-    list_ForEach(listEntry, order_new_single_request->exec_inst) {
-        free(listEntry->data);
+    if (order_new_single_request->exchange_id) {
+        free(order_new_single_request->exchange_id);
+        order_new_single_request->exchange_id = NULL;
     }
-    list_free(order_new_single_request->exec_inst);
+    if (order_new_single_request->client_order_id) {
+        free(order_new_single_request->client_order_id);
+        order_new_single_request->client_order_id = NULL;
+    }
+    if (order_new_single_request->symbol_id_exchange) {
+        free(order_new_single_request->symbol_id_exchange);
+        order_new_single_request->symbol_id_exchange = NULL;
+    }
+    if (order_new_single_request->symbol_id_coinapi) {
+        free(order_new_single_request->symbol_id_coinapi);
+        order_new_single_request->symbol_id_coinapi = NULL;
+    }
+    if (order_new_single_request->exec_inst) {
+        list_ForEach(listEntry, order_new_single_request->exec_inst) {
+            free(listEntry->data);
+        }
+        list_free(order_new_single_request->exec_inst);
+        order_new_single_request->exec_inst = NULL;
+    }
     free(order_new_single_request);
 }
 

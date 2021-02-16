@@ -1,68 +1,109 @@
+//
+// AUTO-GENERATED FILE, DO NOT MODIFY!
+//
+// @dart=2.0
+
+// ignore_for_file: unused_element, unused_import
+// ignore_for_file: always_put_required_named_parameters_first
+// ignore_for_file: lines_longer_than_80_chars
+
 part of openapi.api;
 
 class ValidationError {
-  
-  String type = null;
-  
-  String title = null;
-  
-  num status = null;
-  
-  String traceId = null;
-  
-  String errors = null;
-  ValidationError();
+  /// Returns a new [ValidationError] instance.
+  ValidationError({
+    this.type,
+    this.title,
+    this.status,
+    this.traceId,
+    this.errors,
+  });
+
+  String type;
+
+  String title;
+
+  num status;
+
+  String traceId;
+
+  String errors;
 
   @override
-  String toString() {
-    return 'ValidationError[type=$type, title=$title, status=$status, traceId=$traceId, errors=$errors, ]';
-  }
+  bool operator ==(Object other) => identical(this, other) || other is ValidationError &&
+     other.type == type &&
+     other.title == title &&
+     other.status == status &&
+     other.traceId == traceId &&
+     other.errors == errors;
 
-  ValidationError.fromJson(Map<String, dynamic> json) {
-    if (json == null) return;
-    type = json['type'];
-    title = json['title'];
-    status = json['status'];
-    traceId = json['traceId'];
-    errors = json['errors'];
-  }
+  @override
+  int get hashCode =>
+    (type == null ? 0 : type.hashCode) +
+    (title == null ? 0 : title.hashCode) +
+    (status == null ? 0 : status.hashCode) +
+    (traceId == null ? 0 : traceId.hashCode) +
+    (errors == null ? 0 : errors.hashCode);
+
+  @override
+  String toString() => 'ValidationError[type=$type, title=$title, status=$status, traceId=$traceId, errors=$errors]';
 
   Map<String, dynamic> toJson() {
-    Map <String, dynamic> json = {};
-    if (type != null)
-      json['type'] = type;
-    if (title != null)
-      json['title'] = title;
-    if (status != null)
-      json['status'] = status;
-    if (traceId != null)
-      json['traceId'] = traceId;
-    if (errors != null)
-      json['errors'] = errors;
+    final json = <String, dynamic>{};
+    if (type != null) {
+      json[r'type'] = type;
+    }
+    if (title != null) {
+      json[r'title'] = title;
+    }
+    if (status != null) {
+      json[r'status'] = status;
+    }
+    if (traceId != null) {
+      json[r'traceId'] = traceId;
+    }
+    if (errors != null) {
+      json[r'errors'] = errors;
+    }
     return json;
   }
 
-  static List<ValidationError> listFromJson(List<dynamic> json) {
-    return json == null ? List<ValidationError>() : json.map((value) => ValidationError.fromJson(value)).toList();
-  }
+  /// Returns a new [ValidationError] instance and imports its values from
+  /// [json] if it's non-null, null if [json] is null.
+  static ValidationError fromJson(Map<String, dynamic> json) => json == null
+    ? null
+    : ValidationError(
+        type: json[r'type'],
+        title: json[r'title'],
+        status: json[r'status'] == null ?
+          null :
+          json[r'status'].toDouble(),
+        traceId: json[r'traceId'],
+        errors: json[r'errors'],
+    );
+
+  static List<ValidationError> listFromJson(List<dynamic> json, {bool emptyIsNull, bool growable,}) =>
+    json == null || json.isEmpty
+      ? true == emptyIsNull ? null : <ValidationError>[]
+      : json.map((v) => ValidationError.fromJson(v)).toList(growable: true == growable);
 
   static Map<String, ValidationError> mapFromJson(Map<String, dynamic> json) {
-    var map = Map<String, ValidationError>();
+    final map = <String, ValidationError>{};
     if (json != null && json.isNotEmpty) {
-      json.forEach((String key, dynamic value) => map[key] = ValidationError.fromJson(value));
+      json.forEach((String key, dynamic v) => map[key] = ValidationError.fromJson(v));
     }
     return map;
   }
 
   // maps a json object with a list of ValidationError-objects as value to a dart map
-  static Map<String, List<ValidationError>> mapListFromJson(Map<String, dynamic> json) {
-    var map = Map<String, List<ValidationError>>();
-     if (json != null && json.isNotEmpty) {
-       json.forEach((String key, dynamic value) {
-         map[key] = ValidationError.listFromJson(value);
-       });
-     }
-     return map;
+  static Map<String, List<ValidationError>> mapListFromJson(Map<String, dynamic> json, {bool emptyIsNull, bool growable,}) {
+    final map = <String, List<ValidationError>>{};
+    if (json != null && json.isNotEmpty) {
+      json.forEach((String key, dynamic v) {
+        map[key] = ValidationError.listFromJson(v, emptyIsNull: emptyIsNull, growable: growable);
+      });
+    }
+    return map;
   }
 }
 

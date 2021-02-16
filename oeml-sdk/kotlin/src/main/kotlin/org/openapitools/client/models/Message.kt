@@ -14,6 +14,7 @@ package org.openapitools.client.models
 import org.openapitools.client.models.Severity
 
 import com.squareup.moshi.Json
+
 /**
  * 
  * @param type Type of message.

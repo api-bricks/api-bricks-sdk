@@ -77,7 +77,7 @@ data V1PositionsGet
 -- | /Optional Param/ "exchange_id" - Filter the balances to the specific exchange.
 instance HasOptionalParam V1PositionsGet ExchangeId where
   applyOptionalParam req (ExchangeId xs) =
-    req `setQuery` toQuery ("exchange_id", Just xs)
+    req `addQuery` toQuery ("exchange_id", Just xs)
 -- | @application/json@
 instance Produces V1PositionsGet MimeJSON
 -- | @appliction/json@

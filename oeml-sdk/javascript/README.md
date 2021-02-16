@@ -138,6 +138,7 @@ Class | Method | HTTP request | Description
 
  - [OemlRestApi.Balance](docs/Balance.md)
  - [OemlRestApi.BalanceData](docs/BalanceData.md)
+ - [OemlRestApi.Fills](docs/Fills.md)
  - [OemlRestApi.Message](docs/Message.md)
  - [OemlRestApi.OrdSide](docs/OrdSide.md)
  - [OemlRestApi.OrdStatus](docs/OrdStatus.md)

@@ -68,11 +68,4 @@ private class OASValidationErrorTest {
         System.assertEquals(validationError1.hashCode(), validationError2.hashCode());
         System.assertEquals(validationError3.hashCode(), validationError4.hashCode());
     }
-
-    @isTest
-    private static void maintainRenamedProperties() {
-        OASValidationError validationError = new OASValidationError();
-        Map<String, String> propertyMappings = validationError.getPropertyMappings();
-        System.assertEquals('r_type', propertyMappings.get('type'));
-    }
 }

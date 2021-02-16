@@ -17,7 +17,7 @@
 export type OrdSide = 'BUY' | 'SELL';
 
 export const OrdSide = {
-    BUY: 'BUY' as OrdSide,
-    SELL: 'SELL' as OrdSide
+    Buy: 'BUY' as OrdSide,
+    Sell: 'SELL' as OrdSide
 };
 

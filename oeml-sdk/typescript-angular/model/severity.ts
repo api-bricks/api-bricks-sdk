@@ -17,8 +17,8 @@
 export type Severity = 'INFO' | 'WARNING' | 'ERROR';
 
 export const Severity = {
-    INFO: 'INFO' as Severity,
-    WARNING: 'WARNING' as Severity,
-    ERROR: 'ERROR' as Severity
+    Info: 'INFO' as Severity,
+    Warning: 'WARNING' as Severity,
+    Error: 'ERROR' as Severity
 };
 

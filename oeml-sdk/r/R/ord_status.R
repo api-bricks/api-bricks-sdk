@@ -8,35 +8,58 @@
 
 #' @docType class
 #' @title OrdStatus
+#'
 #' @description OrdStatus Class
+#'
 #' @format An \code{R6Class} generator object
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
 #' @export
 OrdStatus <- R6::R6Class(
-  'OrdStatus',
-  public = list(
-    initialize = function(, ...){
-      local.optional.var <- list(...)
-    },
-    toJSON = function() {
-      OrdStatusObject <- list()
+    "OrdStatus",
+    public = list(
+        initialize = function(...) {
+            local.optional.var <- list(...)
+            val <- unlist(local.optional.var)
+            enumvec <- .parse_OrdStatus()
 
-      OrdStatusObject
-    },
-    fromJSON = function(OrdStatusJson) {
-      OrdStatusObject <- jsonlite::fromJSON(OrdStatusJson)
-    },
-    toJSONString = function() {
-      jsoncontent <- c(
-      )
-      jsoncontent <- paste(jsoncontent, collapse = ",")
-      paste('{', jsoncontent, '}', sep = "")
-    },
-    fromJSONString = function(OrdStatusJson) {
-      OrdStatusObject <- jsonlite::fromJSON(OrdStatusJson)
-      self
-    }
-  )
+            stopifnot(length(val) == 1L)
+
+            if (!val %in% enumvec)
+                stop("Use one of the valid values: ",
+                    paste0(enumvec, collapse = ", "))
+            private$value <- val
+        },
+        toJSON = function() {
+            jsonlite::toJSON(private$value, auto_unbox = TRUE)
+        },
+        fromJSON = function(OrdStatusJson) {
+            private$value <- jsonlite::fromJSON(OrdStatusJson,
+                simplifyVector = FALSE)
+            self
+        },
+        toJSONString = function() {
+            as.character(jsonlite::toJSON(private$value,
+                auto_unbox = TRUE))
+        },
+        fromJSONString = function(OrdStatusJson) {
+            private$value <- jsonlite::fromJSON(OrdStatusJson,
+                simplifyVector = FALSE)
+            self
+        }
+    ),
+    private = list(
+        value = NULL
+    )
 )
+
+# add to utils.R
+.parse_OrdStatus <- function(vals) {
+    res <- gsub("^\\[|\\]$", "",
+        "[RECEIVED, ROUTING, ROUTED, NEW, PENDING_CANCEL, PARTIALLY_FILLED, FILLED, CANCELED, REJECTED]"
+    )
+    unlist(strsplit(res, ", "))
+}
+
+

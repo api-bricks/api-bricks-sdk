@@ -56,19 +56,19 @@
 
     it('should have the property exchangeId (base name: "exchange_id")', function() {
       // uncomment below and update the code to test the property exchangeId
-      //var instane = new OemlRestApi.OrderCancelSingleRequest();
+      //var instance = new OemlRestApi.OrderCancelSingleRequest();
       //expect(instance).to.be();
     });
 
     it('should have the property exchangeOrderId (base name: "exchange_order_id")', function() {
       // uncomment below and update the code to test the property exchangeOrderId
-      //var instane = new OemlRestApi.OrderCancelSingleRequest();
+      //var instance = new OemlRestApi.OrderCancelSingleRequest();
       //expect(instance).to.be();
     });
 
     it('should have the property clientOrderId (base name: "client_order_id")', function() {
       // uncomment below and update the code to test the property clientOrderId
-      //var instane = new OemlRestApi.OrderCancelSingleRequest();
+      //var instance = new OemlRestApi.OrderCancelSingleRequest();
       //expect(instance).to.be();
     });
 

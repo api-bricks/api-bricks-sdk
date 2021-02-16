@@ -1,4 +1,4 @@
-/* 
+/*
  * OEML - REST API
  *
  * This section will provide necessary information about the `CoinAPI OEML REST API` protocol. This API is also available in the Postman application: <a href=\"https://postman.coinapi.io/\" target=\"_blank\">https://postman.coinapi.io/</a>       
@@ -10,16 +10,17 @@
 
 
 using System;
-using System.Linq;
-using System.IO;
-using System.Text;
-using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Linq;
+using System.IO;
 using System.Runtime.Serialization;
+using System.Text;
+using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = CoinAPI.OMS.API.SDK.Client.OpenAPIDateConverter;
 
@@ -28,13 +29,13 @@ namespace CoinAPI.OMS.API.SDK.Model
     /// <summary>
     /// Message
     /// </summary>
-    [DataContract]
-    public partial class Message :  IEquatable<Message>, IValidatableObject
+    [DataContract(Name = "Message")]
+    public partial class Message : IEquatable<Message>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets Severity
         /// </summary>
-        [DataMember(Name="severity", EmitDefaultValue=false)]
+        [DataMember(Name = "severity", EmitDefaultValue = false)]
         public Severity? Severity { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="Message" /> class.
@@ -50,26 +51,26 @@ namespace CoinAPI.OMS.API.SDK.Model
             this.ExchangeId = exchangeId;
             this._Message = message;
         }
-        
+
         /// <summary>
         /// Type of message.
         /// </summary>
         /// <value>Type of message.</value>
-        [DataMember(Name="type", EmitDefaultValue=false)]
+        [DataMember(Name = "type", EmitDefaultValue = false)]
         public string Type { get; set; }
 
         /// <summary>
         /// If the message related to exchange, then the identifier of the exchange will be provided.
         /// </summary>
         /// <value>If the message related to exchange, then the identifier of the exchange will be provided.</value>
-        [DataMember(Name="exchange_id", EmitDefaultValue=false)]
+        [DataMember(Name = "exchange_id", EmitDefaultValue = false)]
         public string ExchangeId { get; set; }
 
         /// <summary>
         /// Message text.
         /// </summary>
         /// <value>Message text.</value>
-        [DataMember(Name="message", EmitDefaultValue=false)]
+        [DataMember(Name = "message", EmitDefaultValue = false)]
         public string _Message { get; set; }
 
         /// <summary>
@@ -87,14 +88,14 @@ namespace CoinAPI.OMS.API.SDK.Model
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
         public virtual string ToJson()
         {
-            return JsonConvert.SerializeObject(this, Formatting.Indented);
+            return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
 
         /// <summary>

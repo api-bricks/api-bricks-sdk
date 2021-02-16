@@ -24,9 +24,11 @@ defmodule OEML-RESTAPI.Model.OrderExecutionReport do
     :"exchange_order_id",
     :"amount_open",
     :"amount_filled",
+    :"avg_px",
     :"status",
-    :"time_order",
-    :"error_message"
+    :"status_history",
+    :"error_message",
+    :"fills"
   ]
 
   @type t :: %__MODULE__{
@@ -45,9 +47,11 @@ defmodule OEML-RESTAPI.Model.OrderExecutionReport do
     :"exchange_order_id" => String.t | nil,
     :"amount_open" => float(),
     :"amount_filled" => float(),
+    :"avg_px" => float() | nil,
     :"status" => OrdStatus,
-    :"time_order" => [[String.t]],
-    :"error_message" => String.t | nil
+    :"status_history" => [[String.t]] | nil,
+    :"error_message" => String.t | nil,
+    :"fills" => [Fills] | nil
   }
 end
 
@@ -60,6 +64,7 @@ defimpl Poison.Decoder, for: OEML-RESTAPI.Model.OrderExecutionReport do
     |> deserialize(:"time_in_force", :struct, OEML-RESTAPI.Model.TimeInForce, options)
     |> deserialize(:"expire_time", :struct, OEML-RESTAPI.Model.DateTime, options)
     |> deserialize(:"status", :struct, OEML-RESTAPI.Model.OrdStatus, options)
+    |> deserialize(:"fills", :list, OEML-RESTAPI.Model.Fills, options)
   end
 end
 

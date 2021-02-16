@@ -14,12 +14,7 @@ note
 	EIS:"Eiffel openapi generator", "src=https://openapi-generator.tech", "protocol=uri"
 class BALANCE_DATA 
 
-inherit
 
-  ANY
-      redefine
-          out 
-      end
 
 
 feature --Access
@@ -28,18 +23,18 @@ feature --Access
       -- Exchange currency code.
     asset_id_coinapi: detachable STRING_32 
       -- CoinAPI currency code.
-    balance: REAL_32 
-      -- Value of the current total currency balance on the exchange.
-    available: REAL_32 
-      -- Value of the current available currency balance on the exchange that can be used as collateral.
-    locked: REAL_32 
-      -- Value of the current locked currency balance by the exchange.
+ 	balance: REAL_32 
+    	 -- Value of the current total currency balance on the exchange.
+ 	available: REAL_32 
+    	 -- Value of the current available currency balance on the exchange that can be used as collateral.
+ 	locked: REAL_32 
+    	 -- Value of the current locked currency balance by the exchange.
     last_updated_by: detachable STRING_32 
       -- Source of the last modification. 
-    rate_usd: REAL_32 
-      -- Current exchange rate to the USD for the single unit of the currency. 
-    traded: REAL_32 
-      -- Value of the current total traded.
+ 	rate_usd: REAL_32 
+    	 -- Current exchange rate to the USD for the single unit of the currency. 
+ 	traded: REAL_32 
+    	 -- Value of the current total traded.
 
 feature -- Change Element  
  
@@ -110,7 +105,7 @@ feature -- Change Element
 
  feature -- Status Report
 
-    out: STRING
+    output: STRING
           -- <Precursor>
       do
         create Result.make_empty

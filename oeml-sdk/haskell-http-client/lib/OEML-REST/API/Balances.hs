@@ -77,7 +77,7 @@ data V1BalancesGet
 -- | /Optional Param/ "exchange_id" - Filter the balances to the specific exchange.
 instance HasOptionalParam V1BalancesGet ExchangeId where
   applyOptionalParam req (ExchangeId xs) =
-    req `setQuery` toQuery ("exchange_id", Just xs)
+    req `addQuery` toQuery ("exchange_id", Just xs)
 -- | @application/json@
 instance Produces V1BalancesGet MimeJSON
 -- | @appliction/json@

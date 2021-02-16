@@ -19,15 +19,17 @@ local function cast_order_execution_report_all_of(t)
 	return setmetatable(t, order_execution_report_all_of_mt)
 end
 
-local function new_order_execution_report_all_of(client_order_id_format_exchange, exchange_order_id, amount_open, amount_filled, status, time_order, error_message)
+local function new_order_execution_report_all_of(client_order_id_format_exchange, exchange_order_id, amount_open, amount_filled, avg_px, status, status_history, error_message, fills)
 	return cast_order_execution_report_all_of({
 		["client_order_id_format_exchange"] = client_order_id_format_exchange;
 		["exchange_order_id"] = exchange_order_id;
 		["amount_open"] = amount_open;
 		["amount_filled"] = amount_filled;
+		["avg_px"] = avg_px;
 		["status"] = status;
-		["time_order"] = time_order;
+		["status_history"] = status_history;
 		["error_message"] = error_message;
+		["fills"] = fills;
 	})
 end
 

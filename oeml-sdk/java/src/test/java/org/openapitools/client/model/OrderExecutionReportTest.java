@@ -24,6 +24,7 @@ import java.io.IOException;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
+import org.openapitools.client.model.Fills;
 import org.openapitools.client.model.OrdSide;
 import org.openapitools.client.model.OrdStatus;
 import org.openapitools.client.model.OrdType;
@@ -171,6 +172,14 @@ public class OrderExecutionReportTest {
     }
 
     /**
+     * Test the property 'avgPx'
+     */
+    @Test
+    public void avgPxTest() {
+        // TODO: test avgPx
+    }
+
+    /**
      * Test the property 'status'
      */
     @Test
@@ -179,11 +188,11 @@ public class OrderExecutionReportTest {
     }
 
     /**
-     * Test the property 'timeOrder'
+     * Test the property 'statusHistory'
      */
     @Test
-    public void timeOrderTest() {
-        // TODO: test timeOrder
+    public void statusHistoryTest() {
+        // TODO: test statusHistory
     }
 
     /**
@@ -192,6 +201,14 @@ public class OrderExecutionReportTest {
     @Test
     public void errorMessageTest() {
         // TODO: test errorMessage
+    }
+
+    /**
+     * Test the property 'fills'
+     */
+    @Test
+    public void fillsTest() {
+        // TODO: test fills
     }
 
 }

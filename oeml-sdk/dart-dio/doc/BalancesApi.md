@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 # **v1BalancesGet**
-> List<Balance> v1BalancesGet(exchangeId)
+> BuiltList<Balance> v1BalancesGet(exchangeId)
 
 Get balances
 
@@ -30,7 +30,7 @@ try {
     var result = api_instance.v1BalancesGet(exchangeId);
     print(result);
 } catch (e) {
-    print("Exception when calling BalancesApi->v1BalancesGet: $e\n");
+    print('Exception when calling BalancesApi->v1BalancesGet: $e\n');
 }
 ```
 
@@ -38,11 +38,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **exchangeId** | **String**| Filter the balances to the specific exchange. | [optional] [default to null]
+ **exchangeId** | **String**| Filter the balances to the specific exchange. | [optional] 
 
 ### Return type
 
-[**List<Balance>**](Balance.md)
+[**BuiltList<Balance>**](Balance.md)
 
 ### Authorization
 

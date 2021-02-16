@@ -114,6 +114,12 @@ public class OASOrderExecutionReport implements OASOrderNewSingleRequest, OASOrd
     public Double amountFilled { get; set; }
 
     /**
+     * Calculated average price of all fills on this order.
+     * @return avgPx
+     */
+    public Double avgPx { get; set; }
+
+    /**
      * Get status
      * @return status
      */
@@ -121,15 +127,21 @@ public class OASOrderExecutionReport implements OASOrderNewSingleRequest, OASOrd
 
     /**
      * Timestamped history of order status changes.
-     * @return timeOrder
+     * @return statusHistory
      */
-    public List<List<String>> timeOrder { get; set; }
+    public List<List<String>> statusHistory { get; set; }
 
     /**
-     * Error message
+     * Error message.
      * @return errorMessage
      */
     public String errorMessage { get; set; }
+
+    /**
+     * Relay fill information on working orders.
+     * @return fills
+     */
+    public List<OASFills> fills { get; set; }
 
     private static final Map<String, String> propertyMappings = new Map<String, String>{
         'exchange_id' => 'exchangeId',
@@ -145,7 +157,353 @@ public class OASOrderExecutionReport implements OASOrderNewSingleRequest, OASOrd
         'exchange_order_id' => 'exchangeOrderId',
         'amount_open' => 'amountOpen',
         'amount_filled' => 'amountFilled',
-        'time_order' => 'timeOrder',
+        'avg_px' => 'avgPx',
+        'status_history' => 'statusHistory',
+        'error_message' => 'errorMessage'
+    };
+
+    public Map<String, String> getPropertyMappings() {
+        return propertyMappings;
+    }
+
+    private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'exchange_id' => 'exchangeId',
+        'client_order_id' => 'clientOrderId',
+        'symbol_id_exchange' => 'symbolIdExchange',
+        'symbol_id_coinapi' => 'symbolIdCoinapi',
+        'amount_order' => 'amountOrder',
+        'order_type' => 'orderType',
+        'time_in_force' => 'timeInForce',
+        'expire_time' => 'expireTime',
+        'exec_inst' => 'execInst',
+        'client_order_id_format_exchange' => 'clientOrderIdFormatExchange',
+        'exchange_order_id' => 'exchangeOrderId',
+        'amount_open' => 'amountOpen',
+        'amount_filled' => 'amountFilled',
+        'avg_px' => 'avgPx',
+        'status_history' => 'statusHistory',
+        'error_message' => 'errorMessage'
+    };
+
+    public Map<String, String> getPropertyMappings() {
+        return propertyMappings;
+    }
+
+    private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'exchange_id' => 'exchangeId',
+        'client_order_id' => 'clientOrderId',
+        'symbol_id_exchange' => 'symbolIdExchange',
+        'symbol_id_coinapi' => 'symbolIdCoinapi',
+        'amount_order' => 'amountOrder',
+        'order_type' => 'orderType',
+        'time_in_force' => 'timeInForce',
+        'expire_time' => 'expireTime',
+        'exec_inst' => 'execInst',
+        'client_order_id_format_exchange' => 'clientOrderIdFormatExchange',
+        'exchange_order_id' => 'exchangeOrderId',
+        'amount_open' => 'amountOpen',
+        'amount_filled' => 'amountFilled',
+        'avg_px' => 'avgPx',
+        'status_history' => 'statusHistory',
+        'error_message' => 'errorMessage'
+    };
+
+    public Map<String, String> getPropertyMappings() {
+        return propertyMappings;
+    }
+
+    private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'exchange_id' => 'exchangeId',
+        'client_order_id' => 'clientOrderId',
+        'symbol_id_exchange' => 'symbolIdExchange',
+        'symbol_id_coinapi' => 'symbolIdCoinapi',
+        'amount_order' => 'amountOrder',
+        'order_type' => 'orderType',
+        'time_in_force' => 'timeInForce',
+        'expire_time' => 'expireTime',
+        'exec_inst' => 'execInst',
+        'client_order_id_format_exchange' => 'clientOrderIdFormatExchange',
+        'exchange_order_id' => 'exchangeOrderId',
+        'amount_open' => 'amountOpen',
+        'amount_filled' => 'amountFilled',
+        'avg_px' => 'avgPx',
+        'status_history' => 'statusHistory',
+        'error_message' => 'errorMessage'
+    };
+
+    public Map<String, String> getPropertyMappings() {
+        return propertyMappings;
+    }
+
+    private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'exchange_id' => 'exchangeId',
+        'client_order_id' => 'clientOrderId',
+        'symbol_id_exchange' => 'symbolIdExchange',
+        'symbol_id_coinapi' => 'symbolIdCoinapi',
+        'amount_order' => 'amountOrder',
+        'order_type' => 'orderType',
+        'time_in_force' => 'timeInForce',
+        'expire_time' => 'expireTime',
+        'exec_inst' => 'execInst',
+        'client_order_id_format_exchange' => 'clientOrderIdFormatExchange',
+        'exchange_order_id' => 'exchangeOrderId',
+        'amount_open' => 'amountOpen',
+        'amount_filled' => 'amountFilled',
+        'avg_px' => 'avgPx',
+        'status_history' => 'statusHistory',
+        'error_message' => 'errorMessage'
+    };
+
+    public Map<String, String> getPropertyMappings() {
+        return propertyMappings;
+    }
+
+    private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'exchange_id' => 'exchangeId',
+        'client_order_id' => 'clientOrderId',
+        'symbol_id_exchange' => 'symbolIdExchange',
+        'symbol_id_coinapi' => 'symbolIdCoinapi',
+        'amount_order' => 'amountOrder',
+        'order_type' => 'orderType',
+        'time_in_force' => 'timeInForce',
+        'expire_time' => 'expireTime',
+        'exec_inst' => 'execInst',
+        'client_order_id_format_exchange' => 'clientOrderIdFormatExchange',
+        'exchange_order_id' => 'exchangeOrderId',
+        'amount_open' => 'amountOpen',
+        'amount_filled' => 'amountFilled',
+        'avg_px' => 'avgPx',
+        'status_history' => 'statusHistory',
+        'error_message' => 'errorMessage'
+    };
+
+    public Map<String, String> getPropertyMappings() {
+        return propertyMappings;
+    }
+
+    private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'exchange_id' => 'exchangeId',
+        'client_order_id' => 'clientOrderId',
+        'symbol_id_exchange' => 'symbolIdExchange',
+        'symbol_id_coinapi' => 'symbolIdCoinapi',
+        'amount_order' => 'amountOrder',
+        'order_type' => 'orderType',
+        'time_in_force' => 'timeInForce',
+        'expire_time' => 'expireTime',
+        'exec_inst' => 'execInst',
+        'client_order_id_format_exchange' => 'clientOrderIdFormatExchange',
+        'exchange_order_id' => 'exchangeOrderId',
+        'amount_open' => 'amountOpen',
+        'amount_filled' => 'amountFilled',
+        'avg_px' => 'avgPx',
+        'status_history' => 'statusHistory',
+        'error_message' => 'errorMessage'
+    };
+
+    public Map<String, String> getPropertyMappings() {
+        return propertyMappings;
+    }
+
+    private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'exchange_id' => 'exchangeId',
+        'client_order_id' => 'clientOrderId',
+        'symbol_id_exchange' => 'symbolIdExchange',
+        'symbol_id_coinapi' => 'symbolIdCoinapi',
+        'amount_order' => 'amountOrder',
+        'order_type' => 'orderType',
+        'time_in_force' => 'timeInForce',
+        'expire_time' => 'expireTime',
+        'exec_inst' => 'execInst',
+        'client_order_id_format_exchange' => 'clientOrderIdFormatExchange',
+        'exchange_order_id' => 'exchangeOrderId',
+        'amount_open' => 'amountOpen',
+        'amount_filled' => 'amountFilled',
+        'avg_px' => 'avgPx',
+        'status_history' => 'statusHistory',
+        'error_message' => 'errorMessage'
+    };
+
+    public Map<String, String> getPropertyMappings() {
+        return propertyMappings;
+    }
+
+    private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'exchange_id' => 'exchangeId',
+        'client_order_id' => 'clientOrderId',
+        'symbol_id_exchange' => 'symbolIdExchange',
+        'symbol_id_coinapi' => 'symbolIdCoinapi',
+        'amount_order' => 'amountOrder',
+        'order_type' => 'orderType',
+        'time_in_force' => 'timeInForce',
+        'expire_time' => 'expireTime',
+        'exec_inst' => 'execInst',
+        'client_order_id_format_exchange' => 'clientOrderIdFormatExchange',
+        'exchange_order_id' => 'exchangeOrderId',
+        'amount_open' => 'amountOpen',
+        'amount_filled' => 'amountFilled',
+        'avg_px' => 'avgPx',
+        'status_history' => 'statusHistory',
+        'error_message' => 'errorMessage'
+    };
+
+    public Map<String, String> getPropertyMappings() {
+        return propertyMappings;
+    }
+
+    private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'exchange_id' => 'exchangeId',
+        'client_order_id' => 'clientOrderId',
+        'symbol_id_exchange' => 'symbolIdExchange',
+        'symbol_id_coinapi' => 'symbolIdCoinapi',
+        'amount_order' => 'amountOrder',
+        'order_type' => 'orderType',
+        'time_in_force' => 'timeInForce',
+        'expire_time' => 'expireTime',
+        'exec_inst' => 'execInst',
+        'client_order_id_format_exchange' => 'clientOrderIdFormatExchange',
+        'exchange_order_id' => 'exchangeOrderId',
+        'amount_open' => 'amountOpen',
+        'amount_filled' => 'amountFilled',
+        'avg_px' => 'avgPx',
+        'status_history' => 'statusHistory',
+        'error_message' => 'errorMessage'
+    };
+
+    public Map<String, String> getPropertyMappings() {
+        return propertyMappings;
+    }
+
+    private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'exchange_id' => 'exchangeId',
+        'client_order_id' => 'clientOrderId',
+        'symbol_id_exchange' => 'symbolIdExchange',
+        'symbol_id_coinapi' => 'symbolIdCoinapi',
+        'amount_order' => 'amountOrder',
+        'order_type' => 'orderType',
+        'time_in_force' => 'timeInForce',
+        'expire_time' => 'expireTime',
+        'exec_inst' => 'execInst',
+        'client_order_id_format_exchange' => 'clientOrderIdFormatExchange',
+        'exchange_order_id' => 'exchangeOrderId',
+        'amount_open' => 'amountOpen',
+        'amount_filled' => 'amountFilled',
+        'avg_px' => 'avgPx',
+        'status_history' => 'statusHistory',
+        'error_message' => 'errorMessage'
+    };
+
+    public Map<String, String> getPropertyMappings() {
+        return propertyMappings;
+    }
+
+    private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'exchange_id' => 'exchangeId',
+        'client_order_id' => 'clientOrderId',
+        'symbol_id_exchange' => 'symbolIdExchange',
+        'symbol_id_coinapi' => 'symbolIdCoinapi',
+        'amount_order' => 'amountOrder',
+        'order_type' => 'orderType',
+        'time_in_force' => 'timeInForce',
+        'expire_time' => 'expireTime',
+        'exec_inst' => 'execInst',
+        'client_order_id_format_exchange' => 'clientOrderIdFormatExchange',
+        'exchange_order_id' => 'exchangeOrderId',
+        'amount_open' => 'amountOpen',
+        'amount_filled' => 'amountFilled',
+        'avg_px' => 'avgPx',
+        'status_history' => 'statusHistory',
+        'error_message' => 'errorMessage'
+    };
+
+    public Map<String, String> getPropertyMappings() {
+        return propertyMappings;
+    }
+
+    private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'exchange_id' => 'exchangeId',
+        'client_order_id' => 'clientOrderId',
+        'symbol_id_exchange' => 'symbolIdExchange',
+        'symbol_id_coinapi' => 'symbolIdCoinapi',
+        'amount_order' => 'amountOrder',
+        'order_type' => 'orderType',
+        'time_in_force' => 'timeInForce',
+        'expire_time' => 'expireTime',
+        'exec_inst' => 'execInst',
+        'client_order_id_format_exchange' => 'clientOrderIdFormatExchange',
+        'exchange_order_id' => 'exchangeOrderId',
+        'amount_open' => 'amountOpen',
+        'amount_filled' => 'amountFilled',
+        'avg_px' => 'avgPx',
+        'status_history' => 'statusHistory',
+        'error_message' => 'errorMessage'
+    };
+
+    public Map<String, String> getPropertyMappings() {
+        return propertyMappings;
+    }
+
+    private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'exchange_id' => 'exchangeId',
+        'client_order_id' => 'clientOrderId',
+        'symbol_id_exchange' => 'symbolIdExchange',
+        'symbol_id_coinapi' => 'symbolIdCoinapi',
+        'amount_order' => 'amountOrder',
+        'order_type' => 'orderType',
+        'time_in_force' => 'timeInForce',
+        'expire_time' => 'expireTime',
+        'exec_inst' => 'execInst',
+        'client_order_id_format_exchange' => 'clientOrderIdFormatExchange',
+        'exchange_order_id' => 'exchangeOrderId',
+        'amount_open' => 'amountOpen',
+        'amount_filled' => 'amountFilled',
+        'avg_px' => 'avgPx',
+        'status_history' => 'statusHistory',
+        'error_message' => 'errorMessage'
+    };
+
+    public Map<String, String> getPropertyMappings() {
+        return propertyMappings;
+    }
+
+    private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'exchange_id' => 'exchangeId',
+        'client_order_id' => 'clientOrderId',
+        'symbol_id_exchange' => 'symbolIdExchange',
+        'symbol_id_coinapi' => 'symbolIdCoinapi',
+        'amount_order' => 'amountOrder',
+        'order_type' => 'orderType',
+        'time_in_force' => 'timeInForce',
+        'expire_time' => 'expireTime',
+        'exec_inst' => 'execInst',
+        'client_order_id_format_exchange' => 'clientOrderIdFormatExchange',
+        'exchange_order_id' => 'exchangeOrderId',
+        'amount_open' => 'amountOpen',
+        'amount_filled' => 'amountFilled',
+        'avg_px' => 'avgPx',
+        'status_history' => 'statusHistory',
+        'error_message' => 'errorMessage'
+    };
+
+    public Map<String, String> getPropertyMappings() {
+        return propertyMappings;
+    }
+
+    private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'exchange_id' => 'exchangeId',
+        'client_order_id' => 'clientOrderId',
+        'symbol_id_exchange' => 'symbolIdExchange',
+        'symbol_id_coinapi' => 'symbolIdCoinapi',
+        'amount_order' => 'amountOrder',
+        'order_type' => 'orderType',
+        'time_in_force' => 'timeInForce',
+        'expire_time' => 'expireTime',
+        'exec_inst' => 'execInst',
+        'client_order_id_format_exchange' => 'clientOrderIdFormatExchange',
+        'exchange_order_id' => 'exchangeOrderId',
+        'amount_open' => 'amountOpen',
+        'amount_filled' => 'amountFilled',
+        'avg_px' => 'avgPx',
+        'status_history' => 'statusHistory',
         'error_message' => 'errorMessage'
     };
 
@@ -155,7 +513,8 @@ public class OASOrderExecutionReport implements OASOrderNewSingleRequest, OASOrd
 
     public OASOrderExecutionReport() {
         execInst = new List<ExecInstEnum>();
-        timeOrder = new List<List<String>>();
+        statusHistory = new List<List<String>>();
+        fills = new List<OASFills>();
     }
 
     public static OASOrderExecutionReport getExample() {
@@ -175,9 +534,11 @@ public class OASOrderExecutionReport implements OASOrderNewSingleRequest, OASOrd
           orderExecutionReport.exchangeOrderId = '3456456754';
           orderExecutionReport.amountOpen = 0.22;
           orderExecutionReport.amountFilled = 0.0;
+          orderExecutionReport.avgPx = 0.0783;
           orderExecutionReport.status = OASOrdStatus.getExample();
-          orderExecutionReport.timeOrder = new List<List<String>>{new List<String>{'[["RECEIVED","2020-05-27T11:16:20.1677709Z"],["REJECTED","2020-05-27T11:16:20.1677710Z"]]'}};
+          orderExecutionReport.statusHistory = new List<List<String>>{new List<String>{'[["RECEIVED","2020-05-27T11:16:20.1677709Z"],["REJECTED","2020-05-27T11:16:20.1677710Z"]]'}};
           orderExecutionReport.errorMessage = '{"result":"error","reason":"InsufficientFunds","message":"Failed to place buy order on symbol \'BTCUSD\' for price $7,000.00 and quantity 0.22 BTC due to insufficient funds"}';
+          orderExecutionReport.fills = new List<OASFills>{OASFills.getExample()};
         return orderExecutionReport;
     }
 
@@ -199,9 +560,11 @@ public class OASOrderExecutionReport implements OASOrderNewSingleRequest, OASOrd
                 && this.exchangeOrderId == orderExecutionReport.exchangeOrderId
                 && this.amountOpen == orderExecutionReport.amountOpen
                 && this.amountFilled == orderExecutionReport.amountFilled
+                && this.avgPx == orderExecutionReport.avgPx
                 && this.status == orderExecutionReport.status
-                && this.timeOrder == orderExecutionReport.timeOrder
-                && this.errorMessage == orderExecutionReport.errorMessage;
+                && this.statusHistory == orderExecutionReport.statusHistory
+                && this.errorMessage == orderExecutionReport.errorMessage
+                && this.fills == orderExecutionReport.fills;
         }
         return false;
     }
@@ -223,9 +586,11 @@ public class OASOrderExecutionReport implements OASOrderNewSingleRequest, OASOrd
         hashCode = (17 * hashCode) + (exchangeOrderId == null ? 0 : System.hashCode(exchangeOrderId));
         hashCode = (17 * hashCode) + (amountOpen == null ? 0 : System.hashCode(amountOpen));
         hashCode = (17 * hashCode) + (amountFilled == null ? 0 : System.hashCode(amountFilled));
+        hashCode = (17 * hashCode) + (avgPx == null ? 0 : System.hashCode(avgPx));
         hashCode = (17 * hashCode) + (status == null ? 0 : System.hashCode(status));
-        hashCode = (17 * hashCode) + (timeOrder == null ? 0 : System.hashCode(timeOrder));
+        hashCode = (17 * hashCode) + (statusHistory == null ? 0 : System.hashCode(statusHistory));
         hashCode = (17 * hashCode) + (errorMessage == null ? 0 : System.hashCode(errorMessage));
+        hashCode = (17 * hashCode) + (fills == null ? 0 : System.hashCode(fills));
         return hashCode;
     }
 }

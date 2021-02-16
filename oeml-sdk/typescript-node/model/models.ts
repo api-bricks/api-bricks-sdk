@@ -1,5 +1,8 @@
+import localVarRequest from 'request';
+
 export * from './balance';
 export * from './balanceData';
+export * from './fills';
 export * from './message';
 export * from './ordSide';
 export * from './ordStatus';
@@ -15,10 +18,22 @@ export * from './severity';
 export * from './timeInForce';
 export * from './validationError';
 
-import localVarRequest = require('request');
+import * as fs from 'fs';
+
+export interface RequestDetailedFile {
+    value: Buffer;
+    options?: {
+        filename?: string;
+        contentType?: string;
+    }
+}
+
+export type RequestFile = string | Buffer | fs.ReadStream | RequestDetailedFile;
+
 
 import { Balance } from './balance';
 import { BalanceData } from './balanceData';
+import { Fills } from './fills';
 import { Message } from './message';
 import { OrdSide } from './ordSide';
 import { OrdStatus } from './ordStatus';
@@ -60,6 +75,7 @@ let enumsMap: {[index: string]: any} = {
 let typeMap: {[index: string]: any} = {
     "Balance": Balance,
     "BalanceData": BalanceData,
+    "Fills": Fills,
     "Message": Message,
     "OrderCancelAllRequest": OrderCancelAllRequest,
     "OrderCancelSingleRequest": OrderCancelSingleRequest,

@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 # **v1PositionsGet**
-> List<Position> v1PositionsGet(exchangeId)
+> BuiltList<Position> v1PositionsGet(exchangeId)
 
 Get open positions
 
@@ -30,7 +30,7 @@ try {
     var result = api_instance.v1PositionsGet(exchangeId);
     print(result);
 } catch (e) {
-    print("Exception when calling PositionsApi->v1PositionsGet: $e\n");
+    print('Exception when calling PositionsApi->v1PositionsGet: $e\n');
 }
 ```
 
@@ -38,11 +38,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **exchangeId** | **String**| Filter the balances to the specific exchange. | [optional] [default to null]
+ **exchangeId** | **String**| Filter the balances to the specific exchange. | [optional] 
 
 ### Return type
 
-[**List<Position>**](Position.md)
+[**BuiltList<Position>**](Position.md)
 
 ### Authorization
 

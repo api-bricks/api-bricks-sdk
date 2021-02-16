@@ -8,8 +8,11 @@
 
 #' @docType class
 #' @title PositionData
+#'
 #' @description PositionData Class
+#'
 #' @format An \code{R6Class} generator object
+#'
 #' @field symbol_id_exchange  character [optional]
 #'
 #' @field symbol_id_coinapi  character [optional]
@@ -28,8 +31,7 @@
 #'
 #' @field liquidation_price  numeric [optional]
 #'
-#' @field raw_data  \link{object} [optional]
-#'
+#' @field raw_data  object [optional]
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -47,7 +49,9 @@ PositionData <- R6::R6Class(
     `cross_margin` = NULL,
     `liquidation_price` = NULL,
     `raw_data` = NULL,
-    initialize = function(`symbol_id_exchange`=NULL, `symbol_id_coinapi`=NULL, `avg_entry_price`=NULL, `quantity`=NULL, `side`=NULL, `unrealized_pnl`=NULL, `leverage`=NULL, `cross_margin`=NULL, `liquidation_price`=NULL, `raw_data`=NULL, ...){
+    initialize = function(
+        `symbol_id_exchange`=NULL, `symbol_id_coinapi`=NULL, `avg_entry_price`=NULL, `quantity`=NULL, `side`=NULL, `unrealized_pnl`=NULL, `leverage`=NULL, `cross_margin`=NULL, `liquidation_price`=NULL, `raw_data`=NULL, ...
+    ) {
       local.optional.var <- list(...)
       if (!is.null(`symbol_id_exchange`)) {
         stopifnot(is.character(`symbol_id_exchange`), length(`symbol_id_exchange`) == 1)
@@ -80,7 +84,6 @@ PositionData <- R6::R6Class(
         self$`liquidation_price` <- `liquidation_price`
       }
       if (!is.null(`raw_data`)) {
-        stopifnot(R6::is.R6(`raw_data`))
         self$`raw_data` <- `raw_data`
       }
     },
@@ -124,7 +127,7 @@ PositionData <- R6::R6Class(
       }
       if (!is.null(self$`raw_data`)) {
         PositionDataObject[['raw_data']] <-
-          self$`raw_data`$toJSON()
+          self$`raw_data`
       }
 
       PositionDataObject
@@ -161,10 +164,9 @@ PositionData <- R6::R6Class(
         self$`liquidation_price` <- PositionDataObject$`liquidation_price`
       }
       if (!is.null(PositionDataObject$`raw_data`)) {
-        raw_dataObject <- object$new()
-        raw_dataObject$fromJSON(jsonlite::toJSON(PositionDataObject$raw_data, auto_unbox = TRUE, digits = NA))
-        self$`raw_data` <- raw_dataObject
+        self$`raw_data` <- PositionDataObject$`raw_data`
       }
+      self
     },
     toJSONString = function() {
       jsoncontent <- c(
@@ -234,9 +236,9 @@ PositionData <- R6::R6Class(
         if (!is.null(self$`raw_data`)) {
         sprintf(
         '"raw_data":
-        %s
-        ',
-        jsonlite::toJSON(self$`raw_data`$toJSON(), auto_unbox=TRUE, digits = NA)
+          "%s"
+                ',
+        self$`raw_data`
         )}
       )
       jsoncontent <- paste(jsoncontent, collapse = ",")
@@ -253,8 +255,9 @@ PositionData <- R6::R6Class(
       self$`leverage` <- PositionDataObject$`leverage`
       self$`cross_margin` <- PositionDataObject$`cross_margin`
       self$`liquidation_price` <- PositionDataObject$`liquidation_price`
-      self$`raw_data` <- object$new()$fromJSON(jsonlite::toJSON(PositionDataObject$raw_data, auto_unbox = TRUE, digits = NA))
+      self$`raw_data` <- PositionDataObject$`raw_data`
       self
     }
   )
 )
+

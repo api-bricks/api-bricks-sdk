@@ -3,7 +3,7 @@
 #include <ctype.h>
 #include "PositionsAPI.h"
 
-
+#define MAX_NUMBER_LENGTH 16
 #define MAX_BUFFER_LENGTH 4096
 #define intToStr(dst, src) \
     do {\
@@ -107,6 +107,7 @@ PositionsAPI_v1PositionsGet(apiClient_t *apiClient, char * exchange_id )
     }
     return elementToReturn;
 end:
+    free(localVarPath);
     return NULL;
 
 }

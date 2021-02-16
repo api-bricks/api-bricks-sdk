@@ -24,9 +24,11 @@
   | {'exchange_order_id', binary() }
   | {'amount_open', integer() }
   | {'amount_filled', integer() }
+  | {'avg_px', integer() }
   | {'status', openapi_ord_status:openapi_ord_status() }
-  | {'time_order', list(list(binary())) }
+  | {'status_history', list(list(binary())) }
   | {'error_message', binary() }
+  | {'fills', list(openapi_fills:openapi_fills()) }
   ].
 
 
@@ -49,9 +51,11 @@ openapi_order_execution_report(Fields) ->
             , {'exchange_order_id', binary() }
             , {'amount_open', integer() }
             , {'amount_filled', integer() }
+            , {'avg_px', integer() }
             , {'status', openapi_ord_status:openapi_ord_status() }
-            , {'time_order', list(list(binary())) }
+            , {'status_history', list(list(binary())) }
             , {'error_message', binary() }
+            , {'fills', list(openapi_fills:openapi_fills()) }
             ],
   lists:ukeymerge(1, lists:sort(Fields), lists:sort(Default)).
 

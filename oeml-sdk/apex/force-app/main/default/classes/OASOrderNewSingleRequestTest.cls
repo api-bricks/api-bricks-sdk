@@ -72,16 +72,16 @@ private class OASOrderNewSingleRequestTest {
     @isTest
     private static void maintainRenamedProperties() {
         OASOrderNewSingleRequest orderNewSingleRequest = new OASOrderNewSingleRequest();
-        Map<String, String> propertyMappings = orderNewSingleRequest.getPropertyMappings();
-        System.assertEquals('exchangeId', propertyMappings.get('exchange_id'));
-        System.assertEquals('clientOrderId', propertyMappings.get('client_order_id'));
-        System.assertEquals('symbolIdExchange', propertyMappings.get('symbol_id_exchange'));
-        System.assertEquals('symbolIdCoinapi', propertyMappings.get('symbol_id_coinapi'));
-        System.assertEquals('amountOrder', propertyMappings.get('amount_order'));
-        System.assertEquals('orderType', propertyMappings.get('order_type'));
-        System.assertEquals('timeInForce', propertyMappings.get('time_in_force'));
-        System.assertEquals('expireTime', propertyMappings.get('expire_time'));
-        System.assertEquals('execInst', propertyMappings.get('exec_inst'));
+        Map<String, String> x-property-mappings = orderNewSingleRequest.getx-property-mappings();
+        System.assertEquals('exchangeId', x-property-mappings.get('exchange_id'));
+        System.assertEquals('clientOrderId', x-property-mappings.get('client_order_id'));
+        System.assertEquals('symbolIdExchange', x-property-mappings.get('symbol_id_exchange'));
+        System.assertEquals('symbolIdCoinapi', x-property-mappings.get('symbol_id_coinapi'));
+        System.assertEquals('amountOrder', x-property-mappings.get('amount_order'));
+        System.assertEquals('orderType', x-property-mappings.get('order_type'));
+        System.assertEquals('timeInForce', x-property-mappings.get('time_in_force'));
+        System.assertEquals('expireTime', x-property-mappings.get('expire_time'));
+        System.assertEquals('execInst', x-property-mappings.get('exec_inst'));
     }
 
     @isTest

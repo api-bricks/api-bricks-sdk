@@ -8,6 +8,7 @@ import 'package:built_value/standard_json_plugin.dart';
 
 import 'package:openapi/model/balance.dart';
 import 'package:openapi/model/balance_data.dart';
+import 'package:openapi/model/fills.dart';
 import 'package:openapi/model/message.dart';
 import 'package:openapi/model/ord_side.dart';
 import 'package:openapi/model/ord_status.dart';
@@ -29,6 +30,7 @@ part 'serializers.g.dart';
 @SerializersFor(const [
 Balance,
 BalanceData,
+Fills,
 Message,
 OrdSide,
 OrdStatus,
@@ -54,6 +56,9 @@ const FullType(BuiltList, const [const FullType(Balance)]),
 ..addBuilderFactory(
 const FullType(BuiltList, const [const FullType(BalanceData)]),
 () => new ListBuilder<BalanceData>())
+..addBuilderFactory(
+const FullType(BuiltList, const [const FullType(Fills)]),
+() => new ListBuilder<Fills>())
 ..addBuilderFactory(
 const FullType(BuiltList, const [const FullType(Message)]),
 () => new ListBuilder<Message>())

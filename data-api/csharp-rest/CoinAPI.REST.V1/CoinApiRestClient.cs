@@ -6,8 +6,6 @@ using System.Net;
 using System.Net.Http;
 using CoinAPI.REST.V1.Exceptions;
 using CoinAPI.REST.V1.DataModels;
-using System.Diagnostics;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace CoinAPI.REST.V1
@@ -92,7 +90,7 @@ namespace CoinAPI.REST.V1
             return data;
         }
 
-        public Task<List<Exchange>> Metadata_list_exchanges()
+        public Task<List<Exchange>> Metadata_list_exchangesAsync()
         {
             return GetData<List<Exchange>>(CoinApiEndpointUrls.Exchanges());
         }

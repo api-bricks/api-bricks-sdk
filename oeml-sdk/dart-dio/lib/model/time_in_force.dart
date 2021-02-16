@@ -1,4 +1,4 @@
-        import 'package:built_collection/built_collection.dart';
+import 'package:built_collection/built_collection.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -6,21 +6,21 @@ part 'time_in_force.g.dart';
 
 class TimeInForce extends EnumClass {
 
-  /// Order time in force options are documented in the separate section: &lt;a href&#x3D;\&quot;#oeml-order-params-tif\&quot;&gt;OEML / Starter Guide / Order parameters / Time in force&lt;/a&gt; 
-  @BuiltValueEnumConst(wireName: "GOOD_TILL_CANCEL")
-  static const TimeInForce gOODTILLCANCEL = _$gOODTILLCANCEL;
-  /// Order time in force options are documented in the separate section: &lt;a href&#x3D;\&quot;#oeml-order-params-tif\&quot;&gt;OEML / Starter Guide / Order parameters / Time in force&lt;/a&gt; 
-  @BuiltValueEnumConst(wireName: "GOOD_TILL_TIME_EXCHANGE")
-  static const TimeInForce gOODTILLTIMEEXCHANGE = _$gOODTILLTIMEEXCHANGE;
-  /// Order time in force options are documented in the separate section: &lt;a href&#x3D;\&quot;#oeml-order-params-tif\&quot;&gt;OEML / Starter Guide / Order parameters / Time in force&lt;/a&gt; 
-  @BuiltValueEnumConst(wireName: "GOOD_TILL_TIME_OMS")
-  static const TimeInForce gOODTILLTIMEOMS = _$gOODTILLTIMEOMS;
-  /// Order time in force options are documented in the separate section: &lt;a href&#x3D;\&quot;#oeml-order-params-tif\&quot;&gt;OEML / Starter Guide / Order parameters / Time in force&lt;/a&gt; 
-  @BuiltValueEnumConst(wireName: "FILL_OR_KILL")
-  static const TimeInForce fILLORKILL = _$fILLORKILL;
-  /// Order time in force options are documented in the separate section: &lt;a href&#x3D;\&quot;#oeml-order-params-tif\&quot;&gt;OEML / Starter Guide / Order parameters / Time in force&lt;/a&gt; 
-  @BuiltValueEnumConst(wireName: "IMMEDIATE_OR_CANCEL")
-  static const TimeInForce iMMEDIATEORCANCEL = _$iMMEDIATEORCANCEL;
+  /// Order time in force options are documented in the separate section: <a href=\"#oeml-order-params-tif\">OEML / Starter Guide / Order parameters / Time in force</a> 
+  @BuiltValueEnumConst(wireName: r'GOOD_TILL_CANCEL')
+  static const TimeInForce GOOD_TILL_CANCEL = _$GOOD_TILL_CANCEL;
+  /// Order time in force options are documented in the separate section: <a href=\"#oeml-order-params-tif\">OEML / Starter Guide / Order parameters / Time in force</a> 
+  @BuiltValueEnumConst(wireName: r'GOOD_TILL_TIME_EXCHANGE')
+  static const TimeInForce GOOD_TILL_TIME_EXCHANGE = _$GOOD_TILL_TIME_EXCHANGE;
+  /// Order time in force options are documented in the separate section: <a href=\"#oeml-order-params-tif\">OEML / Starter Guide / Order parameters / Time in force</a> 
+  @BuiltValueEnumConst(wireName: r'GOOD_TILL_TIME_OMS')
+  static const TimeInForce GOOD_TILL_TIME_OMS = _$GOOD_TILL_TIME_OMS;
+  /// Order time in force options are documented in the separate section: <a href=\"#oeml-order-params-tif\">OEML / Starter Guide / Order parameters / Time in force</a> 
+  @BuiltValueEnumConst(wireName: r'FILL_OR_KILL')
+  static const TimeInForce FILL_OR_KILL = _$FILL_OR_KILL;
+  /// Order time in force options are documented in the separate section: <a href=\"#oeml-order-params-tif\">OEML / Starter Guide / Order parameters / Time in force</a> 
+  @BuiltValueEnumConst(wireName: r'IMMEDIATE_OR_CANCEL')
+  static const TimeInForce IMMEDIATE_OR_CANCEL = _$IMMEDIATE_OR_CANCEL;
 
   static Serializer<TimeInForce> get serializer => _$timeInForceSerializer;
 

@@ -38,14 +38,14 @@ class PositionsApi(basePath: kotlin.String = defaultBasePath) : ApiClient(basePa
     * Get open positions
     * Get current open positions across all or single exchange.
     * @param exchangeId Filter the balances to the specific exchange. (optional)
-    * @return kotlin.Array<Position>
+    * @return kotlin.collections.List<Position>
     * @throws UnsupportedOperationException If the API returns an informational or redirection response
     * @throws ClientException If the API returns a client error response
     * @throws ServerException If the API returns a server error response
     */
     @Suppress("UNCHECKED_CAST")
     @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun v1PositionsGet(exchangeId: kotlin.String?) : kotlin.Array<Position> {
+    fun v1PositionsGet(exchangeId: kotlin.String?) : kotlin.collections.List<Position> {
         val localVariableBody: kotlin.Any? = null
         val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, List<kotlin.String>>()
             .apply {
@@ -60,13 +60,13 @@ class PositionsApi(basePath: kotlin.String = defaultBasePath) : ApiClient(basePa
             query = localVariableQuery,
             headers = localVariableHeaders
         )
-        val localVarResponse = request<kotlin.Array<Position>>(
+        val localVarResponse = request<kotlin.collections.List<Position>>(
             localVariableConfig,
             localVariableBody
         )
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.Array<Position>
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<Position>
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {

@@ -10,8 +10,9 @@
  * Do not edit the class manually.
  */
 
-import localVarRequest = require('request');
-import http = require('http');
+
+import localVarRequest from 'request';
+import http from 'http';
 
 /* tslint:disable:no-unused-locals */
 import { Balance } from '../model/balance';
@@ -91,7 +92,7 @@ export class BalancesApi {
      * @summary Get balances
      * @param exchangeId Filter the balances to the specific exchange.
      */
-    public async v1BalancesGet (exchangeId?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: Array<Balance>;  }> {
+    public async v1BalancesGet (exchangeId?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<Balance>;  }> {
         const localVarPath = this.basePath + '/v1/balances';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -137,7 +138,7 @@ export class BalancesApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: Array<Balance>;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: Array<Balance>;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);

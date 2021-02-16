@@ -48,9 +48,9 @@ export interface BalanceData {
 export namespace BalanceData {
     export type LastUpdatedByEnum = 'INITIALIZATION' | 'BALANCE_MANAGER' | 'EXCHANGE';
     export const LastUpdatedByEnum = {
-        INITIALIZATION: 'INITIALIZATION' as LastUpdatedByEnum,
-        BALANCEMANAGER: 'BALANCE_MANAGER' as LastUpdatedByEnum,
-        EXCHANGE: 'EXCHANGE' as LastUpdatedByEnum
+        Initialization: 'INITIALIZATION' as LastUpdatedByEnum,
+        BalanceManager: 'BALANCE_MANAGER' as LastUpdatedByEnum,
+        Exchange: 'EXCHANGE' as LastUpdatedByEnum
     };
 }
 

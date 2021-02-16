@@ -555,6 +555,22 @@ components:
       - ERROR
       example: INFO
       type: string
+    Fills:
+      properties:
+        time:
+          description: Execution time.
+          example: 2020-01-01T10:45:20.1677709Z
+          type: date
+        price:
+          description: Execution price.
+          example: 10799.2
+          type: number
+        amount:
+          description: Executed quantity.
+          example: 0.002
+          type: number
+      title: Relay fill information on working orders.
+      type: object
     OrderExecutionReport_allOf:
       description: The order execution report message.
       properties:
@@ -577,9 +593,13 @@ components:
           description: Total quantity filled.
           example: 0.0
           type: number
+        avg_px:
+          description: Calculated average price of all fills on this order.
+          example: 0.0783
+          type: number
         status:
           $ref: '#/components/schemas/OrdStatus'
-        time_order:
+        status_history:
           description: Timestamped history of order status changes.
           items:
             items:
@@ -588,17 +608,23 @@ components:
             type: array
           type: array
         error_message:
-          description: Error message
+          description: Error message.
           example: '{"result":"error","reason":"InsufficientFunds","message":"Failed
             to place buy order on symbol ''BTCUSD'' for price $7,000.00 and quantity
             0.22 BTC due to insufficient funds"}'
           type: string
+        fills:
+          description: Relay fill information on working orders.
+          items:
+            $ref: '#/components/schemas/Fills'
+          type: array
       required:
       - amount_filled
       - amount_open
       - client_order_id_format_exchange
       - status
       - time_order
+      type: object
     Balance_data:
       example:
         last_updated_by: EXCHANGE
@@ -654,6 +680,7 @@ components:
           example: 0.007
           format: float
           type: number
+      type: object
     Position_data:
       description: The Position object.
       example:
@@ -706,4 +733,5 @@ components:
         raw_data:
           example: Other information provided by the exchange on this position.
           type: object
+      type: object
 

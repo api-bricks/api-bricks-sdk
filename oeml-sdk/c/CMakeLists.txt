@@ -40,6 +40,7 @@ set(SRCS
     model/object.c
     model/balance.c
     model/balance_data.c
+    model/fills.c
     model/message.c
     model/ord_side.c
     model/ord_status.c
@@ -69,6 +70,7 @@ set(HDRS
     model/object.h
     model/balance.h
     model/balance_data.h
+    model/fills.h
     model/message.h
     model/ord_side.h
     model/ord_status.h

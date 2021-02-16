@@ -2,18 +2,19 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**exchange_id** | **String** | Exchange identifier used to identify the routing destination. | [optional] 
-**data** | [**Array&lt;BalanceData&gt;**](BalanceData.md) |  | [optional] 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **exchange_id** | **String** | Exchange identifier used to identify the routing destination. | [optional] |
+| **data** | [**Array&lt;BalanceData&gt;**](BalanceData.md) |  | [optional] |
 
-## Code Sample
+## Example
 
 ```ruby
-require 'OpenapiClient'
+require 'openapi_client'
 
-instance = OpenapiClient::Balance.new(exchange_id: KRAKEN,
-                                 data: null)
+instance = OpenapiClient::Balance.new(
+  exchange_id: KRAKEN,
+  data: null
+)
 ```
-
 

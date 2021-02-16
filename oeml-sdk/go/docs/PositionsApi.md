@@ -10,28 +10,51 @@ Method | HTTP request | Description
 
 ## V1PositionsGet
 
-> []Position V1PositionsGet(ctx, optional)
+> []Position V1PositionsGet(ctx).ExchangeId(exchangeId).Execute()
 
 Get open positions
 
-Get current open positions across all or single exchange.
 
-### Required Parameters
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    exchangeId := "KRAKEN" // string | Filter the balances to the specific exchange. (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    api_client := openapiclient.NewAPIClient(configuration)
+    resp, r, err := api_client.PositionsApi.V1PositionsGet(context.Background()).ExchangeId(exchangeId).Execute()
+    if err.Error() != "" {
+        fmt.Fprintf(os.Stderr, "Error when calling `PositionsApi.V1PositionsGet``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `V1PositionsGet`: []Position
+    fmt.Fprintf(os.Stdout, "Response from `PositionsApi.V1PositionsGet`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiV1PositionsGetRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
- **optional** | ***V1PositionsGetOpts** | optional parameters | nil if no parameters
-
-### Optional Parameters
-
-Optional parameters are passed through a pointer to a V1PositionsGetOpts struct
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **exchangeId** | **optional.String**| Filter the balances to the specific exchange. | 
+ **exchangeId** | **string** | Filter the balances to the specific exchange. | 
 
 ### Return type
 

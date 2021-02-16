@@ -1,68 +1,94 @@
+//
+// AUTO-GENERATED FILE, DO NOT MODIFY!
+//
+// @dart=2.0
+
+// ignore_for_file: unused_element, unused_import
+// ignore_for_file: always_put_required_named_parameters_first
+// ignore_for_file: lines_longer_than_80_chars
+
 part of openapi.api;
 
 
-
 class PositionsApi {
-  final ApiClient apiClient;
-
   PositionsApi([ApiClient apiClient]) : apiClient = apiClient ?? defaultApiClient;
 
-  /// Get open positions with HTTP info returned
+  final ApiClient apiClient;
+
+  /// Get open positions
   ///
   /// Get current open positions across all or single exchange.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [String] exchangeId:
+  ///   Filter the balances to the specific exchange.
   Future<Response> v1PositionsGetWithHttpInfo({ String exchangeId }) async {
+    // Verify required params are set.
+
+    final path = '/v1/positions'.replaceAll('{format}', 'json');
+
     Object postBody;
 
-    // verify required params are set
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
 
-    // create path and map variables
-    String path = "/v1/positions".replaceAll("{format}","json");
-
-    // query params
-    List<QueryParam> queryParams = [];
-    Map<String, String> headerParams = {};
-    Map<String, String> formParams = {};
-    if(exchangeId != null) {
-      queryParams.addAll(_convertParametersForCollectionFormat("", "exchange_id", exchangeId));
+    if (exchangeId != null) {
+      queryParams.addAll(_convertParametersForCollectionFormat('', 'exchange_id', exchangeId));
     }
 
-    List<String> contentTypes = [];
+    final contentTypes = <String>[];
+    final nullableContentType = contentTypes.isNotEmpty ? contentTypes[0] : null;
+    final authNames = <String>[];
 
-    String nullableContentType = contentTypes.isNotEmpty ? contentTypes[0] : null;
-    List<String> authNames = [];
-
-    if(nullableContentType != null && nullableContentType.startsWith("multipart/form-data")) {
+    if (
+      nullableContentType != null &&
+      nullableContentType.toLowerCase().startsWith('multipart/form-data')
+    ) {
       bool hasFields = false;
-      MultipartRequest mp = MultipartRequest(null, null);
-      if(hasFields)
+      final mp = MultipartRequest(null, null);
+      if (hasFields) {
         postBody = mp;
-    }
-    else {
+      }
+    } else {
     }
 
-    var response = await apiClient.invokeAPI(path,
-                                             'GET',
-                                             queryParams,
-                                             postBody,
-                                             headerParams,
-                                             formParams,
-                                             nullableContentType,
-                                             authNames);
-    return response;
+    return await apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      nullableContentType,
+      authNames,
+    );
   }
 
   /// Get open positions
   ///
   /// Get current open positions across all or single exchange.
+  ///
+  /// Parameters:
+  ///
+  /// * [String] exchangeId:
+  ///   Filter the balances to the specific exchange.
   Future<List<Position>> v1PositionsGet({ String exchangeId }) async {
-    Response response = await v1PositionsGetWithHttpInfo( exchangeId: exchangeId );
-    if(response.statusCode >= 400) {
+    final response = await v1PositionsGetWithHttpInfo( exchangeId: exchangeId );
+    if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, _decodeBodyBytes(response));
-    } else if(response.body != null) {
-      return (apiClient.deserialize(_decodeBodyBytes(response), 'List<Position>') as List).map((item) => item as Position).toList();
-    } else {
-      return null;
     }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body != null && response.statusCode != HttpStatus.noContent) {
+      return (apiClient.deserialize(_decodeBodyBytes(response), 'List<Position>') as List)
+        .map((item) => item as Position)
+        .toList(growable: false);
+    }
+    return null;
   }
-
 }

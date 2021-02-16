@@ -3,7 +3,7 @@
 #include <ctype.h>
 #include "OrdersAPI.h"
 
-
+#define MAX_NUMBER_LENGTH 16
 #define MAX_BUFFER_LENGTH 4096
 #define intToStr(dst, src) \
     do {\
@@ -35,7 +35,7 @@ OrdersAPI_v1OrdersCancelAllPost(apiClient_t *apiClient, order_cancel_all_request
 
 
     // Body Param
-    cJSON *localVarSingleItemJSON_order_cancel_all_request;
+    cJSON *localVarSingleItemJSON_order_cancel_all_request = NULL;
     if (order_cancel_all_request != NULL)
     {
         //string
@@ -84,10 +84,14 @@ OrdersAPI_v1OrdersCancelAllPost(apiClient_t *apiClient, order_cancel_all_request
     list_free(localVarHeaderType);
     list_free(localVarContentType);
     free(localVarPath);
-    cJSON_Delete(localVarSingleItemJSON_order_cancel_all_request);
+    if (localVarSingleItemJSON_order_cancel_all_request) {
+        cJSON_Delete(localVarSingleItemJSON_order_cancel_all_request);
+        localVarSingleItemJSON_order_cancel_all_request = NULL;
+    }
     free(localVarBodyParameters);
     return elementToReturn;
 end:
+    free(localVarPath);
     return NULL;
 
 }
@@ -115,7 +119,7 @@ OrdersAPI_v1OrdersCancelPost(apiClient_t *apiClient, order_cancel_single_request
 
 
     // Body Param
-    cJSON *localVarSingleItemJSON_order_cancel_single_request;
+    cJSON *localVarSingleItemJSON_order_cancel_single_request = NULL;
     if (order_cancel_single_request != NULL)
     {
         //string
@@ -164,10 +168,14 @@ OrdersAPI_v1OrdersCancelPost(apiClient_t *apiClient, order_cancel_single_request
     list_free(localVarHeaderType);
     list_free(localVarContentType);
     free(localVarPath);
-    cJSON_Delete(localVarSingleItemJSON_order_cancel_single_request);
+    if (localVarSingleItemJSON_order_cancel_single_request) {
+        cJSON_Delete(localVarSingleItemJSON_order_cancel_single_request);
+        localVarSingleItemJSON_order_cancel_single_request = NULL;
+    }
     free(localVarBodyParameters);
     return elementToReturn;
 end:
+    free(localVarPath);
     return NULL;
 
 }
@@ -267,6 +275,7 @@ OrdersAPI_v1OrdersGet(apiClient_t *apiClient, char * exchange_id )
     }
     return elementToReturn;
 end:
+    free(localVarPath);
     return NULL;
 
 }
@@ -294,7 +303,7 @@ OrdersAPI_v1OrdersPost(apiClient_t *apiClient, order_new_single_request_t * orde
 
 
     // Body Param
-    cJSON *localVarSingleItemJSON_order_new_single_request;
+    cJSON *localVarSingleItemJSON_order_new_single_request = NULL;
     if (order_new_single_request != NULL)
     {
         //string
@@ -346,10 +355,14 @@ OrdersAPI_v1OrdersPost(apiClient_t *apiClient, order_new_single_request_t * orde
     list_free(localVarHeaderType);
     list_free(localVarContentType);
     free(localVarPath);
-    cJSON_Delete(localVarSingleItemJSON_order_new_single_request);
+    if (localVarSingleItemJSON_order_new_single_request) {
+        cJSON_Delete(localVarSingleItemJSON_order_new_single_request);
+        localVarSingleItemJSON_order_new_single_request = NULL;
+    }
     free(localVarBodyParameters);
     return elementToReturn;
 end:
+    free(localVarPath);
     return NULL;
 
 }
@@ -425,6 +438,7 @@ OrdersAPI_v1OrdersStatusClientOrderIdGet(apiClient_t *apiClient, char * client_o
     free(localVarToReplace_client_order_id);
     return elementToReturn;
 end:
+    free(localVarPath);
     return NULL;
 
 }

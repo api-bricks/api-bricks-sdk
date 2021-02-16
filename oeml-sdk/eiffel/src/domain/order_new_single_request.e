@@ -14,12 +14,7 @@ note
 	EIS:"Eiffel openapi generator", "src=https://openapi-generator.tech", "protocol=uri"
 class ORDER_NEW_SINGLE_REQUEST 
 
-inherit
 
-  ANY
-      redefine
-          out 
-      end
 
 
 feature --Access
@@ -32,10 +27,10 @@ feature --Access
       -- Exchange symbol. One of the properties (`symbol_id_exchange`, `symbol_id_coinapi`) is required to identify the market for the new order.
     symbol_id_coinapi: detachable STRING_32 
       -- CoinAPI symbol. One of the properties (`symbol_id_exchange`, `symbol_id_coinapi`) is required to identify the market for the new order.
-    amount_order: REAL_32 
-      -- Order quantity.
-    price: REAL_32 
-      -- Order price.
+ 	amount_order: REAL_32 
+    	 -- Order quantity.
+ 	price: REAL_32 
+    	 -- Order price.
     side: detachable ORD_SIDE 
       
     order_type: detachable ORD_TYPE 
@@ -140,7 +135,7 @@ feature -- Change Element
 
  feature -- Status Report
 
-    out: STRING
+    output: STRING
           -- <Precursor>
       do
         create Result.make_empty

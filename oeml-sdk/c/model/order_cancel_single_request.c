@@ -27,9 +27,18 @@ void order_cancel_single_request_free(order_cancel_single_request_t *order_cance
         return ;
     }
     listEntry_t *listEntry;
-    free(order_cancel_single_request->exchange_id);
-    free(order_cancel_single_request->exchange_order_id);
-    free(order_cancel_single_request->client_order_id);
+    if (order_cancel_single_request->exchange_id) {
+        free(order_cancel_single_request->exchange_id);
+        order_cancel_single_request->exchange_id = NULL;
+    }
+    if (order_cancel_single_request->exchange_order_id) {
+        free(order_cancel_single_request->exchange_order_id);
+        order_cancel_single_request->exchange_order_id = NULL;
+    }
+    if (order_cancel_single_request->client_order_id) {
+        free(order_cancel_single_request->client_order_id);
+        order_cancel_single_request->client_order_id = NULL;
+    }
     free(order_cancel_single_request);
 }
 

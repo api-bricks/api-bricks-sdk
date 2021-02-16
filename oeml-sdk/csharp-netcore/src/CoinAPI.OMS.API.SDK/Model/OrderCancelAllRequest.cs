@@ -1,4 +1,4 @@
-/* 
+/*
  * OEML - REST API
  *
  * This section will provide necessary information about the `CoinAPI OEML REST API` protocol. This API is also available in the Postman application: <a href=\"https://postman.coinapi.io/\" target=\"_blank\">https://postman.coinapi.io/</a>       
@@ -10,16 +10,17 @@
 
 
 using System;
-using System.Linq;
-using System.IO;
-using System.Text;
-using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Linq;
+using System.IO;
 using System.Runtime.Serialization;
+using System.Text;
+using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = CoinAPI.OMS.API.SDK.Client.OpenAPIDateConverter;
 
@@ -28,8 +29,8 @@ namespace CoinAPI.OMS.API.SDK.Model
     /// <summary>
     /// Cancel all orders request object.
     /// </summary>
-    [DataContract]
-    public partial class OrderCancelAllRequest :  IEquatable<OrderCancelAllRequest>, IValidatableObject
+    [DataContract(Name = "OrderCancelAllRequest")]
+    public partial class OrderCancelAllRequest : IEquatable<OrderCancelAllRequest>, IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="OrderCancelAllRequest" /> class.
@@ -45,12 +46,12 @@ namespace CoinAPI.OMS.API.SDK.Model
             // to ensure "exchangeId" is required (not null)
             this.ExchangeId = exchangeId ?? throw new ArgumentNullException("exchangeId is a required property for OrderCancelAllRequest and cannot be null");
         }
-        
+
         /// <summary>
         /// Identifier of the exchange from which active orders should be canceled.
         /// </summary>
         /// <value>Identifier of the exchange from which active orders should be canceled.</value>
-        [DataMember(Name="exchange_id", EmitDefaultValue=false)]
+        [DataMember(Name = "exchange_id", IsRequired = true, EmitDefaultValue = false)]
         public string ExchangeId { get; set; }
 
         /// <summary>
@@ -65,14 +66,14 @@ namespace CoinAPI.OMS.API.SDK.Model
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
         public virtual string ToJson()
         {
-            return JsonConvert.SerializeObject(this, Formatting.Indented);
+            return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
 
         /// <summary>

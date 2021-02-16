@@ -11,7 +11,7 @@ void main() {
     //
     // Get current currency balance from all or single exchange.
     //
-    //Future<List<Balance>> v1BalancesGet({ String exchangeId }) async 
+    //Future<List<Balance>> v1BalancesGet({ String exchangeId }) async
     test('test v1BalancesGet', () async {
       // TODO
     });

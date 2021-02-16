@@ -1,4 +1,4 @@
-        import 'package:built_collection/built_collection.dart';
+import 'package:built_collection/built_collection.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -7,14 +7,14 @@ part 'severity.g.dart';
 class Severity extends EnumClass {
 
   /// Severity of the message.
-  @BuiltValueEnumConst(wireName: "INFO")
-  static const Severity iNFO = _$iNFO;
+  @BuiltValueEnumConst(wireName: r'INFO')
+  static const Severity INFO = _$INFO;
   /// Severity of the message.
-  @BuiltValueEnumConst(wireName: "WARNING")
-  static const Severity wARNING = _$wARNING;
+  @BuiltValueEnumConst(wireName: r'WARNING')
+  static const Severity WARNING = _$WARNING;
   /// Severity of the message.
-  @BuiltValueEnumConst(wireName: "ERROR")
-  static const Severity eRROR = _$eRROR;
+  @BuiltValueEnumConst(wireName: r'ERROR')
+  static const Severity ERROR = _$ERROR;
 
   static Serializer<Severity> get serializer => _$severitySerializer;
 

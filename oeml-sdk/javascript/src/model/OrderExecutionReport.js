@@ -12,6 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
+import Fills from './Fills';
 import OrdSide from './OrdSide';
 import OrdStatus from './OrdStatus';
 import OrdType from './OrdType';
@@ -42,11 +43,10 @@ class OrderExecutionReport {
      * @param amountOpen {Number} Quantity open for further execution. `amount_open` = `amount_order` - `amount_filled`
      * @param amountFilled {Number} Total quantity filled.
      * @param status {module:model/OrdStatus} 
-     * @param timeOrder {Array.<Array.<String>>} Timestamped history of order status changes.
      */
-    constructor(exchangeId, clientOrderId, amountOrder, price, side, orderType, timeInForce, clientOrderIdFormatExchange, amountOpen, amountFilled, status, timeOrder) { 
-        OrderNewSingleRequest.initialize(this, exchangeId, clientOrderId, amountOrder, price, side, orderType, timeInForce);OrderExecutionReportAllOf.initialize(this, clientOrderIdFormatExchange, amountOpen, amountFilled, status, timeOrder);
-        OrderExecutionReport.initialize(this, exchangeId, clientOrderId, amountOrder, price, side, orderType, timeInForce, clientOrderIdFormatExchange, amountOpen, amountFilled, status, timeOrder);
+    constructor(exchangeId, clientOrderId, amountOrder, price, side, orderType, timeInForce, clientOrderIdFormatExchange, amountOpen, amountFilled, status) { 
+        OrderNewSingleRequest.initialize(this, exchangeId, clientOrderId, amountOrder, price, side, orderType, timeInForce);OrderExecutionReportAllOf.initialize(this, clientOrderIdFormatExchange, amountOpen, amountFilled, status);
+        OrderExecutionReport.initialize(this, exchangeId, clientOrderId, amountOrder, price, side, orderType, timeInForce, clientOrderIdFormatExchange, amountOpen, amountFilled, status);
     }
 
     /**
@@ -54,7 +54,7 @@ class OrderExecutionReport {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, exchangeId, clientOrderId, amountOrder, price, side, orderType, timeInForce, clientOrderIdFormatExchange, amountOpen, amountFilled, status, timeOrder) { 
+    static initialize(obj, exchangeId, clientOrderId, amountOrder, price, side, orderType, timeInForce, clientOrderIdFormatExchange, amountOpen, amountFilled, status) { 
         obj['exchange_id'] = exchangeId;
         obj['client_order_id'] = clientOrderId;
         obj['amount_order'] = amountOrder;
@@ -66,7 +66,6 @@ class OrderExecutionReport {
         obj['amount_open'] = amountOpen;
         obj['amount_filled'] = amountFilled;
         obj['status'] = status;
-        obj['time_order'] = timeOrder;
     }
 
     /**
@@ -127,14 +126,20 @@ class OrderExecutionReport {
             if (data.hasOwnProperty('amount_filled')) {
                 obj['amount_filled'] = ApiClient.convertToType(data['amount_filled'], 'Number');
             }
+            if (data.hasOwnProperty('avg_px')) {
+                obj['avg_px'] = ApiClient.convertToType(data['avg_px'], 'Number');
+            }
             if (data.hasOwnProperty('status')) {
                 obj['status'] = OrdStatus.constructFromObject(data['status']);
             }
-            if (data.hasOwnProperty('time_order')) {
-                obj['time_order'] = ApiClient.convertToType(data['time_order'], [['String']]);
+            if (data.hasOwnProperty('status_history')) {
+                obj['status_history'] = ApiClient.convertToType(data['status_history'], [['String']]);
             }
             if (data.hasOwnProperty('error_message')) {
                 obj['error_message'] = ApiClient.convertToType(data['error_message'], 'String');
+            }
+            if (data.hasOwnProperty('fills')) {
+                obj['fills'] = ApiClient.convertToType(data['fills'], [Fills]);
             }
         }
         return obj;
@@ -231,21 +236,33 @@ OrderExecutionReport.prototype['amount_open'] = undefined;
 OrderExecutionReport.prototype['amount_filled'] = undefined;
 
 /**
+ * Calculated average price of all fills on this order.
+ * @member {Number} avg_px
+ */
+OrderExecutionReport.prototype['avg_px'] = undefined;
+
+/**
  * @member {module:model/OrdStatus} status
  */
 OrderExecutionReport.prototype['status'] = undefined;
 
 /**
  * Timestamped history of order status changes.
- * @member {Array.<Array.<String>>} time_order
+ * @member {Array.<Array.<String>>} status_history
  */
-OrderExecutionReport.prototype['time_order'] = undefined;
+OrderExecutionReport.prototype['status_history'] = undefined;
 
 /**
- * Error message
+ * Error message.
  * @member {String} error_message
  */
 OrderExecutionReport.prototype['error_message'] = undefined;
+
+/**
+ * Relay fill information on working orders.
+ * @member {Array.<module:model/Fills>} fills
+ */
+OrderExecutionReport.prototype['fills'] = undefined;
 
 
 // Implement OrderNewSingleRequest interface:
@@ -323,19 +340,29 @@ OrderExecutionReportAllOf.prototype['amount_open'] = undefined;
  */
 OrderExecutionReportAllOf.prototype['amount_filled'] = undefined;
 /**
+ * Calculated average price of all fills on this order.
+ * @member {Number} avg_px
+ */
+OrderExecutionReportAllOf.prototype['avg_px'] = undefined;
+/**
  * @member {module:model/OrdStatus} status
  */
 OrderExecutionReportAllOf.prototype['status'] = undefined;
 /**
  * Timestamped history of order status changes.
- * @member {Array.<Array.<String>>} time_order
+ * @member {Array.<Array.<String>>} status_history
  */
-OrderExecutionReportAllOf.prototype['time_order'] = undefined;
+OrderExecutionReportAllOf.prototype['status_history'] = undefined;
 /**
- * Error message
+ * Error message.
  * @member {String} error_message
  */
 OrderExecutionReportAllOf.prototype['error_message'] = undefined;
+/**
+ * Relay fill information on working orders.
+ * @member {Array.<module:model/Fills>} fills
+ */
+OrderExecutionReportAllOf.prototype['fills'] = undefined;
 
 
 

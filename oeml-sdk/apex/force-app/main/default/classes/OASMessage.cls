@@ -16,9 +16,9 @@
 public class OASMessage implements OAS.MappedProperties {
     /**
      * Type of message.
-     * @return r_type
+     * @return type
      */
-    public String r_type { get; set; }
+    public String type { get; set; }
 
     /**
      * Get severity
@@ -39,7 +39,6 @@ public class OASMessage implements OAS.MappedProperties {
     public String message { get; set; }
 
     private static final Map<String, String> propertyMappings = new Map<String, String>{
-        'type' => 'r_type',
         'exchange_id' => 'exchangeId'
     };
 
@@ -49,7 +48,7 @@ public class OASMessage implements OAS.MappedProperties {
 
     public static OASMessage getExample() {
         OASMessage message = new OASMessage();
-          message.r_type = 'message';
+          message.type = 'message';
           message.severity = OASSeverity.getExample();
           message.exchangeId = 'KRAKEN';
           message.message = 'Ok';
@@ -59,7 +58,7 @@ public class OASMessage implements OAS.MappedProperties {
     public Boolean equals(Object obj) {
         if (obj instanceof OASMessage) {           
             OASMessage message = (OASMessage) obj;
-            return this.r_type == message.r_type
+            return this.type == message.type
                 && this.severity == message.severity
                 && this.exchangeId == message.exchangeId
                 && this.message == message.message;
@@ -69,7 +68,7 @@ public class OASMessage implements OAS.MappedProperties {
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (r_type == null ? 0 : System.hashCode(r_type));
+        hashCode = (17 * hashCode) + (type == null ? 0 : System.hashCode(type));
         hashCode = (17 * hashCode) + (severity == null ? 0 : System.hashCode(severity));
         hashCode = (17 * hashCode) + (exchangeId == null ? 0 : System.hashCode(exchangeId));
         hashCode = (17 * hashCode) + (message == null ? 0 : System.hashCode(message));

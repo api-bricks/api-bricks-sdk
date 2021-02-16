@@ -10,8 +10,9 @@
  * Do not edit the class manually.
  */
 
-import localVarRequest = require('request');
-import http = require('http');
+
+import localVarRequest from 'request';
+import http from 'http';
 
 /* tslint:disable:no-unused-locals */
 import { Message } from '../model/message';
@@ -95,7 +96,7 @@ export class OrdersApi {
      * @summary Cancel all orders request
      * @param orderCancelAllRequest OrderCancelAllRequest object.
      */
-    public async v1OrdersCancelAllPost (orderCancelAllRequest: OrderCancelAllRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: Message;  }> {
+    public async v1OrdersCancelAllPost (orderCancelAllRequest: OrderCancelAllRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Message;  }> {
         const localVarPath = this.basePath + '/v1/orders/cancel/all';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -143,7 +144,7 @@ export class OrdersApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: Message;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: Message;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
@@ -164,7 +165,7 @@ export class OrdersApi {
      * @summary Cancel order request
      * @param orderCancelSingleRequest OrderCancelSingleRequest object.
      */
-    public async v1OrdersCancelPost (orderCancelSingleRequest: OrderCancelSingleRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: OrderExecutionReport;  }> {
+    public async v1OrdersCancelPost (orderCancelSingleRequest: OrderCancelSingleRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: OrderExecutionReport;  }> {
         const localVarPath = this.basePath + '/v1/orders/cancel';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -212,7 +213,7 @@ export class OrdersApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: OrderExecutionReport;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: OrderExecutionReport;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
@@ -233,7 +234,7 @@ export class OrdersApi {
      * @summary Get open orders
      * @param exchangeId Filter the open orders to the specific exchange.
      */
-    public async v1OrdersGet (exchangeId?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: Array<OrderExecutionReport>;  }> {
+    public async v1OrdersGet (exchangeId?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<OrderExecutionReport>;  }> {
         const localVarPath = this.basePath + '/v1/orders';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -279,7 +280,7 @@ export class OrdersApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: Array<OrderExecutionReport>;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: Array<OrderExecutionReport>;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
@@ -300,7 +301,7 @@ export class OrdersApi {
      * @summary Send new order
      * @param orderNewSingleRequest OrderNewSingleRequest object.
      */
-    public async v1OrdersPost (orderNewSingleRequest: OrderNewSingleRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: OrderExecutionReport;  }> {
+    public async v1OrdersPost (orderNewSingleRequest: OrderNewSingleRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: OrderExecutionReport;  }> {
         const localVarPath = this.basePath + '/v1/orders';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -348,7 +349,7 @@ export class OrdersApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: OrderExecutionReport;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: OrderExecutionReport;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
@@ -369,7 +370,7 @@ export class OrdersApi {
      * @summary Get order execution report
      * @param clientOrderId The unique identifier of the order assigned by the client.
      */
-    public async v1OrdersStatusClientOrderIdGet (clientOrderId: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: OrderExecutionReport;  }> {
+    public async v1OrdersStatusClientOrderIdGet (clientOrderId: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: OrderExecutionReport;  }> {
         const localVarPath = this.basePath + '/v1/orders/status/{client_order_id}'
             .replace('{' + 'client_order_id' + '}', encodeURIComponent(String(clientOrderId)));
         let localVarQueryParameters: any = {};
@@ -417,7 +418,7 @@ export class OrdersApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: OrderExecutionReport;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: OrderExecutionReport;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);

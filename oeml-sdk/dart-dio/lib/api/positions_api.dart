@@ -1,12 +1,11 @@
 import 'dart:async';
-import 'dart:io';
 import 'dart:convert';
 import 'package:dio/dio.dart';
-import 'package:built_collection/built_collection.dart';
 import 'package:built_value/serializer.dart';
 
 import 'package:openapi/model/position.dart';
 import 'package:openapi/model/message.dart';
+import 'package:built_collection/built_collection.dart';
 
 class PositionsApi {
     final Dio _dio;
@@ -14,45 +13,55 @@ class PositionsApi {
 
     PositionsApi(this._dio, this._serializers);
 
-        /// Get open positions
-        ///
-        /// Get current open positions across all or single exchange.
-        Future<Response<List<Position>>>v1PositionsGet({ String exchangeId,CancelToken cancelToken, Map<String, String> headers,}) async {
+    /// Get open positions
+    ///
+    /// Get current open positions across all or single exchange.
+    Future<Response<BuiltList<Position>>> v1PositionsGet({ 
+        String exchangeId,
+        CancelToken cancelToken,
+        Map<String, dynamic> headers,
+        Map<String, dynamic> extra,
+        ValidateStatus validateStatus,
+        ProgressCallback onSendProgress,
+        ProgressCallback onReceiveProgress,
+    }) async {
+        final String _path = '/v1/positions';
 
-        String _path = "/v1/positions";
-
-        Map<String, dynamic> queryParams = {};
-        Map<String, String> headerParams = Map.from(headers ?? {});
+        final Map<String, dynamic> queryParams = {};
+        final Map<String, dynamic> headerParams = {
+            if (headers != null) ...headers,
+        };
         dynamic bodyData;
 
-                queryParams[r'exchange_id'] = exchangeId;
+        queryParams[r'exchange_id'] = exchangeId;
         queryParams.removeWhere((key, value) => value == null);
         headerParams.removeWhere((key, value) => value == null);
 
-        List<String> contentTypes = [];
+        final List<String> contentTypes = [];
 
-
-
-            return _dio.request(
+        return _dio.request(
             _path,
             queryParameters: queryParams,
             data: bodyData,
             options: Options(
-            method: 'get'.toUpperCase(),
-            headers: headerParams,
-            extra: {
-                'secure': [],
-            },
-            contentType: contentTypes.isNotEmpty ? contentTypes[0] : "application/json",
+                method: 'get'.toUpperCase(),
+                headers: headerParams,
+                extra: {
+                    'secure': [],
+                    if (extra != null) ...extra,
+                },
+                validateStatus: validateStatus,
+                contentType: contentTypes.isNotEmpty ? contentTypes[0] : 'application/json',
             ),
             cancelToken: cancelToken,
-            ).then((response) {
+            onSendProgress: onSendProgress,
+            onReceiveProgress: onReceiveProgress,
+        ).then((response) {
+            const collectionType = BuiltList;
+            const type = FullType(collectionType, [FullType(Position)]);
+            final BuiltList<Position> data = _serializers.deserialize(response.data is String ? jsonDecode(response.data) : response.data, specifiedType: type);
 
-                final FullType type = const FullType(BuiltList, const [const FullType(Position)]);
-                BuiltList<Position> dataList = _serializers.deserialize(response.data is String ? jsonDecode(response.data) : response.data, specifiedType: type);
-                var data = dataList.toList();
-
-            return Response<List<Position>>(
+            return Response<BuiltList<Position>>(
                 data: data,
                 headers: response.headers,
                 request: response.request,
@@ -61,6 +70,7 @@ class PositionsApi {
                 statusMessage: response.statusMessage,
                 extra: response.extra,
             );
-            });
-            }
-        }
+        });
+    }
+
+}

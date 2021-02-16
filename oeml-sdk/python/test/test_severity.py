@@ -1,5 +1,3 @@
-# coding: utf-8
-
 """
     OEML - REST API
 
@@ -11,14 +9,12 @@
 """
 
 
-from __future__ import absolute_import
-
+import sys
 import unittest
-import datetime
 
 import openapi_client
-from openapi_client.models.severity import Severity  # noqa: E501
-from openapi_client.rest import ApiException
+from openapi_client.model.severity import Severity
+
 
 class TestSeverity(unittest.TestCase):
     """Severity unit test stubs"""
@@ -29,23 +25,11 @@ class TestSeverity(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def make_instance(self, include_optional):
-        """Test Severity
-            include_option is a boolean, when False only required
-            params are included, when True both required and
-            optional params are included """
-        # model = openapi_client.models.severity.Severity()  # noqa: E501
-        if include_optional :
-            return Severity(
-            )
-        else :
-            return Severity(
-        )
-
     def testSeverity(self):
         """Test Severity"""
-        inst_req_only = self.make_instance(include_optional=False)
-        inst_req_and_optional = self.make_instance(include_optional=True)
+        # FIXME: construct object with mandatory attributes with example values
+        # model = Severity()  # noqa: E501
+        pass
 
 
 if __name__ == '__main__':

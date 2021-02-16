@@ -56,61 +56,61 @@
 
     it('should have the property symbolIdExchange (base name: "symbol_id_exchange")', function() {
       // uncomment below and update the code to test the property symbolIdExchange
-      //var instane = new OemlRestApi.PositionData();
+      //var instance = new OemlRestApi.PositionData();
       //expect(instance).to.be();
     });
 
     it('should have the property symbolIdCoinapi (base name: "symbol_id_coinapi")', function() {
       // uncomment below and update the code to test the property symbolIdCoinapi
-      //var instane = new OemlRestApi.PositionData();
+      //var instance = new OemlRestApi.PositionData();
       //expect(instance).to.be();
     });
 
     it('should have the property avgEntryPrice (base name: "avg_entry_price")', function() {
       // uncomment below and update the code to test the property avgEntryPrice
-      //var instane = new OemlRestApi.PositionData();
+      //var instance = new OemlRestApi.PositionData();
       //expect(instance).to.be();
     });
 
     it('should have the property quantity (base name: "quantity")', function() {
       // uncomment below and update the code to test the property quantity
-      //var instane = new OemlRestApi.PositionData();
+      //var instance = new OemlRestApi.PositionData();
       //expect(instance).to.be();
     });
 
     it('should have the property side (base name: "side")', function() {
       // uncomment below and update the code to test the property side
-      //var instane = new OemlRestApi.PositionData();
+      //var instance = new OemlRestApi.PositionData();
       //expect(instance).to.be();
     });
 
     it('should have the property unrealizedPnl (base name: "unrealized_pnl")', function() {
       // uncomment below and update the code to test the property unrealizedPnl
-      //var instane = new OemlRestApi.PositionData();
+      //var instance = new OemlRestApi.PositionData();
       //expect(instance).to.be();
     });
 
     it('should have the property leverage (base name: "leverage")', function() {
       // uncomment below and update the code to test the property leverage
-      //var instane = new OemlRestApi.PositionData();
+      //var instance = new OemlRestApi.PositionData();
       //expect(instance).to.be();
     });
 
     it('should have the property crossMargin (base name: "cross_margin")', function() {
       // uncomment below and update the code to test the property crossMargin
-      //var instane = new OemlRestApi.PositionData();
+      //var instance = new OemlRestApi.PositionData();
       //expect(instance).to.be();
     });
 
     it('should have the property liquidationPrice (base name: "liquidation_price")', function() {
       // uncomment below and update the code to test the property liquidationPrice
-      //var instane = new OemlRestApi.PositionData();
+      //var instance = new OemlRestApi.PositionData();
       //expect(instance).to.be();
     });
 
     it('should have the property rawData (base name: "raw_data")', function() {
       // uncomment below and update the code to test the property rawData
-      //var instane = new OemlRestApi.PositionData();
+      //var instance = new OemlRestApi.PositionData();
       //expect(instance).to.be();
     });
 

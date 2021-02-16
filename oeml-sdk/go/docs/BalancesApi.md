@@ -10,28 +10,51 @@ Method | HTTP request | Description
 
 ## V1BalancesGet
 
-> []Balance V1BalancesGet(ctx, optional)
+> []Balance V1BalancesGet(ctx).ExchangeId(exchangeId).Execute()
 
 Get balances
 
-Get current currency balance from all or single exchange.
 
-### Required Parameters
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    exchangeId := "KRAKEN" // string | Filter the balances to the specific exchange. (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    api_client := openapiclient.NewAPIClient(configuration)
+    resp, r, err := api_client.BalancesApi.V1BalancesGet(context.Background()).ExchangeId(exchangeId).Execute()
+    if err.Error() != "" {
+        fmt.Fprintf(os.Stderr, "Error when calling `BalancesApi.V1BalancesGet``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `V1BalancesGet`: []Balance
+    fmt.Fprintf(os.Stdout, "Response from `BalancesApi.V1BalancesGet`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiV1BalancesGetRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
- **optional** | ***V1BalancesGetOpts** | optional parameters | nil if no parameters
-
-### Optional Parameters
-
-Optional parameters are passed through a pointer to a V1BalancesGetOpts struct
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **exchangeId** | **optional.String**| Filter the balances to the specific exchange. | 
+ **exchangeId** | **string** | Filter the balances to the specific exchange. | 
 
 ### Return type
 

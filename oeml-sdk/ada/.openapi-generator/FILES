@@ -1,0 +1,9 @@
+.openapi-generator-ignore
+config.gpr
+defaultpackage.gpr
+src/-client.adb
+src/.ads
+src/client/-clients.adb
+src/client/-clients.ads
+src/model/-models.adb
+src/model/-models.ads

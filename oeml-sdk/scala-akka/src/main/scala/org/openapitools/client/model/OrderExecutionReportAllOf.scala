@@ -19,14 +19,18 @@ case class OrderExecutionReportAllOf (
   /* Unique identifier of the order assigned by the exchange or executing system. */
   exchangeOrderId: Option[String] = None,
   /* Quantity open for further execution. `amount_open` = `amount_order` - `amount_filled` */
-  amountOpen: Double,
+  amountOpen: BigDecimal,
   /* Total quantity filled. */
-  amountFilled: Double,
+  amountFilled: BigDecimal,
+  /* Calculated average price of all fills on this order. */
+  avgPx: Option[BigDecimal] = None,
   status: OrdStatus,
   /* Timestamped history of order status changes. */
-  timeOrder: Seq[Seq[String]],
-  /* Error message */
-  errorMessage: Option[String] = None
+  statusHistory: Option[Seq[Seq[String]]] = None,
+  /* Error message. */
+  errorMessage: Option[String] = None,
+  /* Relay fill information on working orders. */
+  fills: Option[Seq[Fills]] = None
 ) extends ApiModel
 
 

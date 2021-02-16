@@ -93,6 +93,7 @@ Class | Method | HTTP request | Description
 
  - [OpenapiClient::Balance](docs/Balance.md)
  - [OpenapiClient::BalanceData](docs/BalanceData.md)
+ - [OpenapiClient::Fills](docs/Fills.md)
  - [OpenapiClient::Message](docs/Message.md)
  - [OpenapiClient::OrdSide](docs/OrdSide.md)
  - [OpenapiClient::OrdStatus](docs/OrdStatus.md)

@@ -8,10 +8,12 @@
 
 #' @docType class
 #' @title OrderCancelAllRequest
-#' @description OrderCancelAllRequest Class
-#' @format An \code{R6Class} generator object
-#' @field exchange_id  character 
 #'
+#' @description OrderCancelAllRequest Class
+#'
+#' @format An \code{R6Class} generator object
+#'
+#' @field exchange_id  character 
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -20,7 +22,9 @@ OrderCancelAllRequest <- R6::R6Class(
   'OrderCancelAllRequest',
   public = list(
     `exchange_id` = NULL,
-    initialize = function(`exchange_id`, ...){
+    initialize = function(
+        `exchange_id`, ...
+    ) {
       local.optional.var <- list(...)
       if (!missing(`exchange_id`)) {
         stopifnot(is.character(`exchange_id`), length(`exchange_id`) == 1)
@@ -41,6 +45,7 @@ OrderCancelAllRequest <- R6::R6Class(
       if (!is.null(OrderCancelAllRequestObject$`exchange_id`)) {
         self$`exchange_id` <- OrderCancelAllRequestObject$`exchange_id`
       }
+      self
     },
     toJSONString = function() {
       jsoncontent <- c(
@@ -62,3 +67,4 @@ OrderCancelAllRequest <- R6::R6Class(
     }
   )
 )
+

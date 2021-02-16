@@ -30,6 +30,7 @@ use Log::Any qw($log);
 use Date::Parse;
 use DateTime;
 
+use WWW::OpenAPIClient::Object::Fills;
 use WWW::OpenAPIClient::Object::OrdStatus;
 
 use base ("Class::Accessor", "Class::Data::Inheritable");
@@ -190,6 +191,13 @@ __PACKAGE__->method_documentation({
         format => '',
         read_only => '',
             },
+    'avg_px' => {
+        datatype => 'double',
+        base_name => 'avg_px',
+        description => 'Calculated average price of all fills on this order.',
+        format => '',
+        read_only => '',
+            },
     'status' => {
         datatype => 'OrdStatus',
         base_name => 'status',
@@ -197,9 +205,9 @@ __PACKAGE__->method_documentation({
         format => '',
         read_only => '',
             },
-    'time_order' => {
+    'status_history' => {
         datatype => 'ARRAY[ARRAY[string]]',
-        base_name => 'time_order',
+        base_name => 'status_history',
         description => 'Timestamped history of order status changes.',
         format => '',
         read_only => '',
@@ -207,7 +215,14 @@ __PACKAGE__->method_documentation({
     'error_message' => {
         datatype => 'string',
         base_name => 'error_message',
-        description => 'Error message',
+        description => 'Error message.',
+        format => '',
+        read_only => '',
+            },
+    'fills' => {
+        datatype => 'ARRAY[Fills]',
+        base_name => 'fills',
+        description => 'Relay fill information on working orders.',
         format => '',
         read_only => '',
             },
@@ -218,9 +233,11 @@ __PACKAGE__->openapi_types( {
     'exchange_order_id' => 'string',
     'amount_open' => 'double',
     'amount_filled' => 'double',
+    'avg_px' => 'double',
     'status' => 'OrdStatus',
-    'time_order' => 'ARRAY[ARRAY[string]]',
-    'error_message' => 'string'
+    'status_history' => 'ARRAY[ARRAY[string]]',
+    'error_message' => 'string',
+    'fills' => 'ARRAY[Fills]'
 } );
 
 __PACKAGE__->attribute_map( {
@@ -228,9 +245,11 @@ __PACKAGE__->attribute_map( {
     'exchange_order_id' => 'exchange_order_id',
     'amount_open' => 'amount_open',
     'amount_filled' => 'amount_filled',
+    'avg_px' => 'avg_px',
     'status' => 'status',
-    'time_order' => 'time_order',
-    'error_message' => 'error_message'
+    'status_history' => 'status_history',
+    'error_message' => 'error_message',
+    'fills' => 'fills'
 } );
 
 __PACKAGE__->mk_accessors(keys %{__PACKAGE__->attribute_map});

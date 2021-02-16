@@ -8,35 +8,58 @@
 
 #' @docType class
 #' @title TimeInForce
+#'
 #' @description TimeInForce Class
+#'
 #' @format An \code{R6Class} generator object
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
 #' @export
 TimeInForce <- R6::R6Class(
-  'TimeInForce',
-  public = list(
-    initialize = function(, ...){
-      local.optional.var <- list(...)
-    },
-    toJSON = function() {
-      TimeInForceObject <- list()
+    "TimeInForce",
+    public = list(
+        initialize = function(...) {
+            local.optional.var <- list(...)
+            val <- unlist(local.optional.var)
+            enumvec <- .parse_TimeInForce()
 
-      TimeInForceObject
-    },
-    fromJSON = function(TimeInForceJson) {
-      TimeInForceObject <- jsonlite::fromJSON(TimeInForceJson)
-    },
-    toJSONString = function() {
-      jsoncontent <- c(
-      )
-      jsoncontent <- paste(jsoncontent, collapse = ",")
-      paste('{', jsoncontent, '}', sep = "")
-    },
-    fromJSONString = function(TimeInForceJson) {
-      TimeInForceObject <- jsonlite::fromJSON(TimeInForceJson)
-      self
-    }
-  )
+            stopifnot(length(val) == 1L)
+
+            if (!val %in% enumvec)
+                stop("Use one of the valid values: ",
+                    paste0(enumvec, collapse = ", "))
+            private$value <- val
+        },
+        toJSON = function() {
+            jsonlite::toJSON(private$value, auto_unbox = TRUE)
+        },
+        fromJSON = function(TimeInForceJson) {
+            private$value <- jsonlite::fromJSON(TimeInForceJson,
+                simplifyVector = FALSE)
+            self
+        },
+        toJSONString = function() {
+            as.character(jsonlite::toJSON(private$value,
+                auto_unbox = TRUE))
+        },
+        fromJSONString = function(TimeInForceJson) {
+            private$value <- jsonlite::fromJSON(TimeInForceJson,
+                simplifyVector = FALSE)
+            self
+        }
+    ),
+    private = list(
+        value = NULL
+    )
 )
+
+# add to utils.R
+.parse_TimeInForce <- function(vals) {
+    res <- gsub("^\\[|\\]$", "",
+        "[GOOD_TILL_CANCEL, GOOD_TILL_TIME_EXCHANGE, GOOD_TILL_TIME_OMS, FILL_OR_KILL, IMMEDIATE_OR_CANCEL]"
+    )
+    unlist(strsplit(res, ", "))
+}
+
+

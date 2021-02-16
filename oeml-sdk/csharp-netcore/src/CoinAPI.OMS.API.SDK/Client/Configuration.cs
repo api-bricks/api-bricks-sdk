@@ -1,4 +1,4 @@
-/* 
+/*
  * OEML - REST API
  *
  * This section will provide necessary information about the `CoinAPI OEML REST API` protocol. This API is also available in the Postman application: <a href=\"https://postman.coinapi.io/\" target=\"_blank\">https://postman.coinapi.io/</a>       
@@ -10,11 +10,12 @@
 
 
 using System;
-using System.Reflection;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Net;
+using System.Reflection;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 
@@ -54,7 +55,7 @@ namespace CoinAPI.OMS.API.SDK.Client
             {
                 return new ApiException(status,
                     string.Format("Error calling {0}: {1}", methodName, response.RawContent),
-                    response.RawContent);
+                    response.RawContent, response.Headers);
             }
             if (status == 0)
             {
@@ -90,6 +91,11 @@ namespace CoinAPI.OMS.API.SDK.Client
         private string _dateTimeFormat = ISO8601_DATETIME_FORMAT;
         private string _tempFolderPath = Path.GetTempPath();
 
+        /// <summary>
+        /// Gets or sets the servers defined in the OpenAPI spec.
+        /// </summary>
+        /// <value>The servers</value>
+        private IList<IReadOnlyDictionary<string, object>> _servers;
         #endregion Private Members
 
         #region Constructors
@@ -100,11 +106,21 @@ namespace CoinAPI.OMS.API.SDK.Client
         [System.Diagnostics.CodeAnalysis.SuppressMessage("ReSharper", "VirtualMemberCallInConstructor")]
         public Configuration()
         {
+            Proxy = null;
             UserAgent = "OpenAPI-Generator/1.0.0/csharp";
             BasePath = "https://13d16e9d-d8b1-4ef4-bc4a-ed8156b2b159.mock.pstmn.io";
             DefaultHeaders = new ConcurrentDictionary<string, string>();
             ApiKey = new ConcurrentDictionary<string, string>();
             ApiKeyPrefix = new ConcurrentDictionary<string, string>();
+            Servers = new List<IReadOnlyDictionary<string, object>>()
+            {
+                {
+                    new Dictionary<string, object> {
+                        {"url", "https://13d16e9d-d8b1-4ef4-bc4a-ed8156b2b159.mock.pstmn.io"},
+                        {"description", "No description provided"},
+                    }
+                }
+            };
 
             // Setting Timeout has side effects (forces ApiClient creation).
             Timeout = 100000;
@@ -156,9 +172,7 @@ namespace CoinAPI.OMS.API.SDK.Client
         /// </summary>
         public virtual string BasePath {
             get { return _basePath; }
-            set {
-                _basePath = value;
-            }
+            set { _basePath = value; }
         }
 
         /// <summary>
@@ -188,6 +202,12 @@ namespace CoinAPI.OMS.API.SDK.Client
         public virtual int Timeout { get; set; }
 
         /// <summary>
+        /// Gets or sets the proxy
+        /// </summary>
+        /// <value>Proxy.</value>
+        public virtual WebProxy Proxy { get; set; }
+
+        /// <summary>
         /// Gets or sets the HTTP user agent.
         /// </summary>
         /// <value>Http user agent.</value>
@@ -213,13 +233,13 @@ namespace CoinAPI.OMS.API.SDK.Client
         public string GetApiKeyWithPrefix(string apiKeyIdentifier)
         {
             string apiKeyValue;
-            ApiKey.TryGetValue (apiKeyIdentifier, out apiKeyValue);
+            ApiKey.TryGetValue(apiKeyIdentifier, out apiKeyValue);
             string apiKeyPrefix;
             if (ApiKeyPrefix.TryGetValue(apiKeyIdentifier, out apiKeyPrefix))
             {
                 return apiKeyPrefix + " " + apiKeyValue;
             }
-            
+
             return apiKeyValue;
         }
 
@@ -231,7 +251,7 @@ namespace CoinAPI.OMS.API.SDK.Client
 
         /// <summary>
         /// Gets or sets the access token for OAuth2 authentication.
-        /// 
+        ///
         /// This helper property simplifies code generation.
         /// </summary>
         /// <value>The access token.</value>
@@ -301,13 +321,13 @@ namespace CoinAPI.OMS.API.SDK.Client
         /// Gets or sets the prefix (e.g. Token) of the API key based on the authentication name.
         ///
         /// Whatever you set here will be prepended to the value defined in AddApiKey.
-        /// 
+        ///
         /// An example invocation here might be:
         /// <example>
         /// ApiKeyPrefix["Authorization"] = "Bearer";
         /// </example>
         /// … where ApiKey["Authorization"] would then be used to set the value of your bearer token.
-        /// 
+        ///
         /// <remarks>
         /// OAuth2 workflows should set tokens via AccessToken.
         /// </remarks>
@@ -341,6 +361,82 @@ namespace CoinAPI.OMS.API.SDK.Client
                 }
                 _apiKey = value;
             }
+        }
+
+        /// <summary>
+        /// Gets or sets the servers.
+        /// </summary>
+        /// <value>The servers.</value>
+        public virtual IList<IReadOnlyDictionary<string, object>> Servers
+        {
+            get { return _servers; }
+            set
+            {
+                if (value == null)
+                {
+                    throw new InvalidOperationException("Servers may not be null.");
+                }
+                _servers = value;
+            }
+        }
+
+        /// <summary>
+        /// Returns URL based on server settings without providing values
+        /// for the variables
+        /// </summary>
+        /// <param name="index">Array index of the server settings.</param>
+        /// <return>The server URL.</return>
+        public string GetServerUrl(int index)
+        {
+            return GetServerUrl(index, null);
+        }
+
+        /// <summary>
+        /// Returns URL based on server settings.
+        /// </summary>
+        /// <param name="index">Array index of the server settings.</param>
+        /// <param name="inputVariables">Dictionary of the variables and the corresponding values.</param>
+        /// <return>The server URL.</return>
+        public string GetServerUrl(int index, Dictionary<string, string> inputVariables)
+        {
+            if (index < 0 || index >= Servers.Count)
+            {
+                throw new InvalidOperationException($"Invalid index {index} when selecting the server. Must be less than {Servers.Count}.");
+            }
+
+            if (inputVariables == null)
+            {
+                inputVariables = new Dictionary<string, string>();
+            }
+
+            IReadOnlyDictionary<string, object> server = Servers[index];
+            string url = (string)server["url"];
+
+            // go through variable and assign a value
+            foreach (KeyValuePair<string, object> variable in (IReadOnlyDictionary<string, object>)server["variables"])
+            {
+
+                IReadOnlyDictionary<string, object> serverVariables = (IReadOnlyDictionary<string, object>)(variable.Value);
+
+                if (inputVariables.ContainsKey(variable.Key))
+                {
+                    if (((List<string>)serverVariables["enum_values"]).Contains(inputVariables[variable.Key]))
+                    {
+                        url = url.Replace("{" + variable.Key + "}", inputVariables[variable.Key]);
+                    }
+                    else
+                    {
+                        throw new InvalidOperationException($"The variable `{variable.Key}` in the server URL has invalid value #{inputVariables[variable.Key]}. Must be {(List<string>)serverVariables["enum_values"]}");
+                    }
+                }
+                else
+                {
+                    // use defualt value
+                    url = url.Replace("{" + variable.Key + "}", (string)serverVariables["default_value"]);
+                }
+            }
+
+            return url;
         }
 
         #endregion Properties
@@ -394,11 +490,11 @@ namespace CoinAPI.OMS.API.SDK.Client
         public static IReadableConfiguration MergeConfigurations(IReadableConfiguration first, IReadableConfiguration second)
         {
             if (second == null) return first ?? GlobalConfiguration.Instance;
-            
+
             Dictionary<string, string> apiKey = first.ApiKey.ToDictionary(kvp => kvp.Key, kvp => kvp.Value);
             Dictionary<string, string> apiKeyPrefix = first.ApiKeyPrefix.ToDictionary(kvp => kvp.Key, kvp => kvp.Value);
             Dictionary<string, string> defaultHeaders = first.DefaultHeaders.ToDictionary(kvp => kvp.Key, kvp => kvp.Value);
-            
+
             foreach (var kvp in second.ApiKey) apiKey[kvp.Key] = kvp.Value;
             foreach (var kvp in second.ApiKeyPrefix) apiKeyPrefix[kvp.Key] = kvp.Value;
             foreach (var kvp in second.DefaultHeaders) defaultHeaders[kvp.Key] = kvp.Value;
@@ -410,6 +506,7 @@ namespace CoinAPI.OMS.API.SDK.Client
                 DefaultHeaders = defaultHeaders,
                 BasePath = second.BasePath ?? first.BasePath,
                 Timeout = second.Timeout,
+                Proxy = second.Proxy ?? first.Proxy,
                 UserAgent = second.UserAgent ?? first.UserAgent,
                 Username = second.Username ?? first.Username,
                 Password = second.Password ?? first.Password,

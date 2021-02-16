@@ -15,6 +15,7 @@
 import ApiClient from './ApiClient';
 import Balance from './model/Balance';
 import BalanceData from './model/BalanceData';
+import Fills from './model/Fills';
 import Message from './model/Message';
 import OrdSide from './model/OrdSide';
 import OrdStatus from './model/OrdStatus';
@@ -83,6 +84,12 @@ export {
      * @property {module:model/BalanceData}
      */
     BalanceData,
+
+    /**
+     * The Fills model constructor.
+     * @property {module:model/Fills}
+     */
+    Fills,
 
     /**
      * The Message model constructor.

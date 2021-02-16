@@ -27,14 +27,14 @@ This request cancels all open orders on single specified exchange.
 ```dart
 import 'package:openapi/api.dart';
 
-var api_instance = OrdersApi();
-var orderCancelAllRequest = OrderCancelAllRequest(); // OrderCancelAllRequest | OrderCancelAllRequest object.
+final api_instance = OrdersApi();
+final orderCancelAllRequest = OrderCancelAllRequest(); // OrderCancelAllRequest | OrderCancelAllRequest object.
 
 try { 
-    var result = api_instance.v1OrdersCancelAllPost(orderCancelAllRequest);
+    final result = api_instance.v1OrdersCancelAllPost(orderCancelAllRequest);
     print(result);
 } catch (e) {
-    print("Exception when calling OrdersApi->v1OrdersCancelAllPost: $e\n");
+    print('Exception when calling OrdersApi->v1OrdersCancelAllPost: $e\n');
 }
 ```
 
@@ -70,14 +70,14 @@ Request cancel for an existing order. The order can be canceled using the `clien
 ```dart
 import 'package:openapi/api.dart';
 
-var api_instance = OrdersApi();
-var orderCancelSingleRequest = OrderCancelSingleRequest(); // OrderCancelSingleRequest | OrderCancelSingleRequest object.
+final api_instance = OrdersApi();
+final orderCancelSingleRequest = OrderCancelSingleRequest(); // OrderCancelSingleRequest | OrderCancelSingleRequest object.
 
 try { 
-    var result = api_instance.v1OrdersCancelPost(orderCancelSingleRequest);
+    final result = api_instance.v1OrdersCancelPost(orderCancelSingleRequest);
     print(result);
 } catch (e) {
-    print("Exception when calling OrdersApi->v1OrdersCancelPost: $e\n");
+    print('Exception when calling OrdersApi->v1OrdersCancelPost: $e\n');
 }
 ```
 
@@ -113,14 +113,14 @@ Get last execution reports for open orders across all or single exchange.
 ```dart
 import 'package:openapi/api.dart';
 
-var api_instance = OrdersApi();
-var exchangeId = KRAKEN; // String | Filter the open orders to the specific exchange.
+final api_instance = OrdersApi();
+final exchangeId = KRAKEN; // String | Filter the open orders to the specific exchange.
 
 try { 
-    var result = api_instance.v1OrdersGet(exchangeId);
+    final result = api_instance.v1OrdersGet(exchangeId);
     print(result);
 } catch (e) {
-    print("Exception when calling OrdersApi->v1OrdersGet: $e\n");
+    print('Exception when calling OrdersApi->v1OrdersGet: $e\n');
 }
 ```
 
@@ -128,7 +128,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **exchangeId** | **String**| Filter the open orders to the specific exchange. | [optional] [default to null]
+ **exchangeId** | **String**| Filter the open orders to the specific exchange. | [optional] 
 
 ### Return type
 
@@ -156,14 +156,14 @@ This request creating new order for the specific exchange.
 ```dart
 import 'package:openapi/api.dart';
 
-var api_instance = OrdersApi();
-var orderNewSingleRequest = OrderNewSingleRequest(); // OrderNewSingleRequest | OrderNewSingleRequest object.
+final api_instance = OrdersApi();
+final orderNewSingleRequest = OrderNewSingleRequest(); // OrderNewSingleRequest | OrderNewSingleRequest object.
 
 try { 
-    var result = api_instance.v1OrdersPost(orderNewSingleRequest);
+    final result = api_instance.v1OrdersPost(orderNewSingleRequest);
     print(result);
 } catch (e) {
-    print("Exception when calling OrdersApi->v1OrdersPost: $e\n");
+    print('Exception when calling OrdersApi->v1OrdersPost: $e\n');
 }
 ```
 
@@ -199,14 +199,14 @@ Get the last order execution report for the specified order. The requested order
 ```dart
 import 'package:openapi/api.dart';
 
-var api_instance = OrdersApi();
-var clientOrderId = 6ab36bc1-344d-432e-ac6d-0bf44ee64c2b; // String | The unique identifier of the order assigned by the client.
+final api_instance = OrdersApi();
+final clientOrderId = 6ab36bc1-344d-432e-ac6d-0bf44ee64c2b; // String | The unique identifier of the order assigned by the client.
 
 try { 
-    var result = api_instance.v1OrdersStatusClientOrderIdGet(clientOrderId);
+    final result = api_instance.v1OrdersStatusClientOrderIdGet(clientOrderId);
     print(result);
 } catch (e) {
-    print("Exception when calling OrdersApi->v1OrdersStatusClientOrderIdGet: $e\n");
+    print('Exception when calling OrdersApi->v1OrdersStatusClientOrderIdGet: $e\n');
 }
 ```
 
@@ -214,7 +214,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **clientOrderId** | **String**| The unique identifier of the order assigned by the client. | [default to null]
+ **clientOrderId** | **String**| The unique identifier of the order assigned by the client. | 
 
 ### Return type
 

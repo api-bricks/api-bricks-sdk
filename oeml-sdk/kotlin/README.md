@@ -2,7 +2,7 @@
 
 ## Requires
 
-* Kotlin 1.3.41
+* Kotlin 1.3.61
 * Gradle 4.9
 
 ## Build
@@ -49,6 +49,7 @@ Class | Method | HTTP request | Description
 
  - [org.openapitools.client.models.Balance](docs/Balance.md)
  - [org.openapitools.client.models.BalanceData](docs/BalanceData.md)
+ - [org.openapitools.client.models.Fills](docs/Fills.md)
  - [org.openapitools.client.models.Message](docs/Message.md)
  - [org.openapitools.client.models.OrdSide](docs/OrdSide.md)
  - [org.openapitools.client.models.OrdStatus](docs/OrdStatus.md)

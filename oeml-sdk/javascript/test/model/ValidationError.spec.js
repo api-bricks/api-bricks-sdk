@@ -56,31 +56,31 @@
 
     it('should have the property type (base name: "type")', function() {
       // uncomment below and update the code to test the property type
-      //var instane = new OemlRestApi.ValidationError();
+      //var instance = new OemlRestApi.ValidationError();
       //expect(instance).to.be();
     });
 
     it('should have the property title (base name: "title")', function() {
       // uncomment below and update the code to test the property title
-      //var instane = new OemlRestApi.ValidationError();
+      //var instance = new OemlRestApi.ValidationError();
       //expect(instance).to.be();
     });
 
     it('should have the property status (base name: "status")', function() {
       // uncomment below and update the code to test the property status
-      //var instane = new OemlRestApi.ValidationError();
+      //var instance = new OemlRestApi.ValidationError();
       //expect(instance).to.be();
     });
 
     it('should have the property traceId (base name: "traceId")', function() {
       // uncomment below and update the code to test the property traceId
-      //var instane = new OemlRestApi.ValidationError();
+      //var instance = new OemlRestApi.ValidationError();
       //expect(instance).to.be();
     });
 
     it('should have the property errors (base name: "errors")', function() {
       // uncomment below and update the code to test the property errors
-      //var instane = new OemlRestApi.ValidationError();
+      //var instance = new OemlRestApi.ValidationError();
       //expect(instance).to.be();
     });
 

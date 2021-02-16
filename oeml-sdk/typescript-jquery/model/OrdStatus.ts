@@ -19,13 +19,13 @@ import * as models from './models';
     * Order statuses and the lifecycle are documented in the separate section: <a href=\"#oeml-order-lifecycle\">OEML / Starter Guide / Order Lifecycle</a> 
     */
 export enum OrdStatus {
-    RECEIVED = <any> 'RECEIVED',
-    ROUTING = <any> 'ROUTING',
-    ROUTED = <any> 'ROUTED',
-    NEW = <any> 'NEW',
-    PENDINGCANCEL = <any> 'PENDING_CANCEL',
-    PARTIALLYFILLED = <any> 'PARTIALLY_FILLED',
-    FILLED = <any> 'FILLED',
-    CANCELED = <any> 'CANCELED',
-    REJECTED = <any> 'REJECTED'
+    Received = <any> 'RECEIVED',
+    Routing = <any> 'ROUTING',
+    Routed = <any> 'ROUTED',
+    New = <any> 'NEW',
+    PendingCancel = <any> 'PENDING_CANCEL',
+    PartiallyFilled = <any> 'PARTIALLY_FILLED',
+    Filled = <any> 'FILLED',
+    Canceled = <any> 'CANCELED',
+    Rejected = <any> 'REJECTED'
 }

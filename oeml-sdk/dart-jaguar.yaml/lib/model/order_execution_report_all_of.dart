@@ -3,6 +3,8 @@ import 'package:jaguar_serializer/jaguar_serializer.dart';
 
 import 'package:openapi/model/ord_status.dart';
 
+import 'package:openapi/model/fills.dart';
+
 part 'order_execution_report_all_of.jser.dart';
 
 class OrderExecutionReportAllOf {
@@ -18,6 +20,9 @@ class OrderExecutionReportAllOf {
    /* Total quantity filled. */
   @Alias('amount_filled', isNullable: false,  )
   final num amountFilled;
+   /* Calculated average price of all fills on this order. */
+  @Alias('avg_px', isNullable: false,  )
+  final num avgPx;
   
   @Alias('status', isNullable: false,
           
@@ -26,11 +31,14 @@ class OrderExecutionReportAllOf {
   )
   final OrdStatus status;
   //enum statusEnum {  RECEIVED,  ROUTING,  ROUTED,  NEW,  PENDING_CANCEL,  PARTIALLY_FILLED,  FILLED,  CANCELED,  REJECTED,  }; /* Timestamped history of order status changes. */
-  @Alias('time_order', isNullable: false,  )
-  final List<List<String>> timeOrder;
-   /* Error message */
+  @Alias('status_history', isNullable: false,  )
+  final List<List<String>> statusHistory;
+   /* Error message. */
   @Alias('error_message', isNullable: false,  )
   final String errorMessage;
+   /* Relay fill information on working orders. */
+  @Alias('fills', isNullable: false,  )
+  final List<Fills> fills;
   
 
   OrderExecutionReportAllOf(
@@ -41,16 +49,18 @@ class OrderExecutionReportAllOf {
      this.clientOrderIdFormatExchange = null,   this.exchangeOrderId = null,  
     
      this.amountOpen = null,  
-     this.amountFilled = null,  
-     this.status = null,  
-     this.timeOrder = const [],   this.errorMessage = null 
+     this.amountFilled = null,   this.avgPx = null,  
+    
+     this.status = null,   this.statusHistory = const [],  
+     this.errorMessage = null,  
+     this.fills = const [] 
     
     }
   );
 
   @override
   String toString() {
-    return 'OrderExecutionReportAllOf[clientOrderIdFormatExchange=$clientOrderIdFormatExchange, exchangeOrderId=$exchangeOrderId, amountOpen=$amountOpen, amountFilled=$amountFilled, status=$status, timeOrder=$timeOrder, errorMessage=$errorMessage, ]';
+    return 'OrderExecutionReportAllOf[clientOrderIdFormatExchange=$clientOrderIdFormatExchange, exchangeOrderId=$exchangeOrderId, amountOpen=$amountOpen, amountFilled=$amountFilled, avgPx=$avgPx, status=$status, statusHistory=$statusHistory, errorMessage=$errorMessage, fills=$fills, ]';
   }
 }
 

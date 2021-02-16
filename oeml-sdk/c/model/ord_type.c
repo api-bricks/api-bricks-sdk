@@ -33,9 +33,9 @@ fail:
     return NULL;
 }
 
-ord_type_ord_type_e ord_type_ord_type_parseFromJSON(cJSON *ord_typeJSON) {
-    ord_type_ord_type_e *ord_type = NULL;
-    ord_type_ord_type_e ord_typeVariable;
+oeml___rest_api_ord_type__e ord_type_ord_type_parseFromJSON(cJSON *ord_typeJSON) {
+    oeml___rest_api_ord_type__e *ord_type = NULL;
+    oeml___rest_api_ord_type__e ord_typeVariable;
     cJSON *ord_typeVar = cJSON_GetObjectItemCaseSensitive(ord_typeJSON, "ord_type");
     if(!cJSON_IsString(ord_typeVar) || (ord_typeVar->valuestring == NULL)){
         goto end;

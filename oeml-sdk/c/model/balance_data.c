@@ -54,8 +54,14 @@ void balance_data_free(balance_data_t *balance_data) {
         return ;
     }
     listEntry_t *listEntry;
-    free(balance_data->asset_id_exchange);
-    free(balance_data->asset_id_coinapi);
+    if (balance_data->asset_id_exchange) {
+        free(balance_data->asset_id_exchange);
+        balance_data->asset_id_exchange = NULL;
+    }
+    if (balance_data->asset_id_coinapi) {
+        free(balance_data->asset_id_coinapi);
+        balance_data->asset_id_coinapi = NULL;
+    }
     free(balance_data);
 }
 

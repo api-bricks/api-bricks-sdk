@@ -22,6 +22,7 @@ main =
       pure ()
       propMimeEq MimeJSON (Proxy :: Proxy Balance)
       propMimeEq MimeJSON (Proxy :: Proxy BalanceData)
+      propMimeEq MimeJSON (Proxy :: Proxy Fills)
       propMimeEq MimeJSON (Proxy :: Proxy Message)
       propMimeEq MimeJSON (Proxy :: Proxy OrdSide)
       propMimeEq MimeJSON (Proxy :: Proxy OrdStatus)

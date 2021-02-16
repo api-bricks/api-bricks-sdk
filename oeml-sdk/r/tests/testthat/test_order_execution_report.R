@@ -122,6 +122,14 @@ test_that("amount_filled", {
   #expect_equal(model.instance$`amount_filled`, "EXPECTED_RESULT")
 })
 
+test_that("avg_px", {
+  # tests for the property `avg_px` (numeric)
+  # Calculated average price of all fills on this order.
+
+  # uncomment below to test the property 
+  #expect_equal(model.instance$`avg_px`, "EXPECTED_RESULT")
+})
+
 test_that("status", {
   # tests for the property `status` (OrdStatus)
 
@@ -129,19 +137,27 @@ test_that("status", {
   #expect_equal(model.instance$`status`, "EXPECTED_RESULT")
 })
 
-test_that("time_order", {
-  # tests for the property `time_order` (array[array[character]])
+test_that("status_history", {
+  # tests for the property `status_history` (array[array[character]])
   # Timestamped history of order status changes.
 
   # uncomment below to test the property 
-  #expect_equal(model.instance$`time_order`, "EXPECTED_RESULT")
+  #expect_equal(model.instance$`status_history`, "EXPECTED_RESULT")
 })
 
 test_that("error_message", {
   # tests for the property `error_message` (character)
-  # Error message
+  # Error message.
 
   # uncomment below to test the property 
   #expect_equal(model.instance$`error_message`, "EXPECTED_RESULT")
+})
+
+test_that("fills", {
+  # tests for the property `fills` (array[Fills])
+  # Relay fill information on working orders.
+
+  # uncomment below to test the property 
+  #expect_equal(model.instance$`fills`, "EXPECTED_RESULT")
 })
 

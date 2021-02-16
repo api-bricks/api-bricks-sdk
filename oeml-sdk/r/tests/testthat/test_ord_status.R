@@ -2,6 +2,3 @@
 # Please update as you see appropriate
 
 context("Test OrdStatus")
-
-model.instance <- OrdStatus$new()
-

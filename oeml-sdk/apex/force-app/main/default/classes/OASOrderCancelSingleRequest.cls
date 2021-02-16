@@ -42,6 +42,26 @@ public class OASOrderCancelSingleRequest implements OAS.MappedProperties {
         return propertyMappings;
     }
 
+    private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'exchange_id' => 'exchangeId',
+        'exchange_order_id' => 'exchangeOrderId',
+        'client_order_id' => 'clientOrderId'
+    };
+
+    public Map<String, String> getPropertyMappings() {
+        return propertyMappings;
+    }
+
+    private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'exchange_id' => 'exchangeId',
+        'exchange_order_id' => 'exchangeOrderId',
+        'client_order_id' => 'clientOrderId'
+    };
+
+    public Map<String, String> getPropertyMappings() {
+        return propertyMappings;
+    }
+
     public static OASOrderCancelSingleRequest getExample() {
         OASOrderCancelSingleRequest orderCancelSingleRequest = new OASOrderCancelSingleRequest();
           orderCancelSingleRequest.exchangeId = 'KRAKEN';

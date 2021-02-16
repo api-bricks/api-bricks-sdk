@@ -224,7 +224,7 @@
 #'
 #' }
 #' @importFrom R6 R6Class
-#' @importFrom caTools base64encode
+#' @importFrom base64enc base64encode
 #' @export
 OrdersApi <- R6::R6Class(
   'OrdersApi',
@@ -367,6 +367,7 @@ OrdersApi <- R6::R6Class(
 
       queryParams['exchange_id'] <- exchange.id
 
+      body <- NULL
       urlPath <- "/v1/orders"
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -469,6 +470,7 @@ OrdersApi <- R6::R6Class(
         stop("Missing required parameter `client.order.id`.")
       }
 
+      body <- NULL
       urlPath <- "/v1/orders/status/{client_order_id}"
       if (!missing(`client.order.id`)) {
         urlPath <- gsub(paste0("\\{", "client_order_id", "\\}"), URLencode(as.character(`client.order.id`), reserved = TRUE), urlPath)

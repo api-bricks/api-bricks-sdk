@@ -28,6 +28,7 @@ build = {
 		["openapiclient.api.positions_api"] = "openapiclient/api/positions_api.lua";
 		["openapiclient.model.balance"] = "openapiclient/model/balance.lua";
 		["openapiclient.model.balance_data"] = "openapiclient/model/balance_data.lua";
+		["openapiclient.model.fills"] = "openapiclient/model/fills.lua";
 		["openapiclient.model.message"] = "openapiclient/model/message.lua";
 		["openapiclient.model.ord_side"] = "openapiclient/model/ord_side.lua";
 		["openapiclient.model.ord_status"] = "openapiclient/model/ord_status.lua";

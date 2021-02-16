@@ -25,7 +25,7 @@ defmodule OEML-RESTAPI.Api.Balances do
   {:ok, [%Balance{}, ...]} on success
   {:error, info} on failure
   """
-  @spec v1_balances_get(Tesla.Env.client, keyword()) :: {:ok, list(OEML-RESTAPI.Model.Balance.t)} | {:error, Tesla.Env.t}
+  @spec v1_balances_get(Tesla.Env.client, keyword()) :: {:ok, list(OEML-RESTAPI.Model.Balance.t)} | {:ok, OEML-RESTAPI.Model.Message.t} | {:error, Tesla.Env.t}
   def v1_balances_get(connection, opts \\ []) do
     optional_params = %{
       :"exchange_id" => :query

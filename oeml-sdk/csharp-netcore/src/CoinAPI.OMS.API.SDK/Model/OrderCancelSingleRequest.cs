@@ -1,4 +1,4 @@
-/* 
+/*
  * OEML - REST API
  *
  * This section will provide necessary information about the `CoinAPI OEML REST API` protocol. This API is also available in the Postman application: <a href=\"https://postman.coinapi.io/\" target=\"_blank\">https://postman.coinapi.io/</a>       
@@ -10,16 +10,17 @@
 
 
 using System;
-using System.Linq;
-using System.IO;
-using System.Text;
-using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Linq;
+using System.IO;
 using System.Runtime.Serialization;
+using System.Text;
+using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = CoinAPI.OMS.API.SDK.Client.OpenAPIDateConverter;
 
@@ -28,8 +29,8 @@ namespace CoinAPI.OMS.API.SDK.Model
     /// <summary>
     /// Cancel single order request object.
     /// </summary>
-    [DataContract]
-    public partial class OrderCancelSingleRequest :  IEquatable<OrderCancelSingleRequest>, IValidatableObject
+    [DataContract(Name = "OrderCancelSingleRequest")]
+    public partial class OrderCancelSingleRequest : IEquatable<OrderCancelSingleRequest>, IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="OrderCancelSingleRequest" /> class.
@@ -49,26 +50,26 @@ namespace CoinAPI.OMS.API.SDK.Model
             this.ExchangeOrderId = exchangeOrderId;
             this.ClientOrderId = clientOrderId;
         }
-        
+
         /// <summary>
         /// Exchange identifier used to identify the routing destination.
         /// </summary>
         /// <value>Exchange identifier used to identify the routing destination.</value>
-        [DataMember(Name="exchange_id", EmitDefaultValue=false)]
+        [DataMember(Name = "exchange_id", IsRequired = true, EmitDefaultValue = false)]
         public string ExchangeId { get; set; }
 
         /// <summary>
         /// Unique identifier of the order assigned by the exchange or executing system. One of the properties (&#x60;exchange_order_id&#x60;, &#x60;client_order_id&#x60;) is required to identify the new order.
         /// </summary>
         /// <value>Unique identifier of the order assigned by the exchange or executing system. One of the properties (&#x60;exchange_order_id&#x60;, &#x60;client_order_id&#x60;) is required to identify the new order.</value>
-        [DataMember(Name="exchange_order_id", EmitDefaultValue=false)]
+        [DataMember(Name = "exchange_order_id", EmitDefaultValue = false)]
         public string ExchangeOrderId { get; set; }
 
         /// <summary>
         /// The unique identifier of the order assigned by the client. One of the properties (&#x60;exchange_order_id&#x60;, &#x60;client_order_id&#x60;) is required to identify the new order.
         /// </summary>
         /// <value>The unique identifier of the order assigned by the client. One of the properties (&#x60;exchange_order_id&#x60;, &#x60;client_order_id&#x60;) is required to identify the new order.</value>
-        [DataMember(Name="client_order_id", EmitDefaultValue=false)]
+        [DataMember(Name = "client_order_id", EmitDefaultValue = false)]
         public string ClientOrderId { get; set; }
 
         /// <summary>
@@ -85,14 +86,14 @@ namespace CoinAPI.OMS.API.SDK.Model
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
         public virtual string ToJson()
         {
-            return JsonConvert.SerializeObject(this, Formatting.Indented);
+            return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
 
         /// <summary>

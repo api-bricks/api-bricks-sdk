@@ -10,13 +10,13 @@
  * Do not edit the class manually.
  */
 
-import { RequestFile } from '../api';
+import { RequestFile } from './models';
 
 /**
 * Severity of the message.
 */
 export enum Severity {
-    INFO = <any> 'INFO',
-    WARNING = <any> 'WARNING',
-    ERROR = <any> 'ERROR'
+    Info = <any> 'INFO',
+    Warning = <any> 'WARNING',
+    Error = <any> 'ERROR'
 }

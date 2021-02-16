@@ -18,31 +18,31 @@ namespace CoinAPI.WebSocket.V1.Tests
             {
                 apikey = System.Guid.Parse(config["TestApiKey"]),
                 subscribe_data_type = new string[] { "trade", "quote" },
-                subscribe_filter_exchange_id = new string[] { "BITSTAMP" }
+                subscribe_filter_exchange_id = new string[] { "COINBASE" }
             };
 
-            using(var wsClient = new CoinApiWsClient(false))
+            using(var wsClient = new CoinApiWsClient(true))
             {
                 var mre_bs = new ManualResetEvent(false);
                 var mre_cb = new ManualResetEvent(false);
                 wsClient.TradeEvent += (s, i) =>
                 {
-                    if (i.symbol_id.StartsWith("COINBASE"))
+                    if (i.symbol_id.StartsWith("GEMINI"))
                     {
                         mre_cb.Set();
                     }
-                    else if (i.symbol_id.StartsWith("BITSTAMP"))
+                    else if (i.symbol_id.StartsWith("COINBASE"))
                     {
                         mre_bs.Set();
                     }
                 };
                 wsClient.QuoteEvent += (s, i) =>
                 {
-                    if (i.symbol_id.StartsWith("COINBASE"))
+                    if (i.symbol_id.StartsWith("GEMINI"))
                     {
                         mre_cb.Set();
                     }
-                    else if (i.symbol_id.StartsWith("BITSTAMP"))
+                    else if (i.symbol_id.StartsWith("COINBASE"))
                     {
                         mre_bs.Set();
                     }
@@ -71,7 +71,7 @@ namespace CoinAPI.WebSocket.V1.Tests
                 {
                     apikey = System.Guid.Parse(config["TestApiKey"]),
                     subscribe_data_type = new string[] { "trade", "quote" },
-                    subscribe_filter_exchange_id = new string[] { "COINBASE" }
+                    subscribe_filter_exchange_id = new string[] { "GEMINI" }
                 };
 
                 wsClient.SendHelloMessage(helloMsg);

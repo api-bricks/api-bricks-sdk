@@ -1,4 +1,4 @@
-/* 
+/*
  * OEML - REST API
  *
  * This section will provide necessary information about the `CoinAPI OEML REST API` protocol. This API is also available in the Postman application: <a href=\"https://postman.coinapi.io/\" target=\"_blank\">https://postman.coinapi.io/</a>       
@@ -10,16 +10,17 @@
 
 
 using System;
-using System.Linq;
-using System.IO;
-using System.Text;
-using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Linq;
+using System.IO;
 using System.Runtime.Serialization;
+using System.Text;
+using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = CoinAPI.OMS.API.SDK.Client.OpenAPIDateConverter;
 
@@ -28,8 +29,8 @@ namespace CoinAPI.OMS.API.SDK.Model
     /// <summary>
     /// ValidationError
     /// </summary>
-    [DataContract]
-    public partial class ValidationError :  IEquatable<ValidationError>, IValidatableObject
+    [DataContract(Name = "ValidationError")]
+    public partial class ValidationError : IEquatable<ValidationError>, IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ValidationError" /> class.
@@ -47,35 +48,35 @@ namespace CoinAPI.OMS.API.SDK.Model
             this.TraceId = traceId;
             this.Errors = errors;
         }
-        
+
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
-        [DataMember(Name="type", EmitDefaultValue=false)]
+        [DataMember(Name = "type", EmitDefaultValue = false)]
         public string Type { get; set; }
 
         /// <summary>
         /// Gets or Sets Title
         /// </summary>
-        [DataMember(Name="title", EmitDefaultValue=false)]
+        [DataMember(Name = "title", EmitDefaultValue = false)]
         public string Title { get; set; }
 
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
-        [DataMember(Name="status", EmitDefaultValue=false)]
+        [DataMember(Name = "status", EmitDefaultValue = false)]
         public decimal Status { get; set; }
 
         /// <summary>
         /// Gets or Sets TraceId
         /// </summary>
-        [DataMember(Name="traceId", EmitDefaultValue=false)]
+        [DataMember(Name = "traceId", EmitDefaultValue = false)]
         public string TraceId { get; set; }
 
         /// <summary>
         /// Gets or Sets Errors
         /// </summary>
-        [DataMember(Name="errors", EmitDefaultValue=false)]
+        [DataMember(Name = "errors", EmitDefaultValue = false)]
         public string Errors { get; set; }
 
         /// <summary>
@@ -94,14 +95,14 @@ namespace CoinAPI.OMS.API.SDK.Model
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
         public virtual string ToJson()
         {
-            return JsonConvert.SerializeObject(this, Formatting.Indented);
+            return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
 
         /// <summary>

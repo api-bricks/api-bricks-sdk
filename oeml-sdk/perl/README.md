@@ -234,6 +234,7 @@ To load the models:
 ```perl
 use WWW::OpenAPIClient::Object::Balance;
 use WWW::OpenAPIClient::Object::BalanceData;
+use WWW::OpenAPIClient::Object::Fills;
 use WWW::OpenAPIClient::Object::Message;
 use WWW::OpenAPIClient::Object::OrdSide;
 use WWW::OpenAPIClient::Object::OrdStatus;
@@ -266,6 +267,7 @@ use WWW::OpenAPIClient::PositionsApi;
 # load the models
 use WWW::OpenAPIClient::Object::Balance;
 use WWW::OpenAPIClient::Object::BalanceData;
+use WWW::OpenAPIClient::Object::Fills;
 use WWW::OpenAPIClient::Object::Message;
 use WWW::OpenAPIClient::Object::OrdSide;
 use WWW::OpenAPIClient::Object::OrdStatus;
@@ -318,6 +320,7 @@ Class | Method | HTTP request | Description
 # DOCUMENTATION FOR MODELS
  - [WWW::OpenAPIClient::Object::Balance](docs/Balance.md)
  - [WWW::OpenAPIClient::Object::BalanceData](docs/BalanceData.md)
+ - [WWW::OpenAPIClient::Object::Fills](docs/Fills.md)
  - [WWW::OpenAPIClient::Object::Message](docs/Message.md)
  - [WWW::OpenAPIClient::Object::OrdSide](docs/OrdSide.md)
  - [WWW::OpenAPIClient::Object::OrdStatus](docs/OrdStatus.md)

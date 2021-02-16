@@ -33,9 +33,9 @@ fail:
     return NULL;
 }
 
-ord_status_ord_status_e ord_status_ord_status_parseFromJSON(cJSON *ord_statusJSON) {
-    ord_status_ord_status_e *ord_status = NULL;
-    ord_status_ord_status_e ord_statusVariable;
+oeml___rest_api_ord_status__e ord_status_ord_status_parseFromJSON(cJSON *ord_statusJSON) {
+    oeml___rest_api_ord_status__e *ord_status = NULL;
+    oeml___rest_api_ord_status__e ord_statusVariable;
     cJSON *ord_statusVar = cJSON_GetObjectItemCaseSensitive(ord_statusJSON, "ord_status");
     if(!cJSON_IsString(ord_statusVar) || (ord_statusVar->valuestring == NULL)){
         goto end;

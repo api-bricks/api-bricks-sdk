@@ -19,5 +19,5 @@ import * as models from './models';
     * Order types are documented in the separate section: <a href=\"#oeml-order-params-type\">OEML / Starter Guide / Order parameters / Order type</a> 
     */
 export enum OrdType {
-    LIMIT = <any> 'LIMIT'
+    Limit = <any> 'LIMIT'
 }

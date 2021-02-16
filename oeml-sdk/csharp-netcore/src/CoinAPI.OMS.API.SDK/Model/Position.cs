@@ -1,4 +1,4 @@
-/* 
+/*
  * OEML - REST API
  *
  * This section will provide necessary information about the `CoinAPI OEML REST API` protocol. This API is also available in the Postman application: <a href=\"https://postman.coinapi.io/\" target=\"_blank\">https://postman.coinapi.io/</a>       
@@ -10,16 +10,17 @@
 
 
 using System;
-using System.Linq;
-using System.IO;
-using System.Text;
-using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Linq;
+using System.IO;
 using System.Runtime.Serialization;
+using System.Text;
+using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = CoinAPI.OMS.API.SDK.Client.OpenAPIDateConverter;
 
@@ -28,8 +29,8 @@ namespace CoinAPI.OMS.API.SDK.Model
     /// <summary>
     /// Position
     /// </summary>
-    [DataContract]
-    public partial class Position :  IEquatable<Position>, IValidatableObject
+    [DataContract(Name = "Position")]
+    public partial class Position : IEquatable<Position>, IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Position" /> class.
@@ -41,18 +42,18 @@ namespace CoinAPI.OMS.API.SDK.Model
             this.ExchangeId = exchangeId;
             this.Data = data;
         }
-        
+
         /// <summary>
         /// Exchange identifier used to identify the routing destination.
         /// </summary>
         /// <value>Exchange identifier used to identify the routing destination.</value>
-        [DataMember(Name="exchange_id", EmitDefaultValue=false)]
+        [DataMember(Name = "exchange_id", EmitDefaultValue = false)]
         public string ExchangeId { get; set; }
 
         /// <summary>
         /// Gets or Sets Data
         /// </summary>
-        [DataMember(Name="data", EmitDefaultValue=false)]
+        [DataMember(Name = "data", EmitDefaultValue = false)]
         public List<PositionData> Data { get; set; }
 
         /// <summary>
@@ -68,14 +69,14 @@ namespace CoinAPI.OMS.API.SDK.Model
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
         public virtual string ToJson()
         {
-            return JsonConvert.SerializeObject(this, Formatting.Indented);
+            return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
 
         /// <summary>

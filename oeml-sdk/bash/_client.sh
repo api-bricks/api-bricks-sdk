@@ -300,7 +300,8 @@ case $state in
             "v1OrdersCancelPost[Cancel order request]" \
             "v1OrdersGet[Get open orders]" \
             "v1OrdersPost[Send new order]" \
-            "v1OrdersStatusClientOrderIdGet[Get order execution report]"             "v1PositionsGet[Get open positions]" 
+            "v1OrdersStatusClientOrderIdGet[Get order execution report]"             "v1PositionsGet[Get open positions]" \
+
     _arguments "(--help)--help[Print information about operation]"
 
     ret=0

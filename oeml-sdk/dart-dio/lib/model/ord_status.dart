@@ -1,4 +1,4 @@
-        import 'package:built_collection/built_collection.dart';
+import 'package:built_collection/built_collection.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -6,33 +6,33 @@ part 'ord_status.g.dart';
 
 class OrdStatus extends EnumClass {
 
-  /// Order statuses and the lifecycle are documented in the separate section: &lt;a href&#x3D;\&quot;#oeml-order-lifecycle\&quot;&gt;OEML / Starter Guide / Order Lifecycle&lt;/a&gt; 
-  @BuiltValueEnumConst(wireName: "RECEIVED")
-  static const OrdStatus rECEIVED = _$rECEIVED;
-  /// Order statuses and the lifecycle are documented in the separate section: &lt;a href&#x3D;\&quot;#oeml-order-lifecycle\&quot;&gt;OEML / Starter Guide / Order Lifecycle&lt;/a&gt; 
-  @BuiltValueEnumConst(wireName: "ROUTING")
-  static const OrdStatus rOUTING = _$rOUTING;
-  /// Order statuses and the lifecycle are documented in the separate section: &lt;a href&#x3D;\&quot;#oeml-order-lifecycle\&quot;&gt;OEML / Starter Guide / Order Lifecycle&lt;/a&gt; 
-  @BuiltValueEnumConst(wireName: "ROUTED")
-  static const OrdStatus rOUTED = _$rOUTED;
-  /// Order statuses and the lifecycle are documented in the separate section: &lt;a href&#x3D;\&quot;#oeml-order-lifecycle\&quot;&gt;OEML / Starter Guide / Order Lifecycle&lt;/a&gt; 
-  @BuiltValueEnumConst(wireName: "NEW")
-  static const OrdStatus nEW_ = _$nEW_;
-  /// Order statuses and the lifecycle are documented in the separate section: &lt;a href&#x3D;\&quot;#oeml-order-lifecycle\&quot;&gt;OEML / Starter Guide / Order Lifecycle&lt;/a&gt; 
-  @BuiltValueEnumConst(wireName: "PENDING_CANCEL")
-  static const OrdStatus pENDINGCANCEL = _$pENDINGCANCEL;
-  /// Order statuses and the lifecycle are documented in the separate section: &lt;a href&#x3D;\&quot;#oeml-order-lifecycle\&quot;&gt;OEML / Starter Guide / Order Lifecycle&lt;/a&gt; 
-  @BuiltValueEnumConst(wireName: "PARTIALLY_FILLED")
-  static const OrdStatus pARTIALLYFILLED = _$pARTIALLYFILLED;
-  /// Order statuses and the lifecycle are documented in the separate section: &lt;a href&#x3D;\&quot;#oeml-order-lifecycle\&quot;&gt;OEML / Starter Guide / Order Lifecycle&lt;/a&gt; 
-  @BuiltValueEnumConst(wireName: "FILLED")
-  static const OrdStatus fILLED = _$fILLED;
-  /// Order statuses and the lifecycle are documented in the separate section: &lt;a href&#x3D;\&quot;#oeml-order-lifecycle\&quot;&gt;OEML / Starter Guide / Order Lifecycle&lt;/a&gt; 
-  @BuiltValueEnumConst(wireName: "CANCELED")
-  static const OrdStatus cANCELED = _$cANCELED;
-  /// Order statuses and the lifecycle are documented in the separate section: &lt;a href&#x3D;\&quot;#oeml-order-lifecycle\&quot;&gt;OEML / Starter Guide / Order Lifecycle&lt;/a&gt; 
-  @BuiltValueEnumConst(wireName: "REJECTED")
-  static const OrdStatus rEJECTED = _$rEJECTED;
+  /// Order statuses and the lifecycle are documented in the separate section: <a href=\"#oeml-order-lifecycle\">OEML / Starter Guide / Order Lifecycle</a> 
+  @BuiltValueEnumConst(wireName: r'RECEIVED')
+  static const OrdStatus RECEIVED = _$RECEIVED;
+  /// Order statuses and the lifecycle are documented in the separate section: <a href=\"#oeml-order-lifecycle\">OEML / Starter Guide / Order Lifecycle</a> 
+  @BuiltValueEnumConst(wireName: r'ROUTING')
+  static const OrdStatus ROUTING = _$ROUTING;
+  /// Order statuses and the lifecycle are documented in the separate section: <a href=\"#oeml-order-lifecycle\">OEML / Starter Guide / Order Lifecycle</a> 
+  @BuiltValueEnumConst(wireName: r'ROUTED')
+  static const OrdStatus ROUTED = _$ROUTED;
+  /// Order statuses and the lifecycle are documented in the separate section: <a href=\"#oeml-order-lifecycle\">OEML / Starter Guide / Order Lifecycle</a> 
+  @BuiltValueEnumConst(wireName: r'NEW')
+  static const OrdStatus NEW = _$NEW;
+  /// Order statuses and the lifecycle are documented in the separate section: <a href=\"#oeml-order-lifecycle\">OEML / Starter Guide / Order Lifecycle</a> 
+  @BuiltValueEnumConst(wireName: r'PENDING_CANCEL')
+  static const OrdStatus PENDING_CANCEL = _$PENDING_CANCEL;
+  /// Order statuses and the lifecycle are documented in the separate section: <a href=\"#oeml-order-lifecycle\">OEML / Starter Guide / Order Lifecycle</a> 
+  @BuiltValueEnumConst(wireName: r'PARTIALLY_FILLED')
+  static const OrdStatus PARTIALLY_FILLED = _$PARTIALLY_FILLED;
+  /// Order statuses and the lifecycle are documented in the separate section: <a href=\"#oeml-order-lifecycle\">OEML / Starter Guide / Order Lifecycle</a> 
+  @BuiltValueEnumConst(wireName: r'FILLED')
+  static const OrdStatus FILLED = _$FILLED;
+  /// Order statuses and the lifecycle are documented in the separate section: <a href=\"#oeml-order-lifecycle\">OEML / Starter Guide / Order Lifecycle</a> 
+  @BuiltValueEnumConst(wireName: r'CANCELED')
+  static const OrdStatus CANCELED = _$CANCELED;
+  /// Order statuses and the lifecycle are documented in the separate section: <a href=\"#oeml-order-lifecycle\">OEML / Starter Guide / Order Lifecycle</a> 
+  @BuiltValueEnumConst(wireName: r'REJECTED')
+  static const OrdStatus REJECTED = _$REJECTED;
 
   static Serializer<OrdStatus> get serializer => _$ordStatusSerializer;
 

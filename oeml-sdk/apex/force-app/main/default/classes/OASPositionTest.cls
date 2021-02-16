@@ -72,8 +72,8 @@ private class OASPositionTest {
     @isTest
     private static void maintainRenamedProperties() {
         OASPosition position = new OASPosition();
-        Map<String, String> propertyMappings = position.getPropertyMappings();
-        System.assertEquals('exchangeId', propertyMappings.get('exchange_id'));
+        Map<String, String> x-property-mappings = position.getx-property-mappings();
+        System.assertEquals('exchangeId', x-property-mappings.get('exchange_id'));
     }
 
     @isTest

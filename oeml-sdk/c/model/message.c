@@ -45,9 +45,18 @@ void message_free(message_t *message) {
         return ;
     }
     listEntry_t *listEntry;
-    free(message->type);
-    free(message->exchange_id);
-    free(message->message);
+    if (message->type) {
+        free(message->type);
+        message->type = NULL;
+    }
+    if (message->exchange_id) {
+        free(message->exchange_id);
+        message->exchange_id = NULL;
+    }
+    if (message->message) {
+        free(message->message);
+        message->message = NULL;
+    }
     free(message);
 }
 

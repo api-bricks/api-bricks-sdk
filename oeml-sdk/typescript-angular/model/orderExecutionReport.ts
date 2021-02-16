@@ -13,6 +13,7 @@ import { OrdSide } from './ordSide';
 import { OrdStatus } from './ordStatus';
 import { OrdType } from './ordType';
 import { TimeInForce } from './timeInForce';
+import { Fills } from './fills';
 import { OrderNewSingleRequest } from './orderNewSingleRequest';
 import { OrderExecutionReportAllOf } from './orderExecutionReportAllOf';
 
@@ -72,22 +73,30 @@ export interface OrderExecutionReport {
      * Total quantity filled.
      */
     amount_filled: number;
+    /**
+     * Calculated average price of all fills on this order.
+     */
+    avg_px?: number;
     status: OrdStatus;
     /**
      * Timestamped history of order status changes.
      */
-    time_order: Array<Array<string>>;
+    status_history?: Array<Array<string>>;
     /**
-     * Error message
+     * Error message.
      */
     error_message?: string;
+    /**
+     * Relay fill information on working orders.
+     */
+    fills?: Array<Fills>;
 }
 export namespace OrderExecutionReport {
     export type ExecInstEnum = 'MAKER_OR_CANCEL' | 'AUCTION_ONLY' | 'INDICATION_OF_INTEREST';
     export const ExecInstEnum = {
-        MAKERORCANCEL: 'MAKER_OR_CANCEL' as ExecInstEnum,
-        AUCTIONONLY: 'AUCTION_ONLY' as ExecInstEnum,
-        INDICATIONOFINTEREST: 'INDICATION_OF_INTEREST' as ExecInstEnum
+        MakerOrCancel: 'MAKER_OR_CANCEL' as ExecInstEnum,
+        AuctionOnly: 'AUCTION_ONLY' as ExecInstEnum,
+        IndicationOfInterest: 'INDICATION_OF_INTEREST' as ExecInstEnum
     };
 }
 

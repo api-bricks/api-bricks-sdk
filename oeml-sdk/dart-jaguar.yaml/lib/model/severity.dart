@@ -9,11 +9,11 @@ class Severity {
   const Severity._internal(this.value);
 
   /// Severity of the message.
-  static const Severity iNFO_ = const Severity._internal("INFO");
+  static const Severity INFO = const Severity._internal('INFO');
   /// Severity of the message.
-  static const Severity wARNING_ = const Severity._internal("WARNING");
+  static const Severity WARNING = const Severity._internal('WARNING');
   /// Severity of the message.
-  static const Severity eRROR_ = const Severity._internal("ERROR");
+  static const Severity ERROR = const Severity._internal('ERROR');
 }
 
 class SeverityFieldProcessor implements FieldProcessor<Severity, String> {
@@ -21,9 +21,9 @@ class SeverityFieldProcessor implements FieldProcessor<Severity, String> {
 
     Severity deserialize(String data) {
         switch (data) {
-            case "INFO": return Severity.iNFO_;
-            case "WARNING": return Severity.wARNING_;
-            case "ERROR": return Severity.eRROR_;
+            case 'INFO': return Severity.INFO;
+            case 'WARNING': return Severity.WARNING;
+            case 'ERROR': return Severity.ERROR;
             default: throw('Unknown enum value to decode: $data');
         }
     }

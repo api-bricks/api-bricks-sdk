@@ -8,8 +8,8 @@ import 'package:openapi/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**exchangeId** | **String** | Exchange identifier used to identify the routing destination. | [optional] [default to null]
-**data** | [**BuiltList&lt;PositionData&gt;**](PositionData.md) |  | [optional] [default to const []]
+**exchangeId** | **String** | Exchange identifier used to identify the routing destination. | [optional] 
+**data** | [**BuiltList<PositionData>**](PositionData.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

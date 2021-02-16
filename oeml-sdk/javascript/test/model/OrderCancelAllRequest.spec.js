@@ -56,7 +56,7 @@
 
     it('should have the property exchangeId (base name: "exchange_id")', function() {
       // uncomment below and update the code to test the property exchangeId
-      //var instane = new OemlRestApi.OrderCancelAllRequest();
+      //var instance = new OemlRestApi.OrderCancelAllRequest();
       //expect(instance).to.be();
     });
 

@@ -8,8 +8,11 @@
 
 #' @docType class
 #' @title ValidationError
+#'
 #' @description ValidationError Class
+#'
 #' @format An \code{R6Class} generator object
+#'
 #' @field type  character [optional]
 #'
 #' @field title  character [optional]
@@ -19,7 +22,6 @@
 #' @field traceId  character [optional]
 #'
 #' @field errors  character [optional]
-#'
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -32,7 +34,9 @@ ValidationError <- R6::R6Class(
     `status` = NULL,
     `traceId` = NULL,
     `errors` = NULL,
-    initialize = function(`type`=NULL, `title`=NULL, `status`=NULL, `traceId`=NULL, `errors`=NULL, ...){
+    initialize = function(
+        `type`=NULL, `title`=NULL, `status`=NULL, `traceId`=NULL, `errors`=NULL, ...
+    ) {
       local.optional.var <- list(...)
       if (!is.null(`type`)) {
         stopifnot(is.character(`type`), length(`type`) == 1)
@@ -96,6 +100,7 @@ ValidationError <- R6::R6Class(
       if (!is.null(ValidationErrorObject$`errors`)) {
         self$`errors` <- ValidationErrorObject$`errors`
       }
+      self
     },
     toJSONString = function() {
       jsoncontent <- c(
@@ -149,3 +154,4 @@ ValidationError <- R6::R6Class(
     }
   )
 )
+

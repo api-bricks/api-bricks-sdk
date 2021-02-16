@@ -76,6 +76,7 @@ Class | Method | HTTP request | Description
 
  - [OASBalance](OASBalance.md)
  - [OASBalanceData](OASBalanceData.md)
+ - [OASFills](OASFills.md)
  - [OASMessage](OASMessage.md)
  - [OASOrdSide](OASOrdSide.md)
  - [OASOrdStatus](OASOrdStatus.md)

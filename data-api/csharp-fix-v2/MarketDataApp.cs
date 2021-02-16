@@ -15,9 +15,11 @@ namespace COINAPI.FIX.V2
 
         private string[] SubscribeBySymbolRegex = new string[] 
         {
-            "^GEMINI_SPOT_BTC_USD$", // you can use the exact match of the symbol id
-            "^GEMINI_SPOT_(.*)_ETH$", // or you can use the regular expression syntax to get eg. all spot symbols to ETH from GEMINI
-            "^GEMINI_SPOT_(BCH|LTC)_USD$" // second example of the regex, the BCH/USD & LTC/USD
+            //"^GEMINI_SPOT_BTC_USD$", // you can use the exact match of the symbol id
+            //"^GEMINI_SPOT_(.*)_ETH$", // or you can use the regular expression syntax to get eg. all spot symbols to ETH from GEMINI
+            //"^GEMINI_SPOT_(BCH|LTC)_USD$" // second example of the regex, the BCH/USD & LTC/USD
+            "BINANCE_SPOT_BTC_USDT",
+            //"^(BITSTAMP|GEMINI|COINBASE)_SPOT_BTC_USD$"
         };
 
         private HashSet<string> _seen = null;
@@ -158,11 +160,6 @@ namespace COINAPI.FIX.V2
                 type.MDEntryType = new MDEntryType(MDEntryType.OFFER);
                 mdr.AddGroup(type);
             }
-            {
-                var type = new QuickFix.FIX44.MarketDataRequest.NoMDEntryTypesGroup();
-                type.MDEntryType = new MDEntryType(MDEntryType.TRADE);
-                mdr.AddGroup(type);
-            }
 
             foreach (var symbol_id in symbol_ids)
             {
@@ -288,13 +285,15 @@ namespace COINAPI.FIX.V2
 
             }
 
-            Console.WriteLine($"Received MarketDataIncrementalRefresh {msg.NoMDEntries.getValue()} items for {string.Join(",", symbols)} with {string.Join(",", entryType)}.");
-            return;
-
             for (int idx = 0; idx < msg.NoMDEntries.getValue(); idx++)
             {
                 var item = new QuickFix.FIX44.MarketDataIncrementalRefresh.NoMDEntriesGroup();
                 msg.GetGroup(idx + 1, item);
+
+                {
+                    Console.WriteLine($"Received MarketDataIncrementalRefresh {msg.NoMDEntries.getValue()} items for {string.Join(",", symbols)} with {string.Join(",", entryType)} (lag: {(DateTime.UtcNow - msg.Header.GetDateTime(52)).TotalMilliseconds} / {(DateTime.UtcNow - item.MDEntryDate.getValue().Add(item.MDEntryTime.getValue().TimeOfDay)).TotalMilliseconds}).");
+                    return;
+                }
 
                 Console.WriteLine($"{item.MDEntryType} {item.MDUpdateAction} @ {item.Symbol}:");
                 if (item.IsSetMDEntryID())
@@ -315,7 +314,8 @@ namespace COINAPI.FIX.V2
 
         public void OnMessage(QuickFix.FIX44.MarketDataSnapshotFullRefresh msg, SessionID s)
         {
-            Console.WriteLine($"Received MarketDataSnapshotFullRefresh for {msg.Symbol.getValue()} with {msg.NoMDEntries.getValue()} items.");
+            _seen.Add(msg.Symbol.getValue());
+            Console.WriteLine($"Received MarketDataSnapshotFullRefresh for {msg.Symbol.getValue()} with {msg.NoMDEntries.getValue()} items (lag: {(DateTime.UtcNow - msg.Header.GetDateTime(52)).TotalMilliseconds}).");
 
             //for (int idx = 0; idx < msg.NoMDEntries.getValue(); idx++)
             //{

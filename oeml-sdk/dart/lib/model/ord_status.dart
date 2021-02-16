@@ -1,58 +1,104 @@
+//
+// AUTO-GENERATED FILE, DO NOT MODIFY!
+//
+// @dart=2.0
+
+// ignore_for_file: unused_element, unused_import
+// ignore_for_file: always_put_required_named_parameters_first
+// ignore_for_file: lines_longer_than_80_chars
+
 part of openapi.api;
 
+/// Order statuses and the lifecycle are documented in the separate section: <a href=\"#oeml-order-lifecycle\">OEML / Starter Guide / Order Lifecycle</a> 
 class OrdStatus {
+  /// Instantiate a new enum with the provided [value].
+  const OrdStatus._(this.value);
+
   /// The underlying value of this enum member.
   final String value;
 
-  const OrdStatus._internal(this.value);
+  @override
+  bool operator ==(Object other) => identical(this, other) ||
+      other is OrdStatus && other.value == value;
 
-  /// Order statuses and the lifecycle are documented in the separate section: &lt;a href&#x3D;\&quot;#oeml-order-lifecycle\&quot;&gt;OEML / Starter Guide / Order Lifecycle&lt;/a&gt; 
-  static const OrdStatus rECEIVED_ = const OrdStatus._internal("RECEIVED");
-  /// Order statuses and the lifecycle are documented in the separate section: &lt;a href&#x3D;\&quot;#oeml-order-lifecycle\&quot;&gt;OEML / Starter Guide / Order Lifecycle&lt;/a&gt; 
-  static const OrdStatus rOUTING_ = const OrdStatus._internal("ROUTING");
-  /// Order statuses and the lifecycle are documented in the separate section: &lt;a href&#x3D;\&quot;#oeml-order-lifecycle\&quot;&gt;OEML / Starter Guide / Order Lifecycle&lt;/a&gt; 
-  static const OrdStatus rOUTED_ = const OrdStatus._internal("ROUTED");
-  /// Order statuses and the lifecycle are documented in the separate section: &lt;a href&#x3D;\&quot;#oeml-order-lifecycle\&quot;&gt;OEML / Starter Guide / Order Lifecycle&lt;/a&gt; 
-  static const OrdStatus nEW_ = const OrdStatus._internal("NEW");
-  /// Order statuses and the lifecycle are documented in the separate section: &lt;a href&#x3D;\&quot;#oeml-order-lifecycle\&quot;&gt;OEML / Starter Guide / Order Lifecycle&lt;/a&gt; 
-  static const OrdStatus pENDINGCANCEL_ = const OrdStatus._internal("PENDING_CANCEL");
-  /// Order statuses and the lifecycle are documented in the separate section: &lt;a href&#x3D;\&quot;#oeml-order-lifecycle\&quot;&gt;OEML / Starter Guide / Order Lifecycle&lt;/a&gt; 
-  static const OrdStatus pARTIALLYFILLED_ = const OrdStatus._internal("PARTIALLY_FILLED");
-  /// Order statuses and the lifecycle are documented in the separate section: &lt;a href&#x3D;\&quot;#oeml-order-lifecycle\&quot;&gt;OEML / Starter Guide / Order Lifecycle&lt;/a&gt; 
-  static const OrdStatus fILLED_ = const OrdStatus._internal("FILLED");
-  /// Order statuses and the lifecycle are documented in the separate section: &lt;a href&#x3D;\&quot;#oeml-order-lifecycle\&quot;&gt;OEML / Starter Guide / Order Lifecycle&lt;/a&gt; 
-  static const OrdStatus cANCELED_ = const OrdStatus._internal("CANCELED");
-  /// Order statuses and the lifecycle are documented in the separate section: &lt;a href&#x3D;\&quot;#oeml-order-lifecycle\&quot;&gt;OEML / Starter Guide / Order Lifecycle&lt;/a&gt; 
-  static const OrdStatus rEJECTED_ = const OrdStatus._internal("REJECTED");
+  @override
+  int get hashCode => toString().hashCode;
 
-  static OrdStatus fromJson(String value) {
-    return new OrdStatusTypeTransformer().decode(value);
-  }
-  
-  static List<OrdStatus> listFromJson(List<dynamic> json) {
-    return json == null ? new List<OrdStatus>() : json.map((value) => OrdStatus.fromJson(value)).toList();
-  }
+  @override
+  String toString() => value;
+
+  String toJson() => value;
+
+  static const RECEIVED = OrdStatus._(r'RECEIVED');
+  static const ROUTING = OrdStatus._(r'ROUTING');
+  static const ROUTED = OrdStatus._(r'ROUTED');
+  static const NEW = OrdStatus._(r'NEW');
+  static const PENDING_CANCEL = OrdStatus._(r'PENDING_CANCEL');
+  static const PARTIALLY_FILLED = OrdStatus._(r'PARTIALLY_FILLED');
+  static const FILLED = OrdStatus._(r'FILLED');
+  static const CANCELED = OrdStatus._(r'CANCELED');
+  static const REJECTED = OrdStatus._(r'REJECTED');
+
+  /// List of all possible values in this [enum][OrdStatus].
+  static const values = <OrdStatus>[
+    RECEIVED,
+    ROUTING,
+    ROUTED,
+    NEW,
+    PENDING_CANCEL,
+    PARTIALLY_FILLED,
+    FILLED,
+    CANCELED,
+    REJECTED,
+  ];
+
+  static OrdStatus fromJson(dynamic value) =>
+    OrdStatusTypeTransformer().decode(value);
+
+  static List<OrdStatus> listFromJson(List<dynamic> json, {bool emptyIsNull, bool growable,}) =>
+    json == null || json.isEmpty
+      ? true == emptyIsNull ? null : <OrdStatus>[]
+      : json
+          .map((value) => OrdStatus.fromJson(value))
+          .toList(growable: true == growable);
 }
 
+/// Transformation class that can [encode] an instance of [OrdStatus] to String,
+/// and [decode] dynamic data back to [OrdStatus].
 class OrdStatusTypeTransformer {
+  const OrdStatusTypeTransformer._();
 
-  dynamic encode(OrdStatus data) {
-    return data.value;
-  }
+  factory OrdStatusTypeTransformer() => _instance ??= OrdStatusTypeTransformer._();
 
-  OrdStatus decode(dynamic data) {
+  String encode(OrdStatus data) => data.value;
+
+  /// Decodes a [dynamic value][data] to a OrdStatus.
+  ///
+  /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
+  /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
+  /// cannot be decoded successfully, then an [UnimplementedError] is thrown.
+  ///
+  /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
+  /// and users are still using an old app with the old code.
+  OrdStatus decode(dynamic data, {bool allowNull}) {
     switch (data) {
-      case "RECEIVED": return OrdStatus.rECEIVED_;
-      case "ROUTING": return OrdStatus.rOUTING_;
-      case "ROUTED": return OrdStatus.rOUTED_;
-      case "NEW": return OrdStatus.nEW_;
-      case "PENDING_CANCEL": return OrdStatus.pENDINGCANCEL_;
-      case "PARTIALLY_FILLED": return OrdStatus.pARTIALLYFILLED_;
-      case "FILLED": return OrdStatus.fILLED_;
-      case "CANCELED": return OrdStatus.cANCELED_;
-      case "REJECTED": return OrdStatus.rEJECTED_;
-      default: throw('Unknown enum value to decode: $data');
+      case r'RECEIVED': return OrdStatus.RECEIVED;
+      case r'ROUTING': return OrdStatus.ROUTING;
+      case r'ROUTED': return OrdStatus.ROUTED;
+      case r'NEW': return OrdStatus.NEW;
+      case r'PENDING_CANCEL': return OrdStatus.PENDING_CANCEL;
+      case r'PARTIALLY_FILLED': return OrdStatus.PARTIALLY_FILLED;
+      case r'FILLED': return OrdStatus.FILLED;
+      case r'CANCELED': return OrdStatus.CANCELED;
+      case r'REJECTED': return OrdStatus.REJECTED;
+      default:
+        if (allowNull == false) {
+          throw ArgumentError('Unknown enum value to decode: $data');
+        }
     }
+    return null;
   }
-}
 
+  /// Singleton [OrdStatusTypeTransformer] instance.
+  static OrdStatusTypeTransformer _instance;
+}

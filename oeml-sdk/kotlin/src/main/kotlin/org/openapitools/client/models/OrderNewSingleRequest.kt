@@ -16,6 +16,7 @@ import org.openapitools.client.models.OrdType
 import org.openapitools.client.models.TimeInForce
 
 import com.squareup.moshi.Json
+
 /**
  * The new order message.
  * @param exchangeId Exchange identifier used to identify the routing destination.
@@ -61,7 +62,7 @@ data class OrderNewSingleRequest (
     val expireTime: java.time.LocalDate? = null,
     /* Order execution instructions are documented in the separate section: <a href=\"#oeml-order-params-exec\">OEML / Starter Guide / Order parameters / Execution instructions</a>  */
     @Json(name = "exec_inst")
-    val execInst: kotlin.Array<OrderNewSingleRequest.ExecInst>? = null
+    val execInst: kotlin.collections.List<OrderNewSingleRequest.ExecInst>? = null
 ) {
 
     /**

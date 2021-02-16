@@ -8,12 +8,14 @@
 
 #' @docType class
 #' @title Position
+#'
 #' @description Position Class
+#'
 #' @format An \code{R6Class} generator object
+#'
 #' @field exchange_id  character [optional]
 #'
 #' @field data  list( \link{PositionData} ) [optional]
-#'
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -23,7 +25,9 @@ Position <- R6::R6Class(
   public = list(
     `exchange_id` = NULL,
     `data` = NULL,
-    initialize = function(`exchange_id`=NULL, `data`=NULL, ...){
+    initialize = function(
+        `exchange_id`=NULL, `data`=NULL, ...
+    ) {
       local.optional.var <- list(...)
       if (!is.null(`exchange_id`)) {
         stopifnot(is.character(`exchange_id`), length(`exchange_id`) == 1)
@@ -56,6 +60,7 @@ Position <- R6::R6Class(
       if (!is.null(PositionObject$`data`)) {
         self$`data` <- ApiClient$new()$deserializeObj(PositionObject$`data`, "array[PositionData]", loadNamespace("openapi"))
       }
+      self
     },
     toJSONString = function() {
       jsoncontent <- c(
@@ -85,3 +90,4 @@ Position <- R6::R6Class(
     }
   )
 )
+

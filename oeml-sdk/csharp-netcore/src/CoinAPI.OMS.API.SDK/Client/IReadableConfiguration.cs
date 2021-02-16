@@ -1,4 +1,4 @@
-/* 
+/*
  * OEML - REST API
  *
  * This section will provide necessary information about the `CoinAPI OEML REST API` protocol. This API is also available in the Postman application: <a href=\"https://postman.coinapi.io/\" target=\"_blank\">https://postman.coinapi.io/</a>       
@@ -11,6 +11,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Net;
 using System.Security.Cryptography.X509Certificates;
 
 namespace CoinAPI.OMS.API.SDK.Client
@@ -74,6 +75,12 @@ namespace CoinAPI.OMS.API.SDK.Client
         /// </summary>
         /// <value>HTTP connection timeout.</value>
         int Timeout { get; }
+
+        /// <summary>
+        /// Gets the proxy.
+        /// </summary>
+        /// <value>Proxy.</value>
+        WebProxy Proxy { get; }
 
         /// <summary>
         /// Gets the user agent.

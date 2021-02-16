@@ -164,6 +164,44 @@ mkBalanceData =
   , balanceDataTraded = Nothing
   }
 
+-- ** Fills
+-- | Fills
+-- Relay fill information on working orders.
+-- 
+data Fills = Fills
+  { fillsTime :: !(Maybe Date) -- ^ "time" - Execution time.
+  , fillsPrice :: !(Maybe Double) -- ^ "price" - Execution price.
+  , fillsAmount :: !(Maybe Double) -- ^ "amount" - Executed quantity.
+  } deriving (P.Show, P.Eq, P.Typeable)
+
+-- | FromJSON Fills
+instance A.FromJSON Fills where
+  parseJSON = A.withObject "Fills" $ \o ->
+    Fills
+      <$> (o .:? "time")
+      <*> (o .:? "price")
+      <*> (o .:? "amount")
+
+-- | ToJSON Fills
+instance A.ToJSON Fills where
+  toJSON Fills {..} =
+   _omitNulls
+      [ "time" .= fillsTime
+      , "price" .= fillsPrice
+      , "amount" .= fillsAmount
+      ]
+
+
+-- | Construct a value of type 'Fills' (by applying it's required fields, if any)
+mkFills
+  :: Fills
+mkFills =
+  Fills
+  { fillsTime = Nothing
+  , fillsPrice = Nothing
+  , fillsAmount = Nothing
+  }
+
 -- ** Message
 -- | Message
 -- Message object.
@@ -293,9 +331,11 @@ data OrderExecutionReport = OrderExecutionReport
   , orderExecutionReportExchangeOrderId :: !(Maybe Text) -- ^ "exchange_order_id" - Unique identifier of the order assigned by the exchange or executing system.
   , orderExecutionReportAmountOpen :: !(Double) -- ^ /Required/ "amount_open" - Quantity open for further execution. &#x60;amount_open&#x60; &#x3D; &#x60;amount_order&#x60; - &#x60;amount_filled&#x60;
   , orderExecutionReportAmountFilled :: !(Double) -- ^ /Required/ "amount_filled" - Total quantity filled.
+  , orderExecutionReportAvgPx :: !(Maybe Double) -- ^ "avg_px" - Calculated average price of all fills on this order.
   , orderExecutionReportStatus :: !(OrdStatus) -- ^ /Required/ "status"
-  , orderExecutionReportTimeOrder :: !([[Text]]) -- ^ /Required/ "time_order" - Timestamped history of order status changes.
-  , orderExecutionReportErrorMessage :: !(Maybe Text) -- ^ "error_message" - Error message
+  , orderExecutionReportStatusHistory :: !(Maybe [[Text]]) -- ^ "status_history" - Timestamped history of order status changes.
+  , orderExecutionReportErrorMessage :: !(Maybe Text) -- ^ "error_message" - Error message.
+  , orderExecutionReportFills :: !(Maybe [Fills]) -- ^ "fills" - Relay fill information on working orders.
   } deriving (P.Show, P.Eq, P.Typeable)
 
 -- | FromJSON OrderExecutionReport
@@ -317,9 +357,11 @@ instance A.FromJSON OrderExecutionReport where
       <*> (o .:? "exchange_order_id")
       <*> (o .:  "amount_open")
       <*> (o .:  "amount_filled")
+      <*> (o .:? "avg_px")
       <*> (o .:  "status")
-      <*> (o .:  "time_order")
+      <*> (o .:? "status_history")
       <*> (o .:? "error_message")
+      <*> (o .:? "fills")
 
 -- | ToJSON OrderExecutionReport
 instance A.ToJSON OrderExecutionReport where
@@ -340,9 +382,11 @@ instance A.ToJSON OrderExecutionReport where
       , "exchange_order_id" .= orderExecutionReportExchangeOrderId
       , "amount_open" .= orderExecutionReportAmountOpen
       , "amount_filled" .= orderExecutionReportAmountFilled
+      , "avg_px" .= orderExecutionReportAvgPx
       , "status" .= orderExecutionReportStatus
-      , "time_order" .= orderExecutionReportTimeOrder
+      , "status_history" .= orderExecutionReportStatusHistory
       , "error_message" .= orderExecutionReportErrorMessage
+      , "fills" .= orderExecutionReportFills
       ]
 
 
@@ -359,9 +403,8 @@ mkOrderExecutionReport
   -> Double -- ^ 'orderExecutionReportAmountOpen': Quantity open for further execution. `amount_open` = `amount_order` - `amount_filled`
   -> Double -- ^ 'orderExecutionReportAmountFilled': Total quantity filled.
   -> OrdStatus -- ^ 'orderExecutionReportStatus' 
-  -> [[Text]] -- ^ 'orderExecutionReportTimeOrder': Timestamped history of order status changes.
   -> OrderExecutionReport
-mkOrderExecutionReport orderExecutionReportExchangeId orderExecutionReportClientOrderId orderExecutionReportAmountOrder orderExecutionReportPrice orderExecutionReportSide orderExecutionReportOrderType orderExecutionReportTimeInForce orderExecutionReportClientOrderIdFormatExchange orderExecutionReportAmountOpen orderExecutionReportAmountFilled orderExecutionReportStatus orderExecutionReportTimeOrder =
+mkOrderExecutionReport orderExecutionReportExchangeId orderExecutionReportClientOrderId orderExecutionReportAmountOrder orderExecutionReportPrice orderExecutionReportSide orderExecutionReportOrderType orderExecutionReportTimeInForce orderExecutionReportClientOrderIdFormatExchange orderExecutionReportAmountOpen orderExecutionReportAmountFilled orderExecutionReportStatus =
   OrderExecutionReport
   { orderExecutionReportExchangeId
   , orderExecutionReportClientOrderId
@@ -378,9 +421,11 @@ mkOrderExecutionReport orderExecutionReportExchangeId orderExecutionReportClient
   , orderExecutionReportExchangeOrderId = Nothing
   , orderExecutionReportAmountOpen
   , orderExecutionReportAmountFilled
+  , orderExecutionReportAvgPx = Nothing
   , orderExecutionReportStatus
-  , orderExecutionReportTimeOrder
+  , orderExecutionReportStatusHistory = Nothing
   , orderExecutionReportErrorMessage = Nothing
+  , orderExecutionReportFills = Nothing
   }
 
 -- ** OrderExecutionReportAllOf
@@ -391,9 +436,11 @@ data OrderExecutionReportAllOf = OrderExecutionReportAllOf
   , orderExecutionReportAllOfExchangeOrderId :: !(Maybe Text) -- ^ "exchange_order_id" - Unique identifier of the order assigned by the exchange or executing system.
   , orderExecutionReportAllOfAmountOpen :: !(Double) -- ^ /Required/ "amount_open" - Quantity open for further execution. &#x60;amount_open&#x60; &#x3D; &#x60;amount_order&#x60; - &#x60;amount_filled&#x60;
   , orderExecutionReportAllOfAmountFilled :: !(Double) -- ^ /Required/ "amount_filled" - Total quantity filled.
+  , orderExecutionReportAllOfAvgPx :: !(Maybe Double) -- ^ "avg_px" - Calculated average price of all fills on this order.
   , orderExecutionReportAllOfStatus :: !(OrdStatus) -- ^ /Required/ "status"
-  , orderExecutionReportAllOfTimeOrder :: !([[Text]]) -- ^ /Required/ "time_order" - Timestamped history of order status changes.
-  , orderExecutionReportAllOfErrorMessage :: !(Maybe Text) -- ^ "error_message" - Error message
+  , orderExecutionReportAllOfStatusHistory :: !(Maybe [[Text]]) -- ^ "status_history" - Timestamped history of order status changes.
+  , orderExecutionReportAllOfErrorMessage :: !(Maybe Text) -- ^ "error_message" - Error message.
+  , orderExecutionReportAllOfFills :: !(Maybe [Fills]) -- ^ "fills" - Relay fill information on working orders.
   } deriving (P.Show, P.Eq, P.Typeable)
 
 -- | FromJSON OrderExecutionReportAllOf
@@ -404,9 +451,11 @@ instance A.FromJSON OrderExecutionReportAllOf where
       <*> (o .:? "exchange_order_id")
       <*> (o .:  "amount_open")
       <*> (o .:  "amount_filled")
+      <*> (o .:? "avg_px")
       <*> (o .:  "status")
-      <*> (o .:  "time_order")
+      <*> (o .:? "status_history")
       <*> (o .:? "error_message")
+      <*> (o .:? "fills")
 
 -- | ToJSON OrderExecutionReportAllOf
 instance A.ToJSON OrderExecutionReportAllOf where
@@ -416,9 +465,11 @@ instance A.ToJSON OrderExecutionReportAllOf where
       , "exchange_order_id" .= orderExecutionReportAllOfExchangeOrderId
       , "amount_open" .= orderExecutionReportAllOfAmountOpen
       , "amount_filled" .= orderExecutionReportAllOfAmountFilled
+      , "avg_px" .= orderExecutionReportAllOfAvgPx
       , "status" .= orderExecutionReportAllOfStatus
-      , "time_order" .= orderExecutionReportAllOfTimeOrder
+      , "status_history" .= orderExecutionReportAllOfStatusHistory
       , "error_message" .= orderExecutionReportAllOfErrorMessage
+      , "fills" .= orderExecutionReportAllOfFills
       ]
 
 
@@ -428,17 +479,18 @@ mkOrderExecutionReportAllOf
   -> Double -- ^ 'orderExecutionReportAllOfAmountOpen': Quantity open for further execution. `amount_open` = `amount_order` - `amount_filled`
   -> Double -- ^ 'orderExecutionReportAllOfAmountFilled': Total quantity filled.
   -> OrdStatus -- ^ 'orderExecutionReportAllOfStatus' 
-  -> [[Text]] -- ^ 'orderExecutionReportAllOfTimeOrder': Timestamped history of order status changes.
   -> OrderExecutionReportAllOf
-mkOrderExecutionReportAllOf orderExecutionReportAllOfClientOrderIdFormatExchange orderExecutionReportAllOfAmountOpen orderExecutionReportAllOfAmountFilled orderExecutionReportAllOfStatus orderExecutionReportAllOfTimeOrder =
+mkOrderExecutionReportAllOf orderExecutionReportAllOfClientOrderIdFormatExchange orderExecutionReportAllOfAmountOpen orderExecutionReportAllOfAmountFilled orderExecutionReportAllOfStatus =
   OrderExecutionReportAllOf
   { orderExecutionReportAllOfClientOrderIdFormatExchange
   , orderExecutionReportAllOfExchangeOrderId = Nothing
   , orderExecutionReportAllOfAmountOpen
   , orderExecutionReportAllOfAmountFilled
+  , orderExecutionReportAllOfAvgPx = Nothing
   , orderExecutionReportAllOfStatus
-  , orderExecutionReportAllOfTimeOrder
+  , orderExecutionReportAllOfStatusHistory = Nothing
   , orderExecutionReportAllOfErrorMessage = Nothing
+  , orderExecutionReportAllOfFills = Nothing
   }
 
 -- ** OrderNewSingleRequest
@@ -697,7 +749,7 @@ toE'ExecInst = \case
 
 -- ** E'LastUpdatedBy
 
--- | Enum of 'Text' . 
+-- | Enum of 'Text' .
 -- Source of the last modification. 
 data E'LastUpdatedBy
   = E'LastUpdatedBy'INITIALIZATION -- ^ @"INITIALIZATION"@
@@ -729,7 +781,7 @@ toE'LastUpdatedBy = \case
 
 -- ** OrdSide
 
--- | Enum of 'Text' . 
+-- | Enum of 'Text' .
 -- Side of order. 
 data OrdSide
   = OrdSide'BUY -- ^ @"BUY"@
@@ -758,7 +810,7 @@ toOrdSide = \case
 
 -- ** OrdStatus
 
--- | Enum of 'Text' . 
+-- | Enum of 'Text' .
 -- Order statuses and the lifecycle are documented in the separate section: <a href=\"#oeml-order-lifecycle\">OEML / Starter Guide / Order Lifecycle</a> 
 data OrdStatus
   = OrdStatus'RECEIVED -- ^ @"RECEIVED"@
@@ -808,7 +860,7 @@ toOrdStatus = \case
 
 -- ** OrdType
 
--- | Enum of 'Text' . 
+-- | Enum of 'Text' .
 -- Order types are documented in the separate section: <a href=\"#oeml-order-params-type\">OEML / Starter Guide / Order parameters / Order type</a> 
 data OrdType
   = OrdType'LIMIT -- ^ @"LIMIT"@
@@ -834,7 +886,7 @@ toOrdType = \case
 
 -- ** Severity
 
--- | Enum of 'Text' . 
+-- | Enum of 'Text' .
 -- Severity of the message.
 data Severity
   = Severity'INFO -- ^ @"INFO"@
@@ -866,7 +918,7 @@ toSeverity = \case
 
 -- ** TimeInForce
 
--- | Enum of 'Text' . 
+-- | Enum of 'Text' .
 -- Order time in force options are documented in the separate section: <a href=\"#oeml-order-params-tif\">OEML / Starter Guide / Order parameters / Time in force</a> 
 data TimeInForce
   = TimeInForce'GOOD_TILL_CANCEL -- ^ @"GOOD_TILL_CANCEL"@

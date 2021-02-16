@@ -12,7 +12,7 @@
 
 #include "OAIOrdersApi.h"
 #include "OAIHelpers.h"
-
+#include "OAIServerConfiguration.h"
 #include <QJsonArray>
 #include <QJsonDocument>
 
@@ -24,10 +24,57 @@ OAIOrdersApi::OAIOrdersApi(const QString &scheme, const QString &host, int port,
       _port(port),
       _basePath(basePath),
       _timeOut(timeOut),
+      _manager(nullptr),
       isResponseCompressionEnabled(false),
-      isRequestCompressionEnabled(false) {}
+      isRequestCompressionEnabled(false) {
+      initializeServerConfigs();
+      }
 
 OAIOrdersApi::~OAIOrdersApi() {
+}
+
+void OAIOrdersApi::initializeServerConfigs(){
+
+//Default server
+QList<OAIServerConfiguration> defaultConf = QList<OAIServerConfiguration>();
+//varying endpoint server 
+QList<OAIServerConfiguration> serverConf = QList<OAIServerConfiguration>();
+defaultConf.append(OAIServerConfiguration(
+    "https://13d16e9d-d8b1-4ef4-bc4a-ed8156b2b159.mock.pstmn.io",
+    "No description provided",
+    QMap<QString, OAIServerVariable>()));
+_serverConfigs.insert("v1OrdersCancelAllPost",defaultConf);
+_serverIndices.insert("v1OrdersCancelAllPost",0);
+
+_serverConfigs.insert("v1OrdersCancelPost",defaultConf);
+_serverIndices.insert("v1OrdersCancelPost",0);
+
+_serverConfigs.insert("v1OrdersGet",defaultConf);
+_serverIndices.insert("v1OrdersGet",0);
+
+_serverConfigs.insert("v1OrdersPost",defaultConf);
+_serverIndices.insert("v1OrdersPost",0);
+
+_serverConfigs.insert("v1OrdersStatusClientOrderIdGet",defaultConf);
+_serverIndices.insert("v1OrdersStatusClientOrderIdGet",0);
+
+
+}
+
+/**
+* returns 0 on success and -1, -2 or -3 on failure.
+* -1 when the variable does not exist and -2 if the value is not defined in the enum and -3 if the operation or server index is not found 
+*/
+int OAIOrdersApi::setDefaultServerValue(int serverIndex, const QString &operation, const QString &variable, const QString &value){
+    auto it = _serverConfigs.find(operation);
+    if(it != _serverConfigs.end() && serverIndex < it.value().size() ){
+      return _serverConfigs[operation][serverIndex].setDefaultValue(variable,value);
+    }
+    return -3;
+}
+void OAIOrdersApi::setServerIndex(const QString &operation, int serverIndex){
+    if(_serverIndices.contains(operation) && serverIndex < _serverConfigs.find(operation).value().size() )
+        _serverIndices[operation] = serverIndex;
 }
 
 void OAIOrdersApi::setScheme(const QString &scheme) {
@@ -42,6 +89,22 @@ void OAIOrdersApi::setPort(int port) {
     _port = port;
 }
 
+void OAIOrdersApi::setApiKey(const QString &apiKeyName, const QString &apiKey){
+    _apiKeys.insert(apiKeyName,apiKey);
+}
+
+void OAIOrdersApi::setBearerToken(const QString &token){
+    _bearerToken = token;
+}
+
+void OAIOrdersApi::setUsername(const QString &username) {
+    _username = username;
+}
+
+void OAIOrdersApi::setPassword(const QString &password) {
+    _password = password;
+}
+
 void OAIOrdersApi::setBasePath(const QString &basePath) {
     _basePath = basePath;
 }
@@ -52,6 +115,10 @@ void OAIOrdersApi::setTimeOut(const int timeOut) {
 
 void OAIOrdersApi::setWorkingDirectory(const QString &path) {
     _workingDirectory = path;
+}
+
+void OAIOrdersApi::setNetworkAccessManager(QNetworkAccessManager* manager) {
+    _manager = manager;  
 }
 
 void OAIOrdersApi::addHeaders(const QString &key, const QString &value) {
@@ -71,14 +138,10 @@ void OAIOrdersApi::abortRequests(){
 }
 
 void OAIOrdersApi::v1OrdersCancelAllPost(const OAIOrderCancelAllRequest &oai_order_cancel_all_request) {
-    QString fullPath = QString("%1://%2%3%4%5")
-                           .arg(_scheme)
-                           .arg(_host)
-                           .arg(_port ? ":" + QString::number(_port) : "")
-                           .arg(_basePath)
-                           .arg("/v1/orders/cancel/all");
+    QString fullPath = QString(_serverConfigs["v1OrdersCancelAllPost"][_serverIndices.value("v1OrdersCancelAllPost")].URL()+"/v1/orders/cancel/all");
 
-    OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this);
+
+    OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
     worker->setWorkingDirectory(_workingDirectory);
     OAIHttpRequestInput input(fullPath, "POST");
@@ -117,14 +180,10 @@ void OAIOrdersApi::v1OrdersCancelAllPostCallback(OAIHttpRequestWorker *worker) {
 }
 
 void OAIOrdersApi::v1OrdersCancelPost(const OAIOrderCancelSingleRequest &oai_order_cancel_single_request) {
-    QString fullPath = QString("%1://%2%3%4%5")
-                           .arg(_scheme)
-                           .arg(_host)
-                           .arg(_port ? ":" + QString::number(_port) : "")
-                           .arg(_basePath)
-                           .arg("/v1/orders/cancel");
+    QString fullPath = QString(_serverConfigs["v1OrdersCancelPost"][_serverIndices.value("v1OrdersCancelPost")].URL()+"/v1/orders/cancel");
 
-    OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this);
+
+    OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
     worker->setWorkingDirectory(_workingDirectory);
     OAIHttpRequestInput input(fullPath, "POST");
@@ -163,12 +222,8 @@ void OAIOrdersApi::v1OrdersCancelPostCallback(OAIHttpRequestWorker *worker) {
 }
 
 void OAIOrdersApi::v1OrdersGet(const QString &exchange_id) {
-    QString fullPath = QString("%1://%2%3%4%5")
-                           .arg(_scheme)
-                           .arg(_host)
-                           .arg(_port ? ":" + QString::number(_port) : "")
-                           .arg(_basePath)
-                           .arg("/v1/orders");
+    QString fullPath = QString(_serverConfigs["v1OrdersGet"][_serverIndices.value("v1OrdersGet")].URL()+"/v1/orders");
+
 
     if (fullPath.indexOf("?") > 0)
         fullPath.append("&");
@@ -176,7 +231,7 @@ void OAIOrdersApi::v1OrdersGet(const QString &exchange_id) {
         fullPath.append("?");
     fullPath.append(QUrl::toPercentEncoding("exchange_id")).append("=").append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(exchange_id)));
 
-    OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this);
+    OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
     worker->setWorkingDirectory(_workingDirectory);
     OAIHttpRequestInput input(fullPath, "GET");
@@ -221,14 +276,10 @@ void OAIOrdersApi::v1OrdersGetCallback(OAIHttpRequestWorker *worker) {
 }
 
 void OAIOrdersApi::v1OrdersPost(const OAIOrderNewSingleRequest &oai_order_new_single_request) {
-    QString fullPath = QString("%1://%2%3%4%5")
-                           .arg(_scheme)
-                           .arg(_host)
-                           .arg(_port ? ":" + QString::number(_port) : "")
-                           .arg(_basePath)
-                           .arg("/v1/orders");
+    QString fullPath = QString(_serverConfigs["v1OrdersPost"][_serverIndices.value("v1OrdersPost")].URL()+"/v1/orders");
 
-    OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this);
+
+    OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
     worker->setWorkingDirectory(_workingDirectory);
     OAIHttpRequestInput input(fullPath, "POST");
@@ -267,17 +318,13 @@ void OAIOrdersApi::v1OrdersPostCallback(OAIHttpRequestWorker *worker) {
 }
 
 void OAIOrdersApi::v1OrdersStatusClientOrderIdGet(const QString &client_order_id) {
-    QString fullPath = QString("%1://%2%3%4%5")
-                           .arg(_scheme)
-                           .arg(_host)
-                           .arg(_port ? ":" + QString::number(_port) : "")
-                           .arg(_basePath)
-                           .arg("/v1/orders/status/{client_order_id}");
+    QString fullPath = QString(_serverConfigs["v1OrdersStatusClientOrderIdGet"][_serverIndices.value("v1OrdersStatusClientOrderIdGet")].URL()+"/v1/orders/status/{client_order_id}");
     QString client_order_idPathParam("{");
     client_order_idPathParam.append("client_order_id").append("}");
     fullPath.replace(client_order_idPathParam, QUrl::toPercentEncoding(::OpenAPI::toStringValue(client_order_id)));
+    
 
-    OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this);
+    OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
     worker->setWorkingDirectory(_workingDirectory);
     OAIHttpRequestInput input(fullPath, "GET");

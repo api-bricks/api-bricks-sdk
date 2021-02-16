@@ -12,7 +12,7 @@ For more information, please visit [https://www.coinapi.io](https://www.coinapi.
 
 ## Requirements.
 
-Python 2.7 and 3.4+
+Python >= 3.6
 
 ## Installation & Usage
 ### pip install
@@ -48,13 +48,13 @@ import openapi_client
 Please follow the [installation procedure](#installation--usage) and then run the following:
 
 ```python
-from __future__ import print_function
 
 import time
 import openapi_client
-from openapi_client.rest import ApiException
 from pprint import pprint
-
+from openapi_client.api import balances_api
+from openapi_client.model.balances import Balances
+from openapi_client.model.message import Message
 # Defining the host is optional and defaults to https://13d16e9d-d8b1-4ef4-bc4a-ed8156b2b159.mock.pstmn.io
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
@@ -66,16 +66,15 @@ configuration = openapi_client.Configuration(
 # Enter a context with an instance of the API client
 with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.BalancesApi(api_client)
-    exchange_id = 'KRAKEN' # str | Filter the balances to the specific exchange. (optional)
+    api_instance = balances_api.BalancesApi(api_client)
+    exchange_id = "KRAKEN" # str | Filter the balances to the specific exchange. (optional)
 
     try:
         # Get balances
         api_response = api_instance.v1_balances_get(exchange_id=exchange_id)
         pprint(api_response)
-    except ApiException as e:
+    except openapi_client.ApiException as e:
         print("Exception when calling BalancesApi->v1_balances_get: %s\n" % e)
-    
 ```
 
 ## Documentation for API Endpoints
@@ -97,6 +96,9 @@ Class | Method | HTTP request | Description
 
  - [Balance](docs/Balance.md)
  - [BalanceData](docs/BalanceData.md)
+ - [Balances](docs/Balances.md)
+ - [ExecInst](docs/ExecInst.md)
+ - [Fills](docs/Fills.md)
  - [Message](docs/Message.md)
  - [OrdSide](docs/OrdSide.md)
  - [OrdStatus](docs/OrdStatus.md)
@@ -105,9 +107,11 @@ Class | Method | HTTP request | Description
  - [OrderCancelSingleRequest](docs/OrderCancelSingleRequest.md)
  - [OrderExecutionReport](docs/OrderExecutionReport.md)
  - [OrderExecutionReportAllOf](docs/OrderExecutionReportAllOf.md)
+ - [OrderExecutionReports](docs/OrderExecutionReports.md)
  - [OrderNewSingleRequest](docs/OrderNewSingleRequest.md)
  - [Position](docs/Position.md)
  - [PositionData](docs/PositionData.md)
+ - [Positions](docs/Positions.md)
  - [Severity](docs/Severity.md)
  - [TimeInForce](docs/TimeInForce.md)
  - [ValidationError](docs/ValidationError.md)
@@ -121,4 +125,23 @@ Class | Method | HTTP request | Description
 
 support@coinapi.io
 
+
+## Notes for Large OpenAPI documents
+If the OpenAPI document is large, imports in openapi_client.apis and openapi_client.models may fail with a
+RecursionError indicating the maximum recursion limit has been exceeded. In that case, there are a couple of solutions:
+
+Solution 1:
+Use specific imports for apis and models like:
+- `from openapi_client.api.default_api import DefaultApi`
+- `from openapi_client.model.pet import Pet`
+
+Solution 1:
+Before importing the package, adjust the maximum recursion limit as shown below:
+```
+import sys
+sys.setrecursionlimit(1500)
+import openapi_client
+from openapi_client.apis import *
+from openapi_client.models import *
+```
 

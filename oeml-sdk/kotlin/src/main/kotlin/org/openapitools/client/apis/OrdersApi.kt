@@ -124,14 +124,14 @@ class OrdersApi(basePath: kotlin.String = defaultBasePath) : ApiClient(basePath)
     * Get open orders
     * Get last execution reports for open orders across all or single exchange.
     * @param exchangeId Filter the open orders to the specific exchange. (optional)
-    * @return kotlin.Array<OrderExecutionReport>
+    * @return kotlin.collections.List<OrderExecutionReport>
     * @throws UnsupportedOperationException If the API returns an informational or redirection response
     * @throws ClientException If the API returns a client error response
     * @throws ServerException If the API returns a server error response
     */
     @Suppress("UNCHECKED_CAST")
     @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun v1OrdersGet(exchangeId: kotlin.String?) : kotlin.Array<OrderExecutionReport> {
+    fun v1OrdersGet(exchangeId: kotlin.String?) : kotlin.collections.List<OrderExecutionReport> {
         val localVariableBody: kotlin.Any? = null
         val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, List<kotlin.String>>()
             .apply {
@@ -146,13 +146,13 @@ class OrdersApi(basePath: kotlin.String = defaultBasePath) : ApiClient(basePath)
             query = localVariableQuery,
             headers = localVariableHeaders
         )
-        val localVarResponse = request<kotlin.Array<OrderExecutionReport>>(
+        val localVarResponse = request<kotlin.collections.List<OrderExecutionReport>>(
             localVariableConfig,
             localVariableBody
         )
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.Array<OrderExecutionReport>
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<OrderExecutionReport>
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {

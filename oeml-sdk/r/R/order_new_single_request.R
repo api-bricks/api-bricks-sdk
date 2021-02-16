@@ -8,8 +8,11 @@
 
 #' @docType class
 #' @title OrderNewSingleRequest
+#'
 #' @description OrderNewSingleRequest Class
+#'
 #' @format An \code{R6Class} generator object
+#'
 #' @field exchange_id  character 
 #'
 #' @field client_order_id  character 
@@ -32,7 +35,6 @@
 #'
 #' @field exec_inst  list( character ) [optional]
 #'
-#'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
 #' @export
@@ -50,7 +52,9 @@ OrderNewSingleRequest <- R6::R6Class(
     `time_in_force` = NULL,
     `expire_time` = NULL,
     `exec_inst` = NULL,
-    initialize = function(`exchange_id`, `client_order_id`, `amount_order`, `price`, `side`, `order_type`, `time_in_force`, `symbol_id_exchange`=NULL, `symbol_id_coinapi`=NULL, `expire_time`=NULL, `exec_inst`=NULL, ...){
+    initialize = function(
+        `exchange_id`, `client_order_id`, `amount_order`, `price`, `side`, `order_type`, `time_in_force`, `symbol_id_exchange`=NULL, `symbol_id_coinapi`=NULL, `expire_time`=NULL, `exec_inst`=NULL, ...
+    ) {
       local.optional.var <- list(...)
       if (!missing(`exchange_id`)) {
         stopifnot(is.character(`exchange_id`), length(`exchange_id`) == 1)
@@ -185,6 +189,7 @@ OrderNewSingleRequest <- R6::R6Class(
       if (!is.null(OrderNewSingleRequestObject$`exec_inst`)) {
         self$`exec_inst` <- ApiClient$new()$deserializeObj(OrderNewSingleRequestObject$`exec_inst`, "array[character]", loadNamespace("openapi"))
       }
+      self
     },
     toJSONString = function() {
       jsoncontent <- c(
@@ -286,3 +291,4 @@ OrderNewSingleRequest <- R6::R6Class(
     }
   )
 )
+

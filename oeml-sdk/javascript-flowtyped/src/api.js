@@ -152,6 +152,32 @@ export type BalanceData = {
  * 
  * @export
  */
+export type Fills = {
+    /**
+     * Execution time.
+     * @type {Date}
+     * @memberof Fills
+     */
+    time?: Date;
+    /**
+     * Execution price.
+     * @type {number}
+     * @memberof Fills
+     */
+    price?: number;
+    /**
+     * Executed quantity.
+     * @type {number}
+     * @memberof Fills
+     */
+    amount?: number;
+}
+
+
+/**
+ * 
+ * @export
+ */
 export type Message = {
     /**
      * Type of message.
@@ -339,6 +365,12 @@ export type OrderExecutionReport = {
      */
     amount_filled: number;
     /**
+     * Calculated average price of all fills on this order.
+     * @type {number}
+     * @memberof OrderExecutionReport
+     */
+    avg_px?: number;
+    /**
      * 
      * @type {OrdStatus}
      * @memberof OrderExecutionReport
@@ -349,13 +381,19 @@ export type OrderExecutionReport = {
      * @type {Array<Array<string>>}
      * @memberof OrderExecutionReport
      */
-    time_order: Array<Array<string>>;
+    status_history?: Array<Array<string>>;
     /**
-     * Error message
+     * Error message.
      * @type {string}
      * @memberof OrderExecutionReport
      */
     error_message?: string;
+    /**
+     * Relay fill information on working orders.
+     * @type {Array<Fills>}
+     * @memberof OrderExecutionReport
+     */
+    fills?: Array<Fills>;
 }
 
 
@@ -389,6 +427,12 @@ export type OrderExecutionReportAllOf = {
      */
     amount_filled: number;
     /**
+     * Calculated average price of all fills on this order.
+     * @type {number}
+     * @memberof OrderExecutionReportAllOf
+     */
+    avg_px?: number;
+    /**
      * 
      * @type {OrdStatus}
      * @memberof OrderExecutionReportAllOf
@@ -399,13 +443,19 @@ export type OrderExecutionReportAllOf = {
      * @type {Array<Array<string>>}
      * @memberof OrderExecutionReportAllOf
      */
-    time_order: Array<Array<string>>;
+    status_history?: Array<Array<string>>;
     /**
-     * Error message
+     * Error message.
      * @type {string}
      * @memberof OrderExecutionReportAllOf
      */
     error_message?: string;
+    /**
+     * Relay fill information on working orders.
+     * @type {Array<Fills>}
+     * @memberof OrderExecutionReportAllOf
+     */
+    fills?: Array<Fills>;
 }
 
 
@@ -651,7 +701,7 @@ export const BalancesApiFetchParamCreator = function (configuration?: Configurat
 
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
+            localVarUrlObj.search = null;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
 
             return {
@@ -717,7 +767,7 @@ export const OrdersApiFetchParamCreator = function (configuration?: Configuratio
 
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
+            localVarUrlObj.search = null;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
             const needsSerialization = (typeof orderCancelAllRequest !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body =  needsSerialization ? JSON.stringify(orderCancelAllRequest != null ? orderCancelAllRequest : {}) : (((orderCancelAllRequest:any):string) || "");
@@ -747,7 +797,7 @@ export const OrdersApiFetchParamCreator = function (configuration?: Configuratio
 
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
+            localVarUrlObj.search = null;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
             const needsSerialization = (typeof orderCancelSingleRequest !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body =  needsSerialization ? JSON.stringify(orderCancelSingleRequest != null ? orderCancelSingleRequest : {}) : (((orderCancelSingleRequest:any):string) || "");
@@ -775,7 +825,7 @@ export const OrdersApiFetchParamCreator = function (configuration?: Configuratio
 
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
+            localVarUrlObj.search = null;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
 
             return {
@@ -803,7 +853,7 @@ export const OrdersApiFetchParamCreator = function (configuration?: Configuratio
 
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
+            localVarUrlObj.search = null;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
             const needsSerialization = (typeof orderNewSingleRequest !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body =  needsSerialization ? JSON.stringify(orderNewSingleRequest != null ? orderNewSingleRequest : {}) : (((orderNewSingleRequest:any):string) || "");
@@ -832,7 +882,7 @@ export const OrdersApiFetchParamCreator = function (configuration?: Configuratio
 
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
+            localVarUrlObj.search = null;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
 
             return {
@@ -964,7 +1014,7 @@ export const PositionsApiFetchParamCreator = function (configuration?: Configura
 
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
+            localVarUrlObj.search = null;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
 
             return {

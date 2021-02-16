@@ -1,4 +1,4 @@
-        import 'package:built_collection/built_collection.dart';
+import 'package:built_collection/built_collection.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -7,11 +7,11 @@ part 'ord_side.g.dart';
 class OrdSide extends EnumClass {
 
   /// Side of order. 
-  @BuiltValueEnumConst(wireName: "BUY")
-  static const OrdSide bUY = _$bUY;
+  @BuiltValueEnumConst(wireName: r'BUY')
+  static const OrdSide BUY = _$BUY;
   /// Side of order. 
-  @BuiltValueEnumConst(wireName: "SELL")
-  static const OrdSide sELL = _$sELL;
+  @BuiltValueEnumConst(wireName: r'SELL')
+  static const OrdSide SELL = _$SELL;
 
   static Serializer<OrdSide> get serializer => _$ordSideSerializer;
 

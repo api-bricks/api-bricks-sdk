@@ -56,49 +56,49 @@
 
     it('should have the property assetIdExchange (base name: "asset_id_exchange")', function() {
       // uncomment below and update the code to test the property assetIdExchange
-      //var instane = new OemlRestApi.BalanceData();
+      //var instance = new OemlRestApi.BalanceData();
       //expect(instance).to.be();
     });
 
     it('should have the property assetIdCoinapi (base name: "asset_id_coinapi")', function() {
       // uncomment below and update the code to test the property assetIdCoinapi
-      //var instane = new OemlRestApi.BalanceData();
+      //var instance = new OemlRestApi.BalanceData();
       //expect(instance).to.be();
     });
 
     it('should have the property balance (base name: "balance")', function() {
       // uncomment below and update the code to test the property balance
-      //var instane = new OemlRestApi.BalanceData();
+      //var instance = new OemlRestApi.BalanceData();
       //expect(instance).to.be();
     });
 
     it('should have the property available (base name: "available")', function() {
       // uncomment below and update the code to test the property available
-      //var instane = new OemlRestApi.BalanceData();
+      //var instance = new OemlRestApi.BalanceData();
       //expect(instance).to.be();
     });
 
     it('should have the property locked (base name: "locked")', function() {
       // uncomment below and update the code to test the property locked
-      //var instane = new OemlRestApi.BalanceData();
+      //var instance = new OemlRestApi.BalanceData();
       //expect(instance).to.be();
     });
 
     it('should have the property lastUpdatedBy (base name: "last_updated_by")', function() {
       // uncomment below and update the code to test the property lastUpdatedBy
-      //var instane = new OemlRestApi.BalanceData();
+      //var instance = new OemlRestApi.BalanceData();
       //expect(instance).to.be();
     });
 
     it('should have the property rateUsd (base name: "rate_usd")', function() {
       // uncomment below and update the code to test the property rateUsd
-      //var instane = new OemlRestApi.BalanceData();
+      //var instance = new OemlRestApi.BalanceData();
       //expect(instance).to.be();
     });
 
     it('should have the property traded (base name: "traded")', function() {
       // uncomment below and update the code to test the property traded
-      //var instane = new OemlRestApi.BalanceData();
+      //var instance = new OemlRestApi.BalanceData();
       //expect(instance).to.be();
     });
 

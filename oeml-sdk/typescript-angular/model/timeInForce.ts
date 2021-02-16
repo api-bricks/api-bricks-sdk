@@ -17,10 +17,10 @@
 export type TimeInForce = 'GOOD_TILL_CANCEL' | 'GOOD_TILL_TIME_EXCHANGE' | 'GOOD_TILL_TIME_OMS' | 'FILL_OR_KILL' | 'IMMEDIATE_OR_CANCEL';
 
 export const TimeInForce = {
-    GOODTILLCANCEL: 'GOOD_TILL_CANCEL' as TimeInForce,
-    GOODTILLTIMEEXCHANGE: 'GOOD_TILL_TIME_EXCHANGE' as TimeInForce,
-    GOODTILLTIMEOMS: 'GOOD_TILL_TIME_OMS' as TimeInForce,
-    FILLORKILL: 'FILL_OR_KILL' as TimeInForce,
-    IMMEDIATEORCANCEL: 'IMMEDIATE_OR_CANCEL' as TimeInForce
+    GoodTillCancel: 'GOOD_TILL_CANCEL' as TimeInForce,
+    GoodTillTimeExchange: 'GOOD_TILL_TIME_EXCHANGE' as TimeInForce,
+    GoodTillTimeOms: 'GOOD_TILL_TIME_OMS' as TimeInForce,
+    FillOrKill: 'FILL_OR_KILL' as TimeInForce,
+    ImmediateOrCancel: 'IMMEDIATE_OR_CANCEL' as TimeInForce
 };
 

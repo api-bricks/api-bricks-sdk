@@ -95,6 +95,25 @@ balanceDataTradedL f BalanceData{..} = (\balanceDataTraded -> BalanceData { bala
 
 
 
+-- * Fills
+
+-- | 'fillsTime' Lens
+fillsTimeL :: Lens_' Fills (Maybe Date)
+fillsTimeL f Fills{..} = (\fillsTime -> Fills { fillsTime, ..} ) <$> f fillsTime
+{-# INLINE fillsTimeL #-}
+
+-- | 'fillsPrice' Lens
+fillsPriceL :: Lens_' Fills (Maybe Double)
+fillsPriceL f Fills{..} = (\fillsPrice -> Fills { fillsPrice, ..} ) <$> f fillsPrice
+{-# INLINE fillsPriceL #-}
+
+-- | 'fillsAmount' Lens
+fillsAmountL :: Lens_' Fills (Maybe Double)
+fillsAmountL f Fills{..} = (\fillsAmount -> Fills { fillsAmount, ..} ) <$> f fillsAmount
+{-# INLINE fillsAmountL #-}
+
+
+
 -- * Message
 
 -- | 'messageType' Lens
@@ -236,20 +255,30 @@ orderExecutionReportAmountFilledL :: Lens_' OrderExecutionReport (Double)
 orderExecutionReportAmountFilledL f OrderExecutionReport{..} = (\orderExecutionReportAmountFilled -> OrderExecutionReport { orderExecutionReportAmountFilled, ..} ) <$> f orderExecutionReportAmountFilled
 {-# INLINE orderExecutionReportAmountFilledL #-}
 
+-- | 'orderExecutionReportAvgPx' Lens
+orderExecutionReportAvgPxL :: Lens_' OrderExecutionReport (Maybe Double)
+orderExecutionReportAvgPxL f OrderExecutionReport{..} = (\orderExecutionReportAvgPx -> OrderExecutionReport { orderExecutionReportAvgPx, ..} ) <$> f orderExecutionReportAvgPx
+{-# INLINE orderExecutionReportAvgPxL #-}
+
 -- | 'orderExecutionReportStatus' Lens
 orderExecutionReportStatusL :: Lens_' OrderExecutionReport (OrdStatus)
 orderExecutionReportStatusL f OrderExecutionReport{..} = (\orderExecutionReportStatus -> OrderExecutionReport { orderExecutionReportStatus, ..} ) <$> f orderExecutionReportStatus
 {-# INLINE orderExecutionReportStatusL #-}
 
--- | 'orderExecutionReportTimeOrder' Lens
-orderExecutionReportTimeOrderL :: Lens_' OrderExecutionReport ([[Text]])
-orderExecutionReportTimeOrderL f OrderExecutionReport{..} = (\orderExecutionReportTimeOrder -> OrderExecutionReport { orderExecutionReportTimeOrder, ..} ) <$> f orderExecutionReportTimeOrder
-{-# INLINE orderExecutionReportTimeOrderL #-}
+-- | 'orderExecutionReportStatusHistory' Lens
+orderExecutionReportStatusHistoryL :: Lens_' OrderExecutionReport (Maybe [[Text]])
+orderExecutionReportStatusHistoryL f OrderExecutionReport{..} = (\orderExecutionReportStatusHistory -> OrderExecutionReport { orderExecutionReportStatusHistory, ..} ) <$> f orderExecutionReportStatusHistory
+{-# INLINE orderExecutionReportStatusHistoryL #-}
 
 -- | 'orderExecutionReportErrorMessage' Lens
 orderExecutionReportErrorMessageL :: Lens_' OrderExecutionReport (Maybe Text)
 orderExecutionReportErrorMessageL f OrderExecutionReport{..} = (\orderExecutionReportErrorMessage -> OrderExecutionReport { orderExecutionReportErrorMessage, ..} ) <$> f orderExecutionReportErrorMessage
 {-# INLINE orderExecutionReportErrorMessageL #-}
+
+-- | 'orderExecutionReportFills' Lens
+orderExecutionReportFillsL :: Lens_' OrderExecutionReport (Maybe [Fills])
+orderExecutionReportFillsL f OrderExecutionReport{..} = (\orderExecutionReportFills -> OrderExecutionReport { orderExecutionReportFills, ..} ) <$> f orderExecutionReportFills
+{-# INLINE orderExecutionReportFillsL #-}
 
 
 
@@ -275,20 +304,30 @@ orderExecutionReportAllOfAmountFilledL :: Lens_' OrderExecutionReportAllOf (Doub
 orderExecutionReportAllOfAmountFilledL f OrderExecutionReportAllOf{..} = (\orderExecutionReportAllOfAmountFilled -> OrderExecutionReportAllOf { orderExecutionReportAllOfAmountFilled, ..} ) <$> f orderExecutionReportAllOfAmountFilled
 {-# INLINE orderExecutionReportAllOfAmountFilledL #-}
 
+-- | 'orderExecutionReportAllOfAvgPx' Lens
+orderExecutionReportAllOfAvgPxL :: Lens_' OrderExecutionReportAllOf (Maybe Double)
+orderExecutionReportAllOfAvgPxL f OrderExecutionReportAllOf{..} = (\orderExecutionReportAllOfAvgPx -> OrderExecutionReportAllOf { orderExecutionReportAllOfAvgPx, ..} ) <$> f orderExecutionReportAllOfAvgPx
+{-# INLINE orderExecutionReportAllOfAvgPxL #-}
+
 -- | 'orderExecutionReportAllOfStatus' Lens
 orderExecutionReportAllOfStatusL :: Lens_' OrderExecutionReportAllOf (OrdStatus)
 orderExecutionReportAllOfStatusL f OrderExecutionReportAllOf{..} = (\orderExecutionReportAllOfStatus -> OrderExecutionReportAllOf { orderExecutionReportAllOfStatus, ..} ) <$> f orderExecutionReportAllOfStatus
 {-# INLINE orderExecutionReportAllOfStatusL #-}
 
--- | 'orderExecutionReportAllOfTimeOrder' Lens
-orderExecutionReportAllOfTimeOrderL :: Lens_' OrderExecutionReportAllOf ([[Text]])
-orderExecutionReportAllOfTimeOrderL f OrderExecutionReportAllOf{..} = (\orderExecutionReportAllOfTimeOrder -> OrderExecutionReportAllOf { orderExecutionReportAllOfTimeOrder, ..} ) <$> f orderExecutionReportAllOfTimeOrder
-{-# INLINE orderExecutionReportAllOfTimeOrderL #-}
+-- | 'orderExecutionReportAllOfStatusHistory' Lens
+orderExecutionReportAllOfStatusHistoryL :: Lens_' OrderExecutionReportAllOf (Maybe [[Text]])
+orderExecutionReportAllOfStatusHistoryL f OrderExecutionReportAllOf{..} = (\orderExecutionReportAllOfStatusHistory -> OrderExecutionReportAllOf { orderExecutionReportAllOfStatusHistory, ..} ) <$> f orderExecutionReportAllOfStatusHistory
+{-# INLINE orderExecutionReportAllOfStatusHistoryL #-}
 
 -- | 'orderExecutionReportAllOfErrorMessage' Lens
 orderExecutionReportAllOfErrorMessageL :: Lens_' OrderExecutionReportAllOf (Maybe Text)
 orderExecutionReportAllOfErrorMessageL f OrderExecutionReportAllOf{..} = (\orderExecutionReportAllOfErrorMessage -> OrderExecutionReportAllOf { orderExecutionReportAllOfErrorMessage, ..} ) <$> f orderExecutionReportAllOfErrorMessage
 {-# INLINE orderExecutionReportAllOfErrorMessageL #-}
+
+-- | 'orderExecutionReportAllOfFills' Lens
+orderExecutionReportAllOfFillsL :: Lens_' OrderExecutionReportAllOf (Maybe [Fills])
+orderExecutionReportAllOfFillsL f OrderExecutionReportAllOf{..} = (\orderExecutionReportAllOfFills -> OrderExecutionReportAllOf { orderExecutionReportAllOfFills, ..} ) <$> f orderExecutionReportAllOfFills
+{-# INLINE orderExecutionReportAllOfFillsL #-}
 
 
 

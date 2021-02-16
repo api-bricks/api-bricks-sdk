@@ -128,6 +128,16 @@ genBalanceData n =
     <*> arbitraryReducedMaybe n -- balanceDataRateUsd :: Maybe Float
     <*> arbitraryReducedMaybe n -- balanceDataTraded :: Maybe Float
   
+instance Arbitrary Fills where
+  arbitrary = sized genFills
+
+genFills :: Int -> Gen Fills
+genFills n =
+  Fills
+    <$> arbitraryReducedMaybe n -- fillsTime :: Maybe Date
+    <*> arbitraryReducedMaybe n -- fillsPrice :: Maybe Double
+    <*> arbitraryReducedMaybe n -- fillsAmount :: Maybe Double
+  
 instance Arbitrary Message where
   arbitrary = sized genMessage
 
@@ -178,9 +188,11 @@ genOrderExecutionReport n =
     <*> arbitraryReducedMaybe n -- orderExecutionReportExchangeOrderId :: Maybe Text
     <*> arbitrary -- orderExecutionReportAmountOpen :: Double
     <*> arbitrary -- orderExecutionReportAmountFilled :: Double
+    <*> arbitraryReducedMaybe n -- orderExecutionReportAvgPx :: Maybe Double
     <*> arbitraryReduced n -- orderExecutionReportStatus :: OrdStatus
-    <*> arbitraryReduced n -- orderExecutionReportTimeOrder :: [[Text]]
+    <*> arbitraryReducedMaybe n -- orderExecutionReportStatusHistory :: Maybe [[Text]]
     <*> arbitraryReducedMaybe n -- orderExecutionReportErrorMessage :: Maybe Text
+    <*> arbitraryReducedMaybe n -- orderExecutionReportFills :: Maybe [Fills]
   
 instance Arbitrary OrderExecutionReportAllOf where
   arbitrary = sized genOrderExecutionReportAllOf
@@ -192,9 +204,11 @@ genOrderExecutionReportAllOf n =
     <*> arbitraryReducedMaybe n -- orderExecutionReportAllOfExchangeOrderId :: Maybe Text
     <*> arbitrary -- orderExecutionReportAllOfAmountOpen :: Double
     <*> arbitrary -- orderExecutionReportAllOfAmountFilled :: Double
+    <*> arbitraryReducedMaybe n -- orderExecutionReportAllOfAvgPx :: Maybe Double
     <*> arbitraryReduced n -- orderExecutionReportAllOfStatus :: OrdStatus
-    <*> arbitraryReduced n -- orderExecutionReportAllOfTimeOrder :: [[Text]]
+    <*> arbitraryReducedMaybe n -- orderExecutionReportAllOfStatusHistory :: Maybe [[Text]]
     <*> arbitraryReducedMaybe n -- orderExecutionReportAllOfErrorMessage :: Maybe Text
+    <*> arbitraryReducedMaybe n -- orderExecutionReportAllOfFills :: Maybe [Fills]
   
 instance Arbitrary OrderNewSingleRequest where
   arbitrary = sized genOrderNewSingleRequest

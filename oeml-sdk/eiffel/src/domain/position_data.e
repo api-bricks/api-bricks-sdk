@@ -14,12 +14,7 @@ note
 	EIS:"Eiffel openapi generator", "src=https://openapi-generator.tech", "protocol=uri"
 class POSITION_DATA 
 
-inherit
 
-  ANY
-      redefine
-          out 
-      end
 
 
 feature --Access
@@ -28,20 +23,20 @@ feature --Access
       -- Exchange symbol.
     symbol_id_coinapi: detachable STRING_32 
       -- CoinAPI symbol.
-    avg_entry_price: REAL_32 
-      -- Calculated average price of all fills on this position.
-    quantity: REAL_32 
-      -- The current position quantity.
+ 	avg_entry_price: REAL_32 
+    	 -- Calculated average price of all fills on this position.
+ 	quantity: REAL_32 
+    	 -- The current position quantity.
     side: detachable ORD_SIDE 
       
-    unrealized_pnl: REAL_32 
-      -- Unrealised profit or loss (PNL) of this position.
-    leverage: REAL_32 
-      -- Leverage for this position reported by the exchange.
-    cross_margin: BOOLEAN 
-      -- Is cross margin mode enable for this position?
-    liquidation_price: REAL_32 
-      -- Liquidation price. If mark price will reach this value, the position will be liquidated.
+ 	unrealized_pnl: REAL_32 
+    	 -- Unrealised profit or loss (PNL) of this position.
+ 	leverage: REAL_32 
+    	 -- Leverage for this position reported by the exchange.
+ 	cross_margin: BOOLEAN 
+    	 -- Is cross margin mode enable for this position?
+ 	liquidation_price: REAL_32 
+    	 -- Liquidation price. If mark price will reach this value, the position will be liquidated.
     raw_data: detachable ANY 
       
 
@@ -130,7 +125,7 @@ feature -- Change Element
 
  feature -- Status Report
 
-    out: STRING
+    output: STRING
           -- <Precursor>
       do
         create Result.make_empty

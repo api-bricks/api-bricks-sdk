@@ -2,16 +2,17 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**exchange_id** | **String** | Identifier of the exchange from which active orders should be canceled. | 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **exchange_id** | **String** | Identifier of the exchange from which active orders should be canceled. |  |
 
-## Code Sample
+## Example
 
 ```ruby
-require 'OpenapiClient'
+require 'openapi_client'
 
-instance = OpenapiClient::OrderCancelAllRequest.new(exchange_id: KRAKEN)
+instance = OpenapiClient::OrderCancelAllRequest.new(
+  exchange_id: KRAKEN
+)
 ```
-
 

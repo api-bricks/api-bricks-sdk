@@ -26,6 +26,7 @@ import java.io.IOException;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
+import org.openapitools.client.model.Fills;
 import org.openapitools.client.model.OrdSide;
 import org.openapitools.client.model.OrdStatus;
 import org.openapitools.client.model.OrdType;
@@ -38,7 +39,7 @@ import org.threeten.bp.LocalDate;
  * The order execution report object.
  */
 @ApiModel(description = "The order execution report object.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-09-18T23:23:31.356Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-01-13T14:55:50.104Z[Etc/UTC]")
 public class OrderExecutionReport {
   public static final String SERIALIZED_NAME_EXCHANGE_ID = "exchange_id";
   @SerializedName(SERIALIZED_NAME_EXCHANGE_ID)
@@ -149,17 +150,25 @@ public class OrderExecutionReport {
   @SerializedName(SERIALIZED_NAME_AMOUNT_FILLED)
   private BigDecimal amountFilled;
 
+  public static final String SERIALIZED_NAME_AVG_PX = "avg_px";
+  @SerializedName(SERIALIZED_NAME_AVG_PX)
+  private BigDecimal avgPx;
+
   public static final String SERIALIZED_NAME_STATUS = "status";
   @SerializedName(SERIALIZED_NAME_STATUS)
   private OrdStatus status;
 
-  public static final String SERIALIZED_NAME_TIME_ORDER = "time_order";
-  @SerializedName(SERIALIZED_NAME_TIME_ORDER)
-  private List<List<String>> timeOrder = new ArrayList<List<String>>();
+  public static final String SERIALIZED_NAME_STATUS_HISTORY = "status_history";
+  @SerializedName(SERIALIZED_NAME_STATUS_HISTORY)
+  private List<List<String>> statusHistory = null;
 
   public static final String SERIALIZED_NAME_ERROR_MESSAGE = "error_message";
   @SerializedName(SERIALIZED_NAME_ERROR_MESSAGE)
   private String errorMessage;
+
+  public static final String SERIALIZED_NAME_FILLS = "fills";
+  @SerializedName(SERIALIZED_NAME_FILLS)
+  private List<Fills> fills = null;
 
 
   public OrderExecutionReport exchangeId(String exchangeId) {
@@ -505,6 +514,29 @@ public class OrderExecutionReport {
   }
 
 
+  public OrderExecutionReport avgPx(BigDecimal avgPx) {
+    
+    this.avgPx = avgPx;
+    return this;
+  }
+
+   /**
+   * Calculated average price of all fills on this order.
+   * @return avgPx
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "0.0783", value = "Calculated average price of all fills on this order.")
+
+  public BigDecimal getAvgPx() {
+    return avgPx;
+  }
+
+
+  public void setAvgPx(BigDecimal avgPx) {
+    this.avgPx = avgPx;
+  }
+
+
   public OrderExecutionReport status(OrdStatus status) {
     
     this.status = status;
@@ -527,30 +559,34 @@ public class OrderExecutionReport {
   }
 
 
-  public OrderExecutionReport timeOrder(List<List<String>> timeOrder) {
+  public OrderExecutionReport statusHistory(List<List<String>> statusHistory) {
     
-    this.timeOrder = timeOrder;
+    this.statusHistory = statusHistory;
     return this;
   }
 
-  public OrderExecutionReport addTimeOrderItem(List<String> timeOrderItem) {
-    this.timeOrder.add(timeOrderItem);
+  public OrderExecutionReport addStatusHistoryItem(List<String> statusHistoryItem) {
+    if (this.statusHistory == null) {
+      this.statusHistory = new ArrayList<List<String>>();
+    }
+    this.statusHistory.add(statusHistoryItem);
     return this;
   }
 
    /**
    * Timestamped history of order status changes.
-   * @return timeOrder
+   * @return statusHistory
   **/
-  @ApiModelProperty(required = true, value = "Timestamped history of order status changes.")
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "Timestamped history of order status changes.")
 
-  public List<List<String>> getTimeOrder() {
-    return timeOrder;
+  public List<List<String>> getStatusHistory() {
+    return statusHistory;
   }
 
 
-  public void setTimeOrder(List<List<String>> timeOrder) {
-    this.timeOrder = timeOrder;
+  public void setStatusHistory(List<List<String>> statusHistory) {
+    this.statusHistory = statusHistory;
   }
 
 
@@ -561,11 +597,11 @@ public class OrderExecutionReport {
   }
 
    /**
-   * Error message
+   * Error message.
    * @return errorMessage
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "{\"result\":\"error\",\"reason\":\"InsufficientFunds\",\"message\":\"Failed to place buy order on symbol 'BTCUSD' for price $7,000.00 and quantity 0.22 BTC due to insufficient funds\"}", value = "Error message")
+  @ApiModelProperty(example = "{\"result\":\"error\",\"reason\":\"InsufficientFunds\",\"message\":\"Failed to place buy order on symbol 'BTCUSD' for price $7,000.00 and quantity 0.22 BTC due to insufficient funds\"}", value = "Error message.")
 
   public String getErrorMessage() {
     return errorMessage;
@@ -577,8 +613,39 @@ public class OrderExecutionReport {
   }
 
 
+  public OrderExecutionReport fills(List<Fills> fills) {
+    
+    this.fills = fills;
+    return this;
+  }
+
+  public OrderExecutionReport addFillsItem(Fills fillsItem) {
+    if (this.fills == null) {
+      this.fills = new ArrayList<Fills>();
+    }
+    this.fills.add(fillsItem);
+    return this;
+  }
+
+   /**
+   * Relay fill information on working orders.
+   * @return fills
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "Relay fill information on working orders.")
+
+  public List<Fills> getFills() {
+    return fills;
+  }
+
+
+  public void setFills(List<Fills> fills) {
+    this.fills = fills;
+  }
+
+
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -601,14 +668,16 @@ public class OrderExecutionReport {
         Objects.equals(this.exchangeOrderId, orderExecutionReport.exchangeOrderId) &&
         Objects.equals(this.amountOpen, orderExecutionReport.amountOpen) &&
         Objects.equals(this.amountFilled, orderExecutionReport.amountFilled) &&
+        Objects.equals(this.avgPx, orderExecutionReport.avgPx) &&
         Objects.equals(this.status, orderExecutionReport.status) &&
-        Objects.equals(this.timeOrder, orderExecutionReport.timeOrder) &&
-        Objects.equals(this.errorMessage, orderExecutionReport.errorMessage);
+        Objects.equals(this.statusHistory, orderExecutionReport.statusHistory) &&
+        Objects.equals(this.errorMessage, orderExecutionReport.errorMessage) &&
+        Objects.equals(this.fills, orderExecutionReport.fills);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(exchangeId, clientOrderId, symbolIdExchange, symbolIdCoinapi, amountOrder, price, side, orderType, timeInForce, expireTime, execInst, clientOrderIdFormatExchange, exchangeOrderId, amountOpen, amountFilled, status, timeOrder, errorMessage);
+    return Objects.hash(exchangeId, clientOrderId, symbolIdExchange, symbolIdCoinapi, amountOrder, price, side, orderType, timeInForce, expireTime, execInst, clientOrderIdFormatExchange, exchangeOrderId, amountOpen, amountFilled, avgPx, status, statusHistory, errorMessage, fills);
   }
 
 
@@ -631,9 +700,11 @@ public class OrderExecutionReport {
     sb.append("    exchangeOrderId: ").append(toIndentedString(exchangeOrderId)).append("\n");
     sb.append("    amountOpen: ").append(toIndentedString(amountOpen)).append("\n");
     sb.append("    amountFilled: ").append(toIndentedString(amountFilled)).append("\n");
+    sb.append("    avgPx: ").append(toIndentedString(avgPx)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
-    sb.append("    timeOrder: ").append(toIndentedString(timeOrder)).append("\n");
+    sb.append("    statusHistory: ").append(toIndentedString(statusHistory)).append("\n");
     sb.append("    errorMessage: ").append(toIndentedString(errorMessage)).append("\n");
+    sb.append("    fills: ").append(toIndentedString(fills)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -642,7 +713,7 @@ public class OrderExecutionReport {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

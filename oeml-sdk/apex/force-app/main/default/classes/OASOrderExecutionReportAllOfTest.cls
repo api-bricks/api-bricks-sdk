@@ -72,23 +72,26 @@ private class OASOrderExecutionReportAllOfTest {
     @isTest
     private static void maintainRenamedProperties() {
         OASOrderExecutionReportAllOf orderExecutionReportAllOf = new OASOrderExecutionReportAllOf();
-        Map<String, String> propertyMappings = orderExecutionReportAllOf.getPropertyMappings();
-        System.assertEquals('clientOrderIdFormatExchange', propertyMappings.get('client_order_id_format_exchange'));
-        System.assertEquals('exchangeOrderId', propertyMappings.get('exchange_order_id'));
-        System.assertEquals('amountOpen', propertyMappings.get('amount_open'));
-        System.assertEquals('amountFilled', propertyMappings.get('amount_filled'));
-        System.assertEquals('timeOrder', propertyMappings.get('time_order'));
-        System.assertEquals('errorMessage', propertyMappings.get('error_message'));
+        Map<String, String> x-property-mappings = orderExecutionReportAllOf.getx-property-mappings();
+        System.assertEquals('clientOrderIdFormatExchange', x-property-mappings.get('client_order_id_format_exchange'));
+        System.assertEquals('exchangeOrderId', x-property-mappings.get('exchange_order_id'));
+        System.assertEquals('amountOpen', x-property-mappings.get('amount_open'));
+        System.assertEquals('amountFilled', x-property-mappings.get('amount_filled'));
+        System.assertEquals('avgPx', x-property-mappings.get('avg_px'));
+        System.assertEquals('statusHistory', x-property-mappings.get('status_history'));
+        System.assertEquals('errorMessage', x-property-mappings.get('error_message'));
     }
 
     @isTest
     private static void defaultValuesPopulated() {
         OASOrderExecutionReportAllOf orderExecutionReportAllOf = new OASOrderExecutionReportAllOf();
-        System.assertEquals(new List<List<String>>(), orderExecutionReportAllOf.timeOrder);
+        System.assertEquals(new List<List<String>>(), orderExecutionReportAllOf.statusHistory);
+        System.assertEquals(new List<OASFills>(), orderExecutionReportAllOf.fills);
         System.assertEquals(null, orderExecutionReportAllOf.clientOrderIdFormatExchange);
         System.assertEquals(null, orderExecutionReportAllOf.exchangeOrderId);
         System.assertEquals(null, orderExecutionReportAllOf.amountOpen);
         System.assertEquals(null, orderExecutionReportAllOf.amountFilled);
+        System.assertEquals(null, orderExecutionReportAllOf.avgPx);
         System.assertEquals(null, orderExecutionReportAllOf.status);
         System.assertEquals(null, orderExecutionReportAllOf.errorMessage);
     }

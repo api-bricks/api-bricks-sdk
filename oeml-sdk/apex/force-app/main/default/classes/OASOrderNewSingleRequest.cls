@@ -105,6 +105,134 @@ public class OASOrderNewSingleRequest implements OAS.MappedProperties {
         return propertyMappings;
     }
 
+    private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'exchange_id' => 'exchangeId',
+        'client_order_id' => 'clientOrderId',
+        'symbol_id_exchange' => 'symbolIdExchange',
+        'symbol_id_coinapi' => 'symbolIdCoinapi',
+        'amount_order' => 'amountOrder',
+        'order_type' => 'orderType',
+        'time_in_force' => 'timeInForce',
+        'expire_time' => 'expireTime',
+        'exec_inst' => 'execInst'
+    };
+
+    public Map<String, String> getPropertyMappings() {
+        return propertyMappings;
+    }
+
+    private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'exchange_id' => 'exchangeId',
+        'client_order_id' => 'clientOrderId',
+        'symbol_id_exchange' => 'symbolIdExchange',
+        'symbol_id_coinapi' => 'symbolIdCoinapi',
+        'amount_order' => 'amountOrder',
+        'order_type' => 'orderType',
+        'time_in_force' => 'timeInForce',
+        'expire_time' => 'expireTime',
+        'exec_inst' => 'execInst'
+    };
+
+    public Map<String, String> getPropertyMappings() {
+        return propertyMappings;
+    }
+
+    private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'exchange_id' => 'exchangeId',
+        'client_order_id' => 'clientOrderId',
+        'symbol_id_exchange' => 'symbolIdExchange',
+        'symbol_id_coinapi' => 'symbolIdCoinapi',
+        'amount_order' => 'amountOrder',
+        'order_type' => 'orderType',
+        'time_in_force' => 'timeInForce',
+        'expire_time' => 'expireTime',
+        'exec_inst' => 'execInst'
+    };
+
+    public Map<String, String> getPropertyMappings() {
+        return propertyMappings;
+    }
+
+    private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'exchange_id' => 'exchangeId',
+        'client_order_id' => 'clientOrderId',
+        'symbol_id_exchange' => 'symbolIdExchange',
+        'symbol_id_coinapi' => 'symbolIdCoinapi',
+        'amount_order' => 'amountOrder',
+        'order_type' => 'orderType',
+        'time_in_force' => 'timeInForce',
+        'expire_time' => 'expireTime',
+        'exec_inst' => 'execInst'
+    };
+
+    public Map<String, String> getPropertyMappings() {
+        return propertyMappings;
+    }
+
+    private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'exchange_id' => 'exchangeId',
+        'client_order_id' => 'clientOrderId',
+        'symbol_id_exchange' => 'symbolIdExchange',
+        'symbol_id_coinapi' => 'symbolIdCoinapi',
+        'amount_order' => 'amountOrder',
+        'order_type' => 'orderType',
+        'time_in_force' => 'timeInForce',
+        'expire_time' => 'expireTime',
+        'exec_inst' => 'execInst'
+    };
+
+    public Map<String, String> getPropertyMappings() {
+        return propertyMappings;
+    }
+
+    private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'exchange_id' => 'exchangeId',
+        'client_order_id' => 'clientOrderId',
+        'symbol_id_exchange' => 'symbolIdExchange',
+        'symbol_id_coinapi' => 'symbolIdCoinapi',
+        'amount_order' => 'amountOrder',
+        'order_type' => 'orderType',
+        'time_in_force' => 'timeInForce',
+        'expire_time' => 'expireTime',
+        'exec_inst' => 'execInst'
+    };
+
+    public Map<String, String> getPropertyMappings() {
+        return propertyMappings;
+    }
+
+    private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'exchange_id' => 'exchangeId',
+        'client_order_id' => 'clientOrderId',
+        'symbol_id_exchange' => 'symbolIdExchange',
+        'symbol_id_coinapi' => 'symbolIdCoinapi',
+        'amount_order' => 'amountOrder',
+        'order_type' => 'orderType',
+        'time_in_force' => 'timeInForce',
+        'expire_time' => 'expireTime',
+        'exec_inst' => 'execInst'
+    };
+
+    public Map<String, String> getPropertyMappings() {
+        return propertyMappings;
+    }
+
+    private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'exchange_id' => 'exchangeId',
+        'client_order_id' => 'clientOrderId',
+        'symbol_id_exchange' => 'symbolIdExchange',
+        'symbol_id_coinapi' => 'symbolIdCoinapi',
+        'amount_order' => 'amountOrder',
+        'order_type' => 'orderType',
+        'time_in_force' => 'timeInForce',
+        'expire_time' => 'expireTime',
+        'exec_inst' => 'execInst'
+    };
+
+    public Map<String, String> getPropertyMappings() {
+        return propertyMappings;
+    }
+
     public OASOrderNewSingleRequest() {
         execInst = new List<ExecInstEnum>();
     }

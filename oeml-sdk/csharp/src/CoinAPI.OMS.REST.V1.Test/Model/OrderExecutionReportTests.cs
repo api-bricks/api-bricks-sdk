@@ -186,6 +186,14 @@ namespace CoinAPI.OMS.REST.V1.Test
             // TODO unit test for the property 'AmountFilled'
         }
         /// <summary>
+        /// Test the property 'AvgPx'
+        /// </summary>
+        [Test]
+        public void AvgPxTest()
+        {
+            // TODO unit test for the property 'AvgPx'
+        }
+        /// <summary>
         /// Test the property 'Status'
         /// </summary>
         [Test]
@@ -194,12 +202,12 @@ namespace CoinAPI.OMS.REST.V1.Test
             // TODO unit test for the property 'Status'
         }
         /// <summary>
-        /// Test the property 'TimeOrder'
+        /// Test the property 'StatusHistory'
         /// </summary>
         [Test]
-        public void TimeOrderTest()
+        public void StatusHistoryTest()
         {
-            // TODO unit test for the property 'TimeOrder'
+            // TODO unit test for the property 'StatusHistory'
         }
         /// <summary>
         /// Test the property 'ErrorMessage'
@@ -208,6 +216,14 @@ namespace CoinAPI.OMS.REST.V1.Test
         public void ErrorMessageTest()
         {
             // TODO unit test for the property 'ErrorMessage'
+        }
+        /// <summary>
+        /// Test the property 'Fills'
+        /// </summary>
+        [Test]
+        public void FillsTest()
+        {
+            // TODO unit test for the property 'Fills'
         }
 
     }

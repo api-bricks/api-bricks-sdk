@@ -9,23 +9,23 @@ class OrdStatus {
   const OrdStatus._internal(this.value);
 
   /// Order statuses and the lifecycle are documented in the separate section: &lt;a href&#x3D;\&quot;#oeml-order-lifecycle\&quot;&gt;OEML / Starter Guide / Order Lifecycle&lt;/a&gt; 
-  static const OrdStatus rECEIVED_ = const OrdStatus._internal("RECEIVED");
+  static const OrdStatus RECEIVED = const OrdStatus._internal('RECEIVED');
   /// Order statuses and the lifecycle are documented in the separate section: &lt;a href&#x3D;\&quot;#oeml-order-lifecycle\&quot;&gt;OEML / Starter Guide / Order Lifecycle&lt;/a&gt; 
-  static const OrdStatus rOUTING_ = const OrdStatus._internal("ROUTING");
+  static const OrdStatus ROUTING = const OrdStatus._internal('ROUTING');
   /// Order statuses and the lifecycle are documented in the separate section: &lt;a href&#x3D;\&quot;#oeml-order-lifecycle\&quot;&gt;OEML / Starter Guide / Order Lifecycle&lt;/a&gt; 
-  static const OrdStatus rOUTED_ = const OrdStatus._internal("ROUTED");
+  static const OrdStatus ROUTED = const OrdStatus._internal('ROUTED');
   /// Order statuses and the lifecycle are documented in the separate section: &lt;a href&#x3D;\&quot;#oeml-order-lifecycle\&quot;&gt;OEML / Starter Guide / Order Lifecycle&lt;/a&gt; 
-  static const OrdStatus nEW_ = const OrdStatus._internal("NEW");
+  static const OrdStatus NEW = const OrdStatus._internal('NEW');
   /// Order statuses and the lifecycle are documented in the separate section: &lt;a href&#x3D;\&quot;#oeml-order-lifecycle\&quot;&gt;OEML / Starter Guide / Order Lifecycle&lt;/a&gt; 
-  static const OrdStatus pENDINGCANCEL_ = const OrdStatus._internal("PENDING_CANCEL");
+  static const OrdStatus PENDING_CANCEL = const OrdStatus._internal('PENDING_CANCEL');
   /// Order statuses and the lifecycle are documented in the separate section: &lt;a href&#x3D;\&quot;#oeml-order-lifecycle\&quot;&gt;OEML / Starter Guide / Order Lifecycle&lt;/a&gt; 
-  static const OrdStatus pARTIALLYFILLED_ = const OrdStatus._internal("PARTIALLY_FILLED");
+  static const OrdStatus PARTIALLY_FILLED = const OrdStatus._internal('PARTIALLY_FILLED');
   /// Order statuses and the lifecycle are documented in the separate section: &lt;a href&#x3D;\&quot;#oeml-order-lifecycle\&quot;&gt;OEML / Starter Guide / Order Lifecycle&lt;/a&gt; 
-  static const OrdStatus fILLED_ = const OrdStatus._internal("FILLED");
+  static const OrdStatus FILLED = const OrdStatus._internal('FILLED');
   /// Order statuses and the lifecycle are documented in the separate section: &lt;a href&#x3D;\&quot;#oeml-order-lifecycle\&quot;&gt;OEML / Starter Guide / Order Lifecycle&lt;/a&gt; 
-  static const OrdStatus cANCELED_ = const OrdStatus._internal("CANCELED");
+  static const OrdStatus CANCELED = const OrdStatus._internal('CANCELED');
   /// Order statuses and the lifecycle are documented in the separate section: &lt;a href&#x3D;\&quot;#oeml-order-lifecycle\&quot;&gt;OEML / Starter Guide / Order Lifecycle&lt;/a&gt; 
-  static const OrdStatus rEJECTED_ = const OrdStatus._internal("REJECTED");
+  static const OrdStatus REJECTED = const OrdStatus._internal('REJECTED');
 }
 
 class OrdStatusFieldProcessor implements FieldProcessor<OrdStatus, String> {
@@ -33,15 +33,15 @@ class OrdStatusFieldProcessor implements FieldProcessor<OrdStatus, String> {
 
     OrdStatus deserialize(String data) {
         switch (data) {
-            case "RECEIVED": return OrdStatus.rECEIVED_;
-            case "ROUTING": return OrdStatus.rOUTING_;
-            case "ROUTED": return OrdStatus.rOUTED_;
-            case "NEW": return OrdStatus.nEW_;
-            case "PENDING_CANCEL": return OrdStatus.pENDINGCANCEL_;
-            case "PARTIALLY_FILLED": return OrdStatus.pARTIALLYFILLED_;
-            case "FILLED": return OrdStatus.fILLED_;
-            case "CANCELED": return OrdStatus.cANCELED_;
-            case "REJECTED": return OrdStatus.rEJECTED_;
+            case 'RECEIVED': return OrdStatus.RECEIVED;
+            case 'ROUTING': return OrdStatus.ROUTING;
+            case 'ROUTED': return OrdStatus.ROUTED;
+            case 'NEW': return OrdStatus.NEW;
+            case 'PENDING_CANCEL': return OrdStatus.PENDING_CANCEL;
+            case 'PARTIALLY_FILLED': return OrdStatus.PARTIALLY_FILLED;
+            case 'FILLED': return OrdStatus.FILLED;
+            case 'CANCELED': return OrdStatus.CANCELED;
+            case 'REJECTED': return OrdStatus.REJECTED;
             default: throw('Unknown enum value to decode: $data');
         }
     }

@@ -17,6 +17,6 @@
 export type OrdType = 'LIMIT';
 
 export const OrdType = {
-    LIMIT: 'LIMIT' as OrdType
+    Limit: 'LIMIT' as OrdType
 };
 

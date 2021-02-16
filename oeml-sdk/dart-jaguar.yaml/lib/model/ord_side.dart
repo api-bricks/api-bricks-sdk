@@ -9,9 +9,9 @@ class OrdSide {
   const OrdSide._internal(this.value);
 
   /// Side of order. 
-  static const OrdSide bUY_ = const OrdSide._internal("BUY");
+  static const OrdSide BUY = const OrdSide._internal('BUY');
   /// Side of order. 
-  static const OrdSide sELL_ = const OrdSide._internal("SELL");
+  static const OrdSide SELL = const OrdSide._internal('SELL');
 }
 
 class OrdSideFieldProcessor implements FieldProcessor<OrdSide, String> {
@@ -19,8 +19,8 @@ class OrdSideFieldProcessor implements FieldProcessor<OrdSide, String> {
 
     OrdSide deserialize(String data) {
         switch (data) {
-            case "BUY": return OrdSide.bUY_;
-            case "SELL": return OrdSide.sELL_;
+            case 'BUY': return OrdSide.BUY;
+            case 'SELL': return OrdSide.SELL;
             default: throw('Unknown enum value to decode: $data');
         }
     }

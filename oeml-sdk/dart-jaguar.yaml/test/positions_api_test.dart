@@ -11,7 +11,7 @@ void main() {
     //
     // Get current open positions across all or single exchange.
     //
-    //Future<List<Position>> v1PositionsGet({ String exchangeId }) async 
+    //Future<List<Position>> v1PositionsGet({ String exchangeId }) async
     test('test v1PositionsGet', () async {
       // TODO
     });

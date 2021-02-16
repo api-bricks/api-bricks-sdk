@@ -88,6 +88,90 @@ public class OASPositionData implements OAS.MappedProperties {
         return propertyMappings;
     }
 
+    private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'symbol_id_exchange' => 'symbolIdExchange',
+        'symbol_id_coinapi' => 'symbolIdCoinapi',
+        'avg_entry_price' => 'avgEntryPrice',
+        'unrealized_pnl' => 'unrealizedPnl',
+        'cross_margin' => 'crossMargin',
+        'liquidation_price' => 'liquidationPrice',
+        'raw_data' => 'rawData'
+    };
+
+    public Map<String, String> getPropertyMappings() {
+        return propertyMappings;
+    }
+
+    private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'symbol_id_exchange' => 'symbolIdExchange',
+        'symbol_id_coinapi' => 'symbolIdCoinapi',
+        'avg_entry_price' => 'avgEntryPrice',
+        'unrealized_pnl' => 'unrealizedPnl',
+        'cross_margin' => 'crossMargin',
+        'liquidation_price' => 'liquidationPrice',
+        'raw_data' => 'rawData'
+    };
+
+    public Map<String, String> getPropertyMappings() {
+        return propertyMappings;
+    }
+
+    private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'symbol_id_exchange' => 'symbolIdExchange',
+        'symbol_id_coinapi' => 'symbolIdCoinapi',
+        'avg_entry_price' => 'avgEntryPrice',
+        'unrealized_pnl' => 'unrealizedPnl',
+        'cross_margin' => 'crossMargin',
+        'liquidation_price' => 'liquidationPrice',
+        'raw_data' => 'rawData'
+    };
+
+    public Map<String, String> getPropertyMappings() {
+        return propertyMappings;
+    }
+
+    private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'symbol_id_exchange' => 'symbolIdExchange',
+        'symbol_id_coinapi' => 'symbolIdCoinapi',
+        'avg_entry_price' => 'avgEntryPrice',
+        'unrealized_pnl' => 'unrealizedPnl',
+        'cross_margin' => 'crossMargin',
+        'liquidation_price' => 'liquidationPrice',
+        'raw_data' => 'rawData'
+    };
+
+    public Map<String, String> getPropertyMappings() {
+        return propertyMappings;
+    }
+
+    private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'symbol_id_exchange' => 'symbolIdExchange',
+        'symbol_id_coinapi' => 'symbolIdCoinapi',
+        'avg_entry_price' => 'avgEntryPrice',
+        'unrealized_pnl' => 'unrealizedPnl',
+        'cross_margin' => 'crossMargin',
+        'liquidation_price' => 'liquidationPrice',
+        'raw_data' => 'rawData'
+    };
+
+    public Map<String, String> getPropertyMappings() {
+        return propertyMappings;
+    }
+
+    private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'symbol_id_exchange' => 'symbolIdExchange',
+        'symbol_id_coinapi' => 'symbolIdCoinapi',
+        'avg_entry_price' => 'avgEntryPrice',
+        'unrealized_pnl' => 'unrealizedPnl',
+        'cross_margin' => 'crossMargin',
+        'liquidation_price' => 'liquidationPrice',
+        'raw_data' => 'rawData'
+    };
+
+    public Map<String, String> getPropertyMappings() {
+        return propertyMappings;
+    }
+
     public static OASPositionData getExample() {
         OASPositionData positionData = new OASPositionData();
           positionData.symbolIdExchange = 'XBTUSD';

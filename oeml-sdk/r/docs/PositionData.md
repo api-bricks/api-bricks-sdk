@@ -13,6 +13,6 @@ Name | Type | Description | Notes
 **leverage** | **numeric** | Leverage for this position reported by the exchange. | [optional] 
 **cross_margin** | **character** | Is cross margin mode enable for this position? | [optional] 
 **liquidation_price** | **numeric** | Liquidation price. If mark price will reach this value, the position will be liquidated. | [optional] 
-**raw_data** | [**object**](.md) |  | [optional] 
+**raw_data** | **object** |  | [optional] 
 
 

@@ -1,5 +1,3 @@
-# coding: utf-8
-
 """
     OEML - REST API
 
@@ -11,14 +9,12 @@
 """
 
 
-from __future__ import absolute_import
-
+import sys
 import unittest
-import datetime
 
 import openapi_client
-from openapi_client.models.balance_data import BalanceData  # noqa: E501
-from openapi_client.rest import ApiException
+from openapi_client.model.balance_data import BalanceData
+
 
 class TestBalanceData(unittest.TestCase):
     """BalanceData unit test stubs"""
@@ -29,31 +25,11 @@ class TestBalanceData(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def make_instance(self, include_optional):
-        """Test BalanceData
-            include_option is a boolean, when False only required
-            params are included, when True both required and
-            optional params are included """
-        # model = openapi_client.models.balance_data.BalanceData()  # noqa: E501
-        if include_optional :
-            return BalanceData(
-                asset_id_exchange = 'XBT', 
-                asset_id_coinapi = 'BTC', 
-                balance = 0.00134444, 
-                available = 0.00134444, 
-                locked = 0.0, 
-                last_updated_by = 'EXCHANGE', 
-                rate_usd = 1355.12, 
-                traded = 0.007
-            )
-        else :
-            return BalanceData(
-        )
-
     def testBalanceData(self):
         """Test BalanceData"""
-        inst_req_only = self.make_instance(include_optional=False)
-        inst_req_and_optional = self.make_instance(include_optional=True)
+        # FIXME: construct object with mandatory attributes with example values
+        # model = BalanceData()  # noqa: E501
+        pass
 
 
 if __name__ == '__main__':

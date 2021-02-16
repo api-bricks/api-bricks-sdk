@@ -7,7 +7,7 @@ import io.coinapi.websocket.model.*;
 import io.coinapi.websocket.model.Error;
 import org.glassfish.tyrus.client.ClientManager;
 
-import javax.websocket.*;
+import jakarta.websocket.*;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -31,6 +31,7 @@ public class CoinAPIWebSocketImpl implements CoinAPIWebSocket {
     private ClientManager client;
     private Optional<Session> connection = Optional.empty();
     private Optional<Thread> processingMessages;
+    private volatile boolean running = true;
 
     private Queue messagesQueue = new LinkedBlockingDeque();
 
@@ -40,6 +41,7 @@ public class CoinAPIWebSocketImpl implements CoinAPIWebSocket {
     private InvokeFunction ohlcvInvoke;
     private InvokeFunction volumeInvoke;
     private InvokeFunction errorInvoke;
+    private InvokeFunction reconnectInvoke;
 
     /**
      *
@@ -51,7 +53,7 @@ public class CoinAPIWebSocketImpl implements CoinAPIWebSocket {
         client = ClientManager.createClient();
 
         Runnable task = () -> {
-            while (true) {
+            while (running) {
                 if (messagesQueue.size() > 0) {
                     String message = (String) messagesQueue.remove();
                     InputStream stream = new ByteArrayInputStream(message.getBytes());
@@ -79,6 +81,9 @@ public class CoinAPIWebSocketImpl implements CoinAPIWebSocket {
                                 break;
                             case error:
                                 handle(message, Error.class, errorInvoke);
+                                break;
+                            case reconnect:
+                                handle(message, Reconnect.class, reconnectInvoke);
                                 break;
                         }
                     } catch (Exception e) {
@@ -108,8 +113,7 @@ public class CoinAPIWebSocketImpl implements CoinAPIWebSocket {
 
             final ClientEndpointConfig cec = ClientEndpointConfig.Builder.create().build();
 
-            connection = Optional.ofNullable(client.connectToServer(new Endpoint() {
-
+            Endpoint endpoint = new Endpoint() {
                 @Override
                 public void onOpen(Session session, EndpointConfig config) {
                     try {
@@ -131,7 +135,9 @@ public class CoinAPIWebSocketImpl implements CoinAPIWebSocket {
                 public void onClose(Session session, CloseReason closeReason) {
                     super.onClose(session, closeReason);
                 }
-            }, cec, new URI(isSandbox ? sandboxUrl : noSandboxUrl)));
+            };
+
+            connection = Optional.ofNullable(client.connectToServer(endpoint, cec, new URI(isSandbox ? sandboxUrl : noSandboxUrl)));
             latch.await(100, TimeUnit.SECONDS);
         } catch (Exception e) {
             e.printStackTrace();
@@ -151,6 +157,7 @@ public class CoinAPIWebSocketImpl implements CoinAPIWebSocket {
         }
 
         if (processingMessages.isPresent() && processingMessages.get().isAlive()) {
+            running = false;
             processingMessages.get().interrupt();
             System.out.println("processingMessage thread interrupt");
         }
@@ -206,14 +213,25 @@ public class CoinAPIWebSocketImpl implements CoinAPIWebSocket {
      * @param function
      */
     @Override
-    public void setErrorInvoke(InvokeFunction function) { this.errorInvoke = function; }
+    public void setErrorInvoke(InvokeFunction function) { 
+        this.errorInvoke = function; 
+    }
+
+    /**
+     *
+     * @param function
+     */
+    @Override
+    public void setReconnectInvoke(InvokeFunction function) { 
+        this.reconnectInvoke = function; 
+    }
 
     private void handle(String message, Class deserializeClass, InvokeFunction invokeFunction) throws IOException, NotImplementedException {
 
         Object deserialize = json.deserialize(deserializeClass, new ByteArrayInputStream(message.getBytes()));
 
         if (invokeFunction == null) {
-            throw new NotImplementedException();
+            return;
         }
         invokeFunction.preprocesMessages((MessageBase) deserialize);
     }

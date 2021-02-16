@@ -23,14 +23,14 @@ Get current open positions across all or single exchange.
 ```dart
 import 'package:openapi/api.dart';
 
-var api_instance = PositionsApi();
-var exchangeId = KRAKEN; // String | Filter the balances to the specific exchange.
+final api_instance = PositionsApi();
+final exchangeId = KRAKEN; // String | Filter the balances to the specific exchange.
 
 try { 
-    var result = api_instance.v1PositionsGet(exchangeId);
+    final result = api_instance.v1PositionsGet(exchangeId);
     print(result);
 } catch (e) {
-    print("Exception when calling PositionsApi->v1PositionsGet: $e\n");
+    print('Exception when calling PositionsApi->v1PositionsGet: $e\n');
 }
 ```
 
@@ -38,7 +38,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **exchangeId** | **String**| Filter the balances to the specific exchange. | [optional] [default to null]
+ **exchangeId** | **String**| Filter the balances to the specific exchange. | [optional] 
 
 ### Return type
 

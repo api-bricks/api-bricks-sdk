@@ -14,19 +14,51 @@ Method | HTTP request | Description
 
 ## V1OrdersCancelAllPost
 
-> Message V1OrdersCancelAllPost(ctx, orderCancelAllRequest)
+> Message V1OrdersCancelAllPost(ctx).OrderCancelAllRequest(orderCancelAllRequest).Execute()
 
 Cancel all orders request
 
-This request cancels all open orders on single specified exchange.
 
-### Required Parameters
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    orderCancelAllRequest := *openapiclient.NewOrderCancelAllRequest("KRAKEN") // OrderCancelAllRequest | OrderCancelAllRequest object.
+
+    configuration := openapiclient.NewConfiguration()
+    api_client := openapiclient.NewAPIClient(configuration)
+    resp, r, err := api_client.OrdersApi.V1OrdersCancelAllPost(context.Background()).OrderCancelAllRequest(orderCancelAllRequest).Execute()
+    if err.Error() != "" {
+        fmt.Fprintf(os.Stderr, "Error when calling `OrdersApi.V1OrdersCancelAllPost``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `V1OrdersCancelAllPost`: Message
+    fmt.Fprintf(os.Stdout, "Response from `OrdersApi.V1OrdersCancelAllPost`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiV1OrdersCancelAllPostRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**orderCancelAllRequest** | [**OrderCancelAllRequest**](OrderCancelAllRequest.md)| OrderCancelAllRequest object. | 
+ **orderCancelAllRequest** | [**OrderCancelAllRequest**](OrderCancelAllRequest.md) | OrderCancelAllRequest object. | 
 
 ### Return type
 
@@ -48,19 +80,51 @@ No authorization required
 
 ## V1OrdersCancelPost
 
-> OrderExecutionReport V1OrdersCancelPost(ctx, orderCancelSingleRequest)
+> OrderExecutionReport V1OrdersCancelPost(ctx).OrderCancelSingleRequest(orderCancelSingleRequest).Execute()
 
 Cancel order request
 
-Request cancel for an existing order. The order can be canceled using the `client_order_id` or `exchange_order_id`.
 
-### Required Parameters
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    orderCancelSingleRequest := *openapiclient.NewOrderCancelSingleRequest("KRAKEN") // OrderCancelSingleRequest | OrderCancelSingleRequest object.
+
+    configuration := openapiclient.NewConfiguration()
+    api_client := openapiclient.NewAPIClient(configuration)
+    resp, r, err := api_client.OrdersApi.V1OrdersCancelPost(context.Background()).OrderCancelSingleRequest(orderCancelSingleRequest).Execute()
+    if err.Error() != "" {
+        fmt.Fprintf(os.Stderr, "Error when calling `OrdersApi.V1OrdersCancelPost``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `V1OrdersCancelPost`: OrderExecutionReport
+    fmt.Fprintf(os.Stdout, "Response from `OrdersApi.V1OrdersCancelPost`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiV1OrdersCancelPostRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**orderCancelSingleRequest** | [**OrderCancelSingleRequest**](OrderCancelSingleRequest.md)| OrderCancelSingleRequest object. | 
+ **orderCancelSingleRequest** | [**OrderCancelSingleRequest**](OrderCancelSingleRequest.md) | OrderCancelSingleRequest object. | 
 
 ### Return type
 
@@ -82,28 +146,51 @@ No authorization required
 
 ## V1OrdersGet
 
-> []OrderExecutionReport V1OrdersGet(ctx, optional)
+> []OrderExecutionReport V1OrdersGet(ctx).ExchangeId(exchangeId).Execute()
 
 Get open orders
 
-Get last execution reports for open orders across all or single exchange.
 
-### Required Parameters
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    exchangeId := "KRAKEN" // string | Filter the open orders to the specific exchange. (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    api_client := openapiclient.NewAPIClient(configuration)
+    resp, r, err := api_client.OrdersApi.V1OrdersGet(context.Background()).ExchangeId(exchangeId).Execute()
+    if err.Error() != "" {
+        fmt.Fprintf(os.Stderr, "Error when calling `OrdersApi.V1OrdersGet``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `V1OrdersGet`: []OrderExecutionReport
+    fmt.Fprintf(os.Stdout, "Response from `OrdersApi.V1OrdersGet`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiV1OrdersGetRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
- **optional** | ***V1OrdersGetOpts** | optional parameters | nil if no parameters
-
-### Optional Parameters
-
-Optional parameters are passed through a pointer to a V1OrdersGetOpts struct
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **exchangeId** | **optional.String**| Filter the open orders to the specific exchange. | 
+ **exchangeId** | **string** | Filter the open orders to the specific exchange. | 
 
 ### Return type
 
@@ -125,19 +212,51 @@ No authorization required
 
 ## V1OrdersPost
 
-> OrderExecutionReport V1OrdersPost(ctx, orderNewSingleRequest)
+> OrderExecutionReport V1OrdersPost(ctx).OrderNewSingleRequest(orderNewSingleRequest).Execute()
 
 Send new order
 
-This request creating new order for the specific exchange.
 
-### Required Parameters
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    orderNewSingleRequest := *openapiclient.NewOrderNewSingleRequest("KRAKEN", "6ab36bc1-344d-432e-ac6d-0bf44ee64c2b", float32(0.045), float32(0.0783), openapiclient.OrdSide("BUY"), openapiclient.OrdType("LIMIT"), openapiclient.TimeInForce("GOOD_TILL_CANCEL")) // OrderNewSingleRequest | OrderNewSingleRequest object.
+
+    configuration := openapiclient.NewConfiguration()
+    api_client := openapiclient.NewAPIClient(configuration)
+    resp, r, err := api_client.OrdersApi.V1OrdersPost(context.Background()).OrderNewSingleRequest(orderNewSingleRequest).Execute()
+    if err.Error() != "" {
+        fmt.Fprintf(os.Stderr, "Error when calling `OrdersApi.V1OrdersPost``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `V1OrdersPost`: OrderExecutionReport
+    fmt.Fprintf(os.Stdout, "Response from `OrdersApi.V1OrdersPost`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiV1OrdersPostRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**orderNewSingleRequest** | [**OrderNewSingleRequest**](OrderNewSingleRequest.md)| OrderNewSingleRequest object. | 
+ **orderNewSingleRequest** | [**OrderNewSingleRequest**](OrderNewSingleRequest.md) | OrderNewSingleRequest object. | 
 
 ### Return type
 
@@ -159,19 +278,55 @@ No authorization required
 
 ## V1OrdersStatusClientOrderIdGet
 
-> OrderExecutionReport V1OrdersStatusClientOrderIdGet(ctx, clientOrderId)
+> OrderExecutionReport V1OrdersStatusClientOrderIdGet(ctx, clientOrderId).Execute()
 
 Get order execution report
 
-Get the last order execution report for the specified order. The requested order does not need to be active or opened.
 
-### Required Parameters
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    clientOrderId := "6ab36bc1-344d-432e-ac6d-0bf44ee64c2b" // string | The unique identifier of the order assigned by the client.
+
+    configuration := openapiclient.NewConfiguration()
+    api_client := openapiclient.NewAPIClient(configuration)
+    resp, r, err := api_client.OrdersApi.V1OrdersStatusClientOrderIdGet(context.Background(), clientOrderId).Execute()
+    if err.Error() != "" {
+        fmt.Fprintf(os.Stderr, "Error when calling `OrdersApi.V1OrdersStatusClientOrderIdGet``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `V1OrdersStatusClientOrderIdGet`: OrderExecutionReport
+    fmt.Fprintf(os.Stdout, "Response from `OrdersApi.V1OrdersStatusClientOrderIdGet`: %v\n", resp)
+}
+```
+
+### Path Parameters
 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**clientOrderId** | **string**| The unique identifier of the order assigned by the client. | 
+**clientOrderId** | **string** | The unique identifier of the order assigned by the client. | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiV1OrdersStatusClientOrderIdGetRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
 
 ### Return type
 

@@ -21,6 +21,7 @@
 
 #include <QJsonObject>
 
+#include "OAIFills.h"
 #include "OAIOrdSide.h"
 #include "OAIOrdStatus.h"
 #include "OAIOrdType.h"
@@ -122,20 +123,30 @@ public:
     bool is_amount_filled_Set() const;
     bool is_amount_filled_Valid() const;
 
+    double getAvgPx() const;
+    void setAvgPx(const double &avg_px);
+    bool is_avg_px_Set() const;
+    bool is_avg_px_Valid() const;
+
     OAIOrdStatus getStatus() const;
     void setStatus(const OAIOrdStatus &status);
     bool is_status_Set() const;
     bool is_status_Valid() const;
 
-    QList<QList<QString>> getTimeOrder() const;
-    void setTimeOrder(const QList<QList<QString>> &time_order);
-    bool is_time_order_Set() const;
-    bool is_time_order_Valid() const;
+    QList<QList<QString>> getStatusHistory() const;
+    void setStatusHistory(const QList<QList<QString>> &status_history);
+    bool is_status_history_Set() const;
+    bool is_status_history_Valid() const;
 
     QString getErrorMessage() const;
     void setErrorMessage(const QString &error_message);
     bool is_error_message_Set() const;
     bool is_error_message_Valid() const;
+
+    QList<OAIFills> getFills() const;
+    void setFills(const QList<OAIFills> &fills);
+    bool is_fills_Set() const;
+    bool is_fills_Valid() const;
 
     virtual bool isSet() const override;
     virtual bool isValid() const override;
@@ -203,17 +214,25 @@ private:
     bool m_amount_filled_isSet;
     bool m_amount_filled_isValid;
 
+    double avg_px;
+    bool m_avg_px_isSet;
+    bool m_avg_px_isValid;
+
     OAIOrdStatus status;
     bool m_status_isSet;
     bool m_status_isValid;
 
-    QList<QList<QString>> time_order;
-    bool m_time_order_isSet;
-    bool m_time_order_isValid;
+    QList<QList<QString>> status_history;
+    bool m_status_history_isSet;
+    bool m_status_history_isValid;
 
     QString error_message;
     bool m_error_message_isSet;
     bool m_error_message_isValid;
+
+    QList<OAIFills> fills;
+    bool m_fills_isSet;
+    bool m_fills_isValid;
 };
 
 } // namespace OpenAPI

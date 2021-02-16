@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="v1BalancesGet"></a>
 # **v1BalancesGet**
-> kotlin.Array&lt;Balance&gt; v1BalancesGet(exchangeId)
+> kotlin.collections.List&lt;Balance&gt; v1BalancesGet(exchangeId)
 
 Get balances
 
@@ -24,7 +24,7 @@ Get current currency balance from all or single exchange.
 val apiInstance = BalancesApi()
 val exchangeId : kotlin.String = KRAKEN // kotlin.String | Filter the balances to the specific exchange.
 try {
-    val result : kotlin.Array<Balance> = apiInstance.v1BalancesGet(exchangeId)
+    val result : kotlin.collections.List<Balance> = apiInstance.v1BalancesGet(exchangeId)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling BalancesApi#v1BalancesGet")
@@ -43,7 +43,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**kotlin.Array&lt;Balance&gt;**](Balance.md)
+[**kotlin.collections.List&lt;Balance&gt;**](Balance.md)
 
 ### Authorization
 

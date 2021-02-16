@@ -14,6 +14,7 @@ import 'package:openapi/api/positions_api.dart';
 
 import 'package:openapi/model/balance.dart';
 import 'package:openapi/model/balance_data.dart';
+import 'package:openapi/model/fills.dart';
 import 'package:openapi/model/message.dart';
 import 'package:openapi/model/ord_side.dart';
 import 'package:openapi/model/ord_status.dart';
@@ -34,6 +35,7 @@ import 'package:openapi/model/validation_error.dart';
 final _jsonJaguarRepo = JsonRepo()
 ..add(BalanceSerializer())
 ..add(BalanceDataSerializer())
+..add(FillsSerializer())
 ..add(MessageSerializer())
 
 

@@ -1,4 +1,4 @@
-/* 
+/*
  * OEML - REST API
  *
  * This section will provide necessary information about the `CoinAPI OEML REST API` protocol. This API is also available in the Postman application: <a href=\"https://postman.coinapi.io/\" target=\"_blank\">https://postman.coinapi.io/</a>       
@@ -19,9 +19,10 @@ using Xunit;
 
 using CoinAPI.OMS.API.SDK.Client;
 using CoinAPI.OMS.API.SDK.Api;
-using CoinAPI.OMS.API.SDK.Model;
+// uncomment below to import models
+//using CoinAPI.OMS.API.SDK.Model;
 
-namespace CoinAPI.OMS.API.SDK.Test
+namespace CoinAPI.OMS.API.SDK.Test.Api
 {
     /// <summary>
     ///  Class for testing BalancesApi
@@ -50,11 +51,10 @@ namespace CoinAPI.OMS.API.SDK.Test
         [Fact]
         public void InstanceTest()
         {
-            // TODO uncomment below to test 'IsInstanceOfType' BalancesApi
-            //Assert.IsType(typeof(BalancesApi), instance, "instance is a BalancesApi");
+            // TODO uncomment below to test 'IsType' BalancesApi
+            //Assert.IsType<BalancesApi>(instance);
         }
 
-        
         /// <summary>
         /// Test V1BalancesGet
         /// </summary>
@@ -64,9 +64,7 @@ namespace CoinAPI.OMS.API.SDK.Test
             // TODO uncomment below to test the method and replace null with proper value
             //string exchangeId = null;
             //var response = instance.V1BalancesGet(exchangeId);
-            //Assert.IsType<List<Balance>> (response, "response is List<Balance>");
+            //Assert.IsType<List<Balance>>(response);
         }
-        
     }
-
 }

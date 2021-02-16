@@ -56,109 +56,121 @@
 
     it('should have the property exchangeId (base name: "exchange_id")', function() {
       // uncomment below and update the code to test the property exchangeId
-      //var instane = new OemlRestApi.OrderExecutionReport();
+      //var instance = new OemlRestApi.OrderExecutionReport();
       //expect(instance).to.be();
     });
 
     it('should have the property clientOrderId (base name: "client_order_id")', function() {
       // uncomment below and update the code to test the property clientOrderId
-      //var instane = new OemlRestApi.OrderExecutionReport();
+      //var instance = new OemlRestApi.OrderExecutionReport();
       //expect(instance).to.be();
     });
 
     it('should have the property symbolIdExchange (base name: "symbol_id_exchange")', function() {
       // uncomment below and update the code to test the property symbolIdExchange
-      //var instane = new OemlRestApi.OrderExecutionReport();
+      //var instance = new OemlRestApi.OrderExecutionReport();
       //expect(instance).to.be();
     });
 
     it('should have the property symbolIdCoinapi (base name: "symbol_id_coinapi")', function() {
       // uncomment below and update the code to test the property symbolIdCoinapi
-      //var instane = new OemlRestApi.OrderExecutionReport();
+      //var instance = new OemlRestApi.OrderExecutionReport();
       //expect(instance).to.be();
     });
 
     it('should have the property amountOrder (base name: "amount_order")', function() {
       // uncomment below and update the code to test the property amountOrder
-      //var instane = new OemlRestApi.OrderExecutionReport();
+      //var instance = new OemlRestApi.OrderExecutionReport();
       //expect(instance).to.be();
     });
 
     it('should have the property price (base name: "price")', function() {
       // uncomment below and update the code to test the property price
-      //var instane = new OemlRestApi.OrderExecutionReport();
+      //var instance = new OemlRestApi.OrderExecutionReport();
       //expect(instance).to.be();
     });
 
     it('should have the property side (base name: "side")', function() {
       // uncomment below and update the code to test the property side
-      //var instane = new OemlRestApi.OrderExecutionReport();
+      //var instance = new OemlRestApi.OrderExecutionReport();
       //expect(instance).to.be();
     });
 
     it('should have the property orderType (base name: "order_type")', function() {
       // uncomment below and update the code to test the property orderType
-      //var instane = new OemlRestApi.OrderExecutionReport();
+      //var instance = new OemlRestApi.OrderExecutionReport();
       //expect(instance).to.be();
     });
 
     it('should have the property timeInForce (base name: "time_in_force")', function() {
       // uncomment below and update the code to test the property timeInForce
-      //var instane = new OemlRestApi.OrderExecutionReport();
+      //var instance = new OemlRestApi.OrderExecutionReport();
       //expect(instance).to.be();
     });
 
     it('should have the property expireTime (base name: "expire_time")', function() {
       // uncomment below and update the code to test the property expireTime
-      //var instane = new OemlRestApi.OrderExecutionReport();
+      //var instance = new OemlRestApi.OrderExecutionReport();
       //expect(instance).to.be();
     });
 
     it('should have the property execInst (base name: "exec_inst")', function() {
       // uncomment below and update the code to test the property execInst
-      //var instane = new OemlRestApi.OrderExecutionReport();
+      //var instance = new OemlRestApi.OrderExecutionReport();
       //expect(instance).to.be();
     });
 
     it('should have the property clientOrderIdFormatExchange (base name: "client_order_id_format_exchange")', function() {
       // uncomment below and update the code to test the property clientOrderIdFormatExchange
-      //var instane = new OemlRestApi.OrderExecutionReport();
+      //var instance = new OemlRestApi.OrderExecutionReport();
       //expect(instance).to.be();
     });
 
     it('should have the property exchangeOrderId (base name: "exchange_order_id")', function() {
       // uncomment below and update the code to test the property exchangeOrderId
-      //var instane = new OemlRestApi.OrderExecutionReport();
+      //var instance = new OemlRestApi.OrderExecutionReport();
       //expect(instance).to.be();
     });
 
     it('should have the property amountOpen (base name: "amount_open")', function() {
       // uncomment below and update the code to test the property amountOpen
-      //var instane = new OemlRestApi.OrderExecutionReport();
+      //var instance = new OemlRestApi.OrderExecutionReport();
       //expect(instance).to.be();
     });
 
     it('should have the property amountFilled (base name: "amount_filled")', function() {
       // uncomment below and update the code to test the property amountFilled
-      //var instane = new OemlRestApi.OrderExecutionReport();
+      //var instance = new OemlRestApi.OrderExecutionReport();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property avgPx (base name: "avg_px")', function() {
+      // uncomment below and update the code to test the property avgPx
+      //var instance = new OemlRestApi.OrderExecutionReport();
       //expect(instance).to.be();
     });
 
     it('should have the property status (base name: "status")', function() {
       // uncomment below and update the code to test the property status
-      //var instane = new OemlRestApi.OrderExecutionReport();
+      //var instance = new OemlRestApi.OrderExecutionReport();
       //expect(instance).to.be();
     });
 
-    it('should have the property timeOrder (base name: "time_order")', function() {
-      // uncomment below and update the code to test the property timeOrder
-      //var instane = new OemlRestApi.OrderExecutionReport();
+    it('should have the property statusHistory (base name: "status_history")', function() {
+      // uncomment below and update the code to test the property statusHistory
+      //var instance = new OemlRestApi.OrderExecutionReport();
       //expect(instance).to.be();
     });
 
     it('should have the property errorMessage (base name: "error_message")', function() {
       // uncomment below and update the code to test the property errorMessage
-      //var instane = new OemlRestApi.OrderExecutionReport();
+      //var instance = new OemlRestApi.OrderExecutionReport();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property fills (base name: "fills")', function() {
+      // uncomment below and update the code to test the property fills
+      //var instance = new OemlRestApi.OrderExecutionReport();
       //expect(instance).to.be();
     });
 

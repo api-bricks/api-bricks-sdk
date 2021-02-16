@@ -1,4 +1,4 @@
-/* 
+/*
  * OEML - REST API
  *
  * This section will provide necessary information about the `CoinAPI OEML REST API` protocol. This API is also available in the Postman application: <a href=\"https://postman.coinapi.io/\" target=\"_blank\">https://postman.coinapi.io/</a>       
@@ -21,7 +21,7 @@ using CoinAPI.OMS.API.SDK.Client;
 using System.Reflection;
 using Newtonsoft.Json;
 
-namespace CoinAPI.OMS.API.SDK.Test
+namespace CoinAPI.OMS.API.SDK.Test.Model
 {
     /// <summary>
     ///  Class for testing OrderExecutionReport
@@ -52,8 +52,8 @@ namespace CoinAPI.OMS.API.SDK.Test
         [Fact]
         public void OrderExecutionReportInstanceTest()
         {
-            // TODO uncomment below to test "IsInstanceOfType" OrderExecutionReport
-            //Assert.IsInstanceOfType<OrderExecutionReport> (instance, "variable 'instance' is a OrderExecutionReport");
+            // TODO uncomment below to test "IsType" OrderExecutionReport
+            //Assert.IsType<OrderExecutionReport>(instance);
         }
 
 
@@ -178,6 +178,14 @@ namespace CoinAPI.OMS.API.SDK.Test
             // TODO unit test for the property 'AmountFilled'
         }
         /// <summary>
+        /// Test the property 'AvgPx'
+        /// </summary>
+        [Fact]
+        public void AvgPxTest()
+        {
+            // TODO unit test for the property 'AvgPx'
+        }
+        /// <summary>
         /// Test the property 'Status'
         /// </summary>
         [Fact]
@@ -186,12 +194,12 @@ namespace CoinAPI.OMS.API.SDK.Test
             // TODO unit test for the property 'Status'
         }
         /// <summary>
-        /// Test the property 'TimeOrder'
+        /// Test the property 'StatusHistory'
         /// </summary>
         [Fact]
-        public void TimeOrderTest()
+        public void StatusHistoryTest()
         {
-            // TODO unit test for the property 'TimeOrder'
+            // TODO unit test for the property 'StatusHistory'
         }
         /// <summary>
         /// Test the property 'ErrorMessage'
@@ -200,6 +208,14 @@ namespace CoinAPI.OMS.API.SDK.Test
         public void ErrorMessageTest()
         {
             // TODO unit test for the property 'ErrorMessage'
+        }
+        /// <summary>
+        /// Test the property 'Fills'
+        /// </summary>
+        [Fact]
+        public void FillsTest()
+        {
+            // TODO unit test for the property 'Fills'
         }
 
     }

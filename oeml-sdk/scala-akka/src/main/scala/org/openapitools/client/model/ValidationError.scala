@@ -16,7 +16,7 @@ import org.openapitools.client.core.ApiModel
 case class ValidationError (
   `type`: Option[String] = None,
   title: Option[String] = None,
-  status: Option[Double] = None,
+  status: Option[BigDecimal] = None,
   traceId: Option[String] = None,
   errors: Option[String] = None
 ) extends ApiModel

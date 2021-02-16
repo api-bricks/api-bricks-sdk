@@ -1,4 +1,4 @@
-/* 
+/*
  * OEML - REST API
  *
  * This section will provide necessary information about the `CoinAPI OEML REST API` protocol. This API is also available in the Postman application: <a href=\"https://postman.coinapi.io/\" target=\"_blank\">https://postman.coinapi.io/</a>       
@@ -10,16 +10,17 @@
 
 
 using System;
-using System.Linq;
-using System.IO;
-using System.Text;
-using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Linq;
+using System.IO;
 using System.Runtime.Serialization;
+using System.Text;
+using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = CoinAPI.OMS.API.SDK.Client.OpenAPIDateConverter;
 
@@ -28,23 +29,23 @@ namespace CoinAPI.OMS.API.SDK.Model
     /// <summary>
     /// The order execution report object.
     /// </summary>
-    [DataContract]
-    public partial class OrderExecutionReport :  IEquatable<OrderExecutionReport>, IValidatableObject
+    [DataContract(Name = "OrderExecutionReport")]
+    public partial class OrderExecutionReport : IEquatable<OrderExecutionReport>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets Side
         /// </summary>
-        [DataMember(Name="side", EmitDefaultValue=false)]
+        [DataMember(Name = "side", IsRequired = true, EmitDefaultValue = false)]
         public OrdSide Side { get; set; }
         /// <summary>
         /// Gets or Sets OrderType
         /// </summary>
-        [DataMember(Name="order_type", EmitDefaultValue=false)]
+        [DataMember(Name = "order_type", IsRequired = true, EmitDefaultValue = false)]
         public OrdType OrderType { get; set; }
         /// <summary>
         /// Gets or Sets TimeInForce
         /// </summary>
-        [DataMember(Name="time_in_force", EmitDefaultValue=false)]
+        [DataMember(Name = "time_in_force", IsRequired = true, EmitDefaultValue = false)]
         public TimeInForce TimeInForce { get; set; }
         /// <summary>
         /// Defines ExecInst
@@ -77,12 +78,12 @@ namespace CoinAPI.OMS.API.SDK.Model
         /// Order execution instructions are documented in the separate section: &lt;a href&#x3D;\&quot;#oeml-order-params-exec\&quot;&gt;OEML / Starter Guide / Order parameters / Execution instructions&lt;/a&gt; 
         /// </summary>
         /// <value>Order execution instructions are documented in the separate section: &lt;a href&#x3D;\&quot;#oeml-order-params-exec\&quot;&gt;OEML / Starter Guide / Order parameters / Execution instructions&lt;/a&gt; </value>
-        [DataMember(Name="exec_inst", EmitDefaultValue=false)]
+        [DataMember(Name = "exec_inst", EmitDefaultValue = false)]
         public List<ExecInstEnum> ExecInst { get; set; }
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
-        [DataMember(Name="status", EmitDefaultValue=false)]
+        [DataMember(Name = "status", IsRequired = true, EmitDefaultValue = false)]
         public OrdStatus Status { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="OrderExecutionReport" /> class.
@@ -107,10 +108,12 @@ namespace CoinAPI.OMS.API.SDK.Model
         /// <param name="exchangeOrderId">Unique identifier of the order assigned by the exchange or executing system..</param>
         /// <param name="amountOpen">Quantity open for further execution. &#x60;amount_open&#x60; &#x3D; &#x60;amount_order&#x60; - &#x60;amount_filled&#x60; (required).</param>
         /// <param name="amountFilled">Total quantity filled. (required).</param>
+        /// <param name="avgPx">Calculated average price of all fills on this order..</param>
         /// <param name="status">status (required).</param>
-        /// <param name="timeOrder">Timestamped history of order status changes. (required).</param>
-        /// <param name="errorMessage">Error message.</param>
-        public OrderExecutionReport(string exchangeId = default(string), string clientOrderId = default(string), string symbolIdExchange = default(string), string symbolIdCoinapi = default(string), decimal amountOrder = default(decimal), decimal price = default(decimal), OrdSide side = default(OrdSide), OrdType orderType = default(OrdType), TimeInForce timeInForce = default(TimeInForce), DateTime expireTime = default(DateTime), List<ExecInstEnum> execInst = default(List<ExecInstEnum>), string clientOrderIdFormatExchange = default(string), string exchangeOrderId = default(string), decimal amountOpen = default(decimal), decimal amountFilled = default(decimal), OrdStatus status = default(OrdStatus), List<List<string>> timeOrder = default(List<List<string>>), string errorMessage = default(string))
+        /// <param name="statusHistory">Timestamped history of order status changes..</param>
+        /// <param name="errorMessage">Error message..</param>
+        /// <param name="fills">Relay fill information on working orders..</param>
+        public OrderExecutionReport(string exchangeId = default(string), string clientOrderId = default(string), string symbolIdExchange = default(string), string symbolIdCoinapi = default(string), decimal amountOrder = default(decimal), decimal price = default(decimal), OrdSide side = default(OrdSide), OrdType orderType = default(OrdType), TimeInForce timeInForce = default(TimeInForce), DateTime expireTime = default(DateTime), List<ExecInstEnum> execInst = default(List<ExecInstEnum>), string clientOrderIdFormatExchange = default(string), string exchangeOrderId = default(string), decimal amountOpen = default(decimal), decimal amountFilled = default(decimal), decimal avgPx = default(decimal), OrdStatus status = default(OrdStatus), List<List<string>> statusHistory = default(List<List<string>>), string errorMessage = default(string), List<Fills> fills = default(List<Fills>))
         {
             // to ensure "exchangeId" is required (not null)
             this.ExchangeId = exchangeId ?? throw new ArgumentNullException("exchangeId is a required property for OrderExecutionReport and cannot be null");
@@ -126,106 +129,121 @@ namespace CoinAPI.OMS.API.SDK.Model
             this.AmountOpen = amountOpen;
             this.AmountFilled = amountFilled;
             this.Status = status;
-            // to ensure "timeOrder" is required (not null)
-            this.TimeOrder = timeOrder ?? throw new ArgumentNullException("timeOrder is a required property for OrderExecutionReport and cannot be null");
             this.SymbolIdExchange = symbolIdExchange;
             this.SymbolIdCoinapi = symbolIdCoinapi;
             this.ExpireTime = expireTime;
             this.ExecInst = execInst;
             this.ExchangeOrderId = exchangeOrderId;
+            this.AvgPx = avgPx;
+            this.StatusHistory = statusHistory;
             this.ErrorMessage = errorMessage;
+            this.Fills = fills;
         }
-        
+
         /// <summary>
         /// Exchange identifier used to identify the routing destination.
         /// </summary>
         /// <value>Exchange identifier used to identify the routing destination.</value>
-        [DataMember(Name="exchange_id", EmitDefaultValue=false)]
+        [DataMember(Name = "exchange_id", IsRequired = true, EmitDefaultValue = false)]
         public string ExchangeId { get; set; }
 
         /// <summary>
         /// The unique identifier of the order assigned by the client.
         /// </summary>
         /// <value>The unique identifier of the order assigned by the client.</value>
-        [DataMember(Name="client_order_id", EmitDefaultValue=false)]
+        [DataMember(Name = "client_order_id", IsRequired = true, EmitDefaultValue = false)]
         public string ClientOrderId { get; set; }
 
         /// <summary>
         /// Exchange symbol. One of the properties (&#x60;symbol_id_exchange&#x60;, &#x60;symbol_id_coinapi&#x60;) is required to identify the market for the new order.
         /// </summary>
         /// <value>Exchange symbol. One of the properties (&#x60;symbol_id_exchange&#x60;, &#x60;symbol_id_coinapi&#x60;) is required to identify the market for the new order.</value>
-        [DataMember(Name="symbol_id_exchange", EmitDefaultValue=false)]
+        [DataMember(Name = "symbol_id_exchange", EmitDefaultValue = false)]
         public string SymbolIdExchange { get; set; }
 
         /// <summary>
         /// CoinAPI symbol. One of the properties (&#x60;symbol_id_exchange&#x60;, &#x60;symbol_id_coinapi&#x60;) is required to identify the market for the new order.
         /// </summary>
         /// <value>CoinAPI symbol. One of the properties (&#x60;symbol_id_exchange&#x60;, &#x60;symbol_id_coinapi&#x60;) is required to identify the market for the new order.</value>
-        [DataMember(Name="symbol_id_coinapi", EmitDefaultValue=false)]
+        [DataMember(Name = "symbol_id_coinapi", EmitDefaultValue = false)]
         public string SymbolIdCoinapi { get; set; }
 
         /// <summary>
         /// Order quantity.
         /// </summary>
         /// <value>Order quantity.</value>
-        [DataMember(Name="amount_order", EmitDefaultValue=false)]
+        [DataMember(Name = "amount_order", IsRequired = true, EmitDefaultValue = false)]
         public decimal AmountOrder { get; set; }
 
         /// <summary>
         /// Order price.
         /// </summary>
         /// <value>Order price.</value>
-        [DataMember(Name="price", EmitDefaultValue=false)]
+        [DataMember(Name = "price", IsRequired = true, EmitDefaultValue = false)]
         public decimal Price { get; set; }
 
         /// <summary>
         /// Expiration time. Conditionaly required for orders with time_in_force &#x3D; &#x60;GOOD_TILL_TIME_EXCHANGE&#x60; or &#x60;GOOD_TILL_TIME_OEML&#x60;.
         /// </summary>
         /// <value>Expiration time. Conditionaly required for orders with time_in_force &#x3D; &#x60;GOOD_TILL_TIME_EXCHANGE&#x60; or &#x60;GOOD_TILL_TIME_OEML&#x60;.</value>
-        [DataMember(Name="expire_time", EmitDefaultValue=false)]
+        [DataMember(Name = "expire_time", EmitDefaultValue = false)]
         public DateTime ExpireTime { get; set; }
 
         /// <summary>
         /// The unique identifier of the order assigned by the client converted to the exchange order tag format for the purpose of tracking it.
         /// </summary>
         /// <value>The unique identifier of the order assigned by the client converted to the exchange order tag format for the purpose of tracking it.</value>
-        [DataMember(Name="client_order_id_format_exchange", EmitDefaultValue=false)]
+        [DataMember(Name = "client_order_id_format_exchange", IsRequired = true, EmitDefaultValue = false)]
         public string ClientOrderIdFormatExchange { get; set; }
 
         /// <summary>
         /// Unique identifier of the order assigned by the exchange or executing system.
         /// </summary>
         /// <value>Unique identifier of the order assigned by the exchange or executing system.</value>
-        [DataMember(Name="exchange_order_id", EmitDefaultValue=false)]
+        [DataMember(Name = "exchange_order_id", EmitDefaultValue = false)]
         public string ExchangeOrderId { get; set; }
 
         /// <summary>
         /// Quantity open for further execution. &#x60;amount_open&#x60; &#x3D; &#x60;amount_order&#x60; - &#x60;amount_filled&#x60;
         /// </summary>
         /// <value>Quantity open for further execution. &#x60;amount_open&#x60; &#x3D; &#x60;amount_order&#x60; - &#x60;amount_filled&#x60;</value>
-        [DataMember(Name="amount_open", EmitDefaultValue=false)]
+        [DataMember(Name = "amount_open", IsRequired = true, EmitDefaultValue = false)]
         public decimal AmountOpen { get; set; }
 
         /// <summary>
         /// Total quantity filled.
         /// </summary>
         /// <value>Total quantity filled.</value>
-        [DataMember(Name="amount_filled", EmitDefaultValue=false)]
+        [DataMember(Name = "amount_filled", IsRequired = true, EmitDefaultValue = false)]
         public decimal AmountFilled { get; set; }
+
+        /// <summary>
+        /// Calculated average price of all fills on this order.
+        /// </summary>
+        /// <value>Calculated average price of all fills on this order.</value>
+        [DataMember(Name = "avg_px", EmitDefaultValue = false)]
+        public decimal AvgPx { get; set; }
 
         /// <summary>
         /// Timestamped history of order status changes.
         /// </summary>
         /// <value>Timestamped history of order status changes.</value>
-        [DataMember(Name="time_order", EmitDefaultValue=false)]
-        public List<List<string>> TimeOrder { get; set; }
+        [DataMember(Name = "status_history", EmitDefaultValue = false)]
+        public List<List<string>> StatusHistory { get; set; }
 
         /// <summary>
-        /// Error message
+        /// Error message.
         /// </summary>
-        /// <value>Error message</value>
-        [DataMember(Name="error_message", EmitDefaultValue=false)]
+        /// <value>Error message.</value>
+        [DataMember(Name = "error_message", EmitDefaultValue = false)]
         public string ErrorMessage { get; set; }
+
+        /// <summary>
+        /// Relay fill information on working orders.
+        /// </summary>
+        /// <value>Relay fill information on working orders.</value>
+        [DataMember(Name = "fills", EmitDefaultValue = false)]
+        public List<Fills> Fills { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -250,20 +268,22 @@ namespace CoinAPI.OMS.API.SDK.Model
             sb.Append("  ExchangeOrderId: ").Append(ExchangeOrderId).Append("\n");
             sb.Append("  AmountOpen: ").Append(AmountOpen).Append("\n");
             sb.Append("  AmountFilled: ").Append(AmountFilled).Append("\n");
+            sb.Append("  AvgPx: ").Append(AvgPx).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
-            sb.Append("  TimeOrder: ").Append(TimeOrder).Append("\n");
+            sb.Append("  StatusHistory: ").Append(StatusHistory).Append("\n");
             sb.Append("  ErrorMessage: ").Append(ErrorMessage).Append("\n");
+            sb.Append("  Fills: ").Append(Fills).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
         public virtual string ToJson()
         {
-            return JsonConvert.SerializeObject(this, Formatting.Indented);
+            return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
 
         /// <summary>
@@ -355,19 +375,29 @@ namespace CoinAPI.OMS.API.SDK.Model
                     this.AmountFilled.Equals(input.AmountFilled)
                 ) && 
                 (
+                    this.AvgPx == input.AvgPx ||
+                    this.AvgPx.Equals(input.AvgPx)
+                ) && 
+                (
                     this.Status == input.Status ||
                     this.Status.Equals(input.Status)
                 ) && 
                 (
-                    this.TimeOrder == input.TimeOrder ||
-                    this.TimeOrder != null &&
-                    input.TimeOrder != null &&
-                    this.TimeOrder.SequenceEqual(input.TimeOrder)
+                    this.StatusHistory == input.StatusHistory ||
+                    this.StatusHistory != null &&
+                    input.StatusHistory != null &&
+                    this.StatusHistory.SequenceEqual(input.StatusHistory)
                 ) && 
                 (
                     this.ErrorMessage == input.ErrorMessage ||
                     (this.ErrorMessage != null &&
                     this.ErrorMessage.Equals(input.ErrorMessage))
+                ) && 
+                (
+                    this.Fills == input.Fills ||
+                    this.Fills != null &&
+                    input.Fills != null &&
+                    this.Fills.SequenceEqual(input.Fills)
                 );
         }
 
@@ -402,11 +432,14 @@ namespace CoinAPI.OMS.API.SDK.Model
                     hashCode = hashCode * 59 + this.ExchangeOrderId.GetHashCode();
                 hashCode = hashCode * 59 + this.AmountOpen.GetHashCode();
                 hashCode = hashCode * 59 + this.AmountFilled.GetHashCode();
+                hashCode = hashCode * 59 + this.AvgPx.GetHashCode();
                 hashCode = hashCode * 59 + this.Status.GetHashCode();
-                if (this.TimeOrder != null)
-                    hashCode = hashCode * 59 + this.TimeOrder.GetHashCode();
+                if (this.StatusHistory != null)
+                    hashCode = hashCode * 59 + this.StatusHistory.GetHashCode();
                 if (this.ErrorMessage != null)
                     hashCode = hashCode * 59 + this.ErrorMessage.GetHashCode();
+                if (this.Fills != null)
+                    hashCode = hashCode * 59 + this.Fills.GetHashCode();
                 return hashCode;
             }
         }

@@ -13,12 +13,12 @@
 /**
  * OASValidationError
  */
-public class OASValidationError implements OAS.MappedProperties {
+public class OASValidationError {
     /**
-     * Get r_type
-     * @return r_type
+     * Get type
+     * @return type
      */
-    public String r_type { get; set; }
+    public String type { get; set; }
 
     /**
      * Get title
@@ -44,17 +44,9 @@ public class OASValidationError implements OAS.MappedProperties {
      */
     public String errors { get; set; }
 
-    private static final Map<String, String> propertyMappings = new Map<String, String>{
-        'type' => 'r_type'
-    };
-
-    public Map<String, String> getPropertyMappings() {
-        return propertyMappings;
-    }
-
     public static OASValidationError getExample() {
         OASValidationError validationError = new OASValidationError();
-          validationError.r_type = 'https://tools.ietf.org/html/rfc7231#section-6.5.1';
+          validationError.type = 'https://tools.ietf.org/html/rfc7231#section-6.5.1';
           validationError.title = 'One or more validation errors occurred.';
           validationError.status = 400;
           validationError.traceId = 'd200e8b5-4271a5461ce5342f';
@@ -65,7 +57,7 @@ public class OASValidationError implements OAS.MappedProperties {
     public Boolean equals(Object obj) {
         if (obj instanceof OASValidationError) {           
             OASValidationError validationError = (OASValidationError) obj;
-            return this.r_type == validationError.r_type
+            return this.type == validationError.type
                 && this.title == validationError.title
                 && this.status == validationError.status
                 && this.traceId == validationError.traceId
@@ -76,7 +68,7 @@ public class OASValidationError implements OAS.MappedProperties {
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (r_type == null ? 0 : System.hashCode(r_type));
+        hashCode = (17 * hashCode) + (type == null ? 0 : System.hashCode(type));
         hashCode = (17 * hashCode) + (title == null ? 0 : System.hashCode(title));
         hashCode = (17 * hashCode) + (status == null ? 0 : System.hashCode(status));
         hashCode = (17 * hashCode) + (traceId == null ? 0 : System.hashCode(traceId));

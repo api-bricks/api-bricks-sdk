@@ -19,6 +19,7 @@
             [oeml-rest-api.specs.position :refer :all]
             [oeml-rest-api.specs.order-new-single-request :refer :all]
             [oeml-rest-api.specs.ord-side :refer :all]
+            [oeml-rest-api.specs.fills :refer :all]
             )
   (:import (java.io File)))
 

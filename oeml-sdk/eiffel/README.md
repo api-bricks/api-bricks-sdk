@@ -37,6 +37,7 @@ Class | Method | HTTP request | Description
 
  - [BALANCE](docs/BALANCE.md)
  - [BALANCE_DATA](docs/BALANCE_DATA.md)
+ - [FILLS](docs/FILLS.md)
  - [MESSAGE](docs/MESSAGE.md)
  - [ORDER_CANCEL_ALL_REQUEST](docs/ORDER_CANCEL_ALL_REQUEST.md)
  - [ORDER_CANCEL_SINGLE_REQUEST](docs/ORDER_CANCEL_SINGLE_REQUEST.md)

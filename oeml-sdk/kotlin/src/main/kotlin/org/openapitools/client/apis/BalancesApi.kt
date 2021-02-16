@@ -38,14 +38,14 @@ class BalancesApi(basePath: kotlin.String = defaultBasePath) : ApiClient(basePat
     * Get balances
     * Get current currency balance from all or single exchange.
     * @param exchangeId Filter the balances to the specific exchange. (optional)
-    * @return kotlin.Array<Balance>
+    * @return kotlin.collections.List<Balance>
     * @throws UnsupportedOperationException If the API returns an informational or redirection response
     * @throws ClientException If the API returns a client error response
     * @throws ServerException If the API returns a server error response
     */
     @Suppress("UNCHECKED_CAST")
     @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun v1BalancesGet(exchangeId: kotlin.String?) : kotlin.Array<Balance> {
+    fun v1BalancesGet(exchangeId: kotlin.String?) : kotlin.collections.List<Balance> {
         val localVariableBody: kotlin.Any? = null
         val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, List<kotlin.String>>()
             .apply {
@@ -60,13 +60,13 @@ class BalancesApi(basePath: kotlin.String = defaultBasePath) : ApiClient(basePat
             query = localVariableQuery,
             headers = localVariableHeaders
         )
-        val localVarResponse = request<kotlin.Array<Balance>>(
+        val localVarResponse = request<kotlin.collections.List<Balance>>(
             localVariableConfig,
             localVariableBody
         )
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.Array<Balance>
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<Balance>
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {

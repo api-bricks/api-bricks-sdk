@@ -12,7 +12,7 @@
 
 #include "OAIBalancesApi.h"
 #include "OAIHelpers.h"
-
+#include "OAIServerConfiguration.h"
 #include <QJsonArray>
 #include <QJsonDocument>
 
@@ -24,10 +24,45 @@ OAIBalancesApi::OAIBalancesApi(const QString &scheme, const QString &host, int p
       _port(port),
       _basePath(basePath),
       _timeOut(timeOut),
+      _manager(nullptr),
       isResponseCompressionEnabled(false),
-      isRequestCompressionEnabled(false) {}
+      isRequestCompressionEnabled(false) {
+      initializeServerConfigs();
+      }
 
 OAIBalancesApi::~OAIBalancesApi() {
+}
+
+void OAIBalancesApi::initializeServerConfigs(){
+
+//Default server
+QList<OAIServerConfiguration> defaultConf = QList<OAIServerConfiguration>();
+//varying endpoint server 
+QList<OAIServerConfiguration> serverConf = QList<OAIServerConfiguration>();
+defaultConf.append(OAIServerConfiguration(
+    "https://13d16e9d-d8b1-4ef4-bc4a-ed8156b2b159.mock.pstmn.io",
+    "No description provided",
+    QMap<QString, OAIServerVariable>()));
+_serverConfigs.insert("v1BalancesGet",defaultConf);
+_serverIndices.insert("v1BalancesGet",0);
+
+
+}
+
+/**
+* returns 0 on success and -1, -2 or -3 on failure.
+* -1 when the variable does not exist and -2 if the value is not defined in the enum and -3 if the operation or server index is not found 
+*/
+int OAIBalancesApi::setDefaultServerValue(int serverIndex, const QString &operation, const QString &variable, const QString &value){
+    auto it = _serverConfigs.find(operation);
+    if(it != _serverConfigs.end() && serverIndex < it.value().size() ){
+      return _serverConfigs[operation][serverIndex].setDefaultValue(variable,value);
+    }
+    return -3;
+}
+void OAIBalancesApi::setServerIndex(const QString &operation, int serverIndex){
+    if(_serverIndices.contains(operation) && serverIndex < _serverConfigs.find(operation).value().size() )
+        _serverIndices[operation] = serverIndex;
 }
 
 void OAIBalancesApi::setScheme(const QString &scheme) {
@@ -42,6 +77,22 @@ void OAIBalancesApi::setPort(int port) {
     _port = port;
 }
 
+void OAIBalancesApi::setApiKey(const QString &apiKeyName, const QString &apiKey){
+    _apiKeys.insert(apiKeyName,apiKey);
+}
+
+void OAIBalancesApi::setBearerToken(const QString &token){
+    _bearerToken = token;
+}
+
+void OAIBalancesApi::setUsername(const QString &username) {
+    _username = username;
+}
+
+void OAIBalancesApi::setPassword(const QString &password) {
+    _password = password;
+}
+
 void OAIBalancesApi::setBasePath(const QString &basePath) {
     _basePath = basePath;
 }
@@ -52,6 +103,10 @@ void OAIBalancesApi::setTimeOut(const int timeOut) {
 
 void OAIBalancesApi::setWorkingDirectory(const QString &path) {
     _workingDirectory = path;
+}
+
+void OAIBalancesApi::setNetworkAccessManager(QNetworkAccessManager* manager) {
+    _manager = manager;  
 }
 
 void OAIBalancesApi::addHeaders(const QString &key, const QString &value) {
@@ -71,12 +126,8 @@ void OAIBalancesApi::abortRequests(){
 }
 
 void OAIBalancesApi::v1BalancesGet(const QString &exchange_id) {
-    QString fullPath = QString("%1://%2%3%4%5")
-                           .arg(_scheme)
-                           .arg(_host)
-                           .arg(_port ? ":" + QString::number(_port) : "")
-                           .arg(_basePath)
-                           .arg("/v1/balances");
+    QString fullPath = QString(_serverConfigs["v1BalancesGet"][_serverIndices.value("v1BalancesGet")].URL()+"/v1/balances");
+
 
     if (fullPath.indexOf("?") > 0)
         fullPath.append("&");
@@ -84,7 +135,7 @@ void OAIBalancesApi::v1BalancesGet(const QString &exchange_id) {
         fullPath.append("?");
     fullPath.append(QUrl::toPercentEncoding("exchange_id")).append("=").append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(exchange_id)));
 
-    OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this);
+    OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
     worker->setWorkingDirectory(_workingDirectory);
     OAIHttpRequestInput input(fullPath, "GET");

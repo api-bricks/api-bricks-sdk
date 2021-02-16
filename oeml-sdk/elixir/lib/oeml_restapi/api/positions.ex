@@ -25,7 +25,7 @@ defmodule OEML-RESTAPI.Api.Positions do
   {:ok, [%Position{}, ...]} on success
   {:error, info} on failure
   """
-  @spec v1_positions_get(Tesla.Env.client, keyword()) :: {:ok, list(OEML-RESTAPI.Model.Position.t)} | {:error, Tesla.Env.t}
+  @spec v1_positions_get(Tesla.Env.client, keyword()) :: {:ok, list(OEML-RESTAPI.Model.Position.t)} | {:ok, OEML-RESTAPI.Model.Message.t} | {:error, Tesla.Env.t}
   def v1_positions_get(connection, opts \\ []) do
     optional_params = %{
       :"exchange_id" => :query

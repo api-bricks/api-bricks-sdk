@@ -8,8 +8,11 @@
 
 #' @docType class
 #' @title Message
+#'
 #' @description Message Class
+#'
 #' @format An \code{R6Class} generator object
+#'
 #' @field type  character [optional]
 #'
 #' @field severity  \link{Severity} [optional]
@@ -17,7 +20,6 @@
 #' @field exchange_id  character [optional]
 #'
 #' @field message  character [optional]
-#'
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -29,7 +31,9 @@ Message <- R6::R6Class(
     `severity` = NULL,
     `exchange_id` = NULL,
     `message` = NULL,
-    initialize = function(`type`=NULL, `severity`=NULL, `exchange_id`=NULL, `message`=NULL, ...){
+    initialize = function(
+        `type`=NULL, `severity`=NULL, `exchange_id`=NULL, `message`=NULL, ...
+    ) {
       local.optional.var <- list(...)
       if (!is.null(`type`)) {
         stopifnot(is.character(`type`), length(`type`) == 1)
@@ -85,6 +89,7 @@ Message <- R6::R6Class(
       if (!is.null(MessageObject$`message`)) {
         self$`message` <- MessageObject$`message`
       }
+      self
     },
     toJSONString = function() {
       jsoncontent <- c(
@@ -130,3 +135,4 @@ Message <- R6::R6Class(
     }
   )
 )
+

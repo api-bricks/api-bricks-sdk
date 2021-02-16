@@ -1,4 +1,4 @@
-/* 
+/*
  * OEML - REST API
  *
  * This section will provide necessary information about the `CoinAPI OEML REST API` protocol. This API is also available in the Postman application: <a href=\"https://postman.coinapi.io/\" target=\"_blank\">https://postman.coinapi.io/</a>       
@@ -10,16 +10,17 @@
 
 
 using System;
-using System.Linq;
-using System.IO;
-using System.Text;
-using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Linq;
+using System.IO;
 using System.Runtime.Serialization;
+using System.Text;
+using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = CoinAPI.OMS.API.SDK.Client.OpenAPIDateConverter;
 
@@ -28,23 +29,23 @@ namespace CoinAPI.OMS.API.SDK.Model
     /// <summary>
     /// The new order message.
     /// </summary>
-    [DataContract]
-    public partial class OrderNewSingleRequest :  IEquatable<OrderNewSingleRequest>, IValidatableObject
+    [DataContract(Name = "OrderNewSingleRequest")]
+    public partial class OrderNewSingleRequest : IEquatable<OrderNewSingleRequest>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets Side
         /// </summary>
-        [DataMember(Name="side", EmitDefaultValue=false)]
+        [DataMember(Name = "side", IsRequired = true, EmitDefaultValue = false)]
         public OrdSide Side { get; set; }
         /// <summary>
         /// Gets or Sets OrderType
         /// </summary>
-        [DataMember(Name="order_type", EmitDefaultValue=false)]
+        [DataMember(Name = "order_type", IsRequired = true, EmitDefaultValue = false)]
         public OrdType OrderType { get; set; }
         /// <summary>
         /// Gets or Sets TimeInForce
         /// </summary>
-        [DataMember(Name="time_in_force", EmitDefaultValue=false)]
+        [DataMember(Name = "time_in_force", IsRequired = true, EmitDefaultValue = false)]
         public TimeInForce TimeInForce { get; set; }
         /// <summary>
         /// Defines ExecInst
@@ -77,7 +78,7 @@ namespace CoinAPI.OMS.API.SDK.Model
         /// Order execution instructions are documented in the separate section: &lt;a href&#x3D;\&quot;#oeml-order-params-exec\&quot;&gt;OEML / Starter Guide / Order parameters / Execution instructions&lt;/a&gt; 
         /// </summary>
         /// <value>Order execution instructions are documented in the separate section: &lt;a href&#x3D;\&quot;#oeml-order-params-exec\&quot;&gt;OEML / Starter Guide / Order parameters / Execution instructions&lt;/a&gt; </value>
-        [DataMember(Name="exec_inst", EmitDefaultValue=false)]
+        [DataMember(Name = "exec_inst", EmitDefaultValue = false)]
         public List<ExecInstEnum> ExecInst { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="OrderNewSingleRequest" /> class.
@@ -114,54 +115,54 @@ namespace CoinAPI.OMS.API.SDK.Model
             this.ExpireTime = expireTime;
             this.ExecInst = execInst;
         }
-        
+
         /// <summary>
         /// Exchange identifier used to identify the routing destination.
         /// </summary>
         /// <value>Exchange identifier used to identify the routing destination.</value>
-        [DataMember(Name="exchange_id", EmitDefaultValue=false)]
+        [DataMember(Name = "exchange_id", IsRequired = true, EmitDefaultValue = false)]
         public string ExchangeId { get; set; }
 
         /// <summary>
         /// The unique identifier of the order assigned by the client.
         /// </summary>
         /// <value>The unique identifier of the order assigned by the client.</value>
-        [DataMember(Name="client_order_id", EmitDefaultValue=false)]
+        [DataMember(Name = "client_order_id", IsRequired = true, EmitDefaultValue = false)]
         public string ClientOrderId { get; set; }
 
         /// <summary>
         /// Exchange symbol. One of the properties (&#x60;symbol_id_exchange&#x60;, &#x60;symbol_id_coinapi&#x60;) is required to identify the market for the new order.
         /// </summary>
         /// <value>Exchange symbol. One of the properties (&#x60;symbol_id_exchange&#x60;, &#x60;symbol_id_coinapi&#x60;) is required to identify the market for the new order.</value>
-        [DataMember(Name="symbol_id_exchange", EmitDefaultValue=false)]
+        [DataMember(Name = "symbol_id_exchange", EmitDefaultValue = false)]
         public string SymbolIdExchange { get; set; }
 
         /// <summary>
         /// CoinAPI symbol. One of the properties (&#x60;symbol_id_exchange&#x60;, &#x60;symbol_id_coinapi&#x60;) is required to identify the market for the new order.
         /// </summary>
         /// <value>CoinAPI symbol. One of the properties (&#x60;symbol_id_exchange&#x60;, &#x60;symbol_id_coinapi&#x60;) is required to identify the market for the new order.</value>
-        [DataMember(Name="symbol_id_coinapi", EmitDefaultValue=false)]
+        [DataMember(Name = "symbol_id_coinapi", EmitDefaultValue = false)]
         public string SymbolIdCoinapi { get; set; }
 
         /// <summary>
         /// Order quantity.
         /// </summary>
         /// <value>Order quantity.</value>
-        [DataMember(Name="amount_order", EmitDefaultValue=false)]
+        [DataMember(Name = "amount_order", IsRequired = true, EmitDefaultValue = false)]
         public decimal AmountOrder { get; set; }
 
         /// <summary>
         /// Order price.
         /// </summary>
         /// <value>Order price.</value>
-        [DataMember(Name="price", EmitDefaultValue=false)]
+        [DataMember(Name = "price", IsRequired = true, EmitDefaultValue = false)]
         public decimal Price { get; set; }
 
         /// <summary>
         /// Expiration time. Conditionaly required for orders with time_in_force &#x3D; &#x60;GOOD_TILL_TIME_EXCHANGE&#x60; or &#x60;GOOD_TILL_TIME_OEML&#x60;.
         /// </summary>
         /// <value>Expiration time. Conditionaly required for orders with time_in_force &#x3D; &#x60;GOOD_TILL_TIME_EXCHANGE&#x60; or &#x60;GOOD_TILL_TIME_OEML&#x60;.</value>
-        [DataMember(Name="expire_time", EmitDefaultValue=false)]
+        [DataMember(Name = "expire_time", EmitDefaultValue = false)]
         public DateTime ExpireTime { get; set; }
 
         /// <summary>
@@ -186,14 +187,14 @@ namespace CoinAPI.OMS.API.SDK.Model
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
         public virtual string ToJson()
         {
-            return JsonConvert.SerializeObject(this, Formatting.Indented);
+            return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
 
         /// <summary>

@@ -1,4 +1,4 @@
-/* 
+/*
  * OEML - REST API
  *
  * This section will provide necessary information about the `CoinAPI OEML REST API` protocol. This API is also available in the Postman application: <a href=\"https://postman.coinapi.io/\" target=\"_blank\">https://postman.coinapi.io/</a>       
@@ -10,16 +10,17 @@
 
 
 using System;
-using System.Linq;
-using System.IO;
-using System.Text;
-using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Linq;
+using System.IO;
 using System.Runtime.Serialization;
+using System.Text;
+using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = CoinAPI.OMS.API.SDK.Client.OpenAPIDateConverter;
 
@@ -28,8 +29,8 @@ namespace CoinAPI.OMS.API.SDK.Model
     /// <summary>
     /// BalanceData
     /// </summary>
-    [DataContract]
-    public partial class BalanceData :  IEquatable<BalanceData>, IValidatableObject
+    [DataContract(Name = "Balance_data")]
+    public partial class BalanceData : IEquatable<BalanceData>, IValidatableObject
     {
         /// <summary>
         /// Source of the last modification. 
@@ -62,7 +63,7 @@ namespace CoinAPI.OMS.API.SDK.Model
         /// Source of the last modification. 
         /// </summary>
         /// <value>Source of the last modification. </value>
-        [DataMember(Name="last_updated_by", EmitDefaultValue=false)]
+        [DataMember(Name = "last_updated_by", EmitDefaultValue = false)]
         public LastUpdatedByEnum? LastUpdatedBy { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="BalanceData" /> class.
@@ -86,54 +87,54 @@ namespace CoinAPI.OMS.API.SDK.Model
             this.RateUsd = rateUsd;
             this.Traded = traded;
         }
-        
+
         /// <summary>
         /// Exchange currency code.
         /// </summary>
         /// <value>Exchange currency code.</value>
-        [DataMember(Name="asset_id_exchange", EmitDefaultValue=false)]
+        [DataMember(Name = "asset_id_exchange", EmitDefaultValue = false)]
         public string AssetIdExchange { get; set; }
 
         /// <summary>
         /// CoinAPI currency code.
         /// </summary>
         /// <value>CoinAPI currency code.</value>
-        [DataMember(Name="asset_id_coinapi", EmitDefaultValue=false)]
+        [DataMember(Name = "asset_id_coinapi", EmitDefaultValue = false)]
         public string AssetIdCoinapi { get; set; }
 
         /// <summary>
         /// Value of the current total currency balance on the exchange.
         /// </summary>
         /// <value>Value of the current total currency balance on the exchange.</value>
-        [DataMember(Name="balance", EmitDefaultValue=false)]
+        [DataMember(Name = "balance", EmitDefaultValue = false)]
         public float Balance { get; set; }
 
         /// <summary>
         /// Value of the current available currency balance on the exchange that can be used as collateral.
         /// </summary>
         /// <value>Value of the current available currency balance on the exchange that can be used as collateral.</value>
-        [DataMember(Name="available", EmitDefaultValue=false)]
+        [DataMember(Name = "available", EmitDefaultValue = false)]
         public float Available { get; set; }
 
         /// <summary>
         /// Value of the current locked currency balance by the exchange.
         /// </summary>
         /// <value>Value of the current locked currency balance by the exchange.</value>
-        [DataMember(Name="locked", EmitDefaultValue=false)]
+        [DataMember(Name = "locked", EmitDefaultValue = false)]
         public float Locked { get; set; }
 
         /// <summary>
         /// Current exchange rate to the USD for the single unit of the currency. 
         /// </summary>
         /// <value>Current exchange rate to the USD for the single unit of the currency. </value>
-        [DataMember(Name="rate_usd", EmitDefaultValue=false)]
+        [DataMember(Name = "rate_usd", EmitDefaultValue = false)]
         public float RateUsd { get; set; }
 
         /// <summary>
         /// Value of the current total traded.
         /// </summary>
         /// <value>Value of the current total traded.</value>
-        [DataMember(Name="traded", EmitDefaultValue=false)]
+        [DataMember(Name = "traded", EmitDefaultValue = false)]
         public float Traded { get; set; }
 
         /// <summary>
@@ -155,14 +156,14 @@ namespace CoinAPI.OMS.API.SDK.Model
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
         public virtual string ToJson()
         {
-            return JsonConvert.SerializeObject(this, Formatting.Indented);
+            return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
 
         /// <summary>

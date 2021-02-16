@@ -8,8 +8,11 @@
 
 #' @docType class
 #' @title OrderExecutionReport
+#'
 #' @description OrderExecutionReport Class
+#'
 #' @format An \code{R6Class} generator object
+#'
 #' @field exchange_id  character 
 #'
 #' @field client_order_id  character 
@@ -40,12 +43,15 @@
 #'
 #' @field amount_filled  numeric 
 #'
+#' @field avg_px  numeric [optional]
+#'
 #' @field status  \link{OrdStatus} 
 #'
-#' @field time_order  list( \link{array[character]} ) 
+#' @field status_history  list( \link{array[character]} ) [optional]
 #'
 #' @field error_message  character [optional]
 #'
+#' @field fills  list( \link{Fills} ) [optional]
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -68,10 +74,14 @@ OrderExecutionReport <- R6::R6Class(
     `exchange_order_id` = NULL,
     `amount_open` = NULL,
     `amount_filled` = NULL,
+    `avg_px` = NULL,
     `status` = NULL,
-    `time_order` = NULL,
+    `status_history` = NULL,
     `error_message` = NULL,
-    initialize = function(`exchange_id`, `client_order_id`, `amount_order`, `price`, `side`, `order_type`, `time_in_force`, `client_order_id_format_exchange`, `amount_open`, `amount_filled`, `status`, `time_order`, `symbol_id_exchange`=NULL, `symbol_id_coinapi`=NULL, `expire_time`=NULL, `exec_inst`=NULL, `exchange_order_id`=NULL, `error_message`=NULL, ...){
+    `fills` = NULL,
+    initialize = function(
+        `exchange_id`, `client_order_id`, `amount_order`, `price`, `side`, `order_type`, `time_in_force`, `client_order_id_format_exchange`, `amount_open`, `amount_filled`, `status`, `symbol_id_exchange`=NULL, `symbol_id_coinapi`=NULL, `expire_time`=NULL, `exec_inst`=NULL, `exchange_order_id`=NULL, `avg_px`=NULL, `status_history`=NULL, `error_message`=NULL, `fills`=NULL, ...
+    ) {
       local.optional.var <- list(...)
       if (!missing(`exchange_id`)) {
         stopifnot(is.character(`exchange_id`), length(`exchange_id`) == 1)
@@ -113,11 +123,6 @@ OrderExecutionReport <- R6::R6Class(
         stopifnot(R6::is.R6(`status`))
         self$`status` <- `status`
       }
-      if (!missing(`time_order`)) {
-        stopifnot(is.vector(`time_order`), length(`time_order`) != 0)
-        sapply(`time_order`, function(x) stopifnot(R6::is.R6(x)))
-        self$`time_order` <- `time_order`
-      }
       if (!is.null(`symbol_id_exchange`)) {
         stopifnot(is.character(`symbol_id_exchange`), length(`symbol_id_exchange`) == 1)
         self$`symbol_id_exchange` <- `symbol_id_exchange`
@@ -138,9 +143,22 @@ OrderExecutionReport <- R6::R6Class(
         stopifnot(is.character(`exchange_order_id`), length(`exchange_order_id`) == 1)
         self$`exchange_order_id` <- `exchange_order_id`
       }
+      if (!is.null(`avg_px`)) {
+        self$`avg_px` <- `avg_px`
+      }
+      if (!is.null(`status_history`)) {
+        stopifnot(is.vector(`status_history`), length(`status_history`) != 0)
+        sapply(`status_history`, function(x) stopifnot(R6::is.R6(x)))
+        self$`status_history` <- `status_history`
+      }
       if (!is.null(`error_message`)) {
         stopifnot(is.character(`error_message`), length(`error_message`) == 1)
         self$`error_message` <- `error_message`
+      }
+      if (!is.null(`fills`)) {
+        stopifnot(is.vector(`fills`), length(`fills`) != 0)
+        sapply(`fills`, function(x) stopifnot(R6::is.R6(x)))
+        self$`fills` <- `fills`
       }
     },
     toJSON = function() {
@@ -205,17 +223,25 @@ OrderExecutionReport <- R6::R6Class(
         OrderExecutionReportObject[['amount_filled']] <-
           self$`amount_filled`
       }
+      if (!is.null(self$`avg_px`)) {
+        OrderExecutionReportObject[['avg_px']] <-
+          self$`avg_px`
+      }
       if (!is.null(self$`status`)) {
         OrderExecutionReportObject[['status']] <-
           self$`status`$toJSON()
       }
-      if (!is.null(self$`time_order`)) {
-        OrderExecutionReportObject[['time_order']] <-
-          lapply(self$`time_order`, function(x) x$toJSON())
+      if (!is.null(self$`status_history`)) {
+        OrderExecutionReportObject[['status_history']] <-
+          lapply(self$`status_history`, function(x) x$toJSON())
       }
       if (!is.null(self$`error_message`)) {
         OrderExecutionReportObject[['error_message']] <-
           self$`error_message`
+      }
+      if (!is.null(self$`fills`)) {
+        OrderExecutionReportObject[['fills']] <-
+          lapply(self$`fills`, function(x) x$toJSON())
       }
 
       OrderExecutionReportObject
@@ -273,17 +299,24 @@ OrderExecutionReport <- R6::R6Class(
       if (!is.null(OrderExecutionReportObject$`amount_filled`)) {
         self$`amount_filled` <- OrderExecutionReportObject$`amount_filled`
       }
+      if (!is.null(OrderExecutionReportObject$`avg_px`)) {
+        self$`avg_px` <- OrderExecutionReportObject$`avg_px`
+      }
       if (!is.null(OrderExecutionReportObject$`status`)) {
         statusObject <- OrdStatus$new()
         statusObject$fromJSON(jsonlite::toJSON(OrderExecutionReportObject$status, auto_unbox = TRUE, digits = NA))
         self$`status` <- statusObject
       }
-      if (!is.null(OrderExecutionReportObject$`time_order`)) {
-        self$`time_order` <- ApiClient$new()$deserializeObj(OrderExecutionReportObject$`time_order`, "array[array[character]]", loadNamespace("openapi"))
+      if (!is.null(OrderExecutionReportObject$`status_history`)) {
+        self$`status_history` <- ApiClient$new()$deserializeObj(OrderExecutionReportObject$`status_history`, "array[array[character]]", loadNamespace("openapi"))
       }
       if (!is.null(OrderExecutionReportObject$`error_message`)) {
         self$`error_message` <- OrderExecutionReportObject$`error_message`
       }
+      if (!is.null(OrderExecutionReportObject$`fills`)) {
+        self$`fills` <- ApiClient$new()$deserializeObj(OrderExecutionReportObject$`fills`, "array[Fills]", loadNamespace("openapi"))
+      }
+      self
     },
     toJSONString = function() {
       jsoncontent <- c(
@@ -392,6 +425,13 @@ OrderExecutionReport <- R6::R6Class(
                 ',
         self$`amount_filled`
         )},
+        if (!is.null(self$`avg_px`)) {
+        sprintf(
+        '"avg_px":
+          %d
+                ',
+        self$`avg_px`
+        )},
         if (!is.null(self$`status`)) {
         sprintf(
         '"status":
@@ -399,12 +439,12 @@ OrderExecutionReport <- R6::R6Class(
         ',
         jsonlite::toJSON(self$`status`$toJSON(), auto_unbox=TRUE, digits = NA)
         )},
-        if (!is.null(self$`time_order`)) {
+        if (!is.null(self$`status_history`)) {
         sprintf(
-        '"time_order":
+        '"status_history":
         [%s]
 ',
-        paste(sapply(self$`time_order`, function(x) jsonlite::toJSON(x$toJSON(), auto_unbox=TRUE, digits = NA)), collapse=",")
+        paste(sapply(self$`status_history`, function(x) jsonlite::toJSON(x$toJSON(), auto_unbox=TRUE, digits = NA)), collapse=",")
         )},
         if (!is.null(self$`error_message`)) {
         sprintf(
@@ -412,6 +452,13 @@ OrderExecutionReport <- R6::R6Class(
           "%s"
                 ',
         self$`error_message`
+        )},
+        if (!is.null(self$`fills`)) {
+        sprintf(
+        '"fills":
+        [%s]
+',
+        paste(sapply(self$`fills`, function(x) jsonlite::toJSON(x$toJSON(), auto_unbox=TRUE, digits = NA)), collapse=",")
         )}
       )
       jsoncontent <- paste(jsoncontent, collapse = ",")
@@ -434,10 +481,13 @@ OrderExecutionReport <- R6::R6Class(
       self$`exchange_order_id` <- OrderExecutionReportObject$`exchange_order_id`
       self$`amount_open` <- OrderExecutionReportObject$`amount_open`
       self$`amount_filled` <- OrderExecutionReportObject$`amount_filled`
+      self$`avg_px` <- OrderExecutionReportObject$`avg_px`
       self$`status` <- OrdStatus$new()$fromJSON(jsonlite::toJSON(OrderExecutionReportObject$status, auto_unbox = TRUE, digits = NA))
-      self$`time_order` <- ApiClient$new()$deserializeObj(OrderExecutionReportObject$`time_order`, "array[array[character]]", loadNamespace("openapi"))
+      self$`status_history` <- ApiClient$new()$deserializeObj(OrderExecutionReportObject$`status_history`, "array[array[character]]", loadNamespace("openapi"))
       self$`error_message` <- OrderExecutionReportObject$`error_message`
+      self$`fills` <- ApiClient$new()$deserializeObj(OrderExecutionReportObject$`fills`, "array[Fills]", loadNamespace("openapi"))
       self
     }
   )
 )
+

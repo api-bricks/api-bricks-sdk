@@ -7,7 +7,7 @@ import com.dslplatform.json.JsonAttribute;
 public class Hello {
 
     private String type = "hello";
-    private String apiKey;
+    private String apikey;
     private Boolean heartbeat = true;
     private String[] subscribeDataType;
     private String[] subscribeFilterSymbolId;
@@ -21,8 +21,8 @@ public class Hello {
         return type;
     }
 
-    public String getApiKey() {
-        return apiKey;
+    public String getApikey() {
+        return apikey;
     }
 
     public Boolean getHeartbeat() {
@@ -64,8 +64,8 @@ public class Hello {
         return subscribeUpdateLimitMsBookSnapshot;
     }
 
-    public void setApiKey(String apiKey) {
-        this.apiKey = apiKey;
+    public void setApikey(String apikey) {
+        this.apikey = apikey;
     }
 
     public void setHeartbeat(Boolean heartbeat) {

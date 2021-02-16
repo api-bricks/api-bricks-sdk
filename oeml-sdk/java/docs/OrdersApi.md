@@ -162,7 +162,7 @@ public class Example {
     defaultClient.setBasePath("https://13d16e9d-d8b1-4ef4-bc4a-ed8156b2b159.mock.pstmn.io");
 
     OrdersApi apiInstance = new OrdersApi(defaultClient);
-    String exchangeId = KRAKEN; // String | Filter the open orders to the specific exchange.
+    String exchangeId = "KRAKEN"; // String | Filter the open orders to the specific exchange.
     try {
       List<OrderExecutionReport> result = apiInstance.v1OrdersGet(exchangeId);
       System.out.println(result);
@@ -290,7 +290,7 @@ public class Example {
     defaultClient.setBasePath("https://13d16e9d-d8b1-4ef4-bc4a-ed8156b2b159.mock.pstmn.io");
 
     OrdersApi apiInstance = new OrdersApi(defaultClient);
-    String clientOrderId = 6ab36bc1-344d-432e-ac6d-0bf44ee64c2b; // String | The unique identifier of the order assigned by the client.
+    String clientOrderId = "6ab36bc1-344d-432e-ac6d-0bf44ee64c2b"; // String | The unique identifier of the order assigned by the client.
     try {
       OrderExecutionReport result = apiInstance.v1OrdersStatusClientOrderIdGet(clientOrderId);
       System.out.println(result);

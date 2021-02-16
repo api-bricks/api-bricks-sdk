@@ -23,7 +23,10 @@ void order_cancel_all_request_free(order_cancel_all_request_t *order_cancel_all_
         return ;
     }
     listEntry_t *listEntry;
-    free(order_cancel_all_request->exchange_id);
+    if (order_cancel_all_request->exchange_id) {
+        free(order_cancel_all_request->exchange_id);
+        order_cancel_all_request->exchange_id = NULL;
+    }
     free(order_cancel_all_request);
 }
 
