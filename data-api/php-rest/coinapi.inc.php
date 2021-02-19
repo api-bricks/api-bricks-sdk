@@ -2,10 +2,13 @@
 
 class CoinAPI
 {
+    public function $locale;
+
     var $ApiKey;
-    function __construct($Key)
+    function __construct($Key, $locale="en")
     {
         $this->ApiKey = $Key;
+        $this->locale = $locale;
     }
     
     // Metadata
@@ -311,7 +314,8 @@ class CoinAPI
         
         curl_setopt($ch, CURLOPT_HTTPHEADER, array(
             'X-CoinAPI-Key: ' . $this->ApiKey,
-            'Content-Type: application/json'
+            'Content-Type: application/json',
+            'Accept-Language: ' . $this->locale,
         ));
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         $output = curl_exec($ch);
