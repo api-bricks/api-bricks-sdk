@@ -9,7 +9,7 @@ package io.coinapi.rest;
  * <p>
  * @see <a href="https://docs.oracle.com/javase/8/docs/technotes/guides/language/enums.html">Enum documentation</a>
  */
-enum Period_identifier {
+public enum Period_identifier {
 	
 	_1SEC,
 	_2SEC,
