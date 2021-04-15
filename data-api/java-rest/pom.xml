@@ -5,7 +5,7 @@
 
     <groupId>io.coinapi.rest</groupId>
     <artifactId>v1</artifactId>
-    <version>1.13</version>
+    <version>1.14</version>
 
     <organization>
         <name>COINAPI LTD</name>
