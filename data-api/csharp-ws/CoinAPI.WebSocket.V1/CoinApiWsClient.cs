@@ -36,6 +36,14 @@ namespace CoinAPI.WebSocket.V1
         public DateTime? ConnectedTime { get; private set; }
         protected bool? ForceOverrideHeartbeat { get; set; } = true;
 
+
+        public CoinApiWsClient(bool isSandbox, double hbTimeoutSecs, double reconnectIntervalSecs) : this(isSandbox)
+        {
+            _hbTimeout = TimeSpan.FromSeconds(hbTimeoutSecs);
+            _reconnectInterval = TimeSpan.FromSeconds(reconnectIntervalSecs);
+        }
+
+
         public CoinApiWsClient(bool isSandbox = false)
         {
             _queueThread = new QueueThread<MessageData>();
