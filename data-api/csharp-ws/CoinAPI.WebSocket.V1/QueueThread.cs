@@ -7,7 +7,7 @@ namespace CoinAPI.WebSocket.V1
 {
     public class QueueThread<T> : IDisposable
     {
-        private readonly ManualResetEvent _messagesBufferEvent = new ManualResetEvent(false);
+        private readonly ManualResetEventSlim _messagesBufferEvent = new ManualResetEventSlim(false);
         private readonly TimeSpan _messagesRouterTimeout = TimeSpan.FromSeconds(1);
         private readonly int? _bufferCapacity;
         private Thread _messagesRouterThread;
@@ -38,17 +38,20 @@ namespace CoinAPI.WebSocket.V1
 
         private void MessagesRouter_Thread()
         {
+            T item;
             while (!_cts.IsCancellationRequested)
             {
                 try
                 {
-                    while (_messagesBufferEvent.WaitOne(_messagesRouterTimeout))
+                    _messagesBufferEvent.Wait(_messagesRouterTimeout, _cts.Token);
+
+                    do
                     {
-                        T item;
                         lock (_messagesBuffer)
                         {
                             if (_messagesBuffer.Count == 0)
                             {
+                                _messagesBufferEvent.Reset();
                                 break;
                             }
 
@@ -57,8 +60,7 @@ namespace CoinAPI.WebSocket.V1
 
                         ItemDequeuedEvent?.Invoke(this, item);
                     }
-
-                    _messagesBufferEvent.Reset();
+                    while (!_cts.IsCancellationRequested);
                 }
                 catch (Exception ex)
                 {
@@ -79,7 +81,10 @@ namespace CoinAPI.WebSocket.V1
                 _messagesBuffer.Enqueue(item);
             }
 
-            _messagesBufferEvent.Set();
+            if(!_messagesBufferEvent.IsSet)
+            {
+                _messagesBufferEvent.Set();
+            }
             return true;
         }
 

@@ -81,7 +81,7 @@ namespace CoinAPI.WebSocket.V1
         {
             var data = JsonSerializer.Deserialize<MessageBase>(item.Data);
 
-            if (!Enum.TryParse(data.type, out MessageType messageType))
+            if (!data.type.TryParse(out var messageType))
             {
                 // unknown type
                 return;
