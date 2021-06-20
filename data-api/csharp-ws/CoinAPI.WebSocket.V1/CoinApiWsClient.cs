@@ -11,6 +11,7 @@ namespace CoinAPI.WebSocket.V1
 {
     public class CoinApiWsClient : ICoinApiWsClient, IDisposable
     {
+        private static readonly int ReceiveBufferSize = 8192;
         private const string UrlSandbox = "wss://ws-sandbox.coinapi.io/";
         private const string UrlProduction = "wss://ws.coinapi.io/";
 
@@ -22,7 +23,8 @@ namespace CoinAPI.WebSocket.V1
         private readonly TimeSpan _hbTimeout = TimeSpan.FromSeconds(10);
         private readonly TimeSpan _hbTimeoutCheckInterval = TimeSpan.FromSeconds(1);
         private readonly TimeSpan _reconnectInterval = TimeSpan.FromSeconds(1);
-        private DateTime _hbLastAction = DateTime.MinValue;
+        private int _hbLastAction;
+        private int _hbLastActionMaxCount;
 
         // client reference is leaked here only for testing purposes (forcing reconnects)
 #pragma warning disable IDE0069 // Disposable fields should be disposed
@@ -43,19 +45,17 @@ namespace CoinAPI.WebSocket.V1
             _reconnectInterval = TimeSpan.FromSeconds(reconnectIntervalSecs);
         }
 
-
-        public CoinApiWsClient(bool isSandbox = false)
+        public CoinApiWsClient(bool isSandbox = false) : this(isSandbox ? UrlSandbox : UrlProduction)
         {
-            _queueThread = new QueueThread<MessageData>();
-            _queueThread.ItemDequeuedEvent += _queueThread_ItemDequeuedEvent;
-            _url = isSandbox ? UrlSandbox : UrlProduction;
         }
+
         public CoinApiWsClient(string url)
         {
             _queueThread = new QueueThread<MessageData>();
             _queueThread.ItemDequeuedEvent += _queueThread_ItemDequeuedEvent;
             _url = url;
         }
+
         public void SendHelloMessage(Hello msg)
         {
             if (msg == null)
@@ -200,10 +200,13 @@ namespace CoinAPI.WebSocket.V1
 
         private async Task HeartbeatWatcher(ClientWebSocket client, CancellationTokenSource connectionCts)
         {
+            // the quantity of loops that can be performed before timing out
+            _hbLastActionMaxCount = _hbTimeout.Seconds / _hbTimeoutCheckInterval.Seconds;
+
             while (!connectionCts.IsCancellationRequested)
             {
-                var lag = DateTime.UtcNow - _hbLastAction;
-                if (lag > _hbTimeout)
+                // _hbLastAction is cleared by the connection worker, if we reach maxCount here means it hasn't gotten any message for a while
+                if (Interlocked.Increment(ref _hbLastAction) >= _hbLastActionMaxCount)
                 {
                     connectionCts.Cancel();
                     await client.CloseAsync(WebSocketCloseStatus.NormalClosure, 
@@ -217,7 +220,7 @@ namespace CoinAPI.WebSocket.V1
 
         private async Task HandleConnection(CancellationTokenSource connectionCts)
         {
-            _hbLastAction = DateTime.UtcNow;
+            Interlocked.Exchange(ref _hbLastAction, 0);
 
             using (_client = new ClientWebSocket())
             {
@@ -228,13 +231,14 @@ namespace CoinAPI.WebSocket.V1
                     ConnectedTime = DateTime.UtcNow;
                     ConnectedEvent.Set();
                     ConnectedEvent.Reset();
-                    _hbLastAction = DateTime.UtcNow;
+                    Interlocked.Exchange(ref _hbLastAction, 0);
 
                     var currentHello = HelloMessage;
                     var helloAs = new ArraySegment<byte>(JsonSerializer.Serialize(currentHello));
                     await _client.SendAsync(helloAs, WebSocketMessageType.Text, true, connectionCts.Token);
-                    _hbLastAction = DateTime.UtcNow;
+                    Interlocked.Exchange(ref _hbLastAction, 0);
 
+                    var bufferArray = new byte[ReceiveBufferSize];
                     while (_client.State == WebSocketState.Open && !connectionCts.IsCancellationRequested)
                     {
                         if (currentHello != HelloMessage)
@@ -242,10 +246,10 @@ namespace CoinAPI.WebSocket.V1
                             currentHello = HelloMessage;
                             helloAs = new ArraySegment<byte>(JsonSerializer.Serialize(currentHello));
                             await _client.SendAsync(helloAs, WebSocketMessageType.Text, true, connectionCts.Token);
-                            _hbLastAction = DateTime.UtcNow;
+                            Interlocked.Exchange(ref _hbLastAction, 0);
                         }
-                        var messageData = await WSUtils.ReceiveMessage(_client, connectionCts.Token);
-                        _hbLastAction = DateTime.UtcNow;
+                        var messageData = await WSUtils.ReceiveMessage(_client, connectionCts.Token, bufferArray);
+                        Interlocked.Exchange(ref _hbLastAction, 0);
 
                         if (messageData.MessageType == WebSocketMessageType.Close)
                         {

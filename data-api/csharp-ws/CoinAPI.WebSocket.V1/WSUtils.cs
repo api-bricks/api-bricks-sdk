@@ -11,14 +11,14 @@ namespace CoinAPI.WebSocket.V1
 {
     internal static class WSUtils
     {
-        private static readonly int ReceiveBufferSize = 8192;
 
         internal async static Task<MessageData> ReceiveMessage(
             System.Net.WebSockets.WebSocket webSocket, 
-            CancellationToken ct, 
+            CancellationToken ct,
+            byte[] bufferArray,
             long maxSize = long.MaxValue)
         {
-            ArraySegment<Byte> buffer = new ArraySegment<byte>(new Byte[ReceiveBufferSize]);
+            ArraySegment<Byte> buffer = new ArraySegment<byte>(bufferArray);
             WebSocketReceiveResult result = null;
 
             using (var ms = new MemoryStream())
