@@ -48,28 +48,27 @@ func main() {
 	bookInvoke := GetInvokeFunction(t.BOOK_L2_FULL)
 	sdk.SetBookInvoke(bookInvoke)
 
-	println(" * GetHello: Single data type!")
-	hello := getHello(false, false)
-
 	println(" * SendHello: Single data type!")
+	hello := getHello(false, false)
 	_ = sdk.SendHello(hello)
 
 	println(" * Wait for messages!")
 	time.Sleep(time.Second * 5)
 
-	println(" * GetHello: Expanded data t!")
-	hello = getHello(true, false)
+	println("******************")
+	println("* Hard Conn Reset *")
+	println("******************")
+	_ = sdk.ResetConnection()
 
 	println(" * SendHello: Expanded data t!")
+	hello = getHello(true, false)
 	_ = sdk.SendHello(hello)
 
 	println(" * Wait for messages!")
 	time.Sleep(time.Second * 5)
 
-	println(" * GetHello: Heartbeat!")
-	hello = getHello(false, true)
-
 	println(" * SendHello: Heartbeat!")
+	hello = getHello(false, true)
 	_ = sdk.SendHello(hello)
 
 	println(" * Wait for messages!")

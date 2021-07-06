@@ -24,21 +24,20 @@ func (s SDKImpl) CloseConnection() (err error) {
 	running = false
 
 	// close WS channel if its not yet fully closed!
-	// The nil check, however, seems not very effective to determine if a channel is already closed, but it prevents NPE.
 	if stopC != nil {
 		close(stopC)
 	}
 
-	// closes connection before message processing!
-	// When closing the underlying connection, message processing would throw useOfCloseConnection warnings
-	if doneC != nil {
-		close(doneC)
+	// close connection
+	err = con.Close()
+	if err != nil {
+		//log.Println("can't close connection")
+		log.Println(err)
 	}
-
-	return nil
+	return err
 }
 
-func (s SDKImpl) Reconnect() (err error) {
+func (s SDKImpl) ResetConnection() (err error) {
 
 	err = s.CloseConnection()
 	logError(err)
