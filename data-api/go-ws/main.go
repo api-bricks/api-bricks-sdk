@@ -10,7 +10,7 @@ import (
 
 const apiKey = "THIS-IS-A-SAMPLE-API-KEY-C2A7CB1EF"
 
-//All integrations:
+// All exchanges & data integrations:
 // https://www.coinapi.io/integration
 
 func main() {
