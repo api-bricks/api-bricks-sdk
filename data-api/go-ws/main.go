@@ -48,6 +48,9 @@ func main() {
 	bookInvoke := GetInvokeFunction(t.BOOK_L2_FULL)
 	sdk.SetBookInvoke(bookInvoke)
 
+	volInvoke := GetInvokeFunction(t.VOLUME)
+	sdk.SetVolumeInvoke(volInvoke)
+
 	println(" * SendHello: Single data type!")
 	hello := getHello(false, false)
 	_ = sdk.SendHello(hello)
@@ -74,10 +77,42 @@ func main() {
 	println(" * Wait for messages!")
 	time.Sleep(time.Second * 5)
 
+	println(" * GetHello: Volume only!")
+	hello = getExchangeVolumeHello(false)
+
+	println(" * SendHello: Requesting Volume type only !")
+	_ = sdk.SendHello(hello)
+
+	println(" * Wait for messages!")
+	time.Sleep(time.Second * 3)
+
+	// stop volume feed...
+	hello = getHello(false, false)
+	_ = sdk.SendHello(hello)
+	time.Sleep(time.Second * 1)
+
 	println(" * CloseConnection!")
 	_ = sdk.CloseConnection()
 
 	println("Goodbye!")
+}
+
+func getExchangeVolumeHello(heartbeat bool) (hello *t.Hello) {
+	// For volume data, only asset ID is required.
+	var assets []string
+	var dataTypes []string
+
+	assets = append(assets, "BTC")
+	dataTypes = append(dataTypes, "volume")
+
+	hello = &t.Hello{
+		Type:                      "hello",
+		Api_key:                   apiKey,
+		Heartbeat:                 heartbeat,
+		Subscribe_data_type:       dataTypes,
+		Subscribe_filter_asset_id: assets,
+	}
+	return hello
 }
 
 func getHello(expanded, heartbeat bool) (hello *t.Hello) {
@@ -236,7 +271,7 @@ func printMessage(msgType t.MessageType, message *t.DataMessage) {
 		log.Println(msg)
 		println()
 	case t.VOLUME:
-		msg := message.Quote
+		msg := message.Volume
 		log.Println(msg)
 		println()
 

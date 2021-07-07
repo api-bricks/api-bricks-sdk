@@ -30,7 +30,7 @@ func main() {
 	sdk.SetVolumeInvoke(volInvoke)
 
 	println(" * GetHello: Volume only!")
-	hello := getVolumeHello(false)
+	hello := getExchangeVolumeHello(false)
 
 	println(" * SendHello: Requesting Volume type only !")
 	_ = sdk.SendHello(hello)
@@ -44,11 +44,12 @@ func main() {
 	println("Goodbye!")
 }
 
-func getVolumeHello(heartbeat bool) (hello *t.Hello) {
-	// For volume data, only the Asset ID is required and nothing else.
-	// Notice, if you want to req quotes & volume, hello most contain symbol ID & asset ID
+func getExchangeVolumeHello(heartbeat bool) (hello *t.Hello) {
+	// For volume data, asset ID is required.
+	// Do not add a symbol ID as it triggers an error 1006 and ends the connection.
 	var dataTypes []string
 	var assets []string
+
 	dataTypes = append(dataTypes, "volume")
 	assets = append(assets, "BTC")
 
@@ -57,7 +58,7 @@ func getVolumeHello(heartbeat bool) (hello *t.Hello) {
 		Api_key:                   apiKey,
 		Heartbeat:                 heartbeat,
 		Subscribe_data_type:       dataTypes,
-		Subscribe_filter_asset_id: nil,
+		Subscribe_filter_asset_id: assets,
 	}
 	return hello
 }
