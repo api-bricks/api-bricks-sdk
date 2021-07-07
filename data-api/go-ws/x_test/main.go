@@ -21,12 +21,13 @@ func main() {
 
 	println(" * SetErrorInvoke!")
 	sdk.SetErrorInvoke(sys.ErrorInvoke)
-
 	println(" * SetHeartBeatInvoke!")
 	sdk.SetHeartBeatInvoke(sys.HeartBeatInvoke)
-
 	println(" * SetReconnectInvoke!")
 	sdk.SetReconnectInvoke(sys.ReconnectInvoke)
+
+	volInvoke := GetInvokeFunction(t.VOLUME)
+	sdk.SetVolumeInvoke(volInvoke)
 
 	println(" * GetHello: Volume only!")
 	hello := getVolumeHello(false)
@@ -44,21 +45,19 @@ func main() {
 }
 
 func getVolumeHello(heartbeat bool) (hello *t.Hello) {
+	// For volume data, only the Asset ID is required and nothing else.
+	// Notice, if you want to req quotes & volume, hello most contain symbol ID & asset ID
 	var dataTypes []string
-	var symbolIds []string
-	var periodIDs []string
-
+	var assets []string
 	dataTypes = append(dataTypes, "volume")
-	symbolIds = append(symbolIds, "COINBASE_SPOT_BTC_USD")
-	periodIDs = append(periodIDs, "1MIN")
+	assets = append(assets, "BTC")
 
 	hello = &t.Hello{
-		Type:                       "hello",
-		Api_key:                    apiKey,
-		Heartbeat:                  heartbeat,
-		Subscribe_data_type:        dataTypes,
-		Subscribe_filter_period_id: periodIDs,
-		Subscribe_filter_symbol_id: symbolIds,
+		Type:                      "hello",
+		Api_key:                   apiKey,
+		Heartbeat:                 heartbeat,
+		Subscribe_data_type:       dataTypes,
+		Subscribe_filter_asset_id: nil,
 	}
 	return hello
 }
@@ -183,7 +182,7 @@ func printMessage(msgType t.MessageType, message *t.DataMessage) {
 		log.Println(msg)
 		println()
 	case t.VOLUME:
-		msg := message.Quote
+		msg := message.Volume
 		log.Println(msg)
 		println()
 
