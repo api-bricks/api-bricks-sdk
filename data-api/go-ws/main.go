@@ -99,6 +99,7 @@ func main() {
 
 func getExchangeVolumeHello(heartbeat bool) (hello *t.Hello) {
 	// For volume data, only asset ID is required.
+	// It seems there is no filtering so expect huge volume from all connected exchanges..
 	var assets []string
 	var dataTypes []string
 
