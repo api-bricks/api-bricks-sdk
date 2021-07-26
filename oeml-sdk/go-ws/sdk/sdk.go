@@ -1,8 +1,8 @@
 package sdk
 
 import (
-	"go-ws/sdk/types"
-	"go-ws/sdk/v1"
+	"github.com/marvin-hansen/coinapi-sdk/oeml-sdk/go-ws/sdk/types"
+	v1 "github.com/marvin-hansen/coinapi-sdk/oeml-sdk/go-ws/sdk/v1"
 )
 
 func NewOemlSDK(url string, version types.Version) (sdk types.SDK) {

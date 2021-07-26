@@ -1,7 +1,7 @@
 package v1
 
 import (
-	"go-ws/sdk/types"
+	"github.com/marvin-hansen/coinapi-sdk/oeml-sdk/go-ws/sdk/types"
 )
 
 func (s SDKImpl) LookupSymbolData(exchangeID, baseSymbolCoinApi, quoteSymbolCoinApi string) (symbolData types.SymbolData, ok bool) {

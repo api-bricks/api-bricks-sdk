@@ -1,8 +1,8 @@
 package v1
 
 import (
-	"go-ws/sdk/types"
-	"go-ws/sdk/web_socket"
+	"github.com/marvin-hansen/coinapi-sdk/oeml-sdk/go-ws/sdk/types"
+	"github.com/marvin-hansen/coinapi-sdk/oeml-sdk/go-ws/sdk/web_socket"
 )
 
 type SDKImpl struct {

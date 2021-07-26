@@ -1,8 +1,8 @@
 package api
 
 import (
-	SDK "go-ws/sdk"
-	"go-ws/sdk/types"
+	"github.com/marvin-hansen/coinapi-sdk/oeml-sdk/go-ws/sdk"
+	"github.com/marvin-hansen/coinapi-sdk/oeml-sdk/go-ws/sdk/types"
 	"log"
 	"time"
 )
@@ -40,23 +40,23 @@ func main() {
 	CloseSocket(sdk)
 }
 
-func getSDK(url string) (sdk types.SDK) {
+func getSDK(url string) (oemlSDK types.SDK) {
 	println(" * NewSDK!")
-	sdk = SDK.NewOemlSDK(url, types.Version(1))
+	oemlSDK = sdk.NewOemlSDK(url, types.Version(1))
 
 	println(" * SetSysInvoke!")
 	sysInvoke := GetSysInvoke()
-	sdk.SetSystemInvoke(sysInvoke)
+	oemlSDK.SetSystemInvoke(sysInvoke)
 
 	println(" * SetSysSnapshotInvoke!")
 	snapInvoke := GetSnapshotInvoke()
-	sdk.SetSnapshotInvoke(snapInvoke)
+	oemlSDK.SetSnapshotInvoke(snapInvoke)
 
 	println(" * SetSysSnapshotInvoke!")
 	updInvoke := GetUpdateInvoke()
-	sdk.SetUpdateInvoke(updInvoke)
+	oemlSDK.SetUpdateInvoke(updInvoke)
 
-	return sdk
+	return oemlSDK
 }
 
 func TestSymbolLookup(sdk types.SDK) {

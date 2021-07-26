@@ -1,4 +1,4 @@
-module go-ws
+module github.com/marvin-hansen/coinapi-sdk/oeml-sdk/go-ws
 
 go 1.16
 
