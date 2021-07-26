@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **V1OrdersCancelAllPost**
-> Message V1OrdersCancelAllPost(order.cancel.all.request)
+> MessageReject V1OrdersCancelAllPost(order.cancel.all.request)
 
 Cancel all orders request
 
@@ -38,7 +38,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Message**](Message.md)
+[**MessageReject**](MessageReject.md)
 
 ### Authorization
 

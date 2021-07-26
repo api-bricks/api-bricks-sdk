@@ -66,12 +66,12 @@ class OrderCancelSingleRequest {
   static List<OrderCancelSingleRequest> listFromJson(List<dynamic> json, {bool emptyIsNull, bool growable,}) =>
     json == null || json.isEmpty
       ? true == emptyIsNull ? null : <OrderCancelSingleRequest>[]
-      : json.map((v) => OrderCancelSingleRequest.fromJson(v)).toList(growable: true == growable);
+      : json.map((dynamic value) => OrderCancelSingleRequest.fromJson(value)).toList(growable: true == growable);
 
   static Map<String, OrderCancelSingleRequest> mapFromJson(Map<String, dynamic> json) {
     final map = <String, OrderCancelSingleRequest>{};
-    if (json != null && json.isNotEmpty) {
-      json.forEach((String key, dynamic v) => map[key] = OrderCancelSingleRequest.fromJson(v));
+    if (json?.isNotEmpty == true) {
+      json.forEach((key, value) => map[key] = OrderCancelSingleRequest.fromJson(value));
     }
     return map;
   }
@@ -79,9 +79,9 @@ class OrderCancelSingleRequest {
   // maps a json object with a list of OrderCancelSingleRequest-objects as value to a dart map
   static Map<String, List<OrderCancelSingleRequest>> mapListFromJson(Map<String, dynamic> json, {bool emptyIsNull, bool growable,}) {
     final map = <String, List<OrderCancelSingleRequest>>{};
-    if (json != null && json.isNotEmpty) {
-      json.forEach((String key, dynamic v) {
-        map[key] = OrderCancelSingleRequest.listFromJson(v, emptyIsNull: emptyIsNull, growable: growable);
+    if (json?.isNotEmpty == true) {
+      json.forEach((key, value) {
+        map[key] = OrderCancelSingleRequest.listFromJson(value, emptyIsNull: emptyIsNull, growable: growable,);
       });
     }
     return map;

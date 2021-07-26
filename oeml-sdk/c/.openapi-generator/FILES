@@ -13,7 +13,7 @@ docs/PositionsAPI.md
 docs/balance.md
 docs/balance_data.md
 docs/fills.md
-docs/message.md
+docs/message_reject.md
 docs/ord_side.md
 docs/ord_status.md
 docs/ord_type.md
@@ -24,7 +24,7 @@ docs/order_execution_report_all_of.md
 docs/order_new_single_request.md
 docs/position.md
 docs/position_data.md
-docs/severity.md
+docs/reject_reason.md
 docs/time_in_force.md
 docs/validation_error.md
 external/cJSON.c
@@ -41,8 +41,8 @@ model/balance_data.c
 model/balance_data.h
 model/fills.c
 model/fills.h
-model/message.c
-model/message.h
+model/message_reject.c
+model/message_reject.h
 model/object.c
 model/object.h
 model/ord_side.c
@@ -65,8 +65,8 @@ model/position.c
 model/position.h
 model/position_data.c
 model/position_data.h
-model/severity.c
-model/severity.h
+model/reject_reason.c
+model/reject_reason.h
 model/time_in_force.c
 model/time_in_force.h
 model/validation_error.c
@@ -79,7 +79,7 @@ uncrustify-rules.cfg
 unit-test/test_balance.c
 unit-test/test_balance_data.c
 unit-test/test_fills.c
-unit-test/test_message.c
+unit-test/test_message_reject.c
 unit-test/test_ord_side.c
 unit-test/test_ord_status.c
 unit-test/test_ord_type.c
@@ -90,6 +90,6 @@ unit-test/test_order_execution_report_all_of.c
 unit-test/test_order_new_single_request.c
 unit-test/test_position.c
 unit-test/test_position_data.c
-unit-test/test_severity.c
+unit-test/test_reject_reason.c
 unit-test/test_time_in_force.c
 unit-test/test_validation_error.c

@@ -110,7 +110,7 @@ namespace CoinAPI.OMS.API.SDK.Api
         /// Initializes a new instance of the <see cref="PositionsApi"/> class.
         /// </summary>
         /// <returns></returns>
-        public PositionsApi(String basePath)
+        public PositionsApi(string basePath)
         {
             this.Configuration = CoinAPI.OMS.API.SDK.Client.Configuration.MergeConfigurations(
                 CoinAPI.OMS.API.SDK.Client.GlobalConfiguration.Instance,
@@ -173,7 +173,7 @@ namespace CoinAPI.OMS.API.SDK.Api
         /// Gets the base path of the API client.
         /// </summary>
         /// <value>The base path</value>
-        public String GetBasePath()
+        public string GetBasePath()
         {
             return this.Configuration.BasePath;
         }
@@ -222,11 +222,11 @@ namespace CoinAPI.OMS.API.SDK.Api
         {
             CoinAPI.OMS.API.SDK.Client.RequestOptions localVarRequestOptions = new CoinAPI.OMS.API.SDK.Client.RequestOptions();
 
-            String[] _contentTypes = new String[] {
+            string[] _contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] _accepts = new String[] {
+            string[] _accepts = new string[] {
                 "application/json",
                 "appliction/json"
             };
@@ -280,11 +280,11 @@ namespace CoinAPI.OMS.API.SDK.Api
 
             CoinAPI.OMS.API.SDK.Client.RequestOptions localVarRequestOptions = new CoinAPI.OMS.API.SDK.Client.RequestOptions();
 
-            String[] _contentTypes = new String[] {
+            string[] _contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] _accepts = new String[] {
+            string[] _accepts = new string[] {
                 "application/json",
                 "appliction/json"
             };

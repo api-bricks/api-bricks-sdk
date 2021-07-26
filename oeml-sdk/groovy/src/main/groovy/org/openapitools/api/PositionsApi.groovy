@@ -1,7 +1,7 @@
 package org.openapitools.api;
 
 import org.openapitools.api.ApiUtils
-import org.openapitools.model.Message
+import org.openapitools.model.MessageReject
 import org.openapitools.model.Position
 
 class PositionsApi {

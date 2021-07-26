@@ -15,7 +15,7 @@ package org.openapitools.client.api;
 
 import org.openapitools.client.ApiException;
 import org.openapitools.client.model.Balance;
-import org.openapitools.client.model.Message;
+import org.openapitools.client.model.MessageReject;
 import org.junit.Test;
 import org.junit.Ignore;
 

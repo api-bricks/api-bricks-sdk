@@ -122,7 +122,7 @@ Class | Method | HTTP request | Description
  - [Model.Balance](docs/Balance.md)
  - [Model.BalanceData](docs/BalanceData.md)
  - [Model.Fills](docs/Fills.md)
- - [Model.Message](docs/Message.md)
+ - [Model.MessageReject](docs/MessageReject.md)
  - [Model.OrdSide](docs/OrdSide.md)
  - [Model.OrdStatus](docs/OrdStatus.md)
  - [Model.OrdType](docs/OrdType.md)
@@ -133,7 +133,7 @@ Class | Method | HTTP request | Description
  - [Model.OrderNewSingleRequest](docs/OrderNewSingleRequest.md)
  - [Model.Position](docs/Position.md)
  - [Model.PositionData](docs/PositionData.md)
- - [Model.Severity](docs/Severity.md)
+ - [Model.RejectReason](docs/RejectReason.md)
  - [Model.TimeInForce](docs/TimeInForce.md)
  - [Model.ValidationError](docs/ValidationError.md)
 

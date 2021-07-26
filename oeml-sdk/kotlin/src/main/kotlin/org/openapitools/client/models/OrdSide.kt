@@ -19,6 +19,7 @@ import com.squareup.moshi.Json
 * Values: bUY,sELL
 */
 
+
 enum class OrdSide(val value: kotlin.String) {
 
 

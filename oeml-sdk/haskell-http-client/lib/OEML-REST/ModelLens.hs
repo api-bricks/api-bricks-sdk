@@ -114,27 +114,32 @@ fillsAmountL f Fills{..} = (\fillsAmount -> Fills { fillsAmount, ..} ) <$> f fil
 
 
 
--- * Message
+-- * MessageReject
 
--- | 'messageType' Lens
-messageTypeL :: Lens_' Message (Maybe Text)
-messageTypeL f Message{..} = (\messageType -> Message { messageType, ..} ) <$> f messageType
-{-# INLINE messageTypeL #-}
+-- | 'messageRejectType' Lens
+messageRejectTypeL :: Lens_' MessageReject (Maybe Text)
+messageRejectTypeL f MessageReject{..} = (\messageRejectType -> MessageReject { messageRejectType, ..} ) <$> f messageRejectType
+{-# INLINE messageRejectTypeL #-}
 
--- | 'messageSeverity' Lens
-messageSeverityL :: Lens_' Message (Maybe Severity)
-messageSeverityL f Message{..} = (\messageSeverity -> Message { messageSeverity, ..} ) <$> f messageSeverity
-{-# INLINE messageSeverityL #-}
+-- | 'messageRejectRejectReason' Lens
+messageRejectRejectReasonL :: Lens_' MessageReject (Maybe RejectReason)
+messageRejectRejectReasonL f MessageReject{..} = (\messageRejectRejectReason -> MessageReject { messageRejectRejectReason, ..} ) <$> f messageRejectRejectReason
+{-# INLINE messageRejectRejectReasonL #-}
 
--- | 'messageExchangeId' Lens
-messageExchangeIdL :: Lens_' Message (Maybe Text)
-messageExchangeIdL f Message{..} = (\messageExchangeId -> Message { messageExchangeId, ..} ) <$> f messageExchangeId
-{-# INLINE messageExchangeIdL #-}
+-- | 'messageRejectExchangeId' Lens
+messageRejectExchangeIdL :: Lens_' MessageReject (Maybe Text)
+messageRejectExchangeIdL f MessageReject{..} = (\messageRejectExchangeId -> MessageReject { messageRejectExchangeId, ..} ) <$> f messageRejectExchangeId
+{-# INLINE messageRejectExchangeIdL #-}
 
--- | 'messageMessage' Lens
-messageMessageL :: Lens_' Message (Maybe Text)
-messageMessageL f Message{..} = (\messageMessage -> Message { messageMessage, ..} ) <$> f messageMessage
-{-# INLINE messageMessageL #-}
+-- | 'messageRejectMessage' Lens
+messageRejectMessageL :: Lens_' MessageReject (Maybe Text)
+messageRejectMessageL f MessageReject{..} = (\messageRejectMessage -> MessageReject { messageRejectMessage, ..} ) <$> f messageRejectMessage
+{-# INLINE messageRejectMessageL #-}
+
+-- | 'messageRejectRejectedMessage' Lens
+messageRejectRejectedMessageL :: Lens_' MessageReject (Maybe Text)
+messageRejectRejectedMessageL f MessageReject{..} = (\messageRejectRejectedMessage -> MessageReject { messageRejectRejectedMessage, ..} ) <$> f messageRejectRejectedMessage
+{-# INLINE messageRejectRejectedMessageL #-}
 
 
 
@@ -458,7 +463,7 @@ positionDataRawDataL f PositionData{..} = (\positionDataRawData -> PositionData 
 
 
 
--- * Severity
+-- * RejectReason
 
 
 

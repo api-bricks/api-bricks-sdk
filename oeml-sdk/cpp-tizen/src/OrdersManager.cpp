@@ -51,14 +51,14 @@ static gpointer __OrdersManagerthreadFunc(gpointer data)
 static bool v1OrdersCancelAllPostProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
 	void(* voidHandler)())
 {
-	void(* handler)(Message, Error, void* )
-	= reinterpret_cast<void(*)(Message, Error, void* )> (voidHandler);
+	void(* handler)(MessageReject, Error, void* )
+	= reinterpret_cast<void(*)(MessageReject, Error, void* )> (voidHandler);
 	
 	JsonNode* pJson;
 	char * data = p_chunk.memory;
 
 	
-	Message out;
+	MessageReject out;
 
 	if (code >= 200 && code < 300) {
 		Error error(code, string("No Error"));
@@ -66,12 +66,12 @@ static bool v1OrdersCancelAllPostProcessor(MemoryStruct_s p_chunk, long code, ch
 
 
 
-		if (isprimitive("Message")) {
+		if (isprimitive("MessageReject")) {
 			pJson = json_from_string(data, NULL);
-			jsonToValue(&out, pJson, "Message", "Message");
+			jsonToValue(&out, pJson, "MessageReject", "MessageReject");
 			json_node_free(pJson);
 
-			if ("Message" == "std::string") {
+			if ("MessageReject" == "std::string") {
 				string* val = (std::string*)(&out);
 				if (val->empty() && p_chunk.size>4) {
 					*val = string(p_chunk.memory, p_chunk.size);
@@ -115,7 +115,7 @@ static bool v1OrdersCancelAllPostProcessor(MemoryStruct_s p_chunk, long code, ch
 
 static bool v1OrdersCancelAllPostHelper(char * accessToken,
 	OrderCancelAllRequest orderCancelAllRequest, 
-	void(* handler)(Message, Error, void* )
+	void(* handler)(MessageReject, Error, void* )
 	, void* userData, bool isAsync)
 {
 
@@ -199,7 +199,7 @@ static bool v1OrdersCancelAllPostHelper(char * accessToken,
 
 bool OrdersManager::v1OrdersCancelAllPostAsync(char * accessToken,
 	OrderCancelAllRequest orderCancelAllRequest, 
-	void(* handler)(Message, Error, void* )
+	void(* handler)(MessageReject, Error, void* )
 	, void* userData)
 {
 	return v1OrdersCancelAllPostHelper(accessToken,
@@ -209,7 +209,7 @@ bool OrdersManager::v1OrdersCancelAllPostAsync(char * accessToken,
 
 bool OrdersManager::v1OrdersCancelAllPostSync(char * accessToken,
 	OrderCancelAllRequest orderCancelAllRequest, 
-	void(* handler)(Message, Error, void* )
+	void(* handler)(MessageReject, Error, void* )
 	, void* userData)
 {
 	return v1OrdersCancelAllPostHelper(accessToken,

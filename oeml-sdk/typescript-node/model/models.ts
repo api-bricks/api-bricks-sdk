@@ -3,7 +3,7 @@ import localVarRequest from 'request';
 export * from './balance';
 export * from './balanceData';
 export * from './fills';
-export * from './message';
+export * from './messageReject';
 export * from './ordSide';
 export * from './ordStatus';
 export * from './ordType';
@@ -14,7 +14,7 @@ export * from './orderExecutionReportAllOf';
 export * from './orderNewSingleRequest';
 export * from './position';
 export * from './positionData';
-export * from './severity';
+export * from './rejectReason';
 export * from './timeInForce';
 export * from './validationError';
 
@@ -34,7 +34,7 @@ export type RequestFile = string | Buffer | fs.ReadStream | RequestDetailedFile;
 import { Balance } from './balance';
 import { BalanceData } from './balanceData';
 import { Fills } from './fills';
-import { Message } from './message';
+import { MessageReject } from './messageReject';
 import { OrdSide } from './ordSide';
 import { OrdStatus } from './ordStatus';
 import { OrdType } from './ordType';
@@ -45,7 +45,7 @@ import { OrderExecutionReportAllOf } from './orderExecutionReportAllOf';
 import { OrderNewSingleRequest } from './orderNewSingleRequest';
 import { Position } from './position';
 import { PositionData } from './positionData';
-import { Severity } from './severity';
+import { RejectReason } from './rejectReason';
 import { TimeInForce } from './timeInForce';
 import { ValidationError } from './validationError';
 
@@ -68,7 +68,7 @@ let enumsMap: {[index: string]: any} = {
         "OrdType": OrdType,
         "OrderExecutionReport.ExecInstEnum": OrderExecutionReport.ExecInstEnum,
         "OrderNewSingleRequest.ExecInstEnum": OrderNewSingleRequest.ExecInstEnum,
-        "Severity": Severity,
+        "RejectReason": RejectReason,
         "TimeInForce": TimeInForce,
 }
 
@@ -76,7 +76,7 @@ let typeMap: {[index: string]: any} = {
     "Balance": Balance,
     "BalanceData": BalanceData,
     "Fills": Fills,
-    "Message": Message,
+    "MessageReject": MessageReject,
     "OrderCancelAllRequest": OrderCancelAllRequest,
     "OrderCancelSingleRequest": OrderCancelSingleRequest,
     "OrderExecutionReport": OrderExecutionReport,

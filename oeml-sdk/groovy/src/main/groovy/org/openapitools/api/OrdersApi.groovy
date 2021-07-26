@@ -1,7 +1,7 @@
 package org.openapitools.api;
 
 import org.openapitools.api.ApiUtils
-import org.openapitools.model.Message
+import org.openapitools.model.MessageReject
 import org.openapitools.model.OrderCancelAllRequest
 import org.openapitools.model.OrderCancelSingleRequest
 import org.openapitools.model.OrderExecutionReport
@@ -35,7 +35,7 @@ class OrdersApi {
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
                     "POST", "",
-                    Message.class )
+                    MessageReject.class )
 
     }
 

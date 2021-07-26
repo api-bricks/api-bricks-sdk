@@ -10,7 +10,7 @@ import 'package:dio/dio.dart';
 import 'package:built_value/serializer.dart';
 
 import 'package:built_collection/built_collection.dart';
-import 'package:openapi/model/message.dart';
+import 'package:openapi/model/message_reject.dart';
 import 'package:openapi/model/order_cancel_all_request.dart';
 import 'package:openapi/model/order_cancel_single_request.dart';
 import 'package:openapi/model/order_execution_report.dart';
@@ -28,7 +28,7 @@ class OrdersApi {
   /// Cancel all orders request
   ///
   /// This request cancels all open orders on single specified exchange.
-  Future<Response<Message>> v1OrdersCancelAllPost(
+  Future<Response<MessageReject>> v1OrdersCancelAllPost(
     OrderCancelAllRequest orderCancelAllRequest, { 
     CancelToken cancelToken,
     Map<String, dynamic> headers,
@@ -48,9 +48,7 @@ class OrdersApi {
         ...?extra,
       },
       validateStatus: validateStatus,
-      contentType: [
-        'application/json',
-      ].first,
+      contentType: 'application/json',
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,
       onReceiveProgress: onReceiveProgress,
@@ -67,13 +65,13 @@ class OrdersApi {
       options: _request,
     );
 
-    const _responseType = FullType(Message);
+    const _responseType = FullType(MessageReject);
     final _responseData = _serializers.deserialize(
       _response.data,
       specifiedType: _responseType,
-    ) as Message;
+    ) as MessageReject;
 
-    return Response<Message>(
+    return Response<MessageReject>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -108,9 +106,7 @@ class OrdersApi {
         ...?extra,
       },
       validateStatus: validateStatus,
-      contentType: [
-        'application/json',
-      ].first,
+      contentType: 'application/json',
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,
       onReceiveProgress: onReceiveProgress,
@@ -171,9 +167,7 @@ class OrdersApi {
         ...?extra,
       },
       validateStatus: validateStatus,
-      contentType: [
-        'application/json',
-      ].first,
+      contentType: 'application/json',
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,
       onReceiveProgress: onReceiveProgress,
@@ -228,9 +222,7 @@ class OrdersApi {
         ...?extra,
       },
       validateStatus: validateStatus,
-      contentType: [
-        'application/json',
-      ].first,
+      contentType: 'application/json',
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,
       onReceiveProgress: onReceiveProgress,
@@ -288,9 +280,7 @@ class OrdersApi {
         ...?extra,
       },
       validateStatus: validateStatus,
-      contentType: [
-        'application/json',
-      ].first,
+      contentType: 'application/json',
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,
       onReceiveProgress: onReceiveProgress,

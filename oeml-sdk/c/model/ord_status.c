@@ -5,13 +5,13 @@
 
 
 char* ord_status_ord_status_ToString(oeml___rest_api_ord_status__e ord_status) {
-    char *ord_statusArray[] =  { "NULL", "RECEIVED", "ROUTING", "ROUTED", "_NEW", "PENDING_CANCEL", "PARTIALLY_FILLED", "FILLED", "CANCELED", "REJECTED" };
+    char *ord_statusArray[] =  { "NULL", "RECEIVED", "ROUTING", "ROUTED", "NEW", "PENDING_CANCEL", "PARTIALLY_FILLED", "FILLED", "CANCELED", "REJECTED" };
     return ord_statusArray[ord_status];
 }
 
 oeml___rest_api_ord_status__e ord_status_ord_status_FromString(char* ord_status) {
     int stringToReturn = 0;
-    char *ord_statusArray[] =  { "NULL", "RECEIVED", "ROUTING", "ROUTED", "_NEW", "PENDING_CANCEL", "PARTIALLY_FILLED", "FILLED", "CANCELED", "REJECTED" };
+    char *ord_statusArray[] =  { "NULL", "RECEIVED", "ROUTING", "ROUTED", "NEW", "PENDING_CANCEL", "PARTIALLY_FILLED", "FILLED", "CANCELED", "REJECTED" };
     size_t sizeofArray = sizeof(ord_statusArray) / sizeof(ord_statusArray[0]);
     while(stringToReturn < sizeofArray) {
         if(strcmp(ord_status, ord_statusArray[stringToReturn]) == 0) {

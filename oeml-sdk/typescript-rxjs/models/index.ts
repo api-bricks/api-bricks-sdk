@@ -1,7 +1,7 @@
 export * from './Balance';
 export * from './BalanceData';
 export * from './Fills';
-export * from './Message';
+export * from './MessageReject';
 export * from './OrdSide';
 export * from './OrdStatus';
 export * from './OrdType';
@@ -12,6 +12,6 @@ export * from './OrderExecutionReportAllOf';
 export * from './OrderNewSingleRequest';
 export * from './Position';
 export * from './PositionData';
-export * from './Severity';
+export * from './RejectReason';
 export * from './TimeInForce';
 export * from './ValidationError';

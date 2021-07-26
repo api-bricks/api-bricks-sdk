@@ -14,7 +14,7 @@
 package org.openapitools.client.api;
 
 import org.openapitools.client.ApiException;
-import org.openapitools.client.model.Message;
+import org.openapitools.client.model.MessageReject;
 import org.openapitools.client.model.OrderCancelAllRequest;
 import org.openapitools.client.model.OrderCancelSingleRequest;
 import org.openapitools.client.model.OrderExecutionReport;
@@ -48,7 +48,7 @@ public class OrdersApiTest {
     @Test
     public void v1OrdersCancelAllPostTest() throws ApiException {
         OrderCancelAllRequest orderCancelAllRequest = null;
-        Message response = api.v1OrdersCancelAllPost(orderCancelAllRequest);
+        MessageReject response = api.v1OrdersCancelAllPost(orderCancelAllRequest);
 
         // TODO: test validations
     }

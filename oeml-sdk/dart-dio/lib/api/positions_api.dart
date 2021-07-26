@@ -10,7 +10,7 @@ import 'package:dio/dio.dart';
 import 'package:built_value/serializer.dart';
 
 import 'package:built_collection/built_collection.dart';
-import 'package:openapi/model/message.dart';
+import 'package:openapi/model/message_reject.dart';
 import 'package:openapi/model/position.dart';
 
 class PositionsApi {
@@ -47,9 +47,7 @@ class PositionsApi {
         ...?extra,
       },
       validateStatus: validateStatus,
-      contentType: [
-        'application/json',
-      ].first,
+      contentType: 'application/json',
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,
       onReceiveProgress: onReceiveProgress,

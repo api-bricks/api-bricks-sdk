@@ -24,14 +24,14 @@ inherit
 feature -- API Access
 
 
-	v1_orders_cancel_all_post (order_cancel_all_request: ORDER_CANCEL_ALL_REQUEST): detachable MESSAGE
+	v1_orders_cancel_all_post (order_cancel_all_request: ORDER_CANCEL_ALL_REQUEST): detachable MESSAGE_REJECT
 			-- Cancel all orders request
 			-- This request cancels all open orders on single specified exchange.
 			-- 
 			-- argument: order_cancel_all_request OrderCancelAllRequest object. (required)
 			-- 
 			-- 
-			-- Result MESSAGE
+			-- Result MESSAGE_REJECT
 		require
 		local
   			l_path: STRING
@@ -52,7 +52,7 @@ feature -- API Access
 			l_response := api_client.call_api (l_path, "Post", l_request, Void, agent deserializer)
 			if l_response.has_error then
 				last_error := l_response.error
-			elseif attached { MESSAGE } l_response.data ({ MESSAGE }) as l_data then
+			elseif attached { MESSAGE_REJECT } l_response.data ({ MESSAGE_REJECT }) as l_data then
 				Result := l_data
 			else
 				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")

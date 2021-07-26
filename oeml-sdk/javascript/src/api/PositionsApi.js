@@ -13,7 +13,7 @@
 
 
 import ApiClient from "../ApiClient";
-import Message from '../model/Message';
+import MessageReject from '../model/MessageReject';
 import Position from '../model/Position';
 
 /**

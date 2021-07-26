@@ -57,12 +57,12 @@ class Balance {
   static List<Balance> listFromJson(List<dynamic> json, {bool emptyIsNull, bool growable,}) =>
     json == null || json.isEmpty
       ? true == emptyIsNull ? null : <Balance>[]
-      : json.map((v) => Balance.fromJson(v)).toList(growable: true == growable);
+      : json.map((dynamic value) => Balance.fromJson(value)).toList(growable: true == growable);
 
   static Map<String, Balance> mapFromJson(Map<String, dynamic> json) {
     final map = <String, Balance>{};
-    if (json != null && json.isNotEmpty) {
-      json.forEach((String key, dynamic v) => map[key] = Balance.fromJson(v));
+    if (json?.isNotEmpty == true) {
+      json.forEach((key, value) => map[key] = Balance.fromJson(value));
     }
     return map;
   }
@@ -70,9 +70,9 @@ class Balance {
   // maps a json object with a list of Balance-objects as value to a dart map
   static Map<String, List<Balance>> mapListFromJson(Map<String, dynamic> json, {bool emptyIsNull, bool growable,}) {
     final map = <String, List<Balance>>{};
-    if (json != null && json.isNotEmpty) {
-      json.forEach((String key, dynamic v) {
-        map[key] = Balance.listFromJson(v, emptyIsNull: emptyIsNull, growable: growable);
+    if (json?.isNotEmpty == true) {
+      json.forEach((key, value) {
+        map[key] = Balance.listFromJson(value, emptyIsNull: emptyIsNull, growable: growable,);
       });
     }
     return map;

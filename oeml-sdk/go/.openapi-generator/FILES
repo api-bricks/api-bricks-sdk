@@ -12,7 +12,7 @@ docs/Balance.md
 docs/BalanceData.md
 docs/BalancesApi.md
 docs/Fills.md
-docs/Message.md
+docs/MessageReject.md
 docs/OrdSide.md
 docs/OrdStatus.md
 docs/OrdType.md
@@ -25,7 +25,7 @@ docs/OrdersApi.md
 docs/Position.md
 docs/PositionData.md
 docs/PositionsApi.md
-docs/Severity.md
+docs/RejectReason.md
 docs/TimeInForce.md
 docs/ValidationError.md
 git_push.sh
@@ -34,7 +34,7 @@ go.sum
 model_balance.go
 model_balance_data.go
 model_fills.go
-model_message.go
+model_message_reject.go
 model_ord_side.go
 model_ord_status.go
 model_ord_type.go
@@ -45,7 +45,7 @@ model_order_execution_report_all_of.go
 model_order_new_single_request.go
 model_position.go
 model_position_data.go
-model_severity.go
+model_reject_reason.go
 model_time_in_force.go
 model_validation_error.go
 response.go

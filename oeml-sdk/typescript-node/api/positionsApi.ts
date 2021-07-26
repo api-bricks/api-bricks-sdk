@@ -15,7 +15,7 @@ import localVarRequest from 'request';
 import http from 'http';
 
 /* tslint:disable:no-unused-locals */
-import { Message } from '../model/message';
+import { MessageReject } from '../model/messageReject';
 import { Position } from '../model/position';
 
 import { ObjectSerializer, Authentication, VoidAuth, Interceptor } from '../model/models';

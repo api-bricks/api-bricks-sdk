@@ -22,10 +22,10 @@ defmodule OEML-RESTAPI.Api.Orders do
   - opts (KeywordList): [optional] Optional parameters
   ## Returns
 
-  {:ok, OEML-RESTAPI.Model.Message.t} on success
+  {:ok, OEML-RESTAPI.Model.MessageReject.t} on success
   {:error, Tesla.Env.t} on failure
   """
-  @spec v1_orders_cancel_all_post(Tesla.Env.client, OEML-RESTAPI.Model.OrderCancelAllRequest.t, keyword()) :: {:ok, OEML-RESTAPI.Model.Message.t} | {:ok, OEML-RESTAPI.Model.ValidationError.t} | {:error, Tesla.Env.t}
+  @spec v1_orders_cancel_all_post(Tesla.Env.client, OEML-RESTAPI.Model.OrderCancelAllRequest.t, keyword()) :: {:ok, OEML-RESTAPI.Model.ValidationError.t} | {:ok, OEML-RESTAPI.Model.MessageReject.t} | {:error, Tesla.Env.t}
   def v1_orders_cancel_all_post(connection, order_cancel_all_request, _opts \\ []) do
     %{}
     |> method(:post)
@@ -34,9 +34,9 @@ defmodule OEML-RESTAPI.Api.Orders do
     |> Enum.into([])
     |> (&Connection.request(connection, &1)).()
     |> evaluate_response([
-      { 200, %OEML-RESTAPI.Model.Message{}},
+      { 200, %OEML-RESTAPI.Model.MessageReject{}},
       { 400, %OEML-RESTAPI.Model.ValidationError{}},
-      { 490, %OEML-RESTAPI.Model.Message{}}
+      { 490, %OEML-RESTAPI.Model.MessageReject{}}
     ])
   end
 
@@ -54,7 +54,7 @@ defmodule OEML-RESTAPI.Api.Orders do
   {:ok, OEML-RESTAPI.Model.OrderExecutionReport.t} on success
   {:error, Tesla.Env.t} on failure
   """
-  @spec v1_orders_cancel_post(Tesla.Env.client, OEML-RESTAPI.Model.OrderCancelSingleRequest.t, keyword()) :: {:ok, OEML-RESTAPI.Model.OrderExecutionReport.t} | {:ok, OEML-RESTAPI.Model.Message.t} | {:ok, OEML-RESTAPI.Model.ValidationError.t} | {:error, Tesla.Env.t}
+  @spec v1_orders_cancel_post(Tesla.Env.client, OEML-RESTAPI.Model.OrderCancelSingleRequest.t, keyword()) :: {:ok, OEML-RESTAPI.Model.OrderExecutionReport.t} | {:ok, OEML-RESTAPI.Model.ValidationError.t} | {:ok, OEML-RESTAPI.Model.MessageReject.t} | {:error, Tesla.Env.t}
   def v1_orders_cancel_post(connection, order_cancel_single_request, _opts \\ []) do
     %{}
     |> method(:post)
@@ -65,7 +65,7 @@ defmodule OEML-RESTAPI.Api.Orders do
     |> evaluate_response([
       { 200, %OEML-RESTAPI.Model.OrderExecutionReport{}},
       { 400, %OEML-RESTAPI.Model.ValidationError{}},
-      { 490, %OEML-RESTAPI.Model.Message{}}
+      { 490, %OEML-RESTAPI.Model.MessageReject{}}
     ])
   end
 
@@ -83,7 +83,7 @@ defmodule OEML-RESTAPI.Api.Orders do
   {:ok, [%OrderExecutionReport{}, ...]} on success
   {:error, Tesla.Env.t} on failure
   """
-  @spec v1_orders_get(Tesla.Env.client, keyword()) :: {:ok, OEML-RESTAPI.Model.Message.t} | {:ok, list(OEML-RESTAPI.Model.OrderExecutionReport.t)} | {:error, Tesla.Env.t}
+  @spec v1_orders_get(Tesla.Env.client, keyword()) :: {:ok, OEML-RESTAPI.Model.MessageReject.t} | {:ok, list(OEML-RESTAPI.Model.OrderExecutionReport.t)} | {:error, Tesla.Env.t}
   def v1_orders_get(connection, opts \\ []) do
     optional_params = %{
       :"exchange_id" => :query
@@ -96,7 +96,7 @@ defmodule OEML-RESTAPI.Api.Orders do
     |> (&Connection.request(connection, &1)).()
     |> evaluate_response([
       { 200, [%OEML-RESTAPI.Model.OrderExecutionReport{}]},
-      { 490, %OEML-RESTAPI.Model.Message{}}
+      { 490, %OEML-RESTAPI.Model.MessageReject{}}
     ])
   end
 
@@ -114,7 +114,7 @@ defmodule OEML-RESTAPI.Api.Orders do
   {:ok, OEML-RESTAPI.Model.OrderExecutionReport.t} on success
   {:error, Tesla.Env.t} on failure
   """
-  @spec v1_orders_post(Tesla.Env.client, OEML-RESTAPI.Model.OrderNewSingleRequest.t, keyword()) :: {:ok, OEML-RESTAPI.Model.OrderExecutionReport.t} | {:ok, OEML-RESTAPI.Model.Message.t} | {:ok, OEML-RESTAPI.Model.ValidationError.t} | {:error, Tesla.Env.t}
+  @spec v1_orders_post(Tesla.Env.client, OEML-RESTAPI.Model.OrderNewSingleRequest.t, keyword()) :: {:ok, OEML-RESTAPI.Model.OrderExecutionReport.t} | {:ok, OEML-RESTAPI.Model.ValidationError.t} | {:ok, OEML-RESTAPI.Model.MessageReject.t} | {:error, Tesla.Env.t}
   def v1_orders_post(connection, order_new_single_request, _opts \\ []) do
     %{}
     |> method(:post)
@@ -125,8 +125,8 @@ defmodule OEML-RESTAPI.Api.Orders do
     |> evaluate_response([
       { 200, %OEML-RESTAPI.Model.OrderExecutionReport{}},
       { 400, %OEML-RESTAPI.Model.ValidationError{}},
-      { 490, %OEML-RESTAPI.Model.Message{}},
-      { 504, %OEML-RESTAPI.Model.Message{}}
+      { 490, %OEML-RESTAPI.Model.MessageReject{}},
+      { 504, %OEML-RESTAPI.Model.MessageReject{}}
     ])
   end
 
@@ -144,7 +144,7 @@ defmodule OEML-RESTAPI.Api.Orders do
   {:ok, OEML-RESTAPI.Model.OrderExecutionReport.t} on success
   {:error, Tesla.Env.t} on failure
   """
-  @spec v1_orders_status_client_order_id_get(Tesla.Env.client, String.t, keyword()) :: {:ok, OEML-RESTAPI.Model.OrderExecutionReport.t} | {:ok, OEML-RESTAPI.Model.Message.t} | {:error, Tesla.Env.t}
+  @spec v1_orders_status_client_order_id_get(Tesla.Env.client, String.t, keyword()) :: {:ok, OEML-RESTAPI.Model.OrderExecutionReport.t} | {:ok, OEML-RESTAPI.Model.MessageReject.t} | {:error, Tesla.Env.t}
   def v1_orders_status_client_order_id_get(connection, client_order_id, _opts \\ []) do
     %{}
     |> method(:get)
@@ -153,7 +153,7 @@ defmodule OEML-RESTAPI.Api.Orders do
     |> (&Connection.request(connection, &1)).()
     |> evaluate_response([
       { 200, %OEML-RESTAPI.Model.OrderExecutionReport{}},
-      { 404, %OEML-RESTAPI.Model.Message{}}
+      { 404, %OEML-RESTAPI.Model.MessageReject{}}
     ])
   end
 end

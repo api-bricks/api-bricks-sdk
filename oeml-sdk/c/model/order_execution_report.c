@@ -73,13 +73,13 @@ oeml___rest_api_order_execution_report_EXECINST_e exec_instorder_execution_repor
     return 0;
 }
 char* statusorder_execution_report_ToString(oeml___rest_api_order_execution_report__e status) {
-    char* statusArray[] =  { "NULL", "RECEIVED", "ROUTING", "ROUTED", "_NEW", "PENDING_CANCEL", "PARTIALLY_FILLED", "FILLED", "CANCELED", "REJECTED" };
+    char* statusArray[] =  { "NULL", "RECEIVED", "ROUTING", "ROUTED", "NEW", "PENDING_CANCEL", "PARTIALLY_FILLED", "FILLED", "CANCELED", "REJECTED" };
 	return statusArray[status];
 }
 
 oeml___rest_api_order_execution_report__e statusorder_execution_report_FromString(char* status){
     int stringToReturn = 0;
-    char *statusArray[] =  { "NULL", "RECEIVED", "ROUTING", "ROUTED", "_NEW", "PENDING_CANCEL", "PARTIALLY_FILLED", "FILLED", "CANCELED", "REJECTED" };
+    char *statusArray[] =  { "NULL", "RECEIVED", "ROUTING", "ROUTED", "NEW", "PENDING_CANCEL", "PARTIALLY_FILLED", "FILLED", "CANCELED", "REJECTED" };
     size_t sizeofArray = sizeof(statusArray) / sizeof(statusArray[0]);
     while(stringToReturn < sizeofArray) {
         if(strcmp(status, statusArray[stringToReturn]) == 0) {

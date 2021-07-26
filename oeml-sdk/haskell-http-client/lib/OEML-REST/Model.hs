@@ -202,46 +202,50 @@ mkFills =
   , fillsAmount = Nothing
   }
 
--- ** Message
--- | Message
--- Message object.
+-- ** MessageReject
+-- | MessageReject
+-- MessageReject object.
 -- 
-data Message = Message
-  { messageType :: !(Maybe Text) -- ^ "type" - Type of message.
-  , messageSeverity :: !(Maybe Severity) -- ^ "severity"
-  , messageExchangeId :: !(Maybe Text) -- ^ "exchange_id" - If the message related to exchange, then the identifier of the exchange will be provided.
-  , messageMessage :: !(Maybe Text) -- ^ "message" - Message text.
+data MessageReject = MessageReject
+  { messageRejectType :: !(Maybe Text) -- ^ "type" - Message type, constant.
+  , messageRejectRejectReason :: !(Maybe RejectReason) -- ^ "reject_reason"
+  , messageRejectExchangeId :: !(Maybe Text) -- ^ "exchange_id" - If the message related to exchange, then the identifier of the exchange will be provided.
+  , messageRejectMessage :: !(Maybe Text) -- ^ "message" - Message text.
+  , messageRejectRejectedMessage :: !(Maybe Text) -- ^ "rejected_message" - Value of rejected request, if available.
   } deriving (P.Show, P.Eq, P.Typeable)
 
--- | FromJSON Message
-instance A.FromJSON Message where
-  parseJSON = A.withObject "Message" $ \o ->
-    Message
+-- | FromJSON MessageReject
+instance A.FromJSON MessageReject where
+  parseJSON = A.withObject "MessageReject" $ \o ->
+    MessageReject
       <$> (o .:? "type")
-      <*> (o .:? "severity")
+      <*> (o .:? "reject_reason")
       <*> (o .:? "exchange_id")
       <*> (o .:? "message")
+      <*> (o .:? "rejected_message")
 
--- | ToJSON Message
-instance A.ToJSON Message where
-  toJSON Message {..} =
+-- | ToJSON MessageReject
+instance A.ToJSON MessageReject where
+  toJSON MessageReject {..} =
    _omitNulls
-      [ "type" .= messageType
-      , "severity" .= messageSeverity
-      , "exchange_id" .= messageExchangeId
-      , "message" .= messageMessage
+      [ "type" .= messageRejectType
+      , "reject_reason" .= messageRejectRejectReason
+      , "exchange_id" .= messageRejectExchangeId
+      , "message" .= messageRejectMessage
+      , "rejected_message" .= messageRejectRejectedMessage
       ]
 
 
--- | Construct a value of type 'Message' (by applying it's required fields, if any)
-mkMessage
-  :: Message
-mkMessage =
-  Message
-  { messageType = Nothing
-  , messageSeverity = Nothing
-  , messageExchangeId = Nothing
-  , messageMessage = Nothing
+-- | Construct a value of type 'MessageReject' (by applying it's required fields, if any)
+mkMessageReject
+  :: MessageReject
+mkMessageReject =
+  MessageReject
+  { messageRejectType = Nothing
+  , messageRejectRejectReason = Nothing
+  , messageRejectExchangeId = Nothing
+  , messageRejectMessage = Nothing
+  , messageRejectRejectedMessage = Nothing
   }
 
 -- ** OrderCancelAllRequest
@@ -884,36 +888,48 @@ toOrdType = \case
   s -> P.Left $ "toOrdType: enum parse failure: " P.++ P.show s
 
 
--- ** Severity
+-- ** RejectReason
 
 -- | Enum of 'Text' .
--- Severity of the message.
-data Severity
-  = Severity'INFO -- ^ @"INFO"@
-  | Severity'WARNING -- ^ @"WARNING"@
-  | Severity'ERROR -- ^ @"ERROR"@
+-- Cause of rejection.
+data RejectReason
+  = RejectReason'OTHER -- ^ @"OTHER"@
+  | RejectReason'EXCHANGE_UNREACHABLE -- ^ @"EXCHANGE_UNREACHABLE"@
+  | RejectReason'EXCHANGE_RESPONSE_TIMEOUT -- ^ @"EXCHANGE_RESPONSE_TIMEOUT"@
+  | RejectReason'ORDER_ID_NOT_FOUND -- ^ @"ORDER_ID_NOT_FOUND"@
+  | RejectReason'INVALID_TYPE -- ^ @"INVALID_TYPE"@
+  | RejectReason'METHOD_NOT_SUPPORTED -- ^ @"METHOD_NOT_SUPPORTED"@
+  | RejectReason'JSON_ERROR -- ^ @"JSON_ERROR"@
   deriving (P.Show, P.Eq, P.Typeable, P.Ord, P.Bounded, P.Enum)
 
-instance A.ToJSON Severity where toJSON = A.toJSON . fromSeverity
-instance A.FromJSON Severity where parseJSON o = P.either P.fail (pure . P.id) . toSeverity =<< A.parseJSON o
-instance WH.ToHttpApiData Severity where toQueryParam = WH.toQueryParam . fromSeverity
-instance WH.FromHttpApiData Severity where parseQueryParam o = WH.parseQueryParam o >>= P.left T.pack . toSeverity
-instance MimeRender MimeMultipartFormData Severity where mimeRender _ = mimeRenderDefaultMultipartFormData
+instance A.ToJSON RejectReason where toJSON = A.toJSON . fromRejectReason
+instance A.FromJSON RejectReason where parseJSON o = P.either P.fail (pure . P.id) . toRejectReason =<< A.parseJSON o
+instance WH.ToHttpApiData RejectReason where toQueryParam = WH.toQueryParam . fromRejectReason
+instance WH.FromHttpApiData RejectReason where parseQueryParam o = WH.parseQueryParam o >>= P.left T.pack . toRejectReason
+instance MimeRender MimeMultipartFormData RejectReason where mimeRender _ = mimeRenderDefaultMultipartFormData
 
--- | unwrap 'Severity' enum
-fromSeverity :: Severity -> Text
-fromSeverity = \case
-  Severity'INFO -> "INFO"
-  Severity'WARNING -> "WARNING"
-  Severity'ERROR -> "ERROR"
+-- | unwrap 'RejectReason' enum
+fromRejectReason :: RejectReason -> Text
+fromRejectReason = \case
+  RejectReason'OTHER -> "OTHER"
+  RejectReason'EXCHANGE_UNREACHABLE -> "EXCHANGE_UNREACHABLE"
+  RejectReason'EXCHANGE_RESPONSE_TIMEOUT -> "EXCHANGE_RESPONSE_TIMEOUT"
+  RejectReason'ORDER_ID_NOT_FOUND -> "ORDER_ID_NOT_FOUND"
+  RejectReason'INVALID_TYPE -> "INVALID_TYPE"
+  RejectReason'METHOD_NOT_SUPPORTED -> "METHOD_NOT_SUPPORTED"
+  RejectReason'JSON_ERROR -> "JSON_ERROR"
 
--- | parse 'Severity' enum
-toSeverity :: Text -> P.Either String Severity
-toSeverity = \case
-  "INFO" -> P.Right Severity'INFO
-  "WARNING" -> P.Right Severity'WARNING
-  "ERROR" -> P.Right Severity'ERROR
-  s -> P.Left $ "toSeverity: enum parse failure: " P.++ P.show s
+-- | parse 'RejectReason' enum
+toRejectReason :: Text -> P.Either String RejectReason
+toRejectReason = \case
+  "OTHER" -> P.Right RejectReason'OTHER
+  "EXCHANGE_UNREACHABLE" -> P.Right RejectReason'EXCHANGE_UNREACHABLE
+  "EXCHANGE_RESPONSE_TIMEOUT" -> P.Right RejectReason'EXCHANGE_RESPONSE_TIMEOUT
+  "ORDER_ID_NOT_FOUND" -> P.Right RejectReason'ORDER_ID_NOT_FOUND
+  "INVALID_TYPE" -> P.Right RejectReason'INVALID_TYPE
+  "METHOD_NOT_SUPPORTED" -> P.Right RejectReason'METHOD_NOT_SUPPORTED
+  "JSON_ERROR" -> P.Right RejectReason'JSON_ERROR
+  s -> P.Left $ "toRejectReason: enum parse failure: " P.++ P.show s
 
 
 -- ** TimeInForce

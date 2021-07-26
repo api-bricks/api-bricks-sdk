@@ -12,7 +12,7 @@ Feature | HTTP request | Description
 
 
 # **v1_orders_cancel_all_post**
-> v1_orders_cancel_all_post (order_cancel_all_request: ORDER_CANCEL_ALL_REQUEST ): detachable MESSAGE
+> v1_orders_cancel_all_post (order_cancel_all_request: ORDER_CANCEL_ALL_REQUEST ): detachable MESSAGE_REJECT
 	
 
 Cancel all orders request
@@ -28,7 +28,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**MESSAGE**](Message.md)
+[**MESSAGE_REJECT**](MessageReject.md)
 
 ### Authorization
 

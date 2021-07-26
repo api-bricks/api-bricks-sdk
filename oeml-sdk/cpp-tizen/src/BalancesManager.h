@@ -6,7 +6,7 @@
 #include <list>
 #include <glib.h>
 #include "Balance.h"
-#include "Message.h"
+#include "MessageReject.h"
 #include "Error.h"
 
 /** \defgroup Operations API Endpoints

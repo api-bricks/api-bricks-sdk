@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 ## v1OrdersCancelAllPost
 
-> Message v1OrdersCancelAllPost(orderCancelAllRequest)
+> MessageReject v1OrdersCancelAllPost(orderCancelAllRequest)
 
 Cancel all orders request
 
@@ -45,7 +45,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Message**](Message.md)
+[**MessageReject**](MessageReject.md)
 
 ### Authorization
 

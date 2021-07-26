@@ -94,7 +94,7 @@ Class | Method | HTTP request | Description
  - [OpenapiClient::Balance](docs/Balance.md)
  - [OpenapiClient::BalanceData](docs/BalanceData.md)
  - [OpenapiClient::Fills](docs/Fills.md)
- - [OpenapiClient::Message](docs/Message.md)
+ - [OpenapiClient::MessageReject](docs/MessageReject.md)
  - [OpenapiClient::OrdSide](docs/OrdSide.md)
  - [OpenapiClient::OrdStatus](docs/OrdStatus.md)
  - [OpenapiClient::OrdType](docs/OrdType.md)
@@ -105,7 +105,7 @@ Class | Method | HTTP request | Description
  - [OpenapiClient::OrderNewSingleRequest](docs/OrderNewSingleRequest.md)
  - [OpenapiClient::Position](docs/Position.md)
  - [OpenapiClient::PositionData](docs/PositionData.md)
- - [OpenapiClient::Severity](docs/Severity.md)
+ - [OpenapiClient::RejectReason](docs/RejectReason.md)
  - [OpenapiClient::TimeInForce](docs/TimeInForce.md)
  - [OpenapiClient::ValidationError](docs/ValidationError.md)
 

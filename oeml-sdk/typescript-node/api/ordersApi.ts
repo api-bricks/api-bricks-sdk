@@ -15,7 +15,7 @@ import localVarRequest from 'request';
 import http from 'http';
 
 /* tslint:disable:no-unused-locals */
-import { Message } from '../model/message';
+import { MessageReject } from '../model/messageReject';
 import { OrderCancelAllRequest } from '../model/orderCancelAllRequest';
 import { OrderCancelSingleRequest } from '../model/orderCancelSingleRequest';
 import { OrderExecutionReport } from '../model/orderExecutionReport';
@@ -96,7 +96,7 @@ export class OrdersApi {
      * @summary Cancel all orders request
      * @param orderCancelAllRequest OrderCancelAllRequest object.
      */
-    public async v1OrdersCancelAllPost (orderCancelAllRequest: OrderCancelAllRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Message;  }> {
+    public async v1OrdersCancelAllPost (orderCancelAllRequest: OrderCancelAllRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: MessageReject;  }> {
         const localVarPath = this.basePath + '/v1/orders/cancel/all';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -144,12 +144,12 @@ export class OrdersApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: Message;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: MessageReject;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
-                        body = ObjectSerializer.deserialize(body, "Message");
+                        body = ObjectSerializer.deserialize(body, "MessageReject");
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
                             resolve({ response: response, body: body });
                         } else {

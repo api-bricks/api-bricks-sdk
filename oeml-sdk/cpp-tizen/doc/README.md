@@ -74,7 +74,7 @@ Class | Description
  *Balance* | 
  *Balance_data* | 
  *Fills* | 
- *Message* | 
+ *MessageReject* | 
  *OrdSide* | Side of order. 
  *OrdStatus* | Order statuses and the lifecycle are documented in the separate section: <a href=\"#oeml-order-lifecycle\">OEML / Starter Guide / Order Lifecycle</a> 
  *OrdType* | Order types are documented in the separate section: <a href=\"#oeml-order-params-type\">OEML / Starter Guide / Order parameters / Order type</a> 
@@ -85,7 +85,7 @@ Class | Description
  *OrderNewSingleRequest* | The new order message.
  *Position* | 
  *Position_data* | The Position object.
- *Severity* | Severity of the message.
+ *RejectReason* | Cause of rejection.
  *TimeInForce* | Order time in force options are documented in the separate section: <a href=\"#oeml-order-params-tif\">OEML / Starter Guide / Order parameters / Time in force</a> 
  *ValidationError* | 
 

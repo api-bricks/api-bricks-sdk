@@ -14,7 +14,7 @@
 import { Observable } from 'rxjs';
 import { BaseAPI, HttpQuery, OperationOpts, RawAjaxResponse } from '../runtime';
 import {
-    Message,
+    MessageReject,
     Position,
 } from '../models';
 

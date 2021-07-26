@@ -78,6 +78,7 @@ PositionData <- R6::R6Class(
         self$`leverage` <- `leverage`
       }
       if (!is.null(`cross_margin`)) {
+        stopifnot(is.logical(`cross_margin`), length(`cross_margin`) == 1)
         self$`cross_margin` <- `cross_margin`
       }
       if (!is.null(`liquidation_price`)) {
@@ -222,9 +223,9 @@ PositionData <- R6::R6Class(
         if (!is.null(self$`cross_margin`)) {
         sprintf(
         '"cross_margin":
-          "%s"
+          %s
                 ',
-        self$`cross_margin`
+        tolower(self$`cross_margin`)
         )},
         if (!is.null(self$`liquidation_price`)) {
         sprintf(
@@ -260,4 +261,3 @@ PositionData <- R6::R6Class(
     }
   )
 )
-

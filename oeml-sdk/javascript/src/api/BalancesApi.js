@@ -14,7 +14,7 @@
 
 import ApiClient from "../ApiClient";
 import Balance from '../model/Balance';
-import Message from '../model/Message';
+import MessageReject from '../model/MessageReject';
 
 /**
 * Balances service.

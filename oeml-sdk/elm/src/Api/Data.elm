@@ -18,7 +18,7 @@ module Api.Data exposing
     ( Balance
     , BalanceData, BalanceDataLastUpdatedBy(..), balanceDataLastUpdatedByVariants
     , Fills
-    , Message
+    , MessageReject
     , OrdSide(..), ordSideVariants
     , OrdStatus(..), ordStatusVariants
     , OrdType(..), ordTypeVariants
@@ -28,13 +28,13 @@ module Api.Data exposing
     , OrderNewSingleRequest, OrderNewSingleRequestExecInst(..), orderNewSingleRequestExecInstVariants
     , Position
     , PositionData
-    , Severity(..), severityVariants
+    , RejectReason(..), rejectReasonVariants
     , TimeInForce(..), timeInForceVariants
     , ValidationError
     , encodeBalance
     , encodeBalanceData
     , encodeFills
-    , encodeMessage
+    , encodeMessageReject
     , encodeOrdSide
     , encodeOrdStatus
     , encodeOrdType
@@ -44,13 +44,13 @@ module Api.Data exposing
     , encodeOrderNewSingleRequest
     , encodePosition
     , encodePositionData
-    , encodeSeverity
+    , encodeRejectReason
     , encodeTimeInForce
     , encodeValidationError
     , balanceDecoder
     , balanceDataDecoder
     , fillsDecoder
-    , messageDecoder
+    , messageRejectDecoder
     , ordSideDecoder
     , ordStatusDecoder
     , ordTypeDecoder
@@ -60,7 +60,7 @@ module Api.Data exposing
     , orderNewSingleRequestDecoder
     , positionDecoder
     , positionDataDecoder
-    , severityDecoder
+    , rejectReasonDecoder
     , timeInForceDecoder
     , validationErrorDecoder
     )
@@ -113,11 +113,12 @@ type alias Fills =
     }
 
 
-type alias Message =
+type alias MessageReject =
     { type_ : Maybe String
-    , severity : Maybe Severity
+    , rejectReason : Maybe RejectReason
     , exchangeId : Maybe String
     , message : Maybe String
+    , rejectedMessage : Maybe String
     }
 
 
@@ -284,19 +285,27 @@ type alias PositionData =
     }
 
 
-{-| Severity of the message.
+{-| Cause of rejection.
 -}
-type Severity
-    = SeverityINFO
-    | SeverityWARNING
-    | SeverityERROR
+type RejectReason
+    = RejectReasonOTHER
+    | RejectReasonEXCHANGEUNREACHABLE
+    | RejectReasonEXCHANGERESPONSETIMEOUT
+    | RejectReasonORDERIDNOTFOUND
+    | RejectReasonINVALIDTYPE
+    | RejectReasonMETHODNOTSUPPORTED
+    | RejectReasonJSONERROR
 
 
-severityVariants : List Severity
-severityVariants =
-    [ SeverityINFO
-    , SeverityWARNING
-    , SeverityERROR
+rejectReasonVariants : List RejectReason
+rejectReasonVariants =
+    [ RejectReasonOTHER
+    , RejectReasonEXCHANGEUNREACHABLE
+    , RejectReasonEXCHANGERESPONSETIMEOUT
+    , RejectReasonORDERIDNOTFOUND
+    , RejectReasonINVALIDTYPE
+    , RejectReasonMETHODNOTSUPPORTED
+    , RejectReasonJSONERROR
     ]
 
 
@@ -420,24 +429,25 @@ encodeFillsPairs model =
     pairs
 
 
-encodeMessage : Message -> Json.Encode.Value
-encodeMessage =
-    encodeObject << encodeMessagePairs
+encodeMessageReject : MessageReject -> Json.Encode.Value
+encodeMessageReject =
+    encodeObject << encodeMessageRejectPairs
 
 
-encodeMessageWithTag : ( String, String ) -> Message -> Json.Encode.Value
-encodeMessageWithTag (tagField, tag) model =
-    encodeObject (encodeMessagePairs model ++ [ encode tagField Json.Encode.string tag ])
+encodeMessageRejectWithTag : ( String, String ) -> MessageReject -> Json.Encode.Value
+encodeMessageRejectWithTag (tagField, tag) model =
+    encodeObject (encodeMessageRejectPairs model ++ [ encode tagField Json.Encode.string tag ])
 
 
-encodeMessagePairs : Message -> List EncodedField
-encodeMessagePairs model =
+encodeMessageRejectPairs : MessageReject -> List EncodedField
+encodeMessageRejectPairs model =
     let
         pairs =
             [ maybeEncode "type" Json.Encode.string model.type_
-            , maybeEncode "severity" encodeSeverity model.severity
+            , maybeEncode "reject_reason" encodeRejectReason model.rejectReason
             , maybeEncode "exchange_id" Json.Encode.string model.exchangeId
             , maybeEncode "message" Json.Encode.string model.message
+            , maybeEncode "rejected_message" Json.Encode.string model.rejectedMessage
             ]
     in
     pairs
@@ -703,22 +713,34 @@ encodePositionDataPairs model =
     pairs
 
 
-stringFromSeverity : Severity -> String
-stringFromSeverity model =
+stringFromRejectReason : RejectReason -> String
+stringFromRejectReason model =
     case model of
-        SeverityINFO ->
-            "INFO"
+        RejectReasonOTHER ->
+            "OTHER"
 
-        SeverityWARNING ->
-            "WARNING"
+        RejectReasonEXCHANGEUNREACHABLE ->
+            "EXCHANGE_UNREACHABLE"
 
-        SeverityERROR ->
-            "ERROR"
+        RejectReasonEXCHANGERESPONSETIMEOUT ->
+            "EXCHANGE_RESPONSE_TIMEOUT"
+
+        RejectReasonORDERIDNOTFOUND ->
+            "ORDER_ID_NOT_FOUND"
+
+        RejectReasonINVALIDTYPE ->
+            "INVALID_TYPE"
+
+        RejectReasonMETHODNOTSUPPORTED ->
+            "METHOD_NOT_SUPPORTED"
+
+        RejectReasonJSONERROR ->
+            "JSON_ERROR"
 
 
-encodeSeverity : Severity -> Json.Encode.Value
-encodeSeverity =
-    Json.Encode.string << stringFromSeverity
+encodeRejectReason : RejectReason -> Json.Encode.Value
+encodeRejectReason =
+    Json.Encode.string << stringFromRejectReason
 
 
 stringFromTimeInForce : TimeInForce -> String
@@ -821,13 +843,14 @@ fillsDecoder =
         |> maybeDecode "amount" Json.Decode.float Nothing
 
 
-messageDecoder : Json.Decode.Decoder Message
-messageDecoder =
-    Json.Decode.succeed Message
+messageRejectDecoder : Json.Decode.Decoder MessageReject
+messageRejectDecoder =
+    Json.Decode.succeed MessageReject
         |> maybeDecode "type" Json.Decode.string Nothing
-        |> maybeDecode "severity" severityDecoder Nothing
+        |> maybeDecode "reject_reason" rejectReasonDecoder Nothing
         |> maybeDecode "exchange_id" Json.Decode.string Nothing
         |> maybeDecode "message" Json.Decode.string Nothing
+        |> maybeDecode "rejected_message" Json.Decode.string Nothing
 
 
 ordSideDecoder : Json.Decode.Decoder OrdSide
@@ -1018,20 +1041,32 @@ positionDataDecoder =
         |> maybeDecode "raw_data" objectDecoder Nothing
 
 
-severityDecoder : Json.Decode.Decoder Severity
-severityDecoder =
+rejectReasonDecoder : Json.Decode.Decoder RejectReason
+rejectReasonDecoder =
     Json.Decode.string
         |> Json.Decode.andThen
             (\value ->
                 case value of
-                    "INFO" ->
-                        Json.Decode.succeed SeverityINFO
+                    "OTHER" ->
+                        Json.Decode.succeed RejectReasonOTHER
 
-                    "WARNING" ->
-                        Json.Decode.succeed SeverityWARNING
+                    "EXCHANGE_UNREACHABLE" ->
+                        Json.Decode.succeed RejectReasonEXCHANGEUNREACHABLE
 
-                    "ERROR" ->
-                        Json.Decode.succeed SeverityERROR
+                    "EXCHANGE_RESPONSE_TIMEOUT" ->
+                        Json.Decode.succeed RejectReasonEXCHANGERESPONSETIMEOUT
+
+                    "ORDER_ID_NOT_FOUND" ->
+                        Json.Decode.succeed RejectReasonORDERIDNOTFOUND
+
+                    "INVALID_TYPE" ->
+                        Json.Decode.succeed RejectReasonINVALIDTYPE
+
+                    "METHOD_NOT_SUPPORTED" ->
+                        Json.Decode.succeed RejectReasonMETHODNOTSUPPORTED
+
+                    "JSON_ERROR" ->
+                        Json.Decode.succeed RejectReasonJSONERROR
 
                     other ->
                         Json.Decode.fail <| "Unknown type: " ++ other

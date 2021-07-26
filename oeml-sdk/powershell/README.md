@@ -68,7 +68,7 @@ Class | Method | HTTP request | Description
  - [PSOpenAPITools/Model.Balance](docs/Balance.md)
  - [PSOpenAPITools/Model.BalanceData](docs/BalanceData.md)
  - [PSOpenAPITools/Model.Fills](docs/Fills.md)
- - [PSOpenAPITools/Model.Message](docs/Message.md)
+ - [PSOpenAPITools/Model.MessageReject](docs/MessageReject.md)
  - [PSOpenAPITools/Model.OrdSide](docs/OrdSide.md)
  - [PSOpenAPITools/Model.OrdStatus](docs/OrdStatus.md)
  - [PSOpenAPITools/Model.OrdType](docs/OrdType.md)
@@ -79,7 +79,7 @@ Class | Method | HTTP request | Description
  - [PSOpenAPITools/Model.OrderNewSingleRequest](docs/OrderNewSingleRequest.md)
  - [PSOpenAPITools/Model.Position](docs/Position.md)
  - [PSOpenAPITools/Model.PositionData](docs/PositionData.md)
- - [PSOpenAPITools/Model.Severity](docs/Severity.md)
+ - [PSOpenAPITools/Model.RejectReason](docs/RejectReason.md)
  - [PSOpenAPITools/Model.TimeInForce](docs/TimeInForce.md)
  - [PSOpenAPITools/Model.ValidationError](docs/ValidationError.md)
 

@@ -13,7 +13,7 @@ All URIs are relative to *https://13d16e9d-d8b1-4ef4-bc4a-ed8156b2b159.mock.pstm
 
 ## v1_orders_cancel_all_post
 
-> <Message> v1_orders_cancel_all_post(order_cancel_all_request)
+> <MessageReject> v1_orders_cancel_all_post(order_cancel_all_request)
 
 Cancel all orders request
 
@@ -41,7 +41,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Message>, Integer, Hash)> v1_orders_cancel_all_post_with_http_info(order_cancel_all_request)
+> <Array(<MessageReject>, Integer, Hash)> v1_orders_cancel_all_post_with_http_info(order_cancel_all_request)
 
 ```ruby
 begin
@@ -49,7 +49,7 @@ begin
   data, status_code, headers = api_instance.v1_orders_cancel_all_post_with_http_info(order_cancel_all_request)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <Message>
+  p data # => <MessageReject>
 rescue OpenapiClient::ApiError => e
   puts "Error when calling OrdersApi->v1_orders_cancel_all_post_with_http_info: #{e}"
 end
@@ -63,7 +63,7 @@ end
 
 ### Return type
 
-[**Message**](Message.md)
+[**MessageReject**](MessageReject.md)
 
 ### Authorization
 

@@ -85,12 +85,12 @@ class ValidationError {
   static List<ValidationError> listFromJson(List<dynamic> json, {bool emptyIsNull, bool growable,}) =>
     json == null || json.isEmpty
       ? true == emptyIsNull ? null : <ValidationError>[]
-      : json.map((v) => ValidationError.fromJson(v)).toList(growable: true == growable);
+      : json.map((dynamic value) => ValidationError.fromJson(value)).toList(growable: true == growable);
 
   static Map<String, ValidationError> mapFromJson(Map<String, dynamic> json) {
     final map = <String, ValidationError>{};
-    if (json != null && json.isNotEmpty) {
-      json.forEach((String key, dynamic v) => map[key] = ValidationError.fromJson(v));
+    if (json?.isNotEmpty == true) {
+      json.forEach((key, value) => map[key] = ValidationError.fromJson(value));
     }
     return map;
   }
@@ -98,9 +98,9 @@ class ValidationError {
   // maps a json object with a list of ValidationError-objects as value to a dart map
   static Map<String, List<ValidationError>> mapListFromJson(Map<String, dynamic> json, {bool emptyIsNull, bool growable,}) {
     final map = <String, List<ValidationError>>{};
-    if (json != null && json.isNotEmpty) {
-      json.forEach((String key, dynamic v) {
-        map[key] = ValidationError.listFromJson(v, emptyIsNull: emptyIsNull, growable: growable);
+    if (json?.isNotEmpty == true) {
+      json.forEach((key, value) {
+        map[key] = ValidationError.listFromJson(value, emptyIsNull: emptyIsNull, growable: growable,);
       });
     }
     return map;

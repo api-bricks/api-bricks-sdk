@@ -35,8 +35,8 @@ namespace CoinAPI.OMS.API.SDK.Api
         /// </remarks>
         /// <exception cref="CoinAPI.OMS.API.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orderCancelAllRequest">OrderCancelAllRequest object.</param>
-        /// <returns>Message</returns>
-        Message V1OrdersCancelAllPost(OrderCancelAllRequest orderCancelAllRequest);
+        /// <returns>MessageReject</returns>
+        MessageReject V1OrdersCancelAllPost(OrderCancelAllRequest orderCancelAllRequest);
 
         /// <summary>
         /// Cancel all orders request
@@ -46,8 +46,8 @@ namespace CoinAPI.OMS.API.SDK.Api
         /// </remarks>
         /// <exception cref="CoinAPI.OMS.API.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orderCancelAllRequest">OrderCancelAllRequest object.</param>
-        /// <returns>ApiResponse of Message</returns>
-        ApiResponse<Message> V1OrdersCancelAllPostWithHttpInfo(OrderCancelAllRequest orderCancelAllRequest);
+        /// <returns>ApiResponse of MessageReject</returns>
+        ApiResponse<MessageReject> V1OrdersCancelAllPostWithHttpInfo(OrderCancelAllRequest orderCancelAllRequest);
         /// <summary>
         /// Cancel order request
         /// </summary>
@@ -150,8 +150,8 @@ namespace CoinAPI.OMS.API.SDK.Api
         /// <exception cref="CoinAPI.OMS.API.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orderCancelAllRequest">OrderCancelAllRequest object.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Message</returns>
-        System.Threading.Tasks.Task<Message> V1OrdersCancelAllPostAsync(OrderCancelAllRequest orderCancelAllRequest, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of MessageReject</returns>
+        System.Threading.Tasks.Task<MessageReject> V1OrdersCancelAllPostAsync(OrderCancelAllRequest orderCancelAllRequest, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Cancel all orders request
@@ -162,8 +162,8 @@ namespace CoinAPI.OMS.API.SDK.Api
         /// <exception cref="CoinAPI.OMS.API.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orderCancelAllRequest">OrderCancelAllRequest object.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Message)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Message>> V1OrdersCancelAllPostWithHttpInfoAsync(OrderCancelAllRequest orderCancelAllRequest, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (MessageReject)</returns>
+        System.Threading.Tasks.Task<ApiResponse<MessageReject>> V1OrdersCancelAllPostWithHttpInfoAsync(OrderCancelAllRequest orderCancelAllRequest, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Cancel order request
         /// </summary>
@@ -286,7 +286,7 @@ namespace CoinAPI.OMS.API.SDK.Api
         /// Initializes a new instance of the <see cref="OrdersApi"/> class.
         /// </summary>
         /// <returns></returns>
-        public OrdersApi(String basePath)
+        public OrdersApi(string basePath)
         {
             this.Configuration = CoinAPI.OMS.API.SDK.Client.Configuration.MergeConfigurations(
                 CoinAPI.OMS.API.SDK.Client.GlobalConfiguration.Instance,
@@ -349,7 +349,7 @@ namespace CoinAPI.OMS.API.SDK.Api
         /// Gets the base path of the API client.
         /// </summary>
         /// <value>The base path</value>
-        public String GetBasePath()
+        public string GetBasePath()
         {
             return this.Configuration.BasePath;
         }
@@ -381,10 +381,10 @@ namespace CoinAPI.OMS.API.SDK.Api
         /// </summary>
         /// <exception cref="CoinAPI.OMS.API.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orderCancelAllRequest">OrderCancelAllRequest object.</param>
-        /// <returns>Message</returns>
-        public Message V1OrdersCancelAllPost(OrderCancelAllRequest orderCancelAllRequest)
+        /// <returns>MessageReject</returns>
+        public MessageReject V1OrdersCancelAllPost(OrderCancelAllRequest orderCancelAllRequest)
         {
-            CoinAPI.OMS.API.SDK.Client.ApiResponse<Message> localVarResponse = V1OrdersCancelAllPostWithHttpInfo(orderCancelAllRequest);
+            CoinAPI.OMS.API.SDK.Client.ApiResponse<MessageReject> localVarResponse = V1OrdersCancelAllPostWithHttpInfo(orderCancelAllRequest);
             return localVarResponse.Data;
         }
 
@@ -393,8 +393,8 @@ namespace CoinAPI.OMS.API.SDK.Api
         /// </summary>
         /// <exception cref="CoinAPI.OMS.API.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orderCancelAllRequest">OrderCancelAllRequest object.</param>
-        /// <returns>ApiResponse of Message</returns>
-        public CoinAPI.OMS.API.SDK.Client.ApiResponse<Message> V1OrdersCancelAllPostWithHttpInfo(OrderCancelAllRequest orderCancelAllRequest)
+        /// <returns>ApiResponse of MessageReject</returns>
+        public CoinAPI.OMS.API.SDK.Client.ApiResponse<MessageReject> V1OrdersCancelAllPostWithHttpInfo(OrderCancelAllRequest orderCancelAllRequest)
         {
             // verify the required parameter 'orderCancelAllRequest' is set
             if (orderCancelAllRequest == null)
@@ -402,12 +402,12 @@ namespace CoinAPI.OMS.API.SDK.Api
 
             CoinAPI.OMS.API.SDK.Client.RequestOptions localVarRequestOptions = new CoinAPI.OMS.API.SDK.Client.RequestOptions();
 
-            String[] _contentTypes = new String[] {
+            string[] _contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] _accepts = new String[] {
+            string[] _accepts = new string[] {
                 "application/json",
                 "appliction/json"
             };
@@ -422,7 +422,7 @@ namespace CoinAPI.OMS.API.SDK.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Message>("/v1/orders/cancel/all", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<MessageReject>("/v1/orders/cancel/all", localVarRequestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -439,10 +439,10 @@ namespace CoinAPI.OMS.API.SDK.Api
         /// <exception cref="CoinAPI.OMS.API.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orderCancelAllRequest">OrderCancelAllRequest object.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Message</returns>
-        public async System.Threading.Tasks.Task<Message> V1OrdersCancelAllPostAsync(OrderCancelAllRequest orderCancelAllRequest, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of MessageReject</returns>
+        public async System.Threading.Tasks.Task<MessageReject> V1OrdersCancelAllPostAsync(OrderCancelAllRequest orderCancelAllRequest, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CoinAPI.OMS.API.SDK.Client.ApiResponse<Message> localVarResponse = await V1OrdersCancelAllPostWithHttpInfoAsync(orderCancelAllRequest, cancellationToken).ConfigureAwait(false);
+            CoinAPI.OMS.API.SDK.Client.ApiResponse<MessageReject> localVarResponse = await V1OrdersCancelAllPostWithHttpInfoAsync(orderCancelAllRequest, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -452,8 +452,8 @@ namespace CoinAPI.OMS.API.SDK.Api
         /// <exception cref="CoinAPI.OMS.API.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orderCancelAllRequest">OrderCancelAllRequest object.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Message)</returns>
-        public async System.Threading.Tasks.Task<CoinAPI.OMS.API.SDK.Client.ApiResponse<Message>> V1OrdersCancelAllPostWithHttpInfoAsync(OrderCancelAllRequest orderCancelAllRequest, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (MessageReject)</returns>
+        public async System.Threading.Tasks.Task<CoinAPI.OMS.API.SDK.Client.ApiResponse<MessageReject>> V1OrdersCancelAllPostWithHttpInfoAsync(OrderCancelAllRequest orderCancelAllRequest, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'orderCancelAllRequest' is set
             if (orderCancelAllRequest == null)
@@ -462,12 +462,12 @@ namespace CoinAPI.OMS.API.SDK.Api
 
             CoinAPI.OMS.API.SDK.Client.RequestOptions localVarRequestOptions = new CoinAPI.OMS.API.SDK.Client.RequestOptions();
 
-            String[] _contentTypes = new String[] {
+            string[] _contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] _accepts = new String[] {
+            string[] _accepts = new string[] {
                 "application/json",
                 "appliction/json"
             };
@@ -484,7 +484,7 @@ namespace CoinAPI.OMS.API.SDK.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Message>("/v1/orders/cancel/all", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<MessageReject>("/v1/orders/cancel/all", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -521,12 +521,12 @@ namespace CoinAPI.OMS.API.SDK.Api
 
             CoinAPI.OMS.API.SDK.Client.RequestOptions localVarRequestOptions = new CoinAPI.OMS.API.SDK.Client.RequestOptions();
 
-            String[] _contentTypes = new String[] {
+            string[] _contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] _accepts = new String[] {
+            string[] _accepts = new string[] {
                 "application/json",
                 "appliction/json"
             };
@@ -581,12 +581,12 @@ namespace CoinAPI.OMS.API.SDK.Api
 
             CoinAPI.OMS.API.SDK.Client.RequestOptions localVarRequestOptions = new CoinAPI.OMS.API.SDK.Client.RequestOptions();
 
-            String[] _contentTypes = new String[] {
+            string[] _contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] _accepts = new String[] {
+            string[] _accepts = new string[] {
                 "application/json",
                 "appliction/json"
             };
@@ -636,11 +636,11 @@ namespace CoinAPI.OMS.API.SDK.Api
         {
             CoinAPI.OMS.API.SDK.Client.RequestOptions localVarRequestOptions = new CoinAPI.OMS.API.SDK.Client.RequestOptions();
 
-            String[] _contentTypes = new String[] {
+            string[] _contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] _accepts = new String[] {
+            string[] _accepts = new string[] {
                 "application/json",
                 "appliction/json"
             };
@@ -694,11 +694,11 @@ namespace CoinAPI.OMS.API.SDK.Api
 
             CoinAPI.OMS.API.SDK.Client.RequestOptions localVarRequestOptions = new CoinAPI.OMS.API.SDK.Client.RequestOptions();
 
-            String[] _contentTypes = new String[] {
+            string[] _contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] _accepts = new String[] {
+            string[] _accepts = new string[] {
                 "application/json",
                 "appliction/json"
             };
@@ -755,12 +755,12 @@ namespace CoinAPI.OMS.API.SDK.Api
 
             CoinAPI.OMS.API.SDK.Client.RequestOptions localVarRequestOptions = new CoinAPI.OMS.API.SDK.Client.RequestOptions();
 
-            String[] _contentTypes = new String[] {
+            string[] _contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] _accepts = new String[] {
+            string[] _accepts = new string[] {
                 "application/json",
                 "appliction/json"
             };
@@ -815,12 +815,12 @@ namespace CoinAPI.OMS.API.SDK.Api
 
             CoinAPI.OMS.API.SDK.Client.RequestOptions localVarRequestOptions = new CoinAPI.OMS.API.SDK.Client.RequestOptions();
 
-            String[] _contentTypes = new String[] {
+            string[] _contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] _accepts = new String[] {
+            string[] _accepts = new string[] {
                 "application/json",
                 "appliction/json"
             };
@@ -874,11 +874,11 @@ namespace CoinAPI.OMS.API.SDK.Api
 
             CoinAPI.OMS.API.SDK.Client.RequestOptions localVarRequestOptions = new CoinAPI.OMS.API.SDK.Client.RequestOptions();
 
-            String[] _contentTypes = new String[] {
+            string[] _contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] _accepts = new String[] {
+            string[] _accepts = new string[] {
                 "application/json"
             };
 
@@ -932,11 +932,11 @@ namespace CoinAPI.OMS.API.SDK.Api
 
             CoinAPI.OMS.API.SDK.Client.RequestOptions localVarRequestOptions = new CoinAPI.OMS.API.SDK.Client.RequestOptions();
 
-            String[] _contentTypes = new String[] {
+            string[] _contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] _accepts = new String[] {
+            string[] _accepts = new string[] {
                 "application/json"
             };
 

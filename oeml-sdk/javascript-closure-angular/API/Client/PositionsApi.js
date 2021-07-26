@@ -14,7 +14,7 @@
 
 goog.provide('API.Client.PositionsApi');
 
-goog.require('API.Client.Message');
+goog.require('API.Client.MessageReject');
 goog.require('API.Client.Position');
 
 /**

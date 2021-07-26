@@ -16,7 +16,7 @@
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <Company>COINAPI LTD</Company>
     <Copyright>COINAPI LTD or its affiliates</Copyright>
-    <Version>2.0.6</Version>
+    <Version>2.0.7</Version>
     <UserSecretsId>17704ec2-7050-452e-99b5-0eddf76dea5d</UserSecretsId>
   </PropertyGroup>
 

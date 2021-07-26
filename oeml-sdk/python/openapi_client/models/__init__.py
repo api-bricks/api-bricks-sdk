@@ -14,7 +14,7 @@ from openapi_client.model.balance_data import BalanceData
 from openapi_client.model.balances import Balances
 from openapi_client.model.exec_inst import ExecInst
 from openapi_client.model.fills import Fills
-from openapi_client.model.message import Message
+from openapi_client.model.message_reject import MessageReject
 from openapi_client.model.ord_side import OrdSide
 from openapi_client.model.ord_status import OrdStatus
 from openapi_client.model.ord_type import OrdType
@@ -27,6 +27,6 @@ from openapi_client.model.order_new_single_request import OrderNewSingleRequest
 from openapi_client.model.position import Position
 from openapi_client.model.position_data import PositionData
 from openapi_client.model.positions import Positions
-from openapi_client.model.severity import Severity
+from openapi_client.model.reject_reason import RejectReason
 from openapi_client.model.time_in_force import TimeInForce
 from openapi_client.model.validation_error import ValidationError

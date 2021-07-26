@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 ## V1OrdersCancelAllPost
 
-> Message V1OrdersCancelAllPost (OrderCancelAllRequest orderCancelAllRequest)
+> MessageReject V1OrdersCancelAllPost (OrderCancelAllRequest orderCancelAllRequest)
 
 Cancel all orders request
 
@@ -42,7 +42,7 @@ namespace Example
             try
             {
                 // Cancel all orders request
-                Message result = apiInstance.V1OrdersCancelAllPost(orderCancelAllRequest);
+                MessageReject result = apiInstance.V1OrdersCancelAllPost(orderCancelAllRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
@@ -65,7 +65,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Message**](Message.md)
+[**MessageReject**](MessageReject.md)
 
 ### Authorization
 

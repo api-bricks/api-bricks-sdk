@@ -45,7 +45,7 @@ namespace CoinAPI.OMS.API.SDK.Client
         /// <summary>
         /// Gets or sets any error text defined by the calling client.
         /// </summary>
-        String ErrorText { get; set; }
+        string ErrorText { get; set; }
 
         /// <summary>
         /// Gets or sets any cookies passed along on the response.
@@ -86,7 +86,7 @@ namespace CoinAPI.OMS.API.SDK.Client
         /// <summary>
         /// Gets or sets any error text defined by the calling client.
         /// </summary>
-        public String ErrorText { get; set; }
+        public string ErrorText { get; set; }
 
         /// <summary>
         /// Gets or sets any cookies passed along on the response.

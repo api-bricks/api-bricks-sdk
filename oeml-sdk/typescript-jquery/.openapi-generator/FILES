@@ -9,7 +9,7 @@ index.ts
 model/Balance.ts
 model/BalanceData.ts
 model/Fills.ts
-model/Message.ts
+model/MessageReject.ts
 model/OrdSide.ts
 model/OrdStatus.ts
 model/OrdType.ts
@@ -20,7 +20,7 @@ model/OrderExecutionReportAllOf.ts
 model/OrderNewSingleRequest.ts
 model/Position.ts
 model/PositionData.ts
-model/Severity.ts
+model/RejectReason.ts
 model/TimeInForce.ts
 model/ValidationError.ts
 model/models.ts

@@ -9,7 +9,7 @@ docs/Balance.md
 docs/BalanceData.md
 docs/BalancesApi.md
 docs/Fills.md
-docs/Message.md
+docs/MessageReject.md
 docs/OrdSide.md
 docs/OrdStatus.md
 docs/OrdType.md
@@ -22,7 +22,7 @@ docs/OrdersApi.md
 docs/Position.md
 docs/PositionData.md
 docs/PositionsApi.md
-docs/Severity.md
+docs/RejectReason.md
 docs/TimeInForce.md
 docs/ValidationError.md
 git_push.sh
@@ -34,7 +34,7 @@ src/CoinAPI.OMS.REST.V1.Test/CoinAPI.OMS.REST.V1.Test.csproj
 src/CoinAPI.OMS.REST.V1.Test/Model/BalanceDataTests.cs
 src/CoinAPI.OMS.REST.V1.Test/Model/BalanceTests.cs
 src/CoinAPI.OMS.REST.V1.Test/Model/FillsTests.cs
-src/CoinAPI.OMS.REST.V1.Test/Model/MessageTests.cs
+src/CoinAPI.OMS.REST.V1.Test/Model/MessageRejectTests.cs
 src/CoinAPI.OMS.REST.V1.Test/Model/OrdSideTests.cs
 src/CoinAPI.OMS.REST.V1.Test/Model/OrdStatusTests.cs
 src/CoinAPI.OMS.REST.V1.Test/Model/OrdTypeTests.cs
@@ -45,7 +45,7 @@ src/CoinAPI.OMS.REST.V1.Test/Model/OrderExecutionReportTests.cs
 src/CoinAPI.OMS.REST.V1.Test/Model/OrderNewSingleRequestTests.cs
 src/CoinAPI.OMS.REST.V1.Test/Model/PositionDataTests.cs
 src/CoinAPI.OMS.REST.V1.Test/Model/PositionTests.cs
-src/CoinAPI.OMS.REST.V1.Test/Model/SeverityTests.cs
+src/CoinAPI.OMS.REST.V1.Test/Model/RejectReasonTests.cs
 src/CoinAPI.OMS.REST.V1.Test/Model/TimeInForceTests.cs
 src/CoinAPI.OMS.REST.V1.Test/Model/ValidationErrorTests.cs
 src/CoinAPI.OMS.REST.V1.Test/packages.config
@@ -66,7 +66,7 @@ src/CoinAPI.OMS.REST.V1/CoinAPI.OMS.REST.V1.nuspec
 src/CoinAPI.OMS.REST.V1/Model/Balance.cs
 src/CoinAPI.OMS.REST.V1/Model/BalanceData.cs
 src/CoinAPI.OMS.REST.V1/Model/Fills.cs
-src/CoinAPI.OMS.REST.V1/Model/Message.cs
+src/CoinAPI.OMS.REST.V1/Model/MessageReject.cs
 src/CoinAPI.OMS.REST.V1/Model/OrdSide.cs
 src/CoinAPI.OMS.REST.V1/Model/OrdStatus.cs
 src/CoinAPI.OMS.REST.V1/Model/OrdType.cs
@@ -77,7 +77,7 @@ src/CoinAPI.OMS.REST.V1/Model/OrderExecutionReportAllOf.cs
 src/CoinAPI.OMS.REST.V1/Model/OrderNewSingleRequest.cs
 src/CoinAPI.OMS.REST.V1/Model/Position.cs
 src/CoinAPI.OMS.REST.V1/Model/PositionData.cs
-src/CoinAPI.OMS.REST.V1/Model/Severity.cs
+src/CoinAPI.OMS.REST.V1/Model/RejectReason.cs
 src/CoinAPI.OMS.REST.V1/Model/TimeInForce.cs
 src/CoinAPI.OMS.REST.V1/Model/ValidationError.cs
 src/CoinAPI.OMS.REST.V1/Properties/AssemblyInfo.cs

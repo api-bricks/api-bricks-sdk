@@ -5,7 +5,7 @@
 #include <cstring>
 #include <list>
 #include <glib.h>
-#include "Message.h"
+#include "MessageReject.h"
 #include "Position.h"
 #include "Error.h"
 

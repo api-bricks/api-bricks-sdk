@@ -6,7 +6,7 @@ docs/Balance.md
 docs/BalanceData.md
 docs/BalancesApi.md
 docs/Fills.md
-docs/Message.md
+docs/MessageReject.md
 docs/OrdSide.md
 docs/OrdStatus.md
 docs/OrdType.md
@@ -19,7 +19,7 @@ docs/OrdersApi.md
 docs/Position.md
 docs/PositionData.md
 docs/PositionsApi.md
-docs/Severity.md
+docs/RejectReason.md
 docs/TimeInForce.md
 docs/ValidationError.md
 src/PSOpenAPITools/Api/BalancesApi.ps1
@@ -29,7 +29,7 @@ src/PSOpenAPITools/Client/Configuration.ps1
 src/PSOpenAPITools/Model/Balance.ps1
 src/PSOpenAPITools/Model/BalanceData.ps1
 src/PSOpenAPITools/Model/Fills.ps1
-src/PSOpenAPITools/Model/Message.ps1
+src/PSOpenAPITools/Model/MessageReject.ps1
 src/PSOpenAPITools/Model/OrdSide.ps1
 src/PSOpenAPITools/Model/OrdStatus.ps1
 src/PSOpenAPITools/Model/OrdType.ps1
@@ -40,7 +40,7 @@ src/PSOpenAPITools/Model/OrderExecutionReportAllOf.ps1
 src/PSOpenAPITools/Model/OrderNewSingleRequest.ps1
 src/PSOpenAPITools/Model/Position.ps1
 src/PSOpenAPITools/Model/PositionData.ps1
-src/PSOpenAPITools/Model/Severity.ps1
+src/PSOpenAPITools/Model/RejectReason.ps1
 src/PSOpenAPITools/Model/TimeInForce.ps1
 src/PSOpenAPITools/Model/ValidationError.ps1
 src/PSOpenAPITools/PSOpenAPITools.psm1
@@ -56,7 +56,7 @@ tests/Api/PositionsApi.Tests.ps1
 tests/Model/Balance.Tests.ps1
 tests/Model/BalanceData.Tests.ps1
 tests/Model/Fills.Tests.ps1
-tests/Model/Message.Tests.ps1
+tests/Model/MessageReject.Tests.ps1
 tests/Model/OrdSide.Tests.ps1
 tests/Model/OrdStatus.Tests.ps1
 tests/Model/OrdType.Tests.ps1
@@ -67,6 +67,6 @@ tests/Model/OrderExecutionReportAllOf.Tests.ps1
 tests/Model/OrderNewSingleRequest.Tests.ps1
 tests/Model/Position.Tests.ps1
 tests/Model/PositionData.Tests.ps1
-tests/Model/Severity.Tests.ps1
+tests/Model/RejectReason.Tests.ps1
 tests/Model/TimeInForce.Tests.ps1
 tests/Model/ValidationError.Tests.ps1

@@ -19,6 +19,7 @@ import com.squareup.moshi.Json
 * Values: rECEIVED,rOUTING,rOUTED,nEW,pENDINGCANCEL,pARTIALLYFILLED,fILLED,cANCELED,rEJECTED
 */
 
+
 enum class OrdStatus(val value: kotlin.String) {
 
 

@@ -6,7 +6,7 @@ src/openapi_balance.erl
 src/openapi_balance_data.erl
 src/openapi_balances_api.erl
 src/openapi_fills.erl
-src/openapi_message.erl
+src/openapi_message_reject.erl
 src/openapi_ord_side.erl
 src/openapi_ord_status.erl
 src/openapi_ord_type.erl
@@ -19,7 +19,7 @@ src/openapi_orders_api.erl
 src/openapi_position.erl
 src/openapi_position_data.erl
 src/openapi_positions_api.erl
-src/openapi_severity.erl
+src/openapi_reject_reason.erl
 src/openapi_time_in_force.erl
 src/openapi_utils.erl
 src/openapi_validation_error.erl

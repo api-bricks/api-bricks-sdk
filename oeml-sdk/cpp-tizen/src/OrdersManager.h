@@ -5,7 +5,7 @@
 #include <cstring>
 #include <list>
 #include <glib.h>
-#include "Message.h"
+#include "MessageReject.h"
 #include "OrderCancelAllRequest.h"
 #include "OrderCancelSingleRequest.h"
 #include "OrderExecutionReport.h"
@@ -39,7 +39,7 @@ public:
  */
 bool v1OrdersCancelAllPostSync(char * accessToken,
 	OrderCancelAllRequest orderCancelAllRequest, 
-	void(* handler)(Message, Error, void* )
+	void(* handler)(MessageReject, Error, void* )
 	, void* userData);
 
 /*! \brief Cancel all orders request. *Asynchronous*
@@ -52,7 +52,7 @@ bool v1OrdersCancelAllPostSync(char * accessToken,
  */
 bool v1OrdersCancelAllPostAsync(char * accessToken,
 	OrderCancelAllRequest orderCancelAllRequest, 
-	void(* handler)(Message, Error, void* )
+	void(* handler)(MessageReject, Error, void* )
 	, void* userData);
 
 

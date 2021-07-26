@@ -4,8 +4,8 @@ import 'package:jaguar_serializer/jaguar_serializer.dart';
 import 'package:jaguar_mimetype/jaguar_mimetype.dart';
 import 'dart:async';
 
+import 'package:openapi/model/message_reject.dart';
 import 'package:openapi/model/balance.dart';
-import 'package:openapi/model/message.dart';
 
 part 'balances_api.jretro.dart';
 

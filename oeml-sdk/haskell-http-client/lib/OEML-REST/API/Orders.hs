@@ -70,7 +70,7 @@ v1OrdersCancelAllPost
   :: (Consumes V1OrdersCancelAllPost MimeJSON, MimeRender MimeJSON OrderCancelAllRequest)
   => Accept accept -- ^ request accept ('MimeType')
   -> OrderCancelAllRequest -- ^ "orderCancelAllRequest" -  OrderCancelAllRequest object.
-  -> OEML-RESTRequest V1OrdersCancelAllPost MimeJSON Message accept
+  -> OEML-RESTRequest V1OrdersCancelAllPost MimeJSON MessageReject accept
 v1OrdersCancelAllPost  _ orderCancelAllRequest =
   _mkRequest "POST" ["/v1/orders/cancel/all"]
     `setBodyParam` orderCancelAllRequest

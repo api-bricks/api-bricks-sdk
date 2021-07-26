@@ -16,7 +16,7 @@
 //
 // This request cancels all open orders on single specified exchange.
 //
-message_t*
+message_reject_t*
 OrdersAPI_v1OrdersCancelAllPost(apiClient_t *apiClient, order_cancel_all_request_t * order_cancel_all_request )
 {
     list_t    *localVarQueryParameters = NULL;
@@ -66,7 +66,7 @@ OrdersAPI_v1OrdersCancelAllPost(apiClient_t *apiClient, order_cancel_all_request
     }
     //nonprimitive not container
     cJSON *OrdersAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-    message_t *elementToReturn = message_parseFromJSON(OrdersAPIlocalVarJSON);
+    message_reject_t *elementToReturn = message_reject_parseFromJSON(OrdersAPIlocalVarJSON);
     cJSON_Delete(OrdersAPIlocalVarJSON);
     if(elementToReturn == NULL) {
         // return 0;

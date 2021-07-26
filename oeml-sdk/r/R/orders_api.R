@@ -19,12 +19,12 @@
 #'
 #' \itemize{
 #' \item \emph{ @param } order.cancel.all.request \link{OrderCancelAllRequest}
-#' \item \emph{ @returnType } \link{Message} \cr
+#' \item \emph{ @returnType } \link{MessageReject} \cr
 #'
 #'
 #' \item status code : 200 | Result
 #'
-#' \item return type : Message 
+#' \item return type : MessageReject 
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -38,7 +38,7 @@
 #' }
 #' \item status code : 490 | Exchange is unreachable.
 #'
-#' \item return type : Message 
+#' \item return type : MessageReject 
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -69,7 +69,7 @@
 #' }
 #' \item status code : 490 | Exchange is unreachable.
 #'
-#' \item return type : Message 
+#' \item return type : MessageReject 
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -93,7 +93,7 @@
 #' }
 #' \item status code : 490 | Filtered exchange is unreachable.
 #'
-#' \item return type : Message 
+#' \item return type : MessageReject 
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -124,14 +124,14 @@
 #' }
 #' \item status code : 490 | Exchange is unreachable.
 #'
-#' \item return type : Message 
+#' \item return type : MessageReject 
 #' \item response headers :
 #'
 #' \tabular{ll}{
 #' }
 #' \item status code : 504 | Exchange didn&#39;t responded in the defined timeout.
 #'
-#' \item return type : Message 
+#' \item return type : MessageReject 
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -155,7 +155,7 @@
 #' }
 #' \item status code : 404 | The requested order was not found.
 #'
-#' \item return type : Message 
+#' \item return type : MessageReject 
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -278,7 +278,7 @@ OrdersApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "Message", loadNamespace("openapi")),
+          self$apiClient$deserialize(resp, "MessageReject", loadNamespace("openapi")),
           error = function(e){
              stop("Failed to deserialize response")
           }

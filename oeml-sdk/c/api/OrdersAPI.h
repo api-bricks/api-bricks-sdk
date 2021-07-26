@@ -5,7 +5,7 @@
 #include "../external/cJSON.h"
 #include "../include/keyValuePair.h"
 #include "../include/binary.h"
-#include "../model/message.h"
+#include "../model/message_reject.h"
 #include "../model/order_cancel_all_request.h"
 #include "../model/order_cancel_single_request.h"
 #include "../model/order_execution_report.h"
@@ -17,7 +17,7 @@
 //
 // This request cancels all open orders on single specified exchange.
 //
-message_t*
+message_reject_t*
 OrdersAPI_v1OrdersCancelAllPost(apiClient_t *apiClient, order_cancel_all_request_t * order_cancel_all_request );
 
 

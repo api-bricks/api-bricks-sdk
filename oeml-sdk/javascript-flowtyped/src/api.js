@@ -47,7 +47,6 @@ export type FetchArgs = {
     options: {};
 }
 
-
 /**
  *
  * @export
@@ -178,31 +177,37 @@ export type Fills = {
  * 
  * @export
  */
-export type Message = {
+export type MessageReject = {
     /**
-     * Type of message.
+     * Message type, constant.
      * @type {string}
-     * @memberof Message
+     * @memberof MessageReject
      */
     type?: string;
     /**
      * 
-     * @type {Severity}
-     * @memberof Message
+     * @type {RejectReason}
+     * @memberof MessageReject
      */
-    severity?: Severity;
+    reject_reason?: RejectReason;
     /**
      * If the message related to exchange, then the identifier of the exchange will be provided.
      * @type {string}
-     * @memberof Message
+     * @memberof MessageReject
      */
     exchange_id?: string;
     /**
      * Message text.
      * @type {string}
-     * @memberof Message
+     * @memberof MessageReject
      */
     message?: string;
+    /**
+     * Value of rejected request, if available.
+     * @type {string}
+     * @memberof MessageReject
+     */
+    rejected_message?: string;
 }
 
 
@@ -624,11 +629,11 @@ export type PositionData = {
 
 
 /**
- * Severity of the message.
+ * Cause of rejection.
  * @export
  * @enum {string}
  */
-export type Severity = 'INFO' | 'WARNING' | 'ERROR';
+export type RejectReason = 'OTHER' | 'EXCHANGE_UNREACHABLE' | 'EXCHANGE_RESPONSE_TIMEOUT' | 'ORDER_ID_NOT_FOUND' | 'INVALID_TYPE' | 'METHOD_NOT_SUPPORTED' | 'JSON_ERROR';
 
 /**
  * Order time in force options are documented in the separate section: <a href=\"#oeml-order-params-tif\">OEML / Starter Guide / Order parameters / Time in force</a> 
@@ -740,6 +745,7 @@ export const BalancesApi = function(configuration?: Configuration, fetch: FetchA
         },
     }
 };
+
 
 /**
  * OrdersApi - fetch parameter creator
@@ -894,7 +900,7 @@ export const OrdersApiFetchParamCreator = function (configuration?: Configuratio
 };
 
 export type OrdersApiType = { 
-    v1OrdersCancelAllPost(orderCancelAllRequest: OrderCancelAllRequest, options?: RequestOptions): Promise<Message>,
+    v1OrdersCancelAllPost(orderCancelAllRequest: OrderCancelAllRequest, options?: RequestOptions): Promise<MessageReject>,
 
     v1OrdersCancelPost(orderCancelSingleRequest: OrderCancelSingleRequest, options?: RequestOptions): Promise<OrderExecutionReport>,
 
@@ -917,7 +923,7 @@ export const OrdersApi = function(configuration?: Configuration, fetch: FetchAPI
          * @summary Cancel all orders request
          * @throws {RequiredError}
          */
-        v1OrdersCancelAllPost(orderCancelAllRequest: OrderCancelAllRequest, options?: RequestOptions = {}): Promise<Message> {
+        v1OrdersCancelAllPost(orderCancelAllRequest: OrderCancelAllRequest, options?: RequestOptions = {}): Promise<MessageReject> {
             const localVarFetchArgs = OrdersApiFetchParamCreator(configuration).v1OrdersCancelAllPost(orderCancelAllRequest, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
@@ -990,6 +996,7 @@ export const OrdersApi = function(configuration?: Configuration, fetch: FetchAPI
     }
 };
 
+
 /**
  * PositionsApi - fetch parameter creator
  * @export
@@ -1053,6 +1060,7 @@ export const PositionsApi = function(configuration?: Configuration, fetch: Fetch
         },
     }
 };
+
 
 export type ApiTypes = { 
     BalancesApi: BalancesApiType,

@@ -17,7 +17,7 @@ local basexx = require "basexx"
 
 -- model import
 local openapiclient_balance = require "openapiclient.model.balance"
-local openapiclient_message = require "openapiclient.model.message"
+local openapiclient_message_reject = require "openapiclient.model.message_reject"
 
 local balances_api = {}
 local balances_api_mt = {

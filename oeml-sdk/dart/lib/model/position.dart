@@ -57,12 +57,12 @@ class Position {
   static List<Position> listFromJson(List<dynamic> json, {bool emptyIsNull, bool growable,}) =>
     json == null || json.isEmpty
       ? true == emptyIsNull ? null : <Position>[]
-      : json.map((v) => Position.fromJson(v)).toList(growable: true == growable);
+      : json.map((dynamic value) => Position.fromJson(value)).toList(growable: true == growable);
 
   static Map<String, Position> mapFromJson(Map<String, dynamic> json) {
     final map = <String, Position>{};
-    if (json != null && json.isNotEmpty) {
-      json.forEach((String key, dynamic v) => map[key] = Position.fromJson(v));
+    if (json?.isNotEmpty == true) {
+      json.forEach((key, value) => map[key] = Position.fromJson(value));
     }
     return map;
   }
@@ -70,9 +70,9 @@ class Position {
   // maps a json object with a list of Position-objects as value to a dart map
   static Map<String, List<Position>> mapListFromJson(Map<String, dynamic> json, {bool emptyIsNull, bool growable,}) {
     final map = <String, List<Position>>{};
-    if (json != null && json.isNotEmpty) {
-      json.forEach((String key, dynamic v) {
-        map[key] = Position.listFromJson(v, emptyIsNull: emptyIsNull, growable: growable);
+    if (json?.isNotEmpty == true) {
+      json.forEach((key, value) {
+        map[key] = Position.listFromJson(value, emptyIsNull: emptyIsNull, growable: growable,);
       });
     }
     return map;

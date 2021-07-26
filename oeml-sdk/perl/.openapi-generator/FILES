@@ -7,7 +7,7 @@ docs/Balance.md
 docs/BalanceData.md
 docs/BalancesApi.md
 docs/Fills.md
-docs/Message.md
+docs/MessageReject.md
 docs/OrdSide.md
 docs/OrdStatus.md
 docs/OrdType.md
@@ -20,7 +20,7 @@ docs/OrdersApi.md
 docs/Position.md
 docs/PositionData.md
 docs/PositionsApi.md
-docs/Severity.md
+docs/RejectReason.md
 docs/TimeInForce.md
 docs/ValidationError.md
 git_push.sh
@@ -31,7 +31,7 @@ lib/WWW/OpenAPIClient/Configuration.pm
 lib/WWW/OpenAPIClient/Object/Balance.pm
 lib/WWW/OpenAPIClient/Object/BalanceData.pm
 lib/WWW/OpenAPIClient/Object/Fills.pm
-lib/WWW/OpenAPIClient/Object/Message.pm
+lib/WWW/OpenAPIClient/Object/MessageReject.pm
 lib/WWW/OpenAPIClient/Object/OrdSide.pm
 lib/WWW/OpenAPIClient/Object/OrdStatus.pm
 lib/WWW/OpenAPIClient/Object/OrdType.pm
@@ -42,7 +42,7 @@ lib/WWW/OpenAPIClient/Object/OrderExecutionReportAllOf.pm
 lib/WWW/OpenAPIClient/Object/OrderNewSingleRequest.pm
 lib/WWW/OpenAPIClient/Object/Position.pm
 lib/WWW/OpenAPIClient/Object/PositionData.pm
-lib/WWW/OpenAPIClient/Object/Severity.pm
+lib/WWW/OpenAPIClient/Object/RejectReason.pm
 lib/WWW/OpenAPIClient/Object/TimeInForce.pm
 lib/WWW/OpenAPIClient/Object/ValidationError.pm
 lib/WWW/OpenAPIClient/OrdersApi.pm
@@ -53,7 +53,7 @@ t/BalanceDataTest.t
 t/BalanceTest.t
 t/BalancesApiTest.t
 t/FillsTest.t
-t/MessageTest.t
+t/MessageRejectTest.t
 t/OrdSideTest.t
 t/OrdStatusTest.t
 t/OrdTypeTest.t
@@ -66,6 +66,6 @@ t/OrdersApiTest.t
 t/PositionDataTest.t
 t/PositionTest.t
 t/PositionsApiTest.t
-t/SeverityTest.t
+t/RejectReasonTest.t
 t/TimeInForceTest.t
 t/ValidationErrorTest.t

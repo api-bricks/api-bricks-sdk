@@ -17,7 +17,7 @@ namespace COINAPI.FIX.V2
                 QuickFix.SessionSettings settings = new QuickFix.SessionSettings("config_nossl.cfg");
                 MarketDataApp application = new MarketDataApp();
                 QuickFix.IMessageStoreFactory storeFactory = new QuickFix.FileStoreFactory(settings);
-                QuickFix.ILogFactory logFactory = new NullLogFactory(settings);
+                QuickFix.ILogFactory logFactory = new FileLogFactory(settings);
                 QuickFix.Transport.SocketInitiator initiator = new QuickFix.Transport.SocketInitiator(application, storeFactory, settings, logFactory);
                 initiator.Start();
 

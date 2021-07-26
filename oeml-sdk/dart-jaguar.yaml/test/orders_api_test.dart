@@ -11,7 +11,7 @@ void main() {
     //
     // This request cancels all open orders on single specified exchange.
     //
-    //Future<Message> v1OrdersCancelAllPost(OrderCancelAllRequest orderCancelAllRequest) async
+    //Future<MessageReject> v1OrdersCancelAllPost(OrderCancelAllRequest orderCancelAllRequest) async
     test('test v1OrdersCancelAllPost', () async {
       // TODO
     });

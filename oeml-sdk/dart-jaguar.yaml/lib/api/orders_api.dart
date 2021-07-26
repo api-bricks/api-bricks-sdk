@@ -4,11 +4,11 @@ import 'package:jaguar_serializer/jaguar_serializer.dart';
 import 'package:jaguar_mimetype/jaguar_mimetype.dart';
 import 'dart:async';
 
+import 'package:openapi/model/message_reject.dart';
 import 'package:openapi/model/order_cancel_all_request.dart';
 import 'package:openapi/model/validation_error.dart';
 import 'package:openapi/model/order_cancel_single_request.dart';
 import 'package:openapi/model/order_execution_report.dart';
-import 'package:openapi/model/message.dart';
 import 'package:openapi/model/order_new_single_request.dart';
 
 part 'orders_api.jretro.dart';
@@ -25,7 +25,7 @@ class OrdersApi extends ApiClient with _$OrdersApiClient {
     ///
     /// This request cancels all open orders on single specified exchange.
     @PostReq(path: "/v1/orders/cancel/all")
-    Future<Message> v1OrdersCancelAllPost(
+    Future<MessageReject> v1OrdersCancelAllPost(
             
              @AsJson() OrderCancelAllRequest orderCancelAllRequest
         ) {

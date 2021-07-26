@@ -77,7 +77,7 @@ Class | Method | HTTP request | Description
  - [OASBalance](OASBalance.md)
  - [OASBalanceData](OASBalanceData.md)
  - [OASFills](OASFills.md)
- - [OASMessage](OASMessage.md)
+ - [OASMessageReject](OASMessageReject.md)
  - [OASOrdSide](OASOrdSide.md)
  - [OASOrdStatus](OASOrdStatus.md)
  - [OASOrdType](OASOrdType.md)
@@ -88,7 +88,7 @@ Class | Method | HTTP request | Description
  - [OASOrderNewSingleRequest](OASOrderNewSingleRequest.md)
  - [OASPosition](OASPosition.md)
  - [OASPositionData](OASPositionData.md)
- - [OASSeverity](OASSeverity.md)
+ - [OASRejectReason](OASRejectReason.md)
  - [OASTimeInForce](OASTimeInForce.md)
  - [OASValidationError](OASValidationError.md)
 

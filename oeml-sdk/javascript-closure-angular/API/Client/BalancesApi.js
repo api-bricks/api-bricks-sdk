@@ -15,7 +15,7 @@
 goog.provide('API.Client.BalancesApi');
 
 goog.require('API.Client.Balance');
-goog.require('API.Client.Message');
+goog.require('API.Client.MessageReject');
 
 /**
  * @constructor

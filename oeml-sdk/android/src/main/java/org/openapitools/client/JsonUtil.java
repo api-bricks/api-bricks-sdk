@@ -69,8 +69,8 @@ public class JsonUtil {
       return new TypeToken<List<Fills>>(){}.getType();
     }
     
-    if ("Message".equalsIgnoreCase(className)) {
-      return new TypeToken<List<Message>>(){}.getType();
+    if ("MessageReject".equalsIgnoreCase(className)) {
+      return new TypeToken<List<MessageReject>>(){}.getType();
     }
     
     if ("OrdSide".equalsIgnoreCase(className)) {
@@ -113,8 +113,8 @@ public class JsonUtil {
       return new TypeToken<List<PositionData>>(){}.getType();
     }
     
-    if ("Severity".equalsIgnoreCase(className)) {
-      return new TypeToken<List<Severity>>(){}.getType();
+    if ("RejectReason".equalsIgnoreCase(className)) {
+      return new TypeToken<List<RejectReason>>(){}.getType();
     }
     
     if ("TimeInForce".equalsIgnoreCase(className)) {
@@ -143,8 +143,8 @@ public class JsonUtil {
       return new TypeToken<Fills>(){}.getType();
     }
     
-    if ("Message".equalsIgnoreCase(className)) {
-      return new TypeToken<Message>(){}.getType();
+    if ("MessageReject".equalsIgnoreCase(className)) {
+      return new TypeToken<MessageReject>(){}.getType();
     }
     
     if ("OrdSide".equalsIgnoreCase(className)) {
@@ -187,8 +187,8 @@ public class JsonUtil {
       return new TypeToken<PositionData>(){}.getType();
     }
     
-    if ("Severity".equalsIgnoreCase(className)) {
-      return new TypeToken<Severity>(){}.getType();
+    if ("RejectReason".equalsIgnoreCase(className)) {
+      return new TypeToken<RejectReason>(){}.getType();
     }
     
     if ("TimeInForce".equalsIgnoreCase(className)) {

@@ -33,7 +33,7 @@ import Json.Encode
 
 {-| This request cancels all open orders on single specified exchange.
 -}
-v1OrdersCancelAllPost : Api.Data.OrderCancelAllRequest -> Api.Request Api.Data.Message
+v1OrdersCancelAllPost : Api.Data.OrderCancelAllRequest -> Api.Request Api.Data.MessageReject
 v1OrdersCancelAllPost orderCancelAllRequest_body =
     Api.request
         "POST"
@@ -42,7 +42,7 @@ v1OrdersCancelAllPost orderCancelAllRequest_body =
         []
         []
         (Just (Api.Data.encodeOrderCancelAllRequest orderCancelAllRequest_body))
-        Api.Data.messageDecoder
+        Api.Data.messageRejectDecoder
 
 
 

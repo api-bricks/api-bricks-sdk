@@ -23,7 +23,7 @@ import java.util.*;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 
-import org.openapitools.client.model.Message;
+import org.openapitools.client.model.MessageReject;
 import org.openapitools.client.model.Position;
 
 import org.apache.http.HttpEntity;

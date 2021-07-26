@@ -19,6 +19,7 @@ import com.squareup.moshi.Json
 * Values: gOODTILLCANCEL,gOODTILLTIMEEXCHANGE,gOODTILLTIMEOMS,fILLORKILL,iMMEDIATEORCANCEL
 */
 
+
 enum class TimeInForce(val value: kotlin.String) {
 
 

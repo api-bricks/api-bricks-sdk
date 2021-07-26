@@ -9,7 +9,7 @@ All URIs are relative to *https://13d16e9d-d8b1-4ef4-bc4a-ed8156b2b159.mock.pstm
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**v1BalancesGet**](BalancesApi.md#v1balancesget) | **get** /v1/balances | Get balances
+[**v1BalancesGet**](BalancesApi.md#v1balancesget) | **GET** /v1/balances | Get balances
 
 
 # **v1BalancesGet**

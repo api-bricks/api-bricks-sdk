@@ -10,7 +10,7 @@ R/balance.R
 R/balance_data.R
 R/balances_api.R
 R/fills.R
-R/message.R
+R/message_reject.R
 R/ord_side.R
 R/ord_status.R
 R/ord_type.R
@@ -23,7 +23,7 @@ R/orders_api.R
 R/position.R
 R/position_data.R
 R/positions_api.R
-R/severity.R
+R/reject_reason.R
 R/time_in_force.R
 R/validation_error.R
 README.md
@@ -31,7 +31,7 @@ docs/Balance.md
 docs/BalanceData.md
 docs/BalancesApi.md
 docs/Fills.md
-docs/Message.md
+docs/MessageReject.md
 docs/OrdSide.md
 docs/OrdStatus.md
 docs/OrdType.md
@@ -44,7 +44,7 @@ docs/OrdersApi.md
 docs/Position.md
 docs/PositionData.md
 docs/PositionsApi.md
-docs/Severity.md
+docs/RejectReason.md
 docs/TimeInForce.md
 docs/ValidationError.md
 git_push.sh
@@ -53,7 +53,7 @@ tests/testthat/test_balance.R
 tests/testthat/test_balance_data.R
 tests/testthat/test_balances_api.R
 tests/testthat/test_fills.R
-tests/testthat/test_message.R
+tests/testthat/test_message_reject.R
 tests/testthat/test_ord_side.R
 tests/testthat/test_ord_status.R
 tests/testthat/test_ord_type.R
@@ -66,6 +66,6 @@ tests/testthat/test_orders_api.R
 tests/testthat/test_position.R
 tests/testthat/test_position_data.R
 tests/testthat/test_positions_api.R
-tests/testthat/test_severity.R
+tests/testthat/test_reject_reason.R
 tests/testthat/test_time_in_force.R
 tests/testthat/test_validation_error.R

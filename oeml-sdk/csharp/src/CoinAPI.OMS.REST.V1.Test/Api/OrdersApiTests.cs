@@ -72,7 +72,7 @@ namespace CoinAPI.OMS.REST.V1.Test
             // TODO uncomment below to test the method and replace null with proper value
             //OrderCancelAllRequest orderCancelAllRequest = null;
             //var response = instance.V1OrdersCancelAllPost(orderCancelAllRequest);
-            //Assert.IsInstanceOf(typeof(Message), response, "response is Message");
+            //Assert.IsInstanceOf(typeof(MessageReject), response, "response is MessageReject");
         }
         
         /// <summary>

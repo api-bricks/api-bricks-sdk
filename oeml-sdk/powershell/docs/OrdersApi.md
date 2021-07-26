@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="Invoke-V1OrdersCancelAllPost"></a>
 # **Invoke-V1OrdersCancelAllPost**
-> Message Invoke-V1OrdersCancelAllPost<br>
+> MessageReject Invoke-V1OrdersCancelAllPost<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-OrderCancelAllRequest] <PSCustomObject><br>
 
 Cancel all orders request
@@ -22,11 +22,11 @@ This request cancels all open orders on single specified exchange.
 
 ### Example
 ```powershell
-$OrderCancelAllRequest = (Initialize-OrderCancelAllRequest -ExchangeId "ExchangeId_example") # OrderCancelAllRequest | OrderCancelAllRequest object.
+$OrderCancelAllRequest = Initialize-OrderCancelAllRequest -ExchangeId "KRAKEN" # OrderCancelAllRequest | OrderCancelAllRequest object.
 
 # Cancel all orders request
 try {
-     $Result = Invoke-V1OrdersCancelAllPost -OrderCancelAllRequest $OrderCancelAllRequest
+    $Result = Invoke-V1OrdersCancelAllPost -OrderCancelAllRequest $OrderCancelAllRequest
 } catch {
     Write-Host ("Exception occured when calling Invoke-V1OrdersCancelAllPost: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -41,7 +41,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Message**](Message.md) (PSCustomObject)
+[**MessageReject**](MessageReject.md) (PSCustomObject)
 
 ### Authorization
 
@@ -65,11 +65,11 @@ Request cancel for an existing order. The order can be canceled using the `clien
 
 ### Example
 ```powershell
-$OrderCancelSingleRequest = (Initialize-OrderCancelSingleRequest -ExchangeId "ExchangeId_example" -ExchangeOrderId "ExchangeOrderId_example" -ClientOrderId "ClientOrderId_example") # OrderCancelSingleRequest | OrderCancelSingleRequest object.
+$OrderCancelSingleRequest = Initialize-OrderCancelSingleRequest -ExchangeId "KRAKEN" -ExchangeOrderId "3456456754" -ClientOrderId "6ab36bc1-344d-432e-ac6d-0bf44ee64c2b" # OrderCancelSingleRequest | OrderCancelSingleRequest object.
 
 # Cancel order request
 try {
-     $Result = Invoke-V1OrdersCancelPost -OrderCancelSingleRequest $OrderCancelSingleRequest
+    $Result = Invoke-V1OrdersCancelPost -OrderCancelSingleRequest $OrderCancelSingleRequest
 } catch {
     Write-Host ("Exception occured when calling Invoke-V1OrdersCancelPost: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -108,11 +108,11 @@ Get last execution reports for open orders across all or single exchange.
 
 ### Example
 ```powershell
-$ExchangeId = "ExchangeId_example" # String | Filter the open orders to the specific exchange. (optional)
+$ExchangeId = "KRAKEN" # String | Filter the open orders to the specific exchange. (optional)
 
 # Get open orders
 try {
-     $Result = Invoke-V1OrdersGet -ExchangeId $ExchangeId
+    $Result = Invoke-V1OrdersGet -ExchangeId $ExchangeId
 } catch {
     Write-Host ("Exception occured when calling Invoke-V1OrdersGet: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -151,11 +151,11 @@ This request creating new order for the specific exchange.
 
 ### Example
 ```powershell
-$OrderNewSingleRequest = (Initialize-OrderNewSingleRequest -ExchangeId "ExchangeId_example" -ClientOrderId "ClientOrderId_example" -SymbolIdExchange "SymbolIdExchange_example" -SymbolIdCoinapi "SymbolIdCoinapi_example" -AmountOrder 123 -Price 123 -Side (Initialize-OrdSide ) -OrderType (Initialize-OrdType ) -TimeInForce (Initialize-TimeInForce ) -ExpireTime Get-Date -ExecInst @("MAKER_OR_CANCEL")) # OrderNewSingleRequest | OrderNewSingleRequest object.
+"MAKER_OR_CANCEL"$OrderNewSingleRequest = Initialize-OrderNewSingleRequest -ExchangeId "KRAKEN" -ClientOrderId "6ab36bc1-344d-432e-ac6d-0bf44ee64c2b" -SymbolIdExchange "XBT/USDT" -SymbolIdCoinapi "KRAKEN_SPOT_BTC_USDT" -AmountOrder 0.045 -Price 0.0783 -Side "BUY" -OrderType "LIMIT" -TimeInForce "GOOD_TILL_CANCEL" -ExpireTime 2020-01-01T10:45:20.1677709Z -ExecInst "MAKER_OR_CANCEL" # OrderNewSingleRequest | OrderNewSingleRequest object.
 
 # Send new order
 try {
-     $Result = Invoke-V1OrdersPost -OrderNewSingleRequest $OrderNewSingleRequest
+    $Result = Invoke-V1OrdersPost -OrderNewSingleRequest $OrderNewSingleRequest
 } catch {
     Write-Host ("Exception occured when calling Invoke-V1OrdersPost: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -194,11 +194,11 @@ Get the last order execution report for the specified order. The requested order
 
 ### Example
 ```powershell
-$ClientOrderId = "ClientOrderId_example" # String | The unique identifier of the order assigned by the client.
+$ClientOrderId = "6ab36bc1-344d-432e-ac6d-0bf44ee64c2b" # String | The unique identifier of the order assigned by the client.
 
 # Get order execution report
 try {
-     $Result = Invoke-V1OrdersStatusClientOrderIdGet -ClientOrderId $ClientOrderId
+    $Result = Invoke-V1OrdersStatusClientOrderIdGet -ClientOrderId $ClientOrderId
 } catch {
     Write-Host ("Exception occured when calling Invoke-V1OrdersStatusClientOrderIdGet: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))

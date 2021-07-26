@@ -138,16 +138,17 @@ genFills n =
     <*> arbitraryReducedMaybe n -- fillsPrice :: Maybe Double
     <*> arbitraryReducedMaybe n -- fillsAmount :: Maybe Double
   
-instance Arbitrary Message where
-  arbitrary = sized genMessage
+instance Arbitrary MessageReject where
+  arbitrary = sized genMessageReject
 
-genMessage :: Int -> Gen Message
-genMessage n =
-  Message
-    <$> arbitraryReducedMaybe n -- messageType :: Maybe Text
-    <*> arbitraryReducedMaybe n -- messageSeverity :: Maybe Severity
-    <*> arbitraryReducedMaybe n -- messageExchangeId :: Maybe Text
-    <*> arbitraryReducedMaybe n -- messageMessage :: Maybe Text
+genMessageReject :: Int -> Gen MessageReject
+genMessageReject n =
+  MessageReject
+    <$> arbitraryReducedMaybe n -- messageRejectType :: Maybe Text
+    <*> arbitraryReducedMaybe n -- messageRejectRejectReason :: Maybe RejectReason
+    <*> arbitraryReducedMaybe n -- messageRejectExchangeId :: Maybe Text
+    <*> arbitraryReducedMaybe n -- messageRejectMessage :: Maybe Text
+    <*> arbitraryReducedMaybe n -- messageRejectRejectedMessage :: Maybe Text
   
 instance Arbitrary OrderCancelAllRequest where
   arbitrary = sized genOrderCancelAllRequest
@@ -284,7 +285,7 @@ instance Arbitrary OrdStatus where
 instance Arbitrary OrdType where
   arbitrary = arbitraryBoundedEnum
 
-instance Arbitrary Severity where
+instance Arbitrary RejectReason where
   arbitrary = arbitraryBoundedEnum
 
 instance Arbitrary TimeInForce where

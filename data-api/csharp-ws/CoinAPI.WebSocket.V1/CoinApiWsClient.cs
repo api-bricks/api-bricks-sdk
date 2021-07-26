@@ -259,7 +259,10 @@ namespace CoinAPI.WebSocket.V1
                         _queueThread.Enqueue(messageData);
                     }
                 }
-                catch (TaskCanceledException) { }
+                catch (TaskCanceledException) 
+                {
+                    await _client.CloseAsync(WebSocketCloseStatus.NormalClosure, "Normal", CancellationToken.None);
+                }
                 catch (Exception ex)
                 {
                     OnError(ex);

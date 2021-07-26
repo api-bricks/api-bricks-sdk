@@ -139,7 +139,7 @@ Class | Method | HTTP request | Description
  - [OemlRestApi.Balance](docs/Balance.md)
  - [OemlRestApi.BalanceData](docs/BalanceData.md)
  - [OemlRestApi.Fills](docs/Fills.md)
- - [OemlRestApi.Message](docs/Message.md)
+ - [OemlRestApi.MessageReject](docs/MessageReject.md)
  - [OemlRestApi.OrdSide](docs/OrdSide.md)
  - [OemlRestApi.OrdStatus](docs/OrdStatus.md)
  - [OemlRestApi.OrdType](docs/OrdType.md)
@@ -150,7 +150,7 @@ Class | Method | HTTP request | Description
  - [OemlRestApi.OrderNewSingleRequest](docs/OrderNewSingleRequest.md)
  - [OemlRestApi.Position](docs/Position.md)
  - [OemlRestApi.PositionData](docs/PositionData.md)
- - [OemlRestApi.Severity](docs/Severity.md)
+ - [OemlRestApi.RejectReason](docs/RejectReason.md)
  - [OemlRestApi.TimeInForce](docs/TimeInForce.md)
  - [OemlRestApi.ValidationError](docs/ValidationError.md)
 

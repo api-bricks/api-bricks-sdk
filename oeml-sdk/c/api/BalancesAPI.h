@@ -6,7 +6,7 @@
 #include "../include/keyValuePair.h"
 #include "../include/binary.h"
 #include "../model/balance.h"
-#include "../model/message.h"
+#include "../model/message_reject.h"
 
 
 // Get balances

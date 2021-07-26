@@ -10,7 +10,7 @@ docs/Balance.md
 docs/BalanceData.md
 docs/BalancesApi.md
 docs/Fills.md
-docs/Message.md
+docs/MessageReject.md
 docs/OrdSide.md
 docs/OrdStatus.md
 docs/OrdType.md
@@ -23,7 +23,7 @@ docs/OrdersApi.md
 docs/Position.md
 docs/PositionData.md
 docs/PositionsApi.md
-docs/Severity.md
+docs/RejectReason.md
 docs/TimeInForce.md
 docs/ValidationError.md
 git_push.sh
@@ -37,7 +37,7 @@ lib/openapi_client/configuration.rb
 lib/openapi_client/models/balance.rb
 lib/openapi_client/models/balance_data.rb
 lib/openapi_client/models/fills.rb
-lib/openapi_client/models/message.rb
+lib/openapi_client/models/message_reject.rb
 lib/openapi_client/models/ord_side.rb
 lib/openapi_client/models/ord_status.rb
 lib/openapi_client/models/ord_type.rb
@@ -48,7 +48,7 @@ lib/openapi_client/models/order_execution_report_all_of.rb
 lib/openapi_client/models/order_new_single_request.rb
 lib/openapi_client/models/position.rb
 lib/openapi_client/models/position_data.rb
-lib/openapi_client/models/severity.rb
+lib/openapi_client/models/reject_reason.rb
 lib/openapi_client/models/time_in_force.rb
 lib/openapi_client/models/validation_error.rb
 lib/openapi_client/version.rb
@@ -61,7 +61,7 @@ spec/configuration_spec.rb
 spec/models/balance_data_spec.rb
 spec/models/balance_spec.rb
 spec/models/fills_spec.rb
-spec/models/message_spec.rb
+spec/models/message_reject_spec.rb
 spec/models/ord_side_spec.rb
 spec/models/ord_status_spec.rb
 spec/models/ord_type_spec.rb
@@ -72,7 +72,7 @@ spec/models/order_execution_report_spec.rb
 spec/models/order_new_single_request_spec.rb
 spec/models/position_data_spec.rb
 spec/models/position_spec.rb
-spec/models/severity_spec.rb
+spec/models/reject_reason_spec.rb
 spec/models/time_in_force_spec.rb
 spec/models/validation_error_spec.rb
 spec/spec_helper.rb

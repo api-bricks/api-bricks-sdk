@@ -9,7 +9,7 @@ docs/Balances.md
 docs/BalancesApi.md
 docs/ExecInst.md
 docs/Fills.md
-docs/Message.md
+docs/MessageReject.md
 docs/OrdSide.md
 docs/OrdStatus.md
 docs/OrdType.md
@@ -24,7 +24,7 @@ docs/Position.md
 docs/PositionData.md
 docs/Positions.md
 docs/PositionsApi.md
-docs/Severity.md
+docs/RejectReason.md
 docs/TimeInForce.md
 docs/ValidationError.md
 git_push.sh
@@ -43,7 +43,7 @@ openapi_client/model/balance_data.py
 openapi_client/model/balances.py
 openapi_client/model/exec_inst.py
 openapi_client/model/fills.py
-openapi_client/model/message.py
+openapi_client/model/message_reject.py
 openapi_client/model/ord_side.py
 openapi_client/model/ord_status.py
 openapi_client/model/ord_type.py
@@ -56,7 +56,7 @@ openapi_client/model/order_new_single_request.py
 openapi_client/model/position.py
 openapi_client/model/position_data.py
 openapi_client/model/positions.py
-openapi_client/model/severity.py
+openapi_client/model/reject_reason.py
 openapi_client/model/time_in_force.py
 openapi_client/model/validation_error.py
 openapi_client/model_utils.py
@@ -73,7 +73,7 @@ test/test_balances.py
 test/test_balances_api.py
 test/test_exec_inst.py
 test/test_fills.py
-test/test_message.py
+test/test_message_reject.py
 test/test_ord_side.py
 test/test_ord_status.py
 test/test_ord_type.py
@@ -88,7 +88,7 @@ test/test_position.py
 test/test_position_data.py
 test/test_positions.py
 test/test_positions_api.py
-test/test_severity.py
+test/test_reject_reason.py
 test/test_time_in_force.py
 test/test_validation_error.py
 tox.ini

@@ -14,7 +14,7 @@
 
 goog.provide('API.Client.OrdersApi');
 
-goog.require('API.Client.Message');
+goog.require('API.Client.MessageReject');
 goog.require('API.Client.OrderCancelAllRequest');
 goog.require('API.Client.OrderCancelSingleRequest');
 goog.require('API.Client.OrderExecutionReport');
@@ -53,7 +53,7 @@ API.Client.OrdersApi.$inject = ['$http', '$httpParamSerializer', '$injector'];
  * This request cancels all open orders on single specified exchange.
  * @param {!OrderCancelAllRequest} orderCancelAllRequest OrderCancelAllRequest object.
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
- * @return {!angular.$q.Promise<!API.Client.Message>}
+ * @return {!angular.$q.Promise<!API.Client.MessageReject>}
  */
 API.Client.OrdersApi.prototype.v1OrdersCancelAllPost = function(orderCancelAllRequest, opt_extraHttpRequestParams) {
   /** @const {string} */

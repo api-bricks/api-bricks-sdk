@@ -16,7 +16,7 @@ src/main/scala/org/openapitools/client/core/requests.scala
 src/main/scala/org/openapitools/client/model/Balance.scala
 src/main/scala/org/openapitools/client/model/BalanceData.scala
 src/main/scala/org/openapitools/client/model/Fills.scala
-src/main/scala/org/openapitools/client/model/Message.scala
+src/main/scala/org/openapitools/client/model/MessageReject.scala
 src/main/scala/org/openapitools/client/model/OrdSide.scala
 src/main/scala/org/openapitools/client/model/OrdStatus.scala
 src/main/scala/org/openapitools/client/model/OrdType.scala
@@ -27,6 +27,6 @@ src/main/scala/org/openapitools/client/model/OrderExecutionReportAllOf.scala
 src/main/scala/org/openapitools/client/model/OrderNewSingleRequest.scala
 src/main/scala/org/openapitools/client/model/Position.scala
 src/main/scala/org/openapitools/client/model/PositionData.scala
-src/main/scala/org/openapitools/client/model/Severity.scala
+src/main/scala/org/openapitools/client/model/RejectReason.scala
 src/main/scala/org/openapitools/client/model/TimeInForce.scala
 src/main/scala/org/openapitools/client/model/ValidationError.scala

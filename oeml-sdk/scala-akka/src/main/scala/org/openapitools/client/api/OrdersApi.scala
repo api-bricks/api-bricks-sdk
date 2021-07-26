@@ -11,7 +11,7 @@
  */
 package org.openapitools.client.api
 
-import org.openapitools.client.model.Message
+import org.openapitools.client.model.MessageReject
 import org.openapitools.client.model.OrderCancelAllRequest
 import org.openapitools.client.model.OrderCancelSingleRequest
 import org.openapitools.client.model.OrderExecutionReport
@@ -32,18 +32,18 @@ class OrdersApi(baseUrl: String) {
    * This request cancels all open orders on single specified exchange.
    * 
    * Expected answers:
-   *   code 200 : Message (Result)
+   *   code 200 : MessageReject (Result)
    *   code 400 : ValidationError (Input model validation errors.)
-   *   code 490 : Message (Exchange is unreachable.)
+   *   code 490 : MessageReject (Exchange is unreachable.)
    * 
    * @param orderCancelAllRequest OrderCancelAllRequest object.
    */
-  def v1OrdersCancelAllPost(orderCancelAllRequest: OrderCancelAllRequest): ApiRequest[Message] =
-    ApiRequest[Message](ApiMethods.POST, baseUrl, "/v1/orders/cancel/all", "application/json")
+  def v1OrdersCancelAllPost(orderCancelAllRequest: OrderCancelAllRequest): ApiRequest[MessageReject] =
+    ApiRequest[MessageReject](ApiMethods.POST, baseUrl, "/v1/orders/cancel/all", "application/json")
       .withBody(orderCancelAllRequest)
-      .withSuccessResponse[Message](200)
+      .withSuccessResponse[MessageReject](200)
       .withErrorResponse[ValidationError](400)
-      .withErrorResponse[Message](490)
+      .withErrorResponse[MessageReject](490)
       
 
   /**
@@ -52,7 +52,7 @@ class OrdersApi(baseUrl: String) {
    * Expected answers:
    *   code 200 : OrderExecutionReport (The last execution report for the order for which cancelation was requested.)
    *   code 400 : ValidationError (Input model validation errors.)
-   *   code 490 : Message (Exchange is unreachable.)
+   *   code 490 : MessageReject (Exchange is unreachable.)
    * 
    * @param orderCancelSingleRequest OrderCancelSingleRequest object.
    */
@@ -61,7 +61,7 @@ class OrdersApi(baseUrl: String) {
       .withBody(orderCancelSingleRequest)
       .withSuccessResponse[OrderExecutionReport](200)
       .withErrorResponse[ValidationError](400)
-      .withErrorResponse[Message](490)
+      .withErrorResponse[MessageReject](490)
       
 
   /**
@@ -69,7 +69,7 @@ class OrdersApi(baseUrl: String) {
    * 
    * Expected answers:
    *   code 200 : Seq[OrderExecutionReport] (Collection of order execution reports.)
-   *   code 490 : Message (Filtered exchange is unreachable.)
+   *   code 490 : MessageReject (Filtered exchange is unreachable.)
    * 
    * @param exchangeId Filter the open orders to the specific exchange.
    */
@@ -77,7 +77,7 @@ class OrdersApi(baseUrl: String) {
     ApiRequest[Seq[OrderExecutionReport]](ApiMethods.GET, baseUrl, "/v1/orders", "application/json")
       .withQueryParam("exchange_id", exchangeId)
       .withSuccessResponse[Seq[OrderExecutionReport]](200)
-      .withErrorResponse[Message](490)
+      .withErrorResponse[MessageReject](490)
       
 
   /**
@@ -86,8 +86,8 @@ class OrdersApi(baseUrl: String) {
    * Expected answers:
    *   code 200 : OrderExecutionReport (Created)
    *   code 400 : ValidationError (Input model validation errors.)
-   *   code 490 : Message (Exchange is unreachable.)
-   *   code 504 : Message (Exchange didn't responded in the defined timeout.)
+   *   code 490 : MessageReject (Exchange is unreachable.)
+   *   code 504 : MessageReject (Exchange didn't responded in the defined timeout.)
    * 
    * @param orderNewSingleRequest OrderNewSingleRequest object.
    */
@@ -96,8 +96,8 @@ class OrdersApi(baseUrl: String) {
       .withBody(orderNewSingleRequest)
       .withSuccessResponse[OrderExecutionReport](200)
       .withErrorResponse[ValidationError](400)
-      .withErrorResponse[Message](490)
-      .withErrorResponse[Message](504)
+      .withErrorResponse[MessageReject](490)
+      .withErrorResponse[MessageReject](504)
       
 
   /**
@@ -105,7 +105,7 @@ class OrdersApi(baseUrl: String) {
    * 
    * Expected answers:
    *   code 200 : OrderExecutionReport (The last execution report of the requested order.)
-   *   code 404 : Message (The requested order was not found.)
+   *   code 404 : MessageReject (The requested order was not found.)
    * 
    * @param clientOrderId The unique identifier of the order assigned by the client.
    */
@@ -113,7 +113,7 @@ class OrdersApi(baseUrl: String) {
     ApiRequest[OrderExecutionReport](ApiMethods.GET, baseUrl, "/v1/orders/status/{client_order_id}", "application/json")
       .withPathParam("client_order_id", clientOrderId)
       .withSuccessResponse[OrderExecutionReport](200)
-      .withErrorResponse[Message](404)
+      .withErrorResponse[MessageReject](404)
       
 
 

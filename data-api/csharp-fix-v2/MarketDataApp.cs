@@ -2,6 +2,7 @@
 using QuickFix;
 using QuickFix.Fields;
 using System.Collections.Generic;
+using System.Threading;
 
 namespace COINAPI.FIX.V2
 {
@@ -13,12 +14,88 @@ namespace COINAPI.FIX.V2
         private string FilterBySymbolIdForSecurityListRequest = "^DERIBIT_OPT_(.*)$";
         private string FilterByExchangeNameForSecurityListRequest = "GEMINI";
 
+        private string DebugSymbol = "COINBASE_SPOT_BTC_USD";
+
         private string[] SubscribeBySymbolRegex = new string[] 
         {
+            //"^(.*)$"
             //"^GEMINI_SPOT_BTC_USD$", // you can use the exact match of the symbol id
             //"^GEMINI_SPOT_(.*)_ETH$", // or you can use the regular expression syntax to get eg. all spot symbols to ETH from GEMINI
             //"^GEMINI_SPOT_(BCH|LTC)_USD$" // second example of the regex, the BCH/USD & LTC/USD
-            "BINANCE_SPOT_BTC_USDT",
+            //"GEMINI_SPOT_ETH_BTC",
+            //"BINANCEFTS_PERP_BNB_USDT",
+            //"KRAKEN_SPOT_BTC_GBP",
+            //"(.*)_SPOT_BTC_USD(.*)$",
+            //"KRAKEN_SPOT_LTC_BTC",
+            //"KRAKEN_SPOT_LTC_EUR",
+            //"BINANCE_SPOT_USDC_TUSD",
+            //"GEMINI_SPOT_ZEC_ETH",
+            //"KRAKEN_SPOT_BTC_JPY",
+            //"BITSTAMP_SPOT_BTC_EUR",
+            //"BINANCE_SPOT_LTC_USDT",
+            //"COINBASE_SPOT_BCH_EUR",
+            //"BYBIT_PERP_ETH_USD",
+            //"BINANCE_SPOT_LTC_TUSD",
+            //"BITFINEX_SPOT_BTC_USDT",
+            //"COINBASE_SPOT_BCH_BTC",
+            //"COINBASE_SPOT_BTC_EUR",
+            //"BITMEX_PERP_ETH_USD",
+            //"BINANCEFTS_PERP_BTC_USDT",
+            //"KRAKEN_SPOT_ETH_USD",
+            //"BINANCE_SPOT_BTC_USDC",
+            //"OKEX_PERP_BTC_USDT",
+            //"KRAKEN_SPOT_ETH_EUR",
+            //"BINANCE_SPOT_LTC_PAX",
+            //"BITMEX_PERP_BTC_USD",
+            //"BINANCE_SPOT_LTC_BTC",
+            //"KRAKEN_SPOT_BTC_CAD",
+            //"BINANCE_SPOT_BTC_TUSD",
+            //"BINANCE_SPOT_TUSD_USDT",
+            //"KRAKEN_SPOT_LTC_USD",
+            //"BITSTAMP_SPOT_BTC_USD",
+            //"COINBASE_SPOT_BCH_USD",
+            //"BINANCEFTS_PERP_LTC_USDT",
+            //"BINANCE_SPOT_ETH_USDT",
+            //"BINANCE_SPOT_ETH_TUSD",
+            //"COINBASE_SPOT_BTC_GBP",
+            //"BINANCEFTS_PERP_BCH_USDT",
+            //"GEMINI_SPOT_BTC_USD",
+            //"GEMINI_SPOT_ETH_BTC",
+            //"KRAKEN_SPOT_BTC_USD",
+            //"KRAKEN_SPOT_ETH_JPY",
+            //"KRAKEN_SPOT_USDT_USD",
+            //"COINBASE_SPOT_ETH_BTC",
+            //"COINBASE_SPOT_ETH_EUR",
+            //"BITSTAMP_SPOT_LTC_USD",
+            //"BITFINEX_SPOT_ETH_USDT",
+            //"BITFINEX_SPOT_USDT_USD",
+            //"COINBASE_SPOT_ETH_USD",
+            //"GEMINI_SPOT_ZEC_USD",
+            //"KRAKEN_SPOT_ETH_CAD",
+            //"BINANCE_SPOT_LTC_USDC",
+            //"BINANCEFTS_PERP_ETC_USDT",
+            //"GEMINI_SPOT_ZEC_BTC",
+            //"KRAKEN_SPOT_ETH_GBP",
+            //"GEMINI_SPOT_ETH_USD",
+            //"BITFINEX_SPOT_LTC_USD",
+            //"KRAKEN_SPOT_BTC_EUR",
+            //"BINANCE_SPOT_ETH_PAX",
+            //"BINANCE_SPOT_BTC_PAX",
+            //"COINBASE_SPOT_LTC_USD",
+            //"BINANCE_SPOT_ETH_USDC",
+            //"KRAKEN_SPOT_ETH_BTC",
+            //"BINANCE_SPOT_ETH_BTC",
+            //"BITFINEX_SPOT_BTC_USD",
+            //"COINBASE_SPOT_LTC_EUR",
+            //"BITFINEX_SPOT_ETH_USD",
+            //"BYBIT_PERP_BTC_USD",
+            "COINBASE_SPOT_BTC_USD",
+            //"BITSTAMP_SPOT_ETH_USD",
+            //"BITFINEX_SPOT_BTC_EUR",
+            //"BINANCE_SPOT_BTC_USDT",
+            //"OKEX_PERP_ETH_USDT",
+            //"BINANCE_SPOT_BTC_USDS",
+            //"BINANCE_SPOT_LTC_ETH"
             //"^(BITSTAMP|GEMINI|COINBASE)_SPOT_BTC_USD$"
         };
 
@@ -59,7 +136,7 @@ namespace COINAPI.FIX.V2
             //MarketDataRequestTrades(SubscribeBySymbolRegex);
             //MarketDataRequestQuotes(SubscribeBySymbolRegex);
             //MarketDataRequestFullOrderbook(SubscribeBySymbolRegex);
-            MarketDataRequestFullOrderbookIncremential(SubscribeBySymbolRegex);
+            MarketDataRequestFullOrderbookIncrementialMsgPerEach(SubscribeBySymbolRegex);
         }
 
         private void MarketDataRequestTrades(string[] symbol_ids)
@@ -141,9 +218,9 @@ namespace COINAPI.FIX.V2
             SendMessage(mdr);
         }
 
-        private void MarketDataRequestFullOrderbookIncremential(string[] symbol_ids)
+        private void MarketDataRequestFullOrderbookIncrementialAllInOne(string[] symbol_ids)
         {
-            Console.WriteLine($"Sending MarketDataRequest with {symbol_ids.Length} items.");
+            //Console.WriteLine($"Sending MarketDataRequest with {symbol_ids.Length} items.");
             QuickFix.FIX44.MarketDataRequest mdr = new QuickFix.FIX44.MarketDataRequest();
             mdr.MDReqID = new MDReqID(Guid.NewGuid().ToString());
             mdr.SubscriptionRequestType = new SubscriptionRequestType(SubscriptionRequestType.SNAPSHOT_PLUS_UPDATES);
@@ -169,6 +246,36 @@ namespace COINAPI.FIX.V2
             }
 
             SendMessage(mdr);
+        }
+
+        private void MarketDataRequestFullOrderbookIncrementialMsgPerEach(string[] symbol_ids)
+        {
+            foreach (var symbol_id in symbol_ids)
+            {
+                //Console.WriteLine($"Sending MarketDataRequest with {symbol_ids.Length} items.");
+                QuickFix.FIX44.MarketDataRequest mdr = new QuickFix.FIX44.MarketDataRequest();
+                mdr.MDReqID = new MDReqID(Guid.NewGuid().ToString());
+                mdr.SubscriptionRequestType = new SubscriptionRequestType(SubscriptionRequestType.SNAPSHOT_PLUS_UPDATES);
+                mdr.MarketDepth = new MarketDepth(0);
+                mdr.MDUpdateType = new MDUpdateType(MDUpdateType.INCREMENTAL_REFRESH);
+
+                {
+                    var type = new QuickFix.FIX44.MarketDataRequest.NoMDEntryTypesGroup();
+                    type.MDEntryType = new MDEntryType(MDEntryType.BID);
+                    mdr.AddGroup(type);
+                }
+                {
+                    var type = new QuickFix.FIX44.MarketDataRequest.NoMDEntryTypesGroup();
+                    type.MDEntryType = new MDEntryType(MDEntryType.OFFER);
+                    mdr.AddGroup(type);
+                }
+
+                var relatedsym = new QuickFix.FIX44.MarketDataRequest.NoRelatedSymGroup();
+                relatedsym.Symbol = new Symbol(symbol_id);
+                mdr.AddGroup(relatedsym);
+
+                SendMessage(mdr);
+            }
         }
 
         private void SecurityListRequestFilteredBySymbolIdPrefix(string symbol_id_prefix)
@@ -207,11 +314,11 @@ namespace COINAPI.FIX.V2
 
         public void FromAdmin(Message message, SessionID sessionID)
         {
-            //Console.WriteLine("FromAdmin - " + sessionID.ToString());
+            Console.WriteLine("FromAdmin - " + sessionID.ToString() + " - " + message.ToString());
         }
         public void ToAdmin(Message message, SessionID sessionID)
         {
-            //Console.WriteLine("ToAdmin - " + sessionID.ToString());
+            Console.WriteLine("ToAdmin - " + sessionID.ToString() + " - " + message.ToString());
         }
 
         public void FromApp(Message message, SessionID sessionID)
@@ -280,9 +387,8 @@ namespace COINAPI.FIX.V2
 
                 if (!_seen.Contains(item.Symbol.getValue()) && MDEntryType.TRADE != item.MDEntryType.getValue())
                 {
-                    throw new Exception("Incremential before snapshot");
+                    //throw new Exception("Incremential before snapshot");
                 }
-
             }
 
             for (int idx = 0; idx < msg.NoMDEntries.getValue(); idx++)
@@ -290,10 +396,11 @@ namespace COINAPI.FIX.V2
                 var item = new QuickFix.FIX44.MarketDataIncrementalRefresh.NoMDEntriesGroup();
                 msg.GetGroup(idx + 1, item);
 
+                if (item.Symbol.getValue() == DebugSymbol)
                 {
                     Console.WriteLine($"Received MarketDataIncrementalRefresh {msg.NoMDEntries.getValue()} items for {string.Join(",", symbols)} with {string.Join(",", entryType)} (lag: {(DateTime.UtcNow - msg.Header.GetDateTime(52)).TotalMilliseconds} / {(DateTime.UtcNow - item.MDEntryDate.getValue().Add(item.MDEntryTime.getValue().TimeOfDay)).TotalMilliseconds}).");
-                    return;
                 }
+                return;
 
                 Console.WriteLine($"{item.MDEntryType} {item.MDUpdateAction} @ {item.Symbol}:");
                 if (item.IsSetMDEntryID())
@@ -315,8 +422,18 @@ namespace COINAPI.FIX.V2
         public void OnMessage(QuickFix.FIX44.MarketDataSnapshotFullRefresh msg, SessionID s)
         {
             _seen.Add(msg.Symbol.getValue());
-            Console.WriteLine($"Received MarketDataSnapshotFullRefresh for {msg.Symbol.getValue()} with {msg.NoMDEntries.getValue()} items (lag: {(DateTime.UtcNow - msg.Header.GetDateTime(52)).TotalMilliseconds}).");
 
+            if (msg.Symbol.getValue() == DebugSymbol)
+            {
+                for (int idx = 0; idx < msg.NoMDEntries.getValue(); idx++)
+                {
+                    var item = new QuickFix.FIX44.MarketDataSnapshotFullRefresh.NoMDEntriesGroup();
+                    msg.GetGroup(idx + 1, item);
+                    Console.WriteLine($"Received MarketDataSnapshotFullRefresh for {msg.Symbol.getValue()} with {msg.NoMDEntries.getValue()} items (lag: {(DateTime.UtcNow - msg.Header.GetDateTime(52)).TotalMilliseconds} / {(DateTime.UtcNow - item.MDEntryDate.getValue().Add(item.MDEntryTime.getValue().TimeOfDay)).TotalMilliseconds}).");
+                    break;
+                }
+            }
+            return;
             //for (int idx = 0; idx < msg.NoMDEntries.getValue(); idx++)
             //{
             //    var level = new QuickFix.FIX44.MarketDataSnapshotFullRefresh.NoMDEntriesGroup();

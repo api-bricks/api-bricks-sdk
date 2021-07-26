@@ -52,7 +52,7 @@ export class OrdersApi {
      * @param orderCancelAllRequest OrderCancelAllRequest object.
      */
     public v1OrdersCancelAllPost(orderCancelAllRequest: models.OrderCancelAllRequest, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
-    { response: JQueryXHR; body: models.Message;  },
+    { response: JQueryXHR; body: models.MessageReject;  },
     { response: JQueryXHR; errorThrown: string }
     > {
         let localVarPath = this.basePath + '/v1/orders/cancel/all';
@@ -101,11 +101,11 @@ export class OrdersApi {
         }
 
         let dfd = $.Deferred<
-            { response: JQueryXHR; body: models.Message;  },
+            { response: JQueryXHR; body: models.MessageReject;  },
             { response: JQueryXHR; errorThrown: string }
         >();
         $.ajax(requestOptions).then(
-            (data: models.Message, textStatus: string, jqXHR: JQueryXHR) =>
+            (data: models.MessageReject, textStatus: string, jqXHR: JQueryXHR) =>
                 dfd.resolve({response: jqXHR, body: data}),
             (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
                 dfd.reject({response: xhr, errorThrown: errorThrown})

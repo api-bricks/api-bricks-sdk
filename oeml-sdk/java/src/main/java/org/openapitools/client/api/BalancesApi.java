@@ -28,7 +28,7 @@ import java.io.IOException;
 
 
 import org.openapitools.client.model.Balance;
-import org.openapitools.client.model.Message;
+import org.openapitools.client.model.MessageReject;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;

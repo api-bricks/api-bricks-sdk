@@ -16,7 +16,7 @@ import ApiClient from './ApiClient';
 import Balance from './model/Balance';
 import BalanceData from './model/BalanceData';
 import Fills from './model/Fills';
-import Message from './model/Message';
+import MessageReject from './model/MessageReject';
 import OrdSide from './model/OrdSide';
 import OrdStatus from './model/OrdStatus';
 import OrdType from './model/OrdType';
@@ -27,7 +27,7 @@ import OrderExecutionReportAllOf from './model/OrderExecutionReportAllOf';
 import OrderNewSingleRequest from './model/OrderNewSingleRequest';
 import Position from './model/Position';
 import PositionData from './model/PositionData';
-import Severity from './model/Severity';
+import RejectReason from './model/RejectReason';
 import TimeInForce from './model/TimeInForce';
 import ValidationError from './model/ValidationError';
 import BalancesApi from './api/BalancesApi';
@@ -92,10 +92,10 @@ export {
     Fills,
 
     /**
-     * The Message model constructor.
-     * @property {module:model/Message}
+     * The MessageReject model constructor.
+     * @property {module:model/MessageReject}
      */
-    Message,
+    MessageReject,
 
     /**
      * The OrdSide model constructor.
@@ -158,10 +158,10 @@ export {
     PositionData,
 
     /**
-     * The Severity model constructor.
-     * @property {module:model/Severity}
+     * The RejectReason model constructor.
+     * @property {module:model/RejectReason}
      */
-    Severity,
+    RejectReason,
 
     /**
      * The TimeInForce model constructor.

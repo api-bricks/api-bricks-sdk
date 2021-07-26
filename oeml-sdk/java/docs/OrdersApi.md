@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="v1OrdersCancelAllPost"></a>
 # **v1OrdersCancelAllPost**
-> Message v1OrdersCancelAllPost(orderCancelAllRequest)
+> MessageReject v1OrdersCancelAllPost(orderCancelAllRequest)
 
 Cancel all orders request
 
@@ -36,7 +36,7 @@ public class Example {
     OrdersApi apiInstance = new OrdersApi(defaultClient);
     OrderCancelAllRequest orderCancelAllRequest = new OrderCancelAllRequest(); // OrderCancelAllRequest | OrderCancelAllRequest object.
     try {
-      Message result = apiInstance.v1OrdersCancelAllPost(orderCancelAllRequest);
+      MessageReject result = apiInstance.v1OrdersCancelAllPost(orderCancelAllRequest);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling OrdersApi#v1OrdersCancelAllPost");
@@ -57,7 +57,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Message**](Message.md)
+[**MessageReject**](MessageReject.md)
 
 ### Authorization
 

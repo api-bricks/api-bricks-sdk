@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 ## v1OrdersCancelAllPost
 
-> Message v1OrdersCancelAllPost(orderCancelAllRequest)
+> MessageReject v1OrdersCancelAllPost(orderCancelAllRequest)
 
 Cancel all orders request
 
@@ -29,7 +29,7 @@ This request cancels all open orders on single specified exchange.
 OrdersApi apiInstance = new OrdersApi();
 OrderCancelAllRequest orderCancelAllRequest = new OrderCancelAllRequest(); // OrderCancelAllRequest | OrderCancelAllRequest object.
 try {
-    Message result = apiInstance.v1OrdersCancelAllPost(orderCancelAllRequest);
+    MessageReject result = apiInstance.v1OrdersCancelAllPost(orderCancelAllRequest);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling OrdersApi#v1OrdersCancelAllPost");
@@ -46,7 +46,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Message**](Message.md)
+[**MessageReject**](MessageReject.md)
 
 ### Authorization
 

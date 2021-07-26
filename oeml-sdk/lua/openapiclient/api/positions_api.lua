@@ -16,7 +16,7 @@ local dkjson = require "dkjson"
 local basexx = require "basexx"
 
 -- model import
-local openapiclient_message = require "openapiclient.model.message"
+local openapiclient_message_reject = require "openapiclient.model.message_reject"
 local openapiclient_position = require "openapiclient.model.position"
 
 local positions_api = {}

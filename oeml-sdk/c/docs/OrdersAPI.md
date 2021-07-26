@@ -17,7 +17,7 @@ Method | HTTP request | Description
 //
 // This request cancels all open orders on single specified exchange.
 //
-message_t* OrdersAPI_v1OrdersCancelAllPost(apiClient_t *apiClient, order_cancel_all_request_t * order_cancel_all_request);
+message_reject_t* OrdersAPI_v1OrdersCancelAllPost(apiClient_t *apiClient, order_cancel_all_request_t * order_cancel_all_request);
 ```
 
 ### Parameters
@@ -28,7 +28,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[message_t](message.md) *
+[message_reject_t](message_reject.md) *
 
 
 ### Authorization

@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 
 # **v1_orders_cancel_all_post**
-> Message v1_orders_cancel_all_post(order_cancel_all_request => $order_cancel_all_request)
+> MessageReject v1_orders_cancel_all_post(order_cancel_all_request => $order_cancel_all_request)
 
 Cancel all orders request
 
@@ -49,7 +49,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Message**](Message.md)
+[**MessageReject**](MessageReject.md)
 
 ### Authorization
 

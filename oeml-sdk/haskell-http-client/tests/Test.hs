@@ -23,7 +23,7 @@ main =
       propMimeEq MimeJSON (Proxy :: Proxy Balance)
       propMimeEq MimeJSON (Proxy :: Proxy BalanceData)
       propMimeEq MimeJSON (Proxy :: Proxy Fills)
-      propMimeEq MimeJSON (Proxy :: Proxy Message)
+      propMimeEq MimeJSON (Proxy :: Proxy MessageReject)
       propMimeEq MimeJSON (Proxy :: Proxy OrdSide)
       propMimeEq MimeJSON (Proxy :: Proxy OrdStatus)
       propMimeEq MimeJSON (Proxy :: Proxy OrdType)
@@ -34,7 +34,7 @@ main =
       propMimeEq MimeJSON (Proxy :: Proxy OrderNewSingleRequest)
       propMimeEq MimeJSON (Proxy :: Proxy Position)
       propMimeEq MimeJSON (Proxy :: Proxy PositionData)
-      propMimeEq MimeJSON (Proxy :: Proxy Severity)
+      propMimeEq MimeJSON (Proxy :: Proxy RejectReason)
       propMimeEq MimeJSON (Proxy :: Proxy TimeInForce)
       propMimeEq MimeJSON (Proxy :: Proxy ValidationError)
       

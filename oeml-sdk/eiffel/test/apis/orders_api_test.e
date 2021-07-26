@@ -18,7 +18,7 @@ feature -- Test routines
             -- 
             -- This request cancels all open orders on single specified exchange. 
         local
-            l_response: MESSAGE
+            l_response: MESSAGE_REJECT
             l_order_cancel_all_request: ORDER_CANCEL_ALL_REQUEST
         do
             -- TODO: Initialize required params.

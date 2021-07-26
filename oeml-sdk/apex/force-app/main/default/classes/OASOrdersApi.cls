@@ -29,15 +29,15 @@ public class OASOrdersApi {
      * Cancel all orders request
      * This request cancels all open orders on single specified exchange.
      * @param oaSOrderCancelAllRequest OrderCancelAllRequest object. (required)
-     * @return OASMessage
+     * @return OASMessageReject
      * @throws OAS.ApiException if fails to make API call
      */
-    public OASMessage v1OrdersCancelAllPost(Map<String, Object> params) {
+    public OASMessageReject v1OrdersCancelAllPost(Map<String, Object> params) {
         client.assertNotNull(params.get('oaSOrderCancelAllRequest'), 'oaSOrderCancelAllRequest');
         List<OAS.Param> query = new List<OAS.Param>();
         List<OAS.Param> form = new List<OAS.Param>();
 
-        return (OASMessage) client.invoke(
+        return (OASMessageReject) client.invoke(
             'POST', '/v1/orders/cancel/all',
             (OASOrderCancelAllRequest) params.get('oaSOrderCancelAllRequest'),
             query, form,
@@ -46,7 +46,7 @@ public class OASOrdersApi {
             new List<String>{ 'application/json', 'appliction/json' },
             new List<String>{ 'application/json' },
             new List<String>(),
-            OASMessage.class
+            OASMessageReject.class
         );
     }
     /**

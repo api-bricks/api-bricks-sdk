@@ -10,7 +10,7 @@ lib/oeml_restapi/deserializer.ex
 lib/oeml_restapi/model/balance.ex
 lib/oeml_restapi/model/balance_data.ex
 lib/oeml_restapi/model/fills.ex
-lib/oeml_restapi/model/message.ex
+lib/oeml_restapi/model/message_reject.ex
 lib/oeml_restapi/model/ord_side.ex
 lib/oeml_restapi/model/ord_status.ex
 lib/oeml_restapi/model/ord_type.ex
@@ -21,7 +21,7 @@ lib/oeml_restapi/model/order_execution_report_all_of.ex
 lib/oeml_restapi/model/order_new_single_request.ex
 lib/oeml_restapi/model/position.ex
 lib/oeml_restapi/model/position_data.ex
-lib/oeml_restapi/model/severity.ex
+lib/oeml_restapi/model/reject_reason.ex
 lib/oeml_restapi/model/time_in_force.ex
 lib/oeml_restapi/model/validation_error.ex
 lib/oeml_restapi/request_builder.ex

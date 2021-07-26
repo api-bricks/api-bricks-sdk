@@ -18,11 +18,11 @@ Get current currency balance from all or single exchange.
 
 ### Example
 ```powershell
-$ExchangeId = "ExchangeId_example" # String | Filter the balances to the specific exchange. (optional)
+$ExchangeId = "KRAKEN" # String | Filter the balances to the specific exchange. (optional)
 
 # Get balances
 try {
-     $Result = Invoke-V1BalancesGet -ExchangeId $ExchangeId
+    $Result = Invoke-V1BalancesGet -ExchangeId $ExchangeId
 } catch {
     Write-Host ("Exception occured when calling Invoke-V1BalancesGet: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))

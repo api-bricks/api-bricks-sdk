@@ -11,7 +11,7 @@
 */
 package org.openapitools.client.apis
 
-import org.openapitools.client.models.Message
+import org.openapitools.client.models.MessageReject
 import org.openapitools.client.models.OrderCancelAllRequest
 import org.openapitools.client.models.OrderCancelSingleRequest
 import org.openapitools.client.models.OrderExecutionReport
@@ -42,22 +42,22 @@ class OrdersApi(basePath: kotlin.String = defaultBasePath) : ApiClient(basePath)
     * Cancel all orders request
     * This request cancels all open orders on single specified exchange.
     * @param orderCancelAllRequest OrderCancelAllRequest object. 
-    * @return Message
+    * @return MessageReject
     * @throws UnsupportedOperationException If the API returns an informational or redirection response
     * @throws ClientException If the API returns a client error response
     * @throws ServerException If the API returns a server error response
     */
     @Suppress("UNCHECKED_CAST")
     @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun v1OrdersCancelAllPost(orderCancelAllRequest: OrderCancelAllRequest) : Message {
+    fun v1OrdersCancelAllPost(orderCancelAllRequest: OrderCancelAllRequest) : MessageReject {
         val localVariableConfig = v1OrdersCancelAllPostRequestConfig(orderCancelAllRequest = orderCancelAllRequest)
 
-        val localVarResponse = request<Message>(
+        val localVarResponse = request<OrderCancelAllRequest, MessageReject>(
             localVariableConfig
         )
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as Message
+            ResponseType.Success -> (localVarResponse as Success<*>).data as MessageReject
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -77,20 +77,18 @@ class OrdersApi(basePath: kotlin.String = defaultBasePath) : ApiClient(basePath)
     * @param orderCancelAllRequest OrderCancelAllRequest object. 
     * @return RequestConfig
     */
-    fun v1OrdersCancelAllPostRequestConfig(orderCancelAllRequest: OrderCancelAllRequest) : RequestConfig {
-        val localVariableBody: kotlin.Any? = orderCancelAllRequest
+    fun v1OrdersCancelAllPostRequestConfig(orderCancelAllRequest: OrderCancelAllRequest) : RequestConfig<OrderCancelAllRequest> {
+        val localVariableBody = orderCancelAllRequest
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
-        
-        val localVariableConfig = RequestConfig(
+
+        return RequestConfig(
             method = RequestMethod.POST,
             path = "/v1/orders/cancel/all",
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
         )
-
-        return localVariableConfig
     }
 
     /**
@@ -107,7 +105,7 @@ class OrdersApi(basePath: kotlin.String = defaultBasePath) : ApiClient(basePath)
     fun v1OrdersCancelPost(orderCancelSingleRequest: OrderCancelSingleRequest) : OrderExecutionReport {
         val localVariableConfig = v1OrdersCancelPostRequestConfig(orderCancelSingleRequest = orderCancelSingleRequest)
 
-        val localVarResponse = request<OrderExecutionReport>(
+        val localVarResponse = request<OrderCancelSingleRequest, OrderExecutionReport>(
             localVariableConfig
         )
 
@@ -132,20 +130,18 @@ class OrdersApi(basePath: kotlin.String = defaultBasePath) : ApiClient(basePath)
     * @param orderCancelSingleRequest OrderCancelSingleRequest object. 
     * @return RequestConfig
     */
-    fun v1OrdersCancelPostRequestConfig(orderCancelSingleRequest: OrderCancelSingleRequest) : RequestConfig {
-        val localVariableBody: kotlin.Any? = orderCancelSingleRequest
+    fun v1OrdersCancelPostRequestConfig(orderCancelSingleRequest: OrderCancelSingleRequest) : RequestConfig<OrderCancelSingleRequest> {
+        val localVariableBody = orderCancelSingleRequest
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
-        
-        val localVariableConfig = RequestConfig(
+
+        return RequestConfig(
             method = RequestMethod.POST,
             path = "/v1/orders/cancel",
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
         )
-
-        return localVariableConfig
     }
 
     /**
@@ -162,7 +158,7 @@ class OrdersApi(basePath: kotlin.String = defaultBasePath) : ApiClient(basePath)
     fun v1OrdersGet(exchangeId: kotlin.String?) : kotlin.collections.List<OrderExecutionReport> {
         val localVariableConfig = v1OrdersGetRequestConfig(exchangeId = exchangeId)
 
-        val localVarResponse = request<kotlin.collections.List<OrderExecutionReport>>(
+        val localVarResponse = request<Unit, kotlin.collections.List<OrderExecutionReport>>(
             localVariableConfig
         )
 
@@ -187,8 +183,8 @@ class OrdersApi(basePath: kotlin.String = defaultBasePath) : ApiClient(basePath)
     * @param exchangeId Filter the open orders to the specific exchange. (optional)
     * @return RequestConfig
     */
-    fun v1OrdersGetRequestConfig(exchangeId: kotlin.String?) : RequestConfig {
-        val localVariableBody: kotlin.Any? = null
+    fun v1OrdersGetRequestConfig(exchangeId: kotlin.String?) : RequestConfig<Unit> {
+        val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, List<kotlin.String>>()
             .apply {
                 if (exchangeId != null) {
@@ -196,16 +192,14 @@ class OrdersApi(basePath: kotlin.String = defaultBasePath) : ApiClient(basePath)
                 }
             }
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
-        
-        val localVariableConfig = RequestConfig(
+
+        return RequestConfig(
             method = RequestMethod.GET,
             path = "/v1/orders",
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
         )
-
-        return localVariableConfig
     }
 
     /**
@@ -222,7 +216,7 @@ class OrdersApi(basePath: kotlin.String = defaultBasePath) : ApiClient(basePath)
     fun v1OrdersPost(orderNewSingleRequest: OrderNewSingleRequest) : OrderExecutionReport {
         val localVariableConfig = v1OrdersPostRequestConfig(orderNewSingleRequest = orderNewSingleRequest)
 
-        val localVarResponse = request<OrderExecutionReport>(
+        val localVarResponse = request<OrderNewSingleRequest, OrderExecutionReport>(
             localVariableConfig
         )
 
@@ -247,20 +241,18 @@ class OrdersApi(basePath: kotlin.String = defaultBasePath) : ApiClient(basePath)
     * @param orderNewSingleRequest OrderNewSingleRequest object. 
     * @return RequestConfig
     */
-    fun v1OrdersPostRequestConfig(orderNewSingleRequest: OrderNewSingleRequest) : RequestConfig {
-        val localVariableBody: kotlin.Any? = orderNewSingleRequest
+    fun v1OrdersPostRequestConfig(orderNewSingleRequest: OrderNewSingleRequest) : RequestConfig<OrderNewSingleRequest> {
+        val localVariableBody = orderNewSingleRequest
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
-        
-        val localVariableConfig = RequestConfig(
+
+        return RequestConfig(
             method = RequestMethod.POST,
             path = "/v1/orders",
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
         )
-
-        return localVariableConfig
     }
 
     /**
@@ -277,7 +269,7 @@ class OrdersApi(basePath: kotlin.String = defaultBasePath) : ApiClient(basePath)
     fun v1OrdersStatusClientOrderIdGet(clientOrderId: kotlin.String) : OrderExecutionReport {
         val localVariableConfig = v1OrdersStatusClientOrderIdGetRequestConfig(clientOrderId = clientOrderId)
 
-        val localVarResponse = request<OrderExecutionReport>(
+        val localVarResponse = request<Unit, OrderExecutionReport>(
             localVariableConfig
         )
 
@@ -302,20 +294,18 @@ class OrdersApi(basePath: kotlin.String = defaultBasePath) : ApiClient(basePath)
     * @param clientOrderId The unique identifier of the order assigned by the client. 
     * @return RequestConfig
     */
-    fun v1OrdersStatusClientOrderIdGetRequestConfig(clientOrderId: kotlin.String) : RequestConfig {
-        val localVariableBody: kotlin.Any? = null
+    fun v1OrdersStatusClientOrderIdGetRequestConfig(clientOrderId: kotlin.String) : RequestConfig<Unit> {
+        val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
-        
-        val localVariableConfig = RequestConfig(
+
+        return RequestConfig(
             method = RequestMethod.GET,
             path = "/v1/orders/status/{client_order_id}".replace("{"+"client_order_id"+"}", "$clientOrderId"),
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
         )
-
-        return localVariableConfig
     }
 
 }

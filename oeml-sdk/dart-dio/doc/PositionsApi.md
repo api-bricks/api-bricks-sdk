@@ -9,7 +9,7 @@ All URIs are relative to *https://13d16e9d-d8b1-4ef4-bc4a-ed8156b2b159.mock.pstm
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**v1PositionsGet**](PositionsApi.md#v1positionsget) | **get** /v1/positions | Get open positions
+[**v1PositionsGet**](PositionsApi.md#v1positionsget) | **GET** /v1/positions | Get open positions
 
 
 # **v1PositionsGet**

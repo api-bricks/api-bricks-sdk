@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 ## V1OrdersCancelAllPost
 
-> Message V1OrdersCancelAllPost(ctx).OrderCancelAllRequest(orderCancelAllRequest).Execute()
+> MessageReject V1OrdersCancelAllPost(ctx).OrderCancelAllRequest(orderCancelAllRequest).Execute()
 
 Cancel all orders request
 
@@ -42,7 +42,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `OrdersApi.V1OrdersCancelAllPost``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `V1OrdersCancelAllPost`: Message
+    // response from `V1OrdersCancelAllPost`: MessageReject
     fmt.Fprintf(os.Stdout, "Response from `OrdersApi.V1OrdersCancelAllPost`: %v\n", resp)
 }
 ```
@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Message**](Message.md)
+[**MessageReject**](MessageReject.md)
 
 ### Authorization
 

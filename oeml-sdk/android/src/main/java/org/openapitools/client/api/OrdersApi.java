@@ -23,7 +23,7 @@ import java.util.*;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 
-import org.openapitools.client.model.Message;
+import org.openapitools.client.model.MessageReject;
 import org.openapitools.client.model.OrderCancelAllRequest;
 import org.openapitools.client.model.OrderCancelSingleRequest;
 import org.openapitools.client.model.OrderExecutionReport;
@@ -64,9 +64,9 @@ public class OrdersApi {
   * Cancel all orders request
   * This request cancels all open orders on single specified exchange.
    * @param orderCancelAllRequest OrderCancelAllRequest object.
-   * @return Message
+   * @return MessageReject
   */
-  public Message v1OrdersCancelAllPost (OrderCancelAllRequest orderCancelAllRequest) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public MessageReject v1OrdersCancelAllPost (OrderCancelAllRequest orderCancelAllRequest) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = orderCancelAllRequest;
     // verify the required parameter 'orderCancelAllRequest' is set
     if (orderCancelAllRequest == null) {
@@ -102,7 +102,7 @@ public class OrdersApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (Message) ApiInvoker.deserialize(localVarResponse, "", Message.class);
+         return (MessageReject) ApiInvoker.deserialize(localVarResponse, "", MessageReject.class);
       } else {
          return null;
       }
@@ -128,7 +128,7 @@ public class OrdersApi {
    * This request cancels all open orders on single specified exchange.
    * @param orderCancelAllRequest OrderCancelAllRequest object.
   */
-  public void v1OrdersCancelAllPost (OrderCancelAllRequest orderCancelAllRequest, final Response.Listener<Message> responseListener, final Response.ErrorListener errorListener) {
+  public void v1OrdersCancelAllPost (OrderCancelAllRequest orderCancelAllRequest, final Response.Listener<MessageReject> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = orderCancelAllRequest;
 
     // verify the required parameter 'orderCancelAllRequest' is set
@@ -173,7 +173,7 @@ public class OrdersApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((Message) ApiInvoker.deserialize(localVarResponse,  "", Message.class));
+              responseListener.onResponse((MessageReject) ApiInvoker.deserialize(localVarResponse,  "", MessageReject.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

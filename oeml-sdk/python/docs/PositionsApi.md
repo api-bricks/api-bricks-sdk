@@ -21,7 +21,7 @@ import time
 import openapi_client
 from openapi_client.api import positions_api
 from openapi_client.model.positions import Positions
-from openapi_client.model.message import Message
+from openapi_client.model.message_reject import MessageReject
 from pprint import pprint
 # Defining the host is optional and defaults to https://13d16e9d-d8b1-4ef4-bc4a-ed8156b2b159.mock.pstmn.io
 # See configuration.py for a list of all supported configuration parameters.

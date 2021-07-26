@@ -8,7 +8,7 @@ openapiclient/api/positions_api.lua
 openapiclient/model/balance.lua
 openapiclient/model/balance_data.lua
 openapiclient/model/fills.lua
-openapiclient/model/message.lua
+openapiclient/model/message_reject.lua
 openapiclient/model/ord_side.lua
 openapiclient/model/ord_status.lua
 openapiclient/model/ord_type.lua
@@ -19,14 +19,14 @@ openapiclient/model/order_execution_report_all_of.lua
 openapiclient/model/order_new_single_request.lua
 openapiclient/model/position.lua
 openapiclient/model/position_data.lua
-openapiclient/model/severity.lua
+openapiclient/model/reject_reason.lua
 openapiclient/model/time_in_force.lua
 openapiclient/model/validation_error.lua
 spec/balance_data_spec.lua
 spec/balance_spec.lua
 spec/balances_api_spec.lua
 spec/fills_spec.lua
-spec/message_spec.lua
+spec/message_reject_spec.lua
 spec/ord_side_spec.lua
 spec/ord_status_spec.lua
 spec/ord_type_spec.lua
@@ -39,6 +39,6 @@ spec/orders_api_spec.lua
 spec/position_data_spec.lua
 spec/position_spec.lua
 spec/positions_api_spec.lua
-spec/severity_spec.lua
+spec/reject_reason_spec.lua
 spec/time_in_force_spec.lua
 spec/validation_error_spec.lua

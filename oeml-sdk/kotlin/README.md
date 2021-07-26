@@ -50,7 +50,7 @@ Class | Method | HTTP request | Description
  - [org.openapitools.client.models.Balance](docs/Balance.md)
  - [org.openapitools.client.models.BalanceData](docs/BalanceData.md)
  - [org.openapitools.client.models.Fills](docs/Fills.md)
- - [org.openapitools.client.models.Message](docs/Message.md)
+ - [org.openapitools.client.models.MessageReject](docs/MessageReject.md)
  - [org.openapitools.client.models.OrdSide](docs/OrdSide.md)
  - [org.openapitools.client.models.OrdStatus](docs/OrdStatus.md)
  - [org.openapitools.client.models.OrdType](docs/OrdType.md)
@@ -61,7 +61,7 @@ Class | Method | HTTP request | Description
  - [org.openapitools.client.models.OrderNewSingleRequest](docs/OrderNewSingleRequest.md)
  - [org.openapitools.client.models.Position](docs/Position.md)
  - [org.openapitools.client.models.PositionData](docs/PositionData.md)
- - [org.openapitools.client.models.Severity](docs/Severity.md)
+ - [org.openapitools.client.models.RejectReason](docs/RejectReason.md)
  - [org.openapitools.client.models.TimeInForce](docs/TimeInForce.md)
  - [org.openapitools.client.models.ValidationError](docs/ValidationError.md)
 

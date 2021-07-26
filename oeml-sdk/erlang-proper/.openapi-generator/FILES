@@ -4,7 +4,7 @@ rebar.config
 src/model/openapi_balance.erl
 src/model/openapi_balance_data.erl
 src/model/openapi_fills.erl
-src/model/openapi_message.erl
+src/model/openapi_message_reject.erl
 src/model/openapi_ord_side.erl
 src/model/openapi_ord_status.erl
 src/model/openapi_ord_type.erl
@@ -15,7 +15,7 @@ src/model/openapi_order_execution_report_all_of.erl
 src/model/openapi_order_new_single_request.erl
 src/model/openapi_position.erl
 src/model/openapi_position_data.erl
-src/model/openapi_severity.erl
+src/model/openapi_reject_reason.erl
 src/model/openapi_time_in_force.erl
 src/model/openapi_validation_error.erl
 src/openapi.app.src

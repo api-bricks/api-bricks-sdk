@@ -32,8 +32,8 @@ model/Balance_data.cpp
 model/Balance_data.h
 model/Fills.cpp
 model/Fills.h
-model/Message.cpp
-model/Message.h
+model/MessageReject.cpp
+model/MessageReject.h
 model/OrdSide.cpp
 model/OrdSide.h
 model/OrdStatus.cpp
@@ -54,8 +54,8 @@ model/Position.cpp
 model/Position.h
 model/Position_data.cpp
 model/Position_data.h
-model/Severity.cpp
-model/Severity.h
+model/RejectReason.cpp
+model/RejectReason.h
 model/TimeInForce.cpp
 model/TimeInForce.h
 model/ValidationError.cpp

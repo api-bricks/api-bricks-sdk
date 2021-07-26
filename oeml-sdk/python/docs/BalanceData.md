@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **last_updated_by** | **str** | Source of the last modification.  | [optional] 
 **rate_usd** | **float** | Current exchange rate to the USD for the single unit of the currency.  | [optional] 
 **traded** | **float** | Value of the current total traded. | [optional] 
+**any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

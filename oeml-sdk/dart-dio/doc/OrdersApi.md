@@ -9,15 +9,15 @@ All URIs are relative to *https://13d16e9d-d8b1-4ef4-bc4a-ed8156b2b159.mock.pstm
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**v1OrdersCancelAllPost**](OrdersApi.md#v1orderscancelallpost) | **post** /v1/orders/cancel/all | Cancel all orders request
-[**v1OrdersCancelPost**](OrdersApi.md#v1orderscancelpost) | **post** /v1/orders/cancel | Cancel order request
-[**v1OrdersGet**](OrdersApi.md#v1ordersget) | **get** /v1/orders | Get open orders
-[**v1OrdersPost**](OrdersApi.md#v1orderspost) | **post** /v1/orders | Send new order
-[**v1OrdersStatusClientOrderIdGet**](OrdersApi.md#v1ordersstatusclientorderidget) | **get** /v1/orders/status/{client_order_id} | Get order execution report
+[**v1OrdersCancelAllPost**](OrdersApi.md#v1orderscancelallpost) | **POST** /v1/orders/cancel/all | Cancel all orders request
+[**v1OrdersCancelPost**](OrdersApi.md#v1orderscancelpost) | **POST** /v1/orders/cancel | Cancel order request
+[**v1OrdersGet**](OrdersApi.md#v1ordersget) | **GET** /v1/orders | Get open orders
+[**v1OrdersPost**](OrdersApi.md#v1orderspost) | **POST** /v1/orders | Send new order
+[**v1OrdersStatusClientOrderIdGet**](OrdersApi.md#v1ordersstatusclientorderidget) | **GET** /v1/orders/status/{client_order_id} | Get order execution report
 
 
 # **v1OrdersCancelAllPost**
-> Message v1OrdersCancelAllPost(orderCancelAllRequest)
+> MessageReject v1OrdersCancelAllPost(orderCancelAllRequest)
 
 Cancel all orders request
 
@@ -46,7 +46,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Message**](Message.md)
+[**MessageReject**](MessageReject.md)
 
 ### Authorization
 

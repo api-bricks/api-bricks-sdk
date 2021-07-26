@@ -11,7 +11,7 @@
  */
 package org.openapitools.client.api
 
-import org.openapitools.client.model.Message
+import org.openapitools.client.model.MessageReject
 import org.openapitools.client.model.Position
 import org.openapitools.client.core._
 import org.openapitools.client.core.CollectionFormats._
@@ -29,7 +29,7 @@ class PositionsApi(baseUrl: String) {
    * 
    * Expected answers:
    *   code 200 : Seq[Position] (Collection of positons.)
-   *   code 490 : Message (Exchange is unreachable.)
+   *   code 490 : MessageReject (Exchange is unreachable.)
    * 
    * @param exchangeId Filter the balances to the specific exchange.
    */
@@ -37,7 +37,7 @@ class PositionsApi(baseUrl: String) {
     ApiRequest[Seq[Position]](ApiMethods.GET, baseUrl, "/v1/positions", "application/json")
       .withQueryParam("exchange_id", exchangeId)
       .withSuccessResponse[Seq[Position]](200)
-      .withErrorResponse[Message](490)
+      .withErrorResponse[MessageReject](490)
       
 
 

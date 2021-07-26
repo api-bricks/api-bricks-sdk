@@ -62,4 +62,3 @@ OrdType <- R6::R6Class(
     unlist(strsplit(res, ", "))
 }
 
-

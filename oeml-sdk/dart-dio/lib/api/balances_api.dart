@@ -11,7 +11,7 @@ import 'package:built_value/serializer.dart';
 
 import 'package:built_collection/built_collection.dart';
 import 'package:openapi/model/balance.dart';
-import 'package:openapi/model/message.dart';
+import 'package:openapi/model/message_reject.dart';
 
 class BalancesApi {
 
@@ -47,9 +47,7 @@ class BalancesApi {
         ...?extra,
       },
       validateStatus: validateStatus,
-      contentType: [
-        'application/json',
-      ].first,
+      contentType: 'application/json',
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,
       onReceiveProgress: onReceiveProgress,

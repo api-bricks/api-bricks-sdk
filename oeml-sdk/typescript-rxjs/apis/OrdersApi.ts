@@ -14,7 +14,7 @@
 import { Observable } from 'rxjs';
 import { BaseAPI, HttpHeaders, HttpQuery, throwIfNullOrUndefined, encodeURI, OperationOpts, RawAjaxResponse } from '../runtime';
 import {
-    Message,
+    MessageReject,
     OrderCancelAllRequest,
     OrderCancelSingleRequest,
     OrderExecutionReport,
@@ -51,16 +51,16 @@ export class OrdersApi extends BaseAPI {
      * This request cancels all open orders on single specified exchange.
      * Cancel all orders request
      */
-    v1OrdersCancelAllPost({ orderCancelAllRequest }: V1OrdersCancelAllPostRequest): Observable<Message>
-    v1OrdersCancelAllPost({ orderCancelAllRequest }: V1OrdersCancelAllPostRequest, opts?: OperationOpts): Observable<RawAjaxResponse<Message>>
-    v1OrdersCancelAllPost({ orderCancelAllRequest }: V1OrdersCancelAllPostRequest, opts?: OperationOpts): Observable<Message | RawAjaxResponse<Message>> {
+    v1OrdersCancelAllPost({ orderCancelAllRequest }: V1OrdersCancelAllPostRequest): Observable<MessageReject>
+    v1OrdersCancelAllPost({ orderCancelAllRequest }: V1OrdersCancelAllPostRequest, opts?: OperationOpts): Observable<RawAjaxResponse<MessageReject>>
+    v1OrdersCancelAllPost({ orderCancelAllRequest }: V1OrdersCancelAllPostRequest, opts?: OperationOpts): Observable<MessageReject | RawAjaxResponse<MessageReject>> {
         throwIfNullOrUndefined(orderCancelAllRequest, 'orderCancelAllRequest', 'v1OrdersCancelAllPost');
 
         const headers: HttpHeaders = {
             'Content-Type': 'application/json',
         };
 
-        return this.request<Message>({
+        return this.request<MessageReject>({
             url: '/v1/orders/cancel/all',
             method: 'POST',
             headers,

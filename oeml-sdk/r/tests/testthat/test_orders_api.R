@@ -11,7 +11,7 @@ test_that("V1OrdersCancelAllPost", {
   # Cancel all orders request
   # This request cancels all open orders on single specified exchange.
   # @param order.cancel.all.request OrderCancelAllRequest OrderCancelAllRequest object.
-  # @return [Message]
+  # @return [MessageReject]
 
   # uncomment below to test the operation
   #expect_equal(result, "EXPECTED_RESULT")

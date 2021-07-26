@@ -64,7 +64,7 @@ namespace CoinAPI.OMS.API.SDK.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //OrderCancelAllRequest orderCancelAllRequest = null;
             //var response = instance.V1OrdersCancelAllPost(orderCancelAllRequest);
-            //Assert.IsType<Message>(response);
+            //Assert.IsType<MessageReject>(response);
         }
 
         /// <summary>

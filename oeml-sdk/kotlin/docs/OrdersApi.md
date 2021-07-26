@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="v1OrdersCancelAllPost"></a>
 # **v1OrdersCancelAllPost**
-> Message v1OrdersCancelAllPost(orderCancelAllRequest)
+> MessageReject v1OrdersCancelAllPost(orderCancelAllRequest)
 
 Cancel all orders request
 
@@ -28,7 +28,7 @@ This request cancels all open orders on single specified exchange.
 val apiInstance = OrdersApi()
 val orderCancelAllRequest : OrderCancelAllRequest =  // OrderCancelAllRequest | OrderCancelAllRequest object.
 try {
-    val result : Message = apiInstance.v1OrdersCancelAllPost(orderCancelAllRequest)
+    val result : MessageReject = apiInstance.v1OrdersCancelAllPost(orderCancelAllRequest)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling OrdersApi#v1OrdersCancelAllPost")
@@ -47,7 +47,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Message**](Message.md)
+[**MessageReject**](MessageReject.md)
 
 ### Authorization
 

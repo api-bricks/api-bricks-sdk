@@ -2,7 +2,7 @@
 
 -export([v1_positions_get/1, v1_positions_get/2]).
 
--define(BASE_URL, "").
+-define(BASE_URL, <<"">>).
 
 %% @doc Get open positions
 %% Get current open positions across all or single exchange.
@@ -16,7 +16,7 @@ v1_positions_get(Ctx, Optional) ->
     Cfg = maps:get(cfg, Optional, application:get_env(kuberl, config, #{})),
 
     Method = get,
-    Path = ["/v1/positions"],
+    Path = [<<"/v1/positions">>],
     QS = lists:flatten([])++openapi_utils:optional_params(['exchange_id'], _OptionalParams),
     Headers = [],
     Body1 = [],

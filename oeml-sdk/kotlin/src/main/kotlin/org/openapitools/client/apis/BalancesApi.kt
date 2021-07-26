@@ -12,7 +12,7 @@
 package org.openapitools.client.apis
 
 import org.openapitools.client.models.Balance
-import org.openapitools.client.models.Message
+import org.openapitools.client.models.MessageReject
 
 import org.openapitools.client.infrastructure.ApiClient
 import org.openapitools.client.infrastructure.ClientException
@@ -48,7 +48,7 @@ class BalancesApi(basePath: kotlin.String = defaultBasePath) : ApiClient(basePat
     fun v1BalancesGet(exchangeId: kotlin.String?) : kotlin.collections.List<Balance> {
         val localVariableConfig = v1BalancesGetRequestConfig(exchangeId = exchangeId)
 
-        val localVarResponse = request<kotlin.collections.List<Balance>>(
+        val localVarResponse = request<Unit, kotlin.collections.List<Balance>>(
             localVariableConfig
         )
 
@@ -73,8 +73,8 @@ class BalancesApi(basePath: kotlin.String = defaultBasePath) : ApiClient(basePat
     * @param exchangeId Filter the balances to the specific exchange. (optional)
     * @return RequestConfig
     */
-    fun v1BalancesGetRequestConfig(exchangeId: kotlin.String?) : RequestConfig {
-        val localVariableBody: kotlin.Any? = null
+    fun v1BalancesGetRequestConfig(exchangeId: kotlin.String?) : RequestConfig<Unit> {
+        val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, List<kotlin.String>>()
             .apply {
                 if (exchangeId != null) {
@@ -82,16 +82,14 @@ class BalancesApi(basePath: kotlin.String = defaultBasePath) : ApiClient(basePat
                 }
             }
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
-        
-        val localVariableConfig = RequestConfig(
+
+        return RequestConfig(
             method = RequestMethod.GET,
             path = "/v1/balances",
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
         )
-
-        return localVariableConfig
     }
 
 }

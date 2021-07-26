@@ -95,7 +95,7 @@ Class | Method | HTTP request | Description
  - [Balance](docs/Balance.md)
  - [BalanceData](docs/BalanceData.md)
  - [Fills](docs/Fills.md)
- - [Message](docs/Message.md)
+ - [MessageReject](docs/MessageReject.md)
  - [OrdSide](docs/OrdSide.md)
  - [OrdStatus](docs/OrdStatus.md)
  - [OrdType](docs/OrdType.md)
@@ -106,7 +106,7 @@ Class | Method | HTTP request | Description
  - [OrderNewSingleRequest](docs/OrderNewSingleRequest.md)
  - [Position](docs/Position.md)
  - [PositionData](docs/PositionData.md)
- - [Severity](docs/Severity.md)
+ - [RejectReason](docs/RejectReason.md)
  - [TimeInForce](docs/TimeInForce.md)
  - [ValidationError](docs/ValidationError.md)
 

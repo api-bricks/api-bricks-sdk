@@ -54,7 +54,7 @@ import openapi_client
 from pprint import pprint
 from openapi_client.api import balances_api
 from openapi_client.model.balances import Balances
-from openapi_client.model.message import Message
+from openapi_client.model.message_reject import MessageReject
 # Defining the host is optional and defaults to https://13d16e9d-d8b1-4ef4-bc4a-ed8156b2b159.mock.pstmn.io
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
@@ -99,7 +99,7 @@ Class | Method | HTTP request | Description
  - [Balances](docs/Balances.md)
  - [ExecInst](docs/ExecInst.md)
  - [Fills](docs/Fills.md)
- - [Message](docs/Message.md)
+ - [MessageReject](docs/MessageReject.md)
  - [OrdSide](docs/OrdSide.md)
  - [OrdStatus](docs/OrdStatus.md)
  - [OrdType](docs/OrdType.md)
@@ -112,7 +112,7 @@ Class | Method | HTTP request | Description
  - [Position](docs/Position.md)
  - [PositionData](docs/PositionData.md)
  - [Positions](docs/Positions.md)
- - [Severity](docs/Severity.md)
+ - [RejectReason](docs/RejectReason.md)
  - [TimeInForce](docs/TimeInForce.md)
  - [ValidationError](docs/ValidationError.md)
 

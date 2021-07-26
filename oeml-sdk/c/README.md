@@ -79,7 +79,7 @@ Category | Method | HTTP request | Description
  - [balance_t](docs/balance.md)
  - [balance_data_t](docs/balance_data.md)
  - [fills_t](docs/fills.md)
- - [message_t](docs/message.md)
+ - [message_reject_t](docs/message_reject.md)
  - [ord_side_t](docs/ord_side.md)
  - [ord_status_t](docs/ord_status.md)
  - [ord_type_t](docs/ord_type.md)
@@ -90,7 +90,7 @@ Category | Method | HTTP request | Description
  - [order_new_single_request_t](docs/order_new_single_request.md)
  - [position_t](docs/position.md)
  - [position_data_t](docs/position_data.md)
- - [severity_t](docs/severity.md)
+ - [reject_reason_t](docs/reject_reason.md)
  - [time_in_force_t](docs/time_in_force.md)
  - [validation_error_t](docs/validation_error.md)
 

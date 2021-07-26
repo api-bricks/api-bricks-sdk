@@ -3,7 +3,7 @@ API/Client/Balance.js
 API/Client/BalanceData.js
 API/Client/BalancesApi.js
 API/Client/Fills.js
-API/Client/Message.js
+API/Client/MessageReject.js
 API/Client/OrdSide.js
 API/Client/OrdStatus.js
 API/Client/OrdType.js
@@ -16,6 +16,6 @@ API/Client/OrdersApi.js
 API/Client/Position.js
 API/Client/PositionData.js
 API/Client/PositionsApi.js
-API/Client/Severity.js
+API/Client/RejectReason.js
 API/Client/TimeInForce.js
 API/Client/ValidationError.js

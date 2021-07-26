@@ -123,7 +123,7 @@ func (a *BalancesApiService) V1BalancesGetExecute(r ApiV1BalancesGetRequest) ([]
 			error: localVarHTTPResponse.Status,
 		}
 		if localVarHTTPResponse.StatusCode == 490 {
-			var v Message
+			var v MessageReject
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
 				newErr.error = err.Error()

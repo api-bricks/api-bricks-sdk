@@ -39,7 +39,7 @@ func (r ApiV1OrdersCancelAllPostRequest) OrderCancelAllRequest(orderCancelAllReq
 	return r
 }
 
-func (r ApiV1OrdersCancelAllPostRequest) Execute() (Message, *_nethttp.Response, error) {
+func (r ApiV1OrdersCancelAllPostRequest) Execute() (MessageReject, *_nethttp.Response, error) {
 	return r.ApiService.V1OrdersCancelAllPostExecute(r)
 }
 
@@ -58,16 +58,16 @@ func (a *OrdersApiService) V1OrdersCancelAllPost(ctx _context.Context) ApiV1Orde
 
 /*
  * Execute executes the request
- * @return Message
+ * @return MessageReject
  */
-func (a *OrdersApiService) V1OrdersCancelAllPostExecute(r ApiV1OrdersCancelAllPostRequest) (Message, *_nethttp.Response, error) {
+func (a *OrdersApiService) V1OrdersCancelAllPostExecute(r ApiV1OrdersCancelAllPostRequest) (MessageReject, *_nethttp.Response, error) {
 	var (
 		localVarHTTPMethod   = _nethttp.MethodPost
 		localVarPostBody     interface{}
 		localVarFormFileName string
 		localVarFileName     string
 		localVarFileBytes    []byte
-		localVarReturnValue  Message
+		localVarReturnValue  MessageReject
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "OrdersApiService.V1OrdersCancelAllPost")
@@ -136,7 +136,7 @@ func (a *OrdersApiService) V1OrdersCancelAllPostExecute(r ApiV1OrdersCancelAllPo
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 490 {
-			var v Message
+			var v MessageReject
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
 				newErr.error = err.Error()
@@ -267,7 +267,7 @@ func (a *OrdersApiService) V1OrdersCancelPostExecute(r ApiV1OrdersCancelPostRequ
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 490 {
-			var v Message
+			var v MessageReject
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
 				newErr.error = err.Error()
@@ -386,7 +386,7 @@ func (a *OrdersApiService) V1OrdersGetExecute(r ApiV1OrdersGetRequest) ([]OrderE
 			error: localVarHTTPResponse.Status,
 		}
 		if localVarHTTPResponse.StatusCode == 490 {
-			var v Message
+			var v MessageReject
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
 				newErr.error = err.Error()
@@ -517,7 +517,7 @@ func (a *OrdersApiService) V1OrdersPostExecute(r ApiV1OrdersPostRequest) (OrderE
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 490 {
-			var v Message
+			var v MessageReject
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
 				newErr.error = err.Error()
@@ -527,7 +527,7 @@ func (a *OrdersApiService) V1OrdersPostExecute(r ApiV1OrdersPostRequest) (OrderE
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 504 {
-			var v Message
+			var v MessageReject
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
 				newErr.error = err.Error()
@@ -642,7 +642,7 @@ func (a *OrdersApiService) V1OrdersStatusClientOrderIdGetExecute(r ApiV1OrdersSt
 			error: localVarHTTPResponse.Status,
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
-			var v Message
+			var v MessageReject
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
 				newErr.error = err.Error()

@@ -48,7 +48,7 @@ paths:
           content:
             appliction/json:
               schema:
-                $ref: '#/components/schemas/Message'
+                $ref: '#/components/schemas/MessageReject'
           description: Filtered exchange is unreachable.
       summary: Get open orders
       tags:
@@ -79,13 +79,13 @@ paths:
           content:
             appliction/json:
               schema:
-                $ref: '#/components/schemas/Message'
+                $ref: '#/components/schemas/MessageReject'
           description: Exchange is unreachable.
         "504":
           content:
             appliction/json:
               schema:
-                $ref: '#/components/schemas/Message'
+                $ref: '#/components/schemas/MessageReject'
           description: Exchange didn't responded in the defined timeout.
       summary: Send new order
       tags:
@@ -115,7 +115,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Message'
+                $ref: '#/components/schemas/MessageReject'
           description: The requested order was not found.
       summary: Get order execution report
       tags:
@@ -149,7 +149,7 @@ paths:
           content:
             appliction/json:
               schema:
-                $ref: '#/components/schemas/Message'
+                $ref: '#/components/schemas/MessageReject'
           description: Exchange is unreachable.
       summary: Cancel order request
       tags:
@@ -169,7 +169,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Message'
+                $ref: '#/components/schemas/MessageReject'
           description: Result
         "400":
           content:
@@ -181,7 +181,7 @@ paths:
           content:
             appliction/json:
               schema:
-                $ref: '#/components/schemas/Message'
+                $ref: '#/components/schemas/MessageReject'
           description: Exchange is unreachable.
       summary: Cancel all orders request
       tags:
@@ -210,7 +210,7 @@ paths:
           content:
             appliction/json:
               schema:
-                $ref: '#/components/schemas/Message'
+                $ref: '#/components/schemas/MessageReject'
           description: Exchange is unreachable.
       summary: Get balances
       tags:
@@ -239,7 +239,7 @@ paths:
           content:
             appliction/json:
               schema:
-                $ref: '#/components/schemas/Message'
+                $ref: '#/components/schemas/MessageReject'
           description: Exchange is unreachable.
       summary: Get open positions
       tags:
@@ -513,37 +513,46 @@ components:
           type: string
       title: JSON validation error.
       type: object
-    Message:
+    MessageReject:
       example:
-        severity: INFO
-        exchange_id: KRAKEN
-        type: message
-        message: Ok
+        exchange_id: BINANCE
+        rejected_message: '{"client_order_id":"BINANCE-7d8a-4888","exchange_id":"BINANCE","type":"ORDER_CANCEL_SINGLE_REQUEST"}'
+        reject_reason: ORDER_ID_NOT_FOUND
+        type: MESSAGE_REJECT
+        message: 'Order with ID: BINANCE-7d8a-4888 not found'
       properties:
         type:
-          description: Type of message.
-          example: message
+          description: Message type, constant.
+          example: MESSAGE_REJECT
           type: string
-        severity:
-          $ref: '#/components/schemas/Severity'
+        reject_reason:
+          $ref: '#/components/schemas/RejectReason'
         exchange_id:
           description: If the message related to exchange, then the identifier of
             the exchange will be provided.
-          example: KRAKEN
+          example: BINANCE
           type: string
         message:
           description: Message text.
-          example: Ok
+          example: 'Order with ID: BINANCE-7d8a-4888 not found'
           type: string
-      title: Message object.
+        rejected_message:
+          description: Value of rejected request, if available.
+          example: '{"client_order_id":"BINANCE-7d8a-4888","exchange_id":"BINANCE","type":"ORDER_CANCEL_SINGLE_REQUEST"}'
+          type: string
+      title: MessageReject object.
       type: object
-    Severity:
-      description: Severity of the message.
+    RejectReason:
+      description: Cause of rejection.
       enum:
-      - INFO
-      - WARNING
-      - ERROR
-      example: INFO
+      - OTHER
+      - EXCHANGE_UNREACHABLE
+      - EXCHANGE_RESPONSE_TIMEOUT
+      - ORDER_ID_NOT_FOUND
+      - INVALID_TYPE
+      - METHOD_NOT_SUPPORTED
+      - JSON_ERROR
+      example: ORDER_ID_NOT_FOUND
       type: string
     Fills:
       properties:

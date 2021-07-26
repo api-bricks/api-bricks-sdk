@@ -16,7 +16,7 @@ local dkjson = require "dkjson"
 local basexx = require "basexx"
 
 -- model import
-local openapiclient_message = require "openapiclient.model.message"
+local openapiclient_message_reject = require "openapiclient.model.message_reject"
 local openapiclient_order_execution_report = require "openapiclient.model.order_execution_report"
 local openapiclient_validation_error = require "openapiclient.model.validation_error"
 local openapiclient_order_cancel_all_request = require "openapiclient.model.order_cancel_all_request"
@@ -89,7 +89,7 @@ function orders_api:v1_orders_cancel_all_post(order_cancel_all_request)
 		if result == nil then
 			return nil, err3
 		end
-		return openapiclient_message.cast(result), headers
+		return openapiclient_message_reject.cast(result), headers
 	else
 		local body, err, errno2 = stream:get_body_as_string()
 		if not body then

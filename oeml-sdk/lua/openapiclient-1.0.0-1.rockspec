@@ -29,7 +29,7 @@ build = {
 		["openapiclient.model.balance"] = "openapiclient/model/balance.lua";
 		["openapiclient.model.balance_data"] = "openapiclient/model/balance_data.lua";
 		["openapiclient.model.fills"] = "openapiclient/model/fills.lua";
-		["openapiclient.model.message"] = "openapiclient/model/message.lua";
+		["openapiclient.model.message_reject"] = "openapiclient/model/message_reject.lua";
 		["openapiclient.model.ord_side"] = "openapiclient/model/ord_side.lua";
 		["openapiclient.model.ord_status"] = "openapiclient/model/ord_status.lua";
 		["openapiclient.model.ord_type"] = "openapiclient/model/ord_type.lua";
@@ -40,7 +40,7 @@ build = {
 		["openapiclient.model.order_new_single_request"] = "openapiclient/model/order_new_single_request.lua";
 		["openapiclient.model.position"] = "openapiclient/model/position.lua";
 		["openapiclient.model.position_data"] = "openapiclient/model/position_data.lua";
-		["openapiclient.model.severity"] = "openapiclient/model/severity.lua";
+		["openapiclient.model.reject_reason"] = "openapiclient/model/reject_reason.lua";
 		["openapiclient.model.time_in_force"] = "openapiclient/model/time_in_force.lua";
 		["openapiclient.model.validation_error"] = "openapiclient/model/validation_error.lua";
 	}

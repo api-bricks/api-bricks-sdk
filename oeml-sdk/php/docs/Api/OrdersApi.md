@@ -14,7 +14,7 @@ Method | HTTP request | Description
 ## `v1OrdersCancelAllPost()`
 
 ```php
-v1OrdersCancelAllPost($order_cancel_all_request): \OpenAPI\Client\Model\Message
+v1OrdersCancelAllPost($order_cancel_all_request): \OpenAPI\Client\Model\MessageReject
 ```
 
 Cancel all orders request
@@ -52,7 +52,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Message**](../Model/Message.md)
+[**\OpenAPI\Client\Model\MessageReject**](../Model/MessageReject.md)
 
 ### Authorization
 

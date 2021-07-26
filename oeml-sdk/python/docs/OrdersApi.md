@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **v1_orders_cancel_all_post**
-> Message v1_orders_cancel_all_post(order_cancel_all_request)
+> MessageReject v1_orders_cancel_all_post(order_cancel_all_request)
 
 Cancel all orders request
 
@@ -26,7 +26,7 @@ import openapi_client
 from openapi_client.api import orders_api
 from openapi_client.model.validation_error import ValidationError
 from openapi_client.model.order_cancel_all_request import OrderCancelAllRequest
-from openapi_client.model.message import Message
+from openapi_client.model.message_reject import MessageReject
 from pprint import pprint
 # Defining the host is optional and defaults to https://13d16e9d-d8b1-4ef4-bc4a-ed8156b2b159.mock.pstmn.io
 # See configuration.py for a list of all supported configuration parameters.
@@ -61,7 +61,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Message**](Message.md)
+[**MessageReject**](MessageReject.md)
 
 ### Authorization
 
@@ -97,8 +97,8 @@ import openapi_client
 from openapi_client.api import orders_api
 from openapi_client.model.order_cancel_single_request import OrderCancelSingleRequest
 from openapi_client.model.validation_error import ValidationError
-from openapi_client.model.message import Message
 from openapi_client.model.order_execution_report import OrderExecutionReport
+from openapi_client.model.message_reject import MessageReject
 from pprint import pprint
 # Defining the host is optional and defaults to https://13d16e9d-d8b1-4ef4-bc4a-ed8156b2b159.mock.pstmn.io
 # See configuration.py for a list of all supported configuration parameters.
@@ -170,7 +170,7 @@ import time
 import openapi_client
 from openapi_client.api import orders_api
 from openapi_client.model.order_execution_reports import OrderExecutionReports
-from openapi_client.model.message import Message
+from openapi_client.model.message_reject import MessageReject
 from pprint import pprint
 # Defining the host is optional and defaults to https://13d16e9d-d8b1-4ef4-bc4a-ed8156b2b159.mock.pstmn.io
 # See configuration.py for a list of all supported configuration parameters.
@@ -239,8 +239,8 @@ import openapi_client
 from openapi_client.api import orders_api
 from openapi_client.model.order_new_single_request import OrderNewSingleRequest
 from openapi_client.model.validation_error import ValidationError
-from openapi_client.model.message import Message
 from openapi_client.model.order_execution_report import OrderExecutionReport
+from openapi_client.model.message_reject import MessageReject
 from pprint import pprint
 # Defining the host is optional and defaults to https://13d16e9d-d8b1-4ef4-bc4a-ed8156b2b159.mock.pstmn.io
 # See configuration.py for a list of all supported configuration parameters.
@@ -320,8 +320,8 @@ Get the last order execution report for the specified order. The requested order
 import time
 import openapi_client
 from openapi_client.api import orders_api
-from openapi_client.model.message import Message
 from openapi_client.model.order_execution_report import OrderExecutionReport
+from openapi_client.model.message_reject import MessageReject
 from pprint import pprint
 # Defining the host is optional and defaults to https://13d16e9d-d8b1-4ef4-bc4a-ed8156b2b159.mock.pstmn.io
 # See configuration.py for a list of all supported configuration parameters.

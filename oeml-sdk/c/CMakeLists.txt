@@ -41,7 +41,7 @@ set(SRCS
     model/balance.c
     model/balance_data.c
     model/fills.c
-    model/message.c
+    model/message_reject.c
     model/ord_side.c
     model/ord_status.c
     model/ord_type.c
@@ -52,7 +52,7 @@ set(SRCS
     model/order_new_single_request.c
     model/position.c
     model/position_data.c
-    model/severity.c
+    model/reject_reason.c
     model/time_in_force.c
     model/validation_error.c
     api/BalancesAPI.c
@@ -71,7 +71,7 @@ set(HDRS
     model/balance.h
     model/balance_data.h
     model/fills.h
-    model/message.h
+    model/message_reject.h
     model/ord_side.h
     model/ord_status.h
     model/ord_type.h
@@ -82,7 +82,7 @@ set(HDRS
     model/order_new_single_request.h
     model/position.h
     model/position_data.h
-    model/severity.h
+    model/reject_reason.h
     model/time_in_force.h
     model/validation_error.h
     api/BalancesAPI.h

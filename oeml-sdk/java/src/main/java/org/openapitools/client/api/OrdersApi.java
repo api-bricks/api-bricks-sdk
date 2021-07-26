@@ -27,7 +27,7 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import org.openapitools.client.model.Message;
+import org.openapitools.client.model.MessageReject;
 import org.openapitools.client.model.OrderCancelAllRequest;
 import org.openapitools.client.model.OrderCancelSingleRequest;
 import org.openapitools.client.model.OrderExecutionReport;
@@ -121,7 +121,7 @@ public class OrdersApi {
      * Cancel all orders request
      * This request cancels all open orders on single specified exchange.
      * @param orderCancelAllRequest OrderCancelAllRequest object. (required)
-     * @return Message
+     * @return MessageReject
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -131,8 +131,8 @@ public class OrdersApi {
         <tr><td> 490 </td><td> Exchange is unreachable. </td><td>  -  </td></tr>
      </table>
      */
-    public Message v1OrdersCancelAllPost(OrderCancelAllRequest orderCancelAllRequest) throws ApiException {
-        ApiResponse<Message> localVarResp = v1OrdersCancelAllPostWithHttpInfo(orderCancelAllRequest);
+    public MessageReject v1OrdersCancelAllPost(OrderCancelAllRequest orderCancelAllRequest) throws ApiException {
+        ApiResponse<MessageReject> localVarResp = v1OrdersCancelAllPostWithHttpInfo(orderCancelAllRequest);
         return localVarResp.getData();
     }
 
@@ -140,7 +140,7 @@ public class OrdersApi {
      * Cancel all orders request
      * This request cancels all open orders on single specified exchange.
      * @param orderCancelAllRequest OrderCancelAllRequest object. (required)
-     * @return ApiResponse&lt;Message&gt;
+     * @return ApiResponse&lt;MessageReject&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -150,9 +150,9 @@ public class OrdersApi {
         <tr><td> 490 </td><td> Exchange is unreachable. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Message> v1OrdersCancelAllPostWithHttpInfo(OrderCancelAllRequest orderCancelAllRequest) throws ApiException {
+    public ApiResponse<MessageReject> v1OrdersCancelAllPostWithHttpInfo(OrderCancelAllRequest orderCancelAllRequest) throws ApiException {
         okhttp3.Call localVarCall = v1OrdersCancelAllPostValidateBeforeCall(orderCancelAllRequest, null);
-        Type localVarReturnType = new TypeToken<Message>(){}.getType();
+        Type localVarReturnType = new TypeToken<MessageReject>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -171,10 +171,10 @@ public class OrdersApi {
         <tr><td> 490 </td><td> Exchange is unreachable. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call v1OrdersCancelAllPostAsync(OrderCancelAllRequest orderCancelAllRequest, final ApiCallback<Message> _callback) throws ApiException {
+    public okhttp3.Call v1OrdersCancelAllPostAsync(OrderCancelAllRequest orderCancelAllRequest, final ApiCallback<MessageReject> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = v1OrdersCancelAllPostValidateBeforeCall(orderCancelAllRequest, _callback);
-        Type localVarReturnType = new TypeToken<Message>(){}.getType();
+        Type localVarReturnType = new TypeToken<MessageReject>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

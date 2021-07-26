@@ -6,7 +6,7 @@ docs/BALANCE.md
 docs/BALANCES_API.md
 docs/BALANCE_DATA.md
 docs/FILLS.md
-docs/MESSAGE.md
+docs/MESSAGE_REJECT.md
 docs/ORDERS_API.md
 docs/ORDER_CANCEL_ALL_REQUEST.md
 docs/ORDER_CANCEL_SINGLE_REQUEST.md
@@ -19,7 +19,7 @@ docs/ORD_TYPE.md
 docs/POSITION.md
 docs/POSITIONS_API.md
 docs/POSITION_DATA.md
-docs/SEVERITY.md
+docs/REJECT_REASON.md
 docs/TIME_IN_FORCE.md
 docs/VALIDATION_ERROR.md
 src/api/balances_api.e
@@ -29,7 +29,7 @@ src/api_client.e
 src/domain/balance.e
 src/domain/balance_data.e
 src/domain/fills.e
-src/domain/message.e
+src/domain/message_reject.e
 src/domain/ord_side.e
 src/domain/ord_status.e
 src/domain/ord_type.e
@@ -40,7 +40,7 @@ src/domain/order_execution_report_all_of.e
 src/domain/order_new_single_request.e
 src/domain/position.e
 src/domain/position_data.e
-src/domain/severity.e
+src/domain/reject_reason.e
 src/domain/time_in_force.e
 src/domain/validation_error.e
 src/framework/api_client_request.e

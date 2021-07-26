@@ -3,18 +3,18 @@
             [clojure.spec.alpha :as s]
             [spec-tools.core :as st]
             [orchestra.core :refer [defn-spec]]
-            [oeml-rest-api.specs.severity :refer :all]
             [oeml-rest-api.specs.time-in-force :refer :all]
             [oeml-rest-api.specs.balance-data :refer :all]
             [oeml-rest-api.specs.validation-error :refer :all]
+            [oeml-rest-api.specs.reject-reason :refer :all]
             [oeml-rest-api.specs.position-data :refer :all]
-            [oeml-rest-api.specs.message :refer :all]
             [oeml-rest-api.specs.order-cancel-single-request :refer :all]
             [oeml-rest-api.specs.ord-status :refer :all]
             [oeml-rest-api.specs.order-execution-report-all-of :refer :all]
             [oeml-rest-api.specs.balance :refer :all]
             [oeml-rest-api.specs.ord-type :refer :all]
             [oeml-rest-api.specs.order-execution-report :refer :all]
+            [oeml-rest-api.specs.message-reject :refer :all]
             [oeml-rest-api.specs.order-cancel-all-request :refer :all]
             [oeml-rest-api.specs.position :refer :all]
             [oeml-rest-api.specs.order-new-single-request :refer :all]
@@ -39,13 +39,13 @@
              :accepts       ["application/json" "appliction/json"]
              :auth-names    []}))
 
-(defn-spec v1-orders-cancel-all-post message-spec
+(defn-spec v1-orders-cancel-all-post message-reject-spec
   "Cancel all orders request
   This request cancels all open orders on single specified exchange."
   [order-cancel-all-request order-cancel-all-request]
   (let [res (:data (v1-orders-cancel-all-post-with-http-info order-cancel-all-request))]
     (if (:decode-models *api-context*)
-       (st/decode message-spec res st/string-transformer)
+       (st/decode message-reject-spec res st/string-transformer)
        res)))
 
 

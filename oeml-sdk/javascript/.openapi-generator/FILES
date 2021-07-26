@@ -7,7 +7,7 @@ docs/Balance.md
 docs/BalanceData.md
 docs/BalancesApi.md
 docs/Fills.md
-docs/Message.md
+docs/MessageReject.md
 docs/OrdSide.md
 docs/OrdStatus.md
 docs/OrdType.md
@@ -20,7 +20,7 @@ docs/OrdersApi.md
 docs/Position.md
 docs/PositionData.md
 docs/PositionsApi.md
-docs/Severity.md
+docs/RejectReason.md
 docs/TimeInForce.md
 docs/ValidationError.md
 git_push.sh
@@ -34,7 +34,7 @@ src/index.js
 src/model/Balance.js
 src/model/BalanceData.js
 src/model/Fills.js
-src/model/Message.js
+src/model/MessageReject.js
 src/model/OrdSide.js
 src/model/OrdStatus.js
 src/model/OrdType.js
@@ -45,7 +45,7 @@ src/model/OrderExecutionReportAllOf.js
 src/model/OrderNewSingleRequest.js
 src/model/Position.js
 src/model/PositionData.js
-src/model/Severity.js
+src/model/RejectReason.js
 src/model/TimeInForce.js
 src/model/ValidationError.js
 test/api/BalancesApi.spec.js
@@ -54,7 +54,7 @@ test/api/PositionsApi.spec.js
 test/model/Balance.spec.js
 test/model/BalanceData.spec.js
 test/model/Fills.spec.js
-test/model/Message.spec.js
+test/model/MessageReject.spec.js
 test/model/OrdSide.spec.js
 test/model/OrdStatus.spec.js
 test/model/OrdType.spec.js
@@ -65,6 +65,6 @@ test/model/OrderExecutionReportAllOf.spec.js
 test/model/OrderNewSingleRequest.spec.js
 test/model/Position.spec.js
 test/model/PositionData.spec.js
-test/model/Severity.spec.js
+test/model/RejectReason.spec.js
 test/model/TimeInForce.spec.js
 test/model/ValidationError.spec.js

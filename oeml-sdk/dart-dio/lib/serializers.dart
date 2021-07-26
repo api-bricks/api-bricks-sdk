@@ -16,7 +16,7 @@ import 'package:built_value/standard_json_plugin.dart';
 import 'package:openapi/model/balance.dart';
 import 'package:openapi/model/balance_data.dart';
 import 'package:openapi/model/fills.dart';
-import 'package:openapi/model/message.dart';
+import 'package:openapi/model/message_reject.dart';
 import 'package:openapi/model/ord_side.dart';
 import 'package:openapi/model/ord_status.dart';
 import 'package:openapi/model/ord_type.dart';
@@ -27,7 +27,7 @@ import 'package:openapi/model/order_execution_report_all_of.dart';
 import 'package:openapi/model/order_new_single_request.dart';
 import 'package:openapi/model/position.dart';
 import 'package:openapi/model/position_data.dart';
-import 'package:openapi/model/severity.dart';
+import 'package:openapi/model/reject_reason.dart';
 import 'package:openapi/model/time_in_force.dart';
 import 'package:openapi/model/validation_error.dart';
 
@@ -37,7 +37,7 @@ part 'serializers.g.dart';
   Balance,
   BalanceData,
   Fills,
-  Message,
+  MessageReject,
   OrdSide,
   OrdStatus,
   OrdType,
@@ -48,7 +48,7 @@ part 'serializers.g.dart';
   OrderNewSingleRequest,
   Position,
   PositionData,
-  Severity,
+  RejectReason,
   TimeInForce,
   ValidationError,
 ])

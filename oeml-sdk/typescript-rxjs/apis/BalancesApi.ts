@@ -15,7 +15,7 @@ import { Observable } from 'rxjs';
 import { BaseAPI, HttpQuery, OperationOpts, RawAjaxResponse } from '../runtime';
 import {
     Balance,
-    Message,
+    MessageReject,
 } from '../models';
 
 export interface V1BalancesGetRequest {

@@ -13,7 +13,7 @@
 
 
 import ApiClient from "../ApiClient";
-import Message from '../model/Message';
+import MessageReject from '../model/MessageReject';
 import OrderCancelAllRequest from '../model/OrderCancelAllRequest';
 import OrderCancelSingleRequest from '../model/OrderCancelSingleRequest';
 import OrderExecutionReport from '../model/OrderExecutionReport';
@@ -43,7 +43,7 @@ export default class OrdersApi {
      * Callback function to receive the result of the v1OrdersCancelAllPost operation.
      * @callback module:api/OrdersApi~v1OrdersCancelAllPostCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/Message} data The data returned by the service call.
+     * @param {module:model/MessageReject} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -52,7 +52,7 @@ export default class OrdersApi {
      * This request cancels all open orders on single specified exchange.
      * @param {module:model/OrderCancelAllRequest} orderCancelAllRequest OrderCancelAllRequest object.
      * @param {module:api/OrdersApi~v1OrdersCancelAllPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/Message}
+     * data is of type: {@link module:model/MessageReject}
      */
     v1OrdersCancelAllPost(orderCancelAllRequest, callback) {
       let postBody = orderCancelAllRequest;
@@ -73,7 +73,7 @@ export default class OrdersApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json', 'appliction/json'];
-      let returnType = Message;
+      let returnType = MessageReject;
       return this.apiClient.callApi(
         '/v1/orders/cancel/all', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,

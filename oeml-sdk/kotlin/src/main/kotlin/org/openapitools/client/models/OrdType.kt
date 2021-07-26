@@ -19,6 +19,7 @@ import com.squareup.moshi.Json
 * Values: lIMIT
 */
 
+
 enum class OrdType(val value: kotlin.String) {
 
 

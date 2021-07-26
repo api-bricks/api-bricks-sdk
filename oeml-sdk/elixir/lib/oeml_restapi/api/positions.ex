@@ -25,7 +25,7 @@ defmodule OEML-RESTAPI.Api.Positions do
   {:ok, [%Position{}, ...]} on success
   {:error, Tesla.Env.t} on failure
   """
-  @spec v1_positions_get(Tesla.Env.client, keyword()) :: {:ok, list(OEML-RESTAPI.Model.Position.t)} | {:ok, OEML-RESTAPI.Model.Message.t} | {:error, Tesla.Env.t}
+  @spec v1_positions_get(Tesla.Env.client, keyword()) :: {:ok, list(OEML-RESTAPI.Model.Position.t)} | {:ok, OEML-RESTAPI.Model.MessageReject.t} | {:error, Tesla.Env.t}
   def v1_positions_get(connection, opts \\ []) do
     optional_params = %{
       :"exchange_id" => :query
@@ -38,7 +38,7 @@ defmodule OEML-RESTAPI.Api.Positions do
     |> (&Connection.request(connection, &1)).()
     |> evaluate_response([
       { 200, [%OEML-RESTAPI.Model.Position{}]},
-      { 490, %OEML-RESTAPI.Model.Message{}}
+      { 490, %OEML-RESTAPI.Model.MessageReject{}}
     ])
   end
 end

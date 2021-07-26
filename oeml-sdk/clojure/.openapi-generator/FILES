@@ -9,7 +9,7 @@ src/oeml_rest_api/core.clj
 src/oeml_rest_api/specs/balance.clj
 src/oeml_rest_api/specs/balance_data.clj
 src/oeml_rest_api/specs/fills.clj
-src/oeml_rest_api/specs/message.clj
+src/oeml_rest_api/specs/message_reject.clj
 src/oeml_rest_api/specs/ord_side.clj
 src/oeml_rest_api/specs/ord_status.clj
 src/oeml_rest_api/specs/ord_type.clj
@@ -20,6 +20,6 @@ src/oeml_rest_api/specs/order_execution_report_all_of.clj
 src/oeml_rest_api/specs/order_new_single_request.clj
 src/oeml_rest_api/specs/position.clj
 src/oeml_rest_api/specs/position_data.clj
-src/oeml_rest_api/specs/severity.clj
+src/oeml_rest_api/specs/reject_reason.clj
 src/oeml_rest_api/specs/time_in_force.clj
 src/oeml_rest_api/specs/validation_error.clj

@@ -28,7 +28,7 @@ A switch when turned on will return a hash table of Response, StatusCode and Hea
 
 .OUTPUTS
 
-Message
+MessageReject
 #>
 function Invoke-V1OrdersCancelAllPost {
     [CmdletBinding()]
@@ -85,7 +85,7 @@ function Invoke-V1OrdersCancelAllPost {
                                 -QueryParameters $LocalVarQueryParameters `
                                 -FormParameters $LocalVarFormParameters `
                                 -CookieParameters $LocalVarCookieParameters `
-                                -ReturnType "Message" `
+                                -ReturnType "MessageReject" `
                                 -IsBodyNullable $false
 
         if ($WithHttpInfo.IsPresent) {
@@ -412,7 +412,7 @@ function Invoke-V1OrdersStatusClientOrderIdGet {
         if (!$ClientOrderId) {
             throw "Error! The required parameter `ClientOrderId` missing when calling v1OrdersStatusClientOrderIdGet."
         }
-        $LocalVarUri = $LocalVarUri.replace('{client_order_id}', $ClientOrderId)
+        $LocalVarUri = $LocalVarUri.replace('{client_order_id}', [System.Web.HTTPUtility]::UrlEncode($ClientOrderId))
 
         $LocalVarResult = Invoke-ApiClient -Method 'GET' `
                                 -Uri $LocalVarUri `

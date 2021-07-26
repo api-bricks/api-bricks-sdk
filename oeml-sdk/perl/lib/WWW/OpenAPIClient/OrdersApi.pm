@@ -65,10 +65,10 @@ sub new {
     __PACKAGE__->method_documentation->{ 'v1_orders_cancel_all_post' } = { 
         summary => 'Cancel all orders request',
         params => $params,
-        returns => 'Message',
+        returns => 'MessageReject',
         };
 }
-# @return Message
+# @return MessageReject
 #
 sub v1_orders_cancel_all_post {
     my ($self, %args) = @_;
@@ -109,7 +109,7 @@ sub v1_orders_cancel_all_post {
     if (!$response) {
         return;
     }
-    my $_response_object = $self->{api_client}->deserialize('Message', $response);
+    my $_response_object = $self->{api_client}->deserialize('MessageReject', $response);
     return $_response_object;
 }
 
