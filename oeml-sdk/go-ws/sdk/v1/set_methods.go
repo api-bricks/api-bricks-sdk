@@ -1,6 +1,8 @@
 package v1
 
-import "go-ws/types"
+import (
+	"go-ws/sdk/types"
+)
 
 func (s SDKImpl) SetSystemInvoke(function types.SystemInvoke) {
 	errorMessageInvoke = function.ErrorMessageInvoke

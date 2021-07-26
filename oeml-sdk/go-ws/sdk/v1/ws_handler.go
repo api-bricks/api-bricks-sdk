@@ -3,8 +3,8 @@ package v1
 import (
 	"encoding/json"
 	"github.com/bitly/go-simplejson"
-	"go-ws/types"
-	"go-ws/web_socket"
+	"go-ws/sdk/types"
+	"go-ws/sdk/web_socket"
 	"log"
 )
 

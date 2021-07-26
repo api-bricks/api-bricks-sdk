@@ -1,8 +1,8 @@
-package main
+package api
 
 import (
-	SDK "go-ws"
-	"go-ws/types"
+	SDK "go-ws/sdk"
+	"go-ws/sdk/types"
 	"log"
 	"time"
 )

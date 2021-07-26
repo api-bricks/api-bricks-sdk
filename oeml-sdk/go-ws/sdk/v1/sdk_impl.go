@@ -1,8 +1,8 @@
 package v1
 
 import (
-	"go-ws/types"
-	"go-ws/web_socket"
+	"go-ws/sdk/types"
+	"go-ws/sdk/web_socket"
 )
 
 type SDKImpl struct {

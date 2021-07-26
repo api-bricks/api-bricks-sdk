@@ -1,7 +1,7 @@
 package v1
 
 import (
-	"go-ws/types"
+	"go-ws/sdk/types"
 	"log"
 )
 

@@ -1,8 +1,8 @@
-package api
+package sdk
 
 import (
-	"go-ws/types"
-	v1 "go-ws/v1"
+	"go-ws/sdk/types"
+	"go-ws/sdk/v1"
 )
 
 func NewOemlSDK(url string, version types.Version) (sdk types.SDK) {
