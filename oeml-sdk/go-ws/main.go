@@ -142,7 +142,7 @@ func TestCancelAll(sdk types.SDK) {
 
 func TestCancelSingleOrderError(sdk types.SDK) {
 	printHeader(" * Construct cancel request!")
-	reqCancel := sdk.NewCancelSingleOrderRequest(exchangeID, "")
+	reqCancel := sdk.NewCancelSingleOrderRequest(exchangeID, "Not-An-Order-ID")
 	b, _ := reqCancel.MarshalJSON()
 	println(string(b))
 
@@ -156,7 +156,7 @@ func TestCancelAllError(sdk types.SDK) {
 	time.Sleep(1 * time.Second)
 
 	printHeader(" * Construct broken cancel request to trigger  MESSAGE_REJECT!")
-	reqCancelAll := sdk.NewCancelAllOrdersRequest("")
+	reqCancelAll := sdk.NewCancelAllOrdersRequest("Not-An-Exchange")
 	b, _ := reqCancelAll.MarshalJSON()
 	println(string(b))
 
