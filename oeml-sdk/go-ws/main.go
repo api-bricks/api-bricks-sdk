@@ -1,4 +1,4 @@
-package api
+package main
 
 import (
 	"github.com/marvin-hansen/coinapi-sdk/oeml-sdk/go-ws/sdk"
