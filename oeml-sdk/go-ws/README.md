@@ -14,7 +14,6 @@
 cd /path/to/workspace
 go get github.com/CoinAPI/coinapi-sdk/oeml-sdk/go-ws
 go mod download github.com/marvin-hansen/coinapi-sdk/oeml-sdk/go-ws
-
 ```
 
 ## Port-forward to Kubernetes
@@ -29,8 +28,6 @@ kubectl port-forward svc/oeml-api-composite 8080:80
 ## Run examples:
 
 ```bash
-
-
 wget -v https://raw.githubusercontent.com/coinapi-sdk/master/oeml-sdk/go-ws/main.go
 
 go run main.go
@@ -70,7 +67,6 @@ account balances and positions would require an init process as outlined below:
 ### Init 
 
 ```go
-
 func NewAccountHandler(coinApi *coinapi.CoinApi) *AccountHandler {
     amx := &AccountHandler{coinApi: coinApi}
     amx.init()
@@ -216,7 +212,6 @@ func (h ExecutionHandler) placeOrder(oc CoinOrder) (err error) {
 
     return err
 }
-
 ```
 
 ### Cancel order
@@ -247,7 +242,6 @@ func (h ExecutionHandler) reqGlobalCancel(exchangeID string) {
     // send request
     err := coinOeml.CancelAllOrders(reqCancelAll)
 }
-
 ```
 
 ### Order Updates 
@@ -339,9 +333,8 @@ func GetErrorInvoke() types.InvokeFunction {
         if reason == "EXCHANGE_RESPONSE_TIMEOUT"{
         ...
         }
-
-
-return nil
+        
+        return err
 	}
 }
 ```
