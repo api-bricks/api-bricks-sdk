@@ -12,5 +12,5 @@ type OemlMessage struct {
 	PositionUpdate               *Position
 	ServerInfo                   *ServerInfo
 	SymbolSnapshot               *Symbols
-	Message                      *Message
+	MessageReject                *MessageReject
 }

@@ -43,12 +43,6 @@ func (s SDKImpl) getWSMessageHandler(errHandler web_socket.WsErrHandler) (wsHand
 	return wsHandler
 }
 
-func printRawMsg(message []byte) {
-	msg := string(message)
-	log.Println("raw message: ")
-	log.Println(msg)
-}
-
 func (s SDKImpl) processMessage(message []byte, errHandler web_socket.WsErrHandler) (err error) {
 	var dataMessage = new(types.OemlMessage)
 	messageType := s.getMessageType(message, errHandler)
@@ -135,11 +129,11 @@ func (s SDKImpl) processMessage(message []byte, errHandler web_socket.WsErrHandl
 		errHandler(err)
 		return checkError(err)
 
-	case types.MESSAGE:
-		println("MESSAGE")
-		msg := new(types.Message)
+	case types.MESSAGE_REJECT:
+		// https://docs.coinapi.io/oeml.html#message_reject-in
+		msg := new(types.MessageReject)
 		_ = json.Unmarshal(message, msg)
-		dataMessage.Message = msg
+		dataMessage.MessageReject = msg
 		err = errorMessageInvoke(dataMessage)
 		errHandler(err)
 		return checkError(err)

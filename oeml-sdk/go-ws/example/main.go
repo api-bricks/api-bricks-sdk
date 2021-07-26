@@ -3,7 +3,7 @@
 package main
 
 import (
-	api "go-ws"
+	SDK "go-ws"
 	"go-ws/types"
 	"log"
 	"time"
@@ -14,7 +14,7 @@ import (
 const (
 	url           = "ws://127.0.0.1:8080"
 	wait          = 5
-	websocat      = true
+	websocat      = false
 	verbose       = false
 	exchangeID    = "BINANCE"
 	clientOrderID = "BINANCE-7d8a-4888"
@@ -22,21 +22,29 @@ const (
 
 func main() {
 	sdk := getSDK(url)
-
 	TestSymbolLookup(sdk)
 
 	TestPlaceSingleOrder(sdk)
+	time.Sleep(wait * time.Second)
 
 	TestCancelSingleOrder(sdk)
+	time.Sleep(wait * time.Second)
 
 	TestCancelAll(sdk)
+	time.Sleep(wait * time.Second)
+
+	TestCancelSingleOrderError(sdk)
+	time.Sleep(wait * time.Second)
+
+	TestCancelAllError(sdk)
+	time.Sleep(wait * time.Second)
 
 	CloseSocket(sdk)
 }
 
 func getSDK(url string) (sdk types.SDK) {
 	println(" * NewSDK!")
-	sdk = api.NewOemlSDK(url, types.Version(1))
+	sdk = SDK.NewOemlSDK(url, types.Version(1))
 
 	println(" * SetSysInvoke!")
 	sysInvoke := GetSysInvoke()
@@ -134,6 +142,32 @@ func TestCancelAll(sdk types.SDK) {
 	time.Sleep(wait * time.Second)
 }
 
+func TestCancelSingleOrderError(sdk types.SDK) {
+	printHeader(" * Construct cancel request!")
+	reqCancel := sdk.NewCancelSingleOrderRequest(exchangeID, "")
+	b, _ := reqCancel.MarshalJSON()
+	println(string(b))
+
+	printHeader(" * Cancel order!")
+	err := sdk.CancelSingleOrder(reqCancel)
+	logError(err)
+	time.Sleep(wait * time.Second)
+}
+
+func TestCancelAllError(sdk types.SDK) {
+	time.Sleep(1 * time.Second)
+
+	printHeader(" * Construct broken cancel request to trigger  MESSAGE_REJECT!")
+	reqCancelAll := sdk.NewCancelAllOrdersRequest("")
+	b, _ := reqCancelAll.MarshalJSON()
+	println(string(b))
+
+	printHeader("Send broken broken cancel requests!")
+	err := sdk.CancelAllOrders(reqCancelAll)
+	logError(err)
+	time.Sleep(wait * time.Second)
+}
+
 func CloseSocket(sdk types.SDK) {
 	println(" * Close websocket!")
 	if websocat {
@@ -206,11 +240,14 @@ func GetErrorInvoke() types.InvokeFunction {
 	return func(message *types.OemlMessage) (err error) {
 		mtd := "ErrorHandler: "
 		println(mtd)
-		msg := message.Message //.GetMessage()
-		log.Println("Message")
-		log.Println("Type: ", *msg.Type)
-		log.Println("Severity: ", *msg.Severity)
-		log.Println("Message: ", *msg.Message)
+		// RejectMessage is used to communicate rejection of user order request.
+		// https://docs.coinapi.io/oeml.html#message_reject-in
+		msg := message.MessageReject
+		log.Println("RejectMessage")
+		log.Println("Reject_reason: ", msg.GetRejectReason())
+		log.Println("Exchange_id: ", msg.GetExchangeId())
+		log.Println("Message: ", msg.GetMessage())
+		log.Println("RejectedMessage: ", msg.GetRejectedMessage())
 
 		return nil
 	}
@@ -226,7 +263,7 @@ func GetInvokeFunction(msgType types.MessageType) types.InvokeFunction {
 func printMessage(msgType types.MessageType, message *types.OemlMessage) {
 	switch msgType {
 	case types.SERVER_INFO:
-		log.Println("ServerInfo/Heartbeat: " + *message.ServerInfo.ExchangeId)
+		//log.Println("ServerInfo/Heartbeat: " + *message.ServerInfo.ExchangeId)
 		if verbose {
 			msg := message
 			log.Println(msg.ServerInfo)
@@ -278,12 +315,15 @@ func printMessage(msgType types.MessageType, message *types.OemlMessage) {
 			log.Println(msg.SymbolSnapshot)
 			println()
 		}
-	case types.MESSAGE:
+	case types.MESSAGE_REJECT:
 		log.Println("Message")
-		msg := message.Message
-		log.Println("Type: ", msg.Type)
-		log.Println("Severity: ", msg.Severity)
-		log.Println("Message: ", msg.Message)
+		msg := message.MessageReject
+		log.Println("RejectMessage")
+		log.Println("Reject_reason: ", msg.GetRejectReason())
+		log.Println("Exchange_id: ", msg.GetExchangeId())
+		log.Println("Message: ", msg.GetMessage())
+		log.Println("RejectedMessage: ", msg.GetRejectedMessage())
+
 		println()
 	}
 }

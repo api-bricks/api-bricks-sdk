@@ -25,5 +25,5 @@ const (
 	POSITION_SNAPSHOT           MessageType = "POSITION_SNAPSHOT"
 	POSITION_UPDATE             MessageType = "POSITION_UPDATE"
 	SYMBOLS_SNAPSHOT            MessageType = "SYMBOLS_SNAPSHOT"
-	MESSAGE                     MessageType = "MESSAGE"
+	MESSAGE_REJECT              MessageType = "MESSAGE_REJECT"
 )
