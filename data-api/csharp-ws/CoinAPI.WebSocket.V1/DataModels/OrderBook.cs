@@ -11,7 +11,7 @@ namespace CoinAPI.WebSocket.V1.DataModels
         public bool? is_snapshot { get; set; }
         public DateTime time_exchange { get; set; }
         public DateTime time_coinapi { get; set; }
-        public object[] asks { get; set; }
-        public object[] bids { get; set; }
+        public List<BidAsk> asks { get; set; }
+        public List<BidAsk> bids { get; set; }
     }
 }
