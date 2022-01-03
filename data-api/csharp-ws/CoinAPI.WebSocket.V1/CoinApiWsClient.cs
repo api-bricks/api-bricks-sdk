@@ -92,6 +92,15 @@ namespace CoinAPI.WebSocket.V1
                 case MessageType.book:
                     HandleBookItem(sender, item);
                     break;
+                case MessageType.book5:
+                    HandleBook5Item(sender, item);
+                    break;
+                case MessageType.book20:
+                    HandleBook20Item(sender, item);
+                    break;
+                case MessageType.book50:
+                    HandleBook50Item(sender, item);
+                    break;
                 case MessageType.book_l3:
                     HandleBookL3Item(sender, item);
                     break;
@@ -125,7 +134,24 @@ namespace CoinAPI.WebSocket.V1
             Debug.WriteLine(JsonSerializer.ToJsonString(data));
             OrderBookEvent?.Invoke(sender, data);
         }
-
+        private void HandleBook5Item(object sender, MessageData item)
+        {
+            var data = JsonSerializer.Deserialize<OrderBook>(item.Data);
+            Debug.WriteLine(JsonSerializer.ToJsonString(data));
+            OrderBook5Event?.Invoke(sender, data);
+        }
+        private void HandleBook20Item(object sender, MessageData item)
+        {
+            var data = JsonSerializer.Deserialize<OrderBook>(item.Data);
+            Debug.WriteLine(JsonSerializer.ToJsonString(data));
+            OrderBook20Event?.Invoke(sender, data);
+        }
+        private void HandleBook50Item(object sender, MessageData item)
+        {
+            var data = JsonSerializer.Deserialize<OrderBook>(item.Data);
+            Debug.WriteLine(JsonSerializer.ToJsonString(data));
+            OrderBook50Event?.Invoke(sender, data);
+        }
         private void HandleBookL3Item(object sender, MessageData item)
         {
             var data = JsonSerializer.Deserialize<OrderBookL3>(item.Data);
@@ -286,6 +312,9 @@ namespace CoinAPI.WebSocket.V1
 
         public event OHLCVEventHandler OHLCVEvent;
         public event OrderBookEventHandler OrderBookEvent;
+        public event OrderBook5EventHandler OrderBook5Event;
+        public event OrderBook20EventHandler OrderBook20Event;
+        public event OrderBook50EventHandler OrderBook50Event;
         public event OrderBookL3EventHandler OrderBookL3Event;
         public event QuoteEventHandler QuoteEvent;
         public event TradeEventHandler TradeEvent;

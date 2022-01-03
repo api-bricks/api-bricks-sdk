@@ -3,6 +3,9 @@
     internal enum MessageType
     {
         book,
+        book5,
+        book20,
+        book50,
         book_l3,
         hearbeat,
         hello,
