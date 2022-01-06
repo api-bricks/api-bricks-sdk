@@ -48,6 +48,7 @@ func main() {
 	bookInvoke := GetInvokeFunction(t.BOOK_L2_FULL)
 	sdk.SetBookInvoke(bookInvoke)
 
+	println(" * SetVolumeInvoke!")
 	volInvoke := GetInvokeFunction(t.VOLUME)
 	sdk.SetVolumeInvoke(volInvoke)
 
