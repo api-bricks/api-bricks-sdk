@@ -131,25 +131,21 @@ namespace CoinAPI.WebSocket.V1
         private void HandleBookItem(object sender, MessageData item)
         {
             var data = JsonSerializer.Deserialize<OrderBook>(item.Data);
-            Debug.WriteLine(JsonSerializer.ToJsonString(data));
             OrderBookEvent?.Invoke(sender, data);
         }
         private void HandleBook5Item(object sender, MessageData item)
         {
             var data = JsonSerializer.Deserialize<OrderBook>(item.Data);
-            Debug.WriteLine(JsonSerializer.ToJsonString(data));
             OrderBook5Event?.Invoke(sender, data);
         }
         private void HandleBook20Item(object sender, MessageData item)
         {
             var data = JsonSerializer.Deserialize<OrderBook>(item.Data);
-            Debug.WriteLine(JsonSerializer.ToJsonString(data));
             OrderBook20Event?.Invoke(sender, data);
         }
         private void HandleBook50Item(object sender, MessageData item)
         {
             var data = JsonSerializer.Deserialize<OrderBook>(item.Data);
-            Debug.WriteLine(JsonSerializer.ToJsonString(data));
             OrderBook50Event?.Invoke(sender, data);
         }
         private void HandleBookL3Item(object sender, MessageData item)
@@ -162,44 +158,36 @@ namespace CoinAPI.WebSocket.V1
         private void HandleOHLCVItem(object sender, MessageData item)
         {
             var data = JsonSerializer.Deserialize<OHLCV>(item.Data);
-
-            Debug.WriteLine(JsonSerializer.ToJsonString(data));
-
             OHLCVEvent?.Invoke(sender, data);
         }
 
         private void HandleQuoteItem(object sender, MessageData item)
         {
             var data = JsonSerializer.Deserialize<Quote>(item.Data);
-            Debug.WriteLine(JsonSerializer.ToJsonString(data));
             QuoteEvent?.Invoke(sender, data);
         }
 
         private void HandleTradeItem(object sender, MessageData item)
         {
             var data = JsonSerializer.Deserialize<Trade>(item.Data);
-            Debug.WriteLine(JsonSerializer.ToJsonString(data));
             TradeEvent?.Invoke(sender, data);
         }
 
         private void HandleVolumeItem(object sender, MessageData item)
         {
             var data = JsonSerializer.Deserialize<Volume>(item.Data);
-            Debug.WriteLine(JsonSerializer.ToJsonString(data));
             VolumeEvent?.Invoke(sender, data);
         }
 
         private void HandleExchangeRateItem(object sender, MessageData item)
         {
             var data = JsonSerializer.Deserialize<ExchangeRate>(item.Data);
-            Debug.WriteLine(JsonSerializer.ToJsonString(data));
             ExchangeRateEvent?.Invoke(sender, data);
         }
 
         private void HandleTickerItem(object sender, MessageData item)
         {
             var data = JsonSerializer.Deserialize<Ticker>(item.Data);
-            Debug.WriteLine(JsonSerializer.ToJsonString(data));
             TickerEvent?.Invoke(sender, data);
         }
 
