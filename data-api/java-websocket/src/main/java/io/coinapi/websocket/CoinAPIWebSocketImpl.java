@@ -1,6 +1,7 @@
 package io.coinapi.websocket;
 
 import com.dslplatform.json.DslJson;
+import io.coinapi.websocket.communication.WebsocketReconnectHandler;
 import io.coinapi.websocket.exception.NotImplementedException;
 import io.coinapi.websocket.interfaces.InvokeFunction;
 import io.coinapi.websocket.model.*;
@@ -8,6 +9,8 @@ import io.coinapi.websocket.model.Error;
 import org.glassfish.tyrus.client.ClientManager;
 
 import jakarta.websocket.*;
+import org.glassfish.tyrus.client.ClientProperties;
+
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -51,6 +54,7 @@ public class CoinAPIWebSocketImpl implements CoinAPIWebSocket {
 
         this.isSandbox = isSandbox;
         client = ClientManager.createClient();
+        client.getProperties().put(ClientProperties.RECONNECT_HANDLER, new WebsocketReconnectHandler());
 
         Runnable task = () -> {
             while (running) {
