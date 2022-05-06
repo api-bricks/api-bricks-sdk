@@ -252,14 +252,32 @@ public class REST_methods implements Closeable {
 		JSONArray array = new JSONArray(json);
 		return parse_timeseries(array);
 	}
+
+	public Timedata[] ohlcv_get_historical_timeseries(String symbol_id, Period_identifier period_id, String time_start) throws IOException {
+		String json = get_json("/v1/ohlcv/" + symbol_id + "/history?period_id=" + period_id + "&time_start=" + time_start);
+		JSONArray array = new JSONArray(json);
+		return parse_timeseries(array);
+	}
 	
 	public Timedata[] ohlcv_get_historical_timeseries(String symbol_id, Period_identifier period_id, Instant time_start, Instant time_end) throws IOException {
 		String json = get_json("/v1/ohlcv/" + symbol_id + "/history?period_id=" + period_id + "&time_start=" + time_start + "&time_end=" + time_end);
 		JSONArray array = new JSONArray(json);
 		return parse_timeseries(array);
 	}
+
+	public Timedata[] ohlcv_get_historical_timeseries(String symbol_id, Period_identifier period_id, String time_start, String time_end) throws IOException {
+		String json = get_json("/v1/ohlcv/" + symbol_id + "/history?period_id=" + period_id + "&time_start=" + time_start + "&time_end=" + time_end);
+		JSONArray array = new JSONArray(json);
+		return parse_timeseries(array);
+	}
 	
 	public Timedata[] ohlcv_get_historical_timeseries(String symbol_id, Period_identifier period_id, Instant time_start, int limit) throws IOException {
+		String json = get_json("/v1/ohlcv/" + symbol_id + "/history?period_id=" + period_id + "&time_start=" + time_start + "&limit=" + limit);
+		JSONArray array = new JSONArray(json);
+		return parse_timeseries(array);
+	}
+
+	public Timedata[] ohlcv_get_historical_timeseries(String symbol_id, Period_identifier period_id, String time_start, int limit) throws IOException {
 		String json = get_json("/v1/ohlcv/" + symbol_id + "/history?period_id=" + period_id + "&time_start=" + time_start + "&limit=" + limit);
 		JSONArray array = new JSONArray(json);
 		return parse_timeseries(array);
@@ -399,8 +417,20 @@ public class REST_methods implements Closeable {
 		JSONArray array = new JSONArray(json);
 		return parse_trades(array);
 	}
+
+	public Trade[] trades_get_historical_data(String symbol_id, String time_start) throws IOException {
+		String json = get_json("/v1/trades/" + symbol_id + "/history?time_start=" + time_start);
+		JSONArray array = new JSONArray(json);
+		return parse_trades(array);
+	}
 	
 	public Trade[] trades_get_historical_data(String symbol_id, Instant time_start, int limit) throws IOException {
+		String json = get_json("/v1/trades/" + symbol_id + "/history?time_start=" + time_start + "&limit=" + limit);
+		JSONArray array = new JSONArray(json);
+		return parse_trades(array);
+	}
+
+	public Trade[] trades_get_historical_data(String symbol_id, String time_start, int limit) throws IOException {
 		String json = get_json("/v1/trades/" + symbol_id + "/history?time_start=" + time_start + "&limit=" + limit);
 		JSONArray array = new JSONArray(json);
 		return parse_trades(array);
@@ -411,8 +441,20 @@ public class REST_methods implements Closeable {
 		JSONArray array = new JSONArray(json);
 		return parse_trades(array);
 	}
+
+	public Trade[] trades_get_historical_data(String symbol_id, String time_start, String time_end) throws IOException {
+		String json = get_json("/v1/trades/" + symbol_id + "/history?time_start=" + time_start + "&time_end=" + time_end);
+		JSONArray array = new JSONArray(json);
+		return parse_trades(array);
+	}
 	
 	public Trade[] trades_get_historical_data(String symbol_id, Instant time_start, Instant time_end, int limit) throws IOException {
+		String json = get_json("/v1/trades/" + symbol_id + "/history?time_start=" + time_start + "&time_end=" + time_end + "&limit=" + limit);
+		JSONArray array = new JSONArray(json);
+		return parse_trades(array);
+	}
+
+	public Trade[] trades_get_historical_data(String symbol_id, String time_start, String time_end, int limit) throws IOException {
 		String json = get_json("/v1/trades/" + symbol_id + "/history?time_start=" + time_start + "&time_end=" + time_end + "&limit=" + limit);
 		JSONArray array = new JSONArray(json);
 		return parse_trades(array);
@@ -459,20 +501,43 @@ public class REST_methods implements Closeable {
 		JSONArray array = new JSONArray(json);
 		return parse_quotes(array);
 	}
+
+	public Quote[] quotes_get_historical_data(String symbol_id, String time_start) throws IOException {
+		String json = get_json("/v1/quotes/" + symbol_id + "/history?time_start=" + time_start);
+		JSONArray array = new JSONArray(json);
+		return parse_quotes(array);
+	}
 	
 	public Quote[] quotes_get_historical_data(String symbol_id, Instant time_start, int limit) throws IOException {
 		String json = get_json("/v1/quotes/" + symbol_id + "/history?time_start=" + time_start + "&limit=" + limit);
 		JSONArray array = new JSONArray(json);
 		return parse_quotes(array);
 	}
-	
+
+	public Quote[] quotes_get_historical_data(String symbol_id, String time_start, int limit) throws IOException {
+		String json = get_json("/v1/quotes/" + symbol_id + "/history?time_start=" + time_start + "&limit=" + limit);
+		JSONArray array = new JSONArray(json);
+		return parse_quotes(array);
+	}
+
 	public Quote[] quotes_get_historical_data(String symbol_id, Instant time_start, Instant time_end) throws IOException {
 		String json = get_json("/v1/quotes/" + symbol_id + "/history?time_start=" + time_start + "&time_end=" + time_end);
 		JSONArray array = new JSONArray(json);
 		return parse_quotes(array);
 	}
-	
+	public Quote[] quotes_get_historical_data(String symbol_id, String time_start, String time_end) throws IOException {
+		String json = get_json("/v1/quotes/" + symbol_id + "/history?time_start=" + time_start + "&time_end=" + time_end);
+		JSONArray array = new JSONArray(json);
+		return parse_quotes(array);
+	}
+
 	public Quote[] quotes_get_historical_data(String symbol_id, Instant time_start, Instant time_end, int limit) throws IOException {
+		String json = get_json("/v1/quotes/" + symbol_id + "/history?time_start=" + time_start + "&time_end=" + time_end + "&limit=" + limit);
+		JSONArray array = new JSONArray(json);
+		return parse_quotes(array);
+	}
+
+	public Quote[] quotes_get_historical_data(String symbol_id, String time_start, String time_end, int limit) throws IOException {
 		String json = get_json("/v1/quotes/" + symbol_id + "/history?time_start=" + time_start + "&time_end=" + time_end + "&limit=" + limit);
 		JSONArray array = new JSONArray(json);
 		return parse_quotes(array);
@@ -507,8 +572,20 @@ public class REST_methods implements Closeable {
 		JSONArray array = new JSONArray(json);
 		return parse_orderbooks(array);
 	}
+
+	public Orderbook[] orderbooks_get_historical_data(String symbol_id, String time_start) throws IOException {
+		String json = get_json("/v1/orderbooks/" + symbol_id + "/history?time_start=" + time_start);
+		JSONArray array = new JSONArray(json);
+		return parse_orderbooks(array);
+	}
 	
 	public Orderbook[] orderbooks_get_historical_data(String symbol_id, Instant time_start, int limit) throws IOException {
+		String json = get_json("/v1/orderbooks/" + symbol_id + "/history?time_start=" + time_start + "&limit=" + limit);
+		JSONArray array = new JSONArray(json);
+		return parse_orderbooks(array);
+	}
+
+	public Orderbook[] orderbooks_get_historical_data(String symbol_id, String time_start, int limit) throws IOException {
 		String json = get_json("/v1/orderbooks/" + symbol_id + "/history?time_start=" + time_start + "&limit=" + limit);
 		JSONArray array = new JSONArray(json);
 		return parse_orderbooks(array);
@@ -519,8 +596,20 @@ public class REST_methods implements Closeable {
 		JSONArray array = new JSONArray(json);
 		return parse_orderbooks(array);
 	}
-	
+
+	public Orderbook[] orderbooks_get_historical_data(String symbol_id, String time_start, String time_end) throws IOException {
+		String json = get_json("/v1/orderbooks/" + symbol_id + "/history?time_start=" + time_start + "&time_end=" + time_end);
+		JSONArray array = new JSONArray(json);
+		return parse_orderbooks(array);
+	}
+
 	public Orderbook[] orderbooks_get_historical_data(String symbol_id, Instant time_start, Instant time_end, int limit) throws IOException {
+		String json = get_json("/v1/orderbooks/" + symbol_id + "/history?time_start=" + time_start + "&time_end=" + time_end + "&limit=" + limit);
+		JSONArray array = new JSONArray(json);
+		return parse_orderbooks(array);
+	}
+
+	public Orderbook[] orderbooks_get_historical_data(String symbol_id, String time_start, String time_end, int limit) throws IOException {
 		String json = get_json("/v1/orderbooks/" + symbol_id + "/history?time_start=" + time_start + "&time_end=" + time_end + "&limit=" + limit);
 		JSONArray array = new JSONArray(json);
 		return parse_orderbooks(array);
