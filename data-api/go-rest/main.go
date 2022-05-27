@@ -6,7 +6,7 @@ import (
 	"time"
 )
 
-import SDK "github.com/CoinAPI/coinapi-sdk/go-rest/v1"
+import SDK "github.com/CoinAPI/coinapi-sdk/data-api/go-rest/v1"
 
 var API_KEY = "YOUR_API_KEY_HERE"
 
