@@ -51,7 +51,7 @@ import org.openapitools.client.JSON;
  * The Bundle is used as a global store of derived ETH price in USD.
  */
 @ApiModel(description = "The Bundle is used as a global store of derived ETH price in USD.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-12-27T08:56:44.933773Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-12-28T12:53:01.945348Z[Etc/UTC]")
 public class SushiswapBundleDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
