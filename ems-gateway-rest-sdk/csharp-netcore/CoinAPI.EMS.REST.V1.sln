@@ -2,7 +2,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 VisualStudioVersion = 12.0.0.0
 MinimumVisualStudioVersion = 10.0.0.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoinAPI.EMS.REST.V1", "src\CoinAPI.EMS.REST.V1\CoinAPI.EMS.REST.V1.csproj", "{D7355B41-483F-4698-A054-43A3D68AB66F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoinAPI.EMS.REST.V1", "src\CoinAPI.EMS.REST.V1\CoinAPI.EMS.REST.V1.csproj", "{23331228-A331-4777-B50E-B2823BE5F90E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoinAPI.EMS.REST.V1.Test", "src\CoinAPI.EMS.REST.V1.Test\CoinAPI.EMS.REST.V1.Test.csproj", "{19F1DEBC-DE5E-4517-8062-F000CD499087}"
 EndProject
@@ -12,10 +12,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D7355B41-483F-4698-A054-43A3D68AB66F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D7355B41-483F-4698-A054-43A3D68AB66F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D7355B41-483F-4698-A054-43A3D68AB66F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D7355B41-483F-4698-A054-43A3D68AB66F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23331228-A331-4777-B50E-B2823BE5F90E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23331228-A331-4777-B50E-B2823BE5F90E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23331228-A331-4777-B50E-B2823BE5F90E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23331228-A331-4777-B50E-B2823BE5F90E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Release|Any CPU.ActiveCfg = Release|Any CPU
