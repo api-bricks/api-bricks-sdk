@@ -51,7 +51,7 @@ import org.openapitools.client.JSON;
  * Batch executed. Every batch will contain at least solution with the a set of trades that are executed in it
  */
 @ApiModel(description = "Batch executed. Every batch will contain at least solution with the a set of trades that are executed in it")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-02T12:46:08.556380Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-02T12:49:29.976620Z[Etc/UTC]")
 public class DexBatchDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
