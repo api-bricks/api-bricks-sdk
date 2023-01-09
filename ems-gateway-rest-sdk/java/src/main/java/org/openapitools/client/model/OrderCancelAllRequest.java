@@ -49,7 +49,7 @@ import org.openapitools.client.JSON;
  * Cancel all orders request object.
  */
 @ApiModel(description = "Cancel all orders request object.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-03T14:17:20.944553Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-09T08:14:36.646432Z[Etc/UTC]")
 public class OrderCancelAllRequest {
   public static final String SERIALIZED_NAME_EXCHANGE_ID = "exchange_id";
   @SerializedName(SERIALIZED_NAME_EXCHANGE_ID)
