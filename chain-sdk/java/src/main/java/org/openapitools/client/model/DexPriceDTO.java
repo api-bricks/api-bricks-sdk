@@ -51,7 +51,7 @@ import org.openapitools.client.JSON;
  * Token price in conjuction with batch id.
  */
 @ApiModel(description = "Token price in conjuction with batch id.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-09T11:25:14.649133Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-09T16:14:14.496338Z[Etc/UTC]")
 public class DexPriceDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
