@@ -51,7 +51,7 @@ import org.openapitools.client.JSON;
  * Tracks pair data across each day.
  */
 @ApiModel(description = "Tracks pair data across each day.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-09T09:38:48.580031Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-09T09:48:57.788327Z[Etc/UTC]")
 public class UniswapV2PairDayDataDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
