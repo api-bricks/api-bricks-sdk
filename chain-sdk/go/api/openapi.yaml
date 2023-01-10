@@ -19,6 +19,9 @@ info:
     url: https://github.com/coinapi/coinapi-sdk/blob/master/LICENSE
   title: On Chain Dapps - REST API
   version: v1
+  x-seodescription: "---\r\ntitleTemplate: REST API | Chain API\r\ndescription: This\
+    \ section will provide necessary information about the `OnChain API` protocol.\
+    \ \r\n---\r\n                            "
 servers:
 - url: https://onchain.coinapi.io
 tags:
