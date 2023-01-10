@@ -47,6 +47,9 @@ info:
   termsOfService: https://www.coinapi.io/legal
   title: EMS - REST API
   version: v1
+  x-seodescription: "---\r\ntitleTemplate: REST API | EMS API\r\ndescription: This\
+    \ section will provide necessary information about the `CoinAPI EMS REST API`\
+    \ protocol. \r\n---\r\n                            "
 externalDocs:
   description: Find out more about EMS API
   url: https://docs.coinapi.io/
