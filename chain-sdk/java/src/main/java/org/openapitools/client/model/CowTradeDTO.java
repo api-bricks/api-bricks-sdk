@@ -52,7 +52,7 @@ import org.openapitools.client.JSON;
  * Trade entity.
  */
 @ApiModel(description = "Trade entity.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-11T10:01:31.553734Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-11T12:24:49.237069Z[Etc/UTC]")
 public class CowTradeDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
