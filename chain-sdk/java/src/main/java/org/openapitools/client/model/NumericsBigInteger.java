@@ -48,7 +48,7 @@ import org.openapitools.client.JSON;
 /**
  * NumericsBigInteger
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-11T12:24:49.237069Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-11T13:44:36.287958Z[Etc/UTC]")
 public class NumericsBigInteger {
   public static final String SERIALIZED_NAME_IS_POWER_OF_TWO = "is_power_of_two";
   @SerializedName(SERIALIZED_NAME_IS_POWER_OF_TWO)
