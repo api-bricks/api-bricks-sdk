@@ -52,7 +52,7 @@ import org.openapitools.client.JSON;
  * Swap are created for each token swap within a pair.
  */
 @ApiModel(description = "Swap are created for each token swap within a pair.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-16T01:35:47.755042Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-16T08:17:07.161169Z[Etc/UTC]")
 public class SushiswapSwapDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
