@@ -52,7 +52,7 @@ import org.openapitools.client.JSON;
  * Trade for a single user, as part of a ring trade. It&#39;s part of the solution submitted by a solver for a given batch.
  */
 @ApiModel(description = "Trade for a single user, as part of a ring trade. It's part of the solution submitted by a solver for a given batch.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-16T12:16:34.841866Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-16T15:28:20.545912Z[Etc/UTC]")
 public class DexTradeDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
