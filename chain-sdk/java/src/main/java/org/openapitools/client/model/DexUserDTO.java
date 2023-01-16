@@ -51,7 +51,7 @@ import org.openapitools.client.JSON;
  * User of the protocol. Any ethereum account that deposited tokens or traded.
  */
 @ApiModel(description = "User of the protocol. Any ethereum account that deposited tokens or traded.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-11T14:15:41.318494Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-16T01:35:47.755042Z[Etc/UTC]")
 public class DexUserDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
