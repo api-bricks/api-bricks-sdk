@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **block_number** | **INTEGER_64** | Number of block in which entity was recorded. | [optional] [default to null]
 **id** | [**STRING_32**](STRING_32.md) | Pair contract address. | [optional] [default to null]
 **factory** | [**STRING_32**](STRING_32.md) | Factory contract address. | [optional] [default to null]
-**name** | [**STRING_32**](STRING_32.md) | Friendly name, format: &lt;token0 name&gt;-&lt;token1 name&gt; | [optional] [default to null]
+**name** | [**STRING_32**](STRING_32.md) | Friendly name, format: (token0 name)-(token1 name) | [optional] [default to null]
 **token_0** | [**STRING_32**](STRING_32.md) | Reference to token0 as stored in pair contract. | [optional] [default to null]
 **token_1** | [**STRING_32**](STRING_32.md) | Reference to token0 as stored in pair contract. | [optional] [default to null]
 **reserve_0** | [**STRING_32**](STRING_32.md) | Reserve of token0. | [optional] [default to null]

@@ -50,7 +50,7 @@ import org.openapitools.client.JSON;
 /**
  * UniswapV3PositionSnapshotDTO
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-16T16:13:26.555571Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-17T12:39:15.555439Z[Etc/UTC]")
 public class UniswapV3PositionSnapshotDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -207,11 +207,11 @@ public class UniswapV3PositionSnapshotDTO {
   }
 
    /**
-   * NFT token identifier, format: &lt;NFT token id&gt;#&lt;block number&gt;
+   * NFT token identifier, format: (NFT token id)#(block number).
    * @return id
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "NFT token identifier, format: <NFT token id>#<block number>")
+  @ApiModelProperty(value = "NFT token identifier, format: (NFT token id)#(block number).")
 
   public String getId() {
     return id;

@@ -35,7 +35,7 @@ void main() {
       // TODO
     });
 
-    // Friendly name, format: <token0 name>-<token1 name>
+    // Friendly name, format: (token0 name)-(token1 name)
     // String name
     test('to test the property `name`', () async {
       // TODO

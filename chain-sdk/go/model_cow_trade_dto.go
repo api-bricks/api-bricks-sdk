@@ -22,7 +22,7 @@ type CowTradeDTO struct {
 	RecvTime *time.Time `json:"recv_time,omitempty"`
 	// Number of block in which entity was recorded.
 	BlockNumber *int64 `json:"block_number,omitempty"`
-	// Identifier, format: <order id>|<transaction hash>|<event index>.
+	// Identifier, format: (order id)|(transaction hash)|(event index).
 	Id NullableString `json:"id,omitempty"`
 	// Block's timestamp.
 	Timestamp NullableString `json:"timestamp,omitempty"`

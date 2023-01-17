@@ -26,7 +26,7 @@ feature --Access
  	block_number: INTEGER_64
     	 -- Number of block in which entity was recorded.
     id: detachable STRING_32
-      -- Identifier, format: <token id>-<batch id>.
+      -- Identifier, format: (token id)-(batch id).
     token: detachable STRING_32
       -- Token identifier.
     batch_id: detachable STRING_32

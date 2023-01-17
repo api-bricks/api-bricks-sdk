@@ -23,7 +23,7 @@ export class DexDepositDTO {
     */
     'blockNumber'?: number;
     /**
-    * Identifier, format: <transaction hash>-<token id>.
+    * Identifier, format: (transaction hash)-(token id).
     */
     'id'?: string | null;
     /**

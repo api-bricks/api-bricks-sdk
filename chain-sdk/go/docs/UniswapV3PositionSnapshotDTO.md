@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **EntryTime** | Pointer to **time.Time** |  | [optional] 
 **RecvTime** | Pointer to **time.Time** |  | [optional] 
 **BlockNumber** | Pointer to **int64** | Number of block in which entity was recorded. | [optional] 
-**Id** | Pointer to **NullableString** | NFT token identifier, format: &lt;NFT token id&gt;#&lt;block number&gt; | [optional] 
+**Id** | Pointer to **NullableString** | NFT token identifier, format: (NFT token id)#(block number). | [optional] 
 **Owner** | Pointer to **NullableString** | Owner of the NFT. | [optional] 
 **Pool** | Pointer to **NullableString** | Pool the position is within. | [optional] 
 **Position** | Pointer to **NullableString** | Position of which the snap was taken of. | [optional] 

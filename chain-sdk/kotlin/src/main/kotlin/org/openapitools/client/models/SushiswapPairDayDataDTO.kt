@@ -24,7 +24,7 @@ import com.squareup.moshi.Json
  * @param entryTime 
  * @param recvTime 
  * @param blockNumber Number of block in which entity was recorded.
- * @param id Identifier, format: <pair id>-<day start timestamp>.
+ * @param id Identifier, format: (pair id)-(day start timestamp).
  * @param date Unix timestamp for start of day.
  * @param pair Reference to pair.
  * @param token0 Reference to token0.
@@ -53,7 +53,7 @@ data class SushiswapPairDayDataDTO (
     @Json(name = "block_number")
     val blockNumber: kotlin.Long? = null,
 
-    /* Identifier, format: <pair id>-<day start timestamp>. */
+    /* Identifier, format: (pair id)-(day start timestamp). */
     @Json(name = "id")
     val id: kotlin.String? = null,
 

@@ -228,7 +228,7 @@ UniswapV3SwapDTO.prototype['block_number'] = undefined;
 UniswapV3SwapDTO.prototype['vid'] = undefined;
 
 /**
- * Identifier, format: transaction hash + \"#\" + index in swaps Transaction array.
+ * Identifier, format: (transaction hash) + # + (index in swaps Transaction array).
  * @member {String} id
  */
 UniswapV3SwapDTO.prototype['id'] = undefined;

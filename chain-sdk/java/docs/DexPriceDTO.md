@@ -11,7 +11,7 @@ Token price in conjuction with batch id.
 |**entryTime** | **OffsetDateTime** |  |  [optional] |
 |**recvTime** | **OffsetDateTime** |  |  [optional] |
 |**blockNumber** | **Long** | Number of block in which entity was recorded. |  [optional] |
-|**id** | **String** | Identifier, format: &lt;token id&gt;-&lt;batch id&gt;. |  [optional] |
+|**id** | **String** | Identifier, format: (token id)-(batch id). |  [optional] |
 |**token** | **String** | Token identifier. |  [optional] |
 |**batchId** | **String** | Batch identifier. |  [optional] |
 |**priceInOwlNumerator** | **String** | Price enumerator in OWL (derivative of the GNO token). |  [optional] |

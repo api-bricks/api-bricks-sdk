@@ -67,11 +67,11 @@ public:
 	/*! \brief Set Number of block in which entity was recorded.
 	 */
 	void setBlockNumber(long long  block_number);
-	/*! \brief Get Identifier, format: <order id>|<transaction hash>|<event index>.
+	/*! \brief Get Identifier, format: (order id)|(transaction hash)|(event index).
 	 */
 	std::string getId();
 
-	/*! \brief Set Identifier, format: <order id>|<transaction hash>|<event index>.
+	/*! \brief Set Identifier, format: (order id)|(transaction hash)|(event index).
 	 */
 	void setId(std::string  id);
 	/*! \brief Get Block's timestamp.

@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **BlockNumber** | **Int64** | Number of block in which entity was recorded. | [optional] 
 **Id** | **String** | Pair contract address. | [optional] 
 **Factory** | **String** | Factory contract address. | [optional] 
-**Name** | **String** | Friendly name, format: &lt;token0 name&gt;-&lt;token1 name&gt; | [optional] 
+**Name** | **String** | Friendly name, format: (token0 name)-(token1 name) | [optional] 
 **Token0** | **String** | Reference to token0 as stored in pair contract. | [optional] 
 **Token1** | **String** | Reference to token0 as stored in pair contract. | [optional] 
 **Reserve0** | **String** | Reserve of token0. | [optional] 

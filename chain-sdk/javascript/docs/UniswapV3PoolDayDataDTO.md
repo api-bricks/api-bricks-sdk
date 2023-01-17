@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **entryTime** | **Date** |  | [optional] 
 **recvTime** | **Date** |  | [optional] 
 **blockNumber** | **Number** | Number of block in which entity was recorded. | [optional] 
-**id** | **String** | Identifier, format: &lt;pool address&gt;-&lt;day id&gt;. | [optional] 
+**id** | **String** | Identifier, format: (pool address)-(day id). | [optional] 
 **date** | **Number** | Timestamp rounded to current day by dividing by 86400 | [optional] 
 **pool** | **String** | Pointer to pool. | [optional] 
 **liquidity** | **String** | In range liquidity at end of period. | [optional] 

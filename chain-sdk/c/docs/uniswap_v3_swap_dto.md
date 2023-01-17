@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **recv_time** | **char \*** |  | [optional] 
 **block_number** | **long** | Number of block in which entity was recorded. | [optional] 
 **vid** | **long** |  | [optional] 
-**id** | **char \*** | Identifier, format: transaction hash + \&quot;#\&quot; + index in swaps Transaction array. | [optional] 
+**id** | **char \*** | Identifier, format: (transaction hash) + # + (index in swaps Transaction array). | [optional] 
 **transaction** | **char \*** | Pointer to transaction. | [optional] 
 **timestamp** | **char \*** | Timestamp of transaction. | [optional] 
 **pool** | **char \*** | Pool swap occured within. | [optional] 

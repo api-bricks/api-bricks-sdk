@@ -25,7 +25,7 @@ import com.squareup.moshi.Json
  * @param entryTime 
  * @param recvTime 
  * @param blockNumber Number of block in which entity was recorded.
- * @param id Identifier, format: <order id>|<transaction hash>|<event index>.
+ * @param id Identifier, format: (order id)|(transaction hash)|(event index).
  * @param timestamp Block's timestamp.
  * @param gasPrice Transaction's gas price.
  * @param gasLimit Transaction's gas limit.
@@ -58,7 +58,7 @@ data class CowTradeDTO (
     @Json(name = "block_number")
     val blockNumber: kotlin.Long? = null,
 
-    /* Identifier, format: <order id>|<transaction hash>|<event index>. */
+    /* Identifier, format: (order id)|(transaction hash)|(event index). */
     @Json(name = "id")
     val id: kotlin.String? = null,
 

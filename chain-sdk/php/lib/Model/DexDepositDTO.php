@@ -461,7 +461,7 @@ class DexDepositDTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets id
      *
-     * @param string|null $id Identifier, format: <transaction hash>-<token id>.
+     * @param string|null $id Identifier, format: (transaction hash)-(token id).
      *
      * @return self
      */

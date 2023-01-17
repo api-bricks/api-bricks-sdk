@@ -22,7 +22,7 @@ No description available.
 .PARAMETER BlockNumber
 Number of block in which entity was recorded.
 .PARAMETER Id
-Identifier, format: <pool address>-<day id>.
+Identifier, format: (pool address)-(day id).
 .PARAMETER Date
 Timestamp rounded to current day by dividing by 86400
 .PARAMETER Pool

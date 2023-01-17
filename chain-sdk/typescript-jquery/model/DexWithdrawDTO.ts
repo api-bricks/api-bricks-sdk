@@ -26,7 +26,7 @@ export interface DexWithdrawDTO {
     block_number?: number;
 
     /**
-     * Identifier, format: <transaction hash>-<id>.
+     * Identifier, format: (transaction hash)-(id).
      */
     id?: string;
 

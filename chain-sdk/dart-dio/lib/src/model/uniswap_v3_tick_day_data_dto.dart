@@ -14,7 +14,7 @@ part 'uniswap_v3_tick_day_data_dto.g.dart';
 /// * [entryTime] 
 /// * [recvTime] 
 /// * [blockNumber] - Number of block in which entity was recorded.
-/// * [id] - Identifier, format: <pool address>-<tick index>-<timestamp>.
+/// * [id] - Identifier, format: (pool address)-(tick index)-(timestamp).
 /// * [date] - Timestamp rounded to current day by dividing by 86400.
 /// * [pool] - Pointer to pool.
 /// * [tick] - Pointer to tick.
@@ -39,7 +39,7 @@ abstract class UniswapV3TickDayDataDTO implements Built<UniswapV3TickDayDataDTO,
   @BuiltValueField(wireName: r'block_number')
   int? get blockNumber;
 
-  /// Identifier, format: <pool address>-<tick index>-<timestamp>.
+  /// Identifier, format: (pool address)-(tick index)-(timestamp).
   @BuiltValueField(wireName: r'id')
   String? get id;
 

@@ -7,7 +7,7 @@
 | **entry_time** | **Time** |  | [optional] |
 | **recv_time** | **Time** |  | [optional] |
 | **block_number** | **Integer** | Number of block in which entity was recorded. | [optional] |
-| **id** | **String** | Identifier, format: &lt;pair address&gt;-&lt;user address&gt; | [optional] |
+| **id** | **String** | Identifier, format: (pair address)-(user address) | [optional] |
 | **user** | **String** | User address. | [optional] |
 | **pair** | **String** | Pair address. | [optional] |
 | **liquidity_token_balance** | **String** | Amount of LP tokens minted for this position. | [optional] |

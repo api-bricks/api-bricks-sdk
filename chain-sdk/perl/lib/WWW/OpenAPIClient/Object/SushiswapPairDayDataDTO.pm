@@ -243,7 +243,7 @@ __PACKAGE__->method_documentation({
     'id' => {
         datatype => 'string',
         base_name => 'id',
-        description => 'Identifier, format: &lt;pair id&gt;-&lt;day start timestamp&gt;.',
+        description => 'Identifier, format: (pair id)-(day start timestamp).',
         format => '',
         read_only => '',
             },

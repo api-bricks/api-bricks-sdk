@@ -453,7 +453,7 @@ class SushiswapLiquidityPositionDTO implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets id
      *
-     * @param string|null $id Identifier, format: <pair address>-<user address>
+     * @param string|null $id Identifier, format: (pair address)-(user address)
      *
      * @return self
      */

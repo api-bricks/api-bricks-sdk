@@ -232,7 +232,7 @@ UniswapV3PoolDayDataDTO.prototype['recv_time'] = undefined;
 UniswapV3PoolDayDataDTO.prototype['block_number'] = undefined;
 
 /**
- * Identifier, format: <pool address>-<day id>.
+ * Identifier, format: (pool address)-(day id).
  * @member {String} id
  */
 UniswapV3PoolDayDataDTO.prototype['id'] = undefined;

@@ -13,7 +13,7 @@ class SushiswapBurnDTO {
     Date recvTime
     /* Number of block in which entity was recorded. */
     Long blockNumber
-    /* Identifier, format: <transaction id>:<transaction.burns.length>. */
+    /* Identifier, format: (transaction id):(transaction.burns.length). */
     String id
     /* Reference to the transaction Burn was included in. */
     String transaction

@@ -51,7 +51,7 @@ import org.openapitools.client.JSON;
  * Tracks pair data across each hour.
  */
 @ApiModel(description = "Tracks pair data across each hour.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-16T16:13:26.555571Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-17T12:39:15.555439Z[Etc/UTC]")
 public class SushiswapPairHourDataDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -188,11 +188,11 @@ public class SushiswapPairHourDataDTO {
   }
 
    /**
-   * Identifier, format: &lt;pair id&gt;-&lt;hour start timestamp&gt;.
+   * Identifier, format: (pair id)-(hour start timestamp).
    * @return id
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Identifier, format: <pair id>-<hour start timestamp>.")
+  @ApiModelProperty(value = "Identifier, format: (pair id)-(hour start timestamp).")
 
   public String getId() {
     return id;

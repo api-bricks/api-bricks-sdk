@@ -26,7 +26,7 @@ export interface DexPriceDTO {
     block_number?: number;
 
     /**
-     * Identifier, format: <token id>-<batch id>.
+     * Identifier, format: (token id)-(batch id).
      */
     id?: string;
 

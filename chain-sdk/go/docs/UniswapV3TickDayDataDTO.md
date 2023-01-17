@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **EntryTime** | Pointer to **time.Time** |  | [optional] 
 **RecvTime** | Pointer to **time.Time** |  | [optional] 
 **BlockNumber** | Pointer to **int64** | Number of block in which entity was recorded. | [optional] 
-**Id** | Pointer to **NullableString** | Identifier, format: &lt;pool address&gt;-&lt;tick index&gt;-&lt;timestamp&gt;. | [optional] 
+**Id** | Pointer to **NullableString** | Identifier, format: (pool address)-(tick index)-(timestamp). | [optional] 
 **Date** | Pointer to **int32** | Timestamp rounded to current day by dividing by 86400. | [optional] 
 **Pool** | Pointer to **NullableString** | Pointer to pool. | [optional] 
 **Tick** | Pointer to **NullableString** | Pointer to tick. | [optional] 

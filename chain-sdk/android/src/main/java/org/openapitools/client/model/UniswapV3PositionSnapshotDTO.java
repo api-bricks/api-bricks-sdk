@@ -90,9 +90,9 @@ public class UniswapV3PositionSnapshotDTO {
   }
 
   /**
-   * NFT token identifier, format: <NFT token id>#<block number>
+   * NFT token identifier, format: (NFT token id)#(block number).
    **/
-  @ApiModelProperty(value = "NFT token identifier, format: <NFT token id>#<block number>")
+  @ApiModelProperty(value = "NFT token identifier, format: (NFT token id)#(block number).")
   public String getId() {
     return id;
   }

@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **EntryTime** | Pointer to **time.Time** |  | [optional] 
 **RecvTime** | Pointer to **time.Time** |  | [optional] 
 **BlockNumber** | Pointer to **int64** | Number of block in which entity was recorded. | [optional] 
-**Id** | Pointer to **NullableString** | Identifier, format: &lt;transaction hash&gt;-&lt;id&gt;. | [optional] 
+**Id** | Pointer to **NullableString** | Identifier, format: (transaction hash)-(id). | [optional] 
 **User** | Pointer to **NullableString** |  | [optional] 
 **TokenAddress** | Pointer to **NullableString** |  | [optional] 
 **Amount** | Pointer to **NullableString** |  | [optional] 

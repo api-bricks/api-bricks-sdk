@@ -22,7 +22,7 @@ type UniswapV3PositionSnapshotDTO struct {
 	RecvTime *time.Time `json:"recv_time,omitempty"`
 	// Number of block in which entity was recorded.
 	BlockNumber *int64 `json:"block_number,omitempty"`
-	// NFT token identifier, format: <NFT token id>#<block number>
+	// NFT token identifier, format: (NFT token id)#(block number).
 	Id NullableString `json:"id,omitempty"`
 	// Owner of the NFT.
 	Owner NullableString `json:"owner,omitempty"`

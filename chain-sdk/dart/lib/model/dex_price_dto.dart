@@ -52,7 +52,7 @@ class DexPriceDTO {
   ///
   int? blockNumber;
 
-  /// Identifier, format: <token id>-<batch id>.
+  /// Identifier, format: (token id)-(batch id).
   String? id;
 
   /// Token identifier.

@@ -33,7 +33,7 @@ export interface SushiswapLiquidityPositionDTO {
      */
     block_number?: number;
     /**
-     * Identifier, format: <pair address>-<user address>
+     * Identifier, format: (pair address)-(user address)
      * @type {string}
      * @memberof SushiswapLiquidityPositionDTO
      */

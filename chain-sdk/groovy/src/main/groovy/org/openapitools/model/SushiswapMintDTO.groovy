@@ -13,7 +13,7 @@ class SushiswapMintDTO {
     Date recvTime
     /* Number of block in which entity was recorded. */
     Long blockNumber
-    /* Identifier, format: <transaction hash>-<index in the transaction mint array>. */
+    /* Identifier, format: (transaction hash)-(index in the transaction mint array). */
     String id
     /* Reference to the transaction Mint was included in. */
     String transaction

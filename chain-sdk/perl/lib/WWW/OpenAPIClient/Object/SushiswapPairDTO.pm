@@ -257,7 +257,7 @@ __PACKAGE__->method_documentation({
     'name' => {
         datatype => 'string',
         base_name => 'name',
-        description => 'Friendly name, format: &lt;token0 name&gt;-&lt;token1 name&gt;',
+        description => 'Friendly name, format: (token0 name)-(token1 name)',
         format => '',
         read_only => '',
             },

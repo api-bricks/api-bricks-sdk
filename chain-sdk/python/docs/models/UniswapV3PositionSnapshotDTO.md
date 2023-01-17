@@ -11,7 +11,7 @@ Key | Input Type | Accessed Type | Description | Notes
 **entry_time** | str, datetime,  | str,  |  | [optional] value must conform to RFC-3339 date-time
 **recv_time** | str, datetime,  | str,  |  | [optional] value must conform to RFC-3339 date-time
 **block_number** | decimal.Decimal, int,  | decimal.Decimal,  | Number of block in which entity was recorded. | [optional] value must be a 64 bit integer
-**id** | None, str,  | NoneClass, str,  | NFT token identifier, format: &lt;NFT token id&gt;#&lt;block number&gt; | [optional] 
+**id** | None, str,  | NoneClass, str,  | NFT token identifier, format: (NFT token id)#(block number). | [optional] 
 **owner** | None, str,  | NoneClass, str,  | Owner of the NFT. | [optional] 
 **pool** | None, str,  | NoneClass, str,  | Pool the position is within. | [optional] 
 **position** | None, str,  | NoneClass, str,  | Position of which the snap was taken of. | [optional] 

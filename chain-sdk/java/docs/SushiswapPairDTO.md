@@ -13,7 +13,7 @@ Information about a pair. Includes references to each token within the pair, vol
 |**blockNumber** | **Long** | Number of block in which entity was recorded. |  [optional] |
 |**id** | **String** | Pair contract address. |  [optional] |
 |**factory** | **String** | Factory contract address. |  [optional] |
-|**name** | **String** | Friendly name, format: &lt;token0 name&gt;-&lt;token1 name&gt; |  [optional] |
+|**name** | **String** | Friendly name, format: (token0 name)-(token1 name) |  [optional] |
 |**token0** | **String** | Reference to token0 as stored in pair contract. |  [optional] |
 |**token1** | **String** | Reference to token0 as stored in pair contract. |  [optional] |
 |**reserve0** | **String** | Reserve of token0. |  [optional] |

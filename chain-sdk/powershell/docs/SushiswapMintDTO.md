@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **EntryTime** | **System.DateTime** |  | [optional] 
 **RecvTime** | **System.DateTime** |  | [optional] 
 **BlockNumber** | **Int64** | Number of block in which entity was recorded. | [optional] 
-**Id** | **String** | Identifier, format: &lt;transaction hash&gt;-&lt;index in the transaction mint array&gt;. | [optional] 
+**Id** | **String** | Identifier, format: (transaction hash)-(index in the transaction mint array). | [optional] 
 **Transaction** | **String** | Reference to the transaction Mint was included in. | [optional] 
 **Timestamp** | **String** | Timestamp of Mint, used to sort recent liquidity provisions. | [optional] 
 **Pair** | **String** | Reference to pair. | [optional] 

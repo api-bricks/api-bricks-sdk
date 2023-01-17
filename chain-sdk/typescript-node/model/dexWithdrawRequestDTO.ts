@@ -23,7 +23,7 @@ export class DexWithdrawRequestDTO {
     */
     'blockNumber'?: number;
     /**
-    * Identifier, format: <transaction hash>-<id>.
+    * Identifier, format: (transaction hash)-(id).
     */
     'id'?: string | null;
     /**

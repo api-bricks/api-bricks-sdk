@@ -10,7 +10,7 @@
 #' @field entry_time  character [optional]
 #' @field recv_time  character [optional]
 #' @field block_number Number of block in which entity was recorded. integer [optional]
-#' @field id Identifier, format: <pool address>-<tick index>-<timestamp>. character [optional]
+#' @field id Identifier, format: (pool address)-(tick index)-(timestamp). character [optional]
 #' @field date Timestamp rounded to current day by dividing by 86400. integer [optional]
 #' @field pool Pointer to pool. character [optional]
 #' @field tick Pointer to tick. character [optional]
@@ -53,7 +53,7 @@ UniswapV3TickDayDataDTO <- R6::R6Class(
     #' @param entry_time entry_time
     #' @param recv_time recv_time
     #' @param block_number Number of block in which entity was recorded.
-    #' @param id Identifier, format: <pool address>-<tick index>-<timestamp>.
+    #' @param id Identifier, format: (pool address)-(tick index)-(timestamp).
     #' @param date Timestamp rounded to current day by dividing by 86400.
     #' @param pool Pointer to pool.
     #' @param tick Pointer to tick.

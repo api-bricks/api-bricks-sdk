@@ -200,7 +200,7 @@ UniswapV3PositionSnapshotDTO.prototype['recv_time'] = undefined;
 UniswapV3PositionSnapshotDTO.prototype['block_number'] = undefined;
 
 /**
- * NFT token identifier, format: <NFT token id>#<block number>
+ * NFT token identifier, format: (NFT token id)#(block number).
  * @member {String} id
  */
 UniswapV3PositionSnapshotDTO.prototype['id'] = undefined;

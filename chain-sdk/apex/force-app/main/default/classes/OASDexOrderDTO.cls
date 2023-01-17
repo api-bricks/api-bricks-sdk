@@ -33,7 +33,7 @@ public class OASDexOrderDTO implements OAS.MappedProperties {
     public Long blockNumber { get; set; }
 
     /**
-     * Identifier, format: <owner address>-<order id>
+     * Identifier, format: (owner address)-(order id)
      * @return id
      */
     public String id { get; set; }

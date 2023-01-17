@@ -243,7 +243,7 @@ __PACKAGE__->method_documentation({
     'id' => {
         datatype => 'string',
         base_name => 'id',
-        description => 'Equals to: &lt;pool_id&gt;-&lt;coin_index&gt;.',
+        description => 'Equals to: (pool_id)-(coin_index).',
         format => '',
         read_only => '',
             },

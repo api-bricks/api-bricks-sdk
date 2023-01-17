@@ -162,7 +162,7 @@ SushiswapPairHourDataDTO.prototype['recv_time'] = undefined;
 SushiswapPairHourDataDTO.prototype['block_number'] = undefined;
 
 /**
- * Identifier, format: <pair id>-<hour start timestamp>.
+ * Identifier, format: (pair id)-(hour start timestamp).
  * @member {String} id
  */
 SushiswapPairHourDataDTO.prototype['id'] = undefined;

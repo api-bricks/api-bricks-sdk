@@ -64,7 +64,7 @@ class UniswapV3PoolHourDataDTO {
   ///
   int? blockNumber;
 
-  /// Identifier, format: <pool address>-<day id>
+  /// Identifier, format: (pool address)-(day id)
   String? id;
 
   /// Unix timestamp for start of hour.

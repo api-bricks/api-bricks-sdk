@@ -474,7 +474,7 @@ class CurveUnderlyingCoinDTO implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets id
      *
-     * @param string|null $id Equals to: <pool_id>-<coin_index>.
+     * @param string|null $id Equals to: (pool_id)-(coin_index).
      *
      * @return self
      */

@@ -89,9 +89,9 @@ public class SushiswapLiquidityPositionSnapshotDTO {
   }
 
   /**
-   * Identifier, format: <pair address>-<user address>-<timestamp>
+   * Identifier, format: (pair address)-(user address)-(timestamp)
    **/
-  @ApiModelProperty(value = "Identifier, format: <pair address>-<user address>-<timestamp>")
+  @ApiModelProperty(value = "Identifier, format: (pair address)-(user address)-(timestamp)")
   public String getId() {
     return id;
   }

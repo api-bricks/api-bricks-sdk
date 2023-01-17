@@ -243,7 +243,7 @@ __PACKAGE__->method_documentation({
     'id' => {
         datatype => 'string',
         base_name => 'id',
-        description => 'Identifier, format: &lt;owner address&gt;-&lt;order id&gt;',
+        description => 'Identifier, format: (owner address)-(order id)',
         format => '',
         read_only => '',
             },

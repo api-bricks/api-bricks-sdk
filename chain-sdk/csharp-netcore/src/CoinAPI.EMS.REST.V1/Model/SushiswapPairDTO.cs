@@ -40,7 +40,7 @@ namespace CoinAPI.EMS.REST.V1.Model
         /// <param name="blockNumber">Number of block in which entity was recorded..</param>
         /// <param name="id">Pair contract address..</param>
         /// <param name="factory">Factory contract address..</param>
-        /// <param name="name">Friendly name, format: &lt;token0 name&gt;-&lt;token1 name&gt;.</param>
+        /// <param name="name">Friendly name, format: (token0 name)-(token1 name).</param>
         /// <param name="token0">Reference to token0 as stored in pair contract..</param>
         /// <param name="token1">Reference to token0 as stored in pair contract..</param>
         /// <param name="reserve0">Reserve of token0..</param>
@@ -123,9 +123,9 @@ namespace CoinAPI.EMS.REST.V1.Model
         public string Factory { get; set; }
 
         /// <summary>
-        /// Friendly name, format: &lt;token0 name&gt;-&lt;token1 name&gt;
+        /// Friendly name, format: (token0 name)-(token1 name)
         /// </summary>
-        /// <value>Friendly name, format: &lt;token0 name&gt;-&lt;token1 name&gt;</value>
+        /// <value>Friendly name, format: (token0 name)-(token1 name)</value>
         [DataMember(Name = "name", EmitDefaultValue = true)]
         public string Name { get; set; }
 

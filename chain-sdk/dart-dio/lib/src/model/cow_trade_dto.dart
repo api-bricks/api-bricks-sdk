@@ -15,7 +15,7 @@ part 'cow_trade_dto.g.dart';
 /// * [entryTime] 
 /// * [recvTime] 
 /// * [blockNumber] - Number of block in which entity was recorded.
-/// * [id] - Identifier, format: <order id>|<transaction hash>|<event index>.
+/// * [id] - Identifier, format: (order id)|(transaction hash)|(event index).
 /// * [timestamp] - Block's timestamp.
 /// * [gasPrice] - Transaction's gas price.
 /// * [gasLimit] - Transaction's gas limit.
@@ -45,7 +45,7 @@ abstract class CowTradeDTO implements Built<CowTradeDTO, CowTradeDTOBuilder> {
   @BuiltValueField(wireName: r'block_number')
   int? get blockNumber;
 
-  /// Identifier, format: <order id>|<transaction hash>|<event index>.
+  /// Identifier, format: (order id)|(transaction hash)|(event index).
   @BuiltValueField(wireName: r'id')
   String? get id;
 

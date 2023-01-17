@@ -503,7 +503,7 @@ class SushiswapLiquidityPositionSnapshotDTO implements ModelInterface, ArrayAcce
     /**
      * Sets id
      *
-     * @param string|null $id Identifier, format: <pair address>-<user address>-<timestamp>
+     * @param string|null $id Identifier, format: (pair address)-(user address)-(timestamp)
      *
      * @return self
      */

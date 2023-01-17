@@ -10,7 +10,7 @@
 #' @field entry_time  character [optional]
 #' @field recv_time  character [optional]
 #' @field block_number Number of block in which entity was recorded. integer [optional]
-#' @field id Identifier, format: <order id>|<transaction hash>|<event index>. character [optional]
+#' @field id Identifier, format: (order id)|(transaction hash)|(event index). character [optional]
 #' @field timestamp Block's timestamp. character [optional]
 #' @field gas_price Transaction's gas price. character [optional]
 #' @field gas_limit Transaction's gas limit. character [optional]
@@ -63,7 +63,7 @@ CowTradeDTO <- R6::R6Class(
     #' @param entry_time entry_time
     #' @param recv_time recv_time
     #' @param block_number Number of block in which entity was recorded.
-    #' @param id Identifier, format: <order id>|<transaction hash>|<event index>.
+    #' @param id Identifier, format: (order id)|(transaction hash)|(event index).
     #' @param timestamp Block's timestamp.
     #' @param gas_price Transaction's gas price.
     #' @param gas_limit Transaction's gas limit.

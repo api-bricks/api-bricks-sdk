@@ -183,7 +183,7 @@ SushiswapPairDayDataDTO.prototype['recv_time'] = undefined;
 SushiswapPairDayDataDTO.prototype['block_number'] = undefined;
 
 /**
- * Identifier, format: <pair id>-<day start timestamp>.
+ * Identifier, format: (pair id)-(day start timestamp).
  * @member {String} id
  */
 SushiswapPairDayDataDTO.prototype['id'] = undefined;

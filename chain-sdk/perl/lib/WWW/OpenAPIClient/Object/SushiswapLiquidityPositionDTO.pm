@@ -243,7 +243,7 @@ __PACKAGE__->method_documentation({
     'id' => {
         datatype => 'string',
         base_name => 'id',
-        description => 'Identifier, format: &lt;pair address&gt;-&lt;user address&gt;',
+        description => 'Identifier, format: (pair address)-(user address)',
         format => '',
         read_only => '',
             },

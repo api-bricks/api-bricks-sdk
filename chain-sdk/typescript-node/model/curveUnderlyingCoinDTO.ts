@@ -20,7 +20,7 @@ export class CurveUnderlyingCoinDTO {
     */
     'blockNumber'?: number;
     /**
-    * Equals to: <pool_id>-<coin_index>.
+    * Equals to: (pool_id)-(coin_index).
     */
     'id'?: string | null;
     /**

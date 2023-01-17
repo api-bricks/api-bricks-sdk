@@ -24,7 +24,7 @@ type UniswapV3TickDTO struct {
 	BlockNumber *int64 `json:"block_number,omitempty"`
 	// 
 	Vid *int64 `json:"vid,omitempty"`
-	// Identifier, format: <pool address>#<tick index>
+	// Identifier, format: (pool address)#(tick index)
 	Id NullableString `json:"id,omitempty"`
 	// Pool address.
 	PoolAddress NullableString `json:"pool_address,omitempty"`

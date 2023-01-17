@@ -26,7 +26,7 @@ export interface UniswapV2LiquidityPositionSnapshotDTO {
     block_number?: number;
 
     /**
-     * Identifier, format: <pair address>-<user address>
+     * Identifier, format: (pair address)-(user address)
      */
     id?: string;
 

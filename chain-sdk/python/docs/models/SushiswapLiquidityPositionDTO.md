@@ -11,7 +11,7 @@ Key | Input Type | Accessed Type | Description | Notes
 **entry_time** | str, datetime,  | str,  |  | [optional] value must conform to RFC-3339 date-time
 **recv_time** | str, datetime,  | str,  |  | [optional] value must conform to RFC-3339 date-time
 **block_number** | decimal.Decimal, int,  | decimal.Decimal,  | Number of block in which entity was recorded. | [optional] value must be a 64 bit integer
-**id** | None, str,  | NoneClass, str,  | Identifier, format: &lt;pair address&gt;-&lt;user address&gt; | [optional] 
+**id** | None, str,  | NoneClass, str,  | Identifier, format: (pair address)-(user address) | [optional] 
 **user** | None, str,  | NoneClass, str,  | User address. | [optional] 
 **pair** | None, str,  | NoneClass, str,  | Pair address. | [optional] 
 **liquidity_token_balance** | None, str,  | NoneClass, str,  | Amount of LP tokens minted for this position. | [optional] 

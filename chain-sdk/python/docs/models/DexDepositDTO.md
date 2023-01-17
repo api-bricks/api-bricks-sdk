@@ -13,7 +13,7 @@ Key | Input Type | Accessed Type | Description | Notes
 **entry_time** | str, datetime,  | str,  |  | [optional] value must conform to RFC-3339 date-time
 **recv_time** | str, datetime,  | str,  |  | [optional] value must conform to RFC-3339 date-time
 **block_number** | decimal.Decimal, int,  | decimal.Decimal,  | Number of block in which entity was recorded. | [optional] value must be a 64 bit integer
-**id** | None, str,  | NoneClass, str,  | Identifier, format: &lt;transaction hash&gt;-&lt;token id&gt;. | [optional] 
+**id** | None, str,  | NoneClass, str,  | Identifier, format: (transaction hash)-(token id). | [optional] 
 **user** | None, str,  | NoneClass, str,  | User address. | [optional] 
 **token_address** | None, str,  | NoneClass, str,  | Token address. | [optional] 
 **amount** | None, str,  | NoneClass, str,  | Amount of deposit. | [optional] 

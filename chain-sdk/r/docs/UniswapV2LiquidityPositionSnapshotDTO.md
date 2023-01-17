@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **entry_time** | **character** |  | [optional] 
 **recv_time** | **character** |  | [optional] 
 **block_number** | **integer** | Number of block in which entity was recorded. | [optional] 
-**id** | **character** | Identifier, format: &lt;pair address&gt;-&lt;user address&gt; | [optional] 
+**id** | **character** | Identifier, format: (pair address)-(user address) | [optional] 
 **liquidity_position** | **character** | Reference to LP identifier. | [optional] 
 **timestamp** | **integer** | Creation time. | [optional] 
 **block** | **integer** | Number of block in which LP snapshot was recorded. | [optional] 

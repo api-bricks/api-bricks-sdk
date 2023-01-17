@@ -38,7 +38,7 @@ namespace CoinAPI.EMS.REST.V1.Model
         /// <param name="entryTime">entryTime.</param>
         /// <param name="recvTime">recvTime.</param>
         /// <param name="blockNumber">Number of block in which entity was recorded..</param>
-        /// <param name="id">Identifier, format: &lt;pair address&gt;-&lt;user address&gt;.</param>
+        /// <param name="id">Identifier, format: (pair address)-(user address).</param>
         /// <param name="liquidityPosition">Reference to LP identifier..</param>
         /// <param name="timestamp">Creation time..</param>
         /// <param name="block">Number of block in which LP snapshot was recorded..</param>
@@ -95,9 +95,9 @@ namespace CoinAPI.EMS.REST.V1.Model
         public long BlockNumber { get; set; }
 
         /// <summary>
-        /// Identifier, format: &lt;pair address&gt;-&lt;user address&gt;
+        /// Identifier, format: (pair address)-(user address)
         /// </summary>
-        /// <value>Identifier, format: &lt;pair address&gt;-&lt;user address&gt;</value>
+        /// <value>Identifier, format: (pair address)-(user address)</value>
         [DataMember(Name = "id", EmitDefaultValue = true)]
         public string Id { get; set; }
 

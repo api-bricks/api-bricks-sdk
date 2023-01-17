@@ -21,7 +21,7 @@ case class SwapDTO (
   blockNumber: Option[Long] = None,
   /*  */
   vid: Option[Long] = None,
-  /* Identifier, format: transaction hash + \"#\" + index in swaps Transaction array. */
+  /* Identifier, format: (transaction hash) + # + (index in swaps Transaction array). */
   id: Option[String] = None,
   /* Pointer to transaction. */
   transaction: Option[String] = None,

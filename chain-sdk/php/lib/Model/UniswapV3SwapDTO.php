@@ -581,7 +581,7 @@ class UniswapV3SwapDTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets id
      *
-     * @param string|null $id Identifier, format: transaction hash + \"#\" + index in swaps Transaction array.
+     * @param string|null $id Identifier, format: (transaction hash) + # + (index in swaps Transaction array).
      *
      * @return self
      */

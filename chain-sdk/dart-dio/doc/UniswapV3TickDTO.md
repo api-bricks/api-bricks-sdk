@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **recvTime** | [**DateTime**](DateTime.md) |  | [optional] 
 **blockNumber** | **int** | Number of block in which entity was recorded. | [optional] 
 **vid** | **int** |  | [optional] 
-**id** | **String** | Identifier, format: <pool address>#<tick index> | [optional] 
+**id** | **String** | Identifier, format: (pool address)#(tick index) | [optional] 
 **poolAddress** | **String** | Pool address. | [optional] 
 **tickIdx** | [**NumericsBigInteger**](NumericsBigInteger.md) |  | [optional] 
 **pool** | **String** | Pool address. | [optional] 

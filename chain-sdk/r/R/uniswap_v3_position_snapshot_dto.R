@@ -10,7 +10,7 @@
 #' @field entry_time  character [optional]
 #' @field recv_time  character [optional]
 #' @field block_number Number of block in which entity was recorded. integer [optional]
-#' @field id NFT token identifier, format: <NFT token id>#<block number> character [optional]
+#' @field id NFT token identifier, format: (NFT token id)#(block number). character [optional]
 #' @field owner Owner of the NFT. character [optional]
 #' @field pool Pool the position is within. character [optional]
 #' @field position Position of which the snap was taken of. character [optional]
@@ -59,7 +59,7 @@ UniswapV3PositionSnapshotDTO <- R6::R6Class(
     #' @param entry_time entry_time
     #' @param recv_time recv_time
     #' @param block_number Number of block in which entity was recorded.
-    #' @param id NFT token identifier, format: <NFT token id>#<block number>
+    #' @param id NFT token identifier, format: (NFT token id)#(block number).
     #' @param owner Owner of the NFT.
     #' @param pool Pool the position is within.
     #' @param position Position of which the snap was taken of.

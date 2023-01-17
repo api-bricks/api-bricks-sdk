@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **EntryTime** | **System.DateTime** |  | [optional] 
 **RecvTime** | **System.DateTime** |  | [optional] 
 **BlockNumber** | **Int64** | Number of block in which entity was recorded. | [optional] 
-**Id** | **String** | NFT token identifier, format: &lt;NFT token id&gt;#&lt;block number&gt; | [optional] 
+**Id** | **String** | NFT token identifier, format: (NFT token id)#(block number). | [optional] 
 **Owner** | **String** | Owner of the NFT. | [optional] 
 **Pool** | **String** | Pool the position is within. | [optional] 
 **Position** | **String** | Position of which the snap was taken of. | [optional] 

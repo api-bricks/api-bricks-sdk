@@ -10,7 +10,7 @@
 #' @field entry_time  character [optional]
 #' @field recv_time  character [optional]
 #' @field block_number Number of block in which entity was recorded. integer [optional]
-#' @field id Identifier, format: <pair address>-<user address>-<timestamp> character [optional]
+#' @field id Identifier, format: (pair address)-(user address)-(timestamp) character [optional]
 #' @field liquidity_position Reference to LP identifier. character [optional]
 #' @field timestamp Creation time. integer [optional]
 #' @field block Block in which snapshot has been created. integer [optional]
@@ -55,7 +55,7 @@ SushiswapLiquidityPositionSnapshotDTO <- R6::R6Class(
     #' @param entry_time entry_time
     #' @param recv_time recv_time
     #' @param block_number Number of block in which entity was recorded.
-    #' @param id Identifier, format: <pair address>-<user address>-<timestamp>
+    #' @param id Identifier, format: (pair address)-(user address)-(timestamp)
     #' @param liquidity_position Reference to LP identifier.
     #' @param timestamp Creation time.
     #' @param block Block in which snapshot has been created.

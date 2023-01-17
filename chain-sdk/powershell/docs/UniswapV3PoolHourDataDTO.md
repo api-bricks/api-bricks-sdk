@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **EntryTime** | **System.DateTime** |  | [optional] 
 **RecvTime** | **System.DateTime** |  | [optional] 
 **BlockNumber** | **Int64** | Number of block in which entity was recorded. | [optional] 
-**Id** | **String** | Identifier, format: &lt;pool address&gt;-&lt;day id&gt; | [optional] 
+**Id** | **String** | Identifier, format: (pool address)-(day id) | [optional] 
 **PeriodStartUnix** | **Int32** | Unix timestamp for start of hour. | [optional] 
 **Pool** | **String** | Pointer to pool. | [optional] 
 **Liquidity** | **String** | In range liquidity at end of period. | [optional] 

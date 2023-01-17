@@ -77,9 +77,9 @@ public class DexDepositDTO {
   }
 
   /**
-   * Identifier, format: <transaction hash>-<token id>.
+   * Identifier, format: (transaction hash)-(token id).
    **/
-  @ApiModelProperty(value = "Identifier, format: <transaction hash>-<token id>.")
+  @ApiModelProperty(value = "Identifier, format: (transaction hash)-(token id).")
   public String getId() {
     return id;
   }

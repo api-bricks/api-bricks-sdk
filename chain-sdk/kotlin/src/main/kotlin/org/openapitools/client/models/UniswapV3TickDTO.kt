@@ -26,7 +26,7 @@ import com.squareup.moshi.Json
  * @param recvTime 
  * @param blockNumber Number of block in which entity was recorded.
  * @param vid 
- * @param id Identifier, format: <pool address>#<tick index>
+ * @param id Identifier, format: (pool address)#(tick index)
  * @param poolAddress Pool address.
  * @param tickIdx 
  * @param pool Pool address.
@@ -65,7 +65,7 @@ data class UniswapV3TickDTO (
     @Json(name = "vid")
     val vid: kotlin.Long? = null,
 
-    /* Identifier, format: <pool address>#<tick index> */
+    /* Identifier, format: (pool address)#(tick index) */
     @Json(name = "id")
     val id: kotlin.String? = null,
 

@@ -26,7 +26,7 @@ feature --Access
  	block_number: INTEGER_64
     	 -- Number of block in which entity was recorded.
     id: detachable STRING_32
-      -- Identifier, format: <pair id>-<hour start timestamp>.
+      -- Identifier, format: (pair id)-(hour start timestamp).
  	date: INTEGER_32
     	 -- Hour start timestamp.
     pair: detachable STRING_32

@@ -22,7 +22,7 @@ No description available.
 .PARAMETER BlockNumber
 Number of block in which entity was recorded.
 .PARAMETER Id
-NFT token identifier, format: <NFT token id>#<block number>
+NFT token identifier, format: (NFT token id)#(block number).
 .PARAMETER Owner
 Owner of the NFT.
 .PARAMETER Pool

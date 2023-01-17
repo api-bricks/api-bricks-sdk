@@ -28,7 +28,7 @@ feature --Access
  	vid: INTEGER_64
     	 -- 
     id: detachable STRING_32
-      -- Identifier, format: transaction hash + \"#\" + index in swaps Transaction array.
+      -- Identifier, format: (transaction hash) + # + (index in swaps Transaction array).
     transaction: detachable STRING_32
       -- Pointer to transaction.
     timestamp: detachable DATE_TIME

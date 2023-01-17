@@ -26,7 +26,7 @@ type SushiswapPairDTO struct {
 	Id NullableString `json:"id,omitempty"`
 	// Factory contract address.
 	Factory NullableString `json:"factory,omitempty"`
-	// Friendly name, format: <token0 name>-<token1 name>
+	// Friendly name, format: (token0 name)-(token1 name)
 	Name NullableString `json:"name,omitempty"`
 	// Reference to token0 as stored in pair contract.
 	Token0 NullableString `json:"token_0,omitempty"`

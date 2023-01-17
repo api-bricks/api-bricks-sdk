@@ -638,7 +638,7 @@ class SushiswapPairDTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets name
      *
-     * @param string|null $name Friendly name, format: <token0 name>-<token1 name>
+     * @param string|null $name Friendly name, format: (token0 name)-(token1 name)
      *
      * @return self
      */

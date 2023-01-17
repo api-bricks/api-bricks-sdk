@@ -33,7 +33,7 @@ API.Client.UniswapV3TickDTO.prototype.blockNumber;
 API.Client.UniswapV3TickDTO.prototype.vid;
 
 /**
- * Identifier, format: <pool address>#<tick index>
+ * Identifier, format: (pool address)#(tick index)
  * @type {!string}
  * @export
  */

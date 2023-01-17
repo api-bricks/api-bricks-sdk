@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **entryTime** | [**java.time.OffsetDateTime**](java.time.OffsetDateTime.md) |  |  [optional]
 **recvTime** | [**java.time.OffsetDateTime**](java.time.OffsetDateTime.md) |  |  [optional]
 **blockNumber** | **kotlin.Long** | Number of block in which entity was recorded. |  [optional]
-**id** | **kotlin.String** | Identifier, format: &lt;pair id&gt;-&lt;day start timestamp&gt;. |  [optional]
+**id** | **kotlin.String** | Identifier, format: (pair id)-(day start timestamp). |  [optional]
 **date** | **kotlin.Int** | Unix timestamp for start of day. |  [optional]
 **pair** | **kotlin.String** | Reference to pair. |  [optional]
 **token0** | **kotlin.String** | Reference to token0. |  [optional]

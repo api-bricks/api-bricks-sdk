@@ -52,7 +52,7 @@ import org.openapitools.client.JSON;
  * Trade entity.
  */
 @ApiModel(description = "Trade entity.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-16T16:13:26.555571Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-17T12:39:15.555439Z[Etc/UTC]")
 public class CowTradeDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -231,11 +231,11 @@ public class CowTradeDTO {
   }
 
    /**
-   * Identifier, format: &lt;order id&gt;|&lt;transaction hash&gt;|&lt;event index&gt;.
+   * Identifier, format: (order id)|(transaction hash)|(event index).
    * @return id
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Identifier, format: <order id>|<transaction hash>|<event index>.")
+  @ApiModelProperty(value = "Identifier, format: (order id)|(transaction hash)|(event index).")
 
   public String getId() {
     return id;

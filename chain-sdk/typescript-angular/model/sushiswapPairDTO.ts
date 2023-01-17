@@ -30,7 +30,7 @@ export interface SushiswapPairDTO {
      */
     factory?: string | null;
     /**
-     * Friendly name, format: <token0 name>-<token1 name>
+     * Friendly name, format: (token0 name)-(token1 name)
      */
     name?: string | null;
     /**

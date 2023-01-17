@@ -32,7 +32,7 @@ void main() {
       // TODO
     });
 
-    // Identifier, format: <pair address>-<user address>
+    // Identifier, format: (pair address)-(user address)
     // String id
     test('to test the property `id`', () async {
       // TODO

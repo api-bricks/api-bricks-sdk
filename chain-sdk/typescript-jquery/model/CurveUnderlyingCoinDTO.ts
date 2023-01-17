@@ -23,7 +23,7 @@ export interface CurveUnderlyingCoinDTO {
     block_number?: number;
 
     /**
-     * Equals to: <pool_id>-<coin_index>.
+     * Equals to: (pool_id)-(coin_index).
      */
     id?: string;
 

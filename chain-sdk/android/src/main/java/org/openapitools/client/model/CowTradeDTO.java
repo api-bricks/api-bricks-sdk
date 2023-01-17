@@ -98,9 +98,9 @@ public class CowTradeDTO {
   }
 
   /**
-   * Identifier, format: <order id>|<transaction hash>|<event index>.
+   * Identifier, format: (order id)|(transaction hash)|(event index).
    **/
-  @ApiModelProperty(value = "Identifier, format: <order id>|<transaction hash>|<event index>.")
+  @ApiModelProperty(value = "Identifier, format: (order id)|(transaction hash)|(event index).")
   public String getId() {
     return id;
   }

@@ -10,7 +10,7 @@
 #' @field entry_time  character [optional]
 #' @field recv_time  character [optional]
 #' @field block_number Number of block in which entity was recorded. integer [optional]
-#' @field id Identifier, format: <token id>-<batch id>. character [optional]
+#' @field id Identifier, format: (token id)-(batch id). character [optional]
 #' @field token Token identifier. character [optional]
 #' @field batch_id Batch identifier. character [optional]
 #' @field price_in_owl_numerator Price enumerator in OWL (derivative of the GNO token). character [optional]
@@ -45,7 +45,7 @@ DexPriceDTO <- R6::R6Class(
     #' @param entry_time entry_time
     #' @param recv_time recv_time
     #' @param block_number Number of block in which entity was recorded.
-    #' @param id Identifier, format: <token id>-<batch id>.
+    #' @param id Identifier, format: (token id)-(batch id).
     #' @param token Token identifier.
     #' @param batch_id Batch identifier.
     #' @param price_in_owl_numerator Price enumerator in OWL (derivative of the GNO token).

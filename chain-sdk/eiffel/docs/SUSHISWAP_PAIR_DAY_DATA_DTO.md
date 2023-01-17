@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **entry_time** | [**DATE_TIME**](DATE_TIME.md) |  | [optional] [default to null]
 **recv_time** | [**DATE_TIME**](DATE_TIME.md) |  | [optional] [default to null]
 **block_number** | **INTEGER_64** | Number of block in which entity was recorded. | [optional] [default to null]
-**id** | [**STRING_32**](STRING_32.md) | Identifier, format: &lt;pair id&gt;-&lt;day start timestamp&gt;. | [optional] [default to null]
+**id** | [**STRING_32**](STRING_32.md) | Identifier, format: (pair id)-(day start timestamp). | [optional] [default to null]
 **date** | **INTEGER_32** | Unix timestamp for start of day. | [optional] [default to null]
 **pair** | [**STRING_32**](STRING_32.md) | Reference to pair. | [optional] [default to null]
 **token_0** | [**STRING_32**](STRING_32.md) | Reference to token0. | [optional] [default to null]

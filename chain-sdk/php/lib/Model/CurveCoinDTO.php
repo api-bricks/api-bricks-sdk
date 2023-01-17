@@ -488,7 +488,7 @@ class CurveCoinDTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets id
      *
-     * @param string|null $id Identifier, format: <pool_id>-<coin_index>.
+     * @param string|null $id Identifier, format: (pool_id)-(coin_index).
      *
      * @return self
      */

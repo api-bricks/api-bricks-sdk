@@ -12,7 +12,7 @@
 #' @field block_number Number of block in which entity was recorded. integer [optional]
 #' @field id Pair contract address. character [optional]
 #' @field factory Factory contract address. character [optional]
-#' @field name Friendly name, format: <token0 name>-<token1 name> character [optional]
+#' @field name Friendly name, format: (token0 name)-(token1 name) character [optional]
 #' @field token_0 Reference to token0 as stored in pair contract. character [optional]
 #' @field token_1 Reference to token0 as stored in pair contract. character [optional]
 #' @field reserve_0 Reserve of token0. character [optional]
@@ -75,7 +75,7 @@ SushiswapPairDTO <- R6::R6Class(
     #' @param block_number Number of block in which entity was recorded.
     #' @param id Pair contract address.
     #' @param factory Factory contract address.
-    #' @param name Friendly name, format: <token0 name>-<token1 name>
+    #' @param name Friendly name, format: (token0 name)-(token1 name)
     #' @param token_0 Reference to token0 as stored in pair contract.
     #' @param token_1 Reference to token0 as stored in pair contract.
     #' @param reserve_0 Reserve of token0.

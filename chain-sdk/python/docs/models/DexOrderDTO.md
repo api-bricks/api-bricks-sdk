@@ -13,7 +13,7 @@ Key | Input Type | Accessed Type | Description | Notes
 **entry_time** | str, datetime,  | str,  |  | [optional] value must conform to RFC-3339 date-time
 **recv_time** | str, datetime,  | str,  |  | [optional] value must conform to RFC-3339 date-time
 **block_number** | decimal.Decimal, int,  | decimal.Decimal,  | Number of block in which entity was recorded. | [optional] value must be a 64 bit integer
-**id** | None, str,  | NoneClass, str,  | Identifier, format: &lt;owner address&gt;-&lt;order id&gt; | [optional] 
+**id** | None, str,  | NoneClass, str,  | Identifier, format: (owner address)-(order id) | [optional] 
 **owner** | None, str,  | NoneClass, str,  | Reference to owner. | [optional] 
 **order_id** | decimal.Decimal, int,  | decimal.Decimal,  | Order id. | [optional] value must be a 32 bit integer
 **from_batch_id** | None, str,  | NoneClass, str,  | Batch id from which order became valid. | [optional] 

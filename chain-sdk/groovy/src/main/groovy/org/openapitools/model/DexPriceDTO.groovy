@@ -13,7 +13,7 @@ class DexPriceDTO {
     Date recvTime
     /* Number of block in which entity was recorded. */
     Long blockNumber
-    /* Identifier, format: <token id>-<batch id>. */
+    /* Identifier, format: (token id)-(batch id). */
     String id
     /* Token identifier. */
     String token

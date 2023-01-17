@@ -103,9 +103,9 @@ public class DexOrderDTO {
   }
 
   /**
-   * Identifier, format: <owner address>-<order id>
+   * Identifier, format: (owner address)-(order id)
    **/
-  @ApiModelProperty(value = "Identifier, format: <owner address>-<order id>")
+  @ApiModelProperty(value = "Identifier, format: (owner address)-(order id)")
   public String getId() {
     return id;
   }

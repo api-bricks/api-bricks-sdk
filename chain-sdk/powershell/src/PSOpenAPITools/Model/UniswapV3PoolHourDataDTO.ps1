@@ -22,7 +22,7 @@ No description available.
 .PARAMETER BlockNumber
 Number of block in which entity was recorded.
 .PARAMETER Id
-Identifier, format: <pool address>-<day id>
+Identifier, format: (pool address)-(day id)
 .PARAMETER PeriodStartUnix
 Unix timestamp for start of hour.
 .PARAMETER Pool

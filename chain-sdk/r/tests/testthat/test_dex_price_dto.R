@@ -29,7 +29,7 @@ test_that("block_number", {
 
 test_that("id", {
   # tests for the property `id` (character)
-  # Identifier, format: &lt;token id&gt;-&lt;batch id&gt;.
+  # Identifier, format: (token id)-(batch id).
 
   # uncomment below to test the property
   #expect_equal(model.instance$`id`, "EXPECTED_RESULT")

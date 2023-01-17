@@ -26,7 +26,7 @@ export interface DexDepositDTO {
     block_number?: number;
 
     /**
-     * Identifier, format: <transaction hash>-<token id>.
+     * Identifier, format: (transaction hash)-(token id).
      */
     id?: string;
 

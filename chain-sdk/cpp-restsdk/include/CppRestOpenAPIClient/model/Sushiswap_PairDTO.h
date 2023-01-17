@@ -100,7 +100,7 @@ public:
     void setFactory(const utility::string_t& value);
 
     /// <summary>
-    /// Friendly name, format: &lt;token0 name&gt;-&lt;token1 name&gt;
+    /// Friendly name, format: (token0 name)-(token1 name)
     /// </summary>
     utility::string_t getName() const;
     bool nameIsSet() const;

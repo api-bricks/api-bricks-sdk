@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **EntryTime** | Pointer to **time.Time** |  | [optional] 
 **RecvTime** | Pointer to **time.Time** |  | [optional] 
 **BlockNumber** | Pointer to **int64** | Number of block in which entity was recorded. | [optional] 
-**Id** | Pointer to **NullableString** | Identifier, format: &lt;order id&gt;|&lt;transaction hash&gt;|&lt;event index&gt;. | [optional] 
+**Id** | Pointer to **NullableString** | Identifier, format: (order id)|(transaction hash)|(event index). | [optional] 
 **Timestamp** | Pointer to **NullableString** | Block&#39;s timestamp. | [optional] 
 **GasPrice** | Pointer to **NullableString** | Transaction&#39;s gas price. | [optional] 
 **GasLimit** | Pointer to **NullableString** | Transaction&#39;s gas limit. | [optional] 

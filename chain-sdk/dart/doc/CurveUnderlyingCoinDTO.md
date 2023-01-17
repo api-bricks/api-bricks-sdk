@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **entryTime** | [**DateTime**](DateTime.md) |  | [optional] 
 **recvTime** | [**DateTime**](DateTime.md) |  | [optional] 
 **blockNumber** | **int** | Number of block in which entity was recorded. | [optional] 
-**id** | **String** | Equals to: <pool_id>-<coin_index>. | [optional] 
+**id** | **String** | Equals to: (pool_id)-(coin_index). | [optional] 
 **index** | **int** | Coin index. | [optional] 
 **pool** | **String** |  | [optional] 
 **token** | **String** |  | [optional] 

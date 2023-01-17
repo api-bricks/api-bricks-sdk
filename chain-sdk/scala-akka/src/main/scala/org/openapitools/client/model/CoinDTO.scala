@@ -19,7 +19,7 @@ case class CoinDTO (
   recvTime: Option[OffsetDateTime] = None,
   /* Number of block in which entity was recorded. */
   blockNumber: Option[Long] = None,
-  /* Identifier, format: <pool_id>-<coin_index>. */
+  /* Identifier, format: (pool_id)-(coin_index). */
   id: Option[String] = None,
   /* Coin index. */
   index: Option[Int] = None,

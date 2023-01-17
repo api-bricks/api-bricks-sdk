@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **entry_time** | [**DATE_TIME**](DATE_TIME.md) |  | [optional] [default to null]
 **recv_time** | [**DATE_TIME**](DATE_TIME.md) |  | [optional] [default to null]
 **block_number** | **INTEGER_64** | Number of block in which entity was recorded. | [optional] [default to null]
-**id** | [**STRING_32**](STRING_32.md) | Identifier, format: &lt;pair address&gt;-&lt;user address&gt; | [optional] [default to null]
+**id** | [**STRING_32**](STRING_32.md) | Identifier, format: (pair address)-(user address) | [optional] [default to null]
 **liquidity_position** | [**STRING_32**](STRING_32.md) | Reference to LP identifier. | [optional] [default to null]
 **timestamp** | **INTEGER_32** | Creation time. | [optional] [default to null]
 **block** | **INTEGER_32** | Number of block in which LP snapshot was recorded. | [optional] [default to null]

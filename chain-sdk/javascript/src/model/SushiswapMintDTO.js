@@ -187,7 +187,7 @@ SushiswapMintDTO.prototype['recv_time'] = undefined;
 SushiswapMintDTO.prototype['block_number'] = undefined;
 
 /**
- * Identifier, format: <transaction hash>-<index in the transaction mint array>.
+ * Identifier, format: (transaction hash)-(index in the transaction mint array).
  * @member {String} id
  */
 SushiswapMintDTO.prototype['id'] = undefined;

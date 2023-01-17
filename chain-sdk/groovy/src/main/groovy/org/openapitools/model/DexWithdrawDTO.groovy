@@ -13,7 +13,7 @@ class DexWithdrawDTO {
     Date recvTime
     /* Number of block in which entity was recorded. */
     Long blockNumber
-    /* Identifier, format: <transaction hash>-<id>. */
+    /* Identifier, format: (transaction hash)-(id). */
     String id
     /*  */
     String user

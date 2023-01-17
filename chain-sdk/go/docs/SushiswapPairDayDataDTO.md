@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **EntryTime** | Pointer to **time.Time** |  | [optional] 
 **RecvTime** | Pointer to **time.Time** |  | [optional] 
 **BlockNumber** | Pointer to **int64** | Number of block in which entity was recorded. | [optional] 
-**Id** | Pointer to **NullableString** | Identifier, format: &lt;pair id&gt;-&lt;day start timestamp&gt;. | [optional] 
+**Id** | Pointer to **NullableString** | Identifier, format: (pair id)-(day start timestamp). | [optional] 
 **Date** | Pointer to **int32** | Unix timestamp for start of day. | [optional] 
 **Pair** | Pointer to **NullableString** | Reference to pair. | [optional] 
 **Token0** | Pointer to **NullableString** | Reference to token0. | [optional] 

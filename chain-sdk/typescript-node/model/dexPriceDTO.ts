@@ -23,7 +23,7 @@ export class DexPriceDTO {
     */
     'blockNumber'?: number;
     /**
-    * Identifier, format: <token id>-<batch id>.
+    * Identifier, format: (token id)-(batch id).
     */
     'id'?: string | null;
     /**

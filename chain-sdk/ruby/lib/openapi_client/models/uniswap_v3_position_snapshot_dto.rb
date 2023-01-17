@@ -22,7 +22,7 @@ module OpenapiClient
     # Number of block in which entity was recorded.
     attr_accessor :block_number
 
-    # NFT token identifier, format: <NFT token id>#<block number>
+    # NFT token identifier, format: (NFT token id)#(block number).
     attr_accessor :id
 
     # Owner of the NFT.

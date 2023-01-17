@@ -31,7 +31,7 @@ export interface UniswapV3TickDTO {
     vid?: number;
 
     /**
-     * Identifier, format: <pool address>#<tick index>
+     * Identifier, format: (pool address)#(tick index)
      */
     id?: string;
 

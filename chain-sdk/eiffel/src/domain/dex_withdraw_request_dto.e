@@ -26,7 +26,7 @@ feature --Access
  	block_number: INTEGER_64
     	 -- Number of block in which entity was recorded.
     id: detachable STRING_32
-      -- Identifier, format: <transaction hash>-<id>.
+      -- Identifier, format: (transaction hash)-(id).
     user: detachable STRING_32
       -- 
     token_address: detachable STRING_32

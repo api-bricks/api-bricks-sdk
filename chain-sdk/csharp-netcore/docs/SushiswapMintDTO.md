@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **EntryTime** | **DateTime** |  | [optional] 
 **RecvTime** | **DateTime** |  | [optional] 
 **BlockNumber** | **long** | Number of block in which entity was recorded. | [optional] 
-**Id** | **string** | Identifier, format: &lt;transaction hash&gt;-&lt;index in the transaction mint array&gt;. | [optional] 
+**Id** | **string** | Identifier, format: (transaction hash)-(index in the transaction mint array). | [optional] 
 **Transaction** | **string** | Reference to the transaction Mint was included in. | [optional] 
 **Timestamp** | **string** | Timestamp of Mint, used to sort recent liquidity provisions. | [optional] 
 **Pair** | **string** | Reference to pair. | [optional] 

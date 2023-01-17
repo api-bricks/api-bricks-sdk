@@ -33,7 +33,7 @@ public class OASDexWithdrawRequestDTO implements OAS.MappedProperties {
     public Long blockNumber { get; set; }
 
     /**
-     * Identifier, format: <transaction hash>-<id>.
+     * Identifier, format: (transaction hash)-(id).
      * @return id
      */
     public String id { get; set; }

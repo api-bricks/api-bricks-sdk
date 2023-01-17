@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **EntryTime** | Pointer to **time.Time** |  | [optional] 
 **RecvTime** | Pointer to **time.Time** |  | [optional] 
 **BlockNumber** | Pointer to **int64** | Number of block in which entity was recorded. | [optional] 
-**Id** | Pointer to **NullableString** | Identifier, format: &lt;owner address&gt;-&lt;order id&gt; | [optional] 
+**Id** | Pointer to **NullableString** | Identifier, format: (owner address)-(order id) | [optional] 
 **Owner** | Pointer to **NullableString** | Reference to owner. | [optional] 
 **OrderId** | Pointer to **int32** | Order id. | [optional] 
 **FromBatchId** | Pointer to **NullableString** | Batch id from which order became valid. | [optional] 

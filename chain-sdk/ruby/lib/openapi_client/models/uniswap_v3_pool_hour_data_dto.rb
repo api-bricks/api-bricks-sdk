@@ -23,7 +23,7 @@ module OpenapiClient
     # Number of block in which entity was recorded.
     attr_accessor :block_number
 
-    # Identifier, format: <pool address>-<day id>
+    # Identifier, format: (pool address)-(day id)
     attr_accessor :id
 
     # Unix timestamp for start of hour.

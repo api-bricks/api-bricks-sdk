@@ -57,7 +57,7 @@ class SushiswapLiquidityPositionSnapshotDTO {
   ///
   int? blockNumber;
 
-  /// Identifier, format: <pair address>-<user address>-<timestamp>
+  /// Identifier, format: (pair address)-(user address)-(timestamp)
   String? id;
 
   /// Reference to LP identifier.

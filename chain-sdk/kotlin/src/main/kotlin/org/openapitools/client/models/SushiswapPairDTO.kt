@@ -26,7 +26,7 @@ import com.squareup.moshi.Json
  * @param blockNumber Number of block in which entity was recorded.
  * @param id Pair contract address.
  * @param factory Factory contract address.
- * @param name Friendly name, format: <token0 name>-<token1 name>
+ * @param name Friendly name, format: (token0 name)-(token1 name)
  * @param token0 Reference to token0 as stored in pair contract.
  * @param token1 Reference to token0 as stored in pair contract.
  * @param reserve0 Reserve of token0.
@@ -70,7 +70,7 @@ data class SushiswapPairDTO (
     @Json(name = "factory")
     val factory: kotlin.String? = null,
 
-    /* Friendly name, format: <token0 name>-<token1 name> */
+    /* Friendly name, format: (token0 name)-(token1 name) */
     @Json(name = "name")
     val name: kotlin.String? = null,
 

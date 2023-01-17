@@ -26,7 +26,7 @@ feature --Access
  	block_number: INTEGER_64
     	 -- Number of block in which entity was recorded.
     id: detachable STRING_32
-      -- Identifier, format: <pool address>-<day id>.
+      -- Identifier, format: (pool address)-(day id).
  	date: INTEGER_32
     	 -- Timestamp rounded to current day by dividing by 86400
     pool: detachable STRING_32

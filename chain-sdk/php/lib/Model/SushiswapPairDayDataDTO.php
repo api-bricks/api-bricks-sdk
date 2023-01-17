@@ -503,7 +503,7 @@ class SushiswapPairDayDataDTO implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets id
      *
-     * @param string|null $id Identifier, format: <pair id>-<day start timestamp>.
+     * @param string|null $id Identifier, format: (pair id)-(day start timestamp).
      *
      * @return self
      */

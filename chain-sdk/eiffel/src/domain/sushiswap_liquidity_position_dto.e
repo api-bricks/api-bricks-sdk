@@ -26,7 +26,7 @@ feature --Access
  	block_number: INTEGER_64
     	 -- Number of block in which entity was recorded.
     id: detachable STRING_32
-      -- Identifier, format: <pair address>-<user address>
+      -- Identifier, format: (pair address)-(user address)
     user: detachable STRING_32
       -- User address.
     pair: detachable STRING_32

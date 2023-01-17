@@ -23,7 +23,7 @@ module OpenapiClient
     # Number of block in which entity was recorded.
     attr_accessor :block_number
 
-    # Identifier, format: <order id>|<transaction hash>|<event index>.
+    # Identifier, format: (order id)|(transaction hash)|(event index).
     attr_accessor :id
 
     # Block's timestamp.

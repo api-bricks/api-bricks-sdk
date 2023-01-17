@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **entry_time** | **char \*** |  | [optional] 
 **recv_time** | **char \*** |  | [optional] 
 **block_number** | **long** | Number of block in which entity was recorded. | [optional] 
-**id** | **char \*** | Identifier, format: &lt;pool address&gt;-&lt;tick index&gt;-&lt;timestamp&gt;. | [optional] 
+**id** | **char \*** | Identifier, format: (pool address)-(tick index)-(timestamp). | [optional] 
 **date** | **int** | Timestamp rounded to current day by dividing by 86400. | [optional] 
 **pool** | **char \*** | Pointer to pool. | [optional] 
 **tick** | **char \*** | Pointer to tick. | [optional] 

@@ -26,7 +26,7 @@ feature --Access
  	block_number: INTEGER_64
     	 -- Number of block in which entity was recorded.
     id: detachable STRING_32
-      -- NFT token identifier, format: <NFT token id>#<block number>
+      -- NFT token identifier, format: (NFT token id)#(block number).
     owner: detachable STRING_32
       -- Owner of the NFT.
     pool: detachable STRING_32

@@ -26,7 +26,7 @@ module OpenapiClient
     # 
     attr_accessor :vid
 
-    # Identifier, format: <pool address>#<tick index>
+    # Identifier, format: (pool address)#(tick index)
     attr_accessor :id
 
     # Pool address.

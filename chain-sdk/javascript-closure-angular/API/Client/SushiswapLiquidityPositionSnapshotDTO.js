@@ -26,7 +26,7 @@ API.Client.SushiswapLiquidityPositionSnapshotDTO.prototype.recvTime;
 API.Client.SushiswapLiquidityPositionSnapshotDTO.prototype.blockNumber;
 
 /**
- * Identifier, format: <pair address>-<user address>-<timestamp>
+ * Identifier, format: (pair address)-(user address)-(timestamp)
  * @type {!string}
  * @export
  */

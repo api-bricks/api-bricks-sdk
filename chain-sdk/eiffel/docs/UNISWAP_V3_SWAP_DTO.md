@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **recv_time** | [**DATE_TIME**](DATE_TIME.md) |  | [optional] [default to null]
 **block_number** | **INTEGER_64** | Number of block in which entity was recorded. | [optional] [default to null]
 **vid** | **INTEGER_64** |  | [optional] [default to null]
-**id** | [**STRING_32**](STRING_32.md) | Identifier, format: transaction hash + \&quot;#\&quot; + index in swaps Transaction array. | [optional] [default to null]
+**id** | [**STRING_32**](STRING_32.md) | Identifier, format: (transaction hash) + # + (index in swaps Transaction array). | [optional] [default to null]
 **transaction** | [**STRING_32**](STRING_32.md) | Pointer to transaction. | [optional] [default to null]
 **timestamp** | [**DATE_TIME**](DATE_TIME.md) | Timestamp of transaction. | [optional] [default to null]
 **pool** | [**STRING_32**](STRING_32.md) | Pool swap occured within. | [optional] [default to null]

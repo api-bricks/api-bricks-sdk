@@ -10,7 +10,7 @@
 #' @field entry_time  character [optional]
 #' @field recv_time  character [optional]
 #' @field block_number Number of block in which entity was recorded. integer [optional]
-#' @field id Identifier, format: <pair address>-<user address> character [optional]
+#' @field id Identifier, format: (pair address)-(user address) character [optional]
 #' @field liquidity_position Reference to LP identifier. character [optional]
 #' @field timestamp Creation time. integer [optional]
 #' @field block Number of block in which LP snapshot was recorded. integer [optional]
@@ -57,7 +57,7 @@ UniswapV2LiquidityPositionSnapshotDTO <- R6::R6Class(
     #' @param entry_time entry_time
     #' @param recv_time recv_time
     #' @param block_number Number of block in which entity was recorded.
-    #' @param id Identifier, format: <pair address>-<user address>
+    #' @param id Identifier, format: (pair address)-(user address)
     #' @param liquidity_position Reference to LP identifier.
     #' @param timestamp Creation time.
     #' @param block Number of block in which LP snapshot was recorded.

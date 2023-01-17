@@ -22,7 +22,7 @@ type SushiswapBurnDTO struct {
 	RecvTime *time.Time `json:"recv_time,omitempty"`
 	// Number of block in which entity was recorded.
 	BlockNumber *int64 `json:"block_number,omitempty"`
-	// Identifier, format: <transaction id>:<transaction.burns.length>.
+	// Identifier, format: (transaction id):(transaction.burns.length).
 	Id NullableString `json:"id,omitempty"`
 	// Reference to the transaction Burn was included in.
 	Transaction NullableString `json:"transaction,omitempty"`

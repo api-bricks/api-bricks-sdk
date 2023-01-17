@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **entry_time** | [**DATE_TIME**](DATE_TIME.md) |  | [optional] [default to null]
 **recv_time** | [**DATE_TIME**](DATE_TIME.md) |  | [optional] [default to null]
 **block_number** | **INTEGER_64** | Number of block in which entity was recorded. | [optional] [default to null]
-**id** | [**STRING_32**](STRING_32.md) | Identifier, format: &lt;token id&gt;-&lt;batch id&gt;. | [optional] [default to null]
+**id** | [**STRING_32**](STRING_32.md) | Identifier, format: (token id)-(batch id). | [optional] [default to null]
 **token** | [**STRING_32**](STRING_32.md) | Token identifier. | [optional] [default to null]
 **batch_id** | [**STRING_32**](STRING_32.md) | Batch identifier. | [optional] [default to null]
 **price_in_owl_numerator** | [**STRING_32**](STRING_32.md) | Price enumerator in OWL (derivative of the GNO token). | [optional] [default to null]

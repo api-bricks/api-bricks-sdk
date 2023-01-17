@@ -10,7 +10,7 @@
 #' @field entry_time  character [optional]
 #' @field recv_time  character [optional]
 #' @field block_number Number of block in which entity was recorded. integer [optional]
-#' @field id Identifier, format: <pair id>-<day start timestamp>. character [optional]
+#' @field id Identifier, format: (pair id)-(day start timestamp). character [optional]
 #' @field date Unix timestamp for start of day. integer [optional]
 #' @field pair Reference to pair. character [optional]
 #' @field token_0 Reference to token0. character [optional]
@@ -55,7 +55,7 @@ SushiswapPairDayDataDTO <- R6::R6Class(
     #' @param entry_time entry_time
     #' @param recv_time recv_time
     #' @param block_number Number of block in which entity was recorded.
-    #' @param id Identifier, format: <pair id>-<day start timestamp>.
+    #' @param id Identifier, format: (pair id)-(day start timestamp).
     #' @param date Unix timestamp for start of day.
     #' @param pair Reference to pair.
     #' @param token_0 Reference to token0.

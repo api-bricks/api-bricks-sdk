@@ -552,7 +552,7 @@ class UniswapV3PoolDayDataDTO implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets id
      *
-     * @param string|null $id Identifier, format: <pool address>-<day id>.
+     * @param string|null $id Identifier, format: (pool address)-(day id).
      *
      * @return self
      */

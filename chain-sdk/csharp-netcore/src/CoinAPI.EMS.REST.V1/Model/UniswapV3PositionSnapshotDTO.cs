@@ -38,7 +38,7 @@ namespace CoinAPI.EMS.REST.V1.Model
         /// <param name="entryTime">entryTime.</param>
         /// <param name="recvTime">recvTime.</param>
         /// <param name="blockNumber">Number of block in which entity was recorded..</param>
-        /// <param name="id">NFT token identifier, format: &lt;NFT token id&gt;#&lt;block number&gt;.</param>
+        /// <param name="id">NFT token identifier, format: (NFT token id)#(block number)..</param>
         /// <param name="owner">Owner of the NFT..</param>
         /// <param name="pool">Pool the position is within..</param>
         /// <param name="position">Position of which the snap was taken of..</param>
@@ -97,9 +97,9 @@ namespace CoinAPI.EMS.REST.V1.Model
         public long BlockNumber { get; set; }
 
         /// <summary>
-        /// NFT token identifier, format: &lt;NFT token id&gt;#&lt;block number&gt;
+        /// NFT token identifier, format: (NFT token id)#(block number).
         /// </summary>
-        /// <value>NFT token identifier, format: &lt;NFT token id&gt;#&lt;block number&gt;</value>
+        /// <value>NFT token identifier, format: (NFT token id)#(block number).</value>
         [DataMember(Name = "id", EmitDefaultValue = true)]
         public string Id { get; set; }
 

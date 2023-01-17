@@ -11,7 +11,7 @@
 #' @field recv_time  character [optional]
 #' @field block_number Number of block in which entity was recorded. integer [optional]
 #' @field vid  integer [optional]
-#' @field id Identifier, format: transaction hash + \"#\" + index in swaps Transaction array. character [optional]
+#' @field id Identifier, format: (transaction hash) + # + (index in swaps Transaction array). character [optional]
 #' @field transaction Pointer to transaction. character [optional]
 #' @field timestamp Timestamp of transaction. character [optional]
 #' @field pool Pool swap occured within. character [optional]
@@ -70,7 +70,7 @@ UniswapV3SwapDTO <- R6::R6Class(
     #' @param recv_time recv_time
     #' @param block_number Number of block in which entity was recorded.
     #' @param vid 
-    #' @param id Identifier, format: transaction hash + \"#\" + index in swaps Transaction array.
+    #' @param id Identifier, format: (transaction hash) + # + (index in swaps Transaction array).
     #' @param transaction Pointer to transaction.
     #' @param timestamp Timestamp of transaction.
     #' @param pool Pool swap occured within.

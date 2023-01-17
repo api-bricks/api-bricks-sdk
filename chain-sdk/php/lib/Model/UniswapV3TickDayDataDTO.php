@@ -496,7 +496,7 @@ class UniswapV3TickDayDataDTO implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets id
      *
-     * @param string|null $id Identifier, format: <pool address>-<tick index>-<timestamp>.
+     * @param string|null $id Identifier, format: (pool address)-(tick index)-(timestamp).
      *
      * @return self
      */

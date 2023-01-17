@@ -22,7 +22,7 @@ export interface SushiswapMintDTO {
      */
     block_number?: number;
     /**
-     * Identifier, format: <transaction hash>-<index in the transaction mint array>.
+     * Identifier, format: (transaction hash)-(index in the transaction mint array).
      */
     id?: string | null;
     /**

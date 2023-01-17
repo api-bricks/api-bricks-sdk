@@ -24,7 +24,7 @@ import com.squareup.moshi.Json
  * @param entryTime 
  * @param recvTime 
  * @param blockNumber Number of block in which entity was recorded.
- * @param id Identifier, format: <transaction hash>-<index in the transaction mint array>.
+ * @param id Identifier, format: (transaction hash)-(index in the transaction mint array).
  * @param transaction Reference to the transaction Mint was included in.
  * @param timestamp Timestamp of Mint, used to sort recent liquidity provisions.
  * @param pair Reference to pair.
@@ -53,7 +53,7 @@ data class SushiswapMintDTO (
     @Json(name = "block_number")
     val blockNumber: kotlin.Long? = null,
 
-    /* Identifier, format: <transaction hash>-<index in the transaction mint array>. */
+    /* Identifier, format: (transaction hash)-(index in the transaction mint array). */
     @Json(name = "id")
     val id: kotlin.String? = null,
 

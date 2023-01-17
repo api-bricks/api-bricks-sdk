@@ -25,7 +25,7 @@ API.Client.CurveUnderlyingCoinDTO.prototype.recvTime;
 API.Client.CurveUnderlyingCoinDTO.prototype.blockNumber;
 
 /**
- * Equals to: <pool_id>-<coin_index>.
+ * Equals to: (pool_id)-(coin_index).
  * @type {!string}
  * @export
  */

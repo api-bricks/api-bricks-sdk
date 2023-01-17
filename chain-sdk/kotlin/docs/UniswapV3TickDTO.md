@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **recvTime** | [**java.time.OffsetDateTime**](java.time.OffsetDateTime.md) |  |  [optional]
 **blockNumber** | **kotlin.Long** | Number of block in which entity was recorded. |  [optional]
 **vid** | **kotlin.Long** |  |  [optional]
-**id** | **kotlin.String** | Identifier, format: &lt;pool address&gt;#&lt;tick index&gt; |  [optional]
+**id** | **kotlin.String** | Identifier, format: (pool address)#(tick index) |  [optional]
 **poolAddress** | **kotlin.String** | Pool address. |  [optional]
 **tickIdx** | [**NumericsBigInteger**](NumericsBigInteger.md) |  |  [optional]
 **pool** | **kotlin.String** | Pool address. |  [optional]

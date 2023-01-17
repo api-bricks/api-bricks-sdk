@@ -14,7 +14,7 @@ part 'dex_deposit_dto.g.dart';
 /// * [entryTime] 
 /// * [recvTime] 
 /// * [blockNumber] - Number of block in which entity was recorded.
-/// * [id] - Identifier, format: <transaction hash>-<token id>.
+/// * [id] - Identifier, format: (transaction hash)-(token id).
 /// * [user] - User address.
 /// * [tokenAddress] - Token address.
 /// * [amount] - Amount of deposit.
@@ -34,7 +34,7 @@ abstract class DexDepositDTO implements Built<DexDepositDTO, DexDepositDTOBuilde
   @BuiltValueField(wireName: r'block_number')
   int? get blockNumber;
 
-  /// Identifier, format: <transaction hash>-<token id>.
+  /// Identifier, format: (transaction hash)-(token id).
   @BuiltValueField(wireName: r'id')
   String? get id;
 

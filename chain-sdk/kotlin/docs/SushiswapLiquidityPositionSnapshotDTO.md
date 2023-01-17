@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **entryTime** | [**java.time.OffsetDateTime**](java.time.OffsetDateTime.md) |  |  [optional]
 **recvTime** | [**java.time.OffsetDateTime**](java.time.OffsetDateTime.md) |  |  [optional]
 **blockNumber** | **kotlin.Long** | Number of block in which entity was recorded. |  [optional]
-**id** | **kotlin.String** | Identifier, format: &lt;pair address&gt;-&lt;user address&gt;-&lt;timestamp&gt; |  [optional]
+**id** | **kotlin.String** | Identifier, format: (pair address)-(user address)-(timestamp) |  [optional]
 **liquidityPosition** | **kotlin.String** | Reference to LP identifier. |  [optional]
 **timestamp** | **kotlin.Int** | Creation time. |  [optional]
 **block** | **kotlin.Int** | Block in which snapshot has been created. |  [optional]

@@ -32,7 +32,7 @@ void main() {
       // TODO
     });
 
-    // Identifier, format: <transaction hash>-<token id>.
+    // Identifier, format: (transaction hash)-(token id).
     // String id
     test('to test the property `id`', () async {
       // TODO

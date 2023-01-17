@@ -36,7 +36,7 @@ namespace CoinAPI.EMS.REST.V1.Model
         /// <param name="entryTime">entryTime.</param>
         /// <param name="recvTime">recvTime.</param>
         /// <param name="blockNumber">Number of block in which entity was recorded..</param>
-        /// <param name="id">Equals to: &lt;pool_id&gt;-&lt;coin_index&gt;..</param>
+        /// <param name="id">Equals to: (pool_id)-(coin_index)..</param>
         /// <param name="index">Coin index..</param>
         /// <param name="pool">pool.</param>
         /// <param name="token">token.</param>
@@ -91,9 +91,9 @@ namespace CoinAPI.EMS.REST.V1.Model
         public long BlockNumber { get; set; }
 
         /// <summary>
-        /// Equals to: &lt;pool_id&gt;-&lt;coin_index&gt;.
+        /// Equals to: (pool_id)-(coin_index).
         /// </summary>
-        /// <value>Equals to: &lt;pool_id&gt;-&lt;coin_index&gt;.</value>
+        /// <value>Equals to: (pool_id)-(coin_index).</value>
         [DataMember(Name="id", EmitDefaultValue=true)]
         public string Id { get; set; }
 

@@ -24,7 +24,7 @@ import com.squareup.moshi.Json
  * @param entryTime 
  * @param recvTime 
  * @param blockNumber Number of block in which entity was recorded.
- * @param id Identifier, format: <pool_id>-<coin_index>.
+ * @param id Identifier, format: (pool_id)-(coin_index).
  * @param index Coin index.
  * @param pool 
  * @param token 
@@ -51,7 +51,7 @@ data class CurveCoinDTO (
     @Json(name = "block_number")
     val blockNumber: kotlin.Long? = null,
 
-    /* Identifier, format: <pool_id>-<coin_index>. */
+    /* Identifier, format: (pool_id)-(coin_index). */
     @Json(name = "id")
     val id: kotlin.String? = null,
 

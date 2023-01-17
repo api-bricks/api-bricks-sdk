@@ -45,7 +45,7 @@ test_that("factory", {
 
 test_that("name", {
   # tests for the property `name` (character)
-  # Friendly name, format: &lt;token0 name&gt;-&lt;token1 name&gt;
+  # Friendly name, format: (token0 name)-(token1 name)
 
   # uncomment below to test the property
   #expect_equal(model.instance$`name`, "EXPECTED_RESULT")

@@ -29,7 +29,7 @@ test_that("block_number", {
 
 test_that("id", {
   # tests for the property `id` (character)
-  # Identifier, format: &lt;pair id&gt;-&lt;hour start timestamp&gt;.
+  # Identifier, format: (pair id)-(hour start timestamp).
 
   # uncomment below to test the property
   #expect_equal(model.instance$`id`, "EXPECTED_RESULT")

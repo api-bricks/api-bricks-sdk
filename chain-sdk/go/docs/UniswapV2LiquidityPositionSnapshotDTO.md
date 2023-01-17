@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **EntryTime** | Pointer to **time.Time** |  | [optional] 
 **RecvTime** | Pointer to **time.Time** |  | [optional] 
 **BlockNumber** | Pointer to **int64** | Number of block in which entity was recorded. | [optional] 
-**Id** | Pointer to **NullableString** | Identifier, format: &lt;pair address&gt;-&lt;user address&gt; | [optional] 
+**Id** | Pointer to **NullableString** | Identifier, format: (pair address)-(user address) | [optional] 
 **LiquidityPosition** | Pointer to **NullableString** | Reference to LP identifier. | [optional] 
 **Timestamp** | Pointer to **int32** | Creation time. | [optional] 
 **Block** | Pointer to **int32** | Number of block in which LP snapshot was recorded. | [optional] 

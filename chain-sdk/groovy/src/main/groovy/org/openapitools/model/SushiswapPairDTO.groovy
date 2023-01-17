@@ -17,7 +17,7 @@ class SushiswapPairDTO {
     String id
     /* Factory contract address. */
     String factory
-    /* Friendly name, format: <token0 name>-<token1 name> */
+    /* Friendly name, format: (token0 name)-(token1 name) */
     String name
     /* Reference to token0 as stored in pair contract. */
     String token0

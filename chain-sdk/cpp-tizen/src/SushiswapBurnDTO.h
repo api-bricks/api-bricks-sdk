@@ -66,11 +66,11 @@ public:
 	/*! \brief Set Number of block in which entity was recorded.
 	 */
 	void setBlockNumber(long long  block_number);
-	/*! \brief Get Identifier, format: <transaction id>:<transaction.burns.length>.
+	/*! \brief Get Identifier, format: (transaction id):(transaction.burns.length).
 	 */
 	std::string getId();
 
-	/*! \brief Set Identifier, format: <transaction id>:<transaction.burns.length>.
+	/*! \brief Set Identifier, format: (transaction id):(transaction.burns.length).
 	 */
 	void setId(std::string  id);
 	/*! \brief Get Reference to the transaction Burn was included in.

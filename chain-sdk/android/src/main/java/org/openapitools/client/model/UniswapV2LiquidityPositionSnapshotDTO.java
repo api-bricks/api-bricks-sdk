@@ -91,9 +91,9 @@ public class UniswapV2LiquidityPositionSnapshotDTO {
   }
 
   /**
-   * Identifier, format: <pair address>-<user address>
+   * Identifier, format: (pair address)-(user address)
    **/
-  @ApiModelProperty(value = "Identifier, format: <pair address>-<user address>")
+  @ApiModelProperty(value = "Identifier, format: (pair address)-(user address)")
   public String getId() {
     return id;
   }

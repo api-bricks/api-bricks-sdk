@@ -19,7 +19,7 @@ case class DepositDTO (
   recvTime: Option[OffsetDateTime] = None,
   /* Number of block in which entity was recorded. */
   blockNumber: Option[Long] = None,
-  /* Identifier, format: <transaction hash>-<token id>. */
+  /* Identifier, format: (transaction hash)-(token id). */
   id: Option[String] = None,
   /* User address. */
   user: Option[String] = None,

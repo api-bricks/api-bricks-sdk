@@ -10,7 +10,7 @@
 #' @field entry_time  character [optional]
 #' @field recv_time  character [optional]
 #' @field block_number Number of block in which entity was recorded. integer [optional]
-#' @field id Identifier, format: <transaction hash>-<id>. character [optional]
+#' @field id Identifier, format: (transaction hash)-(id). character [optional]
 #' @field user  character [optional]
 #' @field token_address  character [optional]
 #' @field amount  character [optional]
@@ -43,7 +43,7 @@ DexWithdrawDTO <- R6::R6Class(
     #' @param entry_time entry_time
     #' @param recv_time recv_time
     #' @param block_number Number of block in which entity was recorded.
-    #' @param id Identifier, format: <transaction hash>-<id>.
+    #' @param id Identifier, format: (transaction hash)-(id).
     #' @param user 
     #' @param token_address 
     #' @param amount 

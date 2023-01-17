@@ -82,7 +82,7 @@ public:
     void setBlockNumber(int64_t value);
 
     /// <summary>
-    /// Identifier, format: &lt;transaction hash&gt;-&lt;token id&gt;.
+    /// Identifier, format: (transaction hash)-(token id).
     /// </summary>
     utility::string_t getId() const;
     bool idIsSet() const;

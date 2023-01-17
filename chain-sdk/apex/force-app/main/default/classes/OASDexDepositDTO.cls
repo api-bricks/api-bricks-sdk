@@ -33,7 +33,7 @@ public class OASDexDepositDTO implements OAS.MappedProperties {
     public Long blockNumber { get; set; }
 
     /**
-     * Identifier, format: <transaction hash>-<token id>.
+     * Identifier, format: (transaction hash)-(token id).
      * @return id
      */
     public String id { get; set; }

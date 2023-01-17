@@ -40,7 +40,7 @@ API.Client.SushiswapPairDTO.prototype.id;
 API.Client.SushiswapPairDTO.prototype.factory;
 
 /**
- * Friendly name, format: <token0 name>-<token1 name>
+ * Friendly name, format: (token0 name)-(token1 name)
  * @type {!string}
  * @export
  */

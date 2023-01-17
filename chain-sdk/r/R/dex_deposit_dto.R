@@ -10,7 +10,7 @@
 #' @field entry_time  character [optional]
 #' @field recv_time  character [optional]
 #' @field block_number Number of block in which entity was recorded. integer [optional]
-#' @field id Identifier, format: <transaction hash>-<token id>. character [optional]
+#' @field id Identifier, format: (transaction hash)-(token id). character [optional]
 #' @field user User address. character [optional]
 #' @field token_address Token address. character [optional]
 #' @field amount Amount of deposit. character [optional]
@@ -43,7 +43,7 @@ DexDepositDTO <- R6::R6Class(
     #' @param entry_time entry_time
     #' @param recv_time recv_time
     #' @param block_number Number of block in which entity was recorded.
-    #' @param id Identifier, format: <transaction hash>-<token id>.
+    #' @param id Identifier, format: (transaction hash)-(token id).
     #' @param user User address.
     #' @param token_address Token address.
     #' @param amount Amount of deposit.

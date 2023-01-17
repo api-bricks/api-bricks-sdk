@@ -22,7 +22,7 @@ type UniswapV2LiquidityPositionSnapshotDTO struct {
 	RecvTime *time.Time `json:"recv_time,omitempty"`
 	// Number of block in which entity was recorded.
 	BlockNumber *int64 `json:"block_number,omitempty"`
-	// Identifier, format: <pair address>-<user address>
+	// Identifier, format: (pair address)-(user address)
 	Id NullableString `json:"id,omitempty"`
 	// Reference to LP identifier.
 	LiquidityPosition NullableString `json:"liquidity_position,omitempty"`

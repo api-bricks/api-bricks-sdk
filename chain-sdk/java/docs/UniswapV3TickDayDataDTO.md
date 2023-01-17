@@ -11,7 +11,7 @@ Data accumulated and condensed into day stats for each exchange. Entity gets sav
 |**entryTime** | **OffsetDateTime** |  |  [optional] |
 |**recvTime** | **OffsetDateTime** |  |  [optional] |
 |**blockNumber** | **Long** | Number of block in which entity was recorded. |  [optional] |
-|**id** | **String** | Identifier, format: &lt;pool address&gt;-&lt;tick index&gt;-&lt;timestamp&gt;. |  [optional] |
+|**id** | **String** | Identifier, format: (pool address)-(tick index)-(timestamp). |  [optional] |
 |**date** | **Integer** | Timestamp rounded to current day by dividing by 86400. |  [optional] |
 |**pool** | **String** | Pointer to pool. |  [optional] |
 |**tick** | **String** | Pointer to tick. |  [optional] |

@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **entry_time** | **character** |  | [optional] 
 **recv_time** | **character** |  | [optional] 
 **block_number** | **integer** | Number of block in which entity was recorded. | [optional] 
-**id** | **character** | Identifier, format: &lt;pair id&gt;-&lt;hour start timestamp&gt;. | [optional] 
+**id** | **character** | Identifier, format: (pair id)-(hour start timestamp). | [optional] 
 **date** | **integer** | Hour start timestamp. | [optional] 
 **pair** | **character** | Reference to pair. | [optional] 
 **reserve_0** | **character** | Reserve of token0 (updated during each transaction on pair). | [optional] 

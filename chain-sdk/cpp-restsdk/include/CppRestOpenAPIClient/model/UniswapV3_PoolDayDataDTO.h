@@ -82,7 +82,7 @@ public:
     void setBlockNumber(int64_t value);
 
     /// <summary>
-    /// Identifier, format: &lt;pool address&gt;-&lt;day id&gt;.
+    /// Identifier, format: (pool address)-(day id).
     /// </summary>
     utility::string_t getId() const;
     bool idIsSet() const;

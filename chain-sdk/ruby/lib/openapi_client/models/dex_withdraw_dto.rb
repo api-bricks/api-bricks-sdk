@@ -23,7 +23,7 @@ module OpenapiClient
     # Number of block in which entity was recorded.
     attr_accessor :block_number
 
-    # Identifier, format: <transaction hash>-<id>.
+    # Identifier, format: (transaction hash)-(id).
     attr_accessor :id
 
     # 

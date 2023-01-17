@@ -33,7 +33,7 @@ public class OASUniswapV3TickDayDataDTO implements OAS.MappedProperties {
     public Long blockNumber { get; set; }
 
     /**
-     * Identifier, format: <pool address>-<tick index>-<timestamp>.
+     * Identifier, format: (pool address)-(tick index)-(timestamp).
      * @return id
      */
     public String id { get; set; }

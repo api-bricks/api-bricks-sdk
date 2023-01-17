@@ -91,9 +91,9 @@ public class SushiswapBurnDTO {
   }
 
   /**
-   * Identifier, format: <transaction id>:<transaction.burns.length>.
+   * Identifier, format: (transaction id):(transaction.burns.length).
    **/
-  @ApiModelProperty(value = "Identifier, format: <transaction id>:<transaction.burns.length>.")
+  @ApiModelProperty(value = "Identifier, format: (transaction id):(transaction.burns.length).")
   public String getId() {
     return id;
   }

@@ -552,7 +552,7 @@ class DexOrderDTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets id
      *
-     * @param string|null $id Identifier, format: <owner address>-<order id>
+     * @param string|null $id Identifier, format: (owner address)-(order id)
      *
      * @return self
      */

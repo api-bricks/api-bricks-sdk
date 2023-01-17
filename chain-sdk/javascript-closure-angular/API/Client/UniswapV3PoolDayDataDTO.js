@@ -26,7 +26,7 @@ API.Client.UniswapV3PoolDayDataDTO.prototype.recvTime;
 API.Client.UniswapV3PoolDayDataDTO.prototype.blockNumber;
 
 /**
- * Identifier, format: <pool address>-<day id>.
+ * Identifier, format: (pool address)-(day id).
  * @type {!string}
  * @export
  */

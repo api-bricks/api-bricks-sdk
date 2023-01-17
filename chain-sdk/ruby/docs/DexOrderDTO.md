@@ -7,7 +7,7 @@
 | **entry_time** | **Time** |  | [optional] |
 | **recv_time** | **Time** |  | [optional] |
 | **block_number** | **Integer** | Number of block in which entity was recorded. | [optional] |
-| **id** | **String** | Identifier, format: &lt;owner address&gt;-&lt;order id&gt; | [optional] |
+| **id** | **String** | Identifier, format: (owner address)-(order id) | [optional] |
 | **owner** | **String** | Reference to owner. | [optional] |
 | **order_id** | **Integer** | Order id. | [optional] |
 | **from_batch_id** | **String** | Batch id from which order became valid. | [optional] |

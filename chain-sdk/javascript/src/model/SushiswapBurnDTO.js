@@ -190,7 +190,7 @@ SushiswapBurnDTO.prototype['recv_time'] = undefined;
 SushiswapBurnDTO.prototype['block_number'] = undefined;
 
 /**
- * Identifier, format: <transaction id>:<transaction.burns.length>.
+ * Identifier, format: (transaction id):(transaction.burns.length).
  * @member {String} id
  */
 SushiswapBurnDTO.prototype['id'] = undefined;

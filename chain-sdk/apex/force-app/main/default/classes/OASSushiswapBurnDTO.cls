@@ -33,7 +33,7 @@ public class OASSushiswapBurnDTO implements OAS.MappedProperties {
     public Long blockNumber { get; set; }
 
     /**
-     * Identifier, format: <transaction id>:<transaction.burns.length>.
+     * Identifier, format: (transaction id):(transaction.burns.length).
      * @return id
      */
     public String id { get; set; }

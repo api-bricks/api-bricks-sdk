@@ -516,7 +516,7 @@ class UniswapV3PositionSnapshotDTO implements ModelInterface, ArrayAccess, \Json
     /**
      * Sets id
      *
-     * @param string|null $id NFT token identifier, format: <NFT token id>#<block number>
+     * @param string|null $id NFT token identifier, format: (NFT token id)#(block number).
      *
      * @return self
      */

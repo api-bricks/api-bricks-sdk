@@ -39,7 +39,7 @@ public class OASUniswapV3TickDTO implements OAS.MappedProperties {
     public Long vid { get; set; }
 
     /**
-     * Identifier, format: <pool address>#<tick index>
+     * Identifier, format: (pool address)#(tick index)
      * @return id
      */
     public String id { get; set; }

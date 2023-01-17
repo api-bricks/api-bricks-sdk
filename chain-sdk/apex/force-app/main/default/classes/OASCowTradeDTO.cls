@@ -33,7 +33,7 @@ public class OASCowTradeDTO implements OAS.MappedProperties {
     public Long blockNumber { get; set; }
 
     /**
-     * Identifier, format: <order id>|<transaction hash>|<event index>.
+     * Identifier, format: (order id)|(transaction hash)|(event index).
      * @return id
      */
     public String id { get; set; }

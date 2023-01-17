@@ -14,7 +14,7 @@ part 'sushiswap_burn_dto.g.dart';
 /// * [entryTime] 
 /// * [recvTime] 
 /// * [blockNumber] - Number of block in which entity was recorded.
-/// * [id] - Identifier, format: <transaction id>:<transaction.burns.length>.
+/// * [id] - Identifier, format: (transaction id):(transaction.burns.length).
 /// * [transaction] - Reference to the transaction Burn was included in.
 /// * [timestamp] - Timestamp of Burn, used to sort recent liquidity removals.
 /// * [pair] - Reference to pair.
@@ -41,7 +41,7 @@ abstract class SushiswapBurnDTO implements Built<SushiswapBurnDTO, SushiswapBurn
   @BuiltValueField(wireName: r'block_number')
   int? get blockNumber;
 
-  /// Identifier, format: <transaction id>:<transaction.burns.length>.
+  /// Identifier, format: (transaction id):(transaction.burns.length).
   @BuiltValueField(wireName: r'id')
   String? get id;
 

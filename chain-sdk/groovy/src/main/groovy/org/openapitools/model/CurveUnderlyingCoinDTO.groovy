@@ -13,7 +13,7 @@ class CurveUnderlyingCoinDTO {
     Date recvTime
     /* Number of block in which entity was recorded. */
     Long blockNumber
-    /* Equals to: <pool_id>-<coin_index>. */
+    /* Equals to: (pool_id)-(coin_index). */
     String id
     /* Coin index. */
     Integer index

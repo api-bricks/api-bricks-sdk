@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **entry_time** | **character** |  | [optional] 
 **recv_time** | **character** |  | [optional] 
 **block_number** | **integer** | Number of block in which entity was recorded. | [optional] 
-**id** | **character** | Identifier, format: &lt;token id&gt;-&lt;batch id&gt;. | [optional] 
+**id** | **character** | Identifier, format: (token id)-(batch id). | [optional] 
 **token** | **character** | Token identifier. | [optional] 
 **batch_id** | **character** | Batch identifier. | [optional] 
 **price_in_owl_numerator** | **character** | Price enumerator in OWL (derivative of the GNO token). | [optional] 

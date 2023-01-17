@@ -243,7 +243,7 @@ __PACKAGE__->method_documentation({
     'id' => {
         datatype => 'string',
         base_name => 'id',
-        description => 'Identifier, format: &lt;token id&gt;-&lt;batch id&gt;.',
+        description => 'Identifier, format: (token id)-(batch id).',
         format => '',
         read_only => '',
             },

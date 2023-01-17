@@ -22,7 +22,7 @@ type SushiswapPairHourDataDTO struct {
 	RecvTime *time.Time `json:"recv_time,omitempty"`
 	// Number of block in which entity was recorded.
 	BlockNumber *int64 `json:"block_number,omitempty"`
-	// Identifier, format: <pair id>-<hour start timestamp>.
+	// Identifier, format: (pair id)-(hour start timestamp).
 	Id NullableString `json:"id,omitempty"`
 	// Hour start timestamp.
 	Date *int32 `json:"date,omitempty"`

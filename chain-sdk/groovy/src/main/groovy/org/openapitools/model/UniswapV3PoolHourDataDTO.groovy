@@ -13,7 +13,7 @@ class UniswapV3PoolHourDataDTO {
     Date recvTime
     /* Number of block in which entity was recorded. */
     Long blockNumber
-    /* Identifier, format: <pool address>-<day id> */
+    /* Identifier, format: (pool address)-(day id) */
     String id
     /* Unix timestamp for start of hour. */
     Integer periodStartUnix

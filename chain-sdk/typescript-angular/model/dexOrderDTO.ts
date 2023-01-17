@@ -22,7 +22,7 @@ export interface DexOrderDTO {
      */
     block_number?: number;
     /**
-     * Identifier, format: <owner address>-<order id>
+     * Identifier, format: (owner address)-(order id)
      */
     id?: string | null;
     /**

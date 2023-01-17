@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **RecvTime** | Pointer to **time.Time** |  | [optional] 
 **BlockNumber** | Pointer to **int64** | Number of block in which entity was recorded. | [optional] 
 **Vid** | Pointer to **int64** |  | [optional] 
-**Id** | Pointer to **NullableString** | Identifier, format: &lt;pool address&gt;#&lt;tick index&gt; | [optional] 
+**Id** | Pointer to **NullableString** | Identifier, format: (pool address)#(tick index) | [optional] 
 **PoolAddress** | Pointer to **NullableString** | Pool address. | [optional] 
 **TickIdx** | Pointer to [**NumericsBigInteger**](NumericsBigInteger.md) |  | [optional] 
 **Pool** | Pointer to **NullableString** | Pool address. | [optional] 

@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **RecvTime** | **DateTime** |  | [optional] 
 **BlockNumber** | **long** | Number of block in which entity was recorded. | [optional] 
 **Vid** | **long** |  | [optional] 
-**Id** | **string** | Identifier, format: &lt;pool address&gt;#&lt;tick index&gt; | [optional] 
+**Id** | **string** | Identifier, format: (pool address)#(tick index) | [optional] 
 **PoolAddress** | **string** | Pool address. | [optional] 
 **TickIdx** | [**NumericsBigInteger**](NumericsBigInteger.md) |  | [optional] 
 **Pool** | **string** | Pool address. | [optional] 

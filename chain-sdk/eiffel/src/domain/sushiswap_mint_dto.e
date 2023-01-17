@@ -26,7 +26,7 @@ feature --Access
  	block_number: INTEGER_64
     	 -- Number of block in which entity was recorded.
     id: detachable STRING_32
-      -- Identifier, format: <transaction hash>-<index in the transaction mint array>.
+      -- Identifier, format: (transaction hash)-(index in the transaction mint array).
     transaction: detachable STRING_32
       -- Reference to the transaction Mint was included in.
     timestamp: detachable STRING_32

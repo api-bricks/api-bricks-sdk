@@ -29,7 +29,7 @@ test_that("block_number", {
 
 test_that("id", {
   # tests for the property `id` (character)
-  # NFT token identifier, format: &lt;NFT token id&gt;#&lt;block number&gt;
+  # NFT token identifier, format: (NFT token id)#(block number).
 
   # uncomment below to test the property
   #expect_equal(model.instance$`id`, "EXPECTED_RESULT")

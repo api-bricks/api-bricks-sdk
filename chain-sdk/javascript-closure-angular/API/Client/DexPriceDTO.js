@@ -26,7 +26,7 @@ API.Client.DexPriceDTO.prototype.recvTime;
 API.Client.DexPriceDTO.prototype.blockNumber;
 
 /**
- * Identifier, format: <token id>-<batch id>.
+ * Identifier, format: (token id)-(batch id).
  * @type {!string}
  * @export
  */

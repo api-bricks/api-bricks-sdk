@@ -38,7 +38,7 @@ namespace CoinAPI.EMS.REST.V1.Model
         /// <param name="entryTime">entryTime.</param>
         /// <param name="recvTime">recvTime.</param>
         /// <param name="blockNumber">Number of block in which entity was recorded..</param>
-        /// <param name="id">Identifier, format: &lt;token id&gt;-&lt;batch id&gt;..</param>
+        /// <param name="id">Identifier, format: (token id)-(batch id)..</param>
         /// <param name="token">Token identifier..</param>
         /// <param name="batchId">Batch identifier..</param>
         /// <param name="priceInOwlNumerator">Price enumerator in OWL (derivative of the GNO token)..</param>
@@ -83,9 +83,9 @@ namespace CoinAPI.EMS.REST.V1.Model
         public long BlockNumber { get; set; }
 
         /// <summary>
-        /// Identifier, format: &lt;token id&gt;-&lt;batch id&gt;.
+        /// Identifier, format: (token id)-(batch id).
         /// </summary>
-        /// <value>Identifier, format: &lt;token id&gt;-&lt;batch id&gt;.</value>
+        /// <value>Identifier, format: (token id)-(batch id).</value>
         [DataMember(Name = "id", EmitDefaultValue = true)]
         public string Id { get; set; }
 

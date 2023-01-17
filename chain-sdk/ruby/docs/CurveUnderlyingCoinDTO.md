@@ -7,7 +7,7 @@
 | **entry_time** | **Time** |  | [optional] |
 | **recv_time** | **Time** |  | [optional] |
 | **block_number** | **Integer** | Number of block in which entity was recorded. | [optional] |
-| **id** | **String** | Equals to: &lt;pool_id&gt;-&lt;coin_index&gt;. | [optional] |
+| **id** | **String** | Equals to: (pool_id)-(coin_index). | [optional] |
 | **index** | **Integer** | Coin index. | [optional] |
 | **pool** | **String** |  | [optional] |
 | **token** | **String** |  | [optional] |

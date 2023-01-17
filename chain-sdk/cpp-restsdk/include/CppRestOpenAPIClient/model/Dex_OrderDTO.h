@@ -82,7 +82,7 @@ public:
     void setBlockNumber(int64_t value);
 
     /// <summary>
-    /// Identifier, format: &lt;owner address&gt;-&lt;order id&gt;
+    /// Identifier, format: (owner address)-(order id)
     /// </summary>
     utility::string_t getId() const;
     bool idIsSet() const;

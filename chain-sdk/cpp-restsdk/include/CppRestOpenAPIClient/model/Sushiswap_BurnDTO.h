@@ -82,7 +82,7 @@ public:
     void setBlockNumber(int64_t value);
 
     /// <summary>
-    /// Identifier, format: &lt;transaction id&gt;:&lt;transaction.burns.length&gt;.
+    /// Identifier, format: (transaction id):(transaction.burns.length).
     /// </summary>
     utility::string_t getId() const;
     bool idIsSet() const;

@@ -82,7 +82,7 @@ public:
     void setBlockNumber(int64_t value);
 
     /// <summary>
-    /// Identifier, format: &lt;pair address&gt;-&lt;user address&gt;-&lt;timestamp&gt;
+    /// Identifier, format: (pair address)-(user address)-(timestamp)
     /// </summary>
     utility::string_t getId() const;
     bool idIsSet() const;

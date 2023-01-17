@@ -243,7 +243,7 @@ __PACKAGE__->method_documentation({
     'id' => {
         datatype => 'string',
         base_name => 'id',
-        description => 'Identifier, format: &lt;transaction id&gt;:&lt;transaction.burns.length&gt;.',
+        description => 'Identifier, format: (transaction id):(transaction.burns.length).',
         format => '',
         read_only => '',
             },

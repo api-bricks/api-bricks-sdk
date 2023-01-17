@@ -51,7 +51,7 @@ import org.openapitools.client.JSON;
  * Mint entities are created for every emitted Mint event on the Sushiswap core contracts. The Mint entity stores key data about the event like token amounts, who sent the transaction, who received the liquidity, and more. This entity can be used to track liquidity provisions on pairs.
  */
 @ApiModel(description = "Mint entities are created for every emitted Mint event on the Sushiswap core contracts. The Mint entity stores key data about the event like token amounts, who sent the transaction, who received the liquidity, and more. This entity can be used to track liquidity provisions on pairs.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-16T16:13:26.555571Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-17T12:39:15.555439Z[Etc/UTC]")
 public class SushiswapMintDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -200,11 +200,11 @@ public class SushiswapMintDTO {
   }
 
    /**
-   * Identifier, format: &lt;transaction hash&gt;-&lt;index in the transaction mint array&gt;.
+   * Identifier, format: (transaction hash)-(index in the transaction mint array).
    * @return id
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Identifier, format: <transaction hash>-<index in the transaction mint array>.")
+  @ApiModelProperty(value = "Identifier, format: (transaction hash)-(index in the transaction mint array).")
 
   public String getId() {
     return id;

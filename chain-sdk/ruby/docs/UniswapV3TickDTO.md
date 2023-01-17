@@ -8,7 +8,7 @@
 | **recv_time** | **Time** |  | [optional] |
 | **block_number** | **Integer** | Number of block in which entity was recorded. | [optional] |
 | **vid** | **Integer** |  | [optional] |
-| **id** | **String** | Identifier, format: &lt;pool address&gt;#&lt;tick index&gt; | [optional] |
+| **id** | **String** | Identifier, format: (pool address)#(tick index) | [optional] |
 | **pool_address** | **String** | Pool address. | [optional] |
 | **tick_idx** | [**NumericsBigInteger**](NumericsBigInteger.md) |  | [optional] |
 | **pool** | **String** | Pool address. | [optional] |

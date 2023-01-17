@@ -11,7 +11,7 @@ Key | Input Type | Accessed Type | Description | Notes
 **entry_time** | str, datetime,  | str,  |  | [optional] value must conform to RFC-3339 date-time
 **recv_time** | str, datetime,  | str,  |  | [optional] value must conform to RFC-3339 date-time
 **block_number** | decimal.Decimal, int,  | decimal.Decimal,  | Number of block in which entity was recorded. | [optional] value must be a 64 bit integer
-**id** | None, str,  | NoneClass, str,  | Equals to: &lt;pool_id&gt;-&lt;coin_index&gt;. | [optional] 
+**id** | None, str,  | NoneClass, str,  | Equals to: (pool_id)-(coin_index). | [optional] 
 **index** | decimal.Decimal, int,  | decimal.Decimal,  | Coin index. | [optional] value must be a 32 bit integer
 **pool** | None, str,  | NoneClass, str,  |  | [optional] 
 **token** | None, str,  | NoneClass, str,  |  | [optional] 

@@ -115,9 +115,9 @@ public class UniswapV3TickDTO {
   }
 
   /**
-   * Identifier, format: <pool address>#<tick index>
+   * Identifier, format: (pool address)#(tick index)
    **/
-  @ApiModelProperty(value = "Identifier, format: <pool address>#<tick index>")
+  @ApiModelProperty(value = "Identifier, format: (pool address)#(tick index)")
   public String getId() {
     return id;
   }

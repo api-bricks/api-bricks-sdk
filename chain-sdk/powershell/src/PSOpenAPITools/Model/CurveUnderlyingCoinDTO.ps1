@@ -22,7 +22,7 @@ No description available.
 .PARAMETER BlockNumber
 Number of block in which entity was recorded.
 .PARAMETER Id
-Equals to: <pool_id>-<coin_index>.
+Equals to: (pool_id)-(coin_index).
 .PARAMETER Index
 Coin index.
 .PARAMETER Pool

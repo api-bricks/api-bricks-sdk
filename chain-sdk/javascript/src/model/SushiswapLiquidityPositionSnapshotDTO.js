@@ -179,7 +179,7 @@ SushiswapLiquidityPositionSnapshotDTO.prototype['recv_time'] = undefined;
 SushiswapLiquidityPositionSnapshotDTO.prototype['block_number'] = undefined;
 
 /**
- * Identifier, format: <pair address>-<user address>-<timestamp>
+ * Identifier, format: (pair address)-(user address)-(timestamp)
  * @member {String} id
  */
 SushiswapLiquidityPositionSnapshotDTO.prototype['id'] = undefined;

@@ -66,11 +66,11 @@ public:
 	/*! \brief Set Number of block in which entity was recorded.
 	 */
 	void setBlockNumber(long long  block_number);
-	/*! \brief Get Identifier, format: <transaction hash>-<token id>.
+	/*! \brief Get Identifier, format: (transaction hash)-(token id).
 	 */
 	std::string getId();
 
-	/*! \brief Set Identifier, format: <transaction hash>-<token id>.
+	/*! \brief Set Identifier, format: (transaction hash)-(token id).
 	 */
 	void setId(std::string  id);
 	/*! \brief Get User address.

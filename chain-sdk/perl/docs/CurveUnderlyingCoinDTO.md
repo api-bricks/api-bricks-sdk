@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **entry_time** | **DATE_TIME** |  | [optional] 
 **recv_time** | **DATE_TIME** |  | [optional] 
 **block_number** | **int** | Number of block in which entity was recorded. | [optional] 
-**id** | **string** | Equals to: &lt;pool_id&gt;-&lt;coin_index&gt;. | [optional] 
+**id** | **string** | Equals to: (pool_id)-(coin_index). | [optional] 
 **index** | **int** | Coin index. | [optional] 
 **pool** | **string** |  | [optional] 
 **token** | **string** |  | [optional] 

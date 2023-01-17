@@ -14,7 +14,7 @@ part 'dex_withdraw_request_dto.g.dart';
 /// * [entryTime] 
 /// * [recvTime] 
 /// * [blockNumber] - Number of block in which entity was recorded.
-/// * [id] - Identifier, format: <transaction hash>-<id>.
+/// * [id] - Identifier, format: (transaction hash)-(id).
 /// * [user] - 
 /// * [tokenAddress] - 
 /// * [amount] - 
@@ -35,7 +35,7 @@ abstract class DexWithdrawRequestDTO implements Built<DexWithdrawRequestDTO, Dex
   @BuiltValueField(wireName: r'block_number')
   int? get blockNumber;
 
-  /// Identifier, format: <transaction hash>-<id>.
+  /// Identifier, format: (transaction hash)-(id).
   @BuiltValueField(wireName: r'id')
   String? get id;
 

@@ -82,7 +82,7 @@ public:
     void setBlockNumber(int64_t value);
 
     /// <summary>
-    /// NFT token identifier, format: &lt;NFT token id&gt;#&lt;block number&gt;
+    /// NFT token identifier, format: (NFT token id)#(block number).
     /// </summary>
     utility::string_t getId() const;
     bool idIsSet() const;

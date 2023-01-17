@@ -78,9 +78,9 @@ public class CurveUnderlyingCoinDTO {
   }
 
   /**
-   * Equals to: <pool_id>-<coin_index>.
+   * Equals to: (pool_id)-(coin_index).
    **/
-  @ApiModelProperty(value = "Equals to: <pool_id>-<coin_index>.")
+  @ApiModelProperty(value = "Equals to: (pool_id)-(coin_index).")
   public String getId() {
     return id;
   }

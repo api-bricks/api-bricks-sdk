@@ -19,7 +19,7 @@ case class PoolHourDataDTO (
   recvTime: Option[OffsetDateTime] = None,
   /* Number of block in which entity was recorded. */
   blockNumber: Option[Long] = None,
-  /* Identifier, format: <pool address>-<day id> */
+  /* Identifier, format: (pool address)-(day id) */
   id: Option[String] = None,
   /* Unix timestamp for start of hour. */
   periodStartUnix: Option[Int] = None,

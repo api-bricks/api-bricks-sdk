@@ -10,7 +10,7 @@
 #' @field entry_time  character [optional]
 #' @field recv_time  character [optional]
 #' @field block_number Number of block in which entity was recorded. integer [optional]
-#' @field id Identifier, format: <pair address>-<user address> character [optional]
+#' @field id Identifier, format: (pair address)-(user address) character [optional]
 #' @field user User address. character [optional]
 #' @field pair Pair address. character [optional]
 #' @field liquidity_token_balance Amount of LP tokens minted for this position. character [optional]
@@ -41,7 +41,7 @@ SushiswapLiquidityPositionDTO <- R6::R6Class(
     #' @param entry_time entry_time
     #' @param recv_time recv_time
     #' @param block_number Number of block in which entity was recorded.
-    #' @param id Identifier, format: <pair address>-<user address>
+    #' @param id Identifier, format: (pair address)-(user address)
     #' @param user User address.
     #' @param pair Pair address.
     #' @param liquidity_token_balance Amount of LP tokens minted for this position.

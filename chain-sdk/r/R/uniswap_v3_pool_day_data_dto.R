@@ -10,7 +10,7 @@
 #' @field entry_time  character [optional]
 #' @field recv_time  character [optional]
 #' @field block_number Number of block in which entity was recorded. integer [optional]
-#' @field id Identifier, format: <pool address>-<day id>. character [optional]
+#' @field id Identifier, format: (pool address)-(day id). character [optional]
 #' @field date Timestamp rounded to current day by dividing by 86400 integer [optional]
 #' @field pool Pointer to pool. character [optional]
 #' @field liquidity In range liquidity at end of period. character [optional]
@@ -69,7 +69,7 @@ UniswapV3PoolDayDataDTO <- R6::R6Class(
     #' @param entry_time entry_time
     #' @param recv_time recv_time
     #' @param block_number Number of block in which entity was recorded.
-    #' @param id Identifier, format: <pool address>-<day id>.
+    #' @param id Identifier, format: (pool address)-(day id).
     #' @param date Timestamp rounded to current day by dividing by 86400
     #' @param pool Pointer to pool.
     #' @param liquidity In range liquidity at end of period.

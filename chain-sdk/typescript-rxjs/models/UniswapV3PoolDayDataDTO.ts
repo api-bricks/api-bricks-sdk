@@ -34,7 +34,7 @@ export interface UniswapV3PoolDayDataDTO {
      */
     block_number?: number;
     /**
-     * Identifier, format: <pool address>-<day id>.
+     * Identifier, format: (pool address)-(day id).
      * @type {string}
      * @memberof UniswapV3PoolDayDataDTO
      */

@@ -13,7 +13,7 @@ class CurveCoinDTO {
     Date recvTime
     /* Number of block in which entity was recorded. */
     Long blockNumber
-    /* Identifier, format: <pool_id>-<coin_index>. */
+    /* Identifier, format: (pool_id)-(coin_index). */
     String id
     /* Coin index. */
     Integer index

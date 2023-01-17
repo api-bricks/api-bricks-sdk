@@ -13,7 +13,7 @@ class UniswapV2LiquidityPositionSnapshotDTO {
     Date recvTime
     /* Number of block in which entity was recorded. */
     Long blockNumber
-    /* Identifier, format: <pair address>-<user address> */
+    /* Identifier, format: (pair address)-(user address) */
     String id
     /* Reference to LP identifier. */
     String liquidityPosition

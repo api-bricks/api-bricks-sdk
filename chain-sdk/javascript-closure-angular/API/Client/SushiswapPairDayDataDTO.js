@@ -26,7 +26,7 @@ API.Client.SushiswapPairDayDataDTO.prototype.recvTime;
 API.Client.SushiswapPairDayDataDTO.prototype.blockNumber;
 
 /**
- * Identifier, format: <pair id>-<day start timestamp>.
+ * Identifier, format: (pair id)-(day start timestamp).
  * @type {!string}
  * @export
  */

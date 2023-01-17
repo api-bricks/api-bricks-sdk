@@ -23,7 +23,7 @@ void main() {
       // TODO
     });
 
-    // Identifier, format: <pool address>-<tick index>-<timestamp>.
+    // Identifier, format: (pool address)-(tick index)-(timestamp).
     // String id
     test('to test the property `id`', () async {
       // TODO

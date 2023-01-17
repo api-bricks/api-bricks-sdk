@@ -39,7 +39,7 @@ public class OASUniswapV3SwapDTO implements OAS.MappedProperties {
     public Long vid { get; set; }
 
     /**
-     * Identifier, format: transaction hash + "#" + index in swaps Transaction array.
+     * Identifier, format: (transaction hash) + # + (index in swaps Transaction array).
      * @return id
      */
     public String id { get; set; }

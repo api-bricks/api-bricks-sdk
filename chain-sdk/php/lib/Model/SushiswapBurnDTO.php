@@ -510,7 +510,7 @@ class SushiswapBurnDTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets id
      *
-     * @param string|null $id Identifier, format: <transaction id>:<transaction.burns.length>.
+     * @param string|null $id Identifier, format: (transaction id):(transaction.burns.length).
      *
      * @return self
      */

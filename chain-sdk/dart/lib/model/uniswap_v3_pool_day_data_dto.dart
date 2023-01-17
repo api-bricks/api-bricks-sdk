@@ -64,7 +64,7 @@ class UniswapV3PoolDayDataDTO {
   ///
   int? blockNumber;
 
-  /// Identifier, format: <pool address>-<day id>.
+  /// Identifier, format: (pool address)-(day id).
   String? id;
 
   /// Timestamp rounded to current day by dividing by 86400

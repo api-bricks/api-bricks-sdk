@@ -186,7 +186,7 @@ UniswapV2LiquidityPositionSnapshotDTO.prototype['recv_time'] = undefined;
 UniswapV2LiquidityPositionSnapshotDTO.prototype['block_number'] = undefined;
 
 /**
- * Identifier, format: <pair address>-<user address>
+ * Identifier, format: (pair address)-(user address)
  * @member {String} id
  */
 UniswapV2LiquidityPositionSnapshotDTO.prototype['id'] = undefined;

@@ -204,7 +204,7 @@ CowTradeDTO.prototype['recv_time'] = undefined;
 CowTradeDTO.prototype['block_number'] = undefined;
 
 /**
- * Identifier, format: <order id>|<transaction hash>|<event index>.
+ * Identifier, format: (order id)|(transaction hash)|(event index).
  * @member {String} id
  */
 CowTradeDTO.prototype['id'] = undefined;

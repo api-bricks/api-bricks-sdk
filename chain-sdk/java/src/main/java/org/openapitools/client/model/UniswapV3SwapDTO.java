@@ -53,7 +53,7 @@ import org.openapitools.client.JSON;
  * Swap are created for each token swap within a pair.
  */
 @ApiModel(description = "Swap are created for each token swap within a pair.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-16T16:13:26.555571Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-17T12:39:15.555439Z[Etc/UTC]")
 public class UniswapV3SwapDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -267,11 +267,11 @@ public class UniswapV3SwapDTO {
   }
 
    /**
-   * Identifier, format: transaction hash + \&quot;#\&quot; + index in swaps Transaction array.
+   * Identifier, format: (transaction hash) + # + (index in swaps Transaction array).
    * @return id
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Identifier, format: transaction hash + \"#\" + index in swaps Transaction array.")
+  @ApiModelProperty(value = "Identifier, format: (transaction hash) + # + (index in swaps Transaction array).")
 
   public String getId() {
     return id;

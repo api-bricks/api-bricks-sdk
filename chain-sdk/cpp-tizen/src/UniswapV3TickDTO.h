@@ -74,11 +74,11 @@ public:
 	/*! \brief Set 
 	 */
 	void setVid(long long  vid);
-	/*! \brief Get Identifier, format: <pool address>#<tick index>
+	/*! \brief Get Identifier, format: (pool address)#(tick index)
 	 */
 	std::string getId();
 
-	/*! \brief Set Identifier, format: <pool address>#<tick index>
+	/*! \brief Set Identifier, format: (pool address)#(tick index)
 	 */
 	void setId(std::string  id);
 	/*! \brief Get Pool address.

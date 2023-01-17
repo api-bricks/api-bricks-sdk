@@ -16,7 +16,7 @@ part 'sushiswap_pair_dto.g.dart';
 /// * [blockNumber] - Number of block in which entity was recorded.
 /// * [id] - Pair contract address.
 /// * [factory_] - Factory contract address.
-/// * [name] - Friendly name, format: <token0 name>-<token1 name>
+/// * [name] - Friendly name, format: (token0 name)-(token1 name)
 /// * [token0] - Reference to token0 as stored in pair contract.
 /// * [token1] - Reference to token0 as stored in pair contract.
 /// * [reserve0] - Reserve of token0.
@@ -57,7 +57,7 @@ abstract class SushiswapPairDTO implements Built<SushiswapPairDTO, SushiswapPair
   @BuiltValueField(wireName: r'factory')
   String? get factory_;
 
-  /// Friendly name, format: <token0 name>-<token1 name>
+  /// Friendly name, format: (token0 name)-(token1 name)
   @BuiltValueField(wireName: r'name')
   String? get name;
 

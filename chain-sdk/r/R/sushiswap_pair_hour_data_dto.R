@@ -10,7 +10,7 @@
 #' @field entry_time  character [optional]
 #' @field recv_time  character [optional]
 #' @field block_number Number of block in which entity was recorded. integer [optional]
-#' @field id Identifier, format: <pair id>-<hour start timestamp>. character [optional]
+#' @field id Identifier, format: (pair id)-(hour start timestamp). character [optional]
 #' @field date Hour start timestamp. integer [optional]
 #' @field pair Reference to pair. character [optional]
 #' @field reserve_0 Reserve of token0 (updated during each transaction on pair). character [optional]
@@ -49,7 +49,7 @@ SushiswapPairHourDataDTO <- R6::R6Class(
     #' @param entry_time entry_time
     #' @param recv_time recv_time
     #' @param block_number Number of block in which entity was recorded.
-    #' @param id Identifier, format: <pair id>-<hour start timestamp>.
+    #' @param id Identifier, format: (pair id)-(hour start timestamp).
     #' @param date Hour start timestamp.
     #' @param pair Reference to pair.
     #' @param reserve_0 Reserve of token0 (updated during each transaction on pair).

@@ -13,7 +13,7 @@ Key | Input Type | Accessed Type | Description | Notes
 **entry_time** | str, datetime,  | str,  |  | [optional] value must conform to RFC-3339 date-time
 **recv_time** | str, datetime,  | str,  |  | [optional] value must conform to RFC-3339 date-time
 **block_number** | decimal.Decimal, int,  | decimal.Decimal,  | Number of block in which entity was recorded. | [optional] value must be a 64 bit integer
-**id** | None, str,  | NoneClass, str,  | Identifier, format: &lt;transaction hash&gt;-&lt;index in the transaction mint array&gt;. | [optional] 
+**id** | None, str,  | NoneClass, str,  | Identifier, format: (transaction hash)-(index in the transaction mint array). | [optional] 
 **transaction** | None, str,  | NoneClass, str,  | Reference to the transaction Mint was included in. | [optional] 
 **timestamp** | None, str,  | NoneClass, str,  | Timestamp of Mint, used to sort recent liquidity provisions. | [optional] 
 **pair** | None, str,  | NoneClass, str,  | Reference to pair. | [optional] 

@@ -23,7 +23,7 @@ void main() {
       // TODO
     });
 
-    // Identifier, format: <pool address>-<day id>
+    // Identifier, format: (pool address)-(day id)
     // String id
     test('to test the property `id`', () async {
       // TODO

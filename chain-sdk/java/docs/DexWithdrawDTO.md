@@ -11,7 +11,7 @@ Withdraw of an user.
 |**entryTime** | **OffsetDateTime** |  |  [optional] |
 |**recvTime** | **OffsetDateTime** |  |  [optional] |
 |**blockNumber** | **Long** | Number of block in which entity was recorded. |  [optional] |
-|**id** | **String** | Identifier, format: &lt;transaction hash&gt;-&lt;id&gt;. |  [optional] |
+|**id** | **String** | Identifier, format: (transaction hash)-(id). |  [optional] |
 |**user** | **String** |  |  [optional] |
 |**tokenAddress** | **String** |  |  [optional] |
 |**amount** | **String** |  |  [optional] |

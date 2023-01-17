@@ -13,7 +13,7 @@ Key | Input Type | Accessed Type | Description | Notes
 **entry_time** | str, datetime,  | str,  |  | [optional] value must conform to RFC-3339 date-time
 **recv_time** | str, datetime,  | str,  |  | [optional] value must conform to RFC-3339 date-time
 **block_number** | decimal.Decimal, int,  | decimal.Decimal,  | Number of block in which entity was recorded. | [optional] value must be a 64 bit integer
-**id** | None, str,  | NoneClass, str,  | Identifier, format: &lt;pair id&gt;-&lt;day start timestamp&gt;. | [optional] 
+**id** | None, str,  | NoneClass, str,  | Identifier, format: (pair id)-(day start timestamp). | [optional] 
 **date** | decimal.Decimal, int,  | decimal.Decimal,  | Unix timestamp for start of day. | [optional] value must be a 32 bit integer
 **pair** | None, str,  | NoneClass, str,  | Reference to pair. | [optional] 
 **token_0** | None, str,  | NoneClass, str,  | Reference to token0. | [optional] 

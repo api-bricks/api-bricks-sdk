@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **entry_time** | [**DATE_TIME**](DATE_TIME.md) |  | [optional] [default to null]
 **recv_time** | [**DATE_TIME**](DATE_TIME.md) |  | [optional] [default to null]
 **block_number** | **INTEGER_64** | Number of block in which entity was recorded. | [optional] [default to null]
-**id** | [**STRING_32**](STRING_32.md) | Identifier, format: &lt;transaction hash&gt;-&lt;token id&gt;. | [optional] [default to null]
+**id** | [**STRING_32**](STRING_32.md) | Identifier, format: (transaction hash)-(token id). | [optional] [default to null]
 **user** | [**STRING_32**](STRING_32.md) | User address. | [optional] [default to null]
 **token_address** | [**STRING_32**](STRING_32.md) | Token address. | [optional] [default to null]
 **amount** | [**STRING_32**](STRING_32.md) | Amount of deposit. | [optional] [default to null]

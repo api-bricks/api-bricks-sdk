@@ -461,7 +461,7 @@ class DexWithdrawDTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets id
      *
-     * @param string|null $id Identifier, format: <transaction hash>-<id>.
+     * @param string|null $id Identifier, format: (transaction hash)-(id).
      *
      * @return self
      */

@@ -45,7 +45,7 @@ export interface UniswapV3SwapDTO {
      */
     vid?: number;
     /**
-     * Identifier, format: transaction hash + \"#\" + index in swaps Transaction array.
+     * Identifier, format: (transaction hash) + # + (index in swaps Transaction array).
      * @type {string}
      * @memberof UniswapV3SwapDTO
      */

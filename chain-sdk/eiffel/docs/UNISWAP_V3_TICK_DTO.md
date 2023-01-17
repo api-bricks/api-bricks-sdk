@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **recv_time** | [**DATE_TIME**](DATE_TIME.md) |  | [optional] [default to null]
 **block_number** | **INTEGER_64** | Number of block in which entity was recorded. | [optional] [default to null]
 **vid** | **INTEGER_64** |  | [optional] [default to null]
-**id** | [**STRING_32**](STRING_32.md) | Identifier, format: &lt;pool address&gt;#&lt;tick index&gt; | [optional] [default to null]
+**id** | [**STRING_32**](STRING_32.md) | Identifier, format: (pool address)#(tick index) | [optional] [default to null]
 **pool_address** | [**STRING_32**](STRING_32.md) | Pool address. | [optional] [default to null]
 **tick_idx** | [**NUMERICS_BIG_INTEGER**](Numerics.BigInteger.md) |  | [optional] [default to null]
 **pool** | [**STRING_32**](STRING_32.md) | Pool address. | [optional] [default to null]

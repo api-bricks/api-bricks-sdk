@@ -24,7 +24,7 @@ import com.squareup.moshi.Json
  * @param entryTime 
  * @param recvTime 
  * @param blockNumber Number of block in which entity was recorded.
- * @param id Identifier, format: <owner address>-<order id>
+ * @param id Identifier, format: (owner address)-(order id)
  * @param owner Reference to owner.
  * @param orderId Order id.
  * @param fromBatchId Batch id from which order became valid.
@@ -60,7 +60,7 @@ data class DexOrderDTO (
     @Json(name = "block_number")
     val blockNumber: kotlin.Long? = null,
 
-    /* Identifier, format: <owner address>-<order id> */
+    /* Identifier, format: (owner address)-(order id) */
     @Json(name = "id")
     val id: kotlin.String? = null,
 

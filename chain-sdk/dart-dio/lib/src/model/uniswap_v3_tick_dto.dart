@@ -16,7 +16,7 @@ part 'uniswap_v3_tick_dto.g.dart';
 /// * [recvTime] 
 /// * [blockNumber] - Number of block in which entity was recorded.
 /// * [vid] - 
-/// * [id] - Identifier, format: <pool address>#<tick index>
+/// * [id] - Identifier, format: (pool address)#(tick index)
 /// * [poolAddress] - Pool address.
 /// * [tickIdx] 
 /// * [pool] - Pool address.
@@ -52,7 +52,7 @@ abstract class UniswapV3TickDTO implements Built<UniswapV3TickDTO, UniswapV3Tick
   @BuiltValueField(wireName: r'vid')
   int? get vid;
 
-  /// Identifier, format: <pool address>#<tick index>
+  /// Identifier, format: (pool address)#(tick index)
   @BuiltValueField(wireName: r'id')
   String? get id;
 

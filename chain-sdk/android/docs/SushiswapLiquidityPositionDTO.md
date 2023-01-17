@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **entryTime** | [**Date**](Date.md) |  |  [optional]
 **recvTime** | [**Date**](Date.md) |  |  [optional]
 **blockNumber** | **Long** | Number of block in which entity was recorded. |  [optional]
-**id** | **String** | Identifier, format: &lt;pair address&gt;-&lt;user address&gt; |  [optional]
+**id** | **String** | Identifier, format: (pair address)-(user address) |  [optional]
 **user** | **String** | User address. |  [optional]
 **pair** | **String** | Pair address. |  [optional]
 **liquidityTokenBalance** | **String** | Amount of LP tokens minted for this position. |  [optional]

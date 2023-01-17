@@ -252,7 +252,7 @@ __PACKAGE__->method_documentation({
     'id' => {
         datatype => 'string',
         base_name => 'id',
-        description => 'Identifier, format: transaction hash + \&quot;#\&quot; + index in swaps Transaction array.',
+        description => 'Identifier, format: (transaction hash) + # + (index in swaps Transaction array).',
         format => '',
         read_only => '',
             },

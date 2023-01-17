@@ -66,11 +66,11 @@ public:
 	/*! \brief Set Number of block in which entity was recorded.
 	 */
 	void setBlockNumber(long long  block_number);
-	/*! \brief Get NFT token identifier, format: <NFT token id>#<block number>
+	/*! \brief Get NFT token identifier, format: (NFT token id)#(block number).
 	 */
 	std::string getId();
 
-	/*! \brief Set NFT token identifier, format: <NFT token id>#<block number>
+	/*! \brief Set NFT token identifier, format: (NFT token id)#(block number).
 	 */
 	void setId(std::string  id);
 	/*! \brief Get Owner of the NFT.

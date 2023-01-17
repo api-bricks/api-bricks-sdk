@@ -21,7 +21,7 @@ case class TickDTO (
   blockNumber: Option[Long] = None,
   /*  */
   vid: Option[Long] = None,
-  /* Identifier, format: <pool address>#<tick index> */
+  /* Identifier, format: (pool address)#(tick index) */
   id: Option[String] = None,
   /* Pool address. */
   poolAddress: Option[String] = None,

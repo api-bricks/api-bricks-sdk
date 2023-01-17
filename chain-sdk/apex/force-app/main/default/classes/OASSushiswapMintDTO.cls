@@ -33,7 +33,7 @@ public class OASSushiswapMintDTO implements OAS.MappedProperties {
     public Long blockNumber { get; set; }
 
     /**
-     * Identifier, format: <transaction hash>-<index in the transaction mint array>.
+     * Identifier, format: (transaction hash)-(index in the transaction mint array).
      * @return id
      */
     public String id { get; set; }

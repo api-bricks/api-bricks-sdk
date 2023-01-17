@@ -53,7 +53,7 @@ class CurveUnderlyingCoinDTO {
   ///
   int? blockNumber;
 
-  /// Equals to: <pool_id>-<coin_index>.
+  /// Equals to: (pool_id)-(coin_index).
   String? id;
 
   /// Coin index.

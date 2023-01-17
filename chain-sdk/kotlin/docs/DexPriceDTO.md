@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **entryTime** | [**java.time.OffsetDateTime**](java.time.OffsetDateTime.md) |  |  [optional]
 **recvTime** | [**java.time.OffsetDateTime**](java.time.OffsetDateTime.md) |  |  [optional]
 **blockNumber** | **kotlin.Long** | Number of block in which entity was recorded. |  [optional]
-**id** | **kotlin.String** | Identifier, format: &lt;token id&gt;-&lt;batch id&gt;. |  [optional]
+**id** | **kotlin.String** | Identifier, format: (token id)-(batch id). |  [optional]
 **token** | **kotlin.String** | Token identifier. |  [optional]
 **batchId** | **kotlin.String** | Batch identifier. |  [optional]
 **priceInOwlNumerator** | **kotlin.String** | Price enumerator in OWL (derivative of the GNO token). |  [optional]

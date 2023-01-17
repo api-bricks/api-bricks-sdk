@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **entry_time** | **\DateTime** |  | [optional]
 **recv_time** | **\DateTime** |  | [optional]
 **block_number** | **int** | Number of block in which entity was recorded. | [optional]
-**id** | **string** | Identifier, format: &lt;pool address&gt;-&lt;day id&gt; | [optional]
+**id** | **string** | Identifier, format: (pool address)-(day id) | [optional]
 **period_start_unix** | **int** | Unix timestamp for start of hour. | [optional]
 **pool** | **string** | Pointer to pool. | [optional]
 **liquidity** | **string** | In range liquidity at end of period. | [optional]

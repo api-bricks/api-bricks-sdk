@@ -23,7 +23,7 @@ export class DexOrderDTO {
     */
     'blockNumber'?: number;
     /**
-    * Identifier, format: <owner address>-<order id>
+    * Identifier, format: (owner address)-(order id)
     */
     'id'?: string | null;
     /**

@@ -15,7 +15,7 @@ Key | Input Type | Accessed Type | Description | Notes
 **block_number** | decimal.Decimal, int,  | decimal.Decimal,  | Number of block in which entity was recorded. | [optional] value must be a 64 bit integer
 **id** | None, str,  | NoneClass, str,  | Pair contract address. | [optional] 
 **factory** | None, str,  | NoneClass, str,  | Factory contract address. | [optional] 
-**name** | None, str,  | NoneClass, str,  | Friendly name, format: &lt;token0 name&gt;-&lt;token1 name&gt; | [optional] 
+**name** | None, str,  | NoneClass, str,  | Friendly name, format: (token0 name)-(token1 name) | [optional] 
 **token_0** | None, str,  | NoneClass, str,  | Reference to token0 as stored in pair contract. | [optional] 
 **token_1** | None, str,  | NoneClass, str,  | Reference to token0 as stored in pair contract. | [optional] 
 **reserve_0** | None, str,  | NoneClass, str,  | Reserve of token0. | [optional] 

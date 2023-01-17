@@ -73,7 +73,7 @@ class UniswapV3SwapDTO {
   ///
   int? vid;
 
-  /// Identifier, format: transaction hash + \"#\" + index in swaps Transaction array.
+  /// Identifier, format: (transaction hash) + # + (index in swaps Transaction array).
   String? id;
 
   /// Pointer to transaction.

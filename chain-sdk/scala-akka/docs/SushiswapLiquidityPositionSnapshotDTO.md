@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **entryTime** | **OffsetDateTime** |  |  [optional]
 **recvTime** | **OffsetDateTime** |  |  [optional]
 **blockNumber** | **Long** | Number of block in which entity was recorded. |  [optional]
-**id** | **String** | Identifier, format: &lt;pair address&gt;-&lt;user address&gt; |  [optional]
+**id** | **String** | Identifier, format: (pair address)-(user address) |  [optional]
 **liquidityPosition** | **String** | Reference to LP identifier. |  [optional]
 **timestamp** | **Int** | Creation time. |  [optional]
 **block** | **Int** | Number of block in which LP snapshot was recorded. |  [optional]

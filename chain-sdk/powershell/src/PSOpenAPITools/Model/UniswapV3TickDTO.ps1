@@ -24,7 +24,7 @@ Number of block in which entity was recorded.
 .PARAMETER Vid
 
 .PARAMETER Id
-Identifier, format: <pool address>#<tick index>
+Identifier, format: (pool address)#(tick index)
 .PARAMETER PoolAddress
 Pool address.
 .PARAMETER TickIdx

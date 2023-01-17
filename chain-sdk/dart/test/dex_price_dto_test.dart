@@ -32,7 +32,7 @@ void main() {
       // TODO
     });
 
-    // Identifier, format: <token id>-<batch id>.
+    // Identifier, format: (token id)-(batch id).
     // String id
     test('to test the property `id`', () async {
       // TODO

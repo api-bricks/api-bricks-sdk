@@ -19,7 +19,7 @@ case class OrderDTO (
   recvTime: Option[OffsetDateTime] = None,
   /* Number of block in which entity was recorded. */
   blockNumber: Option[Long] = None,
-  /* Identifier, format: <owner address>-<order id> */
+  /* Identifier, format: (owner address)-(order id) */
   id: Option[String] = None,
   /* Reference to owner. */
   owner: Option[String] = None,

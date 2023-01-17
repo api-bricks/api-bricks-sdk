@@ -19,9 +19,6 @@ info:
     url: https://github.com/coinapi/coinapi-sdk/blob/master/LICENSE
   title: On Chain Dapps - REST API
   version: v1
-  x-seodescription: "---\r\ntitleTemplate: REST API | Chain API\r\ndescription: This\
-    \ section will provide necessary information about the `OnChain API` protocol.\
-    \ \r\n---\r\n                            "
 servers:
 - url: https://onchain.coinapi.io
 tags:
@@ -10681,7 +10678,7 @@ components:
           format: int64
           type: integer
         id:
-          description: "Identifier, format: <order id>|<transaction hash>|<event index>."
+          description: "Identifier, format: (order id)|(transaction hash)|(event index)."
           nullable: true
           type: string
         timestamp:
@@ -11043,7 +11040,7 @@ components:
           format: int64
           type: integer
         id:
-          description: "Identifier, format: <pool_id>-<coin_index>."
+          description: "Identifier, format: (pool_id)-(coin_index)."
           nullable: true
           type: string
         index:
@@ -12678,7 +12675,7 @@ components:
           format: int64
           type: integer
         id:
-          description: "Equals to: <pool_id>-<coin_index>."
+          description: "Equals to: (pool_id)-(coin_index)."
           nullable: true
           type: string
         index:
@@ -12930,7 +12927,7 @@ components:
           format: int64
           type: integer
         id:
-          description: "Identifier, format: <transaction hash>-<token id>."
+          description: "Identifier, format: (transaction hash)-(token id)."
           nullable: true
           type: string
         user:
@@ -13004,7 +13001,7 @@ components:
           format: int64
           type: integer
         id:
-          description: "Identifier, format: <owner address>-<order id>"
+          description: "Identifier, format: (owner address)-(order id)"
           nullable: true
           type: string
         owner:
@@ -13116,7 +13113,7 @@ components:
           format: int64
           type: integer
         id:
-          description: "Identifier, format: <token id>-<batch id>."
+          description: "Identifier, format: (token id)-(batch id)."
           nullable: true
           type: string
         token:
@@ -13553,7 +13550,7 @@ components:
           format: int64
           type: integer
         id:
-          description: "Identifier, format: <transaction hash>-<id>."
+          description: "Identifier, format: (transaction hash)-(id)."
           nullable: true
           type: string
         user:
@@ -13613,7 +13610,7 @@ components:
           format: int64
           type: integer
         id:
-          description: "Identifier, format: <transaction hash>-<id>."
+          description: "Identifier, format: (transaction hash)-(id)."
           nullable: true
           type: string
         user:
@@ -13746,7 +13743,7 @@ components:
           format: int64
           type: integer
         id:
-          description: "Identifier, format: <transaction id>:<transaction.burns.length>."
+          description: "Identifier, format: (transaction id):(transaction.burns.length)."
           nullable: true
           type: string
         transaction:
@@ -14048,7 +14045,7 @@ components:
           format: int64
           type: integer
         id:
-          description: "Identifier, format: <pair address>-<user address>"
+          description: "Identifier, format: (pair address)-(user address)"
           nullable: true
           type: string
         user:
@@ -14112,7 +14109,7 @@ components:
           format: int64
           type: integer
         id:
-          description: "Identifier, format: <pair address>-<user address>-<timestamp>"
+          description: "Identifier, format: (pair address)-(user address)-(timestamp)"
           nullable: true
           type: string
         liquidity_position:
@@ -14204,8 +14201,8 @@ components:
           format: int64
           type: integer
         id:
-          description: "Identifier, format: <transaction hash>-<index in the transaction\
-            \ mint array>."
+          description: "Identifier, format: (transaction hash)-(index in the transaction\
+            \ mint array)."
           nullable: true
           type: string
         transaction:
@@ -14314,7 +14311,7 @@ components:
           nullable: true
           type: string
         name:
-          description: "Friendly name, format: <token0 name>-<token1 name>"
+          description: "Friendly name, format: (token0 name)-(token1 name)"
           nullable: true
           type: string
         token_0:
@@ -14433,7 +14430,7 @@ components:
           format: int64
           type: integer
         id:
-          description: "Identifier, format: <pair id>-<day start timestamp>."
+          description: "Identifier, format: (pair id)-(day start timestamp)."
           nullable: true
           type: string
         date:
@@ -14519,7 +14516,7 @@ components:
           format: int64
           type: integer
         id:
-          description: "Identifier, format: <pair id>-<hour start timestamp>."
+          description: "Identifier, format: (pair id)-(hour start timestamp)."
           nullable: true
           type: string
         date:
@@ -15175,7 +15172,7 @@ components:
           format: int64
           type: integer
         id:
-          description: "Identifier, format: <pair address>-<user address>"
+          description: "Identifier, format: (pair address)-(user address)"
           nullable: true
           type: string
         liquidity_position:
@@ -16737,7 +16734,7 @@ components:
           format: int64
           type: integer
         id:
-          description: "Identifier, format: <pool address>-<day id>."
+          description: "Identifier, format: (pool address)-(day id)."
           nullable: true
           type: string
         date:
@@ -16861,7 +16858,7 @@ components:
           format: int64
           type: integer
         id:
-          description: "Identifier, format: <pool address>-<day id>"
+          description: "Identifier, format: (pool address)-(day id)"
           nullable: true
           type: string
         period_start_unix:
@@ -17090,7 +17087,7 @@ components:
           format: int64
           type: integer
         id:
-          description: "NFT token identifier, format: <NFT token id>#<block number>"
+          description: "NFT token identifier, format: (NFT token id)#(block number)."
           nullable: true
           type: string
         owner:
@@ -17213,8 +17210,8 @@ components:
           format: int64
           type: integer
         id:
-          description: "Identifier, format: transaction hash + \"#\" + index in swaps\
-            \ Transaction array."
+          description: "Identifier, format: (transaction hash) + # + (index in swaps\
+            \ Transaction array)."
           nullable: true
           type: string
         transaction:
@@ -17361,7 +17358,7 @@ components:
           format: int64
           type: integer
         id:
-          description: "Identifier, format: <pool address>#<tick index>"
+          description: "Identifier, format: (pool address)#(tick index)"
           nullable: true
           type: string
         pool_address:
@@ -17462,7 +17459,7 @@ components:
           format: int64
           type: integer
         id:
-          description: "Identifier, format: <pool address>-<tick index>-<timestamp>."
+          description: "Identifier, format: (pool address)-(tick index)-(timestamp)."
           nullable: true
           type: string
         date:

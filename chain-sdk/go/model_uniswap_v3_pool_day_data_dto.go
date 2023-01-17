@@ -22,7 +22,7 @@ type UniswapV3PoolDayDataDTO struct {
 	RecvTime *time.Time `json:"recv_time,omitempty"`
 	// Number of block in which entity was recorded.
 	BlockNumber *int64 `json:"block_number,omitempty"`
-	// Identifier, format: <pool address>-<day id>.
+	// Identifier, format: (pool address)-(day id).
 	Id NullableString `json:"id,omitempty"`
 	// Timestamp rounded to current day by dividing by 86400
 	Date *int32 `json:"date,omitempty"`

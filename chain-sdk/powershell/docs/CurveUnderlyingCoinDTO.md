@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **EntryTime** | **System.DateTime** |  | [optional] 
 **RecvTime** | **System.DateTime** |  | [optional] 
 **BlockNumber** | **Int64** | Number of block in which entity was recorded. | [optional] 
-**Id** | **String** | Equals to: &lt;pool_id&gt;-&lt;coin_index&gt;. | [optional] 
+**Id** | **String** | Equals to: (pool_id)-(coin_index). | [optional] 
 **Index** | **Int32** | Coin index. | [optional] 
 **Pool** | **String** |  | [optional] 
 **Token** | **String** |  | [optional] 

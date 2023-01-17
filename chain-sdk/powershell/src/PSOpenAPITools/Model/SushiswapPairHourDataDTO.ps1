@@ -22,7 +22,7 @@ No description available.
 .PARAMETER BlockNumber
 Number of block in which entity was recorded.
 .PARAMETER Id
-Identifier, format: <pair id>-<hour start timestamp>.
+Identifier, format: (pair id)-(hour start timestamp).
 .PARAMETER Date
 Hour start timestamp.
 .PARAMETER Pair

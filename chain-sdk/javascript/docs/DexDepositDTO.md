@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **entryTime** | **Date** |  | [optional] 
 **recvTime** | **Date** |  | [optional] 
 **blockNumber** | **Number** | Number of block in which entity was recorded. | [optional] 
-**id** | **String** | Identifier, format: &lt;transaction hash&gt;-&lt;token id&gt;. | [optional] 
+**id** | **String** | Identifier, format: (transaction hash)-(token id). | [optional] 
 **user** | **String** | User address. | [optional] 
 **tokenAddress** | **String** | Token address. | [optional] 
 **amount** | **String** | Amount of deposit. | [optional] 

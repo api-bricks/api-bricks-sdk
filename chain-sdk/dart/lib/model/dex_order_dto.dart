@@ -64,7 +64,7 @@ class DexOrderDTO {
   ///
   int? blockNumber;
 
-  /// Identifier, format: <owner address>-<order id>
+  /// Identifier, format: (owner address)-(order id)
   String? id;
 
   /// Reference to owner.

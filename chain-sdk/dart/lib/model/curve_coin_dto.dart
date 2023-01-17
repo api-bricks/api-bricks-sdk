@@ -55,7 +55,7 @@ class CurveCoinDTO {
   ///
   int? blockNumber;
 
-  /// Identifier, format: <pool_id>-<coin_index>.
+  /// Identifier, format: (pool_id)-(coin_index).
   String? id;
 
   /// Coin index.

@@ -22,7 +22,7 @@ No description available.
 .PARAMETER BlockNumber
 Number of block in which entity was recorded.
 .PARAMETER Id
-Identifier, format: <owner address>-<order id>
+Identifier, format: (owner address)-(order id)
 .PARAMETER Owner
 Reference to owner.
 .PARAMETER OrderId

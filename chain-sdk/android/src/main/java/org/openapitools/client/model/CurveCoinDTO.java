@@ -82,9 +82,9 @@ public class CurveCoinDTO {
   }
 
   /**
-   * Identifier, format: <pool_id>-<coin_index>.
+   * Identifier, format: (pool_id)-(coin_index).
    **/
-  @ApiModelProperty(value = "Identifier, format: <pool_id>-<coin_index>.")
+  @ApiModelProperty(value = "Identifier, format: (pool_id)-(coin_index).")
   public String getId() {
     return id;
   }

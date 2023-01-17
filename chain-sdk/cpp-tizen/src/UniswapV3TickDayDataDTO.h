@@ -66,11 +66,11 @@ public:
 	/*! \brief Set Number of block in which entity was recorded.
 	 */
 	void setBlockNumber(long long  block_number);
-	/*! \brief Get Identifier, format: <pool address>-<tick index>-<timestamp>.
+	/*! \brief Get Identifier, format: (pool address)-(tick index)-(timestamp).
 	 */
 	std::string getId();
 
-	/*! \brief Set Identifier, format: <pool address>-<tick index>-<timestamp>.
+	/*! \brief Set Identifier, format: (pool address)-(tick index)-(timestamp).
 	 */
 	void setId(std::string  id);
 	/*! \brief Get Timestamp rounded to current day by dividing by 86400.

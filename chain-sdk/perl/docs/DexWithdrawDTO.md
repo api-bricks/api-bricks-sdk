@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **entry_time** | **DATE_TIME** |  | [optional] 
 **recv_time** | **DATE_TIME** |  | [optional] 
 **block_number** | **int** | Number of block in which entity was recorded. | [optional] 
-**id** | **string** | Identifier, format: &lt;transaction hash&gt;-&lt;id&gt;. | [optional] 
+**id** | **string** | Identifier, format: (transaction hash)-(id). | [optional] 
 **user** | **string** |  | [optional] 
 **token_address** | **string** |  | [optional] 
 **amount** | **string** |  | [optional] 

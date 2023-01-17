@@ -23,7 +23,7 @@ export interface CurveCoinDTO {
     block_number?: number;
 
     /**
-     * Identifier, format: <pool_id>-<coin_index>.
+     * Identifier, format: (pool_id)-(coin_index).
      */
     id?: string;
 

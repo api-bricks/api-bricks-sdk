@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **EntryTime** | **System.DateTime** |  | [optional] 
 **RecvTime** | **System.DateTime** |  | [optional] 
 **BlockNumber** | **Int64** | Number of block in which entity was recorded. | [optional] 
-**Id** | **String** | Identifier, format: &lt;pair id&gt;-&lt;day start timestamp&gt;. | [optional] 
+**Id** | **String** | Identifier, format: (pair id)-(day start timestamp). | [optional] 
 **Date** | **Int32** | Unix timestamp for start of day. | [optional] 
 **Pair** | **String** | Reference to pair. | [optional] 
 **Token0** | **String** | Reference to token0. | [optional] 

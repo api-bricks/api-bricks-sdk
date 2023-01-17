@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **EntryTime** | Pointer to **time.Time** |  | [optional] 
 **RecvTime** | Pointer to **time.Time** |  | [optional] 
 **BlockNumber** | Pointer to **int64** | Number of block in which entity was recorded. | [optional] 
-**Id** | Pointer to **NullableString** | Identifier, format: &lt;transaction hash&gt;-&lt;index in the transaction mint array&gt;. | [optional] 
+**Id** | Pointer to **NullableString** | Identifier, format: (transaction hash)-(index in the transaction mint array). | [optional] 
 **Transaction** | Pointer to **NullableString** | Reference to the transaction Mint was included in. | [optional] 
 **Timestamp** | Pointer to **NullableString** | Timestamp of Mint, used to sort recent liquidity provisions. | [optional] 
 **Pair** | Pointer to **NullableString** | Reference to pair. | [optional] 

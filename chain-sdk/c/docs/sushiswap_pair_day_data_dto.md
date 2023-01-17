@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **entry_time** | **char \*** |  | [optional] 
 **recv_time** | **char \*** |  | [optional] 
 **block_number** | **long** | Number of block in which entity was recorded. | [optional] 
-**id** | **char \*** | Identifier, format: &lt;pair id&gt;-&lt;day start timestamp&gt;. | [optional] 
+**id** | **char \*** | Identifier, format: (pair id)-(day start timestamp). | [optional] 
 **date** | **int** | Unix timestamp for start of day. | [optional] 
 **pair** | **char \*** | Reference to pair. | [optional] 
 **token_0** | **char \*** | Reference to token0. | [optional] 

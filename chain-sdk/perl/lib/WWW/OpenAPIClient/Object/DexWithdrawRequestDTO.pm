@@ -243,7 +243,7 @@ __PACKAGE__->method_documentation({
     'id' => {
         datatype => 'string',
         base_name => 'id',
-        description => 'Identifier, format: &lt;transaction hash&gt;-&lt;id&gt;.',
+        description => 'Identifier, format: (transaction hash)-(id).',
         format => '',
         read_only => '',
             },

@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **entryTime** | **Date** |  | [optional] 
 **recvTime** | **Date** |  | [optional] 
 **blockNumber** | **Number** | Number of block in which entity was recorded. | [optional] 
-**id** | **String** | Identifier, format: &lt;pool_id&gt;-&lt;coin_index&gt;. | [optional] 
+**id** | **String** | Identifier, format: (pool_id)-(coin_index). | [optional] 
 **index** | **Number** | Coin index. | [optional] 
 **pool** | **String** |  | [optional] 
 **token** | **String** |  | [optional] 

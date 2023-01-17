@@ -22,7 +22,7 @@ No description available.
 .PARAMETER BlockNumber
 Number of block in which entity was recorded.
 .PARAMETER Id
-Identifier, format: <transaction hash>-<token id>.
+Identifier, format: (transaction hash)-(token id).
 .PARAMETER User
 User address.
 .PARAMETER TokenAddress

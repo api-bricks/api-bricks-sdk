@@ -25,7 +25,7 @@ API.Client.CurveCoinDTO.prototype.recvTime;
 API.Client.CurveCoinDTO.prototype.blockNumber;
 
 /**
- * Identifier, format: <pool_id>-<coin_index>.
+ * Identifier, format: (pool_id)-(coin_index).
  * @type {!string}
  * @export
  */

@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **entry_time** | **char \*** |  | [optional] 
 **recv_time** | **char \*** |  | [optional] 
 **block_number** | **long** | Number of block in which entity was recorded. | [optional] 
-**id** | **char \*** | Equals to: &lt;pool_id&gt;-&lt;coin_index&gt;. | [optional] 
+**id** | **char \*** | Equals to: (pool_id)-(coin_index). | [optional] 
 **index** | **int** | Coin index. | [optional] 
 **pool** | **char \*** |  | [optional] 
 **token** | **char \*** |  | [optional] 

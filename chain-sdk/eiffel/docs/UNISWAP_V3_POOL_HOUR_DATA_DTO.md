@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **entry_time** | [**DATE_TIME**](DATE_TIME.md) |  | [optional] [default to null]
 **recv_time** | [**DATE_TIME**](DATE_TIME.md) |  | [optional] [default to null]
 **block_number** | **INTEGER_64** | Number of block in which entity was recorded. | [optional] [default to null]
-**id** | [**STRING_32**](STRING_32.md) | Identifier, format: &lt;pool address&gt;-&lt;day id&gt; | [optional] [default to null]
+**id** | [**STRING_32**](STRING_32.md) | Identifier, format: (pool address)-(day id) | [optional] [default to null]
 **period_start_unix** | **INTEGER_32** | Unix timestamp for start of hour. | [optional] [default to null]
 **pool** | [**STRING_32**](STRING_32.md) | Pointer to pool. | [optional] [default to null]
 **liquidity** | [**STRING_32**](STRING_32.md) | In range liquidity at end of period. | [optional] [default to null]

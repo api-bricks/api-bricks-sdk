@@ -24,7 +24,7 @@ import com.squareup.moshi.Json
  * @param entryTime 
  * @param recvTime 
  * @param blockNumber Number of block in which entity was recorded.
- * @param id Identifier, format: <pair id>-<hour start timestamp>.
+ * @param id Identifier, format: (pair id)-(hour start timestamp).
  * @param date Hour start timestamp.
  * @param pair Reference to pair.
  * @param reserve0 Reserve of token0 (updated during each transaction on pair).
@@ -50,7 +50,7 @@ data class SushiswapPairHourDataDTO (
     @Json(name = "block_number")
     val blockNumber: kotlin.Long? = null,
 
-    /* Identifier, format: <pair id>-<hour start timestamp>. */
+    /* Identifier, format: (pair id)-(hour start timestamp). */
     @Json(name = "id")
     val id: kotlin.String? = null,
 

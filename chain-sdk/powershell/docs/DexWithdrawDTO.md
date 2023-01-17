@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **EntryTime** | **System.DateTime** |  | [optional] 
 **RecvTime** | **System.DateTime** |  | [optional] 
 **BlockNumber** | **Int64** | Number of block in which entity was recorded. | [optional] 
-**Id** | **String** | Identifier, format: &lt;transaction hash&gt;-&lt;id&gt;. | [optional] 
+**Id** | **String** | Identifier, format: (transaction hash)-(id). | [optional] 
 **User** | **String** |  | [optional] 
 **TokenAddress** | **String** |  | [optional] 
 **Amount** | **String** |  | [optional] 

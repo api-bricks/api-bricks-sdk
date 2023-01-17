@@ -89,9 +89,9 @@ public class SushiswapMintDTO {
   }
 
   /**
-   * Identifier, format: <transaction hash>-<index in the transaction mint array>.
+   * Identifier, format: (transaction hash)-(index in the transaction mint array).
    **/
-  @ApiModelProperty(value = "Identifier, format: <transaction hash>-<index in the transaction mint array>.")
+  @ApiModelProperty(value = "Identifier, format: (transaction hash)-(index in the transaction mint array).")
   public String getId() {
     return id;
   }

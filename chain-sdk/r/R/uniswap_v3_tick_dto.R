@@ -11,7 +11,7 @@
 #' @field recv_time  character [optional]
 #' @field block_number Number of block in which entity was recorded. integer [optional]
 #' @field vid  integer [optional]
-#' @field id Identifier, format: <pool address>#<tick index> character [optional]
+#' @field id Identifier, format: (pool address)#(tick index) character [optional]
 #' @field pool_address Pool address. character [optional]
 #' @field tick_idx  \link{NumericsBigInteger} [optional]
 #' @field pool Pool address. character [optional]
@@ -70,7 +70,7 @@ UniswapV3TickDTO <- R6::R6Class(
     #' @param recv_time recv_time
     #' @param block_number Number of block in which entity was recorded.
     #' @param vid 
-    #' @param id Identifier, format: <pool address>#<tick index>
+    #' @param id Identifier, format: (pool address)#(tick index)
     #' @param pool_address Pool address.
     #' @param tick_idx tick_idx
     #' @param pool Pool address.

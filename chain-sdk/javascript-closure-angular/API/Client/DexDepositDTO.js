@@ -26,7 +26,7 @@ API.Client.DexDepositDTO.prototype.recvTime;
 API.Client.DexDepositDTO.prototype.blockNumber;
 
 /**
- * Identifier, format: <transaction hash>-<token id>.
+ * Identifier, format: (transaction hash)-(token id).
  * @type {!string}
  * @export
  */

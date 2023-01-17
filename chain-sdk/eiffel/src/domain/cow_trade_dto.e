@@ -26,7 +26,7 @@ feature --Access
  	block_number: INTEGER_64
     	 -- Number of block in which entity was recorded.
     id: detachable STRING_32
-      -- Identifier, format: <order id>|<transaction hash>|<event index>.
+      -- Identifier, format: (order id)|(transaction hash)|(event index).
     timestamp: detachable STRING_32
       -- Block's timestamp.
     gas_price: detachable STRING_32

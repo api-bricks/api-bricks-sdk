@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **EntryTime** | **System.DateTime** |  | [optional] 
 **RecvTime** | **System.DateTime** |  | [optional] 
 **BlockNumber** | **Int64** | Number of block in which entity was recorded. | [optional] 
-**Id** | **String** | Identifier, format: &lt;token id&gt;-&lt;batch id&gt;. | [optional] 
+**Id** | **String** | Identifier, format: (token id)-(batch id). | [optional] 
 **Token** | **String** | Token identifier. | [optional] 
 **BatchId** | **String** | Batch identifier. | [optional] 
 **PriceInOwlNumerator** | **String** | Price enumerator in OWL (derivative of the GNO token). | [optional] 

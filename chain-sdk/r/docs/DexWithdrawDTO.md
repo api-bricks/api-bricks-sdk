@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **entry_time** | **character** |  | [optional] 
 **recv_time** | **character** |  | [optional] 
 **block_number** | **integer** | Number of block in which entity was recorded. | [optional] 
-**id** | **character** | Identifier, format: &lt;transaction hash&gt;-&lt;id&gt;. | [optional] 
+**id** | **character** | Identifier, format: (transaction hash)-(id). | [optional] 
 **user** | **character** |  | [optional] 
 **token_address** | **character** |  | [optional] 
 **amount** | **character** |  | [optional] 

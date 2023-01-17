@@ -23,7 +23,7 @@ export class SushiswapLiquidityPositionSnapshotDTO {
     */
     'blockNumber'?: number;
     /**
-    * Identifier, format: <pair address>-<user address>-<timestamp>
+    * Identifier, format: (pair address)-(user address)-(timestamp)
     */
     'id'?: string | null;
     /**

@@ -19,7 +19,7 @@ case class PositionSnapshotDTO (
   recvTime: Option[OffsetDateTime] = None,
   /* Number of block in which entity was recorded. */
   blockNumber: Option[Long] = None,
-  /* NFT token identifier, format: <NFT token id>#<block number> */
+  /* NFT token identifier, format: (NFT token id)#(block number). */
   id: Option[String] = None,
   /* Owner of the NFT. */
   owner: Option[String] = None,

@@ -29,7 +29,7 @@ test_that("block_number", {
 
 test_that("id", {
   # tests for the property `id` (character)
-  # Identifier, format: &lt;transaction id&gt;:&lt;transaction.burns.length&gt;.
+  # Identifier, format: (transaction id):(transaction.burns.length).
 
   # uncomment below to test the property
   #expect_equal(model.instance$`id`, "EXPECTED_RESULT")

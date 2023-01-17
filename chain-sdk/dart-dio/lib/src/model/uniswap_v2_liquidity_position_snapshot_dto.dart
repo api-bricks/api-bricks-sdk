@@ -14,7 +14,7 @@ part 'uniswap_v2_liquidity_position_snapshot_dto.g.dart';
 /// * [entryTime] 
 /// * [recvTime] 
 /// * [blockNumber] - Number of block in which entity was recorded.
-/// * [id] - Identifier, format: <pair address>-<user address>
+/// * [id] - Identifier, format: (pair address)-(user address)
 /// * [liquidityPosition] - Reference to LP identifier.
 /// * [timestamp] - Creation time.
 /// * [block] - Number of block in which LP snapshot was recorded.
@@ -41,7 +41,7 @@ abstract class UniswapV2LiquidityPositionSnapshotDTO implements Built<UniswapV2L
   @BuiltValueField(wireName: r'block_number')
   int? get blockNumber;
 
-  /// Identifier, format: <pair address>-<user address>
+  /// Identifier, format: (pair address)-(user address)
   @BuiltValueField(wireName: r'id')
   String? get id;
 

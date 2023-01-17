@@ -14,7 +14,7 @@ part 'sushiswap_pair_hour_data_dto.g.dart';
 /// * [entryTime] 
 /// * [recvTime] 
 /// * [blockNumber] - Number of block in which entity was recorded.
-/// * [id] - Identifier, format: <pair id>-<hour start timestamp>.
+/// * [id] - Identifier, format: (pair id)-(hour start timestamp).
 /// * [date] - Hour start timestamp.
 /// * [pair] - Reference to pair.
 /// * [reserve0] - Reserve of token0 (updated during each transaction on pair).
@@ -37,7 +37,7 @@ abstract class SushiswapPairHourDataDTO implements Built<SushiswapPairHourDataDT
   @BuiltValueField(wireName: r'block_number')
   int? get blockNumber;
 
-  /// Identifier, format: <pair id>-<hour start timestamp>.
+  /// Identifier, format: (pair id)-(hour start timestamp).
   @BuiltValueField(wireName: r'id')
   String? get id;
 

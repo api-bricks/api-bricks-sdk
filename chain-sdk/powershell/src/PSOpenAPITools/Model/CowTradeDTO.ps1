@@ -22,7 +22,7 @@ No description available.
 .PARAMETER BlockNumber
 Number of block in which entity was recorded.
 .PARAMETER Id
-Identifier, format: <order id>|<transaction hash>|<event index>.
+Identifier, format: (order id)|(transaction hash)|(event index).
 .PARAMETER Timestamp
 Block's timestamp.
 .PARAMETER GasPrice

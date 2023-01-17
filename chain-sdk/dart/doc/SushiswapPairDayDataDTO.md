@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **entryTime** | [**DateTime**](DateTime.md) |  | [optional] 
 **recvTime** | [**DateTime**](DateTime.md) |  | [optional] 
 **blockNumber** | **int** | Number of block in which entity was recorded. | [optional] 
-**id** | **String** | Identifier, format: <pair id>-<day start timestamp>. | [optional] 
+**id** | **String** | Identifier, format: (pair id)-(day start timestamp). | [optional] 
 **date** | **int** | Unix timestamp for start of day. | [optional] 
 **pair** | **String** | Reference to pair. | [optional] 
 **token0** | **String** | Reference to token0. | [optional] 

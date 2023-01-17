@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **entry_time** | **char \*** |  | [optional] 
 **recv_time** | **char \*** |  | [optional] 
 **block_number** | **long** | Number of block in which entity was recorded. | [optional] 
-**id** | **char \*** | Identifier, format: &lt;transaction hash&gt;-&lt;index in the transaction mint array&gt;. | [optional] 
+**id** | **char \*** | Identifier, format: (transaction hash)-(index in the transaction mint array). | [optional] 
 **transaction** | **char \*** | Reference to the transaction Mint was included in. | [optional] 
 **timestamp** | **char \*** | Timestamp of Mint, used to sort recent liquidity provisions. | [optional] 
 **pair** | **char \*** | Reference to pair. | [optional] 

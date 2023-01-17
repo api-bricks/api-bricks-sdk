@@ -251,7 +251,7 @@ __PACKAGE__->method_documentation({
     'id' => {
         datatype => 'string',
         base_name => 'id',
-        description => 'Identifier, format: &lt;pool address&gt;#&lt;tick index&gt;',
+        description => 'Identifier, format: (pool address)#(tick index)',
         format => '',
         read_only => '',
             },

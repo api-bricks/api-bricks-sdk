@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **EntryTime** | **System.DateTime** |  | [optional] 
 **RecvTime** | **System.DateTime** |  | [optional] 
 **BlockNumber** | **Int64** | Number of block in which entity was recorded. | [optional] 
-**Id** | **String** | Identifier, format: &lt;pair id&gt;-&lt;hour start timestamp&gt;. | [optional] 
+**Id** | **String** | Identifier, format: (pair id)-(hour start timestamp). | [optional] 
 **Date** | **Int32** | Hour start timestamp. | [optional] 
 **Pair** | **String** | Reference to pair. | [optional] 
 **Reserve0** | **String** | Reserve of token0 (updated during each transaction on pair). | [optional] 

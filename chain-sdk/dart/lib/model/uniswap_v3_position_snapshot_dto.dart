@@ -59,7 +59,7 @@ class UniswapV3PositionSnapshotDTO {
   ///
   int? blockNumber;
 
-  /// NFT token identifier, format: <NFT token id>#<block number>
+  /// NFT token identifier, format: (NFT token id)#(block number).
   String? id;
 
   /// Owner of the NFT.

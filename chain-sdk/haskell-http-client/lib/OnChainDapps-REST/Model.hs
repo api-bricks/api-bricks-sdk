@@ -320,7 +320,7 @@ data CowTradeDTO = CowTradeDTO
   { cowTradeDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
   , cowTradeDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
   , cowTradeDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
-  , cowTradeDTOId :: !(Maybe Text) -- ^ "id" - Identifier, format: &lt;order id&gt;|&lt;transaction hash&gt;|&lt;event index&gt;.
+  , cowTradeDTOId :: !(Maybe Text) -- ^ "id" - Identifier, format: (order id)|(transaction hash)|(event index).
   , cowTradeDTOTimestamp :: !(Maybe Text) -- ^ "timestamp" - Block&#39;s timestamp.
   , cowTradeDTOGasPrice :: !(Maybe Text) -- ^ "gas_price" - Transaction&#39;s gas price.
   , cowTradeDTOGasLimit :: !(Maybe Text) -- ^ "gas_limit" - Transaction&#39;s gas limit.
@@ -740,7 +740,7 @@ data CurveCoinDTO = CurveCoinDTO
   { curveCoinDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
   , curveCoinDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
   , curveCoinDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
-  , curveCoinDTOId :: !(Maybe Text) -- ^ "id" - Identifier, format: &lt;pool_id&gt;-&lt;coin_index&gt;.
+  , curveCoinDTOId :: !(Maybe Text) -- ^ "id" - Identifier, format: (pool_id)-(coin_index).
   , curveCoinDTOIndex :: !(Maybe Int) -- ^ "index" - Coin index.
   , curveCoinDTOPool :: !(Maybe Text) -- ^ "pool" - 
   , curveCoinDTOToken :: !(Maybe Text) -- ^ "token" - 
@@ -2580,7 +2580,7 @@ data CurveUnderlyingCoinDTO = CurveUnderlyingCoinDTO
   { curveUnderlyingCoinDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
   , curveUnderlyingCoinDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
   , curveUnderlyingCoinDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
-  , curveUnderlyingCoinDTOId :: !(Maybe Text) -- ^ "id" - Equals to: &lt;pool_id&gt;-&lt;coin_index&gt;.
+  , curveUnderlyingCoinDTOId :: !(Maybe Text) -- ^ "id" - Equals to: (pool_id)-(coin_index).
   , curveUnderlyingCoinDTOIndex :: !(Maybe Int) -- ^ "index" - Coin index.
   , curveUnderlyingCoinDTOPool :: !(Maybe Text) -- ^ "pool" - 
   , curveUnderlyingCoinDTOToken :: !(Maybe Text) -- ^ "token" - 
@@ -2866,7 +2866,7 @@ data DexDepositDTO = DexDepositDTO
   { dexDepositDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
   , dexDepositDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
   , dexDepositDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
-  , dexDepositDTOId :: !(Maybe Text) -- ^ "id" - Identifier, format: &lt;transaction hash&gt;-&lt;token id&gt;.
+  , dexDepositDTOId :: !(Maybe Text) -- ^ "id" - Identifier, format: (transaction hash)-(token id).
   , dexDepositDTOUser :: !(Maybe Text) -- ^ "user" - User address.
   , dexDepositDTOTokenAddress :: !(Maybe Text) -- ^ "token_address" - Token address.
   , dexDepositDTOAmount :: !(Maybe Text) -- ^ "amount" - Amount of deposit.
@@ -2935,7 +2935,7 @@ data DexOrderDTO = DexOrderDTO
   { dexOrderDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
   , dexOrderDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
   , dexOrderDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
-  , dexOrderDTOId :: !(Maybe Text) -- ^ "id" - Identifier, format: &lt;owner address&gt;-&lt;order id&gt;
+  , dexOrderDTOId :: !(Maybe Text) -- ^ "id" - Identifier, format: (owner address)-(order id)
   , dexOrderDTOOwner :: !(Maybe Text) -- ^ "owner" - Reference to owner.
   , dexOrderDTOOrderId :: !(Maybe Int) -- ^ "order_id" - Order id.
   , dexOrderDTOFromBatchId :: !(Maybe Text) -- ^ "from_batch_id" - Batch id from which order became valid.
@@ -3056,7 +3056,7 @@ data DexPriceDTO = DexPriceDTO
   { dexPriceDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
   , dexPriceDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
   , dexPriceDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
-  , dexPriceDTOId :: !(Maybe Text) -- ^ "id" - Identifier, format: &lt;token id&gt;-&lt;batch id&gt;.
+  , dexPriceDTOId :: !(Maybe Text) -- ^ "id" - Identifier, format: (token id)-(batch id).
   , dexPriceDTOToken :: !(Maybe Text) -- ^ "token" - Token identifier.
   , dexPriceDTOBatchId :: !(Maybe Text) -- ^ "batch_id" - Batch identifier.
   , dexPriceDTOPriceInOwlNumerator :: !(Maybe Text) -- ^ "price_in_owl_numerator" - Price enumerator in OWL (derivative of the GNO token).
@@ -3533,7 +3533,7 @@ data DexWithdrawDTO = DexWithdrawDTO
   { dexWithdrawDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
   , dexWithdrawDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
   , dexWithdrawDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
-  , dexWithdrawDTOId :: !(Maybe Text) -- ^ "id" - Identifier, format: &lt;transaction hash&gt;-&lt;id&gt;.
+  , dexWithdrawDTOId :: !(Maybe Text) -- ^ "id" - Identifier, format: (transaction hash)-(id).
   , dexWithdrawDTOUser :: !(Maybe Text) -- ^ "user" - 
   , dexWithdrawDTOTokenAddress :: !(Maybe Text) -- ^ "token_address" - 
   , dexWithdrawDTOAmount :: !(Maybe Text) -- ^ "amount" - 
@@ -3602,7 +3602,7 @@ data DexWithdrawRequestDTO = DexWithdrawRequestDTO
   { dexWithdrawRequestDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
   , dexWithdrawRequestDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
   , dexWithdrawRequestDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
-  , dexWithdrawRequestDTOId :: !(Maybe Text) -- ^ "id" - Identifier, format: &lt;transaction hash&gt;-&lt;id&gt;.
+  , dexWithdrawRequestDTOId :: !(Maybe Text) -- ^ "id" - Identifier, format: (transaction hash)-(id).
   , dexWithdrawRequestDTOUser :: !(Maybe Text) -- ^ "user" - 
   , dexWithdrawRequestDTOTokenAddress :: !(Maybe Text) -- ^ "token_address" - 
   , dexWithdrawRequestDTOAmount :: !(Maybe Text) -- ^ "amount" - 
@@ -3768,7 +3768,7 @@ data SushiswapBurnDTO = SushiswapBurnDTO
   { sushiswapBurnDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
   , sushiswapBurnDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
   , sushiswapBurnDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
-  , sushiswapBurnDTOId :: !(Maybe Text) -- ^ "id" - Identifier, format: &lt;transaction id&gt;:&lt;transaction.burns.length&gt;.
+  , sushiswapBurnDTOId :: !(Maybe Text) -- ^ "id" - Identifier, format: (transaction id):(transaction.burns.length).
   , sushiswapBurnDTOTransaction :: !(Maybe Text) -- ^ "transaction" - Reference to the transaction Burn was included in.
   , sushiswapBurnDTOTimestamp :: !(Maybe Text) -- ^ "timestamp" - Timestamp of Burn, used to sort recent liquidity removals.
   , sushiswapBurnDTOPair :: !(Maybe Text) -- ^ "pair" - Reference to pair.
@@ -4098,7 +4098,7 @@ data SushiswapLiquidityPositionDTO = SushiswapLiquidityPositionDTO
   { sushiswapLiquidityPositionDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
   , sushiswapLiquidityPositionDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
   , sushiswapLiquidityPositionDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
-  , sushiswapLiquidityPositionDTOId :: !(Maybe Text) -- ^ "id" - Identifier, format: &lt;pair address&gt;-&lt;user address&gt;
+  , sushiswapLiquidityPositionDTOId :: !(Maybe Text) -- ^ "id" - Identifier, format: (pair address)-(user address)
   , sushiswapLiquidityPositionDTOUser :: !(Maybe Text) -- ^ "user" - User address.
   , sushiswapLiquidityPositionDTOPair :: !(Maybe Text) -- ^ "pair" - Pair address.
   , sushiswapLiquidityPositionDTOLiquidityTokenBalance :: !(Maybe Text) -- ^ "liquidity_token_balance" - Amount of LP tokens minted for this position.
@@ -4163,7 +4163,7 @@ data SushiswapLiquidityPositionSnapshotDTO = SushiswapLiquidityPositionSnapshotD
   { sushiswapLiquidityPositionSnapshotDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
   , sushiswapLiquidityPositionSnapshotDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
   , sushiswapLiquidityPositionSnapshotDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
-  , sushiswapLiquidityPositionSnapshotDTOId :: !(Maybe Text) -- ^ "id" - Identifier, format: &lt;pair address&gt;-&lt;user address&gt;-&lt;timestamp&gt;
+  , sushiswapLiquidityPositionSnapshotDTOId :: !(Maybe Text) -- ^ "id" - Identifier, format: (pair address)-(user address)-(timestamp)
   , sushiswapLiquidityPositionSnapshotDTOLiquidityPosition :: !(Maybe Text) -- ^ "liquidity_position" - Reference to LP identifier.
   , sushiswapLiquidityPositionSnapshotDTOTimestamp :: !(Maybe Int) -- ^ "timestamp" - Creation time.
   , sushiswapLiquidityPositionSnapshotDTOBlock :: !(Maybe Int) -- ^ "block" - Block in which snapshot has been created.
@@ -4256,7 +4256,7 @@ data SushiswapMintDTO = SushiswapMintDTO
   { sushiswapMintDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
   , sushiswapMintDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
   , sushiswapMintDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
-  , sushiswapMintDTOId :: !(Maybe Text) -- ^ "id" - Identifier, format: &lt;transaction hash&gt;-&lt;index in the transaction mint array&gt;.
+  , sushiswapMintDTOId :: !(Maybe Text) -- ^ "id" - Identifier, format: (transaction hash)-(index in the transaction mint array).
   , sushiswapMintDTOTransaction :: !(Maybe Text) -- ^ "transaction" - Reference to the transaction Mint was included in.
   , sushiswapMintDTOTimestamp :: !(Maybe Text) -- ^ "timestamp" - Timestamp of Mint, used to sort recent liquidity provisions.
   , sushiswapMintDTOPair :: !(Maybe Text) -- ^ "pair" - Reference to pair.
@@ -4351,7 +4351,7 @@ data SushiswapPairDTO = SushiswapPairDTO
   , sushiswapPairDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
   , sushiswapPairDTOId :: !(Maybe Text) -- ^ "id" - Pair contract address.
   , sushiswapPairDTOFactory :: !(Maybe Text) -- ^ "factory" - Factory contract address.
-  , sushiswapPairDTOName :: !(Maybe Text) -- ^ "name" - Friendly name, format: &lt;token0 name&gt;-&lt;token1 name&gt;
+  , sushiswapPairDTOName :: !(Maybe Text) -- ^ "name" - Friendly name, format: (token0 name)-(token1 name)
   , sushiswapPairDTOToken0 :: !(Maybe Text) -- ^ "token_0" - Reference to token0 as stored in pair contract.
   , sushiswapPairDTOToken1 :: !(Maybe Text) -- ^ "token_1" - Reference to token0 as stored in pair contract.
   , sushiswapPairDTOReserve0 :: !(Maybe Text) -- ^ "reserve_0" - Reserve of token0.
@@ -4478,7 +4478,7 @@ data SushiswapPairDayDataDTO = SushiswapPairDayDataDTO
   { sushiswapPairDayDataDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
   , sushiswapPairDayDataDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
   , sushiswapPairDayDataDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
-  , sushiswapPairDayDataDTOId :: !(Maybe Text) -- ^ "id" - Identifier, format: &lt;pair id&gt;-&lt;day start timestamp&gt;.
+  , sushiswapPairDayDataDTOId :: !(Maybe Text) -- ^ "id" - Identifier, format: (pair id)-(day start timestamp).
   , sushiswapPairDayDataDTODate :: !(Maybe Int) -- ^ "date" - Unix timestamp for start of day.
   , sushiswapPairDayDataDTOPair :: !(Maybe Text) -- ^ "pair" - Reference to pair.
   , sushiswapPairDayDataDTOToken0 :: !(Maybe Text) -- ^ "token_0" - Reference to token0.
@@ -4571,7 +4571,7 @@ data SushiswapPairHourDataDTO = SushiswapPairHourDataDTO
   { sushiswapPairHourDataDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
   , sushiswapPairHourDataDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
   , sushiswapPairHourDataDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
-  , sushiswapPairHourDataDTOId :: !(Maybe Text) -- ^ "id" - Identifier, format: &lt;pair id&gt;-&lt;hour start timestamp&gt;.
+  , sushiswapPairHourDataDTOId :: !(Maybe Text) -- ^ "id" - Identifier, format: (pair id)-(hour start timestamp).
   , sushiswapPairHourDataDTODate :: !(Maybe Int) -- ^ "date" - Hour start timestamp.
   , sushiswapPairHourDataDTOPair :: !(Maybe Text) -- ^ "pair" - Reference to pair.
   , sushiswapPairHourDataDTOReserve0 :: !(Maybe Text) -- ^ "reserve_0" - Reserve of token0 (updated during each transaction on pair).
@@ -5255,7 +5255,7 @@ data UniswapV2LiquidityPositionSnapshotDTO = UniswapV2LiquidityPositionSnapshotD
   { uniswapV2LiquidityPositionSnapshotDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
   , uniswapV2LiquidityPositionSnapshotDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
   , uniswapV2LiquidityPositionSnapshotDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
-  , uniswapV2LiquidityPositionSnapshotDTOId :: !(Maybe Text) -- ^ "id" - Identifier, format: &lt;pair address&gt;-&lt;user address&gt;
+  , uniswapV2LiquidityPositionSnapshotDTOId :: !(Maybe Text) -- ^ "id" - Identifier, format: (pair address)-(user address)
   , uniswapV2LiquidityPositionSnapshotDTOLiquidityPosition :: !(Maybe Text) -- ^ "liquidity_position" - Reference to LP identifier.
   , uniswapV2LiquidityPositionSnapshotDTOTimestamp :: !(Maybe Int) -- ^ "timestamp" - Creation time.
   , uniswapV2LiquidityPositionSnapshotDTOBlock :: !(Maybe Int) -- ^ "block" - Number of block in which LP snapshot was recorded.
@@ -6800,7 +6800,7 @@ data UniswapV3PoolDayDataDTO = UniswapV3PoolDayDataDTO
   { uniswapV3PoolDayDataDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
   , uniswapV3PoolDayDataDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
   , uniswapV3PoolDayDataDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
-  , uniswapV3PoolDayDataDTOId :: !(Maybe Text) -- ^ "id" - Identifier, format: &lt;pool address&gt;-&lt;day id&gt;.
+  , uniswapV3PoolDayDataDTOId :: !(Maybe Text) -- ^ "id" - Identifier, format: (pool address)-(day id).
   , uniswapV3PoolDayDataDTODate :: !(Maybe Int) -- ^ "date" - Timestamp rounded to current day by dividing by 86400
   , uniswapV3PoolDayDataDTOPool :: !(Maybe Text) -- ^ "pool" - Pointer to pool.
   , uniswapV3PoolDayDataDTOLiquidity :: !(Maybe Text) -- ^ "liquidity" - In range liquidity at end of period.
@@ -6921,7 +6921,7 @@ data UniswapV3PoolHourDataDTO = UniswapV3PoolHourDataDTO
   { uniswapV3PoolHourDataDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
   , uniswapV3PoolHourDataDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
   , uniswapV3PoolHourDataDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
-  , uniswapV3PoolHourDataDTOId :: !(Maybe Text) -- ^ "id" - Identifier, format: &lt;pool address&gt;-&lt;day id&gt;
+  , uniswapV3PoolHourDataDTOId :: !(Maybe Text) -- ^ "id" - Identifier, format: (pool address)-(day id)
   , uniswapV3PoolHourDataDTOPeriodStartUnix :: !(Maybe Int) -- ^ "period_start_unix" - Unix timestamp for start of hour.
   , uniswapV3PoolHourDataDTOPool :: !(Maybe Text) -- ^ "pool" - Pointer to pool.
   , uniswapV3PoolHourDataDTOLiquidity :: !(Maybe Text) -- ^ "liquidity" - In range liquidity at end of period.
@@ -7150,7 +7150,7 @@ data UniswapV3PositionSnapshotDTO = UniswapV3PositionSnapshotDTO
   { uniswapV3PositionSnapshotDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
   , uniswapV3PositionSnapshotDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
   , uniswapV3PositionSnapshotDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
-  , uniswapV3PositionSnapshotDTOId :: !(Maybe Text) -- ^ "id" - NFT token identifier, format: &lt;NFT token id&gt;#&lt;block number&gt;
+  , uniswapV3PositionSnapshotDTOId :: !(Maybe Text) -- ^ "id" - NFT token identifier, format: (NFT token id)#(block number).
   , uniswapV3PositionSnapshotDTOOwner :: !(Maybe Text) -- ^ "owner" - Owner of the NFT.
   , uniswapV3PositionSnapshotDTOPool :: !(Maybe Text) -- ^ "pool" - Pool the position is within.
   , uniswapV3PositionSnapshotDTOPosition :: !(Maybe Text) -- ^ "position" - Position of which the snap was taken of.
@@ -7252,7 +7252,7 @@ data UniswapV3SwapDTO = UniswapV3SwapDTO
   , uniswapV3SwapDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
   , uniswapV3SwapDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
   , uniswapV3SwapDTOVid :: !(Maybe Integer) -- ^ "vid" - 
-  , uniswapV3SwapDTOId :: !(Maybe Text) -- ^ "id" - Identifier, format: transaction hash + \&quot;#\&quot; + index in swaps Transaction array.
+  , uniswapV3SwapDTOId :: !(Maybe Text) -- ^ "id" - Identifier, format: (transaction hash) + # + (index in swaps Transaction array).
   , uniswapV3SwapDTOTransaction :: !(Maybe Text) -- ^ "transaction" - Pointer to transaction.
   , uniswapV3SwapDTOTimestamp :: !(Maybe DateTime) -- ^ "timestamp" - Timestamp of transaction.
   , uniswapV3SwapDTOPool :: !(Maybe Text) -- ^ "pool" - Pool swap occured within.
@@ -7373,7 +7373,7 @@ data UniswapV3TickDTO = UniswapV3TickDTO
   , uniswapV3TickDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
   , uniswapV3TickDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
   , uniswapV3TickDTOVid :: !(Maybe Integer) -- ^ "vid" - 
-  , uniswapV3TickDTOId :: !(Maybe Text) -- ^ "id" - Identifier, format: &lt;pool address&gt;#&lt;tick index&gt;
+  , uniswapV3TickDTOId :: !(Maybe Text) -- ^ "id" - Identifier, format: (pool address)#(tick index)
   , uniswapV3TickDTOPoolAddress :: !(Maybe Text) -- ^ "pool_address" - Pool address.
   , uniswapV3TickDTOTickIdx :: !(Maybe NumericsBigInteger) -- ^ "tick_idx"
   , uniswapV3TickDTOPool :: !(Maybe Text) -- ^ "pool" - Pool address.
@@ -7493,7 +7493,7 @@ data UniswapV3TickDayDataDTO = UniswapV3TickDayDataDTO
   { uniswapV3TickDayDataDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
   , uniswapV3TickDayDataDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
   , uniswapV3TickDayDataDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
-  , uniswapV3TickDayDataDTOId :: !(Maybe Text) -- ^ "id" - Identifier, format: &lt;pool address&gt;-&lt;tick index&gt;-&lt;timestamp&gt;.
+  , uniswapV3TickDayDataDTOId :: !(Maybe Text) -- ^ "id" - Identifier, format: (pool address)-(tick index)-(timestamp).
   , uniswapV3TickDayDataDTODate :: !(Maybe Int) -- ^ "date" - Timestamp rounded to current day by dividing by 86400.
   , uniswapV3TickDayDataDTOPool :: !(Maybe Text) -- ^ "pool" - Pointer to pool.
   , uniswapV3TickDayDataDTOTick :: !(Maybe Text) -- ^ "tick" - Pointer to tick.

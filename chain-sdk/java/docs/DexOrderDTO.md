@@ -11,7 +11,7 @@ Order submitted by an user. It has a validity (dates) so they can only be execut
 |**entryTime** | **OffsetDateTime** |  |  [optional] |
 |**recvTime** | **OffsetDateTime** |  |  [optional] |
 |**blockNumber** | **Long** | Number of block in which entity was recorded. |  [optional] |
-|**id** | **String** | Identifier, format: &lt;owner address&gt;-&lt;order id&gt; |  [optional] |
+|**id** | **String** | Identifier, format: (owner address)-(order id) |  [optional] |
 |**owner** | **String** | Reference to owner. |  [optional] |
 |**orderId** | **Integer** | Order id. |  [optional] |
 |**fromBatchId** | **String** | Batch id from which order became valid. |  [optional] |

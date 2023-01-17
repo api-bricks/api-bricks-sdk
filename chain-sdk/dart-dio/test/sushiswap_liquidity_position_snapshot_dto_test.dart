@@ -23,7 +23,7 @@ void main() {
       // TODO
     });
 
-    // Identifier, format: <pair address>-<user address>-<timestamp>
+    // Identifier, format: (pair address)-(user address)-(timestamp)
     // String id
     test('to test the property `id`', () async {
       // TODO

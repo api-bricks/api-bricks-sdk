@@ -243,7 +243,7 @@ __PACKAGE__->method_documentation({
     'id' => {
         datatype => 'string',
         base_name => 'id',
-        description => 'Identifier, format: &lt;pool address&gt;-&lt;tick index&gt;-&lt;timestamp&gt;.',
+        description => 'Identifier, format: (pool address)-(tick index)-(timestamp).',
         format => '',
         read_only => '',
             },

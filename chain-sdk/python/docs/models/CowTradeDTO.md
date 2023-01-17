@@ -13,7 +13,7 @@ Key | Input Type | Accessed Type | Description | Notes
 **entry_time** | str, datetime,  | str,  |  | [optional] value must conform to RFC-3339 date-time
 **recv_time** | str, datetime,  | str,  |  | [optional] value must conform to RFC-3339 date-time
 **block_number** | decimal.Decimal, int,  | decimal.Decimal,  | Number of block in which entity was recorded. | [optional] value must be a 64 bit integer
-**id** | None, str,  | NoneClass, str,  | Identifier, format: &lt;order id&gt;|&lt;transaction hash&gt;|&lt;event index&gt;. | [optional] 
+**id** | None, str,  | NoneClass, str,  | Identifier, format: (order id)|(transaction hash)|(event index). | [optional] 
 **timestamp** | None, str,  | NoneClass, str,  | Block&#x27;s timestamp. | [optional] 
 **gas_price** | None, str,  | NoneClass, str,  | Transaction&#x27;s gas price. | [optional] 
 **gas_limit** | None, str,  | NoneClass, str,  | Transaction&#x27;s gas limit. | [optional] 

@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **entryTime** | [**DateTime**](DateTime.md) |  | [optional] 
 **recvTime** | [**DateTime**](DateTime.md) |  | [optional] 
 **blockNumber** | **int** | Number of block in which entity was recorded. | [optional] 
-**id** | **String** | Identifier, format: <pool address>-<tick index>-<timestamp>. | [optional] 
+**id** | **String** | Identifier, format: (pool address)-(tick index)-(timestamp). | [optional] 
 **date** | **int** | Timestamp rounded to current day by dividing by 86400. | [optional] 
 **pool** | **String** | Pointer to pool. | [optional] 
 **tick** | **String** | Pointer to tick. | [optional] 

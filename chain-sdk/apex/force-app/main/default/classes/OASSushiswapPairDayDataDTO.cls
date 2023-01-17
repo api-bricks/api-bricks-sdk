@@ -33,7 +33,7 @@ public class OASSushiswapPairDayDataDTO implements OAS.MappedProperties {
     public Long blockNumber { get; set; }
 
     /**
-     * Identifier, format: <pair id>-<day start timestamp>.
+     * Identifier, format: (pair id)-(day start timestamp).
      * @return id
      */
     public String id { get; set; }

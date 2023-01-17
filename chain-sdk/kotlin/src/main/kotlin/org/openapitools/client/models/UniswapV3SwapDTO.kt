@@ -27,7 +27,7 @@ import com.squareup.moshi.Json
  * @param recvTime 
  * @param blockNumber Number of block in which entity was recorded.
  * @param vid 
- * @param id Identifier, format: transaction hash + \"#\" + index in swaps Transaction array.
+ * @param id Identifier, format: (transaction hash) + # + (index in swaps Transaction array).
  * @param transaction Pointer to transaction.
  * @param timestamp Timestamp of transaction.
  * @param pool Pool swap occured within.
@@ -66,7 +66,7 @@ data class UniswapV3SwapDTO (
     @Json(name = "vid")
     val vid: kotlin.Long? = null,
 
-    /* Identifier, format: transaction hash + \"#\" + index in swaps Transaction array. */
+    /* Identifier, format: (transaction hash) + # + (index in swaps Transaction array). */
     @Json(name = "id")
     val id: kotlin.String? = null,
 

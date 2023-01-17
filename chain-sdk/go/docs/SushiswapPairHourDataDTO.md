@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **EntryTime** | Pointer to **time.Time** |  | [optional] 
 **RecvTime** | Pointer to **time.Time** |  | [optional] 
 **BlockNumber** | Pointer to **int64** | Number of block in which entity was recorded. | [optional] 
-**Id** | Pointer to **NullableString** | Identifier, format: &lt;pair id&gt;-&lt;hour start timestamp&gt;. | [optional] 
+**Id** | Pointer to **NullableString** | Identifier, format: (pair id)-(hour start timestamp). | [optional] 
 **Date** | Pointer to **int32** | Hour start timestamp. | [optional] 
 **Pair** | Pointer to **NullableString** | Reference to pair. | [optional] 
 **Reserve0** | Pointer to **NullableString** | Reserve of token0 (updated during each transaction on pair). | [optional] 

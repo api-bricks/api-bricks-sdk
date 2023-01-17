@@ -243,7 +243,7 @@ __PACKAGE__->method_documentation({
     'id' => {
         datatype => 'string',
         base_name => 'id',
-        description => 'NFT token identifier, format: &lt;NFT token id&gt;#&lt;block number&gt;',
+        description => 'NFT token identifier, format: (NFT token id)#(block number).',
         format => '',
         read_only => '',
             },

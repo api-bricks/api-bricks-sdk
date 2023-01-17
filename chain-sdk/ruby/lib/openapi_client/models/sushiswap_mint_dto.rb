@@ -23,7 +23,7 @@ module OpenapiClient
     # Number of block in which entity was recorded.
     attr_accessor :block_number
 
-    # Identifier, format: <transaction hash>-<index in the transaction mint array>.
+    # Identifier, format: (transaction hash)-(index in the transaction mint array).
     attr_accessor :id
 
     # Reference to the transaction Mint was included in.

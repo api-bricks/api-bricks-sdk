@@ -129,9 +129,9 @@ public class SushiswapPairDTO {
   }
 
   /**
-   * Friendly name, format: <token0 name>-<token1 name>
+   * Friendly name, format: (token0 name)-(token1 name)
    **/
-  @ApiModelProperty(value = "Friendly name, format: <token0 name>-<token1 name>")
+  @ApiModelProperty(value = "Friendly name, format: (token0 name)-(token1 name)")
   public String getName() {
     return name;
   }

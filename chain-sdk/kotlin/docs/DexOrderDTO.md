@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **entryTime** | [**java.time.OffsetDateTime**](java.time.OffsetDateTime.md) |  |  [optional]
 **recvTime** | [**java.time.OffsetDateTime**](java.time.OffsetDateTime.md) |  |  [optional]
 **blockNumber** | **kotlin.Long** | Number of block in which entity was recorded. |  [optional]
-**id** | **kotlin.String** | Identifier, format: &lt;owner address&gt;-&lt;order id&gt; |  [optional]
+**id** | **kotlin.String** | Identifier, format: (owner address)-(order id) |  [optional]
 **owner** | **kotlin.String** | Reference to owner. |  [optional]
 **orderId** | **kotlin.Int** | Order id. |  [optional]
 **fromBatchId** | **kotlin.String** | Batch id from which order became valid. |  [optional]

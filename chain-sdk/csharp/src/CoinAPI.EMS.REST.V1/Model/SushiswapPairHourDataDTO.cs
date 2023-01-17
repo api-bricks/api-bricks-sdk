@@ -36,7 +36,7 @@ namespace CoinAPI.EMS.REST.V1.Model
         /// <param name="entryTime">entryTime.</param>
         /// <param name="recvTime">recvTime.</param>
         /// <param name="blockNumber">Number of block in which entity was recorded..</param>
-        /// <param name="id">Identifier, format: &lt;pair id&gt;-&lt;hour start timestamp&gt;..</param>
+        /// <param name="id">Identifier, format: (pair id)-(hour start timestamp)..</param>
         /// <param name="date">Hour start timestamp..</param>
         /// <param name="pair">Reference to pair..</param>
         /// <param name="reserve0">Reserve of token0 (updated during each transaction on pair)..</param>
@@ -94,9 +94,9 @@ namespace CoinAPI.EMS.REST.V1.Model
         public long BlockNumber { get; set; }
 
         /// <summary>
-        /// Identifier, format: &lt;pair id&gt;-&lt;hour start timestamp&gt;.
+        /// Identifier, format: (pair id)-(hour start timestamp).
         /// </summary>
-        /// <value>Identifier, format: &lt;pair id&gt;-&lt;hour start timestamp&gt;.</value>
+        /// <value>Identifier, format: (pair id)-(hour start timestamp).</value>
         [DataMember(Name="id", EmitDefaultValue=true)]
         public string Id { get; set; }
 

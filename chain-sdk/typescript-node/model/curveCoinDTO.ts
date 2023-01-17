@@ -20,7 +20,7 @@ export class CurveCoinDTO {
     */
     'blockNumber'?: number;
     /**
-    * Identifier, format: <pool_id>-<coin_index>.
+    * Identifier, format: (pool_id)-(coin_index).
     */
     'id'?: string | null;
     /**

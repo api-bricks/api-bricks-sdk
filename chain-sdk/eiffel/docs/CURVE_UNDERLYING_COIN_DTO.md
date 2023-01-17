@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **entry_time** | [**DATE_TIME**](DATE_TIME.md) |  | [optional] [default to null]
 **recv_time** | [**DATE_TIME**](DATE_TIME.md) |  | [optional] [default to null]
 **block_number** | **INTEGER_64** | Number of block in which entity was recorded. | [optional] [default to null]
-**id** | [**STRING_32**](STRING_32.md) | Equals to: &lt;pool_id&gt;-&lt;coin_index&gt;. | [optional] [default to null]
+**id** | [**STRING_32**](STRING_32.md) | Equals to: (pool_id)-(coin_index). | [optional] [default to null]
 **index** | **INTEGER_32** | Coin index. | [optional] [default to null]
 **pool** | [**STRING_32**](STRING_32.md) |  | [optional] [default to null]
 **token** | [**STRING_32**](STRING_32.md) |  | [optional] [default to null]

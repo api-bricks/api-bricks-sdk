@@ -581,7 +581,7 @@ class UniswapV3TickDTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets id
      *
-     * @param string|null $id Identifier, format: <pool address>#<tick index>
+     * @param string|null $id Identifier, format: (pool address)#(tick index)
      *
      * @return self
      */

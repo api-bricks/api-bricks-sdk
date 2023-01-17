@@ -239,7 +239,7 @@ UniswapV3TickDTO.prototype['block_number'] = undefined;
 UniswapV3TickDTO.prototype['vid'] = undefined;
 
 /**
- * Identifier, format: <pool address>#<tick index>
+ * Identifier, format: (pool address)#(tick index)
  * @member {String} id
  */
 UniswapV3TickDTO.prototype['id'] = undefined;

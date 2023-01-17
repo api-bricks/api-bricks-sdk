@@ -14,7 +14,7 @@ class CowTradeDTO {
     Date recvTime
     /* Number of block in which entity was recorded. */
     Long blockNumber
-    /* Identifier, format: <order id>|<transaction hash>|<event index>. */
+    /* Identifier, format: (order id)|(transaction hash)|(event index). */
     String id
     /* Block's timestamp. */
     String timestamp

@@ -79,9 +79,9 @@ public class DexPriceDTO {
   }
 
   /**
-   * Identifier, format: <token id>-<batch id>.
+   * Identifier, format: (token id)-(batch id).
    **/
-  @ApiModelProperty(value = "Identifier, format: <token id>-<batch id>.")
+  @ApiModelProperty(value = "Identifier, format: (token id)-(batch id).")
   public String getId() {
     return id;
   }

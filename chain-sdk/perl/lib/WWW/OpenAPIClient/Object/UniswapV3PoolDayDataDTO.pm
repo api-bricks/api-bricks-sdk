@@ -243,7 +243,7 @@ __PACKAGE__->method_documentation({
     'id' => {
         datatype => 'string',
         base_name => 'id',
-        description => 'Identifier, format: &lt;pool address&gt;-&lt;day id&gt;.',
+        description => 'Identifier, format: (pool address)-(day id).',
         format => '',
         read_only => '',
             },

@@ -22,7 +22,7 @@ module OpenapiClient
     # Number of block in which entity was recorded.
     attr_accessor :block_number
 
-    # Equals to: <pool_id>-<coin_index>.
+    # Equals to: (pool_id)-(coin_index).
     attr_accessor :id
 
     # Coin index.

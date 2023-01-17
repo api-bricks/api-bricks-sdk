@@ -19,7 +19,7 @@ case class LiquidityPositionSnapshotDTO (
   recvTime: Option[OffsetDateTime] = None,
   /* Number of block in which entity was recorded. */
   blockNumber: Option[Long] = None,
-  /* Identifier, format: <pair address>-<user address> */
+  /* Identifier, format: (pair address)-(user address) */
   id: Option[String] = None,
   /* Reference to LP identifier. */
   liquidityPosition: Option[String] = None,

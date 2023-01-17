@@ -73,7 +73,7 @@ class UniswapV3TickDTO {
   ///
   int? vid;
 
-  /// Identifier, format: <pool address>#<tick index>
+  /// Identifier, format: (pool address)#(tick index)
   String? id;
 
   /// Pool address.

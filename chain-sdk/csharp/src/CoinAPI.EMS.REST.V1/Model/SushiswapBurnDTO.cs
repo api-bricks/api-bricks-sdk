@@ -36,7 +36,7 @@ namespace CoinAPI.EMS.REST.V1.Model
         /// <param name="entryTime">entryTime.</param>
         /// <param name="recvTime">recvTime.</param>
         /// <param name="blockNumber">Number of block in which entity was recorded..</param>
-        /// <param name="id">Identifier, format: &lt;transaction id&gt;:&lt;transaction.burns.length&gt;..</param>
+        /// <param name="id">Identifier, format: (transaction id):(transaction.burns.length)..</param>
         /// <param name="transaction">Reference to the transaction Burn was included in..</param>
         /// <param name="timestamp">Timestamp of Burn, used to sort recent liquidity removals..</param>
         /// <param name="pair">Reference to pair..</param>
@@ -106,9 +106,9 @@ namespace CoinAPI.EMS.REST.V1.Model
         public long BlockNumber { get; set; }
 
         /// <summary>
-        /// Identifier, format: &lt;transaction id&gt;:&lt;transaction.burns.length&gt;.
+        /// Identifier, format: (transaction id):(transaction.burns.length).
         /// </summary>
-        /// <value>Identifier, format: &lt;transaction id&gt;:&lt;transaction.burns.length&gt;.</value>
+        /// <value>Identifier, format: (transaction id):(transaction.burns.length).</value>
         [DataMember(Name="id", EmitDefaultValue=true)]
         public string Id { get; set; }
 

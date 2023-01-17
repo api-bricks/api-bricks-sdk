@@ -14,7 +14,7 @@ part 'sushiswap_mint_dto.g.dart';
 /// * [entryTime] 
 /// * [recvTime] 
 /// * [blockNumber] - Number of block in which entity was recorded.
-/// * [id] - Identifier, format: <transaction hash>-<index in the transaction mint array>.
+/// * [id] - Identifier, format: (transaction hash)-(index in the transaction mint array).
 /// * [transaction] - Reference to the transaction Mint was included in.
 /// * [timestamp] - Timestamp of Mint, used to sort recent liquidity provisions.
 /// * [pair] - Reference to pair.
@@ -40,7 +40,7 @@ abstract class SushiswapMintDTO implements Built<SushiswapMintDTO, SushiswapMint
   @BuiltValueField(wireName: r'block_number')
   int? get blockNumber;
 
-  /// Identifier, format: <transaction hash>-<index in the transaction mint array>.
+  /// Identifier, format: (transaction hash)-(index in the transaction mint array).
   @BuiltValueField(wireName: r'id')
   String? get id;
 

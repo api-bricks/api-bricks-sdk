@@ -152,7 +152,7 @@ DexWithdrawRequestDTO.prototype['recv_time'] = undefined;
 DexWithdrawRequestDTO.prototype['block_number'] = undefined;
 
 /**
- * Identifier, format: <transaction hash>-<id>.
+ * Identifier, format: (transaction hash)-(id).
  * @member {String} id
  */
 DexWithdrawRequestDTO.prototype['id'] = undefined;

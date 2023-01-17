@@ -23,7 +23,7 @@ module OpenapiClient
     # Number of block in which entity was recorded.
     attr_accessor :block_number
 
-    # Identifier, format: <pair address>-<user address>
+    # Identifier, format: (pair address)-(user address)
     attr_accessor :id
 
     # Reference to LP identifier.

@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **entry_time** | [**DATE_TIME**](DATE_TIME.md) |  | [optional] [default to null]
 **recv_time** | [**DATE_TIME**](DATE_TIME.md) |  | [optional] [default to null]
 **block_number** | **INTEGER_64** | Number of block in which entity was recorded. | [optional] [default to null]
-**id** | [**STRING_32**](STRING_32.md) | Identifier, format: &lt;owner address&gt;-&lt;order id&gt; | [optional] [default to null]
+**id** | [**STRING_32**](STRING_32.md) | Identifier, format: (owner address)-(order id) | [optional] [default to null]
 **owner** | [**STRING_32**](STRING_32.md) | Reference to owner. | [optional] [default to null]
 **order_id** | **INTEGER_32** | Order id. | [optional] [default to null]
 **from_batch_id** | [**STRING_32**](STRING_32.md) | Batch id from which order became valid. | [optional] [default to null]

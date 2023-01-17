@@ -10,7 +10,7 @@
 #' @field entry_time  character [optional]
 #' @field recv_time  character [optional]
 #' @field block_number Number of block in which entity was recorded. integer [optional]
-#' @field id Identifier, format: <owner address>-<order id> character [optional]
+#' @field id Identifier, format: (owner address)-(order id) character [optional]
 #' @field owner Reference to owner. character [optional]
 #' @field order_id Order id. integer [optional]
 #' @field from_batch_id Batch id from which order became valid. character [optional]
@@ -69,7 +69,7 @@ DexOrderDTO <- R6::R6Class(
     #' @param entry_time entry_time
     #' @param recv_time recv_time
     #' @param block_number Number of block in which entity was recorded.
-    #' @param id Identifier, format: <owner address>-<order id>
+    #' @param id Identifier, format: (owner address)-(order id)
     #' @param owner Reference to owner.
     #' @param order_id Order id.
     #' @param from_batch_id Batch id from which order became valid.

@@ -36,7 +36,7 @@ namespace CoinAPI.EMS.REST.V1.Model
         /// <param name="entryTime">entryTime.</param>
         /// <param name="recvTime">recvTime.</param>
         /// <param name="blockNumber">Number of block in which entity was recorded..</param>
-        /// <param name="id">Identifier, format: &lt;transaction hash&gt;-&lt;id&gt;..</param>
+        /// <param name="id">Identifier, format: (transaction hash)-(id)..</param>
         /// <param name="user">user.</param>
         /// <param name="tokenAddress">tokenAddress.</param>
         /// <param name="amount">amount.</param>
@@ -86,9 +86,9 @@ namespace CoinAPI.EMS.REST.V1.Model
         public long BlockNumber { get; set; }
 
         /// <summary>
-        /// Identifier, format: &lt;transaction hash&gt;-&lt;id&gt;.
+        /// Identifier, format: (transaction hash)-(id).
         /// </summary>
-        /// <value>Identifier, format: &lt;transaction hash&gt;-&lt;id&gt;.</value>
+        /// <value>Identifier, format: (transaction hash)-(id).</value>
         [DataMember(Name="id", EmitDefaultValue=true)]
         public string Id { get; set; }
 

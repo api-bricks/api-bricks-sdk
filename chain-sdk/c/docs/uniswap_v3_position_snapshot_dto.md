@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **entry_time** | **char \*** |  | [optional] 
 **recv_time** | **char \*** |  | [optional] 
 **block_number** | **long** | Number of block in which entity was recorded. | [optional] 
-**id** | **char \*** | NFT token identifier, format: &lt;NFT token id&gt;#&lt;block number&gt; | [optional] 
+**id** | **char \*** | NFT token identifier, format: (NFT token id)#(block number). | [optional] 
 **owner** | **char \*** | Owner of the NFT. | [optional] 
 **pool** | **char \*** | Pool the position is within. | [optional] 
 **position** | **char \*** | Position of which the snap was taken of. | [optional] 

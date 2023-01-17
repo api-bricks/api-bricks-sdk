@@ -7,7 +7,7 @@
 | **entry_time** | **Time** |  | [optional] |
 | **recv_time** | **Time** |  | [optional] |
 | **block_number** | **Integer** | Number of block in which entity was recorded. | [optional] |
-| **id** | **String** | Identifier, format: &lt;transaction hash&gt;-&lt;id&gt;. | [optional] |
+| **id** | **String** | Identifier, format: (transaction hash)-(id). | [optional] |
 | **user** | **String** |  | [optional] |
 | **token_address** | **String** |  | [optional] |
 | **amount** | **String** |  | [optional] |

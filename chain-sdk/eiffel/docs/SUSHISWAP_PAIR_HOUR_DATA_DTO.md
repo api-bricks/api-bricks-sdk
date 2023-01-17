@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **entry_time** | [**DATE_TIME**](DATE_TIME.md) |  | [optional] [default to null]
 **recv_time** | [**DATE_TIME**](DATE_TIME.md) |  | [optional] [default to null]
 **block_number** | **INTEGER_64** | Number of block in which entity was recorded. | [optional] [default to null]
-**id** | [**STRING_32**](STRING_32.md) | Identifier, format: &lt;pair id&gt;-&lt;hour start timestamp&gt;. | [optional] [default to null]
+**id** | [**STRING_32**](STRING_32.md) | Identifier, format: (pair id)-(hour start timestamp). | [optional] [default to null]
 **date** | **INTEGER_32** | Hour start timestamp. | [optional] [default to null]
 **pair** | [**STRING_32**](STRING_32.md) | Reference to pair. | [optional] [default to null]
 **reserve_0** | [**STRING_32**](STRING_32.md) | Reserve of token0 (updated during each transaction on pair). | [optional] [default to null]

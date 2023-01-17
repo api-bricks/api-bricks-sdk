@@ -32,7 +32,7 @@ void main() {
       // TODO
     });
 
-    // Identifier, format: <order id>|<transaction hash>|<event index>.
+    // Identifier, format: (order id)|(transaction hash)|(event index).
     // String id
     test('to test the property `id`', () async {
       // TODO

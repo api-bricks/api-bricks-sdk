@@ -38,7 +38,7 @@ export interface CowTradeDTO {
      */
     block_number?: number;
     /**
-     * Identifier, format: <order id>|<transaction hash>|<event index>.
+     * Identifier, format: (order id)|(transaction hash)|(event index).
      * @type {string}
      * @memberof CowTradeDTO
      */

@@ -23,7 +23,7 @@ export class SushiswapPairDayDataDTO {
     */
     'blockNumber'?: number;
     /**
-    * Identifier, format: <pair id>-<day start timestamp>.
+    * Identifier, format: (pair id)-(day start timestamp).
     */
     'id'?: string | null;
     /**

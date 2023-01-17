@@ -13,7 +13,7 @@ class DexOrderDTO {
     Date recvTime
     /* Number of block in which entity was recorded. */
     Long blockNumber
-    /* Identifier, format: <owner address>-<order id> */
+    /* Identifier, format: (owner address)-(order id) */
     String id
     /* Reference to owner. */
     String owner

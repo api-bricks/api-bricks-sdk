@@ -51,7 +51,7 @@ import org.openapitools.client.JSON;
  * Token price in conjuction with batch id.
  */
 @ApiModel(description = "Token price in conjuction with batch id.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-16T16:13:26.555571Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-17T12:39:15.555439Z[Etc/UTC]")
 public class DexPriceDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -180,11 +180,11 @@ public class DexPriceDTO {
   }
 
    /**
-   * Identifier, format: &lt;token id&gt;-&lt;batch id&gt;.
+   * Identifier, format: (token id)-(batch id).
    * @return id
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Identifier, format: <token id>-<batch id>.")
+  @ApiModelProperty(value = "Identifier, format: (token id)-(batch id).")
 
   public String getId() {
     return id;

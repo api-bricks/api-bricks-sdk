@@ -77,9 +77,9 @@ public class DexWithdrawDTO {
   }
 
   /**
-   * Identifier, format: <transaction hash>-<id>.
+   * Identifier, format: (transaction hash)-(id).
    **/
-  @ApiModelProperty(value = "Identifier, format: <transaction hash>-<id>.")
+  @ApiModelProperty(value = "Identifier, format: (transaction hash)-(id).")
   public String getId() {
     return id;
   }

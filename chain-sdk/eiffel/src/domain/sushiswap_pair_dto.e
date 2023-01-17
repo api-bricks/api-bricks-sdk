@@ -30,7 +30,7 @@ feature --Access
     factory: detachable STRING_32
       -- Factory contract address.
     name: detachable STRING_32
-      -- Friendly name, format: <token0 name>-<token1 name>
+      -- Friendly name, format: (token0 name)-(token1 name)
     token_0: detachable STRING_32
       -- Reference to token0 as stored in pair contract.
     token_1: detachable STRING_32

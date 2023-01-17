@@ -26,7 +26,7 @@ feature --Access
  	block_number: INTEGER_64
     	 -- Number of block in which entity was recorded.
     id: detachable STRING_32
-      -- Identifier, format: <pair address>-<user address>-<timestamp>
+      -- Identifier, format: (pair address)-(user address)-(timestamp)
     liquidity_position: detachable STRING_32
       -- Reference to LP identifier.
  	timestamp: INTEGER_32

@@ -468,7 +468,7 @@ class DexWithdrawRequestDTO implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets id
      *
-     * @param string|null $id Identifier, format: <transaction hash>-<id>.
+     * @param string|null $id Identifier, format: (transaction hash)-(id).
      *
      * @return self
      */

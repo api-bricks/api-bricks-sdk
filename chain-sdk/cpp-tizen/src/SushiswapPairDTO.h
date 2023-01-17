@@ -80,11 +80,11 @@ public:
 	/*! \brief Set Factory contract address.
 	 */
 	void setFactory(std::string  factory);
-	/*! \brief Get Friendly name, format: <token0 name>-<token1 name>
+	/*! \brief Get Friendly name, format: (token0 name)-(token1 name)
 	 */
 	std::string getName();
 
-	/*! \brief Set Friendly name, format: <token0 name>-<token1 name>
+	/*! \brief Set Friendly name, format: (token0 name)-(token1 name)
 	 */
 	void setName(std::string  name);
 	/*! \brief Get Reference to token0 as stored in pair contract.

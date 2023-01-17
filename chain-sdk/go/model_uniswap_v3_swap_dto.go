@@ -24,7 +24,7 @@ type UniswapV3SwapDTO struct {
 	BlockNumber *int64 `json:"block_number,omitempty"`
 	// 
 	Vid *int64 `json:"vid,omitempty"`
-	// Identifier, format: transaction hash + \"#\" + index in swaps Transaction array.
+	// Identifier, format: (transaction hash) + # + (index in swaps Transaction array).
 	Id NullableString `json:"id,omitempty"`
 	// Pointer to transaction.
 	Transaction NullableString `json:"transaction,omitempty"`

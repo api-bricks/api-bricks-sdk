@@ -244,7 +244,7 @@ __PACKAGE__->method_documentation({
     'id' => {
         datatype => 'string',
         base_name => 'id',
-        description => 'Identifier, format: &lt;order id&gt;|&lt;transaction hash&gt;|&lt;event index&gt;.',
+        description => 'Identifier, format: (order id)|(transaction hash)|(event index).',
         format => '',
         read_only => '',
             },

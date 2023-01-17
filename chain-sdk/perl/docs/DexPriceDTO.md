@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **entry_time** | **DATE_TIME** |  | [optional] 
 **recv_time** | **DATE_TIME** |  | [optional] 
 **block_number** | **int** | Number of block in which entity was recorded. | [optional] 
-**id** | **string** | Identifier, format: &lt;token id&gt;-&lt;batch id&gt;. | [optional] 
+**id** | **string** | Identifier, format: (token id)-(batch id). | [optional] 
 **token** | **string** | Token identifier. | [optional] 
 **batch_id** | **string** | Batch identifier. | [optional] 
 **price_in_owl_numerator** | **string** | Price enumerator in OWL (derivative of the GNO token). | [optional] 

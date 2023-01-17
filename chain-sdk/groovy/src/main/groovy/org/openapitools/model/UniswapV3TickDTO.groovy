@@ -16,7 +16,7 @@ class UniswapV3TickDTO {
     Long blockNumber
     /*  */
     Long vid
-    /* Identifier, format: <pool address>#<tick index> */
+    /* Identifier, format: (pool address)#(tick index) */
     String id
     /* Pool address. */
     String poolAddress

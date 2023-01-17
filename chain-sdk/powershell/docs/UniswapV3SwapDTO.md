@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **RecvTime** | **System.DateTime** |  | [optional] 
 **BlockNumber** | **Int64** | Number of block in which entity was recorded. | [optional] 
 **Vid** | **Int64** |  | [optional] 
-**Id** | **String** | Identifier, format: transaction hash + &quot;&quot;#&quot;&quot; + index in swaps Transaction array. | [optional] 
+**Id** | **String** | Identifier, format: (transaction hash) + # + (index in swaps Transaction array). | [optional] 
 **Transaction** | **String** | Pointer to transaction. | [optional] 
 **Timestamp** | **System.DateTime** | Timestamp of transaction. | [optional] 
 **Pool** | **String** | Pool swap occured within. | [optional] 

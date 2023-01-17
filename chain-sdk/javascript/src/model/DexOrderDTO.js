@@ -232,7 +232,7 @@ DexOrderDTO.prototype['recv_time'] = undefined;
 DexOrderDTO.prototype['block_number'] = undefined;
 
 /**
- * Identifier, format: <owner address>-<order id>
+ * Identifier, format: (owner address)-(order id)
  * @member {String} id
  */
 DexOrderDTO.prototype['id'] = undefined;

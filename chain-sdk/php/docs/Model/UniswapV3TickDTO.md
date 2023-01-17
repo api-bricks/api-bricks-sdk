@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **recv_time** | **\DateTime** |  | [optional]
 **block_number** | **int** | Number of block in which entity was recorded. | [optional]
 **vid** | **int** |  | [optional]
-**id** | **string** | Identifier, format: &lt;pool address&gt;#&lt;tick index&gt; | [optional]
+**id** | **string** | Identifier, format: (pool address)#(tick index) | [optional]
 **pool_address** | **string** | Pool address. | [optional]
 **tick_idx** | [**\OpenAPI\Client\Model\NumericsBigInteger**](NumericsBigInteger.md) |  | [optional]
 **pool** | **string** | Pool address. | [optional]

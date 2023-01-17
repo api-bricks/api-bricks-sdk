@@ -22,7 +22,7 @@ No description available.
 .PARAMETER BlockNumber
 Number of block in which entity was recorded.
 .PARAMETER Id
-Identifier, format: <pair address>-<user address>-<timestamp>
+Identifier, format: (pair address)-(user address)-(timestamp)
 .PARAMETER LiquidityPosition
 Reference to LP identifier.
 .PARAMETER Timestamp

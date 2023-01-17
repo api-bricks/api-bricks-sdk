@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **entry_time** | [**DATE_TIME**](DATE_TIME.md) |  | [optional] [default to null]
 **recv_time** | [**DATE_TIME**](DATE_TIME.md) |  | [optional] [default to null]
 **block_number** | **INTEGER_64** | Number of block in which entity was recorded. | [optional] [default to null]
-**id** | [**STRING_32**](STRING_32.md) | Identifier, format: &lt;order id&gt;|&lt;transaction hash&gt;|&lt;event index&gt;. | [optional] [default to null]
+**id** | [**STRING_32**](STRING_32.md) | Identifier, format: (order id)|(transaction hash)|(event index). | [optional] [default to null]
 **timestamp** | [**STRING_32**](STRING_32.md) | Block&#39;s timestamp. | [optional] [default to null]
 **gas_price** | [**STRING_32**](STRING_32.md) | Transaction&#39;s gas price. | [optional] [default to null]
 **gas_limit** | [**STRING_32**](STRING_32.md) | Transaction&#39;s gas limit. | [optional] [default to null]

@@ -32,7 +32,7 @@ void main() {
       // TODO
     });
 
-    // Identifier, format: <pool_id>-<coin_index>.
+    // Identifier, format: (pool_id)-(coin_index).
     // String id
     test('to test the property `id`', () async {
       // TODO

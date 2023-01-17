@@ -33,7 +33,7 @@ public class OASSushiswapLiquidityPositionSnapsho implements OAS.MappedPropertie
     public Long blockNumber { get; set; }
 
     /**
-     * Identifier, format: <pair address>-<user address>-<timestamp>
+     * Identifier, format: (pair address)-(user address)-(timestamp)
      * @return id
      */
     public String id { get; set; }

@@ -61,7 +61,7 @@ class CowTradeDTO {
   ///
   int? blockNumber;
 
-  /// Identifier, format: <order id>|<transaction hash>|<event index>.
+  /// Identifier, format: (order id)|(transaction hash)|(event index).
   String? id;
 
   /// Block's timestamp.

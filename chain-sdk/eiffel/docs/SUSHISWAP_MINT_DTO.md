@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **entry_time** | [**DATE_TIME**](DATE_TIME.md) |  | [optional] [default to null]
 **recv_time** | [**DATE_TIME**](DATE_TIME.md) |  | [optional] [default to null]
 **block_number** | **INTEGER_64** | Number of block in which entity was recorded. | [optional] [default to null]
-**id** | [**STRING_32**](STRING_32.md) | Identifier, format: &lt;transaction hash&gt;-&lt;index in the transaction mint array&gt;. | [optional] [default to null]
+**id** | [**STRING_32**](STRING_32.md) | Identifier, format: (transaction hash)-(index in the transaction mint array). | [optional] [default to null]
 **transaction** | [**STRING_32**](STRING_32.md) | Reference to the transaction Mint was included in. | [optional] [default to null]
 **timestamp** | [**STRING_32**](STRING_32.md) | Timestamp of Mint, used to sort recent liquidity provisions. | [optional] [default to null]
 **pair** | [**STRING_32**](STRING_32.md) | Reference to pair. | [optional] [default to null]

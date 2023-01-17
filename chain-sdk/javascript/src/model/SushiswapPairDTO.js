@@ -258,7 +258,7 @@ SushiswapPairDTO.prototype['id'] = undefined;
 SushiswapPairDTO.prototype['factory'] = undefined;
 
 /**
- * Friendly name, format: <token0 name>-<token1 name>
+ * Friendly name, format: (token0 name)-(token1 name)
  * @member {String} name
  */
 SushiswapPairDTO.prototype['name'] = undefined;

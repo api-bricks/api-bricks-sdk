@@ -38,7 +38,7 @@ namespace CoinAPI.EMS.REST.V1.Model
         /// <param name="entryTime">entryTime.</param>
         /// <param name="recvTime">recvTime.</param>
         /// <param name="blockNumber">Number of block in which entity was recorded..</param>
-        /// <param name="id">Identifier, format: &lt;transaction hash&gt;-&lt;index in the transaction mint array&gt;..</param>
+        /// <param name="id">Identifier, format: (transaction hash)-(index in the transaction mint array)..</param>
         /// <param name="transaction">Reference to the transaction Mint was included in..</param>
         /// <param name="timestamp">Timestamp of Mint, used to sort recent liquidity provisions..</param>
         /// <param name="pair">Reference to pair..</param>
@@ -93,9 +93,9 @@ namespace CoinAPI.EMS.REST.V1.Model
         public long BlockNumber { get; set; }
 
         /// <summary>
-        /// Identifier, format: &lt;transaction hash&gt;-&lt;index in the transaction mint array&gt;.
+        /// Identifier, format: (transaction hash)-(index in the transaction mint array).
         /// </summary>
-        /// <value>Identifier, format: &lt;transaction hash&gt;-&lt;index in the transaction mint array&gt;.</value>
+        /// <value>Identifier, format: (transaction hash)-(index in the transaction mint array).</value>
         [DataMember(Name = "id", EmitDefaultValue = true)]
         public string Id { get; set; }
 

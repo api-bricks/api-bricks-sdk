@@ -22,7 +22,7 @@ No description available.
 .PARAMETER BlockNumber
 Number of block in which entity was recorded.
 .PARAMETER Id
-Identifier, format: <transaction hash>-<index in the transaction mint array>.
+Identifier, format: (transaction hash)-(index in the transaction mint array).
 .PARAMETER Transaction
 Reference to the transaction Mint was included in.
 .PARAMETER Timestamp

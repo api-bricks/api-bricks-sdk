@@ -14,7 +14,7 @@ part 'uniswap_v3_pool_day_data_dto.g.dart';
 /// * [entryTime] 
 /// * [recvTime] 
 /// * [blockNumber] - Number of block in which entity was recorded.
-/// * [id] - Identifier, format: <pool address>-<day id>.
+/// * [id] - Identifier, format: (pool address)-(day id).
 /// * [date] - Timestamp rounded to current day by dividing by 86400
 /// * [pool] - Pointer to pool.
 /// * [liquidity] - In range liquidity at end of period.
@@ -47,7 +47,7 @@ abstract class UniswapV3PoolDayDataDTO implements Built<UniswapV3PoolDayDataDTO,
   @BuiltValueField(wireName: r'block_number')
   int? get blockNumber;
 
-  /// Identifier, format: <pool address>-<day id>.
+  /// Identifier, format: (pool address)-(day id).
   @BuiltValueField(wireName: r'id')
   String? get id;
 

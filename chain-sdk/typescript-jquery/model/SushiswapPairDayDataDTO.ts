@@ -26,7 +26,7 @@ export interface SushiswapPairDayDataDTO {
     block_number?: number;
 
     /**
-     * Identifier, format: <pair id>-<day start timestamp>.
+     * Identifier, format: (pair id)-(day start timestamp).
      */
     id?: string;
 

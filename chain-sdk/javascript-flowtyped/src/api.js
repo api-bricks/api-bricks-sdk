@@ -300,7 +300,7 @@ export type CowTradeDTO = {
      */
     block_number?: number;
     /**
-     * Identifier, format: <order id>|<transaction hash>|<event index>.
+     * Identifier, format: (order id)|(transaction hash)|(event index).
      * @type {string}
      * @memberof CowTradeDTO
      */
@@ -756,7 +756,7 @@ export type CurveCoinDTO = {
      */
     block_number?: number;
     /**
-     * Identifier, format: <pool_id>-<coin_index>.
+     * Identifier, format: (pool_id)-(coin_index).
      * @type {string}
      * @memberof CurveCoinDTO
      */
@@ -2791,7 +2791,7 @@ export type CurveUnderlyingCoinDTO = {
      */
     block_number?: number;
     /**
-     * Equals to: <pool_id>-<coin_index>.
+     * Equals to: (pool_id)-(coin_index).
      * @type {string}
      * @memberof CurveUnderlyingCoinDTO
      */
@@ -3101,7 +3101,7 @@ export type DexDepositDTO = {
      */
     block_number?: number;
     /**
-     * Identifier, format: <transaction hash>-<token id>.
+     * Identifier, format: (transaction hash)-(token id).
      * @type {string}
      * @memberof DexDepositDTO
      */
@@ -3174,7 +3174,7 @@ export type DexOrderDTO = {
      */
     block_number?: number;
     /**
-     * Identifier, format: <owner address>-<order id>
+     * Identifier, format: (owner address)-(order id)
      * @type {string}
      * @memberof DexOrderDTO
      */
@@ -3325,7 +3325,7 @@ export type DexPriceDTO = {
      */
     block_number?: number;
     /**
-     * Identifier, format: <token id>-<batch id>.
+     * Identifier, format: (token id)-(batch id).
      * @type {string}
      * @memberof DexPriceDTO
      */
@@ -3859,7 +3859,7 @@ export type DexWithdrawDTO = {
      */
     block_number?: number;
     /**
-     * Identifier, format: <transaction hash>-<id>.
+     * Identifier, format: (transaction hash)-(id).
      * @type {string}
      * @memberof DexWithdrawDTO
      */
@@ -3932,7 +3932,7 @@ export type DexWithdrawRequestDTO = {
      */
     block_number?: number;
     /**
-     * Identifier, format: <transaction hash>-<id>.
+     * Identifier, format: (transaction hash)-(id).
      * @type {string}
      * @memberof DexWithdrawRequestDTO
      */
@@ -4091,7 +4091,7 @@ export type SushiswapBurnDTO = {
      */
     block_number?: number;
     /**
-     * Identifier, format: <transaction id>:<transaction.burns.length>.
+     * Identifier, format: (transaction id):(transaction.burns.length).
      * @type {string}
      * @memberof SushiswapBurnDTO
      */
@@ -4467,7 +4467,7 @@ export type SushiswapLiquidityPositionDTO = {
      */
     block_number?: number;
     /**
-     * Identifier, format: <pair address>-<user address>
+     * Identifier, format: (pair address)-(user address)
      * @type {string}
      * @memberof SushiswapLiquidityPositionDTO
      */
@@ -4534,7 +4534,7 @@ export type SushiswapLiquidityPositionSnapshotDTO = {
      */
     block_number?: number;
     /**
-     * Identifier, format: <pair address>-<user address>-<timestamp>
+     * Identifier, format: (pair address)-(user address)-(timestamp)
      * @type {string}
      * @memberof SushiswapLiquidityPositionSnapshotDTO
      */
@@ -4643,7 +4643,7 @@ export type SushiswapMintDTO = {
      */
     block_number?: number;
     /**
-     * Identifier, format: <transaction hash>-<index in the transaction mint array>.
+     * Identifier, format: (transaction hash)-(index in the transaction mint array).
      * @type {string}
      * @memberof SushiswapMintDTO
      */
@@ -4764,7 +4764,7 @@ export type SushiswapPairDTO = {
      */
     factory?: string;
     /**
-     * Friendly name, format: <token0 name>-<token1 name>
+     * Friendly name, format: (token0 name)-(token1 name)
      * @type {string}
      * @memberof SushiswapPairDTO
      */
@@ -4915,7 +4915,7 @@ export type SushiswapPairDayDataDTO = {
      */
     block_number?: number;
     /**
-     * Identifier, format: <pair id>-<day start timestamp>.
+     * Identifier, format: (pair id)-(day start timestamp).
      * @type {string}
      * @memberof SushiswapPairDayDataDTO
      */
@@ -5024,7 +5024,7 @@ export type SushiswapPairHourDataDTO = {
      */
     block_number?: number;
     /**
-     * Identifier, format: <pair id>-<hour start timestamp>.
+     * Identifier, format: (pair id)-(hour start timestamp).
      * @type {string}
      * @memberof SushiswapPairHourDataDTO
      */
@@ -5784,7 +5784,7 @@ export type UniswapV2LiquidityPositionSnapshotDTO = {
      */
     block_number?: number;
     /**
-     * Identifier, format: <pair address>-<user address>
+     * Identifier, format: (pair address)-(user address)
      * @type {string}
      * @memberof UniswapV2LiquidityPositionSnapshotDTO
      */
@@ -7583,7 +7583,7 @@ export type UniswapV3PoolDayDataDTO = {
      */
     block_number?: number;
     /**
-     * Identifier, format: <pool address>-<day id>.
+     * Identifier, format: (pool address)-(day id).
      * @type {string}
      * @memberof UniswapV3PoolDayDataDTO
      */
@@ -7734,7 +7734,7 @@ export type UniswapV3PoolHourDataDTO = {
      */
     block_number?: number;
     /**
-     * Identifier, format: <pool address>-<day id>
+     * Identifier, format: (pool address)-(day id)
      * @type {string}
      * @memberof UniswapV3PoolHourDataDTO
      */
@@ -8018,7 +8018,7 @@ export type UniswapV3PositionSnapshotDTO = {
      */
     block_number?: number;
     /**
-     * NFT token identifier, format: <NFT token id>#<block number>
+     * NFT token identifier, format: (NFT token id)#(block number).
      * @type {string}
      * @memberof UniswapV3PositionSnapshotDTO
      */
@@ -8145,7 +8145,7 @@ export type UniswapV3SwapDTO = {
      */
     vid?: number;
     /**
-     * Identifier, format: transaction hash + \"#\" + index in swaps Transaction array.
+     * Identifier, format: (transaction hash) + # + (index in swaps Transaction array).
      * @type {string}
      * @memberof UniswapV3SwapDTO
      */
@@ -8296,7 +8296,7 @@ export type UniswapV3TickDTO = {
      */
     vid?: number;
     /**
-     * Identifier, format: <pool address>#<tick index>
+     * Identifier, format: (pool address)#(tick index)
      * @type {string}
      * @memberof UniswapV3TickDTO
      */
@@ -8441,7 +8441,7 @@ export type UniswapV3TickDayDataDTO = {
      */
     block_number?: number;
     /**
-     * Identifier, format: <pool address>-<tick index>-<timestamp>.
+     * Identifier, format: (pool address)-(tick index)-(timestamp).
      * @type {string}
      * @memberof UniswapV3TickDayDataDTO
      */

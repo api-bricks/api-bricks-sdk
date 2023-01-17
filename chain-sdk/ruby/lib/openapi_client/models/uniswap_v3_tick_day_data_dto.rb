@@ -23,7 +23,7 @@ module OpenapiClient
     # Number of block in which entity was recorded.
     attr_accessor :block_number
 
-    # Identifier, format: <pool address>-<tick index>-<timestamp>.
+    # Identifier, format: (pool address)-(tick index)-(timestamp).
     attr_accessor :id
 
     # Timestamp rounded to current day by dividing by 86400.

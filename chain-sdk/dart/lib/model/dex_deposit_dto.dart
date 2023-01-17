@@ -51,7 +51,7 @@ class DexDepositDTO {
   ///
   int? blockNumber;
 
-  /// Identifier, format: <transaction hash>-<token id>.
+  /// Identifier, format: (transaction hash)-(token id).
   String? id;
 
   /// User address.

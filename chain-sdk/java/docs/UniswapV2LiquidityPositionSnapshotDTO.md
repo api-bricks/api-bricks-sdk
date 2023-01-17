@@ -11,7 +11,7 @@ This entity is used to store data about a user's liquidity position over time. T
 |**entryTime** | **OffsetDateTime** |  |  [optional] |
 |**recvTime** | **OffsetDateTime** |  |  [optional] |
 |**blockNumber** | **Long** | Number of block in which entity was recorded. |  [optional] |
-|**id** | **String** | Identifier, format: &lt;pair address&gt;-&lt;user address&gt; |  [optional] |
+|**id** | **String** | Identifier, format: (pair address)-(user address) |  [optional] |
 |**liquidityPosition** | **String** | Reference to LP identifier. |  [optional] |
 |**timestamp** | **Integer** | Creation time. |  [optional] |
 |**block** | **Integer** | Number of block in which LP snapshot was recorded. |  [optional] |

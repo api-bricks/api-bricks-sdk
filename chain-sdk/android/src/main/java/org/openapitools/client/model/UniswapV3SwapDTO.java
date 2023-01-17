@@ -116,9 +116,9 @@ public class UniswapV3SwapDTO {
   }
 
   /**
-   * Identifier, format: transaction hash + \"#\" + index in swaps Transaction array.
+   * Identifier, format: (transaction hash) + # + (index in swaps Transaction array).
    **/
-  @ApiModelProperty(value = "Identifier, format: transaction hash + \"#\" + index in swaps Transaction array.")
+  @ApiModelProperty(value = "Identifier, format: (transaction hash) + # + (index in swaps Transaction array).")
   public String getId() {
     return id;
   }

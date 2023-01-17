@@ -23,7 +23,7 @@ module OpenapiClient
     # Number of block in which entity was recorded.
     attr_accessor :block_number
 
-    # Identifier, format: <token id>-<batch id>.
+    # Identifier, format: (token id)-(batch id).
     attr_accessor :id
 
     # Token identifier.

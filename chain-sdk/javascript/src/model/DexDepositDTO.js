@@ -145,7 +145,7 @@ DexDepositDTO.prototype['recv_time'] = undefined;
 DexDepositDTO.prototype['block_number'] = undefined;
 
 /**
- * Identifier, format: <transaction hash>-<token id>.
+ * Identifier, format: (transaction hash)-(token id).
  * @member {String} id
  */
 DexDepositDTO.prototype['id'] = undefined;

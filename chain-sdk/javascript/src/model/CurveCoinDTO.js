@@ -168,7 +168,7 @@ CurveCoinDTO.prototype['recv_time'] = undefined;
 CurveCoinDTO.prototype['block_number'] = undefined;
 
 /**
- * Identifier, format: <pool_id>-<coin_index>.
+ * Identifier, format: (pool_id)-(coin_index).
  * @member {String} id
  */
 CurveCoinDTO.prototype['id'] = undefined;

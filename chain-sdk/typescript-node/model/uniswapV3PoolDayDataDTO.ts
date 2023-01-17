@@ -23,7 +23,7 @@ export class UniswapV3PoolDayDataDTO {
     */
     'blockNumber'?: number;
     /**
-    * Identifier, format: <pool address>-<day id>.
+    * Identifier, format: (pool address)-(day id).
     */
     'id'?: string | null;
     /**

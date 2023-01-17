@@ -10,7 +10,7 @@
 #' @field entry_time  character [optional]
 #' @field recv_time  character [optional]
 #' @field block_number Number of block in which entity was recorded. integer [optional]
-#' @field id Identifier, format: <transaction hash>-<index in the transaction mint array>. character [optional]
+#' @field id Identifier, format: (transaction hash)-(index in the transaction mint array). character [optional]
 #' @field transaction Reference to the transaction Mint was included in. character [optional]
 #' @field timestamp Timestamp of Mint, used to sort recent liquidity provisions. character [optional]
 #' @field pair Reference to pair. character [optional]
@@ -55,7 +55,7 @@ SushiswapMintDTO <- R6::R6Class(
     #' @param entry_time entry_time
     #' @param recv_time recv_time
     #' @param block_number Number of block in which entity was recorded.
-    #' @param id Identifier, format: <transaction hash>-<index in the transaction mint array>.
+    #' @param id Identifier, format: (transaction hash)-(index in the transaction mint array).
     #' @param transaction Reference to the transaction Mint was included in.
     #' @param timestamp Timestamp of Mint, used to sort recent liquidity provisions.
     #' @param pair Reference to pair.

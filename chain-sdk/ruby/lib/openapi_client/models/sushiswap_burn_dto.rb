@@ -23,7 +23,7 @@ module OpenapiClient
     # Number of block in which entity was recorded.
     attr_accessor :block_number
 
-    # Identifier, format: <transaction id>:<transaction.burns.length>.
+    # Identifier, format: (transaction id):(transaction.burns.length).
     attr_accessor :id
 
     # Reference to the transaction Burn was included in.

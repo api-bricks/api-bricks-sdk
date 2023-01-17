@@ -26,7 +26,7 @@ API.Client.DexOrderDTO.prototype.recvTime;
 API.Client.DexOrderDTO.prototype.blockNumber;
 
 /**
- * Identifier, format: <owner address>-<order id>
+ * Identifier, format: (owner address)-(order id)
  * @type {!string}
  * @export
  */

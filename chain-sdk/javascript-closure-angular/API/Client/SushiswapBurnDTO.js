@@ -26,7 +26,7 @@ API.Client.SushiswapBurnDTO.prototype.recvTime;
 API.Client.SushiswapBurnDTO.prototype.blockNumber;
 
 /**
- * Identifier, format: <transaction id>:<transaction.burns.length>.
+ * Identifier, format: (transaction id):(transaction.burns.length).
  * @type {!string}
  * @export
  */

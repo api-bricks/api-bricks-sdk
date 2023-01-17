@@ -82,7 +82,7 @@ public:
     void setBlockNumber(int64_t value);
 
     /// <summary>
-    /// Identifier, format: &lt;pair id&gt;-&lt;day start timestamp&gt;.
+    /// Identifier, format: (pair id)-(day start timestamp).
     /// </summary>
     utility::string_t getId() const;
     bool idIsSet() const;

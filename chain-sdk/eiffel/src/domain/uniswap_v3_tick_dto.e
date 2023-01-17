@@ -28,7 +28,7 @@ feature --Access
  	vid: INTEGER_64
     	 -- 
     id: detachable STRING_32
-      -- Identifier, format: <pool address>#<tick index>
+      -- Identifier, format: (pool address)#(tick index)
     pool_address: detachable STRING_32
       -- Pool address.
     tick_idx: detachable NUMERICS_BIG_INTEGER

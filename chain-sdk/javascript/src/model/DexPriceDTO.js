@@ -152,7 +152,7 @@ DexPriceDTO.prototype['recv_time'] = undefined;
 DexPriceDTO.prototype['block_number'] = undefined;
 
 /**
- * Identifier, format: <token id>-<batch id>.
+ * Identifier, format: (token id)-(batch id).
  * @member {String} id
  */
 DexPriceDTO.prototype['id'] = undefined;

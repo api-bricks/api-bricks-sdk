@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **EntryTime** | **DateTime** |  | [optional] 
 **RecvTime** | **DateTime** |  | [optional] 
 **BlockNumber** | **long** | Number of block in which entity was recorded. | [optional] 
-**Id** | **string** | Equals to: &lt;pool_id&gt;-&lt;coin_index&gt;. | [optional] 
+**Id** | **string** | Equals to: (pool_id)-(coin_index). | [optional] 
 **Index** | **int** | Coin index. | [optional] 
 **Pool** | **string** |  | [optional] 
 **Token** | **string** |  | [optional] 

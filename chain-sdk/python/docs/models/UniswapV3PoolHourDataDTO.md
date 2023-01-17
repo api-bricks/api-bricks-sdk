@@ -13,7 +13,7 @@ Key | Input Type | Accessed Type | Description | Notes
 **entry_time** | str, datetime,  | str,  |  | [optional] value must conform to RFC-3339 date-time
 **recv_time** | str, datetime,  | str,  |  | [optional] value must conform to RFC-3339 date-time
 **block_number** | decimal.Decimal, int,  | decimal.Decimal,  | Number of block in which entity was recorded. | [optional] value must be a 64 bit integer
-**id** | None, str,  | NoneClass, str,  | Identifier, format: &lt;pool address&gt;-&lt;day id&gt; | [optional] 
+**id** | None, str,  | NoneClass, str,  | Identifier, format: (pool address)-(day id) | [optional] 
 **period_start_unix** | decimal.Decimal, int,  | decimal.Decimal,  | Unix timestamp for start of hour. | [optional] value must be a 32 bit integer
 **pool** | None, str,  | NoneClass, str,  | Pointer to pool. | [optional] 
 **liquidity** | None, str,  | NoneClass, str,  | In range liquidity at end of period. | [optional] 

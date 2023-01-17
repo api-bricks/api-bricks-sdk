@@ -23,7 +23,7 @@ export class UniswapV3TickDayDataDTO {
     */
     'blockNumber'?: number;
     /**
-    * Identifier, format: <pool address>-<tick index>-<timestamp>.
+    * Identifier, format: (pool address)-(tick index)-(timestamp).
     */
     'id'?: string | null;
     /**

@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **blockNumber** | **kotlin.Long** | Number of block in which entity was recorded. |  [optional]
 **id** | **kotlin.String** | Pair contract address. |  [optional]
 **factory** | **kotlin.String** | Factory contract address. |  [optional]
-**name** | **kotlin.String** | Friendly name, format: &lt;token0 name&gt;-&lt;token1 name&gt; |  [optional]
+**name** | **kotlin.String** | Friendly name, format: (token0 name)-(token1 name) |  [optional]
 **token0** | **kotlin.String** | Reference to token0 as stored in pair contract. |  [optional]
 **token1** | **kotlin.String** | Reference to token0 as stored in pair contract. |  [optional]
 **reserve0** | **kotlin.String** | Reserve of token0. |  [optional]

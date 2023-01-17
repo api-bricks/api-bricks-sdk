@@ -14,7 +14,7 @@ part 'sushiswap_pair_day_data_dto.g.dart';
 /// * [entryTime] 
 /// * [recvTime] 
 /// * [blockNumber] - Number of block in which entity was recorded.
-/// * [id] - Identifier, format: <pair id>-<day start timestamp>.
+/// * [id] - Identifier, format: (pair id)-(day start timestamp).
 /// * [date] - Unix timestamp for start of day.
 /// * [pair] - Reference to pair.
 /// * [token0] - Reference to token0.
@@ -40,7 +40,7 @@ abstract class SushiswapPairDayDataDTO implements Built<SushiswapPairDayDataDTO,
   @BuiltValueField(wireName: r'block_number')
   int? get blockNumber;
 
-  /// Identifier, format: <pair id>-<day start timestamp>.
+  /// Identifier, format: (pair id)-(day start timestamp).
   @BuiltValueField(wireName: r'id')
   String? get id;
 

@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **entry_time** | **DATE_TIME** |  | [optional] 
 **recv_time** | **DATE_TIME** |  | [optional] 
 **block_number** | **int** | Number of block in which entity was recorded. | [optional] 
-**id** | **string** | Identifier, format: &lt;transaction hash&gt;-&lt;index in the transaction mint array&gt;. | [optional] 
+**id** | **string** | Identifier, format: (transaction hash)-(index in the transaction mint array). | [optional] 
 **transaction** | **string** | Reference to the transaction Mint was included in. | [optional] 
 **timestamp** | **string** | Timestamp of Mint, used to sort recent liquidity provisions. | [optional] 
 **pair** | **string** | Reference to pair. | [optional] 

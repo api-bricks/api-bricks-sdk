@@ -54,7 +54,7 @@ class SushiswapPairHourDataDTO {
   ///
   int? blockNumber;
 
-  /// Identifier, format: <pair id>-<hour start timestamp>.
+  /// Identifier, format: (pair id)-(hour start timestamp).
   String? id;
 
   /// Hour start timestamp.

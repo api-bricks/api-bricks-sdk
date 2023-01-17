@@ -33,7 +33,7 @@ public class OASUniswapV3PositionSnapshotDTO implements OAS.MappedProperties {
     public Long blockNumber { get; set; }
 
     /**
-     * NFT token identifier, format: <NFT token id>#<block number>
+     * NFT token identifier, format: (NFT token id)#(block number).
      * @return id
      */
     public String id { get; set; }

@@ -22,7 +22,7 @@ type SushiswapLiquidityPositionDTO struct {
 	RecvTime *time.Time `json:"recv_time,omitempty"`
 	// Number of block in which entity was recorded.
 	BlockNumber *int64 `json:"block_number,omitempty"`
-	// Identifier, format: <pair address>-<user address>
+	// Identifier, format: (pair address)-(user address)
 	Id NullableString `json:"id,omitempty"`
 	// User address.
 	User NullableString `json:"user,omitempty"`

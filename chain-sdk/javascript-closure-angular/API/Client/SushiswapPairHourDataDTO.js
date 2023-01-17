@@ -26,7 +26,7 @@ API.Client.SushiswapPairHourDataDTO.prototype.recvTime;
 API.Client.SushiswapPairHourDataDTO.prototype.blockNumber;
 
 /**
- * Identifier, format: <pair id>-<hour start timestamp>.
+ * Identifier, format: (pair id)-(hour start timestamp).
  * @type {!string}
  * @export
  */

@@ -33,7 +33,7 @@ public class OASCurveUnderlyingCoinDTO implements OAS.MappedProperties {
     public Long blockNumber { get; set; }
 
     /**
-     * Equals to: <pool_id>-<coin_index>.
+     * Equals to: (pool_id)-(coin_index).
      * @return id
      */
     public String id { get; set; }

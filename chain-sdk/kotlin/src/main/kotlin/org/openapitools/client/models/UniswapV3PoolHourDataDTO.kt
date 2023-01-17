@@ -24,7 +24,7 @@ import com.squareup.moshi.Json
  * @param entryTime 
  * @param recvTime 
  * @param blockNumber Number of block in which entity was recorded.
- * @param id Identifier, format: <pool address>-<day id>
+ * @param id Identifier, format: (pool address)-(day id)
  * @param periodStartUnix Unix timestamp for start of hour.
  * @param pool Pointer to pool.
  * @param liquidity In range liquidity at end of period.
@@ -60,7 +60,7 @@ data class UniswapV3PoolHourDataDTO (
     @Json(name = "block_number")
     val blockNumber: kotlin.Long? = null,
 
-    /* Identifier, format: <pool address>-<day id> */
+    /* Identifier, format: (pool address)-(day id) */
     @Json(name = "id")
     val id: kotlin.String? = null,
 

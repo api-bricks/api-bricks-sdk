@@ -10,7 +10,7 @@
 #' @field entry_time  character [optional]
 #' @field recv_time  character [optional]
 #' @field block_number Number of block in which entity was recorded. integer [optional]
-#' @field id Identifier, format: <transaction id>:<transaction.burns.length>. character [optional]
+#' @field id Identifier, format: (transaction id):(transaction.burns.length). character [optional]
 #' @field transaction Reference to the transaction Burn was included in. character [optional]
 #' @field timestamp Timestamp of Burn, used to sort recent liquidity removals. character [optional]
 #' @field pair Reference to pair. character [optional]
@@ -57,7 +57,7 @@ SushiswapBurnDTO <- R6::R6Class(
     #' @param entry_time entry_time
     #' @param recv_time recv_time
     #' @param block_number Number of block in which entity was recorded.
-    #' @param id Identifier, format: <transaction id>:<transaction.burns.length>.
+    #' @param id Identifier, format: (transaction id):(transaction.burns.length).
     #' @param transaction Reference to the transaction Burn was included in.
     #' @param timestamp Timestamp of Burn, used to sort recent liquidity removals.
     #' @param pair Reference to pair.

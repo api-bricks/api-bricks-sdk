@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **recv_time** | **char \*** |  | [optional] 
 **block_number** | **long** | Number of block in which entity was recorded. | [optional] 
 **vid** | **long** |  | [optional] 
-**id** | **char \*** | Identifier, format: &lt;pool address&gt;#&lt;tick index&gt; | [optional] 
+**id** | **char \*** | Identifier, format: (pool address)#(tick index) | [optional] 
 **pool_address** | **char \*** | Pool address. | [optional] 
 **tick_idx** | [**numerics_big_integer_t**](numerics_big_integer.md) \* |  | [optional] 
 **pool** | **char \*** | Pool address. | [optional] 

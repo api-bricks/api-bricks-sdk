@@ -82,7 +82,7 @@ public:
     void setBlockNumber(int64_t value);
 
     /// <summary>
-    /// Equals to: &lt;pool_id&gt;-&lt;coin_index&gt;.
+    /// Equals to: (pool_id)-(coin_index).
     /// </summary>
     utility::string_t getId() const;
     bool idIsSet() const;

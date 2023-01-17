@@ -66,11 +66,11 @@ public:
 	/*! \brief Set Number of block in which entity was recorded.
 	 */
 	void setBlockNumber(long long  block_number);
-	/*! \brief Get Identifier, format: <pair address>-<user address>
+	/*! \brief Get Identifier, format: (pair address)-(user address)
 	 */
 	std::string getId();
 
-	/*! \brief Set Identifier, format: <pair address>-<user address>
+	/*! \brief Set Identifier, format: (pair address)-(user address)
 	 */
 	void setId(std::string  id);
 	/*! \brief Get User address.

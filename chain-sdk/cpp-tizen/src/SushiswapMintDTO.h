@@ -66,11 +66,11 @@ public:
 	/*! \brief Set Number of block in which entity was recorded.
 	 */
 	void setBlockNumber(long long  block_number);
-	/*! \brief Get Identifier, format: <transaction hash>-<index in the transaction mint array>.
+	/*! \brief Get Identifier, format: (transaction hash)-(index in the transaction mint array).
 	 */
 	std::string getId();
 
-	/*! \brief Set Identifier, format: <transaction hash>-<index in the transaction mint array>.
+	/*! \brief Set Identifier, format: (transaction hash)-(index in the transaction mint array).
 	 */
 	void setId(std::string  id);
 	/*! \brief Get Reference to the transaction Mint was included in.

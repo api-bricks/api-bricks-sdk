@@ -7,7 +7,7 @@
 | **entry_time** | **Time** |  | [optional] |
 | **recv_time** | **Time** |  | [optional] |
 | **block_number** | **Integer** | Number of block in which entity was recorded. | [optional] |
-| **id** | **String** | Identifier, format: &lt;pair id&gt;-&lt;day start timestamp&gt;. | [optional] |
+| **id** | **String** | Identifier, format: (pair id)-(day start timestamp). | [optional] |
 | **date** | **Integer** | Unix timestamp for start of day. | [optional] |
 | **pair** | **String** | Reference to pair. | [optional] |
 | **token_0** | **String** | Reference to token0. | [optional] |

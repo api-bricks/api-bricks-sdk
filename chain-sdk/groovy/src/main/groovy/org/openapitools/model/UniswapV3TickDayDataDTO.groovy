@@ -13,7 +13,7 @@ class UniswapV3TickDayDataDTO {
     Date recvTime
     /* Number of block in which entity was recorded. */
     Long blockNumber
-    /* Identifier, format: <pool address>-<tick index>-<timestamp>. */
+    /* Identifier, format: (pool address)-(tick index)-(timestamp). */
     String id
     /* Timestamp rounded to current day by dividing by 86400. */
     Integer date

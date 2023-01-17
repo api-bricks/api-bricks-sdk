@@ -38,7 +38,7 @@ namespace CoinAPI.EMS.REST.V1.Model
         /// <param name="entryTime">entryTime.</param>
         /// <param name="recvTime">recvTime.</param>
         /// <param name="blockNumber">Number of block in which entity was recorded..</param>
-        /// <param name="id">Identifier, format: &lt;owner address&gt;-&lt;order id&gt;.</param>
+        /// <param name="id">Identifier, format: (owner address)-(order id).</param>
         /// <param name="owner">Reference to owner..</param>
         /// <param name="orderId">Order id..</param>
         /// <param name="fromBatchId">Batch id from which order became valid..</param>
@@ -107,9 +107,9 @@ namespace CoinAPI.EMS.REST.V1.Model
         public long BlockNumber { get; set; }
 
         /// <summary>
-        /// Identifier, format: &lt;owner address&gt;-&lt;order id&gt;
+        /// Identifier, format: (owner address)-(order id)
         /// </summary>
-        /// <value>Identifier, format: &lt;owner address&gt;-&lt;order id&gt;</value>
+        /// <value>Identifier, format: (owner address)-(order id)</value>
         [DataMember(Name = "id", EmitDefaultValue = true)]
         public string Id { get; set; }
 

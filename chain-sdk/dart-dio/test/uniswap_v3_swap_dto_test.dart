@@ -29,7 +29,7 @@ void main() {
       // TODO
     });
 
-    // Identifier, format: transaction hash + \"#\" + index in swaps Transaction array.
+    // Identifier, format: (transaction hash) + # + (index in swaps Transaction array).
     // String id
     test('to test the property `id`', () async {
       // TODO

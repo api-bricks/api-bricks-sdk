@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **entry_time** | [**DATE_TIME**](DATE_TIME.md) |  | [optional] [default to null]
 **recv_time** | [**DATE_TIME**](DATE_TIME.md) |  | [optional] [default to null]
 **block_number** | **INTEGER_64** | Number of block in which entity was recorded. | [optional] [default to null]
-**id** | [**STRING_32**](STRING_32.md) | NFT token identifier, format: &lt;NFT token id&gt;#&lt;block number&gt; | [optional] [default to null]
+**id** | [**STRING_32**](STRING_32.md) | NFT token identifier, format: (NFT token id)#(block number). | [optional] [default to null]
 **owner** | [**STRING_32**](STRING_32.md) | Owner of the NFT. | [optional] [default to null]
 **pool** | [**STRING_32**](STRING_32.md) | Pool the position is within. | [optional] [default to null]
 **position** | [**STRING_32**](STRING_32.md) | Position of which the snap was taken of. | [optional] [default to null]

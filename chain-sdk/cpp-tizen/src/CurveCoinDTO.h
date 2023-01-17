@@ -66,11 +66,11 @@ public:
 	/*! \brief Set Number of block in which entity was recorded.
 	 */
 	void setBlockNumber(long long  block_number);
-	/*! \brief Get Identifier, format: <pool_id>-<coin_index>.
+	/*! \brief Get Identifier, format: (pool_id)-(coin_index).
 	 */
 	std::string getId();
 
-	/*! \brief Set Identifier, format: <pool_id>-<coin_index>.
+	/*! \brief Set Identifier, format: (pool_id)-(coin_index).
 	 */
 	void setId(std::string  id);
 	/*! \brief Get Coin index.

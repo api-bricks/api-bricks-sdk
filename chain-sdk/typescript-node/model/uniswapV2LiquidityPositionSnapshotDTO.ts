@@ -23,7 +23,7 @@ export class UniswapV2LiquidityPositionSnapshotDTO {
     */
     'blockNumber'?: number;
     /**
-    * Identifier, format: <pair address>-<user address>
+    * Identifier, format: (pair address)-(user address)
     */
     'id'?: string | null;
     /**

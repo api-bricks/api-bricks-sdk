@@ -19,7 +19,7 @@ case class TickDayDataDTO (
   recvTime: Option[OffsetDateTime] = None,
   /* Number of block in which entity was recorded. */
   blockNumber: Option[Long] = None,
-  /* Identifier, format: <pool address>-<tick index>-<timestamp>. */
+  /* Identifier, format: (pool address)-(tick index)-(timestamp). */
   id: Option[String] = None,
   /* Timestamp rounded to current day by dividing by 86400. */
   date: Option[Int] = None,

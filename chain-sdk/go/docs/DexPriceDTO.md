@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **EntryTime** | Pointer to **time.Time** |  | [optional] 
 **RecvTime** | Pointer to **time.Time** |  | [optional] 
 **BlockNumber** | Pointer to **int64** | Number of block in which entity was recorded. | [optional] 
-**Id** | Pointer to **NullableString** | Identifier, format: &lt;token id&gt;-&lt;batch id&gt;. | [optional] 
+**Id** | Pointer to **NullableString** | Identifier, format: (token id)-(batch id). | [optional] 
 **Token** | Pointer to **NullableString** | Token identifier. | [optional] 
 **BatchId** | Pointer to **NullableString** | Batch identifier. | [optional] 
 **PriceInOwlNumerator** | Pointer to **NullableString** | Price enumerator in OWL (derivative of the GNO token). | [optional] 

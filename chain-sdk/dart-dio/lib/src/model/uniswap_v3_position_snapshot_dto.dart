@@ -14,7 +14,7 @@ part 'uniswap_v3_position_snapshot_dto.g.dart';
 /// * [entryTime] 
 /// * [recvTime] 
 /// * [blockNumber] - Number of block in which entity was recorded.
-/// * [id] - NFT token identifier, format: <NFT token id>#<block number>
+/// * [id] - NFT token identifier, format: (NFT token id)#(block number).
 /// * [owner] - Owner of the NFT.
 /// * [pool] - Pool the position is within.
 /// * [position] - Position of which the snap was taken of.
@@ -42,7 +42,7 @@ abstract class UniswapV3PositionSnapshotDTO implements Built<UniswapV3PositionSn
   @BuiltValueField(wireName: r'block_number')
   int? get blockNumber;
 
-  /// NFT token identifier, format: <NFT token id>#<block number>
+  /// NFT token identifier, format: (NFT token id)#(block number).
   @BuiltValueField(wireName: r'id')
   String? get id;
 

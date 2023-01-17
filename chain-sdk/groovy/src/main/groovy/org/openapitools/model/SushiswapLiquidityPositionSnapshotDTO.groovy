@@ -13,7 +13,7 @@ class SushiswapLiquidityPositionSnapshotDTO {
     Date recvTime
     /* Number of block in which entity was recorded. */
     Long blockNumber
-    /* Identifier, format: <pair address>-<user address>-<timestamp> */
+    /* Identifier, format: (pair address)-(user address)-(timestamp) */
     String id
     /* Reference to LP identifier. */
     String liquidityPosition

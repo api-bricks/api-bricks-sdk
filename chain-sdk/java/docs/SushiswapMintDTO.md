@@ -11,7 +11,7 @@ Mint entities are created for every emitted Mint event on the Sushiswap core con
 |**entryTime** | **OffsetDateTime** |  |  [optional] |
 |**recvTime** | **OffsetDateTime** |  |  [optional] |
 |**blockNumber** | **Long** | Number of block in which entity was recorded. |  [optional] |
-|**id** | **String** | Identifier, format: &lt;transaction hash&gt;-&lt;index in the transaction mint array&gt;. |  [optional] |
+|**id** | **String** | Identifier, format: (transaction hash)-(index in the transaction mint array). |  [optional] |
 |**transaction** | **String** | Reference to the transaction Mint was included in. |  [optional] |
 |**timestamp** | **String** | Timestamp of Mint, used to sort recent liquidity provisions. |  [optional] |
 |**pair** | **String** | Reference to pair. |  [optional] |

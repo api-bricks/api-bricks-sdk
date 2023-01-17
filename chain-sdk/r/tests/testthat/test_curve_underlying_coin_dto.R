@@ -29,7 +29,7 @@ test_that("block_number", {
 
 test_that("id", {
   # tests for the property `id` (character)
-  # Equals to: &lt;pool_id&gt;-&lt;coin_index&gt;.
+  # Equals to: (pool_id)-(coin_index).
 
   # uncomment below to test the property
   #expect_equal(model.instance$`id`, "EXPECTED_RESULT")

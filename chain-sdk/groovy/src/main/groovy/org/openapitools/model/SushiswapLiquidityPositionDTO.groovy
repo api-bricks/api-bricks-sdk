@@ -13,7 +13,7 @@ class SushiswapLiquidityPositionDTO {
     Date recvTime
     /* Number of block in which entity was recorded. */
     Long blockNumber
-    /* Identifier, format: <pair address>-<user address> */
+    /* Identifier, format: (pair address)-(user address) */
     String id
     /* User address. */
     String user

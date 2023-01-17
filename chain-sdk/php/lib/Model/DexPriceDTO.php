@@ -468,7 +468,7 @@ class DexPriceDTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets id
      *
-     * @param string|null $id Identifier, format: <token id>-<batch id>.
+     * @param string|null $id Identifier, format: (token id)-(batch id).
      *
      * @return self
      */

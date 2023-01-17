@@ -14,7 +14,7 @@ Key | Input Type | Accessed Type | Description | Notes
 **recv_time** | str, datetime,  | str,  |  | [optional] value must conform to RFC-3339 date-time
 **block_number** | decimal.Decimal, int,  | decimal.Decimal,  | Number of block in which entity was recorded. | [optional] value must be a 64 bit integer
 **vid** | decimal.Decimal, int,  | decimal.Decimal,  |  | [optional] value must be a 64 bit integer
-**id** | None, str,  | NoneClass, str,  | Identifier, format: transaction hash + \&quot;#\&quot; + index in swaps Transaction array. | [optional] 
+**id** | None, str,  | NoneClass, str,  | Identifier, format: (transaction hash) + # + (index in swaps Transaction array). | [optional] 
 **transaction** | None, str,  | NoneClass, str,  | Pointer to transaction. | [optional] 
 **timestamp** | str, datetime,  | str,  | Timestamp of transaction. | [optional] value must conform to RFC-3339 date-time
 **pool** | None, str,  | NoneClass, str,  | Pool swap occured within. | [optional] 

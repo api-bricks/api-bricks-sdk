@@ -176,7 +176,7 @@ UniswapV3TickDayDataDTO.prototype['recv_time'] = undefined;
 UniswapV3TickDayDataDTO.prototype['block_number'] = undefined;
 
 /**
- * Identifier, format: <pool address>-<tick index>-<timestamp>.
+ * Identifier, format: (pool address)-(tick index)-(timestamp).
  * @member {String} id
  */
 UniswapV3TickDayDataDTO.prototype['id'] = undefined;

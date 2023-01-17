@@ -10,7 +10,7 @@
 #' @field entry_time  character [optional]
 #' @field recv_time  character [optional]
 #' @field block_number Number of block in which entity was recorded. integer [optional]
-#' @field id Equals to: <pool_id>-<coin_index>. character [optional]
+#' @field id Equals to: (pool_id)-(coin_index). character [optional]
 #' @field index Coin index. integer [optional]
 #' @field pool  character [optional]
 #' @field token  character [optional]
@@ -47,7 +47,7 @@ CurveUnderlyingCoinDTO <- R6::R6Class(
     #' @param entry_time entry_time
     #' @param recv_time recv_time
     #' @param block_number Number of block in which entity was recorded.
-    #' @param id Equals to: <pool_id>-<coin_index>.
+    #' @param id Equals to: (pool_id)-(coin_index).
     #' @param index Coin index.
     #' @param pool 
     #' @param token 

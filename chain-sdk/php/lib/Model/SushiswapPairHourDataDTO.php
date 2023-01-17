@@ -482,7 +482,7 @@ class SushiswapPairHourDataDTO implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets id
      *
-     * @param string|null $id Identifier, format: <pair id>-<hour start timestamp>.
+     * @param string|null $id Identifier, format: (pair id)-(hour start timestamp).
      *
      * @return self
      */

@@ -25,7 +25,7 @@ API.Client.UniswapV3PositionSnapshotDTO.prototype.recvTime;
 API.Client.UniswapV3PositionSnapshotDTO.prototype.blockNumber;
 
 /**
- * NFT token identifier, format: <NFT token id>#<block number>
+ * NFT token identifier, format: (NFT token id)#(block number).
  * @type {!string}
  * @export
  */

@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **entryTime** | [**java.time.OffsetDateTime**](java.time.OffsetDateTime.md) |  |  [optional]
 **recvTime** | [**java.time.OffsetDateTime**](java.time.OffsetDateTime.md) |  |  [optional]
 **blockNumber** | **kotlin.Long** | Number of block in which entity was recorded. |  [optional]
-**id** | **kotlin.String** | Identifier, format: &lt;pair id&gt;-&lt;hour start timestamp&gt;. |  [optional]
+**id** | **kotlin.String** | Identifier, format: (pair id)-(hour start timestamp). |  [optional]
 **date** | **kotlin.Int** | Hour start timestamp. |  [optional]
 **pair** | **kotlin.String** | Reference to pair. |  [optional]
 **reserve0** | **kotlin.String** | Reserve of token0 (updated during each transaction on pair). |  [optional]

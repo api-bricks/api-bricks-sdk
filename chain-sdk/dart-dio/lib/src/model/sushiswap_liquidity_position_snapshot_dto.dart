@@ -14,7 +14,7 @@ part 'sushiswap_liquidity_position_snapshot_dto.g.dart';
 /// * [entryTime] 
 /// * [recvTime] 
 /// * [blockNumber] - Number of block in which entity was recorded.
-/// * [id] - Identifier, format: <pair address>-<user address>-<timestamp>
+/// * [id] - Identifier, format: (pair address)-(user address)-(timestamp)
 /// * [liquidityPosition] - Reference to LP identifier.
 /// * [timestamp] - Creation time.
 /// * [block] - Block in which snapshot has been created.
@@ -40,7 +40,7 @@ abstract class SushiswapLiquidityPositionSnapshotDTO implements Built<SushiswapL
   @BuiltValueField(wireName: r'block_number')
   int? get blockNumber;
 
-  /// Identifier, format: <pair address>-<user address>-<timestamp>
+  /// Identifier, format: (pair address)-(user address)-(timestamp)
   @BuiltValueField(wireName: r'id')
   String? get id;
 

@@ -37,7 +37,7 @@ test_that("vid", {
 
 test_that("id", {
   # tests for the property `id` (character)
-  # Identifier, format: transaction hash + \&quot;#\&quot; + index in swaps Transaction array.
+  # Identifier, format: (transaction hash) + # + (index in swaps Transaction array).
 
   # uncomment below to test the property
   #expect_equal(model.instance$`id`, "EXPECTED_RESULT")

@@ -26,7 +26,7 @@ feature --Access
  	block_number: INTEGER_64
     	 -- Number of block in which entity was recorded.
     id: detachable STRING_32
-      -- Identifier, format: <pool address>-<day id>
+      -- Identifier, format: (pool address)-(day id)
  	period_start_unix: INTEGER_32
     	 -- Unix timestamp for start of hour.
     pool: detachable STRING_32

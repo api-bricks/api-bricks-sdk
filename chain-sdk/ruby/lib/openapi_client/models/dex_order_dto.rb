@@ -23,7 +23,7 @@ module OpenapiClient
     # Number of block in which entity was recorded.
     attr_accessor :block_number
 
-    # Identifier, format: <owner address>-<order id>
+    # Identifier, format: (owner address)-(order id)
     attr_accessor :id
 
     # Reference to owner.

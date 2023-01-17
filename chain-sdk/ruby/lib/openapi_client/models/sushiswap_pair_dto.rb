@@ -29,7 +29,7 @@ module OpenapiClient
     # Factory contract address.
     attr_accessor :factory
 
-    # Friendly name, format: <token0 name>-<token1 name>
+    # Friendly name, format: (token0 name)-(token1 name)
     attr_accessor :name
 
     # Reference to token0 as stored in pair contract.

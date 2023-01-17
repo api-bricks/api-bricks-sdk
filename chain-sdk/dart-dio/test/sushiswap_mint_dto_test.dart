@@ -23,7 +23,7 @@ void main() {
       // TODO
     });
 
-    // Identifier, format: <transaction hash>-<index in the transaction mint array>.
+    // Identifier, format: (transaction hash)-(index in the transaction mint array).
     // String id
     test('to test the property `id`', () async {
       // TODO

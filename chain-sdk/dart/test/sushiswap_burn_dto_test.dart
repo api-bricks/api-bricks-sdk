@@ -32,7 +32,7 @@ void main() {
       // TODO
     });
 
-    // Identifier, format: <transaction id>:<transaction.burns.length>.
+    // Identifier, format: (transaction id):(transaction.burns.length).
     // String id
     test('to test the property `id`', () async {
       // TODO

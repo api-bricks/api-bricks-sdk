@@ -83,7 +83,7 @@ public:
     void setBlockNumber(int64_t value);
 
     /// <summary>
-    /// Identifier, format: &lt;order id&gt;|&lt;transaction hash&gt;|&lt;event index&gt;.
+    /// Identifier, format: (order id)|(transaction hash)|(event index).
     /// </summary>
     utility::string_t getId() const;
     bool idIsSet() const;

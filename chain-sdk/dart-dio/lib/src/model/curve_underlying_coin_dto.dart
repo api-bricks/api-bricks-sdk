@@ -14,7 +14,7 @@ part 'curve_underlying_coin_dto.g.dart';
 /// * [entryTime] 
 /// * [recvTime] 
 /// * [blockNumber] - Number of block in which entity was recorded.
-/// * [id] - Equals to: <pool_id>-<coin_index>.
+/// * [id] - Equals to: (pool_id)-(coin_index).
 /// * [index] - Coin index.
 /// * [pool] - 
 /// * [token] - 
@@ -36,7 +36,7 @@ abstract class CurveUnderlyingCoinDTO implements Built<CurveUnderlyingCoinDTO, C
   @BuiltValueField(wireName: r'block_number')
   int? get blockNumber;
 
-  /// Equals to: <pool_id>-<coin_index>.
+  /// Equals to: (pool_id)-(coin_index).
   @BuiltValueField(wireName: r'id')
   String? get id;
 

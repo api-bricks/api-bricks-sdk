@@ -66,11 +66,11 @@ public:
 	/*! \brief Set Number of block in which entity was recorded.
 	 */
 	void setBlockNumber(long long  block_number);
-	/*! \brief Get Identifier, format: <pair id>-<hour start timestamp>.
+	/*! \brief Get Identifier, format: (pair id)-(hour start timestamp).
 	 */
 	std::string getId();
 
-	/*! \brief Set Identifier, format: <pair id>-<hour start timestamp>.
+	/*! \brief Set Identifier, format: (pair id)-(hour start timestamp).
 	 */
 	void setId(std::string  id);
 	/*! \brief Get Hour start timestamp.

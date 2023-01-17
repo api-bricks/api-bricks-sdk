@@ -42,7 +42,7 @@ namespace CoinAPI.EMS.REST.V1.Model
         /// <param name="recvTime">recvTime.</param>
         /// <param name="blockNumber">Number of block in which entity was recorded..</param>
         /// <param name="vid">vid.</param>
-        /// <param name="id">Identifier, format: transaction hash + \&quot;#\&quot; + index in swaps Transaction array..</param>
+        /// <param name="id">Identifier, format: (transaction hash) + # + (index in swaps Transaction array)..</param>
         /// <param name="transaction">Pointer to transaction..</param>
         /// <param name="timestamp">Timestamp of transaction..</param>
         /// <param name="pool">Pool swap occured within..</param>
@@ -119,9 +119,9 @@ namespace CoinAPI.EMS.REST.V1.Model
         public long Vid { get; set; }
 
         /// <summary>
-        /// Identifier, format: transaction hash + \&quot;#\&quot; + index in swaps Transaction array.
+        /// Identifier, format: (transaction hash) + # + (index in swaps Transaction array).
         /// </summary>
-        /// <value>Identifier, format: transaction hash + \&quot;#\&quot; + index in swaps Transaction array.</value>
+        /// <value>Identifier, format: (transaction hash) + # + (index in swaps Transaction array).</value>
         [DataMember(Name="id", EmitDefaultValue=true)]
         public string Id { get; set; }
 

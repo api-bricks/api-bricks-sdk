@@ -22,7 +22,7 @@ No description available.
 .PARAMETER BlockNumber
 Number of block in which entity was recorded.
 .PARAMETER Id
-Identifier, format: <token id>-<batch id>.
+Identifier, format: (token id)-(batch id).
 .PARAMETER Token
 Token identifier.
 .PARAMETER BatchId

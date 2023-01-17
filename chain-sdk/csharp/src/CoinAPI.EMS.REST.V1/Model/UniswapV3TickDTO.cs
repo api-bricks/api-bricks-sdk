@@ -37,7 +37,7 @@ namespace CoinAPI.EMS.REST.V1.Model
         /// <param name="recvTime">recvTime.</param>
         /// <param name="blockNumber">Number of block in which entity was recorded..</param>
         /// <param name="vid">vid.</param>
-        /// <param name="id">Identifier, format: &lt;pool address&gt;#&lt;tick index&gt;.</param>
+        /// <param name="id">Identifier, format: (pool address)#(tick index).</param>
         /// <param name="poolAddress">Pool address..</param>
         /// <param name="tickIdx">tickIdx.</param>
         /// <param name="pool">Pool address..</param>
@@ -124,9 +124,9 @@ namespace CoinAPI.EMS.REST.V1.Model
         public long Vid { get; set; }
 
         /// <summary>
-        /// Identifier, format: &lt;pool address&gt;#&lt;tick index&gt;
+        /// Identifier, format: (pool address)#(tick index)
         /// </summary>
-        /// <value>Identifier, format: &lt;pool address&gt;#&lt;tick index&gt;</value>
+        /// <value>Identifier, format: (pool address)#(tick index)</value>
         [DataMember(Name="id", EmitDefaultValue=true)]
         public string Id { get; set; }
 

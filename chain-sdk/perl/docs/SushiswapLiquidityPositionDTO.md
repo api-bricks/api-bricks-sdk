@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **entry_time** | **DATE_TIME** |  | [optional] 
 **recv_time** | **DATE_TIME** |  | [optional] 
 **block_number** | **int** | Number of block in which entity was recorded. | [optional] 
-**id** | **string** | Identifier, format: &lt;pair address&gt;-&lt;user address&gt; | [optional] 
+**id** | **string** | Identifier, format: (pair address)-(user address) | [optional] 
 **user** | **string** | User address. | [optional] 
 **pair** | **string** | Pair address. | [optional] 
 **liquidity_token_balance** | **string** | Amount of LP tokens minted for this position. | [optional] 

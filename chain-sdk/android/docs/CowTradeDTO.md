@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **entryTime** | [**Date**](Date.md) |  |  [optional]
 **recvTime** | [**Date**](Date.md) |  |  [optional]
 **blockNumber** | **Long** | Number of block in which entity was recorded. |  [optional]
-**id** | **String** | Identifier, format: &lt;order id&gt;|&lt;transaction hash&gt;|&lt;event index&gt;. |  [optional]
+**id** | **String** | Identifier, format: (order id)|(transaction hash)|(event index). |  [optional]
 **timestamp** | **String** | Block&#39;s timestamp. |  [optional]
 **gasPrice** | **String** | Transaction&#39;s gas price. |  [optional]
 **gasLimit** | **String** | Transaction&#39;s gas limit. |  [optional]

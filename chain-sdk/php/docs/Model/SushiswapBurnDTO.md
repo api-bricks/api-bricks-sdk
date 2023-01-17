@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **entry_time** | **\DateTime** |  | [optional]
 **recv_time** | **\DateTime** |  | [optional]
 **block_number** | **int** | Number of block in which entity was recorded. | [optional]
-**id** | **string** | Identifier, format: &lt;transaction id&gt;:&lt;transaction.burns.length&gt;. | [optional]
+**id** | **string** | Identifier, format: (transaction id):(transaction.burns.length). | [optional]
 **transaction** | **string** | Reference to the transaction Burn was included in. | [optional]
 **timestamp** | **string** | Timestamp of Burn, used to sort recent liquidity removals. | [optional]
 **pair** | **string** | Reference to pair. | [optional]

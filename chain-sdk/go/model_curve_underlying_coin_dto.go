@@ -22,7 +22,7 @@ type CurveUnderlyingCoinDTO struct {
 	RecvTime *time.Time `json:"recv_time,omitempty"`
 	// Number of block in which entity was recorded.
 	BlockNumber *int64 `json:"block_number,omitempty"`
-	// Equals to: <pool_id>-<coin_index>.
+	// Equals to: (pool_id)-(coin_index).
 	Id NullableString `json:"id,omitempty"`
 	// Coin index.
 	Index *int32 `json:"index,omitempty"`

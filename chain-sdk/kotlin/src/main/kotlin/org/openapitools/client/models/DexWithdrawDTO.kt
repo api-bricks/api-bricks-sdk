@@ -24,7 +24,7 @@ import com.squareup.moshi.Json
  * @param entryTime 
  * @param recvTime 
  * @param blockNumber Number of block in which entity was recorded.
- * @param id Identifier, format: <transaction hash>-<id>.
+ * @param id Identifier, format: (transaction hash)-(id).
  * @param user 
  * @param tokenAddress 
  * @param amount 
@@ -47,7 +47,7 @@ data class DexWithdrawDTO (
     @Json(name = "block_number")
     val blockNumber: kotlin.Long? = null,
 
-    /* Identifier, format: <transaction hash>-<id>. */
+    /* Identifier, format: (transaction hash)-(id). */
     @Json(name = "id")
     val id: kotlin.String? = null,
 

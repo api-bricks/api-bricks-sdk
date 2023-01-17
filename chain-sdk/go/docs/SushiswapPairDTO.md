@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **BlockNumber** | Pointer to **int64** | Number of block in which entity was recorded. | [optional] 
 **Id** | Pointer to **NullableString** | Pair contract address. | [optional] 
 **Factory** | Pointer to **NullableString** | Factory contract address. | [optional] 
-**Name** | Pointer to **NullableString** | Friendly name, format: &lt;token0 name&gt;-&lt;token1 name&gt; | [optional] 
+**Name** | Pointer to **NullableString** | Friendly name, format: (token0 name)-(token1 name) | [optional] 
 **Token0** | Pointer to **NullableString** | Reference to token0 as stored in pair contract. | [optional] 
 **Token1** | Pointer to **NullableString** | Reference to token0 as stored in pair contract. | [optional] 
 **Reserve0** | Pointer to **NullableString** | Reserve of token0. | [optional] 

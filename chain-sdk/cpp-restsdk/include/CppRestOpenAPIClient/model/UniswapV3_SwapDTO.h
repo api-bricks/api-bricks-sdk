@@ -94,7 +94,7 @@ public:
     void setVid(int64_t value);
 
     /// <summary>
-    /// Identifier, format: transaction hash + \&quot;#\&quot; + index in swaps Transaction array.
+    /// Identifier, format: (transaction hash) + # + (index in swaps Transaction array).
     /// </summary>
     utility::string_t getId() const;
     bool idIsSet() const;

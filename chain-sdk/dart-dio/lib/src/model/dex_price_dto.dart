@@ -14,7 +14,7 @@ part 'dex_price_dto.g.dart';
 /// * [entryTime] 
 /// * [recvTime] 
 /// * [blockNumber] - Number of block in which entity was recorded.
-/// * [id] - Identifier, format: <token id>-<batch id>.
+/// * [id] - Identifier, format: (token id)-(batch id).
 /// * [token] - Token identifier.
 /// * [batchId] - Batch identifier.
 /// * [priceInOwlNumerator] - Price enumerator in OWL (derivative of the GNO token).
@@ -35,7 +35,7 @@ abstract class DexPriceDTO implements Built<DexPriceDTO, DexPriceDTOBuilder> {
   @BuiltValueField(wireName: r'block_number')
   int? get blockNumber;
 
-  /// Identifier, format: <token id>-<batch id>.
+  /// Identifier, format: (token id)-(batch id).
   @BuiltValueField(wireName: r'id')
   String? get id;
 

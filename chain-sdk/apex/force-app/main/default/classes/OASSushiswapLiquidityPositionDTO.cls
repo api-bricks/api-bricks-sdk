@@ -33,7 +33,7 @@ public class OASSushiswapLiquidityPositionDTO implements OAS.MappedProperties {
     public Long blockNumber { get; set; }
 
     /**
-     * Identifier, format: <pair address>-<user address>
+     * Identifier, format: (pair address)-(user address)
      * @return id
      */
     public String id { get; set; }

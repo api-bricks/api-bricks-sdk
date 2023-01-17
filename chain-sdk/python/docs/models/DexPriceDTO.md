@@ -13,7 +13,7 @@ Key | Input Type | Accessed Type | Description | Notes
 **entry_time** | str, datetime,  | str,  |  | [optional] value must conform to RFC-3339 date-time
 **recv_time** | str, datetime,  | str,  |  | [optional] value must conform to RFC-3339 date-time
 **block_number** | decimal.Decimal, int,  | decimal.Decimal,  | Number of block in which entity was recorded. | [optional] value must be a 64 bit integer
-**id** | None, str,  | NoneClass, str,  | Identifier, format: &lt;token id&gt;-&lt;batch id&gt;. | [optional] 
+**id** | None, str,  | NoneClass, str,  | Identifier, format: (token id)-(batch id). | [optional] 
 **token** | None, str,  | NoneClass, str,  | Token identifier. | [optional] 
 **batch_id** | None, str,  | NoneClass, str,  | Batch identifier. | [optional] 
 **price_in_owl_numerator** | None, str,  | NoneClass, str,  | Price enumerator in OWL (derivative of the GNO token). | [optional] 

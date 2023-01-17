@@ -14,7 +14,7 @@ part 'curve_coin_dto.g.dart';
 /// * [entryTime] 
 /// * [recvTime] 
 /// * [blockNumber] - Number of block in which entity was recorded.
-/// * [id] - Identifier, format: <pool_id>-<coin_index>.
+/// * [id] - Identifier, format: (pool_id)-(coin_index).
 /// * [index] - Coin index.
 /// * [pool] - 
 /// * [token] - 
@@ -38,7 +38,7 @@ abstract class CurveCoinDTO implements Built<CurveCoinDTO, CurveCoinDTOBuilder> 
   @BuiltValueField(wireName: r'block_number')
   int? get blockNumber;
 
-  /// Identifier, format: <pool_id>-<coin_index>.
+  /// Identifier, format: (pool_id)-(coin_index).
   @BuiltValueField(wireName: r'id')
   String? get id;
 

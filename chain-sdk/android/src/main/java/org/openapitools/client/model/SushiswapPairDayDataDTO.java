@@ -89,9 +89,9 @@ public class SushiswapPairDayDataDTO {
   }
 
   /**
-   * Identifier, format: <pair id>-<day start timestamp>.
+   * Identifier, format: (pair id)-(day start timestamp).
    **/
-  @ApiModelProperty(value = "Identifier, format: <pair id>-<day start timestamp>.")
+  @ApiModelProperty(value = "Identifier, format: (pair id)-(day start timestamp).")
   public String getId() {
     return id;
   }

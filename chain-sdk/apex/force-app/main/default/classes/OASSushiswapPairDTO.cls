@@ -45,7 +45,7 @@ public class OASSushiswapPairDTO implements OAS.MappedProperties {
     public String factory { get; set; }
 
     /**
-     * Friendly name, format: <token0 name>-<token1 name>
+     * Friendly name, format: (token0 name)-(token1 name)
      * @return name
      */
     public String name { get; set; }

@@ -24,7 +24,7 @@ import com.squareup.moshi.Json
  * @param entryTime 
  * @param recvTime 
  * @param blockNumber Number of block in which entity was recorded.
- * @param id Identifier, format: <transaction id>:<transaction.burns.length>.
+ * @param id Identifier, format: (transaction id):(transaction.burns.length).
  * @param transaction Reference to the transaction Burn was included in.
  * @param timestamp Timestamp of Burn, used to sort recent liquidity removals.
  * @param pair Reference to pair.
@@ -54,7 +54,7 @@ data class SushiswapBurnDTO (
     @Json(name = "block_number")
     val blockNumber: kotlin.Long? = null,
 
-    /* Identifier, format: <transaction id>:<transaction.burns.length>. */
+    /* Identifier, format: (transaction id):(transaction.burns.length). */
     @Json(name = "id")
     val id: kotlin.String? = null,
 

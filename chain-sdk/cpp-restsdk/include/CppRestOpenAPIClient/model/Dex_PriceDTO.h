@@ -82,7 +82,7 @@ public:
     void setBlockNumber(int64_t value);
 
     /// <summary>
-    /// Identifier, format: &lt;token id&gt;-&lt;batch id&gt;.
+    /// Identifier, format: (token id)-(batch id).
     /// </summary>
     utility::string_t getId() const;
     bool idIsSet() const;

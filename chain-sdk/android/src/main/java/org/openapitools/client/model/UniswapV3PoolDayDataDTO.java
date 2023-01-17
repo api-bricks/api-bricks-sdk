@@ -103,9 +103,9 @@ public class UniswapV3PoolDayDataDTO {
   }
 
   /**
-   * Identifier, format: <pool address>-<day id>.
+   * Identifier, format: (pool address)-(day id).
    **/
-  @ApiModelProperty(value = "Identifier, format: <pool address>-<day id>.")
+  @ApiModelProperty(value = "Identifier, format: (pool address)-(day id).")
   public String getId() {
     return id;
   }

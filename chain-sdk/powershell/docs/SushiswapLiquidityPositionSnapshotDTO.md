@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **EntryTime** | **System.DateTime** |  | [optional] 
 **RecvTime** | **System.DateTime** |  | [optional] 
 **BlockNumber** | **Int64** | Number of block in which entity was recorded. | [optional] 
-**Id** | **String** | Identifier, format: &lt;pair address&gt;-&lt;user address&gt;-&lt;timestamp&gt; | [optional] 
+**Id** | **String** | Identifier, format: (pair address)-(user address)-(timestamp) | [optional] 
 **LiquidityPosition** | **String** | Reference to LP identifier. | [optional] 
 **Timestamp** | **Int32** | Creation time. | [optional] 
 **Block** | **Int32** | Block in which snapshot has been created. | [optional] 

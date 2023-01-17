@@ -33,7 +33,7 @@ API.Client.UniswapV3SwapDTO.prototype.blockNumber;
 API.Client.UniswapV3SwapDTO.prototype.vid;
 
 /**
- * Identifier, format: transaction hash + \"#\" + index in swaps Transaction array.
+ * Identifier, format: (transaction hash) + # + (index in swaps Transaction array).
  * @type {!string}
  * @export
  */

@@ -17,7 +17,7 @@ class UniswapV3SwapDTO {
     Long blockNumber
     /*  */
     Long vid
-    /* Identifier, format: transaction hash + \"#\" + index in swaps Transaction array. */
+    /* Identifier, format: (transaction hash) + # + (index in swaps Transaction array). */
     String id
     /* Pointer to transaction. */
     String transaction

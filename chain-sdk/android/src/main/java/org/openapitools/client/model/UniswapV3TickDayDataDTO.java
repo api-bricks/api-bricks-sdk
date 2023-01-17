@@ -87,9 +87,9 @@ public class UniswapV3TickDayDataDTO {
   }
 
   /**
-   * Identifier, format: <pool address>-<tick index>-<timestamp>.
+   * Identifier, format: (pool address)-(tick index)-(timestamp).
    **/
-  @ApiModelProperty(value = "Identifier, format: <pool address>-<tick index>-<timestamp>.")
+  @ApiModelProperty(value = "Identifier, format: (pool address)-(tick index)-(timestamp).")
   public String getId() {
     return id;
   }

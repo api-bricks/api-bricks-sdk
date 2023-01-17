@@ -13,7 +13,7 @@ class UniswapV3PositionSnapshotDTO {
     Date recvTime
     /* Number of block in which entity was recorded. */
     Long blockNumber
-    /* NFT token identifier, format: <NFT token id>#<block number> */
+    /* NFT token identifier, format: (NFT token id)#(block number). */
     String id
     /* Owner of the NFT. */
     String owner

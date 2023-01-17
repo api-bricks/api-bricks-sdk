@@ -24,7 +24,7 @@ import com.squareup.moshi.Json
  * @param entryTime 
  * @param recvTime 
  * @param blockNumber Number of block in which entity was recorded.
- * @param id Identifier, format: <pool address>-<tick index>-<timestamp>.
+ * @param id Identifier, format: (pool address)-(tick index)-(timestamp).
  * @param date Timestamp rounded to current day by dividing by 86400.
  * @param pool Pointer to pool.
  * @param tick Pointer to tick.
@@ -52,7 +52,7 @@ data class UniswapV3TickDayDataDTO (
     @Json(name = "block_number")
     val blockNumber: kotlin.Long? = null,
 
-    /* Identifier, format: <pool address>-<tick index>-<timestamp>. */
+    /* Identifier, format: (pool address)-(tick index)-(timestamp). */
     @Json(name = "id")
     val id: kotlin.String? = null,
 

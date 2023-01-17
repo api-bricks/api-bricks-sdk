@@ -24,7 +24,7 @@ Number of block in which entity was recorded.
 .PARAMETER Vid
 
 .PARAMETER Id
-Identifier, format: transaction hash + ""#"" + index in swaps Transaction array.
+Identifier, format: (transaction hash) + # + (index in swaps Transaction array).
 .PARAMETER Transaction
 Pointer to transaction.
 .PARAMETER Timestamp

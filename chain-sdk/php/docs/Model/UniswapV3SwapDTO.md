@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **recv_time** | **\DateTime** |  | [optional]
 **block_number** | **int** | Number of block in which entity was recorded. | [optional]
 **vid** | **int** |  | [optional]
-**id** | **string** | Identifier, format: transaction hash + \&quot;#\&quot; + index in swaps Transaction array. | [optional]
+**id** | **string** | Identifier, format: (transaction hash) + # + (index in swaps Transaction array). | [optional]
 **transaction** | **string** | Pointer to transaction. | [optional]
 **timestamp** | **\DateTime** | Timestamp of transaction. | [optional]
 **pool** | **string** | Pool swap occured within. | [optional]

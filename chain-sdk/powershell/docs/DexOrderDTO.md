@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **EntryTime** | **System.DateTime** |  | [optional] 
 **RecvTime** | **System.DateTime** |  | [optional] 
 **BlockNumber** | **Int64** | Number of block in which entity was recorded. | [optional] 
-**Id** | **String** | Identifier, format: &lt;owner address&gt;-&lt;order id&gt; | [optional] 
+**Id** | **String** | Identifier, format: (owner address)-(order id) | [optional] 
 **Owner** | **String** | Reference to owner. | [optional] 
 **OrderId** | **Int32** | Order id. | [optional] 
 **FromBatchId** | **String** | Batch id from which order became valid. | [optional] 

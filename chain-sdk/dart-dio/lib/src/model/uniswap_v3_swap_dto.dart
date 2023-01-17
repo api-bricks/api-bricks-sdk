@@ -17,7 +17,7 @@ part 'uniswap_v3_swap_dto.g.dart';
 /// * [recvTime] 
 /// * [blockNumber] - Number of block in which entity was recorded.
 /// * [vid] - 
-/// * [id] - Identifier, format: transaction hash + \"#\" + index in swaps Transaction array.
+/// * [id] - Identifier, format: (transaction hash) + # + (index in swaps Transaction array).
 /// * [transaction] - Pointer to transaction.
 /// * [timestamp] - Timestamp of transaction.
 /// * [pool] - Pool swap occured within.
@@ -53,7 +53,7 @@ abstract class UniswapV3SwapDTO implements Built<UniswapV3SwapDTO, UniswapV3Swap
   @BuiltValueField(wireName: r'vid')
   int? get vid;
 
-  /// Identifier, format: transaction hash + \"#\" + index in swaps Transaction array.
+  /// Identifier, format: (transaction hash) + # + (index in swaps Transaction array).
   @BuiltValueField(wireName: r'id')
   String? get id;
 

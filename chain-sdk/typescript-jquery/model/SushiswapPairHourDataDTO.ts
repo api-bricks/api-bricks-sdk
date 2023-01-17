@@ -26,7 +26,7 @@ export interface SushiswapPairHourDataDTO {
     block_number?: number;
 
     /**
-     * Identifier, format: <pair id>-<hour start timestamp>.
+     * Identifier, format: (pair id)-(hour start timestamp).
      */
     id?: string;
 

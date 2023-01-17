@@ -34,7 +34,7 @@ export interface UniswapV2LiquidityPositionSnapshotDTO {
      */
     block_number?: number;
     /**
-     * Identifier, format: <pair address>-<user address>
+     * Identifier, format: (pair address)-(user address)
      * @type {string}
      * @memberof UniswapV2LiquidityPositionSnapshotDTO
      */

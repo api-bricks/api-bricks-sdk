@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **EntryTime** | **System.DateTime** |  | [optional] 
 **RecvTime** | **System.DateTime** |  | [optional] 
 **BlockNumber** | **Int64** | Number of block in which entity was recorded. | [optional] 
-**Id** | **String** | Identifier, format: &lt;pool address&gt;-&lt;tick index&gt;-&lt;timestamp&gt;. | [optional] 
+**Id** | **String** | Identifier, format: (pool address)-(tick index)-(timestamp). | [optional] 
 **Date** | **Int32** | Timestamp rounded to current day by dividing by 86400. | [optional] 
 **Pool** | **String** | Pointer to pool. | [optional] 
 **Tick** | **String** | Pointer to tick. | [optional] 

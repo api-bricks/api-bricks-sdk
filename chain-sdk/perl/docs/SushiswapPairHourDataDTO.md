@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **entry_time** | **DATE_TIME** |  | [optional] 
 **recv_time** | **DATE_TIME** |  | [optional] 
 **block_number** | **int** | Number of block in which entity was recorded. | [optional] 
-**id** | **string** | Identifier, format: &lt;pair id&gt;-&lt;hour start timestamp&gt;. | [optional] 
+**id** | **string** | Identifier, format: (pair id)-(hour start timestamp). | [optional] 
 **date** | **int** | Hour start timestamp. | [optional] 
 **pair** | **string** | Reference to pair. | [optional] 
 **reserve_0** | **string** | Reserve of token0 (updated during each transaction on pair). | [optional] 

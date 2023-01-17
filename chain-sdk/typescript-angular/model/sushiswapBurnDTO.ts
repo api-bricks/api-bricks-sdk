@@ -22,7 +22,7 @@ export interface SushiswapBurnDTO {
      */
     block_number?: number;
     /**
-     * Identifier, format: <transaction id>:<transaction.burns.length>.
+     * Identifier, format: (transaction id):(transaction.burns.length).
      */
     id?: string | null;
     /**

@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **BlockNumber** | **long** | Number of block in which entity was recorded. | [optional] 
 **Id** | **string** | Pair contract address. | [optional] 
 **Factory** | **string** | Factory contract address. | [optional] 
-**Name** | **string** | Friendly name, format: &lt;token0 name&gt;-&lt;token1 name&gt; | [optional] 
+**Name** | **string** | Friendly name, format: (token0 name)-(token1 name) | [optional] 
 **Token0** | **string** | Reference to token0 as stored in pair contract. | [optional] 
 **Token1** | **string** | Reference to token0 as stored in pair contract. | [optional] 
 **Reserve0** | **string** | Reserve of token0. | [optional] 

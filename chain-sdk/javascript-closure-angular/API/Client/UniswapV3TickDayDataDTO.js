@@ -26,7 +26,7 @@ API.Client.UniswapV3TickDayDataDTO.prototype.recvTime;
 API.Client.UniswapV3TickDayDataDTO.prototype.blockNumber;
 
 /**
- * Identifier, format: <pool address>-<tick index>-<timestamp>.
+ * Identifier, format: (pool address)-(tick index)-(timestamp).
  * @type {!string}
  * @export
  */

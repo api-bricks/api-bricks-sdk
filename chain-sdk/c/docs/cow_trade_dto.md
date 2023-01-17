@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **entry_time** | **char \*** |  | [optional] 
 **recv_time** | **char \*** |  | [optional] 
 **block_number** | **long** | Number of block in which entity was recorded. | [optional] 
-**id** | **char \*** | Identifier, format: &lt;order id&gt;|&lt;transaction hash&gt;|&lt;event index&gt;. | [optional] 
+**id** | **char \*** | Identifier, format: (order id)|(transaction hash)|(event index). | [optional] 
 **timestamp** | **char \*** | Block&#39;s timestamp. | [optional] 
 **gas_price** | **char \*** | Transaction&#39;s gas price. | [optional] 
 **gas_limit** | **char \*** | Transaction&#39;s gas limit. | [optional] 

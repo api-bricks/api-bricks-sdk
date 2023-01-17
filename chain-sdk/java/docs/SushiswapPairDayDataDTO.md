@@ -11,7 +11,7 @@ Tracks pair data across each day.
 |**entryTime** | **OffsetDateTime** |  |  [optional] |
 |**recvTime** | **OffsetDateTime** |  |  [optional] |
 |**blockNumber** | **Long** | Number of block in which entity was recorded. |  [optional] |
-|**id** | **String** | Identifier, format: &lt;pair id&gt;-&lt;day start timestamp&gt;. |  [optional] |
+|**id** | **String** | Identifier, format: (pair id)-(day start timestamp). |  [optional] |
 |**date** | **Integer** | Unix timestamp for start of day. |  [optional] |
 |**pair** | **String** | Reference to pair. |  [optional] |
 |**token0** | **String** | Reference to token0. |  [optional] |

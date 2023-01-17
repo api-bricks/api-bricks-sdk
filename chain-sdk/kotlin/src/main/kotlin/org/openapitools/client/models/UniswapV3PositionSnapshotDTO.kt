@@ -24,7 +24,7 @@ import com.squareup.moshi.Json
  * @param entryTime 
  * @param recvTime 
  * @param blockNumber Number of block in which entity was recorded.
- * @param id NFT token identifier, format: <NFT token id>#<block number>
+ * @param id NFT token identifier, format: (NFT token id)#(block number).
  * @param owner Owner of the NFT.
  * @param pool Pool the position is within.
  * @param position Position of which the snap was taken of.
@@ -55,7 +55,7 @@ data class UniswapV3PositionSnapshotDTO (
     @Json(name = "block_number")
     val blockNumber: kotlin.Long? = null,
 
-    /* NFT token identifier, format: <NFT token id>#<block number> */
+    /* NFT token identifier, format: (NFT token id)#(block number). */
     @Json(name = "id")
     val id: kotlin.String? = null,
 

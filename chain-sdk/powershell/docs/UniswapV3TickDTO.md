@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **RecvTime** | **System.DateTime** |  | [optional] 
 **BlockNumber** | **Int64** | Number of block in which entity was recorded. | [optional] 
 **Vid** | **Int64** |  | [optional] 
-**Id** | **String** | Identifier, format: &lt;pool address&gt;#&lt;tick index&gt; | [optional] 
+**Id** | **String** | Identifier, format: (pool address)#(tick index) | [optional] 
 **PoolAddress** | **String** | Pool address. | [optional] 
 **TickIdx** | [**NumericsBigInteger**](NumericsBigInteger.md) |  | [optional] 
 **Pool** | **String** | Pool address. | [optional] 

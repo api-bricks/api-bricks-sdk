@@ -24,7 +24,7 @@ import com.squareup.moshi.Json
  * @param entryTime 
  * @param recvTime 
  * @param blockNumber Number of block in which entity was recorded.
- * @param id Identifier, format: <pair address>-<user address>
+ * @param id Identifier, format: (pair address)-(user address)
  * @param user User address.
  * @param pair Pair address.
  * @param liquidityTokenBalance Amount of LP tokens minted for this position.
@@ -46,7 +46,7 @@ data class SushiswapLiquidityPositionDTO (
     @Json(name = "block_number")
     val blockNumber: kotlin.Long? = null,
 
-    /* Identifier, format: <pair address>-<user address> */
+    /* Identifier, format: (pair address)-(user address) */
     @Json(name = "id")
     val id: kotlin.String? = null,
 

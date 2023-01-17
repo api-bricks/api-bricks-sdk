@@ -243,7 +243,7 @@ __PACKAGE__->method_documentation({
     'id' => {
         datatype => 'string',
         base_name => 'id',
-        description => 'Identifier, format: &lt;transaction hash&gt;-&lt;index in the transaction mint array&gt;.',
+        description => 'Identifier, format: (transaction hash)-(index in the transaction mint array).',
         format => '',
         read_only => '',
             },

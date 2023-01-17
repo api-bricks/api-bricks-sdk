@@ -50,7 +50,7 @@ import org.openapitools.client.JSON;
 /**
  * CurveCoinDTO
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-16T16:13:26.555571Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-17T12:39:15.555439Z[Etc/UTC]")
 public class CurveCoinDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -191,11 +191,11 @@ public class CurveCoinDTO {
   }
 
    /**
-   * Identifier, format: &lt;pool_id&gt;-&lt;coin_index&gt;.
+   * Identifier, format: (pool_id)-(coin_index).
    * @return id
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Identifier, format: <pool_id>-<coin_index>.")
+  @ApiModelProperty(value = "Identifier, format: (pool_id)-(coin_index).")
 
   public String getId() {
     return id;

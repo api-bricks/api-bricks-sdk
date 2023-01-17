@@ -82,7 +82,7 @@ public:
     void setBlockNumber(int64_t value);
 
     /// <summary>
-    /// Identifier, format: &lt;transaction hash&gt;-&lt;index in the transaction mint array&gt;.
+    /// Identifier, format: (transaction hash)-(index in the transaction mint array).
     /// </summary>
     utility::string_t getId() const;
     bool idIsSet() const;

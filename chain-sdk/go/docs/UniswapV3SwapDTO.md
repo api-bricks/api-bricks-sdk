@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **RecvTime** | Pointer to **time.Time** |  | [optional] 
 **BlockNumber** | Pointer to **int64** | Number of block in which entity was recorded. | [optional] 
 **Vid** | Pointer to **int64** |  | [optional] 
-**Id** | Pointer to **NullableString** | Identifier, format: transaction hash + \&quot;#\&quot; + index in swaps Transaction array. | [optional] 
+**Id** | Pointer to **NullableString** | Identifier, format: (transaction hash) + # + (index in swaps Transaction array). | [optional] 
 **Transaction** | Pointer to **NullableString** | Pointer to transaction. | [optional] 
 **Timestamp** | Pointer to **time.Time** | Timestamp of transaction. | [optional] 
 **Pool** | Pointer to **NullableString** | Pool swap occured within. | [optional] 

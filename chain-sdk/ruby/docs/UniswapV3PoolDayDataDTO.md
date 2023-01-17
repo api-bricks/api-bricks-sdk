@@ -7,7 +7,7 @@
 | **entry_time** | **Time** |  | [optional] |
 | **recv_time** | **Time** |  | [optional] |
 | **block_number** | **Integer** | Number of block in which entity was recorded. | [optional] |
-| **id** | **String** | Identifier, format: &lt;pool address&gt;-&lt;day id&gt;. | [optional] |
+| **id** | **String** | Identifier, format: (pool address)-(day id). | [optional] |
 | **date** | **Integer** | Timestamp rounded to current day by dividing by 86400 | [optional] |
 | **pool** | **String** | Pointer to pool. | [optional] |
 | **liquidity** | **String** | In range liquidity at end of period. | [optional] |

@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **EntryTime** | **System.DateTime** |  | [optional] 
 **RecvTime** | **System.DateTime** |  | [optional] 
 **BlockNumber** | **Int64** | Number of block in which entity was recorded. | [optional] 
-**Id** | **String** | Identifier, format: &lt;order id&gt;|&lt;transaction hash&gt;|&lt;event index&gt;. | [optional] 
+**Id** | **String** | Identifier, format: (order id)|(transaction hash)|(event index). | [optional] 
 **Timestamp** | **String** | Block&#39;s timestamp. | [optional] 
 **GasPrice** | **String** | Transaction&#39;s gas price. | [optional] 
 **GasLimit** | **String** | Transaction&#39;s gas limit. | [optional] 

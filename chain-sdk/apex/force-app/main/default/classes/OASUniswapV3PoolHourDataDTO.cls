@@ -33,7 +33,7 @@ public class OASUniswapV3PoolHourDataDTO implements OAS.MappedProperties {
     public Long blockNumber { get; set; }
 
     /**
-     * Identifier, format: <pool address>-<day id>
+     * Identifier, format: (pool address)-(day id)
      * @return id
      */
     public String id { get; set; }

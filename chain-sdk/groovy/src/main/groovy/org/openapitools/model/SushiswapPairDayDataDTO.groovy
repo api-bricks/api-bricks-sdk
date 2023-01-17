@@ -13,7 +13,7 @@ class SushiswapPairDayDataDTO {
     Date recvTime
     /* Number of block in which entity was recorded. */
     Long blockNumber
-    /* Identifier, format: <pair id>-<day start timestamp>. */
+    /* Identifier, format: (pair id)-(day start timestamp). */
     String id
     /* Unix timestamp for start of day. */
     Integer date

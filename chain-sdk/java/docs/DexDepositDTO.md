@@ -11,7 +11,7 @@ Deposit of an user.
 |**entryTime** | **OffsetDateTime** |  |  [optional] |
 |**recvTime** | **OffsetDateTime** |  |  [optional] |
 |**blockNumber** | **Long** | Number of block in which entity was recorded. |  [optional] |
-|**id** | **String** | Identifier, format: &lt;transaction hash&gt;-&lt;token id&gt;. |  [optional] |
+|**id** | **String** | Identifier, format: (transaction hash)-(token id). |  [optional] |
 |**user** | **String** | User address. |  [optional] |
 |**tokenAddress** | **String** | Token address. |  [optional] |
 |**amount** | **String** | Amount of deposit. |  [optional] |

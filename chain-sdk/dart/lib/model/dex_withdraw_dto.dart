@@ -51,7 +51,7 @@ class DexWithdrawDTO {
   ///
   int? blockNumber;
 
-  /// Identifier, format: <transaction hash>-<id>.
+  /// Identifier, format: (transaction hash)-(id).
   String? id;
 
   /// 

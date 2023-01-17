@@ -24,7 +24,7 @@ import com.squareup.moshi.Json
  * @param entryTime 
  * @param recvTime 
  * @param blockNumber Number of block in which entity was recorded.
- * @param id Identifier, format: <token id>-<batch id>.
+ * @param id Identifier, format: (token id)-(batch id).
  * @param token Token identifier.
  * @param batchId Batch identifier.
  * @param priceInOwlNumerator Price enumerator in OWL (derivative of the GNO token).
@@ -48,7 +48,7 @@ data class DexPriceDTO (
     @Json(name = "block_number")
     val blockNumber: kotlin.Long? = null,
 
-    /* Identifier, format: <token id>-<batch id>. */
+    /* Identifier, format: (token id)-(batch id). */
     @Json(name = "id")
     val id: kotlin.String? = null,
 

@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **entryTime** | [**DateTime**](DateTime.md) |  | [optional] 
 **recvTime** | [**DateTime**](DateTime.md) |  | [optional] 
 **blockNumber** | **int** | Number of block in which entity was recorded. | [optional] 
-**id** | **String** | Identifier, format: <transaction hash>-<token id>. | [optional] 
+**id** | **String** | Identifier, format: (transaction hash)-(token id). | [optional] 
 **user** | **String** | User address. | [optional] 
 **tokenAddress** | **String** | Token address. | [optional] 
 **amount** | **String** | Amount of deposit. | [optional] 

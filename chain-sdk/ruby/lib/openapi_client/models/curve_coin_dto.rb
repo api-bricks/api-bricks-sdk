@@ -22,7 +22,7 @@ module OpenapiClient
     # Number of block in which entity was recorded.
     attr_accessor :block_number
 
-    # Identifier, format: <pool_id>-<coin_index>.
+    # Identifier, format: (pool_id)-(coin_index).
     attr_accessor :id
 
     # Coin index.

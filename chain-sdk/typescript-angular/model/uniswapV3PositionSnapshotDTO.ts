@@ -19,7 +19,7 @@ export interface UniswapV3PositionSnapshotDTO {
      */
     block_number?: number;
     /**
-     * NFT token identifier, format: <NFT token id>#<block number>
+     * NFT token identifier, format: (NFT token id)#(block number).
      */
     id?: string | null;
     /**

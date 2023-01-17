@@ -129,7 +129,7 @@ SushiswapLiquidityPositionDTO.prototype['recv_time'] = undefined;
 SushiswapLiquidityPositionDTO.prototype['block_number'] = undefined;
 
 /**
- * Identifier, format: <pair address>-<user address>
+ * Identifier, format: (pair address)-(user address)
  * @member {String} id
  */
 SushiswapLiquidityPositionDTO.prototype['id'] = undefined;

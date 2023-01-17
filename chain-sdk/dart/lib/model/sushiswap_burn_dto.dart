@@ -58,7 +58,7 @@ class SushiswapBurnDTO {
   ///
   int? blockNumber;
 
-  /// Identifier, format: <transaction id>:<transaction.burns.length>.
+  /// Identifier, format: (transaction id):(transaction.burns.length).
   String? id;
 
   /// Reference to the transaction Burn was included in.

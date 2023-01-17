@@ -26,7 +26,7 @@ API.Client.SushiswapMintDTO.prototype.recvTime;
 API.Client.SushiswapMintDTO.prototype.blockNumber;
 
 /**
- * Identifier, format: <transaction hash>-<index in the transaction mint array>.
+ * Identifier, format: (transaction hash)-(index in the transaction mint array).
  * @type {!string}
  * @export
  */

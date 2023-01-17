@@ -23,7 +23,7 @@ module OpenapiClient
     # Number of block in which entity was recorded.
     attr_accessor :block_number
 
-    # Identifier, format: <pair id>-<hour start timestamp>.
+    # Identifier, format: (pair id)-(hour start timestamp).
     attr_accessor :id
 
     # Hour start timestamp.

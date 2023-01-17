@@ -26,7 +26,7 @@ module OpenapiClient
     # 
     attr_accessor :vid
 
-    # Identifier, format: transaction hash + \"#\" + index in swaps Transaction array.
+    # Identifier, format: (transaction hash) + # + (index in swaps Transaction array).
     attr_accessor :id
 
     # Pointer to transaction.

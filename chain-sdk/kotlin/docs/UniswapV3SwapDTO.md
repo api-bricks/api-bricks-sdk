@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **recvTime** | [**java.time.OffsetDateTime**](java.time.OffsetDateTime.md) |  |  [optional]
 **blockNumber** | **kotlin.Long** | Number of block in which entity was recorded. |  [optional]
 **vid** | **kotlin.Long** |  |  [optional]
-**id** | **kotlin.String** | Identifier, format: transaction hash + \&quot;#\&quot; + index in swaps Transaction array. |  [optional]
+**id** | **kotlin.String** | Identifier, format: (transaction hash) + # + (index in swaps Transaction array). |  [optional]
 **transaction** | **kotlin.String** | Pointer to transaction. |  [optional]
 **timestamp** | [**java.time.OffsetDateTime**](java.time.OffsetDateTime.md) | Timestamp of transaction. |  [optional]
 **pool** | **kotlin.String** | Pool swap occured within. |  [optional]

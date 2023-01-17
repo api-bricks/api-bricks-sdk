@@ -50,7 +50,7 @@ class SushiswapLiquidityPositionDTO {
   ///
   int? blockNumber;
 
-  /// Identifier, format: <pair address>-<user address>
+  /// Identifier, format: (pair address)-(user address)
   String? id;
 
   /// User address.

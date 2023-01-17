@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **entry_time** | **char \*** |  | [optional] 
 **recv_time** | **char \*** |  | [optional] 
 **block_number** | **long** | Number of block in which entity was recorded. | [optional] 
-**id** | **char \*** | Identifier, format: &lt;transaction hash&gt;-&lt;id&gt;. | [optional] 
+**id** | **char \*** | Identifier, format: (transaction hash)-(id). | [optional] 
 **user** | **char \*** |  | [optional] 
 **token_address** | **char \*** |  | [optional] 
 **amount** | **char \*** |  | [optional] 

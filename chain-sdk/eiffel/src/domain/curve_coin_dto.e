@@ -26,7 +26,7 @@ feature --Access
  	block_number: INTEGER_64
     	 -- Number of block in which entity was recorded.
     id: detachable STRING_32
-      -- Identifier, format: <pool_id>-<coin_index>.
+      -- Identifier, format: (pool_id)-(coin_index).
  	index: INTEGER_32
     	 -- Coin index.
     pool: detachable STRING_32

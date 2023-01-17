@@ -33,7 +33,7 @@ public class OASDexPriceDTO implements OAS.MappedProperties {
     public Long blockNumber { get; set; }
 
     /**
-     * Identifier, format: <token id>-<batch id>.
+     * Identifier, format: (token id)-(batch id).
      * @return id
      */
     public String id { get; set; }

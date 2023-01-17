@@ -26,7 +26,7 @@ API.Client.DexWithdrawDTO.prototype.recvTime;
 API.Client.DexWithdrawDTO.prototype.blockNumber;
 
 /**
- * Identifier, format: <transaction hash>-<id>.
+ * Identifier, format: (transaction hash)-(id).
  * @type {!string}
  * @export
  */

@@ -14,7 +14,7 @@ part 'dex_order_dto.g.dart';
 /// * [entryTime] 
 /// * [recvTime] 
 /// * [blockNumber] - Number of block in which entity was recorded.
-/// * [id] - Identifier, format: <owner address>-<order id>
+/// * [id] - Identifier, format: (owner address)-(order id)
 /// * [owner] - Reference to owner.
 /// * [orderId] - Order id.
 /// * [fromBatchId] - Batch id from which order became valid.
@@ -47,7 +47,7 @@ abstract class DexOrderDTO implements Built<DexOrderDTO, DexOrderDTOBuilder> {
   @BuiltValueField(wireName: r'block_number')
   int? get blockNumber;
 
-  /// Identifier, format: <owner address>-<order id>
+  /// Identifier, format: (owner address)-(order id)
   @BuiltValueField(wireName: r'id')
   String? get id;
 

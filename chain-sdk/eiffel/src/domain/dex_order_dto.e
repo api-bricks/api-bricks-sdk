@@ -26,7 +26,7 @@ feature --Access
  	block_number: INTEGER_64
     	 -- Number of block in which entity was recorded.
     id: detachable STRING_32
-      -- Identifier, format: <owner address>-<order id>
+      -- Identifier, format: (owner address)-(order id)
     owner: detachable STRING_32
       -- Reference to owner.
  	order_id: INTEGER_32

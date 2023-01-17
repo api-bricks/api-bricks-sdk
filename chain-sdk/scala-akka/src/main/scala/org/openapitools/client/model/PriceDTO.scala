@@ -19,7 +19,7 @@ case class PriceDTO (
   recvTime: Option[OffsetDateTime] = None,
   /* Number of block in which entity was recorded. */
   blockNumber: Option[Long] = None,
-  /* Identifier, format: <token id>-<batch id>. */
+  /* Identifier, format: (token id)-(batch id). */
   id: Option[String] = None,
   /* Token identifier. */
   token: Option[String] = None,

@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **EntryTime** | **System.DateTime** |  | [optional] 
 **RecvTime** | **System.DateTime** |  | [optional] 
 **BlockNumber** | **Int64** | Number of block in which entity was recorded. | [optional] 
-**Id** | **String** | Identifier, format: &lt;pair address&gt;-&lt;user address&gt; | [optional] 
+**Id** | **String** | Identifier, format: (pair address)-(user address) | [optional] 
 **User** | **String** | User address. | [optional] 
 **Pair** | **String** | Pair address. | [optional] 
 **LiquidityTokenBalance** | **String** | Amount of LP tokens minted for this position. | [optional] 

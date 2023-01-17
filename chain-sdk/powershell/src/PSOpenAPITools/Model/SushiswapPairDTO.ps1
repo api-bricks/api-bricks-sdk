@@ -26,7 +26,7 @@ Pair contract address.
 .PARAMETER Factory
 Factory contract address.
 .PARAMETER Name
-Friendly name, format: <token0 name>-<token1 name>
+Friendly name, format: (token0 name)-(token1 name)
 .PARAMETER Token0
 Reference to token0 as stored in pair contract.
 .PARAMETER Token1

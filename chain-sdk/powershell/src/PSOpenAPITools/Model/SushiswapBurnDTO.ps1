@@ -22,7 +22,7 @@ No description available.
 .PARAMETER BlockNumber
 Number of block in which entity was recorded.
 .PARAMETER Id
-Identifier, format: <transaction id>:<transaction.burns.length>.
+Identifier, format: (transaction id):(transaction.burns.length).
 .PARAMETER Transaction
 Reference to the transaction Burn was included in.
 .PARAMETER Timestamp

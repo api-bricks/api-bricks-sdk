@@ -24,7 +24,7 @@ export class CowTradeDTO {
     */
     'blockNumber'?: number;
     /**
-    * Identifier, format: <order id>|<transaction hash>|<event index>.
+    * Identifier, format: (order id)|(transaction hash)|(event index).
     */
     'id'?: string | null;
     /**

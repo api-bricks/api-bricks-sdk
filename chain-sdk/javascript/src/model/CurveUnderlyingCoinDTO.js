@@ -154,7 +154,7 @@ CurveUnderlyingCoinDTO.prototype['recv_time'] = undefined;
 CurveUnderlyingCoinDTO.prototype['block_number'] = undefined;
 
 /**
- * Equals to: <pool_id>-<coin_index>.
+ * Equals to: (pool_id)-(coin_index).
  * @member {String} id
  */
 CurveUnderlyingCoinDTO.prototype['id'] = undefined;

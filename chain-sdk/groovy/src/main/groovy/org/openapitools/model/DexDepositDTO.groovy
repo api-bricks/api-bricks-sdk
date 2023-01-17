@@ -13,7 +13,7 @@ class DexDepositDTO {
     Date recvTime
     /* Number of block in which entity was recorded. */
     Long blockNumber
-    /* Identifier, format: <transaction hash>-<token id>. */
+    /* Identifier, format: (transaction hash)-(token id). */
     String id
     /* User address. */
     String user

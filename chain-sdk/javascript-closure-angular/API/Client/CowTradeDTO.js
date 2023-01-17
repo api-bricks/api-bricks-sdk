@@ -26,7 +26,7 @@ API.Client.CowTradeDTO.prototype.recvTime;
 API.Client.CowTradeDTO.prototype.blockNumber;
 
 /**
- * Identifier, format: <order id>|<transaction hash>|<event index>.
+ * Identifier, format: (order id)|(transaction hash)|(event index).
  * @type {!string}
  * @export
  */

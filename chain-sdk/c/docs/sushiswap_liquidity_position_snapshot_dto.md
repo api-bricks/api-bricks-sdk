@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **entry_time** | **char \*** |  | [optional] 
 **recv_time** | **char \*** |  | [optional] 
 **block_number** | **long** | Number of block in which entity was recorded. | [optional] 
-**id** | **char \*** | Identifier, format: &lt;pair address&gt;-&lt;user address&gt;-&lt;timestamp&gt; | [optional] 
+**id** | **char \*** | Identifier, format: (pair address)-(user address)-(timestamp) | [optional] 
 **liquidity_position** | **char \*** | Reference to LP identifier. | [optional] 
 **timestamp** | **int** | Creation time. | [optional] 
 **block** | **int** | Block in which snapshot has been created. | [optional] 

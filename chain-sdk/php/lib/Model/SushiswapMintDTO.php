@@ -503,7 +503,7 @@ class SushiswapMintDTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets id
      *
-     * @param string|null $id Identifier, format: <transaction hash>-<index in the transaction mint array>.
+     * @param string|null $id Identifier, format: (transaction hash)-(index in the transaction mint array).
      *
      * @return self
      */

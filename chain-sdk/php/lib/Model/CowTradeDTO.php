@@ -531,7 +531,7 @@ class CowTradeDTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets id
      *
-     * @param string|null $id Identifier, format: <order id>|<transaction hash>|<event index>.
+     * @param string|null $id Identifier, format: (order id)|(transaction hash)|(event index).
      *
      * @return self
      */

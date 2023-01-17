@@ -75,11 +75,11 @@ public:
 	/*! \brief Set 
 	 */
 	void setVid(long long  vid);
-	/*! \brief Get Identifier, format: transaction hash + \"#\" + index in swaps Transaction array.
+	/*! \brief Get Identifier, format: (transaction hash) + # + (index in swaps Transaction array).
 	 */
 	std::string getId();
 
-	/*! \brief Set Identifier, format: transaction hash + \"#\" + index in swaps Transaction array.
+	/*! \brief Set Identifier, format: (transaction hash) + # + (index in swaps Transaction array).
 	 */
 	void setId(std::string  id);
 	/*! \brief Get Pointer to transaction.

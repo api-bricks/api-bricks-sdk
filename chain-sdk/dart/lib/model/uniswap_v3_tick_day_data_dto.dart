@@ -56,7 +56,7 @@ class UniswapV3TickDayDataDTO {
   ///
   int? blockNumber;
 
-  /// Identifier, format: <pool address>-<tick index>-<timestamp>.
+  /// Identifier, format: (pool address)-(tick index)-(timestamp).
   String? id;
 
   /// Timestamp rounded to current day by dividing by 86400.

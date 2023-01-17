@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **EntryTime** | Pointer to **time.Time** |  | [optional] 
 **RecvTime** | Pointer to **time.Time** |  | [optional] 
 **BlockNumber** | Pointer to **int64** | Number of block in which entity was recorded. | [optional] 
-**Id** | Pointer to **NullableString** | Identifier, format: &lt;pair address&gt;-&lt;user address&gt; | [optional] 
+**Id** | Pointer to **NullableString** | Identifier, format: (pair address)-(user address) | [optional] 
 **User** | Pointer to **NullableString** | User address. | [optional] 
 **Pair** | Pointer to **NullableString** | Pair address. | [optional] 
 **LiquidityTokenBalance** | Pointer to **NullableString** | Amount of LP tokens minted for this position. | [optional] 

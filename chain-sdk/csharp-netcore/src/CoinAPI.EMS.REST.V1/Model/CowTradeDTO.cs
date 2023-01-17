@@ -44,7 +44,7 @@ namespace CoinAPI.EMS.REST.V1.Model
         /// <param name="entryTime">entryTime.</param>
         /// <param name="recvTime">recvTime.</param>
         /// <param name="blockNumber">Number of block in which entity was recorded..</param>
-        /// <param name="id">Identifier, format: &lt;order id&gt;|&lt;transaction hash&gt;|&lt;event index&gt;..</param>
+        /// <param name="id">Identifier, format: (order id)|(transaction hash)|(event index)..</param>
         /// <param name="timestamp">Block&#39;s timestamp..</param>
         /// <param name="gasPrice">Transaction&#39;s gas price..</param>
         /// <param name="gasLimit">Transaction&#39;s gas limit..</param>
@@ -99,9 +99,9 @@ namespace CoinAPI.EMS.REST.V1.Model
         public long BlockNumber { get; set; }
 
         /// <summary>
-        /// Identifier, format: &lt;order id&gt;|&lt;transaction hash&gt;|&lt;event index&gt;.
+        /// Identifier, format: (order id)|(transaction hash)|(event index).
         /// </summary>
-        /// <value>Identifier, format: &lt;order id&gt;|&lt;transaction hash&gt;|&lt;event index&gt;.</value>
+        /// <value>Identifier, format: (order id)|(transaction hash)|(event index).</value>
         [DataMember(Name = "id", EmitDefaultValue = true)]
         public string Id { get; set; }
 

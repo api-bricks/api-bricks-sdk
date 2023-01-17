@@ -14,7 +14,7 @@ part 'sushiswap_liquidity_position_dto.g.dart';
 /// * [entryTime] 
 /// * [recvTime] 
 /// * [blockNumber] - Number of block in which entity was recorded.
-/// * [id] - Identifier, format: <pair address>-<user address>
+/// * [id] - Identifier, format: (pair address)-(user address)
 /// * [user] - User address.
 /// * [pair] - Pair address.
 /// * [liquidityTokenBalance] - Amount of LP tokens minted for this position.
@@ -33,7 +33,7 @@ abstract class SushiswapLiquidityPositionDTO implements Built<SushiswapLiquidity
   @BuiltValueField(wireName: r'block_number')
   int? get blockNumber;
 
-  /// Identifier, format: <pair address>-<user address>
+  /// Identifier, format: (pair address)-(user address)
   @BuiltValueField(wireName: r'id')
   String? get id;
 

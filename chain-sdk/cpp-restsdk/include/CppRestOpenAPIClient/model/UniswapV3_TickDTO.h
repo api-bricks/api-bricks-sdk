@@ -93,7 +93,7 @@ public:
     void setVid(int64_t value);
 
     /// <summary>
-    /// Identifier, format: &lt;pool address&gt;#&lt;tick index&gt;
+    /// Identifier, format: (pool address)#(tick index)
     /// </summary>
     utility::string_t getId() const;
     bool idIsSet() const;
