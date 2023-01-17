@@ -51,7 +51,7 @@ import org.openapitools.client.JSON;
  * The Position object.
  */
 @ApiModel(description = "The Position object.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-16T16:13:16.475159Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-17T12:48:13.654629Z[Etc/UTC]")
 public class PositionDataInner {
   public static final String SERIALIZED_NAME_SYMBOL_ID_EXCHANGE = "symbol_id_exchange";
   @SerializedName(SERIALIZED_NAME_SYMBOL_ID_EXCHANGE)
