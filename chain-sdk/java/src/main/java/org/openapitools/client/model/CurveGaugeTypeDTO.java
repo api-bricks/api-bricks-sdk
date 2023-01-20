@@ -50,7 +50,7 @@ import org.openapitools.client.JSON;
 /**
  * CurveGaugeTypeDTO
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-17T14:32:08.285320Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-20T12:16:59.494623Z[Etc/UTC]")
 public class CurveGaugeTypeDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
