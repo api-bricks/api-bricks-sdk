@@ -51,7 +51,7 @@ import org.openapitools.client.JSON;
  * Data accumulated and condensed into day stats for each pool.
  */
 @ApiModel(description = "Data accumulated and condensed into day stats for each pool.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-20T12:16:59.494623Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-20T12:28:39.269854Z[Etc/UTC]")
 public class UniswapV3PoolDayDataDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
