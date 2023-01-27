@@ -2,7 +2,7 @@
 
 On Chain Dapps - REST API
 - API version: v1
-  - Build date: 2023-01-27T16:01:35.227471Z[Etc/UTC]
+  - Build date: 2023-01-27T15:59:31.022525Z[Etc/UTC]
 
 
 This section will provide necessary information about the `OnChain API` protocol. 
