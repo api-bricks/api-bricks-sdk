@@ -51,7 +51,7 @@ import org.openapitools.client.JSON;
  * Data accumulated and condensed into day stats for each exchange. Entity gets saved only if there is a change during the day
  */
 @ApiModel(description = "Data accumulated and condensed into day stats for each exchange. Entity gets saved only if there is a change during the day")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-27T15:43:42.289812Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-27T15:45:12.037130Z[Etc/UTC]")
 public class UniswapV3TickDayDataDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
