@@ -50,7 +50,7 @@ import org.openapitools.client.JSON;
 /**
  * SushiswapUserDTO
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-27T15:21:48.564256Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-27T15:43:42.289812Z[Etc/UTC]")
 public class SushiswapUserDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)

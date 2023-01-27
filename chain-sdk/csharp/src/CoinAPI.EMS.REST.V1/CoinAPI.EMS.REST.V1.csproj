@@ -12,7 +12,7 @@ Contact: support@coinapi.io
     
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{32517E50-6ED2-4211-9188-78A431D876DC}</ProjectGuid>
+    <ProjectGuid>{FCA126C0-13F9-40A3-9C57-B09716FEE6DB}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>CoinAPI.EMS.REST.V1</RootNamespace>
