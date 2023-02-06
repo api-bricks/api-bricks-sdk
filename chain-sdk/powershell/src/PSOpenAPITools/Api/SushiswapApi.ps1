@@ -441,22 +441,22 @@ Burns (historical)
 No description available.
 
 .PARAMETER StartBlock
-No description available.
+The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
 
 .PARAMETER EndBlock
-No description available.
+The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
 
 .PARAMETER StartDate
-No description available.
+The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
 
 .PARAMETER EndDate
-No description available.
+The end date of timeframe.
 
 .PARAMETER Id
-No description available.
+Identifier, format: (transaction id):(transaction.burns.length).
 
 .PARAMETER Pair
-No description available.
+Reference to pair.
 
 .PARAMETER ReturnType
 
@@ -951,25 +951,25 @@ LiquidityPositionSnapshots (historical)
 No description available.
 
 .PARAMETER StartBlock
-No description available.
+The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
 
 .PARAMETER EndBlock
-No description available.
+The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
 
 .PARAMETER StartDate
-No description available.
+The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
 
 .PARAMETER EndDate
-No description available.
+The end date of timeframe.
 
 .PARAMETER Id
-No description available.
+Identifier, format: (pair address)-(user address)-(timestamp)
 
 .PARAMETER User
-No description available.
+Reference to user.
 
 .PARAMETER Pair
-No description available.
+Reference to the pair liquidity is being provided on.
 
 .PARAMETER ReturnType
 
@@ -1096,25 +1096,25 @@ LiquidityPositions (historical)
 No description available.
 
 .PARAMETER StartBlock
-No description available.
+The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
 
 .PARAMETER EndBlock
-No description available.
+The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
 
 .PARAMETER StartDate
-No description available.
+The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
 
 .PARAMETER EndDate
-No description available.
+The end date of timeframe.
 
 .PARAMETER Id
-No description available.
+Identifier, format: (pair address)-(user address)
 
 .PARAMETER User
-No description available.
+User address.
 
 .PARAMETER Pair
-No description available.
+Pair address.
 
 .PARAMETER ReturnType
 
@@ -1241,22 +1241,22 @@ Mints (historical)
 No description available.
 
 .PARAMETER StartBlock
-No description available.
+The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
 
 .PARAMETER EndBlock
-No description available.
+The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
 
 .PARAMETER StartDate
-No description available.
+The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
 
 .PARAMETER EndDate
-No description available.
+The end date of timeframe.
 
 .PARAMETER Id
-No description available.
+Identifier, format: (transaction hash)-(index in the transaction mint array).
 
 .PARAMETER Pair
-No description available.
+Reference to pair.
 
 .PARAMETER ReturnType
 
@@ -1376,28 +1376,28 @@ PairDayData (historical)
 No description available.
 
 .PARAMETER StartBlock
-No description available.
+The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
 
 .PARAMETER EndBlock
-No description available.
+The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
 
 .PARAMETER StartDate
-No description available.
+The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
 
 .PARAMETER EndDate
-No description available.
+The end date of timeframe.
 
 .PARAMETER Id
-No description available.
+Identifier, format: (pair id)-(day start timestamp).
 
 .PARAMETER Pair
-No description available.
+Reference to pair.
 
 .PARAMETER Token0
-No description available.
+Reference to token0.
 
 .PARAMETER Token1
-No description available.
+Reference to token1.
 
 .PARAMETER ReturnType
 
@@ -1531,22 +1531,22 @@ PairHourData (historical)
 No description available.
 
 .PARAMETER StartBlock
-No description available.
+The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
 
 .PARAMETER EndBlock
-No description available.
+The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
 
 .PARAMETER StartDate
-No description available.
+The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
 
 .PARAMETER EndDate
-No description available.
+The end date of timeframe.
 
 .PARAMETER Id
-No description available.
+Identifier, format: (pair id)-(hour start timestamp).
 
 .PARAMETER Pair
-No description available.
+Reference to pair.
 
 .PARAMETER ReturnType
 
@@ -1666,28 +1666,28 @@ Pairs (historical)
 No description available.
 
 .PARAMETER StartBlock
-No description available.
+The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
 
 .PARAMETER EndBlock
-No description available.
+The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
 
 .PARAMETER StartDate
-No description available.
+The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
 
 .PARAMETER EndDate
-No description available.
+The end date of timeframe.
 
 .PARAMETER Id
-No description available.
+Pair contract address.
 
 .PARAMETER Name
-No description available.
+Friendly name, format: (token0 name)-(token1 name)
 
 .PARAMETER Token0
-No description available.
+Reference to token0 as stored in pair contract.
 
 .PARAMETER Token1
-No description available.
+Reference to token0 as stored in pair contract.
 
 .PARAMETER ReturnType
 

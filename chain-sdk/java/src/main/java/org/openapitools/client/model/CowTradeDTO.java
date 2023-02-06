@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.time.OffsetDateTime;
 import org.openapitools.client.model.TransactionsETradeAggressiveSide;
@@ -51,8 +49,7 @@ import org.openapitools.client.JSON;
 /**
  * Trade entity.
  */
-@ApiModel(description = "Trade entity.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-30T14:42:00.397192Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-06T14:47:06.037855Z[Etc/UTC]")
 public class CowTradeDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -166,7 +163,6 @@ public class CowTradeDTO {
    * @return entryTime
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public OffsetDateTime getEntryTime() {
     return entryTime;
@@ -189,7 +185,6 @@ public class CowTradeDTO {
    * @return recvTime
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public OffsetDateTime getRecvTime() {
     return recvTime;
@@ -212,7 +207,6 @@ public class CowTradeDTO {
    * @return blockNumber
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Number of block in which entity was recorded.")
 
   public Long getBlockNumber() {
     return blockNumber;
@@ -235,7 +229,6 @@ public class CowTradeDTO {
    * @return id
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Identifier, format: (order id)|(transaction hash)|(event index).")
 
   public String getId() {
     return id;
@@ -258,7 +251,6 @@ public class CowTradeDTO {
    * @return timestamp
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Block's timestamp.")
 
   public String getTimestamp() {
     return timestamp;
@@ -281,7 +273,6 @@ public class CowTradeDTO {
    * @return gasPrice
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Transaction's gas price.")
 
   public String getGasPrice() {
     return gasPrice;
@@ -304,7 +295,6 @@ public class CowTradeDTO {
    * @return gasLimit
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Transaction's gas limit.")
 
   public String getGasLimit() {
     return gasLimit;
@@ -327,7 +317,6 @@ public class CowTradeDTO {
    * @return feeAmount
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Trade's fee amount.")
 
   public String getFeeAmount() {
     return feeAmount;
@@ -350,7 +339,6 @@ public class CowTradeDTO {
    * @return txHash
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Trade event transaction hash.")
 
   public String getTxHash() {
     return txHash;
@@ -373,7 +361,6 @@ public class CowTradeDTO {
    * @return settlement
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Reference to settlement.")
 
   public String getSettlement() {
     return settlement;
@@ -396,7 +383,6 @@ public class CowTradeDTO {
    * @return buyAmount
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Buy amount.")
 
   public String getBuyAmount() {
     return buyAmount;
@@ -419,7 +405,6 @@ public class CowTradeDTO {
    * @return sellAmount
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Sell amount.")
 
   public String getSellAmount() {
     return sellAmount;
@@ -442,7 +427,6 @@ public class CowTradeDTO {
    * @return sellToken
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Address of token that is sold.")
 
   public String getSellToken() {
     return sellToken;
@@ -465,7 +449,6 @@ public class CowTradeDTO {
    * @return buyToken
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Address of token that is bought.")
 
   public String getBuyToken() {
     return buyToken;
@@ -488,7 +471,6 @@ public class CowTradeDTO {
    * @return order
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Reference to order.")
 
   public String getOrder() {
     return order;
@@ -511,7 +493,6 @@ public class CowTradeDTO {
    * @return vid
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public Long getVid() {
     return vid;
@@ -528,7 +509,6 @@ public class CowTradeDTO {
    * @return poolId
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getPoolId() {
     return poolId;
@@ -542,7 +522,6 @@ public class CowTradeDTO {
    * @return transactionId
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getTransactionId() {
     return transactionId;
@@ -556,7 +535,6 @@ public class CowTradeDTO {
    * @return evaluatedPrice
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public Double getEvaluatedPrice() {
     return evaluatedPrice;
@@ -570,7 +548,6 @@ public class CowTradeDTO {
    * @return evaluatedAmount
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public Double getEvaluatedAmount() {
     return evaluatedAmount;
@@ -590,7 +567,6 @@ public class CowTradeDTO {
    * @return evaluatedAggressor
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public TransactionsETradeAggressiveSide getEvaluatedAggressor() {
     return evaluatedAggressor;

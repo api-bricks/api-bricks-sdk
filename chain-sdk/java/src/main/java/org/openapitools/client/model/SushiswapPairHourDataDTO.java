@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.time.OffsetDateTime;
 import org.openapitools.jackson.nullable.JsonNullable;
@@ -50,8 +48,7 @@ import org.openapitools.client.JSON;
 /**
  * Tracks pair data across each hour.
  */
-@ApiModel(description = "Tracks pair data across each hour.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-30T14:42:00.397192Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-06T14:47:06.037855Z[Etc/UTC]")
 public class SushiswapPairHourDataDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -123,7 +120,6 @@ public class SushiswapPairHourDataDTO {
    * @return entryTime
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public OffsetDateTime getEntryTime() {
     return entryTime;
@@ -146,7 +142,6 @@ public class SushiswapPairHourDataDTO {
    * @return recvTime
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public OffsetDateTime getRecvTime() {
     return recvTime;
@@ -169,7 +164,6 @@ public class SushiswapPairHourDataDTO {
    * @return blockNumber
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Number of block in which entity was recorded.")
 
   public Long getBlockNumber() {
     return blockNumber;
@@ -192,7 +186,6 @@ public class SushiswapPairHourDataDTO {
    * @return id
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Identifier, format: (pair id)-(hour start timestamp).")
 
   public String getId() {
     return id;
@@ -215,7 +208,6 @@ public class SushiswapPairHourDataDTO {
    * @return date
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Hour start timestamp.")
 
   public Integer getDate() {
     return date;
@@ -238,7 +230,6 @@ public class SushiswapPairHourDataDTO {
    * @return pair
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Reference to pair.")
 
   public String getPair() {
     return pair;
@@ -261,7 +252,6 @@ public class SushiswapPairHourDataDTO {
    * @return reserve0
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Reserve of token0 (updated during each transaction on pair).")
 
   public String getReserve0() {
     return reserve0;
@@ -284,7 +274,6 @@ public class SushiswapPairHourDataDTO {
    * @return reserve1
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Reserve of token1 (updated during each transaction on pair).")
 
   public String getReserve1() {
     return reserve1;
@@ -307,7 +296,6 @@ public class SushiswapPairHourDataDTO {
    * @return reserveUsd
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Reserve of token0 plus token1 stored as a derived USD amount.")
 
   public String getReserveUsd() {
     return reserveUsd;
@@ -330,7 +318,6 @@ public class SushiswapPairHourDataDTO {
    * @return volumeToken0
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Total amount of token0 swapped throughout hour.")
 
   public String getVolumeToken0() {
     return volumeToken0;
@@ -353,7 +340,6 @@ public class SushiswapPairHourDataDTO {
    * @return volumeToken1
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Total amount of token1 swapped throughout hour.")
 
   public String getVolumeToken1() {
     return volumeToken1;
@@ -376,7 +362,6 @@ public class SushiswapPairHourDataDTO {
    * @return volumeUsd
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Total volume within pair throughout hour.")
 
   public String getVolumeUsd() {
     return volumeUsd;
@@ -399,7 +384,6 @@ public class SushiswapPairHourDataDTO {
    * @return txCount
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Amount of transactions on pair throughout hour.")
 
   public String getTxCount() {
     return txCount;
@@ -422,7 +406,6 @@ public class SushiswapPairHourDataDTO {
    * @return vid
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public Long getVid() {
     return vid;

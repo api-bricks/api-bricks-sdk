@@ -137,13 +137,13 @@ list_t* CowAPI_cowGetTradesHistorical(apiClient_t *apiClient, long startBlock, l
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **apiClient** | **apiClient_t \*** | context containing the client configuration |
-**startBlock** | **long** |  | [optional] 
-**endBlock** | **long** |  | [optional] 
-**startDate** | **char** |  | [optional] 
-**endDate** | **char** |  | [optional] 
-**id** | **char \*** |  | [optional] 
-**sell_token** | **char \*** |  | [optional] 
-**buy_token** | **char \*** |  | [optional] 
+**startBlock** | **long** | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
+**endBlock** | **long** | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
+**startDate** | **char** | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
+**endDate** | **char** | The end date of timeframe. | [optional] 
+**id** | **char \*** | Identifier, format: (order id)|(transaction hash)|(event index). | [optional] 
+**sell_token** | **char \*** | Address of token that is sold. | [optional] 
+**buy_token** | **char \*** | Address of token that is bought. | [optional] 
 
 ### Return type
 

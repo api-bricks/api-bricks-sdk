@@ -365,7 +365,7 @@ uniswap_v3_pool_hour_data_dto_t *uniswap_v3_pool_hour_data_dto_parseFromJSON(cJS
     // uniswap_v3_pool_hour_data_dto->entry_time
     cJSON *entry_time = cJSON_GetObjectItemCaseSensitive(uniswap_v3_pool_hour_data_dtoJSON, "entry_time");
     if (entry_time) { 
-    if(!cJSON_IsString(entry_time))
+    if(!cJSON_IsString(entry_time) && !cJSON_IsNull(entry_time))
     {
     goto end; //DateTime
     }
@@ -374,7 +374,7 @@ uniswap_v3_pool_hour_data_dto_t *uniswap_v3_pool_hour_data_dto_parseFromJSON(cJS
     // uniswap_v3_pool_hour_data_dto->recv_time
     cJSON *recv_time = cJSON_GetObjectItemCaseSensitive(uniswap_v3_pool_hour_data_dtoJSON, "recv_time");
     if (recv_time) { 
-    if(!cJSON_IsString(recv_time))
+    if(!cJSON_IsString(recv_time) && !cJSON_IsNull(recv_time))
     {
     goto end; //DateTime
     }
@@ -392,7 +392,7 @@ uniswap_v3_pool_hour_data_dto_t *uniswap_v3_pool_hour_data_dto_parseFromJSON(cJS
     // uniswap_v3_pool_hour_data_dto->id
     cJSON *id = cJSON_GetObjectItemCaseSensitive(uniswap_v3_pool_hour_data_dtoJSON, "id");
     if (id) { 
-    if(!cJSON_IsString(id))
+    if(!cJSON_IsString(id) && !cJSON_IsNull(id))
     {
     goto end; //String
     }
@@ -410,7 +410,7 @@ uniswap_v3_pool_hour_data_dto_t *uniswap_v3_pool_hour_data_dto_parseFromJSON(cJS
     // uniswap_v3_pool_hour_data_dto->pool
     cJSON *pool = cJSON_GetObjectItemCaseSensitive(uniswap_v3_pool_hour_data_dtoJSON, "pool");
     if (pool) { 
-    if(!cJSON_IsString(pool))
+    if(!cJSON_IsString(pool) && !cJSON_IsNull(pool))
     {
     goto end; //String
     }
@@ -419,7 +419,7 @@ uniswap_v3_pool_hour_data_dto_t *uniswap_v3_pool_hour_data_dto_parseFromJSON(cJS
     // uniswap_v3_pool_hour_data_dto->liquidity
     cJSON *liquidity = cJSON_GetObjectItemCaseSensitive(uniswap_v3_pool_hour_data_dtoJSON, "liquidity");
     if (liquidity) { 
-    if(!cJSON_IsString(liquidity))
+    if(!cJSON_IsString(liquidity) && !cJSON_IsNull(liquidity))
     {
     goto end; //String
     }
@@ -428,7 +428,7 @@ uniswap_v3_pool_hour_data_dto_t *uniswap_v3_pool_hour_data_dto_parseFromJSON(cJS
     // uniswap_v3_pool_hour_data_dto->sqrt_price
     cJSON *sqrt_price = cJSON_GetObjectItemCaseSensitive(uniswap_v3_pool_hour_data_dtoJSON, "sqrt_price");
     if (sqrt_price) { 
-    if(!cJSON_IsString(sqrt_price))
+    if(!cJSON_IsString(sqrt_price) && !cJSON_IsNull(sqrt_price))
     {
     goto end; //String
     }
@@ -437,7 +437,7 @@ uniswap_v3_pool_hour_data_dto_t *uniswap_v3_pool_hour_data_dto_parseFromJSON(cJS
     // uniswap_v3_pool_hour_data_dto->token_0_price
     cJSON *token_0_price = cJSON_GetObjectItemCaseSensitive(uniswap_v3_pool_hour_data_dtoJSON, "token_0_price");
     if (token_0_price) { 
-    if(!cJSON_IsString(token_0_price))
+    if(!cJSON_IsString(token_0_price) && !cJSON_IsNull(token_0_price))
     {
     goto end; //String
     }
@@ -446,7 +446,7 @@ uniswap_v3_pool_hour_data_dto_t *uniswap_v3_pool_hour_data_dto_parseFromJSON(cJS
     // uniswap_v3_pool_hour_data_dto->token_1_price
     cJSON *token_1_price = cJSON_GetObjectItemCaseSensitive(uniswap_v3_pool_hour_data_dtoJSON, "token_1_price");
     if (token_1_price) { 
-    if(!cJSON_IsString(token_1_price))
+    if(!cJSON_IsString(token_1_price) && !cJSON_IsNull(token_1_price))
     {
     goto end; //String
     }
@@ -455,7 +455,7 @@ uniswap_v3_pool_hour_data_dto_t *uniswap_v3_pool_hour_data_dto_parseFromJSON(cJS
     // uniswap_v3_pool_hour_data_dto->tick
     cJSON *tick = cJSON_GetObjectItemCaseSensitive(uniswap_v3_pool_hour_data_dtoJSON, "tick");
     if (tick) { 
-    if(!cJSON_IsString(tick))
+    if(!cJSON_IsString(tick) && !cJSON_IsNull(tick))
     {
     goto end; //String
     }
@@ -464,7 +464,7 @@ uniswap_v3_pool_hour_data_dto_t *uniswap_v3_pool_hour_data_dto_parseFromJSON(cJS
     // uniswap_v3_pool_hour_data_dto->fee_growth_global_0x128
     cJSON *fee_growth_global_0x128 = cJSON_GetObjectItemCaseSensitive(uniswap_v3_pool_hour_data_dtoJSON, "fee_growth_global_0x128");
     if (fee_growth_global_0x128) { 
-    if(!cJSON_IsString(fee_growth_global_0x128))
+    if(!cJSON_IsString(fee_growth_global_0x128) && !cJSON_IsNull(fee_growth_global_0x128))
     {
     goto end; //String
     }
@@ -473,7 +473,7 @@ uniswap_v3_pool_hour_data_dto_t *uniswap_v3_pool_hour_data_dto_parseFromJSON(cJS
     // uniswap_v3_pool_hour_data_dto->fee_growth_global_1x128
     cJSON *fee_growth_global_1x128 = cJSON_GetObjectItemCaseSensitive(uniswap_v3_pool_hour_data_dtoJSON, "fee_growth_global_1x128");
     if (fee_growth_global_1x128) { 
-    if(!cJSON_IsString(fee_growth_global_1x128))
+    if(!cJSON_IsString(fee_growth_global_1x128) && !cJSON_IsNull(fee_growth_global_1x128))
     {
     goto end; //String
     }
@@ -482,7 +482,7 @@ uniswap_v3_pool_hour_data_dto_t *uniswap_v3_pool_hour_data_dto_parseFromJSON(cJS
     // uniswap_v3_pool_hour_data_dto->tvl_usd
     cJSON *tvl_usd = cJSON_GetObjectItemCaseSensitive(uniswap_v3_pool_hour_data_dtoJSON, "tvl_usd");
     if (tvl_usd) { 
-    if(!cJSON_IsString(tvl_usd))
+    if(!cJSON_IsString(tvl_usd) && !cJSON_IsNull(tvl_usd))
     {
     goto end; //String
     }
@@ -491,7 +491,7 @@ uniswap_v3_pool_hour_data_dto_t *uniswap_v3_pool_hour_data_dto_parseFromJSON(cJS
     // uniswap_v3_pool_hour_data_dto->volume_token_0
     cJSON *volume_token_0 = cJSON_GetObjectItemCaseSensitive(uniswap_v3_pool_hour_data_dtoJSON, "volume_token_0");
     if (volume_token_0) { 
-    if(!cJSON_IsString(volume_token_0))
+    if(!cJSON_IsString(volume_token_0) && !cJSON_IsNull(volume_token_0))
     {
     goto end; //String
     }
@@ -500,7 +500,7 @@ uniswap_v3_pool_hour_data_dto_t *uniswap_v3_pool_hour_data_dto_parseFromJSON(cJS
     // uniswap_v3_pool_hour_data_dto->volume_token_1
     cJSON *volume_token_1 = cJSON_GetObjectItemCaseSensitive(uniswap_v3_pool_hour_data_dtoJSON, "volume_token_1");
     if (volume_token_1) { 
-    if(!cJSON_IsString(volume_token_1))
+    if(!cJSON_IsString(volume_token_1) && !cJSON_IsNull(volume_token_1))
     {
     goto end; //String
     }
@@ -509,7 +509,7 @@ uniswap_v3_pool_hour_data_dto_t *uniswap_v3_pool_hour_data_dto_parseFromJSON(cJS
     // uniswap_v3_pool_hour_data_dto->volume_usd
     cJSON *volume_usd = cJSON_GetObjectItemCaseSensitive(uniswap_v3_pool_hour_data_dtoJSON, "volume_usd");
     if (volume_usd) { 
-    if(!cJSON_IsString(volume_usd))
+    if(!cJSON_IsString(volume_usd) && !cJSON_IsNull(volume_usd))
     {
     goto end; //String
     }
@@ -518,7 +518,7 @@ uniswap_v3_pool_hour_data_dto_t *uniswap_v3_pool_hour_data_dto_parseFromJSON(cJS
     // uniswap_v3_pool_hour_data_dto->fees_usd
     cJSON *fees_usd = cJSON_GetObjectItemCaseSensitive(uniswap_v3_pool_hour_data_dtoJSON, "fees_usd");
     if (fees_usd) { 
-    if(!cJSON_IsString(fees_usd))
+    if(!cJSON_IsString(fees_usd) && !cJSON_IsNull(fees_usd))
     {
     goto end; //String
     }
@@ -527,7 +527,7 @@ uniswap_v3_pool_hour_data_dto_t *uniswap_v3_pool_hour_data_dto_parseFromJSON(cJS
     // uniswap_v3_pool_hour_data_dto->tx_count
     cJSON *tx_count = cJSON_GetObjectItemCaseSensitive(uniswap_v3_pool_hour_data_dtoJSON, "tx_count");
     if (tx_count) { 
-    if(!cJSON_IsString(tx_count))
+    if(!cJSON_IsString(tx_count) && !cJSON_IsNull(tx_count))
     {
     goto end; //String
     }
@@ -536,7 +536,7 @@ uniswap_v3_pool_hour_data_dto_t *uniswap_v3_pool_hour_data_dto_parseFromJSON(cJS
     // uniswap_v3_pool_hour_data_dto->open
     cJSON *open = cJSON_GetObjectItemCaseSensitive(uniswap_v3_pool_hour_data_dtoJSON, "open");
     if (open) { 
-    if(!cJSON_IsString(open))
+    if(!cJSON_IsString(open) && !cJSON_IsNull(open))
     {
     goto end; //String
     }
@@ -545,7 +545,7 @@ uniswap_v3_pool_hour_data_dto_t *uniswap_v3_pool_hour_data_dto_parseFromJSON(cJS
     // uniswap_v3_pool_hour_data_dto->high
     cJSON *high = cJSON_GetObjectItemCaseSensitive(uniswap_v3_pool_hour_data_dtoJSON, "high");
     if (high) { 
-    if(!cJSON_IsString(high))
+    if(!cJSON_IsString(high) && !cJSON_IsNull(high))
     {
     goto end; //String
     }
@@ -554,7 +554,7 @@ uniswap_v3_pool_hour_data_dto_t *uniswap_v3_pool_hour_data_dto_parseFromJSON(cJS
     // uniswap_v3_pool_hour_data_dto->low
     cJSON *low = cJSON_GetObjectItemCaseSensitive(uniswap_v3_pool_hour_data_dtoJSON, "low");
     if (low) { 
-    if(!cJSON_IsString(low))
+    if(!cJSON_IsString(low) && !cJSON_IsNull(low))
     {
     goto end; //String
     }
@@ -563,7 +563,7 @@ uniswap_v3_pool_hour_data_dto_t *uniswap_v3_pool_hour_data_dto_parseFromJSON(cJS
     // uniswap_v3_pool_hour_data_dto->close
     cJSON *close = cJSON_GetObjectItemCaseSensitive(uniswap_v3_pool_hour_data_dtoJSON, "close");
     if (close) { 
-    if(!cJSON_IsString(close))
+    if(!cJSON_IsString(close) && !cJSON_IsNull(close))
     {
     goto end; //String
     }
@@ -580,29 +580,29 @@ uniswap_v3_pool_hour_data_dto_t *uniswap_v3_pool_hour_data_dto_parseFromJSON(cJS
 
 
     uniswap_v3_pool_hour_data_dto_local_var = uniswap_v3_pool_hour_data_dto_create (
-        entry_time ? strdup(entry_time->valuestring) : NULL,
-        recv_time ? strdup(recv_time->valuestring) : NULL,
+        entry_time && !cJSON_IsNull(entry_time) ? strdup(entry_time->valuestring) : NULL,
+        recv_time && !cJSON_IsNull(recv_time) ? strdup(recv_time->valuestring) : NULL,
         block_number ? block_number->valuedouble : 0,
-        id ? strdup(id->valuestring) : NULL,
+        id && !cJSON_IsNull(id) ? strdup(id->valuestring) : NULL,
         period_start_unix ? period_start_unix->valuedouble : 0,
-        pool ? strdup(pool->valuestring) : NULL,
-        liquidity ? strdup(liquidity->valuestring) : NULL,
-        sqrt_price ? strdup(sqrt_price->valuestring) : NULL,
-        token_0_price ? strdup(token_0_price->valuestring) : NULL,
-        token_1_price ? strdup(token_1_price->valuestring) : NULL,
-        tick ? strdup(tick->valuestring) : NULL,
-        fee_growth_global_0x128 ? strdup(fee_growth_global_0x128->valuestring) : NULL,
-        fee_growth_global_1x128 ? strdup(fee_growth_global_1x128->valuestring) : NULL,
-        tvl_usd ? strdup(tvl_usd->valuestring) : NULL,
-        volume_token_0 ? strdup(volume_token_0->valuestring) : NULL,
-        volume_token_1 ? strdup(volume_token_1->valuestring) : NULL,
-        volume_usd ? strdup(volume_usd->valuestring) : NULL,
-        fees_usd ? strdup(fees_usd->valuestring) : NULL,
-        tx_count ? strdup(tx_count->valuestring) : NULL,
-        open ? strdup(open->valuestring) : NULL,
-        high ? strdup(high->valuestring) : NULL,
-        low ? strdup(low->valuestring) : NULL,
-        close ? strdup(close->valuestring) : NULL,
+        pool && !cJSON_IsNull(pool) ? strdup(pool->valuestring) : NULL,
+        liquidity && !cJSON_IsNull(liquidity) ? strdup(liquidity->valuestring) : NULL,
+        sqrt_price && !cJSON_IsNull(sqrt_price) ? strdup(sqrt_price->valuestring) : NULL,
+        token_0_price && !cJSON_IsNull(token_0_price) ? strdup(token_0_price->valuestring) : NULL,
+        token_1_price && !cJSON_IsNull(token_1_price) ? strdup(token_1_price->valuestring) : NULL,
+        tick && !cJSON_IsNull(tick) ? strdup(tick->valuestring) : NULL,
+        fee_growth_global_0x128 && !cJSON_IsNull(fee_growth_global_0x128) ? strdup(fee_growth_global_0x128->valuestring) : NULL,
+        fee_growth_global_1x128 && !cJSON_IsNull(fee_growth_global_1x128) ? strdup(fee_growth_global_1x128->valuestring) : NULL,
+        tvl_usd && !cJSON_IsNull(tvl_usd) ? strdup(tvl_usd->valuestring) : NULL,
+        volume_token_0 && !cJSON_IsNull(volume_token_0) ? strdup(volume_token_0->valuestring) : NULL,
+        volume_token_1 && !cJSON_IsNull(volume_token_1) ? strdup(volume_token_1->valuestring) : NULL,
+        volume_usd && !cJSON_IsNull(volume_usd) ? strdup(volume_usd->valuestring) : NULL,
+        fees_usd && !cJSON_IsNull(fees_usd) ? strdup(fees_usd->valuestring) : NULL,
+        tx_count && !cJSON_IsNull(tx_count) ? strdup(tx_count->valuestring) : NULL,
+        open && !cJSON_IsNull(open) ? strdup(open->valuestring) : NULL,
+        high && !cJSON_IsNull(high) ? strdup(high->valuestring) : NULL,
+        low && !cJSON_IsNull(low) ? strdup(low->valuestring) : NULL,
+        close && !cJSON_IsNull(close) ? strdup(close->valuestring) : NULL,
         vid ? vid->valuedouble : 0
         );
 

@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.time.OffsetDateTime;
 import org.openapitools.client.model.NumericsBigInteger;
@@ -51,8 +49,7 @@ import org.openapitools.client.JSON;
 /**
  * Data accumulated and condensed into day stats for all of Uniswap.
  */
-@ApiModel(description = "Data accumulated and condensed into day stats for all of Uniswap.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-30T14:42:00.397192Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-06T14:47:06.037855Z[Etc/UTC]")
 public class UniswapV3UniswapDayDataDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -116,7 +113,6 @@ public class UniswapV3UniswapDayDataDTO {
    * @return entryTime
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public OffsetDateTime getEntryTime() {
     return entryTime;
@@ -139,7 +135,6 @@ public class UniswapV3UniswapDayDataDTO {
    * @return recvTime
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public OffsetDateTime getRecvTime() {
     return recvTime;
@@ -162,7 +157,6 @@ public class UniswapV3UniswapDayDataDTO {
    * @return blockNumber
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Number of block in which entity was recorded.")
 
   public Long getBlockNumber() {
     return blockNumber;
@@ -185,7 +179,6 @@ public class UniswapV3UniswapDayDataDTO {
    * @return vid
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public Long getVid() {
     return vid;
@@ -208,7 +201,6 @@ public class UniswapV3UniswapDayDataDTO {
    * @return id
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Timestamp rounded to current day by dividing by 86400.")
 
   public String getId() {
     return id;
@@ -231,7 +223,6 @@ public class UniswapV3UniswapDayDataDTO {
    * @return date
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Timestamp rounded to current day by dividing by 86400.")
 
   public Integer getDate() {
     return date;
@@ -254,7 +245,6 @@ public class UniswapV3UniswapDayDataDTO {
    * @return volumeEth
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Total volume across all pairs on this day, stored as a derived amount of ETH.")
 
   public String getVolumeEth() {
     return volumeEth;
@@ -277,7 +267,6 @@ public class UniswapV3UniswapDayDataDTO {
    * @return volumeUsd
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Total volume across all pairs on this day, stored as a derived amount of USD.")
 
   public String getVolumeUsd() {
     return volumeUsd;
@@ -300,7 +289,6 @@ public class UniswapV3UniswapDayDataDTO {
    * @return volumeUsdUntracked
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Total daily volume in Uniswap derived in terms of USD untracked.")
 
   public String getVolumeUsdUntracked() {
     return volumeUsdUntracked;
@@ -323,7 +311,6 @@ public class UniswapV3UniswapDayDataDTO {
    * @return feesUsd
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Fees in USD")
 
   public String getFeesUsd() {
     return feesUsd;
@@ -346,7 +333,6 @@ public class UniswapV3UniswapDayDataDTO {
    * @return txCount
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public NumericsBigInteger getTxCount() {
     return txCount;
@@ -369,7 +355,6 @@ public class UniswapV3UniswapDayDataDTO {
    * @return tvlUsd
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Tvl in terms of USD.")
 
   public String getTvlUsd() {
     return tvlUsd;

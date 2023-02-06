@@ -706,12 +706,12 @@ public class SushiswapApi {
     }
     /**
      * Build call for sushiswapGetBurnsHistorical
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param pair  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (transaction id):(transaction.burns.length). (optional)
+     * @param pair Reference to pair. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -800,12 +800,12 @@ public class SushiswapApi {
     /**
      * Burns (historical)
      * Gets burns.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param pair  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (transaction id):(transaction.burns.length). (optional)
+     * @param pair Reference to pair. (optional)
      * @return List&lt;SushiswapBurnDTO&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -822,12 +822,12 @@ public class SushiswapApi {
     /**
      * Burns (historical)
      * Gets burns.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param pair  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (transaction id):(transaction.burns.length). (optional)
+     * @param pair Reference to pair. (optional)
      * @return ApiResponse&lt;List&lt;SushiswapBurnDTO&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -845,12 +845,12 @@ public class SushiswapApi {
     /**
      * Burns (historical) (asynchronously)
      * Gets burns.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param pair  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (transaction id):(transaction.burns.length). (optional)
+     * @param pair Reference to pair. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -1334,13 +1334,13 @@ public class SushiswapApi {
     }
     /**
      * Build call for sushiswapGetLiquidityPositionSnapshotsHistorical
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param user  (optional)
-     * @param pair  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (pair address)-(user address)-(timestamp) (optional)
+     * @param user Reference to user. (optional)
+     * @param pair Reference to the pair liquidity is being provided on. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -1433,13 +1433,13 @@ public class SushiswapApi {
     /**
      * LiquidityPositionSnapshots (historical)
      * Gets liquidityPositionSnapshots.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param user  (optional)
-     * @param pair  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (pair address)-(user address)-(timestamp) (optional)
+     * @param user Reference to user. (optional)
+     * @param pair Reference to the pair liquidity is being provided on. (optional)
      * @return List&lt;SushiswapLiquidityPositionSnapshotDTO&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1456,13 +1456,13 @@ public class SushiswapApi {
     /**
      * LiquidityPositionSnapshots (historical)
      * Gets liquidityPositionSnapshots.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param user  (optional)
-     * @param pair  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (pair address)-(user address)-(timestamp) (optional)
+     * @param user Reference to user. (optional)
+     * @param pair Reference to the pair liquidity is being provided on. (optional)
      * @return ApiResponse&lt;List&lt;SushiswapLiquidityPositionSnapshotDTO&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1480,13 +1480,13 @@ public class SushiswapApi {
     /**
      * LiquidityPositionSnapshots (historical) (asynchronously)
      * Gets liquidityPositionSnapshots.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param user  (optional)
-     * @param pair  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (pair address)-(user address)-(timestamp) (optional)
+     * @param user Reference to user. (optional)
+     * @param pair Reference to the pair liquidity is being provided on. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -1505,13 +1505,13 @@ public class SushiswapApi {
     }
     /**
      * Build call for sushiswapGetLiquidityPositionsHistorical
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param user  (optional)
-     * @param pair  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (pair address)-(user address) (optional)
+     * @param user User address. (optional)
+     * @param pair Pair address. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -1604,13 +1604,13 @@ public class SushiswapApi {
     /**
      * LiquidityPositions (historical)
      * Gets liquidityPositions.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param user  (optional)
-     * @param pair  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (pair address)-(user address) (optional)
+     * @param user User address. (optional)
+     * @param pair Pair address. (optional)
      * @return List&lt;SushiswapLiquidityPositionDTO&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1627,13 +1627,13 @@ public class SushiswapApi {
     /**
      * LiquidityPositions (historical)
      * Gets liquidityPositions.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param user  (optional)
-     * @param pair  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (pair address)-(user address) (optional)
+     * @param user User address. (optional)
+     * @param pair Pair address. (optional)
      * @return ApiResponse&lt;List&lt;SushiswapLiquidityPositionDTO&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1651,13 +1651,13 @@ public class SushiswapApi {
     /**
      * LiquidityPositions (historical) (asynchronously)
      * Gets liquidityPositions.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param user  (optional)
-     * @param pair  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (pair address)-(user address) (optional)
+     * @param user User address. (optional)
+     * @param pair Pair address. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -1676,12 +1676,12 @@ public class SushiswapApi {
     }
     /**
      * Build call for sushiswapGetMintsHistorical
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param pair  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (transaction hash)-(index in the transaction mint array). (optional)
+     * @param pair Reference to pair. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -1770,12 +1770,12 @@ public class SushiswapApi {
     /**
      * Mints (historical)
      * Gets mints.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param pair  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (transaction hash)-(index in the transaction mint array). (optional)
+     * @param pair Reference to pair. (optional)
      * @return List&lt;SushiswapMintDTO&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1792,12 +1792,12 @@ public class SushiswapApi {
     /**
      * Mints (historical)
      * Gets mints.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param pair  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (transaction hash)-(index in the transaction mint array). (optional)
+     * @param pair Reference to pair. (optional)
      * @return ApiResponse&lt;List&lt;SushiswapMintDTO&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1815,12 +1815,12 @@ public class SushiswapApi {
     /**
      * Mints (historical) (asynchronously)
      * Gets mints.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param pair  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (transaction hash)-(index in the transaction mint array). (optional)
+     * @param pair Reference to pair. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -1839,14 +1839,14 @@ public class SushiswapApi {
     }
     /**
      * Build call for sushiswapGetPairDayDataHistorical
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param pair  (optional)
-     * @param token0  (optional)
-     * @param token1  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (pair id)-(day start timestamp). (optional)
+     * @param pair Reference to pair. (optional)
+     * @param token0 Reference to token0. (optional)
+     * @param token1 Reference to token1. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -1943,14 +1943,14 @@ public class SushiswapApi {
     /**
      * PairDayData (historical)
      * Gets pairDayData.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param pair  (optional)
-     * @param token0  (optional)
-     * @param token1  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (pair id)-(day start timestamp). (optional)
+     * @param pair Reference to pair. (optional)
+     * @param token0 Reference to token0. (optional)
+     * @param token1 Reference to token1. (optional)
      * @return List&lt;SushiswapPairDayDataDTO&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1967,14 +1967,14 @@ public class SushiswapApi {
     /**
      * PairDayData (historical)
      * Gets pairDayData.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param pair  (optional)
-     * @param token0  (optional)
-     * @param token1  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (pair id)-(day start timestamp). (optional)
+     * @param pair Reference to pair. (optional)
+     * @param token0 Reference to token0. (optional)
+     * @param token1 Reference to token1. (optional)
      * @return ApiResponse&lt;List&lt;SushiswapPairDayDataDTO&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1992,14 +1992,14 @@ public class SushiswapApi {
     /**
      * PairDayData (historical) (asynchronously)
      * Gets pairDayData.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param pair  (optional)
-     * @param token0  (optional)
-     * @param token1  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (pair id)-(day start timestamp). (optional)
+     * @param pair Reference to pair. (optional)
+     * @param token0 Reference to token0. (optional)
+     * @param token1 Reference to token1. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -2018,12 +2018,12 @@ public class SushiswapApi {
     }
     /**
      * Build call for sushiswapGetPairHourDataHistorical
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param pair  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (pair id)-(hour start timestamp). (optional)
+     * @param pair Reference to pair. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -2112,12 +2112,12 @@ public class SushiswapApi {
     /**
      * PairHourData (historical)
      * Gets pairHourData.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param pair  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (pair id)-(hour start timestamp). (optional)
+     * @param pair Reference to pair. (optional)
      * @return List&lt;SushiswapPairHourDataDTO&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -2134,12 +2134,12 @@ public class SushiswapApi {
     /**
      * PairHourData (historical)
      * Gets pairHourData.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param pair  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (pair id)-(hour start timestamp). (optional)
+     * @param pair Reference to pair. (optional)
      * @return ApiResponse&lt;List&lt;SushiswapPairHourDataDTO&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -2157,12 +2157,12 @@ public class SushiswapApi {
     /**
      * PairHourData (historical) (asynchronously)
      * Gets pairHourData.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param pair  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (pair id)-(hour start timestamp). (optional)
+     * @param pair Reference to pair. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -2181,14 +2181,14 @@ public class SushiswapApi {
     }
     /**
      * Build call for sushiswapGetPairsHistorical
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param name  (optional)
-     * @param token0  (optional)
-     * @param token1  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Pair contract address. (optional)
+     * @param name Friendly name, format: (token0 name)-(token1 name) (optional)
+     * @param token0 Reference to token0 as stored in pair contract. (optional)
+     * @param token1 Reference to token0 as stored in pair contract. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -2285,14 +2285,14 @@ public class SushiswapApi {
     /**
      * Pairs (historical)
      * Gets pairs.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param name  (optional)
-     * @param token0  (optional)
-     * @param token1  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Pair contract address. (optional)
+     * @param name Friendly name, format: (token0 name)-(token1 name) (optional)
+     * @param token0 Reference to token0 as stored in pair contract. (optional)
+     * @param token1 Reference to token0 as stored in pair contract. (optional)
      * @return List&lt;SushiswapPairDTO&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -2309,14 +2309,14 @@ public class SushiswapApi {
     /**
      * Pairs (historical)
      * Gets pairs.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param name  (optional)
-     * @param token0  (optional)
-     * @param token1  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Pair contract address. (optional)
+     * @param name Friendly name, format: (token0 name)-(token1 name) (optional)
+     * @param token0 Reference to token0 as stored in pair contract. (optional)
+     * @param token1 Reference to token0 as stored in pair contract. (optional)
      * @return ApiResponse&lt;List&lt;SushiswapPairDTO&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -2334,14 +2334,14 @@ public class SushiswapApi {
     /**
      * Pairs (historical) (asynchronously)
      * Gets pairs.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param name  (optional)
-     * @param token0  (optional)
-     * @param token1  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Pair contract address. (optional)
+     * @param name Friendly name, format: (token0 name)-(token1 name) (optional)
+     * @param token0 Reference to token0 as stored in pair contract. (optional)
+     * @param token1 Reference to token0 as stored in pair contract. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object

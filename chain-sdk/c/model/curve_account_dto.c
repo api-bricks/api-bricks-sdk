@@ -117,7 +117,7 @@ curve_account_dto_t *curve_account_dto_parseFromJSON(cJSON *curve_account_dtoJSO
     // curve_account_dto->entry_time
     cJSON *entry_time = cJSON_GetObjectItemCaseSensitive(curve_account_dtoJSON, "entry_time");
     if (entry_time) { 
-    if(!cJSON_IsString(entry_time))
+    if(!cJSON_IsString(entry_time) && !cJSON_IsNull(entry_time))
     {
     goto end; //DateTime
     }
@@ -126,7 +126,7 @@ curve_account_dto_t *curve_account_dto_parseFromJSON(cJSON *curve_account_dtoJSO
     // curve_account_dto->recv_time
     cJSON *recv_time = cJSON_GetObjectItemCaseSensitive(curve_account_dtoJSON, "recv_time");
     if (recv_time) { 
-    if(!cJSON_IsString(recv_time))
+    if(!cJSON_IsString(recv_time) && !cJSON_IsNull(recv_time))
     {
     goto end; //DateTime
     }
@@ -144,7 +144,7 @@ curve_account_dto_t *curve_account_dto_parseFromJSON(cJSON *curve_account_dtoJSO
     // curve_account_dto->id
     cJSON *id = cJSON_GetObjectItemCaseSensitive(curve_account_dtoJSON, "id");
     if (id) { 
-    if(!cJSON_IsString(id))
+    if(!cJSON_IsString(id) && !cJSON_IsNull(id))
     {
     goto end; //String
     }
@@ -153,7 +153,7 @@ curve_account_dto_t *curve_account_dto_parseFromJSON(cJSON *curve_account_dtoJSO
     // curve_account_dto->address
     cJSON *address = cJSON_GetObjectItemCaseSensitive(curve_account_dtoJSON, "address");
     if (address) { 
-    if(!cJSON_IsString(address))
+    if(!cJSON_IsString(address) && !cJSON_IsNull(address))
     {
     goto end; //String
     }
@@ -170,11 +170,11 @@ curve_account_dto_t *curve_account_dto_parseFromJSON(cJSON *curve_account_dtoJSO
 
 
     curve_account_dto_local_var = curve_account_dto_create (
-        entry_time ? strdup(entry_time->valuestring) : NULL,
-        recv_time ? strdup(recv_time->valuestring) : NULL,
+        entry_time && !cJSON_IsNull(entry_time) ? strdup(entry_time->valuestring) : NULL,
+        recv_time && !cJSON_IsNull(recv_time) ? strdup(recv_time->valuestring) : NULL,
         block_number ? block_number->valuedouble : 0,
-        id ? strdup(id->valuestring) : NULL,
-        address ? strdup(address->valuestring) : NULL,
+        id && !cJSON_IsNull(id) ? strdup(id->valuestring) : NULL,
+        address && !cJSON_IsNull(address) ? strdup(address->valuestring) : NULL,
         vid ? vid->valuedouble : 0
         );
 

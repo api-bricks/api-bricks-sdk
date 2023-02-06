@@ -142,17 +142,17 @@ feature -- API Access
 			-- Deposits (historical)
 			-- Gets deposits.
 			-- 
-			-- argument: start_block  (optional, default to null)
+			-- argument: start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to null)
 			-- 
-			-- argument: end_block  (optional, default to null)
+			-- argument: end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional, default to null)
 			-- 
-			-- argument: start_date  (optional, default to null)
+			-- argument: start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional, default to null)
 			-- 
-			-- argument: end_date  (optional, default to null)
+			-- argument: end_date The end date of timeframe. (optional, default to null)
 			-- 
-			-- argument: id  (optional, default to null)
+			-- argument: id Identifier, format: (transaction hash)-(token id). (optional, default to null)
 			-- 
-			-- argument: user  (optional, default to null)
+			-- argument: user User address. (optional, default to null)
 			-- 
 			-- 
 			-- Result LIST [DEX_DEPOSIT_DTO]
@@ -193,19 +193,19 @@ feature -- API Access
 			-- Orders (historical)
 			-- Gets orders.
 			-- 
-			-- argument: start_block  (optional, default to null)
+			-- argument: start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to null)
 			-- 
-			-- argument: end_block  (optional, default to null)
+			-- argument: end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional, default to null)
 			-- 
-			-- argument: start_date  (optional, default to null)
+			-- argument: start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional, default to null)
 			-- 
-			-- argument: end_date  (optional, default to null)
+			-- argument: end_date The end date of timeframe. (optional, default to null)
 			-- 
-			-- argument: id  (optional, default to null)
+			-- argument: id Identifier, format: (owner address)-(order id) (optional, default to null)
 			-- 
-			-- argument: buy_token  (optional, default to null)
+			-- argument: buy_token Identifier of token that was bought. (optional, default to null)
 			-- 
-			-- argument: sell_token  (optional, default to null)
+			-- argument: sell_token Identifier of token that was sold. (optional, default to null)
 			-- 
 			-- 
 			-- Result LIST [DEX_ORDER_DTO]
@@ -247,15 +247,15 @@ feature -- API Access
 			-- Prices (historical)
 			-- Gets prices.
 			-- 
-			-- argument: start_block  (optional, default to null)
+			-- argument: start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to null)
 			-- 
-			-- argument: end_block  (optional, default to null)
+			-- argument: end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional, default to null)
 			-- 
-			-- argument: start_date  (optional, default to null)
+			-- argument: start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional, default to null)
 			-- 
-			-- argument: end_date  (optional, default to null)
+			-- argument: end_date The end date of timeframe. (optional, default to null)
 			-- 
-			-- argument: id  (optional, default to null)
+			-- argument: id Identifier, format: (token id)-(batch id). (optional, default to null)
 			-- 
 			-- 
 			-- Result LIST [DEX_PRICE_DTO]
@@ -550,15 +550,15 @@ feature -- API Access
 			-- WithdrawRequests (historical)
 			-- Gets withdrawRequests.
 			-- 
-			-- argument: start_block  (optional, default to null)
+			-- argument: start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to null)
 			-- 
-			-- argument: end_block  (optional, default to null)
+			-- argument: end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional, default to null)
 			-- 
-			-- argument: start_date  (optional, default to null)
+			-- argument: start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional, default to null)
 			-- 
-			-- argument: end_date  (optional, default to null)
+			-- argument: end_date The end date of timeframe. (optional, default to null)
 			-- 
-			-- argument: id  (optional, default to null)
+			-- argument: id Identifier, format: (transaction hash)-(id). (optional, default to null)
 			-- 
 			-- argument: user  (optional, default to null)
 			-- 
@@ -601,15 +601,15 @@ feature -- API Access
 			-- Withdraws (historical)
 			-- Gets withdraws.
 			-- 
-			-- argument: start_block  (optional, default to null)
+			-- argument: start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to null)
 			-- 
-			-- argument: end_block  (optional, default to null)
+			-- argument: end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional, default to null)
 			-- 
-			-- argument: start_date  (optional, default to null)
+			-- argument: start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional, default to null)
 			-- 
-			-- argument: end_date  (optional, default to null)
+			-- argument: end_date The end date of timeframe. (optional, default to null)
 			-- 
-			-- argument: id  (optional, default to null)
+			-- argument: id Identifier, format: (transaction hash)-(id). (optional, default to null)
 			-- 
 			-- argument: user  (optional, default to null)
 			-- 

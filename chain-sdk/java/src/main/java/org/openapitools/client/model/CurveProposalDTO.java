@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.time.OffsetDateTime;
 import org.openapitools.jackson.nullable.JsonNullable;
@@ -50,7 +48,7 @@ import org.openapitools.client.JSON;
 /**
  * CurveProposalDTO
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-30T14:42:00.397192Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-06T14:47:06.037855Z[Etc/UTC]")
 public class CurveProposalDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -194,7 +192,6 @@ public class CurveProposalDTO {
    * @return entryTime
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public OffsetDateTime getEntryTime() {
     return entryTime;
@@ -217,7 +214,6 @@ public class CurveProposalDTO {
    * @return recvTime
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public OffsetDateTime getRecvTime() {
     return recvTime;
@@ -240,7 +236,6 @@ public class CurveProposalDTO {
    * @return blockNumber
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Number of block in which entity was recorded.")
 
   public Long getBlockNumber() {
     return blockNumber;
@@ -263,7 +258,6 @@ public class CurveProposalDTO {
    * @return id
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getId() {
     return id;
@@ -286,7 +280,6 @@ public class CurveProposalDTO {
    * @return number
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Sequential number in related to the realted voting app.")
 
   public String getNumber() {
     return number;
@@ -309,7 +302,6 @@ public class CurveProposalDTO {
    * @return app
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Voting app instance.")
 
   public String getApp() {
     return app;
@@ -332,7 +324,6 @@ public class CurveProposalDTO {
    * @return creator
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Proposal creator's account.")
 
   public String getCreator() {
     return creator;
@@ -355,7 +346,6 @@ public class CurveProposalDTO {
    * @return executionScript
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getExecutionScript() {
     return executionScript;
@@ -378,7 +368,6 @@ public class CurveProposalDTO {
    * @return expireDate
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getExpireDate() {
     return expireDate;
@@ -401,7 +390,6 @@ public class CurveProposalDTO {
    * @return minimumQuorum
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Percentage of positive votes in total possible votes for this proposal to be accepted.")
 
   public String getMinimumQuorum() {
     return minimumQuorum;
@@ -424,7 +412,6 @@ public class CurveProposalDTO {
    * @return requiredSupport
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Percentage of positive votes needed for this proposal to be accepted.")
 
   public String getRequiredSupport() {
     return requiredSupport;
@@ -447,7 +434,6 @@ public class CurveProposalDTO {
    * @return snapshotBlock
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getSnapshotBlock() {
     return snapshotBlock;
@@ -470,7 +456,6 @@ public class CurveProposalDTO {
    * @return votingPower
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getVotingPower() {
     return votingPower;
@@ -493,7 +478,6 @@ public class CurveProposalDTO {
    * @return metadata
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Link to metadata file.")
 
   public String getMetadata() {
     return metadata;
@@ -516,7 +500,6 @@ public class CurveProposalDTO {
    * @return text
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Proposal description text.")
 
   public String getText() {
     return text;
@@ -539,7 +522,6 @@ public class CurveProposalDTO {
    * @return voteCount
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Number of votes received by the proposal.")
 
   public String getVoteCount() {
     return voteCount;
@@ -562,7 +544,6 @@ public class CurveProposalDTO {
    * @return positiveVoteCount
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Number of positive votes (yes) received by the proposal.")
 
   public String getPositiveVoteCount() {
     return positiveVoteCount;
@@ -585,7 +566,6 @@ public class CurveProposalDTO {
    * @return negativeVoteCount
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Number of negative votes (no) received by the proposal.")
 
   public String getNegativeVoteCount() {
     return negativeVoteCount;
@@ -608,7 +588,6 @@ public class CurveProposalDTO {
    * @return currentQuorum
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getCurrentQuorum() {
     return currentQuorum;
@@ -631,7 +610,6 @@ public class CurveProposalDTO {
    * @return currentSupport
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getCurrentSupport() {
     return currentSupport;
@@ -654,7 +632,6 @@ public class CurveProposalDTO {
    * @return stakedSupport
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getStakedSupport() {
     return stakedSupport;
@@ -677,7 +654,6 @@ public class CurveProposalDTO {
    * @return totalStaked
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getTotalStaked() {
     return totalStaked;
@@ -700,7 +676,6 @@ public class CurveProposalDTO {
    * @return created
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getCreated() {
     return created;
@@ -723,7 +698,6 @@ public class CurveProposalDTO {
    * @return createdAtBlock
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getCreatedAtBlock() {
     return createdAtBlock;
@@ -746,7 +720,6 @@ public class CurveProposalDTO {
    * @return createdAtTransaction
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getCreatedAtTransaction() {
     return createdAtTransaction;
@@ -769,7 +742,6 @@ public class CurveProposalDTO {
    * @return updated
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getUpdated() {
     return updated;
@@ -792,7 +764,6 @@ public class CurveProposalDTO {
    * @return updatedAtBlock
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getUpdatedAtBlock() {
     return updatedAtBlock;
@@ -815,7 +786,6 @@ public class CurveProposalDTO {
    * @return updatedAtTransaction
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getUpdatedAtTransaction() {
     return updatedAtTransaction;
@@ -838,7 +808,6 @@ public class CurveProposalDTO {
    * @return executed
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getExecuted() {
     return executed;
@@ -861,7 +830,6 @@ public class CurveProposalDTO {
    * @return executedAtBlock
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getExecutedAtBlock() {
     return executedAtBlock;
@@ -884,7 +852,6 @@ public class CurveProposalDTO {
    * @return executedAtTransaction
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getExecutedAtTransaction() {
     return executedAtTransaction;
@@ -907,7 +874,6 @@ public class CurveProposalDTO {
    * @return vid
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public Long getVid() {
     return vid;

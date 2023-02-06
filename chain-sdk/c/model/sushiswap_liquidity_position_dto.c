@@ -165,7 +165,7 @@ sushiswap_liquidity_position_dto_t *sushiswap_liquidity_position_dto_parseFromJS
     // sushiswap_liquidity_position_dto->entry_time
     cJSON *entry_time = cJSON_GetObjectItemCaseSensitive(sushiswap_liquidity_position_dtoJSON, "entry_time");
     if (entry_time) { 
-    if(!cJSON_IsString(entry_time))
+    if(!cJSON_IsString(entry_time) && !cJSON_IsNull(entry_time))
     {
     goto end; //DateTime
     }
@@ -174,7 +174,7 @@ sushiswap_liquidity_position_dto_t *sushiswap_liquidity_position_dto_parseFromJS
     // sushiswap_liquidity_position_dto->recv_time
     cJSON *recv_time = cJSON_GetObjectItemCaseSensitive(sushiswap_liquidity_position_dtoJSON, "recv_time");
     if (recv_time) { 
-    if(!cJSON_IsString(recv_time))
+    if(!cJSON_IsString(recv_time) && !cJSON_IsNull(recv_time))
     {
     goto end; //DateTime
     }
@@ -192,7 +192,7 @@ sushiswap_liquidity_position_dto_t *sushiswap_liquidity_position_dto_parseFromJS
     // sushiswap_liquidity_position_dto->id
     cJSON *id = cJSON_GetObjectItemCaseSensitive(sushiswap_liquidity_position_dtoJSON, "id");
     if (id) { 
-    if(!cJSON_IsString(id))
+    if(!cJSON_IsString(id) && !cJSON_IsNull(id))
     {
     goto end; //String
     }
@@ -201,7 +201,7 @@ sushiswap_liquidity_position_dto_t *sushiswap_liquidity_position_dto_parseFromJS
     // sushiswap_liquidity_position_dto->user
     cJSON *user = cJSON_GetObjectItemCaseSensitive(sushiswap_liquidity_position_dtoJSON, "user");
     if (user) { 
-    if(!cJSON_IsString(user))
+    if(!cJSON_IsString(user) && !cJSON_IsNull(user))
     {
     goto end; //String
     }
@@ -210,7 +210,7 @@ sushiswap_liquidity_position_dto_t *sushiswap_liquidity_position_dto_parseFromJS
     // sushiswap_liquidity_position_dto->pair
     cJSON *pair = cJSON_GetObjectItemCaseSensitive(sushiswap_liquidity_position_dtoJSON, "pair");
     if (pair) { 
-    if(!cJSON_IsString(pair))
+    if(!cJSON_IsString(pair) && !cJSON_IsNull(pair))
     {
     goto end; //String
     }
@@ -219,7 +219,7 @@ sushiswap_liquidity_position_dto_t *sushiswap_liquidity_position_dto_parseFromJS
     // sushiswap_liquidity_position_dto->liquidity_token_balance
     cJSON *liquidity_token_balance = cJSON_GetObjectItemCaseSensitive(sushiswap_liquidity_position_dtoJSON, "liquidity_token_balance");
     if (liquidity_token_balance) { 
-    if(!cJSON_IsString(liquidity_token_balance))
+    if(!cJSON_IsString(liquidity_token_balance) && !cJSON_IsNull(liquidity_token_balance))
     {
     goto end; //String
     }
@@ -254,13 +254,13 @@ sushiswap_liquidity_position_dto_t *sushiswap_liquidity_position_dto_parseFromJS
 
 
     sushiswap_liquidity_position_dto_local_var = sushiswap_liquidity_position_dto_create (
-        entry_time ? strdup(entry_time->valuestring) : NULL,
-        recv_time ? strdup(recv_time->valuestring) : NULL,
+        entry_time && !cJSON_IsNull(entry_time) ? strdup(entry_time->valuestring) : NULL,
+        recv_time && !cJSON_IsNull(recv_time) ? strdup(recv_time->valuestring) : NULL,
         block_number ? block_number->valuedouble : 0,
-        id ? strdup(id->valuestring) : NULL,
-        user ? strdup(user->valuestring) : NULL,
-        pair ? strdup(pair->valuestring) : NULL,
-        liquidity_token_balance ? strdup(liquidity_token_balance->valuestring) : NULL,
+        id && !cJSON_IsNull(id) ? strdup(id->valuestring) : NULL,
+        user && !cJSON_IsNull(user) ? strdup(user->valuestring) : NULL,
+        pair && !cJSON_IsNull(pair) ? strdup(pair->valuestring) : NULL,
+        liquidity_token_balance && !cJSON_IsNull(liquidity_token_balance) ? strdup(liquidity_token_balance->valuestring) : NULL,
         block ? block->valuedouble : 0,
         timestamp ? timestamp->valuedouble : 0,
         vid ? vid->valuedouble : 0

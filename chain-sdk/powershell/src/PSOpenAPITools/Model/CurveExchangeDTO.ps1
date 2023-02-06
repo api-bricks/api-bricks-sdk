@@ -115,6 +115,7 @@ function Initialize-CurveExchangeDTO {
         [System.Nullable[Double]]
         ${EvaluatedAmount},
         [Parameter(Position = 17, ValueFromPipelineByPropertyName = $true)]
+        [ValidateSet("Buy", "Sell", "EstimatedBuy", "EstimatedSell", "Unknown")]
         [PSCustomObject]
         ${EvaluatedAggressor},
         [Parameter(Position = 18, ValueFromPipelineByPropertyName = $true)]

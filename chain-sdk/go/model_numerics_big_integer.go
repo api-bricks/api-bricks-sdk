@@ -15,6 +15,9 @@ import (
 	"encoding/json"
 )
 
+// checks if the NumericsBigInteger type satisfies the MappedNullable interface at compile time
+var _ MappedNullable = &NumericsBigInteger{}
+
 // NumericsBigInteger struct for NumericsBigInteger
 type NumericsBigInteger struct {
 	IsPowerOfTwo *bool `json:"is_power_of_two,omitempty"`
@@ -54,7 +57,7 @@ func (o *NumericsBigInteger) GetIsPowerOfTwo() bool {
 // and a boolean to check if the value has been set.
 func (o *NumericsBigInteger) GetIsPowerOfTwoOk() (*bool, bool) {
 	if o == nil || isNil(o.IsPowerOfTwo) {
-    return nil, false
+		return nil, false
 	}
 	return o.IsPowerOfTwo, true
 }
@@ -86,7 +89,7 @@ func (o *NumericsBigInteger) GetIsZero() bool {
 // and a boolean to check if the value has been set.
 func (o *NumericsBigInteger) GetIsZeroOk() (*bool, bool) {
 	if o == nil || isNil(o.IsZero) {
-    return nil, false
+		return nil, false
 	}
 	return o.IsZero, true
 }
@@ -118,7 +121,7 @@ func (o *NumericsBigInteger) GetIsOne() bool {
 // and a boolean to check if the value has been set.
 func (o *NumericsBigInteger) GetIsOneOk() (*bool, bool) {
 	if o == nil || isNil(o.IsOne) {
-    return nil, false
+		return nil, false
 	}
 	return o.IsOne, true
 }
@@ -150,7 +153,7 @@ func (o *NumericsBigInteger) GetIsEven() bool {
 // and a boolean to check if the value has been set.
 func (o *NumericsBigInteger) GetIsEvenOk() (*bool, bool) {
 	if o == nil || isNil(o.IsEven) {
-    return nil, false
+		return nil, false
 	}
 	return o.IsEven, true
 }
@@ -182,7 +185,7 @@ func (o *NumericsBigInteger) GetSign() int32 {
 // and a boolean to check if the value has been set.
 func (o *NumericsBigInteger) GetSignOk() (*int32, bool) {
 	if o == nil || isNil(o.Sign) {
-    return nil, false
+		return nil, false
 	}
 	return o.Sign, true
 }
@@ -202,23 +205,21 @@ func (o *NumericsBigInteger) SetSign(v int32) {
 }
 
 func (o NumericsBigInteger) MarshalJSON() ([]byte, error) {
-	toSerialize := map[string]interface{}{}
-	if !isNil(o.IsPowerOfTwo) {
-		toSerialize["is_power_of_two"] = o.IsPowerOfTwo
-	}
-	if !isNil(o.IsZero) {
-		toSerialize["is_zero"] = o.IsZero
-	}
-	if !isNil(o.IsOne) {
-		toSerialize["is_one"] = o.IsOne
-	}
-	if !isNil(o.IsEven) {
-		toSerialize["is_even"] = o.IsEven
-	}
-	if !isNil(o.Sign) {
-		toSerialize["sign"] = o.Sign
+	toSerialize,err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
 	}
 	return json.Marshal(toSerialize)
+}
+
+func (o NumericsBigInteger) ToMap() (map[string]interface{}, error) {
+	toSerialize := map[string]interface{}{}
+	// skip: is_power_of_two is readOnly
+	// skip: is_zero is readOnly
+	// skip: is_one is readOnly
+	// skip: is_even is readOnly
+	// skip: sign is readOnly
+	return toSerialize, nil
 }
 
 type NullableNumericsBigInteger struct {

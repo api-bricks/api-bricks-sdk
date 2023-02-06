@@ -667,12 +667,12 @@ export class UniswapV3Service {
     /**
      * PoolDayData (historical)
      * Gets poolDayData.
-     * @param startBlock 
-     * @param endBlock 
-     * @param startDate 
-     * @param endDate 
-     * @param id 
-     * @param pool 
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param endDate The end date of timeframe.
+     * @param id Identifier, format: (pool address)-(day id).
+     * @param pool Pointer to pool.
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
@@ -757,12 +757,12 @@ export class UniswapV3Service {
     /**
      * PoolHourData (historical)
      * Gets poolHourData.
-     * @param startBlock 
-     * @param endBlock 
-     * @param startDate 
-     * @param endDate 
-     * @param id 
-     * @param pool 
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param endDate The end date of timeframe.
+     * @param id Identifier, format: (pool address)-(day id)
+     * @param pool Pointer to pool.
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
@@ -942,12 +942,12 @@ export class UniswapV3Service {
     /**
      * PositionSnapshots (historical)
      * Gets positionSnapshots.
-     * @param startBlock 
-     * @param endBlock 
-     * @param startDate 
-     * @param endDate 
-     * @param id 
-     * @param pool 
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param endDate The end date of timeframe.
+     * @param id NFT token identifier, format: (NFT token id)#(block number).
+     * @param pool Pool the position is within.
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
@@ -1136,7 +1136,7 @@ export class UniswapV3Service {
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
      * @param endDate The end date of timeframe.
-     * @param id Identifier, format: transaction hash + \&quot;#\&quot; + index in swaps Transaction array.
+     * @param id Identifier, format: (transaction hash) + # + (index in swaps Transaction array).
      * @param pool Pool swap occured within.
      * @param token0 Reference to token0 as stored in pair contract.
      * @param token1 Reference to token1 as stored in pair contract.
@@ -1232,12 +1232,12 @@ export class UniswapV3Service {
     /**
      * TickDayData (historical)
      * Gets tickDayData.
-     * @param startBlock 
-     * @param endBlock 
-     * @param startDate 
-     * @param endDate 
-     * @param id 
-     * @param pool 
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param endDate The end date of timeframe.
+     * @param id Identifier, format: (pool address)-(tick index)-(timestamp).
+     * @param pool Pointer to pool.
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
@@ -1322,12 +1322,12 @@ export class UniswapV3Service {
     /**
      * Ticks (historical)
      * Gets ticks.
-     * @param startBlock 
-     * @param endBlock 
-     * @param startDate 
-     * @param endDate 
-     * @param id 
-     * @param pool 
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param endDate The end date of timeframe.
+     * @param id Identifier, format: (pool address)#(tick index)
+     * @param pool Pool address.
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */

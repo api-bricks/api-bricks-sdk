@@ -93,3 +93,5 @@ export interface CurveExchangeDTO {
     transaction_id?: string;
 
 }
+export namespace CurveExchangeDTO {
+}

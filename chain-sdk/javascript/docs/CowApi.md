@@ -203,13 +203,13 @@ import OnChainDappsRestApi from 'on_chain_dapps_rest_api';
 
 let apiInstance = new OnChainDappsRestApi.CowApi();
 let opts = {
-  'startBlock': 789, // Number | 
-  'endBlock': 789, // Number | 
-  'startDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
-  'endDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
-  'id': "id_example", // String | 
-  'sellToken': "sellToken_example", // String | 
-  'buyToken': "buyToken_example" // String | 
+  'startBlock': 789, // Number | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+  'endBlock': 789, // Number | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+  'startDate': new Date("2013-10-20T19:20:30+01:00"), // Date | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+  'endDate': new Date("2013-10-20T19:20:30+01:00"), // Date | The end date of timeframe.
+  'id': "id_example", // String | Identifier, format: (order id)|(transaction hash)|(event index).
+  'sellToken': "sellToken_example", // String | Address of token that is sold.
+  'buyToken': "buyToken_example" // String | Address of token that is bought.
 };
 apiInstance.cowGetTradesHistorical(opts, (error, data, response) => {
   if (error) {
@@ -225,13 +225,13 @@ apiInstance.cowGetTradesHistorical(opts, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startBlock** | **Number**|  | [optional] 
- **endBlock** | **Number**|  | [optional] 
- **startDate** | **Date**|  | [optional] 
- **endDate** | **Date**|  | [optional] 
- **id** | **String**|  | [optional] 
- **sellToken** | **String**|  | [optional] 
- **buyToken** | **String**|  | [optional] 
+ **startBlock** | **Number**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
+ **endBlock** | **Number**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
+ **startDate** | **Date**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
+ **endDate** | **Date**| The end date of timeframe. | [optional] 
+ **id** | **String**| Identifier, format: (order id)|(transaction hash)|(event index). | [optional] 
+ **sellToken** | **String**| Address of token that is sold. | [optional] 
+ **buyToken** | **String**| Address of token that is bought. | [optional] 
 
 ### Return type
 

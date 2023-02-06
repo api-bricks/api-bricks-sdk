@@ -221,12 +221,12 @@ $apiInstance = new OpenAPI\Client\Api\DexApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$start_block = 56; // int
-$end_block = 56; // int
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$id = 'id_example'; // string
-$user = 'user_example'; // string
+$start_block = 56; // int | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+$end_block = 56; // int | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | The end date of timeframe.
+$id = 'id_example'; // string | Identifier, format: (transaction hash)-(token id).
+$user = 'user_example'; // string | User address.
 
 try {
     $result = $apiInstance->dexGetDepositsHistorical($start_block, $end_block, $start_date, $end_date, $id, $user);
@@ -240,12 +240,12 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **start_block** | **int**|  | [optional] |
-| **end_block** | **int**|  | [optional] |
-| **start_date** | **\DateTime**|  | [optional] |
-| **end_date** | **\DateTime**|  | [optional] |
-| **id** | **string**|  | [optional] |
-| **user** | **string**|  | [optional] |
+| **start_block** | **int**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] |
+| **end_block** | **int**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] |
+| **start_date** | **\DateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] |
+| **end_date** | **\DateTime**| The end date of timeframe. | [optional] |
+| **id** | **string**| Identifier, format: (transaction hash)-(token id). | [optional] |
+| **user** | **string**| User address. | [optional] |
 
 ### Return type
 
@@ -287,13 +287,13 @@ $apiInstance = new OpenAPI\Client\Api\DexApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$start_block = 56; // int
-$end_block = 56; // int
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$id = 'id_example'; // string
-$buy_token = 'buy_token_example'; // string
-$sell_token = 'sell_token_example'; // string
+$start_block = 56; // int | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+$end_block = 56; // int | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | The end date of timeframe.
+$id = 'id_example'; // string | Identifier, format: (owner address)-(order id)
+$buy_token = 'buy_token_example'; // string | Identifier of token that was bought.
+$sell_token = 'sell_token_example'; // string | Identifier of token that was sold.
 
 try {
     $result = $apiInstance->dexGetOrdersHistorical($start_block, $end_block, $start_date, $end_date, $id, $buy_token, $sell_token);
@@ -307,13 +307,13 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **start_block** | **int**|  | [optional] |
-| **end_block** | **int**|  | [optional] |
-| **start_date** | **\DateTime**|  | [optional] |
-| **end_date** | **\DateTime**|  | [optional] |
-| **id** | **string**|  | [optional] |
-| **buy_token** | **string**|  | [optional] |
-| **sell_token** | **string**|  | [optional] |
+| **start_block** | **int**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] |
+| **end_block** | **int**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] |
+| **start_date** | **\DateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] |
+| **end_date** | **\DateTime**| The end date of timeframe. | [optional] |
+| **id** | **string**| Identifier, format: (owner address)-(order id) | [optional] |
+| **buy_token** | **string**| Identifier of token that was bought. | [optional] |
+| **sell_token** | **string**| Identifier of token that was sold. | [optional] |
 
 ### Return type
 
@@ -355,11 +355,11 @@ $apiInstance = new OpenAPI\Client\Api\DexApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$start_block = 56; // int
-$end_block = 56; // int
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$id = 'id_example'; // string
+$start_block = 56; // int | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+$end_block = 56; // int | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | The end date of timeframe.
+$id = 'id_example'; // string | Identifier, format: (token id)-(batch id).
 
 try {
     $result = $apiInstance->dexGetPricesHistorical($start_block, $end_block, $start_date, $end_date, $id);
@@ -373,11 +373,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **start_block** | **int**|  | [optional] |
-| **end_block** | **int**|  | [optional] |
-| **start_date** | **\DateTime**|  | [optional] |
-| **end_date** | **\DateTime**|  | [optional] |
-| **id** | **string**|  | [optional] |
+| **start_block** | **int**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] |
+| **end_block** | **int**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] |
+| **start_date** | **\DateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] |
+| **end_date** | **\DateTime**| The end date of timeframe. | [optional] |
+| **id** | **string**| Identifier, format: (token id)-(batch id). | [optional] |
 
 ### Return type
 
@@ -749,12 +749,12 @@ $apiInstance = new OpenAPI\Client\Api\DexApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$start_block = 56; // int
-$end_block = 56; // int
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$id = 'id_example'; // string
-$user = 'user_example'; // string
+$start_block = 56; // int | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+$end_block = 56; // int | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | The end date of timeframe.
+$id = 'id_example'; // string | Identifier, format: (transaction hash)-(id).
+$user = 'user_example'; // string | 
 
 try {
     $result = $apiInstance->dexGetWithdrawRequestsHistorical($start_block, $end_block, $start_date, $end_date, $id, $user);
@@ -768,11 +768,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **start_block** | **int**|  | [optional] |
-| **end_block** | **int**|  | [optional] |
-| **start_date** | **\DateTime**|  | [optional] |
-| **end_date** | **\DateTime**|  | [optional] |
-| **id** | **string**|  | [optional] |
+| **start_block** | **int**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] |
+| **end_block** | **int**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] |
+| **start_date** | **\DateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] |
+| **end_date** | **\DateTime**| The end date of timeframe. | [optional] |
+| **id** | **string**| Identifier, format: (transaction hash)-(id). | [optional] |
 | **user** | **string**|  | [optional] |
 
 ### Return type
@@ -815,12 +815,12 @@ $apiInstance = new OpenAPI\Client\Api\DexApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$start_block = 56; // int
-$end_block = 56; // int
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$id = 'id_example'; // string
-$user = 'user_example'; // string
+$start_block = 56; // int | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+$end_block = 56; // int | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | The end date of timeframe.
+$id = 'id_example'; // string | Identifier, format: (transaction hash)-(id).
+$user = 'user_example'; // string | 
 
 try {
     $result = $apiInstance->dexGetWithdrawsHistorical($start_block, $end_block, $start_date, $end_date, $id, $user);
@@ -834,11 +834,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **start_block** | **int**|  | [optional] |
-| **end_block** | **int**|  | [optional] |
-| **start_date** | **\DateTime**|  | [optional] |
-| **end_date** | **\DateTime**|  | [optional] |
-| **id** | **string**|  | [optional] |
+| **start_block** | **int**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] |
+| **end_block** | **int**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] |
+| **start_date** | **\DateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] |
+| **end_date** | **\DateTime**| The end date of timeframe. | [optional] |
+| **id** | **string**| Identifier, format: (transaction hash)-(id). | [optional] |
 | **user** | **string**|  | [optional] |
 
 ### Return type

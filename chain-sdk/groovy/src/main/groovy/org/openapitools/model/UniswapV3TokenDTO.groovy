@@ -49,7 +49,7 @@ class UniswapV3TokenDTO {
     /* Derived price in ETH. */
     String derivedEth
     /* Pools token is in that are white listed for USD pricing. */
-    List<String> whitelistPools = new ArrayList<>()
+    List<String> whitelistPools = null
     
     String tokenSymbol
 }

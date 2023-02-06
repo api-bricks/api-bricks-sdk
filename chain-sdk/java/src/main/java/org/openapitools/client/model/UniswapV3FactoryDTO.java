@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.time.OffsetDateTime;
 import org.openapitools.jackson.nullable.JsonNullable;
@@ -50,8 +48,7 @@ import org.openapitools.client.JSON;
 /**
  * The Uniswap Factory entity is responsible for storing aggregate information across all Uniswap pairs. It can be used to view stats about total liquidity, volume, amount of pairs and more.
  */
-@ApiModel(description = "The Uniswap Factory entity is responsible for storing aggregate information across all Uniswap pairs. It can be used to view stats about total liquidity, volume, amount of pairs and more.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-30T14:42:00.397192Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-06T14:47:06.037855Z[Etc/UTC]")
 public class UniswapV3FactoryDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -135,7 +132,6 @@ public class UniswapV3FactoryDTO {
    * @return entryTime
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public OffsetDateTime getEntryTime() {
     return entryTime;
@@ -158,7 +154,6 @@ public class UniswapV3FactoryDTO {
    * @return recvTime
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public OffsetDateTime getRecvTime() {
     return recvTime;
@@ -181,7 +176,6 @@ public class UniswapV3FactoryDTO {
    * @return blockNumber
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Number of block in which entity was recorded.")
 
   public Long getBlockNumber() {
     return blockNumber;
@@ -204,7 +198,6 @@ public class UniswapV3FactoryDTO {
    * @return id
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Factory address.")
 
   public String getId() {
     return id;
@@ -227,7 +220,6 @@ public class UniswapV3FactoryDTO {
    * @return poolCount
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Amount of pools created.")
 
   public String getPoolCount() {
     return poolCount;
@@ -250,7 +242,6 @@ public class UniswapV3FactoryDTO {
    * @return txCount
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Amount of transactions all time.")
 
   public String getTxCount() {
     return txCount;
@@ -273,7 +264,6 @@ public class UniswapV3FactoryDTO {
    * @return totalVolumeUsd
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Total volume all time in derived USD.")
 
   public String getTotalVolumeUsd() {
     return totalVolumeUsd;
@@ -296,7 +286,6 @@ public class UniswapV3FactoryDTO {
    * @return totalVolumeEth
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Total volume all time in derived ETH.")
 
   public String getTotalVolumeEth() {
     return totalVolumeEth;
@@ -319,7 +308,6 @@ public class UniswapV3FactoryDTO {
    * @return totalFeesUsd
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Total swap fees all time in USD.")
 
   public String getTotalFeesUsd() {
     return totalFeesUsd;
@@ -342,7 +330,6 @@ public class UniswapV3FactoryDTO {
    * @return totalFeesEth
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "All volume even through less reliable USD values.")
 
   public String getTotalFeesEth() {
     return totalFeesEth;
@@ -365,7 +352,6 @@ public class UniswapV3FactoryDTO {
    * @return untrackedVolumeUsd
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "All volume even through less reliable USD values.")
 
   public String getUntrackedVolumeUsd() {
     return untrackedVolumeUsd;
@@ -388,7 +374,6 @@ public class UniswapV3FactoryDTO {
    * @return totalValueLockedUsd
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Total value locked derived in USD.")
 
   public String getTotalValueLockedUsd() {
     return totalValueLockedUsd;
@@ -411,7 +396,6 @@ public class UniswapV3FactoryDTO {
    * @return totalValueLockedEth
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Total value locked derived in ETH.")
 
   public String getTotalValueLockedEth() {
     return totalValueLockedEth;
@@ -434,7 +418,6 @@ public class UniswapV3FactoryDTO {
    * @return totalValueLockedUsdUntracked
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Total value locked derived in USD untracked.")
 
   public String getTotalValueLockedUsdUntracked() {
     return totalValueLockedUsdUntracked;
@@ -457,7 +440,6 @@ public class UniswapV3FactoryDTO {
    * @return totalValueLockedEthUntracked
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Total value locked derived in ETH untracked.")
 
   public String getTotalValueLockedEthUntracked() {
     return totalValueLockedEthUntracked;
@@ -480,7 +462,6 @@ public class UniswapV3FactoryDTO {
    * @return owner
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Current owner of the factory.")
 
   public String getOwner() {
     return owner;
@@ -503,7 +484,6 @@ public class UniswapV3FactoryDTO {
    * @return vid
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public Long getVid() {
     return vid;

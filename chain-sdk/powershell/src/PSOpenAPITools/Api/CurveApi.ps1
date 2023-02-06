@@ -1991,22 +1991,22 @@ Coins (historical)
 No description available.
 
 .PARAMETER StartBlock
-No description available.
+The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
 
 .PARAMETER EndBlock
-No description available.
+The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
 
 .PARAMETER StartDate
-No description available.
+The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
 
 .PARAMETER EndDate
-No description available.
+The end date of timeframe.
 
 .PARAMETER Id
-No description available.
+Identifier, format: (pool_id)-(coin_index).
 
 .PARAMETER Pool
-No description available.
+
 
 .PARAMETER ReturnType
 
@@ -5336,22 +5336,22 @@ UnderlyingCoins (historical)
 No description available.
 
 .PARAMETER StartBlock
-No description available.
+The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
 
 .PARAMETER EndBlock
-No description available.
+The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
 
 .PARAMETER StartDate
-No description available.
+The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
 
 .PARAMETER EndDate
-No description available.
+The end date of timeframe.
 
 .PARAMETER Id
-No description available.
+Equals to: (pool_id)-(coin_index).
 
 .PARAMETER Pool
-No description available.
+
 
 .PARAMETER ReturnType
 

@@ -50,6 +50,7 @@ API/Client/DexTradeDTO.js
 API/Client/DexUserDTO.js
 API/Client/DexWithdrawDTO.js
 API/Client/DexWithdrawRequestDTO.js
+API/Client/MetadataApi.js
 API/Client/NumericsBigInteger.js
 API/Client/SushiswapApi.js
 API/Client/SushiswapBundleDTO.js

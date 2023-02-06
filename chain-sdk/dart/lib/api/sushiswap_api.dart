@@ -330,16 +330,22 @@ class SushiswapApi {
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   ///
   /// * [int] endBlock:
+  ///   The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
   ///
   /// * [DateTime] startDate:
+  ///   The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
   ///
   /// * [DateTime] endDate:
+  ///   The end date of timeframe.
   ///
   /// * [String] id:
+  ///   Identifier, format: (transaction id):(transaction.burns.length).
   ///
   /// * [String] pair:
+  ///   Reference to pair.
   Future<Response> sushiswapGetBurnsHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, String? pair, }) async {
     // ignore: prefer_const_declarations
     final path = r'/dapps/sushiswap/burns/historical';
@@ -391,16 +397,22 @@ class SushiswapApi {
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   ///
   /// * [int] endBlock:
+  ///   The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
   ///
   /// * [DateTime] startDate:
+  ///   The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
   ///
   /// * [DateTime] endDate:
+  ///   The end date of timeframe.
   ///
   /// * [String] id:
+  ///   Identifier, format: (transaction id):(transaction.burns.length).
   ///
   /// * [String] pair:
+  ///   Reference to pair.
   Future<List<SushiswapBurnDTO>?> sushiswapGetBurnsHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, String? pair, }) async {
     final response = await sushiswapGetBurnsHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, id: id, pair: pair, );
     if (response.statusCode >= HttpStatus.badRequest) {
@@ -731,18 +743,25 @@ class SushiswapApi {
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   ///
   /// * [int] endBlock:
+  ///   The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
   ///
   /// * [DateTime] startDate:
+  ///   The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
   ///
   /// * [DateTime] endDate:
+  ///   The end date of timeframe.
   ///
   /// * [String] id:
+  ///   Identifier, format: (pair address)-(user address)-(timestamp)
   ///
   /// * [String] user:
+  ///   Reference to user.
   ///
   /// * [String] pair:
+  ///   Reference to the pair liquidity is being provided on.
   Future<Response> sushiswapGetLiquidityPositionSnapshotsHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, String? user, String? pair, }) async {
     // ignore: prefer_const_declarations
     final path = r'/dapps/sushiswap/liquidityPositionSnapshots/historical';
@@ -797,18 +816,25 @@ class SushiswapApi {
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   ///
   /// * [int] endBlock:
+  ///   The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
   ///
   /// * [DateTime] startDate:
+  ///   The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
   ///
   /// * [DateTime] endDate:
+  ///   The end date of timeframe.
   ///
   /// * [String] id:
+  ///   Identifier, format: (pair address)-(user address)-(timestamp)
   ///
   /// * [String] user:
+  ///   Reference to user.
   ///
   /// * [String] pair:
+  ///   Reference to the pair liquidity is being provided on.
   Future<List<SushiswapLiquidityPositionSnapshotDTO>?> sushiswapGetLiquidityPositionSnapshotsHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, String? user, String? pair, }) async {
     final response = await sushiswapGetLiquidityPositionSnapshotsHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, id: id, user: user, pair: pair, );
     if (response.statusCode >= HttpStatus.badRequest) {
@@ -836,18 +862,25 @@ class SushiswapApi {
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   ///
   /// * [int] endBlock:
+  ///   The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
   ///
   /// * [DateTime] startDate:
+  ///   The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
   ///
   /// * [DateTime] endDate:
+  ///   The end date of timeframe.
   ///
   /// * [String] id:
+  ///   Identifier, format: (pair address)-(user address)
   ///
   /// * [String] user:
+  ///   User address.
   ///
   /// * [String] pair:
+  ///   Pair address.
   Future<Response> sushiswapGetLiquidityPositionsHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, String? user, String? pair, }) async {
     // ignore: prefer_const_declarations
     final path = r'/dapps/sushiswap/liquidityPositions/historical';
@@ -902,18 +935,25 @@ class SushiswapApi {
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   ///
   /// * [int] endBlock:
+  ///   The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
   ///
   /// * [DateTime] startDate:
+  ///   The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
   ///
   /// * [DateTime] endDate:
+  ///   The end date of timeframe.
   ///
   /// * [String] id:
+  ///   Identifier, format: (pair address)-(user address)
   ///
   /// * [String] user:
+  ///   User address.
   ///
   /// * [String] pair:
+  ///   Pair address.
   Future<List<SushiswapLiquidityPositionDTO>?> sushiswapGetLiquidityPositionsHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, String? user, String? pair, }) async {
     final response = await sushiswapGetLiquidityPositionsHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, id: id, user: user, pair: pair, );
     if (response.statusCode >= HttpStatus.badRequest) {
@@ -941,16 +981,22 @@ class SushiswapApi {
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   ///
   /// * [int] endBlock:
+  ///   The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
   ///
   /// * [DateTime] startDate:
+  ///   The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
   ///
   /// * [DateTime] endDate:
+  ///   The end date of timeframe.
   ///
   /// * [String] id:
+  ///   Identifier, format: (transaction hash)-(index in the transaction mint array).
   ///
   /// * [String] pair:
+  ///   Reference to pair.
   Future<Response> sushiswapGetMintsHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, String? pair, }) async {
     // ignore: prefer_const_declarations
     final path = r'/dapps/sushiswap/mints/historical';
@@ -1002,16 +1048,22 @@ class SushiswapApi {
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   ///
   /// * [int] endBlock:
+  ///   The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
   ///
   /// * [DateTime] startDate:
+  ///   The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
   ///
   /// * [DateTime] endDate:
+  ///   The end date of timeframe.
   ///
   /// * [String] id:
+  ///   Identifier, format: (transaction hash)-(index in the transaction mint array).
   ///
   /// * [String] pair:
+  ///   Reference to pair.
   Future<List<SushiswapMintDTO>?> sushiswapGetMintsHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, String? pair, }) async {
     final response = await sushiswapGetMintsHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, id: id, pair: pair, );
     if (response.statusCode >= HttpStatus.badRequest) {
@@ -1039,20 +1091,28 @@ class SushiswapApi {
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   ///
   /// * [int] endBlock:
+  ///   The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
   ///
   /// * [DateTime] startDate:
+  ///   The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
   ///
   /// * [DateTime] endDate:
+  ///   The end date of timeframe.
   ///
   /// * [String] id:
+  ///   Identifier, format: (pair id)-(day start timestamp).
   ///
   /// * [String] pair:
+  ///   Reference to pair.
   ///
   /// * [String] token0:
+  ///   Reference to token0.
   ///
   /// * [String] token1:
+  ///   Reference to token1.
   Future<Response> sushiswapGetPairDayDataHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, String? pair, String? token0, String? token1, }) async {
     // ignore: prefer_const_declarations
     final path = r'/dapps/sushiswap/pairDayData/historical';
@@ -1110,20 +1170,28 @@ class SushiswapApi {
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   ///
   /// * [int] endBlock:
+  ///   The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
   ///
   /// * [DateTime] startDate:
+  ///   The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
   ///
   /// * [DateTime] endDate:
+  ///   The end date of timeframe.
   ///
   /// * [String] id:
+  ///   Identifier, format: (pair id)-(day start timestamp).
   ///
   /// * [String] pair:
+  ///   Reference to pair.
   ///
   /// * [String] token0:
+  ///   Reference to token0.
   ///
   /// * [String] token1:
+  ///   Reference to token1.
   Future<List<SushiswapPairDayDataDTO>?> sushiswapGetPairDayDataHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, String? pair, String? token0, String? token1, }) async {
     final response = await sushiswapGetPairDayDataHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, id: id, pair: pair, token0: token0, token1: token1, );
     if (response.statusCode >= HttpStatus.badRequest) {
@@ -1151,16 +1219,22 @@ class SushiswapApi {
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   ///
   /// * [int] endBlock:
+  ///   The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
   ///
   /// * [DateTime] startDate:
+  ///   The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
   ///
   /// * [DateTime] endDate:
+  ///   The end date of timeframe.
   ///
   /// * [String] id:
+  ///   Identifier, format: (pair id)-(hour start timestamp).
   ///
   /// * [String] pair:
+  ///   Reference to pair.
   Future<Response> sushiswapGetPairHourDataHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, String? pair, }) async {
     // ignore: prefer_const_declarations
     final path = r'/dapps/sushiswap/pairHourData/historical';
@@ -1212,16 +1286,22 @@ class SushiswapApi {
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   ///
   /// * [int] endBlock:
+  ///   The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
   ///
   /// * [DateTime] startDate:
+  ///   The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
   ///
   /// * [DateTime] endDate:
+  ///   The end date of timeframe.
   ///
   /// * [String] id:
+  ///   Identifier, format: (pair id)-(hour start timestamp).
   ///
   /// * [String] pair:
+  ///   Reference to pair.
   Future<List<SushiswapPairHourDataDTO>?> sushiswapGetPairHourDataHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, String? pair, }) async {
     final response = await sushiswapGetPairHourDataHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, id: id, pair: pair, );
     if (response.statusCode >= HttpStatus.badRequest) {
@@ -1249,20 +1329,28 @@ class SushiswapApi {
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   ///
   /// * [int] endBlock:
+  ///   The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
   ///
   /// * [DateTime] startDate:
+  ///   The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
   ///
   /// * [DateTime] endDate:
+  ///   The end date of timeframe.
   ///
   /// * [String] id:
+  ///   Pair contract address.
   ///
   /// * [String] name:
+  ///   Friendly name, format: (token0 name)-(token1 name)
   ///
   /// * [String] token0:
+  ///   Reference to token0 as stored in pair contract.
   ///
   /// * [String] token1:
+  ///   Reference to token0 as stored in pair contract.
   Future<Response> sushiswapGetPairsHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, String? name, String? token0, String? token1, }) async {
     // ignore: prefer_const_declarations
     final path = r'/dapps/sushiswap/pairs/historical';
@@ -1320,20 +1408,28 @@ class SushiswapApi {
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   ///
   /// * [int] endBlock:
+  ///   The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
   ///
   /// * [DateTime] startDate:
+  ///   The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
   ///
   /// * [DateTime] endDate:
+  ///   The end date of timeframe.
   ///
   /// * [String] id:
+  ///   Pair contract address.
   ///
   /// * [String] name:
+  ///   Friendly name, format: (token0 name)-(token1 name)
   ///
   /// * [String] token0:
+  ///   Reference to token0 as stored in pair contract.
   ///
   /// * [String] token1:
+  ///   Reference to token0 as stored in pair contract.
   Future<List<SushiswapPairDTO>?> sushiswapGetPairsHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, String? name, String? token0, String? token1, }) async {
     final response = await sushiswapGetPairsHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, id: id, name: name, token0: token0, token1: token1, );
     if (response.statusCode >= HttpStatus.badRequest) {

@@ -275,12 +275,12 @@ library(openapi)
 # Burns (historical)
 #
 # prepare function argument(s)
-var_start_block <- 56 # integer |  (Optional)
-var_end_block <- 56 # integer |  (Optional)
-var_start_date <- "start_date_example" # character |  (Optional)
-var_end_date <- "end_date_example" # character |  (Optional)
-var_id <- "id_example" # character |  (Optional)
-var_pair <- "pair_example" # character |  (Optional)
+var_start_block <- 56 # integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (Optional)
+var_end_block <- 56 # integer | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (Optional)
+var_start_date <- "start_date_example" # character | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (Optional)
+var_end_date <- "end_date_example" # character | The end date of timeframe. (Optional)
+var_id <- "id_example" # character | Identifier, format: (transaction id):(transaction.burns.length). (Optional)
+var_pair <- "pair_example" # character | Reference to pair. (Optional)
 
 api_instance <- SushiswapApi$new()
 # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -293,12 +293,12 @@ dput(result)
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **start_block** | **integer**|  | [optional] 
- **end_block** | **integer**|  | [optional] 
- **start_date** | **character**|  | [optional] 
- **end_date** | **character**|  | [optional] 
- **id** | **character**|  | [optional] 
- **pair** | **character**|  | [optional] 
+ **start_block** | **integer**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
+ **end_block** | **integer**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
+ **start_date** | **character**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
+ **end_date** | **character**| The end date of timeframe. | [optional] 
+ **id** | **character**| Identifier, format: (transaction id):(transaction.burns.length). | [optional] 
+ **pair** | **character**| Reference to pair. | [optional] 
 
 ### Return type
 
@@ -497,13 +497,13 @@ library(openapi)
 # LiquidityPositionSnapshots (historical)
 #
 # prepare function argument(s)
-var_start_block <- 56 # integer |  (Optional)
-var_end_block <- 56 # integer |  (Optional)
-var_start_date <- "start_date_example" # character |  (Optional)
-var_end_date <- "end_date_example" # character |  (Optional)
-var_id <- "id_example" # character |  (Optional)
-var_user <- "user_example" # character |  (Optional)
-var_pair <- "pair_example" # character |  (Optional)
+var_start_block <- 56 # integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (Optional)
+var_end_block <- 56 # integer | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (Optional)
+var_start_date <- "start_date_example" # character | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (Optional)
+var_end_date <- "end_date_example" # character | The end date of timeframe. (Optional)
+var_id <- "id_example" # character | Identifier, format: (pair address)-(user address)-(timestamp) (Optional)
+var_user <- "user_example" # character | Reference to user. (Optional)
+var_pair <- "pair_example" # character | Reference to the pair liquidity is being provided on. (Optional)
 
 api_instance <- SushiswapApi$new()
 # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -516,13 +516,13 @@ dput(result)
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **start_block** | **integer**|  | [optional] 
- **end_block** | **integer**|  | [optional] 
- **start_date** | **character**|  | [optional] 
- **end_date** | **character**|  | [optional] 
- **id** | **character**|  | [optional] 
- **user** | **character**|  | [optional] 
- **pair** | **character**|  | [optional] 
+ **start_block** | **integer**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
+ **end_block** | **integer**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
+ **start_date** | **character**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
+ **end_date** | **character**| The end date of timeframe. | [optional] 
+ **id** | **character**| Identifier, format: (pair address)-(user address)-(timestamp) | [optional] 
+ **user** | **character**| Reference to user. | [optional] 
+ **pair** | **character**| Reference to the pair liquidity is being provided on. | [optional] 
 
 ### Return type
 
@@ -556,13 +556,13 @@ library(openapi)
 # LiquidityPositions (historical)
 #
 # prepare function argument(s)
-var_start_block <- 56 # integer |  (Optional)
-var_end_block <- 56 # integer |  (Optional)
-var_start_date <- "start_date_example" # character |  (Optional)
-var_end_date <- "end_date_example" # character |  (Optional)
-var_id <- "id_example" # character |  (Optional)
-var_user <- "user_example" # character |  (Optional)
-var_pair <- "pair_example" # character |  (Optional)
+var_start_block <- 56 # integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (Optional)
+var_end_block <- 56 # integer | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (Optional)
+var_start_date <- "start_date_example" # character | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (Optional)
+var_end_date <- "end_date_example" # character | The end date of timeframe. (Optional)
+var_id <- "id_example" # character | Identifier, format: (pair address)-(user address) (Optional)
+var_user <- "user_example" # character | User address. (Optional)
+var_pair <- "pair_example" # character | Pair address. (Optional)
 
 api_instance <- SushiswapApi$new()
 # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -575,13 +575,13 @@ dput(result)
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **start_block** | **integer**|  | [optional] 
- **end_block** | **integer**|  | [optional] 
- **start_date** | **character**|  | [optional] 
- **end_date** | **character**|  | [optional] 
- **id** | **character**|  | [optional] 
- **user** | **character**|  | [optional] 
- **pair** | **character**|  | [optional] 
+ **start_block** | **integer**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
+ **end_block** | **integer**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
+ **start_date** | **character**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
+ **end_date** | **character**| The end date of timeframe. | [optional] 
+ **id** | **character**| Identifier, format: (pair address)-(user address) | [optional] 
+ **user** | **character**| User address. | [optional] 
+ **pair** | **character**| Pair address. | [optional] 
 
 ### Return type
 
@@ -615,12 +615,12 @@ library(openapi)
 # Mints (historical)
 #
 # prepare function argument(s)
-var_start_block <- 56 # integer |  (Optional)
-var_end_block <- 56 # integer |  (Optional)
-var_start_date <- "start_date_example" # character |  (Optional)
-var_end_date <- "end_date_example" # character |  (Optional)
-var_id <- "id_example" # character |  (Optional)
-var_pair <- "pair_example" # character |  (Optional)
+var_start_block <- 56 # integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (Optional)
+var_end_block <- 56 # integer | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (Optional)
+var_start_date <- "start_date_example" # character | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (Optional)
+var_end_date <- "end_date_example" # character | The end date of timeframe. (Optional)
+var_id <- "id_example" # character | Identifier, format: (transaction hash)-(index in the transaction mint array). (Optional)
+var_pair <- "pair_example" # character | Reference to pair. (Optional)
 
 api_instance <- SushiswapApi$new()
 # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -633,12 +633,12 @@ dput(result)
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **start_block** | **integer**|  | [optional] 
- **end_block** | **integer**|  | [optional] 
- **start_date** | **character**|  | [optional] 
- **end_date** | **character**|  | [optional] 
- **id** | **character**|  | [optional] 
- **pair** | **character**|  | [optional] 
+ **start_block** | **integer**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
+ **end_block** | **integer**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
+ **start_date** | **character**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
+ **end_date** | **character**| The end date of timeframe. | [optional] 
+ **id** | **character**| Identifier, format: (transaction hash)-(index in the transaction mint array). | [optional] 
+ **pair** | **character**| Reference to pair. | [optional] 
 
 ### Return type
 
@@ -672,14 +672,14 @@ library(openapi)
 # PairDayData (historical)
 #
 # prepare function argument(s)
-var_start_block <- 56 # integer |  (Optional)
-var_end_block <- 56 # integer |  (Optional)
-var_start_date <- "start_date_example" # character |  (Optional)
-var_end_date <- "end_date_example" # character |  (Optional)
-var_id <- "id_example" # character |  (Optional)
-var_pair <- "pair_example" # character |  (Optional)
-var_token_0 <- "token_0_example" # character |  (Optional)
-var_token_1 <- "token_1_example" # character |  (Optional)
+var_start_block <- 56 # integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (Optional)
+var_end_block <- 56 # integer | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (Optional)
+var_start_date <- "start_date_example" # character | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (Optional)
+var_end_date <- "end_date_example" # character | The end date of timeframe. (Optional)
+var_id <- "id_example" # character | Identifier, format: (pair id)-(day start timestamp). (Optional)
+var_pair <- "pair_example" # character | Reference to pair. (Optional)
+var_token_0 <- "token_0_example" # character | Reference to token0. (Optional)
+var_token_1 <- "token_1_example" # character | Reference to token1. (Optional)
 
 api_instance <- SushiswapApi$new()
 # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -692,14 +692,14 @@ dput(result)
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **start_block** | **integer**|  | [optional] 
- **end_block** | **integer**|  | [optional] 
- **start_date** | **character**|  | [optional] 
- **end_date** | **character**|  | [optional] 
- **id** | **character**|  | [optional] 
- **pair** | **character**|  | [optional] 
- **token_0** | **character**|  | [optional] 
- **token_1** | **character**|  | [optional] 
+ **start_block** | **integer**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
+ **end_block** | **integer**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
+ **start_date** | **character**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
+ **end_date** | **character**| The end date of timeframe. | [optional] 
+ **id** | **character**| Identifier, format: (pair id)-(day start timestamp). | [optional] 
+ **pair** | **character**| Reference to pair. | [optional] 
+ **token_0** | **character**| Reference to token0. | [optional] 
+ **token_1** | **character**| Reference to token1. | [optional] 
 
 ### Return type
 
@@ -733,12 +733,12 @@ library(openapi)
 # PairHourData (historical)
 #
 # prepare function argument(s)
-var_start_block <- 56 # integer |  (Optional)
-var_end_block <- 56 # integer |  (Optional)
-var_start_date <- "start_date_example" # character |  (Optional)
-var_end_date <- "end_date_example" # character |  (Optional)
-var_id <- "id_example" # character |  (Optional)
-var_pair <- "pair_example" # character |  (Optional)
+var_start_block <- 56 # integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (Optional)
+var_end_block <- 56 # integer | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (Optional)
+var_start_date <- "start_date_example" # character | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (Optional)
+var_end_date <- "end_date_example" # character | The end date of timeframe. (Optional)
+var_id <- "id_example" # character | Identifier, format: (pair id)-(hour start timestamp). (Optional)
+var_pair <- "pair_example" # character | Reference to pair. (Optional)
 
 api_instance <- SushiswapApi$new()
 # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -751,12 +751,12 @@ dput(result)
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **start_block** | **integer**|  | [optional] 
- **end_block** | **integer**|  | [optional] 
- **start_date** | **character**|  | [optional] 
- **end_date** | **character**|  | [optional] 
- **id** | **character**|  | [optional] 
- **pair** | **character**|  | [optional] 
+ **start_block** | **integer**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
+ **end_block** | **integer**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
+ **start_date** | **character**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
+ **end_date** | **character**| The end date of timeframe. | [optional] 
+ **id** | **character**| Identifier, format: (pair id)-(hour start timestamp). | [optional] 
+ **pair** | **character**| Reference to pair. | [optional] 
 
 ### Return type
 
@@ -790,14 +790,14 @@ library(openapi)
 # Pairs (historical)
 #
 # prepare function argument(s)
-var_start_block <- 56 # integer |  (Optional)
-var_end_block <- 56 # integer |  (Optional)
-var_start_date <- "start_date_example" # character |  (Optional)
-var_end_date <- "end_date_example" # character |  (Optional)
-var_id <- "id_example" # character |  (Optional)
-var_name <- "name_example" # character |  (Optional)
-var_token_0 <- "token_0_example" # character |  (Optional)
-var_token_1 <- "token_1_example" # character |  (Optional)
+var_start_block <- 56 # integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (Optional)
+var_end_block <- 56 # integer | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (Optional)
+var_start_date <- "start_date_example" # character | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (Optional)
+var_end_date <- "end_date_example" # character | The end date of timeframe. (Optional)
+var_id <- "id_example" # character | Pair contract address. (Optional)
+var_name <- "name_example" # character | Friendly name, format: (token0 name)-(token1 name) (Optional)
+var_token_0 <- "token_0_example" # character | Reference to token0 as stored in pair contract. (Optional)
+var_token_1 <- "token_1_example" # character | Reference to token0 as stored in pair contract. (Optional)
 
 api_instance <- SushiswapApi$new()
 # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -810,14 +810,14 @@ dput(result)
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **start_block** | **integer**|  | [optional] 
- **end_block** | **integer**|  | [optional] 
- **start_date** | **character**|  | [optional] 
- **end_date** | **character**|  | [optional] 
- **id** | **character**|  | [optional] 
- **name** | **character**|  | [optional] 
- **token_0** | **character**|  | [optional] 
- **token_1** | **character**|  | [optional] 
+ **start_block** | **integer**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
+ **end_block** | **integer**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
+ **start_date** | **character**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
+ **end_date** | **character**| The end date of timeframe. | [optional] 
+ **id** | **character**| Pair contract address. | [optional] 
+ **name** | **character**| Friendly name, format: (token0 name)-(token1 name) | [optional] 
+ **token_0** | **character**| Reference to token0 as stored in pair contract. | [optional] 
+ **token_1** | **character**| Reference to token0 as stored in pair contract. | [optional] 
 
 ### Return type
 

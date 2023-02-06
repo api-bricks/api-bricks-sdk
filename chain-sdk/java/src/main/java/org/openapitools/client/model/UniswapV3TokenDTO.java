@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.time.OffsetDateTime;
 import java.util.ArrayList;
@@ -53,8 +51,7 @@ import org.openapitools.client.JSON;
 /**
  * Stores aggregated information for a specific token across all pairs that token is included in.
  */
-@ApiModel(description = "Stores aggregated information for a specific token across all pairs that token is included in.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-30T14:42:00.397192Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-06T14:47:06.037855Z[Etc/UTC]")
 public class UniswapV3TokenDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -162,7 +159,6 @@ public class UniswapV3TokenDTO {
    * @return entryTime
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public OffsetDateTime getEntryTime() {
     return entryTime;
@@ -185,7 +181,6 @@ public class UniswapV3TokenDTO {
    * @return recvTime
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public OffsetDateTime getRecvTime() {
     return recvTime;
@@ -208,7 +203,6 @@ public class UniswapV3TokenDTO {
    * @return blockNumber
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Number of block in which entity was recorded.")
 
   public Long getBlockNumber() {
     return blockNumber;
@@ -231,7 +225,6 @@ public class UniswapV3TokenDTO {
    * @return vid
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public Long getVid() {
     return vid;
@@ -254,7 +247,6 @@ public class UniswapV3TokenDTO {
    * @return id
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Token address.")
 
   public String getId() {
     return id;
@@ -277,7 +269,6 @@ public class UniswapV3TokenDTO {
    * @return symbol
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Token symbol.")
 
   public String getSymbol() {
     return symbol;
@@ -300,7 +291,6 @@ public class UniswapV3TokenDTO {
    * @return name
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Token name.")
 
   public String getName() {
     return name;
@@ -323,7 +313,6 @@ public class UniswapV3TokenDTO {
    * @return decimals
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Token decimals.")
 
   public Integer getDecimals() {
     return decimals;
@@ -346,7 +335,6 @@ public class UniswapV3TokenDTO {
    * @return totalSupply
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public NumericsBigInteger getTotalSupply() {
     return totalSupply;
@@ -369,7 +357,6 @@ public class UniswapV3TokenDTO {
    * @return volume
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Volume in token units.")
 
   public String getVolume() {
     return volume;
@@ -392,7 +379,6 @@ public class UniswapV3TokenDTO {
    * @return volumeUsd
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Volume in derived USD.")
 
   public String getVolumeUsd() {
     return volumeUsd;
@@ -415,7 +401,6 @@ public class UniswapV3TokenDTO {
    * @return untrackedVolumeUsd
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Volume in USD even on pools with less reliable USD values.")
 
   public String getUntrackedVolumeUsd() {
     return untrackedVolumeUsd;
@@ -438,7 +423,6 @@ public class UniswapV3TokenDTO {
    * @return feesUsd
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Fees in USD.")
 
   public String getFeesUsd() {
     return feesUsd;
@@ -461,7 +445,6 @@ public class UniswapV3TokenDTO {
    * @return txCount
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public NumericsBigInteger getTxCount() {
     return txCount;
@@ -484,7 +467,6 @@ public class UniswapV3TokenDTO {
    * @return poolCount
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public NumericsBigInteger getPoolCount() {
     return poolCount;
@@ -507,7 +489,6 @@ public class UniswapV3TokenDTO {
    * @return totalValueLocked
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Liquidity across all pools in token units.")
 
   public String getTotalValueLocked() {
     return totalValueLocked;
@@ -530,7 +511,6 @@ public class UniswapV3TokenDTO {
    * @return totalValueLockedUsd
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Liquidity across all pools in derived USD.")
 
   public String getTotalValueLockedUsd() {
     return totalValueLockedUsd;
@@ -553,7 +533,6 @@ public class UniswapV3TokenDTO {
    * @return totalValueLockedUsdUntracked
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "TVL derived in USD untracked.")
 
   public String getTotalValueLockedUsdUntracked() {
     return totalValueLockedUsdUntracked;
@@ -576,7 +555,6 @@ public class UniswapV3TokenDTO {
    * @return derivedEth
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Derived price in ETH.")
 
   public String getDerivedEth() {
     return derivedEth;
@@ -596,7 +574,7 @@ public class UniswapV3TokenDTO {
 
   public UniswapV3TokenDTO addWhitelistPoolsItem(String whitelistPoolsItem) {
     if (this.whitelistPools == null) {
-      this.whitelistPools = new ArrayList<>();
+      this.whitelistPools = null;
     }
     this.whitelistPools.add(whitelistPoolsItem);
     return this;
@@ -607,7 +585,6 @@ public class UniswapV3TokenDTO {
    * @return whitelistPools
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Pools token is in that are white listed for USD pricing.")
 
   public List<String> getWhitelistPools() {
     return whitelistPools;
@@ -624,7 +601,6 @@ public class UniswapV3TokenDTO {
    * @return tokenSymbol
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getTokenSymbol() {
     return tokenSymbol;

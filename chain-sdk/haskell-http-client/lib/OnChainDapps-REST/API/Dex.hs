@@ -167,21 +167,33 @@ dexGetDepositsHistorical  _ =
   _mkRequest "GET" ["/dapps/dex/deposits/historical"]
 
 data DexGetDepositsHistorical  
+
+-- | /Optional Param/ "startBlock" - The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
 instance HasOptionalParam DexGetDepositsHistorical StartBlock where
   applyOptionalParam req (StartBlock xs) =
     req `addQuery` toQuery ("startBlock", Just xs)
+
+-- | /Optional Param/ "endBlock" - The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
 instance HasOptionalParam DexGetDepositsHistorical EndBlock where
   applyOptionalParam req (EndBlock xs) =
     req `addQuery` toQuery ("endBlock", Just xs)
+
+-- | /Optional Param/ "startDate" - The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
 instance HasOptionalParam DexGetDepositsHistorical StartDate where
   applyOptionalParam req (StartDate xs) =
     req `addQuery` toQuery ("startDate", Just xs)
+
+-- | /Optional Param/ "endDate" - The end date of timeframe.
 instance HasOptionalParam DexGetDepositsHistorical EndDate where
   applyOptionalParam req (EndDate xs) =
     req `addQuery` toQuery ("endDate", Just xs)
+
+-- | /Optional Param/ "id" - Identifier, format: (transaction hash)-(token id).
 instance HasOptionalParam DexGetDepositsHistorical Id where
   applyOptionalParam req (Id xs) =
     req `addQuery` toQuery ("id", Just xs)
+
+-- | /Optional Param/ "user" - User address.
 instance HasOptionalParam DexGetDepositsHistorical User where
   applyOptionalParam req (User xs) =
     req `addQuery` toQuery ("user", Just xs)
@@ -208,24 +220,38 @@ dexGetOrdersHistorical  _ =
   _mkRequest "GET" ["/dapps/dex/orders/historical"]
 
 data DexGetOrdersHistorical  
+
+-- | /Optional Param/ "startBlock" - The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
 instance HasOptionalParam DexGetOrdersHistorical StartBlock where
   applyOptionalParam req (StartBlock xs) =
     req `addQuery` toQuery ("startBlock", Just xs)
+
+-- | /Optional Param/ "endBlock" - The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
 instance HasOptionalParam DexGetOrdersHistorical EndBlock where
   applyOptionalParam req (EndBlock xs) =
     req `addQuery` toQuery ("endBlock", Just xs)
+
+-- | /Optional Param/ "startDate" - The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
 instance HasOptionalParam DexGetOrdersHistorical StartDate where
   applyOptionalParam req (StartDate xs) =
     req `addQuery` toQuery ("startDate", Just xs)
+
+-- | /Optional Param/ "endDate" - The end date of timeframe.
 instance HasOptionalParam DexGetOrdersHistorical EndDate where
   applyOptionalParam req (EndDate xs) =
     req `addQuery` toQuery ("endDate", Just xs)
+
+-- | /Optional Param/ "id" - Identifier, format: (owner address)-(order id)
 instance HasOptionalParam DexGetOrdersHistorical Id where
   applyOptionalParam req (Id xs) =
     req `addQuery` toQuery ("id", Just xs)
+
+-- | /Optional Param/ "buy_token" - Identifier of token that was bought.
 instance HasOptionalParam DexGetOrdersHistorical BuyToken where
   applyOptionalParam req (BuyToken xs) =
     req `addQuery` toQuery ("buy_token", Just xs)
+
+-- | /Optional Param/ "sell_token" - Identifier of token that was sold.
 instance HasOptionalParam DexGetOrdersHistorical SellToken where
   applyOptionalParam req (SellToken xs) =
     req `addQuery` toQuery ("sell_token", Just xs)
@@ -252,18 +278,28 @@ dexGetPricesHistorical  _ =
   _mkRequest "GET" ["/dapps/dex/prices/historical"]
 
 data DexGetPricesHistorical  
+
+-- | /Optional Param/ "startBlock" - The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
 instance HasOptionalParam DexGetPricesHistorical StartBlock where
   applyOptionalParam req (StartBlock xs) =
     req `addQuery` toQuery ("startBlock", Just xs)
+
+-- | /Optional Param/ "endBlock" - The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
 instance HasOptionalParam DexGetPricesHistorical EndBlock where
   applyOptionalParam req (EndBlock xs) =
     req `addQuery` toQuery ("endBlock", Just xs)
+
+-- | /Optional Param/ "startDate" - The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
 instance HasOptionalParam DexGetPricesHistorical StartDate where
   applyOptionalParam req (StartDate xs) =
     req `addQuery` toQuery ("startDate", Just xs)
+
+-- | /Optional Param/ "endDate" - The end date of timeframe.
 instance HasOptionalParam DexGetPricesHistorical EndDate where
   applyOptionalParam req (EndDate xs) =
     req `addQuery` toQuery ("endDate", Just xs)
+
+-- | /Optional Param/ "id" - Identifier, format: (token id)-(batch id).
 instance HasOptionalParam DexGetPricesHistorical Id where
   applyOptionalParam req (Id xs) =
     req `addQuery` toQuery ("id", Just xs)
@@ -555,21 +591,33 @@ dexGetWithdrawRequestsHistorical  _ =
   _mkRequest "GET" ["/dapps/dex/withdrawRequests/historical"]
 
 data DexGetWithdrawRequestsHistorical  
+
+-- | /Optional Param/ "startBlock" - The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
 instance HasOptionalParam DexGetWithdrawRequestsHistorical StartBlock where
   applyOptionalParam req (StartBlock xs) =
     req `addQuery` toQuery ("startBlock", Just xs)
+
+-- | /Optional Param/ "endBlock" - The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
 instance HasOptionalParam DexGetWithdrawRequestsHistorical EndBlock where
   applyOptionalParam req (EndBlock xs) =
     req `addQuery` toQuery ("endBlock", Just xs)
+
+-- | /Optional Param/ "startDate" - The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
 instance HasOptionalParam DexGetWithdrawRequestsHistorical StartDate where
   applyOptionalParam req (StartDate xs) =
     req `addQuery` toQuery ("startDate", Just xs)
+
+-- | /Optional Param/ "endDate" - The end date of timeframe.
 instance HasOptionalParam DexGetWithdrawRequestsHistorical EndDate where
   applyOptionalParam req (EndDate xs) =
     req `addQuery` toQuery ("endDate", Just xs)
+
+-- | /Optional Param/ "id" - Identifier, format: (transaction hash)-(id).
 instance HasOptionalParam DexGetWithdrawRequestsHistorical Id where
   applyOptionalParam req (Id xs) =
     req `addQuery` toQuery ("id", Just xs)
+
+-- | /Optional Param/ "user" - 
 instance HasOptionalParam DexGetWithdrawRequestsHistorical User where
   applyOptionalParam req (User xs) =
     req `addQuery` toQuery ("user", Just xs)
@@ -596,21 +644,33 @@ dexGetWithdrawsHistorical  _ =
   _mkRequest "GET" ["/dapps/dex/withdraws/historical"]
 
 data DexGetWithdrawsHistorical  
+
+-- | /Optional Param/ "startBlock" - The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
 instance HasOptionalParam DexGetWithdrawsHistorical StartBlock where
   applyOptionalParam req (StartBlock xs) =
     req `addQuery` toQuery ("startBlock", Just xs)
+
+-- | /Optional Param/ "endBlock" - The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
 instance HasOptionalParam DexGetWithdrawsHistorical EndBlock where
   applyOptionalParam req (EndBlock xs) =
     req `addQuery` toQuery ("endBlock", Just xs)
+
+-- | /Optional Param/ "startDate" - The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
 instance HasOptionalParam DexGetWithdrawsHistorical StartDate where
   applyOptionalParam req (StartDate xs) =
     req `addQuery` toQuery ("startDate", Just xs)
+
+-- | /Optional Param/ "endDate" - The end date of timeframe.
 instance HasOptionalParam DexGetWithdrawsHistorical EndDate where
   applyOptionalParam req (EndDate xs) =
     req `addQuery` toQuery ("endDate", Just xs)
+
+-- | /Optional Param/ "id" - Identifier, format: (transaction hash)-(id).
 instance HasOptionalParam DexGetWithdrawsHistorical Id where
   applyOptionalParam req (Id xs) =
     req `addQuery` toQuery ("id", Just xs)
+
+-- | /Optional Param/ "user" - 
 instance HasOptionalParam DexGetWithdrawsHistorical User where
   applyOptionalParam req (User xs) =
     req `addQuery` toQuery ("user", Just xs)

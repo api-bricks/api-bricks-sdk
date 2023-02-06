@@ -798,11 +798,11 @@ list_t* CurveAPI_curveGetCoinsHistorical(apiClient_t *apiClient, long startBlock
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **apiClient** | **apiClient_t \*** | context containing the client configuration |
-**startBlock** | **long** |  | [optional] 
-**endBlock** | **long** |  | [optional] 
-**startDate** | **char** |  | [optional] 
-**endDate** | **char** |  | [optional] 
-**id** | **char \*** |  | [optional] 
+**startBlock** | **long** | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
+**endBlock** | **long** | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
+**startDate** | **char** | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
+**endDate** | **char** | The end date of timeframe. | [optional] 
+**id** | **char \*** | Identifier, format: (pool_id)-(coin_index). | [optional] 
 **pool** | **char \*** |  | [optional] 
 
 ### Return type
@@ -1695,11 +1695,11 @@ list_t* CurveAPI_curveGetUnderlyingCoinsHistorical(apiClient_t *apiClient, long 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **apiClient** | **apiClient_t \*** | context containing the client configuration |
-**startBlock** | **long** |  | [optional] 
-**endBlock** | **long** |  | [optional] 
-**startDate** | **char** |  | [optional] 
-**endDate** | **char** |  | [optional] 
-**id** | **char \*** |  | [optional] 
+**startBlock** | **long** | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
+**endBlock** | **long** | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
+**startDate** | **char** | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
+**endDate** | **char** | The end date of timeframe. | [optional] 
+**id** | **char \*** | Equals to: (pool_id)-(coin_index). | [optional] 
 **pool** | **char \*** |  | [optional] 
 
 ### Return type

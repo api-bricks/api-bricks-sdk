@@ -239,7 +239,7 @@ uniswap_v2_token_day_data_dto_t *uniswap_v2_token_day_data_dto_parseFromJSON(cJS
     // uniswap_v2_token_day_data_dto->entry_time
     cJSON *entry_time = cJSON_GetObjectItemCaseSensitive(uniswap_v2_token_day_data_dtoJSON, "entry_time");
     if (entry_time) { 
-    if(!cJSON_IsString(entry_time))
+    if(!cJSON_IsString(entry_time) && !cJSON_IsNull(entry_time))
     {
     goto end; //DateTime
     }
@@ -248,7 +248,7 @@ uniswap_v2_token_day_data_dto_t *uniswap_v2_token_day_data_dto_parseFromJSON(cJS
     // uniswap_v2_token_day_data_dto->recv_time
     cJSON *recv_time = cJSON_GetObjectItemCaseSensitive(uniswap_v2_token_day_data_dtoJSON, "recv_time");
     if (recv_time) { 
-    if(!cJSON_IsString(recv_time))
+    if(!cJSON_IsString(recv_time) && !cJSON_IsNull(recv_time))
     {
     goto end; //DateTime
     }
@@ -266,7 +266,7 @@ uniswap_v2_token_day_data_dto_t *uniswap_v2_token_day_data_dto_parseFromJSON(cJS
     // uniswap_v2_token_day_data_dto->id
     cJSON *id = cJSON_GetObjectItemCaseSensitive(uniswap_v2_token_day_data_dtoJSON, "id");
     if (id) { 
-    if(!cJSON_IsString(id))
+    if(!cJSON_IsString(id) && !cJSON_IsNull(id))
     {
     goto end; //String
     }
@@ -284,7 +284,7 @@ uniswap_v2_token_day_data_dto_t *uniswap_v2_token_day_data_dto_parseFromJSON(cJS
     // uniswap_v2_token_day_data_dto->token
     cJSON *token = cJSON_GetObjectItemCaseSensitive(uniswap_v2_token_day_data_dtoJSON, "token");
     if (token) { 
-    if(!cJSON_IsString(token))
+    if(!cJSON_IsString(token) && !cJSON_IsNull(token))
     {
     goto end; //String
     }
@@ -293,7 +293,7 @@ uniswap_v2_token_day_data_dto_t *uniswap_v2_token_day_data_dto_parseFromJSON(cJS
     // uniswap_v2_token_day_data_dto->daily_volume_token
     cJSON *daily_volume_token = cJSON_GetObjectItemCaseSensitive(uniswap_v2_token_day_data_dtoJSON, "daily_volume_token");
     if (daily_volume_token) { 
-    if(!cJSON_IsString(daily_volume_token))
+    if(!cJSON_IsString(daily_volume_token) && !cJSON_IsNull(daily_volume_token))
     {
     goto end; //String
     }
@@ -302,7 +302,7 @@ uniswap_v2_token_day_data_dto_t *uniswap_v2_token_day_data_dto_parseFromJSON(cJS
     // uniswap_v2_token_day_data_dto->daily_volume_eth
     cJSON *daily_volume_eth = cJSON_GetObjectItemCaseSensitive(uniswap_v2_token_day_data_dtoJSON, "daily_volume_eth");
     if (daily_volume_eth) { 
-    if(!cJSON_IsString(daily_volume_eth))
+    if(!cJSON_IsString(daily_volume_eth) && !cJSON_IsNull(daily_volume_eth))
     {
     goto end; //String
     }
@@ -311,7 +311,7 @@ uniswap_v2_token_day_data_dto_t *uniswap_v2_token_day_data_dto_parseFromJSON(cJS
     // uniswap_v2_token_day_data_dto->daily_volume_usd
     cJSON *daily_volume_usd = cJSON_GetObjectItemCaseSensitive(uniswap_v2_token_day_data_dtoJSON, "daily_volume_usd");
     if (daily_volume_usd) { 
-    if(!cJSON_IsString(daily_volume_usd))
+    if(!cJSON_IsString(daily_volume_usd) && !cJSON_IsNull(daily_volume_usd))
     {
     goto end; //String
     }
@@ -320,7 +320,7 @@ uniswap_v2_token_day_data_dto_t *uniswap_v2_token_day_data_dto_parseFromJSON(cJS
     // uniswap_v2_token_day_data_dto->daily_txns
     cJSON *daily_txns = cJSON_GetObjectItemCaseSensitive(uniswap_v2_token_day_data_dtoJSON, "daily_txns");
     if (daily_txns) { 
-    if(!cJSON_IsString(daily_txns))
+    if(!cJSON_IsString(daily_txns) && !cJSON_IsNull(daily_txns))
     {
     goto end; //String
     }
@@ -329,7 +329,7 @@ uniswap_v2_token_day_data_dto_t *uniswap_v2_token_day_data_dto_parseFromJSON(cJS
     // uniswap_v2_token_day_data_dto->total_liquidity_token
     cJSON *total_liquidity_token = cJSON_GetObjectItemCaseSensitive(uniswap_v2_token_day_data_dtoJSON, "total_liquidity_token");
     if (total_liquidity_token) { 
-    if(!cJSON_IsString(total_liquidity_token))
+    if(!cJSON_IsString(total_liquidity_token) && !cJSON_IsNull(total_liquidity_token))
     {
     goto end; //String
     }
@@ -338,7 +338,7 @@ uniswap_v2_token_day_data_dto_t *uniswap_v2_token_day_data_dto_parseFromJSON(cJS
     // uniswap_v2_token_day_data_dto->total_liquidity_eth
     cJSON *total_liquidity_eth = cJSON_GetObjectItemCaseSensitive(uniswap_v2_token_day_data_dtoJSON, "total_liquidity_eth");
     if (total_liquidity_eth) { 
-    if(!cJSON_IsString(total_liquidity_eth))
+    if(!cJSON_IsString(total_liquidity_eth) && !cJSON_IsNull(total_liquidity_eth))
     {
     goto end; //String
     }
@@ -347,7 +347,7 @@ uniswap_v2_token_day_data_dto_t *uniswap_v2_token_day_data_dto_parseFromJSON(cJS
     // uniswap_v2_token_day_data_dto->total_liquidity_usd
     cJSON *total_liquidity_usd = cJSON_GetObjectItemCaseSensitive(uniswap_v2_token_day_data_dtoJSON, "total_liquidity_usd");
     if (total_liquidity_usd) { 
-    if(!cJSON_IsString(total_liquidity_usd))
+    if(!cJSON_IsString(total_liquidity_usd) && !cJSON_IsNull(total_liquidity_usd))
     {
     goto end; //String
     }
@@ -356,7 +356,7 @@ uniswap_v2_token_day_data_dto_t *uniswap_v2_token_day_data_dto_parseFromJSON(cJS
     // uniswap_v2_token_day_data_dto->price_usd
     cJSON *price_usd = cJSON_GetObjectItemCaseSensitive(uniswap_v2_token_day_data_dtoJSON, "price_usd");
     if (price_usd) { 
-    if(!cJSON_IsString(price_usd))
+    if(!cJSON_IsString(price_usd) && !cJSON_IsNull(price_usd))
     {
     goto end; //String
     }
@@ -373,20 +373,20 @@ uniswap_v2_token_day_data_dto_t *uniswap_v2_token_day_data_dto_parseFromJSON(cJS
 
 
     uniswap_v2_token_day_data_dto_local_var = uniswap_v2_token_day_data_dto_create (
-        entry_time ? strdup(entry_time->valuestring) : NULL,
-        recv_time ? strdup(recv_time->valuestring) : NULL,
+        entry_time && !cJSON_IsNull(entry_time) ? strdup(entry_time->valuestring) : NULL,
+        recv_time && !cJSON_IsNull(recv_time) ? strdup(recv_time->valuestring) : NULL,
         block_number ? block_number->valuedouble : 0,
-        id ? strdup(id->valuestring) : NULL,
+        id && !cJSON_IsNull(id) ? strdup(id->valuestring) : NULL,
         date ? date->valuedouble : 0,
-        token ? strdup(token->valuestring) : NULL,
-        daily_volume_token ? strdup(daily_volume_token->valuestring) : NULL,
-        daily_volume_eth ? strdup(daily_volume_eth->valuestring) : NULL,
-        daily_volume_usd ? strdup(daily_volume_usd->valuestring) : NULL,
-        daily_txns ? strdup(daily_txns->valuestring) : NULL,
-        total_liquidity_token ? strdup(total_liquidity_token->valuestring) : NULL,
-        total_liquidity_eth ? strdup(total_liquidity_eth->valuestring) : NULL,
-        total_liquidity_usd ? strdup(total_liquidity_usd->valuestring) : NULL,
-        price_usd ? strdup(price_usd->valuestring) : NULL,
+        token && !cJSON_IsNull(token) ? strdup(token->valuestring) : NULL,
+        daily_volume_token && !cJSON_IsNull(daily_volume_token) ? strdup(daily_volume_token->valuestring) : NULL,
+        daily_volume_eth && !cJSON_IsNull(daily_volume_eth) ? strdup(daily_volume_eth->valuestring) : NULL,
+        daily_volume_usd && !cJSON_IsNull(daily_volume_usd) ? strdup(daily_volume_usd->valuestring) : NULL,
+        daily_txns && !cJSON_IsNull(daily_txns) ? strdup(daily_txns->valuestring) : NULL,
+        total_liquidity_token && !cJSON_IsNull(total_liquidity_token) ? strdup(total_liquidity_token->valuestring) : NULL,
+        total_liquidity_eth && !cJSON_IsNull(total_liquidity_eth) ? strdup(total_liquidity_eth->valuestring) : NULL,
+        total_liquidity_usd && !cJSON_IsNull(total_liquidity_usd) ? strdup(total_liquidity_usd->valuestring) : NULL,
+        price_usd && !cJSON_IsNull(price_usd) ? strdup(price_usd->valuestring) : NULL,
         vid ? vid->valuedouble : 0
         );
 

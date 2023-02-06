@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.time.OffsetDateTime;
 import org.openapitools.jackson.nullable.JsonNullable;
@@ -50,8 +48,7 @@ import org.openapitools.client.JSON;
 /**
  * Tracks data across all pairs aggregated into a daily bucket.
  */
-@ApiModel(description = "Tracks data across all pairs aggregated into a daily bucket.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-30T14:42:00.397192Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-06T14:47:06.037855Z[Etc/UTC]")
 public class SushiswapDayDataDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -119,7 +116,6 @@ public class SushiswapDayDataDTO {
    * @return entryTime
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public OffsetDateTime getEntryTime() {
     return entryTime;
@@ -142,7 +138,6 @@ public class SushiswapDayDataDTO {
    * @return recvTime
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public OffsetDateTime getRecvTime() {
     return recvTime;
@@ -165,7 +160,6 @@ public class SushiswapDayDataDTO {
    * @return blockNumber
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Number of block in which entity was recorded.")
 
   public Long getBlockNumber() {
     return blockNumber;
@@ -188,7 +182,6 @@ public class SushiswapDayDataDTO {
    * @return id
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Unix timestamp for start of day / 86400 giving a unique day index.")
 
   public String getId() {
     return id;
@@ -211,7 +204,6 @@ public class SushiswapDayDataDTO {
    * @return date
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Unix timestamp for start of day.")
 
   public Integer getDate() {
     return date;
@@ -234,7 +226,6 @@ public class SushiswapDayDataDTO {
    * @return factory
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Factory address.")
 
   public String getFactory() {
     return factory;
@@ -257,7 +248,6 @@ public class SushiswapDayDataDTO {
    * @return volumeEth
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Total volume across all pairs on this day, stored as a derived amount of ETH.")
 
   public String getVolumeEth() {
     return volumeEth;
@@ -280,7 +270,6 @@ public class SushiswapDayDataDTO {
    * @return volumeUsd
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Total volume across all pairs on this day, stored as a derived amount of USD.")
 
   public String getVolumeUsd() {
     return volumeUsd;
@@ -303,7 +292,6 @@ public class SushiswapDayDataDTO {
    * @return untrackedVolume
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Total volume across all pairs on this day, untracked")
 
   public String getUntrackedVolume() {
     return untrackedVolume;
@@ -326,7 +314,6 @@ public class SushiswapDayDataDTO {
    * @return liquidityEth
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Total liquidity across all pairs in ETH up to and including this day.")
 
   public String getLiquidityEth() {
     return liquidityEth;
@@ -349,7 +336,6 @@ public class SushiswapDayDataDTO {
    * @return liquidityUsd
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Total liquidity across all pairs in USD up to and including this day.")
 
   public String getLiquidityUsd() {
     return liquidityUsd;
@@ -372,7 +358,6 @@ public class SushiswapDayDataDTO {
    * @return txCount
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Number of transactions throughout this day.")
 
   public String getTxCount() {
     return txCount;
@@ -395,7 +380,6 @@ public class SushiswapDayDataDTO {
    * @return vid
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public Long getVid() {
     return vid;

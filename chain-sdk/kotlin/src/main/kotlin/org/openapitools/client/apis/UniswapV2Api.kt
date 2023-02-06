@@ -122,6 +122,7 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
             path = "/dapps/uniswapv2/bundles/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -189,6 +190,7 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
             path = "/dapps/uniswapv2/burns/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -288,6 +290,7 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
             path = "/dapps/uniswapv2/bundles/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -393,6 +396,7 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
             path = "/dapps/uniswapv2/burns/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -400,13 +404,13 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     /**
      * LiquidityPositionSnapshots (historical)
      * Gets liquidityPositionSnapshots.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param user  (optional)
-     * @param pair  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (pair address)-(user address) (optional)
+     * @param user Reference to user. (optional)
+     * @param pair Reference to the pair liquidity is being provided on. (optional)
      * @return kotlin.collections.List<UniswapV2LiquidityPositionSnapshotDTO>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
@@ -437,13 +441,13 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     /**
      * LiquidityPositionSnapshots (historical)
      * Gets liquidityPositionSnapshots.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param user  (optional)
-     * @param pair  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (pair address)-(user address) (optional)
+     * @param user Reference to user. (optional)
+     * @param pair Reference to the pair liquidity is being provided on. (optional)
      * @return ApiResponse<kotlin.collections.List<UniswapV2LiquidityPositionSnapshotDTO>?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
@@ -461,13 +465,13 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     /**
      * To obtain the request config of the operation uniswapV2GetLiquidityPositionSnapshotsHistorical
      *
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param user  (optional)
-     * @param pair  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (pair address)-(user address) (optional)
+     * @param user Reference to user. (optional)
+     * @param pair Reference to the pair liquidity is being provided on. (optional)
      * @return RequestConfig
      */
     fun uniswapV2GetLiquidityPositionSnapshotsHistoricalRequestConfig(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?, id: kotlin.String?, user: kotlin.String?, pair: kotlin.String?) : RequestConfig<Unit> {
@@ -504,6 +508,7 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
             path = "/dapps/uniswapv2/liquidityPositionSnapshots/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -615,6 +620,7 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
             path = "/dapps/uniswapv2/liquidityPositions/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -720,6 +726,7 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
             path = "/dapps/uniswapv2/mints/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -831,6 +838,7 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
             path = "/dapps/uniswapv2/pairDayData/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -936,6 +944,7 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
             path = "/dapps/uniswapv2/pairHourData/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -1047,6 +1056,7 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
             path = "/dapps/uniswapv2/pairs/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -1152,6 +1162,7 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
             path = "/dapps/uniswapv2/swaps/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -1251,6 +1262,7 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
             path = "/dapps/uniswapv2/tokenDayData/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -1362,6 +1374,7 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
             path = "/dapps/uniswapv2/tokens/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -1461,6 +1474,7 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
             path = "/dapps/uniswapv2/transactions/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -1560,6 +1574,7 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
             path = "/dapps/uniswapv2/uniswapDayData/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -1659,6 +1674,7 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
             path = "/dapps/uniswapv2/uniswapFactories/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -1758,6 +1774,7 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
             path = "/dapps/uniswapv2/users/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -1825,6 +1842,7 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
             path = "/dapps/uniswapv2/liquidityPositionSnapshots/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -1892,6 +1910,7 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
             path = "/dapps/uniswapv2/liquidityPositions/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -1959,6 +1978,7 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
             path = "/dapps/uniswapv2/mints/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -2026,6 +2046,7 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
             path = "/dapps/uniswapv2/pairDayData/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -2093,6 +2114,7 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
             path = "/dapps/uniswapv2/pairHourData/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -2168,6 +2190,7 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
             path = "/dapps/uniswapv2/pairs/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -2243,6 +2266,7 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
             path = "/dapps/uniswapv2/swaps/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -2310,6 +2334,7 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
             path = "/dapps/uniswapv2/tokenDayData/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -2377,6 +2402,7 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
             path = "/dapps/uniswapv2/tokens/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -2444,6 +2470,7 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
             path = "/dapps/uniswapv2/transactions/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -2511,6 +2538,7 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
             path = "/dapps/uniswapv2/uniswapDayData/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -2578,6 +2606,7 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
             path = "/dapps/uniswapv2/uniswapFactories/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -2645,6 +2674,7 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
             path = "/dapps/uniswapv2/users/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }

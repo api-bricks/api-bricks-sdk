@@ -232,24 +232,38 @@ cowGetTradesHistorical  _ =
   _mkRequest "GET" ["/dapps/cow/trades/historical"]
 
 data CowGetTradesHistorical  
+
+-- | /Optional Param/ "startBlock" - The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
 instance HasOptionalParam CowGetTradesHistorical StartBlock where
   applyOptionalParam req (StartBlock xs) =
     req `addQuery` toQuery ("startBlock", Just xs)
+
+-- | /Optional Param/ "endBlock" - The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
 instance HasOptionalParam CowGetTradesHistorical EndBlock where
   applyOptionalParam req (EndBlock xs) =
     req `addQuery` toQuery ("endBlock", Just xs)
+
+-- | /Optional Param/ "startDate" - The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
 instance HasOptionalParam CowGetTradesHistorical StartDate where
   applyOptionalParam req (StartDate xs) =
     req `addQuery` toQuery ("startDate", Just xs)
+
+-- | /Optional Param/ "endDate" - The end date of timeframe.
 instance HasOptionalParam CowGetTradesHistorical EndDate where
   applyOptionalParam req (EndDate xs) =
     req `addQuery` toQuery ("endDate", Just xs)
+
+-- | /Optional Param/ "id" - Identifier, format: (order id)|(transaction hash)|(event index).
 instance HasOptionalParam CowGetTradesHistorical Id where
   applyOptionalParam req (Id xs) =
     req `addQuery` toQuery ("id", Just xs)
+
+-- | /Optional Param/ "sell_token" - Address of token that is sold.
 instance HasOptionalParam CowGetTradesHistorical SellToken where
   applyOptionalParam req (SellToken xs) =
     req `addQuery` toQuery ("sell_token", Just xs)
+
+-- | /Optional Param/ "buy_token" - Address of token that is bought.
 instance HasOptionalParam CowGetTradesHistorical BuyToken where
   applyOptionalParam req (BuyToken xs) =
     req `addQuery` toQuery ("buy_token", Just xs)

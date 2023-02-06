@@ -249,13 +249,13 @@ Gets liquidityPositionSnapshots.
 //import org.openapitools.client.models.*
 
 val apiInstance = UniswapV2Api()
-val startBlock : kotlin.Long = 789 // kotlin.Long | 
-val endBlock : kotlin.Long = 789 // kotlin.Long | 
-val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
-val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
-val id : kotlin.String = id_example // kotlin.String | 
-val user : kotlin.String = user_example // kotlin.String | 
-val pair : kotlin.String = pair_example // kotlin.String | 
+val startBlock : kotlin.Long = 789 // kotlin.Long | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+val endBlock : kotlin.Long = 789 // kotlin.Long | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | The end date of timeframe.
+val id : kotlin.String = id_example // kotlin.String | Identifier, format: (pair address)-(user address)
+val user : kotlin.String = user_example // kotlin.String | Reference to user.
+val pair : kotlin.String = pair_example // kotlin.String | Reference to the pair liquidity is being provided on.
 try {
     val result : kotlin.collections.List<UniswapV2LiquidityPositionSnapshotDTO> = apiInstance.uniswapV2GetLiquidityPositionSnapshotsHistorical(startBlock, endBlock, startDate, endDate, id, user, pair)
     println(result)
@@ -272,13 +272,13 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startBlock** | **kotlin.Long**|  | [optional]
- **endBlock** | **kotlin.Long**|  | [optional]
- **startDate** | **java.time.OffsetDateTime**|  | [optional]
- **endDate** | **java.time.OffsetDateTime**|  | [optional]
- **id** | **kotlin.String**|  | [optional]
- **user** | **kotlin.String**|  | [optional]
- **pair** | **kotlin.String**|  | [optional]
+ **startBlock** | **kotlin.Long**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional]
+ **endBlock** | **kotlin.Long**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional]
+ **startDate** | **java.time.OffsetDateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional]
+ **endDate** | **java.time.OffsetDateTime**| The end date of timeframe. | [optional]
+ **id** | **kotlin.String**| Identifier, format: (pair address)-(user address) | [optional]
+ **user** | **kotlin.String**| Reference to user. | [optional]
+ **pair** | **kotlin.String**| Reference to the pair liquidity is being provided on. | [optional]
 
 ### Return type
 

@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.time.OffsetDateTime;
 import org.openapitools.jackson.nullable.JsonNullable;
@@ -50,8 +48,7 @@ import org.openapitools.client.JSON;
 /**
  * Tracks pair data across each hour.
  */
-@ApiModel(description = "Tracks pair data across each hour.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-30T14:42:00.397192Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-06T14:47:06.037855Z[Etc/UTC]")
 public class UniswapV2PairHourDataDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -127,7 +124,6 @@ public class UniswapV2PairHourDataDTO {
    * @return entryTime
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public OffsetDateTime getEntryTime() {
     return entryTime;
@@ -150,7 +146,6 @@ public class UniswapV2PairHourDataDTO {
    * @return recvTime
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public OffsetDateTime getRecvTime() {
     return recvTime;
@@ -173,7 +168,6 @@ public class UniswapV2PairHourDataDTO {
    * @return blockNumber
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Number of block in which entity was recorded.")
 
   public Long getBlockNumber() {
     return blockNumber;
@@ -196,7 +190,6 @@ public class UniswapV2PairHourDataDTO {
    * @return id
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getId() {
     return id;
@@ -219,7 +212,6 @@ public class UniswapV2PairHourDataDTO {
    * @return hourStartUnix
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Unix timestamp for start of hour.")
 
   public Integer getHourStartUnix() {
     return hourStartUnix;
@@ -242,7 +234,6 @@ public class UniswapV2PairHourDataDTO {
    * @return pair
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Address for pair contract.")
 
   public String getPair() {
     return pair;
@@ -265,7 +256,6 @@ public class UniswapV2PairHourDataDTO {
    * @return reserve0
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Reserve of token0 (updated during each transaction on pair).")
 
   public String getReserve0() {
     return reserve0;
@@ -288,7 +278,6 @@ public class UniswapV2PairHourDataDTO {
    * @return reserve1
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Reserve of token1 (updated during each transaction on pair).")
 
   public String getReserve1() {
     return reserve1;
@@ -311,7 +300,6 @@ public class UniswapV2PairHourDataDTO {
    * @return totalSupply
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Total supply of liquidity token distributed to LPs.")
 
   public String getTotalSupply() {
     return totalSupply;
@@ -334,7 +322,6 @@ public class UniswapV2PairHourDataDTO {
    * @return reserveUsd
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Reserve of token0 plus token1 stored as a derived USD amount.")
 
   public String getReserveUsd() {
     return reserveUsd;
@@ -357,7 +344,6 @@ public class UniswapV2PairHourDataDTO {
    * @return hourlyVolumeToken0
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Total amount of token0 swapped throughout hour.")
 
   public String getHourlyVolumeToken0() {
     return hourlyVolumeToken0;
@@ -380,7 +366,6 @@ public class UniswapV2PairHourDataDTO {
    * @return hourlyVolumeToken1
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Total amount of token1 swapped throughout hour.")
 
   public String getHourlyVolumeToken1() {
     return hourlyVolumeToken1;
@@ -403,7 +388,6 @@ public class UniswapV2PairHourDataDTO {
    * @return hourlyVolumeUsd
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Total volume within pair throughout hour.")
 
   public String getHourlyVolumeUsd() {
     return hourlyVolumeUsd;
@@ -426,7 +410,6 @@ public class UniswapV2PairHourDataDTO {
    * @return hourlyTxns
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Amount of transactions on pair throughout hour.")
 
   public String getHourlyTxns() {
     return hourlyTxns;
@@ -449,7 +432,6 @@ public class UniswapV2PairHourDataDTO {
    * @return vid
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public Long getVid() {
     return vid;

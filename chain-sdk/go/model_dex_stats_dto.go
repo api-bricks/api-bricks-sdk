@@ -16,6 +16,9 @@ import (
 	"time"
 )
 
+// checks if the DexStatsDTO type satisfies the MappedNullable interface at compile time
+var _ MappedNullable = &DexStatsDTO{}
+
 // DexStatsDTO A type collecting global stats about this instance of Gnosis Protocol.
 type DexStatsDTO struct {
 	EntryTime *time.Time `json:"entry_time,omitempty"`
@@ -70,7 +73,7 @@ func (o *DexStatsDTO) GetEntryTime() time.Time {
 // and a boolean to check if the value has been set.
 func (o *DexStatsDTO) GetEntryTimeOk() (*time.Time, bool) {
 	if o == nil || isNil(o.EntryTime) {
-    return nil, false
+		return nil, false
 	}
 	return o.EntryTime, true
 }
@@ -102,7 +105,7 @@ func (o *DexStatsDTO) GetRecvTime() time.Time {
 // and a boolean to check if the value has been set.
 func (o *DexStatsDTO) GetRecvTimeOk() (*time.Time, bool) {
 	if o == nil || isNil(o.RecvTime) {
-    return nil, false
+		return nil, false
 	}
 	return o.RecvTime, true
 }
@@ -134,7 +137,7 @@ func (o *DexStatsDTO) GetBlockNumber() int64 {
 // and a boolean to check if the value has been set.
 func (o *DexStatsDTO) GetBlockNumberOk() (*int64, bool) {
 	if o == nil || isNil(o.BlockNumber) {
-    return nil, false
+		return nil, false
 	}
 	return o.BlockNumber, true
 }
@@ -167,7 +170,7 @@ func (o *DexStatsDTO) GetId() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *DexStatsDTO) GetIdOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Id.Get(), o.Id.IsSet()
 }
@@ -209,7 +212,7 @@ func (o *DexStatsDTO) GetVolumeInOwl() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *DexStatsDTO) GetVolumeInOwlOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.VolumeInOwl.Get(), o.VolumeInOwl.IsSet()
 }
@@ -251,7 +254,7 @@ func (o *DexStatsDTO) GetUtilityInOwl() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *DexStatsDTO) GetUtilityInOwlOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.UtilityInOwl.Get(), o.UtilityInOwl.IsSet()
 }
@@ -293,7 +296,7 @@ func (o *DexStatsDTO) GetOwlBurnt() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *DexStatsDTO) GetOwlBurntOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.OwlBurnt.Get(), o.OwlBurnt.IsSet()
 }
@@ -334,7 +337,7 @@ func (o *DexStatsDTO) GetSettledBatchCount() int32 {
 // and a boolean to check if the value has been set.
 func (o *DexStatsDTO) GetSettledBatchCountOk() (*int32, bool) {
 	if o == nil || isNil(o.SettledBatchCount) {
-    return nil, false
+		return nil, false
 	}
 	return o.SettledBatchCount, true
 }
@@ -366,7 +369,7 @@ func (o *DexStatsDTO) GetSettledTradeCount() int32 {
 // and a boolean to check if the value has been set.
 func (o *DexStatsDTO) GetSettledTradeCountOk() (*int32, bool) {
 	if o == nil || isNil(o.SettledTradeCount) {
-    return nil, false
+		return nil, false
 	}
 	return o.SettledTradeCount, true
 }
@@ -398,7 +401,7 @@ func (o *DexStatsDTO) GetListedTokens() int32 {
 // and a boolean to check if the value has been set.
 func (o *DexStatsDTO) GetListedTokensOk() (*int32, bool) {
 	if o == nil || isNil(o.ListedTokens) {
-    return nil, false
+		return nil, false
 	}
 	return o.ListedTokens, true
 }
@@ -430,7 +433,7 @@ func (o *DexStatsDTO) GetVid() int64 {
 // and a boolean to check if the value has been set.
 func (o *DexStatsDTO) GetVidOk() (*int64, bool) {
 	if o == nil || isNil(o.Vid) {
-    return nil, false
+		return nil, false
 	}
 	return o.Vid, true
 }
@@ -450,6 +453,14 @@ func (o *DexStatsDTO) SetVid(v int64) {
 }
 
 func (o DexStatsDTO) MarshalJSON() ([]byte, error) {
+	toSerialize,err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
+}
+
+func (o DexStatsDTO) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
 	if !isNil(o.EntryTime) {
 		toSerialize["entry_time"] = o.EntryTime
@@ -484,7 +495,7 @@ func (o DexStatsDTO) MarshalJSON() ([]byte, error) {
 	if !isNil(o.Vid) {
 		toSerialize["vid"] = o.Vid
 	}
-	return json.Marshal(toSerialize)
+	return toSerialize, nil
 }
 
 type NullableDexStatsDTO struct {

@@ -353,42 +353,42 @@ sub sushiswap_get_bundles__historical {
 #
 # Burns (historical)
 #
-# @param int $start_block  (optional)
-# @param int $end_block  (optional)
-# @param DATE_TIME $start_date  (optional)
-# @param DATE_TIME $end_date  (optional)
-# @param string $id  (optional)
-# @param string $pair  (optional)
+# @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+# @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+# @param DATE_TIME $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+# @param DATE_TIME $end_date The end date of timeframe. (optional)
+# @param string $id Identifier, format: (transaction id):(transaction.burns.length). (optional)
+# @param string $pair Reference to pair. (optional)
 {
     my $params = {
     'start_block' => {
         data_type => 'int',
-        description => '',
+        description => 'The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.',
         required => '0',
     },
     'end_block' => {
         data_type => 'int',
-        description => '',
+        description => 'The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).',
         required => '0',
     },
     'start_date' => {
         data_type => 'DATE_TIME',
-        description => '',
+        description => 'The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.',
         required => '0',
     },
     'end_date' => {
         data_type => 'DATE_TIME',
-        description => '',
+        description => 'The end date of timeframe.',
         required => '0',
     },
     'id' => {
         data_type => 'string',
-        description => '',
+        description => 'Identifier, format: (transaction id):(transaction.burns.length).',
         required => '0',
     },
     'pair' => {
         data_type => 'string',
-        description => '',
+        description => 'Reference to pair.',
         required => '0',
     },
     };
@@ -780,48 +780,48 @@ sub sushiswap_get_hour_data__historical {
 #
 # LiquidityPositionSnapshots (historical)
 #
-# @param int $start_block  (optional)
-# @param int $end_block  (optional)
-# @param DATE_TIME $start_date  (optional)
-# @param DATE_TIME $end_date  (optional)
-# @param string $id  (optional)
-# @param string $user  (optional)
-# @param string $pair  (optional)
+# @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+# @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+# @param DATE_TIME $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+# @param DATE_TIME $end_date The end date of timeframe. (optional)
+# @param string $id Identifier, format: (pair address)-(user address)-(timestamp) (optional)
+# @param string $user Reference to user. (optional)
+# @param string $pair Reference to the pair liquidity is being provided on. (optional)
 {
     my $params = {
     'start_block' => {
         data_type => 'int',
-        description => '',
+        description => 'The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.',
         required => '0',
     },
     'end_block' => {
         data_type => 'int',
-        description => '',
+        description => 'The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).',
         required => '0',
     },
     'start_date' => {
         data_type => 'DATE_TIME',
-        description => '',
+        description => 'The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.',
         required => '0',
     },
     'end_date' => {
         data_type => 'DATE_TIME',
-        description => '',
+        description => 'The end date of timeframe.',
         required => '0',
     },
     'id' => {
         data_type => 'string',
-        description => '',
+        description => 'Identifier, format: (pair address)-(user address)-(timestamp)',
         required => '0',
     },
     'user' => {
         data_type => 'string',
-        description => '',
+        description => 'Reference to user.',
         required => '0',
     },
     'pair' => {
         data_type => 'string',
-        description => '',
+        description => 'Reference to the pair liquidity is being provided on.',
         required => '0',
     },
     };
@@ -906,48 +906,48 @@ sub sushiswap_get_liquidity_position_snapshots__historical {
 #
 # LiquidityPositions (historical)
 #
-# @param int $start_block  (optional)
-# @param int $end_block  (optional)
-# @param DATE_TIME $start_date  (optional)
-# @param DATE_TIME $end_date  (optional)
-# @param string $id  (optional)
-# @param string $user  (optional)
-# @param string $pair  (optional)
+# @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+# @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+# @param DATE_TIME $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+# @param DATE_TIME $end_date The end date of timeframe. (optional)
+# @param string $id Identifier, format: (pair address)-(user address) (optional)
+# @param string $user User address. (optional)
+# @param string $pair Pair address. (optional)
 {
     my $params = {
     'start_block' => {
         data_type => 'int',
-        description => '',
+        description => 'The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.',
         required => '0',
     },
     'end_block' => {
         data_type => 'int',
-        description => '',
+        description => 'The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).',
         required => '0',
     },
     'start_date' => {
         data_type => 'DATE_TIME',
-        description => '',
+        description => 'The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.',
         required => '0',
     },
     'end_date' => {
         data_type => 'DATE_TIME',
-        description => '',
+        description => 'The end date of timeframe.',
         required => '0',
     },
     'id' => {
         data_type => 'string',
-        description => '',
+        description => 'Identifier, format: (pair address)-(user address)',
         required => '0',
     },
     'user' => {
         data_type => 'string',
-        description => '',
+        description => 'User address.',
         required => '0',
     },
     'pair' => {
         data_type => 'string',
-        description => '',
+        description => 'Pair address.',
         required => '0',
     },
     };
@@ -1032,42 +1032,42 @@ sub sushiswap_get_liquidity_positions__historical {
 #
 # Mints (historical)
 #
-# @param int $start_block  (optional)
-# @param int $end_block  (optional)
-# @param DATE_TIME $start_date  (optional)
-# @param DATE_TIME $end_date  (optional)
-# @param string $id  (optional)
-# @param string $pair  (optional)
+# @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+# @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+# @param DATE_TIME $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+# @param DATE_TIME $end_date The end date of timeframe. (optional)
+# @param string $id Identifier, format: (transaction hash)-(index in the transaction mint array). (optional)
+# @param string $pair Reference to pair. (optional)
 {
     my $params = {
     'start_block' => {
         data_type => 'int',
-        description => '',
+        description => 'The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.',
         required => '0',
     },
     'end_block' => {
         data_type => 'int',
-        description => '',
+        description => 'The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).',
         required => '0',
     },
     'start_date' => {
         data_type => 'DATE_TIME',
-        description => '',
+        description => 'The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.',
         required => '0',
     },
     'end_date' => {
         data_type => 'DATE_TIME',
-        description => '',
+        description => 'The end date of timeframe.',
         required => '0',
     },
     'id' => {
         data_type => 'string',
-        description => '',
+        description => 'Identifier, format: (transaction hash)-(index in the transaction mint array).',
         required => '0',
     },
     'pair' => {
         data_type => 'string',
-        description => '',
+        description => 'Reference to pair.',
         required => '0',
     },
     };
@@ -1147,54 +1147,54 @@ sub sushiswap_get_mints__historical {
 #
 # PairDayData (historical)
 #
-# @param int $start_block  (optional)
-# @param int $end_block  (optional)
-# @param DATE_TIME $start_date  (optional)
-# @param DATE_TIME $end_date  (optional)
-# @param string $id  (optional)
-# @param string $pair  (optional)
-# @param string $token_0  (optional)
-# @param string $token_1  (optional)
+# @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+# @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+# @param DATE_TIME $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+# @param DATE_TIME $end_date The end date of timeframe. (optional)
+# @param string $id Identifier, format: (pair id)-(day start timestamp). (optional)
+# @param string $pair Reference to pair. (optional)
+# @param string $token_0 Reference to token0. (optional)
+# @param string $token_1 Reference to token1. (optional)
 {
     my $params = {
     'start_block' => {
         data_type => 'int',
-        description => '',
+        description => 'The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.',
         required => '0',
     },
     'end_block' => {
         data_type => 'int',
-        description => '',
+        description => 'The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).',
         required => '0',
     },
     'start_date' => {
         data_type => 'DATE_TIME',
-        description => '',
+        description => 'The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.',
         required => '0',
     },
     'end_date' => {
         data_type => 'DATE_TIME',
-        description => '',
+        description => 'The end date of timeframe.',
         required => '0',
     },
     'id' => {
         data_type => 'string',
-        description => '',
+        description => 'Identifier, format: (pair id)-(day start timestamp).',
         required => '0',
     },
     'pair' => {
         data_type => 'string',
-        description => '',
+        description => 'Reference to pair.',
         required => '0',
     },
     'token_0' => {
         data_type => 'string',
-        description => '',
+        description => 'Reference to token0.',
         required => '0',
     },
     'token_1' => {
         data_type => 'string',
-        description => '',
+        description => 'Reference to token1.',
         required => '0',
     },
     };
@@ -1284,42 +1284,42 @@ sub sushiswap_get_pair_day_data__historical {
 #
 # PairHourData (historical)
 #
-# @param int $start_block  (optional)
-# @param int $end_block  (optional)
-# @param DATE_TIME $start_date  (optional)
-# @param DATE_TIME $end_date  (optional)
-# @param string $id  (optional)
-# @param string $pair  (optional)
+# @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+# @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+# @param DATE_TIME $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+# @param DATE_TIME $end_date The end date of timeframe. (optional)
+# @param string $id Identifier, format: (pair id)-(hour start timestamp). (optional)
+# @param string $pair Reference to pair. (optional)
 {
     my $params = {
     'start_block' => {
         data_type => 'int',
-        description => '',
+        description => 'The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.',
         required => '0',
     },
     'end_block' => {
         data_type => 'int',
-        description => '',
+        description => 'The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).',
         required => '0',
     },
     'start_date' => {
         data_type => 'DATE_TIME',
-        description => '',
+        description => 'The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.',
         required => '0',
     },
     'end_date' => {
         data_type => 'DATE_TIME',
-        description => '',
+        description => 'The end date of timeframe.',
         required => '0',
     },
     'id' => {
         data_type => 'string',
-        description => '',
+        description => 'Identifier, format: (pair id)-(hour start timestamp).',
         required => '0',
     },
     'pair' => {
         data_type => 'string',
-        description => '',
+        description => 'Reference to pair.',
         required => '0',
     },
     };
@@ -1399,54 +1399,54 @@ sub sushiswap_get_pair_hour_data__historical {
 #
 # Pairs (historical)
 #
-# @param int $start_block  (optional)
-# @param int $end_block  (optional)
-# @param DATE_TIME $start_date  (optional)
-# @param DATE_TIME $end_date  (optional)
-# @param string $id  (optional)
-# @param string $name  (optional)
-# @param string $token_0  (optional)
-# @param string $token_1  (optional)
+# @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+# @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+# @param DATE_TIME $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+# @param DATE_TIME $end_date The end date of timeframe. (optional)
+# @param string $id Pair contract address. (optional)
+# @param string $name Friendly name, format: (token0 name)-(token1 name) (optional)
+# @param string $token_0 Reference to token0 as stored in pair contract. (optional)
+# @param string $token_1 Reference to token0 as stored in pair contract. (optional)
 {
     my $params = {
     'start_block' => {
         data_type => 'int',
-        description => '',
+        description => 'The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.',
         required => '0',
     },
     'end_block' => {
         data_type => 'int',
-        description => '',
+        description => 'The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).',
         required => '0',
     },
     'start_date' => {
         data_type => 'DATE_TIME',
-        description => '',
+        description => 'The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.',
         required => '0',
     },
     'end_date' => {
         data_type => 'DATE_TIME',
-        description => '',
+        description => 'The end date of timeframe.',
         required => '0',
     },
     'id' => {
         data_type => 'string',
-        description => '',
+        description => 'Pair contract address.',
         required => '0',
     },
     'name' => {
         data_type => 'string',
-        description => '',
+        description => 'Friendly name, format: (token0 name)-(token1 name)',
         required => '0',
     },
     'token_0' => {
         data_type => 'string',
-        description => '',
+        description => 'Reference to token0 as stored in pair contract.',
         required => '0',
     },
     'token_1' => {
         data_type => 'string',
-        description => '',
+        description => 'Reference to token0 as stored in pair contract.',
         required => '0',
     },
     };

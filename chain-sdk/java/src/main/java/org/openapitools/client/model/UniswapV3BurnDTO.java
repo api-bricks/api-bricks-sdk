@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.time.OffsetDateTime;
 import org.openapitools.jackson.nullable.JsonNullable;
@@ -50,8 +48,7 @@ import org.openapitools.client.JSON;
 /**
  * Burn entities are created for every emitted Burn event on the Uniswap core contracts. The Burn entity stores key data about the event like token amounts, who burned, who received tokens, and more. This entity can be used to track liquidity removals on pairs.
  */
-@ApiModel(description = "Burn entities are created for every emitted Burn event on the Uniswap core contracts. The Burn entity stores key data about the event like token amounts, who burned, who received tokens, and more. This entity can be used to track liquidity removals on pairs.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-30T14:42:00.397192Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-06T14:47:06.037855Z[Etc/UTC]")
 public class UniswapV3BurnDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -143,7 +140,6 @@ public class UniswapV3BurnDTO {
    * @return entryTime
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public OffsetDateTime getEntryTime() {
     return entryTime;
@@ -166,7 +162,6 @@ public class UniswapV3BurnDTO {
    * @return recvTime
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public OffsetDateTime getRecvTime() {
     return recvTime;
@@ -189,7 +184,6 @@ public class UniswapV3BurnDTO {
    * @return blockNumber
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Number of block in which entity was recorded.")
 
   public Long getBlockNumber() {
     return blockNumber;
@@ -212,7 +206,6 @@ public class UniswapV3BurnDTO {
    * @return id
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Transaction hash + '#' + index in mints Transaction array.")
 
   public String getId() {
     return id;
@@ -235,7 +228,6 @@ public class UniswapV3BurnDTO {
    * @return transaction
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Transaction burn was included in.")
 
   public String getTransaction() {
     return transaction;
@@ -258,7 +250,6 @@ public class UniswapV3BurnDTO {
    * @return pool
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Pool position is within.")
 
   public String getPool() {
     return pool;
@@ -281,7 +272,6 @@ public class UniswapV3BurnDTO {
    * @return token0
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Reference to token0 as stored in pool contract.")
 
   public String getToken0() {
     return token0;
@@ -304,7 +294,6 @@ public class UniswapV3BurnDTO {
    * @return token1
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Reference to token1 as stored in pool contract.")
 
   public String getToken1() {
     return token1;
@@ -327,7 +316,6 @@ public class UniswapV3BurnDTO {
    * @return timestamp
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Timestamp.")
 
   public String getTimestamp() {
     return timestamp;
@@ -350,7 +338,6 @@ public class UniswapV3BurnDTO {
    * @return owner
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Owner of position where liquidity was burned.")
 
   public String getOwner() {
     return owner;
@@ -373,7 +360,6 @@ public class UniswapV3BurnDTO {
    * @return origin
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Transaction origin: the EOA (Externally Owned Account) that initiated the transaction.")
 
   public String getOrigin() {
     return origin;
@@ -396,7 +382,6 @@ public class UniswapV3BurnDTO {
    * @return amount
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Amount of liquidity burned.")
 
   public String getAmount() {
     return amount;
@@ -419,7 +404,6 @@ public class UniswapV3BurnDTO {
    * @return amount0
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Amount of token 0 burned.")
 
   public String getAmount0() {
     return amount0;
@@ -442,7 +426,6 @@ public class UniswapV3BurnDTO {
    * @return amount1
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Amount of token 1 burned.")
 
   public String getAmount1() {
     return amount1;
@@ -465,7 +448,6 @@ public class UniswapV3BurnDTO {
    * @return amountUsd
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Derived amount based on available prices of tokens.")
 
   public String getAmountUsd() {
     return amountUsd;
@@ -488,7 +470,6 @@ public class UniswapV3BurnDTO {
    * @return tickLower
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Lower tick of position.")
 
   public String getTickLower() {
     return tickLower;
@@ -511,7 +492,6 @@ public class UniswapV3BurnDTO {
    * @return tickUpper
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Upper tick of position.")
 
   public String getTickUpper() {
     return tickUpper;
@@ -534,7 +514,6 @@ public class UniswapV3BurnDTO {
    * @return logIndex
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Position within the transactions.")
 
   public String getLogIndex() {
     return logIndex;
@@ -557,7 +536,6 @@ public class UniswapV3BurnDTO {
    * @return vid
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public Long getVid() {
     return vid;

@@ -4,6 +4,8 @@ export * from './curveApi';
 import { CurveApi } from './curveApi';
 export * from './dexApi';
 import { DexApi } from './dexApi';
+export * from './metadataApi';
+import { MetadataApi } from './metadataApi';
 export * from './sushiswapApi';
 import { SushiswapApi } from './sushiswapApi';
 export * from './uniswapV2Api';
@@ -21,4 +23,4 @@ export class HttpError extends Error {
 
 export { RequestFile } from '../model/models';
 
-export const APIS = [CowApi, CurveApi, DexApi, SushiswapApi, UniswapV2Api, UniswapV3Api];
+export const APIS = [CowApi, CurveApi, DexApi, MetadataApi, SushiswapApi, UniswapV2Api, UniswapV3Api];

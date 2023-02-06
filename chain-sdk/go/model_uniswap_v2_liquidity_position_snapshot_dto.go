@@ -16,6 +16,9 @@ import (
 	"time"
 )
 
+// checks if the UniswapV2LiquidityPositionSnapshotDTO type satisfies the MappedNullable interface at compile time
+var _ MappedNullable = &UniswapV2LiquidityPositionSnapshotDTO{}
+
 // UniswapV2LiquidityPositionSnapshotDTO This entity is used to store data about a user's liquidity position over time. This information, along with information from the pair itself can be used to provide position sizes, token deposits, and more. It gets created and never updated.
 type UniswapV2LiquidityPositionSnapshotDTO struct {
 	EntryTime *time.Time `json:"entry_time,omitempty"`
@@ -84,7 +87,7 @@ func (o *UniswapV2LiquidityPositionSnapshotDTO) GetEntryTime() time.Time {
 // and a boolean to check if the value has been set.
 func (o *UniswapV2LiquidityPositionSnapshotDTO) GetEntryTimeOk() (*time.Time, bool) {
 	if o == nil || isNil(o.EntryTime) {
-    return nil, false
+		return nil, false
 	}
 	return o.EntryTime, true
 }
@@ -116,7 +119,7 @@ func (o *UniswapV2LiquidityPositionSnapshotDTO) GetRecvTime() time.Time {
 // and a boolean to check if the value has been set.
 func (o *UniswapV2LiquidityPositionSnapshotDTO) GetRecvTimeOk() (*time.Time, bool) {
 	if o == nil || isNil(o.RecvTime) {
-    return nil, false
+		return nil, false
 	}
 	return o.RecvTime, true
 }
@@ -148,7 +151,7 @@ func (o *UniswapV2LiquidityPositionSnapshotDTO) GetBlockNumber() int64 {
 // and a boolean to check if the value has been set.
 func (o *UniswapV2LiquidityPositionSnapshotDTO) GetBlockNumberOk() (*int64, bool) {
 	if o == nil || isNil(o.BlockNumber) {
-    return nil, false
+		return nil, false
 	}
 	return o.BlockNumber, true
 }
@@ -181,7 +184,7 @@ func (o *UniswapV2LiquidityPositionSnapshotDTO) GetId() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *UniswapV2LiquidityPositionSnapshotDTO) GetIdOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Id.Get(), o.Id.IsSet()
 }
@@ -223,7 +226,7 @@ func (o *UniswapV2LiquidityPositionSnapshotDTO) GetLiquidityPosition() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *UniswapV2LiquidityPositionSnapshotDTO) GetLiquidityPositionOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.LiquidityPosition.Get(), o.LiquidityPosition.IsSet()
 }
@@ -264,7 +267,7 @@ func (o *UniswapV2LiquidityPositionSnapshotDTO) GetTimestamp() int32 {
 // and a boolean to check if the value has been set.
 func (o *UniswapV2LiquidityPositionSnapshotDTO) GetTimestampOk() (*int32, bool) {
 	if o == nil || isNil(o.Timestamp) {
-    return nil, false
+		return nil, false
 	}
 	return o.Timestamp, true
 }
@@ -296,7 +299,7 @@ func (o *UniswapV2LiquidityPositionSnapshotDTO) GetBlock() int32 {
 // and a boolean to check if the value has been set.
 func (o *UniswapV2LiquidityPositionSnapshotDTO) GetBlockOk() (*int32, bool) {
 	if o == nil || isNil(o.Block) {
-    return nil, false
+		return nil, false
 	}
 	return o.Block, true
 }
@@ -329,7 +332,7 @@ func (o *UniswapV2LiquidityPositionSnapshotDTO) GetUser() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *UniswapV2LiquidityPositionSnapshotDTO) GetUserOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.User.Get(), o.User.IsSet()
 }
@@ -371,7 +374,7 @@ func (o *UniswapV2LiquidityPositionSnapshotDTO) GetPair() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *UniswapV2LiquidityPositionSnapshotDTO) GetPairOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Pair.Get(), o.Pair.IsSet()
 }
@@ -413,7 +416,7 @@ func (o *UniswapV2LiquidityPositionSnapshotDTO) GetToken0PriceUsd() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *UniswapV2LiquidityPositionSnapshotDTO) GetToken0PriceUsdOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Token0PriceUsd.Get(), o.Token0PriceUsd.IsSet()
 }
@@ -455,7 +458,7 @@ func (o *UniswapV2LiquidityPositionSnapshotDTO) GetToken1PriceUsd() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *UniswapV2LiquidityPositionSnapshotDTO) GetToken1PriceUsdOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Token1PriceUsd.Get(), o.Token1PriceUsd.IsSet()
 }
@@ -497,7 +500,7 @@ func (o *UniswapV2LiquidityPositionSnapshotDTO) GetReserve0() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *UniswapV2LiquidityPositionSnapshotDTO) GetReserve0Ok() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Reserve0.Get(), o.Reserve0.IsSet()
 }
@@ -539,7 +542,7 @@ func (o *UniswapV2LiquidityPositionSnapshotDTO) GetReserve1() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *UniswapV2LiquidityPositionSnapshotDTO) GetReserve1Ok() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Reserve1.Get(), o.Reserve1.IsSet()
 }
@@ -581,7 +584,7 @@ func (o *UniswapV2LiquidityPositionSnapshotDTO) GetReserveUsd() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *UniswapV2LiquidityPositionSnapshotDTO) GetReserveUsdOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.ReserveUsd.Get(), o.ReserveUsd.IsSet()
 }
@@ -623,7 +626,7 @@ func (o *UniswapV2LiquidityPositionSnapshotDTO) GetLiquidityTokenTotalSupply() s
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *UniswapV2LiquidityPositionSnapshotDTO) GetLiquidityTokenTotalSupplyOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.LiquidityTokenTotalSupply.Get(), o.LiquidityTokenTotalSupply.IsSet()
 }
@@ -665,7 +668,7 @@ func (o *UniswapV2LiquidityPositionSnapshotDTO) GetLiquidityTokenBalance() strin
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *UniswapV2LiquidityPositionSnapshotDTO) GetLiquidityTokenBalanceOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.LiquidityTokenBalance.Get(), o.LiquidityTokenBalance.IsSet()
 }
@@ -706,7 +709,7 @@ func (o *UniswapV2LiquidityPositionSnapshotDTO) GetVid() int64 {
 // and a boolean to check if the value has been set.
 func (o *UniswapV2LiquidityPositionSnapshotDTO) GetVidOk() (*int64, bool) {
 	if o == nil || isNil(o.Vid) {
-    return nil, false
+		return nil, false
 	}
 	return o.Vid, true
 }
@@ -739,7 +742,7 @@ func (o *UniswapV2LiquidityPositionSnapshotDTO) GetBlockRange() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *UniswapV2LiquidityPositionSnapshotDTO) GetBlockRangeOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.BlockRange.Get(), o.BlockRange.IsSet()
 }
@@ -768,6 +771,14 @@ func (o *UniswapV2LiquidityPositionSnapshotDTO) UnsetBlockRange() {
 }
 
 func (o UniswapV2LiquidityPositionSnapshotDTO) MarshalJSON() ([]byte, error) {
+	toSerialize,err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
+}
+
+func (o UniswapV2LiquidityPositionSnapshotDTO) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
 	if !isNil(o.EntryTime) {
 		toSerialize["entry_time"] = o.EntryTime
@@ -823,7 +834,7 @@ func (o UniswapV2LiquidityPositionSnapshotDTO) MarshalJSON() ([]byte, error) {
 	if o.BlockRange.IsSet() {
 		toSerialize["block_range"] = o.BlockRange.Get()
 	}
-	return json.Marshal(toSerialize)
+	return toSerialize, nil
 }
 
 type NullableUniswapV2LiquidityPositionSnapshotDTO struct {

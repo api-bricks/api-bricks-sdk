@@ -337,17 +337,17 @@ feature -- API Access
 			-- PoolDayData (historical)
 			-- Gets poolDayData.
 			-- 
-			-- argument: start_block  (optional, default to null)
+			-- argument: start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to null)
 			-- 
-			-- argument: end_block  (optional, default to null)
+			-- argument: end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional, default to null)
 			-- 
-			-- argument: start_date  (optional, default to null)
+			-- argument: start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional, default to null)
 			-- 
-			-- argument: end_date  (optional, default to null)
+			-- argument: end_date The end date of timeframe. (optional, default to null)
 			-- 
-			-- argument: id  (optional, default to null)
+			-- argument: id Identifier, format: (pool address)-(day id). (optional, default to null)
 			-- 
-			-- argument: pool  (optional, default to null)
+			-- argument: pool Pointer to pool. (optional, default to null)
 			-- 
 			-- 
 			-- Result LIST [UNISWAP_V3_POOL_DAY_DATA_DTO]
@@ -388,17 +388,17 @@ feature -- API Access
 			-- PoolHourData (historical)
 			-- Gets poolHourData.
 			-- 
-			-- argument: start_block  (optional, default to null)
+			-- argument: start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to null)
 			-- 
-			-- argument: end_block  (optional, default to null)
+			-- argument: end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional, default to null)
 			-- 
-			-- argument: start_date  (optional, default to null)
+			-- argument: start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional, default to null)
 			-- 
-			-- argument: end_date  (optional, default to null)
+			-- argument: end_date The end date of timeframe. (optional, default to null)
 			-- 
-			-- argument: id  (optional, default to null)
+			-- argument: id Identifier, format: (pool address)-(day id) (optional, default to null)
 			-- 
-			-- argument: pool  (optional, default to null)
+			-- argument: pool Pointer to pool. (optional, default to null)
 			-- 
 			-- 
 			-- Result LIST [UNISWAP_V3_POOL_HOUR_DATA_DTO]
@@ -493,17 +493,17 @@ feature -- API Access
 			-- PositionSnapshots (historical)
 			-- Gets positionSnapshots.
 			-- 
-			-- argument: start_block  (optional, default to null)
+			-- argument: start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to null)
 			-- 
-			-- argument: end_block  (optional, default to null)
+			-- argument: end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional, default to null)
 			-- 
-			-- argument: start_date  (optional, default to null)
+			-- argument: start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional, default to null)
 			-- 
-			-- argument: end_date  (optional, default to null)
+			-- argument: end_date The end date of timeframe. (optional, default to null)
 			-- 
-			-- argument: id  (optional, default to null)
+			-- argument: id NFT token identifier, format: (NFT token id)#(block number). (optional, default to null)
 			-- 
-			-- argument: pool  (optional, default to null)
+			-- argument: pool Pool the position is within. (optional, default to null)
 			-- 
 			-- 
 			-- Result LIST [UNISWAP_V3_POSITION_SNAPSHOT_DTO]
@@ -609,7 +609,7 @@ feature -- API Access
 			-- 
 			-- argument: end_date The end date of timeframe. (optional, default to null)
 			-- 
-			-- argument: id Identifier, format: transaction hash + \&quot;#\&quot; + index in swaps Transaction array. (optional, default to null)
+			-- argument: id Identifier, format: (transaction hash) + # + (index in swaps Transaction array). (optional, default to null)
 			-- 
 			-- argument: pool Pool swap occured within. (optional, default to null)
 			-- 
@@ -658,17 +658,17 @@ feature -- API Access
 			-- TickDayData (historical)
 			-- Gets tickDayData.
 			-- 
-			-- argument: start_block  (optional, default to null)
+			-- argument: start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to null)
 			-- 
-			-- argument: end_block  (optional, default to null)
+			-- argument: end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional, default to null)
 			-- 
-			-- argument: start_date  (optional, default to null)
+			-- argument: start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional, default to null)
 			-- 
-			-- argument: end_date  (optional, default to null)
+			-- argument: end_date The end date of timeframe. (optional, default to null)
 			-- 
-			-- argument: id  (optional, default to null)
+			-- argument: id Identifier, format: (pool address)-(tick index)-(timestamp). (optional, default to null)
 			-- 
-			-- argument: pool  (optional, default to null)
+			-- argument: pool Pointer to pool. (optional, default to null)
 			-- 
 			-- 
 			-- Result LIST [UNISWAP_V3_TICK_DAY_DATA_DTO]
@@ -709,17 +709,17 @@ feature -- API Access
 			-- Ticks (historical)
 			-- Gets ticks.
 			-- 
-			-- argument: start_block  (optional, default to null)
+			-- argument: start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to null)
 			-- 
-			-- argument: end_block  (optional, default to null)
+			-- argument: end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional, default to null)
 			-- 
-			-- argument: start_date  (optional, default to null)
+			-- argument: start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional, default to null)
 			-- 
-			-- argument: end_date  (optional, default to null)
+			-- argument: end_date The end date of timeframe. (optional, default to null)
 			-- 
-			-- argument: id  (optional, default to null)
+			-- argument: id Identifier, format: (pool address)#(tick index) (optional, default to null)
 			-- 
-			-- argument: pool  (optional, default to null)
+			-- argument: pool Pool address. (optional, default to null)
 			-- 
 			-- 
 			-- Result LIST [UNISWAP_V3_TICK_DTO]

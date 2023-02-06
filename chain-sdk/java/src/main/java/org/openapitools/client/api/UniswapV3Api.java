@@ -1105,12 +1105,12 @@ public class UniswapV3Api {
     }
     /**
      * Build call for uniswapV3GetPoolDayDataHistorical
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param pool  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (pool address)-(day id). (optional)
+     * @param pool Pointer to pool. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -1199,12 +1199,12 @@ public class UniswapV3Api {
     /**
      * PoolDayData (historical)
      * Gets poolDayData.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param pool  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (pool address)-(day id). (optional)
+     * @param pool Pointer to pool. (optional)
      * @return List&lt;UniswapV3PoolDayDataDTO&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1221,12 +1221,12 @@ public class UniswapV3Api {
     /**
      * PoolDayData (historical)
      * Gets poolDayData.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param pool  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (pool address)-(day id). (optional)
+     * @param pool Pointer to pool. (optional)
      * @return ApiResponse&lt;List&lt;UniswapV3PoolDayDataDTO&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1244,12 +1244,12 @@ public class UniswapV3Api {
     /**
      * PoolDayData (historical) (asynchronously)
      * Gets poolDayData.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param pool  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (pool address)-(day id). (optional)
+     * @param pool Pointer to pool. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -1268,12 +1268,12 @@ public class UniswapV3Api {
     }
     /**
      * Build call for uniswapV3GetPoolHourDataHistorical
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param pool  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (pool address)-(day id) (optional)
+     * @param pool Pointer to pool. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -1362,12 +1362,12 @@ public class UniswapV3Api {
     /**
      * PoolHourData (historical)
      * Gets poolHourData.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param pool  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (pool address)-(day id) (optional)
+     * @param pool Pointer to pool. (optional)
      * @return List&lt;UniswapV3PoolHourDataDTO&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1384,12 +1384,12 @@ public class UniswapV3Api {
     /**
      * PoolHourData (historical)
      * Gets poolHourData.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param pool  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (pool address)-(day id) (optional)
+     * @param pool Pointer to pool. (optional)
      * @return ApiResponse&lt;List&lt;UniswapV3PoolHourDataDTO&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1407,12 +1407,12 @@ public class UniswapV3Api {
     /**
      * PoolHourData (historical) (asynchronously)
      * Gets poolHourData.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param pool  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (pool address)-(day id) (optional)
+     * @param pool Pointer to pool. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -1602,12 +1602,12 @@ public class UniswapV3Api {
     }
     /**
      * Build call for uniswapV3GetPositionSnapshotsHistorical
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param pool  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id NFT token identifier, format: (NFT token id)#(block number). (optional)
+     * @param pool Pool the position is within. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -1696,12 +1696,12 @@ public class UniswapV3Api {
     /**
      * PositionSnapshots (historical)
      * Gets positionSnapshots.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param pool  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id NFT token identifier, format: (NFT token id)#(block number). (optional)
+     * @param pool Pool the position is within. (optional)
      * @return List&lt;UniswapV3PositionSnapshotDTO&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1718,12 +1718,12 @@ public class UniswapV3Api {
     /**
      * PositionSnapshots (historical)
      * Gets positionSnapshots.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param pool  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id NFT token identifier, format: (NFT token id)#(block number). (optional)
+     * @param pool Pool the position is within. (optional)
      * @return ApiResponse&lt;List&lt;UniswapV3PositionSnapshotDTO&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1741,12 +1741,12 @@ public class UniswapV3Api {
     /**
      * PositionSnapshots (historical) (asynchronously)
      * Gets positionSnapshots.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param pool  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id NFT token identifier, format: (NFT token id)#(block number). (optional)
+     * @param pool Pool the position is within. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -1948,7 +1948,7 @@ public class UniswapV3Api {
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
      * @param endDate The end date of timeframe. (optional)
-     * @param id Identifier, format: transaction hash + \&quot;#\&quot; + index in swaps Transaction array. (optional)
+     * @param id Identifier, format: (transaction hash) + # + (index in swaps Transaction array). (optional)
      * @param pool Pool swap occured within. (optional)
      * @param token0 Reference to token0 as stored in pair contract. (optional)
      * @param token1 Reference to token1 as stored in pair contract. (optional)
@@ -2052,7 +2052,7 @@ public class UniswapV3Api {
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
      * @param endDate The end date of timeframe. (optional)
-     * @param id Identifier, format: transaction hash + \&quot;#\&quot; + index in swaps Transaction array. (optional)
+     * @param id Identifier, format: (transaction hash) + # + (index in swaps Transaction array). (optional)
      * @param pool Pool swap occured within. (optional)
      * @param token0 Reference to token0 as stored in pair contract. (optional)
      * @param token1 Reference to token1 as stored in pair contract. (optional)
@@ -2076,7 +2076,7 @@ public class UniswapV3Api {
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
      * @param endDate The end date of timeframe. (optional)
-     * @param id Identifier, format: transaction hash + \&quot;#\&quot; + index in swaps Transaction array. (optional)
+     * @param id Identifier, format: (transaction hash) + # + (index in swaps Transaction array). (optional)
      * @param pool Pool swap occured within. (optional)
      * @param token0 Reference to token0 as stored in pair contract. (optional)
      * @param token1 Reference to token1 as stored in pair contract. (optional)
@@ -2101,7 +2101,7 @@ public class UniswapV3Api {
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
      * @param endDate The end date of timeframe. (optional)
-     * @param id Identifier, format: transaction hash + \&quot;#\&quot; + index in swaps Transaction array. (optional)
+     * @param id Identifier, format: (transaction hash) + # + (index in swaps Transaction array). (optional)
      * @param pool Pool swap occured within. (optional)
      * @param token0 Reference to token0 as stored in pair contract. (optional)
      * @param token1 Reference to token1 as stored in pair contract. (optional)
@@ -2123,12 +2123,12 @@ public class UniswapV3Api {
     }
     /**
      * Build call for uniswapV3GetTickDayDataHistorical
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param pool  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (pool address)-(tick index)-(timestamp). (optional)
+     * @param pool Pointer to pool. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -2217,12 +2217,12 @@ public class UniswapV3Api {
     /**
      * TickDayData (historical)
      * Gets tickDayData.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param pool  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (pool address)-(tick index)-(timestamp). (optional)
+     * @param pool Pointer to pool. (optional)
      * @return List&lt;UniswapV3TickDayDataDTO&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -2239,12 +2239,12 @@ public class UniswapV3Api {
     /**
      * TickDayData (historical)
      * Gets tickDayData.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param pool  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (pool address)-(tick index)-(timestamp). (optional)
+     * @param pool Pointer to pool. (optional)
      * @return ApiResponse&lt;List&lt;UniswapV3TickDayDataDTO&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -2262,12 +2262,12 @@ public class UniswapV3Api {
     /**
      * TickDayData (historical) (asynchronously)
      * Gets tickDayData.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param pool  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (pool address)-(tick index)-(timestamp). (optional)
+     * @param pool Pointer to pool. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -2286,12 +2286,12 @@ public class UniswapV3Api {
     }
     /**
      * Build call for uniswapV3GetTicksHistorical
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param pool  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (pool address)#(tick index) (optional)
+     * @param pool Pool address. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -2380,12 +2380,12 @@ public class UniswapV3Api {
     /**
      * Ticks (historical)
      * Gets ticks.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param pool  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (pool address)#(tick index) (optional)
+     * @param pool Pool address. (optional)
      * @return List&lt;UniswapV3TickDTO&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -2402,12 +2402,12 @@ public class UniswapV3Api {
     /**
      * Ticks (historical)
      * Gets ticks.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param pool  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (pool address)#(tick index) (optional)
+     * @param pool Pool address. (optional)
      * @return ApiResponse&lt;List&lt;UniswapV3TickDTO&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -2425,12 +2425,12 @@ public class UniswapV3Api {
     /**
      * Ticks (historical) (asynchronously)
      * Gets ticks.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param pool  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (pool address)#(tick index) (optional)
+     * @param pool Pool address. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object

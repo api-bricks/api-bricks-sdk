@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.time.OffsetDateTime;
 import org.openapitools.jackson.nullable.JsonNullable;
@@ -50,8 +48,7 @@ import org.openapitools.client.JSON;
 /**
  * Burn entities are created for every emitted Burn event on the Uniswap core contracts. The Burn entity stores key data about the event like token amounts, who burned LP tokens, who received tokens, and more. This entity can be used to track liquidity removals on pairs.
  */
-@ApiModel(description = "Burn entities are created for every emitted Burn event on the Uniswap core contracts. The Burn entity stores key data about the event like token amounts, who burned LP tokens, who received tokens, and more. This entity can be used to track liquidity removals on pairs.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-30T14:42:00.397192Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-06T14:47:06.037855Z[Etc/UTC]")
 public class SushiswapBurnDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -139,7 +136,6 @@ public class SushiswapBurnDTO {
    * @return entryTime
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public OffsetDateTime getEntryTime() {
     return entryTime;
@@ -162,7 +158,6 @@ public class SushiswapBurnDTO {
    * @return recvTime
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public OffsetDateTime getRecvTime() {
     return recvTime;
@@ -185,7 +180,6 @@ public class SushiswapBurnDTO {
    * @return blockNumber
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Number of block in which entity was recorded.")
 
   public Long getBlockNumber() {
     return blockNumber;
@@ -208,7 +202,6 @@ public class SushiswapBurnDTO {
    * @return id
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Identifier, format: (transaction id):(transaction.burns.length).")
 
   public String getId() {
     return id;
@@ -231,7 +224,6 @@ public class SushiswapBurnDTO {
    * @return transaction
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Reference to the transaction Burn was included in.")
 
   public String getTransaction() {
     return transaction;
@@ -254,7 +246,6 @@ public class SushiswapBurnDTO {
    * @return timestamp
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Timestamp of Burn, used to sort recent liquidity removals.")
 
   public String getTimestamp() {
     return timestamp;
@@ -277,7 +268,6 @@ public class SushiswapBurnDTO {
    * @return pair
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Reference to pair.")
 
   public String getPair() {
     return pair;
@@ -300,7 +290,6 @@ public class SushiswapBurnDTO {
    * @return liquidity
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Amount of liquidity tokens burned.")
 
   public String getLiquidity() {
     return liquidity;
@@ -323,7 +312,6 @@ public class SushiswapBurnDTO {
    * @return sender
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Address that initiated the liquidity removal.")
 
   public String getSender() {
     return sender;
@@ -346,7 +334,6 @@ public class SushiswapBurnDTO {
    * @return amount0
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Amount of token0 removed.")
 
   public String getAmount0() {
     return amount0;
@@ -369,7 +356,6 @@ public class SushiswapBurnDTO {
    * @return amount1
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Amount of token1 removed.")
 
   public String getAmount1() {
     return amount1;
@@ -392,7 +378,6 @@ public class SushiswapBurnDTO {
    * @return to
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Recipient of tokens.")
 
   public String getTo() {
     return to;
@@ -415,7 +400,6 @@ public class SushiswapBurnDTO {
    * @return logIndex
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Index in the transaction event was emitted.")
 
   public String getLogIndex() {
     return logIndex;
@@ -438,7 +422,6 @@ public class SushiswapBurnDTO {
    * @return amountUsd
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Derived amount based on available prices of tokens.")
 
   public String getAmountUsd() {
     return amountUsd;
@@ -461,7 +444,6 @@ public class SushiswapBurnDTO {
    * @return complete
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public Boolean getComplete() {
     return complete;
@@ -484,7 +466,6 @@ public class SushiswapBurnDTO {
    * @return feeTo
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Address of fee recipient (if fee is on).")
 
   public String getFeeTo() {
     return feeTo;
@@ -507,7 +488,6 @@ public class SushiswapBurnDTO {
    * @return feeLiquidity
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Amount of tokens sent to fee recipient (if fee is on).")
 
   public String getFeeLiquidity() {
     return feeLiquidity;
@@ -530,7 +510,6 @@ public class SushiswapBurnDTO {
    * @return vid
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public Long getVid() {
     return vid;

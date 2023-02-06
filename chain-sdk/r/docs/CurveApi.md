@@ -1115,11 +1115,11 @@ library(openapi)
 # Coins (historical)
 #
 # prepare function argument(s)
-var_start_block <- 56 # integer |  (Optional)
-var_end_block <- 56 # integer |  (Optional)
-var_start_date <- "start_date_example" # character |  (Optional)
-var_end_date <- "end_date_example" # character |  (Optional)
-var_id <- "id_example" # character |  (Optional)
+var_start_block <- 56 # integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (Optional)
+var_end_block <- 56 # integer | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (Optional)
+var_start_date <- "start_date_example" # character | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (Optional)
+var_end_date <- "end_date_example" # character | The end date of timeframe. (Optional)
+var_id <- "id_example" # character | Identifier, format: (pool_id)-(coin_index). (Optional)
 var_pool <- "pool_example" # character |  (Optional)
 
 api_instance <- CurveApi$new()
@@ -1133,11 +1133,11 @@ dput(result)
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **start_block** | **integer**|  | [optional] 
- **end_block** | **integer**|  | [optional] 
- **start_date** | **character**|  | [optional] 
- **end_date** | **character**|  | [optional] 
- **id** | **character**|  | [optional] 
+ **start_block** | **integer**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
+ **end_block** | **integer**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
+ **start_date** | **character**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
+ **end_date** | **character**| The end date of timeframe. | [optional] 
+ **id** | **character**| Identifier, format: (pool_id)-(coin_index). | [optional] 
  **pool** | **character**|  | [optional] 
 
 ### Return type
@@ -2534,11 +2534,11 @@ library(openapi)
 # UnderlyingCoins (historical)
 #
 # prepare function argument(s)
-var_start_block <- 56 # integer |  (Optional)
-var_end_block <- 56 # integer |  (Optional)
-var_start_date <- "start_date_example" # character |  (Optional)
-var_end_date <- "end_date_example" # character |  (Optional)
-var_id <- "id_example" # character |  (Optional)
+var_start_block <- 56 # integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (Optional)
+var_end_block <- 56 # integer | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (Optional)
+var_start_date <- "start_date_example" # character | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (Optional)
+var_end_date <- "end_date_example" # character | The end date of timeframe. (Optional)
+var_id <- "id_example" # character | Equals to: (pool_id)-(coin_index). (Optional)
 var_pool <- "pool_example" # character |  (Optional)
 
 api_instance <- CurveApi$new()
@@ -2552,11 +2552,11 @@ dput(result)
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **start_block** | **integer**|  | [optional] 
- **end_block** | **integer**|  | [optional] 
- **start_date** | **character**|  | [optional] 
- **end_date** | **character**|  | [optional] 
- **id** | **character**|  | [optional] 
+ **start_block** | **integer**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
+ **end_block** | **integer**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
+ **start_date** | **character**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
+ **end_date** | **character**| The end date of timeframe. | [optional] 
+ **id** | **character**| Equals to: (pool_id)-(coin_index). | [optional] 
  **pool** | **character**|  | [optional] 
 
 ### Return type

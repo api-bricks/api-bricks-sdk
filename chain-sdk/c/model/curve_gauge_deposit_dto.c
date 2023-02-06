@@ -159,7 +159,7 @@ curve_gauge_deposit_dto_t *curve_gauge_deposit_dto_parseFromJSON(cJSON *curve_ga
     // curve_gauge_deposit_dto->entry_time
     cJSON *entry_time = cJSON_GetObjectItemCaseSensitive(curve_gauge_deposit_dtoJSON, "entry_time");
     if (entry_time) { 
-    if(!cJSON_IsString(entry_time))
+    if(!cJSON_IsString(entry_time) && !cJSON_IsNull(entry_time))
     {
     goto end; //DateTime
     }
@@ -168,7 +168,7 @@ curve_gauge_deposit_dto_t *curve_gauge_deposit_dto_parseFromJSON(cJSON *curve_ga
     // curve_gauge_deposit_dto->recv_time
     cJSON *recv_time = cJSON_GetObjectItemCaseSensitive(curve_gauge_deposit_dtoJSON, "recv_time");
     if (recv_time) { 
-    if(!cJSON_IsString(recv_time))
+    if(!cJSON_IsString(recv_time) && !cJSON_IsNull(recv_time))
     {
     goto end; //DateTime
     }
@@ -186,7 +186,7 @@ curve_gauge_deposit_dto_t *curve_gauge_deposit_dto_parseFromJSON(cJSON *curve_ga
     // curve_gauge_deposit_dto->id
     cJSON *id = cJSON_GetObjectItemCaseSensitive(curve_gauge_deposit_dtoJSON, "id");
     if (id) { 
-    if(!cJSON_IsString(id))
+    if(!cJSON_IsString(id) && !cJSON_IsNull(id))
     {
     goto end; //String
     }
@@ -195,7 +195,7 @@ curve_gauge_deposit_dto_t *curve_gauge_deposit_dto_parseFromJSON(cJSON *curve_ga
     // curve_gauge_deposit_dto->gauge
     cJSON *gauge = cJSON_GetObjectItemCaseSensitive(curve_gauge_deposit_dtoJSON, "gauge");
     if (gauge) { 
-    if(!cJSON_IsString(gauge))
+    if(!cJSON_IsString(gauge) && !cJSON_IsNull(gauge))
     {
     goto end; //String
     }
@@ -204,7 +204,7 @@ curve_gauge_deposit_dto_t *curve_gauge_deposit_dto_parseFromJSON(cJSON *curve_ga
     // curve_gauge_deposit_dto->provider
     cJSON *provider = cJSON_GetObjectItemCaseSensitive(curve_gauge_deposit_dtoJSON, "provider");
     if (provider) { 
-    if(!cJSON_IsString(provider))
+    if(!cJSON_IsString(provider) && !cJSON_IsNull(provider))
     {
     goto end; //String
     }
@@ -213,7 +213,7 @@ curve_gauge_deposit_dto_t *curve_gauge_deposit_dto_parseFromJSON(cJSON *curve_ga
     // curve_gauge_deposit_dto->value
     cJSON *value = cJSON_GetObjectItemCaseSensitive(curve_gauge_deposit_dtoJSON, "value");
     if (value) { 
-    if(!cJSON_IsString(value))
+    if(!cJSON_IsString(value) && !cJSON_IsNull(value))
     {
     goto end; //String
     }
@@ -231,7 +231,7 @@ curve_gauge_deposit_dto_t *curve_gauge_deposit_dto_parseFromJSON(cJSON *curve_ga
     // curve_gauge_deposit_dto->block_range
     cJSON *block_range = cJSON_GetObjectItemCaseSensitive(curve_gauge_deposit_dtoJSON, "block_range");
     if (block_range) { 
-    if(!cJSON_IsString(block_range))
+    if(!cJSON_IsString(block_range) && !cJSON_IsNull(block_range))
     {
     goto end; //String
     }
@@ -239,15 +239,15 @@ curve_gauge_deposit_dto_t *curve_gauge_deposit_dto_parseFromJSON(cJSON *curve_ga
 
 
     curve_gauge_deposit_dto_local_var = curve_gauge_deposit_dto_create (
-        entry_time ? strdup(entry_time->valuestring) : NULL,
-        recv_time ? strdup(recv_time->valuestring) : NULL,
+        entry_time && !cJSON_IsNull(entry_time) ? strdup(entry_time->valuestring) : NULL,
+        recv_time && !cJSON_IsNull(recv_time) ? strdup(recv_time->valuestring) : NULL,
         block_number ? block_number->valuedouble : 0,
-        id ? strdup(id->valuestring) : NULL,
-        gauge ? strdup(gauge->valuestring) : NULL,
-        provider ? strdup(provider->valuestring) : NULL,
-        value ? strdup(value->valuestring) : NULL,
+        id && !cJSON_IsNull(id) ? strdup(id->valuestring) : NULL,
+        gauge && !cJSON_IsNull(gauge) ? strdup(gauge->valuestring) : NULL,
+        provider && !cJSON_IsNull(provider) ? strdup(provider->valuestring) : NULL,
+        value && !cJSON_IsNull(value) ? strdup(value->valuestring) : NULL,
         vid ? vid->valuedouble : 0,
-        block_range ? strdup(block_range->valuestring) : NULL
+        block_range && !cJSON_IsNull(block_range) ? strdup(block_range->valuestring) : NULL
         );
 
     return curve_gauge_deposit_dto_local_var;

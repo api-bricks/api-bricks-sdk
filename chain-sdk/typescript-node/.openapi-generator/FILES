@@ -5,6 +5,7 @@ api/apis.ts
 api/cowApi.ts
 api/curveApi.ts
 api/dexApi.ts
+api/metadataApi.ts
 api/sushiswapApi.ts
 api/uniswapV2Api.ts
 api/uniswapV3Api.ts

@@ -1671,11 +1671,11 @@ export class CurveApi {
     /**
      * Gets coins.
      * @summary Coins (historical)
-     * @param startBlock 
-     * @param endBlock 
-     * @param startDate 
-     * @param endDate 
-     * @param id 
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param endDate The end date of timeframe.
+     * @param id Identifier, format: (pool_id)-(coin_index).
      * @param pool 
      */
     public async curveGetCoinsHistorical (startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pool?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<CurveCoinDTO>;  }> {
@@ -3956,11 +3956,11 @@ export class CurveApi {
     /**
      * Gets underlyingCoins.
      * @summary UnderlyingCoins (historical)
-     * @param startBlock 
-     * @param endBlock 
-     * @param startDate 
-     * @param endDate 
-     * @param id 
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param endDate The end date of timeframe.
+     * @param id Equals to: (pool_id)-(coin_index).
      * @param pool 
      */
     public async curveGetUnderlyingCoinsHistorical (startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pool?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<CurveUnderlyingCoinDTO>;  }> {

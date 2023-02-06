@@ -203,13 +203,13 @@ use WWW::OpenAPIClient::CowApi;
 my $api_instance = WWW::OpenAPIClient::CowApi->new(
 );
 
-my $start_block = 789; # int | 
-my $end_block = 789; # int | 
-my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
-my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
-my $id = "id_example"; # string | 
-my $sell_token = "sell_token_example"; # string | 
-my $buy_token = "buy_token_example"; # string | 
+my $start_block = 789; # int | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+my $end_block = 789; # int | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | The end date of timeframe.
+my $id = "id_example"; # string | Identifier, format: (order id)|(transaction hash)|(event index).
+my $sell_token = "sell_token_example"; # string | Address of token that is sold.
+my $buy_token = "buy_token_example"; # string | Address of token that is bought.
 
 eval {
     my $result = $api_instance->cow_get_trades__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, id => $id, sell_token => $sell_token, buy_token => $buy_token);
@@ -224,13 +224,13 @@ if ($@) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **start_block** | **int**|  | [optional] 
- **end_block** | **int**|  | [optional] 
- **start_date** | **DATE_TIME**|  | [optional] 
- **end_date** | **DATE_TIME**|  | [optional] 
- **id** | **string**|  | [optional] 
- **sell_token** | **string**|  | [optional] 
- **buy_token** | **string**|  | [optional] 
+ **start_block** | **int**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
+ **end_block** | **int**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
+ **start_date** | **DATE_TIME**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
+ **end_date** | **DATE_TIME**| The end date of timeframe. | [optional] 
+ **id** | **string**| Identifier, format: (order id)|(transaction hash)|(event index). | [optional] 
+ **sell_token** | **string**| Address of token that is sold. | [optional] 
+ **buy_token** | **string**| Address of token that is bought. | [optional] 
 
 ### Return type
 

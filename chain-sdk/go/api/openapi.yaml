@@ -35,6 +35,14 @@ tags:
 - description: Dex tag descriptor ...
   name: Dex
 paths:
+  /metadata/chains:
+    get:
+      responses:
+        "200":
+          description: Success
+      summary: List all chains.
+      tags:
+      - Metadata
   /dapps/cow/orders/historical:
     get:
       description: Gets orders.
@@ -364,7 +372,9 @@ paths:
       description: Gets trades.
       operationId: Cow.GetTrades (historical)
       parameters:
-      - explode: true
+      - description: "The start block. If endblock is not given, only those entities\
+          \ will be included that were exactly created in startBlock."
+        explode: true
         in: query
         name: startBlock
         required: false
@@ -372,7 +382,9 @@ paths:
           format: int64
           type: integer
         style: form
-      - explode: true
+      - description: The end block. Useful to filter data in range of blocks (FROM
+          startBlock TO endBlock).
+        explode: true
         in: query
         name: endBlock
         required: false
@@ -380,7 +392,9 @@ paths:
           format: int64
           type: integer
         style: form
-      - explode: true
+      - description: "The start date of timeframe. If endDate is not given, entities\
+          \ created FROM startDate TO startDate plus 24 hours will be included."
+        explode: true
         in: query
         name: startDate
         required: false
@@ -388,7 +402,8 @@ paths:
           format: date-time
           type: string
         style: form
-      - explode: true
+      - description: The end date of timeframe.
+        explode: true
         in: query
         name: endDate
         required: false
@@ -396,21 +411,24 @@ paths:
           format: date-time
           type: string
         style: form
-      - explode: true
+      - description: "Identifier, format: (order id)|(transaction hash)|(event index)."
+        explode: true
         in: query
         name: id
         required: false
         schema:
           type: string
         style: form
-      - explode: true
+      - description: Address of token that is sold.
+        explode: true
         in: query
         name: sell_token
         required: false
         schema:
           type: string
         style: form
-      - explode: true
+      - description: Address of token that is bought.
+        explode: true
         in: query
         name: buy_token
         required: false
@@ -1010,7 +1028,9 @@ paths:
       description: Gets coins.
       operationId: Curve.GetCoins (historical)
       parameters:
-      - explode: true
+      - description: "The start block. If endblock is not given, only those entities\
+          \ will be included that were exactly created in startBlock."
+        explode: true
         in: query
         name: startBlock
         required: false
@@ -1018,7 +1038,9 @@ paths:
           format: int64
           type: integer
         style: form
-      - explode: true
+      - description: The end block. Useful to filter data in range of blocks (FROM
+          startBlock TO endBlock).
+        explode: true
         in: query
         name: endBlock
         required: false
@@ -1026,7 +1048,9 @@ paths:
           format: int64
           type: integer
         style: form
-      - explode: true
+      - description: "The start date of timeframe. If endDate is not given, entities\
+          \ created FROM startDate TO startDate plus 24 hours will be included."
+        explode: true
         in: query
         name: startDate
         required: false
@@ -1034,7 +1058,8 @@ paths:
           format: date-time
           type: string
         style: form
-      - explode: true
+      - description: The end date of timeframe.
+        explode: true
         in: query
         name: endDate
         required: false
@@ -1042,14 +1067,16 @@ paths:
           format: date-time
           type: string
         style: form
-      - explode: true
+      - description: "Identifier, format: (pool_id)-(coin_index)."
+        explode: true
         in: query
         name: id
         required: false
         schema:
           type: string
         style: form
-      - explode: true
+      - description: ""
+        explode: true
         in: query
         name: pool
         required: false
@@ -3695,7 +3722,9 @@ paths:
       description: Gets underlyingCoins.
       operationId: Curve.GetUnderlyingCoins (historical)
       parameters:
-      - explode: true
+      - description: "The start block. If endblock is not given, only those entities\
+          \ will be included that were exactly created in startBlock."
+        explode: true
         in: query
         name: startBlock
         required: false
@@ -3703,7 +3732,9 @@ paths:
           format: int64
           type: integer
         style: form
-      - explode: true
+      - description: The end block. Useful to filter data in range of blocks (FROM
+          startBlock TO endBlock).
+        explode: true
         in: query
         name: endBlock
         required: false
@@ -3711,7 +3742,9 @@ paths:
           format: int64
           type: integer
         style: form
-      - explode: true
+      - description: "The start date of timeframe. If endDate is not given, entities\
+          \ created FROM startDate TO startDate plus 24 hours will be included."
+        explode: true
         in: query
         name: startDate
         required: false
@@ -3719,7 +3752,8 @@ paths:
           format: date-time
           type: string
         style: form
-      - explode: true
+      - description: The end date of timeframe.
+        explode: true
         in: query
         name: endDate
         required: false
@@ -3727,14 +3761,16 @@ paths:
           format: date-time
           type: string
         style: form
-      - explode: true
+      - description: "Equals to: (pool_id)-(coin_index)."
+        explode: true
         in: query
         name: id
         required: false
         schema:
           type: string
         style: form
-      - explode: true
+      - description: ""
+        explode: true
         in: query
         name: pool
         required: false
@@ -4005,6 +4041,14 @@ paths:
       summary: WeeklyVolumes (current)
       tags:
       - Curve
+  /metadata/dapps:
+    get:
+      responses:
+        "200":
+          description: Success
+      summary: List all decentralized applications.
+      tags:
+      - Metadata
   /dapps/dex/batches/historical:
     get:
       description: Gets batches.
@@ -4110,7 +4154,9 @@ paths:
       description: Gets deposits.
       operationId: Dex.GetDeposits (historical)
       parameters:
-      - explode: true
+      - description: "The start block. If endblock is not given, only those entities\
+          \ will be included that were exactly created in startBlock."
+        explode: true
         in: query
         name: startBlock
         required: false
@@ -4118,7 +4164,9 @@ paths:
           format: int64
           type: integer
         style: form
-      - explode: true
+      - description: The end block. Useful to filter data in range of blocks (FROM
+          startBlock TO endBlock).
+        explode: true
         in: query
         name: endBlock
         required: false
@@ -4126,7 +4174,9 @@ paths:
           format: int64
           type: integer
         style: form
-      - explode: true
+      - description: "The start date of timeframe. If endDate is not given, entities\
+          \ created FROM startDate TO startDate plus 24 hours will be included."
+        explode: true
         in: query
         name: startDate
         required: false
@@ -4134,7 +4184,8 @@ paths:
           format: date-time
           type: string
         style: form
-      - explode: true
+      - description: The end date of timeframe.
+        explode: true
         in: query
         name: endDate
         required: false
@@ -4142,14 +4193,16 @@ paths:
           format: date-time
           type: string
         style: form
-      - explode: true
+      - description: "Identifier, format: (transaction hash)-(token id)."
+        explode: true
         in: query
         name: id
         required: false
         schema:
           type: string
         style: form
-      - explode: true
+      - description: User address.
+        explode: true
         in: query
         name: user
         required: false
@@ -4209,7 +4262,9 @@ paths:
       description: Gets orders.
       operationId: Dex.GetOrders (historical)
       parameters:
-      - explode: true
+      - description: "The start block. If endblock is not given, only those entities\
+          \ will be included that were exactly created in startBlock."
+        explode: true
         in: query
         name: startBlock
         required: false
@@ -4217,7 +4272,9 @@ paths:
           format: int64
           type: integer
         style: form
-      - explode: true
+      - description: The end block. Useful to filter data in range of blocks (FROM
+          startBlock TO endBlock).
+        explode: true
         in: query
         name: endBlock
         required: false
@@ -4225,7 +4282,9 @@ paths:
           format: int64
           type: integer
         style: form
-      - explode: true
+      - description: "The start date of timeframe. If endDate is not given, entities\
+          \ created FROM startDate TO startDate plus 24 hours will be included."
+        explode: true
         in: query
         name: startDate
         required: false
@@ -4233,7 +4292,8 @@ paths:
           format: date-time
           type: string
         style: form
-      - explode: true
+      - description: The end date of timeframe.
+        explode: true
         in: query
         name: endDate
         required: false
@@ -4241,21 +4301,24 @@ paths:
           format: date-time
           type: string
         style: form
-      - explode: true
+      - description: "Identifier, format: (owner address)-(order id)"
+        explode: true
         in: query
         name: id
         required: false
         schema:
           type: string
         style: form
-      - explode: true
+      - description: Identifier of token that was bought.
+        explode: true
         in: query
         name: buy_token
         required: false
         schema:
           type: string
         style: form
-      - explode: true
+      - description: Identifier of token that was sold.
+        explode: true
         in: query
         name: sell_token
         required: false
@@ -4315,7 +4378,9 @@ paths:
       description: Gets prices.
       operationId: Dex.GetPrices (historical)
       parameters:
-      - explode: true
+      - description: "The start block. If endblock is not given, only those entities\
+          \ will be included that were exactly created in startBlock."
+        explode: true
         in: query
         name: startBlock
         required: false
@@ -4323,7 +4388,9 @@ paths:
           format: int64
           type: integer
         style: form
-      - explode: true
+      - description: The end block. Useful to filter data in range of blocks (FROM
+          startBlock TO endBlock).
+        explode: true
         in: query
         name: endBlock
         required: false
@@ -4331,7 +4398,9 @@ paths:
           format: int64
           type: integer
         style: form
-      - explode: true
+      - description: "The start date of timeframe. If endDate is not given, entities\
+          \ created FROM startDate TO startDate plus 24 hours will be included."
+        explode: true
         in: query
         name: startDate
         required: false
@@ -4339,7 +4408,8 @@ paths:
           format: date-time
           type: string
         style: form
-      - explode: true
+      - description: The end date of timeframe.
+        explode: true
         in: query
         name: endDate
         required: false
@@ -4347,7 +4417,8 @@ paths:
           format: date-time
           type: string
         style: form
-      - explode: true
+      - description: "Identifier, format: (token id)-(batch id)."
+        explode: true
         in: query
         name: id
         required: false
@@ -4947,7 +5018,9 @@ paths:
       description: Gets withdraws.
       operationId: Dex.GetWithdraws (historical)
       parameters:
-      - explode: true
+      - description: "The start block. If endblock is not given, only those entities\
+          \ will be included that were exactly created in startBlock."
+        explode: true
         in: query
         name: startBlock
         required: false
@@ -4955,7 +5028,9 @@ paths:
           format: int64
           type: integer
         style: form
-      - explode: true
+      - description: The end block. Useful to filter data in range of blocks (FROM
+          startBlock TO endBlock).
+        explode: true
         in: query
         name: endBlock
         required: false
@@ -4963,7 +5038,9 @@ paths:
           format: int64
           type: integer
         style: form
-      - explode: true
+      - description: "The start date of timeframe. If endDate is not given, entities\
+          \ created FROM startDate TO startDate plus 24 hours will be included."
+        explode: true
         in: query
         name: startDate
         required: false
@@ -4971,7 +5048,8 @@ paths:
           format: date-time
           type: string
         style: form
-      - explode: true
+      - description: The end date of timeframe.
+        explode: true
         in: query
         name: endDate
         required: false
@@ -4979,14 +5057,16 @@ paths:
           format: date-time
           type: string
         style: form
-      - explode: true
+      - description: "Identifier, format: (transaction hash)-(id)."
+        explode: true
         in: query
         name: id
         required: false
         schema:
           type: string
         style: form
-      - explode: true
+      - description: ""
+        explode: true
         in: query
         name: user
         required: false
@@ -5046,7 +5126,9 @@ paths:
       description: Gets withdrawRequests.
       operationId: Dex.GetWithdrawRequests (historical)
       parameters:
-      - explode: true
+      - description: "The start block. If endblock is not given, only those entities\
+          \ will be included that were exactly created in startBlock."
+        explode: true
         in: query
         name: startBlock
         required: false
@@ -5054,7 +5136,9 @@ paths:
           format: int64
           type: integer
         style: form
-      - explode: true
+      - description: The end block. Useful to filter data in range of blocks (FROM
+          startBlock TO endBlock).
+        explode: true
         in: query
         name: endBlock
         required: false
@@ -5062,7 +5146,9 @@ paths:
           format: int64
           type: integer
         style: form
-      - explode: true
+      - description: "The start date of timeframe. If endDate is not given, entities\
+          \ created FROM startDate TO startDate plus 24 hours will be included."
+        explode: true
         in: query
         name: startDate
         required: false
@@ -5070,7 +5156,8 @@ paths:
           format: date-time
           type: string
         style: form
-      - explode: true
+      - description: The end date of timeframe.
+        explode: true
         in: query
         name: endDate
         required: false
@@ -5078,14 +5165,16 @@ paths:
           format: date-time
           type: string
         style: form
-      - explode: true
+      - description: "Identifier, format: (transaction hash)-(id)."
+        explode: true
         in: query
         name: id
         required: false
         schema:
           type: string
         style: form
-      - explode: true
+      - description: ""
+        explode: true
         in: query
         name: user
         required: false
@@ -5245,7 +5334,9 @@ paths:
       description: Gets burns.
       operationId: Sushiswap.GetBurns (historical)
       parameters:
-      - explode: true
+      - description: "The start block. If endblock is not given, only those entities\
+          \ will be included that were exactly created in startBlock."
+        explode: true
         in: query
         name: startBlock
         required: false
@@ -5253,7 +5344,9 @@ paths:
           format: int64
           type: integer
         style: form
-      - explode: true
+      - description: The end block. Useful to filter data in range of blocks (FROM
+          startBlock TO endBlock).
+        explode: true
         in: query
         name: endBlock
         required: false
@@ -5261,7 +5354,9 @@ paths:
           format: int64
           type: integer
         style: form
-      - explode: true
+      - description: "The start date of timeframe. If endDate is not given, entities\
+          \ created FROM startDate TO startDate plus 24 hours will be included."
+        explode: true
         in: query
         name: startDate
         required: false
@@ -5269,7 +5364,8 @@ paths:
           format: date-time
           type: string
         style: form
-      - explode: true
+      - description: The end date of timeframe.
+        explode: true
         in: query
         name: endDate
         required: false
@@ -5277,14 +5373,16 @@ paths:
           format: date-time
           type: string
         style: form
-      - explode: true
+      - description: "Identifier, format: (transaction id):(transaction.burns.length)."
+        explode: true
         in: query
         name: id
         required: false
         schema:
           type: string
         style: form
-      - explode: true
+      - description: Reference to pair.
+        explode: true
         in: query
         name: pair
         required: false
@@ -5644,7 +5742,9 @@ paths:
       description: Gets liquidityPositions.
       operationId: Sushiswap.GetLiquidityPositions (historical)
       parameters:
-      - explode: true
+      - description: "The start block. If endblock is not given, only those entities\
+          \ will be included that were exactly created in startBlock."
+        explode: true
         in: query
         name: startBlock
         required: false
@@ -5652,7 +5752,9 @@ paths:
           format: int64
           type: integer
         style: form
-      - explode: true
+      - description: The end block. Useful to filter data in range of blocks (FROM
+          startBlock TO endBlock).
+        explode: true
         in: query
         name: endBlock
         required: false
@@ -5660,7 +5762,9 @@ paths:
           format: int64
           type: integer
         style: form
-      - explode: true
+      - description: "The start date of timeframe. If endDate is not given, entities\
+          \ created FROM startDate TO startDate plus 24 hours will be included."
+        explode: true
         in: query
         name: startDate
         required: false
@@ -5668,7 +5772,8 @@ paths:
           format: date-time
           type: string
         style: form
-      - explode: true
+      - description: The end date of timeframe.
+        explode: true
         in: query
         name: endDate
         required: false
@@ -5676,21 +5781,24 @@ paths:
           format: date-time
           type: string
         style: form
-      - explode: true
+      - description: "Identifier, format: (pair address)-(user address)"
+        explode: true
         in: query
         name: id
         required: false
         schema:
           type: string
         style: form
-      - explode: true
+      - description: User address.
+        explode: true
         in: query
         name: user
         required: false
         schema:
           type: string
         style: form
-      - explode: true
+      - description: Pair address.
+        explode: true
         in: query
         name: pair
         required: false
@@ -5750,7 +5858,9 @@ paths:
       description: Gets liquidityPositionSnapshots.
       operationId: Sushiswap.GetLiquidityPositionSnapshots (historical)
       parameters:
-      - explode: true
+      - description: "The start block. If endblock is not given, only those entities\
+          \ will be included that were exactly created in startBlock."
+        explode: true
         in: query
         name: startBlock
         required: false
@@ -5758,7 +5868,9 @@ paths:
           format: int64
           type: integer
         style: form
-      - explode: true
+      - description: The end block. Useful to filter data in range of blocks (FROM
+          startBlock TO endBlock).
+        explode: true
         in: query
         name: endBlock
         required: false
@@ -5766,7 +5878,9 @@ paths:
           format: int64
           type: integer
         style: form
-      - explode: true
+      - description: "The start date of timeframe. If endDate is not given, entities\
+          \ created FROM startDate TO startDate plus 24 hours will be included."
+        explode: true
         in: query
         name: startDate
         required: false
@@ -5774,7 +5888,8 @@ paths:
           format: date-time
           type: string
         style: form
-      - explode: true
+      - description: The end date of timeframe.
+        explode: true
         in: query
         name: endDate
         required: false
@@ -5782,21 +5897,24 @@ paths:
           format: date-time
           type: string
         style: form
-      - explode: true
+      - description: "Identifier, format: (pair address)-(user address)-(timestamp)"
+        explode: true
         in: query
         name: id
         required: false
         schema:
           type: string
         style: form
-      - explode: true
+      - description: Reference to user.
+        explode: true
         in: query
         name: user
         required: false
         schema:
           type: string
         style: form
-      - explode: true
+      - description: Reference to the pair liquidity is being provided on.
+        explode: true
         in: query
         name: pair
         required: false
@@ -5856,7 +5974,9 @@ paths:
       description: Gets mints.
       operationId: Sushiswap.GetMints (historical)
       parameters:
-      - explode: true
+      - description: "The start block. If endblock is not given, only those entities\
+          \ will be included that were exactly created in startBlock."
+        explode: true
         in: query
         name: startBlock
         required: false
@@ -5864,7 +5984,9 @@ paths:
           format: int64
           type: integer
         style: form
-      - explode: true
+      - description: The end block. Useful to filter data in range of blocks (FROM
+          startBlock TO endBlock).
+        explode: true
         in: query
         name: endBlock
         required: false
@@ -5872,7 +5994,9 @@ paths:
           format: int64
           type: integer
         style: form
-      - explode: true
+      - description: "The start date of timeframe. If endDate is not given, entities\
+          \ created FROM startDate TO startDate plus 24 hours will be included."
+        explode: true
         in: query
         name: startDate
         required: false
@@ -5880,7 +6004,8 @@ paths:
           format: date-time
           type: string
         style: form
-      - explode: true
+      - description: The end date of timeframe.
+        explode: true
         in: query
         name: endDate
         required: false
@@ -5888,14 +6013,17 @@ paths:
           format: date-time
           type: string
         style: form
-      - explode: true
+      - description: "Identifier, format: (transaction hash)-(index in the transaction\
+          \ mint array)."
+        explode: true
         in: query
         name: id
         required: false
         schema:
           type: string
         style: form
-      - explode: true
+      - description: Reference to pair.
+        explode: true
         in: query
         name: pair
         required: false
@@ -5955,7 +6083,9 @@ paths:
       description: Gets pairDayData.
       operationId: Sushiswap.GetPairDayData (historical)
       parameters:
-      - explode: true
+      - description: "The start block. If endblock is not given, only those entities\
+          \ will be included that were exactly created in startBlock."
+        explode: true
         in: query
         name: startBlock
         required: false
@@ -5963,7 +6093,9 @@ paths:
           format: int64
           type: integer
         style: form
-      - explode: true
+      - description: The end block. Useful to filter data in range of blocks (FROM
+          startBlock TO endBlock).
+        explode: true
         in: query
         name: endBlock
         required: false
@@ -5971,7 +6103,9 @@ paths:
           format: int64
           type: integer
         style: form
-      - explode: true
+      - description: "The start date of timeframe. If endDate is not given, entities\
+          \ created FROM startDate TO startDate plus 24 hours will be included."
+        explode: true
         in: query
         name: startDate
         required: false
@@ -5979,7 +6113,8 @@ paths:
           format: date-time
           type: string
         style: form
-      - explode: true
+      - description: The end date of timeframe.
+        explode: true
         in: query
         name: endDate
         required: false
@@ -5987,28 +6122,32 @@ paths:
           format: date-time
           type: string
         style: form
-      - explode: true
+      - description: "Identifier, format: (pair id)-(day start timestamp)."
+        explode: true
         in: query
         name: id
         required: false
         schema:
           type: string
         style: form
-      - explode: true
+      - description: Reference to pair.
+        explode: true
         in: query
         name: pair
         required: false
         schema:
           type: string
         style: form
-      - explode: true
+      - description: Reference to token0.
+        explode: true
         in: query
         name: token_0
         required: false
         schema:
           type: string
         style: form
-      - explode: true
+      - description: Reference to token1.
+        explode: true
         in: query
         name: token_1
         required: false
@@ -6068,7 +6207,9 @@ paths:
       description: Gets pairs.
       operationId: Sushiswap.GetPairs (historical)
       parameters:
-      - explode: true
+      - description: "The start block. If endblock is not given, only those entities\
+          \ will be included that were exactly created in startBlock."
+        explode: true
         in: query
         name: startBlock
         required: false
@@ -6076,7 +6217,9 @@ paths:
           format: int64
           type: integer
         style: form
-      - explode: true
+      - description: The end block. Useful to filter data in range of blocks (FROM
+          startBlock TO endBlock).
+        explode: true
         in: query
         name: endBlock
         required: false
@@ -6084,7 +6227,9 @@ paths:
           format: int64
           type: integer
         style: form
-      - explode: true
+      - description: "The start date of timeframe. If endDate is not given, entities\
+          \ created FROM startDate TO startDate plus 24 hours will be included."
+        explode: true
         in: query
         name: startDate
         required: false
@@ -6092,7 +6237,8 @@ paths:
           format: date-time
           type: string
         style: form
-      - explode: true
+      - description: The end date of timeframe.
+        explode: true
         in: query
         name: endDate
         required: false
@@ -6100,28 +6246,32 @@ paths:
           format: date-time
           type: string
         style: form
-      - explode: true
+      - description: Pair contract address.
+        explode: true
         in: query
         name: id
         required: false
         schema:
           type: string
         style: form
-      - explode: true
+      - description: "Friendly name, format: (token0 name)-(token1 name)"
+        explode: true
         in: query
         name: name
         required: false
         schema:
           type: string
         style: form
-      - explode: true
+      - description: Reference to token0 as stored in pair contract.
+        explode: true
         in: query
         name: token_0
         required: false
         schema:
           type: string
         style: form
-      - explode: true
+      - description: Reference to token0 as stored in pair contract.
+        explode: true
         in: query
         name: token_1
         required: false
@@ -6190,7 +6340,9 @@ paths:
       description: Gets pairHourData.
       operationId: Sushiswap.GetPairHourData (historical)
       parameters:
-      - explode: true
+      - description: "The start block. If endblock is not given, only those entities\
+          \ will be included that were exactly created in startBlock."
+        explode: true
         in: query
         name: startBlock
         required: false
@@ -6198,7 +6350,9 @@ paths:
           format: int64
           type: integer
         style: form
-      - explode: true
+      - description: The end block. Useful to filter data in range of blocks (FROM
+          startBlock TO endBlock).
+        explode: true
         in: query
         name: endBlock
         required: false
@@ -6206,7 +6360,9 @@ paths:
           format: int64
           type: integer
         style: form
-      - explode: true
+      - description: "The start date of timeframe. If endDate is not given, entities\
+          \ created FROM startDate TO startDate plus 24 hours will be included."
+        explode: true
         in: query
         name: startDate
         required: false
@@ -6214,7 +6370,8 @@ paths:
           format: date-time
           type: string
         style: form
-      - explode: true
+      - description: The end date of timeframe.
+        explode: true
         in: query
         name: endDate
         required: false
@@ -6222,14 +6379,16 @@ paths:
           format: date-time
           type: string
         style: form
-      - explode: true
+      - description: "Identifier, format: (pair id)-(hour start timestamp)."
+        explode: true
         in: query
         name: id
         required: false
         schema:
           type: string
         style: form
-      - explode: true
+      - description: Reference to pair.
+        explode: true
         in: query
         name: pair
         required: false
@@ -7146,7 +7305,9 @@ paths:
       description: Gets liquidityPositionSnapshots.
       operationId: UniswapV2.GetLiquidityPositionSnapshots (historical)
       parameters:
-      - explode: true
+      - description: "The start block. If endblock is not given, only those entities\
+          \ will be included that were exactly created in startBlock."
+        explode: true
         in: query
         name: startBlock
         required: false
@@ -7154,7 +7315,9 @@ paths:
           format: int64
           type: integer
         style: form
-      - explode: true
+      - description: The end block. Useful to filter data in range of blocks (FROM
+          startBlock TO endBlock).
+        explode: true
         in: query
         name: endBlock
         required: false
@@ -7162,7 +7325,9 @@ paths:
           format: int64
           type: integer
         style: form
-      - explode: true
+      - description: "The start date of timeframe. If endDate is not given, entities\
+          \ created FROM startDate TO startDate plus 24 hours will be included."
+        explode: true
         in: query
         name: startDate
         required: false
@@ -7170,7 +7335,8 @@ paths:
           format: date-time
           type: string
         style: form
-      - explode: true
+      - description: The end date of timeframe.
+        explode: true
         in: query
         name: endDate
         required: false
@@ -7178,21 +7344,24 @@ paths:
           format: date-time
           type: string
         style: form
-      - explode: true
+      - description: "Identifier, format: (pair address)-(user address)"
+        explode: true
         in: query
         name: id
         required: false
         schema:
           type: string
         style: form
-      - explode: true
+      - description: Reference to user.
+        explode: true
         in: query
         name: user
         required: false
         schema:
           type: string
         style: form
-      - explode: true
+      - description: Reference to the pair liquidity is being provided on.
+        explode: true
         in: query
         name: pair
         required: false
@@ -8891,7 +9060,9 @@ paths:
       description: Gets poolDayData.
       operationId: UniswapV3.GetPoolDayData (historical)
       parameters:
-      - explode: true
+      - description: "The start block. If endblock is not given, only those entities\
+          \ will be included that were exactly created in startBlock."
+        explode: true
         in: query
         name: startBlock
         required: false
@@ -8899,7 +9070,9 @@ paths:
           format: int64
           type: integer
         style: form
-      - explode: true
+      - description: The end block. Useful to filter data in range of blocks (FROM
+          startBlock TO endBlock).
+        explode: true
         in: query
         name: endBlock
         required: false
@@ -8907,7 +9080,9 @@ paths:
           format: int64
           type: integer
         style: form
-      - explode: true
+      - description: "The start date of timeframe. If endDate is not given, entities\
+          \ created FROM startDate TO startDate plus 24 hours will be included."
+        explode: true
         in: query
         name: startDate
         required: false
@@ -8915,7 +9090,8 @@ paths:
           format: date-time
           type: string
         style: form
-      - explode: true
+      - description: The end date of timeframe.
+        explode: true
         in: query
         name: endDate
         required: false
@@ -8923,14 +9099,16 @@ paths:
           format: date-time
           type: string
         style: form
-      - explode: true
+      - description: "Identifier, format: (pool address)-(day id)."
+        explode: true
         in: query
         name: id
         required: false
         schema:
           type: string
         style: form
-      - explode: true
+      - description: Pointer to pool.
+        explode: true
         in: query
         name: pool
         required: false
@@ -9115,7 +9293,9 @@ paths:
       description: Gets poolHourData.
       operationId: UniswapV3.GetPoolHourData (historical)
       parameters:
-      - explode: true
+      - description: "The start block. If endblock is not given, only those entities\
+          \ will be included that were exactly created in startBlock."
+        explode: true
         in: query
         name: startBlock
         required: false
@@ -9123,7 +9303,9 @@ paths:
           format: int64
           type: integer
         style: form
-      - explode: true
+      - description: The end block. Useful to filter data in range of blocks (FROM
+          startBlock TO endBlock).
+        explode: true
         in: query
         name: endBlock
         required: false
@@ -9131,7 +9313,9 @@ paths:
           format: int64
           type: integer
         style: form
-      - explode: true
+      - description: "The start date of timeframe. If endDate is not given, entities\
+          \ created FROM startDate TO startDate plus 24 hours will be included."
+        explode: true
         in: query
         name: startDate
         required: false
@@ -9139,7 +9323,8 @@ paths:
           format: date-time
           type: string
         style: form
-      - explode: true
+      - description: The end date of timeframe.
+        explode: true
         in: query
         name: endDate
         required: false
@@ -9147,14 +9332,16 @@ paths:
           format: date-time
           type: string
         style: form
-      - explode: true
+      - description: "Identifier, format: (pool address)-(day id)"
+        explode: true
         in: query
         name: id
         required: false
         schema:
           type: string
         style: form
-      - explode: true
+      - description: Pointer to pool.
+        explode: true
         in: query
         name: pool
         required: false
@@ -9338,7 +9525,9 @@ paths:
       description: Gets positionSnapshots.
       operationId: UniswapV3.GetPositionSnapshots (historical)
       parameters:
-      - explode: true
+      - description: "The start block. If endblock is not given, only those entities\
+          \ will be included that were exactly created in startBlock."
+        explode: true
         in: query
         name: startBlock
         required: false
@@ -9346,7 +9535,9 @@ paths:
           format: int64
           type: integer
         style: form
-      - explode: true
+      - description: The end block. Useful to filter data in range of blocks (FROM
+          startBlock TO endBlock).
+        explode: true
         in: query
         name: endBlock
         required: false
@@ -9354,7 +9545,9 @@ paths:
           format: int64
           type: integer
         style: form
-      - explode: true
+      - description: "The start date of timeframe. If endDate is not given, entities\
+          \ created FROM startDate TO startDate plus 24 hours will be included."
+        explode: true
         in: query
         name: startDate
         required: false
@@ -9362,7 +9555,8 @@ paths:
           format: date-time
           type: string
         style: form
-      - explode: true
+      - description: The end date of timeframe.
+        explode: true
         in: query
         name: endDate
         required: false
@@ -9370,14 +9564,16 @@ paths:
           format: date-time
           type: string
         style: form
-      - explode: true
+      - description: "NFT token identifier, format: (NFT token id)#(block number)."
+        explode: true
         in: query
         name: id
         required: false
         schema:
           type: string
         style: form
-      - explode: true
+      - description: Pool the position is within.
+        explode: true
         in: query
         name: pool
         required: false
@@ -9476,8 +9672,8 @@ paths:
           format: date-time
           type: string
         style: form
-      - description: "Identifier, format: transaction hash + \"#\" + index in swaps\
-          \ Transaction array."
+      - description: "Identifier, format: (transaction hash) + # + (index in swaps\
+          \ Transaction array)."
         explode: true
         in: query
         name: id
@@ -9571,7 +9767,9 @@ paths:
       description: Gets tickDayData.
       operationId: UniswapV3.GetTickDayData (historical)
       parameters:
-      - explode: true
+      - description: "The start block. If endblock is not given, only those entities\
+          \ will be included that were exactly created in startBlock."
+        explode: true
         in: query
         name: startBlock
         required: false
@@ -9579,7 +9777,9 @@ paths:
           format: int64
           type: integer
         style: form
-      - explode: true
+      - description: The end block. Useful to filter data in range of blocks (FROM
+          startBlock TO endBlock).
+        explode: true
         in: query
         name: endBlock
         required: false
@@ -9587,7 +9787,9 @@ paths:
           format: int64
           type: integer
         style: form
-      - explode: true
+      - description: "The start date of timeframe. If endDate is not given, entities\
+          \ created FROM startDate TO startDate plus 24 hours will be included."
+        explode: true
         in: query
         name: startDate
         required: false
@@ -9595,7 +9797,8 @@ paths:
           format: date-time
           type: string
         style: form
-      - explode: true
+      - description: The end date of timeframe.
+        explode: true
         in: query
         name: endDate
         required: false
@@ -9603,14 +9806,16 @@ paths:
           format: date-time
           type: string
         style: form
-      - explode: true
+      - description: "Identifier, format: (pool address)-(tick index)-(timestamp)."
+        explode: true
         in: query
         name: id
         required: false
         schema:
           type: string
         style: form
-      - explode: true
+      - description: Pointer to pool.
+        explode: true
         in: query
         name: pool
         required: false
@@ -9670,7 +9875,9 @@ paths:
       description: Gets ticks.
       operationId: UniswapV3.GetTicks (historical)
       parameters:
-      - explode: true
+      - description: "The start block. If endblock is not given, only those entities\
+          \ will be included that were exactly created in startBlock."
+        explode: true
         in: query
         name: startBlock
         required: false
@@ -9678,7 +9885,9 @@ paths:
           format: int64
           type: integer
         style: form
-      - explode: true
+      - description: The end block. Useful to filter data in range of blocks (FROM
+          startBlock TO endBlock).
+        explode: true
         in: query
         name: endBlock
         required: false
@@ -9686,7 +9895,9 @@ paths:
           format: int64
           type: integer
         style: form
-      - explode: true
+      - description: "The start date of timeframe. If endDate is not given, entities\
+          \ created FROM startDate TO startDate plus 24 hours will be included."
+        explode: true
         in: query
         name: startDate
         required: false
@@ -9694,7 +9905,8 @@ paths:
           format: date-time
           type: string
         style: form
-      - explode: true
+      - description: The end date of timeframe.
+        explode: true
         in: query
         name: endDate
         required: false
@@ -9702,14 +9914,16 @@ paths:
           format: date-time
           type: string
         style: form
-      - explode: true
+      - description: "Identifier, format: (pool address)#(tick index)"
+        explode: true
         in: query
         name: id
         required: false
         schema:
           type: string
         style: form
-      - explode: true
+      - description: Pool address.
+        explode: true
         in: query
         name: pool
         required: false

@@ -136,13 +136,13 @@ public class OASCowApi {
     /**
      * Trades (historical)
      * Gets trades.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param sellToken  (optional)
-     * @param buyToken  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (order id)|(transaction hash)|(event index). (optional)
+     * @param sellToken Address of token that is sold. (optional)
+     * @param buyToken Address of token that is bought. (optional)
      * @return List<OASCowTradeDTO>
      * @throws OAS.ApiException if fails to make API call
      */

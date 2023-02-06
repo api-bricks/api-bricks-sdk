@@ -58,6 +58,7 @@ docs/DexTradeDTO.md
 docs/DexUserDTO.md
 docs/DexWithdrawDTO.md
 docs/DexWithdrawRequestDTO.md
+docs/MetadataApi.md
 docs/NumericsBigInteger.md
 docs/SushiswapApi.md
 docs/SushiswapBundleDTO.md
@@ -116,6 +117,7 @@ lib/openapi_client.rb
 lib/openapi_client/api/cow_api.rb
 lib/openapi_client/api/curve_api.rb
 lib/openapi_client/api/dex_api.rb
+lib/openapi_client/api/metadata_api.rb
 lib/openapi_client/api/sushiswap_api.rb
 lib/openapi_client/api/uniswap_v2_api.rb
 lib/openapi_client/api/uniswap_v3_api.rb
@@ -225,6 +227,7 @@ openapi_client.gemspec
 spec/api/cow_api_spec.rb
 spec/api/curve_api_spec.rb
 spec/api/dex_api_spec.rb
+spec/api/metadata_api_spec.rb
 spec/api/sushiswap_api_spec.rb
 spec/api/uniswap_v2_api_spec.rb
 spec/api/uniswap_v3_api_spec.rb

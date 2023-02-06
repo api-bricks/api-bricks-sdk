@@ -5,6 +5,7 @@ project.clj
 src/on_chain_dapps_rest_api/api/cow.clj
 src/on_chain_dapps_rest_api/api/curve.clj
 src/on_chain_dapps_rest_api/api/dex.clj
+src/on_chain_dapps_rest_api/api/metadata.clj
 src/on_chain_dapps_rest_api/api/sushiswap.clj
 src/on_chain_dapps_rest_api/api/uniswap_v_.clj
 src/on_chain_dapps_rest_api/core.clj

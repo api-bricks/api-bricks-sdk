@@ -16,6 +16,9 @@ import (
 	"time"
 )
 
+// checks if the CurveUnderlyingCoinDTO type satisfies the MappedNullable interface at compile time
+var _ MappedNullable = &CurveUnderlyingCoinDTO{}
+
 // CurveUnderlyingCoinDTO struct for CurveUnderlyingCoinDTO
 type CurveUnderlyingCoinDTO struct {
 	EntryTime *time.Time `json:"entry_time,omitempty"`
@@ -74,7 +77,7 @@ func (o *CurveUnderlyingCoinDTO) GetEntryTime() time.Time {
 // and a boolean to check if the value has been set.
 func (o *CurveUnderlyingCoinDTO) GetEntryTimeOk() (*time.Time, bool) {
 	if o == nil || isNil(o.EntryTime) {
-    return nil, false
+		return nil, false
 	}
 	return o.EntryTime, true
 }
@@ -106,7 +109,7 @@ func (o *CurveUnderlyingCoinDTO) GetRecvTime() time.Time {
 // and a boolean to check if the value has been set.
 func (o *CurveUnderlyingCoinDTO) GetRecvTimeOk() (*time.Time, bool) {
 	if o == nil || isNil(o.RecvTime) {
-    return nil, false
+		return nil, false
 	}
 	return o.RecvTime, true
 }
@@ -138,7 +141,7 @@ func (o *CurveUnderlyingCoinDTO) GetBlockNumber() int64 {
 // and a boolean to check if the value has been set.
 func (o *CurveUnderlyingCoinDTO) GetBlockNumberOk() (*int64, bool) {
 	if o == nil || isNil(o.BlockNumber) {
-    return nil, false
+		return nil, false
 	}
 	return o.BlockNumber, true
 }
@@ -171,7 +174,7 @@ func (o *CurveUnderlyingCoinDTO) GetId() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CurveUnderlyingCoinDTO) GetIdOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Id.Get(), o.Id.IsSet()
 }
@@ -212,7 +215,7 @@ func (o *CurveUnderlyingCoinDTO) GetIndex() int32 {
 // and a boolean to check if the value has been set.
 func (o *CurveUnderlyingCoinDTO) GetIndexOk() (*int32, bool) {
 	if o == nil || isNil(o.Index) {
-    return nil, false
+		return nil, false
 	}
 	return o.Index, true
 }
@@ -245,7 +248,7 @@ func (o *CurveUnderlyingCoinDTO) GetPool() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CurveUnderlyingCoinDTO) GetPoolOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Pool.Get(), o.Pool.IsSet()
 }
@@ -287,7 +290,7 @@ func (o *CurveUnderlyingCoinDTO) GetToken() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CurveUnderlyingCoinDTO) GetTokenOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Token.Get(), o.Token.IsSet()
 }
@@ -329,7 +332,7 @@ func (o *CurveUnderlyingCoinDTO) GetCoin() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CurveUnderlyingCoinDTO) GetCoinOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Coin.Get(), o.Coin.IsSet()
 }
@@ -371,7 +374,7 @@ func (o *CurveUnderlyingCoinDTO) GetBalance() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CurveUnderlyingCoinDTO) GetBalanceOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Balance.Get(), o.Balance.IsSet()
 }
@@ -413,7 +416,7 @@ func (o *CurveUnderlyingCoinDTO) GetUpdated() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CurveUnderlyingCoinDTO) GetUpdatedOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Updated.Get(), o.Updated.IsSet()
 }
@@ -455,7 +458,7 @@ func (o *CurveUnderlyingCoinDTO) GetUpdatedAtBlock() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CurveUnderlyingCoinDTO) GetUpdatedAtBlockOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.UpdatedAtBlock.Get(), o.UpdatedAtBlock.IsSet()
 }
@@ -497,7 +500,7 @@ func (o *CurveUnderlyingCoinDTO) GetUpdatedAtTransaction() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CurveUnderlyingCoinDTO) GetUpdatedAtTransactionOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.UpdatedAtTransaction.Get(), o.UpdatedAtTransaction.IsSet()
 }
@@ -538,7 +541,7 @@ func (o *CurveUnderlyingCoinDTO) GetVid() int64 {
 // and a boolean to check if the value has been set.
 func (o *CurveUnderlyingCoinDTO) GetVidOk() (*int64, bool) {
 	if o == nil || isNil(o.Vid) {
-    return nil, false
+		return nil, false
 	}
 	return o.Vid, true
 }
@@ -558,6 +561,14 @@ func (o *CurveUnderlyingCoinDTO) SetVid(v int64) {
 }
 
 func (o CurveUnderlyingCoinDTO) MarshalJSON() ([]byte, error) {
+	toSerialize,err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
+}
+
+func (o CurveUnderlyingCoinDTO) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
 	if !isNil(o.EntryTime) {
 		toSerialize["entry_time"] = o.EntryTime
@@ -598,7 +609,7 @@ func (o CurveUnderlyingCoinDTO) MarshalJSON() ([]byte, error) {
 	if !isNil(o.Vid) {
 		toSerialize["vid"] = o.Vid
 	}
-	return json.Marshal(toSerialize)
+	return toSerialize, nil
 }
 
 type NullableCurveUnderlyingCoinDTO struct {

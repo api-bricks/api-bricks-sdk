@@ -559,12 +559,12 @@ export class UniswapV3Api {
     /**
      * Gets poolDayData.
      * @summary PoolDayData (historical)
-     * @param startBlock 
-     * @param endBlock 
-     * @param startDate 
-     * @param endDate 
-     * @param id 
-     * @param pool 
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param endDate The end date of timeframe.
+     * @param id Identifier, format: (pool address)-(day id).
+     * @param pool Pointer to pool.
      */
     public uniswapV3GetPoolDayDataHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pool?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
     { response: JQueryXHR; body: Array<models.UniswapV3PoolDayDataDTO>;  },
@@ -641,12 +641,12 @@ export class UniswapV3Api {
     /**
      * Gets poolHourData.
      * @summary PoolHourData (historical)
-     * @param startBlock 
-     * @param endBlock 
-     * @param startDate 
-     * @param endDate 
-     * @param id 
-     * @param pool 
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param endDate The end date of timeframe.
+     * @param id Identifier, format: (pool address)-(day id)
+     * @param pool Pointer to pool.
      */
     public uniswapV3GetPoolHourDataHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pool?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
     { response: JQueryXHR; body: Array<models.UniswapV3PoolHourDataDTO>;  },
@@ -809,12 +809,12 @@ export class UniswapV3Api {
     /**
      * Gets positionSnapshots.
      * @summary PositionSnapshots (historical)
-     * @param startBlock 
-     * @param endBlock 
-     * @param startDate 
-     * @param endDate 
-     * @param id 
-     * @param pool 
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param endDate The end date of timeframe.
+     * @param id NFT token identifier, format: (NFT token id)#(block number).
+     * @param pool Pool the position is within.
      */
     public uniswapV3GetPositionSnapshotsHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pool?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
     { response: JQueryXHR; body: Array<models.UniswapV3PositionSnapshotDTO>;  },
@@ -985,7 +985,7 @@ export class UniswapV3Api {
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
      * @param endDate The end date of timeframe.
-     * @param id Identifier, format: transaction hash + \&quot;#\&quot; + index in swaps Transaction array.
+     * @param id Identifier, format: (transaction hash) + # + (index in swaps Transaction array).
      * @param pool Pool swap occured within.
      * @param token0 Reference to token0 as stored in pair contract.
      * @param token1 Reference to token1 as stored in pair contract.
@@ -1071,12 +1071,12 @@ export class UniswapV3Api {
     /**
      * Gets tickDayData.
      * @summary TickDayData (historical)
-     * @param startBlock 
-     * @param endBlock 
-     * @param startDate 
-     * @param endDate 
-     * @param id 
-     * @param pool 
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param endDate The end date of timeframe.
+     * @param id Identifier, format: (pool address)-(tick index)-(timestamp).
+     * @param pool Pointer to pool.
      */
     public uniswapV3GetTickDayDataHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pool?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
     { response: JQueryXHR; body: Array<models.UniswapV3TickDayDataDTO>;  },
@@ -1153,12 +1153,12 @@ export class UniswapV3Api {
     /**
      * Gets ticks.
      * @summary Ticks (historical)
-     * @param startBlock 
-     * @param endBlock 
-     * @param startDate 
-     * @param endDate 
-     * @param id 
-     * @param pool 
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param endDate The end date of timeframe.
+     * @param id Identifier, format: (pool address)#(tick index)
+     * @param pool Pool address.
      */
     public uniswapV3GetTicksHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pool?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
     { response: JQueryXHR; body: Array<models.UniswapV3TickDTO>;  },

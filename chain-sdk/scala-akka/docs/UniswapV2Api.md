@@ -435,19 +435,19 @@ object Example extends App {
 
     val apiInvoker = ApiInvoker()
     val apiInstance = UniswapV2Api("https://onchain.coinapi.io")
-    val startBlock: Long = 789 // Long | 
+    val startBlock: Long = 789 // Long | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
 
-    val endBlock: Long = 789 // Long | 
+    val endBlock: Long = 789 // Long | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
 
-    val startDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
+    val startDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
 
-    val endDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
+    val endDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | The end date of timeframe.
 
-    val id: String = id_example // String | 
+    val id: String = id_example // String | Identifier, format: (pair address)-(user address)
 
-    val user: String = user_example // String | 
+    val user: String = user_example // String | Reference to user.
 
-    val pair: String = pair_example // String | 
+    val pair: String = pair_example // String | Reference to the pair liquidity is being provided on.
     
     val request = apiInstance.uniswapV2GetLiquidityPositionSnapshotsHistorical(startBlock, endBlock, startDate, endDate, id, user, pair)
     val response = apiInvoker.execute(request)
@@ -477,13 +477,13 @@ object Example extends App {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startBlock** | **Long**|  | [optional]
- **endBlock** | **Long**|  | [optional]
- **startDate** | **OffsetDateTime**|  | [optional]
- **endDate** | **OffsetDateTime**|  | [optional]
- **id** | **String**|  | [optional]
- **user** | **String**|  | [optional]
- **pair** | **String**|  | [optional]
+ **startBlock** | **Long**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional]
+ **endBlock** | **Long**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional]
+ **startDate** | **OffsetDateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional]
+ **endDate** | **OffsetDateTime**| The end date of timeframe. | [optional]
+ **id** | **String**| Identifier, format: (pair address)-(user address) | [optional]
+ **user** | **String**| Reference to user. | [optional]
+ **pair** | **String**| Reference to the pair liquidity is being provided on. | [optional]
 
 ### Return type
 

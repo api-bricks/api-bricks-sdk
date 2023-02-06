@@ -288,11 +288,11 @@ test_that("CurveGetCoinsHistorical", {
   # base path: https://onchain.coinapi.io
   # Coins (historical)
   # Gets coins.
-  # @param start_block integer  (optional)
-  # @param end_block integer  (optional)
-  # @param start_date character  (optional)
-  # @param end_date character  (optional)
-  # @param id character  (optional)
+  # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+  # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+  # @param start_date character The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+  # @param end_date character The end date of timeframe. (optional)
+  # @param id character Identifier, format: (pool_id)-(coin_index). (optional)
   # @param pool character  (optional)
   # @return [array[CurveCoinDTO]]
 
@@ -710,11 +710,11 @@ test_that("CurveGetUnderlyingCoinsHistorical", {
   # base path: https://onchain.coinapi.io
   # UnderlyingCoins (historical)
   # Gets underlyingCoins.
-  # @param start_block integer  (optional)
-  # @param end_block integer  (optional)
-  # @param start_date character  (optional)
-  # @param end_date character  (optional)
-  # @param id character  (optional)
+  # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+  # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+  # @param start_date character The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+  # @param end_date character The end date of timeframe. (optional)
+  # @param id character Equals to: (pool_id)-(coin_index). (optional)
   # @param pool character  (optional)
   # @return [array[CurveUnderlyingCoinDTO]]
 

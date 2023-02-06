@@ -16,6 +16,9 @@ import (
 	"time"
 )
 
+// checks if the UniswapV3FactoryDTO type satisfies the MappedNullable interface at compile time
+var _ MappedNullable = &UniswapV3FactoryDTO{}
+
 // UniswapV3FactoryDTO The Uniswap Factory entity is responsible for storing aggregate information across all Uniswap pairs. It can be used to view stats about total liquidity, volume, amount of pairs and more.
 type UniswapV3FactoryDTO struct {
 	EntryTime *time.Time `json:"entry_time,omitempty"`
@@ -82,7 +85,7 @@ func (o *UniswapV3FactoryDTO) GetEntryTime() time.Time {
 // and a boolean to check if the value has been set.
 func (o *UniswapV3FactoryDTO) GetEntryTimeOk() (*time.Time, bool) {
 	if o == nil || isNil(o.EntryTime) {
-    return nil, false
+		return nil, false
 	}
 	return o.EntryTime, true
 }
@@ -114,7 +117,7 @@ func (o *UniswapV3FactoryDTO) GetRecvTime() time.Time {
 // and a boolean to check if the value has been set.
 func (o *UniswapV3FactoryDTO) GetRecvTimeOk() (*time.Time, bool) {
 	if o == nil || isNil(o.RecvTime) {
-    return nil, false
+		return nil, false
 	}
 	return o.RecvTime, true
 }
@@ -146,7 +149,7 @@ func (o *UniswapV3FactoryDTO) GetBlockNumber() int64 {
 // and a boolean to check if the value has been set.
 func (o *UniswapV3FactoryDTO) GetBlockNumberOk() (*int64, bool) {
 	if o == nil || isNil(o.BlockNumber) {
-    return nil, false
+		return nil, false
 	}
 	return o.BlockNumber, true
 }
@@ -179,7 +182,7 @@ func (o *UniswapV3FactoryDTO) GetId() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *UniswapV3FactoryDTO) GetIdOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Id.Get(), o.Id.IsSet()
 }
@@ -221,7 +224,7 @@ func (o *UniswapV3FactoryDTO) GetPoolCount() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *UniswapV3FactoryDTO) GetPoolCountOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.PoolCount.Get(), o.PoolCount.IsSet()
 }
@@ -263,7 +266,7 @@ func (o *UniswapV3FactoryDTO) GetTxCount() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *UniswapV3FactoryDTO) GetTxCountOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.TxCount.Get(), o.TxCount.IsSet()
 }
@@ -305,7 +308,7 @@ func (o *UniswapV3FactoryDTO) GetTotalVolumeUsd() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *UniswapV3FactoryDTO) GetTotalVolumeUsdOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.TotalVolumeUsd.Get(), o.TotalVolumeUsd.IsSet()
 }
@@ -347,7 +350,7 @@ func (o *UniswapV3FactoryDTO) GetTotalVolumeEth() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *UniswapV3FactoryDTO) GetTotalVolumeEthOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.TotalVolumeEth.Get(), o.TotalVolumeEth.IsSet()
 }
@@ -389,7 +392,7 @@ func (o *UniswapV3FactoryDTO) GetTotalFeesUsd() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *UniswapV3FactoryDTO) GetTotalFeesUsdOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.TotalFeesUsd.Get(), o.TotalFeesUsd.IsSet()
 }
@@ -431,7 +434,7 @@ func (o *UniswapV3FactoryDTO) GetTotalFeesEth() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *UniswapV3FactoryDTO) GetTotalFeesEthOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.TotalFeesEth.Get(), o.TotalFeesEth.IsSet()
 }
@@ -473,7 +476,7 @@ func (o *UniswapV3FactoryDTO) GetUntrackedVolumeUsd() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *UniswapV3FactoryDTO) GetUntrackedVolumeUsdOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.UntrackedVolumeUsd.Get(), o.UntrackedVolumeUsd.IsSet()
 }
@@ -515,7 +518,7 @@ func (o *UniswapV3FactoryDTO) GetTotalValueLockedUsd() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *UniswapV3FactoryDTO) GetTotalValueLockedUsdOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.TotalValueLockedUsd.Get(), o.TotalValueLockedUsd.IsSet()
 }
@@ -557,7 +560,7 @@ func (o *UniswapV3FactoryDTO) GetTotalValueLockedEth() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *UniswapV3FactoryDTO) GetTotalValueLockedEthOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.TotalValueLockedEth.Get(), o.TotalValueLockedEth.IsSet()
 }
@@ -599,7 +602,7 @@ func (o *UniswapV3FactoryDTO) GetTotalValueLockedUsdUntracked() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *UniswapV3FactoryDTO) GetTotalValueLockedUsdUntrackedOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.TotalValueLockedUsdUntracked.Get(), o.TotalValueLockedUsdUntracked.IsSet()
 }
@@ -641,7 +644,7 @@ func (o *UniswapV3FactoryDTO) GetTotalValueLockedEthUntracked() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *UniswapV3FactoryDTO) GetTotalValueLockedEthUntrackedOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.TotalValueLockedEthUntracked.Get(), o.TotalValueLockedEthUntracked.IsSet()
 }
@@ -683,7 +686,7 @@ func (o *UniswapV3FactoryDTO) GetOwner() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *UniswapV3FactoryDTO) GetOwnerOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Owner.Get(), o.Owner.IsSet()
 }
@@ -724,7 +727,7 @@ func (o *UniswapV3FactoryDTO) GetVid() int64 {
 // and a boolean to check if the value has been set.
 func (o *UniswapV3FactoryDTO) GetVidOk() (*int64, bool) {
 	if o == nil || isNil(o.Vid) {
-    return nil, false
+		return nil, false
 	}
 	return o.Vid, true
 }
@@ -744,6 +747,14 @@ func (o *UniswapV3FactoryDTO) SetVid(v int64) {
 }
 
 func (o UniswapV3FactoryDTO) MarshalJSON() ([]byte, error) {
+	toSerialize,err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
+}
+
+func (o UniswapV3FactoryDTO) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
 	if !isNil(o.EntryTime) {
 		toSerialize["entry_time"] = o.EntryTime
@@ -796,7 +807,7 @@ func (o UniswapV3FactoryDTO) MarshalJSON() ([]byte, error) {
 	if !isNil(o.Vid) {
 		toSerialize["vid"] = o.Vid
 	}
-	return json.Marshal(toSerialize)
+	return toSerialize, nil
 }
 
 type NullableUniswapV3FactoryDTO struct {

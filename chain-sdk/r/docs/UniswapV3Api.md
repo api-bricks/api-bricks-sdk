@@ -412,12 +412,12 @@ library(openapi)
 # PoolDayData (historical)
 #
 # prepare function argument(s)
-var_start_block <- 56 # integer |  (Optional)
-var_end_block <- 56 # integer |  (Optional)
-var_start_date <- "start_date_example" # character |  (Optional)
-var_end_date <- "end_date_example" # character |  (Optional)
-var_id <- "id_example" # character |  (Optional)
-var_pool <- "pool_example" # character |  (Optional)
+var_start_block <- 56 # integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (Optional)
+var_end_block <- 56 # integer | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (Optional)
+var_start_date <- "start_date_example" # character | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (Optional)
+var_end_date <- "end_date_example" # character | The end date of timeframe. (Optional)
+var_id <- "id_example" # character | Identifier, format: (pool address)-(day id). (Optional)
+var_pool <- "pool_example" # character | Pointer to pool. (Optional)
 
 api_instance <- UniswapV3Api$new()
 # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -430,12 +430,12 @@ dput(result)
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **start_block** | **integer**|  | [optional] 
- **end_block** | **integer**|  | [optional] 
- **start_date** | **character**|  | [optional] 
- **end_date** | **character**|  | [optional] 
- **id** | **character**|  | [optional] 
- **pool** | **character**|  | [optional] 
+ **start_block** | **integer**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
+ **end_block** | **integer**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
+ **start_date** | **character**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
+ **end_date** | **character**| The end date of timeframe. | [optional] 
+ **id** | **character**| Identifier, format: (pool address)-(day id). | [optional] 
+ **pool** | **character**| Pointer to pool. | [optional] 
 
 ### Return type
 
@@ -469,12 +469,12 @@ library(openapi)
 # PoolHourData (historical)
 #
 # prepare function argument(s)
-var_start_block <- 56 # integer |  (Optional)
-var_end_block <- 56 # integer |  (Optional)
-var_start_date <- "start_date_example" # character |  (Optional)
-var_end_date <- "end_date_example" # character |  (Optional)
-var_id <- "id_example" # character |  (Optional)
-var_pool <- "pool_example" # character |  (Optional)
+var_start_block <- 56 # integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (Optional)
+var_end_block <- 56 # integer | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (Optional)
+var_start_date <- "start_date_example" # character | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (Optional)
+var_end_date <- "end_date_example" # character | The end date of timeframe. (Optional)
+var_id <- "id_example" # character | Identifier, format: (pool address)-(day id) (Optional)
+var_pool <- "pool_example" # character | Pointer to pool. (Optional)
 
 api_instance <- UniswapV3Api$new()
 # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -487,12 +487,12 @@ dput(result)
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **start_block** | **integer**|  | [optional] 
- **end_block** | **integer**|  | [optional] 
- **start_date** | **character**|  | [optional] 
- **end_date** | **character**|  | [optional] 
- **id** | **character**|  | [optional] 
- **pool** | **character**|  | [optional] 
+ **start_block** | **integer**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
+ **end_block** | **integer**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
+ **start_date** | **character**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
+ **end_date** | **character**| The end date of timeframe. | [optional] 
+ **id** | **character**| Identifier, format: (pool address)-(day id) | [optional] 
+ **pool** | **character**| Pointer to pool. | [optional] 
 
 ### Return type
 
@@ -585,12 +585,12 @@ library(openapi)
 # PositionSnapshots (historical)
 #
 # prepare function argument(s)
-var_start_block <- 56 # integer |  (Optional)
-var_end_block <- 56 # integer |  (Optional)
-var_start_date <- "start_date_example" # character |  (Optional)
-var_end_date <- "end_date_example" # character |  (Optional)
-var_id <- "id_example" # character |  (Optional)
-var_pool <- "pool_example" # character |  (Optional)
+var_start_block <- 56 # integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (Optional)
+var_end_block <- 56 # integer | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (Optional)
+var_start_date <- "start_date_example" # character | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (Optional)
+var_end_date <- "end_date_example" # character | The end date of timeframe. (Optional)
+var_id <- "id_example" # character | NFT token identifier, format: (NFT token id)#(block number). (Optional)
+var_pool <- "pool_example" # character | Pool the position is within. (Optional)
 
 api_instance <- UniswapV3Api$new()
 # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -603,12 +603,12 @@ dput(result)
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **start_block** | **integer**|  | [optional] 
- **end_block** | **integer**|  | [optional] 
- **start_date** | **character**|  | [optional] 
- **end_date** | **character**|  | [optional] 
- **id** | **character**|  | [optional] 
- **pool** | **character**|  | [optional] 
+ **start_block** | **integer**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
+ **end_block** | **integer**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
+ **start_date** | **character**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
+ **end_date** | **character**| The end date of timeframe. | [optional] 
+ **id** | **character**| NFT token identifier, format: (NFT token id)#(block number). | [optional] 
+ **pool** | **character**| Pool the position is within. | [optional] 
 
 ### Return type
 
@@ -707,7 +707,7 @@ var_start_block <- 56 # integer | The start block. If endblock is not given, onl
 var_end_block <- 56 # integer | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (Optional)
 var_start_date <- "start_date_example" # character | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (Optional)
 var_end_date <- "end_date_example" # character | The end date of timeframe. (Optional)
-var_id <- "id_example" # character | Identifier, format: transaction hash + \"#\" + index in swaps Transaction array. (Optional)
+var_id <- "id_example" # character | Identifier, format: (transaction hash) + # + (index in swaps Transaction array). (Optional)
 var_pool <- "pool_example" # character | Pool swap occured within. (Optional)
 var_token_0 <- "token_0_example" # character | Reference to token0 as stored in pair contract. (Optional)
 var_token_1 <- "token_1_example" # character | Reference to token1 as stored in pair contract. (Optional)
@@ -727,7 +727,7 @@ Name | Type | Description  | Notes
  **end_block** | **integer**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
  **start_date** | **character**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
  **end_date** | **character**| The end date of timeframe. | [optional] 
- **id** | **character**| Identifier, format: transaction hash + \&quot;#\&quot; + index in swaps Transaction array. | [optional] 
+ **id** | **character**| Identifier, format: (transaction hash) + # + (index in swaps Transaction array). | [optional] 
  **pool** | **character**| Pool swap occured within. | [optional] 
  **token_0** | **character**| Reference to token0 as stored in pair contract. | [optional] 
  **token_1** | **character**| Reference to token1 as stored in pair contract. | [optional] 
@@ -764,12 +764,12 @@ library(openapi)
 # TickDayData (historical)
 #
 # prepare function argument(s)
-var_start_block <- 56 # integer |  (Optional)
-var_end_block <- 56 # integer |  (Optional)
-var_start_date <- "start_date_example" # character |  (Optional)
-var_end_date <- "end_date_example" # character |  (Optional)
-var_id <- "id_example" # character |  (Optional)
-var_pool <- "pool_example" # character |  (Optional)
+var_start_block <- 56 # integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (Optional)
+var_end_block <- 56 # integer | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (Optional)
+var_start_date <- "start_date_example" # character | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (Optional)
+var_end_date <- "end_date_example" # character | The end date of timeframe. (Optional)
+var_id <- "id_example" # character | Identifier, format: (pool address)-(tick index)-(timestamp). (Optional)
+var_pool <- "pool_example" # character | Pointer to pool. (Optional)
 
 api_instance <- UniswapV3Api$new()
 # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -782,12 +782,12 @@ dput(result)
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **start_block** | **integer**|  | [optional] 
- **end_block** | **integer**|  | [optional] 
- **start_date** | **character**|  | [optional] 
- **end_date** | **character**|  | [optional] 
- **id** | **character**|  | [optional] 
- **pool** | **character**|  | [optional] 
+ **start_block** | **integer**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
+ **end_block** | **integer**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
+ **start_date** | **character**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
+ **end_date** | **character**| The end date of timeframe. | [optional] 
+ **id** | **character**| Identifier, format: (pool address)-(tick index)-(timestamp). | [optional] 
+ **pool** | **character**| Pointer to pool. | [optional] 
 
 ### Return type
 
@@ -821,12 +821,12 @@ library(openapi)
 # Ticks (historical)
 #
 # prepare function argument(s)
-var_start_block <- 56 # integer |  (Optional)
-var_end_block <- 56 # integer |  (Optional)
-var_start_date <- "start_date_example" # character |  (Optional)
-var_end_date <- "end_date_example" # character |  (Optional)
-var_id <- "id_example" # character |  (Optional)
-var_pool <- "pool_example" # character |  (Optional)
+var_start_block <- 56 # integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (Optional)
+var_end_block <- 56 # integer | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (Optional)
+var_start_date <- "start_date_example" # character | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (Optional)
+var_end_date <- "end_date_example" # character | The end date of timeframe. (Optional)
+var_id <- "id_example" # character | Identifier, format: (pool address)#(tick index) (Optional)
+var_pool <- "pool_example" # character | Pool address. (Optional)
 
 api_instance <- UniswapV3Api$new()
 # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -839,12 +839,12 @@ dput(result)
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **start_block** | **integer**|  | [optional] 
- **end_block** | **integer**|  | [optional] 
- **start_date** | **character**|  | [optional] 
- **end_date** | **character**|  | [optional] 
- **id** | **character**|  | [optional] 
- **pool** | **character**|  | [optional] 
+ **start_block** | **integer**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
+ **end_block** | **integer**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
+ **start_date** | **character**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
+ **end_date** | **character**| The end date of timeframe. | [optional] 
+ **id** | **character**| Identifier, format: (pool address)#(tick index) | [optional] 
+ **pool** | **character**| Pool address. | [optional] 
 
 ### Return type
 

@@ -16,6 +16,9 @@ import (
 	"time"
 )
 
+// checks if the CurveGaugeDTO type satisfies the MappedNullable interface at compile time
+var _ MappedNullable = &CurveGaugeDTO{}
+
 // CurveGaugeDTO struct for CurveGaugeDTO
 type CurveGaugeDTO struct {
 	EntryTime *time.Time `json:"entry_time,omitempty"`
@@ -70,7 +73,7 @@ func (o *CurveGaugeDTO) GetEntryTime() time.Time {
 // and a boolean to check if the value has been set.
 func (o *CurveGaugeDTO) GetEntryTimeOk() (*time.Time, bool) {
 	if o == nil || isNil(o.EntryTime) {
-    return nil, false
+		return nil, false
 	}
 	return o.EntryTime, true
 }
@@ -102,7 +105,7 @@ func (o *CurveGaugeDTO) GetRecvTime() time.Time {
 // and a boolean to check if the value has been set.
 func (o *CurveGaugeDTO) GetRecvTimeOk() (*time.Time, bool) {
 	if o == nil || isNil(o.RecvTime) {
-    return nil, false
+		return nil, false
 	}
 	return o.RecvTime, true
 }
@@ -134,7 +137,7 @@ func (o *CurveGaugeDTO) GetBlockNumber() int64 {
 // and a boolean to check if the value has been set.
 func (o *CurveGaugeDTO) GetBlockNumberOk() (*int64, bool) {
 	if o == nil || isNil(o.BlockNumber) {
-    return nil, false
+		return nil, false
 	}
 	return o.BlockNumber, true
 }
@@ -167,7 +170,7 @@ func (o *CurveGaugeDTO) GetId() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CurveGaugeDTO) GetIdOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Id.Get(), o.Id.IsSet()
 }
@@ -209,7 +212,7 @@ func (o *CurveGaugeDTO) GetAddress() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CurveGaugeDTO) GetAddressOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Address.Get(), o.Address.IsSet()
 }
@@ -251,7 +254,7 @@ func (o *CurveGaugeDTO) GetType() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CurveGaugeDTO) GetTypeOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Type.Get(), o.Type.IsSet()
 }
@@ -293,7 +296,7 @@ func (o *CurveGaugeDTO) GetPool() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CurveGaugeDTO) GetPoolOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Pool.Get(), o.Pool.IsSet()
 }
@@ -335,7 +338,7 @@ func (o *CurveGaugeDTO) GetCreated() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CurveGaugeDTO) GetCreatedOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Created.Get(), o.Created.IsSet()
 }
@@ -377,7 +380,7 @@ func (o *CurveGaugeDTO) GetCreatedAtBlock() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CurveGaugeDTO) GetCreatedAtBlockOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.CreatedAtBlock.Get(), o.CreatedAtBlock.IsSet()
 }
@@ -419,7 +422,7 @@ func (o *CurveGaugeDTO) GetCreatedAtTransaction() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CurveGaugeDTO) GetCreatedAtTransactionOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.CreatedAtTransaction.Get(), o.CreatedAtTransaction.IsSet()
 }
@@ -460,7 +463,7 @@ func (o *CurveGaugeDTO) GetVid() int64 {
 // and a boolean to check if the value has been set.
 func (o *CurveGaugeDTO) GetVidOk() (*int64, bool) {
 	if o == nil || isNil(o.Vid) {
-    return nil, false
+		return nil, false
 	}
 	return o.Vid, true
 }
@@ -480,6 +483,14 @@ func (o *CurveGaugeDTO) SetVid(v int64) {
 }
 
 func (o CurveGaugeDTO) MarshalJSON() ([]byte, error) {
+	toSerialize,err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
+}
+
+func (o CurveGaugeDTO) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
 	if !isNil(o.EntryTime) {
 		toSerialize["entry_time"] = o.EntryTime
@@ -514,7 +525,7 @@ func (o CurveGaugeDTO) MarshalJSON() ([]byte, error) {
 	if !isNil(o.Vid) {
 		toSerialize["vid"] = o.Vid
 	}
-	return json.Marshal(toSerialize)
+	return toSerialize, nil
 }
 
 type NullableCurveGaugeDTO struct {

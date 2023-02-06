@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.time.OffsetDateTime;
 import org.openapitools.jackson.nullable.JsonNullable;
@@ -50,7 +48,7 @@ import org.openapitools.client.JSON;
 /**
  * CowOrderDTO
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-30T14:42:00.397192Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-06T14:47:06.037855Z[Etc/UTC]")
 public class CowOrderDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -110,7 +108,6 @@ public class CowOrderDTO {
    * @return entryTime
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public OffsetDateTime getEntryTime() {
     return entryTime;
@@ -133,7 +130,6 @@ public class CowOrderDTO {
    * @return recvTime
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public OffsetDateTime getRecvTime() {
     return recvTime;
@@ -156,7 +152,6 @@ public class CowOrderDTO {
    * @return blockNumber
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Number of block in which entity was recorded.")
 
   public Long getBlockNumber() {
     return blockNumber;
@@ -179,7 +174,6 @@ public class CowOrderDTO {
    * @return id
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "User's address.")
 
   public String getId() {
     return id;
@@ -202,7 +196,6 @@ public class CowOrderDTO {
    * @return owner
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "User's address.")
 
   public String getOwner() {
     return owner;
@@ -225,7 +218,6 @@ public class CowOrderDTO {
    * @return tradesTimestamp
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Block's timestamp on trade event.")
 
   public String getTradesTimestamp() {
     return tradesTimestamp;
@@ -248,7 +240,6 @@ public class CowOrderDTO {
    * @return invalidateTimestamp
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Block's timestamp on invalidate event.")
 
   public String getInvalidateTimestamp() {
     return invalidateTimestamp;
@@ -271,7 +262,6 @@ public class CowOrderDTO {
    * @return presignTimestamp
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Block's timestamp on presign event.")
 
   public String getPresignTimestamp() {
     return presignTimestamp;
@@ -294,7 +284,6 @@ public class CowOrderDTO {
    * @return isSigned
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Determines whether order is signed.")
 
   public Boolean getIsSigned() {
     return isSigned;
@@ -317,7 +306,6 @@ public class CowOrderDTO {
    * @return isValid
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Determines whether order is valid.")
 
   public Boolean getIsValid() {
     return isValid;
@@ -340,7 +328,6 @@ public class CowOrderDTO {
    * @return vid
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public Long getVid() {
     return vid;

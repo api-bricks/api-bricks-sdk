@@ -303,19 +303,19 @@ func (a *DexApiService) DexGetBatchesHistoricalExecute(r ApiDexGetBatchesHistori
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		localVarQueryParams.Add("id", parameterToString(*r.id, ""))
+		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -382,31 +382,37 @@ type ApiDexGetDepositsHistoricalRequest struct {
 	user *string
 }
 
+// The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
 func (r ApiDexGetDepositsHistoricalRequest) StartBlock(startBlock int64) ApiDexGetDepositsHistoricalRequest {
 	r.startBlock = &startBlock
 	return r
 }
 
+// The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
 func (r ApiDexGetDepositsHistoricalRequest) EndBlock(endBlock int64) ApiDexGetDepositsHistoricalRequest {
 	r.endBlock = &endBlock
 	return r
 }
 
+// The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
 func (r ApiDexGetDepositsHistoricalRequest) StartDate(startDate time.Time) ApiDexGetDepositsHistoricalRequest {
 	r.startDate = &startDate
 	return r
 }
 
+// The end date of timeframe.
 func (r ApiDexGetDepositsHistoricalRequest) EndDate(endDate time.Time) ApiDexGetDepositsHistoricalRequest {
 	r.endDate = &endDate
 	return r
 }
 
+// Identifier, format: (transaction hash)-(token id).
 func (r ApiDexGetDepositsHistoricalRequest) Id(id string) ApiDexGetDepositsHistoricalRequest {
 	r.id = &id
 	return r
 }
 
+// User address.
 func (r ApiDexGetDepositsHistoricalRequest) User(user string) ApiDexGetDepositsHistoricalRequest {
 	r.user = &user
 	return r
@@ -453,22 +459,22 @@ func (a *DexApiService) DexGetDepositsHistoricalExecute(r ApiDexGetDepositsHisto
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		localVarQueryParams.Add("id", parameterToString(*r.id, ""))
+		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
 	}
 	if r.user != nil {
-		localVarQueryParams.Add("user", parameterToString(*r.user, ""))
+		parameterAddToQuery(localVarQueryParams, "user", r.user, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -536,36 +542,43 @@ type ApiDexGetOrdersHistoricalRequest struct {
 	sellToken *string
 }
 
+// The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
 func (r ApiDexGetOrdersHistoricalRequest) StartBlock(startBlock int64) ApiDexGetOrdersHistoricalRequest {
 	r.startBlock = &startBlock
 	return r
 }
 
+// The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
 func (r ApiDexGetOrdersHistoricalRequest) EndBlock(endBlock int64) ApiDexGetOrdersHistoricalRequest {
 	r.endBlock = &endBlock
 	return r
 }
 
+// The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
 func (r ApiDexGetOrdersHistoricalRequest) StartDate(startDate time.Time) ApiDexGetOrdersHistoricalRequest {
 	r.startDate = &startDate
 	return r
 }
 
+// The end date of timeframe.
 func (r ApiDexGetOrdersHistoricalRequest) EndDate(endDate time.Time) ApiDexGetOrdersHistoricalRequest {
 	r.endDate = &endDate
 	return r
 }
 
+// Identifier, format: (owner address)-(order id)
 func (r ApiDexGetOrdersHistoricalRequest) Id(id string) ApiDexGetOrdersHistoricalRequest {
 	r.id = &id
 	return r
 }
 
+// Identifier of token that was bought.
 func (r ApiDexGetOrdersHistoricalRequest) BuyToken(buyToken string) ApiDexGetOrdersHistoricalRequest {
 	r.buyToken = &buyToken
 	return r
 }
 
+// Identifier of token that was sold.
 func (r ApiDexGetOrdersHistoricalRequest) SellToken(sellToken string) ApiDexGetOrdersHistoricalRequest {
 	r.sellToken = &sellToken
 	return r
@@ -612,25 +625,25 @@ func (a *DexApiService) DexGetOrdersHistoricalExecute(r ApiDexGetOrdersHistorica
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		localVarQueryParams.Add("id", parameterToString(*r.id, ""))
+		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
 	}
 	if r.buyToken != nil {
-		localVarQueryParams.Add("buy_token", parameterToString(*r.buyToken, ""))
+		parameterAddToQuery(localVarQueryParams, "buy_token", r.buyToken, "")
 	}
 	if r.sellToken != nil {
-		localVarQueryParams.Add("sell_token", parameterToString(*r.sellToken, ""))
+		parameterAddToQuery(localVarQueryParams, "sell_token", r.sellToken, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -696,26 +709,31 @@ type ApiDexGetPricesHistoricalRequest struct {
 	id *string
 }
 
+// The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
 func (r ApiDexGetPricesHistoricalRequest) StartBlock(startBlock int64) ApiDexGetPricesHistoricalRequest {
 	r.startBlock = &startBlock
 	return r
 }
 
+// The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
 func (r ApiDexGetPricesHistoricalRequest) EndBlock(endBlock int64) ApiDexGetPricesHistoricalRequest {
 	r.endBlock = &endBlock
 	return r
 }
 
+// The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
 func (r ApiDexGetPricesHistoricalRequest) StartDate(startDate time.Time) ApiDexGetPricesHistoricalRequest {
 	r.startDate = &startDate
 	return r
 }
 
+// The end date of timeframe.
 func (r ApiDexGetPricesHistoricalRequest) EndDate(endDate time.Time) ApiDexGetPricesHistoricalRequest {
 	r.endDate = &endDate
 	return r
 }
 
+// Identifier, format: (token id)-(batch id).
 func (r ApiDexGetPricesHistoricalRequest) Id(id string) ApiDexGetPricesHistoricalRequest {
 	r.id = &id
 	return r
@@ -762,19 +780,19 @@ func (a *DexApiService) DexGetPricesHistoricalExecute(r ApiDexGetPricesHistorica
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		localVarQueryParams.Add("id", parameterToString(*r.id, ""))
+		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -911,19 +929,19 @@ func (a *DexApiService) DexGetSolutionsHistoricalExecute(r ApiDexGetSolutionsHis
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		localVarQueryParams.Add("id", parameterToString(*r.id, ""))
+		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -1060,19 +1078,19 @@ func (a *DexApiService) DexGetStatsHistoricalExecute(r ApiDexGetStatsHistoricalR
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		localVarQueryParams.Add("id", parameterToString(*r.id, ""))
+		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -1230,28 +1248,28 @@ func (a *DexApiService) DexGetTokensHistoricalExecute(r ApiDexGetTokensHistorica
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		localVarQueryParams.Add("id", parameterToString(*r.id, ""))
+		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
 	}
 	if r.address != nil {
-		localVarQueryParams.Add("address", parameterToString(*r.address, ""))
+		parameterAddToQuery(localVarQueryParams, "address", r.address, "")
 	}
 	if r.symbol != nil {
-		localVarQueryParams.Add("symbol", parameterToString(*r.symbol, ""))
+		parameterAddToQuery(localVarQueryParams, "symbol", r.symbol, "")
 	}
 	if r.name != nil {
-		localVarQueryParams.Add("name", parameterToString(*r.name, ""))
+		parameterAddToQuery(localVarQueryParams, "name", r.name, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -1402,25 +1420,25 @@ func (a *DexApiService) DexGetTradesHistoricalExecute(r ApiDexGetTradesHistorica
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		localVarQueryParams.Add("id", parameterToString(*r.id, ""))
+		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
 	}
 	if r.buyToken != nil {
-		localVarQueryParams.Add("buy_token", parameterToString(*r.buyToken, ""))
+		parameterAddToQuery(localVarQueryParams, "buy_token", r.buyToken, "")
 	}
 	if r.sellToken != nil {
-		localVarQueryParams.Add("sell_token", parameterToString(*r.sellToken, ""))
+		parameterAddToQuery(localVarQueryParams, "sell_token", r.sellToken, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -1557,19 +1575,19 @@ func (a *DexApiService) DexGetUsersHistoricalExecute(r ApiDexGetUsersHistoricalR
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		localVarQueryParams.Add("id", parameterToString(*r.id, ""))
+		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -1636,31 +1654,37 @@ type ApiDexGetWithdrawRequestsHistoricalRequest struct {
 	user *string
 }
 
+// The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
 func (r ApiDexGetWithdrawRequestsHistoricalRequest) StartBlock(startBlock int64) ApiDexGetWithdrawRequestsHistoricalRequest {
 	r.startBlock = &startBlock
 	return r
 }
 
+// The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
 func (r ApiDexGetWithdrawRequestsHistoricalRequest) EndBlock(endBlock int64) ApiDexGetWithdrawRequestsHistoricalRequest {
 	r.endBlock = &endBlock
 	return r
 }
 
+// The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
 func (r ApiDexGetWithdrawRequestsHistoricalRequest) StartDate(startDate time.Time) ApiDexGetWithdrawRequestsHistoricalRequest {
 	r.startDate = &startDate
 	return r
 }
 
+// The end date of timeframe.
 func (r ApiDexGetWithdrawRequestsHistoricalRequest) EndDate(endDate time.Time) ApiDexGetWithdrawRequestsHistoricalRequest {
 	r.endDate = &endDate
 	return r
 }
 
+// Identifier, format: (transaction hash)-(id).
 func (r ApiDexGetWithdrawRequestsHistoricalRequest) Id(id string) ApiDexGetWithdrawRequestsHistoricalRequest {
 	r.id = &id
 	return r
 }
 
+// 
 func (r ApiDexGetWithdrawRequestsHistoricalRequest) User(user string) ApiDexGetWithdrawRequestsHistoricalRequest {
 	r.user = &user
 	return r
@@ -1707,22 +1731,22 @@ func (a *DexApiService) DexGetWithdrawRequestsHistoricalExecute(r ApiDexGetWithd
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		localVarQueryParams.Add("id", parameterToString(*r.id, ""))
+		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
 	}
 	if r.user != nil {
-		localVarQueryParams.Add("user", parameterToString(*r.user, ""))
+		parameterAddToQuery(localVarQueryParams, "user", r.user, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -1789,31 +1813,37 @@ type ApiDexGetWithdrawsHistoricalRequest struct {
 	user *string
 }
 
+// The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
 func (r ApiDexGetWithdrawsHistoricalRequest) StartBlock(startBlock int64) ApiDexGetWithdrawsHistoricalRequest {
 	r.startBlock = &startBlock
 	return r
 }
 
+// The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
 func (r ApiDexGetWithdrawsHistoricalRequest) EndBlock(endBlock int64) ApiDexGetWithdrawsHistoricalRequest {
 	r.endBlock = &endBlock
 	return r
 }
 
+// The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
 func (r ApiDexGetWithdrawsHistoricalRequest) StartDate(startDate time.Time) ApiDexGetWithdrawsHistoricalRequest {
 	r.startDate = &startDate
 	return r
 }
 
+// The end date of timeframe.
 func (r ApiDexGetWithdrawsHistoricalRequest) EndDate(endDate time.Time) ApiDexGetWithdrawsHistoricalRequest {
 	r.endDate = &endDate
 	return r
 }
 
+// Identifier, format: (transaction hash)-(id).
 func (r ApiDexGetWithdrawsHistoricalRequest) Id(id string) ApiDexGetWithdrawsHistoricalRequest {
 	r.id = &id
 	return r
 }
 
+// 
 func (r ApiDexGetWithdrawsHistoricalRequest) User(user string) ApiDexGetWithdrawsHistoricalRequest {
 	r.user = &user
 	return r
@@ -1860,22 +1890,22 @@ func (a *DexApiService) DexGetWithdrawsHistoricalExecute(r ApiDexGetWithdrawsHis
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		localVarQueryParams.Add("id", parameterToString(*r.id, ""))
+		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
 	}
 	if r.user != nil {
-		localVarQueryParams.Add("user", parameterToString(*r.user, ""))
+		parameterAddToQuery(localVarQueryParams, "user", r.user, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}

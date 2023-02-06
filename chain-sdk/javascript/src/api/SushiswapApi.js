@@ -258,12 +258,12 @@ export default class SushiswapApi {
      * Burns (historical)
      * Gets burns.
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.startBlock 
-     * @param {Number} opts.endBlock 
-     * @param {Date} opts.startDate 
-     * @param {Date} opts.endDate 
-     * @param {String} opts.id 
-     * @param {String} opts.pair 
+     * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param {Date} opts.startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param {Date} opts.endDate The end date of timeframe.
+     * @param {String} opts.id Identifier, format: (transaction id):(transaction.burns.length).
+     * @param {String} opts.pair Reference to pair.
      * @param {module:api/SushiswapApi~sushiswapGetBurnsHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/SushiswapBurnDTO>}
      */
@@ -456,13 +456,13 @@ export default class SushiswapApi {
      * LiquidityPositionSnapshots (historical)
      * Gets liquidityPositionSnapshots.
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.startBlock 
-     * @param {Number} opts.endBlock 
-     * @param {Date} opts.startDate 
-     * @param {Date} opts.endDate 
-     * @param {String} opts.id 
-     * @param {String} opts.user 
-     * @param {String} opts.pair 
+     * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param {Date} opts.startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param {Date} opts.endDate The end date of timeframe.
+     * @param {String} opts.id Identifier, format: (pair address)-(user address)-(timestamp)
+     * @param {String} opts.user Reference to user.
+     * @param {String} opts.pair Reference to the pair liquidity is being provided on.
      * @param {module:api/SushiswapApi~sushiswapGetLiquidityPositionSnapshotsHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/SushiswapLiquidityPositionSnapshotDTO>}
      */
@@ -509,13 +509,13 @@ export default class SushiswapApi {
      * LiquidityPositions (historical)
      * Gets liquidityPositions.
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.startBlock 
-     * @param {Number} opts.endBlock 
-     * @param {Date} opts.startDate 
-     * @param {Date} opts.endDate 
-     * @param {String} opts.id 
-     * @param {String} opts.user 
-     * @param {String} opts.pair 
+     * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param {Date} opts.startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param {Date} opts.endDate The end date of timeframe.
+     * @param {String} opts.id Identifier, format: (pair address)-(user address)
+     * @param {String} opts.user User address.
+     * @param {String} opts.pair Pair address.
      * @param {module:api/SushiswapApi~sushiswapGetLiquidityPositionsHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/SushiswapLiquidityPositionDTO>}
      */
@@ -562,12 +562,12 @@ export default class SushiswapApi {
      * Mints (historical)
      * Gets mints.
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.startBlock 
-     * @param {Number} opts.endBlock 
-     * @param {Date} opts.startDate 
-     * @param {Date} opts.endDate 
-     * @param {String} opts.id 
-     * @param {String} opts.pair 
+     * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param {Date} opts.startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param {Date} opts.endDate The end date of timeframe.
+     * @param {String} opts.id Identifier, format: (transaction hash)-(index in the transaction mint array).
+     * @param {String} opts.pair Reference to pair.
      * @param {module:api/SushiswapApi~sushiswapGetMintsHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/SushiswapMintDTO>}
      */
@@ -613,14 +613,14 @@ export default class SushiswapApi {
      * PairDayData (historical)
      * Gets pairDayData.
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.startBlock 
-     * @param {Number} opts.endBlock 
-     * @param {Date} opts.startDate 
-     * @param {Date} opts.endDate 
-     * @param {String} opts.id 
-     * @param {String} opts.pair 
-     * @param {String} opts.token0 
-     * @param {String} opts.token1 
+     * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param {Date} opts.startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param {Date} opts.endDate The end date of timeframe.
+     * @param {String} opts.id Identifier, format: (pair id)-(day start timestamp).
+     * @param {String} opts.pair Reference to pair.
+     * @param {String} opts.token0 Reference to token0.
+     * @param {String} opts.token1 Reference to token1.
      * @param {module:api/SushiswapApi~sushiswapGetPairDayDataHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/SushiswapPairDayDataDTO>}
      */
@@ -668,12 +668,12 @@ export default class SushiswapApi {
      * PairHourData (historical)
      * Gets pairHourData.
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.startBlock 
-     * @param {Number} opts.endBlock 
-     * @param {Date} opts.startDate 
-     * @param {Date} opts.endDate 
-     * @param {String} opts.id 
-     * @param {String} opts.pair 
+     * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param {Date} opts.startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param {Date} opts.endDate The end date of timeframe.
+     * @param {String} opts.id Identifier, format: (pair id)-(hour start timestamp).
+     * @param {String} opts.pair Reference to pair.
      * @param {module:api/SushiswapApi~sushiswapGetPairHourDataHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/SushiswapPairHourDataDTO>}
      */
@@ -719,14 +719,14 @@ export default class SushiswapApi {
      * Pairs (historical)
      * Gets pairs.
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.startBlock 
-     * @param {Number} opts.endBlock 
-     * @param {Date} opts.startDate 
-     * @param {Date} opts.endDate 
-     * @param {String} opts.id 
-     * @param {String} opts.name 
-     * @param {String} opts.token0 
-     * @param {String} opts.token1 
+     * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param {Date} opts.startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param {Date} opts.endDate The end date of timeframe.
+     * @param {String} opts.id Pair contract address.
+     * @param {String} opts.name Friendly name, format: (token0 name)-(token1 name)
+     * @param {String} opts.token0 Reference to token0 as stored in pair contract.
+     * @param {String} opts.token1 Reference to token0 as stored in pair contract.
      * @param {module:api/SushiswapApi~sushiswapGetPairsHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/SushiswapPairDTO>}
      */

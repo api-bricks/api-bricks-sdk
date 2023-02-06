@@ -439,12 +439,12 @@ export class SushiswapApi {
     /**
      * Gets burns.
      * @summary Burns (historical)
-     * @param startBlock 
-     * @param endBlock 
-     * @param startDate 
-     * @param endDate 
-     * @param id 
-     * @param pair 
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param endDate The end date of timeframe.
+     * @param id Identifier, format: (transaction id):(transaction.burns.length).
+     * @param pair Reference to pair.
      */
     public async sushiswapGetBurnsHistorical (startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pair?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<SushiswapBurnDTO>;  }> {
         const localVarPath = this.basePath + '/dapps/sushiswap/burns/historical';
@@ -792,13 +792,13 @@ export class SushiswapApi {
     /**
      * Gets liquidityPositionSnapshots.
      * @summary LiquidityPositionSnapshots (historical)
-     * @param startBlock 
-     * @param endBlock 
-     * @param startDate 
-     * @param endDate 
-     * @param id 
-     * @param user 
-     * @param pair 
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param endDate The end date of timeframe.
+     * @param id Identifier, format: (pair address)-(user address)-(timestamp)
+     * @param user Reference to user.
+     * @param pair Reference to the pair liquidity is being provided on.
      */
     public async sushiswapGetLiquidityPositionSnapshotsHistorical (startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, user?: string, pair?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<SushiswapLiquidityPositionSnapshotDTO>;  }> {
         const localVarPath = this.basePath + '/dapps/sushiswap/liquidityPositionSnapshots/historical';
@@ -889,13 +889,13 @@ export class SushiswapApi {
     /**
      * Gets liquidityPositions.
      * @summary LiquidityPositions (historical)
-     * @param startBlock 
-     * @param endBlock 
-     * @param startDate 
-     * @param endDate 
-     * @param id 
-     * @param user 
-     * @param pair 
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param endDate The end date of timeframe.
+     * @param id Identifier, format: (pair address)-(user address)
+     * @param user User address.
+     * @param pair Pair address.
      */
     public async sushiswapGetLiquidityPositionsHistorical (startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, user?: string, pair?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<SushiswapLiquidityPositionDTO>;  }> {
         const localVarPath = this.basePath + '/dapps/sushiswap/liquidityPositions/historical';
@@ -986,12 +986,12 @@ export class SushiswapApi {
     /**
      * Gets mints.
      * @summary Mints (historical)
-     * @param startBlock 
-     * @param endBlock 
-     * @param startDate 
-     * @param endDate 
-     * @param id 
-     * @param pair 
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param endDate The end date of timeframe.
+     * @param id Identifier, format: (transaction hash)-(index in the transaction mint array).
+     * @param pair Reference to pair.
      */
     public async sushiswapGetMintsHistorical (startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pair?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<SushiswapMintDTO>;  }> {
         const localVarPath = this.basePath + '/dapps/sushiswap/mints/historical';
@@ -1078,14 +1078,14 @@ export class SushiswapApi {
     /**
      * Gets pairDayData.
      * @summary PairDayData (historical)
-     * @param startBlock 
-     * @param endBlock 
-     * @param startDate 
-     * @param endDate 
-     * @param id 
-     * @param pair 
-     * @param token0 
-     * @param token1 
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param endDate The end date of timeframe.
+     * @param id Identifier, format: (pair id)-(day start timestamp).
+     * @param pair Reference to pair.
+     * @param token0 Reference to token0.
+     * @param token1 Reference to token1.
      */
     public async sushiswapGetPairDayDataHistorical (startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pair?: string, token0?: string, token1?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<SushiswapPairDayDataDTO>;  }> {
         const localVarPath = this.basePath + '/dapps/sushiswap/pairDayData/historical';
@@ -1180,12 +1180,12 @@ export class SushiswapApi {
     /**
      * Gets pairHourData.
      * @summary PairHourData (historical)
-     * @param startBlock 
-     * @param endBlock 
-     * @param startDate 
-     * @param endDate 
-     * @param id 
-     * @param pair 
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param endDate The end date of timeframe.
+     * @param id Identifier, format: (pair id)-(hour start timestamp).
+     * @param pair Reference to pair.
      */
     public async sushiswapGetPairHourDataHistorical (startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pair?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<SushiswapPairHourDataDTO>;  }> {
         const localVarPath = this.basePath + '/dapps/sushiswap/pairHourData/historical';
@@ -1272,14 +1272,14 @@ export class SushiswapApi {
     /**
      * Gets pairs.
      * @summary Pairs (historical)
-     * @param startBlock 
-     * @param endBlock 
-     * @param startDate 
-     * @param endDate 
-     * @param id 
-     * @param name 
-     * @param token0 
-     * @param token1 
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param endDate The end date of timeframe.
+     * @param id Pair contract address.
+     * @param name Friendly name, format: (token0 name)-(token1 name)
+     * @param token0 Reference to token0 as stored in pair contract.
+     * @param token1 Reference to token0 as stored in pair contract.
      */
     public async sushiswapGetPairsHistorical (startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, name?: string, token0?: string, token1?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<SushiswapPairDTO>;  }> {
         const localVarPath = this.basePath + '/dapps/sushiswap/pairs/historical';

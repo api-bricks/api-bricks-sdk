@@ -310,12 +310,12 @@ export class DexApi {
     /**
      * Gets deposits.
      * @summary Deposits (historical)
-     * @param startBlock 
-     * @param endBlock 
-     * @param startDate 
-     * @param endDate 
-     * @param id 
-     * @param user 
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param endDate The end date of timeframe.
+     * @param id Identifier, format: (transaction hash)-(token id).
+     * @param user User address.
      */
     public async dexGetDepositsHistorical (startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, user?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<DexDepositDTO>;  }> {
         const localVarPath = this.basePath + '/dapps/dex/deposits/historical';
@@ -402,13 +402,13 @@ export class DexApi {
     /**
      * Gets orders.
      * @summary Orders (historical)
-     * @param startBlock 
-     * @param endBlock 
-     * @param startDate 
-     * @param endDate 
-     * @param id 
-     * @param buyToken 
-     * @param sellToken 
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param endDate The end date of timeframe.
+     * @param id Identifier, format: (owner address)-(order id)
+     * @param buyToken Identifier of token that was bought.
+     * @param sellToken Identifier of token that was sold.
      */
     public async dexGetOrdersHistorical (startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, buyToken?: string, sellToken?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<DexOrderDTO>;  }> {
         const localVarPath = this.basePath + '/dapps/dex/orders/historical';
@@ -499,11 +499,11 @@ export class DexApi {
     /**
      * Gets prices.
      * @summary Prices (historical)
-     * @param startBlock 
-     * @param endBlock 
-     * @param startDate 
-     * @param endDate 
-     * @param id 
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param endDate The end date of timeframe.
+     * @param id Identifier, format: (token id)-(batch id).
      */
     public async dexGetPricesHistorical (startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<DexPriceDTO>;  }> {
         const localVarPath = this.basePath + '/dapps/dex/prices/historical';
@@ -1046,11 +1046,11 @@ export class DexApi {
     /**
      * Gets withdrawRequests.
      * @summary WithdrawRequests (historical)
-     * @param startBlock 
-     * @param endBlock 
-     * @param startDate 
-     * @param endDate 
-     * @param id 
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param endDate The end date of timeframe.
+     * @param id Identifier, format: (transaction hash)-(id).
      * @param user 
      */
     public async dexGetWithdrawRequestsHistorical (startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, user?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<DexWithdrawRequestDTO>;  }> {
@@ -1138,11 +1138,11 @@ export class DexApi {
     /**
      * Gets withdraws.
      * @summary Withdraws (historical)
-     * @param startBlock 
-     * @param endBlock 
-     * @param startDate 
-     * @param endDate 
-     * @param id 
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param endDate The end date of timeframe.
+     * @param id Identifier, format: (transaction hash)-(id).
      * @param user 
      */
     public async dexGetWithdrawsHistorical (startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, user?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<DexWithdrawDTO>;  }> {

@@ -432,12 +432,12 @@ public class DexApi {
   /**
   * Deposits (historical)
   * Gets deposits.
-   * @param startBlock 
-   * @param endBlock 
-   * @param startDate 
-   * @param endDate 
-   * @param id 
-   * @param user 
+   * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+   * @param endDate The end date of timeframe.
+   * @param id Identifier, format: (transaction hash)-(token id).
+   * @param user User address.
    * @return List<DexDepositDTO>
   */
   public List<DexDepositDTO> dexGetDepositsHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String user) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
@@ -500,7 +500,7 @@ public class DexApi {
       /**
    * Deposits (historical)
    * Gets deposits.
-   * @param startBlock    * @param endBlock    * @param startDate    * @param endDate    * @param id    * @param user 
+   * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id Identifier, format: (transaction hash)-(token id).   * @param user User address.
   */
   public void dexGetDepositsHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String user, final Response.Listener<List<DexDepositDTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
@@ -566,13 +566,13 @@ public class DexApi {
   /**
   * Orders (historical)
   * Gets orders.
-   * @param startBlock 
-   * @param endBlock 
-   * @param startDate 
-   * @param endDate 
-   * @param id 
-   * @param buyToken 
-   * @param sellToken 
+   * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+   * @param endDate The end date of timeframe.
+   * @param id Identifier, format: (owner address)-(order id)
+   * @param buyToken Identifier of token that was bought.
+   * @param sellToken Identifier of token that was sold.
    * @return List<DexOrderDTO>
   */
   public List<DexOrderDTO> dexGetOrdersHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String buyToken, String sellToken) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
@@ -636,7 +636,7 @@ public class DexApi {
       /**
    * Orders (historical)
    * Gets orders.
-   * @param startBlock    * @param endBlock    * @param startDate    * @param endDate    * @param id    * @param buyToken    * @param sellToken 
+   * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id Identifier, format: (owner address)-(order id)   * @param buyToken Identifier of token that was bought.   * @param sellToken Identifier of token that was sold.
   */
   public void dexGetOrdersHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String buyToken, String sellToken, final Response.Listener<List<DexOrderDTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
@@ -703,11 +703,11 @@ public class DexApi {
   /**
   * Prices (historical)
   * Gets prices.
-   * @param startBlock 
-   * @param endBlock 
-   * @param startDate 
-   * @param endDate 
-   * @param id 
+   * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+   * @param endDate The end date of timeframe.
+   * @param id Identifier, format: (token id)-(batch id).
    * @return List<DexPriceDTO>
   */
   public List<DexPriceDTO> dexGetPricesHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
@@ -769,7 +769,7 @@ public class DexApi {
       /**
    * Prices (historical)
    * Gets prices.
-   * @param startBlock    * @param endBlock    * @param startDate    * @param endDate    * @param id 
+   * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id Identifier, format: (token id)-(batch id).
   */
   public void dexGetPricesHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, final Response.Listener<List<DexPriceDTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
@@ -1504,11 +1504,11 @@ public class DexApi {
   /**
   * WithdrawRequests (historical)
   * Gets withdrawRequests.
-   * @param startBlock 
-   * @param endBlock 
-   * @param startDate 
-   * @param endDate 
-   * @param id 
+   * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+   * @param endDate The end date of timeframe.
+   * @param id Identifier, format: (transaction hash)-(id).
    * @param user 
    * @return List<DexWithdrawRequestDTO>
   */
@@ -1572,7 +1572,7 @@ public class DexApi {
       /**
    * WithdrawRequests (historical)
    * Gets withdrawRequests.
-   * @param startBlock    * @param endBlock    * @param startDate    * @param endDate    * @param id    * @param user 
+   * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id Identifier, format: (transaction hash)-(id).   * @param user 
   */
   public void dexGetWithdrawRequestsHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String user, final Response.Listener<List<DexWithdrawRequestDTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
@@ -1638,11 +1638,11 @@ public class DexApi {
   /**
   * Withdraws (historical)
   * Gets withdraws.
-   * @param startBlock 
-   * @param endBlock 
-   * @param startDate 
-   * @param endDate 
-   * @param id 
+   * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+   * @param endDate The end date of timeframe.
+   * @param id Identifier, format: (transaction hash)-(id).
    * @param user 
    * @return List<DexWithdrawDTO>
   */
@@ -1706,7 +1706,7 @@ public class DexApi {
       /**
    * Withdraws (historical)
    * Gets withdraws.
-   * @param startBlock    * @param endBlock    * @param startDate    * @param endDate    * @param id    * @param user 
+   * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id Identifier, format: (transaction hash)-(id).   * @param user 
   */
   public void dexGetWithdrawsHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String user, final Response.Listener<List<DexWithdrawDTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;

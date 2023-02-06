@@ -54,6 +54,7 @@ docs/DexTradeDTO.md
 docs/DexUserDTO.md
 docs/DexWithdrawDTO.md
 docs/DexWithdrawRequestDTO.md
+docs/MetadataApi.md
 docs/NumericsBigInteger.md
 docs/SushiswapApi.md
 docs/SushiswapBundleDTO.md
@@ -114,6 +115,7 @@ src/ApiClient.js
 src/api/CowApi.js
 src/api/CurveApi.js
 src/api/DexApi.js
+src/api/MetadataApi.js
 src/api/SushiswapApi.js
 src/api/UniswapV2Api.js
 src/api/UniswapV3Api.js
@@ -219,6 +221,7 @@ src/model/UniswapV3UniswapDayDataDTO.js
 test/api/CowApi.spec.js
 test/api/CurveApi.spec.js
 test/api/DexApi.spec.js
+test/api/MetadataApi.spec.js
 test/api/SushiswapApi.spec.js
 test/api/UniswapV2Api.spec.js
 test/api/UniswapV3Api.spec.js

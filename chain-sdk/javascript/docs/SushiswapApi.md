@@ -273,12 +273,12 @@ import OnChainDappsRestApi from 'on_chain_dapps_rest_api';
 
 let apiInstance = new OnChainDappsRestApi.SushiswapApi();
 let opts = {
-  'startBlock': 789, // Number | 
-  'endBlock': 789, // Number | 
-  'startDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
-  'endDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
-  'id': "id_example", // String | 
-  'pair': "pair_example" // String | 
+  'startBlock': 789, // Number | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+  'endBlock': 789, // Number | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+  'startDate': new Date("2013-10-20T19:20:30+01:00"), // Date | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+  'endDate': new Date("2013-10-20T19:20:30+01:00"), // Date | The end date of timeframe.
+  'id': "id_example", // String | Identifier, format: (transaction id):(transaction.burns.length).
+  'pair': "pair_example" // String | Reference to pair.
 };
 apiInstance.sushiswapGetBurnsHistorical(opts, (error, data, response) => {
   if (error) {
@@ -294,12 +294,12 @@ apiInstance.sushiswapGetBurnsHistorical(opts, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startBlock** | **Number**|  | [optional] 
- **endBlock** | **Number**|  | [optional] 
- **startDate** | **Date**|  | [optional] 
- **endDate** | **Date**|  | [optional] 
- **id** | **String**|  | [optional] 
- **pair** | **String**|  | [optional] 
+ **startBlock** | **Number**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
+ **endBlock** | **Number**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
+ **startDate** | **Date**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
+ **endDate** | **Date**| The end date of timeframe. | [optional] 
+ **id** | **String**| Identifier, format: (transaction id):(transaction.burns.length). | [optional] 
+ **pair** | **String**| Reference to pair. | [optional] 
 
 ### Return type
 
@@ -495,13 +495,13 @@ import OnChainDappsRestApi from 'on_chain_dapps_rest_api';
 
 let apiInstance = new OnChainDappsRestApi.SushiswapApi();
 let opts = {
-  'startBlock': 789, // Number | 
-  'endBlock': 789, // Number | 
-  'startDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
-  'endDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
-  'id': "id_example", // String | 
-  'user': "user_example", // String | 
-  'pair': "pair_example" // String | 
+  'startBlock': 789, // Number | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+  'endBlock': 789, // Number | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+  'startDate': new Date("2013-10-20T19:20:30+01:00"), // Date | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+  'endDate': new Date("2013-10-20T19:20:30+01:00"), // Date | The end date of timeframe.
+  'id': "id_example", // String | Identifier, format: (pair address)-(user address)-(timestamp)
+  'user': "user_example", // String | Reference to user.
+  'pair': "pair_example" // String | Reference to the pair liquidity is being provided on.
 };
 apiInstance.sushiswapGetLiquidityPositionSnapshotsHistorical(opts, (error, data, response) => {
   if (error) {
@@ -517,13 +517,13 @@ apiInstance.sushiswapGetLiquidityPositionSnapshotsHistorical(opts, (error, data,
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startBlock** | **Number**|  | [optional] 
- **endBlock** | **Number**|  | [optional] 
- **startDate** | **Date**|  | [optional] 
- **endDate** | **Date**|  | [optional] 
- **id** | **String**|  | [optional] 
- **user** | **String**|  | [optional] 
- **pair** | **String**|  | [optional] 
+ **startBlock** | **Number**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
+ **endBlock** | **Number**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
+ **startDate** | **Date**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
+ **endDate** | **Date**| The end date of timeframe. | [optional] 
+ **id** | **String**| Identifier, format: (pair address)-(user address)-(timestamp) | [optional] 
+ **user** | **String**| Reference to user. | [optional] 
+ **pair** | **String**| Reference to the pair liquidity is being provided on. | [optional] 
 
 ### Return type
 
@@ -554,13 +554,13 @@ import OnChainDappsRestApi from 'on_chain_dapps_rest_api';
 
 let apiInstance = new OnChainDappsRestApi.SushiswapApi();
 let opts = {
-  'startBlock': 789, // Number | 
-  'endBlock': 789, // Number | 
-  'startDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
-  'endDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
-  'id': "id_example", // String | 
-  'user': "user_example", // String | 
-  'pair': "pair_example" // String | 
+  'startBlock': 789, // Number | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+  'endBlock': 789, // Number | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+  'startDate': new Date("2013-10-20T19:20:30+01:00"), // Date | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+  'endDate': new Date("2013-10-20T19:20:30+01:00"), // Date | The end date of timeframe.
+  'id': "id_example", // String | Identifier, format: (pair address)-(user address)
+  'user': "user_example", // String | User address.
+  'pair': "pair_example" // String | Pair address.
 };
 apiInstance.sushiswapGetLiquidityPositionsHistorical(opts, (error, data, response) => {
   if (error) {
@@ -576,13 +576,13 @@ apiInstance.sushiswapGetLiquidityPositionsHistorical(opts, (error, data, respons
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startBlock** | **Number**|  | [optional] 
- **endBlock** | **Number**|  | [optional] 
- **startDate** | **Date**|  | [optional] 
- **endDate** | **Date**|  | [optional] 
- **id** | **String**|  | [optional] 
- **user** | **String**|  | [optional] 
- **pair** | **String**|  | [optional] 
+ **startBlock** | **Number**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
+ **endBlock** | **Number**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
+ **startDate** | **Date**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
+ **endDate** | **Date**| The end date of timeframe. | [optional] 
+ **id** | **String**| Identifier, format: (pair address)-(user address) | [optional] 
+ **user** | **String**| User address. | [optional] 
+ **pair** | **String**| Pair address. | [optional] 
 
 ### Return type
 
@@ -613,12 +613,12 @@ import OnChainDappsRestApi from 'on_chain_dapps_rest_api';
 
 let apiInstance = new OnChainDappsRestApi.SushiswapApi();
 let opts = {
-  'startBlock': 789, // Number | 
-  'endBlock': 789, // Number | 
-  'startDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
-  'endDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
-  'id': "id_example", // String | 
-  'pair': "pair_example" // String | 
+  'startBlock': 789, // Number | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+  'endBlock': 789, // Number | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+  'startDate': new Date("2013-10-20T19:20:30+01:00"), // Date | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+  'endDate': new Date("2013-10-20T19:20:30+01:00"), // Date | The end date of timeframe.
+  'id': "id_example", // String | Identifier, format: (transaction hash)-(index in the transaction mint array).
+  'pair': "pair_example" // String | Reference to pair.
 };
 apiInstance.sushiswapGetMintsHistorical(opts, (error, data, response) => {
   if (error) {
@@ -634,12 +634,12 @@ apiInstance.sushiswapGetMintsHistorical(opts, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startBlock** | **Number**|  | [optional] 
- **endBlock** | **Number**|  | [optional] 
- **startDate** | **Date**|  | [optional] 
- **endDate** | **Date**|  | [optional] 
- **id** | **String**|  | [optional] 
- **pair** | **String**|  | [optional] 
+ **startBlock** | **Number**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
+ **endBlock** | **Number**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
+ **startDate** | **Date**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
+ **endDate** | **Date**| The end date of timeframe. | [optional] 
+ **id** | **String**| Identifier, format: (transaction hash)-(index in the transaction mint array). | [optional] 
+ **pair** | **String**| Reference to pair. | [optional] 
 
 ### Return type
 
@@ -670,14 +670,14 @@ import OnChainDappsRestApi from 'on_chain_dapps_rest_api';
 
 let apiInstance = new OnChainDappsRestApi.SushiswapApi();
 let opts = {
-  'startBlock': 789, // Number | 
-  'endBlock': 789, // Number | 
-  'startDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
-  'endDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
-  'id': "id_example", // String | 
-  'pair': "pair_example", // String | 
-  'token0': "token0_example", // String | 
-  'token1': "token1_example" // String | 
+  'startBlock': 789, // Number | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+  'endBlock': 789, // Number | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+  'startDate': new Date("2013-10-20T19:20:30+01:00"), // Date | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+  'endDate': new Date("2013-10-20T19:20:30+01:00"), // Date | The end date of timeframe.
+  'id': "id_example", // String | Identifier, format: (pair id)-(day start timestamp).
+  'pair': "pair_example", // String | Reference to pair.
+  'token0': "token0_example", // String | Reference to token0.
+  'token1': "token1_example" // String | Reference to token1.
 };
 apiInstance.sushiswapGetPairDayDataHistorical(opts, (error, data, response) => {
   if (error) {
@@ -693,14 +693,14 @@ apiInstance.sushiswapGetPairDayDataHistorical(opts, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startBlock** | **Number**|  | [optional] 
- **endBlock** | **Number**|  | [optional] 
- **startDate** | **Date**|  | [optional] 
- **endDate** | **Date**|  | [optional] 
- **id** | **String**|  | [optional] 
- **pair** | **String**|  | [optional] 
- **token0** | **String**|  | [optional] 
- **token1** | **String**|  | [optional] 
+ **startBlock** | **Number**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
+ **endBlock** | **Number**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
+ **startDate** | **Date**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
+ **endDate** | **Date**| The end date of timeframe. | [optional] 
+ **id** | **String**| Identifier, format: (pair id)-(day start timestamp). | [optional] 
+ **pair** | **String**| Reference to pair. | [optional] 
+ **token0** | **String**| Reference to token0. | [optional] 
+ **token1** | **String**| Reference to token1. | [optional] 
 
 ### Return type
 
@@ -731,12 +731,12 @@ import OnChainDappsRestApi from 'on_chain_dapps_rest_api';
 
 let apiInstance = new OnChainDappsRestApi.SushiswapApi();
 let opts = {
-  'startBlock': 789, // Number | 
-  'endBlock': 789, // Number | 
-  'startDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
-  'endDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
-  'id': "id_example", // String | 
-  'pair': "pair_example" // String | 
+  'startBlock': 789, // Number | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+  'endBlock': 789, // Number | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+  'startDate': new Date("2013-10-20T19:20:30+01:00"), // Date | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+  'endDate': new Date("2013-10-20T19:20:30+01:00"), // Date | The end date of timeframe.
+  'id': "id_example", // String | Identifier, format: (pair id)-(hour start timestamp).
+  'pair': "pair_example" // String | Reference to pair.
 };
 apiInstance.sushiswapGetPairHourDataHistorical(opts, (error, data, response) => {
   if (error) {
@@ -752,12 +752,12 @@ apiInstance.sushiswapGetPairHourDataHistorical(opts, (error, data, response) => 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startBlock** | **Number**|  | [optional] 
- **endBlock** | **Number**|  | [optional] 
- **startDate** | **Date**|  | [optional] 
- **endDate** | **Date**|  | [optional] 
- **id** | **String**|  | [optional] 
- **pair** | **String**|  | [optional] 
+ **startBlock** | **Number**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
+ **endBlock** | **Number**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
+ **startDate** | **Date**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
+ **endDate** | **Date**| The end date of timeframe. | [optional] 
+ **id** | **String**| Identifier, format: (pair id)-(hour start timestamp). | [optional] 
+ **pair** | **String**| Reference to pair. | [optional] 
 
 ### Return type
 
@@ -788,14 +788,14 @@ import OnChainDappsRestApi from 'on_chain_dapps_rest_api';
 
 let apiInstance = new OnChainDappsRestApi.SushiswapApi();
 let opts = {
-  'startBlock': 789, // Number | 
-  'endBlock': 789, // Number | 
-  'startDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
-  'endDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
-  'id': "id_example", // String | 
-  'name': "name_example", // String | 
-  'token0': "token0_example", // String | 
-  'token1': "token1_example" // String | 
+  'startBlock': 789, // Number | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+  'endBlock': 789, // Number | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+  'startDate': new Date("2013-10-20T19:20:30+01:00"), // Date | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+  'endDate': new Date("2013-10-20T19:20:30+01:00"), // Date | The end date of timeframe.
+  'id': "id_example", // String | Pair contract address.
+  'name': "name_example", // String | Friendly name, format: (token0 name)-(token1 name)
+  'token0': "token0_example", // String | Reference to token0 as stored in pair contract.
+  'token1': "token1_example" // String | Reference to token0 as stored in pair contract.
 };
 apiInstance.sushiswapGetPairsHistorical(opts, (error, data, response) => {
   if (error) {
@@ -811,14 +811,14 @@ apiInstance.sushiswapGetPairsHistorical(opts, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startBlock** | **Number**|  | [optional] 
- **endBlock** | **Number**|  | [optional] 
- **startDate** | **Date**|  | [optional] 
- **endDate** | **Date**|  | [optional] 
- **id** | **String**|  | [optional] 
- **name** | **String**|  | [optional] 
- **token0** | **String**|  | [optional] 
- **token1** | **String**|  | [optional] 
+ **startBlock** | **Number**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
+ **endBlock** | **Number**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
+ **startDate** | **Date**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
+ **endDate** | **Date**| The end date of timeframe. | [optional] 
+ **id** | **String**| Pair contract address. | [optional] 
+ **name** | **String**| Friendly name, format: (token0 name)-(token1 name) | [optional] 
+ **token0** | **String**| Reference to token0 as stored in pair contract. | [optional] 
+ **token1** | **String**| Reference to token0 as stored in pair contract. | [optional] 
 
 ### Return type
 

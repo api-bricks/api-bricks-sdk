@@ -239,7 +239,7 @@ sushiswap_token_day_data_dto_t *sushiswap_token_day_data_dto_parseFromJSON(cJSON
     // sushiswap_token_day_data_dto->entry_time
     cJSON *entry_time = cJSON_GetObjectItemCaseSensitive(sushiswap_token_day_data_dtoJSON, "entry_time");
     if (entry_time) { 
-    if(!cJSON_IsString(entry_time))
+    if(!cJSON_IsString(entry_time) && !cJSON_IsNull(entry_time))
     {
     goto end; //DateTime
     }
@@ -248,7 +248,7 @@ sushiswap_token_day_data_dto_t *sushiswap_token_day_data_dto_parseFromJSON(cJSON
     // sushiswap_token_day_data_dto->recv_time
     cJSON *recv_time = cJSON_GetObjectItemCaseSensitive(sushiswap_token_day_data_dtoJSON, "recv_time");
     if (recv_time) { 
-    if(!cJSON_IsString(recv_time))
+    if(!cJSON_IsString(recv_time) && !cJSON_IsNull(recv_time))
     {
     goto end; //DateTime
     }
@@ -266,7 +266,7 @@ sushiswap_token_day_data_dto_t *sushiswap_token_day_data_dto_parseFromJSON(cJSON
     // sushiswap_token_day_data_dto->id
     cJSON *id = cJSON_GetObjectItemCaseSensitive(sushiswap_token_day_data_dtoJSON, "id");
     if (id) { 
-    if(!cJSON_IsString(id))
+    if(!cJSON_IsString(id) && !cJSON_IsNull(id))
     {
     goto end; //String
     }
@@ -284,7 +284,7 @@ sushiswap_token_day_data_dto_t *sushiswap_token_day_data_dto_parseFromJSON(cJSON
     // sushiswap_token_day_data_dto->token
     cJSON *token = cJSON_GetObjectItemCaseSensitive(sushiswap_token_day_data_dtoJSON, "token");
     if (token) { 
-    if(!cJSON_IsString(token))
+    if(!cJSON_IsString(token) && !cJSON_IsNull(token))
     {
     goto end; //String
     }
@@ -293,7 +293,7 @@ sushiswap_token_day_data_dto_t *sushiswap_token_day_data_dto_parseFromJSON(cJSON
     // sushiswap_token_day_data_dto->volume
     cJSON *volume = cJSON_GetObjectItemCaseSensitive(sushiswap_token_day_data_dtoJSON, "volume");
     if (volume) { 
-    if(!cJSON_IsString(volume))
+    if(!cJSON_IsString(volume) && !cJSON_IsNull(volume))
     {
     goto end; //String
     }
@@ -302,7 +302,7 @@ sushiswap_token_day_data_dto_t *sushiswap_token_day_data_dto_parseFromJSON(cJSON
     // sushiswap_token_day_data_dto->volume_eth
     cJSON *volume_eth = cJSON_GetObjectItemCaseSensitive(sushiswap_token_day_data_dtoJSON, "volume_eth");
     if (volume_eth) { 
-    if(!cJSON_IsString(volume_eth))
+    if(!cJSON_IsString(volume_eth) && !cJSON_IsNull(volume_eth))
     {
     goto end; //String
     }
@@ -311,7 +311,7 @@ sushiswap_token_day_data_dto_t *sushiswap_token_day_data_dto_parseFromJSON(cJSON
     // sushiswap_token_day_data_dto->volume_usd
     cJSON *volume_usd = cJSON_GetObjectItemCaseSensitive(sushiswap_token_day_data_dtoJSON, "volume_usd");
     if (volume_usd) { 
-    if(!cJSON_IsString(volume_usd))
+    if(!cJSON_IsString(volume_usd) && !cJSON_IsNull(volume_usd))
     {
     goto end; //String
     }
@@ -320,7 +320,7 @@ sushiswap_token_day_data_dto_t *sushiswap_token_day_data_dto_parseFromJSON(cJSON
     // sushiswap_token_day_data_dto->tx_count
     cJSON *tx_count = cJSON_GetObjectItemCaseSensitive(sushiswap_token_day_data_dtoJSON, "tx_count");
     if (tx_count) { 
-    if(!cJSON_IsString(tx_count))
+    if(!cJSON_IsString(tx_count) && !cJSON_IsNull(tx_count))
     {
     goto end; //String
     }
@@ -329,7 +329,7 @@ sushiswap_token_day_data_dto_t *sushiswap_token_day_data_dto_parseFromJSON(cJSON
     // sushiswap_token_day_data_dto->liquidity
     cJSON *liquidity = cJSON_GetObjectItemCaseSensitive(sushiswap_token_day_data_dtoJSON, "liquidity");
     if (liquidity) { 
-    if(!cJSON_IsString(liquidity))
+    if(!cJSON_IsString(liquidity) && !cJSON_IsNull(liquidity))
     {
     goto end; //String
     }
@@ -338,7 +338,7 @@ sushiswap_token_day_data_dto_t *sushiswap_token_day_data_dto_parseFromJSON(cJSON
     // sushiswap_token_day_data_dto->liquidity_eth
     cJSON *liquidity_eth = cJSON_GetObjectItemCaseSensitive(sushiswap_token_day_data_dtoJSON, "liquidity_eth");
     if (liquidity_eth) { 
-    if(!cJSON_IsString(liquidity_eth))
+    if(!cJSON_IsString(liquidity_eth) && !cJSON_IsNull(liquidity_eth))
     {
     goto end; //String
     }
@@ -347,7 +347,7 @@ sushiswap_token_day_data_dto_t *sushiswap_token_day_data_dto_parseFromJSON(cJSON
     // sushiswap_token_day_data_dto->liquidity_usd
     cJSON *liquidity_usd = cJSON_GetObjectItemCaseSensitive(sushiswap_token_day_data_dtoJSON, "liquidity_usd");
     if (liquidity_usd) { 
-    if(!cJSON_IsString(liquidity_usd))
+    if(!cJSON_IsString(liquidity_usd) && !cJSON_IsNull(liquidity_usd))
     {
     goto end; //String
     }
@@ -356,7 +356,7 @@ sushiswap_token_day_data_dto_t *sushiswap_token_day_data_dto_parseFromJSON(cJSON
     // sushiswap_token_day_data_dto->price_usd
     cJSON *price_usd = cJSON_GetObjectItemCaseSensitive(sushiswap_token_day_data_dtoJSON, "price_usd");
     if (price_usd) { 
-    if(!cJSON_IsString(price_usd))
+    if(!cJSON_IsString(price_usd) && !cJSON_IsNull(price_usd))
     {
     goto end; //String
     }
@@ -373,20 +373,20 @@ sushiswap_token_day_data_dto_t *sushiswap_token_day_data_dto_parseFromJSON(cJSON
 
 
     sushiswap_token_day_data_dto_local_var = sushiswap_token_day_data_dto_create (
-        entry_time ? strdup(entry_time->valuestring) : NULL,
-        recv_time ? strdup(recv_time->valuestring) : NULL,
+        entry_time && !cJSON_IsNull(entry_time) ? strdup(entry_time->valuestring) : NULL,
+        recv_time && !cJSON_IsNull(recv_time) ? strdup(recv_time->valuestring) : NULL,
         block_number ? block_number->valuedouble : 0,
-        id ? strdup(id->valuestring) : NULL,
+        id && !cJSON_IsNull(id) ? strdup(id->valuestring) : NULL,
         date ? date->valuedouble : 0,
-        token ? strdup(token->valuestring) : NULL,
-        volume ? strdup(volume->valuestring) : NULL,
-        volume_eth ? strdup(volume_eth->valuestring) : NULL,
-        volume_usd ? strdup(volume_usd->valuestring) : NULL,
-        tx_count ? strdup(tx_count->valuestring) : NULL,
-        liquidity ? strdup(liquidity->valuestring) : NULL,
-        liquidity_eth ? strdup(liquidity_eth->valuestring) : NULL,
-        liquidity_usd ? strdup(liquidity_usd->valuestring) : NULL,
-        price_usd ? strdup(price_usd->valuestring) : NULL,
+        token && !cJSON_IsNull(token) ? strdup(token->valuestring) : NULL,
+        volume && !cJSON_IsNull(volume) ? strdup(volume->valuestring) : NULL,
+        volume_eth && !cJSON_IsNull(volume_eth) ? strdup(volume_eth->valuestring) : NULL,
+        volume_usd && !cJSON_IsNull(volume_usd) ? strdup(volume_usd->valuestring) : NULL,
+        tx_count && !cJSON_IsNull(tx_count) ? strdup(tx_count->valuestring) : NULL,
+        liquidity && !cJSON_IsNull(liquidity) ? strdup(liquidity->valuestring) : NULL,
+        liquidity_eth && !cJSON_IsNull(liquidity_eth) ? strdup(liquidity_eth->valuestring) : NULL,
+        liquidity_usd && !cJSON_IsNull(liquidity_usd) ? strdup(liquidity_usd->valuestring) : NULL,
+        price_usd && !cJSON_IsNull(price_usd) ? strdup(price_usd->valuestring) : NULL,
         vid ? vid->valuedouble : 0
         );
 

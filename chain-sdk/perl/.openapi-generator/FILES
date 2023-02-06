@@ -54,6 +54,7 @@ docs/DexTradeDTO.md
 docs/DexUserDTO.md
 docs/DexWithdrawDTO.md
 docs/DexWithdrawRequestDTO.md
+docs/MetadataApi.md
 docs/NumericsBigInteger.md
 docs/SushiswapApi.md
 docs/SushiswapBundleDTO.md
@@ -114,6 +115,7 @@ lib/WWW/OpenAPIClient/Configuration.pm
 lib/WWW/OpenAPIClient/CowApi.pm
 lib/WWW/OpenAPIClient/CurveApi.pm
 lib/WWW/OpenAPIClient/DexApi.pm
+lib/WWW/OpenAPIClient/MetadataApi.pm
 lib/WWW/OpenAPIClient/Object/CowOrderDTO.pm
 lib/WWW/OpenAPIClient/Object/CowSettlementDTO.pm
 lib/WWW/OpenAPIClient/Object/CowTokenDTO.pm
@@ -268,6 +270,7 @@ t/DexTradeDTOTest.t
 t/DexUserDTOTest.t
 t/DexWithdrawDTOTest.t
 t/DexWithdrawRequestDTOTest.t
+t/MetadataApiTest.t
 t/NumericsBigIntegerTest.t
 t/SushiswapApiTest.t
 t/SushiswapBundleDTOTest.t

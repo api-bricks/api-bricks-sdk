@@ -179,7 +179,7 @@ cow_order_dto_t *cow_order_dto_parseFromJSON(cJSON *cow_order_dtoJSON){
     // cow_order_dto->entry_time
     cJSON *entry_time = cJSON_GetObjectItemCaseSensitive(cow_order_dtoJSON, "entry_time");
     if (entry_time) { 
-    if(!cJSON_IsString(entry_time))
+    if(!cJSON_IsString(entry_time) && !cJSON_IsNull(entry_time))
     {
     goto end; //DateTime
     }
@@ -188,7 +188,7 @@ cow_order_dto_t *cow_order_dto_parseFromJSON(cJSON *cow_order_dtoJSON){
     // cow_order_dto->recv_time
     cJSON *recv_time = cJSON_GetObjectItemCaseSensitive(cow_order_dtoJSON, "recv_time");
     if (recv_time) { 
-    if(!cJSON_IsString(recv_time))
+    if(!cJSON_IsString(recv_time) && !cJSON_IsNull(recv_time))
     {
     goto end; //DateTime
     }
@@ -206,7 +206,7 @@ cow_order_dto_t *cow_order_dto_parseFromJSON(cJSON *cow_order_dtoJSON){
     // cow_order_dto->id
     cJSON *id = cJSON_GetObjectItemCaseSensitive(cow_order_dtoJSON, "id");
     if (id) { 
-    if(!cJSON_IsString(id))
+    if(!cJSON_IsString(id) && !cJSON_IsNull(id))
     {
     goto end; //String
     }
@@ -215,7 +215,7 @@ cow_order_dto_t *cow_order_dto_parseFromJSON(cJSON *cow_order_dtoJSON){
     // cow_order_dto->owner
     cJSON *owner = cJSON_GetObjectItemCaseSensitive(cow_order_dtoJSON, "owner");
     if (owner) { 
-    if(!cJSON_IsString(owner))
+    if(!cJSON_IsString(owner) && !cJSON_IsNull(owner))
     {
     goto end; //String
     }
@@ -224,7 +224,7 @@ cow_order_dto_t *cow_order_dto_parseFromJSON(cJSON *cow_order_dtoJSON){
     // cow_order_dto->trades_timestamp
     cJSON *trades_timestamp = cJSON_GetObjectItemCaseSensitive(cow_order_dtoJSON, "trades_timestamp");
     if (trades_timestamp) { 
-    if(!cJSON_IsString(trades_timestamp))
+    if(!cJSON_IsString(trades_timestamp) && !cJSON_IsNull(trades_timestamp))
     {
     goto end; //String
     }
@@ -233,7 +233,7 @@ cow_order_dto_t *cow_order_dto_parseFromJSON(cJSON *cow_order_dtoJSON){
     // cow_order_dto->invalidate_timestamp
     cJSON *invalidate_timestamp = cJSON_GetObjectItemCaseSensitive(cow_order_dtoJSON, "invalidate_timestamp");
     if (invalidate_timestamp) { 
-    if(!cJSON_IsString(invalidate_timestamp))
+    if(!cJSON_IsString(invalidate_timestamp) && !cJSON_IsNull(invalidate_timestamp))
     {
     goto end; //String
     }
@@ -242,7 +242,7 @@ cow_order_dto_t *cow_order_dto_parseFromJSON(cJSON *cow_order_dtoJSON){
     // cow_order_dto->presign_timestamp
     cJSON *presign_timestamp = cJSON_GetObjectItemCaseSensitive(cow_order_dtoJSON, "presign_timestamp");
     if (presign_timestamp) { 
-    if(!cJSON_IsString(presign_timestamp))
+    if(!cJSON_IsString(presign_timestamp) && !cJSON_IsNull(presign_timestamp))
     {
     goto end; //String
     }
@@ -277,14 +277,14 @@ cow_order_dto_t *cow_order_dto_parseFromJSON(cJSON *cow_order_dtoJSON){
 
 
     cow_order_dto_local_var = cow_order_dto_create (
-        entry_time ? strdup(entry_time->valuestring) : NULL,
-        recv_time ? strdup(recv_time->valuestring) : NULL,
+        entry_time && !cJSON_IsNull(entry_time) ? strdup(entry_time->valuestring) : NULL,
+        recv_time && !cJSON_IsNull(recv_time) ? strdup(recv_time->valuestring) : NULL,
         block_number ? block_number->valuedouble : 0,
-        id ? strdup(id->valuestring) : NULL,
-        owner ? strdup(owner->valuestring) : NULL,
-        trades_timestamp ? strdup(trades_timestamp->valuestring) : NULL,
-        invalidate_timestamp ? strdup(invalidate_timestamp->valuestring) : NULL,
-        presign_timestamp ? strdup(presign_timestamp->valuestring) : NULL,
+        id && !cJSON_IsNull(id) ? strdup(id->valuestring) : NULL,
+        owner && !cJSON_IsNull(owner) ? strdup(owner->valuestring) : NULL,
+        trades_timestamp && !cJSON_IsNull(trades_timestamp) ? strdup(trades_timestamp->valuestring) : NULL,
+        invalidate_timestamp && !cJSON_IsNull(invalidate_timestamp) ? strdup(invalidate_timestamp->valuestring) : NULL,
+        presign_timestamp && !cJSON_IsNull(presign_timestamp) ? strdup(presign_timestamp->valuestring) : NULL,
         is_signed ? is_signed->valueint : 0,
         is_valid ? is_valid->valueint : 0,
         vid ? vid->valuedouble : 0

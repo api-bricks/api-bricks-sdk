@@ -965,12 +965,12 @@ public class UniswapV3Api {
   /**
   * PoolDayData (historical)
   * Gets poolDayData.
-   * @param startBlock 
-   * @param endBlock 
-   * @param startDate 
-   * @param endDate 
-   * @param id 
-   * @param pool 
+   * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+   * @param endDate The end date of timeframe.
+   * @param id Identifier, format: (pool address)-(day id).
+   * @param pool Pointer to pool.
    * @return List<UniswapV3PoolDayDataDTO>
   */
   public List<UniswapV3PoolDayDataDTO> uniswapV3GetPoolDayDataHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String pool) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
@@ -1033,7 +1033,7 @@ public class UniswapV3Api {
       /**
    * PoolDayData (historical)
    * Gets poolDayData.
-   * @param startBlock    * @param endBlock    * @param startDate    * @param endDate    * @param id    * @param pool 
+   * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id Identifier, format: (pool address)-(day id).   * @param pool Pointer to pool.
   */
   public void uniswapV3GetPoolDayDataHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String pool, final Response.Listener<List<UniswapV3PoolDayDataDTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
@@ -1099,12 +1099,12 @@ public class UniswapV3Api {
   /**
   * PoolHourData (historical)
   * Gets poolHourData.
-   * @param startBlock 
-   * @param endBlock 
-   * @param startDate 
-   * @param endDate 
-   * @param id 
-   * @param pool 
+   * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+   * @param endDate The end date of timeframe.
+   * @param id Identifier, format: (pool address)-(day id)
+   * @param pool Pointer to pool.
    * @return List<UniswapV3PoolHourDataDTO>
   */
   public List<UniswapV3PoolHourDataDTO> uniswapV3GetPoolHourDataHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String pool) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
@@ -1167,7 +1167,7 @@ public class UniswapV3Api {
       /**
    * PoolHourData (historical)
    * Gets poolHourData.
-   * @param startBlock    * @param endBlock    * @param startDate    * @param endDate    * @param id    * @param pool 
+   * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id Identifier, format: (pool address)-(day id)   * @param pool Pointer to pool.
   */
   public void uniswapV3GetPoolHourDataHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String pool, final Response.Listener<List<UniswapV3PoolHourDataDTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
@@ -1370,12 +1370,12 @@ public class UniswapV3Api {
   /**
   * PositionSnapshots (historical)
   * Gets positionSnapshots.
-   * @param startBlock 
-   * @param endBlock 
-   * @param startDate 
-   * @param endDate 
-   * @param id 
-   * @param pool 
+   * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+   * @param endDate The end date of timeframe.
+   * @param id NFT token identifier, format: (NFT token id)#(block number).
+   * @param pool Pool the position is within.
    * @return List<UniswapV3PositionSnapshotDTO>
   */
   public List<UniswapV3PositionSnapshotDTO> uniswapV3GetPositionSnapshotsHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String pool) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
@@ -1438,7 +1438,7 @@ public class UniswapV3Api {
       /**
    * PositionSnapshots (historical)
    * Gets positionSnapshots.
-   * @param startBlock    * @param endBlock    * @param startDate    * @param endDate    * @param id    * @param pool 
+   * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id NFT token identifier, format: (NFT token id)#(block number).   * @param pool Pool the position is within.
   */
   public void uniswapV3GetPositionSnapshotsHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String pool, final Response.Listener<List<UniswapV3PositionSnapshotDTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
@@ -1648,7 +1648,7 @@ public class UniswapV3Api {
    * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
    * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
    * @param endDate The end date of timeframe.
-   * @param id Identifier, format: transaction hash + \&quot;#\&quot; + index in swaps Transaction array.
+   * @param id Identifier, format: (transaction hash) + # + (index in swaps Transaction array).
    * @param pool Pool swap occured within.
    * @param token0 Reference to token0 as stored in pair contract.
    * @param token1 Reference to token1 as stored in pair contract.
@@ -1716,7 +1716,7 @@ public class UniswapV3Api {
       /**
    * Swaps (historical)
    * Gets swaps.
-   * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id Identifier, format: transaction hash + \&quot;#\&quot; + index in swaps Transaction array.   * @param pool Pool swap occured within.   * @param token0 Reference to token0 as stored in pair contract.   * @param token1 Reference to token1 as stored in pair contract.
+   * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id Identifier, format: (transaction hash) + # + (index in swaps Transaction array).   * @param pool Pool swap occured within.   * @param token0 Reference to token0 as stored in pair contract.   * @param token1 Reference to token1 as stored in pair contract.
   */
   public void uniswapV3GetSwapsHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String pool, String token0, String token1, final Response.Listener<List<UniswapV3SwapDTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
@@ -1784,12 +1784,12 @@ public class UniswapV3Api {
   /**
   * TickDayData (historical)
   * Gets tickDayData.
-   * @param startBlock 
-   * @param endBlock 
-   * @param startDate 
-   * @param endDate 
-   * @param id 
-   * @param pool 
+   * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+   * @param endDate The end date of timeframe.
+   * @param id Identifier, format: (pool address)-(tick index)-(timestamp).
+   * @param pool Pointer to pool.
    * @return List<UniswapV3TickDayDataDTO>
   */
   public List<UniswapV3TickDayDataDTO> uniswapV3GetTickDayDataHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String pool) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
@@ -1852,7 +1852,7 @@ public class UniswapV3Api {
       /**
    * TickDayData (historical)
    * Gets tickDayData.
-   * @param startBlock    * @param endBlock    * @param startDate    * @param endDate    * @param id    * @param pool 
+   * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id Identifier, format: (pool address)-(tick index)-(timestamp).   * @param pool Pointer to pool.
   */
   public void uniswapV3GetTickDayDataHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String pool, final Response.Listener<List<UniswapV3TickDayDataDTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
@@ -1918,12 +1918,12 @@ public class UniswapV3Api {
   /**
   * Ticks (historical)
   * Gets ticks.
-   * @param startBlock 
-   * @param endBlock 
-   * @param startDate 
-   * @param endDate 
-   * @param id 
-   * @param pool 
+   * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+   * @param endDate The end date of timeframe.
+   * @param id Identifier, format: (pool address)#(tick index)
+   * @param pool Pool address.
    * @return List<UniswapV3TickDTO>
   */
   public List<UniswapV3TickDTO> uniswapV3GetTicksHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String pool) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
@@ -1986,7 +1986,7 @@ public class UniswapV3Api {
       /**
    * Ticks (historical)
    * Gets ticks.
-   * @param startBlock    * @param endBlock    * @param startDate    * @param endDate    * @param id    * @param pool 
+   * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id Identifier, format: (pool address)#(tick index)   * @param pool Pool address.
   */
   public void uniswapV3GetTicksHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String pool, final Response.Listener<List<UniswapV3TickDTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;

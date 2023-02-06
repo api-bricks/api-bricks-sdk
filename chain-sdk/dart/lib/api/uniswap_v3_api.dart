@@ -636,16 +636,22 @@ class UniswapV3Api {
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   ///
   /// * [int] endBlock:
+  ///   The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
   ///
   /// * [DateTime] startDate:
+  ///   The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
   ///
   /// * [DateTime] endDate:
+  ///   The end date of timeframe.
   ///
   /// * [String] id:
+  ///   Identifier, format: (pool address)-(day id).
   ///
   /// * [String] pool:
+  ///   Pointer to pool.
   Future<Response> uniswapV3GetPoolDayDataHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, String? pool, }) async {
     // ignore: prefer_const_declarations
     final path = r'/dapps/uniswapv3/poolDayData/historical';
@@ -697,16 +703,22 @@ class UniswapV3Api {
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   ///
   /// * [int] endBlock:
+  ///   The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
   ///
   /// * [DateTime] startDate:
+  ///   The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
   ///
   /// * [DateTime] endDate:
+  ///   The end date of timeframe.
   ///
   /// * [String] id:
+  ///   Identifier, format: (pool address)-(day id).
   ///
   /// * [String] pool:
+  ///   Pointer to pool.
   Future<List<UniswapV3PoolDayDataDTO>?> uniswapV3GetPoolDayDataHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, String? pool, }) async {
     final response = await uniswapV3GetPoolDayDataHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, id: id, pool: pool, );
     if (response.statusCode >= HttpStatus.badRequest) {
@@ -734,16 +746,22 @@ class UniswapV3Api {
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   ///
   /// * [int] endBlock:
+  ///   The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
   ///
   /// * [DateTime] startDate:
+  ///   The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
   ///
   /// * [DateTime] endDate:
+  ///   The end date of timeframe.
   ///
   /// * [String] id:
+  ///   Identifier, format: (pool address)-(day id)
   ///
   /// * [String] pool:
+  ///   Pointer to pool.
   Future<Response> uniswapV3GetPoolHourDataHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, String? pool, }) async {
     // ignore: prefer_const_declarations
     final path = r'/dapps/uniswapv3/poolHourData/historical';
@@ -795,16 +813,22 @@ class UniswapV3Api {
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   ///
   /// * [int] endBlock:
+  ///   The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
   ///
   /// * [DateTime] startDate:
+  ///   The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
   ///
   /// * [DateTime] endDate:
+  ///   The end date of timeframe.
   ///
   /// * [String] id:
+  ///   Identifier, format: (pool address)-(day id)
   ///
   /// * [String] pool:
+  ///   Pointer to pool.
   Future<List<UniswapV3PoolHourDataDTO>?> uniswapV3GetPoolHourDataHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, String? pool, }) async {
     final response = await uniswapV3GetPoolHourDataHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, id: id, pool: pool, );
     if (response.statusCode >= HttpStatus.badRequest) {
@@ -951,16 +975,22 @@ class UniswapV3Api {
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   ///
   /// * [int] endBlock:
+  ///   The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
   ///
   /// * [DateTime] startDate:
+  ///   The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
   ///
   /// * [DateTime] endDate:
+  ///   The end date of timeframe.
   ///
   /// * [String] id:
+  ///   NFT token identifier, format: (NFT token id)#(block number).
   ///
   /// * [String] pool:
+  ///   Pool the position is within.
   Future<Response> uniswapV3GetPositionSnapshotsHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, String? pool, }) async {
     // ignore: prefer_const_declarations
     final path = r'/dapps/uniswapv3/positionSnapshots/historical';
@@ -1012,16 +1042,22 @@ class UniswapV3Api {
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   ///
   /// * [int] endBlock:
+  ///   The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
   ///
   /// * [DateTime] startDate:
+  ///   The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
   ///
   /// * [DateTime] endDate:
+  ///   The end date of timeframe.
   ///
   /// * [String] id:
+  ///   NFT token identifier, format: (NFT token id)#(block number).
   ///
   /// * [String] pool:
+  ///   Pool the position is within.
   Future<List<UniswapV3PositionSnapshotDTO>?> uniswapV3GetPositionSnapshotsHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, String? pool, }) async {
     final response = await uniswapV3GetPositionSnapshotsHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, id: id, pool: pool, );
     if (response.statusCode >= HttpStatus.badRequest) {
@@ -1189,7 +1225,7 @@ class UniswapV3Api {
   ///   The end date of timeframe.
   ///
   /// * [String] id:
-  ///   Identifier, format: transaction hash + \"#\" + index in swaps Transaction array.
+  ///   Identifier, format: (transaction hash) + # + (index in swaps Transaction array).
   ///
   /// * [String] pool:
   ///   Pool swap occured within.
@@ -1268,7 +1304,7 @@ class UniswapV3Api {
   ///   The end date of timeframe.
   ///
   /// * [String] id:
-  ///   Identifier, format: transaction hash + \"#\" + index in swaps Transaction array.
+  ///   Identifier, format: (transaction hash) + # + (index in swaps Transaction array).
   ///
   /// * [String] pool:
   ///   Pool swap occured within.
@@ -1305,16 +1341,22 @@ class UniswapV3Api {
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   ///
   /// * [int] endBlock:
+  ///   The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
   ///
   /// * [DateTime] startDate:
+  ///   The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
   ///
   /// * [DateTime] endDate:
+  ///   The end date of timeframe.
   ///
   /// * [String] id:
+  ///   Identifier, format: (pool address)-(tick index)-(timestamp).
   ///
   /// * [String] pool:
+  ///   Pointer to pool.
   Future<Response> uniswapV3GetTickDayDataHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, String? pool, }) async {
     // ignore: prefer_const_declarations
     final path = r'/dapps/uniswapv3/tickDayData/historical';
@@ -1366,16 +1408,22 @@ class UniswapV3Api {
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   ///
   /// * [int] endBlock:
+  ///   The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
   ///
   /// * [DateTime] startDate:
+  ///   The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
   ///
   /// * [DateTime] endDate:
+  ///   The end date of timeframe.
   ///
   /// * [String] id:
+  ///   Identifier, format: (pool address)-(tick index)-(timestamp).
   ///
   /// * [String] pool:
+  ///   Pointer to pool.
   Future<List<UniswapV3TickDayDataDTO>?> uniswapV3GetTickDayDataHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, String? pool, }) async {
     final response = await uniswapV3GetTickDayDataHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, id: id, pool: pool, );
     if (response.statusCode >= HttpStatus.badRequest) {
@@ -1403,16 +1451,22 @@ class UniswapV3Api {
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   ///
   /// * [int] endBlock:
+  ///   The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
   ///
   /// * [DateTime] startDate:
+  ///   The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
   ///
   /// * [DateTime] endDate:
+  ///   The end date of timeframe.
   ///
   /// * [String] id:
+  ///   Identifier, format: (pool address)#(tick index)
   ///
   /// * [String] pool:
+  ///   Pool address.
   Future<Response> uniswapV3GetTicksHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, String? pool, }) async {
     // ignore: prefer_const_declarations
     final path = r'/dapps/uniswapv3/ticks/historical';
@@ -1464,16 +1518,22 @@ class UniswapV3Api {
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   ///
   /// * [int] endBlock:
+  ///   The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
   ///
   /// * [DateTime] startDate:
+  ///   The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
   ///
   /// * [DateTime] endDate:
+  ///   The end date of timeframe.
   ///
   /// * [String] id:
+  ///   Identifier, format: (pool address)#(tick index)
   ///
   /// * [String] pool:
+  ///   Pool address.
   Future<List<UniswapV3TickDTO>?> uniswapV3GetTicksHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, String? pool, }) async {
     final response = await uniswapV3GetTicksHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, id: id, pool: pool, );
     if (response.statusCode >= HttpStatus.badRequest) {

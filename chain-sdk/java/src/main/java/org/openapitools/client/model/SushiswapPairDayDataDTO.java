@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.time.OffsetDateTime;
 import org.openapitools.jackson.nullable.JsonNullable;
@@ -50,8 +48,7 @@ import org.openapitools.client.JSON;
 /**
  * Tracks pair data across each day.
  */
-@ApiModel(description = "Tracks pair data across each day.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-30T14:42:00.397192Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-06T14:47:06.037855Z[Etc/UTC]")
 public class SushiswapPairDayDataDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -135,7 +132,6 @@ public class SushiswapPairDayDataDTO {
    * @return entryTime
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public OffsetDateTime getEntryTime() {
     return entryTime;
@@ -158,7 +154,6 @@ public class SushiswapPairDayDataDTO {
    * @return recvTime
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public OffsetDateTime getRecvTime() {
     return recvTime;
@@ -181,7 +176,6 @@ public class SushiswapPairDayDataDTO {
    * @return blockNumber
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Number of block in which entity was recorded.")
 
   public Long getBlockNumber() {
     return blockNumber;
@@ -204,7 +198,6 @@ public class SushiswapPairDayDataDTO {
    * @return id
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Identifier, format: (pair id)-(day start timestamp).")
 
   public String getId() {
     return id;
@@ -227,7 +220,6 @@ public class SushiswapPairDayDataDTO {
    * @return date
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Unix timestamp for start of day.")
 
   public Integer getDate() {
     return date;
@@ -250,7 +242,6 @@ public class SushiswapPairDayDataDTO {
    * @return pair
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Reference to pair.")
 
   public String getPair() {
     return pair;
@@ -273,7 +264,6 @@ public class SushiswapPairDayDataDTO {
    * @return token0
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Reference to token0.")
 
   public String getToken0() {
     return token0;
@@ -296,7 +286,6 @@ public class SushiswapPairDayDataDTO {
    * @return token1
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Reference to token1.")
 
   public String getToken1() {
     return token1;
@@ -319,7 +308,6 @@ public class SushiswapPairDayDataDTO {
    * @return reserve0
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Reserve of token0 (updated during each transaction on pair).")
 
   public String getReserve0() {
     return reserve0;
@@ -342,7 +330,6 @@ public class SushiswapPairDayDataDTO {
    * @return reserve1
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Reserve of token1 (updated during each transaction on pair).")
 
   public String getReserve1() {
     return reserve1;
@@ -365,7 +352,6 @@ public class SushiswapPairDayDataDTO {
    * @return totalSupply
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Total supply of liquidity token distributed to LPs.")
 
   public String getTotalSupply() {
     return totalSupply;
@@ -388,7 +374,6 @@ public class SushiswapPairDayDataDTO {
    * @return reserveUsd
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Reserve of token0 plus token1 stored as a derived USD amount.")
 
   public String getReserveUsd() {
     return reserveUsd;
@@ -411,7 +396,6 @@ public class SushiswapPairDayDataDTO {
    * @return volumeToken0
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Total amount of token0 swapped throughout day.")
 
   public String getVolumeToken0() {
     return volumeToken0;
@@ -434,7 +418,6 @@ public class SushiswapPairDayDataDTO {
    * @return volumeToken1
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Total amount of token1 swapped throughout day.")
 
   public String getVolumeToken1() {
     return volumeToken1;
@@ -457,7 +440,6 @@ public class SushiswapPairDayDataDTO {
    * @return volumeUsd
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Total volume within pair throughout day.")
 
   public String getVolumeUsd() {
     return volumeUsd;
@@ -480,7 +462,6 @@ public class SushiswapPairDayDataDTO {
    * @return txCount
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Amount of transactions on pair throughout day.")
 
   public String getTxCount() {
     return txCount;
@@ -503,7 +484,6 @@ public class SushiswapPairDayDataDTO {
    * @return vid
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public Long getVid() {
     return vid;

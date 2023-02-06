@@ -727,21 +727,33 @@ curveGetCoinsHistorical  _ =
   _mkRequest "GET" ["/dapps/curve/coins/historical"]
 
 data CurveGetCoinsHistorical  
+
+-- | /Optional Param/ "startBlock" - The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
 instance HasOptionalParam CurveGetCoinsHistorical StartBlock where
   applyOptionalParam req (StartBlock xs) =
     req `addQuery` toQuery ("startBlock", Just xs)
+
+-- | /Optional Param/ "endBlock" - The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
 instance HasOptionalParam CurveGetCoinsHistorical EndBlock where
   applyOptionalParam req (EndBlock xs) =
     req `addQuery` toQuery ("endBlock", Just xs)
+
+-- | /Optional Param/ "startDate" - The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
 instance HasOptionalParam CurveGetCoinsHistorical StartDate where
   applyOptionalParam req (StartDate xs) =
     req `addQuery` toQuery ("startDate", Just xs)
+
+-- | /Optional Param/ "endDate" - The end date of timeframe.
 instance HasOptionalParam CurveGetCoinsHistorical EndDate where
   applyOptionalParam req (EndDate xs) =
     req `addQuery` toQuery ("endDate", Just xs)
+
+-- | /Optional Param/ "id" - Identifier, format: (pool_id)-(coin_index).
 instance HasOptionalParam CurveGetCoinsHistorical Id where
   applyOptionalParam req (Id xs) =
     req `addQuery` toQuery ("id", Just xs)
+
+-- | /Optional Param/ "pool" - 
 instance HasOptionalParam CurveGetCoinsHistorical Pool where
   applyOptionalParam req (Pool xs) =
     req `addQuery` toQuery ("pool", Just xs)
@@ -2025,21 +2037,33 @@ curveGetUnderlyingCoinsHistorical  _ =
   _mkRequest "GET" ["/dapps/curve/underlyingCoins/historical"]
 
 data CurveGetUnderlyingCoinsHistorical  
+
+-- | /Optional Param/ "startBlock" - The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
 instance HasOptionalParam CurveGetUnderlyingCoinsHistorical StartBlock where
   applyOptionalParam req (StartBlock xs) =
     req `addQuery` toQuery ("startBlock", Just xs)
+
+-- | /Optional Param/ "endBlock" - The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
 instance HasOptionalParam CurveGetUnderlyingCoinsHistorical EndBlock where
   applyOptionalParam req (EndBlock xs) =
     req `addQuery` toQuery ("endBlock", Just xs)
+
+-- | /Optional Param/ "startDate" - The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
 instance HasOptionalParam CurveGetUnderlyingCoinsHistorical StartDate where
   applyOptionalParam req (StartDate xs) =
     req `addQuery` toQuery ("startDate", Just xs)
+
+-- | /Optional Param/ "endDate" - The end date of timeframe.
 instance HasOptionalParam CurveGetUnderlyingCoinsHistorical EndDate where
   applyOptionalParam req (EndDate xs) =
     req `addQuery` toQuery ("endDate", Just xs)
+
+-- | /Optional Param/ "id" - Equals to: (pool_id)-(coin_index).
 instance HasOptionalParam CurveGetUnderlyingCoinsHistorical Id where
   applyOptionalParam req (Id xs) =
     req `addQuery` toQuery ("id", Just xs)
+
+-- | /Optional Param/ "pool" - 
 instance HasOptionalParam CurveGetUnderlyingCoinsHistorical Pool where
   applyOptionalParam req (Pool xs) =
     req `addQuery` toQuery ("pool", Just xs)

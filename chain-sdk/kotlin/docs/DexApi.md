@@ -184,12 +184,12 @@ Gets deposits.
 //import org.openapitools.client.models.*
 
 val apiInstance = DexApi()
-val startBlock : kotlin.Long = 789 // kotlin.Long | 
-val endBlock : kotlin.Long = 789 // kotlin.Long | 
-val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
-val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
-val id : kotlin.String = id_example // kotlin.String | 
-val user : kotlin.String = user_example // kotlin.String | 
+val startBlock : kotlin.Long = 789 // kotlin.Long | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+val endBlock : kotlin.Long = 789 // kotlin.Long | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | The end date of timeframe.
+val id : kotlin.String = id_example // kotlin.String | Identifier, format: (transaction hash)-(token id).
+val user : kotlin.String = user_example // kotlin.String | User address.
 try {
     val result : kotlin.collections.List<DexDepositDTO> = apiInstance.dexGetDepositsHistorical(startBlock, endBlock, startDate, endDate, id, user)
     println(result)
@@ -206,12 +206,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startBlock** | **kotlin.Long**|  | [optional]
- **endBlock** | **kotlin.Long**|  | [optional]
- **startDate** | **java.time.OffsetDateTime**|  | [optional]
- **endDate** | **java.time.OffsetDateTime**|  | [optional]
- **id** | **kotlin.String**|  | [optional]
- **user** | **kotlin.String**|  | [optional]
+ **startBlock** | **kotlin.Long**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional]
+ **endBlock** | **kotlin.Long**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional]
+ **startDate** | **java.time.OffsetDateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional]
+ **endDate** | **java.time.OffsetDateTime**| The end date of timeframe. | [optional]
+ **id** | **kotlin.String**| Identifier, format: (transaction hash)-(token id). | [optional]
+ **user** | **kotlin.String**| User address. | [optional]
 
 ### Return type
 
@@ -241,13 +241,13 @@ Gets orders.
 //import org.openapitools.client.models.*
 
 val apiInstance = DexApi()
-val startBlock : kotlin.Long = 789 // kotlin.Long | 
-val endBlock : kotlin.Long = 789 // kotlin.Long | 
-val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
-val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
-val id : kotlin.String = id_example // kotlin.String | 
-val buyToken : kotlin.String = buyToken_example // kotlin.String | 
-val sellToken : kotlin.String = sellToken_example // kotlin.String | 
+val startBlock : kotlin.Long = 789 // kotlin.Long | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+val endBlock : kotlin.Long = 789 // kotlin.Long | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | The end date of timeframe.
+val id : kotlin.String = id_example // kotlin.String | Identifier, format: (owner address)-(order id)
+val buyToken : kotlin.String = buyToken_example // kotlin.String | Identifier of token that was bought.
+val sellToken : kotlin.String = sellToken_example // kotlin.String | Identifier of token that was sold.
 try {
     val result : kotlin.collections.List<DexOrderDTO> = apiInstance.dexGetOrdersHistorical(startBlock, endBlock, startDate, endDate, id, buyToken, sellToken)
     println(result)
@@ -264,13 +264,13 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startBlock** | **kotlin.Long**|  | [optional]
- **endBlock** | **kotlin.Long**|  | [optional]
- **startDate** | **java.time.OffsetDateTime**|  | [optional]
- **endDate** | **java.time.OffsetDateTime**|  | [optional]
- **id** | **kotlin.String**|  | [optional]
- **buyToken** | **kotlin.String**|  | [optional]
- **sellToken** | **kotlin.String**|  | [optional]
+ **startBlock** | **kotlin.Long**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional]
+ **endBlock** | **kotlin.Long**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional]
+ **startDate** | **java.time.OffsetDateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional]
+ **endDate** | **java.time.OffsetDateTime**| The end date of timeframe. | [optional]
+ **id** | **kotlin.String**| Identifier, format: (owner address)-(order id) | [optional]
+ **buyToken** | **kotlin.String**| Identifier of token that was bought. | [optional]
+ **sellToken** | **kotlin.String**| Identifier of token that was sold. | [optional]
 
 ### Return type
 
@@ -300,11 +300,11 @@ Gets prices.
 //import org.openapitools.client.models.*
 
 val apiInstance = DexApi()
-val startBlock : kotlin.Long = 789 // kotlin.Long | 
-val endBlock : kotlin.Long = 789 // kotlin.Long | 
-val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
-val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
-val id : kotlin.String = id_example // kotlin.String | 
+val startBlock : kotlin.Long = 789 // kotlin.Long | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+val endBlock : kotlin.Long = 789 // kotlin.Long | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | The end date of timeframe.
+val id : kotlin.String = id_example // kotlin.String | Identifier, format: (token id)-(batch id).
 try {
     val result : kotlin.collections.List<DexPriceDTO> = apiInstance.dexGetPricesHistorical(startBlock, endBlock, startDate, endDate, id)
     println(result)
@@ -321,11 +321,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startBlock** | **kotlin.Long**|  | [optional]
- **endBlock** | **kotlin.Long**|  | [optional]
- **startDate** | **java.time.OffsetDateTime**|  | [optional]
- **endDate** | **java.time.OffsetDateTime**|  | [optional]
- **id** | **kotlin.String**|  | [optional]
+ **startBlock** | **kotlin.Long**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional]
+ **endBlock** | **kotlin.Long**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional]
+ **startDate** | **java.time.OffsetDateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional]
+ **endDate** | **java.time.OffsetDateTime**| The end date of timeframe. | [optional]
+ **id** | **kotlin.String**| Identifier, format: (token id)-(batch id). | [optional]
 
 ### Return type
 
@@ -640,11 +640,11 @@ Gets withdrawRequests.
 //import org.openapitools.client.models.*
 
 val apiInstance = DexApi()
-val startBlock : kotlin.Long = 789 // kotlin.Long | 
-val endBlock : kotlin.Long = 789 // kotlin.Long | 
-val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
-val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
-val id : kotlin.String = id_example // kotlin.String | 
+val startBlock : kotlin.Long = 789 // kotlin.Long | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+val endBlock : kotlin.Long = 789 // kotlin.Long | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | The end date of timeframe.
+val id : kotlin.String = id_example // kotlin.String | Identifier, format: (transaction hash)-(id).
 val user : kotlin.String = user_example // kotlin.String | 
 try {
     val result : kotlin.collections.List<DexWithdrawRequestDTO> = apiInstance.dexGetWithdrawRequestsHistorical(startBlock, endBlock, startDate, endDate, id, user)
@@ -662,11 +662,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startBlock** | **kotlin.Long**|  | [optional]
- **endBlock** | **kotlin.Long**|  | [optional]
- **startDate** | **java.time.OffsetDateTime**|  | [optional]
- **endDate** | **java.time.OffsetDateTime**|  | [optional]
- **id** | **kotlin.String**|  | [optional]
+ **startBlock** | **kotlin.Long**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional]
+ **endBlock** | **kotlin.Long**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional]
+ **startDate** | **java.time.OffsetDateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional]
+ **endDate** | **java.time.OffsetDateTime**| The end date of timeframe. | [optional]
+ **id** | **kotlin.String**| Identifier, format: (transaction hash)-(id). | [optional]
  **user** | **kotlin.String**|  | [optional]
 
 ### Return type
@@ -697,11 +697,11 @@ Gets withdraws.
 //import org.openapitools.client.models.*
 
 val apiInstance = DexApi()
-val startBlock : kotlin.Long = 789 // kotlin.Long | 
-val endBlock : kotlin.Long = 789 // kotlin.Long | 
-val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
-val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
-val id : kotlin.String = id_example // kotlin.String | 
+val startBlock : kotlin.Long = 789 // kotlin.Long | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+val endBlock : kotlin.Long = 789 // kotlin.Long | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | The end date of timeframe.
+val id : kotlin.String = id_example // kotlin.String | Identifier, format: (transaction hash)-(id).
 val user : kotlin.String = user_example // kotlin.String | 
 try {
     val result : kotlin.collections.List<DexWithdrawDTO> = apiInstance.dexGetWithdrawsHistorical(startBlock, endBlock, startDate, endDate, id, user)
@@ -719,11 +719,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startBlock** | **kotlin.Long**|  | [optional]
- **endBlock** | **kotlin.Long**|  | [optional]
- **startDate** | **java.time.OffsetDateTime**|  | [optional]
- **endDate** | **java.time.OffsetDateTime**|  | [optional]
- **id** | **kotlin.String**|  | [optional]
+ **startBlock** | **kotlin.Long**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional]
+ **endBlock** | **kotlin.Long**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional]
+ **startDate** | **java.time.OffsetDateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional]
+ **endDate** | **java.time.OffsetDateTime**| The end date of timeframe. | [optional]
+ **id** | **kotlin.String**| Identifier, format: (transaction hash)-(id). | [optional]
  **user** | **kotlin.String**|  | [optional]
 
 ### Return type

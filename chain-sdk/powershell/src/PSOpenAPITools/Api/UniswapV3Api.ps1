@@ -801,22 +801,22 @@ PoolDayData (historical)
 No description available.
 
 .PARAMETER StartBlock
-No description available.
+The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
 
 .PARAMETER EndBlock
-No description available.
+The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
 
 .PARAMETER StartDate
-No description available.
+The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
 
 .PARAMETER EndDate
-No description available.
+The end date of timeframe.
 
 .PARAMETER Id
-No description available.
+Identifier, format: (pool address)-(day id).
 
 .PARAMETER Pool
-No description available.
+Pointer to pool.
 
 .PARAMETER ReturnType
 
@@ -936,22 +936,22 @@ PoolHourData (historical)
 No description available.
 
 .PARAMETER StartBlock
-No description available.
+The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
 
 .PARAMETER EndBlock
-No description available.
+The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
 
 .PARAMETER StartDate
-No description available.
+The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
 
 .PARAMETER EndDate
-No description available.
+The end date of timeframe.
 
 .PARAMETER Id
-No description available.
+Identifier, format: (pool address)-(day id)
 
 .PARAMETER Pool
-No description available.
+Pointer to pool.
 
 .PARAMETER ReturnType
 
@@ -1216,22 +1216,22 @@ PositionSnapshots (historical)
 No description available.
 
 .PARAMETER StartBlock
-No description available.
+The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
 
 .PARAMETER EndBlock
-No description available.
+The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
 
 .PARAMETER StartDate
-No description available.
+The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
 
 .PARAMETER EndDate
-No description available.
+The end date of timeframe.
 
 .PARAMETER Id
-No description available.
+NFT token identifier, format: (NFT token id)#(block number).
 
 .PARAMETER Pool
-No description available.
+Pool the position is within.
 
 .PARAMETER ReturnType
 
@@ -1518,7 +1518,7 @@ The start date of timeframe. If endDate is not given, entities created FROM star
 The end date of timeframe.
 
 .PARAMETER Id
-Identifier, format: transaction hash + ""#"" + index in swaps Transaction array.
+Identifier, format: (transaction hash) + # + (index in swaps Transaction array).
 
 .PARAMETER Pool
 Pool swap occured within.
@@ -1661,22 +1661,22 @@ TickDayData (historical)
 No description available.
 
 .PARAMETER StartBlock
-No description available.
+The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
 
 .PARAMETER EndBlock
-No description available.
+The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
 
 .PARAMETER StartDate
-No description available.
+The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
 
 .PARAMETER EndDate
-No description available.
+The end date of timeframe.
 
 .PARAMETER Id
-No description available.
+Identifier, format: (pool address)-(tick index)-(timestamp).
 
 .PARAMETER Pool
-No description available.
+Pointer to pool.
 
 .PARAMETER ReturnType
 
@@ -1796,22 +1796,22 @@ Ticks (historical)
 No description available.
 
 .PARAMETER StartBlock
-No description available.
+The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
 
 .PARAMETER EndBlock
-No description available.
+The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
 
 .PARAMETER StartDate
-No description available.
+The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
 
 .PARAMETER EndDate
-No description available.
+The end date of timeframe.
 
 .PARAMETER Id
-No description available.
+Identifier, format: (pool address)#(tick index)
 
 .PARAMETER Pool
-No description available.
+Pool address.
 
 .PARAMETER ReturnType
 

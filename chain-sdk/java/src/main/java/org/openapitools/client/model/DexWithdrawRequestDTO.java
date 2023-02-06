@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.time.OffsetDateTime;
 import org.openapitools.jackson.nullable.JsonNullable;
@@ -50,8 +48,7 @@ import org.openapitools.client.JSON;
 /**
  * Withdraw request of an user
  */
-@ApiModel(description = "Withdraw request of an user")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-30T14:42:00.397192Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-06T14:47:06.037855Z[Etc/UTC]")
 public class DexWithdrawRequestDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -115,7 +112,6 @@ public class DexWithdrawRequestDTO {
    * @return entryTime
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public OffsetDateTime getEntryTime() {
     return entryTime;
@@ -138,7 +134,6 @@ public class DexWithdrawRequestDTO {
    * @return recvTime
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public OffsetDateTime getRecvTime() {
     return recvTime;
@@ -161,7 +156,6 @@ public class DexWithdrawRequestDTO {
    * @return blockNumber
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Number of block in which entity was recorded.")
 
   public Long getBlockNumber() {
     return blockNumber;
@@ -184,7 +178,6 @@ public class DexWithdrawRequestDTO {
    * @return id
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Identifier, format: (transaction hash)-(id).")
 
   public String getId() {
     return id;
@@ -207,7 +200,6 @@ public class DexWithdrawRequestDTO {
    * @return user
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getUser() {
     return user;
@@ -230,7 +222,6 @@ public class DexWithdrawRequestDTO {
    * @return tokenAddress
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getTokenAddress() {
     return tokenAddress;
@@ -253,7 +244,6 @@ public class DexWithdrawRequestDTO {
    * @return amount
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getAmount() {
     return amount;
@@ -276,7 +266,6 @@ public class DexWithdrawRequestDTO {
    * @return withdrawableFromBatchId
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getWithdrawableFromBatchId() {
     return withdrawableFromBatchId;
@@ -299,7 +288,6 @@ public class DexWithdrawRequestDTO {
    * @return createEpoch
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getCreateEpoch() {
     return createEpoch;
@@ -322,7 +310,6 @@ public class DexWithdrawRequestDTO {
    * @return createBatchId
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getCreateBatchId() {
     return createBatchId;
@@ -345,7 +332,6 @@ public class DexWithdrawRequestDTO {
    * @return txHash
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getTxHash() {
     return txHash;
@@ -368,7 +354,6 @@ public class DexWithdrawRequestDTO {
    * @return vid
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public Long getVid() {
     return vid;

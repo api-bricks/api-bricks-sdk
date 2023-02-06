@@ -16,6 +16,9 @@ import (
 	"time"
 )
 
+// checks if the CowTradeDTO type satisfies the MappedNullable interface at compile time
+var _ MappedNullable = &CowTradeDTO{}
+
 // CowTradeDTO Trade entity.
 type CowTradeDTO struct {
 	EntryTime *time.Time `json:"entry_time,omitempty"`
@@ -85,7 +88,7 @@ func (o *CowTradeDTO) GetEntryTime() time.Time {
 // and a boolean to check if the value has been set.
 func (o *CowTradeDTO) GetEntryTimeOk() (*time.Time, bool) {
 	if o == nil || isNil(o.EntryTime) {
-    return nil, false
+		return nil, false
 	}
 	return o.EntryTime, true
 }
@@ -117,7 +120,7 @@ func (o *CowTradeDTO) GetRecvTime() time.Time {
 // and a boolean to check if the value has been set.
 func (o *CowTradeDTO) GetRecvTimeOk() (*time.Time, bool) {
 	if o == nil || isNil(o.RecvTime) {
-    return nil, false
+		return nil, false
 	}
 	return o.RecvTime, true
 }
@@ -149,7 +152,7 @@ func (o *CowTradeDTO) GetBlockNumber() int64 {
 // and a boolean to check if the value has been set.
 func (o *CowTradeDTO) GetBlockNumberOk() (*int64, bool) {
 	if o == nil || isNil(o.BlockNumber) {
-    return nil, false
+		return nil, false
 	}
 	return o.BlockNumber, true
 }
@@ -182,7 +185,7 @@ func (o *CowTradeDTO) GetId() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CowTradeDTO) GetIdOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Id.Get(), o.Id.IsSet()
 }
@@ -224,7 +227,7 @@ func (o *CowTradeDTO) GetTimestamp() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CowTradeDTO) GetTimestampOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Timestamp.Get(), o.Timestamp.IsSet()
 }
@@ -266,7 +269,7 @@ func (o *CowTradeDTO) GetGasPrice() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CowTradeDTO) GetGasPriceOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.GasPrice.Get(), o.GasPrice.IsSet()
 }
@@ -308,7 +311,7 @@ func (o *CowTradeDTO) GetGasLimit() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CowTradeDTO) GetGasLimitOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.GasLimit.Get(), o.GasLimit.IsSet()
 }
@@ -350,7 +353,7 @@ func (o *CowTradeDTO) GetFeeAmount() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CowTradeDTO) GetFeeAmountOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.FeeAmount.Get(), o.FeeAmount.IsSet()
 }
@@ -392,7 +395,7 @@ func (o *CowTradeDTO) GetTxHash() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CowTradeDTO) GetTxHashOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.TxHash.Get(), o.TxHash.IsSet()
 }
@@ -434,7 +437,7 @@ func (o *CowTradeDTO) GetSettlement() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CowTradeDTO) GetSettlementOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Settlement.Get(), o.Settlement.IsSet()
 }
@@ -476,7 +479,7 @@ func (o *CowTradeDTO) GetBuyAmount() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CowTradeDTO) GetBuyAmountOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.BuyAmount.Get(), o.BuyAmount.IsSet()
 }
@@ -518,7 +521,7 @@ func (o *CowTradeDTO) GetSellAmount() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CowTradeDTO) GetSellAmountOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.SellAmount.Get(), o.SellAmount.IsSet()
 }
@@ -560,7 +563,7 @@ func (o *CowTradeDTO) GetSellToken() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CowTradeDTO) GetSellTokenOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.SellToken.Get(), o.SellToken.IsSet()
 }
@@ -602,7 +605,7 @@ func (o *CowTradeDTO) GetBuyToken() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CowTradeDTO) GetBuyTokenOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.BuyToken.Get(), o.BuyToken.IsSet()
 }
@@ -644,7 +647,7 @@ func (o *CowTradeDTO) GetOrder() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CowTradeDTO) GetOrderOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Order.Get(), o.Order.IsSet()
 }
@@ -685,7 +688,7 @@ func (o *CowTradeDTO) GetVid() int64 {
 // and a boolean to check if the value has been set.
 func (o *CowTradeDTO) GetVidOk() (*int64, bool) {
 	if o == nil || isNil(o.Vid) {
-    return nil, false
+		return nil, false
 	}
 	return o.Vid, true
 }
@@ -718,7 +721,7 @@ func (o *CowTradeDTO) GetPoolId() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CowTradeDTO) GetPoolIdOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.PoolId.Get(), o.PoolId.IsSet()
 }
@@ -760,7 +763,7 @@ func (o *CowTradeDTO) GetTransactionId() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CowTradeDTO) GetTransactionIdOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.TransactionId.Get(), o.TransactionId.IsSet()
 }
@@ -801,7 +804,7 @@ func (o *CowTradeDTO) GetEvaluatedPrice() float64 {
 // and a boolean to check if the value has been set.
 func (o *CowTradeDTO) GetEvaluatedPriceOk() (*float64, bool) {
 	if o == nil || isNil(o.EvaluatedPrice) {
-    return nil, false
+		return nil, false
 	}
 	return o.EvaluatedPrice, true
 }
@@ -833,7 +836,7 @@ func (o *CowTradeDTO) GetEvaluatedAmount() float64 {
 // and a boolean to check if the value has been set.
 func (o *CowTradeDTO) GetEvaluatedAmountOk() (*float64, bool) {
 	if o == nil || isNil(o.EvaluatedAmount) {
-    return nil, false
+		return nil, false
 	}
 	return o.EvaluatedAmount, true
 }
@@ -865,7 +868,7 @@ func (o *CowTradeDTO) GetEvaluatedAggressor() TransactionsETradeAggressiveSide {
 // and a boolean to check if the value has been set.
 func (o *CowTradeDTO) GetEvaluatedAggressorOk() (*TransactionsETradeAggressiveSide, bool) {
 	if o == nil || isNil(o.EvaluatedAggressor) {
-    return nil, false
+		return nil, false
 	}
 	return o.EvaluatedAggressor, true
 }
@@ -885,6 +888,14 @@ func (o *CowTradeDTO) SetEvaluatedAggressor(v TransactionsETradeAggressiveSide) 
 }
 
 func (o CowTradeDTO) MarshalJSON() ([]byte, error) {
+	toSerialize,err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
+}
+
+func (o CowTradeDTO) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
 	if !isNil(o.EntryTime) {
 		toSerialize["entry_time"] = o.EntryTime
@@ -940,16 +951,12 @@ func (o CowTradeDTO) MarshalJSON() ([]byte, error) {
 	if o.TransactionId.IsSet() {
 		toSerialize["transaction_id"] = o.TransactionId.Get()
 	}
-	if !isNil(o.EvaluatedPrice) {
-		toSerialize["evaluated_price"] = o.EvaluatedPrice
-	}
-	if !isNil(o.EvaluatedAmount) {
-		toSerialize["evaluated_amount"] = o.EvaluatedAmount
-	}
+	// skip: evaluated_price is readOnly
+	// skip: evaluated_amount is readOnly
 	if !isNil(o.EvaluatedAggressor) {
 		toSerialize["evaluated_aggressor"] = o.EvaluatedAggressor
 	}
-	return json.Marshal(toSerialize)
+	return toSerialize, nil
 }
 
 type NullableCowTradeDTO struct {

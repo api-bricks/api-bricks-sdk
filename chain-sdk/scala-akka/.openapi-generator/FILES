@@ -47,6 +47,7 @@ docs/DexSolutionDTO.md
 docs/DexStatsDTO.md
 docs/DexWithdrawDTO.md
 docs/DexWithdrawRequestDTO.md
+docs/MetadataApi.md
 docs/NumericsBigInteger.md
 docs/SushiswapApi.md
 docs/SushiswapBundleDTO.md
@@ -83,6 +84,7 @@ src/main/scala/org/openapitools/client/api/CowApi.scala
 src/main/scala/org/openapitools/client/api/CurveApi.scala
 src/main/scala/org/openapitools/client/api/DexApi.scala
 src/main/scala/org/openapitools/client/api/EnumsSerializers.scala
+src/main/scala/org/openapitools/client/api/MetadataApi.scala
 src/main/scala/org/openapitools/client/api/SushiswapApi.scala
 src/main/scala/org/openapitools/client/api/UniswapV2Api.scala
 src/main/scala/org/openapitools/client/api/UniswapV3Api.scala

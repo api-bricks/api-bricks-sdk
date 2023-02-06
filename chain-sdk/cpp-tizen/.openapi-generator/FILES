@@ -108,6 +108,8 @@ src/Error.cpp
 src/Error.h
 src/Helpers.cpp
 src/Helpers.h
+src/MetadataManager.cpp
+src/MetadataManager.h
 src/NetClient.cpp
 src/NetClient.h
 src/NumericsBigInteger.cpp

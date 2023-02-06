@@ -656,13 +656,13 @@
 #' ####################  UniswapV2GetLiquidityPositionSnapshotsHistorical  ####################
 #'
 #' library(openapi)
-#' var_start_block <- 56 # integer |  (Optional)
-#' var_end_block <- 56 # integer |  (Optional)
-#' var_start_date <- "start_date_example" # character |  (Optional)
-#' var_end_date <- "end_date_example" # character |  (Optional)
-#' var_id <- "id_example" # character |  (Optional)
-#' var_user <- "user_example" # character |  (Optional)
-#' var_pair <- "pair_example" # character |  (Optional)
+#' var_start_block <- 56 # integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (Optional)
+#' var_end_block <- 56 # integer | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (Optional)
+#' var_start_date <- "start_date_example" # character | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (Optional)
+#' var_end_date <- "end_date_example" # character | The end date of timeframe. (Optional)
+#' var_id <- "id_example" # character | Identifier, format: (pair address)-(user address) (Optional)
+#' var_user <- "user_example" # character | Reference to user. (Optional)
+#' var_pair <- "pair_example" # character | Reference to the pair liquidity is being provided on. (Optional)
 #'
 #' #LiquidityPositionSnapshots (historical)
 #' api_instance <- UniswapV2Api$new()
@@ -1497,13 +1497,13 @@ UniswapV2Api <- R6::R6Class(
     #' @description
     #' LiquidityPositionSnapshots (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param id (optional) No description
-    #' @param user (optional) No description
-    #' @param pair (optional) No description
+    #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+    #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+    #' @param start_date (optional) The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+    #' @param end_date (optional) The end date of timeframe.
+    #' @param id (optional) Identifier, format: (pair address)-(user address)
+    #' @param user (optional) Reference to user.
+    #' @param pair (optional) Reference to the pair liquidity is being provided on.
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return array[UniswapV2LiquidityPositionSnapshotDTO]
@@ -1525,13 +1525,13 @@ UniswapV2Api <- R6::R6Class(
     #' @description
     #' LiquidityPositionSnapshots (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param id (optional) No description
-    #' @param user (optional) No description
-    #' @param pair (optional) No description
+    #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+    #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+    #' @param start_date (optional) The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+    #' @param end_date (optional) The end date of timeframe.
+    #' @param id (optional) Identifier, format: (pair address)-(user address)
+    #' @param user (optional) Reference to user.
+    #' @param pair (optional) Reference to the pair liquidity is being provided on.
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return API response (array[UniswapV2LiquidityPositionSnapshotDTO]) with additional information such as HTTP status code, headers

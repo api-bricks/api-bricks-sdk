@@ -185,12 +185,12 @@ use WWW::OpenAPIClient::DexApi;
 my $api_instance = WWW::OpenAPIClient::DexApi->new(
 );
 
-my $start_block = 789; # int | 
-my $end_block = 789; # int | 
-my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
-my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
-my $id = "id_example"; # string | 
-my $user = "user_example"; # string | 
+my $start_block = 789; # int | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+my $end_block = 789; # int | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | The end date of timeframe.
+my $id = "id_example"; # string | Identifier, format: (transaction hash)-(token id).
+my $user = "user_example"; # string | User address.
 
 eval {
     my $result = $api_instance->dex_get_deposits__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, id => $id, user => $user);
@@ -205,12 +205,12 @@ if ($@) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **start_block** | **int**|  | [optional] 
- **end_block** | **int**|  | [optional] 
- **start_date** | **DATE_TIME**|  | [optional] 
- **end_date** | **DATE_TIME**|  | [optional] 
- **id** | **string**|  | [optional] 
- **user** | **string**|  | [optional] 
+ **start_block** | **int**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
+ **end_block** | **int**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
+ **start_date** | **DATE_TIME**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
+ **end_date** | **DATE_TIME**| The end date of timeframe. | [optional] 
+ **id** | **string**| Identifier, format: (transaction hash)-(token id). | [optional] 
+ **user** | **string**| User address. | [optional] 
 
 ### Return type
 
@@ -241,13 +241,13 @@ use WWW::OpenAPIClient::DexApi;
 my $api_instance = WWW::OpenAPIClient::DexApi->new(
 );
 
-my $start_block = 789; # int | 
-my $end_block = 789; # int | 
-my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
-my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
-my $id = "id_example"; # string | 
-my $buy_token = "buy_token_example"; # string | 
-my $sell_token = "sell_token_example"; # string | 
+my $start_block = 789; # int | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+my $end_block = 789; # int | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | The end date of timeframe.
+my $id = "id_example"; # string | Identifier, format: (owner address)-(order id)
+my $buy_token = "buy_token_example"; # string | Identifier of token that was bought.
+my $sell_token = "sell_token_example"; # string | Identifier of token that was sold.
 
 eval {
     my $result = $api_instance->dex_get_orders__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, id => $id, buy_token => $buy_token, sell_token => $sell_token);
@@ -262,13 +262,13 @@ if ($@) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **start_block** | **int**|  | [optional] 
- **end_block** | **int**|  | [optional] 
- **start_date** | **DATE_TIME**|  | [optional] 
- **end_date** | **DATE_TIME**|  | [optional] 
- **id** | **string**|  | [optional] 
- **buy_token** | **string**|  | [optional] 
- **sell_token** | **string**|  | [optional] 
+ **start_block** | **int**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
+ **end_block** | **int**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
+ **start_date** | **DATE_TIME**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
+ **end_date** | **DATE_TIME**| The end date of timeframe. | [optional] 
+ **id** | **string**| Identifier, format: (owner address)-(order id) | [optional] 
+ **buy_token** | **string**| Identifier of token that was bought. | [optional] 
+ **sell_token** | **string**| Identifier of token that was sold. | [optional] 
 
 ### Return type
 
@@ -299,11 +299,11 @@ use WWW::OpenAPIClient::DexApi;
 my $api_instance = WWW::OpenAPIClient::DexApi->new(
 );
 
-my $start_block = 789; # int | 
-my $end_block = 789; # int | 
-my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
-my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
-my $id = "id_example"; # string | 
+my $start_block = 789; # int | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+my $end_block = 789; # int | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | The end date of timeframe.
+my $id = "id_example"; # string | Identifier, format: (token id)-(batch id).
 
 eval {
     my $result = $api_instance->dex_get_prices__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, id => $id);
@@ -318,11 +318,11 @@ if ($@) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **start_block** | **int**|  | [optional] 
- **end_block** | **int**|  | [optional] 
- **start_date** | **DATE_TIME**|  | [optional] 
- **end_date** | **DATE_TIME**|  | [optional] 
- **id** | **string**|  | [optional] 
+ **start_block** | **int**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
+ **end_block** | **int**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
+ **start_date** | **DATE_TIME**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
+ **end_date** | **DATE_TIME**| The end date of timeframe. | [optional] 
+ **id** | **string**| Identifier, format: (token id)-(batch id). | [optional] 
 
 ### Return type
 
@@ -633,11 +633,11 @@ use WWW::OpenAPIClient::DexApi;
 my $api_instance = WWW::OpenAPIClient::DexApi->new(
 );
 
-my $start_block = 789; # int | 
-my $end_block = 789; # int | 
-my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
-my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
-my $id = "id_example"; # string | 
+my $start_block = 789; # int | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+my $end_block = 789; # int | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | The end date of timeframe.
+my $id = "id_example"; # string | Identifier, format: (transaction hash)-(id).
 my $user = "user_example"; # string | 
 
 eval {
@@ -653,11 +653,11 @@ if ($@) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **start_block** | **int**|  | [optional] 
- **end_block** | **int**|  | [optional] 
- **start_date** | **DATE_TIME**|  | [optional] 
- **end_date** | **DATE_TIME**|  | [optional] 
- **id** | **string**|  | [optional] 
+ **start_block** | **int**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
+ **end_block** | **int**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
+ **start_date** | **DATE_TIME**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
+ **end_date** | **DATE_TIME**| The end date of timeframe. | [optional] 
+ **id** | **string**| Identifier, format: (transaction hash)-(id). | [optional] 
  **user** | **string**|  | [optional] 
 
 ### Return type
@@ -689,11 +689,11 @@ use WWW::OpenAPIClient::DexApi;
 my $api_instance = WWW::OpenAPIClient::DexApi->new(
 );
 
-my $start_block = 789; # int | 
-my $end_block = 789; # int | 
-my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
-my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
-my $id = "id_example"; # string | 
+my $start_block = 789; # int | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+my $end_block = 789; # int | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | The end date of timeframe.
+my $id = "id_example"; # string | Identifier, format: (transaction hash)-(id).
 my $user = "user_example"; # string | 
 
 eval {
@@ -709,11 +709,11 @@ if ($@) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **start_block** | **int**|  | [optional] 
- **end_block** | **int**|  | [optional] 
- **start_date** | **DATE_TIME**|  | [optional] 
- **end_date** | **DATE_TIME**|  | [optional] 
- **id** | **string**|  | [optional] 
+ **start_block** | **int**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
+ **end_block** | **int**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
+ **start_date** | **DATE_TIME**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
+ **end_date** | **DATE_TIME**| The end date of timeframe. | [optional] 
+ **id** | **string**| Identifier, format: (transaction hash)-(id). | [optional] 
  **user** | **string**|  | [optional] 
 
 ### Return type

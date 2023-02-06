@@ -390,12 +390,12 @@ Gets poolDayData.
 import 'package:openapi/api.dart';
 
 final api_instance = UniswapV3Api();
-final startBlock = 789; // int | 
-final endBlock = 789; // int | 
-final startDate = 2013-10-20T19:20:30+01:00; // DateTime | 
-final endDate = 2013-10-20T19:20:30+01:00; // DateTime | 
-final id = id_example; // String | 
-final pool = pool_example; // String | 
+final startBlock = 789; // int | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+final endBlock = 789; // int | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+final startDate = 2013-10-20T19:20:30+01:00; // DateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+final endDate = 2013-10-20T19:20:30+01:00; // DateTime | The end date of timeframe.
+final id = id_example; // String | Identifier, format: (pool address)-(day id).
+final pool = pool_example; // String | Pointer to pool.
 
 try {
     final result = api_instance.uniswapV3GetPoolDayDataHistorical(startBlock, endBlock, startDate, endDate, id, pool);
@@ -409,12 +409,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startBlock** | **int**|  | [optional] 
- **endBlock** | **int**|  | [optional] 
- **startDate** | **DateTime**|  | [optional] 
- **endDate** | **DateTime**|  | [optional] 
- **id** | **String**|  | [optional] 
- **pool** | **String**|  | [optional] 
+ **startBlock** | **int**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
+ **endBlock** | **int**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
+ **startDate** | **DateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
+ **endDate** | **DateTime**| The end date of timeframe. | [optional] 
+ **id** | **String**| Identifier, format: (pool address)-(day id). | [optional] 
+ **pool** | **String**| Pointer to pool. | [optional] 
 
 ### Return type
 
@@ -443,12 +443,12 @@ Gets poolHourData.
 import 'package:openapi/api.dart';
 
 final api_instance = UniswapV3Api();
-final startBlock = 789; // int | 
-final endBlock = 789; // int | 
-final startDate = 2013-10-20T19:20:30+01:00; // DateTime | 
-final endDate = 2013-10-20T19:20:30+01:00; // DateTime | 
-final id = id_example; // String | 
-final pool = pool_example; // String | 
+final startBlock = 789; // int | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+final endBlock = 789; // int | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+final startDate = 2013-10-20T19:20:30+01:00; // DateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+final endDate = 2013-10-20T19:20:30+01:00; // DateTime | The end date of timeframe.
+final id = id_example; // String | Identifier, format: (pool address)-(day id)
+final pool = pool_example; // String | Pointer to pool.
 
 try {
     final result = api_instance.uniswapV3GetPoolHourDataHistorical(startBlock, endBlock, startDate, endDate, id, pool);
@@ -462,12 +462,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startBlock** | **int**|  | [optional] 
- **endBlock** | **int**|  | [optional] 
- **startDate** | **DateTime**|  | [optional] 
- **endDate** | **DateTime**|  | [optional] 
- **id** | **String**|  | [optional] 
- **pool** | **String**|  | [optional] 
+ **startBlock** | **int**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
+ **endBlock** | **int**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
+ **startDate** | **DateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
+ **endDate** | **DateTime**| The end date of timeframe. | [optional] 
+ **id** | **String**| Identifier, format: (pool address)-(day id) | [optional] 
+ **pool** | **String**| Pointer to pool. | [optional] 
 
 ### Return type
 
@@ -551,12 +551,12 @@ Gets positionSnapshots.
 import 'package:openapi/api.dart';
 
 final api_instance = UniswapV3Api();
-final startBlock = 789; // int | 
-final endBlock = 789; // int | 
-final startDate = 2013-10-20T19:20:30+01:00; // DateTime | 
-final endDate = 2013-10-20T19:20:30+01:00; // DateTime | 
-final id = id_example; // String | 
-final pool = pool_example; // String | 
+final startBlock = 789; // int | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+final endBlock = 789; // int | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+final startDate = 2013-10-20T19:20:30+01:00; // DateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+final endDate = 2013-10-20T19:20:30+01:00; // DateTime | The end date of timeframe.
+final id = id_example; // String | NFT token identifier, format: (NFT token id)#(block number).
+final pool = pool_example; // String | Pool the position is within.
 
 try {
     final result = api_instance.uniswapV3GetPositionSnapshotsHistorical(startBlock, endBlock, startDate, endDate, id, pool);
@@ -570,12 +570,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startBlock** | **int**|  | [optional] 
- **endBlock** | **int**|  | [optional] 
- **startDate** | **DateTime**|  | [optional] 
- **endDate** | **DateTime**|  | [optional] 
- **id** | **String**|  | [optional] 
- **pool** | **String**|  | [optional] 
+ **startBlock** | **int**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
+ **endBlock** | **int**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
+ **startDate** | **DateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
+ **endDate** | **DateTime**| The end date of timeframe. | [optional] 
+ **id** | **String**| NFT token identifier, format: (NFT token id)#(block number). | [optional] 
+ **pool** | **String**| Pool the position is within. | [optional] 
 
 ### Return type
 
@@ -665,7 +665,7 @@ final startBlock = 789; // int | The start block. If endblock is not given, only
 final endBlock = 789; // int | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
 final startDate = 2013-10-20T19:20:30+01:00; // DateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
 final endDate = 2013-10-20T19:20:30+01:00; // DateTime | The end date of timeframe.
-final id = id_example; // String | Identifier, format: transaction hash + \"#\" + index in swaps Transaction array.
+final id = id_example; // String | Identifier, format: (transaction hash) + # + (index in swaps Transaction array).
 final pool = pool_example; // String | Pool swap occured within.
 final token0 = token0_example; // String | Reference to token0 as stored in pair contract.
 final token1 = token1_example; // String | Reference to token1 as stored in pair contract.
@@ -686,7 +686,7 @@ Name | Type | Description  | Notes
  **endBlock** | **int**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
  **startDate** | **DateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
  **endDate** | **DateTime**| The end date of timeframe. | [optional] 
- **id** | **String**| Identifier, format: transaction hash + \"#\" + index in swaps Transaction array. | [optional] 
+ **id** | **String**| Identifier, format: (transaction hash) + # + (index in swaps Transaction array). | [optional] 
  **pool** | **String**| Pool swap occured within. | [optional] 
  **token0** | **String**| Reference to token0 as stored in pair contract. | [optional] 
  **token1** | **String**| Reference to token1 as stored in pair contract. | [optional] 
@@ -718,12 +718,12 @@ Gets tickDayData.
 import 'package:openapi/api.dart';
 
 final api_instance = UniswapV3Api();
-final startBlock = 789; // int | 
-final endBlock = 789; // int | 
-final startDate = 2013-10-20T19:20:30+01:00; // DateTime | 
-final endDate = 2013-10-20T19:20:30+01:00; // DateTime | 
-final id = id_example; // String | 
-final pool = pool_example; // String | 
+final startBlock = 789; // int | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+final endBlock = 789; // int | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+final startDate = 2013-10-20T19:20:30+01:00; // DateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+final endDate = 2013-10-20T19:20:30+01:00; // DateTime | The end date of timeframe.
+final id = id_example; // String | Identifier, format: (pool address)-(tick index)-(timestamp).
+final pool = pool_example; // String | Pointer to pool.
 
 try {
     final result = api_instance.uniswapV3GetTickDayDataHistorical(startBlock, endBlock, startDate, endDate, id, pool);
@@ -737,12 +737,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startBlock** | **int**|  | [optional] 
- **endBlock** | **int**|  | [optional] 
- **startDate** | **DateTime**|  | [optional] 
- **endDate** | **DateTime**|  | [optional] 
- **id** | **String**|  | [optional] 
- **pool** | **String**|  | [optional] 
+ **startBlock** | **int**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
+ **endBlock** | **int**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
+ **startDate** | **DateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
+ **endDate** | **DateTime**| The end date of timeframe. | [optional] 
+ **id** | **String**| Identifier, format: (pool address)-(tick index)-(timestamp). | [optional] 
+ **pool** | **String**| Pointer to pool. | [optional] 
 
 ### Return type
 
@@ -771,12 +771,12 @@ Gets ticks.
 import 'package:openapi/api.dart';
 
 final api_instance = UniswapV3Api();
-final startBlock = 789; // int | 
-final endBlock = 789; // int | 
-final startDate = 2013-10-20T19:20:30+01:00; // DateTime | 
-final endDate = 2013-10-20T19:20:30+01:00; // DateTime | 
-final id = id_example; // String | 
-final pool = pool_example; // String | 
+final startBlock = 789; // int | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+final endBlock = 789; // int | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+final startDate = 2013-10-20T19:20:30+01:00; // DateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+final endDate = 2013-10-20T19:20:30+01:00; // DateTime | The end date of timeframe.
+final id = id_example; // String | Identifier, format: (pool address)#(tick index)
+final pool = pool_example; // String | Pool address.
 
 try {
     final result = api_instance.uniswapV3GetTicksHistorical(startBlock, endBlock, startDate, endDate, id, pool);
@@ -790,12 +790,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startBlock** | **int**|  | [optional] 
- **endBlock** | **int**|  | [optional] 
- **startDate** | **DateTime**|  | [optional] 
- **endDate** | **DateTime**|  | [optional] 
- **id** | **String**|  | [optional] 
- **pool** | **String**|  | [optional] 
+ **startBlock** | **int**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
+ **endBlock** | **int**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
+ **startDate** | **DateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
+ **endDate** | **DateTime**| The end date of timeframe. | [optional] 
+ **id** | **String**| Identifier, format: (pool address)#(tick index) | [optional] 
+ **pool** | **String**| Pool address. | [optional] 
 
 ### Return type
 

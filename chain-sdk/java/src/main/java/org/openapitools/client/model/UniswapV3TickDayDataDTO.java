@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.time.OffsetDateTime;
 import org.openapitools.jackson.nullable.JsonNullable;
@@ -50,8 +48,7 @@ import org.openapitools.client.JSON;
 /**
  * Data accumulated and condensed into day stats for each exchange. Entity gets saved only if there is a change during the day
  */
-@ApiModel(description = "Data accumulated and condensed into day stats for each exchange. Entity gets saved only if there is a change during the day")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-30T14:42:00.397192Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-06T14:47:06.037855Z[Etc/UTC]")
 public class UniswapV3TickDayDataDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -131,7 +128,6 @@ public class UniswapV3TickDayDataDTO {
    * @return entryTime
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public OffsetDateTime getEntryTime() {
     return entryTime;
@@ -154,7 +150,6 @@ public class UniswapV3TickDayDataDTO {
    * @return recvTime
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public OffsetDateTime getRecvTime() {
     return recvTime;
@@ -177,7 +172,6 @@ public class UniswapV3TickDayDataDTO {
    * @return blockNumber
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Number of block in which entity was recorded.")
 
   public Long getBlockNumber() {
     return blockNumber;
@@ -200,7 +194,6 @@ public class UniswapV3TickDayDataDTO {
    * @return id
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Identifier, format: (pool address)-(tick index)-(timestamp).")
 
   public String getId() {
     return id;
@@ -223,7 +216,6 @@ public class UniswapV3TickDayDataDTO {
    * @return date
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Timestamp rounded to current day by dividing by 86400.")
 
   public Integer getDate() {
     return date;
@@ -246,7 +238,6 @@ public class UniswapV3TickDayDataDTO {
    * @return pool
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Pointer to pool.")
 
   public String getPool() {
     return pool;
@@ -269,7 +260,6 @@ public class UniswapV3TickDayDataDTO {
    * @return tick
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Pointer to tick.")
 
   public String getTick() {
     return tick;
@@ -292,7 +282,6 @@ public class UniswapV3TickDayDataDTO {
    * @return liquidityGross
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Total liquidity pool has as tick lower or upper at end of period.")
 
   public String getLiquidityGross() {
     return liquidityGross;
@@ -315,7 +304,6 @@ public class UniswapV3TickDayDataDTO {
    * @return liquidityNet
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "How much liquidity changes when tick crossed at end of period.")
 
   public String getLiquidityNet() {
     return liquidityNet;
@@ -338,7 +326,6 @@ public class UniswapV3TickDayDataDTO {
    * @return volumeToken0
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Hourly volume of token0 with this tick in range.")
 
   public String getVolumeToken0() {
     return volumeToken0;
@@ -361,7 +348,6 @@ public class UniswapV3TickDayDataDTO {
    * @return volumeToken1
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Hourly volume of token1 with this tick in range.")
 
   public String getVolumeToken1() {
     return volumeToken1;
@@ -384,7 +370,6 @@ public class UniswapV3TickDayDataDTO {
    * @return volumeUsd
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Hourly volume in derived USD with this tick in range.")
 
   public String getVolumeUsd() {
     return volumeUsd;
@@ -407,7 +392,6 @@ public class UniswapV3TickDayDataDTO {
    * @return feesUsd
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Fees in USD.")
 
   public String getFeesUsd() {
     return feesUsd;
@@ -430,7 +414,6 @@ public class UniswapV3TickDayDataDTO {
    * @return feeGrowthOutside0x128
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Variable needed for fee computation.")
 
   public String getFeeGrowthOutside0x128() {
     return feeGrowthOutside0x128;
@@ -453,7 +436,6 @@ public class UniswapV3TickDayDataDTO {
    * @return feeGrowthOutside1x128
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Variable needed for fee computation.")
 
   public String getFeeGrowthOutside1x128() {
     return feeGrowthOutside1x128;
@@ -476,7 +458,6 @@ public class UniswapV3TickDayDataDTO {
    * @return vid
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public Long getVid() {
     return vid;

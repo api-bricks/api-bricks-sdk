@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.time.OffsetDateTime;
 import org.openapitools.client.model.NumericsBigInteger;
@@ -51,8 +49,7 @@ import org.openapitools.client.JSON;
 /**
  * Stores aggregated information for a specific token across all pairs that token is included in.
  */
-@ApiModel(description = "Stores aggregated information for a specific token across all pairs that token is included in.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-30T14:42:00.397192Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-06T14:47:06.037855Z[Etc/UTC]")
 public class UniswapV2TokenDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -140,7 +137,6 @@ public class UniswapV2TokenDTO {
    * @return entryTime
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public OffsetDateTime getEntryTime() {
     return entryTime;
@@ -163,7 +159,6 @@ public class UniswapV2TokenDTO {
    * @return recvTime
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public OffsetDateTime getRecvTime() {
     return recvTime;
@@ -186,7 +181,6 @@ public class UniswapV2TokenDTO {
    * @return blockNumber
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Number of block in which entity was recorded.")
 
   public Long getBlockNumber() {
     return blockNumber;
@@ -209,7 +203,6 @@ public class UniswapV2TokenDTO {
    * @return vid
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public Long getVid() {
     return vid;
@@ -232,7 +225,6 @@ public class UniswapV2TokenDTO {
    * @return id
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Token address.")
 
   public String getId() {
     return id;
@@ -255,7 +247,6 @@ public class UniswapV2TokenDTO {
    * @return symbol
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Token symbol.")
 
   public String getSymbol() {
     return symbol;
@@ -278,7 +269,6 @@ public class UniswapV2TokenDTO {
    * @return name
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Token name.")
 
   public String getName() {
     return name;
@@ -301,7 +291,6 @@ public class UniswapV2TokenDTO {
    * @return decimals
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Token decimals.")
 
   public Integer getDecimals() {
     return decimals;
@@ -324,7 +313,6 @@ public class UniswapV2TokenDTO {
    * @return totalSupply
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public NumericsBigInteger getTotalSupply() {
     return totalSupply;
@@ -347,7 +335,6 @@ public class UniswapV2TokenDTO {
    * @return tradeVolume
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Amount of token traded all time across all pairs.")
 
   public String getTradeVolume() {
     return tradeVolume;
@@ -370,7 +357,6 @@ public class UniswapV2TokenDTO {
    * @return tradeVolumeUsd
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Amount of token in USD traded all time across pairs (only for tokens with liquidity above minimum threshold).")
 
   public String getTradeVolumeUsd() {
     return tradeVolumeUsd;
@@ -393,7 +379,6 @@ public class UniswapV2TokenDTO {
    * @return untrackedVolumeUsd
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Amount of token in USD traded all time across pairs (no minimum liquidity threshold).")
 
   public String getUntrackedVolumeUsd() {
     return untrackedVolumeUsd;
@@ -416,7 +401,6 @@ public class UniswapV2TokenDTO {
    * @return txCount
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public NumericsBigInteger getTxCount() {
     return txCount;
@@ -439,7 +423,6 @@ public class UniswapV2TokenDTO {
    * @return totalLiquidity
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Total amount of token provided as liquidity across all pairs.")
 
   public String getTotalLiquidity() {
     return totalLiquidity;
@@ -462,7 +445,6 @@ public class UniswapV2TokenDTO {
    * @return derivedEth
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "ETH per token.")
 
   public String getDerivedEth() {
     return derivedEth;
@@ -479,7 +461,6 @@ public class UniswapV2TokenDTO {
    * @return tokenSymbol
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getTokenSymbol() {
     return tokenSymbol;

@@ -240,12 +240,12 @@ require 'openapi_client'
 
 api_instance = OpenapiClient::DexApi.new
 opts = {
-  start_block: 789, # Integer | 
-  end_block: 789, # Integer | 
-  start_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
-  end_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
-  id: 'id_example', # String | 
-  user: 'user_example' # String | 
+  start_block: 789, # Integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+  end_block: 789, # Integer | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+  start_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+  end_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | The end date of timeframe.
+  id: 'id_example', # String | Identifier, format: (transaction hash)-(token id).
+  user: 'user_example' # String | User address.
 }
 
 begin
@@ -279,12 +279,12 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **start_block** | **Integer** |  | [optional] |
-| **end_block** | **Integer** |  | [optional] |
-| **start_date** | **Time** |  | [optional] |
-| **end_date** | **Time** |  | [optional] |
-| **id** | **String** |  | [optional] |
-| **user** | **String** |  | [optional] |
+| **start_block** | **Integer** | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] |
+| **end_block** | **Integer** | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] |
+| **start_date** | **Time** | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] |
+| **end_date** | **Time** | The end date of timeframe. | [optional] |
+| **id** | **String** | Identifier, format: (transaction hash)-(token id). | [optional] |
+| **user** | **String** | User address. | [optional] |
 
 ### Return type
 
@@ -316,13 +316,13 @@ require 'openapi_client'
 
 api_instance = OpenapiClient::DexApi.new
 opts = {
-  start_block: 789, # Integer | 
-  end_block: 789, # Integer | 
-  start_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
-  end_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
-  id: 'id_example', # String | 
-  buy_token: 'buy_token_example', # String | 
-  sell_token: 'sell_token_example' # String | 
+  start_block: 789, # Integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+  end_block: 789, # Integer | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+  start_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+  end_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | The end date of timeframe.
+  id: 'id_example', # String | Identifier, format: (owner address)-(order id)
+  buy_token: 'buy_token_example', # String | Identifier of token that was bought.
+  sell_token: 'sell_token_example' # String | Identifier of token that was sold.
 }
 
 begin
@@ -356,13 +356,13 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **start_block** | **Integer** |  | [optional] |
-| **end_block** | **Integer** |  | [optional] |
-| **start_date** | **Time** |  | [optional] |
-| **end_date** | **Time** |  | [optional] |
-| **id** | **String** |  | [optional] |
-| **buy_token** | **String** |  | [optional] |
-| **sell_token** | **String** |  | [optional] |
+| **start_block** | **Integer** | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] |
+| **end_block** | **Integer** | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] |
+| **start_date** | **Time** | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] |
+| **end_date** | **Time** | The end date of timeframe. | [optional] |
+| **id** | **String** | Identifier, format: (owner address)-(order id) | [optional] |
+| **buy_token** | **String** | Identifier of token that was bought. | [optional] |
+| **sell_token** | **String** | Identifier of token that was sold. | [optional] |
 
 ### Return type
 
@@ -394,11 +394,11 @@ require 'openapi_client'
 
 api_instance = OpenapiClient::DexApi.new
 opts = {
-  start_block: 789, # Integer | 
-  end_block: 789, # Integer | 
-  start_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
-  end_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
-  id: 'id_example' # String | 
+  start_block: 789, # Integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+  end_block: 789, # Integer | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+  start_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+  end_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | The end date of timeframe.
+  id: 'id_example' # String | Identifier, format: (token id)-(batch id).
 }
 
 begin
@@ -432,11 +432,11 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **start_block** | **Integer** |  | [optional] |
-| **end_block** | **Integer** |  | [optional] |
-| **start_date** | **Time** |  | [optional] |
-| **end_date** | **Time** |  | [optional] |
-| **id** | **String** |  | [optional] |
+| **start_block** | **Integer** | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] |
+| **end_block** | **Integer** | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] |
+| **start_date** | **Time** | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] |
+| **end_date** | **Time** | The end date of timeframe. | [optional] |
+| **id** | **String** | Identifier, format: (token id)-(batch id). | [optional] |
 
 ### Return type
 
@@ -848,11 +848,11 @@ require 'openapi_client'
 
 api_instance = OpenapiClient::DexApi.new
 opts = {
-  start_block: 789, # Integer | 
-  end_block: 789, # Integer | 
-  start_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
-  end_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
-  id: 'id_example', # String | 
+  start_block: 789, # Integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+  end_block: 789, # Integer | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+  start_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+  end_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | The end date of timeframe.
+  id: 'id_example', # String | Identifier, format: (transaction hash)-(id).
   user: 'user_example' # String | 
 }
 
@@ -887,11 +887,11 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **start_block** | **Integer** |  | [optional] |
-| **end_block** | **Integer** |  | [optional] |
-| **start_date** | **Time** |  | [optional] |
-| **end_date** | **Time** |  | [optional] |
-| **id** | **String** |  | [optional] |
+| **start_block** | **Integer** | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] |
+| **end_block** | **Integer** | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] |
+| **start_date** | **Time** | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] |
+| **end_date** | **Time** | The end date of timeframe. | [optional] |
+| **id** | **String** | Identifier, format: (transaction hash)-(id). | [optional] |
 | **user** | **String** |  | [optional] |
 
 ### Return type
@@ -924,11 +924,11 @@ require 'openapi_client'
 
 api_instance = OpenapiClient::DexApi.new
 opts = {
-  start_block: 789, # Integer | 
-  end_block: 789, # Integer | 
-  start_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
-  end_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
-  id: 'id_example', # String | 
+  start_block: 789, # Integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+  end_block: 789, # Integer | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+  start_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+  end_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | The end date of timeframe.
+  id: 'id_example', # String | Identifier, format: (transaction hash)-(id).
   user: 'user_example' # String | 
 }
 
@@ -963,11 +963,11 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **start_block** | **Integer** |  | [optional] |
-| **end_block** | **Integer** |  | [optional] |
-| **start_date** | **Time** |  | [optional] |
-| **end_date** | **Time** |  | [optional] |
-| **id** | **String** |  | [optional] |
+| **start_block** | **Integer** | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] |
+| **end_block** | **Integer** | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] |
+| **start_date** | **Time** | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] |
+| **end_date** | **Time** | The end date of timeframe. | [optional] |
+| **id** | **String** | Identifier, format: (transaction hash)-(id). | [optional] |
 | **user** | **String** |  | [optional] |
 
 ### Return type

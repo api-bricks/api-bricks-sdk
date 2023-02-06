@@ -246,6 +246,15 @@ Method | HTTP request | Description
 *dexWithdraws (current)ASync* | *GET* /dapps/dex/withdraws/current | Withdraws (current).
 
 
+### MetadataManager
+Method | HTTP request | Description
+------------- | ------------- | -------------
+*metadataChainsGetSync* | *GET* /metadata/chains | List all chains..
+*metadataChainsGetASync* | *GET* /metadata/chains | List all chains..
+*metadataDappsGetSync* | *GET* /metadata/dapps | List all decentralized applications..
+*metadataDappsGetASync* | *GET* /metadata/dapps | List all decentralized applications..
+
+
 ### SushiswapManager
 Method | HTTP request | Description
 ------------- | ------------- | -------------

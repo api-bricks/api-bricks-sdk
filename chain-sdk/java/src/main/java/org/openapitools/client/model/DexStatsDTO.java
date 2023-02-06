@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.time.OffsetDateTime;
 import org.openapitools.jackson.nullable.JsonNullable;
@@ -50,8 +48,7 @@ import org.openapitools.client.JSON;
 /**
  * A type collecting global stats about this instance of Gnosis Protocol.
  */
-@ApiModel(description = "A type collecting global stats about this instance of Gnosis Protocol.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-30T14:42:00.397192Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-06T14:47:06.037855Z[Etc/UTC]")
 public class DexStatsDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -111,7 +108,6 @@ public class DexStatsDTO {
    * @return entryTime
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public OffsetDateTime getEntryTime() {
     return entryTime;
@@ -134,7 +130,6 @@ public class DexStatsDTO {
    * @return recvTime
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public OffsetDateTime getRecvTime() {
     return recvTime;
@@ -157,7 +152,6 @@ public class DexStatsDTO {
    * @return blockNumber
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Number of block in which entity was recorded.")
 
   public Long getBlockNumber() {
     return blockNumber;
@@ -180,7 +174,6 @@ public class DexStatsDTO {
    * @return id
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getId() {
     return id;
@@ -203,7 +196,6 @@ public class DexStatsDTO {
    * @return volumeInOwl
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The total volume denominated in OWL (all sell amounts combined).")
 
   public String getVolumeInOwl() {
     return volumeInOwl;
@@ -226,7 +218,6 @@ public class DexStatsDTO {
    * @return utilityInOwl
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The total trader surplus in OWL.")
 
   public String getUtilityInOwl() {
     return utilityInOwl;
@@ -249,7 +240,6 @@ public class DexStatsDTO {
    * @return owlBurnt
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The total amount of OWL burnt (equivalent to fees rewarded to solvers).")
 
   public String getOwlBurnt() {
     return owlBurnt;
@@ -272,7 +262,6 @@ public class DexStatsDTO {
    * @return settledBatchCount
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The total number of settled batches.")
 
   public Integer getSettledBatchCount() {
     return settledBatchCount;
@@ -295,7 +284,6 @@ public class DexStatsDTO {
    * @return settledTradeCount
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The total number of settled trades.")
 
   public Integer getSettledTradeCount() {
     return settledTradeCount;
@@ -318,7 +306,6 @@ public class DexStatsDTO {
    * @return listedTokens
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The number of listed tokens.")
 
   public Integer getListedTokens() {
     return listedTokens;
@@ -341,7 +328,6 @@ public class DexStatsDTO {
    * @return vid
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public Long getVid() {
     return vid;

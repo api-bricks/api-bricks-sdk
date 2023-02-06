@@ -179,12 +179,12 @@ export default class DexApi {
      * Deposits (historical)
      * Gets deposits.
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.startBlock 
-     * @param {Number} opts.endBlock 
-     * @param {Date} opts.startDate 
-     * @param {Date} opts.endDate 
-     * @param {String} opts.id 
-     * @param {String} opts.user 
+     * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param {Date} opts.startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param {Date} opts.endDate The end date of timeframe.
+     * @param {String} opts.id Identifier, format: (transaction hash)-(token id).
+     * @param {String} opts.user User address.
      * @param {module:api/DexApi~dexGetDepositsHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/DexDepositDTO>}
      */
@@ -230,13 +230,13 @@ export default class DexApi {
      * Orders (historical)
      * Gets orders.
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.startBlock 
-     * @param {Number} opts.endBlock 
-     * @param {Date} opts.startDate 
-     * @param {Date} opts.endDate 
-     * @param {String} opts.id 
-     * @param {String} opts.buyToken 
-     * @param {String} opts.sellToken 
+     * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param {Date} opts.startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param {Date} opts.endDate The end date of timeframe.
+     * @param {String} opts.id Identifier, format: (owner address)-(order id)
+     * @param {String} opts.buyToken Identifier of token that was bought.
+     * @param {String} opts.sellToken Identifier of token that was sold.
      * @param {module:api/DexApi~dexGetOrdersHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/DexOrderDTO>}
      */
@@ -283,11 +283,11 @@ export default class DexApi {
      * Prices (historical)
      * Gets prices.
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.startBlock 
-     * @param {Number} opts.endBlock 
-     * @param {Date} opts.startDate 
-     * @param {Date} opts.endDate 
-     * @param {String} opts.id 
+     * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param {Date} opts.startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param {Date} opts.endDate The end date of timeframe.
+     * @param {String} opts.id Identifier, format: (token id)-(batch id).
      * @param {module:api/DexApi~dexGetPricesHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/DexPriceDTO>}
      */
@@ -587,11 +587,11 @@ export default class DexApi {
      * WithdrawRequests (historical)
      * Gets withdrawRequests.
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.startBlock 
-     * @param {Number} opts.endBlock 
-     * @param {Date} opts.startDate 
-     * @param {Date} opts.endDate 
-     * @param {String} opts.id 
+     * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param {Date} opts.startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param {Date} opts.endDate The end date of timeframe.
+     * @param {String} opts.id Identifier, format: (transaction hash)-(id).
      * @param {String} opts.user 
      * @param {module:api/DexApi~dexGetWithdrawRequestsHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/DexWithdrawRequestDTO>}
@@ -638,11 +638,11 @@ export default class DexApi {
      * Withdraws (historical)
      * Gets withdraws.
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.startBlock 
-     * @param {Number} opts.endBlock 
-     * @param {Date} opts.startDate 
-     * @param {Date} opts.endDate 
-     * @param {String} opts.id 
+     * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param {Date} opts.startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param {Date} opts.endDate The end date of timeframe.
+     * @param {String} opts.id Identifier, format: (transaction hash)-(id).
      * @param {String} opts.user 
      * @param {module:api/DexApi~dexGetWithdrawsHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/DexWithdrawDTO>}

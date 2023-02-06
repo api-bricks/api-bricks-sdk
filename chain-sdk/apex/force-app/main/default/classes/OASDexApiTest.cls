@@ -26,20 +26,6 @@ private class OASDexApiTest {
         expectedResponse = new List<OASDexBatchDTO>{OASDexBatchDTO.getExample()};
         response = (List<OASDexBatchDTO>) api.dexBatchesCurrent();
         System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASDexBatchDTO>{OASDexBatchDTO.getExample()});
-        res.setHeader('Content-Type', 'text/json');
-        res.setBody(js);
-        expectedResponse = new List<OASDexBatchDTO>{OASDexBatchDTO.getExample()};
-        response = (List<OASDexBatchDTO>) api.dexBatchesCurrent();
-        System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASDexBatchDTO>{OASDexBatchDTO.getExample()});
-        res.setHeader('Content-Type', 'text/plain');
-        res.setBody(js);
-        expectedResponse = new List<OASDexBatchDTO>{OASDexBatchDTO.getExample()};
-        response = (List<OASDexBatchDTO>) api.dexBatchesCurrent();
-        System.assertEquals(expectedResponse, response);
     }
 
     /**
@@ -64,20 +50,6 @@ private class OASDexApiTest {
 
         js = JSON.serialize(new List<OASDexDepositDTO>{OASDexDepositDTO.getExample()});
         res.setHeader('Content-Type', 'application/json');
-        res.setBody(js);
-        expectedResponse = new List<OASDexDepositDTO>{OASDexDepositDTO.getExample()};
-        response = (List<OASDexDepositDTO>) api.dexDepositsCurrent();
-        System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASDexDepositDTO>{OASDexDepositDTO.getExample()});
-        res.setHeader('Content-Type', 'text/json');
-        res.setBody(js);
-        expectedResponse = new List<OASDexDepositDTO>{OASDexDepositDTO.getExample()};
-        response = (List<OASDexDepositDTO>) api.dexDepositsCurrent();
-        System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASDexDepositDTO>{OASDexDepositDTO.getExample()});
-        res.setHeader('Content-Type', 'text/plain');
         res.setBody(js);
         expectedResponse = new List<OASDexDepositDTO>{OASDexDepositDTO.getExample()};
         response = (List<OASDexDepositDTO>) api.dexDepositsCurrent();
@@ -118,20 +90,6 @@ private class OASDexApiTest {
         expectedResponse = new List<OASDexBatchDTO>{OASDexBatchDTO.getExample()};
         response = (List<OASDexBatchDTO>) api.dexGetBatchesHistorical(params);
         System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASDexBatchDTO>{OASDexBatchDTO.getExample()});
-        res.setHeader('Content-Type', 'text/json');
-        res.setBody(js);
-        expectedResponse = new List<OASDexBatchDTO>{OASDexBatchDTO.getExample()};
-        response = (List<OASDexBatchDTO>) api.dexGetBatchesHistorical(params);
-        System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASDexBatchDTO>{OASDexBatchDTO.getExample()});
-        res.setHeader('Content-Type', 'text/plain');
-        res.setBody(js);
-        expectedResponse = new List<OASDexBatchDTO>{OASDexBatchDTO.getExample()};
-        response = (List<OASDexBatchDTO>) api.dexGetBatchesHistorical(params);
-        System.assertEquals(expectedResponse, response);
     }
 
     /**
@@ -165,20 +123,6 @@ private class OASDexApiTest {
 
         js = JSON.serialize(new List<OASDexDepositDTO>{OASDexDepositDTO.getExample()});
         res.setHeader('Content-Type', 'application/json');
-        res.setBody(js);
-        expectedResponse = new List<OASDexDepositDTO>{OASDexDepositDTO.getExample()};
-        response = (List<OASDexDepositDTO>) api.dexGetDepositsHistorical(params);
-        System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASDexDepositDTO>{OASDexDepositDTO.getExample()});
-        res.setHeader('Content-Type', 'text/json');
-        res.setBody(js);
-        expectedResponse = new List<OASDexDepositDTO>{OASDexDepositDTO.getExample()};
-        response = (List<OASDexDepositDTO>) api.dexGetDepositsHistorical(params);
-        System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASDexDepositDTO>{OASDexDepositDTO.getExample()});
-        res.setHeader('Content-Type', 'text/plain');
         res.setBody(js);
         expectedResponse = new List<OASDexDepositDTO>{OASDexDepositDTO.getExample()};
         response = (List<OASDexDepositDTO>) api.dexGetDepositsHistorical(params);
@@ -221,20 +165,6 @@ private class OASDexApiTest {
         expectedResponse = new List<OASDexOrderDTO>{OASDexOrderDTO.getExample()};
         response = (List<OASDexOrderDTO>) api.dexGetOrdersHistorical(params);
         System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASDexOrderDTO>{OASDexOrderDTO.getExample()});
-        res.setHeader('Content-Type', 'text/json');
-        res.setBody(js);
-        expectedResponse = new List<OASDexOrderDTO>{OASDexOrderDTO.getExample()};
-        response = (List<OASDexOrderDTO>) api.dexGetOrdersHistorical(params);
-        System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASDexOrderDTO>{OASDexOrderDTO.getExample()});
-        res.setHeader('Content-Type', 'text/plain');
-        res.setBody(js);
-        expectedResponse = new List<OASDexOrderDTO>{OASDexOrderDTO.getExample()};
-        response = (List<OASDexOrderDTO>) api.dexGetOrdersHistorical(params);
-        System.assertEquals(expectedResponse, response);
     }
 
     /**
@@ -267,20 +197,6 @@ private class OASDexApiTest {
 
         js = JSON.serialize(new List<OASDexPriceDTO>{OASDexPriceDTO.getExample()});
         res.setHeader('Content-Type', 'application/json');
-        res.setBody(js);
-        expectedResponse = new List<OASDexPriceDTO>{OASDexPriceDTO.getExample()};
-        response = (List<OASDexPriceDTO>) api.dexGetPricesHistorical(params);
-        System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASDexPriceDTO>{OASDexPriceDTO.getExample()});
-        res.setHeader('Content-Type', 'text/json');
-        res.setBody(js);
-        expectedResponse = new List<OASDexPriceDTO>{OASDexPriceDTO.getExample()};
-        response = (List<OASDexPriceDTO>) api.dexGetPricesHistorical(params);
-        System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASDexPriceDTO>{OASDexPriceDTO.getExample()});
-        res.setHeader('Content-Type', 'text/plain');
         res.setBody(js);
         expectedResponse = new List<OASDexPriceDTO>{OASDexPriceDTO.getExample()};
         response = (List<OASDexPriceDTO>) api.dexGetPricesHistorical(params);
@@ -321,20 +237,6 @@ private class OASDexApiTest {
         expectedResponse = new List<OASDexSolutionDTO>{OASDexSolutionDTO.getExample()};
         response = (List<OASDexSolutionDTO>) api.dexGetSolutionsHistorical(params);
         System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASDexSolutionDTO>{OASDexSolutionDTO.getExample()});
-        res.setHeader('Content-Type', 'text/json');
-        res.setBody(js);
-        expectedResponse = new List<OASDexSolutionDTO>{OASDexSolutionDTO.getExample()};
-        response = (List<OASDexSolutionDTO>) api.dexGetSolutionsHistorical(params);
-        System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASDexSolutionDTO>{OASDexSolutionDTO.getExample()});
-        res.setHeader('Content-Type', 'text/plain');
-        res.setBody(js);
-        expectedResponse = new List<OASDexSolutionDTO>{OASDexSolutionDTO.getExample()};
-        response = (List<OASDexSolutionDTO>) api.dexGetSolutionsHistorical(params);
-        System.assertEquals(expectedResponse, response);
     }
 
     /**
@@ -367,20 +269,6 @@ private class OASDexApiTest {
 
         js = JSON.serialize(new List<OASDexStatsDTO>{OASDexStatsDTO.getExample()});
         res.setHeader('Content-Type', 'application/json');
-        res.setBody(js);
-        expectedResponse = new List<OASDexStatsDTO>{OASDexStatsDTO.getExample()};
-        response = (List<OASDexStatsDTO>) api.dexGetStatsHistorical(params);
-        System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASDexStatsDTO>{OASDexStatsDTO.getExample()});
-        res.setHeader('Content-Type', 'text/json');
-        res.setBody(js);
-        expectedResponse = new List<OASDexStatsDTO>{OASDexStatsDTO.getExample()};
-        response = (List<OASDexStatsDTO>) api.dexGetStatsHistorical(params);
-        System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASDexStatsDTO>{OASDexStatsDTO.getExample()});
-        res.setHeader('Content-Type', 'text/plain');
         res.setBody(js);
         expectedResponse = new List<OASDexStatsDTO>{OASDexStatsDTO.getExample()};
         response = (List<OASDexStatsDTO>) api.dexGetStatsHistorical(params);
@@ -424,20 +312,6 @@ private class OASDexApiTest {
         expectedResponse = new List<OASDexTokenDTO>{OASDexTokenDTO.getExample()};
         response = (List<OASDexTokenDTO>) api.dexGetTokensHistorical(params);
         System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASDexTokenDTO>{OASDexTokenDTO.getExample()});
-        res.setHeader('Content-Type', 'text/json');
-        res.setBody(js);
-        expectedResponse = new List<OASDexTokenDTO>{OASDexTokenDTO.getExample()};
-        response = (List<OASDexTokenDTO>) api.dexGetTokensHistorical(params);
-        System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASDexTokenDTO>{OASDexTokenDTO.getExample()});
-        res.setHeader('Content-Type', 'text/plain');
-        res.setBody(js);
-        expectedResponse = new List<OASDexTokenDTO>{OASDexTokenDTO.getExample()};
-        response = (List<OASDexTokenDTO>) api.dexGetTokensHistorical(params);
-        System.assertEquals(expectedResponse, response);
     }
 
     /**
@@ -476,20 +350,6 @@ private class OASDexApiTest {
         expectedResponse = new List<OASDexTradeDTO>{OASDexTradeDTO.getExample()};
         response = (List<OASDexTradeDTO>) api.dexGetTradesHistorical(params);
         System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASDexTradeDTO>{OASDexTradeDTO.getExample()});
-        res.setHeader('Content-Type', 'text/json');
-        res.setBody(js);
-        expectedResponse = new List<OASDexTradeDTO>{OASDexTradeDTO.getExample()};
-        response = (List<OASDexTradeDTO>) api.dexGetTradesHistorical(params);
-        System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASDexTradeDTO>{OASDexTradeDTO.getExample()});
-        res.setHeader('Content-Type', 'text/plain');
-        res.setBody(js);
-        expectedResponse = new List<OASDexTradeDTO>{OASDexTradeDTO.getExample()};
-        response = (List<OASDexTradeDTO>) api.dexGetTradesHistorical(params);
-        System.assertEquals(expectedResponse, response);
     }
 
     /**
@@ -522,20 +382,6 @@ private class OASDexApiTest {
 
         js = JSON.serialize(new List<OASDexUserDTO>{OASDexUserDTO.getExample()});
         res.setHeader('Content-Type', 'application/json');
-        res.setBody(js);
-        expectedResponse = new List<OASDexUserDTO>{OASDexUserDTO.getExample()};
-        response = (List<OASDexUserDTO>) api.dexGetUsersHistorical(params);
-        System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASDexUserDTO>{OASDexUserDTO.getExample()});
-        res.setHeader('Content-Type', 'text/json');
-        res.setBody(js);
-        expectedResponse = new List<OASDexUserDTO>{OASDexUserDTO.getExample()};
-        response = (List<OASDexUserDTO>) api.dexGetUsersHistorical(params);
-        System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASDexUserDTO>{OASDexUserDTO.getExample()});
-        res.setHeader('Content-Type', 'text/plain');
         res.setBody(js);
         expectedResponse = new List<OASDexUserDTO>{OASDexUserDTO.getExample()};
         response = (List<OASDexUserDTO>) api.dexGetUsersHistorical(params);
@@ -577,20 +423,6 @@ private class OASDexApiTest {
         expectedResponse = new List<OASDexWithdrawRequestDTO>{OASDexWithdrawRequestDTO.getExample()};
         response = (List<OASDexWithdrawRequestDTO>) api.dexGetWithdrawRequestsHistorical(params);
         System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASDexWithdrawRequestDTO>{OASDexWithdrawRequestDTO.getExample()});
-        res.setHeader('Content-Type', 'text/json');
-        res.setBody(js);
-        expectedResponse = new List<OASDexWithdrawRequestDTO>{OASDexWithdrawRequestDTO.getExample()};
-        response = (List<OASDexWithdrawRequestDTO>) api.dexGetWithdrawRequestsHistorical(params);
-        System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASDexWithdrawRequestDTO>{OASDexWithdrawRequestDTO.getExample()});
-        res.setHeader('Content-Type', 'text/plain');
-        res.setBody(js);
-        expectedResponse = new List<OASDexWithdrawRequestDTO>{OASDexWithdrawRequestDTO.getExample()};
-        response = (List<OASDexWithdrawRequestDTO>) api.dexGetWithdrawRequestsHistorical(params);
-        System.assertEquals(expectedResponse, response);
     }
 
     /**
@@ -628,20 +460,6 @@ private class OASDexApiTest {
         expectedResponse = new List<OASDexWithdrawDTO>{OASDexWithdrawDTO.getExample()};
         response = (List<OASDexWithdrawDTO>) api.dexGetWithdrawsHistorical(params);
         System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASDexWithdrawDTO>{OASDexWithdrawDTO.getExample()});
-        res.setHeader('Content-Type', 'text/json');
-        res.setBody(js);
-        expectedResponse = new List<OASDexWithdrawDTO>{OASDexWithdrawDTO.getExample()};
-        response = (List<OASDexWithdrawDTO>) api.dexGetWithdrawsHistorical(params);
-        System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASDexWithdrawDTO>{OASDexWithdrawDTO.getExample()});
-        res.setHeader('Content-Type', 'text/plain');
-        res.setBody(js);
-        expectedResponse = new List<OASDexWithdrawDTO>{OASDexWithdrawDTO.getExample()};
-        response = (List<OASDexWithdrawDTO>) api.dexGetWithdrawsHistorical(params);
-        System.assertEquals(expectedResponse, response);
     }
 
     /**
@@ -666,20 +484,6 @@ private class OASDexApiTest {
 
         js = JSON.serialize(new List<OASDexOrderDTO>{OASDexOrderDTO.getExample()});
         res.setHeader('Content-Type', 'application/json');
-        res.setBody(js);
-        expectedResponse = new List<OASDexOrderDTO>{OASDexOrderDTO.getExample()};
-        response = (List<OASDexOrderDTO>) api.dexOrdersCurrent();
-        System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASDexOrderDTO>{OASDexOrderDTO.getExample()});
-        res.setHeader('Content-Type', 'text/json');
-        res.setBody(js);
-        expectedResponse = new List<OASDexOrderDTO>{OASDexOrderDTO.getExample()};
-        response = (List<OASDexOrderDTO>) api.dexOrdersCurrent();
-        System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASDexOrderDTO>{OASDexOrderDTO.getExample()});
-        res.setHeader('Content-Type', 'text/plain');
         res.setBody(js);
         expectedResponse = new List<OASDexOrderDTO>{OASDexOrderDTO.getExample()};
         response = (List<OASDexOrderDTO>) api.dexOrdersCurrent();
@@ -712,20 +516,6 @@ private class OASDexApiTest {
         expectedResponse = new List<OASDexPriceDTO>{OASDexPriceDTO.getExample()};
         response = (List<OASDexPriceDTO>) api.dexPricesCurrent();
         System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASDexPriceDTO>{OASDexPriceDTO.getExample()});
-        res.setHeader('Content-Type', 'text/json');
-        res.setBody(js);
-        expectedResponse = new List<OASDexPriceDTO>{OASDexPriceDTO.getExample()};
-        response = (List<OASDexPriceDTO>) api.dexPricesCurrent();
-        System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASDexPriceDTO>{OASDexPriceDTO.getExample()});
-        res.setHeader('Content-Type', 'text/plain');
-        res.setBody(js);
-        expectedResponse = new List<OASDexPriceDTO>{OASDexPriceDTO.getExample()};
-        response = (List<OASDexPriceDTO>) api.dexPricesCurrent();
-        System.assertEquals(expectedResponse, response);
     }
 
     /**
@@ -750,20 +540,6 @@ private class OASDexApiTest {
 
         js = JSON.serialize(new List<OASDexSolutionDTO>{OASDexSolutionDTO.getExample()});
         res.setHeader('Content-Type', 'application/json');
-        res.setBody(js);
-        expectedResponse = new List<OASDexSolutionDTO>{OASDexSolutionDTO.getExample()};
-        response = (List<OASDexSolutionDTO>) api.dexSolutionsCurrent();
-        System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASDexSolutionDTO>{OASDexSolutionDTO.getExample()});
-        res.setHeader('Content-Type', 'text/json');
-        res.setBody(js);
-        expectedResponse = new List<OASDexSolutionDTO>{OASDexSolutionDTO.getExample()};
-        response = (List<OASDexSolutionDTO>) api.dexSolutionsCurrent();
-        System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASDexSolutionDTO>{OASDexSolutionDTO.getExample()});
-        res.setHeader('Content-Type', 'text/plain');
         res.setBody(js);
         expectedResponse = new List<OASDexSolutionDTO>{OASDexSolutionDTO.getExample()};
         response = (List<OASDexSolutionDTO>) api.dexSolutionsCurrent();
@@ -796,20 +572,6 @@ private class OASDexApiTest {
         expectedResponse = new List<OASDexStatsDTO>{OASDexStatsDTO.getExample()};
         response = (List<OASDexStatsDTO>) api.dexStatsCurrent();
         System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASDexStatsDTO>{OASDexStatsDTO.getExample()});
-        res.setHeader('Content-Type', 'text/json');
-        res.setBody(js);
-        expectedResponse = new List<OASDexStatsDTO>{OASDexStatsDTO.getExample()};
-        response = (List<OASDexStatsDTO>) api.dexStatsCurrent();
-        System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASDexStatsDTO>{OASDexStatsDTO.getExample()});
-        res.setHeader('Content-Type', 'text/plain');
-        res.setBody(js);
-        expectedResponse = new List<OASDexStatsDTO>{OASDexStatsDTO.getExample()};
-        response = (List<OASDexStatsDTO>) api.dexStatsCurrent();
-        System.assertEquals(expectedResponse, response);
     }
 
     /**
@@ -834,20 +596,6 @@ private class OASDexApiTest {
 
         js = JSON.serialize(new List<OASDexTokenDTO>{OASDexTokenDTO.getExample()});
         res.setHeader('Content-Type', 'application/json');
-        res.setBody(js);
-        expectedResponse = new List<OASDexTokenDTO>{OASDexTokenDTO.getExample()};
-        response = (List<OASDexTokenDTO>) api.dexTokensCurrent();
-        System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASDexTokenDTO>{OASDexTokenDTO.getExample()});
-        res.setHeader('Content-Type', 'text/json');
-        res.setBody(js);
-        expectedResponse = new List<OASDexTokenDTO>{OASDexTokenDTO.getExample()};
-        response = (List<OASDexTokenDTO>) api.dexTokensCurrent();
-        System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASDexTokenDTO>{OASDexTokenDTO.getExample()});
-        res.setHeader('Content-Type', 'text/plain');
         res.setBody(js);
         expectedResponse = new List<OASDexTokenDTO>{OASDexTokenDTO.getExample()};
         response = (List<OASDexTokenDTO>) api.dexTokensCurrent();
@@ -880,20 +628,6 @@ private class OASDexApiTest {
         expectedResponse = new List<OASDexTradeDTO>{OASDexTradeDTO.getExample()};
         response = (List<OASDexTradeDTO>) api.dexTradesCurrent();
         System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASDexTradeDTO>{OASDexTradeDTO.getExample()});
-        res.setHeader('Content-Type', 'text/json');
-        res.setBody(js);
-        expectedResponse = new List<OASDexTradeDTO>{OASDexTradeDTO.getExample()};
-        response = (List<OASDexTradeDTO>) api.dexTradesCurrent();
-        System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASDexTradeDTO>{OASDexTradeDTO.getExample()});
-        res.setHeader('Content-Type', 'text/plain');
-        res.setBody(js);
-        expectedResponse = new List<OASDexTradeDTO>{OASDexTradeDTO.getExample()};
-        response = (List<OASDexTradeDTO>) api.dexTradesCurrent();
-        System.assertEquals(expectedResponse, response);
     }
 
     /**
@@ -918,20 +652,6 @@ private class OASDexApiTest {
 
         js = JSON.serialize(new List<OASDexUserDTO>{OASDexUserDTO.getExample()});
         res.setHeader('Content-Type', 'application/json');
-        res.setBody(js);
-        expectedResponse = new List<OASDexUserDTO>{OASDexUserDTO.getExample()};
-        response = (List<OASDexUserDTO>) api.dexUsersCurrent();
-        System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASDexUserDTO>{OASDexUserDTO.getExample()});
-        res.setHeader('Content-Type', 'text/json');
-        res.setBody(js);
-        expectedResponse = new List<OASDexUserDTO>{OASDexUserDTO.getExample()};
-        response = (List<OASDexUserDTO>) api.dexUsersCurrent();
-        System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASDexUserDTO>{OASDexUserDTO.getExample()});
-        res.setHeader('Content-Type', 'text/plain');
         res.setBody(js);
         expectedResponse = new List<OASDexUserDTO>{OASDexUserDTO.getExample()};
         response = (List<OASDexUserDTO>) api.dexUsersCurrent();
@@ -964,20 +684,6 @@ private class OASDexApiTest {
         expectedResponse = new List<OASDexWithdrawRequestDTO>{OASDexWithdrawRequestDTO.getExample()};
         response = (List<OASDexWithdrawRequestDTO>) api.dexWithdrawRequestsCurrent();
         System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASDexWithdrawRequestDTO>{OASDexWithdrawRequestDTO.getExample()});
-        res.setHeader('Content-Type', 'text/json');
-        res.setBody(js);
-        expectedResponse = new List<OASDexWithdrawRequestDTO>{OASDexWithdrawRequestDTO.getExample()};
-        response = (List<OASDexWithdrawRequestDTO>) api.dexWithdrawRequestsCurrent();
-        System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASDexWithdrawRequestDTO>{OASDexWithdrawRequestDTO.getExample()});
-        res.setHeader('Content-Type', 'text/plain');
-        res.setBody(js);
-        expectedResponse = new List<OASDexWithdrawRequestDTO>{OASDexWithdrawRequestDTO.getExample()};
-        response = (List<OASDexWithdrawRequestDTO>) api.dexWithdrawRequestsCurrent();
-        System.assertEquals(expectedResponse, response);
     }
 
     /**
@@ -1002,20 +708,6 @@ private class OASDexApiTest {
 
         js = JSON.serialize(new List<OASDexWithdrawDTO>{OASDexWithdrawDTO.getExample()});
         res.setHeader('Content-Type', 'application/json');
-        res.setBody(js);
-        expectedResponse = new List<OASDexWithdrawDTO>{OASDexWithdrawDTO.getExample()};
-        response = (List<OASDexWithdrawDTO>) api.dexWithdrawsCurrent();
-        System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASDexWithdrawDTO>{OASDexWithdrawDTO.getExample()});
-        res.setHeader('Content-Type', 'text/json');
-        res.setBody(js);
-        expectedResponse = new List<OASDexWithdrawDTO>{OASDexWithdrawDTO.getExample()};
-        response = (List<OASDexWithdrawDTO>) api.dexWithdrawsCurrent();
-        System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASDexWithdrawDTO>{OASDexWithdrawDTO.getExample()});
-        res.setHeader('Content-Type', 'text/plain');
         res.setBody(js);
         expectedResponse = new List<OASDexWithdrawDTO>{OASDexWithdrawDTO.getExample()};
         response = (List<OASDexWithdrawDTO>) api.dexWithdrawsCurrent();

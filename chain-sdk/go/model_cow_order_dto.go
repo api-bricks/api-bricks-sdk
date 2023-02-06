@@ -16,6 +16,9 @@ import (
 	"time"
 )
 
+// checks if the CowOrderDTO type satisfies the MappedNullable interface at compile time
+var _ MappedNullable = &CowOrderDTO{}
+
 // CowOrderDTO struct for CowOrderDTO
 type CowOrderDTO struct {
 	EntryTime *time.Time `json:"entry_time,omitempty"`
@@ -70,7 +73,7 @@ func (o *CowOrderDTO) GetEntryTime() time.Time {
 // and a boolean to check if the value has been set.
 func (o *CowOrderDTO) GetEntryTimeOk() (*time.Time, bool) {
 	if o == nil || isNil(o.EntryTime) {
-    return nil, false
+		return nil, false
 	}
 	return o.EntryTime, true
 }
@@ -102,7 +105,7 @@ func (o *CowOrderDTO) GetRecvTime() time.Time {
 // and a boolean to check if the value has been set.
 func (o *CowOrderDTO) GetRecvTimeOk() (*time.Time, bool) {
 	if o == nil || isNil(o.RecvTime) {
-    return nil, false
+		return nil, false
 	}
 	return o.RecvTime, true
 }
@@ -134,7 +137,7 @@ func (o *CowOrderDTO) GetBlockNumber() int64 {
 // and a boolean to check if the value has been set.
 func (o *CowOrderDTO) GetBlockNumberOk() (*int64, bool) {
 	if o == nil || isNil(o.BlockNumber) {
-    return nil, false
+		return nil, false
 	}
 	return o.BlockNumber, true
 }
@@ -167,7 +170,7 @@ func (o *CowOrderDTO) GetId() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CowOrderDTO) GetIdOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Id.Get(), o.Id.IsSet()
 }
@@ -209,7 +212,7 @@ func (o *CowOrderDTO) GetOwner() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CowOrderDTO) GetOwnerOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Owner.Get(), o.Owner.IsSet()
 }
@@ -251,7 +254,7 @@ func (o *CowOrderDTO) GetTradesTimestamp() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CowOrderDTO) GetTradesTimestampOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.TradesTimestamp.Get(), o.TradesTimestamp.IsSet()
 }
@@ -293,7 +296,7 @@ func (o *CowOrderDTO) GetInvalidateTimestamp() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CowOrderDTO) GetInvalidateTimestampOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.InvalidateTimestamp.Get(), o.InvalidateTimestamp.IsSet()
 }
@@ -335,7 +338,7 @@ func (o *CowOrderDTO) GetPresignTimestamp() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CowOrderDTO) GetPresignTimestampOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.PresignTimestamp.Get(), o.PresignTimestamp.IsSet()
 }
@@ -377,7 +380,7 @@ func (o *CowOrderDTO) GetIsSigned() bool {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CowOrderDTO) GetIsSignedOk() (*bool, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.IsSigned.Get(), o.IsSigned.IsSet()
 }
@@ -418,7 +421,7 @@ func (o *CowOrderDTO) GetIsValid() bool {
 // and a boolean to check if the value has been set.
 func (o *CowOrderDTO) GetIsValidOk() (*bool, bool) {
 	if o == nil || isNil(o.IsValid) {
-    return nil, false
+		return nil, false
 	}
 	return o.IsValid, true
 }
@@ -450,7 +453,7 @@ func (o *CowOrderDTO) GetVid() int64 {
 // and a boolean to check if the value has been set.
 func (o *CowOrderDTO) GetVidOk() (*int64, bool) {
 	if o == nil || isNil(o.Vid) {
-    return nil, false
+		return nil, false
 	}
 	return o.Vid, true
 }
@@ -470,6 +473,14 @@ func (o *CowOrderDTO) SetVid(v int64) {
 }
 
 func (o CowOrderDTO) MarshalJSON() ([]byte, error) {
+	toSerialize,err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
+}
+
+func (o CowOrderDTO) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
 	if !isNil(o.EntryTime) {
 		toSerialize["entry_time"] = o.EntryTime
@@ -504,7 +515,7 @@ func (o CowOrderDTO) MarshalJSON() ([]byte, error) {
 	if !isNil(o.Vid) {
 		toSerialize["vid"] = o.Vid
 	}
-	return json.Marshal(toSerialize)
+	return toSerialize, nil
 }
 
 type NullableCowOrderDTO struct {

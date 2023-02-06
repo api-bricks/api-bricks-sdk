@@ -145,7 +145,7 @@ dex_user_dto_t *dex_user_dto_parseFromJSON(cJSON *dex_user_dtoJSON){
     // dex_user_dto->entry_time
     cJSON *entry_time = cJSON_GetObjectItemCaseSensitive(dex_user_dtoJSON, "entry_time");
     if (entry_time) { 
-    if(!cJSON_IsString(entry_time))
+    if(!cJSON_IsString(entry_time) && !cJSON_IsNull(entry_time))
     {
     goto end; //DateTime
     }
@@ -154,7 +154,7 @@ dex_user_dto_t *dex_user_dto_parseFromJSON(cJSON *dex_user_dtoJSON){
     // dex_user_dto->recv_time
     cJSON *recv_time = cJSON_GetObjectItemCaseSensitive(dex_user_dtoJSON, "recv_time");
     if (recv_time) { 
-    if(!cJSON_IsString(recv_time))
+    if(!cJSON_IsString(recv_time) && !cJSON_IsNull(recv_time))
     {
     goto end; //DateTime
     }
@@ -172,7 +172,7 @@ dex_user_dto_t *dex_user_dto_parseFromJSON(cJSON *dex_user_dtoJSON){
     // dex_user_dto->id
     cJSON *id = cJSON_GetObjectItemCaseSensitive(dex_user_dtoJSON, "id");
     if (id) { 
-    if(!cJSON_IsString(id))
+    if(!cJSON_IsString(id) && !cJSON_IsNull(id))
     {
     goto end; //String
     }
@@ -181,7 +181,7 @@ dex_user_dto_t *dex_user_dto_parseFromJSON(cJSON *dex_user_dtoJSON){
     // dex_user_dto->from_batch_id
     cJSON *from_batch_id = cJSON_GetObjectItemCaseSensitive(dex_user_dtoJSON, "from_batch_id");
     if (from_batch_id) { 
-    if(!cJSON_IsString(from_batch_id))
+    if(!cJSON_IsString(from_batch_id) && !cJSON_IsNull(from_batch_id))
     {
     goto end; //String
     }
@@ -190,7 +190,7 @@ dex_user_dto_t *dex_user_dto_parseFromJSON(cJSON *dex_user_dtoJSON){
     // dex_user_dto->create_epoch
     cJSON *create_epoch = cJSON_GetObjectItemCaseSensitive(dex_user_dtoJSON, "create_epoch");
     if (create_epoch) { 
-    if(!cJSON_IsString(create_epoch))
+    if(!cJSON_IsString(create_epoch) && !cJSON_IsNull(create_epoch))
     {
     goto end; //String
     }
@@ -199,7 +199,7 @@ dex_user_dto_t *dex_user_dto_parseFromJSON(cJSON *dex_user_dtoJSON){
     // dex_user_dto->tx_hash
     cJSON *tx_hash = cJSON_GetObjectItemCaseSensitive(dex_user_dtoJSON, "tx_hash");
     if (tx_hash) { 
-    if(!cJSON_IsString(tx_hash))
+    if(!cJSON_IsString(tx_hash) && !cJSON_IsNull(tx_hash))
     {
     goto end; //String
     }
@@ -216,13 +216,13 @@ dex_user_dto_t *dex_user_dto_parseFromJSON(cJSON *dex_user_dtoJSON){
 
 
     dex_user_dto_local_var = dex_user_dto_create (
-        entry_time ? strdup(entry_time->valuestring) : NULL,
-        recv_time ? strdup(recv_time->valuestring) : NULL,
+        entry_time && !cJSON_IsNull(entry_time) ? strdup(entry_time->valuestring) : NULL,
+        recv_time && !cJSON_IsNull(recv_time) ? strdup(recv_time->valuestring) : NULL,
         block_number ? block_number->valuedouble : 0,
-        id ? strdup(id->valuestring) : NULL,
-        from_batch_id ? strdup(from_batch_id->valuestring) : NULL,
-        create_epoch ? strdup(create_epoch->valuestring) : NULL,
-        tx_hash ? strdup(tx_hash->valuestring) : NULL,
+        id && !cJSON_IsNull(id) ? strdup(id->valuestring) : NULL,
+        from_batch_id && !cJSON_IsNull(from_batch_id) ? strdup(from_batch_id->valuestring) : NULL,
+        create_epoch && !cJSON_IsNull(create_epoch) ? strdup(create_epoch->valuestring) : NULL,
+        tx_hash && !cJSON_IsNull(tx_hash) ? strdup(tx_hash->valuestring) : NULL,
         vid ? vid->valuedouble : 0
         );
 

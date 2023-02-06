@@ -255,13 +255,13 @@ public class Example {
     defaultClient.setBasePath("https://onchain.coinapi.io");
 
     CowApi apiInstance = new CowApi(defaultClient);
-    Long startBlock = 56L; // Long | 
-    Long endBlock = 56L; // Long | 
-    OffsetDateTime startDate = OffsetDateTime.now(); // OffsetDateTime | 
-    OffsetDateTime endDate = OffsetDateTime.now(); // OffsetDateTime | 
-    String id = "id_example"; // String | 
-    String sellToken = "sellToken_example"; // String | 
-    String buyToken = "buyToken_example"; // String | 
+    Long startBlock = 56L; // Long | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+    Long endBlock = 56L; // Long | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+    OffsetDateTime startDate = OffsetDateTime.now(); // OffsetDateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+    OffsetDateTime endDate = OffsetDateTime.now(); // OffsetDateTime | The end date of timeframe.
+    String id = "id_example"; // String | Identifier, format: (order id)|(transaction hash)|(event index).
+    String sellToken = "sellToken_example"; // String | Address of token that is sold.
+    String buyToken = "buyToken_example"; // String | Address of token that is bought.
     try {
       List<CowTradeDTO> result = apiInstance.cowGetTradesHistorical(startBlock, endBlock, startDate, endDate, id, sellToken, buyToken);
       System.out.println(result);
@@ -280,13 +280,13 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **startBlock** | **Long**|  | [optional] |
-| **endBlock** | **Long**|  | [optional] |
-| **startDate** | **OffsetDateTime**|  | [optional] |
-| **endDate** | **OffsetDateTime**|  | [optional] |
-| **id** | **String**|  | [optional] |
-| **sellToken** | **String**|  | [optional] |
-| **buyToken** | **String**|  | [optional] |
+| **startBlock** | **Long**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] |
+| **endBlock** | **Long**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] |
+| **startDate** | **OffsetDateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] |
+| **endDate** | **OffsetDateTime**| The end date of timeframe. | [optional] |
+| **id** | **String**| Identifier, format: (order id)|(transaction hash)|(event index). | [optional] |
+| **sellToken** | **String**| Address of token that is sold. | [optional] |
+| **buyToken** | **String**| Address of token that is bought. | [optional] |
 
 ### Return type
 

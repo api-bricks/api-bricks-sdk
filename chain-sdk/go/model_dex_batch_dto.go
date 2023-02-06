@@ -16,6 +16,9 @@ import (
 	"time"
 )
 
+// checks if the DexBatchDTO type satisfies the MappedNullable interface at compile time
+var _ MappedNullable = &DexBatchDTO{}
+
 // DexBatchDTO Batch executed. Every batch will contain at least solution with the a set of trades that are executed in it
 type DexBatchDTO struct {
 	EntryTime *time.Time `json:"entry_time,omitempty"`
@@ -70,7 +73,7 @@ func (o *DexBatchDTO) GetEntryTime() time.Time {
 // and a boolean to check if the value has been set.
 func (o *DexBatchDTO) GetEntryTimeOk() (*time.Time, bool) {
 	if o == nil || isNil(o.EntryTime) {
-    return nil, false
+		return nil, false
 	}
 	return o.EntryTime, true
 }
@@ -102,7 +105,7 @@ func (o *DexBatchDTO) GetRecvTime() time.Time {
 // and a boolean to check if the value has been set.
 func (o *DexBatchDTO) GetRecvTimeOk() (*time.Time, bool) {
 	if o == nil || isNil(o.RecvTime) {
-    return nil, false
+		return nil, false
 	}
 	return o.RecvTime, true
 }
@@ -134,7 +137,7 @@ func (o *DexBatchDTO) GetBlockNumber() int64 {
 // and a boolean to check if the value has been set.
 func (o *DexBatchDTO) GetBlockNumberOk() (*int64, bool) {
 	if o == nil || isNil(o.BlockNumber) {
-    return nil, false
+		return nil, false
 	}
 	return o.BlockNumber, true
 }
@@ -167,7 +170,7 @@ func (o *DexBatchDTO) GetId() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *DexBatchDTO) GetIdOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Id.Get(), o.Id.IsSet()
 }
@@ -209,7 +212,7 @@ func (o *DexBatchDTO) GetStartEpoch() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *DexBatchDTO) GetStartEpochOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.StartEpoch.Get(), o.StartEpoch.IsSet()
 }
@@ -251,7 +254,7 @@ func (o *DexBatchDTO) GetEndEpoch() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *DexBatchDTO) GetEndEpochOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.EndEpoch.Get(), o.EndEpoch.IsSet()
 }
@@ -293,7 +296,7 @@ func (o *DexBatchDTO) GetSolution() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *DexBatchDTO) GetSolutionOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Solution.Get(), o.Solution.IsSet()
 }
@@ -335,7 +338,7 @@ func (o *DexBatchDTO) GetFirstSolutionEpoch() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *DexBatchDTO) GetFirstSolutionEpochOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.FirstSolutionEpoch.Get(), o.FirstSolutionEpoch.IsSet()
 }
@@ -377,7 +380,7 @@ func (o *DexBatchDTO) GetLastRevertEpoch() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *DexBatchDTO) GetLastRevertEpochOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.LastRevertEpoch.Get(), o.LastRevertEpoch.IsSet()
 }
@@ -419,7 +422,7 @@ func (o *DexBatchDTO) GetTxHash() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *DexBatchDTO) GetTxHashOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.TxHash.Get(), o.TxHash.IsSet()
 }
@@ -460,7 +463,7 @@ func (o *DexBatchDTO) GetVid() int64 {
 // and a boolean to check if the value has been set.
 func (o *DexBatchDTO) GetVidOk() (*int64, bool) {
 	if o == nil || isNil(o.Vid) {
-    return nil, false
+		return nil, false
 	}
 	return o.Vid, true
 }
@@ -480,6 +483,14 @@ func (o *DexBatchDTO) SetVid(v int64) {
 }
 
 func (o DexBatchDTO) MarshalJSON() ([]byte, error) {
+	toSerialize,err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
+}
+
+func (o DexBatchDTO) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
 	if !isNil(o.EntryTime) {
 		toSerialize["entry_time"] = o.EntryTime
@@ -514,7 +525,7 @@ func (o DexBatchDTO) MarshalJSON() ([]byte, error) {
 	if !isNil(o.Vid) {
 		toSerialize["vid"] = o.Vid
 	}
-	return json.Marshal(toSerialize)
+	return toSerialize, nil
 }
 
 type NullableDexBatchDTO struct {

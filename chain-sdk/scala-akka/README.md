@@ -220,6 +220,8 @@ Class | Method | HTTP request | Description
 *DexApi* | [**dexUsersCurrent**](docs/DexApi.md#dexUsersCurrent) | **GET** /dapps/dex/users/current | Users (current)
 *DexApi* | [**dexWithdrawRequestsCurrent**](docs/DexApi.md#dexWithdrawRequestsCurrent) | **GET** /dapps/dex/withdrawRequests/current | WithdrawRequests (current)
 *DexApi* | [**dexWithdrawsCurrent**](docs/DexApi.md#dexWithdrawsCurrent) | **GET** /dapps/dex/withdraws/current | Withdraws (current)
+*MetadataApi* | [**metadataChainsGet**](docs/MetadataApi.md#metadataChainsGet) | **GET** /metadata/chains | List all chains.
+*MetadataApi* | [**metadataDappsGet**](docs/MetadataApi.md#metadataDappsGet) | **GET** /metadata/dapps | List all decentralized applications.
 *SushiswapApi* | [**sushiswapBundlesCurrent**](docs/SushiswapApi.md#sushiswapBundlesCurrent) | **GET** /dapps/sushiswap/bundles/current | Bundles (current)
 *SushiswapApi* | [**sushiswapBurnsCurrent**](docs/SushiswapApi.md#sushiswapBurnsCurrent) | **GET** /dapps/sushiswap/burns/current | Burns (current)
 *SushiswapApi* | [**sushiswapDayDataCurrent**](docs/SushiswapApi.md#sushiswapDayDataCurrent) | **GET** /dapps/sushiswap/dayData/current | DayData (current)

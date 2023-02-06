@@ -16,6 +16,9 @@ import (
 	"time"
 )
 
+// checks if the CowUserDTO type satisfies the MappedNullable interface at compile time
+var _ MappedNullable = &CowUserDTO{}
+
 // CowUserDTO struct for CowUserDTO
 type CowUserDTO struct {
 	EntryTime *time.Time `json:"entry_time,omitempty"`
@@ -64,7 +67,7 @@ func (o *CowUserDTO) GetEntryTime() time.Time {
 // and a boolean to check if the value has been set.
 func (o *CowUserDTO) GetEntryTimeOk() (*time.Time, bool) {
 	if o == nil || isNil(o.EntryTime) {
-    return nil, false
+		return nil, false
 	}
 	return o.EntryTime, true
 }
@@ -96,7 +99,7 @@ func (o *CowUserDTO) GetRecvTime() time.Time {
 // and a boolean to check if the value has been set.
 func (o *CowUserDTO) GetRecvTimeOk() (*time.Time, bool) {
 	if o == nil || isNil(o.RecvTime) {
-    return nil, false
+		return nil, false
 	}
 	return o.RecvTime, true
 }
@@ -128,7 +131,7 @@ func (o *CowUserDTO) GetBlockNumber() int64 {
 // and a boolean to check if the value has been set.
 func (o *CowUserDTO) GetBlockNumberOk() (*int64, bool) {
 	if o == nil || isNil(o.BlockNumber) {
-    return nil, false
+		return nil, false
 	}
 	return o.BlockNumber, true
 }
@@ -161,7 +164,7 @@ func (o *CowUserDTO) GetId() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CowUserDTO) GetIdOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Id.Get(), o.Id.IsSet()
 }
@@ -203,7 +206,7 @@ func (o *CowUserDTO) GetAddress() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CowUserDTO) GetAddressOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Address.Get(), o.Address.IsSet()
 }
@@ -245,7 +248,7 @@ func (o *CowUserDTO) GetFirstTradeTimestamp() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CowUserDTO) GetFirstTradeTimestampOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.FirstTradeTimestamp.Get(), o.FirstTradeTimestamp.IsSet()
 }
@@ -286,7 +289,7 @@ func (o *CowUserDTO) GetIsSolver() bool {
 // and a boolean to check if the value has been set.
 func (o *CowUserDTO) GetIsSolverOk() (*bool, bool) {
 	if o == nil || isNil(o.IsSolver) {
-    return nil, false
+		return nil, false
 	}
 	return o.IsSolver, true
 }
@@ -318,7 +321,7 @@ func (o *CowUserDTO) GetVid() int64 {
 // and a boolean to check if the value has been set.
 func (o *CowUserDTO) GetVidOk() (*int64, bool) {
 	if o == nil || isNil(o.Vid) {
-    return nil, false
+		return nil, false
 	}
 	return o.Vid, true
 }
@@ -338,6 +341,14 @@ func (o *CowUserDTO) SetVid(v int64) {
 }
 
 func (o CowUserDTO) MarshalJSON() ([]byte, error) {
+	toSerialize,err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
+}
+
+func (o CowUserDTO) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
 	if !isNil(o.EntryTime) {
 		toSerialize["entry_time"] = o.EntryTime
@@ -363,7 +374,7 @@ func (o CowUserDTO) MarshalJSON() ([]byte, error) {
 	if !isNil(o.Vid) {
 		toSerialize["vid"] = o.Vid
 	}
-	return json.Marshal(toSerialize)
+	return toSerialize, nil
 }
 
 type NullableCowUserDTO struct {

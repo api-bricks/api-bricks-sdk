@@ -149,12 +149,12 @@ Gets deposits.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startBlock** | **integer** |  | [optional] [default to null]
- **endBlock** | **integer** |  | [optional] [default to null]
- **startDate** | **string** |  | [optional] [default to null]
- **endDate** | **string** |  | [optional] [default to null]
- **id** | **string** |  | [optional] [default to null]
- **user** | **string** |  | [optional] [default to null]
+ **startBlock** | **integer** | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] [default to null]
+ **endBlock** | **integer** | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] [default to null]
+ **startDate** | **string** | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] [default to null]
+ **endDate** | **string** | The end date of timeframe. | [optional] [default to null]
+ **id** | **string** | Identifier, format: (transaction hash)-(token id). | [optional] [default to null]
+ **user** | **string** | User address. | [optional] [default to null]
 
 ### Return type
 
@@ -189,13 +189,13 @@ Gets orders.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startBlock** | **integer** |  | [optional] [default to null]
- **endBlock** | **integer** |  | [optional] [default to null]
- **startDate** | **string** |  | [optional] [default to null]
- **endDate** | **string** |  | [optional] [default to null]
- **id** | **string** |  | [optional] [default to null]
- **buyToken** | **string** |  | [optional] [default to null]
- **sellToken** | **string** |  | [optional] [default to null]
+ **startBlock** | **integer** | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] [default to null]
+ **endBlock** | **integer** | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] [default to null]
+ **startDate** | **string** | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] [default to null]
+ **endDate** | **string** | The end date of timeframe. | [optional] [default to null]
+ **id** | **string** | Identifier, format: (owner address)-(order id) | [optional] [default to null]
+ **buyToken** | **string** | Identifier of token that was bought. | [optional] [default to null]
+ **sellToken** | **string** | Identifier of token that was sold. | [optional] [default to null]
 
 ### Return type
 
@@ -230,11 +230,11 @@ Gets prices.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startBlock** | **integer** |  | [optional] [default to null]
- **endBlock** | **integer** |  | [optional] [default to null]
- **startDate** | **string** |  | [optional] [default to null]
- **endDate** | **string** |  | [optional] [default to null]
- **id** | **string** |  | [optional] [default to null]
+ **startBlock** | **integer** | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] [default to null]
+ **endBlock** | **integer** | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] [default to null]
+ **startDate** | **string** | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] [default to null]
+ **endDate** | **string** | The end date of timeframe. | [optional] [default to null]
+ **id** | **string** | Identifier, format: (token id)-(batch id). | [optional] [default to null]
 
 ### Return type
 
@@ -469,11 +469,11 @@ Gets withdrawRequests.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startBlock** | **integer** |  | [optional] [default to null]
- **endBlock** | **integer** |  | [optional] [default to null]
- **startDate** | **string** |  | [optional] [default to null]
- **endDate** | **string** |  | [optional] [default to null]
- **id** | **string** |  | [optional] [default to null]
+ **startBlock** | **integer** | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] [default to null]
+ **endBlock** | **integer** | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] [default to null]
+ **startDate** | **string** | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] [default to null]
+ **endDate** | **string** | The end date of timeframe. | [optional] [default to null]
+ **id** | **string** | Identifier, format: (transaction hash)-(id). | [optional] [default to null]
  **user** | **string** |  | [optional] [default to null]
 
 ### Return type
@@ -509,11 +509,11 @@ Gets withdraws.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startBlock** | **integer** |  | [optional] [default to null]
- **endBlock** | **integer** |  | [optional] [default to null]
- **startDate** | **string** |  | [optional] [default to null]
- **endDate** | **string** |  | [optional] [default to null]
- **id** | **string** |  | [optional] [default to null]
+ **startBlock** | **integer** | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] [default to null]
+ **endBlock** | **integer** | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] [default to null]
+ **startDate** | **string** | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] [default to null]
+ **endDate** | **string** | The end date of timeframe. | [optional] [default to null]
+ **id** | **string** | Identifier, format: (transaction hash)-(id). | [optional] [default to null]
  **user** | **string** |  | [optional] [default to null]
 
 ### Return type

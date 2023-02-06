@@ -483,12 +483,12 @@
 #' ####################  DexGetDepositsHistorical  ####################
 #'
 #' library(openapi)
-#' var_start_block <- 56 # integer |  (Optional)
-#' var_end_block <- 56 # integer |  (Optional)
-#' var_start_date <- "start_date_example" # character |  (Optional)
-#' var_end_date <- "end_date_example" # character |  (Optional)
-#' var_id <- "id_example" # character |  (Optional)
-#' var_user <- "user_example" # character |  (Optional)
+#' var_start_block <- 56 # integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (Optional)
+#' var_end_block <- 56 # integer | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (Optional)
+#' var_start_date <- "start_date_example" # character | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (Optional)
+#' var_end_date <- "end_date_example" # character | The end date of timeframe. (Optional)
+#' var_id <- "id_example" # character | Identifier, format: (transaction hash)-(token id). (Optional)
+#' var_user <- "user_example" # character | User address. (Optional)
 #'
 #' #Deposits (historical)
 #' api_instance <- DexApi$new()
@@ -502,13 +502,13 @@
 #' ####################  DexGetOrdersHistorical  ####################
 #'
 #' library(openapi)
-#' var_start_block <- 56 # integer |  (Optional)
-#' var_end_block <- 56 # integer |  (Optional)
-#' var_start_date <- "start_date_example" # character |  (Optional)
-#' var_end_date <- "end_date_example" # character |  (Optional)
-#' var_id <- "id_example" # character |  (Optional)
-#' var_buy_token <- "buy_token_example" # character |  (Optional)
-#' var_sell_token <- "sell_token_example" # character |  (Optional)
+#' var_start_block <- 56 # integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (Optional)
+#' var_end_block <- 56 # integer | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (Optional)
+#' var_start_date <- "start_date_example" # character | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (Optional)
+#' var_end_date <- "end_date_example" # character | The end date of timeframe. (Optional)
+#' var_id <- "id_example" # character | Identifier, format: (owner address)-(order id) (Optional)
+#' var_buy_token <- "buy_token_example" # character | Identifier of token that was bought. (Optional)
+#' var_sell_token <- "sell_token_example" # character | Identifier of token that was sold. (Optional)
 #'
 #' #Orders (historical)
 #' api_instance <- DexApi$new()
@@ -522,11 +522,11 @@
 #' ####################  DexGetPricesHistorical  ####################
 #'
 #' library(openapi)
-#' var_start_block <- 56 # integer |  (Optional)
-#' var_end_block <- 56 # integer |  (Optional)
-#' var_start_date <- "start_date_example" # character |  (Optional)
-#' var_end_date <- "end_date_example" # character |  (Optional)
-#' var_id <- "id_example" # character |  (Optional)
+#' var_start_block <- 56 # integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (Optional)
+#' var_end_block <- 56 # integer | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (Optional)
+#' var_start_date <- "start_date_example" # character | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (Optional)
+#' var_end_date <- "end_date_example" # character | The end date of timeframe. (Optional)
+#' var_id <- "id_example" # character | Identifier, format: (token id)-(batch id). (Optional)
 #'
 #' #Prices (historical)
 #' api_instance <- DexApi$new()
@@ -635,11 +635,11 @@
 #' ####################  DexGetWithdrawRequestsHistorical  ####################
 #'
 #' library(openapi)
-#' var_start_block <- 56 # integer |  (Optional)
-#' var_end_block <- 56 # integer |  (Optional)
-#' var_start_date <- "start_date_example" # character |  (Optional)
-#' var_end_date <- "end_date_example" # character |  (Optional)
-#' var_id <- "id_example" # character |  (Optional)
+#' var_start_block <- 56 # integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (Optional)
+#' var_end_block <- 56 # integer | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (Optional)
+#' var_start_date <- "start_date_example" # character | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (Optional)
+#' var_end_date <- "end_date_example" # character | The end date of timeframe. (Optional)
+#' var_id <- "id_example" # character | Identifier, format: (transaction hash)-(id). (Optional)
 #' var_user <- "user_example" # character |  (Optional)
 #'
 #' #WithdrawRequests (historical)
@@ -654,11 +654,11 @@
 #' ####################  DexGetWithdrawsHistorical  ####################
 #'
 #' library(openapi)
-#' var_start_block <- 56 # integer |  (Optional)
-#' var_end_block <- 56 # integer |  (Optional)
-#' var_start_date <- "start_date_example" # character |  (Optional)
-#' var_end_date <- "end_date_example" # character |  (Optional)
-#' var_id <- "id_example" # character |  (Optional)
+#' var_start_block <- 56 # integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (Optional)
+#' var_end_block <- 56 # integer | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (Optional)
+#' var_start_date <- "start_date_example" # character | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (Optional)
+#' var_end_date <- "end_date_example" # character | The end date of timeframe. (Optional)
+#' var_id <- "id_example" # character | Identifier, format: (transaction hash)-(id). (Optional)
 #' var_user <- "user_example" # character |  (Optional)
 #'
 #' #Withdraws (historical)
@@ -1097,12 +1097,12 @@ DexApi <- R6::R6Class(
     #' @description
     #' Deposits (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param id (optional) No description
-    #' @param user (optional) No description
+    #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+    #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+    #' @param start_date (optional) The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+    #' @param end_date (optional) The end date of timeframe.
+    #' @param id (optional) Identifier, format: (transaction hash)-(token id).
+    #' @param user (optional) User address.
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return array[DexDepositDTO]
@@ -1124,12 +1124,12 @@ DexApi <- R6::R6Class(
     #' @description
     #' Deposits (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param id (optional) No description
-    #' @param user (optional) No description
+    #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+    #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+    #' @param start_date (optional) The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+    #' @param end_date (optional) The end date of timeframe.
+    #' @param id (optional) Identifier, format: (transaction hash)-(token id).
+    #' @param user (optional) User address.
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return API response (array[DexDepositDTO]) with additional information such as HTTP status code, headers
@@ -1213,13 +1213,13 @@ DexApi <- R6::R6Class(
     #' @description
     #' Orders (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param id (optional) No description
-    #' @param buy_token (optional) No description
-    #' @param sell_token (optional) No description
+    #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+    #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+    #' @param start_date (optional) The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+    #' @param end_date (optional) The end date of timeframe.
+    #' @param id (optional) Identifier, format: (owner address)-(order id)
+    #' @param buy_token (optional) Identifier of token that was bought.
+    #' @param sell_token (optional) Identifier of token that was sold.
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return array[DexOrderDTO]
@@ -1241,13 +1241,13 @@ DexApi <- R6::R6Class(
     #' @description
     #' Orders (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param id (optional) No description
-    #' @param buy_token (optional) No description
-    #' @param sell_token (optional) No description
+    #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+    #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+    #' @param start_date (optional) The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+    #' @param end_date (optional) The end date of timeframe.
+    #' @param id (optional) Identifier, format: (owner address)-(order id)
+    #' @param buy_token (optional) Identifier of token that was bought.
+    #' @param sell_token (optional) Identifier of token that was sold.
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return API response (array[DexOrderDTO]) with additional information such as HTTP status code, headers
@@ -1334,11 +1334,11 @@ DexApi <- R6::R6Class(
     #' @description
     #' Prices (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param id (optional) No description
+    #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+    #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+    #' @param start_date (optional) The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+    #' @param end_date (optional) The end date of timeframe.
+    #' @param id (optional) Identifier, format: (token id)-(batch id).
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return array[DexPriceDTO]
@@ -1360,11 +1360,11 @@ DexApi <- R6::R6Class(
     #' @description
     #' Prices (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param id (optional) No description
+    #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+    #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+    #' @param start_date (optional) The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+    #' @param end_date (optional) The end date of timeframe.
+    #' @param id (optional) Identifier, format: (token id)-(batch id).
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return API response (array[DexPriceDTO]) with additional information such as HTTP status code, headers
@@ -2025,12 +2025,12 @@ DexApi <- R6::R6Class(
     #' @description
     #' WithdrawRequests (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param id (optional) No description
-    #' @param user (optional) No description
+    #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+    #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+    #' @param start_date (optional) The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+    #' @param end_date (optional) The end date of timeframe.
+    #' @param id (optional) Identifier, format: (transaction hash)-(id).
+    #' @param user (optional) 
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return array[DexWithdrawRequestDTO]
@@ -2052,12 +2052,12 @@ DexApi <- R6::R6Class(
     #' @description
     #' WithdrawRequests (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param id (optional) No description
-    #' @param user (optional) No description
+    #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+    #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+    #' @param start_date (optional) The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+    #' @param end_date (optional) The end date of timeframe.
+    #' @param id (optional) Identifier, format: (transaction hash)-(id).
+    #' @param user (optional) 
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return API response (array[DexWithdrawRequestDTO]) with additional information such as HTTP status code, headers
@@ -2141,12 +2141,12 @@ DexApi <- R6::R6Class(
     #' @description
     #' Withdraws (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param id (optional) No description
-    #' @param user (optional) No description
+    #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+    #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+    #' @param start_date (optional) The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+    #' @param end_date (optional) The end date of timeframe.
+    #' @param id (optional) Identifier, format: (transaction hash)-(id).
+    #' @param user (optional) 
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return array[DexWithdrawDTO]
@@ -2168,12 +2168,12 @@ DexApi <- R6::R6Class(
     #' @description
     #' Withdraws (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param id (optional) No description
-    #' @param user (optional) No description
+    #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+    #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+    #' @param start_date (optional) The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+    #' @param end_date (optional) The end date of timeframe.
+    #' @param id (optional) Identifier, format: (transaction hash)-(id).
+    #' @param user (optional) 
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return API response (array[DexWithdrawDTO]) with additional information such as HTTP status code, headers

@@ -638,13 +638,13 @@ public class UniswapV2Api {
     }
     /**
      * Build call for uniswapV2GetLiquidityPositionSnapshotsHistorical
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param user  (optional)
-     * @param pair  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (pair address)-(user address) (optional)
+     * @param user Reference to user. (optional)
+     * @param pair Reference to the pair liquidity is being provided on. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -737,13 +737,13 @@ public class UniswapV2Api {
     /**
      * LiquidityPositionSnapshots (historical)
      * Gets liquidityPositionSnapshots.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param user  (optional)
-     * @param pair  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (pair address)-(user address) (optional)
+     * @param user Reference to user. (optional)
+     * @param pair Reference to the pair liquidity is being provided on. (optional)
      * @return List&lt;UniswapV2LiquidityPositionSnapshotDTO&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -760,13 +760,13 @@ public class UniswapV2Api {
     /**
      * LiquidityPositionSnapshots (historical)
      * Gets liquidityPositionSnapshots.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param user  (optional)
-     * @param pair  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (pair address)-(user address) (optional)
+     * @param user Reference to user. (optional)
+     * @param pair Reference to the pair liquidity is being provided on. (optional)
      * @return ApiResponse&lt;List&lt;UniswapV2LiquidityPositionSnapshotDTO&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -784,13 +784,13 @@ public class UniswapV2Api {
     /**
      * LiquidityPositionSnapshots (historical) (asynchronously)
      * Gets liquidityPositionSnapshots.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param user  (optional)
-     * @param pair  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (pair address)-(user address) (optional)
+     * @param user Reference to user. (optional)
+     * @param pair Reference to the pair liquidity is being provided on. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object

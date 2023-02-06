@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.time.OffsetDateTime;
 import org.openapitools.client.model.NumericsBigInteger;
@@ -52,8 +50,7 @@ import org.openapitools.client.JSON;
 /**
  * Swap are created for each token swap within a pair.
  */
-@ApiModel(description = "Swap are created for each token swap within a pair.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-30T14:42:00.397192Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-06T14:47:06.037855Z[Etc/UTC]")
 public class UniswapV2SwapDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -171,7 +168,6 @@ public class UniswapV2SwapDTO {
    * @return entryTime
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public OffsetDateTime getEntryTime() {
     return entryTime;
@@ -194,7 +190,6 @@ public class UniswapV2SwapDTO {
    * @return recvTime
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public OffsetDateTime getRecvTime() {
     return recvTime;
@@ -217,7 +212,6 @@ public class UniswapV2SwapDTO {
    * @return blockNumber
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Number of block in which entity was recorded.")
 
   public Long getBlockNumber() {
     return blockNumber;
@@ -240,7 +234,6 @@ public class UniswapV2SwapDTO {
    * @return vid
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public Long getVid() {
     return vid;
@@ -263,7 +256,6 @@ public class UniswapV2SwapDTO {
    * @return id
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Transaction hash plus index in Transaction swap array.")
 
   public String getId() {
     return id;
@@ -286,7 +278,6 @@ public class UniswapV2SwapDTO {
    * @return transaction
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Reference to transaction swap was included in.")
 
   public String getTransaction() {
     return transaction;
@@ -309,7 +300,6 @@ public class UniswapV2SwapDTO {
    * @return timestamp
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Timestamp of swap, used for sorted lookups.")
 
   public OffsetDateTime getTimestamp() {
     return timestamp;
@@ -332,7 +322,6 @@ public class UniswapV2SwapDTO {
    * @return pair
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Reference to pair.")
 
   public String getPair() {
     return pair;
@@ -355,7 +344,6 @@ public class UniswapV2SwapDTO {
    * @return sender
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Address that initiated the swap.")
 
   public String getSender() {
     return sender;
@@ -378,7 +366,6 @@ public class UniswapV2SwapDTO {
    * @return from
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The EOA (Externally Owned Account) that initiated the transaction.")
 
   public String getFrom() {
     return from;
@@ -401,7 +388,6 @@ public class UniswapV2SwapDTO {
    * @return amount0In
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Amount of token0 sold.")
 
   public String getAmount0In() {
     return amount0In;
@@ -424,7 +410,6 @@ public class UniswapV2SwapDTO {
    * @return amount1In
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Amount of token1 sold.")
 
   public String getAmount1In() {
     return amount1In;
@@ -447,7 +432,6 @@ public class UniswapV2SwapDTO {
    * @return amount0Out
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Amount of token0 received.")
 
   public String getAmount0Out() {
     return amount0Out;
@@ -470,7 +454,6 @@ public class UniswapV2SwapDTO {
    * @return amount1Out
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Amount of token1 received.")
 
   public String getAmount1Out() {
     return amount1Out;
@@ -493,7 +476,6 @@ public class UniswapV2SwapDTO {
    * @return to
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Recipient of output tokens.")
 
   public String getTo() {
     return to;
@@ -516,7 +498,6 @@ public class UniswapV2SwapDTO {
    * @return logIndex
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public NumericsBigInteger getLogIndex() {
     return logIndex;
@@ -539,7 +520,6 @@ public class UniswapV2SwapDTO {
    * @return amountUsd
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Derived amount of tokens sold in USD.")
 
   public String getAmountUsd() {
     return amountUsd;
@@ -556,7 +536,6 @@ public class UniswapV2SwapDTO {
    * @return evaluatedPrice
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public Double getEvaluatedPrice() {
     return evaluatedPrice;
@@ -570,7 +549,6 @@ public class UniswapV2SwapDTO {
    * @return evaluatedAmount
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public Double getEvaluatedAmount() {
     return evaluatedAmount;
@@ -590,7 +568,6 @@ public class UniswapV2SwapDTO {
    * @return evaluatedAggressor
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public TransactionsETradeAggressiveSide getEvaluatedAggressor() {
     return evaluatedAggressor;
@@ -607,7 +584,6 @@ public class UniswapV2SwapDTO {
    * @return poolId
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getPoolId() {
     return poolId;
@@ -621,7 +597,6 @@ public class UniswapV2SwapDTO {
    * @return transactionId
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getTransactionId() {
     return transactionId;

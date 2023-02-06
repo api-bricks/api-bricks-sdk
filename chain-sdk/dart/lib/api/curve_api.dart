@@ -1448,16 +1448,22 @@ class CurveApi {
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   ///
   /// * [int] endBlock:
+  ///   The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
   ///
   /// * [DateTime] startDate:
+  ///   The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
   ///
   /// * [DateTime] endDate:
+  ///   The end date of timeframe.
   ///
   /// * [String] id:
+  ///   Identifier, format: (pool_id)-(coin_index).
   ///
   /// * [String] pool:
+  ///   
   Future<Response> curveGetCoinsHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, String? pool, }) async {
     // ignore: prefer_const_declarations
     final path = r'/dapps/curve/coins/historical';
@@ -1509,16 +1515,22 @@ class CurveApi {
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   ///
   /// * [int] endBlock:
+  ///   The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
   ///
   /// * [DateTime] startDate:
+  ///   The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
   ///
   /// * [DateTime] endDate:
+  ///   The end date of timeframe.
   ///
   /// * [String] id:
+  ///   Identifier, format: (pool_id)-(coin_index).
   ///
   /// * [String] pool:
+  ///   
   Future<List<CurveCoinDTO>?> curveGetCoinsHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, String? pool, }) async {
     final response = await curveGetCoinsHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, id: id, pool: pool, );
     if (response.statusCode >= HttpStatus.badRequest) {
@@ -4159,16 +4171,22 @@ class CurveApi {
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   ///
   /// * [int] endBlock:
+  ///   The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
   ///
   /// * [DateTime] startDate:
+  ///   The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
   ///
   /// * [DateTime] endDate:
+  ///   The end date of timeframe.
   ///
   /// * [String] id:
+  ///   Equals to: (pool_id)-(coin_index).
   ///
   /// * [String] pool:
+  ///   
   Future<Response> curveGetUnderlyingCoinsHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, String? pool, }) async {
     // ignore: prefer_const_declarations
     final path = r'/dapps/curve/underlyingCoins/historical';
@@ -4220,16 +4238,22 @@ class CurveApi {
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   ///
   /// * [int] endBlock:
+  ///   The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
   ///
   /// * [DateTime] startDate:
+  ///   The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
   ///
   /// * [DateTime] endDate:
+  ///   The end date of timeframe.
   ///
   /// * [String] id:
+  ///   Equals to: (pool_id)-(coin_index).
   ///
   /// * [String] pool:
+  ///   
   Future<List<CurveUnderlyingCoinDTO>?> curveGetUnderlyingCoinsHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, String? pool, }) async {
     final response = await curveGetUnderlyingCoinsHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, id: id, pool: pool, );
     if (response.statusCode >= HttpStatus.badRequest) {

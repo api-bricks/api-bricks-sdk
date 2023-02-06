@@ -141,3 +141,5 @@ export interface CowTradeDTO {
      */
     evaluated_aggressor?: TransactionsETradeAggressiveSide;
 }
+
+

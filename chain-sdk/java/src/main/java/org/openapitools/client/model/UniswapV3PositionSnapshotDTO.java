@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.time.OffsetDateTime;
 import org.openapitools.jackson.nullable.JsonNullable;
@@ -50,7 +48,7 @@ import org.openapitools.client.JSON;
 /**
  * UniswapV3PositionSnapshotDTO
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-30T14:42:00.397192Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-06T14:47:06.037855Z[Etc/UTC]")
 public class UniswapV3PositionSnapshotDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -142,7 +140,6 @@ public class UniswapV3PositionSnapshotDTO {
    * @return entryTime
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public OffsetDateTime getEntryTime() {
     return entryTime;
@@ -165,7 +162,6 @@ public class UniswapV3PositionSnapshotDTO {
    * @return recvTime
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public OffsetDateTime getRecvTime() {
     return recvTime;
@@ -188,7 +184,6 @@ public class UniswapV3PositionSnapshotDTO {
    * @return blockNumber
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Number of block in which entity was recorded.")
 
   public Long getBlockNumber() {
     return blockNumber;
@@ -211,7 +206,6 @@ public class UniswapV3PositionSnapshotDTO {
    * @return id
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "NFT token identifier, format: (NFT token id)#(block number).")
 
   public String getId() {
     return id;
@@ -234,7 +228,6 @@ public class UniswapV3PositionSnapshotDTO {
    * @return owner
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Owner of the NFT.")
 
   public String getOwner() {
     return owner;
@@ -257,7 +250,6 @@ public class UniswapV3PositionSnapshotDTO {
    * @return pool
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Pool the position is within.")
 
   public String getPool() {
     return pool;
@@ -280,7 +272,6 @@ public class UniswapV3PositionSnapshotDTO {
    * @return position
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Position of which the snap was taken of.")
 
   public String getPosition() {
     return position;
@@ -303,7 +294,6 @@ public class UniswapV3PositionSnapshotDTO {
    * @return timestamp
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Timestamp of block in which the snap was created.")
 
   public String getTimestamp() {
     return timestamp;
@@ -326,7 +316,6 @@ public class UniswapV3PositionSnapshotDTO {
    * @return liquidity
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Total position liquidity.")
 
   public String getLiquidity() {
     return liquidity;
@@ -349,7 +338,6 @@ public class UniswapV3PositionSnapshotDTO {
    * @return depositedToken0
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Amount of token 0 ever deposited to position.")
 
   public String getDepositedToken0() {
     return depositedToken0;
@@ -372,7 +360,6 @@ public class UniswapV3PositionSnapshotDTO {
    * @return depositedToken1
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Amount of token 1 ever deposited to position.")
 
   public String getDepositedToken1() {
     return depositedToken1;
@@ -395,7 +382,6 @@ public class UniswapV3PositionSnapshotDTO {
    * @return withdrawnToken0
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Amount of token 0 ever withdrawn from position (without fees).")
 
   public String getWithdrawnToken0() {
     return withdrawnToken0;
@@ -418,7 +404,6 @@ public class UniswapV3PositionSnapshotDTO {
    * @return withdrawnToken1
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Amount of token 1 ever withdrawn from position (without fees).")
 
   public String getWithdrawnToken1() {
     return withdrawnToken1;
@@ -441,7 +426,6 @@ public class UniswapV3PositionSnapshotDTO {
    * @return collectedFeesToken0
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "All time collected fees in token0.")
 
   public String getCollectedFeesToken0() {
     return collectedFeesToken0;
@@ -464,7 +448,6 @@ public class UniswapV3PositionSnapshotDTO {
    * @return collectedFeesToken1
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "All time collected fees in token1.")
 
   public String getCollectedFeesToken1() {
     return collectedFeesToken1;
@@ -487,7 +470,6 @@ public class UniswapV3PositionSnapshotDTO {
    * @return transaction
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Transaction in which the snapshot was initialized.")
 
   public String getTransaction() {
     return transaction;
@@ -510,7 +492,6 @@ public class UniswapV3PositionSnapshotDTO {
    * @return feeGrowthInside0LastX128
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Variable needed for fee computation.")
 
   public String getFeeGrowthInside0LastX128() {
     return feeGrowthInside0LastX128;
@@ -533,7 +514,6 @@ public class UniswapV3PositionSnapshotDTO {
    * @return feeGrowthInside1LastX128
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Variable needed for fee computation.")
 
   public String getFeeGrowthInside1LastX128() {
     return feeGrowthInside1LastX128;
@@ -556,7 +536,6 @@ public class UniswapV3PositionSnapshotDTO {
    * @return vid
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public Long getVid() {
     return vid;

@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.time.OffsetDateTime;
 import org.openapitools.jackson.nullable.JsonNullable;
@@ -50,8 +48,7 @@ import org.openapitools.client.JSON;
 /**
  * Mint entities are created for every emitted Mint event on the Uniswap core contracts. The Mint entity stores key data about the event like token amounts, who sent the transaction, who received the liquidity, and more. This entity can be used to track liquidity provisions on pairs.
  */
-@ApiModel(description = "Mint entities are created for every emitted Mint event on the Uniswap core contracts. The Mint entity stores key data about the event like token amounts, who sent the transaction, who received the liquidity, and more. This entity can be used to track liquidity provisions on pairs.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-30T14:42:00.397192Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-06T14:47:06.037855Z[Etc/UTC]")
 public class UniswapV2MintDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -139,7 +136,6 @@ public class UniswapV2MintDTO {
    * @return entryTime
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public OffsetDateTime getEntryTime() {
     return entryTime;
@@ -162,7 +158,6 @@ public class UniswapV2MintDTO {
    * @return recvTime
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public OffsetDateTime getRecvTime() {
     return recvTime;
@@ -185,7 +180,6 @@ public class UniswapV2MintDTO {
    * @return blockNumber
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Number of block in which entity was recorded.")
 
   public Long getBlockNumber() {
     return blockNumber;
@@ -208,7 +202,6 @@ public class UniswapV2MintDTO {
    * @return id
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Transaction hash plus index in the transaction mint array.")
 
   public String getId() {
     return id;
@@ -231,7 +224,6 @@ public class UniswapV2MintDTO {
    * @return transaction
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Reference to the transaction Mint was included in.")
 
   public String getTransaction() {
     return transaction;
@@ -254,7 +246,6 @@ public class UniswapV2MintDTO {
    * @return timestamp
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Timestamp of Mint, used to sort recent liquidity provisions.")
 
   public String getTimestamp() {
     return timestamp;
@@ -277,7 +268,6 @@ public class UniswapV2MintDTO {
    * @return pair
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Reference to pair.")
 
   public String getPair() {
     return pair;
@@ -300,7 +290,6 @@ public class UniswapV2MintDTO {
    * @return to
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Recipient of liquidity tokens.")
 
   public String getTo() {
     return to;
@@ -323,7 +312,6 @@ public class UniswapV2MintDTO {
    * @return liquidity
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Amount of liquidity tokens minted.")
 
   public String getLiquidity() {
     return liquidity;
@@ -346,7 +334,6 @@ public class UniswapV2MintDTO {
    * @return sender
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Address that initiated the liquidity provision.")
 
   public String getSender() {
     return sender;
@@ -369,7 +356,6 @@ public class UniswapV2MintDTO {
    * @return amount0
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Amount of token0 provided.")
 
   public String getAmount0() {
     return amount0;
@@ -392,7 +378,6 @@ public class UniswapV2MintDTO {
    * @return amount1
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Amount of token1 provided.")
 
   public String getAmount1() {
     return amount1;
@@ -415,7 +400,6 @@ public class UniswapV2MintDTO {
    * @return logIndex
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Index in the transaction event was emitted.")
 
   public String getLogIndex() {
     return logIndex;
@@ -438,7 +422,6 @@ public class UniswapV2MintDTO {
    * @return amountUsd
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Derived USD value of token0 amount plus token1 amount.")
 
   public String getAmountUsd() {
     return amountUsd;
@@ -461,7 +444,6 @@ public class UniswapV2MintDTO {
    * @return feeTo
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Address of fee recipient (if fee is on).")
 
   public String getFeeTo() {
     return feeTo;
@@ -484,7 +466,6 @@ public class UniswapV2MintDTO {
    * @return feeLiquidity
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Amount of liquidity sent to fee recipient (if fee is on).")
 
   public String getFeeLiquidity() {
     return feeLiquidity;
@@ -507,7 +488,6 @@ public class UniswapV2MintDTO {
    * @return vid
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public Long getVid() {
     return vid;
@@ -530,7 +510,6 @@ public class UniswapV2MintDTO {
    * @return blockRange
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getBlockRange() {
     return blockRange;

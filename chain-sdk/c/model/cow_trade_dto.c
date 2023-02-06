@@ -344,7 +344,7 @@ cow_trade_dto_t *cow_trade_dto_parseFromJSON(cJSON *cow_trade_dtoJSON){
     // cow_trade_dto->entry_time
     cJSON *entry_time = cJSON_GetObjectItemCaseSensitive(cow_trade_dtoJSON, "entry_time");
     if (entry_time) { 
-    if(!cJSON_IsString(entry_time))
+    if(!cJSON_IsString(entry_time) && !cJSON_IsNull(entry_time))
     {
     goto end; //DateTime
     }
@@ -353,7 +353,7 @@ cow_trade_dto_t *cow_trade_dto_parseFromJSON(cJSON *cow_trade_dtoJSON){
     // cow_trade_dto->recv_time
     cJSON *recv_time = cJSON_GetObjectItemCaseSensitive(cow_trade_dtoJSON, "recv_time");
     if (recv_time) { 
-    if(!cJSON_IsString(recv_time))
+    if(!cJSON_IsString(recv_time) && !cJSON_IsNull(recv_time))
     {
     goto end; //DateTime
     }
@@ -371,7 +371,7 @@ cow_trade_dto_t *cow_trade_dto_parseFromJSON(cJSON *cow_trade_dtoJSON){
     // cow_trade_dto->id
     cJSON *id = cJSON_GetObjectItemCaseSensitive(cow_trade_dtoJSON, "id");
     if (id) { 
-    if(!cJSON_IsString(id))
+    if(!cJSON_IsString(id) && !cJSON_IsNull(id))
     {
     goto end; //String
     }
@@ -380,7 +380,7 @@ cow_trade_dto_t *cow_trade_dto_parseFromJSON(cJSON *cow_trade_dtoJSON){
     // cow_trade_dto->timestamp
     cJSON *timestamp = cJSON_GetObjectItemCaseSensitive(cow_trade_dtoJSON, "timestamp");
     if (timestamp) { 
-    if(!cJSON_IsString(timestamp))
+    if(!cJSON_IsString(timestamp) && !cJSON_IsNull(timestamp))
     {
     goto end; //String
     }
@@ -389,7 +389,7 @@ cow_trade_dto_t *cow_trade_dto_parseFromJSON(cJSON *cow_trade_dtoJSON){
     // cow_trade_dto->gas_price
     cJSON *gas_price = cJSON_GetObjectItemCaseSensitive(cow_trade_dtoJSON, "gas_price");
     if (gas_price) { 
-    if(!cJSON_IsString(gas_price))
+    if(!cJSON_IsString(gas_price) && !cJSON_IsNull(gas_price))
     {
     goto end; //String
     }
@@ -398,7 +398,7 @@ cow_trade_dto_t *cow_trade_dto_parseFromJSON(cJSON *cow_trade_dtoJSON){
     // cow_trade_dto->gas_limit
     cJSON *gas_limit = cJSON_GetObjectItemCaseSensitive(cow_trade_dtoJSON, "gas_limit");
     if (gas_limit) { 
-    if(!cJSON_IsString(gas_limit))
+    if(!cJSON_IsString(gas_limit) && !cJSON_IsNull(gas_limit))
     {
     goto end; //String
     }
@@ -407,7 +407,7 @@ cow_trade_dto_t *cow_trade_dto_parseFromJSON(cJSON *cow_trade_dtoJSON){
     // cow_trade_dto->fee_amount
     cJSON *fee_amount = cJSON_GetObjectItemCaseSensitive(cow_trade_dtoJSON, "fee_amount");
     if (fee_amount) { 
-    if(!cJSON_IsString(fee_amount))
+    if(!cJSON_IsString(fee_amount) && !cJSON_IsNull(fee_amount))
     {
     goto end; //String
     }
@@ -416,7 +416,7 @@ cow_trade_dto_t *cow_trade_dto_parseFromJSON(cJSON *cow_trade_dtoJSON){
     // cow_trade_dto->tx_hash
     cJSON *tx_hash = cJSON_GetObjectItemCaseSensitive(cow_trade_dtoJSON, "tx_hash");
     if (tx_hash) { 
-    if(!cJSON_IsString(tx_hash))
+    if(!cJSON_IsString(tx_hash) && !cJSON_IsNull(tx_hash))
     {
     goto end; //String
     }
@@ -425,7 +425,7 @@ cow_trade_dto_t *cow_trade_dto_parseFromJSON(cJSON *cow_trade_dtoJSON){
     // cow_trade_dto->settlement
     cJSON *settlement = cJSON_GetObjectItemCaseSensitive(cow_trade_dtoJSON, "settlement");
     if (settlement) { 
-    if(!cJSON_IsString(settlement))
+    if(!cJSON_IsString(settlement) && !cJSON_IsNull(settlement))
     {
     goto end; //String
     }
@@ -434,7 +434,7 @@ cow_trade_dto_t *cow_trade_dto_parseFromJSON(cJSON *cow_trade_dtoJSON){
     // cow_trade_dto->buy_amount
     cJSON *buy_amount = cJSON_GetObjectItemCaseSensitive(cow_trade_dtoJSON, "buy_amount");
     if (buy_amount) { 
-    if(!cJSON_IsString(buy_amount))
+    if(!cJSON_IsString(buy_amount) && !cJSON_IsNull(buy_amount))
     {
     goto end; //String
     }
@@ -443,7 +443,7 @@ cow_trade_dto_t *cow_trade_dto_parseFromJSON(cJSON *cow_trade_dtoJSON){
     // cow_trade_dto->sell_amount
     cJSON *sell_amount = cJSON_GetObjectItemCaseSensitive(cow_trade_dtoJSON, "sell_amount");
     if (sell_amount) { 
-    if(!cJSON_IsString(sell_amount))
+    if(!cJSON_IsString(sell_amount) && !cJSON_IsNull(sell_amount))
     {
     goto end; //String
     }
@@ -452,7 +452,7 @@ cow_trade_dto_t *cow_trade_dto_parseFromJSON(cJSON *cow_trade_dtoJSON){
     // cow_trade_dto->sell_token
     cJSON *sell_token = cJSON_GetObjectItemCaseSensitive(cow_trade_dtoJSON, "sell_token");
     if (sell_token) { 
-    if(!cJSON_IsString(sell_token))
+    if(!cJSON_IsString(sell_token) && !cJSON_IsNull(sell_token))
     {
     goto end; //String
     }
@@ -461,7 +461,7 @@ cow_trade_dto_t *cow_trade_dto_parseFromJSON(cJSON *cow_trade_dtoJSON){
     // cow_trade_dto->buy_token
     cJSON *buy_token = cJSON_GetObjectItemCaseSensitive(cow_trade_dtoJSON, "buy_token");
     if (buy_token) { 
-    if(!cJSON_IsString(buy_token))
+    if(!cJSON_IsString(buy_token) && !cJSON_IsNull(buy_token))
     {
     goto end; //String
     }
@@ -470,7 +470,7 @@ cow_trade_dto_t *cow_trade_dto_parseFromJSON(cJSON *cow_trade_dtoJSON){
     // cow_trade_dto->order
     cJSON *order = cJSON_GetObjectItemCaseSensitive(cow_trade_dtoJSON, "order");
     if (order) { 
-    if(!cJSON_IsString(order))
+    if(!cJSON_IsString(order) && !cJSON_IsNull(order))
     {
     goto end; //String
     }
@@ -488,7 +488,7 @@ cow_trade_dto_t *cow_trade_dto_parseFromJSON(cJSON *cow_trade_dtoJSON){
     // cow_trade_dto->pool_id
     cJSON *pool_id = cJSON_GetObjectItemCaseSensitive(cow_trade_dtoJSON, "pool_id");
     if (pool_id) { 
-    if(!cJSON_IsString(pool_id))
+    if(!cJSON_IsString(pool_id) && !cJSON_IsNull(pool_id))
     {
     goto end; //String
     }
@@ -497,7 +497,7 @@ cow_trade_dto_t *cow_trade_dto_parseFromJSON(cJSON *cow_trade_dtoJSON){
     // cow_trade_dto->transaction_id
     cJSON *transaction_id = cJSON_GetObjectItemCaseSensitive(cow_trade_dtoJSON, "transaction_id");
     if (transaction_id) { 
-    if(!cJSON_IsString(transaction_id))
+    if(!cJSON_IsString(transaction_id) && !cJSON_IsNull(transaction_id))
     {
     goto end; //String
     }
@@ -529,24 +529,24 @@ cow_trade_dto_t *cow_trade_dto_parseFromJSON(cJSON *cow_trade_dtoJSON){
 
 
     cow_trade_dto_local_var = cow_trade_dto_create (
-        entry_time ? strdup(entry_time->valuestring) : NULL,
-        recv_time ? strdup(recv_time->valuestring) : NULL,
+        entry_time && !cJSON_IsNull(entry_time) ? strdup(entry_time->valuestring) : NULL,
+        recv_time && !cJSON_IsNull(recv_time) ? strdup(recv_time->valuestring) : NULL,
         block_number ? block_number->valuedouble : 0,
-        id ? strdup(id->valuestring) : NULL,
-        timestamp ? strdup(timestamp->valuestring) : NULL,
-        gas_price ? strdup(gas_price->valuestring) : NULL,
-        gas_limit ? strdup(gas_limit->valuestring) : NULL,
-        fee_amount ? strdup(fee_amount->valuestring) : NULL,
-        tx_hash ? strdup(tx_hash->valuestring) : NULL,
-        settlement ? strdup(settlement->valuestring) : NULL,
-        buy_amount ? strdup(buy_amount->valuestring) : NULL,
-        sell_amount ? strdup(sell_amount->valuestring) : NULL,
-        sell_token ? strdup(sell_token->valuestring) : NULL,
-        buy_token ? strdup(buy_token->valuestring) : NULL,
-        order ? strdup(order->valuestring) : NULL,
+        id && !cJSON_IsNull(id) ? strdup(id->valuestring) : NULL,
+        timestamp && !cJSON_IsNull(timestamp) ? strdup(timestamp->valuestring) : NULL,
+        gas_price && !cJSON_IsNull(gas_price) ? strdup(gas_price->valuestring) : NULL,
+        gas_limit && !cJSON_IsNull(gas_limit) ? strdup(gas_limit->valuestring) : NULL,
+        fee_amount && !cJSON_IsNull(fee_amount) ? strdup(fee_amount->valuestring) : NULL,
+        tx_hash && !cJSON_IsNull(tx_hash) ? strdup(tx_hash->valuestring) : NULL,
+        settlement && !cJSON_IsNull(settlement) ? strdup(settlement->valuestring) : NULL,
+        buy_amount && !cJSON_IsNull(buy_amount) ? strdup(buy_amount->valuestring) : NULL,
+        sell_amount && !cJSON_IsNull(sell_amount) ? strdup(sell_amount->valuestring) : NULL,
+        sell_token && !cJSON_IsNull(sell_token) ? strdup(sell_token->valuestring) : NULL,
+        buy_token && !cJSON_IsNull(buy_token) ? strdup(buy_token->valuestring) : NULL,
+        order && !cJSON_IsNull(order) ? strdup(order->valuestring) : NULL,
         vid ? vid->valuedouble : 0,
-        pool_id ? strdup(pool_id->valuestring) : NULL,
-        transaction_id ? strdup(transaction_id->valuestring) : NULL,
+        pool_id && !cJSON_IsNull(pool_id) ? strdup(pool_id->valuestring) : NULL,
+        transaction_id && !cJSON_IsNull(transaction_id) ? strdup(transaction_id->valuestring) : NULL,
         evaluated_price ? evaluated_price->valuedouble : 0,
         evaluated_amount ? evaluated_amount->valuedouble : 0,
         evaluated_aggressor ? evaluated_aggressor_local_nonprim : NULL

@@ -258,7 +258,7 @@ dex_solution_dto_t *dex_solution_dto_parseFromJSON(cJSON *dex_solution_dtoJSON){
     // dex_solution_dto->entry_time
     cJSON *entry_time = cJSON_GetObjectItemCaseSensitive(dex_solution_dtoJSON, "entry_time");
     if (entry_time) { 
-    if(!cJSON_IsString(entry_time))
+    if(!cJSON_IsString(entry_time) && !cJSON_IsNull(entry_time))
     {
     goto end; //DateTime
     }
@@ -267,7 +267,7 @@ dex_solution_dto_t *dex_solution_dto_parseFromJSON(cJSON *dex_solution_dtoJSON){
     // dex_solution_dto->recv_time
     cJSON *recv_time = cJSON_GetObjectItemCaseSensitive(dex_solution_dtoJSON, "recv_time");
     if (recv_time) { 
-    if(!cJSON_IsString(recv_time))
+    if(!cJSON_IsString(recv_time) && !cJSON_IsNull(recv_time))
     {
     goto end; //DateTime
     }
@@ -285,7 +285,7 @@ dex_solution_dto_t *dex_solution_dto_parseFromJSON(cJSON *dex_solution_dtoJSON){
     // dex_solution_dto->id
     cJSON *id = cJSON_GetObjectItemCaseSensitive(dex_solution_dtoJSON, "id");
     if (id) { 
-    if(!cJSON_IsString(id))
+    if(!cJSON_IsString(id) && !cJSON_IsNull(id))
     {
     goto end; //String
     }
@@ -294,7 +294,7 @@ dex_solution_dto_t *dex_solution_dto_parseFromJSON(cJSON *dex_solution_dtoJSON){
     // dex_solution_dto->batch
     cJSON *batch = cJSON_GetObjectItemCaseSensitive(dex_solution_dtoJSON, "batch");
     if (batch) { 
-    if(!cJSON_IsString(batch))
+    if(!cJSON_IsString(batch) && !cJSON_IsNull(batch))
     {
     goto end; //String
     }
@@ -303,7 +303,7 @@ dex_solution_dto_t *dex_solution_dto_parseFromJSON(cJSON *dex_solution_dtoJSON){
     // dex_solution_dto->solver
     cJSON *solver = cJSON_GetObjectItemCaseSensitive(dex_solution_dtoJSON, "solver");
     if (solver) { 
-    if(!cJSON_IsString(solver))
+    if(!cJSON_IsString(solver) && !cJSON_IsNull(solver))
     {
     goto end; //String
     }
@@ -312,7 +312,7 @@ dex_solution_dto_t *dex_solution_dto_parseFromJSON(cJSON *dex_solution_dtoJSON){
     // dex_solution_dto->fee_reward
     cJSON *fee_reward = cJSON_GetObjectItemCaseSensitive(dex_solution_dtoJSON, "fee_reward");
     if (fee_reward) { 
-    if(!cJSON_IsString(fee_reward))
+    if(!cJSON_IsString(fee_reward) && !cJSON_IsNull(fee_reward))
     {
     goto end; //String
     }
@@ -321,7 +321,7 @@ dex_solution_dto_t *dex_solution_dto_parseFromJSON(cJSON *dex_solution_dtoJSON){
     // dex_solution_dto->objective_value
     cJSON *objective_value = cJSON_GetObjectItemCaseSensitive(dex_solution_dtoJSON, "objective_value");
     if (objective_value) { 
-    if(!cJSON_IsString(objective_value))
+    if(!cJSON_IsString(objective_value) && !cJSON_IsNull(objective_value))
     {
     goto end; //String
     }
@@ -330,7 +330,7 @@ dex_solution_dto_t *dex_solution_dto_parseFromJSON(cJSON *dex_solution_dtoJSON){
     // dex_solution_dto->utility
     cJSON *utility = cJSON_GetObjectItemCaseSensitive(dex_solution_dtoJSON, "utility");
     if (utility) { 
-    if(!cJSON_IsString(utility))
+    if(!cJSON_IsString(utility) && !cJSON_IsNull(utility))
     {
     goto end; //String
     }
@@ -358,7 +358,7 @@ dex_solution_dto_t *dex_solution_dto_parseFromJSON(cJSON *dex_solution_dtoJSON){
     // dex_solution_dto->create_epoch
     cJSON *create_epoch = cJSON_GetObjectItemCaseSensitive(dex_solution_dtoJSON, "create_epoch");
     if (create_epoch) { 
-    if(!cJSON_IsString(create_epoch))
+    if(!cJSON_IsString(create_epoch) && !cJSON_IsNull(create_epoch))
     {
     goto end; //String
     }
@@ -367,7 +367,7 @@ dex_solution_dto_t *dex_solution_dto_parseFromJSON(cJSON *dex_solution_dtoJSON){
     // dex_solution_dto->revert_epoch
     cJSON *revert_epoch = cJSON_GetObjectItemCaseSensitive(dex_solution_dtoJSON, "revert_epoch");
     if (revert_epoch) { 
-    if(!cJSON_IsString(revert_epoch))
+    if(!cJSON_IsString(revert_epoch) && !cJSON_IsNull(revert_epoch))
     {
     goto end; //String
     }
@@ -376,7 +376,7 @@ dex_solution_dto_t *dex_solution_dto_parseFromJSON(cJSON *dex_solution_dtoJSON){
     // dex_solution_dto->tx_hash
     cJSON *tx_hash = cJSON_GetObjectItemCaseSensitive(dex_solution_dtoJSON, "tx_hash");
     if (tx_hash) { 
-    if(!cJSON_IsString(tx_hash))
+    if(!cJSON_IsString(tx_hash) && !cJSON_IsNull(tx_hash))
     {
     goto end; //String
     }
@@ -385,7 +385,7 @@ dex_solution_dto_t *dex_solution_dto_parseFromJSON(cJSON *dex_solution_dtoJSON){
     // dex_solution_dto->tx_log_index
     cJSON *tx_log_index = cJSON_GetObjectItemCaseSensitive(dex_solution_dtoJSON, "tx_log_index");
     if (tx_log_index) { 
-    if(!cJSON_IsString(tx_log_index))
+    if(!cJSON_IsString(tx_log_index) && !cJSON_IsNull(tx_log_index))
     {
     goto end; //String
     }
@@ -402,20 +402,20 @@ dex_solution_dto_t *dex_solution_dto_parseFromJSON(cJSON *dex_solution_dtoJSON){
 
 
     dex_solution_dto_local_var = dex_solution_dto_create (
-        entry_time ? strdup(entry_time->valuestring) : NULL,
-        recv_time ? strdup(recv_time->valuestring) : NULL,
+        entry_time && !cJSON_IsNull(entry_time) ? strdup(entry_time->valuestring) : NULL,
+        recv_time && !cJSON_IsNull(recv_time) ? strdup(recv_time->valuestring) : NULL,
         block_number ? block_number->valuedouble : 0,
-        id ? strdup(id->valuestring) : NULL,
-        batch ? strdup(batch->valuestring) : NULL,
-        solver ? strdup(solver->valuestring) : NULL,
-        fee_reward ? strdup(fee_reward->valuestring) : NULL,
-        objective_value ? strdup(objective_value->valuestring) : NULL,
-        utility ? strdup(utility->valuestring) : NULL,
+        id && !cJSON_IsNull(id) ? strdup(id->valuestring) : NULL,
+        batch && !cJSON_IsNull(batch) ? strdup(batch->valuestring) : NULL,
+        solver && !cJSON_IsNull(solver) ? strdup(solver->valuestring) : NULL,
+        fee_reward && !cJSON_IsNull(fee_reward) ? strdup(fee_reward->valuestring) : NULL,
+        objective_value && !cJSON_IsNull(objective_value) ? strdup(objective_value->valuestring) : NULL,
+        utility && !cJSON_IsNull(utility) ? strdup(utility->valuestring) : NULL,
         trades ? tradesList : NULL,
-        create_epoch ? strdup(create_epoch->valuestring) : NULL,
-        revert_epoch ? strdup(revert_epoch->valuestring) : NULL,
-        tx_hash ? strdup(tx_hash->valuestring) : NULL,
-        tx_log_index ? strdup(tx_log_index->valuestring) : NULL,
+        create_epoch && !cJSON_IsNull(create_epoch) ? strdup(create_epoch->valuestring) : NULL,
+        revert_epoch && !cJSON_IsNull(revert_epoch) ? strdup(revert_epoch->valuestring) : NULL,
+        tx_hash && !cJSON_IsNull(tx_hash) ? strdup(tx_hash->valuestring) : NULL,
+        tx_log_index && !cJSON_IsNull(tx_log_index) ? strdup(tx_log_index->valuestring) : NULL,
         vid ? vid->valuedouble : 0
         );
 

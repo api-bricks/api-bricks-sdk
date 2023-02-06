@@ -16,6 +16,9 @@ import (
 	"time"
 )
 
+// checks if the UniswapV3BundleDTO type satisfies the MappedNullable interface at compile time
+var _ MappedNullable = &UniswapV3BundleDTO{}
+
 // UniswapV3BundleDTO The Bundle is used as a global store of derived ETH price in USD. This provides a strong estimate for the USD price of ETH.
 type UniswapV3BundleDTO struct {
 	EntryTime *time.Time `json:"entry_time,omitempty"`
@@ -60,7 +63,7 @@ func (o *UniswapV3BundleDTO) GetEntryTime() time.Time {
 // and a boolean to check if the value has been set.
 func (o *UniswapV3BundleDTO) GetEntryTimeOk() (*time.Time, bool) {
 	if o == nil || isNil(o.EntryTime) {
-    return nil, false
+		return nil, false
 	}
 	return o.EntryTime, true
 }
@@ -92,7 +95,7 @@ func (o *UniswapV3BundleDTO) GetRecvTime() time.Time {
 // and a boolean to check if the value has been set.
 func (o *UniswapV3BundleDTO) GetRecvTimeOk() (*time.Time, bool) {
 	if o == nil || isNil(o.RecvTime) {
-    return nil, false
+		return nil, false
 	}
 	return o.RecvTime, true
 }
@@ -124,7 +127,7 @@ func (o *UniswapV3BundleDTO) GetBlockNumber() int64 {
 // and a boolean to check if the value has been set.
 func (o *UniswapV3BundleDTO) GetBlockNumberOk() (*int64, bool) {
 	if o == nil || isNil(o.BlockNumber) {
-    return nil, false
+		return nil, false
 	}
 	return o.BlockNumber, true
 }
@@ -157,7 +160,7 @@ func (o *UniswapV3BundleDTO) GetId() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *UniswapV3BundleDTO) GetIdOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Id.Get(), o.Id.IsSet()
 }
@@ -199,7 +202,7 @@ func (o *UniswapV3BundleDTO) GetEthPriceUsd() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *UniswapV3BundleDTO) GetEthPriceUsdOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.EthPriceUsd.Get(), o.EthPriceUsd.IsSet()
 }
@@ -240,7 +243,7 @@ func (o *UniswapV3BundleDTO) GetVid() int64 {
 // and a boolean to check if the value has been set.
 func (o *UniswapV3BundleDTO) GetVidOk() (*int64, bool) {
 	if o == nil || isNil(o.Vid) {
-    return nil, false
+		return nil, false
 	}
 	return o.Vid, true
 }
@@ -260,6 +263,14 @@ func (o *UniswapV3BundleDTO) SetVid(v int64) {
 }
 
 func (o UniswapV3BundleDTO) MarshalJSON() ([]byte, error) {
+	toSerialize,err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
+}
+
+func (o UniswapV3BundleDTO) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
 	if !isNil(o.EntryTime) {
 		toSerialize["entry_time"] = o.EntryTime
@@ -279,7 +290,7 @@ func (o UniswapV3BundleDTO) MarshalJSON() ([]byte, error) {
 	if !isNil(o.Vid) {
 		toSerialize["vid"] = o.Vid
 	}
-	return json.Marshal(toSerialize)
+	return toSerialize, nil
 }
 
 type NullableUniswapV3BundleDTO struct {

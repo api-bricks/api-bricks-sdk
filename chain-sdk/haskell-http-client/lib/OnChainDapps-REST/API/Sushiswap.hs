@@ -213,21 +213,33 @@ sushiswapGetBurnsHistorical  _ =
   _mkRequest "GET" ["/dapps/sushiswap/burns/historical"]
 
 data SushiswapGetBurnsHistorical  
+
+-- | /Optional Param/ "startBlock" - The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
 instance HasOptionalParam SushiswapGetBurnsHistorical StartBlock where
   applyOptionalParam req (StartBlock xs) =
     req `addQuery` toQuery ("startBlock", Just xs)
+
+-- | /Optional Param/ "endBlock" - The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
 instance HasOptionalParam SushiswapGetBurnsHistorical EndBlock where
   applyOptionalParam req (EndBlock xs) =
     req `addQuery` toQuery ("endBlock", Just xs)
+
+-- | /Optional Param/ "startDate" - The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
 instance HasOptionalParam SushiswapGetBurnsHistorical StartDate where
   applyOptionalParam req (StartDate xs) =
     req `addQuery` toQuery ("startDate", Just xs)
+
+-- | /Optional Param/ "endDate" - The end date of timeframe.
 instance HasOptionalParam SushiswapGetBurnsHistorical EndDate where
   applyOptionalParam req (EndDate xs) =
     req `addQuery` toQuery ("endDate", Just xs)
+
+-- | /Optional Param/ "id" - Identifier, format: (transaction id):(transaction.burns.length).
 instance HasOptionalParam SushiswapGetBurnsHistorical Id where
   applyOptionalParam req (Id xs) =
     req `addQuery` toQuery ("id", Just xs)
+
+-- | /Optional Param/ "pair" - Reference to pair.
 instance HasOptionalParam SushiswapGetBurnsHistorical Pair where
   applyOptionalParam req (Pair xs) =
     req `addQuery` toQuery ("pair", Just xs)
@@ -398,24 +410,38 @@ sushiswapGetLiquidityPositionSnapshotsHistorical  _ =
   _mkRequest "GET" ["/dapps/sushiswap/liquidityPositionSnapshots/historical"]
 
 data SushiswapGetLiquidityPositionSnapshotsHistorical  
+
+-- | /Optional Param/ "startBlock" - The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
 instance HasOptionalParam SushiswapGetLiquidityPositionSnapshotsHistorical StartBlock where
   applyOptionalParam req (StartBlock xs) =
     req `addQuery` toQuery ("startBlock", Just xs)
+
+-- | /Optional Param/ "endBlock" - The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
 instance HasOptionalParam SushiswapGetLiquidityPositionSnapshotsHistorical EndBlock where
   applyOptionalParam req (EndBlock xs) =
     req `addQuery` toQuery ("endBlock", Just xs)
+
+-- | /Optional Param/ "startDate" - The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
 instance HasOptionalParam SushiswapGetLiquidityPositionSnapshotsHistorical StartDate where
   applyOptionalParam req (StartDate xs) =
     req `addQuery` toQuery ("startDate", Just xs)
+
+-- | /Optional Param/ "endDate" - The end date of timeframe.
 instance HasOptionalParam SushiswapGetLiquidityPositionSnapshotsHistorical EndDate where
   applyOptionalParam req (EndDate xs) =
     req `addQuery` toQuery ("endDate", Just xs)
+
+-- | /Optional Param/ "id" - Identifier, format: (pair address)-(user address)-(timestamp)
 instance HasOptionalParam SushiswapGetLiquidityPositionSnapshotsHistorical Id where
   applyOptionalParam req (Id xs) =
     req `addQuery` toQuery ("id", Just xs)
+
+-- | /Optional Param/ "user" - Reference to user.
 instance HasOptionalParam SushiswapGetLiquidityPositionSnapshotsHistorical User where
   applyOptionalParam req (User xs) =
     req `addQuery` toQuery ("user", Just xs)
+
+-- | /Optional Param/ "pair" - Reference to the pair liquidity is being provided on.
 instance HasOptionalParam SushiswapGetLiquidityPositionSnapshotsHistorical Pair where
   applyOptionalParam req (Pair xs) =
     req `addQuery` toQuery ("pair", Just xs)
@@ -442,24 +468,38 @@ sushiswapGetLiquidityPositionsHistorical  _ =
   _mkRequest "GET" ["/dapps/sushiswap/liquidityPositions/historical"]
 
 data SushiswapGetLiquidityPositionsHistorical  
+
+-- | /Optional Param/ "startBlock" - The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
 instance HasOptionalParam SushiswapGetLiquidityPositionsHistorical StartBlock where
   applyOptionalParam req (StartBlock xs) =
     req `addQuery` toQuery ("startBlock", Just xs)
+
+-- | /Optional Param/ "endBlock" - The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
 instance HasOptionalParam SushiswapGetLiquidityPositionsHistorical EndBlock where
   applyOptionalParam req (EndBlock xs) =
     req `addQuery` toQuery ("endBlock", Just xs)
+
+-- | /Optional Param/ "startDate" - The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
 instance HasOptionalParam SushiswapGetLiquidityPositionsHistorical StartDate where
   applyOptionalParam req (StartDate xs) =
     req `addQuery` toQuery ("startDate", Just xs)
+
+-- | /Optional Param/ "endDate" - The end date of timeframe.
 instance HasOptionalParam SushiswapGetLiquidityPositionsHistorical EndDate where
   applyOptionalParam req (EndDate xs) =
     req `addQuery` toQuery ("endDate", Just xs)
+
+-- | /Optional Param/ "id" - Identifier, format: (pair address)-(user address)
 instance HasOptionalParam SushiswapGetLiquidityPositionsHistorical Id where
   applyOptionalParam req (Id xs) =
     req `addQuery` toQuery ("id", Just xs)
+
+-- | /Optional Param/ "user" - User address.
 instance HasOptionalParam SushiswapGetLiquidityPositionsHistorical User where
   applyOptionalParam req (User xs) =
     req `addQuery` toQuery ("user", Just xs)
+
+-- | /Optional Param/ "pair" - Pair address.
 instance HasOptionalParam SushiswapGetLiquidityPositionsHistorical Pair where
   applyOptionalParam req (Pair xs) =
     req `addQuery` toQuery ("pair", Just xs)
@@ -486,21 +526,33 @@ sushiswapGetMintsHistorical  _ =
   _mkRequest "GET" ["/dapps/sushiswap/mints/historical"]
 
 data SushiswapGetMintsHistorical  
+
+-- | /Optional Param/ "startBlock" - The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
 instance HasOptionalParam SushiswapGetMintsHistorical StartBlock where
   applyOptionalParam req (StartBlock xs) =
     req `addQuery` toQuery ("startBlock", Just xs)
+
+-- | /Optional Param/ "endBlock" - The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
 instance HasOptionalParam SushiswapGetMintsHistorical EndBlock where
   applyOptionalParam req (EndBlock xs) =
     req `addQuery` toQuery ("endBlock", Just xs)
+
+-- | /Optional Param/ "startDate" - The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
 instance HasOptionalParam SushiswapGetMintsHistorical StartDate where
   applyOptionalParam req (StartDate xs) =
     req `addQuery` toQuery ("startDate", Just xs)
+
+-- | /Optional Param/ "endDate" - The end date of timeframe.
 instance HasOptionalParam SushiswapGetMintsHistorical EndDate where
   applyOptionalParam req (EndDate xs) =
     req `addQuery` toQuery ("endDate", Just xs)
+
+-- | /Optional Param/ "id" - Identifier, format: (transaction hash)-(index in the transaction mint array).
 instance HasOptionalParam SushiswapGetMintsHistorical Id where
   applyOptionalParam req (Id xs) =
     req `addQuery` toQuery ("id", Just xs)
+
+-- | /Optional Param/ "pair" - Reference to pair.
 instance HasOptionalParam SushiswapGetMintsHistorical Pair where
   applyOptionalParam req (Pair xs) =
     req `addQuery` toQuery ("pair", Just xs)
@@ -527,27 +579,43 @@ sushiswapGetPairDayDataHistorical  _ =
   _mkRequest "GET" ["/dapps/sushiswap/pairDayData/historical"]
 
 data SushiswapGetPairDayDataHistorical  
+
+-- | /Optional Param/ "startBlock" - The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
 instance HasOptionalParam SushiswapGetPairDayDataHistorical StartBlock where
   applyOptionalParam req (StartBlock xs) =
     req `addQuery` toQuery ("startBlock", Just xs)
+
+-- | /Optional Param/ "endBlock" - The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
 instance HasOptionalParam SushiswapGetPairDayDataHistorical EndBlock where
   applyOptionalParam req (EndBlock xs) =
     req `addQuery` toQuery ("endBlock", Just xs)
+
+-- | /Optional Param/ "startDate" - The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
 instance HasOptionalParam SushiswapGetPairDayDataHistorical StartDate where
   applyOptionalParam req (StartDate xs) =
     req `addQuery` toQuery ("startDate", Just xs)
+
+-- | /Optional Param/ "endDate" - The end date of timeframe.
 instance HasOptionalParam SushiswapGetPairDayDataHistorical EndDate where
   applyOptionalParam req (EndDate xs) =
     req `addQuery` toQuery ("endDate", Just xs)
+
+-- | /Optional Param/ "id" - Identifier, format: (pair id)-(day start timestamp).
 instance HasOptionalParam SushiswapGetPairDayDataHistorical Id where
   applyOptionalParam req (Id xs) =
     req `addQuery` toQuery ("id", Just xs)
+
+-- | /Optional Param/ "pair" - Reference to pair.
 instance HasOptionalParam SushiswapGetPairDayDataHistorical Pair where
   applyOptionalParam req (Pair xs) =
     req `addQuery` toQuery ("pair", Just xs)
+
+-- | /Optional Param/ "token_0" - Reference to token0.
 instance HasOptionalParam SushiswapGetPairDayDataHistorical Token0 where
   applyOptionalParam req (Token0 xs) =
     req `addQuery` toQuery ("token_0", Just xs)
+
+-- | /Optional Param/ "token_1" - Reference to token1.
 instance HasOptionalParam SushiswapGetPairDayDataHistorical Token1 where
   applyOptionalParam req (Token1 xs) =
     req `addQuery` toQuery ("token_1", Just xs)
@@ -574,21 +642,33 @@ sushiswapGetPairHourDataHistorical  _ =
   _mkRequest "GET" ["/dapps/sushiswap/pairHourData/historical"]
 
 data SushiswapGetPairHourDataHistorical  
+
+-- | /Optional Param/ "startBlock" - The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
 instance HasOptionalParam SushiswapGetPairHourDataHistorical StartBlock where
   applyOptionalParam req (StartBlock xs) =
     req `addQuery` toQuery ("startBlock", Just xs)
+
+-- | /Optional Param/ "endBlock" - The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
 instance HasOptionalParam SushiswapGetPairHourDataHistorical EndBlock where
   applyOptionalParam req (EndBlock xs) =
     req `addQuery` toQuery ("endBlock", Just xs)
+
+-- | /Optional Param/ "startDate" - The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
 instance HasOptionalParam SushiswapGetPairHourDataHistorical StartDate where
   applyOptionalParam req (StartDate xs) =
     req `addQuery` toQuery ("startDate", Just xs)
+
+-- | /Optional Param/ "endDate" - The end date of timeframe.
 instance HasOptionalParam SushiswapGetPairHourDataHistorical EndDate where
   applyOptionalParam req (EndDate xs) =
     req `addQuery` toQuery ("endDate", Just xs)
+
+-- | /Optional Param/ "id" - Identifier, format: (pair id)-(hour start timestamp).
 instance HasOptionalParam SushiswapGetPairHourDataHistorical Id where
   applyOptionalParam req (Id xs) =
     req `addQuery` toQuery ("id", Just xs)
+
+-- | /Optional Param/ "pair" - Reference to pair.
 instance HasOptionalParam SushiswapGetPairHourDataHistorical Pair where
   applyOptionalParam req (Pair xs) =
     req `addQuery` toQuery ("pair", Just xs)
@@ -615,27 +695,43 @@ sushiswapGetPairsHistorical  _ =
   _mkRequest "GET" ["/dapps/sushiswap/pairs/historical"]
 
 data SushiswapGetPairsHistorical  
+
+-- | /Optional Param/ "startBlock" - The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
 instance HasOptionalParam SushiswapGetPairsHistorical StartBlock where
   applyOptionalParam req (StartBlock xs) =
     req `addQuery` toQuery ("startBlock", Just xs)
+
+-- | /Optional Param/ "endBlock" - The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
 instance HasOptionalParam SushiswapGetPairsHistorical EndBlock where
   applyOptionalParam req (EndBlock xs) =
     req `addQuery` toQuery ("endBlock", Just xs)
+
+-- | /Optional Param/ "startDate" - The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
 instance HasOptionalParam SushiswapGetPairsHistorical StartDate where
   applyOptionalParam req (StartDate xs) =
     req `addQuery` toQuery ("startDate", Just xs)
+
+-- | /Optional Param/ "endDate" - The end date of timeframe.
 instance HasOptionalParam SushiswapGetPairsHistorical EndDate where
   applyOptionalParam req (EndDate xs) =
     req `addQuery` toQuery ("endDate", Just xs)
+
+-- | /Optional Param/ "id" - Pair contract address.
 instance HasOptionalParam SushiswapGetPairsHistorical Id where
   applyOptionalParam req (Id xs) =
     req `addQuery` toQuery ("id", Just xs)
+
+-- | /Optional Param/ "name" - Friendly name, format: (token0 name)-(token1 name)
 instance HasOptionalParam SushiswapGetPairsHistorical Name where
   applyOptionalParam req (Name xs) =
     req `addQuery` toQuery ("name", Just xs)
+
+-- | /Optional Param/ "token_0" - Reference to token0 as stored in pair contract.
 instance HasOptionalParam SushiswapGetPairsHistorical Token0 where
   applyOptionalParam req (Token0 xs) =
     req `addQuery` toQuery ("token_0", Just xs)
+
+-- | /Optional Param/ "token_1" - Reference to token0 as stored in pair contract.
 instance HasOptionalParam SushiswapGetPairsHistorical Token1 where
   applyOptionalParam req (Token1 xs) =
     req `addQuery` toQuery ("token_1", Just xs)

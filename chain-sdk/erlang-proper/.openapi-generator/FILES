@@ -107,7 +107,9 @@ src/openapi_api.erl
 src/openapi_api.erl
 src/openapi_api.erl
 src/openapi_api.erl
+src/openapi_api.erl
 src/openapi_gen.erl
+src/openapi_statem.erl
 src/openapi_statem.erl
 src/openapi_statem.erl
 src/openapi_statem.erl

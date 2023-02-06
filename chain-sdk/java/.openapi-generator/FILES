@@ -57,6 +57,7 @@ docs/DexTradeDTO.md
 docs/DexUserDTO.md
 docs/DexWithdrawDTO.md
 docs/DexWithdrawRequestDTO.md
+docs/MetadataApi.md
 docs/NumericsBigInteger.md
 docs/SushiswapApi.md
 docs/SushiswapBundleDTO.md
@@ -135,6 +136,7 @@ src/main/java/org/openapitools/client/StringUtil.java
 src/main/java/org/openapitools/client/api/CowApi.java
 src/main/java/org/openapitools/client/api/CurveApi.java
 src/main/java/org/openapitools/client/api/DexApi.java
+src/main/java/org/openapitools/client/api/MetadataApi.java
 src/main/java/org/openapitools/client/api/SushiswapApi.java
 src/main/java/org/openapitools/client/api/UniswapV2Api.java
 src/main/java/org/openapitools/client/api/UniswapV3Api.java
@@ -244,6 +246,7 @@ src/main/java/org/openapitools/client/model/UniswapV3UniswapDayDataDTO.java
 src/test/java/org/openapitools/client/api/CowApiTest.java
 src/test/java/org/openapitools/client/api/CurveApiTest.java
 src/test/java/org/openapitools/client/api/DexApiTest.java
+src/test/java/org/openapitools/client/api/MetadataApiTest.java
 src/test/java/org/openapitools/client/api/SushiswapApiTest.java
 src/test/java/org/openapitools/client/api/UniswapV2ApiTest.java
 src/test/java/org/openapitools/client/api/UniswapV3ApiTest.java

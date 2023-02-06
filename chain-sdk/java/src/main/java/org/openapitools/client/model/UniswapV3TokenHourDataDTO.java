@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.time.OffsetDateTime;
 import org.openapitools.jackson.nullable.JsonNullable;
@@ -50,8 +48,7 @@ import org.openapitools.client.JSON;
 /**
  * Token data aggregated across all pairs that include token.
  */
-@ApiModel(description = "Token data aggregated across all pairs that include token.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-30T14:42:00.397192Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-06T14:47:06.037855Z[Etc/UTC]")
 public class UniswapV3TokenHourDataDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -139,7 +136,6 @@ public class UniswapV3TokenHourDataDTO {
    * @return entryTime
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public OffsetDateTime getEntryTime() {
     return entryTime;
@@ -162,7 +158,6 @@ public class UniswapV3TokenHourDataDTO {
    * @return recvTime
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public OffsetDateTime getRecvTime() {
     return recvTime;
@@ -185,7 +180,6 @@ public class UniswapV3TokenHourDataDTO {
    * @return blockNumber
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Number of block in which entity was recorded.")
 
   public Long getBlockNumber() {
     return blockNumber;
@@ -208,7 +202,6 @@ public class UniswapV3TokenHourDataDTO {
    * @return id
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Token address concatendated with date.")
 
   public String getId() {
     return id;
@@ -231,7 +224,6 @@ public class UniswapV3TokenHourDataDTO {
    * @return periodStartUnix
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Unix timestamp for start of hour.")
 
   public Integer getPeriodStartUnix() {
     return periodStartUnix;
@@ -254,7 +246,6 @@ public class UniswapV3TokenHourDataDTO {
    * @return token
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Pointer to token.")
 
   public String getToken() {
     return token;
@@ -277,7 +268,6 @@ public class UniswapV3TokenHourDataDTO {
    * @return volume
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Volume in token units.")
 
   public String getVolume() {
     return volume;
@@ -300,7 +290,6 @@ public class UniswapV3TokenHourDataDTO {
    * @return volumeUsd
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Volume in derived USD.")
 
   public String getVolumeUsd() {
     return volumeUsd;
@@ -323,7 +312,6 @@ public class UniswapV3TokenHourDataDTO {
    * @return untrackedVolumeUsd
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Volume in USD even on pools with less reliable USD values.")
 
   public String getUntrackedVolumeUsd() {
     return untrackedVolumeUsd;
@@ -346,7 +334,6 @@ public class UniswapV3TokenHourDataDTO {
    * @return totalValueLocked
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Liquidity across all pools in token units.")
 
   public String getTotalValueLocked() {
     return totalValueLocked;
@@ -369,7 +356,6 @@ public class UniswapV3TokenHourDataDTO {
    * @return totalValueLockedUsd
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Liquidity across all pools in derived USD.")
 
   public String getTotalValueLockedUsd() {
     return totalValueLockedUsd;
@@ -392,7 +378,6 @@ public class UniswapV3TokenHourDataDTO {
    * @return priceUsd
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Price at end of period in USD.")
 
   public String getPriceUsd() {
     return priceUsd;
@@ -415,7 +400,6 @@ public class UniswapV3TokenHourDataDTO {
    * @return feesUsd
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Fees in USD.")
 
   public String getFeesUsd() {
     return feesUsd;
@@ -438,7 +422,6 @@ public class UniswapV3TokenHourDataDTO {
    * @return open
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Opening price USD.")
 
   public String getOpen() {
     return open;
@@ -461,7 +444,6 @@ public class UniswapV3TokenHourDataDTO {
    * @return high
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "High price USD.")
 
   public String getHigh() {
     return high;
@@ -484,7 +466,6 @@ public class UniswapV3TokenHourDataDTO {
    * @return low
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Low price USD.")
 
   public String getLow() {
     return low;
@@ -507,7 +488,6 @@ public class UniswapV3TokenHourDataDTO {
    * @return close
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Close price USD.")
 
   public String getClose() {
     return close;
@@ -530,7 +510,6 @@ public class UniswapV3TokenHourDataDTO {
    * @return vid
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public Long getVid() {
     return vid;

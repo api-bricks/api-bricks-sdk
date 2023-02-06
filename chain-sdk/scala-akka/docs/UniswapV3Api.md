@@ -719,17 +719,17 @@ object Example extends App {
 
     val apiInvoker = ApiInvoker()
     val apiInstance = UniswapV3Api("https://onchain.coinapi.io")
-    val startBlock: Long = 789 // Long | 
+    val startBlock: Long = 789 // Long | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
 
-    val endBlock: Long = 789 // Long | 
+    val endBlock: Long = 789 // Long | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
 
-    val startDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
+    val startDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
 
-    val endDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
+    val endDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | The end date of timeframe.
 
-    val id: String = id_example // String | 
+    val id: String = id_example // String | Identifier, format: (pool address)-(day id).
 
-    val pool: String = pool_example // String | 
+    val pool: String = pool_example // String | Pointer to pool.
     
     val request = apiInstance.uniswapV3GetPoolDayDataHistorical(startBlock, endBlock, startDate, endDate, id, pool)
     val response = apiInvoker.execute(request)
@@ -759,12 +759,12 @@ object Example extends App {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startBlock** | **Long**|  | [optional]
- **endBlock** | **Long**|  | [optional]
- **startDate** | **OffsetDateTime**|  | [optional]
- **endDate** | **OffsetDateTime**|  | [optional]
- **id** | **String**|  | [optional]
- **pool** | **String**|  | [optional]
+ **startBlock** | **Long**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional]
+ **endBlock** | **Long**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional]
+ **startDate** | **OffsetDateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional]
+ **endDate** | **OffsetDateTime**| The end date of timeframe. | [optional]
+ **id** | **String**| Identifier, format: (pool address)-(day id). | [optional]
+ **pool** | **String**| Pointer to pool. | [optional]
 
 ### Return type
 
@@ -815,17 +815,17 @@ object Example extends App {
 
     val apiInvoker = ApiInvoker()
     val apiInstance = UniswapV3Api("https://onchain.coinapi.io")
-    val startBlock: Long = 789 // Long | 
+    val startBlock: Long = 789 // Long | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
 
-    val endBlock: Long = 789 // Long | 
+    val endBlock: Long = 789 // Long | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
 
-    val startDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
+    val startDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
 
-    val endDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
+    val endDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | The end date of timeframe.
 
-    val id: String = id_example // String | 
+    val id: String = id_example // String | Identifier, format: (pool address)-(day id)
 
-    val pool: String = pool_example // String | 
+    val pool: String = pool_example // String | Pointer to pool.
     
     val request = apiInstance.uniswapV3GetPoolHourDataHistorical(startBlock, endBlock, startDate, endDate, id, pool)
     val response = apiInvoker.execute(request)
@@ -855,12 +855,12 @@ object Example extends App {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startBlock** | **Long**|  | [optional]
- **endBlock** | **Long**|  | [optional]
- **startDate** | **OffsetDateTime**|  | [optional]
- **endDate** | **OffsetDateTime**|  | [optional]
- **id** | **String**|  | [optional]
- **pool** | **String**|  | [optional]
+ **startBlock** | **Long**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional]
+ **endBlock** | **Long**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional]
+ **startDate** | **OffsetDateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional]
+ **endDate** | **OffsetDateTime**| The end date of timeframe. | [optional]
+ **id** | **String**| Identifier, format: (pool address)-(day id) | [optional]
+ **pool** | **String**| Pointer to pool. | [optional]
 
 ### Return type
 
@@ -1010,17 +1010,17 @@ object Example extends App {
 
     val apiInvoker = ApiInvoker()
     val apiInstance = UniswapV3Api("https://onchain.coinapi.io")
-    val startBlock: Long = 789 // Long | 
+    val startBlock: Long = 789 // Long | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
 
-    val endBlock: Long = 789 // Long | 
+    val endBlock: Long = 789 // Long | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
 
-    val startDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
+    val startDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
 
-    val endDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
+    val endDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | The end date of timeframe.
 
-    val id: String = id_example // String | 
+    val id: String = id_example // String | NFT token identifier, format: (NFT token id)#(block number).
 
-    val pool: String = pool_example // String | 
+    val pool: String = pool_example // String | Pool the position is within.
     
     val request = apiInstance.uniswapV3GetPositionSnapshotsHistorical(startBlock, endBlock, startDate, endDate, id, pool)
     val response = apiInvoker.execute(request)
@@ -1050,12 +1050,12 @@ object Example extends App {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startBlock** | **Long**|  | [optional]
- **endBlock** | **Long**|  | [optional]
- **startDate** | **OffsetDateTime**|  | [optional]
- **endDate** | **OffsetDateTime**|  | [optional]
- **id** | **String**|  | [optional]
- **pool** | **String**|  | [optional]
+ **startBlock** | **Long**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional]
+ **endBlock** | **Long**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional]
+ **startDate** | **OffsetDateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional]
+ **endDate** | **OffsetDateTime**| The end date of timeframe. | [optional]
+ **id** | **String**| NFT token identifier, format: (NFT token id)#(block number). | [optional]
+ **pool** | **String**| Pool the position is within. | [optional]
 
 ### Return type
 
@@ -1216,7 +1216,7 @@ object Example extends App {
 
     val endDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | The end date of timeframe.
 
-    val id: String = id_example // String | Identifier, format: transaction hash + \"#\" + index in swaps Transaction array.
+    val id: String = id_example // String | Identifier, format: (transaction hash) + # + (index in swaps Transaction array).
 
     val pool: String = pool_example // String | Pool swap occured within.
 
@@ -1256,7 +1256,7 @@ Name | Type | Description  | Notes
  **endBlock** | **Long**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional]
  **startDate** | **OffsetDateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional]
  **endDate** | **OffsetDateTime**| The end date of timeframe. | [optional]
- **id** | **String**| Identifier, format: transaction hash + \&quot;#\&quot; + index in swaps Transaction array. | [optional]
+ **id** | **String**| Identifier, format: (transaction hash) + # + (index in swaps Transaction array). | [optional]
  **pool** | **String**| Pool swap occured within. | [optional]
  **token0** | **String**| Reference to token0 as stored in pair contract. | [optional]
  **token1** | **String**| Reference to token1 as stored in pair contract. | [optional]
@@ -1310,17 +1310,17 @@ object Example extends App {
 
     val apiInvoker = ApiInvoker()
     val apiInstance = UniswapV3Api("https://onchain.coinapi.io")
-    val startBlock: Long = 789 // Long | 
+    val startBlock: Long = 789 // Long | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
 
-    val endBlock: Long = 789 // Long | 
+    val endBlock: Long = 789 // Long | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
 
-    val startDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
+    val startDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
 
-    val endDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
+    val endDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | The end date of timeframe.
 
-    val id: String = id_example // String | 
+    val id: String = id_example // String | Identifier, format: (pool address)-(tick index)-(timestamp).
 
-    val pool: String = pool_example // String | 
+    val pool: String = pool_example // String | Pointer to pool.
     
     val request = apiInstance.uniswapV3GetTickDayDataHistorical(startBlock, endBlock, startDate, endDate, id, pool)
     val response = apiInvoker.execute(request)
@@ -1350,12 +1350,12 @@ object Example extends App {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startBlock** | **Long**|  | [optional]
- **endBlock** | **Long**|  | [optional]
- **startDate** | **OffsetDateTime**|  | [optional]
- **endDate** | **OffsetDateTime**|  | [optional]
- **id** | **String**|  | [optional]
- **pool** | **String**|  | [optional]
+ **startBlock** | **Long**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional]
+ **endBlock** | **Long**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional]
+ **startDate** | **OffsetDateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional]
+ **endDate** | **OffsetDateTime**| The end date of timeframe. | [optional]
+ **id** | **String**| Identifier, format: (pool address)-(tick index)-(timestamp). | [optional]
+ **pool** | **String**| Pointer to pool. | [optional]
 
 ### Return type
 
@@ -1406,17 +1406,17 @@ object Example extends App {
 
     val apiInvoker = ApiInvoker()
     val apiInstance = UniswapV3Api("https://onchain.coinapi.io")
-    val startBlock: Long = 789 // Long | 
+    val startBlock: Long = 789 // Long | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
 
-    val endBlock: Long = 789 // Long | 
+    val endBlock: Long = 789 // Long | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
 
-    val startDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
+    val startDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
 
-    val endDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
+    val endDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | The end date of timeframe.
 
-    val id: String = id_example // String | 
+    val id: String = id_example // String | Identifier, format: (pool address)#(tick index)
 
-    val pool: String = pool_example // String | 
+    val pool: String = pool_example // String | Pool address.
     
     val request = apiInstance.uniswapV3GetTicksHistorical(startBlock, endBlock, startDate, endDate, id, pool)
     val response = apiInvoker.execute(request)
@@ -1446,12 +1446,12 @@ object Example extends App {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startBlock** | **Long**|  | [optional]
- **endBlock** | **Long**|  | [optional]
- **startDate** | **OffsetDateTime**|  | [optional]
- **endDate** | **OffsetDateTime**|  | [optional]
- **id** | **String**|  | [optional]
- **pool** | **String**|  | [optional]
+ **startBlock** | **Long**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional]
+ **endBlock** | **Long**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional]
+ **startDate** | **OffsetDateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional]
+ **endDate** | **OffsetDateTime**| The end date of timeframe. | [optional]
+ **id** | **String**| Identifier, format: (pool address)#(tick index) | [optional]
+ **pool** | **String**| Pool address. | [optional]
 
 ### Return type
 

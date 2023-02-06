@@ -406,13 +406,13 @@ export class UniswapV2Api {
     /**
      * Gets liquidityPositionSnapshots.
      * @summary LiquidityPositionSnapshots (historical)
-     * @param startBlock 
-     * @param endBlock 
-     * @param startDate 
-     * @param endDate 
-     * @param id 
-     * @param user 
-     * @param pair 
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param endDate The end date of timeframe.
+     * @param id Identifier, format: (pair address)-(user address)
+     * @param user Reference to user.
+     * @param pair Reference to the pair liquidity is being provided on.
      */
     public async uniswapV2GetLiquidityPositionSnapshotsHistorical (startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, user?: string, pair?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV2LiquidityPositionSnapshotDTO>;  }> {
         const localVarPath = this.basePath + '/dapps/uniswapv2/liquidityPositionSnapshots/historical';

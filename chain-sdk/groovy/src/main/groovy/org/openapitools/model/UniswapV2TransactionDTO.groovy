@@ -20,11 +20,11 @@ class UniswapV2TransactionDTO {
     /* Timestamp. */
     String timestamp
     /* Array of Mint events within the transaction, 0 or greater. */
-    List<String> mints = new ArrayList<>()
+    List<String> mints = null
     /* Array of Burn events within transaction, 0 or greater. */
-    List<String> burns = new ArrayList<>()
+    List<String> burns = null
     /* Array of Swap events within transaction, 0 or greater. */
-    List<String> swaps = new ArrayList<>()
+    List<String> swaps = null
     /*  */
     Long vid
 }

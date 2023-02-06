@@ -22,9 +22,9 @@ class CurveAddLiquidityEventDTO {
     /*  */
     String provider
     /*  */
-    List<String> tokenAmounts = new ArrayList<>()
+    List<String> tokenAmounts = null
     /*  */
-    List<String> fees = new ArrayList<>()
+    List<String> fees = null
     /*  */
     String invariant
     /*  */

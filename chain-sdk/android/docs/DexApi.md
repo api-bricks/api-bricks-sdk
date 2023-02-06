@@ -182,12 +182,12 @@ Gets deposits.
 //import org.openapitools.client.api.DexApi;
 
 DexApi apiInstance = new DexApi();
-Long startBlock = null; // Long | 
-Long endBlock = null; // Long | 
-Date startDate = null; // Date | 
-Date endDate = null; // Date | 
-String id = null; // String | 
-String user = null; // String | 
+Long startBlock = null; // Long | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+Long endBlock = null; // Long | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+Date startDate = null; // Date | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+Date endDate = null; // Date | The end date of timeframe.
+String id = null; // String | Identifier, format: (transaction hash)-(token id).
+String user = null; // String | User address.
 try {
     List<DexDepositDTO> result = apiInstance.dexGetDepositsHistorical(startBlock, endBlock, startDate, endDate, id, user);
     System.out.println(result);
@@ -202,12 +202,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startBlock** | **Long**|  | [optional] [default to null]
- **endBlock** | **Long**|  | [optional] [default to null]
- **startDate** | **Date**|  | [optional] [default to null]
- **endDate** | **Date**|  | [optional] [default to null]
- **id** | **String**|  | [optional] [default to null]
- **user** | **String**|  | [optional] [default to null]
+ **startBlock** | **Long**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] [default to null]
+ **endBlock** | **Long**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] [default to null]
+ **startDate** | **Date**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] [default to null]
+ **endDate** | **Date**| The end date of timeframe. | [optional] [default to null]
+ **id** | **String**| Identifier, format: (transaction hash)-(token id). | [optional] [default to null]
+ **user** | **String**| User address. | [optional] [default to null]
 
 ### Return type
 
@@ -238,13 +238,13 @@ Gets orders.
 //import org.openapitools.client.api.DexApi;
 
 DexApi apiInstance = new DexApi();
-Long startBlock = null; // Long | 
-Long endBlock = null; // Long | 
-Date startDate = null; // Date | 
-Date endDate = null; // Date | 
-String id = null; // String | 
-String buyToken = null; // String | 
-String sellToken = null; // String | 
+Long startBlock = null; // Long | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+Long endBlock = null; // Long | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+Date startDate = null; // Date | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+Date endDate = null; // Date | The end date of timeframe.
+String id = null; // String | Identifier, format: (owner address)-(order id)
+String buyToken = null; // String | Identifier of token that was bought.
+String sellToken = null; // String | Identifier of token that was sold.
 try {
     List<DexOrderDTO> result = apiInstance.dexGetOrdersHistorical(startBlock, endBlock, startDate, endDate, id, buyToken, sellToken);
     System.out.println(result);
@@ -259,13 +259,13 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startBlock** | **Long**|  | [optional] [default to null]
- **endBlock** | **Long**|  | [optional] [default to null]
- **startDate** | **Date**|  | [optional] [default to null]
- **endDate** | **Date**|  | [optional] [default to null]
- **id** | **String**|  | [optional] [default to null]
- **buyToken** | **String**|  | [optional] [default to null]
- **sellToken** | **String**|  | [optional] [default to null]
+ **startBlock** | **Long**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] [default to null]
+ **endBlock** | **Long**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] [default to null]
+ **startDate** | **Date**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] [default to null]
+ **endDate** | **Date**| The end date of timeframe. | [optional] [default to null]
+ **id** | **String**| Identifier, format: (owner address)-(order id) | [optional] [default to null]
+ **buyToken** | **String**| Identifier of token that was bought. | [optional] [default to null]
+ **sellToken** | **String**| Identifier of token that was sold. | [optional] [default to null]
 
 ### Return type
 
@@ -296,11 +296,11 @@ Gets prices.
 //import org.openapitools.client.api.DexApi;
 
 DexApi apiInstance = new DexApi();
-Long startBlock = null; // Long | 
-Long endBlock = null; // Long | 
-Date startDate = null; // Date | 
-Date endDate = null; // Date | 
-String id = null; // String | 
+Long startBlock = null; // Long | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+Long endBlock = null; // Long | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+Date startDate = null; // Date | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+Date endDate = null; // Date | The end date of timeframe.
+String id = null; // String | Identifier, format: (token id)-(batch id).
 try {
     List<DexPriceDTO> result = apiInstance.dexGetPricesHistorical(startBlock, endBlock, startDate, endDate, id);
     System.out.println(result);
@@ -315,11 +315,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startBlock** | **Long**|  | [optional] [default to null]
- **endBlock** | **Long**|  | [optional] [default to null]
- **startDate** | **Date**|  | [optional] [default to null]
- **endDate** | **Date**|  | [optional] [default to null]
- **id** | **String**|  | [optional] [default to null]
+ **startBlock** | **Long**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] [default to null]
+ **endBlock** | **Long**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] [default to null]
+ **startDate** | **Date**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] [default to null]
+ **endDate** | **Date**| The end date of timeframe. | [optional] [default to null]
+ **id** | **String**| Identifier, format: (token id)-(batch id). | [optional] [default to null]
 
 ### Return type
 
@@ -630,11 +630,11 @@ Gets withdrawRequests.
 //import org.openapitools.client.api.DexApi;
 
 DexApi apiInstance = new DexApi();
-Long startBlock = null; // Long | 
-Long endBlock = null; // Long | 
-Date startDate = null; // Date | 
-Date endDate = null; // Date | 
-String id = null; // String | 
+Long startBlock = null; // Long | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+Long endBlock = null; // Long | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+Date startDate = null; // Date | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+Date endDate = null; // Date | The end date of timeframe.
+String id = null; // String | Identifier, format: (transaction hash)-(id).
 String user = null; // String | 
 try {
     List<DexWithdrawRequestDTO> result = apiInstance.dexGetWithdrawRequestsHistorical(startBlock, endBlock, startDate, endDate, id, user);
@@ -650,11 +650,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startBlock** | **Long**|  | [optional] [default to null]
- **endBlock** | **Long**|  | [optional] [default to null]
- **startDate** | **Date**|  | [optional] [default to null]
- **endDate** | **Date**|  | [optional] [default to null]
- **id** | **String**|  | [optional] [default to null]
+ **startBlock** | **Long**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] [default to null]
+ **endBlock** | **Long**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] [default to null]
+ **startDate** | **Date**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] [default to null]
+ **endDate** | **Date**| The end date of timeframe. | [optional] [default to null]
+ **id** | **String**| Identifier, format: (transaction hash)-(id). | [optional] [default to null]
  **user** | **String**|  | [optional] [default to null]
 
 ### Return type
@@ -686,11 +686,11 @@ Gets withdraws.
 //import org.openapitools.client.api.DexApi;
 
 DexApi apiInstance = new DexApi();
-Long startBlock = null; // Long | 
-Long endBlock = null; // Long | 
-Date startDate = null; // Date | 
-Date endDate = null; // Date | 
-String id = null; // String | 
+Long startBlock = null; // Long | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+Long endBlock = null; // Long | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+Date startDate = null; // Date | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+Date endDate = null; // Date | The end date of timeframe.
+String id = null; // String | Identifier, format: (transaction hash)-(id).
 String user = null; // String | 
 try {
     List<DexWithdrawDTO> result = apiInstance.dexGetWithdrawsHistorical(startBlock, endBlock, startDate, endDate, id, user);
@@ -706,11 +706,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startBlock** | **Long**|  | [optional] [default to null]
- **endBlock** | **Long**|  | [optional] [default to null]
- **startDate** | **Date**|  | [optional] [default to null]
- **endDate** | **Date**|  | [optional] [default to null]
- **id** | **String**|  | [optional] [default to null]
+ **startBlock** | **Long**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] [default to null]
+ **endBlock** | **Long**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] [default to null]
+ **startDate** | **Date**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] [default to null]
+ **endDate** | **Date**| The end date of timeframe. | [optional] [default to null]
+ **id** | **String**| Identifier, format: (transaction hash)-(id). | [optional] [default to null]
  **user** | **String**|  | [optional] [default to null]
 
 ### Return type

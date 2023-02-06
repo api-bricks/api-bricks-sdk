@@ -144,6 +144,7 @@ class CowApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
             path = "/dapps/cow/orders/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -243,6 +244,7 @@ class CowApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
             path = "/dapps/cow/settlements/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -360,6 +362,7 @@ class CowApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
             path = "/dapps/cow/tokens/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -367,13 +370,13 @@ class CowApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
     /**
      * Trades (historical)
      * Gets trades.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param sellToken  (optional)
-     * @param buyToken  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (order id)|(transaction hash)|(event index). (optional)
+     * @param sellToken Address of token that is sold. (optional)
+     * @param buyToken Address of token that is bought. (optional)
      * @return kotlin.collections.List<CowTradeDTO>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
@@ -404,13 +407,13 @@ class CowApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
     /**
      * Trades (historical)
      * Gets trades.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param sellToken  (optional)
-     * @param buyToken  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (order id)|(transaction hash)|(event index). (optional)
+     * @param sellToken Address of token that is sold. (optional)
+     * @param buyToken Address of token that is bought. (optional)
      * @return ApiResponse<kotlin.collections.List<CowTradeDTO>?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
@@ -428,13 +431,13 @@ class CowApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
     /**
      * To obtain the request config of the operation cowGetTradesHistorical
      *
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param sellToken  (optional)
-     * @param buyToken  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (order id)|(transaction hash)|(event index). (optional)
+     * @param sellToken Address of token that is sold. (optional)
+     * @param buyToken Address of token that is bought. (optional)
      * @return RequestConfig
      */
     fun cowGetTradesHistoricalRequestConfig(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?, id: kotlin.String?, sellToken: kotlin.String?, buyToken: kotlin.String?) : RequestConfig<Unit> {
@@ -471,6 +474,7 @@ class CowApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
             path = "/dapps/cow/trades/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -576,6 +580,7 @@ class CowApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
             path = "/dapps/cow/users/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -643,6 +648,7 @@ class CowApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
             path = "/dapps/cow/orders/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -710,6 +716,7 @@ class CowApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
             path = "/dapps/cow/settlements/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -777,6 +784,7 @@ class CowApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
             path = "/dapps/cow/tokens/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -844,6 +852,7 @@ class CowApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
             path = "/dapps/cow/trades/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -911,6 +920,7 @@ class CowApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
             path = "/dapps/cow/users/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }

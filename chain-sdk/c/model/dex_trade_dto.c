@@ -358,7 +358,7 @@ dex_trade_dto_t *dex_trade_dto_parseFromJSON(cJSON *dex_trade_dtoJSON){
     // dex_trade_dto->entry_time
     cJSON *entry_time = cJSON_GetObjectItemCaseSensitive(dex_trade_dtoJSON, "entry_time");
     if (entry_time) { 
-    if(!cJSON_IsString(entry_time))
+    if(!cJSON_IsString(entry_time) && !cJSON_IsNull(entry_time))
     {
     goto end; //DateTime
     }
@@ -367,7 +367,7 @@ dex_trade_dto_t *dex_trade_dto_parseFromJSON(cJSON *dex_trade_dtoJSON){
     // dex_trade_dto->recv_time
     cJSON *recv_time = cJSON_GetObjectItemCaseSensitive(dex_trade_dtoJSON, "recv_time");
     if (recv_time) { 
-    if(!cJSON_IsString(recv_time))
+    if(!cJSON_IsString(recv_time) && !cJSON_IsNull(recv_time))
     {
     goto end; //DateTime
     }
@@ -385,7 +385,7 @@ dex_trade_dto_t *dex_trade_dto_parseFromJSON(cJSON *dex_trade_dtoJSON){
     // dex_trade_dto->id
     cJSON *id = cJSON_GetObjectItemCaseSensitive(dex_trade_dtoJSON, "id");
     if (id) { 
-    if(!cJSON_IsString(id))
+    if(!cJSON_IsString(id) && !cJSON_IsNull(id))
     {
     goto end; //String
     }
@@ -394,7 +394,7 @@ dex_trade_dto_t *dex_trade_dto_parseFromJSON(cJSON *dex_trade_dtoJSON){
     // dex_trade_dto->order
     cJSON *order = cJSON_GetObjectItemCaseSensitive(dex_trade_dtoJSON, "order");
     if (order) { 
-    if(!cJSON_IsString(order))
+    if(!cJSON_IsString(order) && !cJSON_IsNull(order))
     {
     goto end; //String
     }
@@ -403,7 +403,7 @@ dex_trade_dto_t *dex_trade_dto_parseFromJSON(cJSON *dex_trade_dtoJSON){
     // dex_trade_dto->owner
     cJSON *owner = cJSON_GetObjectItemCaseSensitive(dex_trade_dtoJSON, "owner");
     if (owner) { 
-    if(!cJSON_IsString(owner))
+    if(!cJSON_IsString(owner) && !cJSON_IsNull(owner))
     {
     goto end; //String
     }
@@ -412,7 +412,7 @@ dex_trade_dto_t *dex_trade_dto_parseFromJSON(cJSON *dex_trade_dtoJSON){
     // dex_trade_dto->sell_volume
     cJSON *sell_volume = cJSON_GetObjectItemCaseSensitive(dex_trade_dtoJSON, "sell_volume");
     if (sell_volume) { 
-    if(!cJSON_IsString(sell_volume))
+    if(!cJSON_IsString(sell_volume) && !cJSON_IsNull(sell_volume))
     {
     goto end; //String
     }
@@ -421,7 +421,7 @@ dex_trade_dto_t *dex_trade_dto_parseFromJSON(cJSON *dex_trade_dtoJSON){
     // dex_trade_dto->buy_volume
     cJSON *buy_volume = cJSON_GetObjectItemCaseSensitive(dex_trade_dtoJSON, "buy_volume");
     if (buy_volume) { 
-    if(!cJSON_IsString(buy_volume))
+    if(!cJSON_IsString(buy_volume) && !cJSON_IsNull(buy_volume))
     {
     goto end; //String
     }
@@ -430,7 +430,7 @@ dex_trade_dto_t *dex_trade_dto_parseFromJSON(cJSON *dex_trade_dtoJSON){
     // dex_trade_dto->trade_batch_id
     cJSON *trade_batch_id = cJSON_GetObjectItemCaseSensitive(dex_trade_dtoJSON, "trade_batch_id");
     if (trade_batch_id) { 
-    if(!cJSON_IsString(trade_batch_id))
+    if(!cJSON_IsString(trade_batch_id) && !cJSON_IsNull(trade_batch_id))
     {
     goto end; //String
     }
@@ -439,7 +439,7 @@ dex_trade_dto_t *dex_trade_dto_parseFromJSON(cJSON *dex_trade_dtoJSON){
     // dex_trade_dto->trade_epoch
     cJSON *trade_epoch = cJSON_GetObjectItemCaseSensitive(dex_trade_dtoJSON, "trade_epoch");
     if (trade_epoch) { 
-    if(!cJSON_IsString(trade_epoch))
+    if(!cJSON_IsString(trade_epoch) && !cJSON_IsNull(trade_epoch))
     {
     goto end; //String
     }
@@ -448,7 +448,7 @@ dex_trade_dto_t *dex_trade_dto_parseFromJSON(cJSON *dex_trade_dtoJSON){
     // dex_trade_dto->buy_token
     cJSON *buy_token = cJSON_GetObjectItemCaseSensitive(dex_trade_dtoJSON, "buy_token");
     if (buy_token) { 
-    if(!cJSON_IsString(buy_token))
+    if(!cJSON_IsString(buy_token) && !cJSON_IsNull(buy_token))
     {
     goto end; //String
     }
@@ -457,7 +457,7 @@ dex_trade_dto_t *dex_trade_dto_parseFromJSON(cJSON *dex_trade_dtoJSON){
     // dex_trade_dto->sell_token
     cJSON *sell_token = cJSON_GetObjectItemCaseSensitive(dex_trade_dtoJSON, "sell_token");
     if (sell_token) { 
-    if(!cJSON_IsString(sell_token))
+    if(!cJSON_IsString(sell_token) && !cJSON_IsNull(sell_token))
     {
     goto end; //String
     }
@@ -466,7 +466,7 @@ dex_trade_dto_t *dex_trade_dto_parseFromJSON(cJSON *dex_trade_dtoJSON){
     // dex_trade_dto->create_epoch
     cJSON *create_epoch = cJSON_GetObjectItemCaseSensitive(dex_trade_dtoJSON, "create_epoch");
     if (create_epoch) { 
-    if(!cJSON_IsString(create_epoch))
+    if(!cJSON_IsString(create_epoch) && !cJSON_IsNull(create_epoch))
     {
     goto end; //String
     }
@@ -475,7 +475,7 @@ dex_trade_dto_t *dex_trade_dto_parseFromJSON(cJSON *dex_trade_dtoJSON){
     // dex_trade_dto->revert_epoch
     cJSON *revert_epoch = cJSON_GetObjectItemCaseSensitive(dex_trade_dtoJSON, "revert_epoch");
     if (revert_epoch) { 
-    if(!cJSON_IsString(revert_epoch))
+    if(!cJSON_IsString(revert_epoch) && !cJSON_IsNull(revert_epoch))
     {
     goto end; //String
     }
@@ -484,7 +484,7 @@ dex_trade_dto_t *dex_trade_dto_parseFromJSON(cJSON *dex_trade_dtoJSON){
     // dex_trade_dto->tx_hash
     cJSON *tx_hash = cJSON_GetObjectItemCaseSensitive(dex_trade_dtoJSON, "tx_hash");
     if (tx_hash) { 
-    if(!cJSON_IsString(tx_hash))
+    if(!cJSON_IsString(tx_hash) && !cJSON_IsNull(tx_hash))
     {
     goto end; //String
     }
@@ -493,7 +493,7 @@ dex_trade_dto_t *dex_trade_dto_parseFromJSON(cJSON *dex_trade_dtoJSON){
     // dex_trade_dto->tx_log_index
     cJSON *tx_log_index = cJSON_GetObjectItemCaseSensitive(dex_trade_dtoJSON, "tx_log_index");
     if (tx_log_index) { 
-    if(!cJSON_IsString(tx_log_index))
+    if(!cJSON_IsString(tx_log_index) && !cJSON_IsNull(tx_log_index))
     {
     goto end; //String
     }
@@ -511,7 +511,7 @@ dex_trade_dto_t *dex_trade_dto_parseFromJSON(cJSON *dex_trade_dtoJSON){
     // dex_trade_dto->pool_id
     cJSON *pool_id = cJSON_GetObjectItemCaseSensitive(dex_trade_dtoJSON, "pool_id");
     if (pool_id) { 
-    if(!cJSON_IsString(pool_id))
+    if(!cJSON_IsString(pool_id) && !cJSON_IsNull(pool_id))
     {
     goto end; //String
     }
@@ -520,7 +520,7 @@ dex_trade_dto_t *dex_trade_dto_parseFromJSON(cJSON *dex_trade_dtoJSON){
     // dex_trade_dto->transaction_id
     cJSON *transaction_id = cJSON_GetObjectItemCaseSensitive(dex_trade_dtoJSON, "transaction_id");
     if (transaction_id) { 
-    if(!cJSON_IsString(transaction_id))
+    if(!cJSON_IsString(transaction_id) && !cJSON_IsNull(transaction_id))
     {
     goto end; //String
     }
@@ -552,25 +552,25 @@ dex_trade_dto_t *dex_trade_dto_parseFromJSON(cJSON *dex_trade_dtoJSON){
 
 
     dex_trade_dto_local_var = dex_trade_dto_create (
-        entry_time ? strdup(entry_time->valuestring) : NULL,
-        recv_time ? strdup(recv_time->valuestring) : NULL,
+        entry_time && !cJSON_IsNull(entry_time) ? strdup(entry_time->valuestring) : NULL,
+        recv_time && !cJSON_IsNull(recv_time) ? strdup(recv_time->valuestring) : NULL,
         block_number ? block_number->valuedouble : 0,
-        id ? strdup(id->valuestring) : NULL,
-        order ? strdup(order->valuestring) : NULL,
-        owner ? strdup(owner->valuestring) : NULL,
-        sell_volume ? strdup(sell_volume->valuestring) : NULL,
-        buy_volume ? strdup(buy_volume->valuestring) : NULL,
-        trade_batch_id ? strdup(trade_batch_id->valuestring) : NULL,
-        trade_epoch ? strdup(trade_epoch->valuestring) : NULL,
-        buy_token ? strdup(buy_token->valuestring) : NULL,
-        sell_token ? strdup(sell_token->valuestring) : NULL,
-        create_epoch ? strdup(create_epoch->valuestring) : NULL,
-        revert_epoch ? strdup(revert_epoch->valuestring) : NULL,
-        tx_hash ? strdup(tx_hash->valuestring) : NULL,
-        tx_log_index ? strdup(tx_log_index->valuestring) : NULL,
+        id && !cJSON_IsNull(id) ? strdup(id->valuestring) : NULL,
+        order && !cJSON_IsNull(order) ? strdup(order->valuestring) : NULL,
+        owner && !cJSON_IsNull(owner) ? strdup(owner->valuestring) : NULL,
+        sell_volume && !cJSON_IsNull(sell_volume) ? strdup(sell_volume->valuestring) : NULL,
+        buy_volume && !cJSON_IsNull(buy_volume) ? strdup(buy_volume->valuestring) : NULL,
+        trade_batch_id && !cJSON_IsNull(trade_batch_id) ? strdup(trade_batch_id->valuestring) : NULL,
+        trade_epoch && !cJSON_IsNull(trade_epoch) ? strdup(trade_epoch->valuestring) : NULL,
+        buy_token && !cJSON_IsNull(buy_token) ? strdup(buy_token->valuestring) : NULL,
+        sell_token && !cJSON_IsNull(sell_token) ? strdup(sell_token->valuestring) : NULL,
+        create_epoch && !cJSON_IsNull(create_epoch) ? strdup(create_epoch->valuestring) : NULL,
+        revert_epoch && !cJSON_IsNull(revert_epoch) ? strdup(revert_epoch->valuestring) : NULL,
+        tx_hash && !cJSON_IsNull(tx_hash) ? strdup(tx_hash->valuestring) : NULL,
+        tx_log_index && !cJSON_IsNull(tx_log_index) ? strdup(tx_log_index->valuestring) : NULL,
         vid ? vid->valuedouble : 0,
-        pool_id ? strdup(pool_id->valuestring) : NULL,
-        transaction_id ? strdup(transaction_id->valuestring) : NULL,
+        pool_id && !cJSON_IsNull(pool_id) ? strdup(pool_id->valuestring) : NULL,
+        transaction_id && !cJSON_IsNull(transaction_id) ? strdup(transaction_id->valuestring) : NULL,
         evaluated_price ? evaluated_price->valuedouble : 0,
         evaluated_amount ? evaluated_amount->valuedouble : 0,
         evaluated_aggressor ? evaluated_aggressor_local_nonprim : NULL

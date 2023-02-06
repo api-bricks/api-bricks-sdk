@@ -570,13 +570,13 @@ public class UniswapV2Api {
   /**
   * LiquidityPositionSnapshots (historical)
   * Gets liquidityPositionSnapshots.
-   * @param startBlock 
-   * @param endBlock 
-   * @param startDate 
-   * @param endDate 
-   * @param id 
-   * @param user 
-   * @param pair 
+   * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+   * @param endDate The end date of timeframe.
+   * @param id Identifier, format: (pair address)-(user address)
+   * @param user Reference to user.
+   * @param pair Reference to the pair liquidity is being provided on.
    * @return List<UniswapV2LiquidityPositionSnapshotDTO>
   */
   public List<UniswapV2LiquidityPositionSnapshotDTO> uniswapV2GetLiquidityPositionSnapshotsHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String user, String pair) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
@@ -640,7 +640,7 @@ public class UniswapV2Api {
       /**
    * LiquidityPositionSnapshots (historical)
    * Gets liquidityPositionSnapshots.
-   * @param startBlock    * @param endBlock    * @param startDate    * @param endDate    * @param id    * @param user    * @param pair 
+   * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id Identifier, format: (pair address)-(user address)   * @param user Reference to user.   * @param pair Reference to the pair liquidity is being provided on.
   */
   public void uniswapV2GetLiquidityPositionSnapshotsHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String user, String pair, final Response.Listener<List<UniswapV2LiquidityPositionSnapshotDTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;

@@ -576,11 +576,11 @@ public class OASCurveApi {
     /**
      * Coins (historical)
      * Gets coins.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (pool_id)-(coin_index). (optional)
      * @param pool  (optional)
      * @return List<OASCurveCoinDTO>
      * @throws OAS.ApiException if fails to make API call
@@ -1470,11 +1470,11 @@ public class OASCurveApi {
     /**
      * UnderlyingCoins (historical)
      * Gets underlyingCoins.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Equals to: (pool_id)-(coin_index). (optional)
      * @param pool  (optional)
      * @return List<OASCurveUnderlyingCoinDTO>
      * @throws OAS.ApiException if fails to make API call

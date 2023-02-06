@@ -869,7 +869,7 @@ func (a *CurveApiService) CurveExchangesCurrentExecute(r ApiCurveExchangesCurren
 	localVarFormParams := url.Values{}
 
 	if r.pool != nil {
-		localVarQueryParams.Add("pool", parameterToString(*r.pool, ""))
+		parameterAddToQuery(localVarQueryParams, "pool", r.pool, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -2003,22 +2003,22 @@ func (a *CurveApiService) CurveGetAccountsHistoricalExecute(r ApiCurveGetAccount
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		localVarQueryParams.Add("id", parameterToString(*r.id, ""))
+		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
 	}
 	if r.address != nil {
-		localVarQueryParams.Add("address", parameterToString(*r.address, ""))
+		parameterAddToQuery(localVarQueryParams, "address", r.address, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -2162,22 +2162,22 @@ func (a *CurveApiService) CurveGetAddLiquidityEventsHistoricalExecute(r ApiCurve
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		localVarQueryParams.Add("id", parameterToString(*r.id, ""))
+		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
 	}
 	if r.pool != nil {
-		localVarQueryParams.Add("pool", parameterToString(*r.pool, ""))
+		parameterAddToQuery(localVarQueryParams, "pool", r.pool, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -2321,22 +2321,22 @@ func (a *CurveApiService) CurveGetAdminFeeChangeLogsHistoricalExecute(r ApiCurve
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		localVarQueryParams.Add("id", parameterToString(*r.id, ""))
+		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
 	}
 	if r.pool != nil {
-		localVarQueryParams.Add("pool", parameterToString(*r.pool, ""))
+		parameterAddToQuery(localVarQueryParams, "pool", r.pool, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -2480,22 +2480,22 @@ func (a *CurveApiService) CurveGetAmplificationCoeffChangeLogsHistoricalExecute(
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		localVarQueryParams.Add("id", parameterToString(*r.id, ""))
+		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
 	}
 	if r.pool != nil {
-		localVarQueryParams.Add("pool", parameterToString(*r.pool, ""))
+		parameterAddToQuery(localVarQueryParams, "pool", r.pool, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -2562,31 +2562,37 @@ type ApiCurveGetCoinsHistoricalRequest struct {
 	pool *string
 }
 
+// The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
 func (r ApiCurveGetCoinsHistoricalRequest) StartBlock(startBlock int64) ApiCurveGetCoinsHistoricalRequest {
 	r.startBlock = &startBlock
 	return r
 }
 
+// The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
 func (r ApiCurveGetCoinsHistoricalRequest) EndBlock(endBlock int64) ApiCurveGetCoinsHistoricalRequest {
 	r.endBlock = &endBlock
 	return r
 }
 
+// The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
 func (r ApiCurveGetCoinsHistoricalRequest) StartDate(startDate time.Time) ApiCurveGetCoinsHistoricalRequest {
 	r.startDate = &startDate
 	return r
 }
 
+// The end date of timeframe.
 func (r ApiCurveGetCoinsHistoricalRequest) EndDate(endDate time.Time) ApiCurveGetCoinsHistoricalRequest {
 	r.endDate = &endDate
 	return r
 }
 
+// Identifier, format: (pool_id)-(coin_index).
 func (r ApiCurveGetCoinsHistoricalRequest) Id(id string) ApiCurveGetCoinsHistoricalRequest {
 	r.id = &id
 	return r
 }
 
+// 
 func (r ApiCurveGetCoinsHistoricalRequest) Pool(pool string) ApiCurveGetCoinsHistoricalRequest {
 	r.pool = &pool
 	return r
@@ -2633,22 +2639,22 @@ func (a *CurveApiService) CurveGetCoinsHistoricalExecute(r ApiCurveGetCoinsHisto
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		localVarQueryParams.Add("id", parameterToString(*r.id, ""))
+		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
 	}
 	if r.pool != nil {
-		localVarQueryParams.Add("pool", parameterToString(*r.pool, ""))
+		parameterAddToQuery(localVarQueryParams, "pool", r.pool, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -2792,22 +2798,22 @@ func (a *CurveApiService) CurveGetContractVersionsHistoricalExecute(r ApiCurveGe
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		localVarQueryParams.Add("id", parameterToString(*r.id, ""))
+		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
 	}
 	if r.address != nil {
-		localVarQueryParams.Add("address", parameterToString(*r.address, ""))
+		parameterAddToQuery(localVarQueryParams, "address", r.address, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -2944,19 +2950,19 @@ func (a *CurveApiService) CurveGetContractsHistoricalExecute(r ApiCurveGetContra
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		localVarQueryParams.Add("id", parameterToString(*r.id, ""))
+		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -3100,22 +3106,22 @@ func (a *CurveApiService) CurveGetDailyVolumesHistoricalExecute(r ApiCurveGetDai
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		localVarQueryParams.Add("id", parameterToString(*r.id, ""))
+		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
 	}
 	if r.pool != nil {
-		localVarQueryParams.Add("pool", parameterToString(*r.pool, ""))
+		parameterAddToQuery(localVarQueryParams, "pool", r.pool, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -3259,22 +3265,22 @@ func (a *CurveApiService) CurveGetExchangesHistoricalExecute(r ApiCurveGetExchan
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		localVarQueryParams.Add("id", parameterToString(*r.id, ""))
+		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
 	}
 	if r.pool != nil {
-		localVarQueryParams.Add("pool", parameterToString(*r.pool, ""))
+		parameterAddToQuery(localVarQueryParams, "pool", r.pool, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -3418,22 +3424,22 @@ func (a *CurveApiService) CurveGetFeeChangeLogsHistoricalExecute(r ApiCurveGetFe
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		localVarQueryParams.Add("id", parameterToString(*r.id, ""))
+		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
 	}
 	if r.pool != nil {
-		localVarQueryParams.Add("pool", parameterToString(*r.pool, ""))
+		parameterAddToQuery(localVarQueryParams, "pool", r.pool, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -3570,19 +3576,19 @@ func (a *CurveApiService) CurveGetGaugeDepositsHistoricalExecute(r ApiCurveGetGa
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		localVarQueryParams.Add("id", parameterToString(*r.id, ""))
+		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -3726,22 +3732,22 @@ func (a *CurveApiService) CurveGetGaugeLiquiditiesHistoricalExecute(r ApiCurveGe
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		localVarQueryParams.Add("id", parameterToString(*r.id, ""))
+		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
 	}
 	if r.user != nil {
-		localVarQueryParams.Add("user", parameterToString(*r.user, ""))
+		parameterAddToQuery(localVarQueryParams, "user", r.user, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -3878,19 +3884,19 @@ func (a *CurveApiService) CurveGetGaugeTotalWeightsHistoricalExecute(r ApiCurveG
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		localVarQueryParams.Add("id", parameterToString(*r.id, ""))
+		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -4027,19 +4033,19 @@ func (a *CurveApiService) CurveGetGaugeTypeWeightsHistoricalExecute(r ApiCurveGe
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		localVarQueryParams.Add("id", parameterToString(*r.id, ""))
+		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -4183,22 +4189,22 @@ func (a *CurveApiService) CurveGetGaugeTypesHistoricalExecute(r ApiCurveGetGauge
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		localVarQueryParams.Add("id", parameterToString(*r.id, ""))
+		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
 	}
 	if r.name != nil {
-		localVarQueryParams.Add("name", parameterToString(*r.name, ""))
+		parameterAddToQuery(localVarQueryParams, "name", r.name, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -4342,22 +4348,22 @@ func (a *CurveApiService) CurveGetGaugeWeightVotesHistoricalExecute(r ApiCurveGe
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		localVarQueryParams.Add("id", parameterToString(*r.id, ""))
+		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
 	}
 	if r.user != nil {
-		localVarQueryParams.Add("user", parameterToString(*r.user, ""))
+		parameterAddToQuery(localVarQueryParams, "user", r.user, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -4494,19 +4500,19 @@ func (a *CurveApiService) CurveGetGaugeWeightsHistoricalExecute(r ApiCurveGetGau
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		localVarQueryParams.Add("id", parameterToString(*r.id, ""))
+		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -4643,19 +4649,19 @@ func (a *CurveApiService) CurveGetGaugeWithdrawsHistoricalExecute(r ApiCurveGetG
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		localVarQueryParams.Add("id", parameterToString(*r.id, ""))
+		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -4806,25 +4812,25 @@ func (a *CurveApiService) CurveGetGaugesHistoricalExecute(r ApiCurveGetGaugesHis
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		localVarQueryParams.Add("id", parameterToString(*r.id, ""))
+		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
 	}
 	if r.address != nil {
-		localVarQueryParams.Add("address", parameterToString(*r.address, ""))
+		parameterAddToQuery(localVarQueryParams, "address", r.address, "")
 	}
 	if r.pool != nil {
-		localVarQueryParams.Add("pool", parameterToString(*r.pool, ""))
+		parameterAddToQuery(localVarQueryParams, "pool", r.pool, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -4968,22 +4974,22 @@ func (a *CurveApiService) CurveGetHourlyVolumesHistoricalExecute(r ApiCurveGetHo
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		localVarQueryParams.Add("id", parameterToString(*r.id, ""))
+		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
 	}
 	if r.pool != nil {
-		localVarQueryParams.Add("pool", parameterToString(*r.pool, ""))
+		parameterAddToQuery(localVarQueryParams, "pool", r.pool, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -5148,31 +5154,31 @@ func (a *CurveApiService) CurveGetLpTokensHistoricalExecute(r ApiCurveGetLpToken
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		localVarQueryParams.Add("id", parameterToString(*r.id, ""))
+		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
 	}
 	if r.address != nil {
-		localVarQueryParams.Add("address", parameterToString(*r.address, ""))
+		parameterAddToQuery(localVarQueryParams, "address", r.address, "")
 	}
 	if r.name != nil {
-		localVarQueryParams.Add("name", parameterToString(*r.name, ""))
+		parameterAddToQuery(localVarQueryParams, "name", r.name, "")
 	}
 	if r.symbol != nil {
-		localVarQueryParams.Add("symbol", parameterToString(*r.symbol, ""))
+		parameterAddToQuery(localVarQueryParams, "symbol", r.symbol, "")
 	}
 	if r.pool != nil {
-		localVarQueryParams.Add("pool", parameterToString(*r.pool, ""))
+		parameterAddToQuery(localVarQueryParams, "pool", r.pool, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -5316,22 +5322,22 @@ func (a *CurveApiService) CurveGetPoolsHistoricalExecute(r ApiCurveGetPoolsHisto
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		localVarQueryParams.Add("id", parameterToString(*r.id, ""))
+		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
 	}
 	if r.name != nil {
-		localVarQueryParams.Add("name", parameterToString(*r.name, ""))
+		parameterAddToQuery(localVarQueryParams, "name", r.name, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -5468,19 +5474,19 @@ func (a *CurveApiService) CurveGetProposalVotesHistoricalExecute(r ApiCurveGetPr
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		localVarQueryParams.Add("id", parameterToString(*r.id, ""))
+		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -5617,19 +5623,19 @@ func (a *CurveApiService) CurveGetProposalsHistoricalExecute(r ApiCurveGetPropos
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		localVarQueryParams.Add("id", parameterToString(*r.id, ""))
+		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -5773,22 +5779,22 @@ func (a *CurveApiService) CurveGetRemoveLiquidityEventsHistoricalExecute(r ApiCu
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		localVarQueryParams.Add("id", parameterToString(*r.id, ""))
+		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
 	}
 	if r.pool != nil {
-		localVarQueryParams.Add("pool", parameterToString(*r.pool, ""))
+		parameterAddToQuery(localVarQueryParams, "pool", r.pool, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -5932,22 +5938,22 @@ func (a *CurveApiService) CurveGetRemoveLiquidityOneEventsHistoricalExecute(r Ap
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		localVarQueryParams.Add("id", parameterToString(*r.id, ""))
+		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
 	}
 	if r.pool != nil {
-		localVarQueryParams.Add("pool", parameterToString(*r.pool, ""))
+		parameterAddToQuery(localVarQueryParams, "pool", r.pool, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -6084,19 +6090,19 @@ func (a *CurveApiService) CurveGetSystemStatesHistoricalExecute(r ApiCurveGetSys
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		localVarQueryParams.Add("id", parameterToString(*r.id, ""))
+		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -6254,28 +6260,28 @@ func (a *CurveApiService) CurveGetTokensHistoricalExecute(r ApiCurveGetTokensHis
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		localVarQueryParams.Add("id", parameterToString(*r.id, ""))
+		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
 	}
 	if r.address != nil {
-		localVarQueryParams.Add("address", parameterToString(*r.address, ""))
+		parameterAddToQuery(localVarQueryParams, "address", r.address, "")
 	}
 	if r.name != nil {
-		localVarQueryParams.Add("name", parameterToString(*r.name, ""))
+		parameterAddToQuery(localVarQueryParams, "name", r.name, "")
 	}
 	if r.symbol != nil {
-		localVarQueryParams.Add("symbol", parameterToString(*r.symbol, ""))
+		parameterAddToQuery(localVarQueryParams, "symbol", r.symbol, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -6419,22 +6425,22 @@ func (a *CurveApiService) CurveGetTransferOwnershipEventsHistoricalExecute(r Api
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		localVarQueryParams.Add("id", parameterToString(*r.id, ""))
+		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
 	}
 	if r.pool != nil {
-		localVarQueryParams.Add("pool", parameterToString(*r.pool, ""))
+		parameterAddToQuery(localVarQueryParams, "pool", r.pool, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -6501,31 +6507,37 @@ type ApiCurveGetUnderlyingCoinsHistoricalRequest struct {
 	pool *string
 }
 
+// The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
 func (r ApiCurveGetUnderlyingCoinsHistoricalRequest) StartBlock(startBlock int64) ApiCurveGetUnderlyingCoinsHistoricalRequest {
 	r.startBlock = &startBlock
 	return r
 }
 
+// The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
 func (r ApiCurveGetUnderlyingCoinsHistoricalRequest) EndBlock(endBlock int64) ApiCurveGetUnderlyingCoinsHistoricalRequest {
 	r.endBlock = &endBlock
 	return r
 }
 
+// The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
 func (r ApiCurveGetUnderlyingCoinsHistoricalRequest) StartDate(startDate time.Time) ApiCurveGetUnderlyingCoinsHistoricalRequest {
 	r.startDate = &startDate
 	return r
 }
 
+// The end date of timeframe.
 func (r ApiCurveGetUnderlyingCoinsHistoricalRequest) EndDate(endDate time.Time) ApiCurveGetUnderlyingCoinsHistoricalRequest {
 	r.endDate = &endDate
 	return r
 }
 
+// Equals to: (pool_id)-(coin_index).
 func (r ApiCurveGetUnderlyingCoinsHistoricalRequest) Id(id string) ApiCurveGetUnderlyingCoinsHistoricalRequest {
 	r.id = &id
 	return r
 }
 
+// 
 func (r ApiCurveGetUnderlyingCoinsHistoricalRequest) Pool(pool string) ApiCurveGetUnderlyingCoinsHistoricalRequest {
 	r.pool = &pool
 	return r
@@ -6572,22 +6584,22 @@ func (a *CurveApiService) CurveGetUnderlyingCoinsHistoricalExecute(r ApiCurveGet
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		localVarQueryParams.Add("id", parameterToString(*r.id, ""))
+		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
 	}
 	if r.pool != nil {
-		localVarQueryParams.Add("pool", parameterToString(*r.pool, ""))
+		parameterAddToQuery(localVarQueryParams, "pool", r.pool, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -6731,22 +6743,22 @@ func (a *CurveApiService) CurveGetVotingAppsHistoricalExecute(r ApiCurveGetVotin
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		localVarQueryParams.Add("id", parameterToString(*r.id, ""))
+		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
 	}
 	if r.address != nil {
-		localVarQueryParams.Add("address", parameterToString(*r.address, ""))
+		parameterAddToQuery(localVarQueryParams, "address", r.address, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -6890,22 +6902,22 @@ func (a *CurveApiService) CurveGetWeeklyVolumesHistoricalExecute(r ApiCurveGetWe
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		localVarQueryParams.Add("id", parameterToString(*r.id, ""))
+		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
 	}
 	if r.pool != nil {
-		localVarQueryParams.Add("pool", parameterToString(*r.pool, ""))
+		parameterAddToQuery(localVarQueryParams, "pool", r.pool, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -7212,7 +7224,7 @@ func (a *CurveApiService) CurvePoolsCurrentExecute(r ApiCurvePoolsCurrentRequest
 	localVarFormParams := url.Values{}
 
 	if r.id != nil {
-		localVarQueryParams.Add("id", parameterToString(*r.id, ""))
+		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}

@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.time.OffsetDateTime;
 import org.openapitools.jackson.nullable.JsonNullable;
@@ -50,8 +48,7 @@ import org.openapitools.client.JSON;
 /**
  * This entity is used to store data about a user&#39;s liquidity position over time. This information, along with information from the pair itself can be used to provide position sizes, token deposits, and more. It gets created and never updated.
  */
-@ApiModel(description = "This entity is used to store data about a user's liquidity position over time. This information, along with information from the pair itself can be used to provide position sizes, token deposits, and more. It gets created and never updated.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-30T14:42:00.397192Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-06T14:47:06.037855Z[Etc/UTC]")
 public class SushiswapLiquidityPositionSnapshotDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -135,7 +132,6 @@ public class SushiswapLiquidityPositionSnapshotDTO {
    * @return entryTime
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public OffsetDateTime getEntryTime() {
     return entryTime;
@@ -158,7 +154,6 @@ public class SushiswapLiquidityPositionSnapshotDTO {
    * @return recvTime
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public OffsetDateTime getRecvTime() {
     return recvTime;
@@ -181,7 +176,6 @@ public class SushiswapLiquidityPositionSnapshotDTO {
    * @return blockNumber
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Number of block in which entity was recorded.")
 
   public Long getBlockNumber() {
     return blockNumber;
@@ -204,7 +198,6 @@ public class SushiswapLiquidityPositionSnapshotDTO {
    * @return id
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Identifier, format: (pair address)-(user address)-(timestamp)")
 
   public String getId() {
     return id;
@@ -227,7 +220,6 @@ public class SushiswapLiquidityPositionSnapshotDTO {
    * @return liquidityPosition
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Reference to LP identifier.")
 
   public String getLiquidityPosition() {
     return liquidityPosition;
@@ -250,7 +242,6 @@ public class SushiswapLiquidityPositionSnapshotDTO {
    * @return timestamp
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Creation time.")
 
   public Integer getTimestamp() {
     return timestamp;
@@ -273,7 +264,6 @@ public class SushiswapLiquidityPositionSnapshotDTO {
    * @return block
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Block in which snapshot has been created.")
 
   public Integer getBlock() {
     return block;
@@ -296,7 +286,6 @@ public class SushiswapLiquidityPositionSnapshotDTO {
    * @return user
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Reference to user.")
 
   public String getUser() {
     return user;
@@ -319,7 +308,6 @@ public class SushiswapLiquidityPositionSnapshotDTO {
    * @return pair
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Reference to the pair liquidity is being provided on.")
 
   public String getPair() {
     return pair;
@@ -342,7 +330,6 @@ public class SushiswapLiquidityPositionSnapshotDTO {
    * @return token0PriceUsd
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Snapshot of token0 price in USD.")
 
   public String getToken0PriceUsd() {
     return token0PriceUsd;
@@ -365,7 +352,6 @@ public class SushiswapLiquidityPositionSnapshotDTO {
    * @return token1PriceUsd
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Snapshot of token0 price in USD.")
 
   public String getToken1PriceUsd() {
     return token1PriceUsd;
@@ -388,7 +374,6 @@ public class SushiswapLiquidityPositionSnapshotDTO {
    * @return reserve0
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Snapshot of pair token0 reserves.")
 
   public String getReserve0() {
     return reserve0;
@@ -411,7 +396,6 @@ public class SushiswapLiquidityPositionSnapshotDTO {
    * @return reserve1
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Snapshot of pair token1 reserves.")
 
   public String getReserve1() {
     return reserve1;
@@ -434,7 +418,6 @@ public class SushiswapLiquidityPositionSnapshotDTO {
    * @return reserveUsd
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Snapshot of pair reserves in USD.")
 
   public String getReserveUsd() {
     return reserveUsd;
@@ -457,7 +440,6 @@ public class SushiswapLiquidityPositionSnapshotDTO {
    * @return liquidityTokenTotalSupply
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Snapshot of pool token supply.")
 
   public String getLiquidityTokenTotalSupply() {
     return liquidityTokenTotalSupply;
@@ -480,7 +462,6 @@ public class SushiswapLiquidityPositionSnapshotDTO {
    * @return liquidityTokenBalance
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Snapshot of users pool token balance.")
 
   public String getLiquidityTokenBalance() {
     return liquidityTokenBalance;
@@ -503,7 +484,6 @@ public class SushiswapLiquidityPositionSnapshotDTO {
    * @return vid
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public Long getVid() {
     return vid;

@@ -117,7 +117,7 @@ sushiswap_bundle_dto_t *sushiswap_bundle_dto_parseFromJSON(cJSON *sushiswap_bund
     // sushiswap_bundle_dto->entry_time
     cJSON *entry_time = cJSON_GetObjectItemCaseSensitive(sushiswap_bundle_dtoJSON, "entry_time");
     if (entry_time) { 
-    if(!cJSON_IsString(entry_time))
+    if(!cJSON_IsString(entry_time) && !cJSON_IsNull(entry_time))
     {
     goto end; //DateTime
     }
@@ -126,7 +126,7 @@ sushiswap_bundle_dto_t *sushiswap_bundle_dto_parseFromJSON(cJSON *sushiswap_bund
     // sushiswap_bundle_dto->recv_time
     cJSON *recv_time = cJSON_GetObjectItemCaseSensitive(sushiswap_bundle_dtoJSON, "recv_time");
     if (recv_time) { 
-    if(!cJSON_IsString(recv_time))
+    if(!cJSON_IsString(recv_time) && !cJSON_IsNull(recv_time))
     {
     goto end; //DateTime
     }
@@ -144,7 +144,7 @@ sushiswap_bundle_dto_t *sushiswap_bundle_dto_parseFromJSON(cJSON *sushiswap_bund
     // sushiswap_bundle_dto->id
     cJSON *id = cJSON_GetObjectItemCaseSensitive(sushiswap_bundle_dtoJSON, "id");
     if (id) { 
-    if(!cJSON_IsString(id))
+    if(!cJSON_IsString(id) && !cJSON_IsNull(id))
     {
     goto end; //String
     }
@@ -153,7 +153,7 @@ sushiswap_bundle_dto_t *sushiswap_bundle_dto_parseFromJSON(cJSON *sushiswap_bund
     // sushiswap_bundle_dto->eth_price
     cJSON *eth_price = cJSON_GetObjectItemCaseSensitive(sushiswap_bundle_dtoJSON, "eth_price");
     if (eth_price) { 
-    if(!cJSON_IsString(eth_price))
+    if(!cJSON_IsString(eth_price) && !cJSON_IsNull(eth_price))
     {
     goto end; //String
     }
@@ -170,11 +170,11 @@ sushiswap_bundle_dto_t *sushiswap_bundle_dto_parseFromJSON(cJSON *sushiswap_bund
 
 
     sushiswap_bundle_dto_local_var = sushiswap_bundle_dto_create (
-        entry_time ? strdup(entry_time->valuestring) : NULL,
-        recv_time ? strdup(recv_time->valuestring) : NULL,
+        entry_time && !cJSON_IsNull(entry_time) ? strdup(entry_time->valuestring) : NULL,
+        recv_time && !cJSON_IsNull(recv_time) ? strdup(recv_time->valuestring) : NULL,
         block_number ? block_number->valuedouble : 0,
-        id ? strdup(id->valuestring) : NULL,
-        eth_price ? strdup(eth_price->valuestring) : NULL,
+        id && !cJSON_IsNull(id) ? strdup(id->valuestring) : NULL,
+        eth_price && !cJSON_IsNull(eth_price) ? strdup(eth_price->valuestring) : NULL,
         vid ? vid->valuedouble : 0
         );
 

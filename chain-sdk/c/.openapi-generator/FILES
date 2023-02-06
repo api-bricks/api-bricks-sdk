@@ -8,6 +8,8 @@ api/CurveAPI.c
 api/CurveAPI.h
 api/DexAPI.c
 api/DexAPI.h
+api/MetadataAPI.c
+api/MetadataAPI.h
 api/SushiswapAPI.c
 api/SushiswapAPI.h
 api/UniswapV2API.c
@@ -17,6 +19,7 @@ api/UniswapV3API.h
 docs/CowAPI.md
 docs/CurveAPI.md
 docs/DexAPI.md
+docs/MetadataAPI.md
 docs/SushiswapAPI.md
 docs/UniswapV2API.md
 docs/UniswapV3API.md

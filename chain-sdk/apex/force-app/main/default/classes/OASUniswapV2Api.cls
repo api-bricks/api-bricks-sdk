@@ -140,13 +140,13 @@ public class OASUniswapV2Api {
     /**
      * LiquidityPositionSnapshots (historical)
      * Gets liquidityPositionSnapshots.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param user  (optional)
-     * @param pair  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (pair address)-(user address) (optional)
+     * @param user Reference to user. (optional)
+     * @param pair Reference to the pair liquidity is being provided on. (optional)
      * @return List<OASUniswapV2LiquidityPositionSnapsho>
      * @throws OAS.ApiException if fails to make API call
      */

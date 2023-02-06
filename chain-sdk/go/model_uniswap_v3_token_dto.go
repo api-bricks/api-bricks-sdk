@@ -16,6 +16,9 @@ import (
 	"time"
 )
 
+// checks if the UniswapV3TokenDTO type satisfies the MappedNullable interface at compile time
+var _ MappedNullable = &UniswapV3TokenDTO{}
+
 // UniswapV3TokenDTO Stores aggregated information for a specific token across all pairs that token is included in.
 type UniswapV3TokenDTO struct {
 	EntryTime *time.Time `json:"entry_time,omitempty"`
@@ -86,7 +89,7 @@ func (o *UniswapV3TokenDTO) GetEntryTime() time.Time {
 // and a boolean to check if the value has been set.
 func (o *UniswapV3TokenDTO) GetEntryTimeOk() (*time.Time, bool) {
 	if o == nil || isNil(o.EntryTime) {
-    return nil, false
+		return nil, false
 	}
 	return o.EntryTime, true
 }
@@ -118,7 +121,7 @@ func (o *UniswapV3TokenDTO) GetRecvTime() time.Time {
 // and a boolean to check if the value has been set.
 func (o *UniswapV3TokenDTO) GetRecvTimeOk() (*time.Time, bool) {
 	if o == nil || isNil(o.RecvTime) {
-    return nil, false
+		return nil, false
 	}
 	return o.RecvTime, true
 }
@@ -150,7 +153,7 @@ func (o *UniswapV3TokenDTO) GetBlockNumber() int64 {
 // and a boolean to check if the value has been set.
 func (o *UniswapV3TokenDTO) GetBlockNumberOk() (*int64, bool) {
 	if o == nil || isNil(o.BlockNumber) {
-    return nil, false
+		return nil, false
 	}
 	return o.BlockNumber, true
 }
@@ -182,7 +185,7 @@ func (o *UniswapV3TokenDTO) GetVid() int64 {
 // and a boolean to check if the value has been set.
 func (o *UniswapV3TokenDTO) GetVidOk() (*int64, bool) {
 	if o == nil || isNil(o.Vid) {
-    return nil, false
+		return nil, false
 	}
 	return o.Vid, true
 }
@@ -215,7 +218,7 @@ func (o *UniswapV3TokenDTO) GetId() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *UniswapV3TokenDTO) GetIdOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Id.Get(), o.Id.IsSet()
 }
@@ -257,7 +260,7 @@ func (o *UniswapV3TokenDTO) GetSymbol() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *UniswapV3TokenDTO) GetSymbolOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Symbol.Get(), o.Symbol.IsSet()
 }
@@ -299,7 +302,7 @@ func (o *UniswapV3TokenDTO) GetName() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *UniswapV3TokenDTO) GetNameOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Name.Get(), o.Name.IsSet()
 }
@@ -340,7 +343,7 @@ func (o *UniswapV3TokenDTO) GetDecimals() int32 {
 // and a boolean to check if the value has been set.
 func (o *UniswapV3TokenDTO) GetDecimalsOk() (*int32, bool) {
 	if o == nil || isNil(o.Decimals) {
-    return nil, false
+		return nil, false
 	}
 	return o.Decimals, true
 }
@@ -372,7 +375,7 @@ func (o *UniswapV3TokenDTO) GetTotalSupply() NumericsBigInteger {
 // and a boolean to check if the value has been set.
 func (o *UniswapV3TokenDTO) GetTotalSupplyOk() (*NumericsBigInteger, bool) {
 	if o == nil || isNil(o.TotalSupply) {
-    return nil, false
+		return nil, false
 	}
 	return o.TotalSupply, true
 }
@@ -405,7 +408,7 @@ func (o *UniswapV3TokenDTO) GetVolume() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *UniswapV3TokenDTO) GetVolumeOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Volume.Get(), o.Volume.IsSet()
 }
@@ -447,7 +450,7 @@ func (o *UniswapV3TokenDTO) GetVolumeUsd() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *UniswapV3TokenDTO) GetVolumeUsdOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.VolumeUsd.Get(), o.VolumeUsd.IsSet()
 }
@@ -489,7 +492,7 @@ func (o *UniswapV3TokenDTO) GetUntrackedVolumeUsd() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *UniswapV3TokenDTO) GetUntrackedVolumeUsdOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.UntrackedVolumeUsd.Get(), o.UntrackedVolumeUsd.IsSet()
 }
@@ -531,7 +534,7 @@ func (o *UniswapV3TokenDTO) GetFeesUsd() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *UniswapV3TokenDTO) GetFeesUsdOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.FeesUsd.Get(), o.FeesUsd.IsSet()
 }
@@ -572,7 +575,7 @@ func (o *UniswapV3TokenDTO) GetTxCount() NumericsBigInteger {
 // and a boolean to check if the value has been set.
 func (o *UniswapV3TokenDTO) GetTxCountOk() (*NumericsBigInteger, bool) {
 	if o == nil || isNil(o.TxCount) {
-    return nil, false
+		return nil, false
 	}
 	return o.TxCount, true
 }
@@ -604,7 +607,7 @@ func (o *UniswapV3TokenDTO) GetPoolCount() NumericsBigInteger {
 // and a boolean to check if the value has been set.
 func (o *UniswapV3TokenDTO) GetPoolCountOk() (*NumericsBigInteger, bool) {
 	if o == nil || isNil(o.PoolCount) {
-    return nil, false
+		return nil, false
 	}
 	return o.PoolCount, true
 }
@@ -637,7 +640,7 @@ func (o *UniswapV3TokenDTO) GetTotalValueLocked() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *UniswapV3TokenDTO) GetTotalValueLockedOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.TotalValueLocked.Get(), o.TotalValueLocked.IsSet()
 }
@@ -679,7 +682,7 @@ func (o *UniswapV3TokenDTO) GetTotalValueLockedUsd() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *UniswapV3TokenDTO) GetTotalValueLockedUsdOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.TotalValueLockedUsd.Get(), o.TotalValueLockedUsd.IsSet()
 }
@@ -721,7 +724,7 @@ func (o *UniswapV3TokenDTO) GetTotalValueLockedUsdUntracked() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *UniswapV3TokenDTO) GetTotalValueLockedUsdUntrackedOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.TotalValueLockedUsdUntracked.Get(), o.TotalValueLockedUsdUntracked.IsSet()
 }
@@ -763,7 +766,7 @@ func (o *UniswapV3TokenDTO) GetDerivedEth() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *UniswapV3TokenDTO) GetDerivedEthOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.DerivedEth.Get(), o.DerivedEth.IsSet()
 }
@@ -805,7 +808,7 @@ func (o *UniswapV3TokenDTO) GetWhitelistPools() []string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *UniswapV3TokenDTO) GetWhitelistPoolsOk() ([]string, bool) {
 	if o == nil || isNil(o.WhitelistPools) {
-    return nil, false
+		return nil, false
 	}
 	return o.WhitelistPools, true
 }
@@ -838,7 +841,7 @@ func (o *UniswapV3TokenDTO) GetTokenSymbol() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *UniswapV3TokenDTO) GetTokenSymbolOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.TokenSymbol.Get(), o.TokenSymbol.IsSet()
 }
@@ -867,6 +870,14 @@ func (o *UniswapV3TokenDTO) UnsetTokenSymbol() {
 }
 
 func (o UniswapV3TokenDTO) MarshalJSON() ([]byte, error) {
+	toSerialize,err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
+}
+
+func (o UniswapV3TokenDTO) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
 	if !isNil(o.EntryTime) {
 		toSerialize["entry_time"] = o.EntryTime
@@ -931,7 +942,7 @@ func (o UniswapV3TokenDTO) MarshalJSON() ([]byte, error) {
 	if o.TokenSymbol.IsSet() {
 		toSerialize["token_symbol"] = o.TokenSymbol.Get()
 	}
-	return json.Marshal(toSerialize)
+	return toSerialize, nil
 }
 
 type NullableUniswapV3TokenDTO struct {

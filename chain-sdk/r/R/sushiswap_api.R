@@ -702,12 +702,12 @@
 #' ####################  SushiswapGetBurnsHistorical  ####################
 #'
 #' library(openapi)
-#' var_start_block <- 56 # integer |  (Optional)
-#' var_end_block <- 56 # integer |  (Optional)
-#' var_start_date <- "start_date_example" # character |  (Optional)
-#' var_end_date <- "end_date_example" # character |  (Optional)
-#' var_id <- "id_example" # character |  (Optional)
-#' var_pair <- "pair_example" # character |  (Optional)
+#' var_start_block <- 56 # integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (Optional)
+#' var_end_block <- 56 # integer | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (Optional)
+#' var_start_date <- "start_date_example" # character | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (Optional)
+#' var_end_date <- "end_date_example" # character | The end date of timeframe. (Optional)
+#' var_id <- "id_example" # character | Identifier, format: (transaction id):(transaction.burns.length). (Optional)
+#' var_pair <- "pair_example" # character | Reference to pair. (Optional)
 #'
 #' #Burns (historical)
 #' api_instance <- SushiswapApi$new()
@@ -775,13 +775,13 @@
 #' ####################  SushiswapGetLiquidityPositionSnapshotsHistorical  ####################
 #'
 #' library(openapi)
-#' var_start_block <- 56 # integer |  (Optional)
-#' var_end_block <- 56 # integer |  (Optional)
-#' var_start_date <- "start_date_example" # character |  (Optional)
-#' var_end_date <- "end_date_example" # character |  (Optional)
-#' var_id <- "id_example" # character |  (Optional)
-#' var_user <- "user_example" # character |  (Optional)
-#' var_pair <- "pair_example" # character |  (Optional)
+#' var_start_block <- 56 # integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (Optional)
+#' var_end_block <- 56 # integer | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (Optional)
+#' var_start_date <- "start_date_example" # character | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (Optional)
+#' var_end_date <- "end_date_example" # character | The end date of timeframe. (Optional)
+#' var_id <- "id_example" # character | Identifier, format: (pair address)-(user address)-(timestamp) (Optional)
+#' var_user <- "user_example" # character | Reference to user. (Optional)
+#' var_pair <- "pair_example" # character | Reference to the pair liquidity is being provided on. (Optional)
 #'
 #' #LiquidityPositionSnapshots (historical)
 #' api_instance <- SushiswapApi$new()
@@ -795,13 +795,13 @@
 #' ####################  SushiswapGetLiquidityPositionsHistorical  ####################
 #'
 #' library(openapi)
-#' var_start_block <- 56 # integer |  (Optional)
-#' var_end_block <- 56 # integer |  (Optional)
-#' var_start_date <- "start_date_example" # character |  (Optional)
-#' var_end_date <- "end_date_example" # character |  (Optional)
-#' var_id <- "id_example" # character |  (Optional)
-#' var_user <- "user_example" # character |  (Optional)
-#' var_pair <- "pair_example" # character |  (Optional)
+#' var_start_block <- 56 # integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (Optional)
+#' var_end_block <- 56 # integer | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (Optional)
+#' var_start_date <- "start_date_example" # character | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (Optional)
+#' var_end_date <- "end_date_example" # character | The end date of timeframe. (Optional)
+#' var_id <- "id_example" # character | Identifier, format: (pair address)-(user address) (Optional)
+#' var_user <- "user_example" # character | User address. (Optional)
+#' var_pair <- "pair_example" # character | Pair address. (Optional)
 #'
 #' #LiquidityPositions (historical)
 #' api_instance <- SushiswapApi$new()
@@ -815,12 +815,12 @@
 #' ####################  SushiswapGetMintsHistorical  ####################
 #'
 #' library(openapi)
-#' var_start_block <- 56 # integer |  (Optional)
-#' var_end_block <- 56 # integer |  (Optional)
-#' var_start_date <- "start_date_example" # character |  (Optional)
-#' var_end_date <- "end_date_example" # character |  (Optional)
-#' var_id <- "id_example" # character |  (Optional)
-#' var_pair <- "pair_example" # character |  (Optional)
+#' var_start_block <- 56 # integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (Optional)
+#' var_end_block <- 56 # integer | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (Optional)
+#' var_start_date <- "start_date_example" # character | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (Optional)
+#' var_end_date <- "end_date_example" # character | The end date of timeframe. (Optional)
+#' var_id <- "id_example" # character | Identifier, format: (transaction hash)-(index in the transaction mint array). (Optional)
+#' var_pair <- "pair_example" # character | Reference to pair. (Optional)
 #'
 #' #Mints (historical)
 #' api_instance <- SushiswapApi$new()
@@ -834,14 +834,14 @@
 #' ####################  SushiswapGetPairDayDataHistorical  ####################
 #'
 #' library(openapi)
-#' var_start_block <- 56 # integer |  (Optional)
-#' var_end_block <- 56 # integer |  (Optional)
-#' var_start_date <- "start_date_example" # character |  (Optional)
-#' var_end_date <- "end_date_example" # character |  (Optional)
-#' var_id <- "id_example" # character |  (Optional)
-#' var_pair <- "pair_example" # character |  (Optional)
-#' var_token_0 <- "token_0_example" # character |  (Optional)
-#' var_token_1 <- "token_1_example" # character |  (Optional)
+#' var_start_block <- 56 # integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (Optional)
+#' var_end_block <- 56 # integer | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (Optional)
+#' var_start_date <- "start_date_example" # character | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (Optional)
+#' var_end_date <- "end_date_example" # character | The end date of timeframe. (Optional)
+#' var_id <- "id_example" # character | Identifier, format: (pair id)-(day start timestamp). (Optional)
+#' var_pair <- "pair_example" # character | Reference to pair. (Optional)
+#' var_token_0 <- "token_0_example" # character | Reference to token0. (Optional)
+#' var_token_1 <- "token_1_example" # character | Reference to token1. (Optional)
 #'
 #' #PairDayData (historical)
 #' api_instance <- SushiswapApi$new()
@@ -855,12 +855,12 @@
 #' ####################  SushiswapGetPairHourDataHistorical  ####################
 #'
 #' library(openapi)
-#' var_start_block <- 56 # integer |  (Optional)
-#' var_end_block <- 56 # integer |  (Optional)
-#' var_start_date <- "start_date_example" # character |  (Optional)
-#' var_end_date <- "end_date_example" # character |  (Optional)
-#' var_id <- "id_example" # character |  (Optional)
-#' var_pair <- "pair_example" # character |  (Optional)
+#' var_start_block <- 56 # integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (Optional)
+#' var_end_block <- 56 # integer | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (Optional)
+#' var_start_date <- "start_date_example" # character | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (Optional)
+#' var_end_date <- "end_date_example" # character | The end date of timeframe. (Optional)
+#' var_id <- "id_example" # character | Identifier, format: (pair id)-(hour start timestamp). (Optional)
+#' var_pair <- "pair_example" # character | Reference to pair. (Optional)
 #'
 #' #PairHourData (historical)
 #' api_instance <- SushiswapApi$new()
@@ -874,14 +874,14 @@
 #' ####################  SushiswapGetPairsHistorical  ####################
 #'
 #' library(openapi)
-#' var_start_block <- 56 # integer |  (Optional)
-#' var_end_block <- 56 # integer |  (Optional)
-#' var_start_date <- "start_date_example" # character |  (Optional)
-#' var_end_date <- "end_date_example" # character |  (Optional)
-#' var_id <- "id_example" # character |  (Optional)
-#' var_name <- "name_example" # character |  (Optional)
-#' var_token_0 <- "token_0_example" # character |  (Optional)
-#' var_token_1 <- "token_1_example" # character |  (Optional)
+#' var_start_block <- 56 # integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (Optional)
+#' var_end_block <- 56 # integer | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (Optional)
+#' var_start_date <- "start_date_example" # character | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (Optional)
+#' var_end_date <- "end_date_example" # character | The end date of timeframe. (Optional)
+#' var_id <- "id_example" # character | Pair contract address. (Optional)
+#' var_name <- "name_example" # character | Friendly name, format: (token0 name)-(token1 name) (Optional)
+#' var_token_0 <- "token_0_example" # character | Reference to token0 as stored in pair contract. (Optional)
+#' var_token_1 <- "token_1_example" # character | Reference to token0 as stored in pair contract. (Optional)
 #'
 #' #Pairs (historical)
 #' api_instance <- SushiswapApi$new()
@@ -1625,12 +1625,12 @@ SushiswapApi <- R6::R6Class(
     #' @description
     #' Burns (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param id (optional) No description
-    #' @param pair (optional) No description
+    #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+    #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+    #' @param start_date (optional) The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+    #' @param end_date (optional) The end date of timeframe.
+    #' @param id (optional) Identifier, format: (transaction id):(transaction.burns.length).
+    #' @param pair (optional) Reference to pair.
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return array[SushiswapBurnDTO]
@@ -1652,12 +1652,12 @@ SushiswapApi <- R6::R6Class(
     #' @description
     #' Burns (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param id (optional) No description
-    #' @param pair (optional) No description
+    #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+    #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+    #' @param start_date (optional) The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+    #' @param end_date (optional) The end date of timeframe.
+    #' @param id (optional) Identifier, format: (transaction id):(transaction.burns.length).
+    #' @param pair (optional) Reference to pair.
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return API response (array[SushiswapBurnDTO]) with additional information such as HTTP status code, headers
@@ -2074,13 +2074,13 @@ SushiswapApi <- R6::R6Class(
     #' @description
     #' LiquidityPositionSnapshots (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param id (optional) No description
-    #' @param user (optional) No description
-    #' @param pair (optional) No description
+    #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+    #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+    #' @param start_date (optional) The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+    #' @param end_date (optional) The end date of timeframe.
+    #' @param id (optional) Identifier, format: (pair address)-(user address)-(timestamp)
+    #' @param user (optional) Reference to user.
+    #' @param pair (optional) Reference to the pair liquidity is being provided on.
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return array[SushiswapLiquidityPositionSnapshotDTO]
@@ -2102,13 +2102,13 @@ SushiswapApi <- R6::R6Class(
     #' @description
     #' LiquidityPositionSnapshots (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param id (optional) No description
-    #' @param user (optional) No description
-    #' @param pair (optional) No description
+    #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+    #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+    #' @param start_date (optional) The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+    #' @param end_date (optional) The end date of timeframe.
+    #' @param id (optional) Identifier, format: (pair address)-(user address)-(timestamp)
+    #' @param user (optional) Reference to user.
+    #' @param pair (optional) Reference to the pair liquidity is being provided on.
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return API response (array[SushiswapLiquidityPositionSnapshotDTO]) with additional information such as HTTP status code, headers
@@ -2195,13 +2195,13 @@ SushiswapApi <- R6::R6Class(
     #' @description
     #' LiquidityPositions (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param id (optional) No description
-    #' @param user (optional) No description
-    #' @param pair (optional) No description
+    #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+    #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+    #' @param start_date (optional) The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+    #' @param end_date (optional) The end date of timeframe.
+    #' @param id (optional) Identifier, format: (pair address)-(user address)
+    #' @param user (optional) User address.
+    #' @param pair (optional) Pair address.
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return array[SushiswapLiquidityPositionDTO]
@@ -2223,13 +2223,13 @@ SushiswapApi <- R6::R6Class(
     #' @description
     #' LiquidityPositions (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param id (optional) No description
-    #' @param user (optional) No description
-    #' @param pair (optional) No description
+    #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+    #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+    #' @param start_date (optional) The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+    #' @param end_date (optional) The end date of timeframe.
+    #' @param id (optional) Identifier, format: (pair address)-(user address)
+    #' @param user (optional) User address.
+    #' @param pair (optional) Pair address.
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return API response (array[SushiswapLiquidityPositionDTO]) with additional information such as HTTP status code, headers
@@ -2316,12 +2316,12 @@ SushiswapApi <- R6::R6Class(
     #' @description
     #' Mints (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param id (optional) No description
-    #' @param pair (optional) No description
+    #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+    #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+    #' @param start_date (optional) The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+    #' @param end_date (optional) The end date of timeframe.
+    #' @param id (optional) Identifier, format: (transaction hash)-(index in the transaction mint array).
+    #' @param pair (optional) Reference to pair.
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return array[SushiswapMintDTO]
@@ -2343,12 +2343,12 @@ SushiswapApi <- R6::R6Class(
     #' @description
     #' Mints (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param id (optional) No description
-    #' @param pair (optional) No description
+    #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+    #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+    #' @param start_date (optional) The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+    #' @param end_date (optional) The end date of timeframe.
+    #' @param id (optional) Identifier, format: (transaction hash)-(index in the transaction mint array).
+    #' @param pair (optional) Reference to pair.
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return API response (array[SushiswapMintDTO]) with additional information such as HTTP status code, headers
@@ -2432,14 +2432,14 @@ SushiswapApi <- R6::R6Class(
     #' @description
     #' PairDayData (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param id (optional) No description
-    #' @param pair (optional) No description
-    #' @param token_0 (optional) No description
-    #' @param token_1 (optional) No description
+    #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+    #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+    #' @param start_date (optional) The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+    #' @param end_date (optional) The end date of timeframe.
+    #' @param id (optional) Identifier, format: (pair id)-(day start timestamp).
+    #' @param pair (optional) Reference to pair.
+    #' @param token_0 (optional) Reference to token0.
+    #' @param token_1 (optional) Reference to token1.
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return array[SushiswapPairDayDataDTO]
@@ -2461,14 +2461,14 @@ SushiswapApi <- R6::R6Class(
     #' @description
     #' PairDayData (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param id (optional) No description
-    #' @param pair (optional) No description
-    #' @param token_0 (optional) No description
-    #' @param token_1 (optional) No description
+    #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+    #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+    #' @param start_date (optional) The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+    #' @param end_date (optional) The end date of timeframe.
+    #' @param id (optional) Identifier, format: (pair id)-(day start timestamp).
+    #' @param pair (optional) Reference to pair.
+    #' @param token_0 (optional) Reference to token0.
+    #' @param token_1 (optional) Reference to token1.
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return API response (array[SushiswapPairDayDataDTO]) with additional information such as HTTP status code, headers
@@ -2558,12 +2558,12 @@ SushiswapApi <- R6::R6Class(
     #' @description
     #' PairHourData (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param id (optional) No description
-    #' @param pair (optional) No description
+    #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+    #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+    #' @param start_date (optional) The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+    #' @param end_date (optional) The end date of timeframe.
+    #' @param id (optional) Identifier, format: (pair id)-(hour start timestamp).
+    #' @param pair (optional) Reference to pair.
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return array[SushiswapPairHourDataDTO]
@@ -2585,12 +2585,12 @@ SushiswapApi <- R6::R6Class(
     #' @description
     #' PairHourData (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param id (optional) No description
-    #' @param pair (optional) No description
+    #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+    #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+    #' @param start_date (optional) The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+    #' @param end_date (optional) The end date of timeframe.
+    #' @param id (optional) Identifier, format: (pair id)-(hour start timestamp).
+    #' @param pair (optional) Reference to pair.
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return API response (array[SushiswapPairHourDataDTO]) with additional information such as HTTP status code, headers
@@ -2674,14 +2674,14 @@ SushiswapApi <- R6::R6Class(
     #' @description
     #' Pairs (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param id (optional) No description
-    #' @param name (optional) No description
-    #' @param token_0 (optional) No description
-    #' @param token_1 (optional) No description
+    #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+    #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+    #' @param start_date (optional) The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+    #' @param end_date (optional) The end date of timeframe.
+    #' @param id (optional) Pair contract address.
+    #' @param name (optional) Friendly name, format: (token0 name)-(token1 name)
+    #' @param token_0 (optional) Reference to token0 as stored in pair contract.
+    #' @param token_1 (optional) Reference to token0 as stored in pair contract.
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return array[SushiswapPairDTO]
@@ -2703,14 +2703,14 @@ SushiswapApi <- R6::R6Class(
     #' @description
     #' Pairs (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param id (optional) No description
-    #' @param name (optional) No description
-    #' @param token_0 (optional) No description
-    #' @param token_1 (optional) No description
+    #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+    #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+    #' @param start_date (optional) The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+    #' @param end_date (optional) The end date of timeframe.
+    #' @param id (optional) Pair contract address.
+    #' @param name (optional) Friendly name, format: (token0 name)-(token1 name)
+    #' @param token_0 (optional) Reference to token0 as stored in pair contract.
+    #' @param token_1 (optional) Reference to token0 as stored in pair contract.
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return API response (array[SushiswapPairDTO]) with additional information such as HTTP status code, headers

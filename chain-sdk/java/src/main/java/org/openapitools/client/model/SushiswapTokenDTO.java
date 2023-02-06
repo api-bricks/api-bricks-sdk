@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.time.OffsetDateTime;
 import java.util.ArrayList;
@@ -52,8 +50,7 @@ import org.openapitools.client.JSON;
 /**
  * Stores aggregated information for a specific token across all pairs that token is included in.
  */
-@ApiModel(description = "Stores aggregated information for a specific token across all pairs that token is included in.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-30T14:42:00.397192Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-06T14:47:06.037855Z[Etc/UTC]")
 public class SushiswapTokenDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -149,7 +146,6 @@ public class SushiswapTokenDTO {
    * @return entryTime
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public OffsetDateTime getEntryTime() {
     return entryTime;
@@ -172,7 +168,6 @@ public class SushiswapTokenDTO {
    * @return recvTime
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public OffsetDateTime getRecvTime() {
     return recvTime;
@@ -195,7 +190,6 @@ public class SushiswapTokenDTO {
    * @return blockNumber
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Number of block in which entity was recorded.")
 
   public Long getBlockNumber() {
     return blockNumber;
@@ -218,7 +212,6 @@ public class SushiswapTokenDTO {
    * @return id
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Token address.")
 
   public String getId() {
     return id;
@@ -241,7 +234,6 @@ public class SushiswapTokenDTO {
    * @return factory
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Factory address.")
 
   public String getFactory() {
     return factory;
@@ -264,7 +256,6 @@ public class SushiswapTokenDTO {
    * @return symbol
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Token symbol.")
 
   public String getSymbol() {
     return symbol;
@@ -287,7 +278,6 @@ public class SushiswapTokenDTO {
    * @return name
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Token name.")
 
   public String getName() {
     return name;
@@ -310,7 +300,6 @@ public class SushiswapTokenDTO {
    * @return decimals
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Token decimals.")
 
   public String getDecimals() {
     return decimals;
@@ -333,7 +322,6 @@ public class SushiswapTokenDTO {
    * @return totalSupply
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Total supply of liquidity token.")
 
   public String getTotalSupply() {
     return totalSupply;
@@ -356,7 +344,6 @@ public class SushiswapTokenDTO {
    * @return volume
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Amount of token traded all time across all pairs.")
 
   public String getVolume() {
     return volume;
@@ -379,7 +366,6 @@ public class SushiswapTokenDTO {
    * @return volumeUsd
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Amount of token in USD traded all time across pairs (only for tokens with liquidity above minimum threshold).")
 
   public String getVolumeUsd() {
     return volumeUsd;
@@ -402,7 +388,6 @@ public class SushiswapTokenDTO {
    * @return untrackedVolumeUsd
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Amount of token in USD traded all time across pairs (no minimum liquidity threshold).")
 
   public String getUntrackedVolumeUsd() {
     return untrackedVolumeUsd;
@@ -425,7 +410,6 @@ public class SushiswapTokenDTO {
    * @return txCount
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Amount of transactions all time in pairs including token.")
 
   public String getTxCount() {
     return txCount;
@@ -448,7 +432,6 @@ public class SushiswapTokenDTO {
    * @return liquidity
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Total amount of token provided as liquidity across all pairs.")
 
   public String getLiquidity() {
     return liquidity;
@@ -471,7 +454,6 @@ public class SushiswapTokenDTO {
    * @return derivedEth
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "ETH per token.")
 
   public String getDerivedEth() {
     return derivedEth;
@@ -491,7 +473,7 @@ public class SushiswapTokenDTO {
 
   public SushiswapTokenDTO addWhitelistPairsItem(String whitelistPairsItem) {
     if (this.whitelistPairs == null) {
-      this.whitelistPairs = new ArrayList<>();
+      this.whitelistPairs = null;
     }
     this.whitelistPairs.add(whitelistPairsItem);
     return this;
@@ -502,7 +484,6 @@ public class SushiswapTokenDTO {
    * @return whitelistPairs
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Array of whitelisted pairs.")
 
   public List<String> getWhitelistPairs() {
     return whitelistPairs;
@@ -525,7 +506,6 @@ public class SushiswapTokenDTO {
    * @return vid
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public Long getVid() {
     return vid;
@@ -542,7 +522,6 @@ public class SushiswapTokenDTO {
    * @return tokenSymbol
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getTokenSymbol() {
     return tokenSymbol;

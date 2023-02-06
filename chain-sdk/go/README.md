@@ -20,7 +20,6 @@ Install the following dependencies:
 
 ```shell
 go get github.com/stretchr/testify/assert
-go get golang.org/x/oauth2
 go get golang.org/x/net/context
 ```
 
@@ -179,6 +178,8 @@ Class | Method | HTTP request | Description
 *DexApi* | [**DexUsersCurrent**](docs/DexApi.md#dexuserscurrent) | **Get** /dapps/dex/users/current | Users (current)
 *DexApi* | [**DexWithdrawRequestsCurrent**](docs/DexApi.md#dexwithdrawrequestscurrent) | **Get** /dapps/dex/withdrawRequests/current | WithdrawRequests (current)
 *DexApi* | [**DexWithdrawsCurrent**](docs/DexApi.md#dexwithdrawscurrent) | **Get** /dapps/dex/withdraws/current | Withdraws (current)
+*MetadataApi* | [**MetadataChainsGet**](docs/MetadataApi.md#metadatachainsget) | **Get** /metadata/chains | List all chains.
+*MetadataApi* | [**MetadataDappsGet**](docs/MetadataApi.md#metadatadappsget) | **Get** /metadata/dapps | List all decentralized applications.
 *SushiswapApi* | [**SushiswapBundlesCurrent**](docs/SushiswapApi.md#sushiswapbundlescurrent) | **Get** /dapps/sushiswap/bundles/current | Bundles (current)
 *SushiswapApi* | [**SushiswapBurnsCurrent**](docs/SushiswapApi.md#sushiswapburnscurrent) | **Get** /dapps/sushiswap/burns/current | Burns (current)
 *SushiswapApi* | [**SushiswapDayDataCurrent**](docs/SushiswapApi.md#sushiswapdaydatacurrent) | **Get** /dapps/sushiswap/dayData/current | DayData (current)

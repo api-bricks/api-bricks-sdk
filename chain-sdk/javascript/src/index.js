@@ -114,6 +114,7 @@ import UniswapV3UniswapDayDataDTO from './model/UniswapV3UniswapDayDataDTO';
 import CowApi from './api/CowApi';
 import CurveApi from './api/CurveApi';
 import DexApi from './api/DexApi';
+import MetadataApi from './api/MetadataApi';
 import SushiswapApi from './api/SushiswapApi';
 import UniswapV2Api from './api/UniswapV2Api';
 import UniswapV3Api from './api/UniswapV3Api';
@@ -762,6 +763,12 @@ export {
     * @property {module:api/DexApi}
     */
     DexApi,
+
+    /**
+    * The MetadataApi service constructor.
+    * @property {module:api/MetadataApi}
+    */
+    MetadataApi,
 
     /**
     * The SushiswapApi service constructor.

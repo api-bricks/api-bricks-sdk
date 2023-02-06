@@ -289,12 +289,12 @@ list_t* UniswapV3API_uniswapV3GetPoolDayDataHistorical(apiClient_t *apiClient, l
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **apiClient** | **apiClient_t \*** | context containing the client configuration |
-**startBlock** | **long** |  | [optional] 
-**endBlock** | **long** |  | [optional] 
-**startDate** | **char** |  | [optional] 
-**endDate** | **char** |  | [optional] 
-**id** | **char \*** |  | [optional] 
-**pool** | **char \*** |  | [optional] 
+**startBlock** | **long** | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
+**endBlock** | **long** | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
+**startDate** | **char** | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
+**endDate** | **char** | The end date of timeframe. | [optional] 
+**id** | **char \*** | Identifier, format: (pool address)-(day id). | [optional] 
+**pool** | **char \*** | Pointer to pool. | [optional] 
 
 ### Return type
 
@@ -325,12 +325,12 @@ list_t* UniswapV3API_uniswapV3GetPoolHourDataHistorical(apiClient_t *apiClient, 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **apiClient** | **apiClient_t \*** | context containing the client configuration |
-**startBlock** | **long** |  | [optional] 
-**endBlock** | **long** |  | [optional] 
-**startDate** | **char** |  | [optional] 
-**endDate** | **char** |  | [optional] 
-**id** | **char \*** |  | [optional] 
-**pool** | **char \*** |  | [optional] 
+**startBlock** | **long** | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
+**endBlock** | **long** | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
+**startDate** | **char** | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
+**endDate** | **char** | The end date of timeframe. | [optional] 
+**id** | **char \*** | Identifier, format: (pool address)-(day id) | [optional] 
+**pool** | **char \*** | Pointer to pool. | [optional] 
 
 ### Return type
 
@@ -398,12 +398,12 @@ list_t* UniswapV3API_uniswapV3GetPositionSnapshotsHistorical(apiClient_t *apiCli
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **apiClient** | **apiClient_t \*** | context containing the client configuration |
-**startBlock** | **long** |  | [optional] 
-**endBlock** | **long** |  | [optional] 
-**startDate** | **char** |  | [optional] 
-**endDate** | **char** |  | [optional] 
-**id** | **char \*** |  | [optional] 
-**pool** | **char \*** |  | [optional] 
+**startBlock** | **long** | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
+**endBlock** | **long** | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
+**startDate** | **char** | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
+**endDate** | **char** | The end date of timeframe. | [optional] 
+**id** | **char \*** | NFT token identifier, format: (NFT token id)#(block number). | [optional] 
+**pool** | **char \*** | Pool the position is within. | [optional] 
 
 ### Return type
 
@@ -476,7 +476,7 @@ Name | Type | Description  | Notes
 **endBlock** | **long** | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
 **startDate** | **char** | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
 **endDate** | **char** | The end date of timeframe. | [optional] 
-**id** | **char \*** | Identifier, format: transaction hash + \&quot;#\&quot; + index in swaps Transaction array. | [optional] 
+**id** | **char \*** | Identifier, format: (transaction hash) + # + (index in swaps Transaction array). | [optional] 
 **pool** | **char \*** | Pool swap occured within. | [optional] 
 **token_0** | **char \*** | Reference to token0 as stored in pair contract. | [optional] 
 **token_1** | **char \*** | Reference to token1 as stored in pair contract. | [optional] 
@@ -510,12 +510,12 @@ list_t* UniswapV3API_uniswapV3GetTickDayDataHistorical(apiClient_t *apiClient, l
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **apiClient** | **apiClient_t \*** | context containing the client configuration |
-**startBlock** | **long** |  | [optional] 
-**endBlock** | **long** |  | [optional] 
-**startDate** | **char** |  | [optional] 
-**endDate** | **char** |  | [optional] 
-**id** | **char \*** |  | [optional] 
-**pool** | **char \*** |  | [optional] 
+**startBlock** | **long** | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
+**endBlock** | **long** | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
+**startDate** | **char** | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
+**endDate** | **char** | The end date of timeframe. | [optional] 
+**id** | **char \*** | Identifier, format: (pool address)-(tick index)-(timestamp). | [optional] 
+**pool** | **char \*** | Pointer to pool. | [optional] 
 
 ### Return type
 
@@ -546,12 +546,12 @@ list_t* UniswapV3API_uniswapV3GetTicksHistorical(apiClient_t *apiClient, long st
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **apiClient** | **apiClient_t \*** | context containing the client configuration |
-**startBlock** | **long** |  | [optional] 
-**endBlock** | **long** |  | [optional] 
-**startDate** | **char** |  | [optional] 
-**endDate** | **char** |  | [optional] 
-**id** | **char \*** |  | [optional] 
-**pool** | **char \*** |  | [optional] 
+**startBlock** | **long** | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
+**endBlock** | **long** | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
+**startDate** | **char** | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
+**endDate** | **char** | The end date of timeframe. | [optional] 
+**id** | **char \*** | Identifier, format: (pool address)#(tick index) | [optional] 
+**pool** | **char \*** | Pool address. | [optional] 
 
 ### Return type
 

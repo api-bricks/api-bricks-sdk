@@ -80,4 +80,7 @@ export interface SushiswapSwapDTO {
     readonly evaluated_amount?: number;
     evaluated_aggressor?: TransactionsETradeAggressiveSide;
 }
+export namespace SushiswapSwapDTO {
+}
+
 

@@ -9,6 +9,7 @@ lib/OnChainDapps-REST/API.hs
 lib/OnChainDapps-REST/API/Cow.hs
 lib/OnChainDapps-REST/API/Curve.hs
 lib/OnChainDapps-REST/API/Dex.hs
+lib/OnChainDapps-REST/API/Metadata.hs
 lib/OnChainDapps-REST/API/Sushiswap.hs
 lib/OnChainDapps-REST/API/UniswapV2.hs
 lib/OnChainDapps-REST/API/UniswapV3.hs

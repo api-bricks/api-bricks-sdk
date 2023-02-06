@@ -490,12 +490,12 @@ $apiInstance = new OpenAPI\Client\Api\UniswapV3Api(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$start_block = 56; // int
-$end_block = 56; // int
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$id = 'id_example'; // string
-$pool = 'pool_example'; // string
+$start_block = 56; // int | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+$end_block = 56; // int | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | The end date of timeframe.
+$id = 'id_example'; // string | Identifier, format: (pool address)-(day id).
+$pool = 'pool_example'; // string | Pointer to pool.
 
 try {
     $result = $apiInstance->uniswapV3GetPoolDayDataHistorical($start_block, $end_block, $start_date, $end_date, $id, $pool);
@@ -509,12 +509,12 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **start_block** | **int**|  | [optional] |
-| **end_block** | **int**|  | [optional] |
-| **start_date** | **\DateTime**|  | [optional] |
-| **end_date** | **\DateTime**|  | [optional] |
-| **id** | **string**|  | [optional] |
-| **pool** | **string**|  | [optional] |
+| **start_block** | **int**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] |
+| **end_block** | **int**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] |
+| **start_date** | **\DateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] |
+| **end_date** | **\DateTime**| The end date of timeframe. | [optional] |
+| **id** | **string**| Identifier, format: (pool address)-(day id). | [optional] |
+| **pool** | **string**| Pointer to pool. | [optional] |
 
 ### Return type
 
@@ -556,12 +556,12 @@ $apiInstance = new OpenAPI\Client\Api\UniswapV3Api(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$start_block = 56; // int
-$end_block = 56; // int
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$id = 'id_example'; // string
-$pool = 'pool_example'; // string
+$start_block = 56; // int | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+$end_block = 56; // int | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | The end date of timeframe.
+$id = 'id_example'; // string | Identifier, format: (pool address)-(day id)
+$pool = 'pool_example'; // string | Pointer to pool.
 
 try {
     $result = $apiInstance->uniswapV3GetPoolHourDataHistorical($start_block, $end_block, $start_date, $end_date, $id, $pool);
@@ -575,12 +575,12 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **start_block** | **int**|  | [optional] |
-| **end_block** | **int**|  | [optional] |
-| **start_date** | **\DateTime**|  | [optional] |
-| **end_date** | **\DateTime**|  | [optional] |
-| **id** | **string**|  | [optional] |
-| **pool** | **string**|  | [optional] |
+| **start_block** | **int**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] |
+| **end_block** | **int**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] |
+| **start_date** | **\DateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] |
+| **end_date** | **\DateTime**| The end date of timeframe. | [optional] |
+| **id** | **string**| Identifier, format: (pool address)-(day id) | [optional] |
+| **pool** | **string**| Pointer to pool. | [optional] |
 
 ### Return type
 
@@ -690,12 +690,12 @@ $apiInstance = new OpenAPI\Client\Api\UniswapV3Api(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$start_block = 56; // int
-$end_block = 56; // int
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$id = 'id_example'; // string
-$pool = 'pool_example'; // string
+$start_block = 56; // int | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+$end_block = 56; // int | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | The end date of timeframe.
+$id = 'id_example'; // string | NFT token identifier, format: (NFT token id)#(block number).
+$pool = 'pool_example'; // string | Pool the position is within.
 
 try {
     $result = $apiInstance->uniswapV3GetPositionSnapshotsHistorical($start_block, $end_block, $start_date, $end_date, $id, $pool);
@@ -709,12 +709,12 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **start_block** | **int**|  | [optional] |
-| **end_block** | **int**|  | [optional] |
-| **start_date** | **\DateTime**|  | [optional] |
-| **end_date** | **\DateTime**|  | [optional] |
-| **id** | **string**|  | [optional] |
-| **pool** | **string**|  | [optional] |
+| **start_block** | **int**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] |
+| **end_block** | **int**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] |
+| **start_date** | **\DateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] |
+| **end_date** | **\DateTime**| The end date of timeframe. | [optional] |
+| **id** | **string**| NFT token identifier, format: (NFT token id)#(block number). | [optional] |
+| **pool** | **string**| Pool the position is within. | [optional] |
 
 ### Return type
 
@@ -830,7 +830,7 @@ $start_block = 56; // int | The start block. If endblock is not given, only thos
 $end_block = 56; // int | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
 $start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
 $end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | The end date of timeframe.
-$id = 'id_example'; // string | Identifier, format: transaction hash + \"#\" + index in swaps Transaction array.
+$id = 'id_example'; // string | Identifier, format: (transaction hash) + # + (index in swaps Transaction array).
 $pool = 'pool_example'; // string | Pool swap occured within.
 $token_0 = 'token_0_example'; // string | Reference to token0 as stored in pair contract.
 $token_1 = 'token_1_example'; // string | Reference to token1 as stored in pair contract.
@@ -851,7 +851,7 @@ try {
 | **end_block** | **int**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] |
 | **start_date** | **\DateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] |
 | **end_date** | **\DateTime**| The end date of timeframe. | [optional] |
-| **id** | **string**| Identifier, format: transaction hash + \&quot;#\&quot; + index in swaps Transaction array. | [optional] |
+| **id** | **string**| Identifier, format: (transaction hash) + # + (index in swaps Transaction array). | [optional] |
 | **pool** | **string**| Pool swap occured within. | [optional] |
 | **token_0** | **string**| Reference to token0 as stored in pair contract. | [optional] |
 | **token_1** | **string**| Reference to token1 as stored in pair contract. | [optional] |
@@ -896,12 +896,12 @@ $apiInstance = new OpenAPI\Client\Api\UniswapV3Api(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$start_block = 56; // int
-$end_block = 56; // int
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$id = 'id_example'; // string
-$pool = 'pool_example'; // string
+$start_block = 56; // int | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+$end_block = 56; // int | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | The end date of timeframe.
+$id = 'id_example'; // string | Identifier, format: (pool address)-(tick index)-(timestamp).
+$pool = 'pool_example'; // string | Pointer to pool.
 
 try {
     $result = $apiInstance->uniswapV3GetTickDayDataHistorical($start_block, $end_block, $start_date, $end_date, $id, $pool);
@@ -915,12 +915,12 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **start_block** | **int**|  | [optional] |
-| **end_block** | **int**|  | [optional] |
-| **start_date** | **\DateTime**|  | [optional] |
-| **end_date** | **\DateTime**|  | [optional] |
-| **id** | **string**|  | [optional] |
-| **pool** | **string**|  | [optional] |
+| **start_block** | **int**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] |
+| **end_block** | **int**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] |
+| **start_date** | **\DateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] |
+| **end_date** | **\DateTime**| The end date of timeframe. | [optional] |
+| **id** | **string**| Identifier, format: (pool address)-(tick index)-(timestamp). | [optional] |
+| **pool** | **string**| Pointer to pool. | [optional] |
 
 ### Return type
 
@@ -962,12 +962,12 @@ $apiInstance = new OpenAPI\Client\Api\UniswapV3Api(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$start_block = 56; // int
-$end_block = 56; // int
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$id = 'id_example'; // string
-$pool = 'pool_example'; // string
+$start_block = 56; // int | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+$end_block = 56; // int | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | The end date of timeframe.
+$id = 'id_example'; // string | Identifier, format: (pool address)#(tick index)
+$pool = 'pool_example'; // string | Pool address.
 
 try {
     $result = $apiInstance->uniswapV3GetTicksHistorical($start_block, $end_block, $start_date, $end_date, $id, $pool);
@@ -981,12 +981,12 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **start_block** | **int**|  | [optional] |
-| **end_block** | **int**|  | [optional] |
-| **start_date** | **\DateTime**|  | [optional] |
-| **end_date** | **\DateTime**|  | [optional] |
-| **id** | **string**|  | [optional] |
-| **pool** | **string**|  | [optional] |
+| **start_block** | **int**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] |
+| **end_block** | **int**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] |
+| **start_date** | **\DateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] |
+| **end_date** | **\DateTime**| The end date of timeframe. | [optional] |
+| **id** | **string**| Identifier, format: (pool address)#(tick index) | [optional] |
+| **pool** | **string**| Pool address. | [optional] |
 
 ### Return type
 

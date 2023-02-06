@@ -16,6 +16,9 @@ import (
 	"time"
 )
 
+// checks if the UniswapV3TickDTO type satisfies the MappedNullable interface at compile time
+var _ MappedNullable = &UniswapV3TickDTO{}
+
 // UniswapV3TickDTO Ticks are the boundaries between discrete areas in price space.
 type UniswapV3TickDTO struct {
 	EntryTime *time.Time `json:"entry_time,omitempty"`
@@ -90,7 +93,7 @@ func (o *UniswapV3TickDTO) GetEntryTime() time.Time {
 // and a boolean to check if the value has been set.
 func (o *UniswapV3TickDTO) GetEntryTimeOk() (*time.Time, bool) {
 	if o == nil || isNil(o.EntryTime) {
-    return nil, false
+		return nil, false
 	}
 	return o.EntryTime, true
 }
@@ -122,7 +125,7 @@ func (o *UniswapV3TickDTO) GetRecvTime() time.Time {
 // and a boolean to check if the value has been set.
 func (o *UniswapV3TickDTO) GetRecvTimeOk() (*time.Time, bool) {
 	if o == nil || isNil(o.RecvTime) {
-    return nil, false
+		return nil, false
 	}
 	return o.RecvTime, true
 }
@@ -154,7 +157,7 @@ func (o *UniswapV3TickDTO) GetBlockNumber() int64 {
 // and a boolean to check if the value has been set.
 func (o *UniswapV3TickDTO) GetBlockNumberOk() (*int64, bool) {
 	if o == nil || isNil(o.BlockNumber) {
-    return nil, false
+		return nil, false
 	}
 	return o.BlockNumber, true
 }
@@ -186,7 +189,7 @@ func (o *UniswapV3TickDTO) GetVid() int64 {
 // and a boolean to check if the value has been set.
 func (o *UniswapV3TickDTO) GetVidOk() (*int64, bool) {
 	if o == nil || isNil(o.Vid) {
-    return nil, false
+		return nil, false
 	}
 	return o.Vid, true
 }
@@ -219,7 +222,7 @@ func (o *UniswapV3TickDTO) GetId() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *UniswapV3TickDTO) GetIdOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Id.Get(), o.Id.IsSet()
 }
@@ -261,7 +264,7 @@ func (o *UniswapV3TickDTO) GetPoolAddress() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *UniswapV3TickDTO) GetPoolAddressOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.PoolAddress.Get(), o.PoolAddress.IsSet()
 }
@@ -302,7 +305,7 @@ func (o *UniswapV3TickDTO) GetTickIdx() NumericsBigInteger {
 // and a boolean to check if the value has been set.
 func (o *UniswapV3TickDTO) GetTickIdxOk() (*NumericsBigInteger, bool) {
 	if o == nil || isNil(o.TickIdx) {
-    return nil, false
+		return nil, false
 	}
 	return o.TickIdx, true
 }
@@ -335,7 +338,7 @@ func (o *UniswapV3TickDTO) GetPool() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *UniswapV3TickDTO) GetPoolOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Pool.Get(), o.Pool.IsSet()
 }
@@ -376,7 +379,7 @@ func (o *UniswapV3TickDTO) GetLiquidityGross() NumericsBigInteger {
 // and a boolean to check if the value has been set.
 func (o *UniswapV3TickDTO) GetLiquidityGrossOk() (*NumericsBigInteger, bool) {
 	if o == nil || isNil(o.LiquidityGross) {
-    return nil, false
+		return nil, false
 	}
 	return o.LiquidityGross, true
 }
@@ -408,7 +411,7 @@ func (o *UniswapV3TickDTO) GetLiquidityNet() NumericsBigInteger {
 // and a boolean to check if the value has been set.
 func (o *UniswapV3TickDTO) GetLiquidityNetOk() (*NumericsBigInteger, bool) {
 	if o == nil || isNil(o.LiquidityNet) {
-    return nil, false
+		return nil, false
 	}
 	return o.LiquidityNet, true
 }
@@ -441,7 +444,7 @@ func (o *UniswapV3TickDTO) GetPrice0() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *UniswapV3TickDTO) GetPrice0Ok() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Price0.Get(), o.Price0.IsSet()
 }
@@ -483,7 +486,7 @@ func (o *UniswapV3TickDTO) GetPrice1() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *UniswapV3TickDTO) GetPrice1Ok() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Price1.Get(), o.Price1.IsSet()
 }
@@ -525,7 +528,7 @@ func (o *UniswapV3TickDTO) GetVolumeToken0() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *UniswapV3TickDTO) GetVolumeToken0Ok() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.VolumeToken0.Get(), o.VolumeToken0.IsSet()
 }
@@ -567,7 +570,7 @@ func (o *UniswapV3TickDTO) GetVolumeToken1() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *UniswapV3TickDTO) GetVolumeToken1Ok() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.VolumeToken1.Get(), o.VolumeToken1.IsSet()
 }
@@ -609,7 +612,7 @@ func (o *UniswapV3TickDTO) GetVolumeUsd() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *UniswapV3TickDTO) GetVolumeUsdOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.VolumeUsd.Get(), o.VolumeUsd.IsSet()
 }
@@ -651,7 +654,7 @@ func (o *UniswapV3TickDTO) GetUntrackedVolumeUsd() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *UniswapV3TickDTO) GetUntrackedVolumeUsdOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.UntrackedVolumeUsd.Get(), o.UntrackedVolumeUsd.IsSet()
 }
@@ -693,7 +696,7 @@ func (o *UniswapV3TickDTO) GetFeesUsd() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *UniswapV3TickDTO) GetFeesUsdOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.FeesUsd.Get(), o.FeesUsd.IsSet()
 }
@@ -735,7 +738,7 @@ func (o *UniswapV3TickDTO) GetCollectedFeesToken0() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *UniswapV3TickDTO) GetCollectedFeesToken0Ok() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.CollectedFeesToken0.Get(), o.CollectedFeesToken0.IsSet()
 }
@@ -777,7 +780,7 @@ func (o *UniswapV3TickDTO) GetCollectedFeesToken1() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *UniswapV3TickDTO) GetCollectedFeesToken1Ok() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.CollectedFeesToken1.Get(), o.CollectedFeesToken1.IsSet()
 }
@@ -819,7 +822,7 @@ func (o *UniswapV3TickDTO) GetCollectedFeesUsd() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *UniswapV3TickDTO) GetCollectedFeesUsdOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.CollectedFeesUsd.Get(), o.CollectedFeesUsd.IsSet()
 }
@@ -860,7 +863,7 @@ func (o *UniswapV3TickDTO) GetCreatedAtTimestamp() time.Time {
 // and a boolean to check if the value has been set.
 func (o *UniswapV3TickDTO) GetCreatedAtTimestampOk() (*time.Time, bool) {
 	if o == nil || isNil(o.CreatedAtTimestamp) {
-    return nil, false
+		return nil, false
 	}
 	return o.CreatedAtTimestamp, true
 }
@@ -892,7 +895,7 @@ func (o *UniswapV3TickDTO) GetLiquidityProviderCount() NumericsBigInteger {
 // and a boolean to check if the value has been set.
 func (o *UniswapV3TickDTO) GetLiquidityProviderCountOk() (*NumericsBigInteger, bool) {
 	if o == nil || isNil(o.LiquidityProviderCount) {
-    return nil, false
+		return nil, false
 	}
 	return o.LiquidityProviderCount, true
 }
@@ -924,7 +927,7 @@ func (o *UniswapV3TickDTO) GetFeeGrowthOutside0x128() NumericsBigInteger {
 // and a boolean to check if the value has been set.
 func (o *UniswapV3TickDTO) GetFeeGrowthOutside0x128Ok() (*NumericsBigInteger, bool) {
 	if o == nil || isNil(o.FeeGrowthOutside0x128) {
-    return nil, false
+		return nil, false
 	}
 	return o.FeeGrowthOutside0x128, true
 }
@@ -956,7 +959,7 @@ func (o *UniswapV3TickDTO) GetFeeGrowthOutside1x128() NumericsBigInteger {
 // and a boolean to check if the value has been set.
 func (o *UniswapV3TickDTO) GetFeeGrowthOutside1x128Ok() (*NumericsBigInteger, bool) {
 	if o == nil || isNil(o.FeeGrowthOutside1x128) {
-    return nil, false
+		return nil, false
 	}
 	return o.FeeGrowthOutside1x128, true
 }
@@ -976,6 +979,14 @@ func (o *UniswapV3TickDTO) SetFeeGrowthOutside1x128(v NumericsBigInteger) {
 }
 
 func (o UniswapV3TickDTO) MarshalJSON() ([]byte, error) {
+	toSerialize,err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
+}
+
+func (o UniswapV3TickDTO) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
 	if !isNil(o.EntryTime) {
 		toSerialize["entry_time"] = o.EntryTime
@@ -1049,7 +1060,7 @@ func (o UniswapV3TickDTO) MarshalJSON() ([]byte, error) {
 	if !isNil(o.FeeGrowthOutside1x128) {
 		toSerialize["fee_growth_outside_1x128"] = o.FeeGrowthOutside1x128
 	}
-	return json.Marshal(toSerialize)
+	return toSerialize, nil
 }
 
 type NullableUniswapV3TickDTO struct {

@@ -54,6 +54,7 @@ doc/DexTradeDTO.md
 doc/DexUserDTO.md
 doc/DexWithdrawDTO.md
 doc/DexWithdrawRequestDTO.md
+doc/MetadataApi.md
 doc/NumericsBigInteger.md
 doc/SushiswapApi.md
 doc/SushiswapBundleDTO.md
@@ -112,6 +113,7 @@ lib/api.dart
 lib/api/cow_api.dart
 lib/api/curve_api.dart
 lib/api/dex_api.dart
+lib/api/metadata_api.dart
 lib/api/sushiswap_api.dart
 lib/api/uniswap_v2_api.dart
 lib/api/uniswap_v3_api.dart
@@ -273,6 +275,7 @@ test/dex_trade_dto_test.dart
 test/dex_user_dto_test.dart
 test/dex_withdraw_dto_test.dart
 test/dex_withdraw_request_dto_test.dart
+test/metadata_api_test.dart
 test/numerics_big_integer_test.dart
 test/sushiswap_api_test.dart
 test/sushiswap_bundle_dto_test.dart

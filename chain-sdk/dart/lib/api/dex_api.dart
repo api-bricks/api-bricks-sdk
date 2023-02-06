@@ -228,16 +228,22 @@ class DexApi {
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   ///
   /// * [int] endBlock:
+  ///   The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
   ///
   /// * [DateTime] startDate:
+  ///   The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
   ///
   /// * [DateTime] endDate:
+  ///   The end date of timeframe.
   ///
   /// * [String] id:
+  ///   Identifier, format: (transaction hash)-(token id).
   ///
   /// * [String] user:
+  ///   User address.
   Future<Response> dexGetDepositsHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, String? user, }) async {
     // ignore: prefer_const_declarations
     final path = r'/dapps/dex/deposits/historical';
@@ -289,16 +295,22 @@ class DexApi {
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   ///
   /// * [int] endBlock:
+  ///   The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
   ///
   /// * [DateTime] startDate:
+  ///   The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
   ///
   /// * [DateTime] endDate:
+  ///   The end date of timeframe.
   ///
   /// * [String] id:
+  ///   Identifier, format: (transaction hash)-(token id).
   ///
   /// * [String] user:
+  ///   User address.
   Future<List<DexDepositDTO>?> dexGetDepositsHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, String? user, }) async {
     final response = await dexGetDepositsHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, id: id, user: user, );
     if (response.statusCode >= HttpStatus.badRequest) {
@@ -326,18 +338,25 @@ class DexApi {
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   ///
   /// * [int] endBlock:
+  ///   The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
   ///
   /// * [DateTime] startDate:
+  ///   The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
   ///
   /// * [DateTime] endDate:
+  ///   The end date of timeframe.
   ///
   /// * [String] id:
+  ///   Identifier, format: (owner address)-(order id)
   ///
   /// * [String] buyToken:
+  ///   Identifier of token that was bought.
   ///
   /// * [String] sellToken:
+  ///   Identifier of token that was sold.
   Future<Response> dexGetOrdersHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, String? buyToken, String? sellToken, }) async {
     // ignore: prefer_const_declarations
     final path = r'/dapps/dex/orders/historical';
@@ -392,18 +411,25 @@ class DexApi {
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   ///
   /// * [int] endBlock:
+  ///   The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
   ///
   /// * [DateTime] startDate:
+  ///   The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
   ///
   /// * [DateTime] endDate:
+  ///   The end date of timeframe.
   ///
   /// * [String] id:
+  ///   Identifier, format: (owner address)-(order id)
   ///
   /// * [String] buyToken:
+  ///   Identifier of token that was bought.
   ///
   /// * [String] sellToken:
+  ///   Identifier of token that was sold.
   Future<List<DexOrderDTO>?> dexGetOrdersHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, String? buyToken, String? sellToken, }) async {
     final response = await dexGetOrdersHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, id: id, buyToken: buyToken, sellToken: sellToken, );
     if (response.statusCode >= HttpStatus.badRequest) {
@@ -431,14 +457,19 @@ class DexApi {
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   ///
   /// * [int] endBlock:
+  ///   The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
   ///
   /// * [DateTime] startDate:
+  ///   The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
   ///
   /// * [DateTime] endDate:
+  ///   The end date of timeframe.
   ///
   /// * [String] id:
+  ///   Identifier, format: (token id)-(batch id).
   Future<Response> dexGetPricesHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, }) async {
     // ignore: prefer_const_declarations
     final path = r'/dapps/dex/prices/historical';
@@ -487,14 +518,19 @@ class DexApi {
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   ///
   /// * [int] endBlock:
+  ///   The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
   ///
   /// * [DateTime] startDate:
+  ///   The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
   ///
   /// * [DateTime] endDate:
+  ///   The end date of timeframe.
   ///
   /// * [String] id:
+  ///   Identifier, format: (token id)-(batch id).
   Future<List<DexPriceDTO>?> dexGetPricesHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, }) async {
     final response = await dexGetPricesHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, id: id, );
     if (response.statusCode >= HttpStatus.badRequest) {
@@ -1072,16 +1108,22 @@ class DexApi {
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   ///
   /// * [int] endBlock:
+  ///   The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
   ///
   /// * [DateTime] startDate:
+  ///   The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
   ///
   /// * [DateTime] endDate:
+  ///   The end date of timeframe.
   ///
   /// * [String] id:
+  ///   Identifier, format: (transaction hash)-(id).
   ///
   /// * [String] user:
+  ///   
   Future<Response> dexGetWithdrawRequestsHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, String? user, }) async {
     // ignore: prefer_const_declarations
     final path = r'/dapps/dex/withdrawRequests/historical';
@@ -1133,16 +1175,22 @@ class DexApi {
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   ///
   /// * [int] endBlock:
+  ///   The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
   ///
   /// * [DateTime] startDate:
+  ///   The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
   ///
   /// * [DateTime] endDate:
+  ///   The end date of timeframe.
   ///
   /// * [String] id:
+  ///   Identifier, format: (transaction hash)-(id).
   ///
   /// * [String] user:
+  ///   
   Future<List<DexWithdrawRequestDTO>?> dexGetWithdrawRequestsHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, String? user, }) async {
     final response = await dexGetWithdrawRequestsHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, id: id, user: user, );
     if (response.statusCode >= HttpStatus.badRequest) {
@@ -1170,16 +1218,22 @@ class DexApi {
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   ///
   /// * [int] endBlock:
+  ///   The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
   ///
   /// * [DateTime] startDate:
+  ///   The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
   ///
   /// * [DateTime] endDate:
+  ///   The end date of timeframe.
   ///
   /// * [String] id:
+  ///   Identifier, format: (transaction hash)-(id).
   ///
   /// * [String] user:
+  ///   
   Future<Response> dexGetWithdrawsHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, String? user, }) async {
     // ignore: prefer_const_declarations
     final path = r'/dapps/dex/withdraws/historical';
@@ -1231,16 +1285,22 @@ class DexApi {
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   ///
   /// * [int] endBlock:
+  ///   The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
   ///
   /// * [DateTime] startDate:
+  ///   The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
   ///
   /// * [DateTime] endDate:
+  ///   The end date of timeframe.
   ///
   /// * [String] id:
+  ///   Identifier, format: (transaction hash)-(id).
   ///
   /// * [String] user:
+  ///   
   Future<List<DexWithdrawDTO>?> dexGetWithdrawsHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, String? user, }) async {
     final response = await dexGetWithdrawsHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, id: id, user: user, );
     if (response.statusCode >= HttpStatus.badRequest) {

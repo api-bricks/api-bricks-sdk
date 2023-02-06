@@ -16,6 +16,9 @@ import (
 	"time"
 )
 
+// checks if the CurveVotingAppDTO type satisfies the MappedNullable interface at compile time
+var _ MappedNullable = &CurveVotingAppDTO{}
+
 // CurveVotingAppDTO struct for CurveVotingAppDTO
 type CurveVotingAppDTO struct {
 	EntryTime *time.Time `json:"entry_time,omitempty"`
@@ -78,7 +81,7 @@ func (o *CurveVotingAppDTO) GetEntryTime() time.Time {
 // and a boolean to check if the value has been set.
 func (o *CurveVotingAppDTO) GetEntryTimeOk() (*time.Time, bool) {
 	if o == nil || isNil(o.EntryTime) {
-    return nil, false
+		return nil, false
 	}
 	return o.EntryTime, true
 }
@@ -110,7 +113,7 @@ func (o *CurveVotingAppDTO) GetRecvTime() time.Time {
 // and a boolean to check if the value has been set.
 func (o *CurveVotingAppDTO) GetRecvTimeOk() (*time.Time, bool) {
 	if o == nil || isNil(o.RecvTime) {
-    return nil, false
+		return nil, false
 	}
 	return o.RecvTime, true
 }
@@ -142,7 +145,7 @@ func (o *CurveVotingAppDTO) GetBlockNumber() int64 {
 // and a boolean to check if the value has been set.
 func (o *CurveVotingAppDTO) GetBlockNumberOk() (*int64, bool) {
 	if o == nil || isNil(o.BlockNumber) {
-    return nil, false
+		return nil, false
 	}
 	return o.BlockNumber, true
 }
@@ -175,7 +178,7 @@ func (o *CurveVotingAppDTO) GetId() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CurveVotingAppDTO) GetIdOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Id.Get(), o.Id.IsSet()
 }
@@ -217,7 +220,7 @@ func (o *CurveVotingAppDTO) GetAddress() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CurveVotingAppDTO) GetAddressOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Address.Get(), o.Address.IsSet()
 }
@@ -259,7 +262,7 @@ func (o *CurveVotingAppDTO) GetCodename() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CurveVotingAppDTO) GetCodenameOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Codename.Get(), o.Codename.IsSet()
 }
@@ -301,7 +304,7 @@ func (o *CurveVotingAppDTO) GetMinimumBalance() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CurveVotingAppDTO) GetMinimumBalanceOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.MinimumBalance.Get(), o.MinimumBalance.IsSet()
 }
@@ -343,7 +346,7 @@ func (o *CurveVotingAppDTO) GetMinimumQuorum() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CurveVotingAppDTO) GetMinimumQuorumOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.MinimumQuorum.Get(), o.MinimumQuorum.IsSet()
 }
@@ -385,7 +388,7 @@ func (o *CurveVotingAppDTO) GetMinimumTime() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CurveVotingAppDTO) GetMinimumTimeOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.MinimumTime.Get(), o.MinimumTime.IsSet()
 }
@@ -427,7 +430,7 @@ func (o *CurveVotingAppDTO) GetRequiredSupport() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CurveVotingAppDTO) GetRequiredSupportOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.RequiredSupport.Get(), o.RequiredSupport.IsSet()
 }
@@ -469,7 +472,7 @@ func (o *CurveVotingAppDTO) GetVoteTime() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CurveVotingAppDTO) GetVoteTimeOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.VoteTime.Get(), o.VoteTime.IsSet()
 }
@@ -511,7 +514,7 @@ func (o *CurveVotingAppDTO) GetProposalCount() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CurveVotingAppDTO) GetProposalCountOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.ProposalCount.Get(), o.ProposalCount.IsSet()
 }
@@ -553,7 +556,7 @@ func (o *CurveVotingAppDTO) GetVoteCount() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CurveVotingAppDTO) GetVoteCountOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.VoteCount.Get(), o.VoteCount.IsSet()
 }
@@ -595,7 +598,7 @@ func (o *CurveVotingAppDTO) GetToken() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CurveVotingAppDTO) GetTokenOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Token.Get(), o.Token.IsSet()
 }
@@ -636,7 +639,7 @@ func (o *CurveVotingAppDTO) GetVid() int64 {
 // and a boolean to check if the value has been set.
 func (o *CurveVotingAppDTO) GetVidOk() (*int64, bool) {
 	if o == nil || isNil(o.Vid) {
-    return nil, false
+		return nil, false
 	}
 	return o.Vid, true
 }
@@ -656,6 +659,14 @@ func (o *CurveVotingAppDTO) SetVid(v int64) {
 }
 
 func (o CurveVotingAppDTO) MarshalJSON() ([]byte, error) {
+	toSerialize,err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
+}
+
+func (o CurveVotingAppDTO) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
 	if !isNil(o.EntryTime) {
 		toSerialize["entry_time"] = o.EntryTime
@@ -702,7 +713,7 @@ func (o CurveVotingAppDTO) MarshalJSON() ([]byte, error) {
 	if !isNil(o.Vid) {
 		toSerialize["vid"] = o.Vid
 	}
-	return json.Marshal(toSerialize)
+	return toSerialize, nil
 }
 
 type NullableCurveVotingAppDTO struct {

@@ -202,13 +202,13 @@ Gets trades.
 //import org.openapitools.client.models.*
 
 val apiInstance = CowApi()
-val startBlock : kotlin.Long = 789 // kotlin.Long | 
-val endBlock : kotlin.Long = 789 // kotlin.Long | 
-val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
-val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
-val id : kotlin.String = id_example // kotlin.String | 
-val sellToken : kotlin.String = sellToken_example // kotlin.String | 
-val buyToken : kotlin.String = buyToken_example // kotlin.String | 
+val startBlock : kotlin.Long = 789 // kotlin.Long | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+val endBlock : kotlin.Long = 789 // kotlin.Long | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | The end date of timeframe.
+val id : kotlin.String = id_example // kotlin.String | Identifier, format: (order id)|(transaction hash)|(event index).
+val sellToken : kotlin.String = sellToken_example // kotlin.String | Address of token that is sold.
+val buyToken : kotlin.String = buyToken_example // kotlin.String | Address of token that is bought.
 try {
     val result : kotlin.collections.List<CowTradeDTO> = apiInstance.cowGetTradesHistorical(startBlock, endBlock, startDate, endDate, id, sellToken, buyToken)
     println(result)
@@ -225,13 +225,13 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startBlock** | **kotlin.Long**|  | [optional]
- **endBlock** | **kotlin.Long**|  | [optional]
- **startDate** | **java.time.OffsetDateTime**|  | [optional]
- **endDate** | **java.time.OffsetDateTime**|  | [optional]
- **id** | **kotlin.String**|  | [optional]
- **sellToken** | **kotlin.String**|  | [optional]
- **buyToken** | **kotlin.String**|  | [optional]
+ **startBlock** | **kotlin.Long**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional]
+ **endBlock** | **kotlin.Long**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional]
+ **startDate** | **java.time.OffsetDateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional]
+ **endDate** | **java.time.OffsetDateTime**| The end date of timeframe. | [optional]
+ **id** | **kotlin.String**| Identifier, format: (order id)|(transaction hash)|(event index). | [optional]
+ **sellToken** | **kotlin.String**| Address of token that is sold. | [optional]
+ **buyToken** | **kotlin.String**| Address of token that is bought. | [optional]
 
 ### Return type
 

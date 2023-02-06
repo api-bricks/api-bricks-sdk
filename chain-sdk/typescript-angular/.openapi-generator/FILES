@@ -6,6 +6,7 @@ api/api.ts
 api/cow.service.ts
 api/curve.service.ts
 api/dex.service.ts
+api/metadata.service.ts
 api/sushiswap.service.ts
 api/uniswapV2.service.ts
 api/uniswapV3.service.ts

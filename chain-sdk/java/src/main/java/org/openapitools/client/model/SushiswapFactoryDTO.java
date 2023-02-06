@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.time.OffsetDateTime;
 import org.openapitools.jackson.nullable.JsonNullable;
@@ -50,8 +48,7 @@ import org.openapitools.client.JSON;
 /**
  * The Sushiswap Factory entity is responsible for storing aggregate information across all Sushiswap pairs. It can be used to view stats about total liquidity, volume, amount of pairs and more.
  */
-@ApiModel(description = "The Sushiswap Factory entity is responsible for storing aggregate information across all Sushiswap pairs. It can be used to view stats about total liquidity, volume, amount of pairs and more.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-30T14:42:00.397192Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-06T14:47:06.037855Z[Etc/UTC]")
 public class SushiswapFactoryDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -123,7 +120,6 @@ public class SushiswapFactoryDTO {
    * @return entryTime
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public OffsetDateTime getEntryTime() {
     return entryTime;
@@ -146,7 +142,6 @@ public class SushiswapFactoryDTO {
    * @return recvTime
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public OffsetDateTime getRecvTime() {
     return recvTime;
@@ -169,7 +164,6 @@ public class SushiswapFactoryDTO {
    * @return blockNumber
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Number of block in which entity was recorded.")
 
   public Long getBlockNumber() {
     return blockNumber;
@@ -192,7 +186,6 @@ public class SushiswapFactoryDTO {
    * @return id
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Factory address.")
 
   public String getId() {
     return id;
@@ -215,7 +208,6 @@ public class SushiswapFactoryDTO {
    * @return pairCount
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Amount of pairs created by the Sushiswap factory.")
 
   public String getPairCount() {
     return pairCount;
@@ -238,7 +230,6 @@ public class SushiswapFactoryDTO {
    * @return volumeUsd
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "All time USD volume across all pairs (USD is derived).")
 
   public String getVolumeUsd() {
     return volumeUsd;
@@ -261,7 +252,6 @@ public class SushiswapFactoryDTO {
    * @return volumeEth
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "All time volume in ETH across all pairs (ETH is derived).")
 
   public String getVolumeEth() {
     return volumeEth;
@@ -284,7 +274,6 @@ public class SushiswapFactoryDTO {
    * @return untrackedVolumeUsd
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Untracked volume USD.")
 
   public String getUntrackedVolumeUsd() {
     return untrackedVolumeUsd;
@@ -307,7 +296,6 @@ public class SushiswapFactoryDTO {
    * @return liquidityUsd
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Total liquidity across all pairs stored as a derived USD amount.")
 
   public String getLiquidityUsd() {
     return liquidityUsd;
@@ -330,7 +318,6 @@ public class SushiswapFactoryDTO {
    * @return liquidityEth
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Total liquidity across all pairs stored as a derived ETH amount.")
 
   public String getLiquidityEth() {
     return liquidityEth;
@@ -353,7 +340,6 @@ public class SushiswapFactoryDTO {
    * @return txCount
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "All time amount of transactions across all pairs.")
 
   public String getTxCount() {
     return txCount;
@@ -376,7 +362,6 @@ public class SushiswapFactoryDTO {
    * @return tokenCount
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Total count of tokens.")
 
   public String getTokenCount() {
     return tokenCount;
@@ -399,7 +384,6 @@ public class SushiswapFactoryDTO {
    * @return userCount
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Users count.")
 
   public String getUserCount() {
     return userCount;
@@ -422,7 +406,6 @@ public class SushiswapFactoryDTO {
    * @return vid
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public Long getVid() {
     return vid;

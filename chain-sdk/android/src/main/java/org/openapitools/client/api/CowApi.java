@@ -465,13 +465,13 @@ public class CowApi {
   /**
   * Trades (historical)
   * Gets trades.
-   * @param startBlock 
-   * @param endBlock 
-   * @param startDate 
-   * @param endDate 
-   * @param id 
-   * @param sellToken 
-   * @param buyToken 
+   * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+   * @param endDate The end date of timeframe.
+   * @param id Identifier, format: (order id)|(transaction hash)|(event index).
+   * @param sellToken Address of token that is sold.
+   * @param buyToken Address of token that is bought.
    * @return List<CowTradeDTO>
   */
   public List<CowTradeDTO> cowGetTradesHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String sellToken, String buyToken) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
@@ -535,7 +535,7 @@ public class CowApi {
       /**
    * Trades (historical)
    * Gets trades.
-   * @param startBlock    * @param endBlock    * @param startDate    * @param endDate    * @param id    * @param sellToken    * @param buyToken 
+   * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id Identifier, format: (order id)|(transaction hash)|(event index).   * @param sellToken Address of token that is sold.   * @param buyToken Address of token that is bought.
   */
   public void cowGetTradesHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String sellToken, String buyToken, final Response.Listener<List<CowTradeDTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;

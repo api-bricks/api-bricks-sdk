@@ -277,7 +277,7 @@ uniswap_v2_liquidity_position_snapshot_dto_t *uniswap_v2_liquidity_position_snap
     // uniswap_v2_liquidity_position_snapshot_dto->entry_time
     cJSON *entry_time = cJSON_GetObjectItemCaseSensitive(uniswap_v2_liquidity_position_snapshot_dtoJSON, "entry_time");
     if (entry_time) { 
-    if(!cJSON_IsString(entry_time))
+    if(!cJSON_IsString(entry_time) && !cJSON_IsNull(entry_time))
     {
     goto end; //DateTime
     }
@@ -286,7 +286,7 @@ uniswap_v2_liquidity_position_snapshot_dto_t *uniswap_v2_liquidity_position_snap
     // uniswap_v2_liquidity_position_snapshot_dto->recv_time
     cJSON *recv_time = cJSON_GetObjectItemCaseSensitive(uniswap_v2_liquidity_position_snapshot_dtoJSON, "recv_time");
     if (recv_time) { 
-    if(!cJSON_IsString(recv_time))
+    if(!cJSON_IsString(recv_time) && !cJSON_IsNull(recv_time))
     {
     goto end; //DateTime
     }
@@ -304,7 +304,7 @@ uniswap_v2_liquidity_position_snapshot_dto_t *uniswap_v2_liquidity_position_snap
     // uniswap_v2_liquidity_position_snapshot_dto->id
     cJSON *id = cJSON_GetObjectItemCaseSensitive(uniswap_v2_liquidity_position_snapshot_dtoJSON, "id");
     if (id) { 
-    if(!cJSON_IsString(id))
+    if(!cJSON_IsString(id) && !cJSON_IsNull(id))
     {
     goto end; //String
     }
@@ -313,7 +313,7 @@ uniswap_v2_liquidity_position_snapshot_dto_t *uniswap_v2_liquidity_position_snap
     // uniswap_v2_liquidity_position_snapshot_dto->liquidity_position
     cJSON *liquidity_position = cJSON_GetObjectItemCaseSensitive(uniswap_v2_liquidity_position_snapshot_dtoJSON, "liquidity_position");
     if (liquidity_position) { 
-    if(!cJSON_IsString(liquidity_position))
+    if(!cJSON_IsString(liquidity_position) && !cJSON_IsNull(liquidity_position))
     {
     goto end; //String
     }
@@ -340,7 +340,7 @@ uniswap_v2_liquidity_position_snapshot_dto_t *uniswap_v2_liquidity_position_snap
     // uniswap_v2_liquidity_position_snapshot_dto->user
     cJSON *user = cJSON_GetObjectItemCaseSensitive(uniswap_v2_liquidity_position_snapshot_dtoJSON, "user");
     if (user) { 
-    if(!cJSON_IsString(user))
+    if(!cJSON_IsString(user) && !cJSON_IsNull(user))
     {
     goto end; //String
     }
@@ -349,7 +349,7 @@ uniswap_v2_liquidity_position_snapshot_dto_t *uniswap_v2_liquidity_position_snap
     // uniswap_v2_liquidity_position_snapshot_dto->pair
     cJSON *pair = cJSON_GetObjectItemCaseSensitive(uniswap_v2_liquidity_position_snapshot_dtoJSON, "pair");
     if (pair) { 
-    if(!cJSON_IsString(pair))
+    if(!cJSON_IsString(pair) && !cJSON_IsNull(pair))
     {
     goto end; //String
     }
@@ -358,7 +358,7 @@ uniswap_v2_liquidity_position_snapshot_dto_t *uniswap_v2_liquidity_position_snap
     // uniswap_v2_liquidity_position_snapshot_dto->token_0_price_usd
     cJSON *token_0_price_usd = cJSON_GetObjectItemCaseSensitive(uniswap_v2_liquidity_position_snapshot_dtoJSON, "token_0_price_usd");
     if (token_0_price_usd) { 
-    if(!cJSON_IsString(token_0_price_usd))
+    if(!cJSON_IsString(token_0_price_usd) && !cJSON_IsNull(token_0_price_usd))
     {
     goto end; //String
     }
@@ -367,7 +367,7 @@ uniswap_v2_liquidity_position_snapshot_dto_t *uniswap_v2_liquidity_position_snap
     // uniswap_v2_liquidity_position_snapshot_dto->token_1_price_usd
     cJSON *token_1_price_usd = cJSON_GetObjectItemCaseSensitive(uniswap_v2_liquidity_position_snapshot_dtoJSON, "token_1_price_usd");
     if (token_1_price_usd) { 
-    if(!cJSON_IsString(token_1_price_usd))
+    if(!cJSON_IsString(token_1_price_usd) && !cJSON_IsNull(token_1_price_usd))
     {
     goto end; //String
     }
@@ -376,7 +376,7 @@ uniswap_v2_liquidity_position_snapshot_dto_t *uniswap_v2_liquidity_position_snap
     // uniswap_v2_liquidity_position_snapshot_dto->reserve_0
     cJSON *reserve_0 = cJSON_GetObjectItemCaseSensitive(uniswap_v2_liquidity_position_snapshot_dtoJSON, "reserve_0");
     if (reserve_0) { 
-    if(!cJSON_IsString(reserve_0))
+    if(!cJSON_IsString(reserve_0) && !cJSON_IsNull(reserve_0))
     {
     goto end; //String
     }
@@ -385,7 +385,7 @@ uniswap_v2_liquidity_position_snapshot_dto_t *uniswap_v2_liquidity_position_snap
     // uniswap_v2_liquidity_position_snapshot_dto->reserve_1
     cJSON *reserve_1 = cJSON_GetObjectItemCaseSensitive(uniswap_v2_liquidity_position_snapshot_dtoJSON, "reserve_1");
     if (reserve_1) { 
-    if(!cJSON_IsString(reserve_1))
+    if(!cJSON_IsString(reserve_1) && !cJSON_IsNull(reserve_1))
     {
     goto end; //String
     }
@@ -394,7 +394,7 @@ uniswap_v2_liquidity_position_snapshot_dto_t *uniswap_v2_liquidity_position_snap
     // uniswap_v2_liquidity_position_snapshot_dto->reserve_usd
     cJSON *reserve_usd = cJSON_GetObjectItemCaseSensitive(uniswap_v2_liquidity_position_snapshot_dtoJSON, "reserve_usd");
     if (reserve_usd) { 
-    if(!cJSON_IsString(reserve_usd))
+    if(!cJSON_IsString(reserve_usd) && !cJSON_IsNull(reserve_usd))
     {
     goto end; //String
     }
@@ -403,7 +403,7 @@ uniswap_v2_liquidity_position_snapshot_dto_t *uniswap_v2_liquidity_position_snap
     // uniswap_v2_liquidity_position_snapshot_dto->liquidity_token_total_supply
     cJSON *liquidity_token_total_supply = cJSON_GetObjectItemCaseSensitive(uniswap_v2_liquidity_position_snapshot_dtoJSON, "liquidity_token_total_supply");
     if (liquidity_token_total_supply) { 
-    if(!cJSON_IsString(liquidity_token_total_supply))
+    if(!cJSON_IsString(liquidity_token_total_supply) && !cJSON_IsNull(liquidity_token_total_supply))
     {
     goto end; //String
     }
@@ -412,7 +412,7 @@ uniswap_v2_liquidity_position_snapshot_dto_t *uniswap_v2_liquidity_position_snap
     // uniswap_v2_liquidity_position_snapshot_dto->liquidity_token_balance
     cJSON *liquidity_token_balance = cJSON_GetObjectItemCaseSensitive(uniswap_v2_liquidity_position_snapshot_dtoJSON, "liquidity_token_balance");
     if (liquidity_token_balance) { 
-    if(!cJSON_IsString(liquidity_token_balance))
+    if(!cJSON_IsString(liquidity_token_balance) && !cJSON_IsNull(liquidity_token_balance))
     {
     goto end; //String
     }
@@ -430,7 +430,7 @@ uniswap_v2_liquidity_position_snapshot_dto_t *uniswap_v2_liquidity_position_snap
     // uniswap_v2_liquidity_position_snapshot_dto->block_range
     cJSON *block_range = cJSON_GetObjectItemCaseSensitive(uniswap_v2_liquidity_position_snapshot_dtoJSON, "block_range");
     if (block_range) { 
-    if(!cJSON_IsString(block_range))
+    if(!cJSON_IsString(block_range) && !cJSON_IsNull(block_range))
     {
     goto end; //String
     }
@@ -438,24 +438,24 @@ uniswap_v2_liquidity_position_snapshot_dto_t *uniswap_v2_liquidity_position_snap
 
 
     uniswap_v2_liquidity_position_snapshot_dto_local_var = uniswap_v2_liquidity_position_snapshot_dto_create (
-        entry_time ? strdup(entry_time->valuestring) : NULL,
-        recv_time ? strdup(recv_time->valuestring) : NULL,
+        entry_time && !cJSON_IsNull(entry_time) ? strdup(entry_time->valuestring) : NULL,
+        recv_time && !cJSON_IsNull(recv_time) ? strdup(recv_time->valuestring) : NULL,
         block_number ? block_number->valuedouble : 0,
-        id ? strdup(id->valuestring) : NULL,
-        liquidity_position ? strdup(liquidity_position->valuestring) : NULL,
+        id && !cJSON_IsNull(id) ? strdup(id->valuestring) : NULL,
+        liquidity_position && !cJSON_IsNull(liquidity_position) ? strdup(liquidity_position->valuestring) : NULL,
         timestamp ? timestamp->valuedouble : 0,
         block ? block->valuedouble : 0,
-        user ? strdup(user->valuestring) : NULL,
-        pair ? strdup(pair->valuestring) : NULL,
-        token_0_price_usd ? strdup(token_0_price_usd->valuestring) : NULL,
-        token_1_price_usd ? strdup(token_1_price_usd->valuestring) : NULL,
-        reserve_0 ? strdup(reserve_0->valuestring) : NULL,
-        reserve_1 ? strdup(reserve_1->valuestring) : NULL,
-        reserve_usd ? strdup(reserve_usd->valuestring) : NULL,
-        liquidity_token_total_supply ? strdup(liquidity_token_total_supply->valuestring) : NULL,
-        liquidity_token_balance ? strdup(liquidity_token_balance->valuestring) : NULL,
+        user && !cJSON_IsNull(user) ? strdup(user->valuestring) : NULL,
+        pair && !cJSON_IsNull(pair) ? strdup(pair->valuestring) : NULL,
+        token_0_price_usd && !cJSON_IsNull(token_0_price_usd) ? strdup(token_0_price_usd->valuestring) : NULL,
+        token_1_price_usd && !cJSON_IsNull(token_1_price_usd) ? strdup(token_1_price_usd->valuestring) : NULL,
+        reserve_0 && !cJSON_IsNull(reserve_0) ? strdup(reserve_0->valuestring) : NULL,
+        reserve_1 && !cJSON_IsNull(reserve_1) ? strdup(reserve_1->valuestring) : NULL,
+        reserve_usd && !cJSON_IsNull(reserve_usd) ? strdup(reserve_usd->valuestring) : NULL,
+        liquidity_token_total_supply && !cJSON_IsNull(liquidity_token_total_supply) ? strdup(liquidity_token_total_supply->valuestring) : NULL,
+        liquidity_token_balance && !cJSON_IsNull(liquidity_token_balance) ? strdup(liquidity_token_balance->valuestring) : NULL,
         vid ? vid->valuedouble : 0,
-        block_range ? strdup(block_range->valuestring) : NULL
+        block_range && !cJSON_IsNull(block_range) ? strdup(block_range->valuestring) : NULL
         );
 
     return uniswap_v2_liquidity_position_snapshot_dto_local_var;

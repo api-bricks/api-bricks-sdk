@@ -248,12 +248,12 @@ import (
 )
 
 func main() {
-    startBlock := int64(789) // int64 |  (optional)
-    endBlock := int64(789) // int64 |  (optional)
-    startDate := time.Now() // time.Time |  (optional)
-    endDate := time.Now() // time.Time |  (optional)
-    id := "id_example" // string |  (optional)
-    user := "user_example" // string |  (optional)
+    startBlock := int64(789) // int64 | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+    endBlock := int64(789) // int64 | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+    startDate := time.Now() // time.Time | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+    endDate := time.Now() // time.Time | The end date of timeframe. (optional)
+    id := "id_example" // string | Identifier, format: (transaction hash)-(token id). (optional)
+    user := "user_example" // string | User address. (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -278,12 +278,12 @@ Other parameters are passed through a pointer to a apiDexGetDepositsHistoricalRe
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startBlock** | **int64** |  | 
- **endBlock** | **int64** |  | 
- **startDate** | **time.Time** |  | 
- **endDate** | **time.Time** |  | 
- **id** | **string** |  | 
- **user** | **string** |  | 
+ **startBlock** | **int64** | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | 
+ **endBlock** | **int64** | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | 
+ **startDate** | **time.Time** | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | 
+ **endDate** | **time.Time** | The end date of timeframe. | 
+ **id** | **string** | Identifier, format: (transaction hash)-(token id). | 
+ **user** | **string** | User address. | 
 
 ### Return type
 
@@ -325,13 +325,13 @@ import (
 )
 
 func main() {
-    startBlock := int64(789) // int64 |  (optional)
-    endBlock := int64(789) // int64 |  (optional)
-    startDate := time.Now() // time.Time |  (optional)
-    endDate := time.Now() // time.Time |  (optional)
-    id := "id_example" // string |  (optional)
-    buyToken := "buyToken_example" // string |  (optional)
-    sellToken := "sellToken_example" // string |  (optional)
+    startBlock := int64(789) // int64 | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+    endBlock := int64(789) // int64 | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+    startDate := time.Now() // time.Time | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+    endDate := time.Now() // time.Time | The end date of timeframe. (optional)
+    id := "id_example" // string | Identifier, format: (owner address)-(order id) (optional)
+    buyToken := "buyToken_example" // string | Identifier of token that was bought. (optional)
+    sellToken := "sellToken_example" // string | Identifier of token that was sold. (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -356,13 +356,13 @@ Other parameters are passed through a pointer to a apiDexGetOrdersHistoricalRequ
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startBlock** | **int64** |  | 
- **endBlock** | **int64** |  | 
- **startDate** | **time.Time** |  | 
- **endDate** | **time.Time** |  | 
- **id** | **string** |  | 
- **buyToken** | **string** |  | 
- **sellToken** | **string** |  | 
+ **startBlock** | **int64** | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | 
+ **endBlock** | **int64** | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | 
+ **startDate** | **time.Time** | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | 
+ **endDate** | **time.Time** | The end date of timeframe. | 
+ **id** | **string** | Identifier, format: (owner address)-(order id) | 
+ **buyToken** | **string** | Identifier of token that was bought. | 
+ **sellToken** | **string** | Identifier of token that was sold. | 
 
 ### Return type
 
@@ -404,11 +404,11 @@ import (
 )
 
 func main() {
-    startBlock := int64(789) // int64 |  (optional)
-    endBlock := int64(789) // int64 |  (optional)
-    startDate := time.Now() // time.Time |  (optional)
-    endDate := time.Now() // time.Time |  (optional)
-    id := "id_example" // string |  (optional)
+    startBlock := int64(789) // int64 | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+    endBlock := int64(789) // int64 | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+    startDate := time.Now() // time.Time | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+    endDate := time.Now() // time.Time | The end date of timeframe. (optional)
+    id := "id_example" // string | Identifier, format: (token id)-(batch id). (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -433,11 +433,11 @@ Other parameters are passed through a pointer to a apiDexGetPricesHistoricalRequ
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startBlock** | **int64** |  | 
- **endBlock** | **int64** |  | 
- **startDate** | **time.Time** |  | 
- **endDate** | **time.Time** |  | 
- **id** | **string** |  | 
+ **startBlock** | **int64** | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | 
+ **endBlock** | **int64** | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | 
+ **startDate** | **time.Time** | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | 
+ **endDate** | **time.Time** | The end date of timeframe. | 
+ **id** | **string** | Identifier, format: (token id)-(batch id). | 
 
 ### Return type
 
@@ -864,11 +864,11 @@ import (
 )
 
 func main() {
-    startBlock := int64(789) // int64 |  (optional)
-    endBlock := int64(789) // int64 |  (optional)
-    startDate := time.Now() // time.Time |  (optional)
-    endDate := time.Now() // time.Time |  (optional)
-    id := "id_example" // string |  (optional)
+    startBlock := int64(789) // int64 | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+    endBlock := int64(789) // int64 | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+    startDate := time.Now() // time.Time | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+    endDate := time.Now() // time.Time | The end date of timeframe. (optional)
+    id := "id_example" // string | Identifier, format: (transaction hash)-(id). (optional)
     user := "user_example" // string |  (optional)
 
     configuration := openapiclient.NewConfiguration()
@@ -894,11 +894,11 @@ Other parameters are passed through a pointer to a apiDexGetWithdrawRequestsHist
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startBlock** | **int64** |  | 
- **endBlock** | **int64** |  | 
- **startDate** | **time.Time** |  | 
- **endDate** | **time.Time** |  | 
- **id** | **string** |  | 
+ **startBlock** | **int64** | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | 
+ **endBlock** | **int64** | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | 
+ **startDate** | **time.Time** | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | 
+ **endDate** | **time.Time** | The end date of timeframe. | 
+ **id** | **string** | Identifier, format: (transaction hash)-(id). | 
  **user** | **string** |  | 
 
 ### Return type
@@ -941,11 +941,11 @@ import (
 )
 
 func main() {
-    startBlock := int64(789) // int64 |  (optional)
-    endBlock := int64(789) // int64 |  (optional)
-    startDate := time.Now() // time.Time |  (optional)
-    endDate := time.Now() // time.Time |  (optional)
-    id := "id_example" // string |  (optional)
+    startBlock := int64(789) // int64 | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+    endBlock := int64(789) // int64 | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+    startDate := time.Now() // time.Time | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+    endDate := time.Now() // time.Time | The end date of timeframe. (optional)
+    id := "id_example" // string | Identifier, format: (transaction hash)-(id). (optional)
     user := "user_example" // string |  (optional)
 
     configuration := openapiclient.NewConfiguration()
@@ -971,11 +971,11 @@ Other parameters are passed through a pointer to a apiDexGetWithdrawsHistoricalR
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startBlock** | **int64** |  | 
- **endBlock** | **int64** |  | 
- **startDate** | **time.Time** |  | 
- **endDate** | **time.Time** |  | 
- **id** | **string** |  | 
+ **startBlock** | **int64** | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | 
+ **endBlock** | **int64** | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | 
+ **startDate** | **time.Time** | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | 
+ **endDate** | **time.Time** | The end date of timeframe. | 
+ **id** | **string** | Identifier, format: (transaction hash)-(id). | 
  **user** | **string** |  | 
 
 ### Return type

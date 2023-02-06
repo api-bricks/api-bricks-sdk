@@ -67,6 +67,7 @@ library
       OnChainDapps-REST.API.Cow
       OnChainDapps-REST.API.Curve
       OnChainDapps-REST.API.Dex
+      OnChainDapps-REST.API.Metadata
       OnChainDapps-REST.API.Sushiswap
       OnChainDapps-REST.API.UniswapV2
       OnChainDapps-REST.API.UniswapV3

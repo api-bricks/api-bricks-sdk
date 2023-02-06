@@ -16,6 +16,9 @@ import (
 	"time"
 )
 
+// checks if the UniswapV3TransactionDTO type satisfies the MappedNullable interface at compile time
+var _ MappedNullable = &UniswapV3TransactionDTO{}
+
 // UniswapV3TransactionDTO struct for UniswapV3TransactionDTO
 type UniswapV3TransactionDTO struct {
 	EntryTime *time.Time `json:"entry_time,omitempty"`
@@ -64,7 +67,7 @@ func (o *UniswapV3TransactionDTO) GetEntryTime() time.Time {
 // and a boolean to check if the value has been set.
 func (o *UniswapV3TransactionDTO) GetEntryTimeOk() (*time.Time, bool) {
 	if o == nil || isNil(o.EntryTime) {
-    return nil, false
+		return nil, false
 	}
 	return o.EntryTime, true
 }
@@ -96,7 +99,7 @@ func (o *UniswapV3TransactionDTO) GetRecvTime() time.Time {
 // and a boolean to check if the value has been set.
 func (o *UniswapV3TransactionDTO) GetRecvTimeOk() (*time.Time, bool) {
 	if o == nil || isNil(o.RecvTime) {
-    return nil, false
+		return nil, false
 	}
 	return o.RecvTime, true
 }
@@ -128,7 +131,7 @@ func (o *UniswapV3TransactionDTO) GetBlockNumber() int64 {
 // and a boolean to check if the value has been set.
 func (o *UniswapV3TransactionDTO) GetBlockNumberOk() (*int64, bool) {
 	if o == nil || isNil(o.BlockNumber) {
-    return nil, false
+		return nil, false
 	}
 	return o.BlockNumber, true
 }
@@ -161,7 +164,7 @@ func (o *UniswapV3TransactionDTO) GetId() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *UniswapV3TransactionDTO) GetIdOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Id.Get(), o.Id.IsSet()
 }
@@ -203,7 +206,7 @@ func (o *UniswapV3TransactionDTO) GetTimestamp() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *UniswapV3TransactionDTO) GetTimestampOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Timestamp.Get(), o.Timestamp.IsSet()
 }
@@ -245,7 +248,7 @@ func (o *UniswapV3TransactionDTO) GetGasUsed() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *UniswapV3TransactionDTO) GetGasUsedOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.GasUsed.Get(), o.GasUsed.IsSet()
 }
@@ -287,7 +290,7 @@ func (o *UniswapV3TransactionDTO) GetGasPrice() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *UniswapV3TransactionDTO) GetGasPriceOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.GasPrice.Get(), o.GasPrice.IsSet()
 }
@@ -328,7 +331,7 @@ func (o *UniswapV3TransactionDTO) GetVid() int64 {
 // and a boolean to check if the value has been set.
 func (o *UniswapV3TransactionDTO) GetVidOk() (*int64, bool) {
 	if o == nil || isNil(o.Vid) {
-    return nil, false
+		return nil, false
 	}
 	return o.Vid, true
 }
@@ -348,6 +351,14 @@ func (o *UniswapV3TransactionDTO) SetVid(v int64) {
 }
 
 func (o UniswapV3TransactionDTO) MarshalJSON() ([]byte, error) {
+	toSerialize,err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
+}
+
+func (o UniswapV3TransactionDTO) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
 	if !isNil(o.EntryTime) {
 		toSerialize["entry_time"] = o.EntryTime
@@ -373,7 +384,7 @@ func (o UniswapV3TransactionDTO) MarshalJSON() ([]byte, error) {
 	if !isNil(o.Vid) {
 		toSerialize["vid"] = o.Vid
 	}
-	return json.Marshal(toSerialize)
+	return toSerialize, nil
 }
 
 type NullableUniswapV3TransactionDTO struct {

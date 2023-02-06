@@ -202,7 +202,7 @@ curve_token_dto_t *curve_token_dto_parseFromJSON(cJSON *curve_token_dtoJSON){
     // curve_token_dto->entry_time
     cJSON *entry_time = cJSON_GetObjectItemCaseSensitive(curve_token_dtoJSON, "entry_time");
     if (entry_time) { 
-    if(!cJSON_IsString(entry_time))
+    if(!cJSON_IsString(entry_time) && !cJSON_IsNull(entry_time))
     {
     goto end; //DateTime
     }
@@ -211,7 +211,7 @@ curve_token_dto_t *curve_token_dto_parseFromJSON(cJSON *curve_token_dtoJSON){
     // curve_token_dto->recv_time
     cJSON *recv_time = cJSON_GetObjectItemCaseSensitive(curve_token_dtoJSON, "recv_time");
     if (recv_time) { 
-    if(!cJSON_IsString(recv_time))
+    if(!cJSON_IsString(recv_time) && !cJSON_IsNull(recv_time))
     {
     goto end; //DateTime
     }
@@ -229,7 +229,7 @@ curve_token_dto_t *curve_token_dto_parseFromJSON(cJSON *curve_token_dtoJSON){
     // curve_token_dto->id
     cJSON *id = cJSON_GetObjectItemCaseSensitive(curve_token_dtoJSON, "id");
     if (id) { 
-    if(!cJSON_IsString(id))
+    if(!cJSON_IsString(id) && !cJSON_IsNull(id))
     {
     goto end; //String
     }
@@ -238,7 +238,7 @@ curve_token_dto_t *curve_token_dto_parseFromJSON(cJSON *curve_token_dtoJSON){
     // curve_token_dto->address
     cJSON *address = cJSON_GetObjectItemCaseSensitive(curve_token_dtoJSON, "address");
     if (address) { 
-    if(!cJSON_IsString(address))
+    if(!cJSON_IsString(address) && !cJSON_IsNull(address))
     {
     goto end; //String
     }
@@ -247,7 +247,7 @@ curve_token_dto_t *curve_token_dto_parseFromJSON(cJSON *curve_token_dtoJSON){
     // curve_token_dto->decimals
     cJSON *decimals = cJSON_GetObjectItemCaseSensitive(curve_token_dtoJSON, "decimals");
     if (decimals) { 
-    if(!cJSON_IsString(decimals))
+    if(!cJSON_IsString(decimals) && !cJSON_IsNull(decimals))
     {
     goto end; //String
     }
@@ -256,7 +256,7 @@ curve_token_dto_t *curve_token_dto_parseFromJSON(cJSON *curve_token_dtoJSON){
     // curve_token_dto->name
     cJSON *name = cJSON_GetObjectItemCaseSensitive(curve_token_dtoJSON, "name");
     if (name) { 
-    if(!cJSON_IsString(name))
+    if(!cJSON_IsString(name) && !cJSON_IsNull(name))
     {
     goto end; //String
     }
@@ -265,7 +265,7 @@ curve_token_dto_t *curve_token_dto_parseFromJSON(cJSON *curve_token_dtoJSON){
     // curve_token_dto->symbol
     cJSON *symbol = cJSON_GetObjectItemCaseSensitive(curve_token_dtoJSON, "symbol");
     if (symbol) { 
-    if(!cJSON_IsString(symbol))
+    if(!cJSON_IsString(symbol) && !cJSON_IsNull(symbol))
     {
     goto end; //String
     }
@@ -302,7 +302,7 @@ curve_token_dto_t *curve_token_dto_parseFromJSON(cJSON *curve_token_dtoJSON){
     // curve_token_dto->token_symbol
     cJSON *token_symbol = cJSON_GetObjectItemCaseSensitive(curve_token_dtoJSON, "token_symbol");
     if (token_symbol) { 
-    if(!cJSON_IsString(token_symbol))
+    if(!cJSON_IsString(token_symbol) && !cJSON_IsNull(token_symbol))
     {
     goto end; //String
     }
@@ -310,17 +310,17 @@ curve_token_dto_t *curve_token_dto_parseFromJSON(cJSON *curve_token_dtoJSON){
 
 
     curve_token_dto_local_var = curve_token_dto_create (
-        entry_time ? strdup(entry_time->valuestring) : NULL,
-        recv_time ? strdup(recv_time->valuestring) : NULL,
+        entry_time && !cJSON_IsNull(entry_time) ? strdup(entry_time->valuestring) : NULL,
+        recv_time && !cJSON_IsNull(recv_time) ? strdup(recv_time->valuestring) : NULL,
         block_number ? block_number->valuedouble : 0,
-        id ? strdup(id->valuestring) : NULL,
-        address ? strdup(address->valuestring) : NULL,
-        decimals ? strdup(decimals->valuestring) : NULL,
-        name ? strdup(name->valuestring) : NULL,
-        symbol ? strdup(symbol->valuestring) : NULL,
+        id && !cJSON_IsNull(id) ? strdup(id->valuestring) : NULL,
+        address && !cJSON_IsNull(address) ? strdup(address->valuestring) : NULL,
+        decimals && !cJSON_IsNull(decimals) ? strdup(decimals->valuestring) : NULL,
+        name && !cJSON_IsNull(name) ? strdup(name->valuestring) : NULL,
+        symbol && !cJSON_IsNull(symbol) ? strdup(symbol->valuestring) : NULL,
         pools ? poolsList : NULL,
         vid ? vid->valuedouble : 0,
-        token_symbol ? strdup(token_symbol->valuestring) : NULL
+        token_symbol && !cJSON_IsNull(token_symbol) ? strdup(token_symbol->valuestring) : NULL
         );
 
     return curve_token_dto_local_var;

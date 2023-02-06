@@ -267,7 +267,7 @@ sushiswap_pair_day_data_dto_t *sushiswap_pair_day_data_dto_parseFromJSON(cJSON *
     // sushiswap_pair_day_data_dto->entry_time
     cJSON *entry_time = cJSON_GetObjectItemCaseSensitive(sushiswap_pair_day_data_dtoJSON, "entry_time");
     if (entry_time) { 
-    if(!cJSON_IsString(entry_time))
+    if(!cJSON_IsString(entry_time) && !cJSON_IsNull(entry_time))
     {
     goto end; //DateTime
     }
@@ -276,7 +276,7 @@ sushiswap_pair_day_data_dto_t *sushiswap_pair_day_data_dto_parseFromJSON(cJSON *
     // sushiswap_pair_day_data_dto->recv_time
     cJSON *recv_time = cJSON_GetObjectItemCaseSensitive(sushiswap_pair_day_data_dtoJSON, "recv_time");
     if (recv_time) { 
-    if(!cJSON_IsString(recv_time))
+    if(!cJSON_IsString(recv_time) && !cJSON_IsNull(recv_time))
     {
     goto end; //DateTime
     }
@@ -294,7 +294,7 @@ sushiswap_pair_day_data_dto_t *sushiswap_pair_day_data_dto_parseFromJSON(cJSON *
     // sushiswap_pair_day_data_dto->id
     cJSON *id = cJSON_GetObjectItemCaseSensitive(sushiswap_pair_day_data_dtoJSON, "id");
     if (id) { 
-    if(!cJSON_IsString(id))
+    if(!cJSON_IsString(id) && !cJSON_IsNull(id))
     {
     goto end; //String
     }
@@ -312,7 +312,7 @@ sushiswap_pair_day_data_dto_t *sushiswap_pair_day_data_dto_parseFromJSON(cJSON *
     // sushiswap_pair_day_data_dto->pair
     cJSON *pair = cJSON_GetObjectItemCaseSensitive(sushiswap_pair_day_data_dtoJSON, "pair");
     if (pair) { 
-    if(!cJSON_IsString(pair))
+    if(!cJSON_IsString(pair) && !cJSON_IsNull(pair))
     {
     goto end; //String
     }
@@ -321,7 +321,7 @@ sushiswap_pair_day_data_dto_t *sushiswap_pair_day_data_dto_parseFromJSON(cJSON *
     // sushiswap_pair_day_data_dto->token_0
     cJSON *token_0 = cJSON_GetObjectItemCaseSensitive(sushiswap_pair_day_data_dtoJSON, "token_0");
     if (token_0) { 
-    if(!cJSON_IsString(token_0))
+    if(!cJSON_IsString(token_0) && !cJSON_IsNull(token_0))
     {
     goto end; //String
     }
@@ -330,7 +330,7 @@ sushiswap_pair_day_data_dto_t *sushiswap_pair_day_data_dto_parseFromJSON(cJSON *
     // sushiswap_pair_day_data_dto->token_1
     cJSON *token_1 = cJSON_GetObjectItemCaseSensitive(sushiswap_pair_day_data_dtoJSON, "token_1");
     if (token_1) { 
-    if(!cJSON_IsString(token_1))
+    if(!cJSON_IsString(token_1) && !cJSON_IsNull(token_1))
     {
     goto end; //String
     }
@@ -339,7 +339,7 @@ sushiswap_pair_day_data_dto_t *sushiswap_pair_day_data_dto_parseFromJSON(cJSON *
     // sushiswap_pair_day_data_dto->reserve_0
     cJSON *reserve_0 = cJSON_GetObjectItemCaseSensitive(sushiswap_pair_day_data_dtoJSON, "reserve_0");
     if (reserve_0) { 
-    if(!cJSON_IsString(reserve_0))
+    if(!cJSON_IsString(reserve_0) && !cJSON_IsNull(reserve_0))
     {
     goto end; //String
     }
@@ -348,7 +348,7 @@ sushiswap_pair_day_data_dto_t *sushiswap_pair_day_data_dto_parseFromJSON(cJSON *
     // sushiswap_pair_day_data_dto->reserve_1
     cJSON *reserve_1 = cJSON_GetObjectItemCaseSensitive(sushiswap_pair_day_data_dtoJSON, "reserve_1");
     if (reserve_1) { 
-    if(!cJSON_IsString(reserve_1))
+    if(!cJSON_IsString(reserve_1) && !cJSON_IsNull(reserve_1))
     {
     goto end; //String
     }
@@ -357,7 +357,7 @@ sushiswap_pair_day_data_dto_t *sushiswap_pair_day_data_dto_parseFromJSON(cJSON *
     // sushiswap_pair_day_data_dto->total_supply
     cJSON *total_supply = cJSON_GetObjectItemCaseSensitive(sushiswap_pair_day_data_dtoJSON, "total_supply");
     if (total_supply) { 
-    if(!cJSON_IsString(total_supply))
+    if(!cJSON_IsString(total_supply) && !cJSON_IsNull(total_supply))
     {
     goto end; //String
     }
@@ -366,7 +366,7 @@ sushiswap_pair_day_data_dto_t *sushiswap_pair_day_data_dto_parseFromJSON(cJSON *
     // sushiswap_pair_day_data_dto->reserve_usd
     cJSON *reserve_usd = cJSON_GetObjectItemCaseSensitive(sushiswap_pair_day_data_dtoJSON, "reserve_usd");
     if (reserve_usd) { 
-    if(!cJSON_IsString(reserve_usd))
+    if(!cJSON_IsString(reserve_usd) && !cJSON_IsNull(reserve_usd))
     {
     goto end; //String
     }
@@ -375,7 +375,7 @@ sushiswap_pair_day_data_dto_t *sushiswap_pair_day_data_dto_parseFromJSON(cJSON *
     // sushiswap_pair_day_data_dto->volume_token_0
     cJSON *volume_token_0 = cJSON_GetObjectItemCaseSensitive(sushiswap_pair_day_data_dtoJSON, "volume_token_0");
     if (volume_token_0) { 
-    if(!cJSON_IsString(volume_token_0))
+    if(!cJSON_IsString(volume_token_0) && !cJSON_IsNull(volume_token_0))
     {
     goto end; //String
     }
@@ -384,7 +384,7 @@ sushiswap_pair_day_data_dto_t *sushiswap_pair_day_data_dto_parseFromJSON(cJSON *
     // sushiswap_pair_day_data_dto->volume_token_1
     cJSON *volume_token_1 = cJSON_GetObjectItemCaseSensitive(sushiswap_pair_day_data_dtoJSON, "volume_token_1");
     if (volume_token_1) { 
-    if(!cJSON_IsString(volume_token_1))
+    if(!cJSON_IsString(volume_token_1) && !cJSON_IsNull(volume_token_1))
     {
     goto end; //String
     }
@@ -393,7 +393,7 @@ sushiswap_pair_day_data_dto_t *sushiswap_pair_day_data_dto_parseFromJSON(cJSON *
     // sushiswap_pair_day_data_dto->volume_usd
     cJSON *volume_usd = cJSON_GetObjectItemCaseSensitive(sushiswap_pair_day_data_dtoJSON, "volume_usd");
     if (volume_usd) { 
-    if(!cJSON_IsString(volume_usd))
+    if(!cJSON_IsString(volume_usd) && !cJSON_IsNull(volume_usd))
     {
     goto end; //String
     }
@@ -402,7 +402,7 @@ sushiswap_pair_day_data_dto_t *sushiswap_pair_day_data_dto_parseFromJSON(cJSON *
     // sushiswap_pair_day_data_dto->tx_count
     cJSON *tx_count = cJSON_GetObjectItemCaseSensitive(sushiswap_pair_day_data_dtoJSON, "tx_count");
     if (tx_count) { 
-    if(!cJSON_IsString(tx_count))
+    if(!cJSON_IsString(tx_count) && !cJSON_IsNull(tx_count))
     {
     goto end; //String
     }
@@ -419,22 +419,22 @@ sushiswap_pair_day_data_dto_t *sushiswap_pair_day_data_dto_parseFromJSON(cJSON *
 
 
     sushiswap_pair_day_data_dto_local_var = sushiswap_pair_day_data_dto_create (
-        entry_time ? strdup(entry_time->valuestring) : NULL,
-        recv_time ? strdup(recv_time->valuestring) : NULL,
+        entry_time && !cJSON_IsNull(entry_time) ? strdup(entry_time->valuestring) : NULL,
+        recv_time && !cJSON_IsNull(recv_time) ? strdup(recv_time->valuestring) : NULL,
         block_number ? block_number->valuedouble : 0,
-        id ? strdup(id->valuestring) : NULL,
+        id && !cJSON_IsNull(id) ? strdup(id->valuestring) : NULL,
         date ? date->valuedouble : 0,
-        pair ? strdup(pair->valuestring) : NULL,
-        token_0 ? strdup(token_0->valuestring) : NULL,
-        token_1 ? strdup(token_1->valuestring) : NULL,
-        reserve_0 ? strdup(reserve_0->valuestring) : NULL,
-        reserve_1 ? strdup(reserve_1->valuestring) : NULL,
-        total_supply ? strdup(total_supply->valuestring) : NULL,
-        reserve_usd ? strdup(reserve_usd->valuestring) : NULL,
-        volume_token_0 ? strdup(volume_token_0->valuestring) : NULL,
-        volume_token_1 ? strdup(volume_token_1->valuestring) : NULL,
-        volume_usd ? strdup(volume_usd->valuestring) : NULL,
-        tx_count ? strdup(tx_count->valuestring) : NULL,
+        pair && !cJSON_IsNull(pair) ? strdup(pair->valuestring) : NULL,
+        token_0 && !cJSON_IsNull(token_0) ? strdup(token_0->valuestring) : NULL,
+        token_1 && !cJSON_IsNull(token_1) ? strdup(token_1->valuestring) : NULL,
+        reserve_0 && !cJSON_IsNull(reserve_0) ? strdup(reserve_0->valuestring) : NULL,
+        reserve_1 && !cJSON_IsNull(reserve_1) ? strdup(reserve_1->valuestring) : NULL,
+        total_supply && !cJSON_IsNull(total_supply) ? strdup(total_supply->valuestring) : NULL,
+        reserve_usd && !cJSON_IsNull(reserve_usd) ? strdup(reserve_usd->valuestring) : NULL,
+        volume_token_0 && !cJSON_IsNull(volume_token_0) ? strdup(volume_token_0->valuestring) : NULL,
+        volume_token_1 && !cJSON_IsNull(volume_token_1) ? strdup(volume_token_1->valuestring) : NULL,
+        volume_usd && !cJSON_IsNull(volume_usd) ? strdup(volume_usd->valuestring) : NULL,
+        tx_count && !cJSON_IsNull(tx_count) ? strdup(tx_count->valuestring) : NULL,
         vid ? vid->valuedouble : 0
         );
 

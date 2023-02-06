@@ -209,6 +209,10 @@ force-app/main/default/classes/OASDexWithdrawRequestDTO.cls
 force-app/main/default/classes/OASDexWithdrawRequestDTO.cls-meta.xml
 force-app/main/default/classes/OASDexWithdrawRequestDTOTest.cls
 force-app/main/default/classes/OASDexWithdrawRequestDTOTest.cls-meta.xml
+force-app/main/default/classes/OASMetadataApi.cls
+force-app/main/default/classes/OASMetadataApi.cls-meta.xml
+force-app/main/default/classes/OASMetadataApiTest.cls
+force-app/main/default/classes/OASMetadataApiTest.cls-meta.xml
 force-app/main/default/classes/OASNumericsBigInteger.cls
 force-app/main/default/classes/OASNumericsBigInteger.cls-meta.xml
 force-app/main/default/classes/OASNumericsBigIntegerTest.cls

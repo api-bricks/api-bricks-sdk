@@ -214,6 +214,9 @@ UniswapV3SwapDTO <- R6::R6Class(
         self$`evaluated_amount` <- `evaluated_amount`
       }
       if (!is.null(`evaluated_aggressor`)) {
+        if (!(`evaluated_aggressor` %in% c())) {
+          stop(paste("Error! \"", `evaluated_aggressor`, "\" cannot be assigned to `evaluated_aggressor`. Must be .", sep = ""))
+        }
         stopifnot(R6::is.R6(`evaluated_aggressor`))
         self$`evaluated_aggressor` <- `evaluated_aggressor`
       }
@@ -728,7 +731,7 @@ UniswapV3SwapDTO <- R6::R6Class(
 ## Uncomment below to unlock the class to allow modifications of the method or field
 # UniswapV3SwapDTO$unlock()
 #
-## Below is an example to define the print fnuction
+## Below is an example to define the print function
 # UniswapV3SwapDTO$set("public", "print", function(...) {
 #   print(jsonlite::prettify(self$toJSONString()))
 #   invisible(self)

@@ -16,6 +16,9 @@ import (
 	"time"
 )
 
+// checks if the CurveContractDTO type satisfies the MappedNullable interface at compile time
+var _ MappedNullable = &CurveContractDTO{}
+
 // CurveContractDTO struct for CurveContractDTO
 type CurveContractDTO struct {
 	EntryTime *time.Time `json:"entry_time,omitempty"`
@@ -72,7 +75,7 @@ func (o *CurveContractDTO) GetEntryTime() time.Time {
 // and a boolean to check if the value has been set.
 func (o *CurveContractDTO) GetEntryTimeOk() (*time.Time, bool) {
 	if o == nil || isNil(o.EntryTime) {
-    return nil, false
+		return nil, false
 	}
 	return o.EntryTime, true
 }
@@ -104,7 +107,7 @@ func (o *CurveContractDTO) GetRecvTime() time.Time {
 // and a boolean to check if the value has been set.
 func (o *CurveContractDTO) GetRecvTimeOk() (*time.Time, bool) {
 	if o == nil || isNil(o.RecvTime) {
-    return nil, false
+		return nil, false
 	}
 	return o.RecvTime, true
 }
@@ -136,7 +139,7 @@ func (o *CurveContractDTO) GetBlockNumber() int64 {
 // and a boolean to check if the value has been set.
 func (o *CurveContractDTO) GetBlockNumberOk() (*int64, bool) {
 	if o == nil || isNil(o.BlockNumber) {
-    return nil, false
+		return nil, false
 	}
 	return o.BlockNumber, true
 }
@@ -169,7 +172,7 @@ func (o *CurveContractDTO) GetId() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CurveContractDTO) GetIdOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Id.Get(), o.Id.IsSet()
 }
@@ -211,7 +214,7 @@ func (o *CurveContractDTO) GetDescription() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CurveContractDTO) GetDescriptionOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Description.Get(), o.Description.IsSet()
 }
@@ -253,7 +256,7 @@ func (o *CurveContractDTO) GetAdded() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CurveContractDTO) GetAddedOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Added.Get(), o.Added.IsSet()
 }
@@ -295,7 +298,7 @@ func (o *CurveContractDTO) GetAddedAtBlock() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CurveContractDTO) GetAddedAtBlockOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.AddedAtBlock.Get(), o.AddedAtBlock.IsSet()
 }
@@ -337,7 +340,7 @@ func (o *CurveContractDTO) GetAddedAtTransaction() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CurveContractDTO) GetAddedAtTransactionOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.AddedAtTransaction.Get(), o.AddedAtTransaction.IsSet()
 }
@@ -379,7 +382,7 @@ func (o *CurveContractDTO) GetModified() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CurveContractDTO) GetModifiedOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Modified.Get(), o.Modified.IsSet()
 }
@@ -421,7 +424,7 @@ func (o *CurveContractDTO) GetModifiedAtBlock() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CurveContractDTO) GetModifiedAtBlockOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.ModifiedAtBlock.Get(), o.ModifiedAtBlock.IsSet()
 }
@@ -463,7 +466,7 @@ func (o *CurveContractDTO) GetModifiedAtTransaction() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CurveContractDTO) GetModifiedAtTransactionOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.ModifiedAtTransaction.Get(), o.ModifiedAtTransaction.IsSet()
 }
@@ -504,7 +507,7 @@ func (o *CurveContractDTO) GetVid() int64 {
 // and a boolean to check if the value has been set.
 func (o *CurveContractDTO) GetVidOk() (*int64, bool) {
 	if o == nil || isNil(o.Vid) {
-    return nil, false
+		return nil, false
 	}
 	return o.Vid, true
 }
@@ -524,6 +527,14 @@ func (o *CurveContractDTO) SetVid(v int64) {
 }
 
 func (o CurveContractDTO) MarshalJSON() ([]byte, error) {
+	toSerialize,err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
+}
+
+func (o CurveContractDTO) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
 	if !isNil(o.EntryTime) {
 		toSerialize["entry_time"] = o.EntryTime
@@ -561,7 +572,7 @@ func (o CurveContractDTO) MarshalJSON() ([]byte, error) {
 	if !isNil(o.Vid) {
 		toSerialize["vid"] = o.Vid
 	}
-	return json.Marshal(toSerialize)
+	return toSerialize, nil
 }
 
 type NullableCurveContractDTO struct {

@@ -243,12 +243,12 @@ export class DexApi {
     /**
      * Gets deposits.
      * @summary Deposits (historical)
-     * @param startBlock 
-     * @param endBlock 
-     * @param startDate 
-     * @param endDate 
-     * @param id 
-     * @param user 
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param endDate The end date of timeframe.
+     * @param id Identifier, format: (transaction hash)-(token id).
+     * @param user User address.
      */
     public dexGetDepositsHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, user?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
     { response: JQueryXHR; body: Array<models.DexDepositDTO>;  },
@@ -325,13 +325,13 @@ export class DexApi {
     /**
      * Gets orders.
      * @summary Orders (historical)
-     * @param startBlock 
-     * @param endBlock 
-     * @param startDate 
-     * @param endDate 
-     * @param id 
-     * @param buyToken 
-     * @param sellToken 
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param endDate The end date of timeframe.
+     * @param id Identifier, format: (owner address)-(order id)
+     * @param buyToken Identifier of token that was bought.
+     * @param sellToken Identifier of token that was sold.
      */
     public dexGetOrdersHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, buyToken?: string, sellToken?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
     { response: JQueryXHR; body: Array<models.DexOrderDTO>;  },
@@ -411,11 +411,11 @@ export class DexApi {
     /**
      * Gets prices.
      * @summary Prices (historical)
-     * @param startBlock 
-     * @param endBlock 
-     * @param startDate 
-     * @param endDate 
-     * @param id 
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param endDate The end date of timeframe.
+     * @param id Identifier, format: (token id)-(batch id).
      */
     public dexGetPricesHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
     { response: JQueryXHR; body: Array<models.DexPriceDTO>;  },
@@ -899,11 +899,11 @@ export class DexApi {
     /**
      * Gets withdrawRequests.
      * @summary WithdrawRequests (historical)
-     * @param startBlock 
-     * @param endBlock 
-     * @param startDate 
-     * @param endDate 
-     * @param id 
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param endDate The end date of timeframe.
+     * @param id Identifier, format: (transaction hash)-(id).
      * @param user 
      */
     public dexGetWithdrawRequestsHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, user?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
@@ -981,11 +981,11 @@ export class DexApi {
     /**
      * Gets withdraws.
      * @summary Withdraws (historical)
-     * @param startBlock 
-     * @param endBlock 
-     * @param startDate 
-     * @param endDate 
-     * @param id 
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param endDate The end date of timeframe.
+     * @param id Identifier, format: (transaction hash)-(id).
      * @param user 
      */
     public dexGetWithdrawsHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, user?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<

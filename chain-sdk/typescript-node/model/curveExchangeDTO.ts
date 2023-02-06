@@ -183,3 +183,5 @@ export class CurveExchangeDTO {
     }
 }
 
+export namespace CurveExchangeDTO {
+}

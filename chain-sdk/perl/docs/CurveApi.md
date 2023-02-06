@@ -1115,11 +1115,11 @@ use WWW::OpenAPIClient::CurveApi;
 my $api_instance = WWW::OpenAPIClient::CurveApi->new(
 );
 
-my $start_block = 789; # int | 
-my $end_block = 789; # int | 
-my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
-my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
-my $id = "id_example"; # string | 
+my $start_block = 789; # int | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+my $end_block = 789; # int | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | The end date of timeframe.
+my $id = "id_example"; # string | Identifier, format: (pool_id)-(coin_index).
 my $pool = "pool_example"; # string | 
 
 eval {
@@ -1135,11 +1135,11 @@ if ($@) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **start_block** | **int**|  | [optional] 
- **end_block** | **int**|  | [optional] 
- **start_date** | **DATE_TIME**|  | [optional] 
- **end_date** | **DATE_TIME**|  | [optional] 
- **id** | **string**|  | [optional] 
+ **start_block** | **int**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
+ **end_block** | **int**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
+ **start_date** | **DATE_TIME**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
+ **end_date** | **DATE_TIME**| The end date of timeframe. | [optional] 
+ **id** | **string**| Identifier, format: (pool_id)-(coin_index). | [optional] 
  **pool** | **string**|  | [optional] 
 
 ### Return type
@@ -2509,11 +2509,11 @@ use WWW::OpenAPIClient::CurveApi;
 my $api_instance = WWW::OpenAPIClient::CurveApi->new(
 );
 
-my $start_block = 789; # int | 
-my $end_block = 789; # int | 
-my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
-my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
-my $id = "id_example"; # string | 
+my $start_block = 789; # int | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+my $end_block = 789; # int | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | The end date of timeframe.
+my $id = "id_example"; # string | Equals to: (pool_id)-(coin_index).
 my $pool = "pool_example"; # string | 
 
 eval {
@@ -2529,11 +2529,11 @@ if ($@) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **start_block** | **int**|  | [optional] 
- **end_block** | **int**|  | [optional] 
- **start_date** | **DATE_TIME**|  | [optional] 
- **end_date** | **DATE_TIME**|  | [optional] 
- **id** | **string**|  | [optional] 
+ **start_block** | **int**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
+ **end_block** | **int**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
+ **start_date** | **DATE_TIME**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
+ **end_date** | **DATE_TIME**| The end date of timeframe. | [optional] 
+ **id** | **string**| Equals to: (pool_id)-(coin_index). | [optional] 
  **pool** | **string**|  | [optional] 
 
 ### Return type

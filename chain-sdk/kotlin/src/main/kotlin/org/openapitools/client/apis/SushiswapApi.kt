@@ -123,6 +123,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
             path = "/dapps/sushiswap/bundles/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -190,6 +191,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
             path = "/dapps/sushiswap/burns/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -257,6 +259,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
             path = "/dapps/sushiswap/dayData/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -324,6 +327,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
             path = "/dapps/sushiswap/factories/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -423,6 +427,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
             path = "/dapps/sushiswap/bundles/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -430,12 +435,12 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     /**
      * Burns (historical)
      * Gets burns.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param pair  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (transaction id):(transaction.burns.length). (optional)
+     * @param pair Reference to pair. (optional)
      * @return kotlin.collections.List<SushiswapBurnDTO>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
@@ -466,12 +471,12 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     /**
      * Burns (historical)
      * Gets burns.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param pair  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (transaction id):(transaction.burns.length). (optional)
+     * @param pair Reference to pair. (optional)
      * @return ApiResponse<kotlin.collections.List<SushiswapBurnDTO>?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
@@ -489,12 +494,12 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     /**
      * To obtain the request config of the operation sushiswapGetBurnsHistorical
      *
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param pair  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (transaction id):(transaction.burns.length). (optional)
+     * @param pair Reference to pair. (optional)
      * @return RequestConfig
      */
     fun sushiswapGetBurnsHistoricalRequestConfig(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?, id: kotlin.String?, pair: kotlin.String?) : RequestConfig<Unit> {
@@ -528,6 +533,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
             path = "/dapps/sushiswap/burns/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -627,6 +633,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
             path = "/dapps/sushiswap/dayData/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -726,6 +733,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
             path = "/dapps/sushiswap/factories/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -825,6 +833,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
             path = "/dapps/sushiswap/hourData/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -832,13 +841,13 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     /**
      * LiquidityPositionSnapshots (historical)
      * Gets liquidityPositionSnapshots.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param user  (optional)
-     * @param pair  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (pair address)-(user address)-(timestamp) (optional)
+     * @param user Reference to user. (optional)
+     * @param pair Reference to the pair liquidity is being provided on. (optional)
      * @return kotlin.collections.List<SushiswapLiquidityPositionSnapshotDTO>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
@@ -869,13 +878,13 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     /**
      * LiquidityPositionSnapshots (historical)
      * Gets liquidityPositionSnapshots.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param user  (optional)
-     * @param pair  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (pair address)-(user address)-(timestamp) (optional)
+     * @param user Reference to user. (optional)
+     * @param pair Reference to the pair liquidity is being provided on. (optional)
      * @return ApiResponse<kotlin.collections.List<SushiswapLiquidityPositionSnapshotDTO>?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
@@ -893,13 +902,13 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     /**
      * To obtain the request config of the operation sushiswapGetLiquidityPositionSnapshotsHistorical
      *
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param user  (optional)
-     * @param pair  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (pair address)-(user address)-(timestamp) (optional)
+     * @param user Reference to user. (optional)
+     * @param pair Reference to the pair liquidity is being provided on. (optional)
      * @return RequestConfig
      */
     fun sushiswapGetLiquidityPositionSnapshotsHistoricalRequestConfig(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?, id: kotlin.String?, user: kotlin.String?, pair: kotlin.String?) : RequestConfig<Unit> {
@@ -936,6 +945,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
             path = "/dapps/sushiswap/liquidityPositionSnapshots/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -943,13 +953,13 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     /**
      * LiquidityPositions (historical)
      * Gets liquidityPositions.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param user  (optional)
-     * @param pair  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (pair address)-(user address) (optional)
+     * @param user User address. (optional)
+     * @param pair Pair address. (optional)
      * @return kotlin.collections.List<SushiswapLiquidityPositionDTO>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
@@ -980,13 +990,13 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     /**
      * LiquidityPositions (historical)
      * Gets liquidityPositions.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param user  (optional)
-     * @param pair  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (pair address)-(user address) (optional)
+     * @param user User address. (optional)
+     * @param pair Pair address. (optional)
      * @return ApiResponse<kotlin.collections.List<SushiswapLiquidityPositionDTO>?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
@@ -1004,13 +1014,13 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     /**
      * To obtain the request config of the operation sushiswapGetLiquidityPositionsHistorical
      *
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param user  (optional)
-     * @param pair  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (pair address)-(user address) (optional)
+     * @param user User address. (optional)
+     * @param pair Pair address. (optional)
      * @return RequestConfig
      */
     fun sushiswapGetLiquidityPositionsHistoricalRequestConfig(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?, id: kotlin.String?, user: kotlin.String?, pair: kotlin.String?) : RequestConfig<Unit> {
@@ -1047,6 +1057,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
             path = "/dapps/sushiswap/liquidityPositions/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -1054,12 +1065,12 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     /**
      * Mints (historical)
      * Gets mints.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param pair  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (transaction hash)-(index in the transaction mint array). (optional)
+     * @param pair Reference to pair. (optional)
      * @return kotlin.collections.List<SushiswapMintDTO>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
@@ -1090,12 +1101,12 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     /**
      * Mints (historical)
      * Gets mints.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param pair  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (transaction hash)-(index in the transaction mint array). (optional)
+     * @param pair Reference to pair. (optional)
      * @return ApiResponse<kotlin.collections.List<SushiswapMintDTO>?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
@@ -1113,12 +1124,12 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     /**
      * To obtain the request config of the operation sushiswapGetMintsHistorical
      *
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param pair  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (transaction hash)-(index in the transaction mint array). (optional)
+     * @param pair Reference to pair. (optional)
      * @return RequestConfig
      */
     fun sushiswapGetMintsHistoricalRequestConfig(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?, id: kotlin.String?, pair: kotlin.String?) : RequestConfig<Unit> {
@@ -1152,6 +1163,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
             path = "/dapps/sushiswap/mints/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -1159,14 +1171,14 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     /**
      * PairDayData (historical)
      * Gets pairDayData.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param pair  (optional)
-     * @param token0  (optional)
-     * @param token1  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (pair id)-(day start timestamp). (optional)
+     * @param pair Reference to pair. (optional)
+     * @param token0 Reference to token0. (optional)
+     * @param token1 Reference to token1. (optional)
      * @return kotlin.collections.List<SushiswapPairDayDataDTO>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
@@ -1197,14 +1209,14 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     /**
      * PairDayData (historical)
      * Gets pairDayData.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param pair  (optional)
-     * @param token0  (optional)
-     * @param token1  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (pair id)-(day start timestamp). (optional)
+     * @param pair Reference to pair. (optional)
+     * @param token0 Reference to token0. (optional)
+     * @param token1 Reference to token1. (optional)
      * @return ApiResponse<kotlin.collections.List<SushiswapPairDayDataDTO>?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
@@ -1222,14 +1234,14 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     /**
      * To obtain the request config of the operation sushiswapGetPairDayDataHistorical
      *
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param pair  (optional)
-     * @param token0  (optional)
-     * @param token1  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (pair id)-(day start timestamp). (optional)
+     * @param pair Reference to pair. (optional)
+     * @param token0 Reference to token0. (optional)
+     * @param token1 Reference to token1. (optional)
      * @return RequestConfig
      */
     fun sushiswapGetPairDayDataHistoricalRequestConfig(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?, id: kotlin.String?, pair: kotlin.String?, token0: kotlin.String?, token1: kotlin.String?) : RequestConfig<Unit> {
@@ -1269,6 +1281,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
             path = "/dapps/sushiswap/pairDayData/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -1276,12 +1289,12 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     /**
      * PairHourData (historical)
      * Gets pairHourData.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param pair  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (pair id)-(hour start timestamp). (optional)
+     * @param pair Reference to pair. (optional)
      * @return kotlin.collections.List<SushiswapPairHourDataDTO>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
@@ -1312,12 +1325,12 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     /**
      * PairHourData (historical)
      * Gets pairHourData.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param pair  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (pair id)-(hour start timestamp). (optional)
+     * @param pair Reference to pair. (optional)
      * @return ApiResponse<kotlin.collections.List<SushiswapPairHourDataDTO>?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
@@ -1335,12 +1348,12 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     /**
      * To obtain the request config of the operation sushiswapGetPairHourDataHistorical
      *
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param pair  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (pair id)-(hour start timestamp). (optional)
+     * @param pair Reference to pair. (optional)
      * @return RequestConfig
      */
     fun sushiswapGetPairHourDataHistoricalRequestConfig(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?, id: kotlin.String?, pair: kotlin.String?) : RequestConfig<Unit> {
@@ -1374,6 +1387,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
             path = "/dapps/sushiswap/pairHourData/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -1381,14 +1395,14 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     /**
      * Pairs (historical)
      * Gets pairs.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param name  (optional)
-     * @param token0  (optional)
-     * @param token1  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Pair contract address. (optional)
+     * @param name Friendly name, format: (token0 name)-(token1 name) (optional)
+     * @param token0 Reference to token0 as stored in pair contract. (optional)
+     * @param token1 Reference to token0 as stored in pair contract. (optional)
      * @return kotlin.collections.List<SushiswapPairDTO>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
@@ -1419,14 +1433,14 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     /**
      * Pairs (historical)
      * Gets pairs.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param name  (optional)
-     * @param token0  (optional)
-     * @param token1  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Pair contract address. (optional)
+     * @param name Friendly name, format: (token0 name)-(token1 name) (optional)
+     * @param token0 Reference to token0 as stored in pair contract. (optional)
+     * @param token1 Reference to token0 as stored in pair contract. (optional)
      * @return ApiResponse<kotlin.collections.List<SushiswapPairDTO>?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
@@ -1444,14 +1458,14 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     /**
      * To obtain the request config of the operation sushiswapGetPairsHistorical
      *
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param name  (optional)
-     * @param token0  (optional)
-     * @param token1  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Pair contract address. (optional)
+     * @param name Friendly name, format: (token0 name)-(token1 name) (optional)
+     * @param token0 Reference to token0 as stored in pair contract. (optional)
+     * @param token1 Reference to token0 as stored in pair contract. (optional)
      * @return RequestConfig
      */
     fun sushiswapGetPairsHistoricalRequestConfig(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?, id: kotlin.String?, name: kotlin.String?, token0: kotlin.String?, token1: kotlin.String?) : RequestConfig<Unit> {
@@ -1491,6 +1505,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
             path = "/dapps/sushiswap/pairs/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -1596,6 +1611,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
             path = "/dapps/sushiswap/swaps/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -1695,6 +1711,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
             path = "/dapps/sushiswap/tokenDayData/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -1806,6 +1823,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
             path = "/dapps/sushiswap/tokens/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -1905,6 +1923,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
             path = "/dapps/sushiswap/transactions/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -2004,6 +2023,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
             path = "/dapps/sushiswap/users/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -2071,6 +2091,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
             path = "/dapps/sushiswap/hourData/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -2138,6 +2159,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
             path = "/dapps/sushiswap/liquidityPositionSnapshots/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -2205,6 +2227,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
             path = "/dapps/sushiswap/liquidityPositions/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -2272,6 +2295,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
             path = "/dapps/sushiswap/mints/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -2339,6 +2363,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
             path = "/dapps/sushiswap/pairDayData/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -2406,6 +2431,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
             path = "/dapps/sushiswap/pairHourData/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -2481,6 +2507,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
             path = "/dapps/sushiswap/pairs/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -2556,6 +2583,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
             path = "/dapps/sushiswap/swaps/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -2623,6 +2651,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
             path = "/dapps/sushiswap/tokenDayData/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -2690,6 +2719,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
             path = "/dapps/sushiswap/tokens/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -2757,6 +2787,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
             path = "/dapps/sushiswap/transactions/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -2824,6 +2855,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
             path = "/dapps/sushiswap/users/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }

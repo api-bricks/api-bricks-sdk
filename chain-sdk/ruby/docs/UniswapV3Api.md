@@ -547,12 +547,12 @@ require 'openapi_client'
 
 api_instance = OpenapiClient::UniswapV3Api.new
 opts = {
-  start_block: 789, # Integer | 
-  end_block: 789, # Integer | 
-  start_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
-  end_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
-  id: 'id_example', # String | 
-  pool: 'pool_example' # String | 
+  start_block: 789, # Integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+  end_block: 789, # Integer | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+  start_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+  end_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | The end date of timeframe.
+  id: 'id_example', # String | Identifier, format: (pool address)-(day id).
+  pool: 'pool_example' # String | Pointer to pool.
 }
 
 begin
@@ -586,12 +586,12 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **start_block** | **Integer** |  | [optional] |
-| **end_block** | **Integer** |  | [optional] |
-| **start_date** | **Time** |  | [optional] |
-| **end_date** | **Time** |  | [optional] |
-| **id** | **String** |  | [optional] |
-| **pool** | **String** |  | [optional] |
+| **start_block** | **Integer** | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] |
+| **end_block** | **Integer** | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] |
+| **start_date** | **Time** | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] |
+| **end_date** | **Time** | The end date of timeframe. | [optional] |
+| **id** | **String** | Identifier, format: (pool address)-(day id). | [optional] |
+| **pool** | **String** | Pointer to pool. | [optional] |
 
 ### Return type
 
@@ -623,12 +623,12 @@ require 'openapi_client'
 
 api_instance = OpenapiClient::UniswapV3Api.new
 opts = {
-  start_block: 789, # Integer | 
-  end_block: 789, # Integer | 
-  start_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
-  end_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
-  id: 'id_example', # String | 
-  pool: 'pool_example' # String | 
+  start_block: 789, # Integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+  end_block: 789, # Integer | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+  start_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+  end_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | The end date of timeframe.
+  id: 'id_example', # String | Identifier, format: (pool address)-(day id)
+  pool: 'pool_example' # String | Pointer to pool.
 }
 
 begin
@@ -662,12 +662,12 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **start_block** | **Integer** |  | [optional] |
-| **end_block** | **Integer** |  | [optional] |
-| **start_date** | **Time** |  | [optional] |
-| **end_date** | **Time** |  | [optional] |
-| **id** | **String** |  | [optional] |
-| **pool** | **String** |  | [optional] |
+| **start_block** | **Integer** | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] |
+| **end_block** | **Integer** | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] |
+| **start_date** | **Time** | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] |
+| **end_date** | **Time** | The end date of timeframe. | [optional] |
+| **id** | **String** | Identifier, format: (pool address)-(day id) | [optional] |
+| **pool** | **String** | Pointer to pool. | [optional] |
 
 ### Return type
 
@@ -777,12 +777,12 @@ require 'openapi_client'
 
 api_instance = OpenapiClient::UniswapV3Api.new
 opts = {
-  start_block: 789, # Integer | 
-  end_block: 789, # Integer | 
-  start_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
-  end_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
-  id: 'id_example', # String | 
-  pool: 'pool_example' # String | 
+  start_block: 789, # Integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+  end_block: 789, # Integer | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+  start_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+  end_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | The end date of timeframe.
+  id: 'id_example', # String | NFT token identifier, format: (NFT token id)#(block number).
+  pool: 'pool_example' # String | Pool the position is within.
 }
 
 begin
@@ -816,12 +816,12 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **start_block** | **Integer** |  | [optional] |
-| **end_block** | **Integer** |  | [optional] |
-| **start_date** | **Time** |  | [optional] |
-| **end_date** | **Time** |  | [optional] |
-| **id** | **String** |  | [optional] |
-| **pool** | **String** |  | [optional] |
+| **start_block** | **Integer** | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] |
+| **end_block** | **Integer** | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] |
+| **start_date** | **Time** | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] |
+| **end_date** | **Time** | The end date of timeframe. | [optional] |
+| **id** | **String** | NFT token identifier, format: (NFT token id)#(block number). | [optional] |
+| **pool** | **String** | Pool the position is within. | [optional] |
 
 ### Return type
 
@@ -937,7 +937,7 @@ opts = {
   end_block: 789, # Integer | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
   start_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
   end_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | The end date of timeframe.
-  id: 'id_example', # String | Identifier, format: transaction hash + \"#\" + index in swaps Transaction array.
+  id: 'id_example', # String | Identifier, format: (transaction hash) + # + (index in swaps Transaction array).
   pool: 'pool_example', # String | Pool swap occured within.
   token_0: 'token_0_example', # String | Reference to token0 as stored in pair contract.
   token_1: 'token_1_example' # String | Reference to token1 as stored in pair contract.
@@ -978,7 +978,7 @@ end
 | **end_block** | **Integer** | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] |
 | **start_date** | **Time** | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] |
 | **end_date** | **Time** | The end date of timeframe. | [optional] |
-| **id** | **String** | Identifier, format: transaction hash + \&quot;#\&quot; + index in swaps Transaction array. | [optional] |
+| **id** | **String** | Identifier, format: (transaction hash) + # + (index in swaps Transaction array). | [optional] |
 | **pool** | **String** | Pool swap occured within. | [optional] |
 | **token_0** | **String** | Reference to token0 as stored in pair contract. | [optional] |
 | **token_1** | **String** | Reference to token1 as stored in pair contract. | [optional] |
@@ -1013,12 +1013,12 @@ require 'openapi_client'
 
 api_instance = OpenapiClient::UniswapV3Api.new
 opts = {
-  start_block: 789, # Integer | 
-  end_block: 789, # Integer | 
-  start_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
-  end_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
-  id: 'id_example', # String | 
-  pool: 'pool_example' # String | 
+  start_block: 789, # Integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+  end_block: 789, # Integer | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+  start_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+  end_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | The end date of timeframe.
+  id: 'id_example', # String | Identifier, format: (pool address)-(tick index)-(timestamp).
+  pool: 'pool_example' # String | Pointer to pool.
 }
 
 begin
@@ -1052,12 +1052,12 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **start_block** | **Integer** |  | [optional] |
-| **end_block** | **Integer** |  | [optional] |
-| **start_date** | **Time** |  | [optional] |
-| **end_date** | **Time** |  | [optional] |
-| **id** | **String** |  | [optional] |
-| **pool** | **String** |  | [optional] |
+| **start_block** | **Integer** | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] |
+| **end_block** | **Integer** | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] |
+| **start_date** | **Time** | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] |
+| **end_date** | **Time** | The end date of timeframe. | [optional] |
+| **id** | **String** | Identifier, format: (pool address)-(tick index)-(timestamp). | [optional] |
+| **pool** | **String** | Pointer to pool. | [optional] |
 
 ### Return type
 
@@ -1089,12 +1089,12 @@ require 'openapi_client'
 
 api_instance = OpenapiClient::UniswapV3Api.new
 opts = {
-  start_block: 789, # Integer | 
-  end_block: 789, # Integer | 
-  start_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
-  end_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
-  id: 'id_example', # String | 
-  pool: 'pool_example' # String | 
+  start_block: 789, # Integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+  end_block: 789, # Integer | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+  start_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+  end_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | The end date of timeframe.
+  id: 'id_example', # String | Identifier, format: (pool address)#(tick index)
+  pool: 'pool_example' # String | Pool address.
 }
 
 begin
@@ -1128,12 +1128,12 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **start_block** | **Integer** |  | [optional] |
-| **end_block** | **Integer** |  | [optional] |
-| **start_date** | **Time** |  | [optional] |
-| **end_date** | **Time** |  | [optional] |
-| **id** | **String** |  | [optional] |
-| **pool** | **String** |  | [optional] |
+| **start_block** | **Integer** | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] |
+| **end_block** | **Integer** | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] |
+| **start_date** | **Time** | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] |
+| **end_date** | **Time** | The end date of timeframe. | [optional] |
+| **id** | **String** | Identifier, format: (pool address)#(tick index) | [optional] |
+| **pool** | **String** | Pool address. | [optional] |
 
 ### Return type
 

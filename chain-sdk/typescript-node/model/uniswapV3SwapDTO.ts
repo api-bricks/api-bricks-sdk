@@ -214,3 +214,5 @@ export class UniswapV3SwapDTO {
     }
 }
 
+export namespace UniswapV3SwapDTO {
+}

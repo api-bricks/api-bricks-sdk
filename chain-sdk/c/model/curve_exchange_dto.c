@@ -330,7 +330,7 @@ curve_exchange_dto_t *curve_exchange_dto_parseFromJSON(cJSON *curve_exchange_dto
     // curve_exchange_dto->entry_time
     cJSON *entry_time = cJSON_GetObjectItemCaseSensitive(curve_exchange_dtoJSON, "entry_time");
     if (entry_time) { 
-    if(!cJSON_IsString(entry_time))
+    if(!cJSON_IsString(entry_time) && !cJSON_IsNull(entry_time))
     {
     goto end; //DateTime
     }
@@ -339,7 +339,7 @@ curve_exchange_dto_t *curve_exchange_dto_parseFromJSON(cJSON *curve_exchange_dto
     // curve_exchange_dto->recv_time
     cJSON *recv_time = cJSON_GetObjectItemCaseSensitive(curve_exchange_dtoJSON, "recv_time");
     if (recv_time) { 
-    if(!cJSON_IsString(recv_time))
+    if(!cJSON_IsString(recv_time) && !cJSON_IsNull(recv_time))
     {
     goto end; //DateTime
     }
@@ -357,7 +357,7 @@ curve_exchange_dto_t *curve_exchange_dto_parseFromJSON(cJSON *curve_exchange_dto
     // curve_exchange_dto->id
     cJSON *id = cJSON_GetObjectItemCaseSensitive(curve_exchange_dtoJSON, "id");
     if (id) { 
-    if(!cJSON_IsString(id))
+    if(!cJSON_IsString(id) && !cJSON_IsNull(id))
     {
     goto end; //String
     }
@@ -366,7 +366,7 @@ curve_exchange_dto_t *curve_exchange_dto_parseFromJSON(cJSON *curve_exchange_dto
     // curve_exchange_dto->pool
     cJSON *pool = cJSON_GetObjectItemCaseSensitive(curve_exchange_dtoJSON, "pool");
     if (pool) { 
-    if(!cJSON_IsString(pool))
+    if(!cJSON_IsString(pool) && !cJSON_IsNull(pool))
     {
     goto end; //String
     }
@@ -375,7 +375,7 @@ curve_exchange_dto_t *curve_exchange_dto_parseFromJSON(cJSON *curve_exchange_dto
     // curve_exchange_dto->buyer
     cJSON *buyer = cJSON_GetObjectItemCaseSensitive(curve_exchange_dtoJSON, "buyer");
     if (buyer) { 
-    if(!cJSON_IsString(buyer))
+    if(!cJSON_IsString(buyer) && !cJSON_IsNull(buyer))
     {
     goto end; //String
     }
@@ -384,7 +384,7 @@ curve_exchange_dto_t *curve_exchange_dto_parseFromJSON(cJSON *curve_exchange_dto
     // curve_exchange_dto->receiver
     cJSON *receiver = cJSON_GetObjectItemCaseSensitive(curve_exchange_dtoJSON, "receiver");
     if (receiver) { 
-    if(!cJSON_IsString(receiver))
+    if(!cJSON_IsString(receiver) && !cJSON_IsNull(receiver))
     {
     goto end; //String
     }
@@ -393,7 +393,7 @@ curve_exchange_dto_t *curve_exchange_dto_parseFromJSON(cJSON *curve_exchange_dto
     // curve_exchange_dto->token_sold
     cJSON *token_sold = cJSON_GetObjectItemCaseSensitive(curve_exchange_dtoJSON, "token_sold");
     if (token_sold) { 
-    if(!cJSON_IsString(token_sold))
+    if(!cJSON_IsString(token_sold) && !cJSON_IsNull(token_sold))
     {
     goto end; //String
     }
@@ -402,7 +402,7 @@ curve_exchange_dto_t *curve_exchange_dto_parseFromJSON(cJSON *curve_exchange_dto
     // curve_exchange_dto->token_bought
     cJSON *token_bought = cJSON_GetObjectItemCaseSensitive(curve_exchange_dtoJSON, "token_bought");
     if (token_bought) { 
-    if(!cJSON_IsString(token_bought))
+    if(!cJSON_IsString(token_bought) && !cJSON_IsNull(token_bought))
     {
     goto end; //String
     }
@@ -411,7 +411,7 @@ curve_exchange_dto_t *curve_exchange_dto_parseFromJSON(cJSON *curve_exchange_dto
     // curve_exchange_dto->amount_sold
     cJSON *amount_sold = cJSON_GetObjectItemCaseSensitive(curve_exchange_dtoJSON, "amount_sold");
     if (amount_sold) { 
-    if(!cJSON_IsString(amount_sold))
+    if(!cJSON_IsString(amount_sold) && !cJSON_IsNull(amount_sold))
     {
     goto end; //String
     }
@@ -420,7 +420,7 @@ curve_exchange_dto_t *curve_exchange_dto_parseFromJSON(cJSON *curve_exchange_dto
     // curve_exchange_dto->amount_bought
     cJSON *amount_bought = cJSON_GetObjectItemCaseSensitive(curve_exchange_dtoJSON, "amount_bought");
     if (amount_bought) { 
-    if(!cJSON_IsString(amount_bought))
+    if(!cJSON_IsString(amount_bought) && !cJSON_IsNull(amount_bought))
     {
     goto end; //String
     }
@@ -429,7 +429,7 @@ curve_exchange_dto_t *curve_exchange_dto_parseFromJSON(cJSON *curve_exchange_dto
     // curve_exchange_dto->block
     cJSON *block = cJSON_GetObjectItemCaseSensitive(curve_exchange_dtoJSON, "block");
     if (block) { 
-    if(!cJSON_IsString(block))
+    if(!cJSON_IsString(block) && !cJSON_IsNull(block))
     {
     goto end; //String
     }
@@ -438,7 +438,7 @@ curve_exchange_dto_t *curve_exchange_dto_parseFromJSON(cJSON *curve_exchange_dto
     // curve_exchange_dto->timestamp
     cJSON *timestamp = cJSON_GetObjectItemCaseSensitive(curve_exchange_dtoJSON, "timestamp");
     if (timestamp) { 
-    if(!cJSON_IsString(timestamp))
+    if(!cJSON_IsString(timestamp) && !cJSON_IsNull(timestamp))
     {
     goto end; //String
     }
@@ -447,7 +447,7 @@ curve_exchange_dto_t *curve_exchange_dto_parseFromJSON(cJSON *curve_exchange_dto
     // curve_exchange_dto->transaction
     cJSON *transaction = cJSON_GetObjectItemCaseSensitive(curve_exchange_dtoJSON, "transaction");
     if (transaction) { 
-    if(!cJSON_IsString(transaction))
+    if(!cJSON_IsString(transaction) && !cJSON_IsNull(transaction))
     {
     goto end; //String
     }
@@ -489,7 +489,7 @@ curve_exchange_dto_t *curve_exchange_dto_parseFromJSON(cJSON *curve_exchange_dto
     // curve_exchange_dto->pool_id
     cJSON *pool_id = cJSON_GetObjectItemCaseSensitive(curve_exchange_dtoJSON, "pool_id");
     if (pool_id) { 
-    if(!cJSON_IsString(pool_id))
+    if(!cJSON_IsString(pool_id) && !cJSON_IsNull(pool_id))
     {
     goto end; //String
     }
@@ -498,7 +498,7 @@ curve_exchange_dto_t *curve_exchange_dto_parseFromJSON(cJSON *curve_exchange_dto
     // curve_exchange_dto->transaction_id
     cJSON *transaction_id = cJSON_GetObjectItemCaseSensitive(curve_exchange_dtoJSON, "transaction_id");
     if (transaction_id) { 
-    if(!cJSON_IsString(transaction_id))
+    if(!cJSON_IsString(transaction_id) && !cJSON_IsNull(transaction_id))
     {
     goto end; //String
     }
@@ -506,26 +506,26 @@ curve_exchange_dto_t *curve_exchange_dto_parseFromJSON(cJSON *curve_exchange_dto
 
 
     curve_exchange_dto_local_var = curve_exchange_dto_create (
-        entry_time ? strdup(entry_time->valuestring) : NULL,
-        recv_time ? strdup(recv_time->valuestring) : NULL,
+        entry_time && !cJSON_IsNull(entry_time) ? strdup(entry_time->valuestring) : NULL,
+        recv_time && !cJSON_IsNull(recv_time) ? strdup(recv_time->valuestring) : NULL,
         block_number ? block_number->valuedouble : 0,
-        id ? strdup(id->valuestring) : NULL,
-        pool ? strdup(pool->valuestring) : NULL,
-        buyer ? strdup(buyer->valuestring) : NULL,
-        receiver ? strdup(receiver->valuestring) : NULL,
-        token_sold ? strdup(token_sold->valuestring) : NULL,
-        token_bought ? strdup(token_bought->valuestring) : NULL,
-        amount_sold ? strdup(amount_sold->valuestring) : NULL,
-        amount_bought ? strdup(amount_bought->valuestring) : NULL,
-        block ? strdup(block->valuestring) : NULL,
-        timestamp ? strdup(timestamp->valuestring) : NULL,
-        transaction ? strdup(transaction->valuestring) : NULL,
+        id && !cJSON_IsNull(id) ? strdup(id->valuestring) : NULL,
+        pool && !cJSON_IsNull(pool) ? strdup(pool->valuestring) : NULL,
+        buyer && !cJSON_IsNull(buyer) ? strdup(buyer->valuestring) : NULL,
+        receiver && !cJSON_IsNull(receiver) ? strdup(receiver->valuestring) : NULL,
+        token_sold && !cJSON_IsNull(token_sold) ? strdup(token_sold->valuestring) : NULL,
+        token_bought && !cJSON_IsNull(token_bought) ? strdup(token_bought->valuestring) : NULL,
+        amount_sold && !cJSON_IsNull(amount_sold) ? strdup(amount_sold->valuestring) : NULL,
+        amount_bought && !cJSON_IsNull(amount_bought) ? strdup(amount_bought->valuestring) : NULL,
+        block && !cJSON_IsNull(block) ? strdup(block->valuestring) : NULL,
+        timestamp && !cJSON_IsNull(timestamp) ? strdup(timestamp->valuestring) : NULL,
+        transaction && !cJSON_IsNull(transaction) ? strdup(transaction->valuestring) : NULL,
         vid ? vid->valuedouble : 0,
         evaluated_price ? evaluated_price->valuedouble : 0,
         evaluated_amount ? evaluated_amount->valuedouble : 0,
         evaluated_aggressor ? evaluated_aggressor_local_nonprim : NULL,
-        pool_id ? strdup(pool_id->valuestring) : NULL,
-        transaction_id ? strdup(transaction_id->valuestring) : NULL
+        pool_id && !cJSON_IsNull(pool_id) ? strdup(pool_id->valuestring) : NULL,
+        transaction_id && !cJSON_IsNull(transaction_id) ? strdup(transaction_id->valuestring) : NULL
         );
 
     return curve_exchange_dto_local_var;

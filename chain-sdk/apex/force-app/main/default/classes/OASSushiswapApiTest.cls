@@ -26,20 +26,6 @@ private class OASSushiswapApiTest {
         expectedResponse = new List<OASSushiswapBundleDTO>{OASSushiswapBundleDTO.getExample()};
         response = (List<OASSushiswapBundleDTO>) api.sushiswapBundlesCurrent();
         System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASSushiswapBundleDTO>{OASSushiswapBundleDTO.getExample()});
-        res.setHeader('Content-Type', 'text/json');
-        res.setBody(js);
-        expectedResponse = new List<OASSushiswapBundleDTO>{OASSushiswapBundleDTO.getExample()};
-        response = (List<OASSushiswapBundleDTO>) api.sushiswapBundlesCurrent();
-        System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASSushiswapBundleDTO>{OASSushiswapBundleDTO.getExample()});
-        res.setHeader('Content-Type', 'text/plain');
-        res.setBody(js);
-        expectedResponse = new List<OASSushiswapBundleDTO>{OASSushiswapBundleDTO.getExample()};
-        response = (List<OASSushiswapBundleDTO>) api.sushiswapBundlesCurrent();
-        System.assertEquals(expectedResponse, response);
     }
 
     /**
@@ -64,20 +50,6 @@ private class OASSushiswapApiTest {
 
         js = JSON.serialize(new List<OASSushiswapBurnDTO>{OASSushiswapBurnDTO.getExample()});
         res.setHeader('Content-Type', 'application/json');
-        res.setBody(js);
-        expectedResponse = new List<OASSushiswapBurnDTO>{OASSushiswapBurnDTO.getExample()};
-        response = (List<OASSushiswapBurnDTO>) api.sushiswapBurnsCurrent();
-        System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASSushiswapBurnDTO>{OASSushiswapBurnDTO.getExample()});
-        res.setHeader('Content-Type', 'text/json');
-        res.setBody(js);
-        expectedResponse = new List<OASSushiswapBurnDTO>{OASSushiswapBurnDTO.getExample()};
-        response = (List<OASSushiswapBurnDTO>) api.sushiswapBurnsCurrent();
-        System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASSushiswapBurnDTO>{OASSushiswapBurnDTO.getExample()});
-        res.setHeader('Content-Type', 'text/plain');
         res.setBody(js);
         expectedResponse = new List<OASSushiswapBurnDTO>{OASSushiswapBurnDTO.getExample()};
         response = (List<OASSushiswapBurnDTO>) api.sushiswapBurnsCurrent();
@@ -110,20 +82,6 @@ private class OASSushiswapApiTest {
         expectedResponse = new List<OASSushiswapDayDataDTO>{OASSushiswapDayDataDTO.getExample()};
         response = (List<OASSushiswapDayDataDTO>) api.sushiswapDayDataCurrent();
         System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASSushiswapDayDataDTO>{OASSushiswapDayDataDTO.getExample()});
-        res.setHeader('Content-Type', 'text/json');
-        res.setBody(js);
-        expectedResponse = new List<OASSushiswapDayDataDTO>{OASSushiswapDayDataDTO.getExample()};
-        response = (List<OASSushiswapDayDataDTO>) api.sushiswapDayDataCurrent();
-        System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASSushiswapDayDataDTO>{OASSushiswapDayDataDTO.getExample()});
-        res.setHeader('Content-Type', 'text/plain');
-        res.setBody(js);
-        expectedResponse = new List<OASSushiswapDayDataDTO>{OASSushiswapDayDataDTO.getExample()};
-        response = (List<OASSushiswapDayDataDTO>) api.sushiswapDayDataCurrent();
-        System.assertEquals(expectedResponse, response);
     }
 
     /**
@@ -148,20 +106,6 @@ private class OASSushiswapApiTest {
 
         js = JSON.serialize(new List<OASSushiswapFactoryDTO>{OASSushiswapFactoryDTO.getExample()});
         res.setHeader('Content-Type', 'application/json');
-        res.setBody(js);
-        expectedResponse = new List<OASSushiswapFactoryDTO>{OASSushiswapFactoryDTO.getExample()};
-        response = (List<OASSushiswapFactoryDTO>) api.sushiswapFactoriesCurrent();
-        System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASSushiswapFactoryDTO>{OASSushiswapFactoryDTO.getExample()});
-        res.setHeader('Content-Type', 'text/json');
-        res.setBody(js);
-        expectedResponse = new List<OASSushiswapFactoryDTO>{OASSushiswapFactoryDTO.getExample()};
-        response = (List<OASSushiswapFactoryDTO>) api.sushiswapFactoriesCurrent();
-        System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASSushiswapFactoryDTO>{OASSushiswapFactoryDTO.getExample()});
-        res.setHeader('Content-Type', 'text/plain');
         res.setBody(js);
         expectedResponse = new List<OASSushiswapFactoryDTO>{OASSushiswapFactoryDTO.getExample()};
         response = (List<OASSushiswapFactoryDTO>) api.sushiswapFactoriesCurrent();
@@ -198,20 +142,6 @@ private class OASSushiswapApiTest {
 
         js = JSON.serialize(new List<OASSushiswapBundleDTO>{OASSushiswapBundleDTO.getExample()});
         res.setHeader('Content-Type', 'application/json');
-        res.setBody(js);
-        expectedResponse = new List<OASSushiswapBundleDTO>{OASSushiswapBundleDTO.getExample()};
-        response = (List<OASSushiswapBundleDTO>) api.sushiswapGetBundlesHistorical(params);
-        System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASSushiswapBundleDTO>{OASSushiswapBundleDTO.getExample()});
-        res.setHeader('Content-Type', 'text/json');
-        res.setBody(js);
-        expectedResponse = new List<OASSushiswapBundleDTO>{OASSushiswapBundleDTO.getExample()};
-        response = (List<OASSushiswapBundleDTO>) api.sushiswapGetBundlesHistorical(params);
-        System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASSushiswapBundleDTO>{OASSushiswapBundleDTO.getExample()});
-        res.setHeader('Content-Type', 'text/plain');
         res.setBody(js);
         expectedResponse = new List<OASSushiswapBundleDTO>{OASSushiswapBundleDTO.getExample()};
         response = (List<OASSushiswapBundleDTO>) api.sushiswapGetBundlesHistorical(params);
@@ -253,20 +183,6 @@ private class OASSushiswapApiTest {
         expectedResponse = new List<OASSushiswapBurnDTO>{OASSushiswapBurnDTO.getExample()};
         response = (List<OASSushiswapBurnDTO>) api.sushiswapGetBurnsHistorical(params);
         System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASSushiswapBurnDTO>{OASSushiswapBurnDTO.getExample()});
-        res.setHeader('Content-Type', 'text/json');
-        res.setBody(js);
-        expectedResponse = new List<OASSushiswapBurnDTO>{OASSushiswapBurnDTO.getExample()};
-        response = (List<OASSushiswapBurnDTO>) api.sushiswapGetBurnsHistorical(params);
-        System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASSushiswapBurnDTO>{OASSushiswapBurnDTO.getExample()});
-        res.setHeader('Content-Type', 'text/plain');
-        res.setBody(js);
-        expectedResponse = new List<OASSushiswapBurnDTO>{OASSushiswapBurnDTO.getExample()};
-        response = (List<OASSushiswapBurnDTO>) api.sushiswapGetBurnsHistorical(params);
-        System.assertEquals(expectedResponse, response);
     }
 
     /**
@@ -299,20 +215,6 @@ private class OASSushiswapApiTest {
 
         js = JSON.serialize(new List<OASSushiswapDayDataDTO>{OASSushiswapDayDataDTO.getExample()});
         res.setHeader('Content-Type', 'application/json');
-        res.setBody(js);
-        expectedResponse = new List<OASSushiswapDayDataDTO>{OASSushiswapDayDataDTO.getExample()};
-        response = (List<OASSushiswapDayDataDTO>) api.sushiswapGetDayDataHistorical(params);
-        System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASSushiswapDayDataDTO>{OASSushiswapDayDataDTO.getExample()});
-        res.setHeader('Content-Type', 'text/json');
-        res.setBody(js);
-        expectedResponse = new List<OASSushiswapDayDataDTO>{OASSushiswapDayDataDTO.getExample()};
-        response = (List<OASSushiswapDayDataDTO>) api.sushiswapGetDayDataHistorical(params);
-        System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASSushiswapDayDataDTO>{OASSushiswapDayDataDTO.getExample()});
-        res.setHeader('Content-Type', 'text/plain');
         res.setBody(js);
         expectedResponse = new List<OASSushiswapDayDataDTO>{OASSushiswapDayDataDTO.getExample()};
         response = (List<OASSushiswapDayDataDTO>) api.sushiswapGetDayDataHistorical(params);
@@ -353,20 +255,6 @@ private class OASSushiswapApiTest {
         expectedResponse = new List<OASSushiswapFactoryDTO>{OASSushiswapFactoryDTO.getExample()};
         response = (List<OASSushiswapFactoryDTO>) api.sushiswapGetFactoriesHistorical(params);
         System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASSushiswapFactoryDTO>{OASSushiswapFactoryDTO.getExample()});
-        res.setHeader('Content-Type', 'text/json');
-        res.setBody(js);
-        expectedResponse = new List<OASSushiswapFactoryDTO>{OASSushiswapFactoryDTO.getExample()};
-        response = (List<OASSushiswapFactoryDTO>) api.sushiswapGetFactoriesHistorical(params);
-        System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASSushiswapFactoryDTO>{OASSushiswapFactoryDTO.getExample()});
-        res.setHeader('Content-Type', 'text/plain');
-        res.setBody(js);
-        expectedResponse = new List<OASSushiswapFactoryDTO>{OASSushiswapFactoryDTO.getExample()};
-        response = (List<OASSushiswapFactoryDTO>) api.sushiswapGetFactoriesHistorical(params);
-        System.assertEquals(expectedResponse, response);
     }
 
     /**
@@ -399,20 +287,6 @@ private class OASSushiswapApiTest {
 
         js = JSON.serialize(new List<OASSushiswapHourDataDTO>{OASSushiswapHourDataDTO.getExample()});
         res.setHeader('Content-Type', 'application/json');
-        res.setBody(js);
-        expectedResponse = new List<OASSushiswapHourDataDTO>{OASSushiswapHourDataDTO.getExample()};
-        response = (List<OASSushiswapHourDataDTO>) api.sushiswapGetHourDataHistorical(params);
-        System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASSushiswapHourDataDTO>{OASSushiswapHourDataDTO.getExample()});
-        res.setHeader('Content-Type', 'text/json');
-        res.setBody(js);
-        expectedResponse = new List<OASSushiswapHourDataDTO>{OASSushiswapHourDataDTO.getExample()};
-        response = (List<OASSushiswapHourDataDTO>) api.sushiswapGetHourDataHistorical(params);
-        System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASSushiswapHourDataDTO>{OASSushiswapHourDataDTO.getExample()});
-        res.setHeader('Content-Type', 'text/plain');
         res.setBody(js);
         expectedResponse = new List<OASSushiswapHourDataDTO>{OASSushiswapHourDataDTO.getExample()};
         response = (List<OASSushiswapHourDataDTO>) api.sushiswapGetHourDataHistorical(params);
@@ -455,20 +329,6 @@ private class OASSushiswapApiTest {
         expectedResponse = new List<OASSushiswapLiquidityPositionSnapsho>{OASSushiswapLiquidityPositionSnapsho.getExample()};
         response = (List<OASSushiswapLiquidityPositionSnapsho>) api.sushiswapGetLiquidityPositionSnapshotsHistorical(params);
         System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASSushiswapLiquidityPositionSnapsho>{OASSushiswapLiquidityPositionSnapsho.getExample()});
-        res.setHeader('Content-Type', 'text/json');
-        res.setBody(js);
-        expectedResponse = new List<OASSushiswapLiquidityPositionSnapsho>{OASSushiswapLiquidityPositionSnapsho.getExample()};
-        response = (List<OASSushiswapLiquidityPositionSnapsho>) api.sushiswapGetLiquidityPositionSnapshotsHistorical(params);
-        System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASSushiswapLiquidityPositionSnapsho>{OASSushiswapLiquidityPositionSnapsho.getExample()});
-        res.setHeader('Content-Type', 'text/plain');
-        res.setBody(js);
-        expectedResponse = new List<OASSushiswapLiquidityPositionSnapsho>{OASSushiswapLiquidityPositionSnapsho.getExample()};
-        response = (List<OASSushiswapLiquidityPositionSnapsho>) api.sushiswapGetLiquidityPositionSnapshotsHistorical(params);
-        System.assertEquals(expectedResponse, response);
     }
 
     /**
@@ -507,20 +367,6 @@ private class OASSushiswapApiTest {
         expectedResponse = new List<OASSushiswapLiquidityPositionDTO>{OASSushiswapLiquidityPositionDTO.getExample()};
         response = (List<OASSushiswapLiquidityPositionDTO>) api.sushiswapGetLiquidityPositionsHistorical(params);
         System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASSushiswapLiquidityPositionDTO>{OASSushiswapLiquidityPositionDTO.getExample()});
-        res.setHeader('Content-Type', 'text/json');
-        res.setBody(js);
-        expectedResponse = new List<OASSushiswapLiquidityPositionDTO>{OASSushiswapLiquidityPositionDTO.getExample()};
-        response = (List<OASSushiswapLiquidityPositionDTO>) api.sushiswapGetLiquidityPositionsHistorical(params);
-        System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASSushiswapLiquidityPositionDTO>{OASSushiswapLiquidityPositionDTO.getExample()});
-        res.setHeader('Content-Type', 'text/plain');
-        res.setBody(js);
-        expectedResponse = new List<OASSushiswapLiquidityPositionDTO>{OASSushiswapLiquidityPositionDTO.getExample()};
-        response = (List<OASSushiswapLiquidityPositionDTO>) api.sushiswapGetLiquidityPositionsHistorical(params);
-        System.assertEquals(expectedResponse, response);
     }
 
     /**
@@ -554,20 +400,6 @@ private class OASSushiswapApiTest {
 
         js = JSON.serialize(new List<OASSushiswapMintDTO>{OASSushiswapMintDTO.getExample()});
         res.setHeader('Content-Type', 'application/json');
-        res.setBody(js);
-        expectedResponse = new List<OASSushiswapMintDTO>{OASSushiswapMintDTO.getExample()};
-        response = (List<OASSushiswapMintDTO>) api.sushiswapGetMintsHistorical(params);
-        System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASSushiswapMintDTO>{OASSushiswapMintDTO.getExample()});
-        res.setHeader('Content-Type', 'text/json');
-        res.setBody(js);
-        expectedResponse = new List<OASSushiswapMintDTO>{OASSushiswapMintDTO.getExample()};
-        response = (List<OASSushiswapMintDTO>) api.sushiswapGetMintsHistorical(params);
-        System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASSushiswapMintDTO>{OASSushiswapMintDTO.getExample()});
-        res.setHeader('Content-Type', 'text/plain');
         res.setBody(js);
         expectedResponse = new List<OASSushiswapMintDTO>{OASSushiswapMintDTO.getExample()};
         response = (List<OASSushiswapMintDTO>) api.sushiswapGetMintsHistorical(params);
@@ -611,20 +443,6 @@ private class OASSushiswapApiTest {
         expectedResponse = new List<OASSushiswapPairDayDataDTO>{OASSushiswapPairDayDataDTO.getExample()};
         response = (List<OASSushiswapPairDayDataDTO>) api.sushiswapGetPairDayDataHistorical(params);
         System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASSushiswapPairDayDataDTO>{OASSushiswapPairDayDataDTO.getExample()});
-        res.setHeader('Content-Type', 'text/json');
-        res.setBody(js);
-        expectedResponse = new List<OASSushiswapPairDayDataDTO>{OASSushiswapPairDayDataDTO.getExample()};
-        response = (List<OASSushiswapPairDayDataDTO>) api.sushiswapGetPairDayDataHistorical(params);
-        System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASSushiswapPairDayDataDTO>{OASSushiswapPairDayDataDTO.getExample()});
-        res.setHeader('Content-Type', 'text/plain');
-        res.setBody(js);
-        expectedResponse = new List<OASSushiswapPairDayDataDTO>{OASSushiswapPairDayDataDTO.getExample()};
-        response = (List<OASSushiswapPairDayDataDTO>) api.sushiswapGetPairDayDataHistorical(params);
-        System.assertEquals(expectedResponse, response);
     }
 
     /**
@@ -658,20 +476,6 @@ private class OASSushiswapApiTest {
 
         js = JSON.serialize(new List<OASSushiswapPairHourDataDTO>{OASSushiswapPairHourDataDTO.getExample()});
         res.setHeader('Content-Type', 'application/json');
-        res.setBody(js);
-        expectedResponse = new List<OASSushiswapPairHourDataDTO>{OASSushiswapPairHourDataDTO.getExample()};
-        response = (List<OASSushiswapPairHourDataDTO>) api.sushiswapGetPairHourDataHistorical(params);
-        System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASSushiswapPairHourDataDTO>{OASSushiswapPairHourDataDTO.getExample()});
-        res.setHeader('Content-Type', 'text/json');
-        res.setBody(js);
-        expectedResponse = new List<OASSushiswapPairHourDataDTO>{OASSushiswapPairHourDataDTO.getExample()};
-        response = (List<OASSushiswapPairHourDataDTO>) api.sushiswapGetPairHourDataHistorical(params);
-        System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASSushiswapPairHourDataDTO>{OASSushiswapPairHourDataDTO.getExample()});
-        res.setHeader('Content-Type', 'text/plain');
         res.setBody(js);
         expectedResponse = new List<OASSushiswapPairHourDataDTO>{OASSushiswapPairHourDataDTO.getExample()};
         response = (List<OASSushiswapPairHourDataDTO>) api.sushiswapGetPairHourDataHistorical(params);
@@ -715,20 +519,6 @@ private class OASSushiswapApiTest {
         expectedResponse = new List<OASSushiswapPairDTO>{OASSushiswapPairDTO.getExample()};
         response = (List<OASSushiswapPairDTO>) api.sushiswapGetPairsHistorical(params);
         System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASSushiswapPairDTO>{OASSushiswapPairDTO.getExample()});
-        res.setHeader('Content-Type', 'text/json');
-        res.setBody(js);
-        expectedResponse = new List<OASSushiswapPairDTO>{OASSushiswapPairDTO.getExample()};
-        response = (List<OASSushiswapPairDTO>) api.sushiswapGetPairsHistorical(params);
-        System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASSushiswapPairDTO>{OASSushiswapPairDTO.getExample()});
-        res.setHeader('Content-Type', 'text/plain');
-        res.setBody(js);
-        expectedResponse = new List<OASSushiswapPairDTO>{OASSushiswapPairDTO.getExample()};
-        response = (List<OASSushiswapPairDTO>) api.sushiswapGetPairsHistorical(params);
-        System.assertEquals(expectedResponse, response);
     }
 
     /**
@@ -766,20 +556,6 @@ private class OASSushiswapApiTest {
         expectedResponse = new List<OASSushiswapSwapDTO>{OASSushiswapSwapDTO.getExample()};
         response = (List<OASSushiswapSwapDTO>) api.sushiswapGetSwapsHistorical(params);
         System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASSushiswapSwapDTO>{OASSushiswapSwapDTO.getExample()});
-        res.setHeader('Content-Type', 'text/json');
-        res.setBody(js);
-        expectedResponse = new List<OASSushiswapSwapDTO>{OASSushiswapSwapDTO.getExample()};
-        response = (List<OASSushiswapSwapDTO>) api.sushiswapGetSwapsHistorical(params);
-        System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASSushiswapSwapDTO>{OASSushiswapSwapDTO.getExample()});
-        res.setHeader('Content-Type', 'text/plain');
-        res.setBody(js);
-        expectedResponse = new List<OASSushiswapSwapDTO>{OASSushiswapSwapDTO.getExample()};
-        response = (List<OASSushiswapSwapDTO>) api.sushiswapGetSwapsHistorical(params);
-        System.assertEquals(expectedResponse, response);
     }
 
     /**
@@ -812,20 +588,6 @@ private class OASSushiswapApiTest {
 
         js = JSON.serialize(new List<OASSushiswapTokenDayDataDTO>{OASSushiswapTokenDayDataDTO.getExample()});
         res.setHeader('Content-Type', 'application/json');
-        res.setBody(js);
-        expectedResponse = new List<OASSushiswapTokenDayDataDTO>{OASSushiswapTokenDayDataDTO.getExample()};
-        response = (List<OASSushiswapTokenDayDataDTO>) api.sushiswapGetTokenDayDataHistorical(params);
-        System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASSushiswapTokenDayDataDTO>{OASSushiswapTokenDayDataDTO.getExample()});
-        res.setHeader('Content-Type', 'text/json');
-        res.setBody(js);
-        expectedResponse = new List<OASSushiswapTokenDayDataDTO>{OASSushiswapTokenDayDataDTO.getExample()};
-        response = (List<OASSushiswapTokenDayDataDTO>) api.sushiswapGetTokenDayDataHistorical(params);
-        System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASSushiswapTokenDayDataDTO>{OASSushiswapTokenDayDataDTO.getExample()});
-        res.setHeader('Content-Type', 'text/plain');
         res.setBody(js);
         expectedResponse = new List<OASSushiswapTokenDayDataDTO>{OASSushiswapTokenDayDataDTO.getExample()};
         response = (List<OASSushiswapTokenDayDataDTO>) api.sushiswapGetTokenDayDataHistorical(params);
@@ -868,20 +630,6 @@ private class OASSushiswapApiTest {
         expectedResponse = new List<OASSushiswapTokenDTO>{OASSushiswapTokenDTO.getExample()};
         response = (List<OASSushiswapTokenDTO>) api.sushiswapGetTokensHistorical(params);
         System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASSushiswapTokenDTO>{OASSushiswapTokenDTO.getExample()});
-        res.setHeader('Content-Type', 'text/json');
-        res.setBody(js);
-        expectedResponse = new List<OASSushiswapTokenDTO>{OASSushiswapTokenDTO.getExample()};
-        response = (List<OASSushiswapTokenDTO>) api.sushiswapGetTokensHistorical(params);
-        System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASSushiswapTokenDTO>{OASSushiswapTokenDTO.getExample()});
-        res.setHeader('Content-Type', 'text/plain');
-        res.setBody(js);
-        expectedResponse = new List<OASSushiswapTokenDTO>{OASSushiswapTokenDTO.getExample()};
-        response = (List<OASSushiswapTokenDTO>) api.sushiswapGetTokensHistorical(params);
-        System.assertEquals(expectedResponse, response);
     }
 
     /**
@@ -914,20 +662,6 @@ private class OASSushiswapApiTest {
 
         js = JSON.serialize(new List<OASSushiswapTransactionDTO>{OASSushiswapTransactionDTO.getExample()});
         res.setHeader('Content-Type', 'application/json');
-        res.setBody(js);
-        expectedResponse = new List<OASSushiswapTransactionDTO>{OASSushiswapTransactionDTO.getExample()};
-        response = (List<OASSushiswapTransactionDTO>) api.sushiswapGetTransactionsHistorical(params);
-        System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASSushiswapTransactionDTO>{OASSushiswapTransactionDTO.getExample()});
-        res.setHeader('Content-Type', 'text/json');
-        res.setBody(js);
-        expectedResponse = new List<OASSushiswapTransactionDTO>{OASSushiswapTransactionDTO.getExample()};
-        response = (List<OASSushiswapTransactionDTO>) api.sushiswapGetTransactionsHistorical(params);
-        System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASSushiswapTransactionDTO>{OASSushiswapTransactionDTO.getExample()});
-        res.setHeader('Content-Type', 'text/plain');
         res.setBody(js);
         expectedResponse = new List<OASSushiswapTransactionDTO>{OASSushiswapTransactionDTO.getExample()};
         response = (List<OASSushiswapTransactionDTO>) api.sushiswapGetTransactionsHistorical(params);
@@ -968,20 +702,6 @@ private class OASSushiswapApiTest {
         expectedResponse = new List<OASSushiswapUserDTO>{OASSushiswapUserDTO.getExample()};
         response = (List<OASSushiswapUserDTO>) api.sushiswapGetUsersHistorical(params);
         System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASSushiswapUserDTO>{OASSushiswapUserDTO.getExample()});
-        res.setHeader('Content-Type', 'text/json');
-        res.setBody(js);
-        expectedResponse = new List<OASSushiswapUserDTO>{OASSushiswapUserDTO.getExample()};
-        response = (List<OASSushiswapUserDTO>) api.sushiswapGetUsersHistorical(params);
-        System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASSushiswapUserDTO>{OASSushiswapUserDTO.getExample()});
-        res.setHeader('Content-Type', 'text/plain');
-        res.setBody(js);
-        expectedResponse = new List<OASSushiswapUserDTO>{OASSushiswapUserDTO.getExample()};
-        response = (List<OASSushiswapUserDTO>) api.sushiswapGetUsersHistorical(params);
-        System.assertEquals(expectedResponse, response);
     }
 
     /**
@@ -1006,20 +726,6 @@ private class OASSushiswapApiTest {
 
         js = JSON.serialize(new List<OASSushiswapHourDataDTO>{OASSushiswapHourDataDTO.getExample()});
         res.setHeader('Content-Type', 'application/json');
-        res.setBody(js);
-        expectedResponse = new List<OASSushiswapHourDataDTO>{OASSushiswapHourDataDTO.getExample()};
-        response = (List<OASSushiswapHourDataDTO>) api.sushiswapHourDataCurrent();
-        System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASSushiswapHourDataDTO>{OASSushiswapHourDataDTO.getExample()});
-        res.setHeader('Content-Type', 'text/json');
-        res.setBody(js);
-        expectedResponse = new List<OASSushiswapHourDataDTO>{OASSushiswapHourDataDTO.getExample()};
-        response = (List<OASSushiswapHourDataDTO>) api.sushiswapHourDataCurrent();
-        System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASSushiswapHourDataDTO>{OASSushiswapHourDataDTO.getExample()});
-        res.setHeader('Content-Type', 'text/plain');
         res.setBody(js);
         expectedResponse = new List<OASSushiswapHourDataDTO>{OASSushiswapHourDataDTO.getExample()};
         response = (List<OASSushiswapHourDataDTO>) api.sushiswapHourDataCurrent();
@@ -1052,20 +758,6 @@ private class OASSushiswapApiTest {
         expectedResponse = new List<OASSushiswapLiquidityPositionSnapsho>{OASSushiswapLiquidityPositionSnapsho.getExample()};
         response = (List<OASSushiswapLiquidityPositionSnapsho>) api.sushiswapLiquidityPositionSnapshotsCurrent();
         System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASSushiswapLiquidityPositionSnapsho>{OASSushiswapLiquidityPositionSnapsho.getExample()});
-        res.setHeader('Content-Type', 'text/json');
-        res.setBody(js);
-        expectedResponse = new List<OASSushiswapLiquidityPositionSnapsho>{OASSushiswapLiquidityPositionSnapsho.getExample()};
-        response = (List<OASSushiswapLiquidityPositionSnapsho>) api.sushiswapLiquidityPositionSnapshotsCurrent();
-        System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASSushiswapLiquidityPositionSnapsho>{OASSushiswapLiquidityPositionSnapsho.getExample()});
-        res.setHeader('Content-Type', 'text/plain');
-        res.setBody(js);
-        expectedResponse = new List<OASSushiswapLiquidityPositionSnapsho>{OASSushiswapLiquidityPositionSnapsho.getExample()};
-        response = (List<OASSushiswapLiquidityPositionSnapsho>) api.sushiswapLiquidityPositionSnapshotsCurrent();
-        System.assertEquals(expectedResponse, response);
     }
 
     /**
@@ -1090,20 +782,6 @@ private class OASSushiswapApiTest {
 
         js = JSON.serialize(new List<OASSushiswapLiquidityPositionDTO>{OASSushiswapLiquidityPositionDTO.getExample()});
         res.setHeader('Content-Type', 'application/json');
-        res.setBody(js);
-        expectedResponse = new List<OASSushiswapLiquidityPositionDTO>{OASSushiswapLiquidityPositionDTO.getExample()};
-        response = (List<OASSushiswapLiquidityPositionDTO>) api.sushiswapLiquidityPositionsCurrent();
-        System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASSushiswapLiquidityPositionDTO>{OASSushiswapLiquidityPositionDTO.getExample()});
-        res.setHeader('Content-Type', 'text/json');
-        res.setBody(js);
-        expectedResponse = new List<OASSushiswapLiquidityPositionDTO>{OASSushiswapLiquidityPositionDTO.getExample()};
-        response = (List<OASSushiswapLiquidityPositionDTO>) api.sushiswapLiquidityPositionsCurrent();
-        System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASSushiswapLiquidityPositionDTO>{OASSushiswapLiquidityPositionDTO.getExample()});
-        res.setHeader('Content-Type', 'text/plain');
         res.setBody(js);
         expectedResponse = new List<OASSushiswapLiquidityPositionDTO>{OASSushiswapLiquidityPositionDTO.getExample()};
         response = (List<OASSushiswapLiquidityPositionDTO>) api.sushiswapLiquidityPositionsCurrent();
@@ -1136,20 +814,6 @@ private class OASSushiswapApiTest {
         expectedResponse = new List<OASSushiswapMintDTO>{OASSushiswapMintDTO.getExample()};
         response = (List<OASSushiswapMintDTO>) api.sushiswapMintsCurrent();
         System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASSushiswapMintDTO>{OASSushiswapMintDTO.getExample()});
-        res.setHeader('Content-Type', 'text/json');
-        res.setBody(js);
-        expectedResponse = new List<OASSushiswapMintDTO>{OASSushiswapMintDTO.getExample()};
-        response = (List<OASSushiswapMintDTO>) api.sushiswapMintsCurrent();
-        System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASSushiswapMintDTO>{OASSushiswapMintDTO.getExample()});
-        res.setHeader('Content-Type', 'text/plain');
-        res.setBody(js);
-        expectedResponse = new List<OASSushiswapMintDTO>{OASSushiswapMintDTO.getExample()};
-        response = (List<OASSushiswapMintDTO>) api.sushiswapMintsCurrent();
-        System.assertEquals(expectedResponse, response);
     }
 
     /**
@@ -1178,20 +842,6 @@ private class OASSushiswapApiTest {
         expectedResponse = new List<OASSushiswapPairDayDataDTO>{OASSushiswapPairDayDataDTO.getExample()};
         response = (List<OASSushiswapPairDayDataDTO>) api.sushiswapPairDayDataCurrent();
         System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASSushiswapPairDayDataDTO>{OASSushiswapPairDayDataDTO.getExample()});
-        res.setHeader('Content-Type', 'text/json');
-        res.setBody(js);
-        expectedResponse = new List<OASSushiswapPairDayDataDTO>{OASSushiswapPairDayDataDTO.getExample()};
-        response = (List<OASSushiswapPairDayDataDTO>) api.sushiswapPairDayDataCurrent();
-        System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASSushiswapPairDayDataDTO>{OASSushiswapPairDayDataDTO.getExample()});
-        res.setHeader('Content-Type', 'text/plain');
-        res.setBody(js);
-        expectedResponse = new List<OASSushiswapPairDayDataDTO>{OASSushiswapPairDayDataDTO.getExample()};
-        response = (List<OASSushiswapPairDayDataDTO>) api.sushiswapPairDayDataCurrent();
-        System.assertEquals(expectedResponse, response);
     }
 
     /**
@@ -1216,20 +866,6 @@ private class OASSushiswapApiTest {
 
         js = JSON.serialize(new List<OASSushiswapPairHourDataDTO>{OASSushiswapPairHourDataDTO.getExample()});
         res.setHeader('Content-Type', 'application/json');
-        res.setBody(js);
-        expectedResponse = new List<OASSushiswapPairHourDataDTO>{OASSushiswapPairHourDataDTO.getExample()};
-        response = (List<OASSushiswapPairHourDataDTO>) api.sushiswapPairHourDataCurrent();
-        System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASSushiswapPairHourDataDTO>{OASSushiswapPairHourDataDTO.getExample()});
-        res.setHeader('Content-Type', 'text/json');
-        res.setBody(js);
-        expectedResponse = new List<OASSushiswapPairHourDataDTO>{OASSushiswapPairHourDataDTO.getExample()};
-        response = (List<OASSushiswapPairHourDataDTO>) api.sushiswapPairHourDataCurrent();
-        System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASSushiswapPairHourDataDTO>{OASSushiswapPairHourDataDTO.getExample()});
-        res.setHeader('Content-Type', 'text/plain');
         res.setBody(js);
         expectedResponse = new List<OASSushiswapPairHourDataDTO>{OASSushiswapPairHourDataDTO.getExample()};
         response = (List<OASSushiswapPairHourDataDTO>) api.sushiswapPairHourDataCurrent();
@@ -1266,20 +902,6 @@ private class OASSushiswapApiTest {
         expectedResponse = new List<OASSushiswapPairDTO>{OASSushiswapPairDTO.getExample()};
         response = (List<OASSushiswapPairDTO>) api.sushiswapPairsCurrent(params);
         System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASSushiswapPairDTO>{OASSushiswapPairDTO.getExample()});
-        res.setHeader('Content-Type', 'text/json');
-        res.setBody(js);
-        expectedResponse = new List<OASSushiswapPairDTO>{OASSushiswapPairDTO.getExample()};
-        response = (List<OASSushiswapPairDTO>) api.sushiswapPairsCurrent(params);
-        System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASSushiswapPairDTO>{OASSushiswapPairDTO.getExample()});
-        res.setHeader('Content-Type', 'text/plain');
-        res.setBody(js);
-        expectedResponse = new List<OASSushiswapPairDTO>{OASSushiswapPairDTO.getExample()};
-        response = (List<OASSushiswapPairDTO>) api.sushiswapPairsCurrent(params);
-        System.assertEquals(expectedResponse, response);
     }
 
     /**
@@ -1312,20 +934,6 @@ private class OASSushiswapApiTest {
         expectedResponse = new List<OASSushiswapSwapDTO>{OASSushiswapSwapDTO.getExample()};
         response = (List<OASSushiswapSwapDTO>) api.sushiswapSwapsCurrent(params);
         System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASSushiswapSwapDTO>{OASSushiswapSwapDTO.getExample()});
-        res.setHeader('Content-Type', 'text/json');
-        res.setBody(js);
-        expectedResponse = new List<OASSushiswapSwapDTO>{OASSushiswapSwapDTO.getExample()};
-        response = (List<OASSushiswapSwapDTO>) api.sushiswapSwapsCurrent(params);
-        System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASSushiswapSwapDTO>{OASSushiswapSwapDTO.getExample()});
-        res.setHeader('Content-Type', 'text/plain');
-        res.setBody(js);
-        expectedResponse = new List<OASSushiswapSwapDTO>{OASSushiswapSwapDTO.getExample()};
-        response = (List<OASSushiswapSwapDTO>) api.sushiswapSwapsCurrent(params);
-        System.assertEquals(expectedResponse, response);
     }
 
     /**
@@ -1350,20 +958,6 @@ private class OASSushiswapApiTest {
 
         js = JSON.serialize(new List<OASSushiswapTokenDayDataDTO>{OASSushiswapTokenDayDataDTO.getExample()});
         res.setHeader('Content-Type', 'application/json');
-        res.setBody(js);
-        expectedResponse = new List<OASSushiswapTokenDayDataDTO>{OASSushiswapTokenDayDataDTO.getExample()};
-        response = (List<OASSushiswapTokenDayDataDTO>) api.sushiswapTokenDayDataCurrent();
-        System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASSushiswapTokenDayDataDTO>{OASSushiswapTokenDayDataDTO.getExample()});
-        res.setHeader('Content-Type', 'text/json');
-        res.setBody(js);
-        expectedResponse = new List<OASSushiswapTokenDayDataDTO>{OASSushiswapTokenDayDataDTO.getExample()};
-        response = (List<OASSushiswapTokenDayDataDTO>) api.sushiswapTokenDayDataCurrent();
-        System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASSushiswapTokenDayDataDTO>{OASSushiswapTokenDayDataDTO.getExample()});
-        res.setHeader('Content-Type', 'text/plain');
         res.setBody(js);
         expectedResponse = new List<OASSushiswapTokenDayDataDTO>{OASSushiswapTokenDayDataDTO.getExample()};
         response = (List<OASSushiswapTokenDayDataDTO>) api.sushiswapTokenDayDataCurrent();
@@ -1396,20 +990,6 @@ private class OASSushiswapApiTest {
         expectedResponse = new List<OASSushiswapTokenDTO>{OASSushiswapTokenDTO.getExample()};
         response = (List<OASSushiswapTokenDTO>) api.sushiswapTokensCurrent();
         System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASSushiswapTokenDTO>{OASSushiswapTokenDTO.getExample()});
-        res.setHeader('Content-Type', 'text/json');
-        res.setBody(js);
-        expectedResponse = new List<OASSushiswapTokenDTO>{OASSushiswapTokenDTO.getExample()};
-        response = (List<OASSushiswapTokenDTO>) api.sushiswapTokensCurrent();
-        System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASSushiswapTokenDTO>{OASSushiswapTokenDTO.getExample()});
-        res.setHeader('Content-Type', 'text/plain');
-        res.setBody(js);
-        expectedResponse = new List<OASSushiswapTokenDTO>{OASSushiswapTokenDTO.getExample()};
-        response = (List<OASSushiswapTokenDTO>) api.sushiswapTokensCurrent();
-        System.assertEquals(expectedResponse, response);
     }
 
     /**
@@ -1438,20 +1018,6 @@ private class OASSushiswapApiTest {
         expectedResponse = new List<OASSushiswapTransactionDTO>{OASSushiswapTransactionDTO.getExample()};
         response = (List<OASSushiswapTransactionDTO>) api.sushiswapTransactionsCurrent();
         System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASSushiswapTransactionDTO>{OASSushiswapTransactionDTO.getExample()});
-        res.setHeader('Content-Type', 'text/json');
-        res.setBody(js);
-        expectedResponse = new List<OASSushiswapTransactionDTO>{OASSushiswapTransactionDTO.getExample()};
-        response = (List<OASSushiswapTransactionDTO>) api.sushiswapTransactionsCurrent();
-        System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASSushiswapTransactionDTO>{OASSushiswapTransactionDTO.getExample()});
-        res.setHeader('Content-Type', 'text/plain');
-        res.setBody(js);
-        expectedResponse = new List<OASSushiswapTransactionDTO>{OASSushiswapTransactionDTO.getExample()};
-        response = (List<OASSushiswapTransactionDTO>) api.sushiswapTransactionsCurrent();
-        System.assertEquals(expectedResponse, response);
     }
 
     /**
@@ -1476,20 +1042,6 @@ private class OASSushiswapApiTest {
 
         js = JSON.serialize(new List<OASSushiswapUserDTO>{OASSushiswapUserDTO.getExample()});
         res.setHeader('Content-Type', 'application/json');
-        res.setBody(js);
-        expectedResponse = new List<OASSushiswapUserDTO>{OASSushiswapUserDTO.getExample()};
-        response = (List<OASSushiswapUserDTO>) api.sushiswapUsersCurrent();
-        System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASSushiswapUserDTO>{OASSushiswapUserDTO.getExample()});
-        res.setHeader('Content-Type', 'text/json');
-        res.setBody(js);
-        expectedResponse = new List<OASSushiswapUserDTO>{OASSushiswapUserDTO.getExample()};
-        response = (List<OASSushiswapUserDTO>) api.sushiswapUsersCurrent();
-        System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(new List<OASSushiswapUserDTO>{OASSushiswapUserDTO.getExample()});
-        res.setHeader('Content-Type', 'text/plain');
         res.setBody(js);
         expectedResponse = new List<OASSushiswapUserDTO>{OASSushiswapUserDTO.getExample()};
         response = (List<OASSushiswapUserDTO>) api.sushiswapUsersCurrent();

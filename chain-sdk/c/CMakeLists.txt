@@ -155,6 +155,7 @@ set(SRCS
     api/CowAPI.c
     api/CurveAPI.c
     api/DexAPI.c
+    api/MetadataAPI.c
     api/SushiswapAPI.c
     api/UniswapV2API.c
     api/UniswapV3API.c
@@ -269,6 +270,7 @@ set(HDRS
     api/CowAPI.h
     api/CurveAPI.h
     api/DexAPI.h
+    api/MetadataAPI.h
     api/SushiswapAPI.h
     api/UniswapV2API.h
     api/UniswapV3API.h
@@ -356,6 +358,7 @@ set(HDRS "")
 #    unit-tests/manual-CowAPI.c
 #    unit-tests/manual-CurveAPI.c
 #    unit-tests/manual-DexAPI.c
+#    unit-tests/manual-MetadataAPI.c
 #    unit-tests/manual-SushiswapAPI.c
 #    unit-tests/manual-UniswapV2API.c
 #    unit-tests/manual-UniswapV3API.c

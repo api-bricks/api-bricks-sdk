@@ -16,6 +16,9 @@ import (
 	"time"
 )
 
+// checks if the UniswapV3TickDayDataDTO type satisfies the MappedNullable interface at compile time
+var _ MappedNullable = &UniswapV3TickDayDataDTO{}
+
 // UniswapV3TickDayDataDTO Data accumulated and condensed into day stats for each exchange. Entity gets saved only if there is a change during the day
 type UniswapV3TickDayDataDTO struct {
 	EntryTime *time.Time `json:"entry_time,omitempty"`
@@ -80,7 +83,7 @@ func (o *UniswapV3TickDayDataDTO) GetEntryTime() time.Time {
 // and a boolean to check if the value has been set.
 func (o *UniswapV3TickDayDataDTO) GetEntryTimeOk() (*time.Time, bool) {
 	if o == nil || isNil(o.EntryTime) {
-    return nil, false
+		return nil, false
 	}
 	return o.EntryTime, true
 }
@@ -112,7 +115,7 @@ func (o *UniswapV3TickDayDataDTO) GetRecvTime() time.Time {
 // and a boolean to check if the value has been set.
 func (o *UniswapV3TickDayDataDTO) GetRecvTimeOk() (*time.Time, bool) {
 	if o == nil || isNil(o.RecvTime) {
-    return nil, false
+		return nil, false
 	}
 	return o.RecvTime, true
 }
@@ -144,7 +147,7 @@ func (o *UniswapV3TickDayDataDTO) GetBlockNumber() int64 {
 // and a boolean to check if the value has been set.
 func (o *UniswapV3TickDayDataDTO) GetBlockNumberOk() (*int64, bool) {
 	if o == nil || isNil(o.BlockNumber) {
-    return nil, false
+		return nil, false
 	}
 	return o.BlockNumber, true
 }
@@ -177,7 +180,7 @@ func (o *UniswapV3TickDayDataDTO) GetId() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *UniswapV3TickDayDataDTO) GetIdOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Id.Get(), o.Id.IsSet()
 }
@@ -218,7 +221,7 @@ func (o *UniswapV3TickDayDataDTO) GetDate() int32 {
 // and a boolean to check if the value has been set.
 func (o *UniswapV3TickDayDataDTO) GetDateOk() (*int32, bool) {
 	if o == nil || isNil(o.Date) {
-    return nil, false
+		return nil, false
 	}
 	return o.Date, true
 }
@@ -251,7 +254,7 @@ func (o *UniswapV3TickDayDataDTO) GetPool() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *UniswapV3TickDayDataDTO) GetPoolOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Pool.Get(), o.Pool.IsSet()
 }
@@ -293,7 +296,7 @@ func (o *UniswapV3TickDayDataDTO) GetTick() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *UniswapV3TickDayDataDTO) GetTickOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Tick.Get(), o.Tick.IsSet()
 }
@@ -335,7 +338,7 @@ func (o *UniswapV3TickDayDataDTO) GetLiquidityGross() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *UniswapV3TickDayDataDTO) GetLiquidityGrossOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.LiquidityGross.Get(), o.LiquidityGross.IsSet()
 }
@@ -377,7 +380,7 @@ func (o *UniswapV3TickDayDataDTO) GetLiquidityNet() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *UniswapV3TickDayDataDTO) GetLiquidityNetOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.LiquidityNet.Get(), o.LiquidityNet.IsSet()
 }
@@ -419,7 +422,7 @@ func (o *UniswapV3TickDayDataDTO) GetVolumeToken0() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *UniswapV3TickDayDataDTO) GetVolumeToken0Ok() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.VolumeToken0.Get(), o.VolumeToken0.IsSet()
 }
@@ -461,7 +464,7 @@ func (o *UniswapV3TickDayDataDTO) GetVolumeToken1() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *UniswapV3TickDayDataDTO) GetVolumeToken1Ok() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.VolumeToken1.Get(), o.VolumeToken1.IsSet()
 }
@@ -503,7 +506,7 @@ func (o *UniswapV3TickDayDataDTO) GetVolumeUsd() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *UniswapV3TickDayDataDTO) GetVolumeUsdOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.VolumeUsd.Get(), o.VolumeUsd.IsSet()
 }
@@ -545,7 +548,7 @@ func (o *UniswapV3TickDayDataDTO) GetFeesUsd() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *UniswapV3TickDayDataDTO) GetFeesUsdOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.FeesUsd.Get(), o.FeesUsd.IsSet()
 }
@@ -587,7 +590,7 @@ func (o *UniswapV3TickDayDataDTO) GetFeeGrowthOutside0x128() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *UniswapV3TickDayDataDTO) GetFeeGrowthOutside0x128Ok() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.FeeGrowthOutside0x128.Get(), o.FeeGrowthOutside0x128.IsSet()
 }
@@ -629,7 +632,7 @@ func (o *UniswapV3TickDayDataDTO) GetFeeGrowthOutside1x128() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *UniswapV3TickDayDataDTO) GetFeeGrowthOutside1x128Ok() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.FeeGrowthOutside1x128.Get(), o.FeeGrowthOutside1x128.IsSet()
 }
@@ -670,7 +673,7 @@ func (o *UniswapV3TickDayDataDTO) GetVid() int64 {
 // and a boolean to check if the value has been set.
 func (o *UniswapV3TickDayDataDTO) GetVidOk() (*int64, bool) {
 	if o == nil || isNil(o.Vid) {
-    return nil, false
+		return nil, false
 	}
 	return o.Vid, true
 }
@@ -690,6 +693,14 @@ func (o *UniswapV3TickDayDataDTO) SetVid(v int64) {
 }
 
 func (o UniswapV3TickDayDataDTO) MarshalJSON() ([]byte, error) {
+	toSerialize,err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
+}
+
+func (o UniswapV3TickDayDataDTO) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
 	if !isNil(o.EntryTime) {
 		toSerialize["entry_time"] = o.EntryTime
@@ -739,7 +750,7 @@ func (o UniswapV3TickDayDataDTO) MarshalJSON() ([]byte, error) {
 	if !isNil(o.Vid) {
 		toSerialize["vid"] = o.Vid
 	}
-	return json.Marshal(toSerialize)
+	return toSerialize, nil
 }
 
 type NullableUniswapV3TickDayDataDTO struct {

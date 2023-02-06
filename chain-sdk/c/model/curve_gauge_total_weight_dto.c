@@ -131,7 +131,7 @@ curve_gauge_total_weight_dto_t *curve_gauge_total_weight_dto_parseFromJSON(cJSON
     // curve_gauge_total_weight_dto->entry_time
     cJSON *entry_time = cJSON_GetObjectItemCaseSensitive(curve_gauge_total_weight_dtoJSON, "entry_time");
     if (entry_time) { 
-    if(!cJSON_IsString(entry_time))
+    if(!cJSON_IsString(entry_time) && !cJSON_IsNull(entry_time))
     {
     goto end; //DateTime
     }
@@ -140,7 +140,7 @@ curve_gauge_total_weight_dto_t *curve_gauge_total_weight_dto_parseFromJSON(cJSON
     // curve_gauge_total_weight_dto->recv_time
     cJSON *recv_time = cJSON_GetObjectItemCaseSensitive(curve_gauge_total_weight_dtoJSON, "recv_time");
     if (recv_time) { 
-    if(!cJSON_IsString(recv_time))
+    if(!cJSON_IsString(recv_time) && !cJSON_IsNull(recv_time))
     {
     goto end; //DateTime
     }
@@ -158,7 +158,7 @@ curve_gauge_total_weight_dto_t *curve_gauge_total_weight_dto_parseFromJSON(cJSON
     // curve_gauge_total_weight_dto->id
     cJSON *id = cJSON_GetObjectItemCaseSensitive(curve_gauge_total_weight_dtoJSON, "id");
     if (id) { 
-    if(!cJSON_IsString(id))
+    if(!cJSON_IsString(id) && !cJSON_IsNull(id))
     {
     goto end; //String
     }
@@ -167,7 +167,7 @@ curve_gauge_total_weight_dto_t *curve_gauge_total_weight_dto_parseFromJSON(cJSON
     // curve_gauge_total_weight_dto->time
     cJSON *time = cJSON_GetObjectItemCaseSensitive(curve_gauge_total_weight_dtoJSON, "time");
     if (time) { 
-    if(!cJSON_IsString(time))
+    if(!cJSON_IsString(time) && !cJSON_IsNull(time))
     {
     goto end; //String
     }
@@ -176,7 +176,7 @@ curve_gauge_total_weight_dto_t *curve_gauge_total_weight_dto_parseFromJSON(cJSON
     // curve_gauge_total_weight_dto->weight
     cJSON *weight = cJSON_GetObjectItemCaseSensitive(curve_gauge_total_weight_dtoJSON, "weight");
     if (weight) { 
-    if(!cJSON_IsString(weight))
+    if(!cJSON_IsString(weight) && !cJSON_IsNull(weight))
     {
     goto end; //String
     }
@@ -193,12 +193,12 @@ curve_gauge_total_weight_dto_t *curve_gauge_total_weight_dto_parseFromJSON(cJSON
 
 
     curve_gauge_total_weight_dto_local_var = curve_gauge_total_weight_dto_create (
-        entry_time ? strdup(entry_time->valuestring) : NULL,
-        recv_time ? strdup(recv_time->valuestring) : NULL,
+        entry_time && !cJSON_IsNull(entry_time) ? strdup(entry_time->valuestring) : NULL,
+        recv_time && !cJSON_IsNull(recv_time) ? strdup(recv_time->valuestring) : NULL,
         block_number ? block_number->valuedouble : 0,
-        id ? strdup(id->valuestring) : NULL,
-        time ? strdup(time->valuestring) : NULL,
-        weight ? strdup(weight->valuestring) : NULL,
+        id && !cJSON_IsNull(id) ? strdup(id->valuestring) : NULL,
+        time && !cJSON_IsNull(time) ? strdup(time->valuestring) : NULL,
+        weight && !cJSON_IsNull(weight) ? strdup(weight->valuestring) : NULL,
         vid ? vid->valuedouble : 0
         );
 

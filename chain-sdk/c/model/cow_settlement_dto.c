@@ -145,7 +145,7 @@ cow_settlement_dto_t *cow_settlement_dto_parseFromJSON(cJSON *cow_settlement_dto
     // cow_settlement_dto->entry_time
     cJSON *entry_time = cJSON_GetObjectItemCaseSensitive(cow_settlement_dtoJSON, "entry_time");
     if (entry_time) { 
-    if(!cJSON_IsString(entry_time))
+    if(!cJSON_IsString(entry_time) && !cJSON_IsNull(entry_time))
     {
     goto end; //DateTime
     }
@@ -154,7 +154,7 @@ cow_settlement_dto_t *cow_settlement_dto_parseFromJSON(cJSON *cow_settlement_dto
     // cow_settlement_dto->recv_time
     cJSON *recv_time = cJSON_GetObjectItemCaseSensitive(cow_settlement_dtoJSON, "recv_time");
     if (recv_time) { 
-    if(!cJSON_IsString(recv_time))
+    if(!cJSON_IsString(recv_time) && !cJSON_IsNull(recv_time))
     {
     goto end; //DateTime
     }
@@ -172,7 +172,7 @@ cow_settlement_dto_t *cow_settlement_dto_parseFromJSON(cJSON *cow_settlement_dto
     // cow_settlement_dto->id
     cJSON *id = cJSON_GetObjectItemCaseSensitive(cow_settlement_dtoJSON, "id");
     if (id) { 
-    if(!cJSON_IsString(id))
+    if(!cJSON_IsString(id) && !cJSON_IsNull(id))
     {
     goto end; //String
     }
@@ -181,7 +181,7 @@ cow_settlement_dto_t *cow_settlement_dto_parseFromJSON(cJSON *cow_settlement_dto
     // cow_settlement_dto->solver
     cJSON *solver = cJSON_GetObjectItemCaseSensitive(cow_settlement_dtoJSON, "solver");
     if (solver) { 
-    if(!cJSON_IsString(solver))
+    if(!cJSON_IsString(solver) && !cJSON_IsNull(solver))
     {
     goto end; //String
     }
@@ -190,7 +190,7 @@ cow_settlement_dto_t *cow_settlement_dto_parseFromJSON(cJSON *cow_settlement_dto
     // cow_settlement_dto->tx_hash
     cJSON *tx_hash = cJSON_GetObjectItemCaseSensitive(cow_settlement_dtoJSON, "tx_hash");
     if (tx_hash) { 
-    if(!cJSON_IsString(tx_hash))
+    if(!cJSON_IsString(tx_hash) && !cJSON_IsNull(tx_hash))
     {
     goto end; //String
     }
@@ -199,7 +199,7 @@ cow_settlement_dto_t *cow_settlement_dto_parseFromJSON(cJSON *cow_settlement_dto
     // cow_settlement_dto->first_trade_timestamp
     cJSON *first_trade_timestamp = cJSON_GetObjectItemCaseSensitive(cow_settlement_dtoJSON, "first_trade_timestamp");
     if (first_trade_timestamp) { 
-    if(!cJSON_IsString(first_trade_timestamp))
+    if(!cJSON_IsString(first_trade_timestamp) && !cJSON_IsNull(first_trade_timestamp))
     {
     goto end; //String
     }
@@ -216,13 +216,13 @@ cow_settlement_dto_t *cow_settlement_dto_parseFromJSON(cJSON *cow_settlement_dto
 
 
     cow_settlement_dto_local_var = cow_settlement_dto_create (
-        entry_time ? strdup(entry_time->valuestring) : NULL,
-        recv_time ? strdup(recv_time->valuestring) : NULL,
+        entry_time && !cJSON_IsNull(entry_time) ? strdup(entry_time->valuestring) : NULL,
+        recv_time && !cJSON_IsNull(recv_time) ? strdup(recv_time->valuestring) : NULL,
         block_number ? block_number->valuedouble : 0,
-        id ? strdup(id->valuestring) : NULL,
-        solver ? strdup(solver->valuestring) : NULL,
-        tx_hash ? strdup(tx_hash->valuestring) : NULL,
-        first_trade_timestamp ? strdup(first_trade_timestamp->valuestring) : NULL,
+        id && !cJSON_IsNull(id) ? strdup(id->valuestring) : NULL,
+        solver && !cJSON_IsNull(solver) ? strdup(solver->valuestring) : NULL,
+        tx_hash && !cJSON_IsNull(tx_hash) ? strdup(tx_hash->valuestring) : NULL,
+        first_trade_timestamp && !cJSON_IsNull(first_trade_timestamp) ? strdup(first_trade_timestamp->valuestring) : NULL,
         vid ? vid->valuedouble : 0
         );
 

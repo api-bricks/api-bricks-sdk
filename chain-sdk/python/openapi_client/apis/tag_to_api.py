@@ -7,6 +7,7 @@ from openapi_client.apis.tags.uniswap_v3_api import UniswapV3Api
 from openapi_client.apis.tags.curve_api import CurveApi
 from openapi_client.apis.tags.cow_api import CowApi
 from openapi_client.apis.tags.dex_api import DexApi
+from openapi_client.apis.tags.metadata_api import MetadataApi
 
 TagToApi = typing_extensions.TypedDict(
     'TagToApi',
@@ -17,6 +18,7 @@ TagToApi = typing_extensions.TypedDict(
         TagValues.CURVE: CurveApi,
         TagValues.COW: CowApi,
         TagValues.DEX: DexApi,
+        TagValues.METADATA: MetadataApi,
     }
 )
 
@@ -28,5 +30,6 @@ tag_to_api = TagToApi(
         TagValues.CURVE: CurveApi,
         TagValues.COW: CowApi,
         TagValues.DEX: DexApi,
+        TagValues.METADATA: MetadataApi,
     }
 )

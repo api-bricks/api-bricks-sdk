@@ -204,3 +204,5 @@ export class DexTradeDTO {
     }
 }
 
+export namespace DexTradeDTO {
+}

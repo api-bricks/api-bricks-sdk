@@ -136,12 +136,12 @@ list_t* DexAPI_dexGetDepositsHistorical(apiClient_t *apiClient, long startBlock,
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **apiClient** | **apiClient_t \*** | context containing the client configuration |
-**startBlock** | **long** |  | [optional] 
-**endBlock** | **long** |  | [optional] 
-**startDate** | **char** |  | [optional] 
-**endDate** | **char** |  | [optional] 
-**id** | **char \*** |  | [optional] 
-**user** | **char \*** |  | [optional] 
+**startBlock** | **long** | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
+**endBlock** | **long** | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
+**startDate** | **char** | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
+**endDate** | **char** | The end date of timeframe. | [optional] 
+**id** | **char \*** | Identifier, format: (transaction hash)-(token id). | [optional] 
+**user** | **char \*** | User address. | [optional] 
 
 ### Return type
 
@@ -172,13 +172,13 @@ list_t* DexAPI_dexGetOrdersHistorical(apiClient_t *apiClient, long startBlock, l
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **apiClient** | **apiClient_t \*** | context containing the client configuration |
-**startBlock** | **long** |  | [optional] 
-**endBlock** | **long** |  | [optional] 
-**startDate** | **char** |  | [optional] 
-**endDate** | **char** |  | [optional] 
-**id** | **char \*** |  | [optional] 
-**buy_token** | **char \*** |  | [optional] 
-**sell_token** | **char \*** |  | [optional] 
+**startBlock** | **long** | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
+**endBlock** | **long** | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
+**startDate** | **char** | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
+**endDate** | **char** | The end date of timeframe. | [optional] 
+**id** | **char \*** | Identifier, format: (owner address)-(order id) | [optional] 
+**buy_token** | **char \*** | Identifier of token that was bought. | [optional] 
+**sell_token** | **char \*** | Identifier of token that was sold. | [optional] 
 
 ### Return type
 
@@ -209,11 +209,11 @@ list_t* DexAPI_dexGetPricesHistorical(apiClient_t *apiClient, long startBlock, l
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **apiClient** | **apiClient_t \*** | context containing the client configuration |
-**startBlock** | **long** |  | [optional] 
-**endBlock** | **long** |  | [optional] 
-**startDate** | **char** |  | [optional] 
-**endDate** | **char** |  | [optional] 
-**id** | **char \*** |  | [optional] 
+**startBlock** | **long** | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
+**endBlock** | **long** | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
+**startDate** | **char** | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
+**endDate** | **char** | The end date of timeframe. | [optional] 
+**id** | **char \*** | Identifier, format: (token id)-(batch id). | [optional] 
 
 ### Return type
 
@@ -424,11 +424,11 @@ list_t* DexAPI_dexGetWithdrawRequestsHistorical(apiClient_t *apiClient, long sta
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **apiClient** | **apiClient_t \*** | context containing the client configuration |
-**startBlock** | **long** |  | [optional] 
-**endBlock** | **long** |  | [optional] 
-**startDate** | **char** |  | [optional] 
-**endDate** | **char** |  | [optional] 
-**id** | **char \*** |  | [optional] 
+**startBlock** | **long** | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
+**endBlock** | **long** | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
+**startDate** | **char** | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
+**endDate** | **char** | The end date of timeframe. | [optional] 
+**id** | **char \*** | Identifier, format: (transaction hash)-(id). | [optional] 
 **user** | **char \*** |  | [optional] 
 
 ### Return type
@@ -460,11 +460,11 @@ list_t* DexAPI_dexGetWithdrawsHistorical(apiClient_t *apiClient, long startBlock
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **apiClient** | **apiClient_t \*** | context containing the client configuration |
-**startBlock** | **long** |  | [optional] 
-**endBlock** | **long** |  | [optional] 
-**startDate** | **char** |  | [optional] 
-**endDate** | **char** |  | [optional] 
-**id** | **char \*** |  | [optional] 
+**startBlock** | **long** | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
+**endBlock** | **long** | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
+**startDate** | **char** | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
+**endDate** | **char** | The end date of timeframe. | [optional] 
+**id** | **char \*** | Identifier, format: (transaction hash)-(id). | [optional] 
 **user** | **char \*** |  | [optional] 
 
 ### Return type

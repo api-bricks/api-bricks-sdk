@@ -53,6 +53,7 @@ docs/DexTradeDTO.md
 docs/DexUserDTO.md
 docs/DexWithdrawDTO.md
 docs/DexWithdrawRequestDTO.md
+docs/MetadataApi.md
 docs/NumericsBigInteger.md
 docs/SushiswapApi.md
 docs/SushiswapBundleDTO.md
@@ -109,6 +110,7 @@ docs/UniswapV3UniswapDayDataDTO.md
 src/PSOpenAPITools/Api/CowApi.ps1
 src/PSOpenAPITools/Api/CurveApi.ps1
 src/PSOpenAPITools/Api/DexApi.ps1
+src/PSOpenAPITools/Api/MetadataApi.ps1
 src/PSOpenAPITools/Api/SushiswapApi.ps1
 src/PSOpenAPITools/Api/UniswapV2Api.ps1
 src/PSOpenAPITools/Api/UniswapV3Api.ps1
@@ -221,6 +223,7 @@ src/PSOpenAPITools/en-US/about_PSOpenAPITools.help.txt
 tests/Api/CowApi.Tests.ps1
 tests/Api/CurveApi.Tests.ps1
 tests/Api/DexApi.Tests.ps1
+tests/Api/MetadataApi.Tests.ps1
 tests/Api/SushiswapApi.Tests.ps1
 tests/Api/UniswapV2Api.Tests.ps1
 tests/Api/UniswapV3Api.Tests.ps1

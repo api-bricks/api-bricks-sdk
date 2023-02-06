@@ -159,7 +159,7 @@ curve_daily_volume_dto_t *curve_daily_volume_dto_parseFromJSON(cJSON *curve_dail
     // curve_daily_volume_dto->entry_time
     cJSON *entry_time = cJSON_GetObjectItemCaseSensitive(curve_daily_volume_dtoJSON, "entry_time");
     if (entry_time) { 
-    if(!cJSON_IsString(entry_time))
+    if(!cJSON_IsString(entry_time) && !cJSON_IsNull(entry_time))
     {
     goto end; //DateTime
     }
@@ -168,7 +168,7 @@ curve_daily_volume_dto_t *curve_daily_volume_dto_parseFromJSON(cJSON *curve_dail
     // curve_daily_volume_dto->recv_time
     cJSON *recv_time = cJSON_GetObjectItemCaseSensitive(curve_daily_volume_dtoJSON, "recv_time");
     if (recv_time) { 
-    if(!cJSON_IsString(recv_time))
+    if(!cJSON_IsString(recv_time) && !cJSON_IsNull(recv_time))
     {
     goto end; //DateTime
     }
@@ -186,7 +186,7 @@ curve_daily_volume_dto_t *curve_daily_volume_dto_parseFromJSON(cJSON *curve_dail
     // curve_daily_volume_dto->id
     cJSON *id = cJSON_GetObjectItemCaseSensitive(curve_daily_volume_dtoJSON, "id");
     if (id) { 
-    if(!cJSON_IsString(id))
+    if(!cJSON_IsString(id) && !cJSON_IsNull(id))
     {
     goto end; //String
     }
@@ -195,7 +195,7 @@ curve_daily_volume_dto_t *curve_daily_volume_dto_parseFromJSON(cJSON *curve_dail
     // curve_daily_volume_dto->pool
     cJSON *pool = cJSON_GetObjectItemCaseSensitive(curve_daily_volume_dtoJSON, "pool");
     if (pool) { 
-    if(!cJSON_IsString(pool))
+    if(!cJSON_IsString(pool) && !cJSON_IsNull(pool))
     {
     goto end; //String
     }
@@ -204,7 +204,7 @@ curve_daily_volume_dto_t *curve_daily_volume_dto_parseFromJSON(cJSON *curve_dail
     // curve_daily_volume_dto->timestamp
     cJSON *timestamp = cJSON_GetObjectItemCaseSensitive(curve_daily_volume_dtoJSON, "timestamp");
     if (timestamp) { 
-    if(!cJSON_IsString(timestamp))
+    if(!cJSON_IsString(timestamp) && !cJSON_IsNull(timestamp))
     {
     goto end; //String
     }
@@ -213,7 +213,7 @@ curve_daily_volume_dto_t *curve_daily_volume_dto_parseFromJSON(cJSON *curve_dail
     // curve_daily_volume_dto->volume
     cJSON *volume = cJSON_GetObjectItemCaseSensitive(curve_daily_volume_dtoJSON, "volume");
     if (volume) { 
-    if(!cJSON_IsString(volume))
+    if(!cJSON_IsString(volume) && !cJSON_IsNull(volume))
     {
     goto end; //String
     }
@@ -231,7 +231,7 @@ curve_daily_volume_dto_t *curve_daily_volume_dto_parseFromJSON(cJSON *curve_dail
     // curve_daily_volume_dto->block_range
     cJSON *block_range = cJSON_GetObjectItemCaseSensitive(curve_daily_volume_dtoJSON, "block_range");
     if (block_range) { 
-    if(!cJSON_IsString(block_range))
+    if(!cJSON_IsString(block_range) && !cJSON_IsNull(block_range))
     {
     goto end; //String
     }
@@ -239,15 +239,15 @@ curve_daily_volume_dto_t *curve_daily_volume_dto_parseFromJSON(cJSON *curve_dail
 
 
     curve_daily_volume_dto_local_var = curve_daily_volume_dto_create (
-        entry_time ? strdup(entry_time->valuestring) : NULL,
-        recv_time ? strdup(recv_time->valuestring) : NULL,
+        entry_time && !cJSON_IsNull(entry_time) ? strdup(entry_time->valuestring) : NULL,
+        recv_time && !cJSON_IsNull(recv_time) ? strdup(recv_time->valuestring) : NULL,
         block_number ? block_number->valuedouble : 0,
-        id ? strdup(id->valuestring) : NULL,
-        pool ? strdup(pool->valuestring) : NULL,
-        timestamp ? strdup(timestamp->valuestring) : NULL,
-        volume ? strdup(volume->valuestring) : NULL,
+        id && !cJSON_IsNull(id) ? strdup(id->valuestring) : NULL,
+        pool && !cJSON_IsNull(pool) ? strdup(pool->valuestring) : NULL,
+        timestamp && !cJSON_IsNull(timestamp) ? strdup(timestamp->valuestring) : NULL,
+        volume && !cJSON_IsNull(volume) ? strdup(volume->valuestring) : NULL,
         vid ? vid->valuedouble : 0,
-        block_range ? strdup(block_range->valuestring) : NULL
+        block_range && !cJSON_IsNull(block_range) ? strdup(block_range->valuestring) : NULL
         );
 
     return curve_daily_volume_dto_local_var;

@@ -338,18 +338,25 @@ class UniswapV2Api {
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   ///
   /// * [int] endBlock:
+  ///   The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
   ///
   /// * [DateTime] startDate:
+  ///   The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
   ///
   /// * [DateTime] endDate:
+  ///   The end date of timeframe.
   ///
   /// * [String] id:
+  ///   Identifier, format: (pair address)-(user address)
   ///
   /// * [String] user:
+  ///   Reference to user.
   ///
   /// * [String] pair:
+  ///   Reference to the pair liquidity is being provided on.
   Future<Response> uniswapV2GetLiquidityPositionSnapshotsHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, String? user, String? pair, }) async {
     // ignore: prefer_const_declarations
     final path = r'/dapps/uniswapv2/liquidityPositionSnapshots/historical';
@@ -404,18 +411,25 @@ class UniswapV2Api {
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   ///
   /// * [int] endBlock:
+  ///   The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
   ///
   /// * [DateTime] startDate:
+  ///   The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
   ///
   /// * [DateTime] endDate:
+  ///   The end date of timeframe.
   ///
   /// * [String] id:
+  ///   Identifier, format: (pair address)-(user address)
   ///
   /// * [String] user:
+  ///   Reference to user.
   ///
   /// * [String] pair:
+  ///   Reference to the pair liquidity is being provided on.
   Future<List<UniswapV2LiquidityPositionSnapshotDTO>?> uniswapV2GetLiquidityPositionSnapshotsHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, String? user, String? pair, }) async {
     final response = await uniswapV2GetLiquidityPositionSnapshotsHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, id: id, user: user, pair: pair, );
     if (response.statusCode >= HttpStatus.badRequest) {

@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.time.OffsetDateTime;
 import org.openapitools.client.model.NumericsBigInteger;
@@ -51,8 +49,7 @@ import org.openapitools.client.JSON;
 /**
  * Information about a pool. Includes references to each token within the pool, volume information, liquidity information, and more. The pool entity mirrors the pool smart contract, and also contains aggregated information about use.
  */
-@ApiModel(description = "Information about a pool. Includes references to each token within the pool, volume information, liquidity information, and more. The pool entity mirrors the pool smart contract, and also contains aggregated information about use.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-30T14:42:00.397192Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-06T14:47:06.037855Z[Etc/UTC]")
 public class UniswapV3PoolDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -208,7 +205,6 @@ public class UniswapV3PoolDTO {
    * @return entryTime
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public OffsetDateTime getEntryTime() {
     return entryTime;
@@ -231,7 +227,6 @@ public class UniswapV3PoolDTO {
    * @return recvTime
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public OffsetDateTime getRecvTime() {
     return recvTime;
@@ -254,7 +249,6 @@ public class UniswapV3PoolDTO {
    * @return blockNumber
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Number of block in which entity was recorded.")
 
   public Long getBlockNumber() {
     return blockNumber;
@@ -277,7 +271,6 @@ public class UniswapV3PoolDTO {
    * @return vid
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public Long getVid() {
     return vid;
@@ -300,7 +293,6 @@ public class UniswapV3PoolDTO {
    * @return id
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Pool address.")
 
   public String getId() {
     return id;
@@ -323,7 +315,6 @@ public class UniswapV3PoolDTO {
    * @return createdAtTimestamp
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Creation time.")
 
   public OffsetDateTime getCreatedAtTimestamp() {
     return createdAtTimestamp;
@@ -346,7 +337,6 @@ public class UniswapV3PoolDTO {
    * @return token0
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Reference to token0 as stored in pool contract.")
 
   public String getToken0() {
     return token0;
@@ -369,7 +359,6 @@ public class UniswapV3PoolDTO {
    * @return token1
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Reference to token1 as stored in pool contract.")
 
   public String getToken1() {
     return token1;
@@ -392,7 +381,6 @@ public class UniswapV3PoolDTO {
    * @return feeTier
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public NumericsBigInteger getFeeTier() {
     return feeTier;
@@ -415,7 +403,6 @@ public class UniswapV3PoolDTO {
    * @return liquidity
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public NumericsBigInteger getLiquidity() {
     return liquidity;
@@ -438,7 +425,6 @@ public class UniswapV3PoolDTO {
    * @return sqrtPrice
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public NumericsBigInteger getSqrtPrice() {
     return sqrtPrice;
@@ -461,7 +447,6 @@ public class UniswapV3PoolDTO {
    * @return feeGrowthGlobal0x128
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public NumericsBigInteger getFeeGrowthGlobal0x128() {
     return feeGrowthGlobal0x128;
@@ -484,7 +469,6 @@ public class UniswapV3PoolDTO {
    * @return feeGrowthGlobal1x128
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public NumericsBigInteger getFeeGrowthGlobal1x128() {
     return feeGrowthGlobal1x128;
@@ -507,7 +491,6 @@ public class UniswapV3PoolDTO {
    * @return token0Price
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Token0 per token1.")
 
   public String getToken0Price() {
     return token0Price;
@@ -530,7 +513,6 @@ public class UniswapV3PoolDTO {
    * @return token1Price
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Token1 per token0.")
 
   public String getToken1Price() {
     return token1Price;
@@ -553,7 +535,6 @@ public class UniswapV3PoolDTO {
    * @return tick
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public NumericsBigInteger getTick() {
     return tick;
@@ -576,7 +557,6 @@ public class UniswapV3PoolDTO {
    * @return observationIndex
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public NumericsBigInteger getObservationIndex() {
     return observationIndex;
@@ -599,7 +579,6 @@ public class UniswapV3PoolDTO {
    * @return volumeToken0
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "All time token0 swapped.")
 
   public String getVolumeToken0() {
     return volumeToken0;
@@ -622,7 +601,6 @@ public class UniswapV3PoolDTO {
    * @return volumeToken1
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "All time token1 swapped.")
 
   public String getVolumeToken1() {
     return volumeToken1;
@@ -645,7 +623,6 @@ public class UniswapV3PoolDTO {
    * @return volumeUsd
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "All time USD swapped.")
 
   public String getVolumeUsd() {
     return volumeUsd;
@@ -668,7 +645,6 @@ public class UniswapV3PoolDTO {
    * @return untrackedVolumeUsd
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "All time USD swapped, unfiltered for unreliable USD pools.")
 
   public String getUntrackedVolumeUsd() {
     return untrackedVolumeUsd;
@@ -691,7 +667,6 @@ public class UniswapV3PoolDTO {
    * @return feesUsd
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Fees in USD.")
 
   public String getFeesUsd() {
     return feesUsd;
@@ -714,7 +689,6 @@ public class UniswapV3PoolDTO {
    * @return txCount
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public NumericsBigInteger getTxCount() {
     return txCount;
@@ -737,7 +711,6 @@ public class UniswapV3PoolDTO {
    * @return collectedFeesToken0
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "All time fees collected token0.")
 
   public String getCollectedFeesToken0() {
     return collectedFeesToken0;
@@ -760,7 +733,6 @@ public class UniswapV3PoolDTO {
    * @return collectedFeesToken1
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "All time fees collected token1.")
 
   public String getCollectedFeesToken1() {
     return collectedFeesToken1;
@@ -783,7 +755,6 @@ public class UniswapV3PoolDTO {
    * @return collectedFeesUsd
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "All time fees collected derived USD.")
 
   public String getCollectedFeesUsd() {
     return collectedFeesUsd;
@@ -806,7 +777,6 @@ public class UniswapV3PoolDTO {
    * @return totalValueLockedToken0
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Total token 0 across all ticks.")
 
   public String getTotalValueLockedToken0() {
     return totalValueLockedToken0;
@@ -829,7 +799,6 @@ public class UniswapV3PoolDTO {
    * @return totalValueLockedToken1
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getTotalValueLockedToken1() {
     return totalValueLockedToken1;
@@ -852,7 +821,6 @@ public class UniswapV3PoolDTO {
    * @return totalValueLockedEth
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Total token 1 across all ticks.")
 
   public String getTotalValueLockedEth() {
     return totalValueLockedEth;
@@ -875,7 +843,6 @@ public class UniswapV3PoolDTO {
    * @return totalValueLockedUsd
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Total value locked USD.")
 
   public String getTotalValueLockedUsd() {
     return totalValueLockedUsd;
@@ -898,7 +865,6 @@ public class UniswapV3PoolDTO {
    * @return totalValueLockedUsdUntracked
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Total value locked derived ETH.")
 
   public String getTotalValueLockedUsdUntracked() {
     return totalValueLockedUsdUntracked;
@@ -921,7 +887,6 @@ public class UniswapV3PoolDTO {
    * @return liquidityProviderCount
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Liquidity providers count, used to detect new exchanges.")
 
   public String getLiquidityProviderCount() {
     return liquidityProviderCount;
@@ -938,7 +903,6 @@ public class UniswapV3PoolDTO {
    * @return evaluatedAsk
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public Double getEvaluatedAsk() {
     return evaluatedAsk;

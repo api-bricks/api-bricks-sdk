@@ -6,6 +6,7 @@ README.md
 docs/apis/tags/CowApi.md
 docs/apis/tags/CurveApi.md
 docs/apis/tags/DexApi.md
+docs/apis/tags/MetadataApi.md
 docs/apis/tags/SushiswapApi.md
 docs/apis/tags/UniswapV2Api.md
 docs/apis/tags/UniswapV3Api.md
@@ -114,6 +115,7 @@ openapi_client/apis/__init__.py
 openapi_client/apis/tags/cow_api.py
 openapi_client/apis/tags/curve_api.py
 openapi_client/apis/tags/dex_api.py
+openapi_client/apis/tags/metadata_api.py
 openapi_client/apis/tags/sushiswap_api.py
 openapi_client/apis/tags/uniswap_v2_api.py
 openapi_client/apis/tags/uniswap_v3_api.py

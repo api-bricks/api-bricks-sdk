@@ -246,13 +246,13 @@ import OnChainDappsRestApi from 'on_chain_dapps_rest_api';
 
 let apiInstance = new OnChainDappsRestApi.UniswapV2Api();
 let opts = {
-  'startBlock': 789, // Number | 
-  'endBlock': 789, // Number | 
-  'startDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
-  'endDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
-  'id': "id_example", // String | 
-  'user': "user_example", // String | 
-  'pair': "pair_example" // String | 
+  'startBlock': 789, // Number | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+  'endBlock': 789, // Number | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+  'startDate': new Date("2013-10-20T19:20:30+01:00"), // Date | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+  'endDate': new Date("2013-10-20T19:20:30+01:00"), // Date | The end date of timeframe.
+  'id': "id_example", // String | Identifier, format: (pair address)-(user address)
+  'user': "user_example", // String | Reference to user.
+  'pair': "pair_example" // String | Reference to the pair liquidity is being provided on.
 };
 apiInstance.uniswapV2GetLiquidityPositionSnapshotsHistorical(opts, (error, data, response) => {
   if (error) {
@@ -268,13 +268,13 @@ apiInstance.uniswapV2GetLiquidityPositionSnapshotsHistorical(opts, (error, data,
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startBlock** | **Number**|  | [optional] 
- **endBlock** | **Number**|  | [optional] 
- **startDate** | **Date**|  | [optional] 
- **endDate** | **Date**|  | [optional] 
- **id** | **String**|  | [optional] 
- **user** | **String**|  | [optional] 
- **pair** | **String**|  | [optional] 
+ **startBlock** | **Number**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
+ **endBlock** | **Number**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
+ **startDate** | **Date**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
+ **endDate** | **Date**| The end date of timeframe. | [optional] 
+ **id** | **String**| Identifier, format: (pair address)-(user address) | [optional] 
+ **user** | **String**| Reference to user. | [optional] 
+ **pair** | **String**| Reference to the pair liquidity is being provided on. | [optional] 
 
 ### Return type
 

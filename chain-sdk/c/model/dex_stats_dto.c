@@ -175,7 +175,7 @@ dex_stats_dto_t *dex_stats_dto_parseFromJSON(cJSON *dex_stats_dtoJSON){
     // dex_stats_dto->entry_time
     cJSON *entry_time = cJSON_GetObjectItemCaseSensitive(dex_stats_dtoJSON, "entry_time");
     if (entry_time) { 
-    if(!cJSON_IsString(entry_time))
+    if(!cJSON_IsString(entry_time) && !cJSON_IsNull(entry_time))
     {
     goto end; //DateTime
     }
@@ -184,7 +184,7 @@ dex_stats_dto_t *dex_stats_dto_parseFromJSON(cJSON *dex_stats_dtoJSON){
     // dex_stats_dto->recv_time
     cJSON *recv_time = cJSON_GetObjectItemCaseSensitive(dex_stats_dtoJSON, "recv_time");
     if (recv_time) { 
-    if(!cJSON_IsString(recv_time))
+    if(!cJSON_IsString(recv_time) && !cJSON_IsNull(recv_time))
     {
     goto end; //DateTime
     }
@@ -202,7 +202,7 @@ dex_stats_dto_t *dex_stats_dto_parseFromJSON(cJSON *dex_stats_dtoJSON){
     // dex_stats_dto->id
     cJSON *id = cJSON_GetObjectItemCaseSensitive(dex_stats_dtoJSON, "id");
     if (id) { 
-    if(!cJSON_IsString(id))
+    if(!cJSON_IsString(id) && !cJSON_IsNull(id))
     {
     goto end; //String
     }
@@ -211,7 +211,7 @@ dex_stats_dto_t *dex_stats_dto_parseFromJSON(cJSON *dex_stats_dtoJSON){
     // dex_stats_dto->volume_in_owl
     cJSON *volume_in_owl = cJSON_GetObjectItemCaseSensitive(dex_stats_dtoJSON, "volume_in_owl");
     if (volume_in_owl) { 
-    if(!cJSON_IsString(volume_in_owl))
+    if(!cJSON_IsString(volume_in_owl) && !cJSON_IsNull(volume_in_owl))
     {
     goto end; //String
     }
@@ -220,7 +220,7 @@ dex_stats_dto_t *dex_stats_dto_parseFromJSON(cJSON *dex_stats_dtoJSON){
     // dex_stats_dto->utility_in_owl
     cJSON *utility_in_owl = cJSON_GetObjectItemCaseSensitive(dex_stats_dtoJSON, "utility_in_owl");
     if (utility_in_owl) { 
-    if(!cJSON_IsString(utility_in_owl))
+    if(!cJSON_IsString(utility_in_owl) && !cJSON_IsNull(utility_in_owl))
     {
     goto end; //String
     }
@@ -229,7 +229,7 @@ dex_stats_dto_t *dex_stats_dto_parseFromJSON(cJSON *dex_stats_dtoJSON){
     // dex_stats_dto->owl_burnt
     cJSON *owl_burnt = cJSON_GetObjectItemCaseSensitive(dex_stats_dtoJSON, "owl_burnt");
     if (owl_burnt) { 
-    if(!cJSON_IsString(owl_burnt))
+    if(!cJSON_IsString(owl_burnt) && !cJSON_IsNull(owl_burnt))
     {
     goto end; //String
     }
@@ -273,13 +273,13 @@ dex_stats_dto_t *dex_stats_dto_parseFromJSON(cJSON *dex_stats_dtoJSON){
 
 
     dex_stats_dto_local_var = dex_stats_dto_create (
-        entry_time ? strdup(entry_time->valuestring) : NULL,
-        recv_time ? strdup(recv_time->valuestring) : NULL,
+        entry_time && !cJSON_IsNull(entry_time) ? strdup(entry_time->valuestring) : NULL,
+        recv_time && !cJSON_IsNull(recv_time) ? strdup(recv_time->valuestring) : NULL,
         block_number ? block_number->valuedouble : 0,
-        id ? strdup(id->valuestring) : NULL,
-        volume_in_owl ? strdup(volume_in_owl->valuestring) : NULL,
-        utility_in_owl ? strdup(utility_in_owl->valuestring) : NULL,
-        owl_burnt ? strdup(owl_burnt->valuestring) : NULL,
+        id && !cJSON_IsNull(id) ? strdup(id->valuestring) : NULL,
+        volume_in_owl && !cJSON_IsNull(volume_in_owl) ? strdup(volume_in_owl->valuestring) : NULL,
+        utility_in_owl && !cJSON_IsNull(utility_in_owl) ? strdup(utility_in_owl->valuestring) : NULL,
+        owl_burnt && !cJSON_IsNull(owl_burnt) ? strdup(owl_burnt->valuestring) : NULL,
         settled_batch_count ? settled_batch_count->valuedouble : 0,
         settled_trade_count ? settled_trade_count->valuedouble : 0,
         listed_tokens ? listed_tokens->valuedouble : 0,

@@ -669,12 +669,12 @@ public class SushiswapApi {
   /**
   * Burns (historical)
   * Gets burns.
-   * @param startBlock 
-   * @param endBlock 
-   * @param startDate 
-   * @param endDate 
-   * @param id 
-   * @param pair 
+   * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+   * @param endDate The end date of timeframe.
+   * @param id Identifier, format: (transaction id):(transaction.burns.length).
+   * @param pair Reference to pair.
    * @return List<SushiswapBurnDTO>
   */
   public List<SushiswapBurnDTO> sushiswapGetBurnsHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String pair) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
@@ -737,7 +737,7 @@ public class SushiswapApi {
       /**
    * Burns (historical)
    * Gets burns.
-   * @param startBlock    * @param endBlock    * @param startDate    * @param endDate    * @param id    * @param pair 
+   * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id Identifier, format: (transaction id):(transaction.burns.length).   * @param pair Reference to pair.
   */
   public void sushiswapGetBurnsHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String pair, final Response.Listener<List<SushiswapBurnDTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
@@ -1196,13 +1196,13 @@ public class SushiswapApi {
   /**
   * LiquidityPositionSnapshots (historical)
   * Gets liquidityPositionSnapshots.
-   * @param startBlock 
-   * @param endBlock 
-   * @param startDate 
-   * @param endDate 
-   * @param id 
-   * @param user 
-   * @param pair 
+   * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+   * @param endDate The end date of timeframe.
+   * @param id Identifier, format: (pair address)-(user address)-(timestamp)
+   * @param user Reference to user.
+   * @param pair Reference to the pair liquidity is being provided on.
    * @return List<SushiswapLiquidityPositionSnapshotDTO>
   */
   public List<SushiswapLiquidityPositionSnapshotDTO> sushiswapGetLiquidityPositionSnapshotsHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String user, String pair) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
@@ -1266,7 +1266,7 @@ public class SushiswapApi {
       /**
    * LiquidityPositionSnapshots (historical)
    * Gets liquidityPositionSnapshots.
-   * @param startBlock    * @param endBlock    * @param startDate    * @param endDate    * @param id    * @param user    * @param pair 
+   * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id Identifier, format: (pair address)-(user address)-(timestamp)   * @param user Reference to user.   * @param pair Reference to the pair liquidity is being provided on.
   */
   public void sushiswapGetLiquidityPositionSnapshotsHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String user, String pair, final Response.Listener<List<SushiswapLiquidityPositionSnapshotDTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
@@ -1333,13 +1333,13 @@ public class SushiswapApi {
   /**
   * LiquidityPositions (historical)
   * Gets liquidityPositions.
-   * @param startBlock 
-   * @param endBlock 
-   * @param startDate 
-   * @param endDate 
-   * @param id 
-   * @param user 
-   * @param pair 
+   * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+   * @param endDate The end date of timeframe.
+   * @param id Identifier, format: (pair address)-(user address)
+   * @param user User address.
+   * @param pair Pair address.
    * @return List<SushiswapLiquidityPositionDTO>
   */
   public List<SushiswapLiquidityPositionDTO> sushiswapGetLiquidityPositionsHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String user, String pair) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
@@ -1403,7 +1403,7 @@ public class SushiswapApi {
       /**
    * LiquidityPositions (historical)
    * Gets liquidityPositions.
-   * @param startBlock    * @param endBlock    * @param startDate    * @param endDate    * @param id    * @param user    * @param pair 
+   * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id Identifier, format: (pair address)-(user address)   * @param user User address.   * @param pair Pair address.
   */
   public void sushiswapGetLiquidityPositionsHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String user, String pair, final Response.Listener<List<SushiswapLiquidityPositionDTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
@@ -1470,12 +1470,12 @@ public class SushiswapApi {
   /**
   * Mints (historical)
   * Gets mints.
-   * @param startBlock 
-   * @param endBlock 
-   * @param startDate 
-   * @param endDate 
-   * @param id 
-   * @param pair 
+   * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+   * @param endDate The end date of timeframe.
+   * @param id Identifier, format: (transaction hash)-(index in the transaction mint array).
+   * @param pair Reference to pair.
    * @return List<SushiswapMintDTO>
   */
   public List<SushiswapMintDTO> sushiswapGetMintsHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String pair) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
@@ -1538,7 +1538,7 @@ public class SushiswapApi {
       /**
    * Mints (historical)
    * Gets mints.
-   * @param startBlock    * @param endBlock    * @param startDate    * @param endDate    * @param id    * @param pair 
+   * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id Identifier, format: (transaction hash)-(index in the transaction mint array).   * @param pair Reference to pair.
   */
   public void sushiswapGetMintsHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String pair, final Response.Listener<List<SushiswapMintDTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
@@ -1604,14 +1604,14 @@ public class SushiswapApi {
   /**
   * PairDayData (historical)
   * Gets pairDayData.
-   * @param startBlock 
-   * @param endBlock 
-   * @param startDate 
-   * @param endDate 
-   * @param id 
-   * @param pair 
-   * @param token0 
-   * @param token1 
+   * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+   * @param endDate The end date of timeframe.
+   * @param id Identifier, format: (pair id)-(day start timestamp).
+   * @param pair Reference to pair.
+   * @param token0 Reference to token0.
+   * @param token1 Reference to token1.
    * @return List<SushiswapPairDayDataDTO>
   */
   public List<SushiswapPairDayDataDTO> sushiswapGetPairDayDataHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String pair, String token0, String token1) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
@@ -1676,7 +1676,7 @@ public class SushiswapApi {
       /**
    * PairDayData (historical)
    * Gets pairDayData.
-   * @param startBlock    * @param endBlock    * @param startDate    * @param endDate    * @param id    * @param pair    * @param token0    * @param token1 
+   * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id Identifier, format: (pair id)-(day start timestamp).   * @param pair Reference to pair.   * @param token0 Reference to token0.   * @param token1 Reference to token1.
   */
   public void sushiswapGetPairDayDataHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String pair, String token0, String token1, final Response.Listener<List<SushiswapPairDayDataDTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
@@ -1744,12 +1744,12 @@ public class SushiswapApi {
   /**
   * PairHourData (historical)
   * Gets pairHourData.
-   * @param startBlock 
-   * @param endBlock 
-   * @param startDate 
-   * @param endDate 
-   * @param id 
-   * @param pair 
+   * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+   * @param endDate The end date of timeframe.
+   * @param id Identifier, format: (pair id)-(hour start timestamp).
+   * @param pair Reference to pair.
    * @return List<SushiswapPairHourDataDTO>
   */
   public List<SushiswapPairHourDataDTO> sushiswapGetPairHourDataHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String pair) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
@@ -1812,7 +1812,7 @@ public class SushiswapApi {
       /**
    * PairHourData (historical)
    * Gets pairHourData.
-   * @param startBlock    * @param endBlock    * @param startDate    * @param endDate    * @param id    * @param pair 
+   * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id Identifier, format: (pair id)-(hour start timestamp).   * @param pair Reference to pair.
   */
   public void sushiswapGetPairHourDataHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String pair, final Response.Listener<List<SushiswapPairHourDataDTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
@@ -1878,14 +1878,14 @@ public class SushiswapApi {
   /**
   * Pairs (historical)
   * Gets pairs.
-   * @param startBlock 
-   * @param endBlock 
-   * @param startDate 
-   * @param endDate 
-   * @param id 
-   * @param name 
-   * @param token0 
-   * @param token1 
+   * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+   * @param endDate The end date of timeframe.
+   * @param id Pair contract address.
+   * @param name Friendly name, format: (token0 name)-(token1 name)
+   * @param token0 Reference to token0 as stored in pair contract.
+   * @param token1 Reference to token0 as stored in pair contract.
    * @return List<SushiswapPairDTO>
   */
   public List<SushiswapPairDTO> sushiswapGetPairsHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String name, String token0, String token1) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
@@ -1950,7 +1950,7 @@ public class SushiswapApi {
       /**
    * Pairs (historical)
    * Gets pairs.
-   * @param startBlock    * @param endBlock    * @param startDate    * @param endDate    * @param id    * @param name    * @param token0    * @param token1 
+   * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id Pair contract address.   * @param name Friendly name, format: (token0 name)-(token1 name)   * @param token0 Reference to token0 as stored in pair contract.   * @param token1 Reference to token0 as stored in pair contract.
   */
   public void sushiswapGetPairsHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String name, String token0, String token1, final Response.Listener<List<SushiswapPairDTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;

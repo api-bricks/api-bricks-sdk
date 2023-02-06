@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.time.OffsetDateTime;
 import org.openapitools.jackson.nullable.JsonNullable;
@@ -50,7 +48,7 @@ import org.openapitools.client.JSON;
 /**
  * CurveCoinDTO
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-30T14:42:00.397192Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-06T14:47:06.037855Z[Etc/UTC]")
 public class CurveCoinDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -126,7 +124,6 @@ public class CurveCoinDTO {
    * @return entryTime
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public OffsetDateTime getEntryTime() {
     return entryTime;
@@ -149,7 +146,6 @@ public class CurveCoinDTO {
    * @return recvTime
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public OffsetDateTime getRecvTime() {
     return recvTime;
@@ -172,7 +168,6 @@ public class CurveCoinDTO {
    * @return blockNumber
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Number of block in which entity was recorded.")
 
   public Long getBlockNumber() {
     return blockNumber;
@@ -195,7 +190,6 @@ public class CurveCoinDTO {
    * @return id
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Identifier, format: (pool_id)-(coin_index).")
 
   public String getId() {
     return id;
@@ -218,7 +212,6 @@ public class CurveCoinDTO {
    * @return index
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Coin index.")
 
   public Integer getIndex() {
     return index;
@@ -241,7 +234,6 @@ public class CurveCoinDTO {
    * @return pool
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getPool() {
     return pool;
@@ -264,7 +256,6 @@ public class CurveCoinDTO {
    * @return token
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getToken() {
     return token;
@@ -287,7 +278,6 @@ public class CurveCoinDTO {
    * @return underlying
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getUnderlying() {
     return underlying;
@@ -310,7 +300,6 @@ public class CurveCoinDTO {
    * @return balance
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getBalance() {
     return balance;
@@ -333,7 +322,6 @@ public class CurveCoinDTO {
    * @return rate
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Exchange rate between this coin and the associated underlying coin within the pool.")
 
   public String getRate() {
     return rate;
@@ -356,7 +344,6 @@ public class CurveCoinDTO {
    * @return updated
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getUpdated() {
     return updated;
@@ -379,7 +366,6 @@ public class CurveCoinDTO {
    * @return updatedAtBlock
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getUpdatedAtBlock() {
     return updatedAtBlock;
@@ -402,7 +388,6 @@ public class CurveCoinDTO {
    * @return updatedAtTransaction
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getUpdatedAtTransaction() {
     return updatedAtTransaction;
@@ -425,7 +410,6 @@ public class CurveCoinDTO {
    * @return vid
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public Long getVid() {
     return vid;
@@ -448,7 +432,6 @@ public class CurveCoinDTO {
    * @return blockRange
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getBlockRange() {
     return blockRange;

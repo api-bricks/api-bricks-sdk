@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.time.OffsetDateTime;
 import org.openapitools.jackson.nullable.JsonNullable;
@@ -50,7 +48,7 @@ import org.openapitools.client.JSON;
 /**
  * CurvePoolDTO
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-30T14:42:00.397192Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-06T14:47:06.037855Z[Etc/UTC]")
 public class CurvePoolDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -182,7 +180,6 @@ public class CurvePoolDTO {
    * @return entryTime
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public OffsetDateTime getEntryTime() {
     return entryTime;
@@ -205,7 +202,6 @@ public class CurvePoolDTO {
    * @return recvTime
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public OffsetDateTime getRecvTime() {
     return recvTime;
@@ -228,7 +224,6 @@ public class CurvePoolDTO {
    * @return blockNumber
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Number of block in which entity was recorded.")
 
   public Long getBlockNumber() {
     return blockNumber;
@@ -251,7 +246,6 @@ public class CurvePoolDTO {
    * @return id
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Pool address.")
 
   public String getId() {
     return id;
@@ -274,7 +268,6 @@ public class CurvePoolDTO {
    * @return name
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Pool's human-readable name.")
 
   public String getName() {
     return name;
@@ -297,7 +290,6 @@ public class CurvePoolDTO {
    * @return isMeta
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Identify whether pool is a metapool.")
 
   public Boolean getIsMeta() {
     return isMeta;
@@ -320,7 +312,6 @@ public class CurvePoolDTO {
    * @return registryAddress
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Registry contract address from where this pool was registered.")
 
   public String getRegistryAddress() {
     return registryAddress;
@@ -343,7 +334,6 @@ public class CurvePoolDTO {
    * @return swapAddress
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Swap contract address.")
 
   public String getSwapAddress() {
     return swapAddress;
@@ -366,7 +356,6 @@ public class CurvePoolDTO {
    * @return lpToken
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Address of the token representing LP share.")
 
   public String getLpToken() {
     return lpToken;
@@ -389,7 +378,6 @@ public class CurvePoolDTO {
    * @return coinCount
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Number of coins composing the pool.")
 
   public String getCoinCount() {
     return coinCount;
@@ -412,7 +400,6 @@ public class CurvePoolDTO {
    * @return underlyingCount
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Number of underlying coins composing the pool.")
 
   public String getUnderlyingCount() {
     return underlyingCount;
@@ -435,7 +422,6 @@ public class CurvePoolDTO {
    * @return a
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Amplification coefficient multiplied by n * (n - 1).")
 
   public String getA() {
     return a;
@@ -458,7 +444,6 @@ public class CurvePoolDTO {
    * @return fee
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Fee to charge for exchanges.")
 
   public String getFee() {
     return fee;
@@ -481,7 +466,6 @@ public class CurvePoolDTO {
    * @return adminFee
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Admin fee is represented as a percentage of the total fee collected on a swap.")
 
   public String getAdminFee() {
     return adminFee;
@@ -504,7 +488,6 @@ public class CurvePoolDTO {
    * @return owner
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Admin address.")
 
   public String getOwner() {
     return owner;
@@ -527,7 +510,6 @@ public class CurvePoolDTO {
    * @return virtualPrice
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Average dollar value of pool token.")
 
   public String getVirtualPrice() {
     return virtualPrice;
@@ -550,7 +532,6 @@ public class CurvePoolDTO {
    * @return locked
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getLocked() {
     return locked;
@@ -573,7 +554,6 @@ public class CurvePoolDTO {
    * @return addedAt
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public OffsetDateTime getAddedAt() {
     return addedAt;
@@ -596,7 +576,6 @@ public class CurvePoolDTO {
    * @return addedAtBlock
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getAddedAtBlock() {
     return addedAtBlock;
@@ -619,7 +598,6 @@ public class CurvePoolDTO {
    * @return addedAtTransaction
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getAddedAtTransaction() {
     return addedAtTransaction;
@@ -642,7 +620,6 @@ public class CurvePoolDTO {
    * @return removedAt
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getRemovedAt() {
     return removedAt;
@@ -665,7 +642,6 @@ public class CurvePoolDTO {
    * @return removedAtBlock
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getRemovedAtBlock() {
     return removedAtBlock;
@@ -688,7 +664,6 @@ public class CurvePoolDTO {
    * @return removedAtTransaction
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getRemovedAtTransaction() {
     return removedAtTransaction;
@@ -711,7 +686,6 @@ public class CurvePoolDTO {
    * @return exchangeCount
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getExchangeCount() {
     return exchangeCount;
@@ -734,7 +708,6 @@ public class CurvePoolDTO {
    * @return gaugeCount
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getGaugeCount() {
     return gaugeCount;
@@ -757,7 +730,6 @@ public class CurvePoolDTO {
    * @return vid
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public Long getVid() {
     return vid;
@@ -774,7 +746,6 @@ public class CurvePoolDTO {
    * @return evaluatedAsk
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public Double getEvaluatedAsk() {
     return evaluatedAsk;

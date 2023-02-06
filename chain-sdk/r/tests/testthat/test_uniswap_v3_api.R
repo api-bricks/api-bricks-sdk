@@ -113,12 +113,12 @@ test_that("UniswapV3GetPoolDayDataHistorical", {
   # base path: https://onchain.coinapi.io
   # PoolDayData (historical)
   # Gets poolDayData.
-  # @param start_block integer  (optional)
-  # @param end_block integer  (optional)
-  # @param start_date character  (optional)
-  # @param end_date character  (optional)
-  # @param id character  (optional)
-  # @param pool character  (optional)
+  # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+  # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+  # @param start_date character The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+  # @param end_date character The end date of timeframe. (optional)
+  # @param id character Identifier, format: (pool address)-(day id). (optional)
+  # @param pool character Pointer to pool. (optional)
   # @return [array[UniswapV3PoolDayDataDTO]]
 
   # uncomment below to test the operation
@@ -130,12 +130,12 @@ test_that("UniswapV3GetPoolHourDataHistorical", {
   # base path: https://onchain.coinapi.io
   # PoolHourData (historical)
   # Gets poolHourData.
-  # @param start_block integer  (optional)
-  # @param end_block integer  (optional)
-  # @param start_date character  (optional)
-  # @param end_date character  (optional)
-  # @param id character  (optional)
-  # @param pool character  (optional)
+  # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+  # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+  # @param start_date character The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+  # @param end_date character The end date of timeframe. (optional)
+  # @param id character Identifier, format: (pool address)-(day id) (optional)
+  # @param pool character Pointer to pool. (optional)
   # @return [array[UniswapV3PoolHourDataDTO]]
 
   # uncomment below to test the operation
@@ -165,12 +165,12 @@ test_that("UniswapV3GetPositionSnapshotsHistorical", {
   # base path: https://onchain.coinapi.io
   # PositionSnapshots (historical)
   # Gets positionSnapshots.
-  # @param start_block integer  (optional)
-  # @param end_block integer  (optional)
-  # @param start_date character  (optional)
-  # @param end_date character  (optional)
-  # @param id character  (optional)
-  # @param pool character  (optional)
+  # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+  # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+  # @param start_date character The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+  # @param end_date character The end date of timeframe. (optional)
+  # @param id character NFT token identifier, format: (NFT token id)#(block number). (optional)
+  # @param pool character Pool the position is within. (optional)
   # @return [array[UniswapV3PositionSnapshotDTO]]
 
   # uncomment below to test the operation
@@ -205,7 +205,7 @@ test_that("UniswapV3GetSwapsHistorical", {
   # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
   # @param start_date character The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
   # @param end_date character The end date of timeframe. (optional)
-  # @param id character Identifier, format: transaction hash + \"#\" + index in swaps Transaction array. (optional)
+  # @param id character Identifier, format: (transaction hash) + # + (index in swaps Transaction array). (optional)
   # @param pool character Pool swap occured within. (optional)
   # @param token_0 character Reference to token0 as stored in pair contract. (optional)
   # @param token_1 character Reference to token1 as stored in pair contract. (optional)
@@ -220,12 +220,12 @@ test_that("UniswapV3GetTickDayDataHistorical", {
   # base path: https://onchain.coinapi.io
   # TickDayData (historical)
   # Gets tickDayData.
-  # @param start_block integer  (optional)
-  # @param end_block integer  (optional)
-  # @param start_date character  (optional)
-  # @param end_date character  (optional)
-  # @param id character  (optional)
-  # @param pool character  (optional)
+  # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+  # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+  # @param start_date character The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+  # @param end_date character The end date of timeframe. (optional)
+  # @param id character Identifier, format: (pool address)-(tick index)-(timestamp). (optional)
+  # @param pool character Pointer to pool. (optional)
   # @return [array[UniswapV3TickDayDataDTO]]
 
   # uncomment below to test the operation
@@ -237,12 +237,12 @@ test_that("UniswapV3GetTicksHistorical", {
   # base path: https://onchain.coinapi.io
   # Ticks (historical)
   # Gets ticks.
-  # @param start_block integer  (optional)
-  # @param end_block integer  (optional)
-  # @param start_date character  (optional)
-  # @param end_date character  (optional)
-  # @param id character  (optional)
-  # @param pool character  (optional)
+  # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+  # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+  # @param start_date character The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+  # @param end_date character The end date of timeframe. (optional)
+  # @param id character Identifier, format: (pool address)#(tick index) (optional)
+  # @param pool character Pool address. (optional)
   # @return [array[UniswapV3TickDTO]]
 
   # uncomment below to test the operation

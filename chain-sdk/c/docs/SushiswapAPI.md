@@ -206,12 +206,12 @@ list_t* SushiswapAPI_sushiswapGetBurnsHistorical(apiClient_t *apiClient, long st
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **apiClient** | **apiClient_t \*** | context containing the client configuration |
-**startBlock** | **long** |  | [optional] 
-**endBlock** | **long** |  | [optional] 
-**startDate** | **char** |  | [optional] 
-**endDate** | **char** |  | [optional] 
-**id** | **char \*** |  | [optional] 
-**pair** | **char \*** |  | [optional] 
+**startBlock** | **long** | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
+**endBlock** | **long** | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
+**startDate** | **char** | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
+**endDate** | **char** | The end date of timeframe. | [optional] 
+**id** | **char \*** | Identifier, format: (transaction id):(transaction.burns.length). | [optional] 
+**pair** | **char \*** | Reference to pair. | [optional] 
 
 ### Return type
 
@@ -347,13 +347,13 @@ list_t* SushiswapAPI_sushiswapGetLiquidityPositionSnapshotsHistorical(apiClient_
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **apiClient** | **apiClient_t \*** | context containing the client configuration |
-**startBlock** | **long** |  | [optional] 
-**endBlock** | **long** |  | [optional] 
-**startDate** | **char** |  | [optional] 
-**endDate** | **char** |  | [optional] 
-**id** | **char \*** |  | [optional] 
-**user** | **char \*** |  | [optional] 
-**pair** | **char \*** |  | [optional] 
+**startBlock** | **long** | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
+**endBlock** | **long** | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
+**startDate** | **char** | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
+**endDate** | **char** | The end date of timeframe. | [optional] 
+**id** | **char \*** | Identifier, format: (pair address)-(user address)-(timestamp) | [optional] 
+**user** | **char \*** | Reference to user. | [optional] 
+**pair** | **char \*** | Reference to the pair liquidity is being provided on. | [optional] 
 
 ### Return type
 
@@ -384,13 +384,13 @@ list_t* SushiswapAPI_sushiswapGetLiquidityPositionsHistorical(apiClient_t *apiCl
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **apiClient** | **apiClient_t \*** | context containing the client configuration |
-**startBlock** | **long** |  | [optional] 
-**endBlock** | **long** |  | [optional] 
-**startDate** | **char** |  | [optional] 
-**endDate** | **char** |  | [optional] 
-**id** | **char \*** |  | [optional] 
-**user** | **char \*** |  | [optional] 
-**pair** | **char \*** |  | [optional] 
+**startBlock** | **long** | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
+**endBlock** | **long** | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
+**startDate** | **char** | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
+**endDate** | **char** | The end date of timeframe. | [optional] 
+**id** | **char \*** | Identifier, format: (pair address)-(user address) | [optional] 
+**user** | **char \*** | User address. | [optional] 
+**pair** | **char \*** | Pair address. | [optional] 
 
 ### Return type
 
@@ -421,12 +421,12 @@ list_t* SushiswapAPI_sushiswapGetMintsHistorical(apiClient_t *apiClient, long st
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **apiClient** | **apiClient_t \*** | context containing the client configuration |
-**startBlock** | **long** |  | [optional] 
-**endBlock** | **long** |  | [optional] 
-**startDate** | **char** |  | [optional] 
-**endDate** | **char** |  | [optional] 
-**id** | **char \*** |  | [optional] 
-**pair** | **char \*** |  | [optional] 
+**startBlock** | **long** | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
+**endBlock** | **long** | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
+**startDate** | **char** | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
+**endDate** | **char** | The end date of timeframe. | [optional] 
+**id** | **char \*** | Identifier, format: (transaction hash)-(index in the transaction mint array). | [optional] 
+**pair** | **char \*** | Reference to pair. | [optional] 
 
 ### Return type
 
@@ -457,14 +457,14 @@ list_t* SushiswapAPI_sushiswapGetPairDayDataHistorical(apiClient_t *apiClient, l
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **apiClient** | **apiClient_t \*** | context containing the client configuration |
-**startBlock** | **long** |  | [optional] 
-**endBlock** | **long** |  | [optional] 
-**startDate** | **char** |  | [optional] 
-**endDate** | **char** |  | [optional] 
-**id** | **char \*** |  | [optional] 
-**pair** | **char \*** |  | [optional] 
-**token_0** | **char \*** |  | [optional] 
-**token_1** | **char \*** |  | [optional] 
+**startBlock** | **long** | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
+**endBlock** | **long** | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
+**startDate** | **char** | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
+**endDate** | **char** | The end date of timeframe. | [optional] 
+**id** | **char \*** | Identifier, format: (pair id)-(day start timestamp). | [optional] 
+**pair** | **char \*** | Reference to pair. | [optional] 
+**token_0** | **char \*** | Reference to token0. | [optional] 
+**token_1** | **char \*** | Reference to token1. | [optional] 
 
 ### Return type
 
@@ -495,12 +495,12 @@ list_t* SushiswapAPI_sushiswapGetPairHourDataHistorical(apiClient_t *apiClient, 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **apiClient** | **apiClient_t \*** | context containing the client configuration |
-**startBlock** | **long** |  | [optional] 
-**endBlock** | **long** |  | [optional] 
-**startDate** | **char** |  | [optional] 
-**endDate** | **char** |  | [optional] 
-**id** | **char \*** |  | [optional] 
-**pair** | **char \*** |  | [optional] 
+**startBlock** | **long** | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
+**endBlock** | **long** | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
+**startDate** | **char** | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
+**endDate** | **char** | The end date of timeframe. | [optional] 
+**id** | **char \*** | Identifier, format: (pair id)-(hour start timestamp). | [optional] 
+**pair** | **char \*** | Reference to pair. | [optional] 
 
 ### Return type
 
@@ -531,14 +531,14 @@ list_t* SushiswapAPI_sushiswapGetPairsHistorical(apiClient_t *apiClient, long st
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **apiClient** | **apiClient_t \*** | context containing the client configuration |
-**startBlock** | **long** |  | [optional] 
-**endBlock** | **long** |  | [optional] 
-**startDate** | **char** |  | [optional] 
-**endDate** | **char** |  | [optional] 
-**id** | **char \*** |  | [optional] 
-**name** | **char \*** |  | [optional] 
-**token_0** | **char \*** |  | [optional] 
-**token_1** | **char \*** |  | [optional] 
+**startBlock** | **long** | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
+**endBlock** | **long** | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
+**startDate** | **char** | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
+**endDate** | **char** | The end date of timeframe. | [optional] 
+**id** | **char \*** | Pair contract address. | [optional] 
+**name** | **char \*** | Friendly name, format: (token0 name)-(token1 name) | [optional] 
+**token_0** | **char \*** | Reference to token0 as stored in pair contract. | [optional] 
+**token_1** | **char \*** | Reference to token0 as stored in pair contract. | [optional] 
 
 ### Return type
 

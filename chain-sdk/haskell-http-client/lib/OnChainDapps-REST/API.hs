@@ -17,6 +17,7 @@ module OnChainDapps-REST.API
   ( module OnChainDapps-REST.API.Cow
   , module OnChainDapps-REST.API.Curve
   , module OnChainDapps-REST.API.Dex
+  , module OnChainDapps-REST.API.Metadata
   , module OnChainDapps-REST.API.Sushiswap
   , module OnChainDapps-REST.API.UniswapV2
   , module OnChainDapps-REST.API.UniswapV3
@@ -25,6 +26,7 @@ module OnChainDapps-REST.API
 import OnChainDapps-REST.API.Cow
 import OnChainDapps-REST.API.Curve
 import OnChainDapps-REST.API.Dex
+import OnChainDapps-REST.API.Metadata
 import OnChainDapps-REST.API.Sushiswap
 import OnChainDapps-REST.API.UniswapV2
 import OnChainDapps-REST.API.UniswapV3

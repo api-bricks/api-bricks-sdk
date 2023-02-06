@@ -59,6 +59,7 @@ R/dex_trade_dto.R
 R/dex_user_dto.R
 R/dex_withdraw_dto.R
 R/dex_withdraw_request_dto.R
+R/metadata_api.R
 R/numerics_big_integer.R
 R/sushiswap_api.R
 R/sushiswap_bundle_dto.R
@@ -164,6 +165,7 @@ docs/DexTradeDTO.md
 docs/DexUserDTO.md
 docs/DexWithdrawDTO.md
 docs/DexWithdrawRequestDTO.md
+docs/MetadataApi.md
 docs/NumericsBigInteger.md
 docs/SushiswapApi.md
 docs/SushiswapBundleDTO.md
@@ -270,6 +272,7 @@ tests/testthat/test_dex_trade_dto.R
 tests/testthat/test_dex_user_dto.R
 tests/testthat/test_dex_withdraw_dto.R
 tests/testthat/test_dex_withdraw_request_dto.R
+tests/testthat/test_metadata_api.R
 tests/testthat/test_numerics_big_integer.R
 tests/testthat/test_sushiswap_api.R
 tests/testthat/test_sushiswap_bundle_dto.R

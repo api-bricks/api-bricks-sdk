@@ -369,11 +369,11 @@ class CurveApi(baseUrl: String) {
    * Expected answers:
    *   code 200 : Seq[CoinDTO] (successful operation)
    * 
-   * @param startBlock 
-   * @param endBlock 
-   * @param startDate 
-   * @param endDate 
-   * @param id 
+   * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+   * @param endDate The end date of timeframe.
+   * @param id Identifier, format: (pool_id)-(coin_index).
    * @param pool 
    */
   def curveGetCoinsHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None, pool: Option[String] = None): ApiRequest[Seq[CoinDTO]] =
@@ -963,11 +963,11 @@ class CurveApi(baseUrl: String) {
    * Expected answers:
    *   code 200 : Seq[UnderlyingCoinDTO] (successful operation)
    * 
-   * @param startBlock 
-   * @param endBlock 
-   * @param startDate 
-   * @param endDate 
-   * @param id 
+   * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+   * @param endDate The end date of timeframe.
+   * @param id Equals to: (pool_id)-(coin_index).
    * @param pool 
    */
   def curveGetUnderlyingCoinsHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None, pool: Option[String] = None): ApiRequest[Seq[UnderlyingCoinDTO]] =

@@ -1561,11 +1561,11 @@
 #' ####################  CurveGetCoinsHistorical  ####################
 #'
 #' library(openapi)
-#' var_start_block <- 56 # integer |  (Optional)
-#' var_end_block <- 56 # integer |  (Optional)
-#' var_start_date <- "start_date_example" # character |  (Optional)
-#' var_end_date <- "end_date_example" # character |  (Optional)
-#' var_id <- "id_example" # character |  (Optional)
+#' var_start_block <- 56 # integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (Optional)
+#' var_end_block <- 56 # integer | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (Optional)
+#' var_start_date <- "start_date_example" # character | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (Optional)
+#' var_end_date <- "end_date_example" # character | The end date of timeframe. (Optional)
+#' var_id <- "id_example" # character | Identifier, format: (pool_id)-(coin_index). (Optional)
 #' var_pool <- "pool_example" # character |  (Optional)
 #'
 #' #Coins (historical)
@@ -2033,11 +2033,11 @@
 #' ####################  CurveGetUnderlyingCoinsHistorical  ####################
 #'
 #' library(openapi)
-#' var_start_block <- 56 # integer |  (Optional)
-#' var_end_block <- 56 # integer |  (Optional)
-#' var_start_date <- "start_date_example" # character |  (Optional)
-#' var_end_date <- "end_date_example" # character |  (Optional)
-#' var_id <- "id_example" # character |  (Optional)
+#' var_start_block <- 56 # integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (Optional)
+#' var_end_block <- 56 # integer | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (Optional)
+#' var_start_date <- "start_date_example" # character | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (Optional)
+#' var_end_date <- "end_date_example" # character | The end date of timeframe. (Optional)
+#' var_id <- "id_example" # character | Equals to: (pool_id)-(coin_index). (Optional)
 #' var_pool <- "pool_example" # character |  (Optional)
 #'
 #' #UnderlyingCoins (historical)
@@ -4387,12 +4387,12 @@ CurveApi <- R6::R6Class(
     #' @description
     #' Coins (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param id (optional) No description
-    #' @param pool (optional) No description
+    #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+    #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+    #' @param start_date (optional) The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+    #' @param end_date (optional) The end date of timeframe.
+    #' @param id (optional) Identifier, format: (pool_id)-(coin_index).
+    #' @param pool (optional) 
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return array[CurveCoinDTO]
@@ -4414,12 +4414,12 @@ CurveApi <- R6::R6Class(
     #' @description
     #' Coins (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param id (optional) No description
-    #' @param pool (optional) No description
+    #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+    #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+    #' @param start_date (optional) The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+    #' @param end_date (optional) The end date of timeframe.
+    #' @param id (optional) Identifier, format: (pool_id)-(coin_index).
+    #' @param pool (optional) 
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return API response (array[CurveCoinDTO]) with additional information such as HTTP status code, headers
@@ -7272,12 +7272,12 @@ CurveApi <- R6::R6Class(
     #' @description
     #' UnderlyingCoins (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param id (optional) No description
-    #' @param pool (optional) No description
+    #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+    #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+    #' @param start_date (optional) The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+    #' @param end_date (optional) The end date of timeframe.
+    #' @param id (optional) Equals to: (pool_id)-(coin_index).
+    #' @param pool (optional) 
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return array[CurveUnderlyingCoinDTO]
@@ -7299,12 +7299,12 @@ CurveApi <- R6::R6Class(
     #' @description
     #' UnderlyingCoins (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param id (optional) No description
-    #' @param pool (optional) No description
+    #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+    #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+    #' @param start_date (optional) The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+    #' @param end_date (optional) The end date of timeframe.
+    #' @param id (optional) Equals to: (pool_id)-(coin_index).
+    #' @param pool (optional) 
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return API response (array[CurveUnderlyingCoinDTO]) with additional information such as HTTP status code, headers

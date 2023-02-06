@@ -201,7 +201,7 @@ dex_price_dto_t *dex_price_dto_parseFromJSON(cJSON *dex_price_dtoJSON){
     // dex_price_dto->entry_time
     cJSON *entry_time = cJSON_GetObjectItemCaseSensitive(dex_price_dtoJSON, "entry_time");
     if (entry_time) { 
-    if(!cJSON_IsString(entry_time))
+    if(!cJSON_IsString(entry_time) && !cJSON_IsNull(entry_time))
     {
     goto end; //DateTime
     }
@@ -210,7 +210,7 @@ dex_price_dto_t *dex_price_dto_parseFromJSON(cJSON *dex_price_dtoJSON){
     // dex_price_dto->recv_time
     cJSON *recv_time = cJSON_GetObjectItemCaseSensitive(dex_price_dtoJSON, "recv_time");
     if (recv_time) { 
-    if(!cJSON_IsString(recv_time))
+    if(!cJSON_IsString(recv_time) && !cJSON_IsNull(recv_time))
     {
     goto end; //DateTime
     }
@@ -228,7 +228,7 @@ dex_price_dto_t *dex_price_dto_parseFromJSON(cJSON *dex_price_dtoJSON){
     // dex_price_dto->id
     cJSON *id = cJSON_GetObjectItemCaseSensitive(dex_price_dtoJSON, "id");
     if (id) { 
-    if(!cJSON_IsString(id))
+    if(!cJSON_IsString(id) && !cJSON_IsNull(id))
     {
     goto end; //String
     }
@@ -237,7 +237,7 @@ dex_price_dto_t *dex_price_dto_parseFromJSON(cJSON *dex_price_dtoJSON){
     // dex_price_dto->token
     cJSON *token = cJSON_GetObjectItemCaseSensitive(dex_price_dtoJSON, "token");
     if (token) { 
-    if(!cJSON_IsString(token))
+    if(!cJSON_IsString(token) && !cJSON_IsNull(token))
     {
     goto end; //String
     }
@@ -246,7 +246,7 @@ dex_price_dto_t *dex_price_dto_parseFromJSON(cJSON *dex_price_dtoJSON){
     // dex_price_dto->batch_id
     cJSON *batch_id = cJSON_GetObjectItemCaseSensitive(dex_price_dtoJSON, "batch_id");
     if (batch_id) { 
-    if(!cJSON_IsString(batch_id))
+    if(!cJSON_IsString(batch_id) && !cJSON_IsNull(batch_id))
     {
     goto end; //String
     }
@@ -255,7 +255,7 @@ dex_price_dto_t *dex_price_dto_parseFromJSON(cJSON *dex_price_dtoJSON){
     // dex_price_dto->price_in_owl_numerator
     cJSON *price_in_owl_numerator = cJSON_GetObjectItemCaseSensitive(dex_price_dtoJSON, "price_in_owl_numerator");
     if (price_in_owl_numerator) { 
-    if(!cJSON_IsString(price_in_owl_numerator))
+    if(!cJSON_IsString(price_in_owl_numerator) && !cJSON_IsNull(price_in_owl_numerator))
     {
     goto end; //String
     }
@@ -264,7 +264,7 @@ dex_price_dto_t *dex_price_dto_parseFromJSON(cJSON *dex_price_dtoJSON){
     // dex_price_dto->price_in_owl_denominator
     cJSON *price_in_owl_denominator = cJSON_GetObjectItemCaseSensitive(dex_price_dtoJSON, "price_in_owl_denominator");
     if (price_in_owl_denominator) { 
-    if(!cJSON_IsString(price_in_owl_denominator))
+    if(!cJSON_IsString(price_in_owl_denominator) && !cJSON_IsNull(price_in_owl_denominator))
     {
     goto end; //String
     }
@@ -273,7 +273,7 @@ dex_price_dto_t *dex_price_dto_parseFromJSON(cJSON *dex_price_dtoJSON){
     // dex_price_dto->volume
     cJSON *volume = cJSON_GetObjectItemCaseSensitive(dex_price_dtoJSON, "volume");
     if (volume) { 
-    if(!cJSON_IsString(volume))
+    if(!cJSON_IsString(volume) && !cJSON_IsNull(volume))
     {
     goto end; //String
     }
@@ -282,7 +282,7 @@ dex_price_dto_t *dex_price_dto_parseFromJSON(cJSON *dex_price_dtoJSON){
     // dex_price_dto->create_epoch
     cJSON *create_epoch = cJSON_GetObjectItemCaseSensitive(dex_price_dtoJSON, "create_epoch");
     if (create_epoch) { 
-    if(!cJSON_IsString(create_epoch))
+    if(!cJSON_IsString(create_epoch) && !cJSON_IsNull(create_epoch))
     {
     goto end; //String
     }
@@ -291,7 +291,7 @@ dex_price_dto_t *dex_price_dto_parseFromJSON(cJSON *dex_price_dtoJSON){
     // dex_price_dto->tx_hash
     cJSON *tx_hash = cJSON_GetObjectItemCaseSensitive(dex_price_dtoJSON, "tx_hash");
     if (tx_hash) { 
-    if(!cJSON_IsString(tx_hash))
+    if(!cJSON_IsString(tx_hash) && !cJSON_IsNull(tx_hash))
     {
     goto end; //String
     }
@@ -308,17 +308,17 @@ dex_price_dto_t *dex_price_dto_parseFromJSON(cJSON *dex_price_dtoJSON){
 
 
     dex_price_dto_local_var = dex_price_dto_create (
-        entry_time ? strdup(entry_time->valuestring) : NULL,
-        recv_time ? strdup(recv_time->valuestring) : NULL,
+        entry_time && !cJSON_IsNull(entry_time) ? strdup(entry_time->valuestring) : NULL,
+        recv_time && !cJSON_IsNull(recv_time) ? strdup(recv_time->valuestring) : NULL,
         block_number ? block_number->valuedouble : 0,
-        id ? strdup(id->valuestring) : NULL,
-        token ? strdup(token->valuestring) : NULL,
-        batch_id ? strdup(batch_id->valuestring) : NULL,
-        price_in_owl_numerator ? strdup(price_in_owl_numerator->valuestring) : NULL,
-        price_in_owl_denominator ? strdup(price_in_owl_denominator->valuestring) : NULL,
-        volume ? strdup(volume->valuestring) : NULL,
-        create_epoch ? strdup(create_epoch->valuestring) : NULL,
-        tx_hash ? strdup(tx_hash->valuestring) : NULL,
+        id && !cJSON_IsNull(id) ? strdup(id->valuestring) : NULL,
+        token && !cJSON_IsNull(token) ? strdup(token->valuestring) : NULL,
+        batch_id && !cJSON_IsNull(batch_id) ? strdup(batch_id->valuestring) : NULL,
+        price_in_owl_numerator && !cJSON_IsNull(price_in_owl_numerator) ? strdup(price_in_owl_numerator->valuestring) : NULL,
+        price_in_owl_denominator && !cJSON_IsNull(price_in_owl_denominator) ? strdup(price_in_owl_denominator->valuestring) : NULL,
+        volume && !cJSON_IsNull(volume) ? strdup(volume->valuestring) : NULL,
+        create_epoch && !cJSON_IsNull(create_epoch) ? strdup(create_epoch->valuestring) : NULL,
+        tx_hash && !cJSON_IsNull(tx_hash) ? strdup(tx_hash->valuestring) : NULL,
         vid ? vid->valuedouble : 0
         );
 

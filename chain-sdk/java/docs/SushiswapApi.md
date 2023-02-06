@@ -363,12 +363,12 @@ public class Example {
     defaultClient.setBasePath("https://onchain.coinapi.io");
 
     SushiswapApi apiInstance = new SushiswapApi(defaultClient);
-    Long startBlock = 56L; // Long | 
-    Long endBlock = 56L; // Long | 
-    OffsetDateTime startDate = OffsetDateTime.now(); // OffsetDateTime | 
-    OffsetDateTime endDate = OffsetDateTime.now(); // OffsetDateTime | 
-    String id = "id_example"; // String | 
-    String pair = "pair_example"; // String | 
+    Long startBlock = 56L; // Long | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+    Long endBlock = 56L; // Long | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+    OffsetDateTime startDate = OffsetDateTime.now(); // OffsetDateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+    OffsetDateTime endDate = OffsetDateTime.now(); // OffsetDateTime | The end date of timeframe.
+    String id = "id_example"; // String | Identifier, format: (transaction id):(transaction.burns.length).
+    String pair = "pair_example"; // String | Reference to pair.
     try {
       List<SushiswapBurnDTO> result = apiInstance.sushiswapGetBurnsHistorical(startBlock, endBlock, startDate, endDate, id, pair);
       System.out.println(result);
@@ -387,12 +387,12 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **startBlock** | **Long**|  | [optional] |
-| **endBlock** | **Long**|  | [optional] |
-| **startDate** | **OffsetDateTime**|  | [optional] |
-| **endDate** | **OffsetDateTime**|  | [optional] |
-| **id** | **String**|  | [optional] |
-| **pair** | **String**|  | [optional] |
+| **startBlock** | **Long**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] |
+| **endBlock** | **Long**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] |
+| **startDate** | **OffsetDateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] |
+| **endDate** | **OffsetDateTime**| The end date of timeframe. | [optional] |
+| **id** | **String**| Identifier, format: (transaction id):(transaction.burns.length). | [optional] |
+| **pair** | **String**| Reference to pair. | [optional] |
 
 ### Return type
 
@@ -645,13 +645,13 @@ public class Example {
     defaultClient.setBasePath("https://onchain.coinapi.io");
 
     SushiswapApi apiInstance = new SushiswapApi(defaultClient);
-    Long startBlock = 56L; // Long | 
-    Long endBlock = 56L; // Long | 
-    OffsetDateTime startDate = OffsetDateTime.now(); // OffsetDateTime | 
-    OffsetDateTime endDate = OffsetDateTime.now(); // OffsetDateTime | 
-    String id = "id_example"; // String | 
-    String user = "user_example"; // String | 
-    String pair = "pair_example"; // String | 
+    Long startBlock = 56L; // Long | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+    Long endBlock = 56L; // Long | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+    OffsetDateTime startDate = OffsetDateTime.now(); // OffsetDateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+    OffsetDateTime endDate = OffsetDateTime.now(); // OffsetDateTime | The end date of timeframe.
+    String id = "id_example"; // String | Identifier, format: (pair address)-(user address)-(timestamp)
+    String user = "user_example"; // String | Reference to user.
+    String pair = "pair_example"; // String | Reference to the pair liquidity is being provided on.
     try {
       List<SushiswapLiquidityPositionSnapshotDTO> result = apiInstance.sushiswapGetLiquidityPositionSnapshotsHistorical(startBlock, endBlock, startDate, endDate, id, user, pair);
       System.out.println(result);
@@ -670,13 +670,13 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **startBlock** | **Long**|  | [optional] |
-| **endBlock** | **Long**|  | [optional] |
-| **startDate** | **OffsetDateTime**|  | [optional] |
-| **endDate** | **OffsetDateTime**|  | [optional] |
-| **id** | **String**|  | [optional] |
-| **user** | **String**|  | [optional] |
-| **pair** | **String**|  | [optional] |
+| **startBlock** | **Long**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] |
+| **endBlock** | **Long**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] |
+| **startDate** | **OffsetDateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] |
+| **endDate** | **OffsetDateTime**| The end date of timeframe. | [optional] |
+| **id** | **String**| Identifier, format: (pair address)-(user address)-(timestamp) | [optional] |
+| **user** | **String**| Reference to user. | [optional] |
+| **pair** | **String**| Reference to the pair liquidity is being provided on. | [optional] |
 
 ### Return type
 
@@ -719,13 +719,13 @@ public class Example {
     defaultClient.setBasePath("https://onchain.coinapi.io");
 
     SushiswapApi apiInstance = new SushiswapApi(defaultClient);
-    Long startBlock = 56L; // Long | 
-    Long endBlock = 56L; // Long | 
-    OffsetDateTime startDate = OffsetDateTime.now(); // OffsetDateTime | 
-    OffsetDateTime endDate = OffsetDateTime.now(); // OffsetDateTime | 
-    String id = "id_example"; // String | 
-    String user = "user_example"; // String | 
-    String pair = "pair_example"; // String | 
+    Long startBlock = 56L; // Long | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+    Long endBlock = 56L; // Long | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+    OffsetDateTime startDate = OffsetDateTime.now(); // OffsetDateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+    OffsetDateTime endDate = OffsetDateTime.now(); // OffsetDateTime | The end date of timeframe.
+    String id = "id_example"; // String | Identifier, format: (pair address)-(user address)
+    String user = "user_example"; // String | User address.
+    String pair = "pair_example"; // String | Pair address.
     try {
       List<SushiswapLiquidityPositionDTO> result = apiInstance.sushiswapGetLiquidityPositionsHistorical(startBlock, endBlock, startDate, endDate, id, user, pair);
       System.out.println(result);
@@ -744,13 +744,13 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **startBlock** | **Long**|  | [optional] |
-| **endBlock** | **Long**|  | [optional] |
-| **startDate** | **OffsetDateTime**|  | [optional] |
-| **endDate** | **OffsetDateTime**|  | [optional] |
-| **id** | **String**|  | [optional] |
-| **user** | **String**|  | [optional] |
-| **pair** | **String**|  | [optional] |
+| **startBlock** | **Long**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] |
+| **endBlock** | **Long**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] |
+| **startDate** | **OffsetDateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] |
+| **endDate** | **OffsetDateTime**| The end date of timeframe. | [optional] |
+| **id** | **String**| Identifier, format: (pair address)-(user address) | [optional] |
+| **user** | **String**| User address. | [optional] |
+| **pair** | **String**| Pair address. | [optional] |
 
 ### Return type
 
@@ -793,12 +793,12 @@ public class Example {
     defaultClient.setBasePath("https://onchain.coinapi.io");
 
     SushiswapApi apiInstance = new SushiswapApi(defaultClient);
-    Long startBlock = 56L; // Long | 
-    Long endBlock = 56L; // Long | 
-    OffsetDateTime startDate = OffsetDateTime.now(); // OffsetDateTime | 
-    OffsetDateTime endDate = OffsetDateTime.now(); // OffsetDateTime | 
-    String id = "id_example"; // String | 
-    String pair = "pair_example"; // String | 
+    Long startBlock = 56L; // Long | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+    Long endBlock = 56L; // Long | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+    OffsetDateTime startDate = OffsetDateTime.now(); // OffsetDateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+    OffsetDateTime endDate = OffsetDateTime.now(); // OffsetDateTime | The end date of timeframe.
+    String id = "id_example"; // String | Identifier, format: (transaction hash)-(index in the transaction mint array).
+    String pair = "pair_example"; // String | Reference to pair.
     try {
       List<SushiswapMintDTO> result = apiInstance.sushiswapGetMintsHistorical(startBlock, endBlock, startDate, endDate, id, pair);
       System.out.println(result);
@@ -817,12 +817,12 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **startBlock** | **Long**|  | [optional] |
-| **endBlock** | **Long**|  | [optional] |
-| **startDate** | **OffsetDateTime**|  | [optional] |
-| **endDate** | **OffsetDateTime**|  | [optional] |
-| **id** | **String**|  | [optional] |
-| **pair** | **String**|  | [optional] |
+| **startBlock** | **Long**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] |
+| **endBlock** | **Long**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] |
+| **startDate** | **OffsetDateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] |
+| **endDate** | **OffsetDateTime**| The end date of timeframe. | [optional] |
+| **id** | **String**| Identifier, format: (transaction hash)-(index in the transaction mint array). | [optional] |
+| **pair** | **String**| Reference to pair. | [optional] |
 
 ### Return type
 
@@ -865,14 +865,14 @@ public class Example {
     defaultClient.setBasePath("https://onchain.coinapi.io");
 
     SushiswapApi apiInstance = new SushiswapApi(defaultClient);
-    Long startBlock = 56L; // Long | 
-    Long endBlock = 56L; // Long | 
-    OffsetDateTime startDate = OffsetDateTime.now(); // OffsetDateTime | 
-    OffsetDateTime endDate = OffsetDateTime.now(); // OffsetDateTime | 
-    String id = "id_example"; // String | 
-    String pair = "pair_example"; // String | 
-    String token0 = "token0_example"; // String | 
-    String token1 = "token1_example"; // String | 
+    Long startBlock = 56L; // Long | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+    Long endBlock = 56L; // Long | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+    OffsetDateTime startDate = OffsetDateTime.now(); // OffsetDateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+    OffsetDateTime endDate = OffsetDateTime.now(); // OffsetDateTime | The end date of timeframe.
+    String id = "id_example"; // String | Identifier, format: (pair id)-(day start timestamp).
+    String pair = "pair_example"; // String | Reference to pair.
+    String token0 = "token0_example"; // String | Reference to token0.
+    String token1 = "token1_example"; // String | Reference to token1.
     try {
       List<SushiswapPairDayDataDTO> result = apiInstance.sushiswapGetPairDayDataHistorical(startBlock, endBlock, startDate, endDate, id, pair, token0, token1);
       System.out.println(result);
@@ -891,14 +891,14 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **startBlock** | **Long**|  | [optional] |
-| **endBlock** | **Long**|  | [optional] |
-| **startDate** | **OffsetDateTime**|  | [optional] |
-| **endDate** | **OffsetDateTime**|  | [optional] |
-| **id** | **String**|  | [optional] |
-| **pair** | **String**|  | [optional] |
-| **token0** | **String**|  | [optional] |
-| **token1** | **String**|  | [optional] |
+| **startBlock** | **Long**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] |
+| **endBlock** | **Long**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] |
+| **startDate** | **OffsetDateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] |
+| **endDate** | **OffsetDateTime**| The end date of timeframe. | [optional] |
+| **id** | **String**| Identifier, format: (pair id)-(day start timestamp). | [optional] |
+| **pair** | **String**| Reference to pair. | [optional] |
+| **token0** | **String**| Reference to token0. | [optional] |
+| **token1** | **String**| Reference to token1. | [optional] |
 
 ### Return type
 
@@ -941,12 +941,12 @@ public class Example {
     defaultClient.setBasePath("https://onchain.coinapi.io");
 
     SushiswapApi apiInstance = new SushiswapApi(defaultClient);
-    Long startBlock = 56L; // Long | 
-    Long endBlock = 56L; // Long | 
-    OffsetDateTime startDate = OffsetDateTime.now(); // OffsetDateTime | 
-    OffsetDateTime endDate = OffsetDateTime.now(); // OffsetDateTime | 
-    String id = "id_example"; // String | 
-    String pair = "pair_example"; // String | 
+    Long startBlock = 56L; // Long | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+    Long endBlock = 56L; // Long | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+    OffsetDateTime startDate = OffsetDateTime.now(); // OffsetDateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+    OffsetDateTime endDate = OffsetDateTime.now(); // OffsetDateTime | The end date of timeframe.
+    String id = "id_example"; // String | Identifier, format: (pair id)-(hour start timestamp).
+    String pair = "pair_example"; // String | Reference to pair.
     try {
       List<SushiswapPairHourDataDTO> result = apiInstance.sushiswapGetPairHourDataHistorical(startBlock, endBlock, startDate, endDate, id, pair);
       System.out.println(result);
@@ -965,12 +965,12 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **startBlock** | **Long**|  | [optional] |
-| **endBlock** | **Long**|  | [optional] |
-| **startDate** | **OffsetDateTime**|  | [optional] |
-| **endDate** | **OffsetDateTime**|  | [optional] |
-| **id** | **String**|  | [optional] |
-| **pair** | **String**|  | [optional] |
+| **startBlock** | **Long**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] |
+| **endBlock** | **Long**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] |
+| **startDate** | **OffsetDateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] |
+| **endDate** | **OffsetDateTime**| The end date of timeframe. | [optional] |
+| **id** | **String**| Identifier, format: (pair id)-(hour start timestamp). | [optional] |
+| **pair** | **String**| Reference to pair. | [optional] |
 
 ### Return type
 
@@ -1013,14 +1013,14 @@ public class Example {
     defaultClient.setBasePath("https://onchain.coinapi.io");
 
     SushiswapApi apiInstance = new SushiswapApi(defaultClient);
-    Long startBlock = 56L; // Long | 
-    Long endBlock = 56L; // Long | 
-    OffsetDateTime startDate = OffsetDateTime.now(); // OffsetDateTime | 
-    OffsetDateTime endDate = OffsetDateTime.now(); // OffsetDateTime | 
-    String id = "id_example"; // String | 
-    String name = "name_example"; // String | 
-    String token0 = "token0_example"; // String | 
-    String token1 = "token1_example"; // String | 
+    Long startBlock = 56L; // Long | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+    Long endBlock = 56L; // Long | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+    OffsetDateTime startDate = OffsetDateTime.now(); // OffsetDateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+    OffsetDateTime endDate = OffsetDateTime.now(); // OffsetDateTime | The end date of timeframe.
+    String id = "id_example"; // String | Pair contract address.
+    String name = "name_example"; // String | Friendly name, format: (token0 name)-(token1 name)
+    String token0 = "token0_example"; // String | Reference to token0 as stored in pair contract.
+    String token1 = "token1_example"; // String | Reference to token0 as stored in pair contract.
     try {
       List<SushiswapPairDTO> result = apiInstance.sushiswapGetPairsHistorical(startBlock, endBlock, startDate, endDate, id, name, token0, token1);
       System.out.println(result);
@@ -1039,14 +1039,14 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **startBlock** | **Long**|  | [optional] |
-| **endBlock** | **Long**|  | [optional] |
-| **startDate** | **OffsetDateTime**|  | [optional] |
-| **endDate** | **OffsetDateTime**|  | [optional] |
-| **id** | **String**|  | [optional] |
-| **name** | **String**|  | [optional] |
-| **token0** | **String**|  | [optional] |
-| **token1** | **String**|  | [optional] |
+| **startBlock** | **Long**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] |
+| **endBlock** | **Long**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] |
+| **startDate** | **OffsetDateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] |
+| **endDate** | **OffsetDateTime**| The end date of timeframe. | [optional] |
+| **id** | **String**| Pair contract address. | [optional] |
+| **name** | **String**| Friendly name, format: (token0 name)-(token1 name) | [optional] |
+| **token0** | **String**| Reference to token0 as stored in pair contract. | [optional] |
+| **token1** | **String**| Reference to token0 as stored in pair contract. | [optional] |
 
 ### Return type
 

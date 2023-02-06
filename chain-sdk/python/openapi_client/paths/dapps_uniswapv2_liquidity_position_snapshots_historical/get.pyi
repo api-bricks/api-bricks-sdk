@@ -116,12 +116,12 @@ class SchemaFor200ResponseBodyTextPlain(
 
     def __new__(
         cls,
-        arg: typing.Union[typing.Tuple['UniswapV2LiquidityPositionSnapshotDTO'], typing.List['UniswapV2LiquidityPositionSnapshotDTO']],
+        _arg: typing.Union[typing.Tuple['UniswapV2LiquidityPositionSnapshotDTO'], typing.List['UniswapV2LiquidityPositionSnapshotDTO']],
         _configuration: typing.Optional[schemas.Configuration] = None,
     ) -> 'SchemaFor200ResponseBodyTextPlain':
         return super().__new__(
             cls,
-            arg,
+            _arg,
             _configuration=_configuration,
         )
 
@@ -142,12 +142,12 @@ class SchemaFor200ResponseBodyApplicationJson(
 
     def __new__(
         cls,
-        arg: typing.Union[typing.Tuple['UniswapV2LiquidityPositionSnapshotDTO'], typing.List['UniswapV2LiquidityPositionSnapshotDTO']],
+        _arg: typing.Union[typing.Tuple['UniswapV2LiquidityPositionSnapshotDTO'], typing.List['UniswapV2LiquidityPositionSnapshotDTO']],
         _configuration: typing.Optional[schemas.Configuration] = None,
     ) -> 'SchemaFor200ResponseBodyApplicationJson':
         return super().__new__(
             cls,
-            arg,
+            _arg,
             _configuration=_configuration,
         )
 
@@ -168,12 +168,12 @@ class SchemaFor200ResponseBodyTextJson(
 
     def __new__(
         cls,
-        arg: typing.Union[typing.Tuple['UniswapV2LiquidityPositionSnapshotDTO'], typing.List['UniswapV2LiquidityPositionSnapshotDTO']],
+        _arg: typing.Union[typing.Tuple['UniswapV2LiquidityPositionSnapshotDTO'], typing.List['UniswapV2LiquidityPositionSnapshotDTO']],
         _configuration: typing.Optional[schemas.Configuration] = None,
     ) -> 'SchemaFor200ResponseBodyTextJson':
         return super().__new__(
             cls,
-            arg,
+            _arg,
             _configuration=_configuration,
         )
 
@@ -306,7 +306,11 @@ class BaseApi(api_client.Api):
                 api_response = api_client.ApiResponseWithoutDeserialization(response=response)
 
         if not 200 <= response.status <= 299:
-            raise exceptions.ApiException(api_response=api_response)
+            raise exceptions.ApiException(
+                status=response.status,
+                reason=response.reason,
+                api_response=api_response
+            )
 
         return api_response
 

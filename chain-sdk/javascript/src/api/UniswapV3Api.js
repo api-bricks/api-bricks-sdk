@@ -381,12 +381,12 @@ export default class UniswapV3Api {
      * PoolDayData (historical)
      * Gets poolDayData.
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.startBlock 
-     * @param {Number} opts.endBlock 
-     * @param {Date} opts.startDate 
-     * @param {Date} opts.endDate 
-     * @param {String} opts.id 
-     * @param {String} opts.pool 
+     * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param {Date} opts.startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param {Date} opts.endDate The end date of timeframe.
+     * @param {String} opts.id Identifier, format: (pool address)-(day id).
+     * @param {String} opts.pool Pointer to pool.
      * @param {module:api/UniswapV3Api~uniswapV3GetPoolDayDataHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/UniswapV3PoolDayDataDTO>}
      */
@@ -432,12 +432,12 @@ export default class UniswapV3Api {
      * PoolHourData (historical)
      * Gets poolHourData.
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.startBlock 
-     * @param {Number} opts.endBlock 
-     * @param {Date} opts.startDate 
-     * @param {Date} opts.endDate 
-     * @param {String} opts.id 
-     * @param {String} opts.pool 
+     * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param {Date} opts.startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param {Date} opts.endDate The end date of timeframe.
+     * @param {String} opts.id Identifier, format: (pool address)-(day id)
+     * @param {String} opts.pool Pointer to pool.
      * @param {module:api/UniswapV3Api~uniswapV3GetPoolHourDataHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/UniswapV3PoolHourDataDTO>}
      */
@@ -536,12 +536,12 @@ export default class UniswapV3Api {
      * PositionSnapshots (historical)
      * Gets positionSnapshots.
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.startBlock 
-     * @param {Number} opts.endBlock 
-     * @param {Date} opts.startDate 
-     * @param {Date} opts.endDate 
-     * @param {String} opts.id 
-     * @param {String} opts.pool 
+     * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param {Date} opts.startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param {Date} opts.endDate The end date of timeframe.
+     * @param {String} opts.id NFT token identifier, format: (NFT token id)#(block number).
+     * @param {String} opts.pool Pool the position is within.
      * @param {module:api/UniswapV3Api~uniswapV3GetPositionSnapshotsHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/UniswapV3PositionSnapshotDTO>}
      */
@@ -646,7 +646,7 @@ export default class UniswapV3Api {
      * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
      * @param {Date} opts.startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
      * @param {Date} opts.endDate The end date of timeframe.
-     * @param {String} opts.id Identifier, format: transaction hash + \"#\" + index in swaps Transaction array.
+     * @param {String} opts.id Identifier, format: (transaction hash) + # + (index in swaps Transaction array).
      * @param {String} opts.pool Pool swap occured within.
      * @param {String} opts.token0 Reference to token0 as stored in pair contract.
      * @param {String} opts.token1 Reference to token1 as stored in pair contract.
@@ -697,12 +697,12 @@ export default class UniswapV3Api {
      * TickDayData (historical)
      * Gets tickDayData.
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.startBlock 
-     * @param {Number} opts.endBlock 
-     * @param {Date} opts.startDate 
-     * @param {Date} opts.endDate 
-     * @param {String} opts.id 
-     * @param {String} opts.pool 
+     * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param {Date} opts.startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param {Date} opts.endDate The end date of timeframe.
+     * @param {String} opts.id Identifier, format: (pool address)-(tick index)-(timestamp).
+     * @param {String} opts.pool Pointer to pool.
      * @param {module:api/UniswapV3Api~uniswapV3GetTickDayDataHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/UniswapV3TickDayDataDTO>}
      */
@@ -748,12 +748,12 @@ export default class UniswapV3Api {
      * Ticks (historical)
      * Gets ticks.
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.startBlock 
-     * @param {Number} opts.endBlock 
-     * @param {Date} opts.startDate 
-     * @param {Date} opts.endDate 
-     * @param {String} opts.id 
-     * @param {String} opts.pool 
+     * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param {Date} opts.startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param {Date} opts.endDate The end date of timeframe.
+     * @param {String} opts.id Identifier, format: (pool address)#(tick index)
+     * @param {String} opts.pool Pool address.
      * @param {module:api/UniswapV3Api~uniswapV3GetTicksHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/UniswapV3TickDTO>}
      */

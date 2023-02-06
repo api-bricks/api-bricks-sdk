@@ -337,12 +337,12 @@ $apiInstance = new OpenAPI\Client\Api\SushiswapApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$start_block = 56; // int
-$end_block = 56; // int
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$id = 'id_example'; // string
-$pair = 'pair_example'; // string
+$start_block = 56; // int | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+$end_block = 56; // int | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | The end date of timeframe.
+$id = 'id_example'; // string | Identifier, format: (transaction id):(transaction.burns.length).
+$pair = 'pair_example'; // string | Reference to pair.
 
 try {
     $result = $apiInstance->sushiswapGetBurnsHistorical($start_block, $end_block, $start_date, $end_date, $id, $pair);
@@ -356,12 +356,12 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **start_block** | **int**|  | [optional] |
-| **end_block** | **int**|  | [optional] |
-| **start_date** | **\DateTime**|  | [optional] |
-| **end_date** | **\DateTime**|  | [optional] |
-| **id** | **string**|  | [optional] |
-| **pair** | **string**|  | [optional] |
+| **start_block** | **int**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] |
+| **end_block** | **int**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] |
+| **start_date** | **\DateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] |
+| **end_date** | **\DateTime**| The end date of timeframe. | [optional] |
+| **id** | **string**| Identifier, format: (transaction id):(transaction.burns.length). | [optional] |
+| **pair** | **string**| Reference to pair. | [optional] |
 
 ### Return type
 
@@ -595,13 +595,13 @@ $apiInstance = new OpenAPI\Client\Api\SushiswapApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$start_block = 56; // int
-$end_block = 56; // int
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$id = 'id_example'; // string
-$user = 'user_example'; // string
-$pair = 'pair_example'; // string
+$start_block = 56; // int | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+$end_block = 56; // int | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | The end date of timeframe.
+$id = 'id_example'; // string | Identifier, format: (pair address)-(user address)-(timestamp)
+$user = 'user_example'; // string | Reference to user.
+$pair = 'pair_example'; // string | Reference to the pair liquidity is being provided on.
 
 try {
     $result = $apiInstance->sushiswapGetLiquidityPositionSnapshotsHistorical($start_block, $end_block, $start_date, $end_date, $id, $user, $pair);
@@ -615,13 +615,13 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **start_block** | **int**|  | [optional] |
-| **end_block** | **int**|  | [optional] |
-| **start_date** | **\DateTime**|  | [optional] |
-| **end_date** | **\DateTime**|  | [optional] |
-| **id** | **string**|  | [optional] |
-| **user** | **string**|  | [optional] |
-| **pair** | **string**|  | [optional] |
+| **start_block** | **int**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] |
+| **end_block** | **int**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] |
+| **start_date** | **\DateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] |
+| **end_date** | **\DateTime**| The end date of timeframe. | [optional] |
+| **id** | **string**| Identifier, format: (pair address)-(user address)-(timestamp) | [optional] |
+| **user** | **string**| Reference to user. | [optional] |
+| **pair** | **string**| Reference to the pair liquidity is being provided on. | [optional] |
 
 ### Return type
 
@@ -663,13 +663,13 @@ $apiInstance = new OpenAPI\Client\Api\SushiswapApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$start_block = 56; // int
-$end_block = 56; // int
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$id = 'id_example'; // string
-$user = 'user_example'; // string
-$pair = 'pair_example'; // string
+$start_block = 56; // int | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+$end_block = 56; // int | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | The end date of timeframe.
+$id = 'id_example'; // string | Identifier, format: (pair address)-(user address)
+$user = 'user_example'; // string | User address.
+$pair = 'pair_example'; // string | Pair address.
 
 try {
     $result = $apiInstance->sushiswapGetLiquidityPositionsHistorical($start_block, $end_block, $start_date, $end_date, $id, $user, $pair);
@@ -683,13 +683,13 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **start_block** | **int**|  | [optional] |
-| **end_block** | **int**|  | [optional] |
-| **start_date** | **\DateTime**|  | [optional] |
-| **end_date** | **\DateTime**|  | [optional] |
-| **id** | **string**|  | [optional] |
-| **user** | **string**|  | [optional] |
-| **pair** | **string**|  | [optional] |
+| **start_block** | **int**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] |
+| **end_block** | **int**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] |
+| **start_date** | **\DateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] |
+| **end_date** | **\DateTime**| The end date of timeframe. | [optional] |
+| **id** | **string**| Identifier, format: (pair address)-(user address) | [optional] |
+| **user** | **string**| User address. | [optional] |
+| **pair** | **string**| Pair address. | [optional] |
 
 ### Return type
 
@@ -731,12 +731,12 @@ $apiInstance = new OpenAPI\Client\Api\SushiswapApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$start_block = 56; // int
-$end_block = 56; // int
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$id = 'id_example'; // string
-$pair = 'pair_example'; // string
+$start_block = 56; // int | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+$end_block = 56; // int | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | The end date of timeframe.
+$id = 'id_example'; // string | Identifier, format: (transaction hash)-(index in the transaction mint array).
+$pair = 'pair_example'; // string | Reference to pair.
 
 try {
     $result = $apiInstance->sushiswapGetMintsHistorical($start_block, $end_block, $start_date, $end_date, $id, $pair);
@@ -750,12 +750,12 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **start_block** | **int**|  | [optional] |
-| **end_block** | **int**|  | [optional] |
-| **start_date** | **\DateTime**|  | [optional] |
-| **end_date** | **\DateTime**|  | [optional] |
-| **id** | **string**|  | [optional] |
-| **pair** | **string**|  | [optional] |
+| **start_block** | **int**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] |
+| **end_block** | **int**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] |
+| **start_date** | **\DateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] |
+| **end_date** | **\DateTime**| The end date of timeframe. | [optional] |
+| **id** | **string**| Identifier, format: (transaction hash)-(index in the transaction mint array). | [optional] |
+| **pair** | **string**| Reference to pair. | [optional] |
 
 ### Return type
 
@@ -797,14 +797,14 @@ $apiInstance = new OpenAPI\Client\Api\SushiswapApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$start_block = 56; // int
-$end_block = 56; // int
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$id = 'id_example'; // string
-$pair = 'pair_example'; // string
-$token_0 = 'token_0_example'; // string
-$token_1 = 'token_1_example'; // string
+$start_block = 56; // int | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+$end_block = 56; // int | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | The end date of timeframe.
+$id = 'id_example'; // string | Identifier, format: (pair id)-(day start timestamp).
+$pair = 'pair_example'; // string | Reference to pair.
+$token_0 = 'token_0_example'; // string | Reference to token0.
+$token_1 = 'token_1_example'; // string | Reference to token1.
 
 try {
     $result = $apiInstance->sushiswapGetPairDayDataHistorical($start_block, $end_block, $start_date, $end_date, $id, $pair, $token_0, $token_1);
@@ -818,14 +818,14 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **start_block** | **int**|  | [optional] |
-| **end_block** | **int**|  | [optional] |
-| **start_date** | **\DateTime**|  | [optional] |
-| **end_date** | **\DateTime**|  | [optional] |
-| **id** | **string**|  | [optional] |
-| **pair** | **string**|  | [optional] |
-| **token_0** | **string**|  | [optional] |
-| **token_1** | **string**|  | [optional] |
+| **start_block** | **int**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] |
+| **end_block** | **int**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] |
+| **start_date** | **\DateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] |
+| **end_date** | **\DateTime**| The end date of timeframe. | [optional] |
+| **id** | **string**| Identifier, format: (pair id)-(day start timestamp). | [optional] |
+| **pair** | **string**| Reference to pair. | [optional] |
+| **token_0** | **string**| Reference to token0. | [optional] |
+| **token_1** | **string**| Reference to token1. | [optional] |
 
 ### Return type
 
@@ -867,12 +867,12 @@ $apiInstance = new OpenAPI\Client\Api\SushiswapApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$start_block = 56; // int
-$end_block = 56; // int
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$id = 'id_example'; // string
-$pair = 'pair_example'; // string
+$start_block = 56; // int | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+$end_block = 56; // int | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | The end date of timeframe.
+$id = 'id_example'; // string | Identifier, format: (pair id)-(hour start timestamp).
+$pair = 'pair_example'; // string | Reference to pair.
 
 try {
     $result = $apiInstance->sushiswapGetPairHourDataHistorical($start_block, $end_block, $start_date, $end_date, $id, $pair);
@@ -886,12 +886,12 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **start_block** | **int**|  | [optional] |
-| **end_block** | **int**|  | [optional] |
-| **start_date** | **\DateTime**|  | [optional] |
-| **end_date** | **\DateTime**|  | [optional] |
-| **id** | **string**|  | [optional] |
-| **pair** | **string**|  | [optional] |
+| **start_block** | **int**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] |
+| **end_block** | **int**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] |
+| **start_date** | **\DateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] |
+| **end_date** | **\DateTime**| The end date of timeframe. | [optional] |
+| **id** | **string**| Identifier, format: (pair id)-(hour start timestamp). | [optional] |
+| **pair** | **string**| Reference to pair. | [optional] |
 
 ### Return type
 
@@ -933,14 +933,14 @@ $apiInstance = new OpenAPI\Client\Api\SushiswapApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$start_block = 56; // int
-$end_block = 56; // int
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$id = 'id_example'; // string
-$name = 'name_example'; // string
-$token_0 = 'token_0_example'; // string
-$token_1 = 'token_1_example'; // string
+$start_block = 56; // int | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+$end_block = 56; // int | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | The end date of timeframe.
+$id = 'id_example'; // string | Pair contract address.
+$name = 'name_example'; // string | Friendly name, format: (token0 name)-(token1 name)
+$token_0 = 'token_0_example'; // string | Reference to token0 as stored in pair contract.
+$token_1 = 'token_1_example'; // string | Reference to token0 as stored in pair contract.
 
 try {
     $result = $apiInstance->sushiswapGetPairsHistorical($start_block, $end_block, $start_date, $end_date, $id, $name, $token_0, $token_1);
@@ -954,14 +954,14 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **start_block** | **int**|  | [optional] |
-| **end_block** | **int**|  | [optional] |
-| **start_date** | **\DateTime**|  | [optional] |
-| **end_date** | **\DateTime**|  | [optional] |
-| **id** | **string**|  | [optional] |
-| **name** | **string**|  | [optional] |
-| **token_0** | **string**|  | [optional] |
-| **token_1** | **string**|  | [optional] |
+| **start_block** | **int**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] |
+| **end_block** | **int**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] |
+| **start_date** | **\DateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] |
+| **end_date** | **\DateTime**| The end date of timeframe. | [optional] |
+| **id** | **string**| Pair contract address. | [optional] |
+| **name** | **string**| Friendly name, format: (token0 name)-(token1 name) | [optional] |
+| **token_0** | **string**| Reference to token0 as stored in pair contract. | [optional] |
+| **token_1** | **string**| Reference to token0 as stored in pair contract. | [optional] |
 
 ### Return type
 

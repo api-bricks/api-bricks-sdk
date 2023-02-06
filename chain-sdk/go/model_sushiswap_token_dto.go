@@ -16,6 +16,9 @@ import (
 	"time"
 )
 
+// checks if the SushiswapTokenDTO type satisfies the MappedNullable interface at compile time
+var _ MappedNullable = &SushiswapTokenDTO{}
+
 // SushiswapTokenDTO Stores aggregated information for a specific token across all pairs that token is included in.
 type SushiswapTokenDTO struct {
 	EntryTime *time.Time `json:"entry_time,omitempty"`
@@ -83,7 +86,7 @@ func (o *SushiswapTokenDTO) GetEntryTime() time.Time {
 // and a boolean to check if the value has been set.
 func (o *SushiswapTokenDTO) GetEntryTimeOk() (*time.Time, bool) {
 	if o == nil || isNil(o.EntryTime) {
-    return nil, false
+		return nil, false
 	}
 	return o.EntryTime, true
 }
@@ -115,7 +118,7 @@ func (o *SushiswapTokenDTO) GetRecvTime() time.Time {
 // and a boolean to check if the value has been set.
 func (o *SushiswapTokenDTO) GetRecvTimeOk() (*time.Time, bool) {
 	if o == nil || isNil(o.RecvTime) {
-    return nil, false
+		return nil, false
 	}
 	return o.RecvTime, true
 }
@@ -147,7 +150,7 @@ func (o *SushiswapTokenDTO) GetBlockNumber() int64 {
 // and a boolean to check if the value has been set.
 func (o *SushiswapTokenDTO) GetBlockNumberOk() (*int64, bool) {
 	if o == nil || isNil(o.BlockNumber) {
-    return nil, false
+		return nil, false
 	}
 	return o.BlockNumber, true
 }
@@ -180,7 +183,7 @@ func (o *SushiswapTokenDTO) GetId() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *SushiswapTokenDTO) GetIdOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Id.Get(), o.Id.IsSet()
 }
@@ -222,7 +225,7 @@ func (o *SushiswapTokenDTO) GetFactory() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *SushiswapTokenDTO) GetFactoryOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Factory.Get(), o.Factory.IsSet()
 }
@@ -264,7 +267,7 @@ func (o *SushiswapTokenDTO) GetSymbol() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *SushiswapTokenDTO) GetSymbolOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Symbol.Get(), o.Symbol.IsSet()
 }
@@ -306,7 +309,7 @@ func (o *SushiswapTokenDTO) GetName() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *SushiswapTokenDTO) GetNameOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Name.Get(), o.Name.IsSet()
 }
@@ -348,7 +351,7 @@ func (o *SushiswapTokenDTO) GetDecimals() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *SushiswapTokenDTO) GetDecimalsOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Decimals.Get(), o.Decimals.IsSet()
 }
@@ -390,7 +393,7 @@ func (o *SushiswapTokenDTO) GetTotalSupply() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *SushiswapTokenDTO) GetTotalSupplyOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.TotalSupply.Get(), o.TotalSupply.IsSet()
 }
@@ -432,7 +435,7 @@ func (o *SushiswapTokenDTO) GetVolume() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *SushiswapTokenDTO) GetVolumeOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Volume.Get(), o.Volume.IsSet()
 }
@@ -474,7 +477,7 @@ func (o *SushiswapTokenDTO) GetVolumeUsd() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *SushiswapTokenDTO) GetVolumeUsdOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.VolumeUsd.Get(), o.VolumeUsd.IsSet()
 }
@@ -516,7 +519,7 @@ func (o *SushiswapTokenDTO) GetUntrackedVolumeUsd() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *SushiswapTokenDTO) GetUntrackedVolumeUsdOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.UntrackedVolumeUsd.Get(), o.UntrackedVolumeUsd.IsSet()
 }
@@ -558,7 +561,7 @@ func (o *SushiswapTokenDTO) GetTxCount() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *SushiswapTokenDTO) GetTxCountOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.TxCount.Get(), o.TxCount.IsSet()
 }
@@ -600,7 +603,7 @@ func (o *SushiswapTokenDTO) GetLiquidity() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *SushiswapTokenDTO) GetLiquidityOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Liquidity.Get(), o.Liquidity.IsSet()
 }
@@ -642,7 +645,7 @@ func (o *SushiswapTokenDTO) GetDerivedEth() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *SushiswapTokenDTO) GetDerivedEthOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.DerivedEth.Get(), o.DerivedEth.IsSet()
 }
@@ -684,7 +687,7 @@ func (o *SushiswapTokenDTO) GetWhitelistPairs() []string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *SushiswapTokenDTO) GetWhitelistPairsOk() ([]string, bool) {
 	if o == nil || isNil(o.WhitelistPairs) {
-    return nil, false
+		return nil, false
 	}
 	return o.WhitelistPairs, true
 }
@@ -716,7 +719,7 @@ func (o *SushiswapTokenDTO) GetVid() int64 {
 // and a boolean to check if the value has been set.
 func (o *SushiswapTokenDTO) GetVidOk() (*int64, bool) {
 	if o == nil || isNil(o.Vid) {
-    return nil, false
+		return nil, false
 	}
 	return o.Vid, true
 }
@@ -749,7 +752,7 @@ func (o *SushiswapTokenDTO) GetTokenSymbol() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *SushiswapTokenDTO) GetTokenSymbolOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.TokenSymbol.Get(), o.TokenSymbol.IsSet()
 }
@@ -778,6 +781,14 @@ func (o *SushiswapTokenDTO) UnsetTokenSymbol() {
 }
 
 func (o SushiswapTokenDTO) MarshalJSON() ([]byte, error) {
+	toSerialize,err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
+}
+
+func (o SushiswapTokenDTO) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
 	if !isNil(o.EntryTime) {
 		toSerialize["entry_time"] = o.EntryTime
@@ -833,7 +844,7 @@ func (o SushiswapTokenDTO) MarshalJSON() ([]byte, error) {
 	if o.TokenSymbol.IsSet() {
 		toSerialize["token_symbol"] = o.TokenSymbol.Get()
 	}
-	return json.Marshal(toSerialize)
+	return toSerialize, nil
 }
 
 type NullableSushiswapTokenDTO struct {

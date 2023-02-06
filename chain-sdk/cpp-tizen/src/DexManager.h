@@ -122,12 +122,12 @@ bool dexGetBatches (historical)Async(char * accessToken,
 /*! \brief Deposits (historical). *Synchronous*
  *
  * Gets deposits.
- * \param startBlock 
- * \param endBlock 
- * \param startDate 
- * \param endDate 
- * \param id 
- * \param user 
+ * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+ * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+ * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+ * \param endDate The end date of timeframe.
+ * \param id Identifier, format: (transaction hash)-(token id).
+ * \param user User address.
  * \param handler The callback function to be invoked on completion. *Required*
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
@@ -140,12 +140,12 @@ bool dexGetDeposits (historical)Sync(char * accessToken,
 /*! \brief Deposits (historical). *Asynchronous*
  *
  * Gets deposits.
- * \param startBlock 
- * \param endBlock 
- * \param startDate 
- * \param endDate 
- * \param id 
- * \param user 
+ * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+ * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+ * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+ * \param endDate The end date of timeframe.
+ * \param id Identifier, format: (transaction hash)-(token id).
+ * \param user User address.
  * \param handler The callback function to be invoked on completion. *Required*
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
@@ -159,13 +159,13 @@ bool dexGetDeposits (historical)Async(char * accessToken,
 /*! \brief Orders (historical). *Synchronous*
  *
  * Gets orders.
- * \param startBlock 
- * \param endBlock 
- * \param startDate 
- * \param endDate 
- * \param id 
- * \param buyToken 
- * \param sellToken 
+ * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+ * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+ * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+ * \param endDate The end date of timeframe.
+ * \param id Identifier, format: (owner address)-(order id)
+ * \param buyToken Identifier of token that was bought.
+ * \param sellToken Identifier of token that was sold.
  * \param handler The callback function to be invoked on completion. *Required*
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
@@ -178,13 +178,13 @@ bool dexGetOrders (historical)Sync(char * accessToken,
 /*! \brief Orders (historical). *Asynchronous*
  *
  * Gets orders.
- * \param startBlock 
- * \param endBlock 
- * \param startDate 
- * \param endDate 
- * \param id 
- * \param buyToken 
- * \param sellToken 
+ * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+ * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+ * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+ * \param endDate The end date of timeframe.
+ * \param id Identifier, format: (owner address)-(order id)
+ * \param buyToken Identifier of token that was bought.
+ * \param sellToken Identifier of token that was sold.
  * \param handler The callback function to be invoked on completion. *Required*
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
@@ -198,11 +198,11 @@ bool dexGetOrders (historical)Async(char * accessToken,
 /*! \brief Prices (historical). *Synchronous*
  *
  * Gets prices.
- * \param startBlock 
- * \param endBlock 
- * \param startDate 
- * \param endDate 
- * \param id 
+ * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+ * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+ * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+ * \param endDate The end date of timeframe.
+ * \param id Identifier, format: (token id)-(batch id).
  * \param handler The callback function to be invoked on completion. *Required*
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
@@ -215,11 +215,11 @@ bool dexGetPrices (historical)Sync(char * accessToken,
 /*! \brief Prices (historical). *Asynchronous*
  *
  * Gets prices.
- * \param startBlock 
- * \param endBlock 
- * \param startDate 
- * \param endDate 
- * \param id 
+ * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+ * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+ * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+ * \param endDate The end date of timeframe.
+ * \param id Identifier, format: (token id)-(batch id).
  * \param handler The callback function to be invoked on completion. *Required*
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
@@ -418,11 +418,11 @@ bool dexGetUsers (historical)Async(char * accessToken,
 /*! \brief WithdrawRequests (historical). *Synchronous*
  *
  * Gets withdrawRequests.
- * \param startBlock 
- * \param endBlock 
- * \param startDate 
- * \param endDate 
- * \param id 
+ * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+ * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+ * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+ * \param endDate The end date of timeframe.
+ * \param id Identifier, format: (transaction hash)-(id).
  * \param user 
  * \param handler The callback function to be invoked on completion. *Required*
  * \param accessToken The Authorization token. *Required*
@@ -436,11 +436,11 @@ bool dexGetWithdrawRequests (historical)Sync(char * accessToken,
 /*! \brief WithdrawRequests (historical). *Asynchronous*
  *
  * Gets withdrawRequests.
- * \param startBlock 
- * \param endBlock 
- * \param startDate 
- * \param endDate 
- * \param id 
+ * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+ * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+ * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+ * \param endDate The end date of timeframe.
+ * \param id Identifier, format: (transaction hash)-(id).
  * \param user 
  * \param handler The callback function to be invoked on completion. *Required*
  * \param accessToken The Authorization token. *Required*
@@ -455,11 +455,11 @@ bool dexGetWithdrawRequests (historical)Async(char * accessToken,
 /*! \brief Withdraws (historical). *Synchronous*
  *
  * Gets withdraws.
- * \param startBlock 
- * \param endBlock 
- * \param startDate 
- * \param endDate 
- * \param id 
+ * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+ * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+ * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+ * \param endDate The end date of timeframe.
+ * \param id Identifier, format: (transaction hash)-(id).
  * \param user 
  * \param handler The callback function to be invoked on completion. *Required*
  * \param accessToken The Authorization token. *Required*
@@ -473,11 +473,11 @@ bool dexGetWithdraws (historical)Sync(char * accessToken,
 /*! \brief Withdraws (historical). *Asynchronous*
  *
  * Gets withdraws.
- * \param startBlock 
- * \param endBlock 
- * \param startDate 
- * \param endDate 
- * \param id 
+ * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+ * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+ * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+ * \param endDate The end date of timeframe.
+ * \param id Identifier, format: (transaction hash)-(id).
  * \param user 
  * \param handler The callback function to be invoked on completion. *Required*
  * \param accessToken The Authorization token. *Required*

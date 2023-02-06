@@ -1805,12 +1805,12 @@ class CurveApi {
   /// Gets coins.
   ///
   /// Parameters:
-  /// * [startBlock] 
-  /// * [endBlock] 
-  /// * [startDate] 
-  /// * [endDate] 
-  /// * [id] 
-  /// * [pool] 
+  /// * [startBlock] - The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+  /// * [endBlock] - The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+  /// * [startDate] - The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+  /// * [endDate] - The end date of timeframe.
+  /// * [id] - Identifier, format: (pool_id)-(coin_index).
+  /// * [pool] - 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -4146,12 +4146,12 @@ class CurveApi {
   /// Gets underlyingCoins.
   ///
   /// Parameters:
-  /// * [startBlock] 
-  /// * [endBlock] 
-  /// * [startDate] 
-  /// * [endDate] 
-  /// * [id] 
-  /// * [pool] 
+  /// * [startBlock] - The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+  /// * [endBlock] - The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+  /// * [startDate] - The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+  /// * [endDate] - The end date of timeframe.
+  /// * [id] - Equals to: (pool_id)-(coin_index).
+  /// * [pool] - 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request

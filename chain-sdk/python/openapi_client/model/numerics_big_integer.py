@@ -90,7 +90,7 @@ class NumericsBigInteger(
 
     def __new__(
         cls,
-        *args: typing.Union[dict, frozendict.frozendict, ],
+        *_args: typing.Union[dict, frozendict.frozendict, ],
         is_power_of_two: typing.Union[MetaOapg.properties.is_power_of_two, bool, schemas.Unset] = schemas.unset,
         is_zero: typing.Union[MetaOapg.properties.is_zero, bool, schemas.Unset] = schemas.unset,
         is_one: typing.Union[MetaOapg.properties.is_one, bool, schemas.Unset] = schemas.unset,
@@ -100,7 +100,7 @@ class NumericsBigInteger(
     ) -> 'NumericsBigInteger':
         return super().__new__(
             cls,
-            *args,
+            *_args,
             is_power_of_two=is_power_of_two,
             is_zero=is_zero,
             is_one=is_one,

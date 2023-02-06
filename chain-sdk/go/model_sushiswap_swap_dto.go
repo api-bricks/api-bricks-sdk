@@ -16,6 +16,9 @@ import (
 	"time"
 )
 
+// checks if the SushiswapSwapDTO type satisfies the MappedNullable interface at compile time
+var _ MappedNullable = &SushiswapSwapDTO{}
+
 // SushiswapSwapDTO Swap are created for each token swap within a pair.
 type SushiswapSwapDTO struct {
 	EntryTime *time.Time `json:"entry_time,omitempty"`
@@ -85,7 +88,7 @@ func (o *SushiswapSwapDTO) GetEntryTime() time.Time {
 // and a boolean to check if the value has been set.
 func (o *SushiswapSwapDTO) GetEntryTimeOk() (*time.Time, bool) {
 	if o == nil || isNil(o.EntryTime) {
-    return nil, false
+		return nil, false
 	}
 	return o.EntryTime, true
 }
@@ -117,7 +120,7 @@ func (o *SushiswapSwapDTO) GetRecvTime() time.Time {
 // and a boolean to check if the value has been set.
 func (o *SushiswapSwapDTO) GetRecvTimeOk() (*time.Time, bool) {
 	if o == nil || isNil(o.RecvTime) {
-    return nil, false
+		return nil, false
 	}
 	return o.RecvTime, true
 }
@@ -149,7 +152,7 @@ func (o *SushiswapSwapDTO) GetBlockNumber() int64 {
 // and a boolean to check if the value has been set.
 func (o *SushiswapSwapDTO) GetBlockNumberOk() (*int64, bool) {
 	if o == nil || isNil(o.BlockNumber) {
-    return nil, false
+		return nil, false
 	}
 	return o.BlockNumber, true
 }
@@ -182,7 +185,7 @@ func (o *SushiswapSwapDTO) GetId() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *SushiswapSwapDTO) GetIdOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Id.Get(), o.Id.IsSet()
 }
@@ -224,7 +227,7 @@ func (o *SushiswapSwapDTO) GetTransaction() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *SushiswapSwapDTO) GetTransactionOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Transaction.Get(), o.Transaction.IsSet()
 }
@@ -266,7 +269,7 @@ func (o *SushiswapSwapDTO) GetTimestamp() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *SushiswapSwapDTO) GetTimestampOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Timestamp.Get(), o.Timestamp.IsSet()
 }
@@ -308,7 +311,7 @@ func (o *SushiswapSwapDTO) GetPair() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *SushiswapSwapDTO) GetPairOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Pair.Get(), o.Pair.IsSet()
 }
@@ -350,7 +353,7 @@ func (o *SushiswapSwapDTO) GetSender() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *SushiswapSwapDTO) GetSenderOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Sender.Get(), o.Sender.IsSet()
 }
@@ -392,7 +395,7 @@ func (o *SushiswapSwapDTO) GetAmount0In() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *SushiswapSwapDTO) GetAmount0InOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Amount0In.Get(), o.Amount0In.IsSet()
 }
@@ -434,7 +437,7 @@ func (o *SushiswapSwapDTO) GetAmount1In() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *SushiswapSwapDTO) GetAmount1InOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Amount1In.Get(), o.Amount1In.IsSet()
 }
@@ -476,7 +479,7 @@ func (o *SushiswapSwapDTO) GetAmount0Out() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *SushiswapSwapDTO) GetAmount0OutOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Amount0Out.Get(), o.Amount0Out.IsSet()
 }
@@ -518,7 +521,7 @@ func (o *SushiswapSwapDTO) GetAmount1Out() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *SushiswapSwapDTO) GetAmount1OutOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Amount1Out.Get(), o.Amount1Out.IsSet()
 }
@@ -560,7 +563,7 @@ func (o *SushiswapSwapDTO) GetTo() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *SushiswapSwapDTO) GetToOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.To.Get(), o.To.IsSet()
 }
@@ -602,7 +605,7 @@ func (o *SushiswapSwapDTO) GetLogIndex() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *SushiswapSwapDTO) GetLogIndexOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.LogIndex.Get(), o.LogIndex.IsSet()
 }
@@ -644,7 +647,7 @@ func (o *SushiswapSwapDTO) GetAmountUsd() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *SushiswapSwapDTO) GetAmountUsdOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.AmountUsd.Get(), o.AmountUsd.IsSet()
 }
@@ -685,7 +688,7 @@ func (o *SushiswapSwapDTO) GetVid() int64 {
 // and a boolean to check if the value has been set.
 func (o *SushiswapSwapDTO) GetVidOk() (*int64, bool) {
 	if o == nil || isNil(o.Vid) {
-    return nil, false
+		return nil, false
 	}
 	return o.Vid, true
 }
@@ -718,7 +721,7 @@ func (o *SushiswapSwapDTO) GetPoolId() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *SushiswapSwapDTO) GetPoolIdOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.PoolId.Get(), o.PoolId.IsSet()
 }
@@ -760,7 +763,7 @@ func (o *SushiswapSwapDTO) GetTransactionId() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *SushiswapSwapDTO) GetTransactionIdOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.TransactionId.Get(), o.TransactionId.IsSet()
 }
@@ -801,7 +804,7 @@ func (o *SushiswapSwapDTO) GetEvaluatedPrice() float64 {
 // and a boolean to check if the value has been set.
 func (o *SushiswapSwapDTO) GetEvaluatedPriceOk() (*float64, bool) {
 	if o == nil || isNil(o.EvaluatedPrice) {
-    return nil, false
+		return nil, false
 	}
 	return o.EvaluatedPrice, true
 }
@@ -833,7 +836,7 @@ func (o *SushiswapSwapDTO) GetEvaluatedAmount() float64 {
 // and a boolean to check if the value has been set.
 func (o *SushiswapSwapDTO) GetEvaluatedAmountOk() (*float64, bool) {
 	if o == nil || isNil(o.EvaluatedAmount) {
-    return nil, false
+		return nil, false
 	}
 	return o.EvaluatedAmount, true
 }
@@ -865,7 +868,7 @@ func (o *SushiswapSwapDTO) GetEvaluatedAggressor() TransactionsETradeAggressiveS
 // and a boolean to check if the value has been set.
 func (o *SushiswapSwapDTO) GetEvaluatedAggressorOk() (*TransactionsETradeAggressiveSide, bool) {
 	if o == nil || isNil(o.EvaluatedAggressor) {
-    return nil, false
+		return nil, false
 	}
 	return o.EvaluatedAggressor, true
 }
@@ -885,6 +888,14 @@ func (o *SushiswapSwapDTO) SetEvaluatedAggressor(v TransactionsETradeAggressiveS
 }
 
 func (o SushiswapSwapDTO) MarshalJSON() ([]byte, error) {
+	toSerialize,err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
+}
+
+func (o SushiswapSwapDTO) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
 	if !isNil(o.EntryTime) {
 		toSerialize["entry_time"] = o.EntryTime
@@ -940,16 +951,12 @@ func (o SushiswapSwapDTO) MarshalJSON() ([]byte, error) {
 	if o.TransactionId.IsSet() {
 		toSerialize["transaction_id"] = o.TransactionId.Get()
 	}
-	if !isNil(o.EvaluatedPrice) {
-		toSerialize["evaluated_price"] = o.EvaluatedPrice
-	}
-	if !isNil(o.EvaluatedAmount) {
-		toSerialize["evaluated_amount"] = o.EvaluatedAmount
-	}
+	// skip: evaluated_price is readOnly
+	// skip: evaluated_amount is readOnly
 	if !isNil(o.EvaluatedAggressor) {
 		toSerialize["evaluated_aggressor"] = o.EvaluatedAggressor
 	}
-	return json.Marshal(toSerialize)
+	return toSerialize, nil
 }
 
 type NullableSushiswapSwapDTO struct {

@@ -5,6 +5,7 @@ src/main/groovy/org/openapitools/api/ApiUtils.groovy
 src/main/groovy/org/openapitools/api/CowApi.groovy
 src/main/groovy/org/openapitools/api/CurveApi.groovy
 src/main/groovy/org/openapitools/api/DexApi.groovy
+src/main/groovy/org/openapitools/api/MetadataApi.groovy
 src/main/groovy/org/openapitools/api/SushiswapApi.groovy
 src/main/groovy/org/openapitools/api/UniswapV2Api.groovy
 src/main/groovy/org/openapitools/api/UniswapV3Api.groovy

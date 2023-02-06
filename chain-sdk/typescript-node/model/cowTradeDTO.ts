@@ -195,3 +195,5 @@ export class CowTradeDTO {
     }
 }
 
+export namespace CowTradeDTO {
+}

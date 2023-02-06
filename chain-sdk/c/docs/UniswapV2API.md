@@ -180,13 +180,13 @@ list_t* UniswapV2API_uniswapV2GetLiquidityPositionSnapshotsHistorical(apiClient_
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **apiClient** | **apiClient_t \*** | context containing the client configuration |
-**startBlock** | **long** |  | [optional] 
-**endBlock** | **long** |  | [optional] 
-**startDate** | **char** |  | [optional] 
-**endDate** | **char** |  | [optional] 
-**id** | **char \*** |  | [optional] 
-**user** | **char \*** |  | [optional] 
-**pair** | **char \*** |  | [optional] 
+**startBlock** | **long** | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
+**endBlock** | **long** | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
+**startDate** | **char** | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
+**endDate** | **char** | The end date of timeframe. | [optional] 
+**id** | **char \*** | Identifier, format: (pair address)-(user address) | [optional] 
+**user** | **char \*** | Reference to user. | [optional] 
+**pair** | **char \*** | Reference to the pair liquidity is being provided on. | [optional] 
 
 ### Return type
 

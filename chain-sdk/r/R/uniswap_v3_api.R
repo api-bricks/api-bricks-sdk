@@ -791,12 +791,12 @@
 #' ####################  UniswapV3GetPoolDayDataHistorical  ####################
 #'
 #' library(openapi)
-#' var_start_block <- 56 # integer |  (Optional)
-#' var_end_block <- 56 # integer |  (Optional)
-#' var_start_date <- "start_date_example" # character |  (Optional)
-#' var_end_date <- "end_date_example" # character |  (Optional)
-#' var_id <- "id_example" # character |  (Optional)
-#' var_pool <- "pool_example" # character |  (Optional)
+#' var_start_block <- 56 # integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (Optional)
+#' var_end_block <- 56 # integer | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (Optional)
+#' var_start_date <- "start_date_example" # character | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (Optional)
+#' var_end_date <- "end_date_example" # character | The end date of timeframe. (Optional)
+#' var_id <- "id_example" # character | Identifier, format: (pool address)-(day id). (Optional)
+#' var_pool <- "pool_example" # character | Pointer to pool. (Optional)
 #'
 #' #PoolDayData (historical)
 #' api_instance <- UniswapV3Api$new()
@@ -810,12 +810,12 @@
 #' ####################  UniswapV3GetPoolHourDataHistorical  ####################
 #'
 #' library(openapi)
-#' var_start_block <- 56 # integer |  (Optional)
-#' var_end_block <- 56 # integer |  (Optional)
-#' var_start_date <- "start_date_example" # character |  (Optional)
-#' var_end_date <- "end_date_example" # character |  (Optional)
-#' var_id <- "id_example" # character |  (Optional)
-#' var_pool <- "pool_example" # character |  (Optional)
+#' var_start_block <- 56 # integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (Optional)
+#' var_end_block <- 56 # integer | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (Optional)
+#' var_start_date <- "start_date_example" # character | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (Optional)
+#' var_end_date <- "end_date_example" # character | The end date of timeframe. (Optional)
+#' var_id <- "id_example" # character | Identifier, format: (pool address)-(day id) (Optional)
+#' var_pool <- "pool_example" # character | Pointer to pool. (Optional)
 #'
 #' #PoolHourData (historical)
 #' api_instance <- UniswapV3Api$new()
@@ -849,12 +849,12 @@
 #' ####################  UniswapV3GetPositionSnapshotsHistorical  ####################
 #'
 #' library(openapi)
-#' var_start_block <- 56 # integer |  (Optional)
-#' var_end_block <- 56 # integer |  (Optional)
-#' var_start_date <- "start_date_example" # character |  (Optional)
-#' var_end_date <- "end_date_example" # character |  (Optional)
-#' var_id <- "id_example" # character |  (Optional)
-#' var_pool <- "pool_example" # character |  (Optional)
+#' var_start_block <- 56 # integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (Optional)
+#' var_end_block <- 56 # integer | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (Optional)
+#' var_start_date <- "start_date_example" # character | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (Optional)
+#' var_end_date <- "end_date_example" # character | The end date of timeframe. (Optional)
+#' var_id <- "id_example" # character | NFT token identifier, format: (NFT token id)#(block number). (Optional)
+#' var_pool <- "pool_example" # character | Pool the position is within. (Optional)
 #'
 #' #PositionSnapshots (historical)
 #' api_instance <- UniswapV3Api$new()
@@ -893,7 +893,7 @@
 #' var_end_block <- 56 # integer | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (Optional)
 #' var_start_date <- "start_date_example" # character | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (Optional)
 #' var_end_date <- "end_date_example" # character | The end date of timeframe. (Optional)
-#' var_id <- "id_example" # character | Identifier, format: transaction hash + \"#\" + index in swaps Transaction array. (Optional)
+#' var_id <- "id_example" # character | Identifier, format: (transaction hash) + # + (index in swaps Transaction array). (Optional)
 #' var_pool <- "pool_example" # character | Pool swap occured within. (Optional)
 #' var_token_0 <- "token_0_example" # character | Reference to token0 as stored in pair contract. (Optional)
 #' var_token_1 <- "token_1_example" # character | Reference to token1 as stored in pair contract. (Optional)
@@ -910,12 +910,12 @@
 #' ####################  UniswapV3GetTickDayDataHistorical  ####################
 #'
 #' library(openapi)
-#' var_start_block <- 56 # integer |  (Optional)
-#' var_end_block <- 56 # integer |  (Optional)
-#' var_start_date <- "start_date_example" # character |  (Optional)
-#' var_end_date <- "end_date_example" # character |  (Optional)
-#' var_id <- "id_example" # character |  (Optional)
-#' var_pool <- "pool_example" # character |  (Optional)
+#' var_start_block <- 56 # integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (Optional)
+#' var_end_block <- 56 # integer | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (Optional)
+#' var_start_date <- "start_date_example" # character | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (Optional)
+#' var_end_date <- "end_date_example" # character | The end date of timeframe. (Optional)
+#' var_id <- "id_example" # character | Identifier, format: (pool address)-(tick index)-(timestamp). (Optional)
+#' var_pool <- "pool_example" # character | Pointer to pool. (Optional)
 #'
 #' #TickDayData (historical)
 #' api_instance <- UniswapV3Api$new()
@@ -929,12 +929,12 @@
 #' ####################  UniswapV3GetTicksHistorical  ####################
 #'
 #' library(openapi)
-#' var_start_block <- 56 # integer |  (Optional)
-#' var_end_block <- 56 # integer |  (Optional)
-#' var_start_date <- "start_date_example" # character |  (Optional)
-#' var_end_date <- "end_date_example" # character |  (Optional)
-#' var_id <- "id_example" # character |  (Optional)
-#' var_pool <- "pool_example" # character |  (Optional)
+#' var_start_block <- 56 # integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (Optional)
+#' var_end_block <- 56 # integer | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (Optional)
+#' var_start_date <- "start_date_example" # character | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (Optional)
+#' var_end_date <- "end_date_example" # character | The end date of timeframe. (Optional)
+#' var_id <- "id_example" # character | Identifier, format: (pool address)#(tick index) (Optional)
+#' var_pool <- "pool_example" # character | Pool address. (Optional)
 #'
 #' #Ticks (historical)
 #' api_instance <- UniswapV3Api$new()
@@ -1980,12 +1980,12 @@ UniswapV3Api <- R6::R6Class(
     #' @description
     #' PoolDayData (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param id (optional) No description
-    #' @param pool (optional) No description
+    #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+    #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+    #' @param start_date (optional) The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+    #' @param end_date (optional) The end date of timeframe.
+    #' @param id (optional) Identifier, format: (pool address)-(day id).
+    #' @param pool (optional) Pointer to pool.
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return array[UniswapV3PoolDayDataDTO]
@@ -2007,12 +2007,12 @@ UniswapV3Api <- R6::R6Class(
     #' @description
     #' PoolDayData (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param id (optional) No description
-    #' @param pool (optional) No description
+    #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+    #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+    #' @param start_date (optional) The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+    #' @param end_date (optional) The end date of timeframe.
+    #' @param id (optional) Identifier, format: (pool address)-(day id).
+    #' @param pool (optional) Pointer to pool.
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return API response (array[UniswapV3PoolDayDataDTO]) with additional information such as HTTP status code, headers
@@ -2096,12 +2096,12 @@ UniswapV3Api <- R6::R6Class(
     #' @description
     #' PoolHourData (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param id (optional) No description
-    #' @param pool (optional) No description
+    #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+    #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+    #' @param start_date (optional) The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+    #' @param end_date (optional) The end date of timeframe.
+    #' @param id (optional) Identifier, format: (pool address)-(day id)
+    #' @param pool (optional) Pointer to pool.
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return array[UniswapV3PoolHourDataDTO]
@@ -2123,12 +2123,12 @@ UniswapV3Api <- R6::R6Class(
     #' @description
     #' PoolHourData (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param id (optional) No description
-    #' @param pool (optional) No description
+    #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+    #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+    #' @param start_date (optional) The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+    #' @param end_date (optional) The end date of timeframe.
+    #' @param id (optional) Identifier, format: (pool address)-(day id)
+    #' @param pool (optional) Pointer to pool.
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return API response (array[UniswapV3PoolHourDataDTO]) with additional information such as HTTP status code, headers
@@ -2333,12 +2333,12 @@ UniswapV3Api <- R6::R6Class(
     #' @description
     #' PositionSnapshots (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param id (optional) No description
-    #' @param pool (optional) No description
+    #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+    #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+    #' @param start_date (optional) The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+    #' @param end_date (optional) The end date of timeframe.
+    #' @param id (optional) NFT token identifier, format: (NFT token id)#(block number).
+    #' @param pool (optional) Pool the position is within.
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return array[UniswapV3PositionSnapshotDTO]
@@ -2360,12 +2360,12 @@ UniswapV3Api <- R6::R6Class(
     #' @description
     #' PositionSnapshots (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param id (optional) No description
-    #' @param pool (optional) No description
+    #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+    #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+    #' @param start_date (optional) The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+    #' @param end_date (optional) The end date of timeframe.
+    #' @param id (optional) NFT token identifier, format: (NFT token id)#(block number).
+    #' @param pool (optional) Pool the position is within.
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return API response (array[UniswapV3PositionSnapshotDTO]) with additional information such as HTTP status code, headers
@@ -2579,7 +2579,7 @@ UniswapV3Api <- R6::R6Class(
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
     #' @param start_date (optional) The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
     #' @param end_date (optional) The end date of timeframe.
-    #' @param id (optional) Identifier, format: transaction hash + \"#\" + index in swaps Transaction array.
+    #' @param id (optional) Identifier, format: (transaction hash) + # + (index in swaps Transaction array).
     #' @param pool (optional) Pool swap occured within.
     #' @param token_0 (optional) Reference to token0 as stored in pair contract.
     #' @param token_1 (optional) Reference to token1 as stored in pair contract.
@@ -2608,7 +2608,7 @@ UniswapV3Api <- R6::R6Class(
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
     #' @param start_date (optional) The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
     #' @param end_date (optional) The end date of timeframe.
-    #' @param id (optional) Identifier, format: transaction hash + \"#\" + index in swaps Transaction array.
+    #' @param id (optional) Identifier, format: (transaction hash) + # + (index in swaps Transaction array).
     #' @param pool (optional) Pool swap occured within.
     #' @param token_0 (optional) Reference to token0 as stored in pair contract.
     #' @param token_1 (optional) Reference to token1 as stored in pair contract.
@@ -2701,12 +2701,12 @@ UniswapV3Api <- R6::R6Class(
     #' @description
     #' TickDayData (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param id (optional) No description
-    #' @param pool (optional) No description
+    #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+    #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+    #' @param start_date (optional) The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+    #' @param end_date (optional) The end date of timeframe.
+    #' @param id (optional) Identifier, format: (pool address)-(tick index)-(timestamp).
+    #' @param pool (optional) Pointer to pool.
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return array[UniswapV3TickDayDataDTO]
@@ -2728,12 +2728,12 @@ UniswapV3Api <- R6::R6Class(
     #' @description
     #' TickDayData (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param id (optional) No description
-    #' @param pool (optional) No description
+    #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+    #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+    #' @param start_date (optional) The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+    #' @param end_date (optional) The end date of timeframe.
+    #' @param id (optional) Identifier, format: (pool address)-(tick index)-(timestamp).
+    #' @param pool (optional) Pointer to pool.
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return API response (array[UniswapV3TickDayDataDTO]) with additional information such as HTTP status code, headers
@@ -2817,12 +2817,12 @@ UniswapV3Api <- R6::R6Class(
     #' @description
     #' Ticks (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param id (optional) No description
-    #' @param pool (optional) No description
+    #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+    #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+    #' @param start_date (optional) The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+    #' @param end_date (optional) The end date of timeframe.
+    #' @param id (optional) Identifier, format: (pool address)#(tick index)
+    #' @param pool (optional) Pool address.
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return array[UniswapV3TickDTO]
@@ -2844,12 +2844,12 @@ UniswapV3Api <- R6::R6Class(
     #' @description
     #' Ticks (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param id (optional) No description
-    #' @param pool (optional) No description
+    #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+    #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+    #' @param start_date (optional) The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+    #' @param end_date (optional) The end date of timeframe.
+    #' @param id (optional) Identifier, format: (pool address)#(tick index)
+    #' @param pool (optional) Pool address.
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return API response (array[UniswapV3TickDTO]) with additional information such as HTTP status code, headers

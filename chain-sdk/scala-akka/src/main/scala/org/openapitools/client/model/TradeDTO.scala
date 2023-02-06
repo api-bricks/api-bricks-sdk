@@ -54,3 +54,6 @@ case class TradeDTO (
   evaluatedAggressor: Option[ETradeAggressiveSide] = None
 ) extends ApiModel
 
+object TradeDTOEnums {
+
+}

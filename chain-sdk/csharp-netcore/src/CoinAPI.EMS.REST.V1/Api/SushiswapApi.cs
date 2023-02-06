@@ -149,12 +149,12 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// Gets burns.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock"> (optional)</param>
-        /// <param name="endBlock"> (optional)</param>
-        /// <param name="startDate"> (optional)</param>
-        /// <param name="endDate"> (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="pair"> (optional)</param>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Identifier, format: (transaction id):(transaction.burns.length). (optional)</param>
+        /// <param name="pair">Reference to pair. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>List&lt;SushiswapBurnDTO&gt;</returns>
         List<SushiswapBurnDTO> SushiswapGetBurnsHistorical(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pair = default(string), int operationIndex = 0);
@@ -166,12 +166,12 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// Gets burns.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock"> (optional)</param>
-        /// <param name="endBlock"> (optional)</param>
-        /// <param name="startDate"> (optional)</param>
-        /// <param name="endDate"> (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="pair"> (optional)</param>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Identifier, format: (transaction id):(transaction.burns.length). (optional)</param>
+        /// <param name="pair">Reference to pair. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of List&lt;SushiswapBurnDTO&gt;</returns>
         ApiResponse<List<SushiswapBurnDTO>> SushiswapGetBurnsHistoricalWithHttpInfo(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pair = default(string), int operationIndex = 0);
@@ -275,13 +275,13 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// Gets liquidityPositionSnapshots.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock"> (optional)</param>
-        /// <param name="endBlock"> (optional)</param>
-        /// <param name="startDate"> (optional)</param>
-        /// <param name="endDate"> (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="user"> (optional)</param>
-        /// <param name="pair"> (optional)</param>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Identifier, format: (pair address)-(user address)-(timestamp) (optional)</param>
+        /// <param name="user">Reference to user. (optional)</param>
+        /// <param name="pair">Reference to the pair liquidity is being provided on. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>List&lt;SushiswapLiquidityPositionSnapshotDTO&gt;</returns>
         List<SushiswapLiquidityPositionSnapshotDTO> SushiswapGetLiquidityPositionSnapshotsHistorical(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string user = default(string), string pair = default(string), int operationIndex = 0);
@@ -293,13 +293,13 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// Gets liquidityPositionSnapshots.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock"> (optional)</param>
-        /// <param name="endBlock"> (optional)</param>
-        /// <param name="startDate"> (optional)</param>
-        /// <param name="endDate"> (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="user"> (optional)</param>
-        /// <param name="pair"> (optional)</param>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Identifier, format: (pair address)-(user address)-(timestamp) (optional)</param>
+        /// <param name="user">Reference to user. (optional)</param>
+        /// <param name="pair">Reference to the pair liquidity is being provided on. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of List&lt;SushiswapLiquidityPositionSnapshotDTO&gt;</returns>
         ApiResponse<List<SushiswapLiquidityPositionSnapshotDTO>> SushiswapGetLiquidityPositionSnapshotsHistoricalWithHttpInfo(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string user = default(string), string pair = default(string), int operationIndex = 0);
@@ -310,13 +310,13 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// Gets liquidityPositions.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock"> (optional)</param>
-        /// <param name="endBlock"> (optional)</param>
-        /// <param name="startDate"> (optional)</param>
-        /// <param name="endDate"> (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="user"> (optional)</param>
-        /// <param name="pair"> (optional)</param>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Identifier, format: (pair address)-(user address) (optional)</param>
+        /// <param name="user">User address. (optional)</param>
+        /// <param name="pair">Pair address. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>List&lt;SushiswapLiquidityPositionDTO&gt;</returns>
         List<SushiswapLiquidityPositionDTO> SushiswapGetLiquidityPositionsHistorical(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string user = default(string), string pair = default(string), int operationIndex = 0);
@@ -328,13 +328,13 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// Gets liquidityPositions.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock"> (optional)</param>
-        /// <param name="endBlock"> (optional)</param>
-        /// <param name="startDate"> (optional)</param>
-        /// <param name="endDate"> (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="user"> (optional)</param>
-        /// <param name="pair"> (optional)</param>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Identifier, format: (pair address)-(user address) (optional)</param>
+        /// <param name="user">User address. (optional)</param>
+        /// <param name="pair">Pair address. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of List&lt;SushiswapLiquidityPositionDTO&gt;</returns>
         ApiResponse<List<SushiswapLiquidityPositionDTO>> SushiswapGetLiquidityPositionsHistoricalWithHttpInfo(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string user = default(string), string pair = default(string), int operationIndex = 0);
@@ -345,12 +345,12 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// Gets mints.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock"> (optional)</param>
-        /// <param name="endBlock"> (optional)</param>
-        /// <param name="startDate"> (optional)</param>
-        /// <param name="endDate"> (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="pair"> (optional)</param>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Identifier, format: (transaction hash)-(index in the transaction mint array). (optional)</param>
+        /// <param name="pair">Reference to pair. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>List&lt;SushiswapMintDTO&gt;</returns>
         List<SushiswapMintDTO> SushiswapGetMintsHistorical(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pair = default(string), int operationIndex = 0);
@@ -362,12 +362,12 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// Gets mints.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock"> (optional)</param>
-        /// <param name="endBlock"> (optional)</param>
-        /// <param name="startDate"> (optional)</param>
-        /// <param name="endDate"> (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="pair"> (optional)</param>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Identifier, format: (transaction hash)-(index in the transaction mint array). (optional)</param>
+        /// <param name="pair">Reference to pair. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of List&lt;SushiswapMintDTO&gt;</returns>
         ApiResponse<List<SushiswapMintDTO>> SushiswapGetMintsHistoricalWithHttpInfo(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pair = default(string), int operationIndex = 0);
@@ -378,14 +378,14 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// Gets pairDayData.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock"> (optional)</param>
-        /// <param name="endBlock"> (optional)</param>
-        /// <param name="startDate"> (optional)</param>
-        /// <param name="endDate"> (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="pair"> (optional)</param>
-        /// <param name="token0"> (optional)</param>
-        /// <param name="token1"> (optional)</param>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Identifier, format: (pair id)-(day start timestamp). (optional)</param>
+        /// <param name="pair">Reference to pair. (optional)</param>
+        /// <param name="token0">Reference to token0. (optional)</param>
+        /// <param name="token1">Reference to token1. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>List&lt;SushiswapPairDayDataDTO&gt;</returns>
         List<SushiswapPairDayDataDTO> SushiswapGetPairDayDataHistorical(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pair = default(string), string token0 = default(string), string token1 = default(string), int operationIndex = 0);
@@ -397,14 +397,14 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// Gets pairDayData.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock"> (optional)</param>
-        /// <param name="endBlock"> (optional)</param>
-        /// <param name="startDate"> (optional)</param>
-        /// <param name="endDate"> (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="pair"> (optional)</param>
-        /// <param name="token0"> (optional)</param>
-        /// <param name="token1"> (optional)</param>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Identifier, format: (pair id)-(day start timestamp). (optional)</param>
+        /// <param name="pair">Reference to pair. (optional)</param>
+        /// <param name="token0">Reference to token0. (optional)</param>
+        /// <param name="token1">Reference to token1. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of List&lt;SushiswapPairDayDataDTO&gt;</returns>
         ApiResponse<List<SushiswapPairDayDataDTO>> SushiswapGetPairDayDataHistoricalWithHttpInfo(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pair = default(string), string token0 = default(string), string token1 = default(string), int operationIndex = 0);
@@ -415,12 +415,12 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// Gets pairHourData.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock"> (optional)</param>
-        /// <param name="endBlock"> (optional)</param>
-        /// <param name="startDate"> (optional)</param>
-        /// <param name="endDate"> (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="pair"> (optional)</param>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Identifier, format: (pair id)-(hour start timestamp). (optional)</param>
+        /// <param name="pair">Reference to pair. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>List&lt;SushiswapPairHourDataDTO&gt;</returns>
         List<SushiswapPairHourDataDTO> SushiswapGetPairHourDataHistorical(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pair = default(string), int operationIndex = 0);
@@ -432,12 +432,12 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// Gets pairHourData.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock"> (optional)</param>
-        /// <param name="endBlock"> (optional)</param>
-        /// <param name="startDate"> (optional)</param>
-        /// <param name="endDate"> (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="pair"> (optional)</param>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Identifier, format: (pair id)-(hour start timestamp). (optional)</param>
+        /// <param name="pair">Reference to pair. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of List&lt;SushiswapPairHourDataDTO&gt;</returns>
         ApiResponse<List<SushiswapPairHourDataDTO>> SushiswapGetPairHourDataHistoricalWithHttpInfo(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pair = default(string), int operationIndex = 0);
@@ -448,14 +448,14 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// Gets pairs.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock"> (optional)</param>
-        /// <param name="endBlock"> (optional)</param>
-        /// <param name="startDate"> (optional)</param>
-        /// <param name="endDate"> (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="name"> (optional)</param>
-        /// <param name="token0"> (optional)</param>
-        /// <param name="token1"> (optional)</param>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Pair contract address. (optional)</param>
+        /// <param name="name">Friendly name, format: (token0 name)-(token1 name) (optional)</param>
+        /// <param name="token0">Reference to token0 as stored in pair contract. (optional)</param>
+        /// <param name="token1">Reference to token0 as stored in pair contract. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>List&lt;SushiswapPairDTO&gt;</returns>
         List<SushiswapPairDTO> SushiswapGetPairsHistorical(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string name = default(string), string token0 = default(string), string token1 = default(string), int operationIndex = 0);
@@ -467,14 +467,14 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// Gets pairs.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock"> (optional)</param>
-        /// <param name="endBlock"> (optional)</param>
-        /// <param name="startDate"> (optional)</param>
-        /// <param name="endDate"> (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="name"> (optional)</param>
-        /// <param name="token0"> (optional)</param>
-        /// <param name="token1"> (optional)</param>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Pair contract address. (optional)</param>
+        /// <param name="name">Friendly name, format: (token0 name)-(token1 name) (optional)</param>
+        /// <param name="token0">Reference to token0 as stored in pair contract. (optional)</param>
+        /// <param name="token1">Reference to token0 as stored in pair contract. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of List&lt;SushiswapPairDTO&gt;</returns>
         ApiResponse<List<SushiswapPairDTO>> SushiswapGetPairsHistoricalWithHttpInfo(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string name = default(string), string token0 = default(string), string token1 = default(string), int operationIndex = 0);
@@ -1036,12 +1036,12 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// Gets burns.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock"> (optional)</param>
-        /// <param name="endBlock"> (optional)</param>
-        /// <param name="startDate"> (optional)</param>
-        /// <param name="endDate"> (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="pair"> (optional)</param>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Identifier, format: (transaction id):(transaction.burns.length). (optional)</param>
+        /// <param name="pair">Reference to pair. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;SushiswapBurnDTO&gt;</returns>
@@ -1054,12 +1054,12 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// Gets burns.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock"> (optional)</param>
-        /// <param name="endBlock"> (optional)</param>
-        /// <param name="startDate"> (optional)</param>
-        /// <param name="endDate"> (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="pair"> (optional)</param>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Identifier, format: (transaction id):(transaction.burns.length). (optional)</param>
+        /// <param name="pair">Reference to pair. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;SushiswapBurnDTO&gt;)</returns>
@@ -1170,13 +1170,13 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// Gets liquidityPositionSnapshots.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock"> (optional)</param>
-        /// <param name="endBlock"> (optional)</param>
-        /// <param name="startDate"> (optional)</param>
-        /// <param name="endDate"> (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="user"> (optional)</param>
-        /// <param name="pair"> (optional)</param>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Identifier, format: (pair address)-(user address)-(timestamp) (optional)</param>
+        /// <param name="user">Reference to user. (optional)</param>
+        /// <param name="pair">Reference to the pair liquidity is being provided on. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;SushiswapLiquidityPositionSnapshotDTO&gt;</returns>
@@ -1189,13 +1189,13 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// Gets liquidityPositionSnapshots.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock"> (optional)</param>
-        /// <param name="endBlock"> (optional)</param>
-        /// <param name="startDate"> (optional)</param>
-        /// <param name="endDate"> (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="user"> (optional)</param>
-        /// <param name="pair"> (optional)</param>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Identifier, format: (pair address)-(user address)-(timestamp) (optional)</param>
+        /// <param name="user">Reference to user. (optional)</param>
+        /// <param name="pair">Reference to the pair liquidity is being provided on. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;SushiswapLiquidityPositionSnapshotDTO&gt;)</returns>
@@ -1207,13 +1207,13 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// Gets liquidityPositions.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock"> (optional)</param>
-        /// <param name="endBlock"> (optional)</param>
-        /// <param name="startDate"> (optional)</param>
-        /// <param name="endDate"> (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="user"> (optional)</param>
-        /// <param name="pair"> (optional)</param>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Identifier, format: (pair address)-(user address) (optional)</param>
+        /// <param name="user">User address. (optional)</param>
+        /// <param name="pair">Pair address. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;SushiswapLiquidityPositionDTO&gt;</returns>
@@ -1226,13 +1226,13 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// Gets liquidityPositions.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock"> (optional)</param>
-        /// <param name="endBlock"> (optional)</param>
-        /// <param name="startDate"> (optional)</param>
-        /// <param name="endDate"> (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="user"> (optional)</param>
-        /// <param name="pair"> (optional)</param>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Identifier, format: (pair address)-(user address) (optional)</param>
+        /// <param name="user">User address. (optional)</param>
+        /// <param name="pair">Pair address. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;SushiswapLiquidityPositionDTO&gt;)</returns>
@@ -1244,12 +1244,12 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// Gets mints.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock"> (optional)</param>
-        /// <param name="endBlock"> (optional)</param>
-        /// <param name="startDate"> (optional)</param>
-        /// <param name="endDate"> (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="pair"> (optional)</param>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Identifier, format: (transaction hash)-(index in the transaction mint array). (optional)</param>
+        /// <param name="pair">Reference to pair. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;SushiswapMintDTO&gt;</returns>
@@ -1262,12 +1262,12 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// Gets mints.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock"> (optional)</param>
-        /// <param name="endBlock"> (optional)</param>
-        /// <param name="startDate"> (optional)</param>
-        /// <param name="endDate"> (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="pair"> (optional)</param>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Identifier, format: (transaction hash)-(index in the transaction mint array). (optional)</param>
+        /// <param name="pair">Reference to pair. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;SushiswapMintDTO&gt;)</returns>
@@ -1279,14 +1279,14 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// Gets pairDayData.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock"> (optional)</param>
-        /// <param name="endBlock"> (optional)</param>
-        /// <param name="startDate"> (optional)</param>
-        /// <param name="endDate"> (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="pair"> (optional)</param>
-        /// <param name="token0"> (optional)</param>
-        /// <param name="token1"> (optional)</param>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Identifier, format: (pair id)-(day start timestamp). (optional)</param>
+        /// <param name="pair">Reference to pair. (optional)</param>
+        /// <param name="token0">Reference to token0. (optional)</param>
+        /// <param name="token1">Reference to token1. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;SushiswapPairDayDataDTO&gt;</returns>
@@ -1299,14 +1299,14 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// Gets pairDayData.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock"> (optional)</param>
-        /// <param name="endBlock"> (optional)</param>
-        /// <param name="startDate"> (optional)</param>
-        /// <param name="endDate"> (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="pair"> (optional)</param>
-        /// <param name="token0"> (optional)</param>
-        /// <param name="token1"> (optional)</param>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Identifier, format: (pair id)-(day start timestamp). (optional)</param>
+        /// <param name="pair">Reference to pair. (optional)</param>
+        /// <param name="token0">Reference to token0. (optional)</param>
+        /// <param name="token1">Reference to token1. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;SushiswapPairDayDataDTO&gt;)</returns>
@@ -1318,12 +1318,12 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// Gets pairHourData.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock"> (optional)</param>
-        /// <param name="endBlock"> (optional)</param>
-        /// <param name="startDate"> (optional)</param>
-        /// <param name="endDate"> (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="pair"> (optional)</param>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Identifier, format: (pair id)-(hour start timestamp). (optional)</param>
+        /// <param name="pair">Reference to pair. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;SushiswapPairHourDataDTO&gt;</returns>
@@ -1336,12 +1336,12 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// Gets pairHourData.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock"> (optional)</param>
-        /// <param name="endBlock"> (optional)</param>
-        /// <param name="startDate"> (optional)</param>
-        /// <param name="endDate"> (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="pair"> (optional)</param>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Identifier, format: (pair id)-(hour start timestamp). (optional)</param>
+        /// <param name="pair">Reference to pair. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;SushiswapPairHourDataDTO&gt;)</returns>
@@ -1353,14 +1353,14 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// Gets pairs.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock"> (optional)</param>
-        /// <param name="endBlock"> (optional)</param>
-        /// <param name="startDate"> (optional)</param>
-        /// <param name="endDate"> (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="name"> (optional)</param>
-        /// <param name="token0"> (optional)</param>
-        /// <param name="token1"> (optional)</param>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Pair contract address. (optional)</param>
+        /// <param name="name">Friendly name, format: (token0 name)-(token1 name) (optional)</param>
+        /// <param name="token0">Reference to token0 as stored in pair contract. (optional)</param>
+        /// <param name="token1">Reference to token0 as stored in pair contract. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;SushiswapPairDTO&gt;</returns>
@@ -1373,14 +1373,14 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// Gets pairs.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock"> (optional)</param>
-        /// <param name="endBlock"> (optional)</param>
-        /// <param name="startDate"> (optional)</param>
-        /// <param name="endDate"> (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="name"> (optional)</param>
-        /// <param name="token0"> (optional)</param>
-        /// <param name="token1"> (optional)</param>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Pair contract address. (optional)</param>
+        /// <param name="name">Friendly name, format: (token0 name)-(token1 name) (optional)</param>
+        /// <param name="token0">Reference to token0 as stored in pair contract. (optional)</param>
+        /// <param name="token1">Reference to token0 as stored in pair contract. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;SushiswapPairDTO&gt;)</returns>
@@ -2670,12 +2670,12 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// Burns (historical) Gets burns.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock"> (optional)</param>
-        /// <param name="endBlock"> (optional)</param>
-        /// <param name="startDate"> (optional)</param>
-        /// <param name="endDate"> (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="pair"> (optional)</param>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Identifier, format: (transaction id):(transaction.burns.length). (optional)</param>
+        /// <param name="pair">Reference to pair. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>List&lt;SushiswapBurnDTO&gt;</returns>
         public List<SushiswapBurnDTO> SushiswapGetBurnsHistorical(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pair = default(string), int operationIndex = 0)
@@ -2688,12 +2688,12 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// Burns (historical) Gets burns.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock"> (optional)</param>
-        /// <param name="endBlock"> (optional)</param>
-        /// <param name="startDate"> (optional)</param>
-        /// <param name="endDate"> (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="pair"> (optional)</param>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Identifier, format: (transaction id):(transaction.burns.length). (optional)</param>
+        /// <param name="pair">Reference to pair. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of List&lt;SushiswapBurnDTO&gt;</returns>
         public CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SushiswapBurnDTO>> SushiswapGetBurnsHistoricalWithHttpInfo(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pair = default(string), int operationIndex = 0)
@@ -2769,12 +2769,12 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// Burns (historical) Gets burns.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock"> (optional)</param>
-        /// <param name="endBlock"> (optional)</param>
-        /// <param name="startDate"> (optional)</param>
-        /// <param name="endDate"> (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="pair"> (optional)</param>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Identifier, format: (transaction id):(transaction.burns.length). (optional)</param>
+        /// <param name="pair">Reference to pair. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;SushiswapBurnDTO&gt;</returns>
@@ -2788,12 +2788,12 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// Burns (historical) Gets burns.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock"> (optional)</param>
-        /// <param name="endBlock"> (optional)</param>
-        /// <param name="startDate"> (optional)</param>
-        /// <param name="endDate"> (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="pair"> (optional)</param>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Identifier, format: (transaction id):(transaction.burns.length). (optional)</param>
+        /// <param name="pair">Reference to pair. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;SushiswapBurnDTO&gt;)</returns>
@@ -3442,13 +3442,13 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// LiquidityPositionSnapshots (historical) Gets liquidityPositionSnapshots.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock"> (optional)</param>
-        /// <param name="endBlock"> (optional)</param>
-        /// <param name="startDate"> (optional)</param>
-        /// <param name="endDate"> (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="user"> (optional)</param>
-        /// <param name="pair"> (optional)</param>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Identifier, format: (pair address)-(user address)-(timestamp) (optional)</param>
+        /// <param name="user">Reference to user. (optional)</param>
+        /// <param name="pair">Reference to the pair liquidity is being provided on. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>List&lt;SushiswapLiquidityPositionSnapshotDTO&gt;</returns>
         public List<SushiswapLiquidityPositionSnapshotDTO> SushiswapGetLiquidityPositionSnapshotsHistorical(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string user = default(string), string pair = default(string), int operationIndex = 0)
@@ -3461,13 +3461,13 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// LiquidityPositionSnapshots (historical) Gets liquidityPositionSnapshots.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock"> (optional)</param>
-        /// <param name="endBlock"> (optional)</param>
-        /// <param name="startDate"> (optional)</param>
-        /// <param name="endDate"> (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="user"> (optional)</param>
-        /// <param name="pair"> (optional)</param>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Identifier, format: (pair address)-(user address)-(timestamp) (optional)</param>
+        /// <param name="user">Reference to user. (optional)</param>
+        /// <param name="pair">Reference to the pair liquidity is being provided on. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of List&lt;SushiswapLiquidityPositionSnapshotDTO&gt;</returns>
         public CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SushiswapLiquidityPositionSnapshotDTO>> SushiswapGetLiquidityPositionSnapshotsHistoricalWithHttpInfo(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string user = default(string), string pair = default(string), int operationIndex = 0)
@@ -3547,13 +3547,13 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// LiquidityPositionSnapshots (historical) Gets liquidityPositionSnapshots.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock"> (optional)</param>
-        /// <param name="endBlock"> (optional)</param>
-        /// <param name="startDate"> (optional)</param>
-        /// <param name="endDate"> (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="user"> (optional)</param>
-        /// <param name="pair"> (optional)</param>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Identifier, format: (pair address)-(user address)-(timestamp) (optional)</param>
+        /// <param name="user">Reference to user. (optional)</param>
+        /// <param name="pair">Reference to the pair liquidity is being provided on. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;SushiswapLiquidityPositionSnapshotDTO&gt;</returns>
@@ -3567,13 +3567,13 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// LiquidityPositionSnapshots (historical) Gets liquidityPositionSnapshots.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock"> (optional)</param>
-        /// <param name="endBlock"> (optional)</param>
-        /// <param name="startDate"> (optional)</param>
-        /// <param name="endDate"> (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="user"> (optional)</param>
-        /// <param name="pair"> (optional)</param>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Identifier, format: (pair address)-(user address)-(timestamp) (optional)</param>
+        /// <param name="user">Reference to user. (optional)</param>
+        /// <param name="pair">Reference to the pair liquidity is being provided on. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;SushiswapLiquidityPositionSnapshotDTO&gt;)</returns>
@@ -3656,13 +3656,13 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// LiquidityPositions (historical) Gets liquidityPositions.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock"> (optional)</param>
-        /// <param name="endBlock"> (optional)</param>
-        /// <param name="startDate"> (optional)</param>
-        /// <param name="endDate"> (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="user"> (optional)</param>
-        /// <param name="pair"> (optional)</param>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Identifier, format: (pair address)-(user address) (optional)</param>
+        /// <param name="user">User address. (optional)</param>
+        /// <param name="pair">Pair address. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>List&lt;SushiswapLiquidityPositionDTO&gt;</returns>
         public List<SushiswapLiquidityPositionDTO> SushiswapGetLiquidityPositionsHistorical(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string user = default(string), string pair = default(string), int operationIndex = 0)
@@ -3675,13 +3675,13 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// LiquidityPositions (historical) Gets liquidityPositions.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock"> (optional)</param>
-        /// <param name="endBlock"> (optional)</param>
-        /// <param name="startDate"> (optional)</param>
-        /// <param name="endDate"> (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="user"> (optional)</param>
-        /// <param name="pair"> (optional)</param>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Identifier, format: (pair address)-(user address) (optional)</param>
+        /// <param name="user">User address. (optional)</param>
+        /// <param name="pair">Pair address. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of List&lt;SushiswapLiquidityPositionDTO&gt;</returns>
         public CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SushiswapLiquidityPositionDTO>> SushiswapGetLiquidityPositionsHistoricalWithHttpInfo(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string user = default(string), string pair = default(string), int operationIndex = 0)
@@ -3761,13 +3761,13 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// LiquidityPositions (historical) Gets liquidityPositions.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock"> (optional)</param>
-        /// <param name="endBlock"> (optional)</param>
-        /// <param name="startDate"> (optional)</param>
-        /// <param name="endDate"> (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="user"> (optional)</param>
-        /// <param name="pair"> (optional)</param>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Identifier, format: (pair address)-(user address) (optional)</param>
+        /// <param name="user">User address. (optional)</param>
+        /// <param name="pair">Pair address. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;SushiswapLiquidityPositionDTO&gt;</returns>
@@ -3781,13 +3781,13 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// LiquidityPositions (historical) Gets liquidityPositions.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock"> (optional)</param>
-        /// <param name="endBlock"> (optional)</param>
-        /// <param name="startDate"> (optional)</param>
-        /// <param name="endDate"> (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="user"> (optional)</param>
-        /// <param name="pair"> (optional)</param>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Identifier, format: (pair address)-(user address) (optional)</param>
+        /// <param name="user">User address. (optional)</param>
+        /// <param name="pair">Pair address. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;SushiswapLiquidityPositionDTO&gt;)</returns>
@@ -3870,12 +3870,12 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// Mints (historical) Gets mints.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock"> (optional)</param>
-        /// <param name="endBlock"> (optional)</param>
-        /// <param name="startDate"> (optional)</param>
-        /// <param name="endDate"> (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="pair"> (optional)</param>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Identifier, format: (transaction hash)-(index in the transaction mint array). (optional)</param>
+        /// <param name="pair">Reference to pair. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>List&lt;SushiswapMintDTO&gt;</returns>
         public List<SushiswapMintDTO> SushiswapGetMintsHistorical(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pair = default(string), int operationIndex = 0)
@@ -3888,12 +3888,12 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// Mints (historical) Gets mints.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock"> (optional)</param>
-        /// <param name="endBlock"> (optional)</param>
-        /// <param name="startDate"> (optional)</param>
-        /// <param name="endDate"> (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="pair"> (optional)</param>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Identifier, format: (transaction hash)-(index in the transaction mint array). (optional)</param>
+        /// <param name="pair">Reference to pair. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of List&lt;SushiswapMintDTO&gt;</returns>
         public CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SushiswapMintDTO>> SushiswapGetMintsHistoricalWithHttpInfo(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pair = default(string), int operationIndex = 0)
@@ -3969,12 +3969,12 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// Mints (historical) Gets mints.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock"> (optional)</param>
-        /// <param name="endBlock"> (optional)</param>
-        /// <param name="startDate"> (optional)</param>
-        /// <param name="endDate"> (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="pair"> (optional)</param>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Identifier, format: (transaction hash)-(index in the transaction mint array). (optional)</param>
+        /// <param name="pair">Reference to pair. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;SushiswapMintDTO&gt;</returns>
@@ -3988,12 +3988,12 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// Mints (historical) Gets mints.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock"> (optional)</param>
-        /// <param name="endBlock"> (optional)</param>
-        /// <param name="startDate"> (optional)</param>
-        /// <param name="endDate"> (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="pair"> (optional)</param>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Identifier, format: (transaction hash)-(index in the transaction mint array). (optional)</param>
+        /// <param name="pair">Reference to pair. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;SushiswapMintDTO&gt;)</returns>
@@ -4072,14 +4072,14 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// PairDayData (historical) Gets pairDayData.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock"> (optional)</param>
-        /// <param name="endBlock"> (optional)</param>
-        /// <param name="startDate"> (optional)</param>
-        /// <param name="endDate"> (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="pair"> (optional)</param>
-        /// <param name="token0"> (optional)</param>
-        /// <param name="token1"> (optional)</param>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Identifier, format: (pair id)-(day start timestamp). (optional)</param>
+        /// <param name="pair">Reference to pair. (optional)</param>
+        /// <param name="token0">Reference to token0. (optional)</param>
+        /// <param name="token1">Reference to token1. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>List&lt;SushiswapPairDayDataDTO&gt;</returns>
         public List<SushiswapPairDayDataDTO> SushiswapGetPairDayDataHistorical(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pair = default(string), string token0 = default(string), string token1 = default(string), int operationIndex = 0)
@@ -4092,14 +4092,14 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// PairDayData (historical) Gets pairDayData.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock"> (optional)</param>
-        /// <param name="endBlock"> (optional)</param>
-        /// <param name="startDate"> (optional)</param>
-        /// <param name="endDate"> (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="pair"> (optional)</param>
-        /// <param name="token0"> (optional)</param>
-        /// <param name="token1"> (optional)</param>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Identifier, format: (pair id)-(day start timestamp). (optional)</param>
+        /// <param name="pair">Reference to pair. (optional)</param>
+        /// <param name="token0">Reference to token0. (optional)</param>
+        /// <param name="token1">Reference to token1. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of List&lt;SushiswapPairDayDataDTO&gt;</returns>
         public CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SushiswapPairDayDataDTO>> SushiswapGetPairDayDataHistoricalWithHttpInfo(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pair = default(string), string token0 = default(string), string token1 = default(string), int operationIndex = 0)
@@ -4183,14 +4183,14 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// PairDayData (historical) Gets pairDayData.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock"> (optional)</param>
-        /// <param name="endBlock"> (optional)</param>
-        /// <param name="startDate"> (optional)</param>
-        /// <param name="endDate"> (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="pair"> (optional)</param>
-        /// <param name="token0"> (optional)</param>
-        /// <param name="token1"> (optional)</param>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Identifier, format: (pair id)-(day start timestamp). (optional)</param>
+        /// <param name="pair">Reference to pair. (optional)</param>
+        /// <param name="token0">Reference to token0. (optional)</param>
+        /// <param name="token1">Reference to token1. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;SushiswapPairDayDataDTO&gt;</returns>
@@ -4204,14 +4204,14 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// PairDayData (historical) Gets pairDayData.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock"> (optional)</param>
-        /// <param name="endBlock"> (optional)</param>
-        /// <param name="startDate"> (optional)</param>
-        /// <param name="endDate"> (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="pair"> (optional)</param>
-        /// <param name="token0"> (optional)</param>
-        /// <param name="token1"> (optional)</param>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Identifier, format: (pair id)-(day start timestamp). (optional)</param>
+        /// <param name="pair">Reference to pair. (optional)</param>
+        /// <param name="token0">Reference to token0. (optional)</param>
+        /// <param name="token1">Reference to token1. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;SushiswapPairDayDataDTO&gt;)</returns>
@@ -4298,12 +4298,12 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// PairHourData (historical) Gets pairHourData.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock"> (optional)</param>
-        /// <param name="endBlock"> (optional)</param>
-        /// <param name="startDate"> (optional)</param>
-        /// <param name="endDate"> (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="pair"> (optional)</param>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Identifier, format: (pair id)-(hour start timestamp). (optional)</param>
+        /// <param name="pair">Reference to pair. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>List&lt;SushiswapPairHourDataDTO&gt;</returns>
         public List<SushiswapPairHourDataDTO> SushiswapGetPairHourDataHistorical(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pair = default(string), int operationIndex = 0)
@@ -4316,12 +4316,12 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// PairHourData (historical) Gets pairHourData.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock"> (optional)</param>
-        /// <param name="endBlock"> (optional)</param>
-        /// <param name="startDate"> (optional)</param>
-        /// <param name="endDate"> (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="pair"> (optional)</param>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Identifier, format: (pair id)-(hour start timestamp). (optional)</param>
+        /// <param name="pair">Reference to pair. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of List&lt;SushiswapPairHourDataDTO&gt;</returns>
         public CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SushiswapPairHourDataDTO>> SushiswapGetPairHourDataHistoricalWithHttpInfo(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pair = default(string), int operationIndex = 0)
@@ -4397,12 +4397,12 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// PairHourData (historical) Gets pairHourData.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock"> (optional)</param>
-        /// <param name="endBlock"> (optional)</param>
-        /// <param name="startDate"> (optional)</param>
-        /// <param name="endDate"> (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="pair"> (optional)</param>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Identifier, format: (pair id)-(hour start timestamp). (optional)</param>
+        /// <param name="pair">Reference to pair. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;SushiswapPairHourDataDTO&gt;</returns>
@@ -4416,12 +4416,12 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// PairHourData (historical) Gets pairHourData.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock"> (optional)</param>
-        /// <param name="endBlock"> (optional)</param>
-        /// <param name="startDate"> (optional)</param>
-        /// <param name="endDate"> (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="pair"> (optional)</param>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Identifier, format: (pair id)-(hour start timestamp). (optional)</param>
+        /// <param name="pair">Reference to pair. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;SushiswapPairHourDataDTO&gt;)</returns>
@@ -4500,14 +4500,14 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// Pairs (historical) Gets pairs.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock"> (optional)</param>
-        /// <param name="endBlock"> (optional)</param>
-        /// <param name="startDate"> (optional)</param>
-        /// <param name="endDate"> (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="name"> (optional)</param>
-        /// <param name="token0"> (optional)</param>
-        /// <param name="token1"> (optional)</param>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Pair contract address. (optional)</param>
+        /// <param name="name">Friendly name, format: (token0 name)-(token1 name) (optional)</param>
+        /// <param name="token0">Reference to token0 as stored in pair contract. (optional)</param>
+        /// <param name="token1">Reference to token0 as stored in pair contract. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>List&lt;SushiswapPairDTO&gt;</returns>
         public List<SushiswapPairDTO> SushiswapGetPairsHistorical(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string name = default(string), string token0 = default(string), string token1 = default(string), int operationIndex = 0)
@@ -4520,14 +4520,14 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// Pairs (historical) Gets pairs.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock"> (optional)</param>
-        /// <param name="endBlock"> (optional)</param>
-        /// <param name="startDate"> (optional)</param>
-        /// <param name="endDate"> (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="name"> (optional)</param>
-        /// <param name="token0"> (optional)</param>
-        /// <param name="token1"> (optional)</param>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Pair contract address. (optional)</param>
+        /// <param name="name">Friendly name, format: (token0 name)-(token1 name) (optional)</param>
+        /// <param name="token0">Reference to token0 as stored in pair contract. (optional)</param>
+        /// <param name="token1">Reference to token0 as stored in pair contract. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of List&lt;SushiswapPairDTO&gt;</returns>
         public CoinAPI.EMS.REST.V1.Client.ApiResponse<List<SushiswapPairDTO>> SushiswapGetPairsHistoricalWithHttpInfo(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string name = default(string), string token0 = default(string), string token1 = default(string), int operationIndex = 0)
@@ -4611,14 +4611,14 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// Pairs (historical) Gets pairs.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock"> (optional)</param>
-        /// <param name="endBlock"> (optional)</param>
-        /// <param name="startDate"> (optional)</param>
-        /// <param name="endDate"> (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="name"> (optional)</param>
-        /// <param name="token0"> (optional)</param>
-        /// <param name="token1"> (optional)</param>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Pair contract address. (optional)</param>
+        /// <param name="name">Friendly name, format: (token0 name)-(token1 name) (optional)</param>
+        /// <param name="token0">Reference to token0 as stored in pair contract. (optional)</param>
+        /// <param name="token1">Reference to token0 as stored in pair contract. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;SushiswapPairDTO&gt;</returns>
@@ -4632,14 +4632,14 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// Pairs (historical) Gets pairs.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock"> (optional)</param>
-        /// <param name="endBlock"> (optional)</param>
-        /// <param name="startDate"> (optional)</param>
-        /// <param name="endDate"> (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="name"> (optional)</param>
-        /// <param name="token0"> (optional)</param>
-        /// <param name="token1"> (optional)</param>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Pair contract address. (optional)</param>
+        /// <param name="name">Friendly name, format: (token0 name)-(token1 name) (optional)</param>
+        /// <param name="token0">Reference to token0 as stored in pair contract. (optional)</param>
+        /// <param name="token1">Reference to token0 as stored in pair contract. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;SushiswapPairDTO&gt;)</returns>

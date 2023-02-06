@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.time.OffsetDateTime;
 import org.openapitools.client.model.TransactionsETradeAggressiveSide;
@@ -51,7 +49,7 @@ import org.openapitools.client.JSON;
 /**
  * CurveExchangeDTO
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-30T14:42:00.397192Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-06T14:47:06.037855Z[Etc/UTC]")
 public class CurveExchangeDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -161,7 +159,6 @@ public class CurveExchangeDTO {
    * @return entryTime
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public OffsetDateTime getEntryTime() {
     return entryTime;
@@ -184,7 +181,6 @@ public class CurveExchangeDTO {
    * @return recvTime
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public OffsetDateTime getRecvTime() {
     return recvTime;
@@ -207,7 +203,6 @@ public class CurveExchangeDTO {
    * @return blockNumber
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Number of block in which entity was recorded.")
 
   public Long getBlockNumber() {
     return blockNumber;
@@ -230,7 +225,6 @@ public class CurveExchangeDTO {
    * @return id
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getId() {
     return id;
@@ -253,7 +247,6 @@ public class CurveExchangeDTO {
    * @return pool
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getPool() {
     return pool;
@@ -276,7 +269,6 @@ public class CurveExchangeDTO {
    * @return buyer
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getBuyer() {
     return buyer;
@@ -299,7 +291,6 @@ public class CurveExchangeDTO {
    * @return receiver
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getReceiver() {
     return receiver;
@@ -322,7 +313,6 @@ public class CurveExchangeDTO {
    * @return tokenSold
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getTokenSold() {
     return tokenSold;
@@ -345,7 +335,6 @@ public class CurveExchangeDTO {
    * @return tokenBought
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getTokenBought() {
     return tokenBought;
@@ -368,7 +357,6 @@ public class CurveExchangeDTO {
    * @return amountSold
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getAmountSold() {
     return amountSold;
@@ -391,7 +379,6 @@ public class CurveExchangeDTO {
    * @return amountBought
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getAmountBought() {
     return amountBought;
@@ -414,7 +401,6 @@ public class CurveExchangeDTO {
    * @return block
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getBlock() {
     return block;
@@ -437,7 +423,6 @@ public class CurveExchangeDTO {
    * @return timestamp
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getTimestamp() {
     return timestamp;
@@ -460,7 +445,6 @@ public class CurveExchangeDTO {
    * @return transaction
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getTransaction() {
     return transaction;
@@ -483,7 +467,6 @@ public class CurveExchangeDTO {
    * @return vid
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public Long getVid() {
     return vid;
@@ -500,7 +483,6 @@ public class CurveExchangeDTO {
    * @return evaluatedPrice
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public Double getEvaluatedPrice() {
     return evaluatedPrice;
@@ -514,7 +496,6 @@ public class CurveExchangeDTO {
    * @return evaluatedAmount
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public Double getEvaluatedAmount() {
     return evaluatedAmount;
@@ -534,7 +515,6 @@ public class CurveExchangeDTO {
    * @return evaluatedAggressor
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public TransactionsETradeAggressiveSide getEvaluatedAggressor() {
     return evaluatedAggressor;
@@ -551,7 +531,6 @@ public class CurveExchangeDTO {
    * @return poolId
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getPoolId() {
     return poolId;
@@ -565,7 +544,6 @@ public class CurveExchangeDTO {
    * @return transactionId
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getTransactionId() {
     return transactionId;

@@ -139,6 +139,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
             path = "/dapps/curve/accounts/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -206,6 +207,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
             path = "/dapps/curve/addLiquidityEvents/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -273,6 +275,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
             path = "/dapps/curve/adminFeeChangeLogs/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -340,6 +343,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
             path = "/dapps/curve/amplificationCoeffChangeLogs/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -407,6 +411,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
             path = "/dapps/curve/coins/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -474,6 +479,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
             path = "/dapps/curve/contractVersions/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -541,6 +547,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
             path = "/dapps/curve/contracts/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -608,6 +615,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
             path = "/dapps/curve/dailyVolumes/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -683,6 +691,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
             path = "/dapps/curve/exchanges/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -750,6 +759,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
             path = "/dapps/curve/feeChangeLogs/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -817,6 +827,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
             path = "/dapps/curve/gaugeDeposits/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -884,6 +895,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
             path = "/dapps/curve/gaugeLiquidities/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -951,6 +963,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
             path = "/dapps/curve/gaugeTotalWeights/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -1018,6 +1031,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
             path = "/dapps/curve/gaugeTypeWeights/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -1085,6 +1099,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
             path = "/dapps/curve/gaugeTypes/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -1152,6 +1167,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
             path = "/dapps/curve/gaugeWeightVotes/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -1219,6 +1235,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
             path = "/dapps/curve/gaugeWeights/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -1286,6 +1303,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
             path = "/dapps/curve/gaugeWithdraws/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -1353,6 +1371,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
             path = "/dapps/curve/gauges/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -1458,6 +1477,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
             path = "/dapps/curve/accounts/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -1563,6 +1583,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
             path = "/dapps/curve/addLiquidityEvents/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -1668,6 +1689,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
             path = "/dapps/curve/adminFeeChangeLogs/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -1773,6 +1795,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
             path = "/dapps/curve/amplificationCoeffChangeLogs/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -1780,11 +1803,11 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     /**
      * Coins (historical)
      * Gets coins.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (pool_id)-(coin_index). (optional)
      * @param pool  (optional)
      * @return kotlin.collections.List<CurveCoinDTO>
      * @throws IllegalStateException If the request is not correctly configured
@@ -1816,11 +1839,11 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     /**
      * Coins (historical)
      * Gets coins.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (pool_id)-(coin_index). (optional)
      * @param pool  (optional)
      * @return ApiResponse<kotlin.collections.List<CurveCoinDTO>?>
      * @throws IllegalStateException If the request is not correctly configured
@@ -1839,11 +1862,11 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     /**
      * To obtain the request config of the operation curveGetCoinsHistorical
      *
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (pool_id)-(coin_index). (optional)
      * @param pool  (optional)
      * @return RequestConfig
      */
@@ -1878,6 +1901,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
             path = "/dapps/curve/coins/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -1983,6 +2007,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
             path = "/dapps/curve/contractVersions/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -2082,6 +2107,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
             path = "/dapps/curve/contracts/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -2187,6 +2213,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
             path = "/dapps/curve/dailyVolumes/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -2292,6 +2319,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
             path = "/dapps/curve/exchanges/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -2397,6 +2425,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
             path = "/dapps/curve/feeChangeLogs/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -2496,6 +2525,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
             path = "/dapps/curve/gaugeDeposits/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -2601,6 +2631,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
             path = "/dapps/curve/gaugeLiquidities/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -2700,6 +2731,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
             path = "/dapps/curve/gaugeTotalWeights/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -2799,6 +2831,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
             path = "/dapps/curve/gaugeTypeWeights/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -2904,6 +2937,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
             path = "/dapps/curve/gaugeTypes/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -3009,6 +3043,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
             path = "/dapps/curve/gaugeWeightVotes/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -3108,6 +3143,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
             path = "/dapps/curve/gaugeWeights/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -3207,6 +3243,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
             path = "/dapps/curve/gaugeWithdraws/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -3318,6 +3355,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
             path = "/dapps/curve/gauges/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -3423,6 +3461,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
             path = "/dapps/curve/hourlyVolumes/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -3546,6 +3585,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
             path = "/dapps/curve/lpTokens/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -3651,6 +3691,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
             path = "/dapps/curve/pools/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -3750,6 +3791,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
             path = "/dapps/curve/proposalVotes/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -3849,6 +3891,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
             path = "/dapps/curve/proposals/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -3954,6 +3997,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
             path = "/dapps/curve/removeLiquidityEvents/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -4059,6 +4103,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
             path = "/dapps/curve/removeLiquidityOneEvents/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -4158,6 +4203,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
             path = "/dapps/curve/systemStates/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -4275,6 +4321,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
             path = "/dapps/curve/tokens/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -4380,6 +4427,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
             path = "/dapps/curve/transferOwnershipEvents/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -4387,11 +4435,11 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     /**
      * UnderlyingCoins (historical)
      * Gets underlyingCoins.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Equals to: (pool_id)-(coin_index). (optional)
      * @param pool  (optional)
      * @return kotlin.collections.List<CurveUnderlyingCoinDTO>
      * @throws IllegalStateException If the request is not correctly configured
@@ -4423,11 +4471,11 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     /**
      * UnderlyingCoins (historical)
      * Gets underlyingCoins.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Equals to: (pool_id)-(coin_index). (optional)
      * @param pool  (optional)
      * @return ApiResponse<kotlin.collections.List<CurveUnderlyingCoinDTO>?>
      * @throws IllegalStateException If the request is not correctly configured
@@ -4446,11 +4494,11 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     /**
      * To obtain the request config of the operation curveGetUnderlyingCoinsHistorical
      *
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Equals to: (pool_id)-(coin_index). (optional)
      * @param pool  (optional)
      * @return RequestConfig
      */
@@ -4485,6 +4533,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
             path = "/dapps/curve/underlyingCoins/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -4590,6 +4639,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
             path = "/dapps/curve/votingApps/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -4695,6 +4745,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
             path = "/dapps/curve/weeklyVolumes/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -4762,6 +4813,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
             path = "/dapps/curve/hourlyVolumes/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -4829,6 +4881,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
             path = "/dapps/curve/lpTokens/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -4904,6 +4957,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
             path = "/dapps/curve/pools/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -4971,6 +5025,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
             path = "/dapps/curve/proposalVotes/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -5038,6 +5093,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
             path = "/dapps/curve/proposals/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -5105,6 +5161,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
             path = "/dapps/curve/removeLiquidityEvents/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -5172,6 +5229,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
             path = "/dapps/curve/removeLiquidityOneEvents/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -5239,6 +5297,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
             path = "/dapps/curve/systemStates/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -5306,6 +5365,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
             path = "/dapps/curve/tokens/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -5373,6 +5433,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
             path = "/dapps/curve/transferOwnershipEvents/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -5440,6 +5501,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
             path = "/dapps/curve/underlyingCoins/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -5507,6 +5569,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
             path = "/dapps/curve/votingApps/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -5574,6 +5637,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
             path = "/dapps/curve/weeklyVolumes/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }

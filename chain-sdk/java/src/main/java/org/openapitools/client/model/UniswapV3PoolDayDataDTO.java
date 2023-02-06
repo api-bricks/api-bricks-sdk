@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.time.OffsetDateTime;
 import org.openapitools.jackson.nullable.JsonNullable;
@@ -50,8 +48,7 @@ import org.openapitools.client.JSON;
 /**
  * Data accumulated and condensed into day stats for each pool.
  */
-@ApiModel(description = "Data accumulated and condensed into day stats for each pool.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-30T14:42:00.397192Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-06T14:47:06.037855Z[Etc/UTC]")
 public class UniswapV3PoolDayDataDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -163,7 +160,6 @@ public class UniswapV3PoolDayDataDTO {
    * @return entryTime
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public OffsetDateTime getEntryTime() {
     return entryTime;
@@ -186,7 +182,6 @@ public class UniswapV3PoolDayDataDTO {
    * @return recvTime
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public OffsetDateTime getRecvTime() {
     return recvTime;
@@ -209,7 +204,6 @@ public class UniswapV3PoolDayDataDTO {
    * @return blockNumber
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Number of block in which entity was recorded.")
 
   public Long getBlockNumber() {
     return blockNumber;
@@ -232,7 +226,6 @@ public class UniswapV3PoolDayDataDTO {
    * @return id
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Identifier, format: (pool address)-(day id).")
 
   public String getId() {
     return id;
@@ -255,7 +248,6 @@ public class UniswapV3PoolDayDataDTO {
    * @return date
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Timestamp rounded to current day by dividing by 86400")
 
   public Integer getDate() {
     return date;
@@ -278,7 +270,6 @@ public class UniswapV3PoolDayDataDTO {
    * @return pool
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Pointer to pool.")
 
   public String getPool() {
     return pool;
@@ -301,7 +292,6 @@ public class UniswapV3PoolDayDataDTO {
    * @return liquidity
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "In range liquidity at end of period.")
 
   public String getLiquidity() {
     return liquidity;
@@ -324,7 +314,6 @@ public class UniswapV3PoolDayDataDTO {
    * @return sqrtPrice
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Current price tracker at end of period.")
 
   public String getSqrtPrice() {
     return sqrtPrice;
@@ -347,7 +336,6 @@ public class UniswapV3PoolDayDataDTO {
    * @return token0Price
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Price of token0 - derived from sqrtPrice.")
 
   public String getToken0Price() {
     return token0Price;
@@ -370,7 +358,6 @@ public class UniswapV3PoolDayDataDTO {
    * @return token1Price
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Price of token1 - derived from sqrtPrice.")
 
   public String getToken1Price() {
     return token1Price;
@@ -393,7 +380,6 @@ public class UniswapV3PoolDayDataDTO {
    * @return tick
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Current tick at end of period.")
 
   public String getTick() {
     return tick;
@@ -416,7 +402,6 @@ public class UniswapV3PoolDayDataDTO {
    * @return feeGrowthGlobal0x128
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Tracker for global fee growth.")
 
   public String getFeeGrowthGlobal0x128() {
     return feeGrowthGlobal0x128;
@@ -439,7 +424,6 @@ public class UniswapV3PoolDayDataDTO {
    * @return feeGrowthGlobal1x128
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Tracker for global fee growth.")
 
   public String getFeeGrowthGlobal1x128() {
     return feeGrowthGlobal1x128;
@@ -462,7 +446,6 @@ public class UniswapV3PoolDayDataDTO {
    * @return tvlUsd
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Total value locked derived in USD at end of period.")
 
   public String getTvlUsd() {
     return tvlUsd;
@@ -485,7 +468,6 @@ public class UniswapV3PoolDayDataDTO {
    * @return volumeToken0
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Volume in token0.")
 
   public String getVolumeToken0() {
     return volumeToken0;
@@ -508,7 +490,6 @@ public class UniswapV3PoolDayDataDTO {
    * @return volumeToken1
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Volume in token1.")
 
   public String getVolumeToken1() {
     return volumeToken1;
@@ -531,7 +512,6 @@ public class UniswapV3PoolDayDataDTO {
    * @return volumeUsd
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Volume in USD.")
 
   public String getVolumeUsd() {
     return volumeUsd;
@@ -554,7 +534,6 @@ public class UniswapV3PoolDayDataDTO {
    * @return feesUsd
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Fees in USD.")
 
   public String getFeesUsd() {
     return feesUsd;
@@ -577,7 +556,6 @@ public class UniswapV3PoolDayDataDTO {
    * @return txCount
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Number of transactions during period.")
 
   public String getTxCount() {
     return txCount;
@@ -600,7 +578,6 @@ public class UniswapV3PoolDayDataDTO {
    * @return open
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Opening price of token0.")
 
   public String getOpen() {
     return open;
@@ -623,7 +600,6 @@ public class UniswapV3PoolDayDataDTO {
    * @return high
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "High price of token0.")
 
   public String getHigh() {
     return high;
@@ -646,7 +622,6 @@ public class UniswapV3PoolDayDataDTO {
    * @return low
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Low price of token0.")
 
   public String getLow() {
     return low;
@@ -669,7 +644,6 @@ public class UniswapV3PoolDayDataDTO {
    * @return close
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Close price of token0.")
 
   public String getClose() {
     return close;
@@ -692,7 +666,6 @@ public class UniswapV3PoolDayDataDTO {
    * @return vid
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public Long getVid() {
     return vid;

@@ -16,6 +16,9 @@ import (
 	"time"
 )
 
+// checks if the DexTradeDTO type satisfies the MappedNullable interface at compile time
+var _ MappedNullable = &DexTradeDTO{}
+
 // DexTradeDTO Trade for a single user, as part of a ring trade. It's part of the solution submitted by a solver for a given batch.
 type DexTradeDTO struct {
 	EntryTime *time.Time `json:"entry_time,omitempty"`
@@ -87,7 +90,7 @@ func (o *DexTradeDTO) GetEntryTime() time.Time {
 // and a boolean to check if the value has been set.
 func (o *DexTradeDTO) GetEntryTimeOk() (*time.Time, bool) {
 	if o == nil || isNil(o.EntryTime) {
-    return nil, false
+		return nil, false
 	}
 	return o.EntryTime, true
 }
@@ -119,7 +122,7 @@ func (o *DexTradeDTO) GetRecvTime() time.Time {
 // and a boolean to check if the value has been set.
 func (o *DexTradeDTO) GetRecvTimeOk() (*time.Time, bool) {
 	if o == nil || isNil(o.RecvTime) {
-    return nil, false
+		return nil, false
 	}
 	return o.RecvTime, true
 }
@@ -151,7 +154,7 @@ func (o *DexTradeDTO) GetBlockNumber() int64 {
 // and a boolean to check if the value has been set.
 func (o *DexTradeDTO) GetBlockNumberOk() (*int64, bool) {
 	if o == nil || isNil(o.BlockNumber) {
-    return nil, false
+		return nil, false
 	}
 	return o.BlockNumber, true
 }
@@ -184,7 +187,7 @@ func (o *DexTradeDTO) GetId() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *DexTradeDTO) GetIdOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Id.Get(), o.Id.IsSet()
 }
@@ -226,7 +229,7 @@ func (o *DexTradeDTO) GetOrder() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *DexTradeDTO) GetOrderOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Order.Get(), o.Order.IsSet()
 }
@@ -268,7 +271,7 @@ func (o *DexTradeDTO) GetOwner() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *DexTradeDTO) GetOwnerOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Owner.Get(), o.Owner.IsSet()
 }
@@ -310,7 +313,7 @@ func (o *DexTradeDTO) GetSellVolume() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *DexTradeDTO) GetSellVolumeOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.SellVolume.Get(), o.SellVolume.IsSet()
 }
@@ -352,7 +355,7 @@ func (o *DexTradeDTO) GetBuyVolume() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *DexTradeDTO) GetBuyVolumeOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.BuyVolume.Get(), o.BuyVolume.IsSet()
 }
@@ -394,7 +397,7 @@ func (o *DexTradeDTO) GetTradeBatchId() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *DexTradeDTO) GetTradeBatchIdOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.TradeBatchId.Get(), o.TradeBatchId.IsSet()
 }
@@ -436,7 +439,7 @@ func (o *DexTradeDTO) GetTradeEpoch() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *DexTradeDTO) GetTradeEpochOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.TradeEpoch.Get(), o.TradeEpoch.IsSet()
 }
@@ -478,7 +481,7 @@ func (o *DexTradeDTO) GetBuyToken() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *DexTradeDTO) GetBuyTokenOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.BuyToken.Get(), o.BuyToken.IsSet()
 }
@@ -520,7 +523,7 @@ func (o *DexTradeDTO) GetSellToken() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *DexTradeDTO) GetSellTokenOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.SellToken.Get(), o.SellToken.IsSet()
 }
@@ -562,7 +565,7 @@ func (o *DexTradeDTO) GetCreateEpoch() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *DexTradeDTO) GetCreateEpochOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.CreateEpoch.Get(), o.CreateEpoch.IsSet()
 }
@@ -604,7 +607,7 @@ func (o *DexTradeDTO) GetRevertEpoch() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *DexTradeDTO) GetRevertEpochOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.RevertEpoch.Get(), o.RevertEpoch.IsSet()
 }
@@ -646,7 +649,7 @@ func (o *DexTradeDTO) GetTxHash() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *DexTradeDTO) GetTxHashOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.TxHash.Get(), o.TxHash.IsSet()
 }
@@ -688,7 +691,7 @@ func (o *DexTradeDTO) GetTxLogIndex() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *DexTradeDTO) GetTxLogIndexOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.TxLogIndex.Get(), o.TxLogIndex.IsSet()
 }
@@ -729,7 +732,7 @@ func (o *DexTradeDTO) GetVid() int64 {
 // and a boolean to check if the value has been set.
 func (o *DexTradeDTO) GetVidOk() (*int64, bool) {
 	if o == nil || isNil(o.Vid) {
-    return nil, false
+		return nil, false
 	}
 	return o.Vid, true
 }
@@ -762,7 +765,7 @@ func (o *DexTradeDTO) GetPoolId() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *DexTradeDTO) GetPoolIdOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.PoolId.Get(), o.PoolId.IsSet()
 }
@@ -804,7 +807,7 @@ func (o *DexTradeDTO) GetTransactionId() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *DexTradeDTO) GetTransactionIdOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.TransactionId.Get(), o.TransactionId.IsSet()
 }
@@ -845,7 +848,7 @@ func (o *DexTradeDTO) GetEvaluatedPrice() float64 {
 // and a boolean to check if the value has been set.
 func (o *DexTradeDTO) GetEvaluatedPriceOk() (*float64, bool) {
 	if o == nil || isNil(o.EvaluatedPrice) {
-    return nil, false
+		return nil, false
 	}
 	return o.EvaluatedPrice, true
 }
@@ -877,7 +880,7 @@ func (o *DexTradeDTO) GetEvaluatedAmount() float64 {
 // and a boolean to check if the value has been set.
 func (o *DexTradeDTO) GetEvaluatedAmountOk() (*float64, bool) {
 	if o == nil || isNil(o.EvaluatedAmount) {
-    return nil, false
+		return nil, false
 	}
 	return o.EvaluatedAmount, true
 }
@@ -909,7 +912,7 @@ func (o *DexTradeDTO) GetEvaluatedAggressor() TransactionsETradeAggressiveSide {
 // and a boolean to check if the value has been set.
 func (o *DexTradeDTO) GetEvaluatedAggressorOk() (*TransactionsETradeAggressiveSide, bool) {
 	if o == nil || isNil(o.EvaluatedAggressor) {
-    return nil, false
+		return nil, false
 	}
 	return o.EvaluatedAggressor, true
 }
@@ -929,6 +932,14 @@ func (o *DexTradeDTO) SetEvaluatedAggressor(v TransactionsETradeAggressiveSide) 
 }
 
 func (o DexTradeDTO) MarshalJSON() ([]byte, error) {
+	toSerialize,err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
+}
+
+func (o DexTradeDTO) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
 	if !isNil(o.EntryTime) {
 		toSerialize["entry_time"] = o.EntryTime
@@ -987,16 +998,12 @@ func (o DexTradeDTO) MarshalJSON() ([]byte, error) {
 	if o.TransactionId.IsSet() {
 		toSerialize["transaction_id"] = o.TransactionId.Get()
 	}
-	if !isNil(o.EvaluatedPrice) {
-		toSerialize["evaluated_price"] = o.EvaluatedPrice
-	}
-	if !isNil(o.EvaluatedAmount) {
-		toSerialize["evaluated_amount"] = o.EvaluatedAmount
-	}
+	// skip: evaluated_price is readOnly
+	// skip: evaluated_amount is readOnly
 	if !isNil(o.EvaluatedAggressor) {
 		toSerialize["evaluated_aggressor"] = o.EvaluatedAggressor
 	}
-	return json.Marshal(toSerialize)
+	return toSerialize, nil
 }
 
 type NullableDexTradeDTO struct {

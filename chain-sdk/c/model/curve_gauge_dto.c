@@ -187,7 +187,7 @@ curve_gauge_dto_t *curve_gauge_dto_parseFromJSON(cJSON *curve_gauge_dtoJSON){
     // curve_gauge_dto->entry_time
     cJSON *entry_time = cJSON_GetObjectItemCaseSensitive(curve_gauge_dtoJSON, "entry_time");
     if (entry_time) { 
-    if(!cJSON_IsString(entry_time))
+    if(!cJSON_IsString(entry_time) && !cJSON_IsNull(entry_time))
     {
     goto end; //DateTime
     }
@@ -196,7 +196,7 @@ curve_gauge_dto_t *curve_gauge_dto_parseFromJSON(cJSON *curve_gauge_dtoJSON){
     // curve_gauge_dto->recv_time
     cJSON *recv_time = cJSON_GetObjectItemCaseSensitive(curve_gauge_dtoJSON, "recv_time");
     if (recv_time) { 
-    if(!cJSON_IsString(recv_time))
+    if(!cJSON_IsString(recv_time) && !cJSON_IsNull(recv_time))
     {
     goto end; //DateTime
     }
@@ -214,7 +214,7 @@ curve_gauge_dto_t *curve_gauge_dto_parseFromJSON(cJSON *curve_gauge_dtoJSON){
     // curve_gauge_dto->id
     cJSON *id = cJSON_GetObjectItemCaseSensitive(curve_gauge_dtoJSON, "id");
     if (id) { 
-    if(!cJSON_IsString(id))
+    if(!cJSON_IsString(id) && !cJSON_IsNull(id))
     {
     goto end; //String
     }
@@ -223,7 +223,7 @@ curve_gauge_dto_t *curve_gauge_dto_parseFromJSON(cJSON *curve_gauge_dtoJSON){
     // curve_gauge_dto->address
     cJSON *address = cJSON_GetObjectItemCaseSensitive(curve_gauge_dtoJSON, "address");
     if (address) { 
-    if(!cJSON_IsString(address))
+    if(!cJSON_IsString(address) && !cJSON_IsNull(address))
     {
     goto end; //String
     }
@@ -232,7 +232,7 @@ curve_gauge_dto_t *curve_gauge_dto_parseFromJSON(cJSON *curve_gauge_dtoJSON){
     // curve_gauge_dto->type
     cJSON *type = cJSON_GetObjectItemCaseSensitive(curve_gauge_dtoJSON, "type");
     if (type) { 
-    if(!cJSON_IsString(type))
+    if(!cJSON_IsString(type) && !cJSON_IsNull(type))
     {
     goto end; //String
     }
@@ -241,7 +241,7 @@ curve_gauge_dto_t *curve_gauge_dto_parseFromJSON(cJSON *curve_gauge_dtoJSON){
     // curve_gauge_dto->pool
     cJSON *pool = cJSON_GetObjectItemCaseSensitive(curve_gauge_dtoJSON, "pool");
     if (pool) { 
-    if(!cJSON_IsString(pool))
+    if(!cJSON_IsString(pool) && !cJSON_IsNull(pool))
     {
     goto end; //String
     }
@@ -250,7 +250,7 @@ curve_gauge_dto_t *curve_gauge_dto_parseFromJSON(cJSON *curve_gauge_dtoJSON){
     // curve_gauge_dto->created
     cJSON *created = cJSON_GetObjectItemCaseSensitive(curve_gauge_dtoJSON, "created");
     if (created) { 
-    if(!cJSON_IsString(created))
+    if(!cJSON_IsString(created) && !cJSON_IsNull(created))
     {
     goto end; //String
     }
@@ -259,7 +259,7 @@ curve_gauge_dto_t *curve_gauge_dto_parseFromJSON(cJSON *curve_gauge_dtoJSON){
     // curve_gauge_dto->created_at_block
     cJSON *created_at_block = cJSON_GetObjectItemCaseSensitive(curve_gauge_dtoJSON, "created_at_block");
     if (created_at_block) { 
-    if(!cJSON_IsString(created_at_block))
+    if(!cJSON_IsString(created_at_block) && !cJSON_IsNull(created_at_block))
     {
     goto end; //String
     }
@@ -268,7 +268,7 @@ curve_gauge_dto_t *curve_gauge_dto_parseFromJSON(cJSON *curve_gauge_dtoJSON){
     // curve_gauge_dto->created_at_transaction
     cJSON *created_at_transaction = cJSON_GetObjectItemCaseSensitive(curve_gauge_dtoJSON, "created_at_transaction");
     if (created_at_transaction) { 
-    if(!cJSON_IsString(created_at_transaction))
+    if(!cJSON_IsString(created_at_transaction) && !cJSON_IsNull(created_at_transaction))
     {
     goto end; //String
     }
@@ -285,16 +285,16 @@ curve_gauge_dto_t *curve_gauge_dto_parseFromJSON(cJSON *curve_gauge_dtoJSON){
 
 
     curve_gauge_dto_local_var = curve_gauge_dto_create (
-        entry_time ? strdup(entry_time->valuestring) : NULL,
-        recv_time ? strdup(recv_time->valuestring) : NULL,
+        entry_time && !cJSON_IsNull(entry_time) ? strdup(entry_time->valuestring) : NULL,
+        recv_time && !cJSON_IsNull(recv_time) ? strdup(recv_time->valuestring) : NULL,
         block_number ? block_number->valuedouble : 0,
-        id ? strdup(id->valuestring) : NULL,
-        address ? strdup(address->valuestring) : NULL,
-        type ? strdup(type->valuestring) : NULL,
-        pool ? strdup(pool->valuestring) : NULL,
-        created ? strdup(created->valuestring) : NULL,
-        created_at_block ? strdup(created_at_block->valuestring) : NULL,
-        created_at_transaction ? strdup(created_at_transaction->valuestring) : NULL,
+        id && !cJSON_IsNull(id) ? strdup(id->valuestring) : NULL,
+        address && !cJSON_IsNull(address) ? strdup(address->valuestring) : NULL,
+        type && !cJSON_IsNull(type) ? strdup(type->valuestring) : NULL,
+        pool && !cJSON_IsNull(pool) ? strdup(pool->valuestring) : NULL,
+        created && !cJSON_IsNull(created) ? strdup(created->valuestring) : NULL,
+        created_at_block && !cJSON_IsNull(created_at_block) ? strdup(created_at_block->valuestring) : NULL,
+        created_at_transaction && !cJSON_IsNull(created_at_transaction) ? strdup(created_at_transaction->valuestring) : NULL,
         vid ? vid->valuedouble : 0
         );
 

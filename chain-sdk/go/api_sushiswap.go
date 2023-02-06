@@ -501,19 +501,19 @@ func (a *SushiswapApiService) SushiswapGetBundlesHistoricalExecute(r ApiSushiswa
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		localVarQueryParams.Add("id", parameterToString(*r.id, ""))
+		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -580,31 +580,37 @@ type ApiSushiswapGetBurnsHistoricalRequest struct {
 	pair *string
 }
 
+// The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
 func (r ApiSushiswapGetBurnsHistoricalRequest) StartBlock(startBlock int64) ApiSushiswapGetBurnsHistoricalRequest {
 	r.startBlock = &startBlock
 	return r
 }
 
+// The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
 func (r ApiSushiswapGetBurnsHistoricalRequest) EndBlock(endBlock int64) ApiSushiswapGetBurnsHistoricalRequest {
 	r.endBlock = &endBlock
 	return r
 }
 
+// The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
 func (r ApiSushiswapGetBurnsHistoricalRequest) StartDate(startDate time.Time) ApiSushiswapGetBurnsHistoricalRequest {
 	r.startDate = &startDate
 	return r
 }
 
+// The end date of timeframe.
 func (r ApiSushiswapGetBurnsHistoricalRequest) EndDate(endDate time.Time) ApiSushiswapGetBurnsHistoricalRequest {
 	r.endDate = &endDate
 	return r
 }
 
+// Identifier, format: (transaction id):(transaction.burns.length).
 func (r ApiSushiswapGetBurnsHistoricalRequest) Id(id string) ApiSushiswapGetBurnsHistoricalRequest {
 	r.id = &id
 	return r
 }
 
+// Reference to pair.
 func (r ApiSushiswapGetBurnsHistoricalRequest) Pair(pair string) ApiSushiswapGetBurnsHistoricalRequest {
 	r.pair = &pair
 	return r
@@ -651,22 +657,22 @@ func (a *SushiswapApiService) SushiswapGetBurnsHistoricalExecute(r ApiSushiswapG
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		localVarQueryParams.Add("id", parameterToString(*r.id, ""))
+		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
 	}
 	if r.pair != nil {
-		localVarQueryParams.Add("pair", parameterToString(*r.pair, ""))
+		parameterAddToQuery(localVarQueryParams, "pair", r.pair, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -803,19 +809,19 @@ func (a *SushiswapApiService) SushiswapGetDayDataHistoricalExecute(r ApiSushiswa
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		localVarQueryParams.Add("id", parameterToString(*r.id, ""))
+		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -952,19 +958,19 @@ func (a *SushiswapApiService) SushiswapGetFactoriesHistoricalExecute(r ApiSushis
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		localVarQueryParams.Add("id", parameterToString(*r.id, ""))
+		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -1101,19 +1107,19 @@ func (a *SushiswapApiService) SushiswapGetHourDataHistoricalExecute(r ApiSushisw
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		localVarQueryParams.Add("id", parameterToString(*r.id, ""))
+		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -1181,36 +1187,43 @@ type ApiSushiswapGetLiquidityPositionSnapshotsHistoricalRequest struct {
 	pair *string
 }
 
+// The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
 func (r ApiSushiswapGetLiquidityPositionSnapshotsHistoricalRequest) StartBlock(startBlock int64) ApiSushiswapGetLiquidityPositionSnapshotsHistoricalRequest {
 	r.startBlock = &startBlock
 	return r
 }
 
+// The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
 func (r ApiSushiswapGetLiquidityPositionSnapshotsHistoricalRequest) EndBlock(endBlock int64) ApiSushiswapGetLiquidityPositionSnapshotsHistoricalRequest {
 	r.endBlock = &endBlock
 	return r
 }
 
+// The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
 func (r ApiSushiswapGetLiquidityPositionSnapshotsHistoricalRequest) StartDate(startDate time.Time) ApiSushiswapGetLiquidityPositionSnapshotsHistoricalRequest {
 	r.startDate = &startDate
 	return r
 }
 
+// The end date of timeframe.
 func (r ApiSushiswapGetLiquidityPositionSnapshotsHistoricalRequest) EndDate(endDate time.Time) ApiSushiswapGetLiquidityPositionSnapshotsHistoricalRequest {
 	r.endDate = &endDate
 	return r
 }
 
+// Identifier, format: (pair address)-(user address)-(timestamp)
 func (r ApiSushiswapGetLiquidityPositionSnapshotsHistoricalRequest) Id(id string) ApiSushiswapGetLiquidityPositionSnapshotsHistoricalRequest {
 	r.id = &id
 	return r
 }
 
+// Reference to user.
 func (r ApiSushiswapGetLiquidityPositionSnapshotsHistoricalRequest) User(user string) ApiSushiswapGetLiquidityPositionSnapshotsHistoricalRequest {
 	r.user = &user
 	return r
 }
 
+// Reference to the pair liquidity is being provided on.
 func (r ApiSushiswapGetLiquidityPositionSnapshotsHistoricalRequest) Pair(pair string) ApiSushiswapGetLiquidityPositionSnapshotsHistoricalRequest {
 	r.pair = &pair
 	return r
@@ -1257,25 +1270,25 @@ func (a *SushiswapApiService) SushiswapGetLiquidityPositionSnapshotsHistoricalEx
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		localVarQueryParams.Add("id", parameterToString(*r.id, ""))
+		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
 	}
 	if r.user != nil {
-		localVarQueryParams.Add("user", parameterToString(*r.user, ""))
+		parameterAddToQuery(localVarQueryParams, "user", r.user, "")
 	}
 	if r.pair != nil {
-		localVarQueryParams.Add("pair", parameterToString(*r.pair, ""))
+		parameterAddToQuery(localVarQueryParams, "pair", r.pair, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -1343,36 +1356,43 @@ type ApiSushiswapGetLiquidityPositionsHistoricalRequest struct {
 	pair *string
 }
 
+// The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
 func (r ApiSushiswapGetLiquidityPositionsHistoricalRequest) StartBlock(startBlock int64) ApiSushiswapGetLiquidityPositionsHistoricalRequest {
 	r.startBlock = &startBlock
 	return r
 }
 
+// The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
 func (r ApiSushiswapGetLiquidityPositionsHistoricalRequest) EndBlock(endBlock int64) ApiSushiswapGetLiquidityPositionsHistoricalRequest {
 	r.endBlock = &endBlock
 	return r
 }
 
+// The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
 func (r ApiSushiswapGetLiquidityPositionsHistoricalRequest) StartDate(startDate time.Time) ApiSushiswapGetLiquidityPositionsHistoricalRequest {
 	r.startDate = &startDate
 	return r
 }
 
+// The end date of timeframe.
 func (r ApiSushiswapGetLiquidityPositionsHistoricalRequest) EndDate(endDate time.Time) ApiSushiswapGetLiquidityPositionsHistoricalRequest {
 	r.endDate = &endDate
 	return r
 }
 
+// Identifier, format: (pair address)-(user address)
 func (r ApiSushiswapGetLiquidityPositionsHistoricalRequest) Id(id string) ApiSushiswapGetLiquidityPositionsHistoricalRequest {
 	r.id = &id
 	return r
 }
 
+// User address.
 func (r ApiSushiswapGetLiquidityPositionsHistoricalRequest) User(user string) ApiSushiswapGetLiquidityPositionsHistoricalRequest {
 	r.user = &user
 	return r
 }
 
+// Pair address.
 func (r ApiSushiswapGetLiquidityPositionsHistoricalRequest) Pair(pair string) ApiSushiswapGetLiquidityPositionsHistoricalRequest {
 	r.pair = &pair
 	return r
@@ -1419,25 +1439,25 @@ func (a *SushiswapApiService) SushiswapGetLiquidityPositionsHistoricalExecute(r 
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		localVarQueryParams.Add("id", parameterToString(*r.id, ""))
+		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
 	}
 	if r.user != nil {
-		localVarQueryParams.Add("user", parameterToString(*r.user, ""))
+		parameterAddToQuery(localVarQueryParams, "user", r.user, "")
 	}
 	if r.pair != nil {
-		localVarQueryParams.Add("pair", parameterToString(*r.pair, ""))
+		parameterAddToQuery(localVarQueryParams, "pair", r.pair, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -1504,31 +1524,37 @@ type ApiSushiswapGetMintsHistoricalRequest struct {
 	pair *string
 }
 
+// The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
 func (r ApiSushiswapGetMintsHistoricalRequest) StartBlock(startBlock int64) ApiSushiswapGetMintsHistoricalRequest {
 	r.startBlock = &startBlock
 	return r
 }
 
+// The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
 func (r ApiSushiswapGetMintsHistoricalRequest) EndBlock(endBlock int64) ApiSushiswapGetMintsHistoricalRequest {
 	r.endBlock = &endBlock
 	return r
 }
 
+// The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
 func (r ApiSushiswapGetMintsHistoricalRequest) StartDate(startDate time.Time) ApiSushiswapGetMintsHistoricalRequest {
 	r.startDate = &startDate
 	return r
 }
 
+// The end date of timeframe.
 func (r ApiSushiswapGetMintsHistoricalRequest) EndDate(endDate time.Time) ApiSushiswapGetMintsHistoricalRequest {
 	r.endDate = &endDate
 	return r
 }
 
+// Identifier, format: (transaction hash)-(index in the transaction mint array).
 func (r ApiSushiswapGetMintsHistoricalRequest) Id(id string) ApiSushiswapGetMintsHistoricalRequest {
 	r.id = &id
 	return r
 }
 
+// Reference to pair.
 func (r ApiSushiswapGetMintsHistoricalRequest) Pair(pair string) ApiSushiswapGetMintsHistoricalRequest {
 	r.pair = &pair
 	return r
@@ -1575,22 +1601,22 @@ func (a *SushiswapApiService) SushiswapGetMintsHistoricalExecute(r ApiSushiswapG
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		localVarQueryParams.Add("id", parameterToString(*r.id, ""))
+		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
 	}
 	if r.pair != nil {
-		localVarQueryParams.Add("pair", parameterToString(*r.pair, ""))
+		parameterAddToQuery(localVarQueryParams, "pair", r.pair, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -1659,41 +1685,49 @@ type ApiSushiswapGetPairDayDataHistoricalRequest struct {
 	token1 *string
 }
 
+// The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
 func (r ApiSushiswapGetPairDayDataHistoricalRequest) StartBlock(startBlock int64) ApiSushiswapGetPairDayDataHistoricalRequest {
 	r.startBlock = &startBlock
 	return r
 }
 
+// The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
 func (r ApiSushiswapGetPairDayDataHistoricalRequest) EndBlock(endBlock int64) ApiSushiswapGetPairDayDataHistoricalRequest {
 	r.endBlock = &endBlock
 	return r
 }
 
+// The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
 func (r ApiSushiswapGetPairDayDataHistoricalRequest) StartDate(startDate time.Time) ApiSushiswapGetPairDayDataHistoricalRequest {
 	r.startDate = &startDate
 	return r
 }
 
+// The end date of timeframe.
 func (r ApiSushiswapGetPairDayDataHistoricalRequest) EndDate(endDate time.Time) ApiSushiswapGetPairDayDataHistoricalRequest {
 	r.endDate = &endDate
 	return r
 }
 
+// Identifier, format: (pair id)-(day start timestamp).
 func (r ApiSushiswapGetPairDayDataHistoricalRequest) Id(id string) ApiSushiswapGetPairDayDataHistoricalRequest {
 	r.id = &id
 	return r
 }
 
+// Reference to pair.
 func (r ApiSushiswapGetPairDayDataHistoricalRequest) Pair(pair string) ApiSushiswapGetPairDayDataHistoricalRequest {
 	r.pair = &pair
 	return r
 }
 
+// Reference to token0.
 func (r ApiSushiswapGetPairDayDataHistoricalRequest) Token0(token0 string) ApiSushiswapGetPairDayDataHistoricalRequest {
 	r.token0 = &token0
 	return r
 }
 
+// Reference to token1.
 func (r ApiSushiswapGetPairDayDataHistoricalRequest) Token1(token1 string) ApiSushiswapGetPairDayDataHistoricalRequest {
 	r.token1 = &token1
 	return r
@@ -1740,28 +1774,28 @@ func (a *SushiswapApiService) SushiswapGetPairDayDataHistoricalExecute(r ApiSush
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		localVarQueryParams.Add("id", parameterToString(*r.id, ""))
+		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
 	}
 	if r.pair != nil {
-		localVarQueryParams.Add("pair", parameterToString(*r.pair, ""))
+		parameterAddToQuery(localVarQueryParams, "pair", r.pair, "")
 	}
 	if r.token0 != nil {
-		localVarQueryParams.Add("token_0", parameterToString(*r.token0, ""))
+		parameterAddToQuery(localVarQueryParams, "token_0", r.token0, "")
 	}
 	if r.token1 != nil {
-		localVarQueryParams.Add("token_1", parameterToString(*r.token1, ""))
+		parameterAddToQuery(localVarQueryParams, "token_1", r.token1, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -1828,31 +1862,37 @@ type ApiSushiswapGetPairHourDataHistoricalRequest struct {
 	pair *string
 }
 
+// The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
 func (r ApiSushiswapGetPairHourDataHistoricalRequest) StartBlock(startBlock int64) ApiSushiswapGetPairHourDataHistoricalRequest {
 	r.startBlock = &startBlock
 	return r
 }
 
+// The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
 func (r ApiSushiswapGetPairHourDataHistoricalRequest) EndBlock(endBlock int64) ApiSushiswapGetPairHourDataHistoricalRequest {
 	r.endBlock = &endBlock
 	return r
 }
 
+// The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
 func (r ApiSushiswapGetPairHourDataHistoricalRequest) StartDate(startDate time.Time) ApiSushiswapGetPairHourDataHistoricalRequest {
 	r.startDate = &startDate
 	return r
 }
 
+// The end date of timeframe.
 func (r ApiSushiswapGetPairHourDataHistoricalRequest) EndDate(endDate time.Time) ApiSushiswapGetPairHourDataHistoricalRequest {
 	r.endDate = &endDate
 	return r
 }
 
+// Identifier, format: (pair id)-(hour start timestamp).
 func (r ApiSushiswapGetPairHourDataHistoricalRequest) Id(id string) ApiSushiswapGetPairHourDataHistoricalRequest {
 	r.id = &id
 	return r
 }
 
+// Reference to pair.
 func (r ApiSushiswapGetPairHourDataHistoricalRequest) Pair(pair string) ApiSushiswapGetPairHourDataHistoricalRequest {
 	r.pair = &pair
 	return r
@@ -1899,22 +1939,22 @@ func (a *SushiswapApiService) SushiswapGetPairHourDataHistoricalExecute(r ApiSus
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		localVarQueryParams.Add("id", parameterToString(*r.id, ""))
+		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
 	}
 	if r.pair != nil {
-		localVarQueryParams.Add("pair", parameterToString(*r.pair, ""))
+		parameterAddToQuery(localVarQueryParams, "pair", r.pair, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -1983,41 +2023,49 @@ type ApiSushiswapGetPairsHistoricalRequest struct {
 	token1 *string
 }
 
+// The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
 func (r ApiSushiswapGetPairsHistoricalRequest) StartBlock(startBlock int64) ApiSushiswapGetPairsHistoricalRequest {
 	r.startBlock = &startBlock
 	return r
 }
 
+// The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
 func (r ApiSushiswapGetPairsHistoricalRequest) EndBlock(endBlock int64) ApiSushiswapGetPairsHistoricalRequest {
 	r.endBlock = &endBlock
 	return r
 }
 
+// The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
 func (r ApiSushiswapGetPairsHistoricalRequest) StartDate(startDate time.Time) ApiSushiswapGetPairsHistoricalRequest {
 	r.startDate = &startDate
 	return r
 }
 
+// The end date of timeframe.
 func (r ApiSushiswapGetPairsHistoricalRequest) EndDate(endDate time.Time) ApiSushiswapGetPairsHistoricalRequest {
 	r.endDate = &endDate
 	return r
 }
 
+// Pair contract address.
 func (r ApiSushiswapGetPairsHistoricalRequest) Id(id string) ApiSushiswapGetPairsHistoricalRequest {
 	r.id = &id
 	return r
 }
 
+// Friendly name, format: (token0 name)-(token1 name)
 func (r ApiSushiswapGetPairsHistoricalRequest) Name(name string) ApiSushiswapGetPairsHistoricalRequest {
 	r.name = &name
 	return r
 }
 
+// Reference to token0 as stored in pair contract.
 func (r ApiSushiswapGetPairsHistoricalRequest) Token0(token0 string) ApiSushiswapGetPairsHistoricalRequest {
 	r.token0 = &token0
 	return r
 }
 
+// Reference to token0 as stored in pair contract.
 func (r ApiSushiswapGetPairsHistoricalRequest) Token1(token1 string) ApiSushiswapGetPairsHistoricalRequest {
 	r.token1 = &token1
 	return r
@@ -2064,28 +2112,28 @@ func (a *SushiswapApiService) SushiswapGetPairsHistoricalExecute(r ApiSushiswapG
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		localVarQueryParams.Add("id", parameterToString(*r.id, ""))
+		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
 	}
 	if r.name != nil {
-		localVarQueryParams.Add("name", parameterToString(*r.name, ""))
+		parameterAddToQuery(localVarQueryParams, "name", r.name, "")
 	}
 	if r.token0 != nil {
-		localVarQueryParams.Add("token_0", parameterToString(*r.token0, ""))
+		parameterAddToQuery(localVarQueryParams, "token_0", r.token0, "")
 	}
 	if r.token1 != nil {
-		localVarQueryParams.Add("token_1", parameterToString(*r.token1, ""))
+		parameterAddToQuery(localVarQueryParams, "token_1", r.token1, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -2229,22 +2277,22 @@ func (a *SushiswapApiService) SushiswapGetSwapsHistoricalExecute(r ApiSushiswapG
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		localVarQueryParams.Add("id", parameterToString(*r.id, ""))
+		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
 	}
 	if r.pair != nil {
-		localVarQueryParams.Add("pair", parameterToString(*r.pair, ""))
+		parameterAddToQuery(localVarQueryParams, "pair", r.pair, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -2381,19 +2429,19 @@ func (a *SushiswapApiService) SushiswapGetTokenDayDataHistoricalExecute(r ApiSus
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		localVarQueryParams.Add("id", parameterToString(*r.id, ""))
+		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -2544,25 +2592,25 @@ func (a *SushiswapApiService) SushiswapGetTokensHistoricalExecute(r ApiSushiswap
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		localVarQueryParams.Add("id", parameterToString(*r.id, ""))
+		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
 	}
 	if r.symbol != nil {
-		localVarQueryParams.Add("symbol", parameterToString(*r.symbol, ""))
+		parameterAddToQuery(localVarQueryParams, "symbol", r.symbol, "")
 	}
 	if r.name != nil {
-		localVarQueryParams.Add("name", parameterToString(*r.name, ""))
+		parameterAddToQuery(localVarQueryParams, "name", r.name, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -2699,19 +2747,19 @@ func (a *SushiswapApiService) SushiswapGetTransactionsHistoricalExecute(r ApiSus
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		localVarQueryParams.Add("id", parameterToString(*r.id, ""))
+		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -2848,19 +2896,19 @@ func (a *SushiswapApiService) SushiswapGetUsersHistoricalExecute(r ApiSushiswapG
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		localVarQueryParams.Add("id", parameterToString(*r.id, ""))
+		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -3563,7 +3611,7 @@ func (a *SushiswapApiService) SushiswapPairsCurrentExecute(r ApiSushiswapPairsCu
 	localVarFormParams := url.Values{}
 
 	if r.id != nil {
-		localVarQueryParams.Add("id", parameterToString(*r.id, ""))
+		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -3672,7 +3720,7 @@ func (a *SushiswapApiService) SushiswapSwapsCurrentExecute(r ApiSushiswapSwapsCu
 	localVarFormParams := url.Values{}
 
 	if r.pair != nil {
-		localVarQueryParams.Add("pair", parameterToString(*r.pair, ""))
+		parameterAddToQuery(localVarQueryParams, "pair", r.pair, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}

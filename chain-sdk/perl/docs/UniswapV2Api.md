@@ -249,13 +249,13 @@ use WWW::OpenAPIClient::UniswapV2Api;
 my $api_instance = WWW::OpenAPIClient::UniswapV2Api->new(
 );
 
-my $start_block = 789; # int | 
-my $end_block = 789; # int | 
-my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
-my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
-my $id = "id_example"; # string | 
-my $user = "user_example"; # string | 
-my $pair = "pair_example"; # string | 
+my $start_block = 789; # int | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+my $end_block = 789; # int | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | The end date of timeframe.
+my $id = "id_example"; # string | Identifier, format: (pair address)-(user address)
+my $user = "user_example"; # string | Reference to user.
+my $pair = "pair_example"; # string | Reference to the pair liquidity is being provided on.
 
 eval {
     my $result = $api_instance->uniswap_v2_get_liquidity_position_snapshots__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, id => $id, user => $user, pair => $pair);
@@ -270,13 +270,13 @@ if ($@) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **start_block** | **int**|  | [optional] 
- **end_block** | **int**|  | [optional] 
- **start_date** | **DATE_TIME**|  | [optional] 
- **end_date** | **DATE_TIME**|  | [optional] 
- **id** | **string**|  | [optional] 
- **user** | **string**|  | [optional] 
- **pair** | **string**|  | [optional] 
+ **start_block** | **int**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
+ **end_block** | **int**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
+ **start_date** | **DATE_TIME**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
+ **end_date** | **DATE_TIME**| The end date of timeframe. | [optional] 
+ **id** | **string**| Identifier, format: (pair address)-(user address) | [optional] 
+ **user** | **string**| Reference to user. | [optional] 
+ **pair** | **string**| Reference to the pair liquidity is being provided on. | [optional] 
 
 ### Return type
 

@@ -416,12 +416,12 @@ Gets poolDayData.
 //import org.openapitools.client.models.*
 
 val apiInstance = UniswapV3Api()
-val startBlock : kotlin.Long = 789 // kotlin.Long | 
-val endBlock : kotlin.Long = 789 // kotlin.Long | 
-val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
-val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
-val id : kotlin.String = id_example // kotlin.String | 
-val pool : kotlin.String = pool_example // kotlin.String | 
+val startBlock : kotlin.Long = 789 // kotlin.Long | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+val endBlock : kotlin.Long = 789 // kotlin.Long | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | The end date of timeframe.
+val id : kotlin.String = id_example // kotlin.String | Identifier, format: (pool address)-(day id).
+val pool : kotlin.String = pool_example // kotlin.String | Pointer to pool.
 try {
     val result : kotlin.collections.List<UniswapV3PoolDayDataDTO> = apiInstance.uniswapV3GetPoolDayDataHistorical(startBlock, endBlock, startDate, endDate, id, pool)
     println(result)
@@ -438,12 +438,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startBlock** | **kotlin.Long**|  | [optional]
- **endBlock** | **kotlin.Long**|  | [optional]
- **startDate** | **java.time.OffsetDateTime**|  | [optional]
- **endDate** | **java.time.OffsetDateTime**|  | [optional]
- **id** | **kotlin.String**|  | [optional]
- **pool** | **kotlin.String**|  | [optional]
+ **startBlock** | **kotlin.Long**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional]
+ **endBlock** | **kotlin.Long**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional]
+ **startDate** | **java.time.OffsetDateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional]
+ **endDate** | **java.time.OffsetDateTime**| The end date of timeframe. | [optional]
+ **id** | **kotlin.String**| Identifier, format: (pool address)-(day id). | [optional]
+ **pool** | **kotlin.String**| Pointer to pool. | [optional]
 
 ### Return type
 
@@ -473,12 +473,12 @@ Gets poolHourData.
 //import org.openapitools.client.models.*
 
 val apiInstance = UniswapV3Api()
-val startBlock : kotlin.Long = 789 // kotlin.Long | 
-val endBlock : kotlin.Long = 789 // kotlin.Long | 
-val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
-val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
-val id : kotlin.String = id_example // kotlin.String | 
-val pool : kotlin.String = pool_example // kotlin.String | 
+val startBlock : kotlin.Long = 789 // kotlin.Long | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+val endBlock : kotlin.Long = 789 // kotlin.Long | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | The end date of timeframe.
+val id : kotlin.String = id_example // kotlin.String | Identifier, format: (pool address)-(day id)
+val pool : kotlin.String = pool_example // kotlin.String | Pointer to pool.
 try {
     val result : kotlin.collections.List<UniswapV3PoolHourDataDTO> = apiInstance.uniswapV3GetPoolHourDataHistorical(startBlock, endBlock, startDate, endDate, id, pool)
     println(result)
@@ -495,12 +495,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startBlock** | **kotlin.Long**|  | [optional]
- **endBlock** | **kotlin.Long**|  | [optional]
- **startDate** | **java.time.OffsetDateTime**|  | [optional]
- **endDate** | **java.time.OffsetDateTime**|  | [optional]
- **id** | **kotlin.String**|  | [optional]
- **pool** | **kotlin.String**|  | [optional]
+ **startBlock** | **kotlin.Long**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional]
+ **endBlock** | **kotlin.Long**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional]
+ **startDate** | **java.time.OffsetDateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional]
+ **endDate** | **java.time.OffsetDateTime**| The end date of timeframe. | [optional]
+ **id** | **kotlin.String**| Identifier, format: (pool address)-(day id) | [optional]
+ **pool** | **kotlin.String**| Pointer to pool. | [optional]
 
 ### Return type
 
@@ -589,12 +589,12 @@ Gets positionSnapshots.
 //import org.openapitools.client.models.*
 
 val apiInstance = UniswapV3Api()
-val startBlock : kotlin.Long = 789 // kotlin.Long | 
-val endBlock : kotlin.Long = 789 // kotlin.Long | 
-val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
-val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
-val id : kotlin.String = id_example // kotlin.String | 
-val pool : kotlin.String = pool_example // kotlin.String | 
+val startBlock : kotlin.Long = 789 // kotlin.Long | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+val endBlock : kotlin.Long = 789 // kotlin.Long | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | The end date of timeframe.
+val id : kotlin.String = id_example // kotlin.String | NFT token identifier, format: (NFT token id)#(block number).
+val pool : kotlin.String = pool_example // kotlin.String | Pool the position is within.
 try {
     val result : kotlin.collections.List<UniswapV3PositionSnapshotDTO> = apiInstance.uniswapV3GetPositionSnapshotsHistorical(startBlock, endBlock, startDate, endDate, id, pool)
     println(result)
@@ -611,12 +611,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startBlock** | **kotlin.Long**|  | [optional]
- **endBlock** | **kotlin.Long**|  | [optional]
- **startDate** | **java.time.OffsetDateTime**|  | [optional]
- **endDate** | **java.time.OffsetDateTime**|  | [optional]
- **id** | **kotlin.String**|  | [optional]
- **pool** | **kotlin.String**|  | [optional]
+ **startBlock** | **kotlin.Long**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional]
+ **endBlock** | **kotlin.Long**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional]
+ **startDate** | **java.time.OffsetDateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional]
+ **endDate** | **java.time.OffsetDateTime**| The end date of timeframe. | [optional]
+ **id** | **kotlin.String**| NFT token identifier, format: (NFT token id)#(block number). | [optional]
+ **pool** | **kotlin.String**| Pool the position is within. | [optional]
 
 ### Return type
 
@@ -711,7 +711,7 @@ val startBlock : kotlin.Long = 789 // kotlin.Long | The start block. If endblock
 val endBlock : kotlin.Long = 789 // kotlin.Long | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
 val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
 val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | The end date of timeframe.
-val id : kotlin.String = id_example // kotlin.String | Identifier, format: transaction hash + \"#\" + index in swaps Transaction array.
+val id : kotlin.String = id_example // kotlin.String | Identifier, format: (transaction hash) + # + (index in swaps Transaction array).
 val pool : kotlin.String = pool_example // kotlin.String | Pool swap occured within.
 val token0 : kotlin.String = token0_example // kotlin.String | Reference to token0 as stored in pair contract.
 val token1 : kotlin.String = token1_example // kotlin.String | Reference to token1 as stored in pair contract.
@@ -735,7 +735,7 @@ Name | Type | Description  | Notes
  **endBlock** | **kotlin.Long**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional]
  **startDate** | **java.time.OffsetDateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional]
  **endDate** | **java.time.OffsetDateTime**| The end date of timeframe. | [optional]
- **id** | **kotlin.String**| Identifier, format: transaction hash + \&quot;#\&quot; + index in swaps Transaction array. | [optional]
+ **id** | **kotlin.String**| Identifier, format: (transaction hash) + # + (index in swaps Transaction array). | [optional]
  **pool** | **kotlin.String**| Pool swap occured within. | [optional]
  **token0** | **kotlin.String**| Reference to token0 as stored in pair contract. | [optional]
  **token1** | **kotlin.String**| Reference to token1 as stored in pair contract. | [optional]
@@ -768,12 +768,12 @@ Gets tickDayData.
 //import org.openapitools.client.models.*
 
 val apiInstance = UniswapV3Api()
-val startBlock : kotlin.Long = 789 // kotlin.Long | 
-val endBlock : kotlin.Long = 789 // kotlin.Long | 
-val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
-val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
-val id : kotlin.String = id_example // kotlin.String | 
-val pool : kotlin.String = pool_example // kotlin.String | 
+val startBlock : kotlin.Long = 789 // kotlin.Long | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+val endBlock : kotlin.Long = 789 // kotlin.Long | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | The end date of timeframe.
+val id : kotlin.String = id_example // kotlin.String | Identifier, format: (pool address)-(tick index)-(timestamp).
+val pool : kotlin.String = pool_example // kotlin.String | Pointer to pool.
 try {
     val result : kotlin.collections.List<UniswapV3TickDayDataDTO> = apiInstance.uniswapV3GetTickDayDataHistorical(startBlock, endBlock, startDate, endDate, id, pool)
     println(result)
@@ -790,12 +790,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startBlock** | **kotlin.Long**|  | [optional]
- **endBlock** | **kotlin.Long**|  | [optional]
- **startDate** | **java.time.OffsetDateTime**|  | [optional]
- **endDate** | **java.time.OffsetDateTime**|  | [optional]
- **id** | **kotlin.String**|  | [optional]
- **pool** | **kotlin.String**|  | [optional]
+ **startBlock** | **kotlin.Long**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional]
+ **endBlock** | **kotlin.Long**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional]
+ **startDate** | **java.time.OffsetDateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional]
+ **endDate** | **java.time.OffsetDateTime**| The end date of timeframe. | [optional]
+ **id** | **kotlin.String**| Identifier, format: (pool address)-(tick index)-(timestamp). | [optional]
+ **pool** | **kotlin.String**| Pointer to pool. | [optional]
 
 ### Return type
 
@@ -825,12 +825,12 @@ Gets ticks.
 //import org.openapitools.client.models.*
 
 val apiInstance = UniswapV3Api()
-val startBlock : kotlin.Long = 789 // kotlin.Long | 
-val endBlock : kotlin.Long = 789 // kotlin.Long | 
-val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
-val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
-val id : kotlin.String = id_example // kotlin.String | 
-val pool : kotlin.String = pool_example // kotlin.String | 
+val startBlock : kotlin.Long = 789 // kotlin.Long | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+val endBlock : kotlin.Long = 789 // kotlin.Long | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | The end date of timeframe.
+val id : kotlin.String = id_example // kotlin.String | Identifier, format: (pool address)#(tick index)
+val pool : kotlin.String = pool_example // kotlin.String | Pool address.
 try {
     val result : kotlin.collections.List<UniswapV3TickDTO> = apiInstance.uniswapV3GetTicksHistorical(startBlock, endBlock, startDate, endDate, id, pool)
     println(result)
@@ -847,12 +847,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startBlock** | **kotlin.Long**|  | [optional]
- **endBlock** | **kotlin.Long**|  | [optional]
- **startDate** | **java.time.OffsetDateTime**|  | [optional]
- **endDate** | **java.time.OffsetDateTime**|  | [optional]
- **id** | **kotlin.String**|  | [optional]
- **pool** | **kotlin.String**|  | [optional]
+ **startBlock** | **kotlin.Long**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional]
+ **endBlock** | **kotlin.Long**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional]
+ **startDate** | **java.time.OffsetDateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional]
+ **endDate** | **java.time.OffsetDateTime**| The end date of timeframe. | [optional]
+ **id** | **kotlin.String**| Identifier, format: (pool address)#(tick index) | [optional]
+ **pool** | **kotlin.String**| Pool address. | [optional]
 
 ### Return type
 

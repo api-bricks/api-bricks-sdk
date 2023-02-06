@@ -223,12 +223,12 @@ Gets burns.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startBlock** | **integer** |  | [optional] [default to null]
- **endBlock** | **integer** |  | [optional] [default to null]
- **startDate** | **string** |  | [optional] [default to null]
- **endDate** | **string** |  | [optional] [default to null]
- **id** | **string** |  | [optional] [default to null]
- **pair** | **string** |  | [optional] [default to null]
+ **startBlock** | **integer** | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] [default to null]
+ **endBlock** | **integer** | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] [default to null]
+ **startDate** | **string** | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] [default to null]
+ **endDate** | **string** | The end date of timeframe. | [optional] [default to null]
+ **id** | **string** | Identifier, format: (transaction id):(transaction.burns.length). | [optional] [default to null]
+ **pair** | **string** | Reference to pair. | [optional] [default to null]
 
 ### Return type
 
@@ -380,13 +380,13 @@ Gets liquidityPositionSnapshots.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startBlock** | **integer** |  | [optional] [default to null]
- **endBlock** | **integer** |  | [optional] [default to null]
- **startDate** | **string** |  | [optional] [default to null]
- **endDate** | **string** |  | [optional] [default to null]
- **id** | **string** |  | [optional] [default to null]
- **user** | **string** |  | [optional] [default to null]
- **pair** | **string** |  | [optional] [default to null]
+ **startBlock** | **integer** | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] [default to null]
+ **endBlock** | **integer** | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] [default to null]
+ **startDate** | **string** | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] [default to null]
+ **endDate** | **string** | The end date of timeframe. | [optional] [default to null]
+ **id** | **string** | Identifier, format: (pair address)-(user address)-(timestamp) | [optional] [default to null]
+ **user** | **string** | Reference to user. | [optional] [default to null]
+ **pair** | **string** | Reference to the pair liquidity is being provided on. | [optional] [default to null]
 
 ### Return type
 
@@ -421,13 +421,13 @@ Gets liquidityPositions.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startBlock** | **integer** |  | [optional] [default to null]
- **endBlock** | **integer** |  | [optional] [default to null]
- **startDate** | **string** |  | [optional] [default to null]
- **endDate** | **string** |  | [optional] [default to null]
- **id** | **string** |  | [optional] [default to null]
- **user** | **string** |  | [optional] [default to null]
- **pair** | **string** |  | [optional] [default to null]
+ **startBlock** | **integer** | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] [default to null]
+ **endBlock** | **integer** | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] [default to null]
+ **startDate** | **string** | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] [default to null]
+ **endDate** | **string** | The end date of timeframe. | [optional] [default to null]
+ **id** | **string** | Identifier, format: (pair address)-(user address) | [optional] [default to null]
+ **user** | **string** | User address. | [optional] [default to null]
+ **pair** | **string** | Pair address. | [optional] [default to null]
 
 ### Return type
 
@@ -462,12 +462,12 @@ Gets mints.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startBlock** | **integer** |  | [optional] [default to null]
- **endBlock** | **integer** |  | [optional] [default to null]
- **startDate** | **string** |  | [optional] [default to null]
- **endDate** | **string** |  | [optional] [default to null]
- **id** | **string** |  | [optional] [default to null]
- **pair** | **string** |  | [optional] [default to null]
+ **startBlock** | **integer** | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] [default to null]
+ **endBlock** | **integer** | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] [default to null]
+ **startDate** | **string** | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] [default to null]
+ **endDate** | **string** | The end date of timeframe. | [optional] [default to null]
+ **id** | **string** | Identifier, format: (transaction hash)-(index in the transaction mint array). | [optional] [default to null]
+ **pair** | **string** | Reference to pair. | [optional] [default to null]
 
 ### Return type
 
@@ -502,14 +502,14 @@ Gets pairDayData.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startBlock** | **integer** |  | [optional] [default to null]
- **endBlock** | **integer** |  | [optional] [default to null]
- **startDate** | **string** |  | [optional] [default to null]
- **endDate** | **string** |  | [optional] [default to null]
- **id** | **string** |  | [optional] [default to null]
- **pair** | **string** |  | [optional] [default to null]
- **token0** | **string** |  | [optional] [default to null]
- **token1** | **string** |  | [optional] [default to null]
+ **startBlock** | **integer** | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] [default to null]
+ **endBlock** | **integer** | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] [default to null]
+ **startDate** | **string** | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] [default to null]
+ **endDate** | **string** | The end date of timeframe. | [optional] [default to null]
+ **id** | **string** | Identifier, format: (pair id)-(day start timestamp). | [optional] [default to null]
+ **pair** | **string** | Reference to pair. | [optional] [default to null]
+ **token0** | **string** | Reference to token0. | [optional] [default to null]
+ **token1** | **string** | Reference to token1. | [optional] [default to null]
 
 ### Return type
 
@@ -544,12 +544,12 @@ Gets pairHourData.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startBlock** | **integer** |  | [optional] [default to null]
- **endBlock** | **integer** |  | [optional] [default to null]
- **startDate** | **string** |  | [optional] [default to null]
- **endDate** | **string** |  | [optional] [default to null]
- **id** | **string** |  | [optional] [default to null]
- **pair** | **string** |  | [optional] [default to null]
+ **startBlock** | **integer** | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] [default to null]
+ **endBlock** | **integer** | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] [default to null]
+ **startDate** | **string** | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] [default to null]
+ **endDate** | **string** | The end date of timeframe. | [optional] [default to null]
+ **id** | **string** | Identifier, format: (pair id)-(hour start timestamp). | [optional] [default to null]
+ **pair** | **string** | Reference to pair. | [optional] [default to null]
 
 ### Return type
 
@@ -584,14 +584,14 @@ Gets pairs.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startBlock** | **integer** |  | [optional] [default to null]
- **endBlock** | **integer** |  | [optional] [default to null]
- **startDate** | **string** |  | [optional] [default to null]
- **endDate** | **string** |  | [optional] [default to null]
- **id** | **string** |  | [optional] [default to null]
- **name** | **string** |  | [optional] [default to null]
- **token0** | **string** |  | [optional] [default to null]
- **token1** | **string** |  | [optional] [default to null]
+ **startBlock** | **integer** | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] [default to null]
+ **endBlock** | **integer** | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] [default to null]
+ **startDate** | **string** | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] [default to null]
+ **endDate** | **string** | The end date of timeframe. | [optional] [default to null]
+ **id** | **string** | Pair contract address. | [optional] [default to null]
+ **name** | **string** | Friendly name, format: (token0 name)-(token1 name) | [optional] [default to null]
+ **token0** | **string** | Reference to token0 as stored in pair contract. | [optional] [default to null]
+ **token1** | **string** | Reference to token0 as stored in pair contract. | [optional] [default to null]
 
 ### Return type
 

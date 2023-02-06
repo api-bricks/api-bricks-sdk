@@ -131,6 +131,7 @@ function Initialize-DexTradeDTO {
         [System.Nullable[Double]]
         ${EvaluatedAmount},
         [Parameter(Position = 21, ValueFromPipelineByPropertyName = $true)]
+        [ValidateSet("Buy", "Sell", "EstimatedBuy", "EstimatedSell", "Unknown")]
         [PSCustomObject]
         ${EvaluatedAggressor}
     )

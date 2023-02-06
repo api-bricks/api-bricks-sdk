@@ -239,7 +239,7 @@ curve_coin_dto_t *curve_coin_dto_parseFromJSON(cJSON *curve_coin_dtoJSON){
     // curve_coin_dto->entry_time
     cJSON *entry_time = cJSON_GetObjectItemCaseSensitive(curve_coin_dtoJSON, "entry_time");
     if (entry_time) { 
-    if(!cJSON_IsString(entry_time))
+    if(!cJSON_IsString(entry_time) && !cJSON_IsNull(entry_time))
     {
     goto end; //DateTime
     }
@@ -248,7 +248,7 @@ curve_coin_dto_t *curve_coin_dto_parseFromJSON(cJSON *curve_coin_dtoJSON){
     // curve_coin_dto->recv_time
     cJSON *recv_time = cJSON_GetObjectItemCaseSensitive(curve_coin_dtoJSON, "recv_time");
     if (recv_time) { 
-    if(!cJSON_IsString(recv_time))
+    if(!cJSON_IsString(recv_time) && !cJSON_IsNull(recv_time))
     {
     goto end; //DateTime
     }
@@ -266,7 +266,7 @@ curve_coin_dto_t *curve_coin_dto_parseFromJSON(cJSON *curve_coin_dtoJSON){
     // curve_coin_dto->id
     cJSON *id = cJSON_GetObjectItemCaseSensitive(curve_coin_dtoJSON, "id");
     if (id) { 
-    if(!cJSON_IsString(id))
+    if(!cJSON_IsString(id) && !cJSON_IsNull(id))
     {
     goto end; //String
     }
@@ -284,7 +284,7 @@ curve_coin_dto_t *curve_coin_dto_parseFromJSON(cJSON *curve_coin_dtoJSON){
     // curve_coin_dto->pool
     cJSON *pool = cJSON_GetObjectItemCaseSensitive(curve_coin_dtoJSON, "pool");
     if (pool) { 
-    if(!cJSON_IsString(pool))
+    if(!cJSON_IsString(pool) && !cJSON_IsNull(pool))
     {
     goto end; //String
     }
@@ -293,7 +293,7 @@ curve_coin_dto_t *curve_coin_dto_parseFromJSON(cJSON *curve_coin_dtoJSON){
     // curve_coin_dto->token
     cJSON *token = cJSON_GetObjectItemCaseSensitive(curve_coin_dtoJSON, "token");
     if (token) { 
-    if(!cJSON_IsString(token))
+    if(!cJSON_IsString(token) && !cJSON_IsNull(token))
     {
     goto end; //String
     }
@@ -302,7 +302,7 @@ curve_coin_dto_t *curve_coin_dto_parseFromJSON(cJSON *curve_coin_dtoJSON){
     // curve_coin_dto->underlying
     cJSON *underlying = cJSON_GetObjectItemCaseSensitive(curve_coin_dtoJSON, "underlying");
     if (underlying) { 
-    if(!cJSON_IsString(underlying))
+    if(!cJSON_IsString(underlying) && !cJSON_IsNull(underlying))
     {
     goto end; //String
     }
@@ -311,7 +311,7 @@ curve_coin_dto_t *curve_coin_dto_parseFromJSON(cJSON *curve_coin_dtoJSON){
     // curve_coin_dto->balance
     cJSON *balance = cJSON_GetObjectItemCaseSensitive(curve_coin_dtoJSON, "balance");
     if (balance) { 
-    if(!cJSON_IsString(balance))
+    if(!cJSON_IsString(balance) && !cJSON_IsNull(balance))
     {
     goto end; //String
     }
@@ -320,7 +320,7 @@ curve_coin_dto_t *curve_coin_dto_parseFromJSON(cJSON *curve_coin_dtoJSON){
     // curve_coin_dto->rate
     cJSON *rate = cJSON_GetObjectItemCaseSensitive(curve_coin_dtoJSON, "rate");
     if (rate) { 
-    if(!cJSON_IsString(rate))
+    if(!cJSON_IsString(rate) && !cJSON_IsNull(rate))
     {
     goto end; //String
     }
@@ -329,7 +329,7 @@ curve_coin_dto_t *curve_coin_dto_parseFromJSON(cJSON *curve_coin_dtoJSON){
     // curve_coin_dto->updated
     cJSON *updated = cJSON_GetObjectItemCaseSensitive(curve_coin_dtoJSON, "updated");
     if (updated) { 
-    if(!cJSON_IsString(updated))
+    if(!cJSON_IsString(updated) && !cJSON_IsNull(updated))
     {
     goto end; //String
     }
@@ -338,7 +338,7 @@ curve_coin_dto_t *curve_coin_dto_parseFromJSON(cJSON *curve_coin_dtoJSON){
     // curve_coin_dto->updated_at_block
     cJSON *updated_at_block = cJSON_GetObjectItemCaseSensitive(curve_coin_dtoJSON, "updated_at_block");
     if (updated_at_block) { 
-    if(!cJSON_IsString(updated_at_block))
+    if(!cJSON_IsString(updated_at_block) && !cJSON_IsNull(updated_at_block))
     {
     goto end; //String
     }
@@ -347,7 +347,7 @@ curve_coin_dto_t *curve_coin_dto_parseFromJSON(cJSON *curve_coin_dtoJSON){
     // curve_coin_dto->updated_at_transaction
     cJSON *updated_at_transaction = cJSON_GetObjectItemCaseSensitive(curve_coin_dtoJSON, "updated_at_transaction");
     if (updated_at_transaction) { 
-    if(!cJSON_IsString(updated_at_transaction))
+    if(!cJSON_IsString(updated_at_transaction) && !cJSON_IsNull(updated_at_transaction))
     {
     goto end; //String
     }
@@ -365,7 +365,7 @@ curve_coin_dto_t *curve_coin_dto_parseFromJSON(cJSON *curve_coin_dtoJSON){
     // curve_coin_dto->block_range
     cJSON *block_range = cJSON_GetObjectItemCaseSensitive(curve_coin_dtoJSON, "block_range");
     if (block_range) { 
-    if(!cJSON_IsString(block_range))
+    if(!cJSON_IsString(block_range) && !cJSON_IsNull(block_range))
     {
     goto end; //String
     }
@@ -373,21 +373,21 @@ curve_coin_dto_t *curve_coin_dto_parseFromJSON(cJSON *curve_coin_dtoJSON){
 
 
     curve_coin_dto_local_var = curve_coin_dto_create (
-        entry_time ? strdup(entry_time->valuestring) : NULL,
-        recv_time ? strdup(recv_time->valuestring) : NULL,
+        entry_time && !cJSON_IsNull(entry_time) ? strdup(entry_time->valuestring) : NULL,
+        recv_time && !cJSON_IsNull(recv_time) ? strdup(recv_time->valuestring) : NULL,
         block_number ? block_number->valuedouble : 0,
-        id ? strdup(id->valuestring) : NULL,
+        id && !cJSON_IsNull(id) ? strdup(id->valuestring) : NULL,
         index ? index->valuedouble : 0,
-        pool ? strdup(pool->valuestring) : NULL,
-        token ? strdup(token->valuestring) : NULL,
-        underlying ? strdup(underlying->valuestring) : NULL,
-        balance ? strdup(balance->valuestring) : NULL,
-        rate ? strdup(rate->valuestring) : NULL,
-        updated ? strdup(updated->valuestring) : NULL,
-        updated_at_block ? strdup(updated_at_block->valuestring) : NULL,
-        updated_at_transaction ? strdup(updated_at_transaction->valuestring) : NULL,
+        pool && !cJSON_IsNull(pool) ? strdup(pool->valuestring) : NULL,
+        token && !cJSON_IsNull(token) ? strdup(token->valuestring) : NULL,
+        underlying && !cJSON_IsNull(underlying) ? strdup(underlying->valuestring) : NULL,
+        balance && !cJSON_IsNull(balance) ? strdup(balance->valuestring) : NULL,
+        rate && !cJSON_IsNull(rate) ? strdup(rate->valuestring) : NULL,
+        updated && !cJSON_IsNull(updated) ? strdup(updated->valuestring) : NULL,
+        updated_at_block && !cJSON_IsNull(updated_at_block) ? strdup(updated_at_block->valuestring) : NULL,
+        updated_at_transaction && !cJSON_IsNull(updated_at_transaction) ? strdup(updated_at_transaction->valuestring) : NULL,
         vid ? vid->valuedouble : 0,
-        block_range ? strdup(block_range->valuestring) : NULL
+        block_range && !cJSON_IsNull(block_range) ? strdup(block_range->valuestring) : NULL
         );
 
     return curve_coin_dto_local_var;

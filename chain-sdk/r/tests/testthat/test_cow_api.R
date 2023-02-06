@@ -61,13 +61,13 @@ test_that("CowGetTradesHistorical", {
   # base path: https://onchain.coinapi.io
   # Trades (historical)
   # Gets trades.
-  # @param start_block integer  (optional)
-  # @param end_block integer  (optional)
-  # @param start_date character  (optional)
-  # @param end_date character  (optional)
-  # @param id character  (optional)
-  # @param sell_token character  (optional)
-  # @param buy_token character  (optional)
+  # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+  # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+  # @param start_date character The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+  # @param end_date character The end date of timeframe. (optional)
+  # @param id character Identifier, format: (order id)|(transaction hash)|(event index). (optional)
+  # @param sell_token character Address of token that is sold. (optional)
+  # @param buy_token character Address of token that is bought. (optional)
   # @return [array[CowTradeDTO]]
 
   # uncomment below to test the operation

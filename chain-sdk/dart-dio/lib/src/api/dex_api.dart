@@ -268,12 +268,12 @@ class DexApi {
   /// Gets deposits.
   ///
   /// Parameters:
-  /// * [startBlock] 
-  /// * [endBlock] 
-  /// * [startDate] 
-  /// * [endDate] 
-  /// * [id] 
-  /// * [user] 
+  /// * [startBlock] - The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+  /// * [endBlock] - The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+  /// * [startDate] - The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+  /// * [endDate] - The end date of timeframe.
+  /// * [id] - Identifier, format: (transaction hash)-(token id).
+  /// * [user] - User address.
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -362,13 +362,13 @@ class DexApi {
   /// Gets orders.
   ///
   /// Parameters:
-  /// * [startBlock] 
-  /// * [endBlock] 
-  /// * [startDate] 
-  /// * [endDate] 
-  /// * [id] 
-  /// * [buyToken] 
-  /// * [sellToken] 
+  /// * [startBlock] - The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+  /// * [endBlock] - The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+  /// * [startDate] - The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+  /// * [endDate] - The end date of timeframe.
+  /// * [id] - Identifier, format: (owner address)-(order id)
+  /// * [buyToken] - Identifier of token that was bought.
+  /// * [sellToken] - Identifier of token that was sold.
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -459,11 +459,11 @@ class DexApi {
   /// Gets prices.
   ///
   /// Parameters:
-  /// * [startBlock] 
-  /// * [endBlock] 
-  /// * [startDate] 
-  /// * [endDate] 
-  /// * [id] 
+  /// * [startBlock] - The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+  /// * [endBlock] - The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+  /// * [startDate] - The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+  /// * [endDate] - The end date of timeframe.
+  /// * [id] - Identifier, format: (token id)-(batch id).
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -1020,12 +1020,12 @@ class DexApi {
   /// Gets withdrawRequests.
   ///
   /// Parameters:
-  /// * [startBlock] 
-  /// * [endBlock] 
-  /// * [startDate] 
-  /// * [endDate] 
-  /// * [id] 
-  /// * [user] 
+  /// * [startBlock] - The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+  /// * [endBlock] - The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+  /// * [startDate] - The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+  /// * [endDate] - The end date of timeframe.
+  /// * [id] - Identifier, format: (transaction hash)-(id).
+  /// * [user] - 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -1114,12 +1114,12 @@ class DexApi {
   /// Gets withdraws.
   ///
   /// Parameters:
-  /// * [startBlock] 
-  /// * [endBlock] 
-  /// * [startDate] 
-  /// * [endDate] 
-  /// * [id] 
-  /// * [user] 
+  /// * [startBlock] - The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+  /// * [endBlock] - The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+  /// * [startDate] - The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+  /// * [endDate] - The end date of timeframe.
+  /// * [id] - Identifier, format: (transaction hash)-(id).
+  /// * [user] - 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request

@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.time.OffsetDateTime;
 import org.openapitools.jackson.nullable.JsonNullable;
@@ -50,7 +48,7 @@ import org.openapitools.client.JSON;
 /**
  * CurveGaugeLiquidityDTO
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-30T14:42:00.397192Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-06T14:47:06.037855Z[Etc/UTC]")
 public class CurveGaugeLiquidityDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -122,7 +120,6 @@ public class CurveGaugeLiquidityDTO {
    * @return entryTime
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public OffsetDateTime getEntryTime() {
     return entryTime;
@@ -145,7 +142,6 @@ public class CurveGaugeLiquidityDTO {
    * @return recvTime
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public OffsetDateTime getRecvTime() {
     return recvTime;
@@ -168,7 +164,6 @@ public class CurveGaugeLiquidityDTO {
    * @return blockNumber
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Number of block in which entity was recorded.")
 
   public Long getBlockNumber() {
     return blockNumber;
@@ -191,7 +186,6 @@ public class CurveGaugeLiquidityDTO {
    * @return id
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getId() {
     return id;
@@ -214,7 +208,6 @@ public class CurveGaugeLiquidityDTO {
    * @return user
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getUser() {
     return user;
@@ -237,7 +230,6 @@ public class CurveGaugeLiquidityDTO {
    * @return gauge
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getGauge() {
     return gauge;
@@ -260,7 +252,6 @@ public class CurveGaugeLiquidityDTO {
    * @return originalBalance
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getOriginalBalance() {
     return originalBalance;
@@ -283,7 +274,6 @@ public class CurveGaugeLiquidityDTO {
    * @return originalSupply
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getOriginalSupply() {
     return originalSupply;
@@ -306,7 +296,6 @@ public class CurveGaugeLiquidityDTO {
    * @return workingBalance
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getWorkingBalance() {
     return workingBalance;
@@ -329,7 +318,6 @@ public class CurveGaugeLiquidityDTO {
    * @return workingSupply
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getWorkingSupply() {
     return workingSupply;
@@ -352,7 +340,6 @@ public class CurveGaugeLiquidityDTO {
    * @return timestamp
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getTimestamp() {
     return timestamp;
@@ -375,7 +362,6 @@ public class CurveGaugeLiquidityDTO {
    * @return block
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getBlock() {
     return block;
@@ -398,7 +384,6 @@ public class CurveGaugeLiquidityDTO {
    * @return transaction
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getTransaction() {
     return transaction;
@@ -421,7 +406,6 @@ public class CurveGaugeLiquidityDTO {
    * @return vid
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public Long getVid() {
     return vid;

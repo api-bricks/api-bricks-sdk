@@ -364,21 +364,33 @@ uniswapV3GetPoolDayDataHistorical  _ =
   _mkRequest "GET" ["/dapps/uniswapv3/poolDayData/historical"]
 
 data UniswapV3GetPoolDayDataHistorical  
+
+-- | /Optional Param/ "startBlock" - The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
 instance HasOptionalParam UniswapV3GetPoolDayDataHistorical StartBlock where
   applyOptionalParam req (StartBlock xs) =
     req `addQuery` toQuery ("startBlock", Just xs)
+
+-- | /Optional Param/ "endBlock" - The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
 instance HasOptionalParam UniswapV3GetPoolDayDataHistorical EndBlock where
   applyOptionalParam req (EndBlock xs) =
     req `addQuery` toQuery ("endBlock", Just xs)
+
+-- | /Optional Param/ "startDate" - The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
 instance HasOptionalParam UniswapV3GetPoolDayDataHistorical StartDate where
   applyOptionalParam req (StartDate xs) =
     req `addQuery` toQuery ("startDate", Just xs)
+
+-- | /Optional Param/ "endDate" - The end date of timeframe.
 instance HasOptionalParam UniswapV3GetPoolDayDataHistorical EndDate where
   applyOptionalParam req (EndDate xs) =
     req `addQuery` toQuery ("endDate", Just xs)
+
+-- | /Optional Param/ "id" - Identifier, format: (pool address)-(day id).
 instance HasOptionalParam UniswapV3GetPoolDayDataHistorical Id where
   applyOptionalParam req (Id xs) =
     req `addQuery` toQuery ("id", Just xs)
+
+-- | /Optional Param/ "pool" - Pointer to pool.
 instance HasOptionalParam UniswapV3GetPoolDayDataHistorical Pool where
   applyOptionalParam req (Pool xs) =
     req `addQuery` toQuery ("pool", Just xs)
@@ -405,21 +417,33 @@ uniswapV3GetPoolHourDataHistorical  _ =
   _mkRequest "GET" ["/dapps/uniswapv3/poolHourData/historical"]
 
 data UniswapV3GetPoolHourDataHistorical  
+
+-- | /Optional Param/ "startBlock" - The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
 instance HasOptionalParam UniswapV3GetPoolHourDataHistorical StartBlock where
   applyOptionalParam req (StartBlock xs) =
     req `addQuery` toQuery ("startBlock", Just xs)
+
+-- | /Optional Param/ "endBlock" - The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
 instance HasOptionalParam UniswapV3GetPoolHourDataHistorical EndBlock where
   applyOptionalParam req (EndBlock xs) =
     req `addQuery` toQuery ("endBlock", Just xs)
+
+-- | /Optional Param/ "startDate" - The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
 instance HasOptionalParam UniswapV3GetPoolHourDataHistorical StartDate where
   applyOptionalParam req (StartDate xs) =
     req `addQuery` toQuery ("startDate", Just xs)
+
+-- | /Optional Param/ "endDate" - The end date of timeframe.
 instance HasOptionalParam UniswapV3GetPoolHourDataHistorical EndDate where
   applyOptionalParam req (EndDate xs) =
     req `addQuery` toQuery ("endDate", Just xs)
+
+-- | /Optional Param/ "id" - Identifier, format: (pool address)-(day id)
 instance HasOptionalParam UniswapV3GetPoolHourDataHistorical Id where
   applyOptionalParam req (Id xs) =
     req `addQuery` toQuery ("id", Just xs)
+
+-- | /Optional Param/ "pool" - Pointer to pool.
 instance HasOptionalParam UniswapV3GetPoolHourDataHistorical Pool where
   applyOptionalParam req (Pool xs) =
     req `addQuery` toQuery ("pool", Just xs)
@@ -504,21 +528,33 @@ uniswapV3GetPositionSnapshotsHistorical  _ =
   _mkRequest "GET" ["/dapps/uniswapv3/positionSnapshots/historical"]
 
 data UniswapV3GetPositionSnapshotsHistorical  
+
+-- | /Optional Param/ "startBlock" - The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
 instance HasOptionalParam UniswapV3GetPositionSnapshotsHistorical StartBlock where
   applyOptionalParam req (StartBlock xs) =
     req `addQuery` toQuery ("startBlock", Just xs)
+
+-- | /Optional Param/ "endBlock" - The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
 instance HasOptionalParam UniswapV3GetPositionSnapshotsHistorical EndBlock where
   applyOptionalParam req (EndBlock xs) =
     req `addQuery` toQuery ("endBlock", Just xs)
+
+-- | /Optional Param/ "startDate" - The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
 instance HasOptionalParam UniswapV3GetPositionSnapshotsHistorical StartDate where
   applyOptionalParam req (StartDate xs) =
     req `addQuery` toQuery ("startDate", Just xs)
+
+-- | /Optional Param/ "endDate" - The end date of timeframe.
 instance HasOptionalParam UniswapV3GetPositionSnapshotsHistorical EndDate where
   applyOptionalParam req (EndDate xs) =
     req `addQuery` toQuery ("endDate", Just xs)
+
+-- | /Optional Param/ "id" - NFT token identifier, format: (NFT token id)#(block number).
 instance HasOptionalParam UniswapV3GetPositionSnapshotsHistorical Id where
   applyOptionalParam req (Id xs) =
     req `addQuery` toQuery ("id", Just xs)
+
+-- | /Optional Param/ "pool" - Pool the position is within.
 instance HasOptionalParam UniswapV3GetPositionSnapshotsHistorical Pool where
   applyOptionalParam req (Pool xs) =
     req `addQuery` toQuery ("pool", Just xs)
@@ -629,7 +665,7 @@ instance HasOptionalParam UniswapV3GetSwapsHistorical EndDate where
   applyOptionalParam req (EndDate xs) =
     req `addQuery` toQuery ("endDate", Just xs)
 
--- | /Optional Param/ "id" - Identifier, format: transaction hash + \"#\" + index in swaps Transaction array.
+-- | /Optional Param/ "id" - Identifier, format: (transaction hash) + # + (index in swaps Transaction array).
 instance HasOptionalParam UniswapV3GetSwapsHistorical Id where
   applyOptionalParam req (Id xs) =
     req `addQuery` toQuery ("id", Just xs)
@@ -671,21 +707,33 @@ uniswapV3GetTickDayDataHistorical  _ =
   _mkRequest "GET" ["/dapps/uniswapv3/tickDayData/historical"]
 
 data UniswapV3GetTickDayDataHistorical  
+
+-- | /Optional Param/ "startBlock" - The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
 instance HasOptionalParam UniswapV3GetTickDayDataHistorical StartBlock where
   applyOptionalParam req (StartBlock xs) =
     req `addQuery` toQuery ("startBlock", Just xs)
+
+-- | /Optional Param/ "endBlock" - The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
 instance HasOptionalParam UniswapV3GetTickDayDataHistorical EndBlock where
   applyOptionalParam req (EndBlock xs) =
     req `addQuery` toQuery ("endBlock", Just xs)
+
+-- | /Optional Param/ "startDate" - The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
 instance HasOptionalParam UniswapV3GetTickDayDataHistorical StartDate where
   applyOptionalParam req (StartDate xs) =
     req `addQuery` toQuery ("startDate", Just xs)
+
+-- | /Optional Param/ "endDate" - The end date of timeframe.
 instance HasOptionalParam UniswapV3GetTickDayDataHistorical EndDate where
   applyOptionalParam req (EndDate xs) =
     req `addQuery` toQuery ("endDate", Just xs)
+
+-- | /Optional Param/ "id" - Identifier, format: (pool address)-(tick index)-(timestamp).
 instance HasOptionalParam UniswapV3GetTickDayDataHistorical Id where
   applyOptionalParam req (Id xs) =
     req `addQuery` toQuery ("id", Just xs)
+
+-- | /Optional Param/ "pool" - Pointer to pool.
 instance HasOptionalParam UniswapV3GetTickDayDataHistorical Pool where
   applyOptionalParam req (Pool xs) =
     req `addQuery` toQuery ("pool", Just xs)
@@ -712,21 +760,33 @@ uniswapV3GetTicksHistorical  _ =
   _mkRequest "GET" ["/dapps/uniswapv3/ticks/historical"]
 
 data UniswapV3GetTicksHistorical  
+
+-- | /Optional Param/ "startBlock" - The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
 instance HasOptionalParam UniswapV3GetTicksHistorical StartBlock where
   applyOptionalParam req (StartBlock xs) =
     req `addQuery` toQuery ("startBlock", Just xs)
+
+-- | /Optional Param/ "endBlock" - The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
 instance HasOptionalParam UniswapV3GetTicksHistorical EndBlock where
   applyOptionalParam req (EndBlock xs) =
     req `addQuery` toQuery ("endBlock", Just xs)
+
+-- | /Optional Param/ "startDate" - The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
 instance HasOptionalParam UniswapV3GetTicksHistorical StartDate where
   applyOptionalParam req (StartDate xs) =
     req `addQuery` toQuery ("startDate", Just xs)
+
+-- | /Optional Param/ "endDate" - The end date of timeframe.
 instance HasOptionalParam UniswapV3GetTicksHistorical EndDate where
   applyOptionalParam req (EndDate xs) =
     req `addQuery` toQuery ("endDate", Just xs)
+
+-- | /Optional Param/ "id" - Identifier, format: (pool address)#(tick index)
 instance HasOptionalParam UniswapV3GetTicksHistorical Id where
   applyOptionalParam req (Id xs) =
     req `addQuery` toQuery ("id", Just xs)
+
+-- | /Optional Param/ "pool" - Pool address.
 instance HasOptionalParam UniswapV3GetTicksHistorical Pool where
   applyOptionalParam req (Pool xs) =
     req `addQuery` toQuery ("pool", Just xs)

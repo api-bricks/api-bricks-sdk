@@ -234,13 +234,13 @@ export default class UniswapV2Api {
      * LiquidityPositionSnapshots (historical)
      * Gets liquidityPositionSnapshots.
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.startBlock 
-     * @param {Number} opts.endBlock 
-     * @param {Date} opts.startDate 
-     * @param {Date} opts.endDate 
-     * @param {String} opts.id 
-     * @param {String} opts.user 
-     * @param {String} opts.pair 
+     * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param {Date} opts.startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param {Date} opts.endDate The end date of timeframe.
+     * @param {String} opts.id Identifier, format: (pair address)-(user address)
+     * @param {String} opts.user Reference to user.
+     * @param {String} opts.pair Reference to the pair liquidity is being provided on.
      * @param {module:api/UniswapV2Api~uniswapV2GetLiquidityPositionSnapshotsHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/UniswapV2LiquidityPositionSnapshotDTO>}
      */

@@ -53,6 +53,7 @@ docs/DEX_TRADE_DTO.md
 docs/DEX_USER_DTO.md
 docs/DEX_WITHDRAW_DTO.md
 docs/DEX_WITHDRAW_REQUEST_DTO.md
+docs/METADATA_API.md
 docs/NUMERICS_BIG_INTEGER.md
 docs/SUSHISWAP_API.md
 docs/SUSHISWAP_BUNDLE_DTO.md
@@ -109,6 +110,7 @@ docs/UNISWAP_V3_UNISWAP_DAY_DATA_DTO.md
 src/api/cow_api.e
 src/api/curve_api.e
 src/api/dex_api.e
+src/api/metadata_api.e
 src/api/sushiswap_api.e
 src/api/uniswap_v2_api.e
 src/api/uniswap_v3_api.e
@@ -230,6 +232,7 @@ test/api_test.ecf
 test/apis/cow_api_test.e
 test/apis/curve_api_test.e
 test/apis/dex_api_test.e
+test/apis/metadata_api_test.e
 test/apis/sushiswap_api_test.e
 test/apis/uniswapv2_api_test.e
 test/apis/uniswapv3_api_test.e

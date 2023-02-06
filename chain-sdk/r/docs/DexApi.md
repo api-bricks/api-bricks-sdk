@@ -181,12 +181,12 @@ library(openapi)
 # Deposits (historical)
 #
 # prepare function argument(s)
-var_start_block <- 56 # integer |  (Optional)
-var_end_block <- 56 # integer |  (Optional)
-var_start_date <- "start_date_example" # character |  (Optional)
-var_end_date <- "end_date_example" # character |  (Optional)
-var_id <- "id_example" # character |  (Optional)
-var_user <- "user_example" # character |  (Optional)
+var_start_block <- 56 # integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (Optional)
+var_end_block <- 56 # integer | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (Optional)
+var_start_date <- "start_date_example" # character | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (Optional)
+var_end_date <- "end_date_example" # character | The end date of timeframe. (Optional)
+var_id <- "id_example" # character | Identifier, format: (transaction hash)-(token id). (Optional)
+var_user <- "user_example" # character | User address. (Optional)
 
 api_instance <- DexApi$new()
 # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -199,12 +199,12 @@ dput(result)
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **start_block** | **integer**|  | [optional] 
- **end_block** | **integer**|  | [optional] 
- **start_date** | **character**|  | [optional] 
- **end_date** | **character**|  | [optional] 
- **id** | **character**|  | [optional] 
- **user** | **character**|  | [optional] 
+ **start_block** | **integer**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
+ **end_block** | **integer**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
+ **start_date** | **character**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
+ **end_date** | **character**| The end date of timeframe. | [optional] 
+ **id** | **character**| Identifier, format: (transaction hash)-(token id). | [optional] 
+ **user** | **character**| User address. | [optional] 
 
 ### Return type
 
@@ -238,13 +238,13 @@ library(openapi)
 # Orders (historical)
 #
 # prepare function argument(s)
-var_start_block <- 56 # integer |  (Optional)
-var_end_block <- 56 # integer |  (Optional)
-var_start_date <- "start_date_example" # character |  (Optional)
-var_end_date <- "end_date_example" # character |  (Optional)
-var_id <- "id_example" # character |  (Optional)
-var_buy_token <- "buy_token_example" # character |  (Optional)
-var_sell_token <- "sell_token_example" # character |  (Optional)
+var_start_block <- 56 # integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (Optional)
+var_end_block <- 56 # integer | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (Optional)
+var_start_date <- "start_date_example" # character | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (Optional)
+var_end_date <- "end_date_example" # character | The end date of timeframe. (Optional)
+var_id <- "id_example" # character | Identifier, format: (owner address)-(order id) (Optional)
+var_buy_token <- "buy_token_example" # character | Identifier of token that was bought. (Optional)
+var_sell_token <- "sell_token_example" # character | Identifier of token that was sold. (Optional)
 
 api_instance <- DexApi$new()
 # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -257,13 +257,13 @@ dput(result)
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **start_block** | **integer**|  | [optional] 
- **end_block** | **integer**|  | [optional] 
- **start_date** | **character**|  | [optional] 
- **end_date** | **character**|  | [optional] 
- **id** | **character**|  | [optional] 
- **buy_token** | **character**|  | [optional] 
- **sell_token** | **character**|  | [optional] 
+ **start_block** | **integer**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
+ **end_block** | **integer**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
+ **start_date** | **character**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
+ **end_date** | **character**| The end date of timeframe. | [optional] 
+ **id** | **character**| Identifier, format: (owner address)-(order id) | [optional] 
+ **buy_token** | **character**| Identifier of token that was bought. | [optional] 
+ **sell_token** | **character**| Identifier of token that was sold. | [optional] 
 
 ### Return type
 
@@ -297,11 +297,11 @@ library(openapi)
 # Prices (historical)
 #
 # prepare function argument(s)
-var_start_block <- 56 # integer |  (Optional)
-var_end_block <- 56 # integer |  (Optional)
-var_start_date <- "start_date_example" # character |  (Optional)
-var_end_date <- "end_date_example" # character |  (Optional)
-var_id <- "id_example" # character |  (Optional)
+var_start_block <- 56 # integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (Optional)
+var_end_block <- 56 # integer | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (Optional)
+var_start_date <- "start_date_example" # character | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (Optional)
+var_end_date <- "end_date_example" # character | The end date of timeframe. (Optional)
+var_id <- "id_example" # character | Identifier, format: (token id)-(batch id). (Optional)
 
 api_instance <- DexApi$new()
 # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -314,11 +314,11 @@ dput(result)
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **start_block** | **integer**|  | [optional] 
- **end_block** | **integer**|  | [optional] 
- **start_date** | **character**|  | [optional] 
- **end_date** | **character**|  | [optional] 
- **id** | **character**|  | [optional] 
+ **start_block** | **integer**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
+ **end_block** | **integer**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
+ **start_date** | **character**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
+ **end_date** | **character**| The end date of timeframe. | [optional] 
+ **id** | **character**| Identifier, format: (token id)-(batch id). | [optional] 
 
 ### Return type
 
@@ -637,11 +637,11 @@ library(openapi)
 # WithdrawRequests (historical)
 #
 # prepare function argument(s)
-var_start_block <- 56 # integer |  (Optional)
-var_end_block <- 56 # integer |  (Optional)
-var_start_date <- "start_date_example" # character |  (Optional)
-var_end_date <- "end_date_example" # character |  (Optional)
-var_id <- "id_example" # character |  (Optional)
+var_start_block <- 56 # integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (Optional)
+var_end_block <- 56 # integer | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (Optional)
+var_start_date <- "start_date_example" # character | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (Optional)
+var_end_date <- "end_date_example" # character | The end date of timeframe. (Optional)
+var_id <- "id_example" # character | Identifier, format: (transaction hash)-(id). (Optional)
 var_user <- "user_example" # character |  (Optional)
 
 api_instance <- DexApi$new()
@@ -655,11 +655,11 @@ dput(result)
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **start_block** | **integer**|  | [optional] 
- **end_block** | **integer**|  | [optional] 
- **start_date** | **character**|  | [optional] 
- **end_date** | **character**|  | [optional] 
- **id** | **character**|  | [optional] 
+ **start_block** | **integer**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
+ **end_block** | **integer**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
+ **start_date** | **character**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
+ **end_date** | **character**| The end date of timeframe. | [optional] 
+ **id** | **character**| Identifier, format: (transaction hash)-(id). | [optional] 
  **user** | **character**|  | [optional] 
 
 ### Return type
@@ -694,11 +694,11 @@ library(openapi)
 # Withdraws (historical)
 #
 # prepare function argument(s)
-var_start_block <- 56 # integer |  (Optional)
-var_end_block <- 56 # integer |  (Optional)
-var_start_date <- "start_date_example" # character |  (Optional)
-var_end_date <- "end_date_example" # character |  (Optional)
-var_id <- "id_example" # character |  (Optional)
+var_start_block <- 56 # integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (Optional)
+var_end_block <- 56 # integer | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (Optional)
+var_start_date <- "start_date_example" # character | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (Optional)
+var_end_date <- "end_date_example" # character | The end date of timeframe. (Optional)
+var_id <- "id_example" # character | Identifier, format: (transaction hash)-(id). (Optional)
 var_user <- "user_example" # character |  (Optional)
 
 api_instance <- DexApi$new()
@@ -712,11 +712,11 @@ dput(result)
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **start_block** | **integer**|  | [optional] 
- **end_block** | **integer**|  | [optional] 
- **start_date** | **character**|  | [optional] 
- **end_date** | **character**|  | [optional] 
- **id** | **character**|  | [optional] 
+ **start_block** | **integer**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
+ **end_block** | **integer**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
+ **start_date** | **character**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
+ **end_date** | **character**| The end date of timeframe. | [optional] 
+ **id** | **character**| Identifier, format: (transaction hash)-(id). | [optional] 
  **user** | **character**|  | [optional] 
 
 ### Return type

@@ -703,7 +703,7 @@ UniswapV2PairDTO <- R6::R6Class(
 ## Uncomment below to unlock the class to allow modifications of the method or field
 # UniswapV2PairDTO$unlock()
 #
-## Below is an example to define the print fnuction
+## Below is an example to define the print function
 # UniswapV2PairDTO$set("public", "print", function(...) {
 #   print(jsonlite::prettify(self$toJSONString()))
 #   invisible(self)

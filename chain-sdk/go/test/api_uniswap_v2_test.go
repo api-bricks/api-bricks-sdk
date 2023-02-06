@@ -10,376 +10,376 @@ Testing UniswapV2ApiService
 package openapi
 
 import (
-    "context"
-    "github.com/stretchr/testify/assert"
-    "github.com/stretchr/testify/require"
-    "testing"
-    openapiclient "./openapi"
+	"context"
+	"github.com/stretchr/testify/assert"
+	"github.com/stretchr/testify/require"
+	"testing"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func Test_openapi_UniswapV2ApiService(t *testing.T) {
 
-    configuration := openapiclient.NewConfiguration()
-    apiClient := openapiclient.NewAPIClient(configuration)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
 
-    t.Run("Test UniswapV2ApiService UniswapV2BundlesCurrent", func(t *testing.T) {
+	t.Run("Test UniswapV2ApiService UniswapV2BundlesCurrent", func(t *testing.T) {
 
-        t.Skip("skip test")  // remove to run test
+		t.Skip("skip test")  // remove to run test
 
-        resp, httpRes, err := apiClient.UniswapV2Api.UniswapV2BundlesCurrent(context.Background()).Execute()
+		resp, httpRes, err := apiClient.UniswapV2Api.UniswapV2BundlesCurrent(context.Background()).Execute()
 
-        require.Nil(t, err)
-        require.NotNil(t, resp)
-        assert.Equal(t, 200, httpRes.StatusCode)
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
 
-    })
+	})
 
-    t.Run("Test UniswapV2ApiService UniswapV2BurnsCurrent", func(t *testing.T) {
+	t.Run("Test UniswapV2ApiService UniswapV2BurnsCurrent", func(t *testing.T) {
 
-        t.Skip("skip test")  // remove to run test
+		t.Skip("skip test")  // remove to run test
 
-        resp, httpRes, err := apiClient.UniswapV2Api.UniswapV2BurnsCurrent(context.Background()).Execute()
+		resp, httpRes, err := apiClient.UniswapV2Api.UniswapV2BurnsCurrent(context.Background()).Execute()
 
-        require.Nil(t, err)
-        require.NotNil(t, resp)
-        assert.Equal(t, 200, httpRes.StatusCode)
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
 
-    })
+	})
 
-    t.Run("Test UniswapV2ApiService UniswapV2GetBundlesHistorical", func(t *testing.T) {
+	t.Run("Test UniswapV2ApiService UniswapV2GetBundlesHistorical", func(t *testing.T) {
 
-        t.Skip("skip test")  // remove to run test
+		t.Skip("skip test")  // remove to run test
 
-        resp, httpRes, err := apiClient.UniswapV2Api.UniswapV2GetBundlesHistorical(context.Background()).Execute()
+		resp, httpRes, err := apiClient.UniswapV2Api.UniswapV2GetBundlesHistorical(context.Background()).Execute()
 
-        require.Nil(t, err)
-        require.NotNil(t, resp)
-        assert.Equal(t, 200, httpRes.StatusCode)
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
 
-    })
+	})
 
-    t.Run("Test UniswapV2ApiService UniswapV2GetBurnsHistorical", func(t *testing.T) {
+	t.Run("Test UniswapV2ApiService UniswapV2GetBurnsHistorical", func(t *testing.T) {
 
-        t.Skip("skip test")  // remove to run test
+		t.Skip("skip test")  // remove to run test
 
-        resp, httpRes, err := apiClient.UniswapV2Api.UniswapV2GetBurnsHistorical(context.Background()).Execute()
+		resp, httpRes, err := apiClient.UniswapV2Api.UniswapV2GetBurnsHistorical(context.Background()).Execute()
 
-        require.Nil(t, err)
-        require.NotNil(t, resp)
-        assert.Equal(t, 200, httpRes.StatusCode)
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
 
-    })
+	})
 
-    t.Run("Test UniswapV2ApiService UniswapV2GetLiquidityPositionSnapshotsHistorical", func(t *testing.T) {
+	t.Run("Test UniswapV2ApiService UniswapV2GetLiquidityPositionSnapshotsHistorical", func(t *testing.T) {
 
-        t.Skip("skip test")  // remove to run test
+		t.Skip("skip test")  // remove to run test
 
-        resp, httpRes, err := apiClient.UniswapV2Api.UniswapV2GetLiquidityPositionSnapshotsHistorical(context.Background()).Execute()
+		resp, httpRes, err := apiClient.UniswapV2Api.UniswapV2GetLiquidityPositionSnapshotsHistorical(context.Background()).Execute()
 
-        require.Nil(t, err)
-        require.NotNil(t, resp)
-        assert.Equal(t, 200, httpRes.StatusCode)
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
 
-    })
+	})
 
-    t.Run("Test UniswapV2ApiService UniswapV2GetLiquidityPositionsHistorical", func(t *testing.T) {
+	t.Run("Test UniswapV2ApiService UniswapV2GetLiquidityPositionsHistorical", func(t *testing.T) {
 
-        t.Skip("skip test")  // remove to run test
+		t.Skip("skip test")  // remove to run test
 
-        resp, httpRes, err := apiClient.UniswapV2Api.UniswapV2GetLiquidityPositionsHistorical(context.Background()).Execute()
+		resp, httpRes, err := apiClient.UniswapV2Api.UniswapV2GetLiquidityPositionsHistorical(context.Background()).Execute()
 
-        require.Nil(t, err)
-        require.NotNil(t, resp)
-        assert.Equal(t, 200, httpRes.StatusCode)
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
 
-    })
+	})
 
-    t.Run("Test UniswapV2ApiService UniswapV2GetMintsHistorical", func(t *testing.T) {
+	t.Run("Test UniswapV2ApiService UniswapV2GetMintsHistorical", func(t *testing.T) {
 
-        t.Skip("skip test")  // remove to run test
+		t.Skip("skip test")  // remove to run test
 
-        resp, httpRes, err := apiClient.UniswapV2Api.UniswapV2GetMintsHistorical(context.Background()).Execute()
+		resp, httpRes, err := apiClient.UniswapV2Api.UniswapV2GetMintsHistorical(context.Background()).Execute()
 
-        require.Nil(t, err)
-        require.NotNil(t, resp)
-        assert.Equal(t, 200, httpRes.StatusCode)
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
 
-    })
+	})
 
-    t.Run("Test UniswapV2ApiService UniswapV2GetPairDayDataHistorical", func(t *testing.T) {
+	t.Run("Test UniswapV2ApiService UniswapV2GetPairDayDataHistorical", func(t *testing.T) {
 
-        t.Skip("skip test")  // remove to run test
+		t.Skip("skip test")  // remove to run test
 
-        resp, httpRes, err := apiClient.UniswapV2Api.UniswapV2GetPairDayDataHistorical(context.Background()).Execute()
+		resp, httpRes, err := apiClient.UniswapV2Api.UniswapV2GetPairDayDataHistorical(context.Background()).Execute()
 
-        require.Nil(t, err)
-        require.NotNil(t, resp)
-        assert.Equal(t, 200, httpRes.StatusCode)
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
 
-    })
+	})
 
-    t.Run("Test UniswapV2ApiService UniswapV2GetPairHourDataHistorical", func(t *testing.T) {
+	t.Run("Test UniswapV2ApiService UniswapV2GetPairHourDataHistorical", func(t *testing.T) {
 
-        t.Skip("skip test")  // remove to run test
+		t.Skip("skip test")  // remove to run test
 
-        resp, httpRes, err := apiClient.UniswapV2Api.UniswapV2GetPairHourDataHistorical(context.Background()).Execute()
+		resp, httpRes, err := apiClient.UniswapV2Api.UniswapV2GetPairHourDataHistorical(context.Background()).Execute()
 
-        require.Nil(t, err)
-        require.NotNil(t, resp)
-        assert.Equal(t, 200, httpRes.StatusCode)
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
 
-    })
+	})
 
-    t.Run("Test UniswapV2ApiService UniswapV2GetPairsHistorical", func(t *testing.T) {
+	t.Run("Test UniswapV2ApiService UniswapV2GetPairsHistorical", func(t *testing.T) {
 
-        t.Skip("skip test")  // remove to run test
+		t.Skip("skip test")  // remove to run test
 
-        resp, httpRes, err := apiClient.UniswapV2Api.UniswapV2GetPairsHistorical(context.Background()).Execute()
+		resp, httpRes, err := apiClient.UniswapV2Api.UniswapV2GetPairsHistorical(context.Background()).Execute()
 
-        require.Nil(t, err)
-        require.NotNil(t, resp)
-        assert.Equal(t, 200, httpRes.StatusCode)
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
 
-    })
+	})
 
-    t.Run("Test UniswapV2ApiService UniswapV2GetSwapsHistorical", func(t *testing.T) {
+	t.Run("Test UniswapV2ApiService UniswapV2GetSwapsHistorical", func(t *testing.T) {
 
-        t.Skip("skip test")  // remove to run test
+		t.Skip("skip test")  // remove to run test
 
-        resp, httpRes, err := apiClient.UniswapV2Api.UniswapV2GetSwapsHistorical(context.Background()).Execute()
+		resp, httpRes, err := apiClient.UniswapV2Api.UniswapV2GetSwapsHistorical(context.Background()).Execute()
 
-        require.Nil(t, err)
-        require.NotNil(t, resp)
-        assert.Equal(t, 200, httpRes.StatusCode)
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
 
-    })
+	})
 
-    t.Run("Test UniswapV2ApiService UniswapV2GetTokenDayDataHistorical", func(t *testing.T) {
+	t.Run("Test UniswapV2ApiService UniswapV2GetTokenDayDataHistorical", func(t *testing.T) {
 
-        t.Skip("skip test")  // remove to run test
+		t.Skip("skip test")  // remove to run test
 
-        resp, httpRes, err := apiClient.UniswapV2Api.UniswapV2GetTokenDayDataHistorical(context.Background()).Execute()
+		resp, httpRes, err := apiClient.UniswapV2Api.UniswapV2GetTokenDayDataHistorical(context.Background()).Execute()
 
-        require.Nil(t, err)
-        require.NotNil(t, resp)
-        assert.Equal(t, 200, httpRes.StatusCode)
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
 
-    })
+	})
 
-    t.Run("Test UniswapV2ApiService UniswapV2GetTokensHistorical", func(t *testing.T) {
+	t.Run("Test UniswapV2ApiService UniswapV2GetTokensHistorical", func(t *testing.T) {
 
-        t.Skip("skip test")  // remove to run test
+		t.Skip("skip test")  // remove to run test
 
-        resp, httpRes, err := apiClient.UniswapV2Api.UniswapV2GetTokensHistorical(context.Background()).Execute()
+		resp, httpRes, err := apiClient.UniswapV2Api.UniswapV2GetTokensHistorical(context.Background()).Execute()
 
-        require.Nil(t, err)
-        require.NotNil(t, resp)
-        assert.Equal(t, 200, httpRes.StatusCode)
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
 
-    })
+	})
 
-    t.Run("Test UniswapV2ApiService UniswapV2GetTransactionsHistorical", func(t *testing.T) {
+	t.Run("Test UniswapV2ApiService UniswapV2GetTransactionsHistorical", func(t *testing.T) {
 
-        t.Skip("skip test")  // remove to run test
+		t.Skip("skip test")  // remove to run test
 
-        resp, httpRes, err := apiClient.UniswapV2Api.UniswapV2GetTransactionsHistorical(context.Background()).Execute()
+		resp, httpRes, err := apiClient.UniswapV2Api.UniswapV2GetTransactionsHistorical(context.Background()).Execute()
 
-        require.Nil(t, err)
-        require.NotNil(t, resp)
-        assert.Equal(t, 200, httpRes.StatusCode)
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
 
-    })
+	})
 
-    t.Run("Test UniswapV2ApiService UniswapV2GetUniswapDayDataHistorical", func(t *testing.T) {
+	t.Run("Test UniswapV2ApiService UniswapV2GetUniswapDayDataHistorical", func(t *testing.T) {
 
-        t.Skip("skip test")  // remove to run test
+		t.Skip("skip test")  // remove to run test
 
-        resp, httpRes, err := apiClient.UniswapV2Api.UniswapV2GetUniswapDayDataHistorical(context.Background()).Execute()
+		resp, httpRes, err := apiClient.UniswapV2Api.UniswapV2GetUniswapDayDataHistorical(context.Background()).Execute()
 
-        require.Nil(t, err)
-        require.NotNil(t, resp)
-        assert.Equal(t, 200, httpRes.StatusCode)
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
 
-    })
+	})
 
-    t.Run("Test UniswapV2ApiService UniswapV2GetUniswapFactoriesHistorical", func(t *testing.T) {
+	t.Run("Test UniswapV2ApiService UniswapV2GetUniswapFactoriesHistorical", func(t *testing.T) {
 
-        t.Skip("skip test")  // remove to run test
+		t.Skip("skip test")  // remove to run test
 
-        resp, httpRes, err := apiClient.UniswapV2Api.UniswapV2GetUniswapFactoriesHistorical(context.Background()).Execute()
+		resp, httpRes, err := apiClient.UniswapV2Api.UniswapV2GetUniswapFactoriesHistorical(context.Background()).Execute()
 
-        require.Nil(t, err)
-        require.NotNil(t, resp)
-        assert.Equal(t, 200, httpRes.StatusCode)
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
 
-    })
+	})
 
-    t.Run("Test UniswapV2ApiService UniswapV2GetUsersHistorical", func(t *testing.T) {
+	t.Run("Test UniswapV2ApiService UniswapV2GetUsersHistorical", func(t *testing.T) {
 
-        t.Skip("skip test")  // remove to run test
+		t.Skip("skip test")  // remove to run test
 
-        resp, httpRes, err := apiClient.UniswapV2Api.UniswapV2GetUsersHistorical(context.Background()).Execute()
+		resp, httpRes, err := apiClient.UniswapV2Api.UniswapV2GetUsersHistorical(context.Background()).Execute()
 
-        require.Nil(t, err)
-        require.NotNil(t, resp)
-        assert.Equal(t, 200, httpRes.StatusCode)
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
 
-    })
+	})
 
-    t.Run("Test UniswapV2ApiService UniswapV2LiquidityPositionSnapshotsCurrent", func(t *testing.T) {
+	t.Run("Test UniswapV2ApiService UniswapV2LiquidityPositionSnapshotsCurrent", func(t *testing.T) {
 
-        t.Skip("skip test")  // remove to run test
+		t.Skip("skip test")  // remove to run test
 
-        resp, httpRes, err := apiClient.UniswapV2Api.UniswapV2LiquidityPositionSnapshotsCurrent(context.Background()).Execute()
+		resp, httpRes, err := apiClient.UniswapV2Api.UniswapV2LiquidityPositionSnapshotsCurrent(context.Background()).Execute()
 
-        require.Nil(t, err)
-        require.NotNil(t, resp)
-        assert.Equal(t, 200, httpRes.StatusCode)
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
 
-    })
+	})
 
-    t.Run("Test UniswapV2ApiService UniswapV2LiquidityPositionsCurrent", func(t *testing.T) {
+	t.Run("Test UniswapV2ApiService UniswapV2LiquidityPositionsCurrent", func(t *testing.T) {
 
-        t.Skip("skip test")  // remove to run test
+		t.Skip("skip test")  // remove to run test
 
-        resp, httpRes, err := apiClient.UniswapV2Api.UniswapV2LiquidityPositionsCurrent(context.Background()).Execute()
+		resp, httpRes, err := apiClient.UniswapV2Api.UniswapV2LiquidityPositionsCurrent(context.Background()).Execute()
 
-        require.Nil(t, err)
-        require.NotNil(t, resp)
-        assert.Equal(t, 200, httpRes.StatusCode)
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
 
-    })
+	})
 
-    t.Run("Test UniswapV2ApiService UniswapV2MintsCurrent", func(t *testing.T) {
+	t.Run("Test UniswapV2ApiService UniswapV2MintsCurrent", func(t *testing.T) {
 
-        t.Skip("skip test")  // remove to run test
+		t.Skip("skip test")  // remove to run test
 
-        resp, httpRes, err := apiClient.UniswapV2Api.UniswapV2MintsCurrent(context.Background()).Execute()
+		resp, httpRes, err := apiClient.UniswapV2Api.UniswapV2MintsCurrent(context.Background()).Execute()
 
-        require.Nil(t, err)
-        require.NotNil(t, resp)
-        assert.Equal(t, 200, httpRes.StatusCode)
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
 
-    })
+	})
 
-    t.Run("Test UniswapV2ApiService UniswapV2PairDayDataCurrent", func(t *testing.T) {
+	t.Run("Test UniswapV2ApiService UniswapV2PairDayDataCurrent", func(t *testing.T) {
 
-        t.Skip("skip test")  // remove to run test
+		t.Skip("skip test")  // remove to run test
 
-        resp, httpRes, err := apiClient.UniswapV2Api.UniswapV2PairDayDataCurrent(context.Background()).Execute()
+		resp, httpRes, err := apiClient.UniswapV2Api.UniswapV2PairDayDataCurrent(context.Background()).Execute()
 
-        require.Nil(t, err)
-        require.NotNil(t, resp)
-        assert.Equal(t, 200, httpRes.StatusCode)
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
 
-    })
+	})
 
-    t.Run("Test UniswapV2ApiService UniswapV2PairHourDataCurrent", func(t *testing.T) {
+	t.Run("Test UniswapV2ApiService UniswapV2PairHourDataCurrent", func(t *testing.T) {
 
-        t.Skip("skip test")  // remove to run test
+		t.Skip("skip test")  // remove to run test
 
-        resp, httpRes, err := apiClient.UniswapV2Api.UniswapV2PairHourDataCurrent(context.Background()).Execute()
+		resp, httpRes, err := apiClient.UniswapV2Api.UniswapV2PairHourDataCurrent(context.Background()).Execute()
 
-        require.Nil(t, err)
-        require.NotNil(t, resp)
-        assert.Equal(t, 200, httpRes.StatusCode)
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
 
-    })
+	})
 
-    t.Run("Test UniswapV2ApiService UniswapV2PairsCurrent", func(t *testing.T) {
+	t.Run("Test UniswapV2ApiService UniswapV2PairsCurrent", func(t *testing.T) {
 
-        t.Skip("skip test")  // remove to run test
+		t.Skip("skip test")  // remove to run test
 
-        resp, httpRes, err := apiClient.UniswapV2Api.UniswapV2PairsCurrent(context.Background()).Execute()
+		resp, httpRes, err := apiClient.UniswapV2Api.UniswapV2PairsCurrent(context.Background()).Execute()
 
-        require.Nil(t, err)
-        require.NotNil(t, resp)
-        assert.Equal(t, 200, httpRes.StatusCode)
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
 
-    })
+	})
 
-    t.Run("Test UniswapV2ApiService UniswapV2SwapsCurrent", func(t *testing.T) {
+	t.Run("Test UniswapV2ApiService UniswapV2SwapsCurrent", func(t *testing.T) {
 
-        t.Skip("skip test")  // remove to run test
+		t.Skip("skip test")  // remove to run test
 
-        resp, httpRes, err := apiClient.UniswapV2Api.UniswapV2SwapsCurrent(context.Background()).Execute()
+		resp, httpRes, err := apiClient.UniswapV2Api.UniswapV2SwapsCurrent(context.Background()).Execute()
 
-        require.Nil(t, err)
-        require.NotNil(t, resp)
-        assert.Equal(t, 200, httpRes.StatusCode)
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
 
-    })
+	})
 
-    t.Run("Test UniswapV2ApiService UniswapV2TokenDayDataCurrent", func(t *testing.T) {
+	t.Run("Test UniswapV2ApiService UniswapV2TokenDayDataCurrent", func(t *testing.T) {
 
-        t.Skip("skip test")  // remove to run test
+		t.Skip("skip test")  // remove to run test
 
-        resp, httpRes, err := apiClient.UniswapV2Api.UniswapV2TokenDayDataCurrent(context.Background()).Execute()
+		resp, httpRes, err := apiClient.UniswapV2Api.UniswapV2TokenDayDataCurrent(context.Background()).Execute()
 
-        require.Nil(t, err)
-        require.NotNil(t, resp)
-        assert.Equal(t, 200, httpRes.StatusCode)
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
 
-    })
+	})
 
-    t.Run("Test UniswapV2ApiService UniswapV2TokensCurrent", func(t *testing.T) {
+	t.Run("Test UniswapV2ApiService UniswapV2TokensCurrent", func(t *testing.T) {
 
-        t.Skip("skip test")  // remove to run test
+		t.Skip("skip test")  // remove to run test
 
-        resp, httpRes, err := apiClient.UniswapV2Api.UniswapV2TokensCurrent(context.Background()).Execute()
+		resp, httpRes, err := apiClient.UniswapV2Api.UniswapV2TokensCurrent(context.Background()).Execute()
 
-        require.Nil(t, err)
-        require.NotNil(t, resp)
-        assert.Equal(t, 200, httpRes.StatusCode)
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
 
-    })
+	})
 
-    t.Run("Test UniswapV2ApiService UniswapV2TransactionsCurrent", func(t *testing.T) {
+	t.Run("Test UniswapV2ApiService UniswapV2TransactionsCurrent", func(t *testing.T) {
 
-        t.Skip("skip test")  // remove to run test
+		t.Skip("skip test")  // remove to run test
 
-        resp, httpRes, err := apiClient.UniswapV2Api.UniswapV2TransactionsCurrent(context.Background()).Execute()
+		resp, httpRes, err := apiClient.UniswapV2Api.UniswapV2TransactionsCurrent(context.Background()).Execute()
 
-        require.Nil(t, err)
-        require.NotNil(t, resp)
-        assert.Equal(t, 200, httpRes.StatusCode)
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
 
-    })
+	})
 
-    t.Run("Test UniswapV2ApiService UniswapV2UniswapDayDataCurrent", func(t *testing.T) {
+	t.Run("Test UniswapV2ApiService UniswapV2UniswapDayDataCurrent", func(t *testing.T) {
 
-        t.Skip("skip test")  // remove to run test
+		t.Skip("skip test")  // remove to run test
 
-        resp, httpRes, err := apiClient.UniswapV2Api.UniswapV2UniswapDayDataCurrent(context.Background()).Execute()
+		resp, httpRes, err := apiClient.UniswapV2Api.UniswapV2UniswapDayDataCurrent(context.Background()).Execute()
 
-        require.Nil(t, err)
-        require.NotNil(t, resp)
-        assert.Equal(t, 200, httpRes.StatusCode)
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
 
-    })
+	})
 
-    t.Run("Test UniswapV2ApiService UniswapV2UniswapFactoriesCurrent", func(t *testing.T) {
+	t.Run("Test UniswapV2ApiService UniswapV2UniswapFactoriesCurrent", func(t *testing.T) {
 
-        t.Skip("skip test")  // remove to run test
+		t.Skip("skip test")  // remove to run test
 
-        resp, httpRes, err := apiClient.UniswapV2Api.UniswapV2UniswapFactoriesCurrent(context.Background()).Execute()
+		resp, httpRes, err := apiClient.UniswapV2Api.UniswapV2UniswapFactoriesCurrent(context.Background()).Execute()
 
-        require.Nil(t, err)
-        require.NotNil(t, resp)
-        assert.Equal(t, 200, httpRes.StatusCode)
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
 
-    })
+	})
 
-    t.Run("Test UniswapV2ApiService UniswapV2UsersCurrent", func(t *testing.T) {
+	t.Run("Test UniswapV2ApiService UniswapV2UsersCurrent", func(t *testing.T) {
 
-        t.Skip("skip test")  // remove to run test
+		t.Skip("skip test")  // remove to run test
 
-        resp, httpRes, err := apiClient.UniswapV2Api.UniswapV2UsersCurrent(context.Background()).Execute()
+		resp, httpRes, err := apiClient.UniswapV2Api.UniswapV2UsersCurrent(context.Background()).Execute()
 
-        require.Nil(t, err)
-        require.NotNil(t, resp)
-        assert.Equal(t, 200, httpRes.StatusCode)
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
 
-    })
+	})
 
 }

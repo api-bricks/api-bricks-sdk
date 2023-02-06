@@ -239,13 +239,13 @@ API.Client.UniswapV2Api.prototype.uniswapV2GetBurnsHistorical = function(opt_sta
 /**
  * LiquidityPositionSnapshots (historical)
  * Gets liquidityPositionSnapshots.
- * @param {!number=} opt_startBlock 
- * @param {!number=} opt_endBlock 
- * @param {!Date=} opt_startDate 
- * @param {!Date=} opt_endDate 
- * @param {!string=} opt_id 
- * @param {!string=} opt_user 
- * @param {!string=} opt_pair 
+ * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+ * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+ * @param {!Date=} opt_startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+ * @param {!Date=} opt_endDate The end date of timeframe.
+ * @param {!string=} opt_id Identifier, format: (pair address)-(user address)
+ * @param {!string=} opt_user Reference to user.
+ * @param {!string=} opt_pair Reference to the pair liquidity is being provided on.
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
  * @return {!angular.$q.Promise<!Array<!API.Client.UniswapV2.LiquidityPositionSnapshotDTO>>}
  */

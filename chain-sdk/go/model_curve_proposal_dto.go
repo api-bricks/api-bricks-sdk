@@ -16,6 +16,9 @@ import (
 	"time"
 )
 
+// checks if the CurveProposalDTO type satisfies the MappedNullable interface at compile time
+var _ MappedNullable = &CurveProposalDTO{}
+
 // CurveProposalDTO struct for CurveProposalDTO
 type CurveProposalDTO struct {
 	EntryTime *time.Time `json:"entry_time,omitempty"`
@@ -112,7 +115,7 @@ func (o *CurveProposalDTO) GetEntryTime() time.Time {
 // and a boolean to check if the value has been set.
 func (o *CurveProposalDTO) GetEntryTimeOk() (*time.Time, bool) {
 	if o == nil || isNil(o.EntryTime) {
-    return nil, false
+		return nil, false
 	}
 	return o.EntryTime, true
 }
@@ -144,7 +147,7 @@ func (o *CurveProposalDTO) GetRecvTime() time.Time {
 // and a boolean to check if the value has been set.
 func (o *CurveProposalDTO) GetRecvTimeOk() (*time.Time, bool) {
 	if o == nil || isNil(o.RecvTime) {
-    return nil, false
+		return nil, false
 	}
 	return o.RecvTime, true
 }
@@ -176,7 +179,7 @@ func (o *CurveProposalDTO) GetBlockNumber() int64 {
 // and a boolean to check if the value has been set.
 func (o *CurveProposalDTO) GetBlockNumberOk() (*int64, bool) {
 	if o == nil || isNil(o.BlockNumber) {
-    return nil, false
+		return nil, false
 	}
 	return o.BlockNumber, true
 }
@@ -209,7 +212,7 @@ func (o *CurveProposalDTO) GetId() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CurveProposalDTO) GetIdOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Id.Get(), o.Id.IsSet()
 }
@@ -251,7 +254,7 @@ func (o *CurveProposalDTO) GetNumber() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CurveProposalDTO) GetNumberOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Number.Get(), o.Number.IsSet()
 }
@@ -293,7 +296,7 @@ func (o *CurveProposalDTO) GetApp() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CurveProposalDTO) GetAppOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.App.Get(), o.App.IsSet()
 }
@@ -335,7 +338,7 @@ func (o *CurveProposalDTO) GetCreator() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CurveProposalDTO) GetCreatorOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Creator.Get(), o.Creator.IsSet()
 }
@@ -377,7 +380,7 @@ func (o *CurveProposalDTO) GetExecutionScript() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CurveProposalDTO) GetExecutionScriptOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.ExecutionScript.Get(), o.ExecutionScript.IsSet()
 }
@@ -419,7 +422,7 @@ func (o *CurveProposalDTO) GetExpireDate() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CurveProposalDTO) GetExpireDateOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.ExpireDate.Get(), o.ExpireDate.IsSet()
 }
@@ -461,7 +464,7 @@ func (o *CurveProposalDTO) GetMinimumQuorum() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CurveProposalDTO) GetMinimumQuorumOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.MinimumQuorum.Get(), o.MinimumQuorum.IsSet()
 }
@@ -503,7 +506,7 @@ func (o *CurveProposalDTO) GetRequiredSupport() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CurveProposalDTO) GetRequiredSupportOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.RequiredSupport.Get(), o.RequiredSupport.IsSet()
 }
@@ -545,7 +548,7 @@ func (o *CurveProposalDTO) GetSnapshotBlock() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CurveProposalDTO) GetSnapshotBlockOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.SnapshotBlock.Get(), o.SnapshotBlock.IsSet()
 }
@@ -587,7 +590,7 @@ func (o *CurveProposalDTO) GetVotingPower() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CurveProposalDTO) GetVotingPowerOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.VotingPower.Get(), o.VotingPower.IsSet()
 }
@@ -629,7 +632,7 @@ func (o *CurveProposalDTO) GetMetadata() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CurveProposalDTO) GetMetadataOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Metadata.Get(), o.Metadata.IsSet()
 }
@@ -671,7 +674,7 @@ func (o *CurveProposalDTO) GetText() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CurveProposalDTO) GetTextOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Text.Get(), o.Text.IsSet()
 }
@@ -713,7 +716,7 @@ func (o *CurveProposalDTO) GetVoteCount() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CurveProposalDTO) GetVoteCountOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.VoteCount.Get(), o.VoteCount.IsSet()
 }
@@ -755,7 +758,7 @@ func (o *CurveProposalDTO) GetPositiveVoteCount() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CurveProposalDTO) GetPositiveVoteCountOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.PositiveVoteCount.Get(), o.PositiveVoteCount.IsSet()
 }
@@ -797,7 +800,7 @@ func (o *CurveProposalDTO) GetNegativeVoteCount() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CurveProposalDTO) GetNegativeVoteCountOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.NegativeVoteCount.Get(), o.NegativeVoteCount.IsSet()
 }
@@ -839,7 +842,7 @@ func (o *CurveProposalDTO) GetCurrentQuorum() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CurveProposalDTO) GetCurrentQuorumOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.CurrentQuorum.Get(), o.CurrentQuorum.IsSet()
 }
@@ -881,7 +884,7 @@ func (o *CurveProposalDTO) GetCurrentSupport() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CurveProposalDTO) GetCurrentSupportOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.CurrentSupport.Get(), o.CurrentSupport.IsSet()
 }
@@ -923,7 +926,7 @@ func (o *CurveProposalDTO) GetStakedSupport() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CurveProposalDTO) GetStakedSupportOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.StakedSupport.Get(), o.StakedSupport.IsSet()
 }
@@ -965,7 +968,7 @@ func (o *CurveProposalDTO) GetTotalStaked() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CurveProposalDTO) GetTotalStakedOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.TotalStaked.Get(), o.TotalStaked.IsSet()
 }
@@ -1007,7 +1010,7 @@ func (o *CurveProposalDTO) GetCreated() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CurveProposalDTO) GetCreatedOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Created.Get(), o.Created.IsSet()
 }
@@ -1049,7 +1052,7 @@ func (o *CurveProposalDTO) GetCreatedAtBlock() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CurveProposalDTO) GetCreatedAtBlockOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.CreatedAtBlock.Get(), o.CreatedAtBlock.IsSet()
 }
@@ -1091,7 +1094,7 @@ func (o *CurveProposalDTO) GetCreatedAtTransaction() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CurveProposalDTO) GetCreatedAtTransactionOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.CreatedAtTransaction.Get(), o.CreatedAtTransaction.IsSet()
 }
@@ -1133,7 +1136,7 @@ func (o *CurveProposalDTO) GetUpdated() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CurveProposalDTO) GetUpdatedOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Updated.Get(), o.Updated.IsSet()
 }
@@ -1175,7 +1178,7 @@ func (o *CurveProposalDTO) GetUpdatedAtBlock() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CurveProposalDTO) GetUpdatedAtBlockOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.UpdatedAtBlock.Get(), o.UpdatedAtBlock.IsSet()
 }
@@ -1217,7 +1220,7 @@ func (o *CurveProposalDTO) GetUpdatedAtTransaction() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CurveProposalDTO) GetUpdatedAtTransactionOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.UpdatedAtTransaction.Get(), o.UpdatedAtTransaction.IsSet()
 }
@@ -1259,7 +1262,7 @@ func (o *CurveProposalDTO) GetExecuted() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CurveProposalDTO) GetExecutedOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Executed.Get(), o.Executed.IsSet()
 }
@@ -1301,7 +1304,7 @@ func (o *CurveProposalDTO) GetExecutedAtBlock() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CurveProposalDTO) GetExecutedAtBlockOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.ExecutedAtBlock.Get(), o.ExecutedAtBlock.IsSet()
 }
@@ -1343,7 +1346,7 @@ func (o *CurveProposalDTO) GetExecutedAtTransaction() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CurveProposalDTO) GetExecutedAtTransactionOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.ExecutedAtTransaction.Get(), o.ExecutedAtTransaction.IsSet()
 }
@@ -1384,7 +1387,7 @@ func (o *CurveProposalDTO) GetVid() int64 {
 // and a boolean to check if the value has been set.
 func (o *CurveProposalDTO) GetVidOk() (*int64, bool) {
 	if o == nil || isNil(o.Vid) {
-    return nil, false
+		return nil, false
 	}
 	return o.Vid, true
 }
@@ -1404,6 +1407,14 @@ func (o *CurveProposalDTO) SetVid(v int64) {
 }
 
 func (o CurveProposalDTO) MarshalJSON() ([]byte, error) {
+	toSerialize,err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
+}
+
+func (o CurveProposalDTO) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
 	if !isNil(o.EntryTime) {
 		toSerialize["entry_time"] = o.EntryTime
@@ -1501,7 +1512,7 @@ func (o CurveProposalDTO) MarshalJSON() ([]byte, error) {
 	if !isNil(o.Vid) {
 		toSerialize["vid"] = o.Vid
 	}
-	return json.Marshal(toSerialize)
+	return toSerialize, nil
 }
 
 type NullableCurveProposalDTO struct {

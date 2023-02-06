@@ -2137,11 +2137,11 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://onchain.coinapi.io";
             var apiInstance = new CurveApi(config);
-            var startBlock = 789L;  // long? |  (optional) 
-            var endBlock = 789L;  // long? |  (optional) 
-            var startDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
-            var endDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
-            var id = "id_example";  // string |  (optional) 
+            var startBlock = 789L;  // long? | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional) 
+            var endBlock = 789L;  // long? | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional) 
+            var startDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional) 
+            var endDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? | The end date of timeframe. (optional) 
+            var id = "id_example";  // string | Identifier, format: (pool_id)-(coin_index). (optional) 
             var pool = "pool_example";  // string |  (optional) 
 
             try
@@ -2185,11 +2185,11 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **startBlock** | **long?** |  | [optional]  |
-| **endBlock** | **long?** |  | [optional]  |
-| **startDate** | **DateTime?** |  | [optional]  |
-| **endDate** | **DateTime?** |  | [optional]  |
-| **id** | **string** |  | [optional]  |
+| **startBlock** | **long?** | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional]  |
+| **endBlock** | **long?** | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional]  |
+| **startDate** | **DateTime?** | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional]  |
+| **endDate** | **DateTime?** | The end date of timeframe. | [optional]  |
+| **id** | **string** | Identifier, format: (pool_id)-(coin_index). | [optional]  |
 | **pool** | **string** |  | [optional]  |
 
 ### Return type
@@ -4656,11 +4656,11 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://onchain.coinapi.io";
             var apiInstance = new CurveApi(config);
-            var startBlock = 789L;  // long? |  (optional) 
-            var endBlock = 789L;  // long? |  (optional) 
-            var startDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
-            var endDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
-            var id = "id_example";  // string |  (optional) 
+            var startBlock = 789L;  // long? | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional) 
+            var endBlock = 789L;  // long? | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional) 
+            var startDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional) 
+            var endDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? | The end date of timeframe. (optional) 
+            var id = "id_example";  // string | Equals to: (pool_id)-(coin_index). (optional) 
             var pool = "pool_example";  // string |  (optional) 
 
             try
@@ -4704,11 +4704,11 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **startBlock** | **long?** |  | [optional]  |
-| **endBlock** | **long?** |  | [optional]  |
-| **startDate** | **DateTime?** |  | [optional]  |
-| **endDate** | **DateTime?** |  | [optional]  |
-| **id** | **string** |  | [optional]  |
+| **startBlock** | **long?** | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional]  |
+| **endBlock** | **long?** | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional]  |
+| **startDate** | **DateTime?** | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional]  |
+| **endDate** | **DateTime?** | The end date of timeframe. | [optional]  |
+| **id** | **string** | Equals to: (pool_id)-(coin_index). | [optional]  |
 | **pool** | **string** |  | [optional]  |
 
 ### Return type

@@ -187,7 +187,7 @@ dex_withdraw_dto_t *dex_withdraw_dto_parseFromJSON(cJSON *dex_withdraw_dtoJSON){
     // dex_withdraw_dto->entry_time
     cJSON *entry_time = cJSON_GetObjectItemCaseSensitive(dex_withdraw_dtoJSON, "entry_time");
     if (entry_time) { 
-    if(!cJSON_IsString(entry_time))
+    if(!cJSON_IsString(entry_time) && !cJSON_IsNull(entry_time))
     {
     goto end; //DateTime
     }
@@ -196,7 +196,7 @@ dex_withdraw_dto_t *dex_withdraw_dto_parseFromJSON(cJSON *dex_withdraw_dtoJSON){
     // dex_withdraw_dto->recv_time
     cJSON *recv_time = cJSON_GetObjectItemCaseSensitive(dex_withdraw_dtoJSON, "recv_time");
     if (recv_time) { 
-    if(!cJSON_IsString(recv_time))
+    if(!cJSON_IsString(recv_time) && !cJSON_IsNull(recv_time))
     {
     goto end; //DateTime
     }
@@ -214,7 +214,7 @@ dex_withdraw_dto_t *dex_withdraw_dto_parseFromJSON(cJSON *dex_withdraw_dtoJSON){
     // dex_withdraw_dto->id
     cJSON *id = cJSON_GetObjectItemCaseSensitive(dex_withdraw_dtoJSON, "id");
     if (id) { 
-    if(!cJSON_IsString(id))
+    if(!cJSON_IsString(id) && !cJSON_IsNull(id))
     {
     goto end; //String
     }
@@ -223,7 +223,7 @@ dex_withdraw_dto_t *dex_withdraw_dto_parseFromJSON(cJSON *dex_withdraw_dtoJSON){
     // dex_withdraw_dto->user
     cJSON *user = cJSON_GetObjectItemCaseSensitive(dex_withdraw_dtoJSON, "user");
     if (user) { 
-    if(!cJSON_IsString(user))
+    if(!cJSON_IsString(user) && !cJSON_IsNull(user))
     {
     goto end; //String
     }
@@ -232,7 +232,7 @@ dex_withdraw_dto_t *dex_withdraw_dto_parseFromJSON(cJSON *dex_withdraw_dtoJSON){
     // dex_withdraw_dto->token_address
     cJSON *token_address = cJSON_GetObjectItemCaseSensitive(dex_withdraw_dtoJSON, "token_address");
     if (token_address) { 
-    if(!cJSON_IsString(token_address))
+    if(!cJSON_IsString(token_address) && !cJSON_IsNull(token_address))
     {
     goto end; //String
     }
@@ -241,7 +241,7 @@ dex_withdraw_dto_t *dex_withdraw_dto_parseFromJSON(cJSON *dex_withdraw_dtoJSON){
     // dex_withdraw_dto->amount
     cJSON *amount = cJSON_GetObjectItemCaseSensitive(dex_withdraw_dtoJSON, "amount");
     if (amount) { 
-    if(!cJSON_IsString(amount))
+    if(!cJSON_IsString(amount) && !cJSON_IsNull(amount))
     {
     goto end; //String
     }
@@ -250,7 +250,7 @@ dex_withdraw_dto_t *dex_withdraw_dto_parseFromJSON(cJSON *dex_withdraw_dtoJSON){
     // dex_withdraw_dto->create_epoch
     cJSON *create_epoch = cJSON_GetObjectItemCaseSensitive(dex_withdraw_dtoJSON, "create_epoch");
     if (create_epoch) { 
-    if(!cJSON_IsString(create_epoch))
+    if(!cJSON_IsString(create_epoch) && !cJSON_IsNull(create_epoch))
     {
     goto end; //String
     }
@@ -259,7 +259,7 @@ dex_withdraw_dto_t *dex_withdraw_dto_parseFromJSON(cJSON *dex_withdraw_dtoJSON){
     // dex_withdraw_dto->create_batch_id
     cJSON *create_batch_id = cJSON_GetObjectItemCaseSensitive(dex_withdraw_dtoJSON, "create_batch_id");
     if (create_batch_id) { 
-    if(!cJSON_IsString(create_batch_id))
+    if(!cJSON_IsString(create_batch_id) && !cJSON_IsNull(create_batch_id))
     {
     goto end; //String
     }
@@ -268,7 +268,7 @@ dex_withdraw_dto_t *dex_withdraw_dto_parseFromJSON(cJSON *dex_withdraw_dtoJSON){
     // dex_withdraw_dto->tx_hash
     cJSON *tx_hash = cJSON_GetObjectItemCaseSensitive(dex_withdraw_dtoJSON, "tx_hash");
     if (tx_hash) { 
-    if(!cJSON_IsString(tx_hash))
+    if(!cJSON_IsString(tx_hash) && !cJSON_IsNull(tx_hash))
     {
     goto end; //String
     }
@@ -285,16 +285,16 @@ dex_withdraw_dto_t *dex_withdraw_dto_parseFromJSON(cJSON *dex_withdraw_dtoJSON){
 
 
     dex_withdraw_dto_local_var = dex_withdraw_dto_create (
-        entry_time ? strdup(entry_time->valuestring) : NULL,
-        recv_time ? strdup(recv_time->valuestring) : NULL,
+        entry_time && !cJSON_IsNull(entry_time) ? strdup(entry_time->valuestring) : NULL,
+        recv_time && !cJSON_IsNull(recv_time) ? strdup(recv_time->valuestring) : NULL,
         block_number ? block_number->valuedouble : 0,
-        id ? strdup(id->valuestring) : NULL,
-        user ? strdup(user->valuestring) : NULL,
-        token_address ? strdup(token_address->valuestring) : NULL,
-        amount ? strdup(amount->valuestring) : NULL,
-        create_epoch ? strdup(create_epoch->valuestring) : NULL,
-        create_batch_id ? strdup(create_batch_id->valuestring) : NULL,
-        tx_hash ? strdup(tx_hash->valuestring) : NULL,
+        id && !cJSON_IsNull(id) ? strdup(id->valuestring) : NULL,
+        user && !cJSON_IsNull(user) ? strdup(user->valuestring) : NULL,
+        token_address && !cJSON_IsNull(token_address) ? strdup(token_address->valuestring) : NULL,
+        amount && !cJSON_IsNull(amount) ? strdup(amount->valuestring) : NULL,
+        create_epoch && !cJSON_IsNull(create_epoch) ? strdup(create_epoch->valuestring) : NULL,
+        create_batch_id && !cJSON_IsNull(create_batch_id) ? strdup(create_batch_id->valuestring) : NULL,
+        tx_hash && !cJSON_IsNull(tx_hash) ? strdup(tx_hash->valuestring) : NULL,
         vid ? vid->valuedouble : 0
         );
 

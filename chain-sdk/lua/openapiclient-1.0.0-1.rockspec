@@ -26,6 +26,7 @@ build = {
 		["openapiclient.api.cow_api"] = "openapiclient/api/cow_api.lua";
 		["openapiclient.api.curve_api"] = "openapiclient/api/curve_api.lua";
 		["openapiclient.api.dex_api"] = "openapiclient/api/dex_api.lua";
+		["openapiclient.api.metadata_api"] = "openapiclient/api/metadata_api.lua";
 		["openapiclient.api.sushiswap_api"] = "openapiclient/api/sushiswap_api.lua";
 		["openapiclient.api.uniswap_v2_api"] = "openapiclient/api/uniswap_v2_api.lua";
 		["openapiclient.api.uniswap_v3_api"] = "openapiclient/api/uniswap_v3_api.lua";

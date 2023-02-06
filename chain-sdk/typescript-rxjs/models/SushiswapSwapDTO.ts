@@ -141,3 +141,5 @@ export interface SushiswapSwapDTO {
      */
     evaluated_aggressor?: TransactionsETradeAggressiveSide;
 }
+
+

@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.time.OffsetDateTime;
 import org.openapitools.jackson.nullable.JsonNullable;
@@ -50,8 +48,7 @@ import org.openapitools.client.JSON;
 /**
  * Order submitted by an user. It has a validity (dates) so they can only be executed from/until some given batches. Partial executions of this trades must respect the limit price.
  */
-@ApiModel(description = "Order submitted by an user. It has a validity (dates) so they can only be executed from/until some given batches. Partial executions of this trades must respect the limit price.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-30T14:42:00.397192Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-06T14:47:06.037855Z[Etc/UTC]")
 public class DexOrderDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -163,7 +160,6 @@ public class DexOrderDTO {
    * @return entryTime
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public OffsetDateTime getEntryTime() {
     return entryTime;
@@ -186,7 +182,6 @@ public class DexOrderDTO {
    * @return recvTime
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public OffsetDateTime getRecvTime() {
     return recvTime;
@@ -209,7 +204,6 @@ public class DexOrderDTO {
    * @return blockNumber
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Number of block in which entity was recorded.")
 
   public Long getBlockNumber() {
     return blockNumber;
@@ -232,7 +226,6 @@ public class DexOrderDTO {
    * @return id
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Identifier, format: (owner address)-(order id)")
 
   public String getId() {
     return id;
@@ -255,7 +248,6 @@ public class DexOrderDTO {
    * @return owner
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Reference to owner.")
 
   public String getOwner() {
     return owner;
@@ -278,7 +270,6 @@ public class DexOrderDTO {
    * @return orderId
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Order id.")
 
   public Integer getOrderId() {
     return orderId;
@@ -301,7 +292,6 @@ public class DexOrderDTO {
    * @return fromBatchId
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Batch id from which order became valid.")
 
   public String getFromBatchId() {
     return fromBatchId;
@@ -324,7 +314,6 @@ public class DexOrderDTO {
    * @return fromEpoch
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Start of epoch in which order was placed and became valid.")
 
   public String getFromEpoch() {
     return fromEpoch;
@@ -347,7 +336,6 @@ public class DexOrderDTO {
    * @return untilBatchId
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Batch id until which trade was still valid.")
 
   public String getUntilBatchId() {
     return untilBatchId;
@@ -370,7 +358,6 @@ public class DexOrderDTO {
    * @return untilEpoch
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "End of epoch in which order was placed.")
 
   public String getUntilEpoch() {
     return untilEpoch;
@@ -393,7 +380,6 @@ public class DexOrderDTO {
    * @return buyToken
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Identifier of token that was bought.")
 
   public String getBuyToken() {
     return buyToken;
@@ -416,7 +402,6 @@ public class DexOrderDTO {
    * @return sellToken
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Identifier of token that was sold.")
 
   public String getSellToken() {
     return sellToken;
@@ -439,7 +424,6 @@ public class DexOrderDTO {
    * @return priceNumerator
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Price enumerator.")
 
   public String getPriceNumerator() {
     return priceNumerator;
@@ -462,7 +446,6 @@ public class DexOrderDTO {
    * @return priceDenominator
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Price denominator.")
 
   public String getPriceDenominator() {
     return priceDenominator;
@@ -485,7 +468,6 @@ public class DexOrderDTO {
    * @return maxSellAmount
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Maximum sell amount.")
 
   public String getMaxSellAmount() {
     return maxSellAmount;
@@ -508,7 +490,6 @@ public class DexOrderDTO {
    * @return minReceiveAmount
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Minimum receive amount.")
 
   public String getMinReceiveAmount() {
     return minReceiveAmount;
@@ -531,7 +512,6 @@ public class DexOrderDTO {
    * @return soldVolume
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Sold volume.")
 
   public String getSoldVolume() {
     return soldVolume;
@@ -554,7 +534,6 @@ public class DexOrderDTO {
    * @return boughtVolume
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Bought volume.")
 
   public String getBoughtVolume() {
     return boughtVolume;
@@ -577,7 +556,6 @@ public class DexOrderDTO {
    * @return createEpoch
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Epoch in which order was created.")
 
   public String getCreateEpoch() {
     return createEpoch;
@@ -600,7 +578,6 @@ public class DexOrderDTO {
    * @return cancelEpoch
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Epoch in which order was cancelled.")
 
   public String getCancelEpoch() {
     return cancelEpoch;
@@ -623,7 +600,6 @@ public class DexOrderDTO {
    * @return deleteEpoch
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Epoch in which order was deleted.")
 
   public String getDeleteEpoch() {
     return deleteEpoch;
@@ -646,7 +622,6 @@ public class DexOrderDTO {
    * @return txHash
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Transaction hash.")
 
   public String getTxHash() {
     return txHash;
@@ -669,7 +644,6 @@ public class DexOrderDTO {
    * @return txLogIndex
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Event index within transaction.")
 
   public String getTxLogIndex() {
     return txLogIndex;
@@ -692,7 +666,6 @@ public class DexOrderDTO {
    * @return vid
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public Long getVid() {
     return vid;

@@ -16,6 +16,9 @@ import (
 	"time"
 )
 
+// checks if the UniswapV2PairHourDataDTO type satisfies the MappedNullable interface at compile time
+var _ MappedNullable = &UniswapV2PairHourDataDTO{}
+
 // UniswapV2PairHourDataDTO Tracks pair data across each hour.
 type UniswapV2PairHourDataDTO struct {
 	EntryTime *time.Time `json:"entry_time,omitempty"`
@@ -78,7 +81,7 @@ func (o *UniswapV2PairHourDataDTO) GetEntryTime() time.Time {
 // and a boolean to check if the value has been set.
 func (o *UniswapV2PairHourDataDTO) GetEntryTimeOk() (*time.Time, bool) {
 	if o == nil || isNil(o.EntryTime) {
-    return nil, false
+		return nil, false
 	}
 	return o.EntryTime, true
 }
@@ -110,7 +113,7 @@ func (o *UniswapV2PairHourDataDTO) GetRecvTime() time.Time {
 // and a boolean to check if the value has been set.
 func (o *UniswapV2PairHourDataDTO) GetRecvTimeOk() (*time.Time, bool) {
 	if o == nil || isNil(o.RecvTime) {
-    return nil, false
+		return nil, false
 	}
 	return o.RecvTime, true
 }
@@ -142,7 +145,7 @@ func (o *UniswapV2PairHourDataDTO) GetBlockNumber() int64 {
 // and a boolean to check if the value has been set.
 func (o *UniswapV2PairHourDataDTO) GetBlockNumberOk() (*int64, bool) {
 	if o == nil || isNil(o.BlockNumber) {
-    return nil, false
+		return nil, false
 	}
 	return o.BlockNumber, true
 }
@@ -175,7 +178,7 @@ func (o *UniswapV2PairHourDataDTO) GetId() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *UniswapV2PairHourDataDTO) GetIdOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Id.Get(), o.Id.IsSet()
 }
@@ -216,7 +219,7 @@ func (o *UniswapV2PairHourDataDTO) GetHourStartUnix() int32 {
 // and a boolean to check if the value has been set.
 func (o *UniswapV2PairHourDataDTO) GetHourStartUnixOk() (*int32, bool) {
 	if o == nil || isNil(o.HourStartUnix) {
-    return nil, false
+		return nil, false
 	}
 	return o.HourStartUnix, true
 }
@@ -249,7 +252,7 @@ func (o *UniswapV2PairHourDataDTO) GetPair() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *UniswapV2PairHourDataDTO) GetPairOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Pair.Get(), o.Pair.IsSet()
 }
@@ -291,7 +294,7 @@ func (o *UniswapV2PairHourDataDTO) GetReserve0() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *UniswapV2PairHourDataDTO) GetReserve0Ok() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Reserve0.Get(), o.Reserve0.IsSet()
 }
@@ -333,7 +336,7 @@ func (o *UniswapV2PairHourDataDTO) GetReserve1() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *UniswapV2PairHourDataDTO) GetReserve1Ok() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Reserve1.Get(), o.Reserve1.IsSet()
 }
@@ -375,7 +378,7 @@ func (o *UniswapV2PairHourDataDTO) GetTotalSupply() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *UniswapV2PairHourDataDTO) GetTotalSupplyOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.TotalSupply.Get(), o.TotalSupply.IsSet()
 }
@@ -417,7 +420,7 @@ func (o *UniswapV2PairHourDataDTO) GetReserveUsd() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *UniswapV2PairHourDataDTO) GetReserveUsdOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.ReserveUsd.Get(), o.ReserveUsd.IsSet()
 }
@@ -459,7 +462,7 @@ func (o *UniswapV2PairHourDataDTO) GetHourlyVolumeToken0() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *UniswapV2PairHourDataDTO) GetHourlyVolumeToken0Ok() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.HourlyVolumeToken0.Get(), o.HourlyVolumeToken0.IsSet()
 }
@@ -501,7 +504,7 @@ func (o *UniswapV2PairHourDataDTO) GetHourlyVolumeToken1() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *UniswapV2PairHourDataDTO) GetHourlyVolumeToken1Ok() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.HourlyVolumeToken1.Get(), o.HourlyVolumeToken1.IsSet()
 }
@@ -543,7 +546,7 @@ func (o *UniswapV2PairHourDataDTO) GetHourlyVolumeUsd() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *UniswapV2PairHourDataDTO) GetHourlyVolumeUsdOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.HourlyVolumeUsd.Get(), o.HourlyVolumeUsd.IsSet()
 }
@@ -585,7 +588,7 @@ func (o *UniswapV2PairHourDataDTO) GetHourlyTxns() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *UniswapV2PairHourDataDTO) GetHourlyTxnsOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.HourlyTxns.Get(), o.HourlyTxns.IsSet()
 }
@@ -626,7 +629,7 @@ func (o *UniswapV2PairHourDataDTO) GetVid() int64 {
 // and a boolean to check if the value has been set.
 func (o *UniswapV2PairHourDataDTO) GetVidOk() (*int64, bool) {
 	if o == nil || isNil(o.Vid) {
-    return nil, false
+		return nil, false
 	}
 	return o.Vid, true
 }
@@ -646,6 +649,14 @@ func (o *UniswapV2PairHourDataDTO) SetVid(v int64) {
 }
 
 func (o UniswapV2PairHourDataDTO) MarshalJSON() ([]byte, error) {
+	toSerialize,err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
+}
+
+func (o UniswapV2PairHourDataDTO) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
 	if !isNil(o.EntryTime) {
 		toSerialize["entry_time"] = o.EntryTime
@@ -692,7 +703,7 @@ func (o UniswapV2PairHourDataDTO) MarshalJSON() ([]byte, error) {
 	if !isNil(o.Vid) {
 		toSerialize["vid"] = o.Vid
 	}
-	return json.Marshal(toSerialize)
+	return toSerialize, nil
 }
 
 type NullableUniswapV2PairHourDataDTO struct {

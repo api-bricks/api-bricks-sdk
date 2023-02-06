@@ -237,13 +237,13 @@ $apiInstance = new OpenAPI\Client\Api\CowApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$start_block = 56; // int
-$end_block = 56; // int
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$id = 'id_example'; // string
-$sell_token = 'sell_token_example'; // string
-$buy_token = 'buy_token_example'; // string
+$start_block = 56; // int | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+$end_block = 56; // int | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | The end date of timeframe.
+$id = 'id_example'; // string | Identifier, format: (order id)|(transaction hash)|(event index).
+$sell_token = 'sell_token_example'; // string | Address of token that is sold.
+$buy_token = 'buy_token_example'; // string | Address of token that is bought.
 
 try {
     $result = $apiInstance->cowGetTradesHistorical($start_block, $end_block, $start_date, $end_date, $id, $sell_token, $buy_token);
@@ -257,13 +257,13 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **start_block** | **int**|  | [optional] |
-| **end_block** | **int**|  | [optional] |
-| **start_date** | **\DateTime**|  | [optional] |
-| **end_date** | **\DateTime**|  | [optional] |
-| **id** | **string**|  | [optional] |
-| **sell_token** | **string**|  | [optional] |
-| **buy_token** | **string**|  | [optional] |
+| **start_block** | **int**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] |
+| **end_block** | **int**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] |
+| **start_date** | **\DateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] |
+| **end_date** | **\DateTime**| The end date of timeframe. | [optional] |
+| **id** | **string**| Identifier, format: (order id)|(transaction hash)|(event index). | [optional] |
+| **sell_token** | **string**| Address of token that is sold. | [optional] |
+| **buy_token** | **string**| Address of token that is bought. | [optional] |
 
 ### Return type
 

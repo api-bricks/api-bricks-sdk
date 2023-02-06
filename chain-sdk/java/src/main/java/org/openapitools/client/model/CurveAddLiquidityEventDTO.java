@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.time.OffsetDateTime;
 import java.util.ArrayList;
@@ -52,7 +50,7 @@ import org.openapitools.client.JSON;
 /**
  * CurveAddLiquidityEventDTO
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-30T14:42:00.397192Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-06T14:47:06.037855Z[Etc/UTC]")
 public class CurveAddLiquidityEventDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -124,7 +122,6 @@ public class CurveAddLiquidityEventDTO {
    * @return entryTime
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public OffsetDateTime getEntryTime() {
     return entryTime;
@@ -147,7 +144,6 @@ public class CurveAddLiquidityEventDTO {
    * @return recvTime
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public OffsetDateTime getRecvTime() {
     return recvTime;
@@ -170,7 +166,6 @@ public class CurveAddLiquidityEventDTO {
    * @return blockNumber
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Number of block in which entity was recorded.")
 
   public Long getBlockNumber() {
     return blockNumber;
@@ -193,7 +188,6 @@ public class CurveAddLiquidityEventDTO {
    * @return id
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getId() {
     return id;
@@ -216,7 +210,6 @@ public class CurveAddLiquidityEventDTO {
    * @return pool
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getPool() {
     return pool;
@@ -239,7 +232,6 @@ public class CurveAddLiquidityEventDTO {
    * @return provider
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getProvider() {
     return provider;
@@ -259,7 +251,7 @@ public class CurveAddLiquidityEventDTO {
 
   public CurveAddLiquidityEventDTO addTokenAmountsItem(String tokenAmountsItem) {
     if (this.tokenAmounts == null) {
-      this.tokenAmounts = new ArrayList<>();
+      this.tokenAmounts = null;
     }
     this.tokenAmounts.add(tokenAmountsItem);
     return this;
@@ -270,7 +262,6 @@ public class CurveAddLiquidityEventDTO {
    * @return tokenAmounts
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public List<String> getTokenAmounts() {
     return tokenAmounts;
@@ -290,7 +281,7 @@ public class CurveAddLiquidityEventDTO {
 
   public CurveAddLiquidityEventDTO addFeesItem(String feesItem) {
     if (this.fees == null) {
-      this.fees = new ArrayList<>();
+      this.fees = null;
     }
     this.fees.add(feesItem);
     return this;
@@ -301,7 +292,6 @@ public class CurveAddLiquidityEventDTO {
    * @return fees
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public List<String> getFees() {
     return fees;
@@ -324,7 +314,6 @@ public class CurveAddLiquidityEventDTO {
    * @return invariant
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getInvariant() {
     return invariant;
@@ -347,7 +336,6 @@ public class CurveAddLiquidityEventDTO {
    * @return tokenSupply
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getTokenSupply() {
     return tokenSupply;
@@ -370,7 +358,6 @@ public class CurveAddLiquidityEventDTO {
    * @return block
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getBlock() {
     return block;
@@ -393,7 +380,6 @@ public class CurveAddLiquidityEventDTO {
    * @return timestamp
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getTimestamp() {
     return timestamp;
@@ -416,7 +402,6 @@ public class CurveAddLiquidityEventDTO {
    * @return transaction
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getTransaction() {
     return transaction;
@@ -439,7 +424,6 @@ public class CurveAddLiquidityEventDTO {
    * @return vid
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public Long getVid() {
     return vid;

@@ -682,42 +682,42 @@ sub uniswap_v3_get_mints__historical {
 #
 # PoolDayData (historical)
 #
-# @param int $start_block  (optional)
-# @param int $end_block  (optional)
-# @param DATE_TIME $start_date  (optional)
-# @param DATE_TIME $end_date  (optional)
-# @param string $id  (optional)
-# @param string $pool  (optional)
+# @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+# @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+# @param DATE_TIME $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+# @param DATE_TIME $end_date The end date of timeframe. (optional)
+# @param string $id Identifier, format: (pool address)-(day id). (optional)
+# @param string $pool Pointer to pool. (optional)
 {
     my $params = {
     'start_block' => {
         data_type => 'int',
-        description => '',
+        description => 'The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.',
         required => '0',
     },
     'end_block' => {
         data_type => 'int',
-        description => '',
+        description => 'The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).',
         required => '0',
     },
     'start_date' => {
         data_type => 'DATE_TIME',
-        description => '',
+        description => 'The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.',
         required => '0',
     },
     'end_date' => {
         data_type => 'DATE_TIME',
-        description => '',
+        description => 'The end date of timeframe.',
         required => '0',
     },
     'id' => {
         data_type => 'string',
-        description => '',
+        description => 'Identifier, format: (pool address)-(day id).',
         required => '0',
     },
     'pool' => {
         data_type => 'string',
-        description => '',
+        description => 'Pointer to pool.',
         required => '0',
     },
     };
@@ -797,42 +797,42 @@ sub uniswap_v3_get_pool_day_data__historical {
 #
 # PoolHourData (historical)
 #
-# @param int $start_block  (optional)
-# @param int $end_block  (optional)
-# @param DATE_TIME $start_date  (optional)
-# @param DATE_TIME $end_date  (optional)
-# @param string $id  (optional)
-# @param string $pool  (optional)
+# @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+# @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+# @param DATE_TIME $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+# @param DATE_TIME $end_date The end date of timeframe. (optional)
+# @param string $id Identifier, format: (pool address)-(day id) (optional)
+# @param string $pool Pointer to pool. (optional)
 {
     my $params = {
     'start_block' => {
         data_type => 'int',
-        description => '',
+        description => 'The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.',
         required => '0',
     },
     'end_block' => {
         data_type => 'int',
-        description => '',
+        description => 'The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).',
         required => '0',
     },
     'start_date' => {
         data_type => 'DATE_TIME',
-        description => '',
+        description => 'The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.',
         required => '0',
     },
     'end_date' => {
         data_type => 'DATE_TIME',
-        description => '',
+        description => 'The end date of timeframe.',
         required => '0',
     },
     'id' => {
         data_type => 'string',
-        description => '',
+        description => 'Identifier, format: (pool address)-(day id)',
         required => '0',
     },
     'pool' => {
         data_type => 'string',
-        description => '',
+        description => 'Pointer to pool.',
         required => '0',
     },
     };
@@ -1038,42 +1038,42 @@ sub uniswap_v3_get_pools__historical {
 #
 # PositionSnapshots (historical)
 #
-# @param int $start_block  (optional)
-# @param int $end_block  (optional)
-# @param DATE_TIME $start_date  (optional)
-# @param DATE_TIME $end_date  (optional)
-# @param string $id  (optional)
-# @param string $pool  (optional)
+# @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+# @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+# @param DATE_TIME $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+# @param DATE_TIME $end_date The end date of timeframe. (optional)
+# @param string $id NFT token identifier, format: (NFT token id)#(block number). (optional)
+# @param string $pool Pool the position is within. (optional)
 {
     my $params = {
     'start_block' => {
         data_type => 'int',
-        description => '',
+        description => 'The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.',
         required => '0',
     },
     'end_block' => {
         data_type => 'int',
-        description => '',
+        description => 'The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).',
         required => '0',
     },
     'start_date' => {
         data_type => 'DATE_TIME',
-        description => '',
+        description => 'The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.',
         required => '0',
     },
     'end_date' => {
         data_type => 'DATE_TIME',
-        description => '',
+        description => 'The end date of timeframe.',
         required => '0',
     },
     'id' => {
         data_type => 'string',
-        description => '',
+        description => 'NFT token identifier, format: (NFT token id)#(block number).',
         required => '0',
     },
     'pool' => {
         data_type => 'string',
-        description => '',
+        description => 'Pool the position is within.',
         required => '0',
     },
     };
@@ -1294,7 +1294,7 @@ sub uniswap_v3_get_positions__historical {
 # @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
 # @param DATE_TIME $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
 # @param DATE_TIME $end_date The end date of timeframe. (optional)
-# @param string $id Identifier, format: transaction hash + \&quot;#\&quot; + index in swaps Transaction array. (optional)
+# @param string $id Identifier, format: (transaction hash) + # + (index in swaps Transaction array). (optional)
 # @param string $pool Pool swap occured within. (optional)
 # @param string $token_0 Reference to token0 as stored in pair contract. (optional)
 # @param string $token_1 Reference to token1 as stored in pair contract. (optional)
@@ -1322,7 +1322,7 @@ sub uniswap_v3_get_positions__historical {
     },
     'id' => {
         data_type => 'string',
-        description => 'Identifier, format: transaction hash + \&quot;#\&quot; + index in swaps Transaction array.',
+        description => 'Identifier, format: (transaction hash) + # + (index in swaps Transaction array).',
         required => '0',
     },
     'pool' => {
@@ -1427,42 +1427,42 @@ sub uniswap_v3_get_swaps__historical {
 #
 # TickDayData (historical)
 #
-# @param int $start_block  (optional)
-# @param int $end_block  (optional)
-# @param DATE_TIME $start_date  (optional)
-# @param DATE_TIME $end_date  (optional)
-# @param string $id  (optional)
-# @param string $pool  (optional)
+# @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+# @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+# @param DATE_TIME $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+# @param DATE_TIME $end_date The end date of timeframe. (optional)
+# @param string $id Identifier, format: (pool address)-(tick index)-(timestamp). (optional)
+# @param string $pool Pointer to pool. (optional)
 {
     my $params = {
     'start_block' => {
         data_type => 'int',
-        description => '',
+        description => 'The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.',
         required => '0',
     },
     'end_block' => {
         data_type => 'int',
-        description => '',
+        description => 'The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).',
         required => '0',
     },
     'start_date' => {
         data_type => 'DATE_TIME',
-        description => '',
+        description => 'The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.',
         required => '0',
     },
     'end_date' => {
         data_type => 'DATE_TIME',
-        description => '',
+        description => 'The end date of timeframe.',
         required => '0',
     },
     'id' => {
         data_type => 'string',
-        description => '',
+        description => 'Identifier, format: (pool address)-(tick index)-(timestamp).',
         required => '0',
     },
     'pool' => {
         data_type => 'string',
-        description => '',
+        description => 'Pointer to pool.',
         required => '0',
     },
     };
@@ -1542,42 +1542,42 @@ sub uniswap_v3_get_tick_day_data__historical {
 #
 # Ticks (historical)
 #
-# @param int $start_block  (optional)
-# @param int $end_block  (optional)
-# @param DATE_TIME $start_date  (optional)
-# @param DATE_TIME $end_date  (optional)
-# @param string $id  (optional)
-# @param string $pool  (optional)
+# @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+# @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+# @param DATE_TIME $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+# @param DATE_TIME $end_date The end date of timeframe. (optional)
+# @param string $id Identifier, format: (pool address)#(tick index) (optional)
+# @param string $pool Pool address. (optional)
 {
     my $params = {
     'start_block' => {
         data_type => 'int',
-        description => '',
+        description => 'The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.',
         required => '0',
     },
     'end_block' => {
         data_type => 'int',
-        description => '',
+        description => 'The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).',
         required => '0',
     },
     'start_date' => {
         data_type => 'DATE_TIME',
-        description => '',
+        description => 'The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.',
         required => '0',
     },
     'end_date' => {
         data_type => 'DATE_TIME',
-        description => '',
+        description => 'The end date of timeframe.',
         required => '0',
     },
     'id' => {
         data_type => 'string',
-        description => '',
+        description => 'Identifier, format: (pool address)#(tick index)',
         required => '0',
     },
     'pool' => {
         data_type => 'string',
-        description => '',
+        description => 'Pool address.',
         required => '0',
     },
     };

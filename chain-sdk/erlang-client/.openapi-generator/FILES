@@ -53,6 +53,7 @@ src/openapi_dex_trade_dto.erl
 src/openapi_dex_user_dto.erl
 src/openapi_dex_withdraw_dto.erl
 src/openapi_dex_withdraw_request_dto.erl
+src/openapi_metadata_api.erl
 src/openapi_numerics_big_integer.erl
 src/openapi_sushiswap_api.erl
 src/openapi_sushiswap_bundle_dto.erl

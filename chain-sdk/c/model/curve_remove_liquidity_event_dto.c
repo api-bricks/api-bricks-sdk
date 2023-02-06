@@ -259,7 +259,7 @@ curve_remove_liquidity_event_dto_t *curve_remove_liquidity_event_dto_parseFromJS
     // curve_remove_liquidity_event_dto->entry_time
     cJSON *entry_time = cJSON_GetObjectItemCaseSensitive(curve_remove_liquidity_event_dtoJSON, "entry_time");
     if (entry_time) { 
-    if(!cJSON_IsString(entry_time))
+    if(!cJSON_IsString(entry_time) && !cJSON_IsNull(entry_time))
     {
     goto end; //DateTime
     }
@@ -268,7 +268,7 @@ curve_remove_liquidity_event_dto_t *curve_remove_liquidity_event_dto_parseFromJS
     // curve_remove_liquidity_event_dto->recv_time
     cJSON *recv_time = cJSON_GetObjectItemCaseSensitive(curve_remove_liquidity_event_dtoJSON, "recv_time");
     if (recv_time) { 
-    if(!cJSON_IsString(recv_time))
+    if(!cJSON_IsString(recv_time) && !cJSON_IsNull(recv_time))
     {
     goto end; //DateTime
     }
@@ -286,7 +286,7 @@ curve_remove_liquidity_event_dto_t *curve_remove_liquidity_event_dto_parseFromJS
     // curve_remove_liquidity_event_dto->id
     cJSON *id = cJSON_GetObjectItemCaseSensitive(curve_remove_liquidity_event_dtoJSON, "id");
     if (id) { 
-    if(!cJSON_IsString(id))
+    if(!cJSON_IsString(id) && !cJSON_IsNull(id))
     {
     goto end; //String
     }
@@ -295,7 +295,7 @@ curve_remove_liquidity_event_dto_t *curve_remove_liquidity_event_dto_parseFromJS
     // curve_remove_liquidity_event_dto->pool
     cJSON *pool = cJSON_GetObjectItemCaseSensitive(curve_remove_liquidity_event_dtoJSON, "pool");
     if (pool) { 
-    if(!cJSON_IsString(pool))
+    if(!cJSON_IsString(pool) && !cJSON_IsNull(pool))
     {
     goto end; //String
     }
@@ -304,7 +304,7 @@ curve_remove_liquidity_event_dto_t *curve_remove_liquidity_event_dto_parseFromJS
     // curve_remove_liquidity_event_dto->provider
     cJSON *provider = cJSON_GetObjectItemCaseSensitive(curve_remove_liquidity_event_dtoJSON, "provider");
     if (provider) { 
-    if(!cJSON_IsString(provider))
+    if(!cJSON_IsString(provider) && !cJSON_IsNull(provider))
     {
     goto end; //String
     }
@@ -351,7 +351,7 @@ curve_remove_liquidity_event_dto_t *curve_remove_liquidity_event_dto_parseFromJS
     // curve_remove_liquidity_event_dto->token_supply
     cJSON *token_supply = cJSON_GetObjectItemCaseSensitive(curve_remove_liquidity_event_dtoJSON, "token_supply");
     if (token_supply) { 
-    if(!cJSON_IsString(token_supply))
+    if(!cJSON_IsString(token_supply) && !cJSON_IsNull(token_supply))
     {
     goto end; //String
     }
@@ -360,7 +360,7 @@ curve_remove_liquidity_event_dto_t *curve_remove_liquidity_event_dto_parseFromJS
     // curve_remove_liquidity_event_dto->invariant
     cJSON *invariant = cJSON_GetObjectItemCaseSensitive(curve_remove_liquidity_event_dtoJSON, "invariant");
     if (invariant) { 
-    if(!cJSON_IsString(invariant))
+    if(!cJSON_IsString(invariant) && !cJSON_IsNull(invariant))
     {
     goto end; //String
     }
@@ -369,7 +369,7 @@ curve_remove_liquidity_event_dto_t *curve_remove_liquidity_event_dto_parseFromJS
     // curve_remove_liquidity_event_dto->block
     cJSON *block = cJSON_GetObjectItemCaseSensitive(curve_remove_liquidity_event_dtoJSON, "block");
     if (block) { 
-    if(!cJSON_IsString(block))
+    if(!cJSON_IsString(block) && !cJSON_IsNull(block))
     {
     goto end; //String
     }
@@ -378,7 +378,7 @@ curve_remove_liquidity_event_dto_t *curve_remove_liquidity_event_dto_parseFromJS
     // curve_remove_liquidity_event_dto->timestamp
     cJSON *timestamp = cJSON_GetObjectItemCaseSensitive(curve_remove_liquidity_event_dtoJSON, "timestamp");
     if (timestamp) { 
-    if(!cJSON_IsString(timestamp))
+    if(!cJSON_IsString(timestamp) && !cJSON_IsNull(timestamp))
     {
     goto end; //String
     }
@@ -387,7 +387,7 @@ curve_remove_liquidity_event_dto_t *curve_remove_liquidity_event_dto_parseFromJS
     // curve_remove_liquidity_event_dto->transaction
     cJSON *transaction = cJSON_GetObjectItemCaseSensitive(curve_remove_liquidity_event_dtoJSON, "transaction");
     if (transaction) { 
-    if(!cJSON_IsString(transaction))
+    if(!cJSON_IsString(transaction) && !cJSON_IsNull(transaction))
     {
     goto end; //String
     }
@@ -404,19 +404,19 @@ curve_remove_liquidity_event_dto_t *curve_remove_liquidity_event_dto_parseFromJS
 
 
     curve_remove_liquidity_event_dto_local_var = curve_remove_liquidity_event_dto_create (
-        entry_time ? strdup(entry_time->valuestring) : NULL,
-        recv_time ? strdup(recv_time->valuestring) : NULL,
+        entry_time && !cJSON_IsNull(entry_time) ? strdup(entry_time->valuestring) : NULL,
+        recv_time && !cJSON_IsNull(recv_time) ? strdup(recv_time->valuestring) : NULL,
         block_number ? block_number->valuedouble : 0,
-        id ? strdup(id->valuestring) : NULL,
-        pool ? strdup(pool->valuestring) : NULL,
-        provider ? strdup(provider->valuestring) : NULL,
+        id && !cJSON_IsNull(id) ? strdup(id->valuestring) : NULL,
+        pool && !cJSON_IsNull(pool) ? strdup(pool->valuestring) : NULL,
+        provider && !cJSON_IsNull(provider) ? strdup(provider->valuestring) : NULL,
         token_amounts ? token_amountsList : NULL,
         fees ? feesList : NULL,
-        token_supply ? strdup(token_supply->valuestring) : NULL,
-        invariant ? strdup(invariant->valuestring) : NULL,
-        block ? strdup(block->valuestring) : NULL,
-        timestamp ? strdup(timestamp->valuestring) : NULL,
-        transaction ? strdup(transaction->valuestring) : NULL,
+        token_supply && !cJSON_IsNull(token_supply) ? strdup(token_supply->valuestring) : NULL,
+        invariant && !cJSON_IsNull(invariant) ? strdup(invariant->valuestring) : NULL,
+        block && !cJSON_IsNull(block) ? strdup(block->valuestring) : NULL,
+        timestamp && !cJSON_IsNull(timestamp) ? strdup(timestamp->valuestring) : NULL,
+        transaction && !cJSON_IsNull(transaction) ? strdup(transaction->valuestring) : NULL,
         vid ? vid->valuedouble : 0
         );
 

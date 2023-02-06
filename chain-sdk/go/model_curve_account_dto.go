@@ -16,6 +16,9 @@ import (
 	"time"
 )
 
+// checks if the CurveAccountDTO type satisfies the MappedNullable interface at compile time
+var _ MappedNullable = &CurveAccountDTO{}
+
 // CurveAccountDTO struct for CurveAccountDTO
 type CurveAccountDTO struct {
 	EntryTime *time.Time `json:"entry_time,omitempty"`
@@ -60,7 +63,7 @@ func (o *CurveAccountDTO) GetEntryTime() time.Time {
 // and a boolean to check if the value has been set.
 func (o *CurveAccountDTO) GetEntryTimeOk() (*time.Time, bool) {
 	if o == nil || isNil(o.EntryTime) {
-    return nil, false
+		return nil, false
 	}
 	return o.EntryTime, true
 }
@@ -92,7 +95,7 @@ func (o *CurveAccountDTO) GetRecvTime() time.Time {
 // and a boolean to check if the value has been set.
 func (o *CurveAccountDTO) GetRecvTimeOk() (*time.Time, bool) {
 	if o == nil || isNil(o.RecvTime) {
-    return nil, false
+		return nil, false
 	}
 	return o.RecvTime, true
 }
@@ -124,7 +127,7 @@ func (o *CurveAccountDTO) GetBlockNumber() int64 {
 // and a boolean to check if the value has been set.
 func (o *CurveAccountDTO) GetBlockNumberOk() (*int64, bool) {
 	if o == nil || isNil(o.BlockNumber) {
-    return nil, false
+		return nil, false
 	}
 	return o.BlockNumber, true
 }
@@ -157,7 +160,7 @@ func (o *CurveAccountDTO) GetId() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CurveAccountDTO) GetIdOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Id.Get(), o.Id.IsSet()
 }
@@ -199,7 +202,7 @@ func (o *CurveAccountDTO) GetAddress() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CurveAccountDTO) GetAddressOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Address.Get(), o.Address.IsSet()
 }
@@ -240,7 +243,7 @@ func (o *CurveAccountDTO) GetVid() int64 {
 // and a boolean to check if the value has been set.
 func (o *CurveAccountDTO) GetVidOk() (*int64, bool) {
 	if o == nil || isNil(o.Vid) {
-    return nil, false
+		return nil, false
 	}
 	return o.Vid, true
 }
@@ -260,6 +263,14 @@ func (o *CurveAccountDTO) SetVid(v int64) {
 }
 
 func (o CurveAccountDTO) MarshalJSON() ([]byte, error) {
+	toSerialize,err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
+}
+
+func (o CurveAccountDTO) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
 	if !isNil(o.EntryTime) {
 		toSerialize["entry_time"] = o.EntryTime
@@ -279,7 +290,7 @@ func (o CurveAccountDTO) MarshalJSON() ([]byte, error) {
 	if !isNil(o.Vid) {
 		toSerialize["vid"] = o.Vid
 	}
-	return json.Marshal(toSerialize)
+	return toSerialize, nil
 }
 
 type NullableCurveAccountDTO struct {

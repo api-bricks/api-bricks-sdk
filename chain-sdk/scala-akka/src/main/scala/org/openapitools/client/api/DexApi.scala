@@ -84,12 +84,12 @@ class DexApi(baseUrl: String) {
    * Expected answers:
    *   code 200 : Seq[DepositDTO] (successful operation)
    * 
-   * @param startBlock 
-   * @param endBlock 
-   * @param startDate 
-   * @param endDate 
-   * @param id 
-   * @param user 
+   * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+   * @param endDate The end date of timeframe.
+   * @param id Identifier, format: (transaction hash)-(token id).
+   * @param user User address.
    */
   def dexGetDepositsHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None, user: Option[String] = None): ApiRequest[Seq[DepositDTO]] =
     ApiRequest[Seq[DepositDTO]](ApiMethods.GET, baseUrl, "/dapps/dex/deposits/historical", "application/json")
@@ -108,13 +108,13 @@ class DexApi(baseUrl: String) {
    * Expected answers:
    *   code 200 : Seq[OrderDTO] (successful operation)
    * 
-   * @param startBlock 
-   * @param endBlock 
-   * @param startDate 
-   * @param endDate 
-   * @param id 
-   * @param buyToken 
-   * @param sellToken 
+   * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+   * @param endDate The end date of timeframe.
+   * @param id Identifier, format: (owner address)-(order id)
+   * @param buyToken Identifier of token that was bought.
+   * @param sellToken Identifier of token that was sold.
    */
   def dexGetOrdersHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None, buyToken: Option[String] = None, sellToken: Option[String] = None): ApiRequest[Seq[OrderDTO]] =
     ApiRequest[Seq[OrderDTO]](ApiMethods.GET, baseUrl, "/dapps/dex/orders/historical", "application/json")
@@ -134,11 +134,11 @@ class DexApi(baseUrl: String) {
    * Expected answers:
    *   code 200 : Seq[PriceDTO] (successful operation)
    * 
-   * @param startBlock 
-   * @param endBlock 
-   * @param startDate 
-   * @param endDate 
-   * @param id 
+   * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+   * @param endDate The end date of timeframe.
+   * @param id Identifier, format: (token id)-(batch id).
    */
   def dexGetPricesHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None): ApiRequest[Seq[PriceDTO]] =
     ApiRequest[Seq[PriceDTO]](ApiMethods.GET, baseUrl, "/dapps/dex/prices/historical", "application/json")
@@ -276,11 +276,11 @@ class DexApi(baseUrl: String) {
    * Expected answers:
    *   code 200 : Seq[WithdrawRequestDTO] (successful operation)
    * 
-   * @param startBlock 
-   * @param endBlock 
-   * @param startDate 
-   * @param endDate 
-   * @param id 
+   * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+   * @param endDate The end date of timeframe.
+   * @param id Identifier, format: (transaction hash)-(id).
    * @param user 
    */
   def dexGetWithdrawRequestsHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None, user: Option[String] = None): ApiRequest[Seq[WithdrawRequestDTO]] =
@@ -300,11 +300,11 @@ class DexApi(baseUrl: String) {
    * Expected answers:
    *   code 200 : Seq[WithdrawDTO] (successful operation)
    * 
-   * @param startBlock 
-   * @param endBlock 
-   * @param startDate 
-   * @param endDate 
-   * @param id 
+   * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+   * @param endDate The end date of timeframe.
+   * @param id Identifier, format: (transaction hash)-(id).
    * @param user 
    */
   def dexGetWithdrawsHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None, user: Option[String] = None): ApiRequest[Seq[WithdrawDTO]] =

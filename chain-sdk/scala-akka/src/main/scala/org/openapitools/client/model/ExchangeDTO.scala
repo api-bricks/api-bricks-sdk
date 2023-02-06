@@ -50,3 +50,6 @@ case class ExchangeDTO (
   transactionId: Option[String] = None
 ) extends ApiModel
 
+object ExchangeDTOEnums {
+
+}

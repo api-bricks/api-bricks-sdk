@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.time.OffsetDateTime;
 import org.openapitools.jackson.nullable.JsonNullable;
@@ -50,7 +48,7 @@ import org.openapitools.client.JSON;
 /**
  * CurveSystemStateDTO
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-30T14:42:00.397192Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-06T14:47:06.037855Z[Etc/UTC]")
 public class CurveSystemStateDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -126,7 +124,6 @@ public class CurveSystemStateDTO {
    * @return entryTime
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public OffsetDateTime getEntryTime() {
     return entryTime;
@@ -149,7 +146,6 @@ public class CurveSystemStateDTO {
    * @return recvTime
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public OffsetDateTime getRecvTime() {
     return recvTime;
@@ -172,7 +168,6 @@ public class CurveSystemStateDTO {
    * @return blockNumber
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Number of block in which entity was recorded.")
 
   public Long getBlockNumber() {
     return blockNumber;
@@ -195,7 +190,6 @@ public class CurveSystemStateDTO {
    * @return id
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Singleton ID, equals to 'current'.")
 
   public String getId() {
     return id;
@@ -218,7 +212,6 @@ public class CurveSystemStateDTO {
    * @return registryContract
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Current pool registry address.")
 
   public String getRegistryContract() {
     return registryContract;
@@ -241,7 +234,6 @@ public class CurveSystemStateDTO {
    * @return contractCount
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Number of contracts in the AddressProvider registry.")
 
   public String getContractCount() {
     return contractCount;
@@ -264,7 +256,6 @@ public class CurveSystemStateDTO {
    * @return gaugeCount
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Number of gauges registered.")
 
   public String getGaugeCount() {
     return gaugeCount;
@@ -287,7 +278,6 @@ public class CurveSystemStateDTO {
    * @return gaugeTypeCount
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Number of gauge types registered.")
 
   public String getGaugeTypeCount() {
     return gaugeTypeCount;
@@ -310,7 +300,6 @@ public class CurveSystemStateDTO {
    * @return poolCount
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Number of active pools.")
 
   public String getPoolCount() {
     return poolCount;
@@ -333,7 +322,6 @@ public class CurveSystemStateDTO {
    * @return tokenCount
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Number of tokens registered.")
 
   public String getTokenCount() {
     return tokenCount;
@@ -356,7 +344,6 @@ public class CurveSystemStateDTO {
    * @return totalPoolCount
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Total number of pools (including removed ones).")
 
   public String getTotalPoolCount() {
     return totalPoolCount;
@@ -379,7 +366,6 @@ public class CurveSystemStateDTO {
    * @return updated
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getUpdated() {
     return updated;
@@ -402,7 +388,6 @@ public class CurveSystemStateDTO {
    * @return updatedAtBlock
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getUpdatedAtBlock() {
     return updatedAtBlock;
@@ -425,7 +410,6 @@ public class CurveSystemStateDTO {
    * @return updatedAtTransaction
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getUpdatedAtTransaction() {
     return updatedAtTransaction;
@@ -448,7 +432,6 @@ public class CurveSystemStateDTO {
    * @return vid
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public Long getVid() {
     return vid;

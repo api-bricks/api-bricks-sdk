@@ -238,6 +238,7 @@ To load the API packages:
 use WWW::OpenAPIClient::CowApi;
 use WWW::OpenAPIClient::CurveApi;
 use WWW::OpenAPIClient::DexApi;
+use WWW::OpenAPIClient::MetadataApi;
 use WWW::OpenAPIClient::SushiswapApi;
 use WWW::OpenAPIClient::UniswapV2Api;
 use WWW::OpenAPIClient::UniswapV3Api;
@@ -358,6 +359,7 @@ use warnings;
 use WWW::OpenAPIClient::CowApi;
 use WWW::OpenAPIClient::CurveApi;
 use WWW::OpenAPIClient::DexApi;
+use WWW::OpenAPIClient::MetadataApi;
 use WWW::OpenAPIClient::SushiswapApi;
 use WWW::OpenAPIClient::UniswapV2Api;
 use WWW::OpenAPIClient::UniswapV3Api;
@@ -587,6 +589,8 @@ Class | Method | HTTP request | Description
 *DexApi* | [**dex_users__current**](docs/DexApi.md#dex_users__current) | **GET** /dapps/dex/users/current | Users (current)
 *DexApi* | [**dex_withdraw_requests__current**](docs/DexApi.md#dex_withdraw_requests__current) | **GET** /dapps/dex/withdrawRequests/current | WithdrawRequests (current)
 *DexApi* | [**dex_withdraws__current**](docs/DexApi.md#dex_withdraws__current) | **GET** /dapps/dex/withdraws/current | Withdraws (current)
+*MetadataApi* | [**metadata_chains_get**](docs/MetadataApi.md#metadata_chains_get) | **GET** /metadata/chains | List all chains.
+*MetadataApi* | [**metadata_dapps_get**](docs/MetadataApi.md#metadata_dapps_get) | **GET** /metadata/dapps | List all decentralized applications.
 *SushiswapApi* | [**sushiswap_bundles__current**](docs/SushiswapApi.md#sushiswap_bundles__current) | **GET** /dapps/sushiswap/bundles/current | Bundles (current)
 *SushiswapApi* | [**sushiswap_burns__current**](docs/SushiswapApi.md#sushiswap_burns__current) | **GET** /dapps/sushiswap/burns/current | Burns (current)
 *SushiswapApi* | [**sushiswap_day_data__current**](docs/SushiswapApi.md#sushiswap_day_data__current) | **GET** /dapps/sushiswap/dayData/current | DayData (current)

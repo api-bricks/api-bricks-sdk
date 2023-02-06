@@ -1455,37 +1455,37 @@ sub curve_get_amplification_coeff_change_logs__historical {
 #
 # Coins (historical)
 #
-# @param int $start_block  (optional)
-# @param int $end_block  (optional)
-# @param DATE_TIME $start_date  (optional)
-# @param DATE_TIME $end_date  (optional)
-# @param string $id  (optional)
+# @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+# @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+# @param DATE_TIME $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+# @param DATE_TIME $end_date The end date of timeframe. (optional)
+# @param string $id Identifier, format: (pool_id)-(coin_index). (optional)
 # @param string $pool  (optional)
 {
     my $params = {
     'start_block' => {
         data_type => 'int',
-        description => '',
+        description => 'The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.',
         required => '0',
     },
     'end_block' => {
         data_type => 'int',
-        description => '',
+        description => 'The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).',
         required => '0',
     },
     'start_date' => {
         data_type => 'DATE_TIME',
-        description => '',
+        description => 'The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.',
         required => '0',
     },
     'end_date' => {
         data_type => 'DATE_TIME',
-        description => '',
+        description => 'The end date of timeframe.',
         required => '0',
     },
     'id' => {
         data_type => 'string',
-        description => '',
+        description => 'Identifier, format: (pool_id)-(coin_index).',
         required => '0',
     },
     'pool' => {
@@ -4297,37 +4297,37 @@ sub curve_get_transfer_ownership_events__historical {
 #
 # UnderlyingCoins (historical)
 #
-# @param int $start_block  (optional)
-# @param int $end_block  (optional)
-# @param DATE_TIME $start_date  (optional)
-# @param DATE_TIME $end_date  (optional)
-# @param string $id  (optional)
+# @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+# @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+# @param DATE_TIME $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+# @param DATE_TIME $end_date The end date of timeframe. (optional)
+# @param string $id Equals to: (pool_id)-(coin_index). (optional)
 # @param string $pool  (optional)
 {
     my $params = {
     'start_block' => {
         data_type => 'int',
-        description => '',
+        description => 'The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.',
         required => '0',
     },
     'end_block' => {
         data_type => 'int',
-        description => '',
+        description => 'The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).',
         required => '0',
     },
     'start_date' => {
         data_type => 'DATE_TIME',
-        description => '',
+        description => 'The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.',
         required => '0',
     },
     'end_date' => {
         data_type => 'DATE_TIME',
-        description => '',
+        description => 'The end date of timeframe.',
         required => '0',
     },
     'id' => {
         data_type => 'string',
-        description => '',
+        description => 'Equals to: (pool_id)-(coin_index).',
         required => '0',
     },
     'pool' => {

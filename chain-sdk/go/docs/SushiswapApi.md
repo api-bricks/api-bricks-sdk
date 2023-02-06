@@ -380,12 +380,12 @@ import (
 )
 
 func main() {
-    startBlock := int64(789) // int64 |  (optional)
-    endBlock := int64(789) // int64 |  (optional)
-    startDate := time.Now() // time.Time |  (optional)
-    endDate := time.Now() // time.Time |  (optional)
-    id := "id_example" // string |  (optional)
-    pair := "pair_example" // string |  (optional)
+    startBlock := int64(789) // int64 | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+    endBlock := int64(789) // int64 | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+    startDate := time.Now() // time.Time | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+    endDate := time.Now() // time.Time | The end date of timeframe. (optional)
+    id := "id_example" // string | Identifier, format: (transaction id):(transaction.burns.length). (optional)
+    pair := "pair_example" // string | Reference to pair. (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -410,12 +410,12 @@ Other parameters are passed through a pointer to a apiSushiswapGetBurnsHistorica
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startBlock** | **int64** |  | 
- **endBlock** | **int64** |  | 
- **startDate** | **time.Time** |  | 
- **endDate** | **time.Time** |  | 
- **id** | **string** |  | 
- **pair** | **string** |  | 
+ **startBlock** | **int64** | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | 
+ **endBlock** | **int64** | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | 
+ **startDate** | **time.Time** | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | 
+ **endDate** | **time.Time** | The end date of timeframe. | 
+ **id** | **string** | Identifier, format: (transaction id):(transaction.burns.length). | 
+ **pair** | **string** | Reference to pair. | 
 
 ### Return type
 
@@ -682,13 +682,13 @@ import (
 )
 
 func main() {
-    startBlock := int64(789) // int64 |  (optional)
-    endBlock := int64(789) // int64 |  (optional)
-    startDate := time.Now() // time.Time |  (optional)
-    endDate := time.Now() // time.Time |  (optional)
-    id := "id_example" // string |  (optional)
-    user := "user_example" // string |  (optional)
-    pair := "pair_example" // string |  (optional)
+    startBlock := int64(789) // int64 | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+    endBlock := int64(789) // int64 | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+    startDate := time.Now() // time.Time | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+    endDate := time.Now() // time.Time | The end date of timeframe. (optional)
+    id := "id_example" // string | Identifier, format: (pair address)-(user address)-(timestamp) (optional)
+    user := "user_example" // string | Reference to user. (optional)
+    pair := "pair_example" // string | Reference to the pair liquidity is being provided on. (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -713,13 +713,13 @@ Other parameters are passed through a pointer to a apiSushiswapGetLiquidityPosit
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startBlock** | **int64** |  | 
- **endBlock** | **int64** |  | 
- **startDate** | **time.Time** |  | 
- **endDate** | **time.Time** |  | 
- **id** | **string** |  | 
- **user** | **string** |  | 
- **pair** | **string** |  | 
+ **startBlock** | **int64** | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | 
+ **endBlock** | **int64** | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | 
+ **startDate** | **time.Time** | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | 
+ **endDate** | **time.Time** | The end date of timeframe. | 
+ **id** | **string** | Identifier, format: (pair address)-(user address)-(timestamp) | 
+ **user** | **string** | Reference to user. | 
+ **pair** | **string** | Reference to the pair liquidity is being provided on. | 
 
 ### Return type
 
@@ -761,13 +761,13 @@ import (
 )
 
 func main() {
-    startBlock := int64(789) // int64 |  (optional)
-    endBlock := int64(789) // int64 |  (optional)
-    startDate := time.Now() // time.Time |  (optional)
-    endDate := time.Now() // time.Time |  (optional)
-    id := "id_example" // string |  (optional)
-    user := "user_example" // string |  (optional)
-    pair := "pair_example" // string |  (optional)
+    startBlock := int64(789) // int64 | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+    endBlock := int64(789) // int64 | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+    startDate := time.Now() // time.Time | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+    endDate := time.Now() // time.Time | The end date of timeframe. (optional)
+    id := "id_example" // string | Identifier, format: (pair address)-(user address) (optional)
+    user := "user_example" // string | User address. (optional)
+    pair := "pair_example" // string | Pair address. (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -792,13 +792,13 @@ Other parameters are passed through a pointer to a apiSushiswapGetLiquidityPosit
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startBlock** | **int64** |  | 
- **endBlock** | **int64** |  | 
- **startDate** | **time.Time** |  | 
- **endDate** | **time.Time** |  | 
- **id** | **string** |  | 
- **user** | **string** |  | 
- **pair** | **string** |  | 
+ **startBlock** | **int64** | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | 
+ **endBlock** | **int64** | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | 
+ **startDate** | **time.Time** | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | 
+ **endDate** | **time.Time** | The end date of timeframe. | 
+ **id** | **string** | Identifier, format: (pair address)-(user address) | 
+ **user** | **string** | User address. | 
+ **pair** | **string** | Pair address. | 
 
 ### Return type
 
@@ -840,12 +840,12 @@ import (
 )
 
 func main() {
-    startBlock := int64(789) // int64 |  (optional)
-    endBlock := int64(789) // int64 |  (optional)
-    startDate := time.Now() // time.Time |  (optional)
-    endDate := time.Now() // time.Time |  (optional)
-    id := "id_example" // string |  (optional)
-    pair := "pair_example" // string |  (optional)
+    startBlock := int64(789) // int64 | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+    endBlock := int64(789) // int64 | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+    startDate := time.Now() // time.Time | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+    endDate := time.Now() // time.Time | The end date of timeframe. (optional)
+    id := "id_example" // string | Identifier, format: (transaction hash)-(index in the transaction mint array). (optional)
+    pair := "pair_example" // string | Reference to pair. (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -870,12 +870,12 @@ Other parameters are passed through a pointer to a apiSushiswapGetMintsHistorica
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startBlock** | **int64** |  | 
- **endBlock** | **int64** |  | 
- **startDate** | **time.Time** |  | 
- **endDate** | **time.Time** |  | 
- **id** | **string** |  | 
- **pair** | **string** |  | 
+ **startBlock** | **int64** | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | 
+ **endBlock** | **int64** | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | 
+ **startDate** | **time.Time** | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | 
+ **endDate** | **time.Time** | The end date of timeframe. | 
+ **id** | **string** | Identifier, format: (transaction hash)-(index in the transaction mint array). | 
+ **pair** | **string** | Reference to pair. | 
 
 ### Return type
 
@@ -917,14 +917,14 @@ import (
 )
 
 func main() {
-    startBlock := int64(789) // int64 |  (optional)
-    endBlock := int64(789) // int64 |  (optional)
-    startDate := time.Now() // time.Time |  (optional)
-    endDate := time.Now() // time.Time |  (optional)
-    id := "id_example" // string |  (optional)
-    pair := "pair_example" // string |  (optional)
-    token0 := "token0_example" // string |  (optional)
-    token1 := "token1_example" // string |  (optional)
+    startBlock := int64(789) // int64 | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+    endBlock := int64(789) // int64 | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+    startDate := time.Now() // time.Time | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+    endDate := time.Now() // time.Time | The end date of timeframe. (optional)
+    id := "id_example" // string | Identifier, format: (pair id)-(day start timestamp). (optional)
+    pair := "pair_example" // string | Reference to pair. (optional)
+    token0 := "token0_example" // string | Reference to token0. (optional)
+    token1 := "token1_example" // string | Reference to token1. (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -949,14 +949,14 @@ Other parameters are passed through a pointer to a apiSushiswapGetPairDayDataHis
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startBlock** | **int64** |  | 
- **endBlock** | **int64** |  | 
- **startDate** | **time.Time** |  | 
- **endDate** | **time.Time** |  | 
- **id** | **string** |  | 
- **pair** | **string** |  | 
- **token0** | **string** |  | 
- **token1** | **string** |  | 
+ **startBlock** | **int64** | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | 
+ **endBlock** | **int64** | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | 
+ **startDate** | **time.Time** | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | 
+ **endDate** | **time.Time** | The end date of timeframe. | 
+ **id** | **string** | Identifier, format: (pair id)-(day start timestamp). | 
+ **pair** | **string** | Reference to pair. | 
+ **token0** | **string** | Reference to token0. | 
+ **token1** | **string** | Reference to token1. | 
 
 ### Return type
 
@@ -998,12 +998,12 @@ import (
 )
 
 func main() {
-    startBlock := int64(789) // int64 |  (optional)
-    endBlock := int64(789) // int64 |  (optional)
-    startDate := time.Now() // time.Time |  (optional)
-    endDate := time.Now() // time.Time |  (optional)
-    id := "id_example" // string |  (optional)
-    pair := "pair_example" // string |  (optional)
+    startBlock := int64(789) // int64 | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+    endBlock := int64(789) // int64 | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+    startDate := time.Now() // time.Time | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+    endDate := time.Now() // time.Time | The end date of timeframe. (optional)
+    id := "id_example" // string | Identifier, format: (pair id)-(hour start timestamp). (optional)
+    pair := "pair_example" // string | Reference to pair. (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1028,12 +1028,12 @@ Other parameters are passed through a pointer to a apiSushiswapGetPairHourDataHi
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startBlock** | **int64** |  | 
- **endBlock** | **int64** |  | 
- **startDate** | **time.Time** |  | 
- **endDate** | **time.Time** |  | 
- **id** | **string** |  | 
- **pair** | **string** |  | 
+ **startBlock** | **int64** | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | 
+ **endBlock** | **int64** | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | 
+ **startDate** | **time.Time** | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | 
+ **endDate** | **time.Time** | The end date of timeframe. | 
+ **id** | **string** | Identifier, format: (pair id)-(hour start timestamp). | 
+ **pair** | **string** | Reference to pair. | 
 
 ### Return type
 
@@ -1075,14 +1075,14 @@ import (
 )
 
 func main() {
-    startBlock := int64(789) // int64 |  (optional)
-    endBlock := int64(789) // int64 |  (optional)
-    startDate := time.Now() // time.Time |  (optional)
-    endDate := time.Now() // time.Time |  (optional)
-    id := "id_example" // string |  (optional)
-    name := "name_example" // string |  (optional)
-    token0 := "token0_example" // string |  (optional)
-    token1 := "token1_example" // string |  (optional)
+    startBlock := int64(789) // int64 | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+    endBlock := int64(789) // int64 | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+    startDate := time.Now() // time.Time | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+    endDate := time.Now() // time.Time | The end date of timeframe. (optional)
+    id := "id_example" // string | Pair contract address. (optional)
+    name := "name_example" // string | Friendly name, format: (token0 name)-(token1 name) (optional)
+    token0 := "token0_example" // string | Reference to token0 as stored in pair contract. (optional)
+    token1 := "token1_example" // string | Reference to token0 as stored in pair contract. (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1107,14 +1107,14 @@ Other parameters are passed through a pointer to a apiSushiswapGetPairsHistorica
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startBlock** | **int64** |  | 
- **endBlock** | **int64** |  | 
- **startDate** | **time.Time** |  | 
- **endDate** | **time.Time** |  | 
- **id** | **string** |  | 
- **name** | **string** |  | 
- **token0** | **string** |  | 
- **token1** | **string** |  | 
+ **startBlock** | **int64** | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | 
+ **endBlock** | **int64** | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | 
+ **startDate** | **time.Time** | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | 
+ **endDate** | **time.Time** | The end date of timeframe. | 
+ **id** | **string** | Pair contract address. | 
+ **name** | **string** | Friendly name, format: (token0 name)-(token1 name) | 
+ **token0** | **string** | Reference to token0 as stored in pair contract. | 
+ **token1** | **string** | Reference to token0 as stored in pair contract. | 
 
 ### Return type
 

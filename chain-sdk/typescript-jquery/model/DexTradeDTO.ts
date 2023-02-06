@@ -106,3 +106,5 @@ export interface DexTradeDTO {
     evaluated_aggressor?: models.TransactionsETradeAggressiveSide;
 
 }
+export namespace DexTradeDTO {
+}

@@ -493,17 +493,17 @@ object Example extends App {
 
     val apiInvoker = ApiInvoker()
     val apiInstance = SushiswapApi("https://onchain.coinapi.io")
-    val startBlock: Long = 789 // Long | 
+    val startBlock: Long = 789 // Long | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
 
-    val endBlock: Long = 789 // Long | 
+    val endBlock: Long = 789 // Long | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
 
-    val startDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
+    val startDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
 
-    val endDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
+    val endDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | The end date of timeframe.
 
-    val id: String = id_example // String | 
+    val id: String = id_example // String | Identifier, format: (transaction id):(transaction.burns.length).
 
-    val pair: String = pair_example // String | 
+    val pair: String = pair_example // String | Reference to pair.
     
     val request = apiInstance.sushiswapGetBurnsHistorical(startBlock, endBlock, startDate, endDate, id, pair)
     val response = apiInvoker.execute(request)
@@ -533,12 +533,12 @@ object Example extends App {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startBlock** | **Long**|  | [optional]
- **endBlock** | **Long**|  | [optional]
- **startDate** | **OffsetDateTime**|  | [optional]
- **endDate** | **OffsetDateTime**|  | [optional]
- **id** | **String**|  | [optional]
- **pair** | **String**|  | [optional]
+ **startBlock** | **Long**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional]
+ **endBlock** | **Long**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional]
+ **startDate** | **OffsetDateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional]
+ **endDate** | **OffsetDateTime**| The end date of timeframe. | [optional]
+ **id** | **String**| Identifier, format: (transaction id):(transaction.burns.length). | [optional]
+ **pair** | **String**| Reference to pair. | [optional]
 
 ### Return type
 
@@ -868,19 +868,19 @@ object Example extends App {
 
     val apiInvoker = ApiInvoker()
     val apiInstance = SushiswapApi("https://onchain.coinapi.io")
-    val startBlock: Long = 789 // Long | 
+    val startBlock: Long = 789 // Long | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
 
-    val endBlock: Long = 789 // Long | 
+    val endBlock: Long = 789 // Long | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
 
-    val startDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
+    val startDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
 
-    val endDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
+    val endDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | The end date of timeframe.
 
-    val id: String = id_example // String | 
+    val id: String = id_example // String | Identifier, format: (pair address)-(user address)-(timestamp)
 
-    val user: String = user_example // String | 
+    val user: String = user_example // String | Reference to user.
 
-    val pair: String = pair_example // String | 
+    val pair: String = pair_example // String | Reference to the pair liquidity is being provided on.
     
     val request = apiInstance.sushiswapGetLiquidityPositionSnapshotsHistorical(startBlock, endBlock, startDate, endDate, id, user, pair)
     val response = apiInvoker.execute(request)
@@ -910,13 +910,13 @@ object Example extends App {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startBlock** | **Long**|  | [optional]
- **endBlock** | **Long**|  | [optional]
- **startDate** | **OffsetDateTime**|  | [optional]
- **endDate** | **OffsetDateTime**|  | [optional]
- **id** | **String**|  | [optional]
- **user** | **String**|  | [optional]
- **pair** | **String**|  | [optional]
+ **startBlock** | **Long**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional]
+ **endBlock** | **Long**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional]
+ **startDate** | **OffsetDateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional]
+ **endDate** | **OffsetDateTime**| The end date of timeframe. | [optional]
+ **id** | **String**| Identifier, format: (pair address)-(user address)-(timestamp) | [optional]
+ **user** | **String**| Reference to user. | [optional]
+ **pair** | **String**| Reference to the pair liquidity is being provided on. | [optional]
 
 ### Return type
 
@@ -967,19 +967,19 @@ object Example extends App {
 
     val apiInvoker = ApiInvoker()
     val apiInstance = SushiswapApi("https://onchain.coinapi.io")
-    val startBlock: Long = 789 // Long | 
+    val startBlock: Long = 789 // Long | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
 
-    val endBlock: Long = 789 // Long | 
+    val endBlock: Long = 789 // Long | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
 
-    val startDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
+    val startDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
 
-    val endDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
+    val endDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | The end date of timeframe.
 
-    val id: String = id_example // String | 
+    val id: String = id_example // String | Identifier, format: (pair address)-(user address)
 
-    val user: String = user_example // String | 
+    val user: String = user_example // String | User address.
 
-    val pair: String = pair_example // String | 
+    val pair: String = pair_example // String | Pair address.
     
     val request = apiInstance.sushiswapGetLiquidityPositionsHistorical(startBlock, endBlock, startDate, endDate, id, user, pair)
     val response = apiInvoker.execute(request)
@@ -1009,13 +1009,13 @@ object Example extends App {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startBlock** | **Long**|  | [optional]
- **endBlock** | **Long**|  | [optional]
- **startDate** | **OffsetDateTime**|  | [optional]
- **endDate** | **OffsetDateTime**|  | [optional]
- **id** | **String**|  | [optional]
- **user** | **String**|  | [optional]
- **pair** | **String**|  | [optional]
+ **startBlock** | **Long**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional]
+ **endBlock** | **Long**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional]
+ **startDate** | **OffsetDateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional]
+ **endDate** | **OffsetDateTime**| The end date of timeframe. | [optional]
+ **id** | **String**| Identifier, format: (pair address)-(user address) | [optional]
+ **user** | **String**| User address. | [optional]
+ **pair** | **String**| Pair address. | [optional]
 
 ### Return type
 
@@ -1066,17 +1066,17 @@ object Example extends App {
 
     val apiInvoker = ApiInvoker()
     val apiInstance = SushiswapApi("https://onchain.coinapi.io")
-    val startBlock: Long = 789 // Long | 
+    val startBlock: Long = 789 // Long | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
 
-    val endBlock: Long = 789 // Long | 
+    val endBlock: Long = 789 // Long | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
 
-    val startDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
+    val startDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
 
-    val endDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
+    val endDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | The end date of timeframe.
 
-    val id: String = id_example // String | 
+    val id: String = id_example // String | Identifier, format: (transaction hash)-(index in the transaction mint array).
 
-    val pair: String = pair_example // String | 
+    val pair: String = pair_example // String | Reference to pair.
     
     val request = apiInstance.sushiswapGetMintsHistorical(startBlock, endBlock, startDate, endDate, id, pair)
     val response = apiInvoker.execute(request)
@@ -1106,12 +1106,12 @@ object Example extends App {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startBlock** | **Long**|  | [optional]
- **endBlock** | **Long**|  | [optional]
- **startDate** | **OffsetDateTime**|  | [optional]
- **endDate** | **OffsetDateTime**|  | [optional]
- **id** | **String**|  | [optional]
- **pair** | **String**|  | [optional]
+ **startBlock** | **Long**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional]
+ **endBlock** | **Long**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional]
+ **startDate** | **OffsetDateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional]
+ **endDate** | **OffsetDateTime**| The end date of timeframe. | [optional]
+ **id** | **String**| Identifier, format: (transaction hash)-(index in the transaction mint array). | [optional]
+ **pair** | **String**| Reference to pair. | [optional]
 
 ### Return type
 
@@ -1162,21 +1162,21 @@ object Example extends App {
 
     val apiInvoker = ApiInvoker()
     val apiInstance = SushiswapApi("https://onchain.coinapi.io")
-    val startBlock: Long = 789 // Long | 
+    val startBlock: Long = 789 // Long | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
 
-    val endBlock: Long = 789 // Long | 
+    val endBlock: Long = 789 // Long | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
 
-    val startDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
+    val startDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
 
-    val endDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
+    val endDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | The end date of timeframe.
 
-    val id: String = id_example // String | 
+    val id: String = id_example // String | Identifier, format: (pair id)-(day start timestamp).
 
-    val pair: String = pair_example // String | 
+    val pair: String = pair_example // String | Reference to pair.
 
-    val token0: String = token0_example // String | 
+    val token0: String = token0_example // String | Reference to token0.
 
-    val token1: String = token1_example // String | 
+    val token1: String = token1_example // String | Reference to token1.
     
     val request = apiInstance.sushiswapGetPairDayDataHistorical(startBlock, endBlock, startDate, endDate, id, pair, token0, token1)
     val response = apiInvoker.execute(request)
@@ -1206,14 +1206,14 @@ object Example extends App {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startBlock** | **Long**|  | [optional]
- **endBlock** | **Long**|  | [optional]
- **startDate** | **OffsetDateTime**|  | [optional]
- **endDate** | **OffsetDateTime**|  | [optional]
- **id** | **String**|  | [optional]
- **pair** | **String**|  | [optional]
- **token0** | **String**|  | [optional]
- **token1** | **String**|  | [optional]
+ **startBlock** | **Long**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional]
+ **endBlock** | **Long**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional]
+ **startDate** | **OffsetDateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional]
+ **endDate** | **OffsetDateTime**| The end date of timeframe. | [optional]
+ **id** | **String**| Identifier, format: (pair id)-(day start timestamp). | [optional]
+ **pair** | **String**| Reference to pair. | [optional]
+ **token0** | **String**| Reference to token0. | [optional]
+ **token1** | **String**| Reference to token1. | [optional]
 
 ### Return type
 
@@ -1264,17 +1264,17 @@ object Example extends App {
 
     val apiInvoker = ApiInvoker()
     val apiInstance = SushiswapApi("https://onchain.coinapi.io")
-    val startBlock: Long = 789 // Long | 
+    val startBlock: Long = 789 // Long | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
 
-    val endBlock: Long = 789 // Long | 
+    val endBlock: Long = 789 // Long | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
 
-    val startDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
+    val startDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
 
-    val endDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
+    val endDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | The end date of timeframe.
 
-    val id: String = id_example // String | 
+    val id: String = id_example // String | Identifier, format: (pair id)-(hour start timestamp).
 
-    val pair: String = pair_example // String | 
+    val pair: String = pair_example // String | Reference to pair.
     
     val request = apiInstance.sushiswapGetPairHourDataHistorical(startBlock, endBlock, startDate, endDate, id, pair)
     val response = apiInvoker.execute(request)
@@ -1304,12 +1304,12 @@ object Example extends App {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startBlock** | **Long**|  | [optional]
- **endBlock** | **Long**|  | [optional]
- **startDate** | **OffsetDateTime**|  | [optional]
- **endDate** | **OffsetDateTime**|  | [optional]
- **id** | **String**|  | [optional]
- **pair** | **String**|  | [optional]
+ **startBlock** | **Long**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional]
+ **endBlock** | **Long**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional]
+ **startDate** | **OffsetDateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional]
+ **endDate** | **OffsetDateTime**| The end date of timeframe. | [optional]
+ **id** | **String**| Identifier, format: (pair id)-(hour start timestamp). | [optional]
+ **pair** | **String**| Reference to pair. | [optional]
 
 ### Return type
 
@@ -1360,21 +1360,21 @@ object Example extends App {
 
     val apiInvoker = ApiInvoker()
     val apiInstance = SushiswapApi("https://onchain.coinapi.io")
-    val startBlock: Long = 789 // Long | 
+    val startBlock: Long = 789 // Long | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
 
-    val endBlock: Long = 789 // Long | 
+    val endBlock: Long = 789 // Long | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
 
-    val startDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
+    val startDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
 
-    val endDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
+    val endDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | The end date of timeframe.
 
-    val id: String = id_example // String | 
+    val id: String = id_example // String | Pair contract address.
 
-    val name: String = name_example // String | 
+    val name: String = name_example // String | Friendly name, format: (token0 name)-(token1 name)
 
-    val token0: String = token0_example // String | 
+    val token0: String = token0_example // String | Reference to token0 as stored in pair contract.
 
-    val token1: String = token1_example // String | 
+    val token1: String = token1_example // String | Reference to token0 as stored in pair contract.
     
     val request = apiInstance.sushiswapGetPairsHistorical(startBlock, endBlock, startDate, endDate, id, name, token0, token1)
     val response = apiInvoker.execute(request)
@@ -1404,14 +1404,14 @@ object Example extends App {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startBlock** | **Long**|  | [optional]
- **endBlock** | **Long**|  | [optional]
- **startDate** | **OffsetDateTime**|  | [optional]
- **endDate** | **OffsetDateTime**|  | [optional]
- **id** | **String**|  | [optional]
- **name** | **String**|  | [optional]
- **token0** | **String**|  | [optional]
- **token1** | **String**|  | [optional]
+ **startBlock** | **Long**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional]
+ **endBlock** | **Long**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional]
+ **startDate** | **OffsetDateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional]
+ **endDate** | **OffsetDateTime**| The end date of timeframe. | [optional]
+ **id** | **String**| Pair contract address. | [optional]
+ **name** | **String**| Friendly name, format: (token0 name)-(token1 name) | [optional]
+ **token0** | **String**| Reference to token0 as stored in pair contract. | [optional]
+ **token1** | **String**| Reference to token0 as stored in pair contract. | [optional]
 
 ### Return type
 

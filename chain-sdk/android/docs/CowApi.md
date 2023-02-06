@@ -200,13 +200,13 @@ Gets trades.
 //import org.openapitools.client.api.CowApi;
 
 CowApi apiInstance = new CowApi();
-Long startBlock = null; // Long | 
-Long endBlock = null; // Long | 
-Date startDate = null; // Date | 
-Date endDate = null; // Date | 
-String id = null; // String | 
-String sellToken = null; // String | 
-String buyToken = null; // String | 
+Long startBlock = null; // Long | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+Long endBlock = null; // Long | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+Date startDate = null; // Date | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+Date endDate = null; // Date | The end date of timeframe.
+String id = null; // String | Identifier, format: (order id)|(transaction hash)|(event index).
+String sellToken = null; // String | Address of token that is sold.
+String buyToken = null; // String | Address of token that is bought.
 try {
     List<CowTradeDTO> result = apiInstance.cowGetTradesHistorical(startBlock, endBlock, startDate, endDate, id, sellToken, buyToken);
     System.out.println(result);
@@ -221,13 +221,13 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startBlock** | **Long**|  | [optional] [default to null]
- **endBlock** | **Long**|  | [optional] [default to null]
- **startDate** | **Date**|  | [optional] [default to null]
- **endDate** | **Date**|  | [optional] [default to null]
- **id** | **String**|  | [optional] [default to null]
- **sellToken** | **String**|  | [optional] [default to null]
- **buyToken** | **String**|  | [optional] [default to null]
+ **startBlock** | **Long**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] [default to null]
+ **endBlock** | **Long**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] [default to null]
+ **startDate** | **Date**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] [default to null]
+ **endDate** | **Date**| The end date of timeframe. | [optional] [default to null]
+ **id** | **String**| Identifier, format: (order id)|(transaction hash)|(event index). | [optional] [default to null]
+ **sellToken** | **String**| Address of token that is sold. | [optional] [default to null]
+ **buyToken** | **String**| Address of token that is bought. | [optional] [default to null]
 
 ### Return type
 

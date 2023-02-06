@@ -16,6 +16,9 @@ import (
 	"time"
 )
 
+// checks if the DexWithdrawRequestDTO type satisfies the MappedNullable interface at compile time
+var _ MappedNullable = &DexWithdrawRequestDTO{}
+
 // DexWithdrawRequestDTO Withdraw request of an user
 type DexWithdrawRequestDTO struct {
 	EntryTime *time.Time `json:"entry_time,omitempty"`
@@ -72,7 +75,7 @@ func (o *DexWithdrawRequestDTO) GetEntryTime() time.Time {
 // and a boolean to check if the value has been set.
 func (o *DexWithdrawRequestDTO) GetEntryTimeOk() (*time.Time, bool) {
 	if o == nil || isNil(o.EntryTime) {
-    return nil, false
+		return nil, false
 	}
 	return o.EntryTime, true
 }
@@ -104,7 +107,7 @@ func (o *DexWithdrawRequestDTO) GetRecvTime() time.Time {
 // and a boolean to check if the value has been set.
 func (o *DexWithdrawRequestDTO) GetRecvTimeOk() (*time.Time, bool) {
 	if o == nil || isNil(o.RecvTime) {
-    return nil, false
+		return nil, false
 	}
 	return o.RecvTime, true
 }
@@ -136,7 +139,7 @@ func (o *DexWithdrawRequestDTO) GetBlockNumber() int64 {
 // and a boolean to check if the value has been set.
 func (o *DexWithdrawRequestDTO) GetBlockNumberOk() (*int64, bool) {
 	if o == nil || isNil(o.BlockNumber) {
-    return nil, false
+		return nil, false
 	}
 	return o.BlockNumber, true
 }
@@ -169,7 +172,7 @@ func (o *DexWithdrawRequestDTO) GetId() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *DexWithdrawRequestDTO) GetIdOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Id.Get(), o.Id.IsSet()
 }
@@ -211,7 +214,7 @@ func (o *DexWithdrawRequestDTO) GetUser() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *DexWithdrawRequestDTO) GetUserOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.User.Get(), o.User.IsSet()
 }
@@ -253,7 +256,7 @@ func (o *DexWithdrawRequestDTO) GetTokenAddress() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *DexWithdrawRequestDTO) GetTokenAddressOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.TokenAddress.Get(), o.TokenAddress.IsSet()
 }
@@ -295,7 +298,7 @@ func (o *DexWithdrawRequestDTO) GetAmount() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *DexWithdrawRequestDTO) GetAmountOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Amount.Get(), o.Amount.IsSet()
 }
@@ -337,7 +340,7 @@ func (o *DexWithdrawRequestDTO) GetWithdrawableFromBatchId() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *DexWithdrawRequestDTO) GetWithdrawableFromBatchIdOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.WithdrawableFromBatchId.Get(), o.WithdrawableFromBatchId.IsSet()
 }
@@ -379,7 +382,7 @@ func (o *DexWithdrawRequestDTO) GetCreateEpoch() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *DexWithdrawRequestDTO) GetCreateEpochOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.CreateEpoch.Get(), o.CreateEpoch.IsSet()
 }
@@ -421,7 +424,7 @@ func (o *DexWithdrawRequestDTO) GetCreateBatchId() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *DexWithdrawRequestDTO) GetCreateBatchIdOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.CreateBatchId.Get(), o.CreateBatchId.IsSet()
 }
@@ -463,7 +466,7 @@ func (o *DexWithdrawRequestDTO) GetTxHash() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *DexWithdrawRequestDTO) GetTxHashOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.TxHash.Get(), o.TxHash.IsSet()
 }
@@ -504,7 +507,7 @@ func (o *DexWithdrawRequestDTO) GetVid() int64 {
 // and a boolean to check if the value has been set.
 func (o *DexWithdrawRequestDTO) GetVidOk() (*int64, bool) {
 	if o == nil || isNil(o.Vid) {
-    return nil, false
+		return nil, false
 	}
 	return o.Vid, true
 }
@@ -524,6 +527,14 @@ func (o *DexWithdrawRequestDTO) SetVid(v int64) {
 }
 
 func (o DexWithdrawRequestDTO) MarshalJSON() ([]byte, error) {
+	toSerialize,err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
+}
+
+func (o DexWithdrawRequestDTO) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
 	if !isNil(o.EntryTime) {
 		toSerialize["entry_time"] = o.EntryTime
@@ -561,7 +572,7 @@ func (o DexWithdrawRequestDTO) MarshalJSON() ([]byte, error) {
 	if !isNil(o.Vid) {
 		toSerialize["vid"] = o.Vid
 	}
-	return json.Marshal(toSerialize)
+	return toSerialize, nil
 }
 
 type NullableDexWithdrawRequestDTO struct {

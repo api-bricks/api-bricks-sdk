@@ -6,6 +6,7 @@ api/openapi.yaml
 api_cow.go
 api_curve.go
 api_dex.go
+api_metadata.go
 api_sushiswap.go
 api_uniswap_v2.go
 api_uniswap_v3.go
@@ -62,6 +63,7 @@ docs/DexTradeDTO.md
 docs/DexUserDTO.md
 docs/DexWithdrawDTO.md
 docs/DexWithdrawRequestDTO.md
+docs/MetadataApi.md
 docs/NumericsBigInteger.md
 docs/SushiswapApi.md
 docs/SushiswapBundleDTO.md
@@ -220,6 +222,7 @@ response.go
 test/api_cow_test.go
 test/api_curve_test.go
 test/api_dex_test.go
+test/api_metadata_test.go
 test/api_sushiswap_test.go
 test/api_uniswap_v2_test.go
 test/api_uniswap_v3_test.go

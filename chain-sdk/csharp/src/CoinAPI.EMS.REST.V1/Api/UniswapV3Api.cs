@@ -217,12 +217,12 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// Gets poolDayData.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock"> (optional)</param>
-        /// <param name="endBlock"> (optional)</param>
-        /// <param name="startDate"> (optional)</param>
-        /// <param name="endDate"> (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="pool"> (optional)</param>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Identifier, format: (pool address)-(day id). (optional)</param>
+        /// <param name="pool">Pointer to pool. (optional)</param>
         /// <returns>List<UniswapV3PoolDayDataDTO></returns>
         List<UniswapV3PoolDayDataDTO> UniswapV3GetPoolDayDataHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string));
 
@@ -233,12 +233,12 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// Gets poolDayData.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock"> (optional)</param>
-        /// <param name="endBlock"> (optional)</param>
-        /// <param name="startDate"> (optional)</param>
-        /// <param name="endDate"> (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="pool"> (optional)</param>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Identifier, format: (pool address)-(day id). (optional)</param>
+        /// <param name="pool">Pointer to pool. (optional)</param>
         /// <returns>ApiResponse of List<UniswapV3PoolDayDataDTO></returns>
         ApiResponse<List<UniswapV3PoolDayDataDTO>> UniswapV3GetPoolDayDataHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string));
         /// <summary>
@@ -248,12 +248,12 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// Gets poolHourData.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock"> (optional)</param>
-        /// <param name="endBlock"> (optional)</param>
-        /// <param name="startDate"> (optional)</param>
-        /// <param name="endDate"> (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="pool"> (optional)</param>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Identifier, format: (pool address)-(day id) (optional)</param>
+        /// <param name="pool">Pointer to pool. (optional)</param>
         /// <returns>List<UniswapV3PoolHourDataDTO></returns>
         List<UniswapV3PoolHourDataDTO> UniswapV3GetPoolHourDataHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string));
 
@@ -264,12 +264,12 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// Gets poolHourData.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock"> (optional)</param>
-        /// <param name="endBlock"> (optional)</param>
-        /// <param name="startDate"> (optional)</param>
-        /// <param name="endDate"> (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="pool"> (optional)</param>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Identifier, format: (pool address)-(day id) (optional)</param>
+        /// <param name="pool">Pointer to pool. (optional)</param>
         /// <returns>ApiResponse of List<UniswapV3PoolHourDataDTO></returns>
         ApiResponse<List<UniswapV3PoolHourDataDTO>> UniswapV3GetPoolHourDataHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string));
         /// <summary>
@@ -312,12 +312,12 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// Gets positionSnapshots.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock"> (optional)</param>
-        /// <param name="endBlock"> (optional)</param>
-        /// <param name="startDate"> (optional)</param>
-        /// <param name="endDate"> (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="pool"> (optional)</param>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">NFT token identifier, format: (NFT token id)#(block number). (optional)</param>
+        /// <param name="pool">Pool the position is within. (optional)</param>
         /// <returns>List<UniswapV3PositionSnapshotDTO></returns>
         List<UniswapV3PositionSnapshotDTO> UniswapV3GetPositionSnapshotsHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string));
 
@@ -328,12 +328,12 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// Gets positionSnapshots.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock"> (optional)</param>
-        /// <param name="endBlock"> (optional)</param>
-        /// <param name="startDate"> (optional)</param>
-        /// <param name="endDate"> (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="pool"> (optional)</param>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">NFT token identifier, format: (NFT token id)#(block number). (optional)</param>
+        /// <param name="pool">Pool the position is within. (optional)</param>
         /// <returns>ApiResponse of List<UniswapV3PositionSnapshotDTO></returns>
         ApiResponse<List<UniswapV3PositionSnapshotDTO>> UniswapV3GetPositionSnapshotsHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string));
         /// <summary>
@@ -382,7 +382,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
         /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
         /// <param name="endDate">The end date of timeframe. (optional)</param>
-        /// <param name="id">Identifier, format: transaction hash + \&quot;#\&quot; + index in swaps Transaction array. (optional)</param>
+        /// <param name="id">Identifier, format: (transaction hash) + # + (index in swaps Transaction array). (optional)</param>
         /// <param name="pool">Pool swap occured within. (optional)</param>
         /// <param name="token0">Reference to token0 as stored in pair contract. (optional)</param>
         /// <param name="token1">Reference to token1 as stored in pair contract. (optional)</param>
@@ -400,7 +400,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
         /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
         /// <param name="endDate">The end date of timeframe. (optional)</param>
-        /// <param name="id">Identifier, format: transaction hash + \&quot;#\&quot; + index in swaps Transaction array. (optional)</param>
+        /// <param name="id">Identifier, format: (transaction hash) + # + (index in swaps Transaction array). (optional)</param>
         /// <param name="pool">Pool swap occured within. (optional)</param>
         /// <param name="token0">Reference to token0 as stored in pair contract. (optional)</param>
         /// <param name="token1">Reference to token1 as stored in pair contract. (optional)</param>
@@ -413,12 +413,12 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// Gets tickDayData.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock"> (optional)</param>
-        /// <param name="endBlock"> (optional)</param>
-        /// <param name="startDate"> (optional)</param>
-        /// <param name="endDate"> (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="pool"> (optional)</param>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Identifier, format: (pool address)-(tick index)-(timestamp). (optional)</param>
+        /// <param name="pool">Pointer to pool. (optional)</param>
         /// <returns>List<UniswapV3TickDayDataDTO></returns>
         List<UniswapV3TickDayDataDTO> UniswapV3GetTickDayDataHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string));
 
@@ -429,12 +429,12 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// Gets tickDayData.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock"> (optional)</param>
-        /// <param name="endBlock"> (optional)</param>
-        /// <param name="startDate"> (optional)</param>
-        /// <param name="endDate"> (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="pool"> (optional)</param>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Identifier, format: (pool address)-(tick index)-(timestamp). (optional)</param>
+        /// <param name="pool">Pointer to pool. (optional)</param>
         /// <returns>ApiResponse of List<UniswapV3TickDayDataDTO></returns>
         ApiResponse<List<UniswapV3TickDayDataDTO>> UniswapV3GetTickDayDataHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string));
         /// <summary>
@@ -444,12 +444,12 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// Gets ticks.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock"> (optional)</param>
-        /// <param name="endBlock"> (optional)</param>
-        /// <param name="startDate"> (optional)</param>
-        /// <param name="endDate"> (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="pool"> (optional)</param>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Identifier, format: (pool address)#(tick index) (optional)</param>
+        /// <param name="pool">Pool address. (optional)</param>
         /// <returns>List<UniswapV3TickDTO></returns>
         List<UniswapV3TickDTO> UniswapV3GetTicksHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string));
 
@@ -460,12 +460,12 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// Gets ticks.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock"> (optional)</param>
-        /// <param name="endBlock"> (optional)</param>
-        /// <param name="startDate"> (optional)</param>
-        /// <param name="endDate"> (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="pool"> (optional)</param>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Identifier, format: (pool address)#(tick index) (optional)</param>
+        /// <param name="pool">Pool address. (optional)</param>
         /// <returns>ApiResponse of List<UniswapV3TickDTO></returns>
         ApiResponse<List<UniswapV3TickDTO>> UniswapV3GetTicksHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string));
         /// <summary>
@@ -1095,12 +1095,12 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// Gets poolDayData.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock"> (optional)</param>
-        /// <param name="endBlock"> (optional)</param>
-        /// <param name="startDate"> (optional)</param>
-        /// <param name="endDate"> (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="pool"> (optional)</param>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Identifier, format: (pool address)-(day id). (optional)</param>
+        /// <param name="pool">Pointer to pool. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of List<UniswapV3PoolDayDataDTO></returns>
         System.Threading.Tasks.Task<List<UniswapV3PoolDayDataDTO>> UniswapV3GetPoolDayDataHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string), CancellationToken cancellationToken = default(CancellationToken));
@@ -1112,12 +1112,12 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// Gets poolDayData.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock"> (optional)</param>
-        /// <param name="endBlock"> (optional)</param>
-        /// <param name="startDate"> (optional)</param>
-        /// <param name="endDate"> (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="pool"> (optional)</param>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Identifier, format: (pool address)-(day id). (optional)</param>
+        /// <param name="pool">Pointer to pool. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (List&lt;UniswapV3PoolDayDataDTO&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<UniswapV3PoolDayDataDTO>>> UniswapV3GetPoolDayDataHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string), CancellationToken cancellationToken = default(CancellationToken));
@@ -1128,12 +1128,12 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// Gets poolHourData.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock"> (optional)</param>
-        /// <param name="endBlock"> (optional)</param>
-        /// <param name="startDate"> (optional)</param>
-        /// <param name="endDate"> (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="pool"> (optional)</param>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Identifier, format: (pool address)-(day id) (optional)</param>
+        /// <param name="pool">Pointer to pool. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of List<UniswapV3PoolHourDataDTO></returns>
         System.Threading.Tasks.Task<List<UniswapV3PoolHourDataDTO>> UniswapV3GetPoolHourDataHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string), CancellationToken cancellationToken = default(CancellationToken));
@@ -1145,12 +1145,12 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// Gets poolHourData.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock"> (optional)</param>
-        /// <param name="endBlock"> (optional)</param>
-        /// <param name="startDate"> (optional)</param>
-        /// <param name="endDate"> (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="pool"> (optional)</param>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Identifier, format: (pool address)-(day id) (optional)</param>
+        /// <param name="pool">Pointer to pool. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (List&lt;UniswapV3PoolHourDataDTO&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<UniswapV3PoolHourDataDTO>>> UniswapV3GetPoolHourDataHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string), CancellationToken cancellationToken = default(CancellationToken));
@@ -1196,12 +1196,12 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// Gets positionSnapshots.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock"> (optional)</param>
-        /// <param name="endBlock"> (optional)</param>
-        /// <param name="startDate"> (optional)</param>
-        /// <param name="endDate"> (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="pool"> (optional)</param>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">NFT token identifier, format: (NFT token id)#(block number). (optional)</param>
+        /// <param name="pool">Pool the position is within. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of List<UniswapV3PositionSnapshotDTO></returns>
         System.Threading.Tasks.Task<List<UniswapV3PositionSnapshotDTO>> UniswapV3GetPositionSnapshotsHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string), CancellationToken cancellationToken = default(CancellationToken));
@@ -1213,12 +1213,12 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// Gets positionSnapshots.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock"> (optional)</param>
-        /// <param name="endBlock"> (optional)</param>
-        /// <param name="startDate"> (optional)</param>
-        /// <param name="endDate"> (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="pool"> (optional)</param>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">NFT token identifier, format: (NFT token id)#(block number). (optional)</param>
+        /// <param name="pool">Pool the position is within. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (List&lt;UniswapV3PositionSnapshotDTO&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<UniswapV3PositionSnapshotDTO>>> UniswapV3GetPositionSnapshotsHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string), CancellationToken cancellationToken = default(CancellationToken));
@@ -1270,7 +1270,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
         /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
         /// <param name="endDate">The end date of timeframe. (optional)</param>
-        /// <param name="id">Identifier, format: transaction hash + \&quot;#\&quot; + index in swaps Transaction array. (optional)</param>
+        /// <param name="id">Identifier, format: (transaction hash) + # + (index in swaps Transaction array). (optional)</param>
         /// <param name="pool">Pool swap occured within. (optional)</param>
         /// <param name="token0">Reference to token0 as stored in pair contract. (optional)</param>
         /// <param name="token1">Reference to token1 as stored in pair contract. (optional)</param>
@@ -1289,7 +1289,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
         /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
         /// <param name="endDate">The end date of timeframe. (optional)</param>
-        /// <param name="id">Identifier, format: transaction hash + \&quot;#\&quot; + index in swaps Transaction array. (optional)</param>
+        /// <param name="id">Identifier, format: (transaction hash) + # + (index in swaps Transaction array). (optional)</param>
         /// <param name="pool">Pool swap occured within. (optional)</param>
         /// <param name="token0">Reference to token0 as stored in pair contract. (optional)</param>
         /// <param name="token1">Reference to token1 as stored in pair contract. (optional)</param>
@@ -1303,12 +1303,12 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// Gets tickDayData.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock"> (optional)</param>
-        /// <param name="endBlock"> (optional)</param>
-        /// <param name="startDate"> (optional)</param>
-        /// <param name="endDate"> (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="pool"> (optional)</param>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Identifier, format: (pool address)-(tick index)-(timestamp). (optional)</param>
+        /// <param name="pool">Pointer to pool. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of List<UniswapV3TickDayDataDTO></returns>
         System.Threading.Tasks.Task<List<UniswapV3TickDayDataDTO>> UniswapV3GetTickDayDataHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string), CancellationToken cancellationToken = default(CancellationToken));
@@ -1320,12 +1320,12 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// Gets tickDayData.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock"> (optional)</param>
-        /// <param name="endBlock"> (optional)</param>
-        /// <param name="startDate"> (optional)</param>
-        /// <param name="endDate"> (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="pool"> (optional)</param>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Identifier, format: (pool address)-(tick index)-(timestamp). (optional)</param>
+        /// <param name="pool">Pointer to pool. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (List&lt;UniswapV3TickDayDataDTO&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<UniswapV3TickDayDataDTO>>> UniswapV3GetTickDayDataHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string), CancellationToken cancellationToken = default(CancellationToken));
@@ -1336,12 +1336,12 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// Gets ticks.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock"> (optional)</param>
-        /// <param name="endBlock"> (optional)</param>
-        /// <param name="startDate"> (optional)</param>
-        /// <param name="endDate"> (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="pool"> (optional)</param>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Identifier, format: (pool address)#(tick index) (optional)</param>
+        /// <param name="pool">Pool address. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of List<UniswapV3TickDTO></returns>
         System.Threading.Tasks.Task<List<UniswapV3TickDTO>> UniswapV3GetTicksHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string), CancellationToken cancellationToken = default(CancellationToken));
@@ -1353,12 +1353,12 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// Gets ticks.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock"> (optional)</param>
-        /// <param name="endBlock"> (optional)</param>
-        /// <param name="startDate"> (optional)</param>
-        /// <param name="endDate"> (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="pool"> (optional)</param>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Identifier, format: (pool address)#(tick index) (optional)</param>
+        /// <param name="pool">Pool address. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (List&lt;UniswapV3TickDTO&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<UniswapV3TickDTO>>> UniswapV3GetTicksHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string), CancellationToken cancellationToken = default(CancellationToken));
@@ -2979,12 +2979,12 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// PoolDayData (historical) Gets poolDayData.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock"> (optional)</param>
-        /// <param name="endBlock"> (optional)</param>
-        /// <param name="startDate"> (optional)</param>
-        /// <param name="endDate"> (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="pool"> (optional)</param>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Identifier, format: (pool address)-(day id). (optional)</param>
+        /// <param name="pool">Pointer to pool. (optional)</param>
         /// <returns>List<UniswapV3PoolDayDataDTO></returns>
         public List<UniswapV3PoolDayDataDTO> UniswapV3GetPoolDayDataHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string))
         {
@@ -2996,12 +2996,12 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// PoolDayData (historical) Gets poolDayData.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock"> (optional)</param>
-        /// <param name="endBlock"> (optional)</param>
-        /// <param name="startDate"> (optional)</param>
-        /// <param name="endDate"> (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="pool"> (optional)</param>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Identifier, format: (pool address)-(day id). (optional)</param>
+        /// <param name="pool">Pointer to pool. (optional)</param>
         /// <returns>ApiResponse of List<UniswapV3PoolDayDataDTO></returns>
         public ApiResponse<List<UniswapV3PoolDayDataDTO>> UniswapV3GetPoolDayDataHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string))
         {
@@ -3059,12 +3059,12 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// PoolDayData (historical) Gets poolDayData.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock"> (optional)</param>
-        /// <param name="endBlock"> (optional)</param>
-        /// <param name="startDate"> (optional)</param>
-        /// <param name="endDate"> (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="pool"> (optional)</param>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Identifier, format: (pool address)-(day id). (optional)</param>
+        /// <param name="pool">Pointer to pool. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of List<UniswapV3PoolDayDataDTO></returns>
         public async System.Threading.Tasks.Task<List<UniswapV3PoolDayDataDTO>> UniswapV3GetPoolDayDataHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string), CancellationToken cancellationToken = default(CancellationToken))
@@ -3078,12 +3078,12 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// PoolDayData (historical) Gets poolDayData.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock"> (optional)</param>
-        /// <param name="endBlock"> (optional)</param>
-        /// <param name="startDate"> (optional)</param>
-        /// <param name="endDate"> (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="pool"> (optional)</param>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Identifier, format: (pool address)-(day id). (optional)</param>
+        /// <param name="pool">Pointer to pool. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (List&lt;UniswapV3PoolDayDataDTO&gt;)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<List<UniswapV3PoolDayDataDTO>>> UniswapV3GetPoolDayDataHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string), CancellationToken cancellationToken = default(CancellationToken))
@@ -3142,12 +3142,12 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// PoolHourData (historical) Gets poolHourData.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock"> (optional)</param>
-        /// <param name="endBlock"> (optional)</param>
-        /// <param name="startDate"> (optional)</param>
-        /// <param name="endDate"> (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="pool"> (optional)</param>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Identifier, format: (pool address)-(day id) (optional)</param>
+        /// <param name="pool">Pointer to pool. (optional)</param>
         /// <returns>List<UniswapV3PoolHourDataDTO></returns>
         public List<UniswapV3PoolHourDataDTO> UniswapV3GetPoolHourDataHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string))
         {
@@ -3159,12 +3159,12 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// PoolHourData (historical) Gets poolHourData.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock"> (optional)</param>
-        /// <param name="endBlock"> (optional)</param>
-        /// <param name="startDate"> (optional)</param>
-        /// <param name="endDate"> (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="pool"> (optional)</param>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Identifier, format: (pool address)-(day id) (optional)</param>
+        /// <param name="pool">Pointer to pool. (optional)</param>
         /// <returns>ApiResponse of List<UniswapV3PoolHourDataDTO></returns>
         public ApiResponse<List<UniswapV3PoolHourDataDTO>> UniswapV3GetPoolHourDataHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string))
         {
@@ -3222,12 +3222,12 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// PoolHourData (historical) Gets poolHourData.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock"> (optional)</param>
-        /// <param name="endBlock"> (optional)</param>
-        /// <param name="startDate"> (optional)</param>
-        /// <param name="endDate"> (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="pool"> (optional)</param>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Identifier, format: (pool address)-(day id) (optional)</param>
+        /// <param name="pool">Pointer to pool. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of List<UniswapV3PoolHourDataDTO></returns>
         public async System.Threading.Tasks.Task<List<UniswapV3PoolHourDataDTO>> UniswapV3GetPoolHourDataHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string), CancellationToken cancellationToken = default(CancellationToken))
@@ -3241,12 +3241,12 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// PoolHourData (historical) Gets poolHourData.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock"> (optional)</param>
-        /// <param name="endBlock"> (optional)</param>
-        /// <param name="startDate"> (optional)</param>
-        /// <param name="endDate"> (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="pool"> (optional)</param>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Identifier, format: (pool address)-(day id) (optional)</param>
+        /// <param name="pool">Pointer to pool. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (List&lt;UniswapV3PoolHourDataDTO&gt;)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<List<UniswapV3PoolHourDataDTO>>> UniswapV3GetPoolHourDataHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string), CancellationToken cancellationToken = default(CancellationToken))
@@ -3474,12 +3474,12 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// PositionSnapshots (historical) Gets positionSnapshots.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock"> (optional)</param>
-        /// <param name="endBlock"> (optional)</param>
-        /// <param name="startDate"> (optional)</param>
-        /// <param name="endDate"> (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="pool"> (optional)</param>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">NFT token identifier, format: (NFT token id)#(block number). (optional)</param>
+        /// <param name="pool">Pool the position is within. (optional)</param>
         /// <returns>List<UniswapV3PositionSnapshotDTO></returns>
         public List<UniswapV3PositionSnapshotDTO> UniswapV3GetPositionSnapshotsHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string))
         {
@@ -3491,12 +3491,12 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// PositionSnapshots (historical) Gets positionSnapshots.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock"> (optional)</param>
-        /// <param name="endBlock"> (optional)</param>
-        /// <param name="startDate"> (optional)</param>
-        /// <param name="endDate"> (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="pool"> (optional)</param>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">NFT token identifier, format: (NFT token id)#(block number). (optional)</param>
+        /// <param name="pool">Pool the position is within. (optional)</param>
         /// <returns>ApiResponse of List<UniswapV3PositionSnapshotDTO></returns>
         public ApiResponse<List<UniswapV3PositionSnapshotDTO>> UniswapV3GetPositionSnapshotsHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string))
         {
@@ -3554,12 +3554,12 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// PositionSnapshots (historical) Gets positionSnapshots.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock"> (optional)</param>
-        /// <param name="endBlock"> (optional)</param>
-        /// <param name="startDate"> (optional)</param>
-        /// <param name="endDate"> (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="pool"> (optional)</param>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">NFT token identifier, format: (NFT token id)#(block number). (optional)</param>
+        /// <param name="pool">Pool the position is within. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of List<UniswapV3PositionSnapshotDTO></returns>
         public async System.Threading.Tasks.Task<List<UniswapV3PositionSnapshotDTO>> UniswapV3GetPositionSnapshotsHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string), CancellationToken cancellationToken = default(CancellationToken))
@@ -3573,12 +3573,12 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// PositionSnapshots (historical) Gets positionSnapshots.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock"> (optional)</param>
-        /// <param name="endBlock"> (optional)</param>
-        /// <param name="startDate"> (optional)</param>
-        /// <param name="endDate"> (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="pool"> (optional)</param>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">NFT token identifier, format: (NFT token id)#(block number). (optional)</param>
+        /// <param name="pool">Pool the position is within. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (List&lt;UniswapV3PositionSnapshotDTO&gt;)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<List<UniswapV3PositionSnapshotDTO>>> UniswapV3GetPositionSnapshotsHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string), CancellationToken cancellationToken = default(CancellationToken))
@@ -3816,7 +3816,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
         /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
         /// <param name="endDate">The end date of timeframe. (optional)</param>
-        /// <param name="id">Identifier, format: transaction hash + \&quot;#\&quot; + index in swaps Transaction array. (optional)</param>
+        /// <param name="id">Identifier, format: (transaction hash) + # + (index in swaps Transaction array). (optional)</param>
         /// <param name="pool">Pool swap occured within. (optional)</param>
         /// <param name="token0">Reference to token0 as stored in pair contract. (optional)</param>
         /// <param name="token1">Reference to token1 as stored in pair contract. (optional)</param>
@@ -3835,7 +3835,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
         /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
         /// <param name="endDate">The end date of timeframe. (optional)</param>
-        /// <param name="id">Identifier, format: transaction hash + \&quot;#\&quot; + index in swaps Transaction array. (optional)</param>
+        /// <param name="id">Identifier, format: (transaction hash) + # + (index in swaps Transaction array). (optional)</param>
         /// <param name="pool">Pool swap occured within. (optional)</param>
         /// <param name="token0">Reference to token0 as stored in pair contract. (optional)</param>
         /// <param name="token1">Reference to token1 as stored in pair contract. (optional)</param>
@@ -3902,7 +3902,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
         /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
         /// <param name="endDate">The end date of timeframe. (optional)</param>
-        /// <param name="id">Identifier, format: transaction hash + \&quot;#\&quot; + index in swaps Transaction array. (optional)</param>
+        /// <param name="id">Identifier, format: (transaction hash) + # + (index in swaps Transaction array). (optional)</param>
         /// <param name="pool">Pool swap occured within. (optional)</param>
         /// <param name="token0">Reference to token0 as stored in pair contract. (optional)</param>
         /// <param name="token1">Reference to token1 as stored in pair contract. (optional)</param>
@@ -3923,7 +3923,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
         /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
         /// <param name="endDate">The end date of timeframe. (optional)</param>
-        /// <param name="id">Identifier, format: transaction hash + \&quot;#\&quot; + index in swaps Transaction array. (optional)</param>
+        /// <param name="id">Identifier, format: (transaction hash) + # + (index in swaps Transaction array). (optional)</param>
         /// <param name="pool">Pool swap occured within. (optional)</param>
         /// <param name="token0">Reference to token0 as stored in pair contract. (optional)</param>
         /// <param name="token1">Reference to token1 as stored in pair contract. (optional)</param>
@@ -3987,12 +3987,12 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// TickDayData (historical) Gets tickDayData.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock"> (optional)</param>
-        /// <param name="endBlock"> (optional)</param>
-        /// <param name="startDate"> (optional)</param>
-        /// <param name="endDate"> (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="pool"> (optional)</param>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Identifier, format: (pool address)-(tick index)-(timestamp). (optional)</param>
+        /// <param name="pool">Pointer to pool. (optional)</param>
         /// <returns>List<UniswapV3TickDayDataDTO></returns>
         public List<UniswapV3TickDayDataDTO> UniswapV3GetTickDayDataHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string))
         {
@@ -4004,12 +4004,12 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// TickDayData (historical) Gets tickDayData.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock"> (optional)</param>
-        /// <param name="endBlock"> (optional)</param>
-        /// <param name="startDate"> (optional)</param>
-        /// <param name="endDate"> (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="pool"> (optional)</param>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Identifier, format: (pool address)-(tick index)-(timestamp). (optional)</param>
+        /// <param name="pool">Pointer to pool. (optional)</param>
         /// <returns>ApiResponse of List<UniswapV3TickDayDataDTO></returns>
         public ApiResponse<List<UniswapV3TickDayDataDTO>> UniswapV3GetTickDayDataHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string))
         {
@@ -4067,12 +4067,12 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// TickDayData (historical) Gets tickDayData.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock"> (optional)</param>
-        /// <param name="endBlock"> (optional)</param>
-        /// <param name="startDate"> (optional)</param>
-        /// <param name="endDate"> (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="pool"> (optional)</param>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Identifier, format: (pool address)-(tick index)-(timestamp). (optional)</param>
+        /// <param name="pool">Pointer to pool. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of List<UniswapV3TickDayDataDTO></returns>
         public async System.Threading.Tasks.Task<List<UniswapV3TickDayDataDTO>> UniswapV3GetTickDayDataHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string), CancellationToken cancellationToken = default(CancellationToken))
@@ -4086,12 +4086,12 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// TickDayData (historical) Gets tickDayData.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock"> (optional)</param>
-        /// <param name="endBlock"> (optional)</param>
-        /// <param name="startDate"> (optional)</param>
-        /// <param name="endDate"> (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="pool"> (optional)</param>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Identifier, format: (pool address)-(tick index)-(timestamp). (optional)</param>
+        /// <param name="pool">Pointer to pool. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (List&lt;UniswapV3TickDayDataDTO&gt;)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<List<UniswapV3TickDayDataDTO>>> UniswapV3GetTickDayDataHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string), CancellationToken cancellationToken = default(CancellationToken))
@@ -4150,12 +4150,12 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// Ticks (historical) Gets ticks.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock"> (optional)</param>
-        /// <param name="endBlock"> (optional)</param>
-        /// <param name="startDate"> (optional)</param>
-        /// <param name="endDate"> (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="pool"> (optional)</param>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Identifier, format: (pool address)#(tick index) (optional)</param>
+        /// <param name="pool">Pool address. (optional)</param>
         /// <returns>List<UniswapV3TickDTO></returns>
         public List<UniswapV3TickDTO> UniswapV3GetTicksHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string))
         {
@@ -4167,12 +4167,12 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// Ticks (historical) Gets ticks.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock"> (optional)</param>
-        /// <param name="endBlock"> (optional)</param>
-        /// <param name="startDate"> (optional)</param>
-        /// <param name="endDate"> (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="pool"> (optional)</param>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Identifier, format: (pool address)#(tick index) (optional)</param>
+        /// <param name="pool">Pool address. (optional)</param>
         /// <returns>ApiResponse of List<UniswapV3TickDTO></returns>
         public ApiResponse<List<UniswapV3TickDTO>> UniswapV3GetTicksHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string))
         {
@@ -4230,12 +4230,12 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// Ticks (historical) Gets ticks.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock"> (optional)</param>
-        /// <param name="endBlock"> (optional)</param>
-        /// <param name="startDate"> (optional)</param>
-        /// <param name="endDate"> (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="pool"> (optional)</param>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Identifier, format: (pool address)#(tick index) (optional)</param>
+        /// <param name="pool">Pool address. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of List<UniswapV3TickDTO></returns>
         public async System.Threading.Tasks.Task<List<UniswapV3TickDTO>> UniswapV3GetTicksHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string), CancellationToken cancellationToken = default(CancellationToken))
@@ -4249,12 +4249,12 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// Ticks (historical) Gets ticks.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock"> (optional)</param>
-        /// <param name="endBlock"> (optional)</param>
-        /// <param name="startDate"> (optional)</param>
-        /// <param name="endDate"> (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="pool"> (optional)</param>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Identifier, format: (pool address)#(tick index) (optional)</param>
+        /// <param name="pool">Pool address. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (List&lt;UniswapV3TickDTO&gt;)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<List<UniswapV3TickDTO>>> UniswapV3GetTicksHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string), CancellationToken cancellationToken = default(CancellationToken))

@@ -201,7 +201,7 @@ curve_contract_dto_t *curve_contract_dto_parseFromJSON(cJSON *curve_contract_dto
     // curve_contract_dto->entry_time
     cJSON *entry_time = cJSON_GetObjectItemCaseSensitive(curve_contract_dtoJSON, "entry_time");
     if (entry_time) { 
-    if(!cJSON_IsString(entry_time))
+    if(!cJSON_IsString(entry_time) && !cJSON_IsNull(entry_time))
     {
     goto end; //DateTime
     }
@@ -210,7 +210,7 @@ curve_contract_dto_t *curve_contract_dto_parseFromJSON(cJSON *curve_contract_dto
     // curve_contract_dto->recv_time
     cJSON *recv_time = cJSON_GetObjectItemCaseSensitive(curve_contract_dtoJSON, "recv_time");
     if (recv_time) { 
-    if(!cJSON_IsString(recv_time))
+    if(!cJSON_IsString(recv_time) && !cJSON_IsNull(recv_time))
     {
     goto end; //DateTime
     }
@@ -228,7 +228,7 @@ curve_contract_dto_t *curve_contract_dto_parseFromJSON(cJSON *curve_contract_dto
     // curve_contract_dto->id
     cJSON *id = cJSON_GetObjectItemCaseSensitive(curve_contract_dtoJSON, "id");
     if (id) { 
-    if(!cJSON_IsString(id))
+    if(!cJSON_IsString(id) && !cJSON_IsNull(id))
     {
     goto end; //String
     }
@@ -237,7 +237,7 @@ curve_contract_dto_t *curve_contract_dto_parseFromJSON(cJSON *curve_contract_dto
     // curve_contract_dto->description
     cJSON *description = cJSON_GetObjectItemCaseSensitive(curve_contract_dtoJSON, "description");
     if (description) { 
-    if(!cJSON_IsString(description))
+    if(!cJSON_IsString(description) && !cJSON_IsNull(description))
     {
     goto end; //String
     }
@@ -246,7 +246,7 @@ curve_contract_dto_t *curve_contract_dto_parseFromJSON(cJSON *curve_contract_dto
     // curve_contract_dto->added
     cJSON *added = cJSON_GetObjectItemCaseSensitive(curve_contract_dtoJSON, "added");
     if (added) { 
-    if(!cJSON_IsString(added))
+    if(!cJSON_IsString(added) && !cJSON_IsNull(added))
     {
     goto end; //String
     }
@@ -255,7 +255,7 @@ curve_contract_dto_t *curve_contract_dto_parseFromJSON(cJSON *curve_contract_dto
     // curve_contract_dto->added_at_block
     cJSON *added_at_block = cJSON_GetObjectItemCaseSensitive(curve_contract_dtoJSON, "added_at_block");
     if (added_at_block) { 
-    if(!cJSON_IsString(added_at_block))
+    if(!cJSON_IsString(added_at_block) && !cJSON_IsNull(added_at_block))
     {
     goto end; //String
     }
@@ -264,7 +264,7 @@ curve_contract_dto_t *curve_contract_dto_parseFromJSON(cJSON *curve_contract_dto
     // curve_contract_dto->added_at_transaction
     cJSON *added_at_transaction = cJSON_GetObjectItemCaseSensitive(curve_contract_dtoJSON, "added_at_transaction");
     if (added_at_transaction) { 
-    if(!cJSON_IsString(added_at_transaction))
+    if(!cJSON_IsString(added_at_transaction) && !cJSON_IsNull(added_at_transaction))
     {
     goto end; //String
     }
@@ -273,7 +273,7 @@ curve_contract_dto_t *curve_contract_dto_parseFromJSON(cJSON *curve_contract_dto
     // curve_contract_dto->modified
     cJSON *modified = cJSON_GetObjectItemCaseSensitive(curve_contract_dtoJSON, "modified");
     if (modified) { 
-    if(!cJSON_IsString(modified))
+    if(!cJSON_IsString(modified) && !cJSON_IsNull(modified))
     {
     goto end; //String
     }
@@ -282,7 +282,7 @@ curve_contract_dto_t *curve_contract_dto_parseFromJSON(cJSON *curve_contract_dto
     // curve_contract_dto->modified_at_block
     cJSON *modified_at_block = cJSON_GetObjectItemCaseSensitive(curve_contract_dtoJSON, "modified_at_block");
     if (modified_at_block) { 
-    if(!cJSON_IsString(modified_at_block))
+    if(!cJSON_IsString(modified_at_block) && !cJSON_IsNull(modified_at_block))
     {
     goto end; //String
     }
@@ -291,7 +291,7 @@ curve_contract_dto_t *curve_contract_dto_parseFromJSON(cJSON *curve_contract_dto
     // curve_contract_dto->modified_at_transaction
     cJSON *modified_at_transaction = cJSON_GetObjectItemCaseSensitive(curve_contract_dtoJSON, "modified_at_transaction");
     if (modified_at_transaction) { 
-    if(!cJSON_IsString(modified_at_transaction))
+    if(!cJSON_IsString(modified_at_transaction) && !cJSON_IsNull(modified_at_transaction))
     {
     goto end; //String
     }
@@ -308,17 +308,17 @@ curve_contract_dto_t *curve_contract_dto_parseFromJSON(cJSON *curve_contract_dto
 
 
     curve_contract_dto_local_var = curve_contract_dto_create (
-        entry_time ? strdup(entry_time->valuestring) : NULL,
-        recv_time ? strdup(recv_time->valuestring) : NULL,
+        entry_time && !cJSON_IsNull(entry_time) ? strdup(entry_time->valuestring) : NULL,
+        recv_time && !cJSON_IsNull(recv_time) ? strdup(recv_time->valuestring) : NULL,
         block_number ? block_number->valuedouble : 0,
-        id ? strdup(id->valuestring) : NULL,
-        description ? strdup(description->valuestring) : NULL,
-        added ? strdup(added->valuestring) : NULL,
-        added_at_block ? strdup(added_at_block->valuestring) : NULL,
-        added_at_transaction ? strdup(added_at_transaction->valuestring) : NULL,
-        modified ? strdup(modified->valuestring) : NULL,
-        modified_at_block ? strdup(modified_at_block->valuestring) : NULL,
-        modified_at_transaction ? strdup(modified_at_transaction->valuestring) : NULL,
+        id && !cJSON_IsNull(id) ? strdup(id->valuestring) : NULL,
+        description && !cJSON_IsNull(description) ? strdup(description->valuestring) : NULL,
+        added && !cJSON_IsNull(added) ? strdup(added->valuestring) : NULL,
+        added_at_block && !cJSON_IsNull(added_at_block) ? strdup(added_at_block->valuestring) : NULL,
+        added_at_transaction && !cJSON_IsNull(added_at_transaction) ? strdup(added_at_transaction->valuestring) : NULL,
+        modified && !cJSON_IsNull(modified) ? strdup(modified->valuestring) : NULL,
+        modified_at_block && !cJSON_IsNull(modified_at_block) ? strdup(modified_at_block->valuestring) : NULL,
+        modified_at_transaction && !cJSON_IsNull(modified_at_transaction) ? strdup(modified_at_transaction->valuestring) : NULL,
         vid ? vid->valuedouble : 0
         );
 

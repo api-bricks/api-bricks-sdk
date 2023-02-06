@@ -16,6 +16,9 @@ import (
 	"time"
 )
 
+// checks if the DexTokenDTO type satisfies the MappedNullable interface at compile time
+var _ MappedNullable = &DexTokenDTO{}
+
 // DexTokenDTO Registered token.
 type DexTokenDTO struct {
 	EntryTime *time.Time `json:"entry_time,omitempty"`
@@ -75,7 +78,7 @@ func (o *DexTokenDTO) GetEntryTime() time.Time {
 // and a boolean to check if the value has been set.
 func (o *DexTokenDTO) GetEntryTimeOk() (*time.Time, bool) {
 	if o == nil || isNil(o.EntryTime) {
-    return nil, false
+		return nil, false
 	}
 	return o.EntryTime, true
 }
@@ -107,7 +110,7 @@ func (o *DexTokenDTO) GetRecvTime() time.Time {
 // and a boolean to check if the value has been set.
 func (o *DexTokenDTO) GetRecvTimeOk() (*time.Time, bool) {
 	if o == nil || isNil(o.RecvTime) {
-    return nil, false
+		return nil, false
 	}
 	return o.RecvTime, true
 }
@@ -139,7 +142,7 @@ func (o *DexTokenDTO) GetBlockNumber() int64 {
 // and a boolean to check if the value has been set.
 func (o *DexTokenDTO) GetBlockNumberOk() (*int64, bool) {
 	if o == nil || isNil(o.BlockNumber) {
-    return nil, false
+		return nil, false
 	}
 	return o.BlockNumber, true
 }
@@ -172,7 +175,7 @@ func (o *DexTokenDTO) GetId() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *DexTokenDTO) GetIdOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Id.Get(), o.Id.IsSet()
 }
@@ -214,7 +217,7 @@ func (o *DexTokenDTO) GetAddress() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *DexTokenDTO) GetAddressOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Address.Get(), o.Address.IsSet()
 }
@@ -256,7 +259,7 @@ func (o *DexTokenDTO) GetFromBatchId() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *DexTokenDTO) GetFromBatchIdOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.FromBatchId.Get(), o.FromBatchId.IsSet()
 }
@@ -298,7 +301,7 @@ func (o *DexTokenDTO) GetSymbol() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *DexTokenDTO) GetSymbolOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Symbol.Get(), o.Symbol.IsSet()
 }
@@ -340,7 +343,7 @@ func (o *DexTokenDTO) GetDecimals() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *DexTokenDTO) GetDecimalsOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Decimals.Get(), o.Decimals.IsSet()
 }
@@ -382,7 +385,7 @@ func (o *DexTokenDTO) GetName() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *DexTokenDTO) GetNameOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Name.Get(), o.Name.IsSet()
 }
@@ -424,7 +427,7 @@ func (o *DexTokenDTO) GetSellVolume() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *DexTokenDTO) GetSellVolumeOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.SellVolume.Get(), o.SellVolume.IsSet()
 }
@@ -466,7 +469,7 @@ func (o *DexTokenDTO) GetCreateEpoch() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *DexTokenDTO) GetCreateEpochOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.CreateEpoch.Get(), o.CreateEpoch.IsSet()
 }
@@ -508,7 +511,7 @@ func (o *DexTokenDTO) GetTxHash() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *DexTokenDTO) GetTxHashOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.TxHash.Get(), o.TxHash.IsSet()
 }
@@ -549,7 +552,7 @@ func (o *DexTokenDTO) GetVid() int64 {
 // and a boolean to check if the value has been set.
 func (o *DexTokenDTO) GetVidOk() (*int64, bool) {
 	if o == nil || isNil(o.Vid) {
-    return nil, false
+		return nil, false
 	}
 	return o.Vid, true
 }
@@ -582,7 +585,7 @@ func (o *DexTokenDTO) GetTokenSymbol() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *DexTokenDTO) GetTokenSymbolOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.TokenSymbol.Get(), o.TokenSymbol.IsSet()
 }
@@ -611,6 +614,14 @@ func (o *DexTokenDTO) UnsetTokenSymbol() {
 }
 
 func (o DexTokenDTO) MarshalJSON() ([]byte, error) {
+	toSerialize,err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
+}
+
+func (o DexTokenDTO) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
 	if !isNil(o.EntryTime) {
 		toSerialize["entry_time"] = o.EntryTime
@@ -654,7 +665,7 @@ func (o DexTokenDTO) MarshalJSON() ([]byte, error) {
 	if o.TokenSymbol.IsSet() {
 		toSerialize["token_symbol"] = o.TokenSymbol.Get()
 	}
-	return json.Marshal(toSerialize)
+	return toSerialize, nil
 }
 
 type NullableDexTokenDTO struct {

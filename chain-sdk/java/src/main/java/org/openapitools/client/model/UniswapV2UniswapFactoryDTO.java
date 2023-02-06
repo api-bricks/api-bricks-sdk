@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.time.OffsetDateTime;
 import org.openapitools.jackson.nullable.JsonNullable;
@@ -50,8 +48,7 @@ import org.openapitools.client.JSON;
 /**
  * The Uniswap Factory entity is responsible for storing aggregate information across all Uniswap pairs. It can be used to view stats about total liquidity, volume, amount of pairs and more.
  */
-@ApiModel(description = "The Uniswap Factory entity is responsible for storing aggregate information across all Uniswap pairs. It can be used to view stats about total liquidity, volume, amount of pairs and more.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-30T14:42:00.397192Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-06T14:47:06.037855Z[Etc/UTC]")
 public class UniswapV2UniswapFactoryDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -115,7 +112,6 @@ public class UniswapV2UniswapFactoryDTO {
    * @return entryTime
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public OffsetDateTime getEntryTime() {
     return entryTime;
@@ -138,7 +134,6 @@ public class UniswapV2UniswapFactoryDTO {
    * @return recvTime
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public OffsetDateTime getRecvTime() {
     return recvTime;
@@ -161,7 +156,6 @@ public class UniswapV2UniswapFactoryDTO {
    * @return blockNumber
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Number of block in which entity was recorded.")
 
   public Long getBlockNumber() {
     return blockNumber;
@@ -184,7 +178,6 @@ public class UniswapV2UniswapFactoryDTO {
    * @return id
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Factory address.")
 
   public String getId() {
     return id;
@@ -207,7 +200,6 @@ public class UniswapV2UniswapFactoryDTO {
    * @return pairCount
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Amount of pairs created by the Uniswap factory.")
 
   public Integer getPairCount() {
     return pairCount;
@@ -230,7 +222,6 @@ public class UniswapV2UniswapFactoryDTO {
    * @return totalVolumeUsd
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "All time USD volume across all pairs (USD is derived).")
 
   public String getTotalVolumeUsd() {
     return totalVolumeUsd;
@@ -253,7 +244,6 @@ public class UniswapV2UniswapFactoryDTO {
    * @return totalVolumeEth
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "All time volume in ETH across all pairs (ETH is derived).")
 
   public String getTotalVolumeEth() {
     return totalVolumeEth;
@@ -276,7 +266,6 @@ public class UniswapV2UniswapFactoryDTO {
    * @return untrackedVolumeUsd
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Untracked volume USD.")
 
   public String getUntrackedVolumeUsd() {
     return untrackedVolumeUsd;
@@ -299,7 +288,6 @@ public class UniswapV2UniswapFactoryDTO {
    * @return totalLiquidityUsd
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Total liquidity across all pairs stored as a derived USD amount.")
 
   public String getTotalLiquidityUsd() {
     return totalLiquidityUsd;
@@ -322,7 +310,6 @@ public class UniswapV2UniswapFactoryDTO {
    * @return totalLiquidityEth
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Total liquidity across all pairs stored as a derived ETH amount.")
 
   public String getTotalLiquidityEth() {
     return totalLiquidityEth;
@@ -345,7 +332,6 @@ public class UniswapV2UniswapFactoryDTO {
    * @return txCount
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "All time amount of transactions across all pairs.")
 
   public String getTxCount() {
     return txCount;
@@ -368,7 +354,6 @@ public class UniswapV2UniswapFactoryDTO {
    * @return vid
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = ".")
 
   public Long getVid() {
     return vid;

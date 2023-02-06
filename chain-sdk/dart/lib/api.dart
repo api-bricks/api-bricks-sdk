@@ -30,6 +30,7 @@ part 'auth/http_bearer_auth.dart';
 part 'api/cow_api.dart';
 part 'api/curve_api.dart';
 part 'api/dex_api.dart';
+part 'api/metadata_api.dart';
 part 'api/sushiswap_api.dart';
 part 'api/uniswap_v2_api.dart';
 part 'api/uniswap_v3_api.dart';

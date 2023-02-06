@@ -101,3 +101,5 @@ export interface CowTradeDTO {
     evaluated_aggressor?: models.TransactionsETradeAggressiveSide;
 
 }
+export namespace CowTradeDTO {
+}

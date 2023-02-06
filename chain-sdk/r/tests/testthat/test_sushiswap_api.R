@@ -70,12 +70,12 @@ test_that("SushiswapGetBurnsHistorical", {
   # base path: https://onchain.coinapi.io
   # Burns (historical)
   # Gets burns.
-  # @param start_block integer  (optional)
-  # @param end_block integer  (optional)
-  # @param start_date character  (optional)
-  # @param end_date character  (optional)
-  # @param id character  (optional)
-  # @param pair character  (optional)
+  # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+  # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+  # @param start_date character The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+  # @param end_date character The end date of timeframe. (optional)
+  # @param id character Identifier, format: (transaction id):(transaction.burns.length). (optional)
+  # @param pair character Reference to pair. (optional)
   # @return [array[SushiswapBurnDTO]]
 
   # uncomment below to test the operation
@@ -135,13 +135,13 @@ test_that("SushiswapGetLiquidityPositionSnapshotsHistorical", {
   # base path: https://onchain.coinapi.io
   # LiquidityPositionSnapshots (historical)
   # Gets liquidityPositionSnapshots.
-  # @param start_block integer  (optional)
-  # @param end_block integer  (optional)
-  # @param start_date character  (optional)
-  # @param end_date character  (optional)
-  # @param id character  (optional)
-  # @param user character  (optional)
-  # @param pair character  (optional)
+  # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+  # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+  # @param start_date character The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+  # @param end_date character The end date of timeframe. (optional)
+  # @param id character Identifier, format: (pair address)-(user address)-(timestamp) (optional)
+  # @param user character Reference to user. (optional)
+  # @param pair character Reference to the pair liquidity is being provided on. (optional)
   # @return [array[SushiswapLiquidityPositionSnapshotDTO]]
 
   # uncomment below to test the operation
@@ -153,13 +153,13 @@ test_that("SushiswapGetLiquidityPositionsHistorical", {
   # base path: https://onchain.coinapi.io
   # LiquidityPositions (historical)
   # Gets liquidityPositions.
-  # @param start_block integer  (optional)
-  # @param end_block integer  (optional)
-  # @param start_date character  (optional)
-  # @param end_date character  (optional)
-  # @param id character  (optional)
-  # @param user character  (optional)
-  # @param pair character  (optional)
+  # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+  # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+  # @param start_date character The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+  # @param end_date character The end date of timeframe. (optional)
+  # @param id character Identifier, format: (pair address)-(user address) (optional)
+  # @param user character User address. (optional)
+  # @param pair character Pair address. (optional)
   # @return [array[SushiswapLiquidityPositionDTO]]
 
   # uncomment below to test the operation
@@ -171,12 +171,12 @@ test_that("SushiswapGetMintsHistorical", {
   # base path: https://onchain.coinapi.io
   # Mints (historical)
   # Gets mints.
-  # @param start_block integer  (optional)
-  # @param end_block integer  (optional)
-  # @param start_date character  (optional)
-  # @param end_date character  (optional)
-  # @param id character  (optional)
-  # @param pair character  (optional)
+  # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+  # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+  # @param start_date character The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+  # @param end_date character The end date of timeframe. (optional)
+  # @param id character Identifier, format: (transaction hash)-(index in the transaction mint array). (optional)
+  # @param pair character Reference to pair. (optional)
   # @return [array[SushiswapMintDTO]]
 
   # uncomment below to test the operation
@@ -188,14 +188,14 @@ test_that("SushiswapGetPairDayDataHistorical", {
   # base path: https://onchain.coinapi.io
   # PairDayData (historical)
   # Gets pairDayData.
-  # @param start_block integer  (optional)
-  # @param end_block integer  (optional)
-  # @param start_date character  (optional)
-  # @param end_date character  (optional)
-  # @param id character  (optional)
-  # @param pair character  (optional)
-  # @param token_0 character  (optional)
-  # @param token_1 character  (optional)
+  # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+  # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+  # @param start_date character The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+  # @param end_date character The end date of timeframe. (optional)
+  # @param id character Identifier, format: (pair id)-(day start timestamp). (optional)
+  # @param pair character Reference to pair. (optional)
+  # @param token_0 character Reference to token0. (optional)
+  # @param token_1 character Reference to token1. (optional)
   # @return [array[SushiswapPairDayDataDTO]]
 
   # uncomment below to test the operation
@@ -207,12 +207,12 @@ test_that("SushiswapGetPairHourDataHistorical", {
   # base path: https://onchain.coinapi.io
   # PairHourData (historical)
   # Gets pairHourData.
-  # @param start_block integer  (optional)
-  # @param end_block integer  (optional)
-  # @param start_date character  (optional)
-  # @param end_date character  (optional)
-  # @param id character  (optional)
-  # @param pair character  (optional)
+  # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+  # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+  # @param start_date character The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+  # @param end_date character The end date of timeframe. (optional)
+  # @param id character Identifier, format: (pair id)-(hour start timestamp). (optional)
+  # @param pair character Reference to pair. (optional)
   # @return [array[SushiswapPairHourDataDTO]]
 
   # uncomment below to test the operation
@@ -224,14 +224,14 @@ test_that("SushiswapGetPairsHistorical", {
   # base path: https://onchain.coinapi.io
   # Pairs (historical)
   # Gets pairs.
-  # @param start_block integer  (optional)
-  # @param end_block integer  (optional)
-  # @param start_date character  (optional)
-  # @param end_date character  (optional)
-  # @param id character  (optional)
-  # @param name character  (optional)
-  # @param token_0 character  (optional)
-  # @param token_1 character  (optional)
+  # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+  # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+  # @param start_date character The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+  # @param end_date character The end date of timeframe. (optional)
+  # @param id character Pair contract address. (optional)
+  # @param name character Friendly name, format: (token0 name)-(token1 name) (optional)
+  # @param token_0 character Reference to token0 as stored in pair contract. (optional)
+  # @param token_1 character Reference to token0 as stored in pair contract. (optional)
   # @return [array[SushiswapPairDTO]]
 
   # uncomment below to test the operation

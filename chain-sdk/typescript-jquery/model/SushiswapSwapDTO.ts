@@ -101,3 +101,5 @@ export interface SushiswapSwapDTO {
     evaluated_aggressor?: models.TransactionsETradeAggressiveSide;
 
 }
+export namespace SushiswapSwapDTO {
+}

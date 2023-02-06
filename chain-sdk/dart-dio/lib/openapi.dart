@@ -12,6 +12,7 @@ export 'package:openapi/src/model/date.dart';
 export 'package:openapi/src/api/cow_api.dart';
 export 'package:openapi/src/api/curve_api.dart';
 export 'package:openapi/src/api/dex_api.dart';
+export 'package:openapi/src/api/metadata_api.dart';
 export 'package:openapi/src/api/sushiswap_api.dart';
 export 'package:openapi/src/api/uniswap_v2_api.dart';
 export 'package:openapi/src/api/uniswap_v3_api.dart';

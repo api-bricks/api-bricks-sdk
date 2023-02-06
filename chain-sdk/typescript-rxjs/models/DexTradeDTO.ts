@@ -147,3 +147,5 @@ export interface DexTradeDTO {
      */
     evaluated_aggressor?: TransactionsETradeAggressiveSide;
 }
+
+

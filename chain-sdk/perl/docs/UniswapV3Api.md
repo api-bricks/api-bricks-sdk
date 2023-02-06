@@ -413,12 +413,12 @@ use WWW::OpenAPIClient::UniswapV3Api;
 my $api_instance = WWW::OpenAPIClient::UniswapV3Api->new(
 );
 
-my $start_block = 789; # int | 
-my $end_block = 789; # int | 
-my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
-my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
-my $id = "id_example"; # string | 
-my $pool = "pool_example"; # string | 
+my $start_block = 789; # int | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+my $end_block = 789; # int | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | The end date of timeframe.
+my $id = "id_example"; # string | Identifier, format: (pool address)-(day id).
+my $pool = "pool_example"; # string | Pointer to pool.
 
 eval {
     my $result = $api_instance->uniswap_v3_get_pool_day_data__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, id => $id, pool => $pool);
@@ -433,12 +433,12 @@ if ($@) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **start_block** | **int**|  | [optional] 
- **end_block** | **int**|  | [optional] 
- **start_date** | **DATE_TIME**|  | [optional] 
- **end_date** | **DATE_TIME**|  | [optional] 
- **id** | **string**|  | [optional] 
- **pool** | **string**|  | [optional] 
+ **start_block** | **int**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
+ **end_block** | **int**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
+ **start_date** | **DATE_TIME**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
+ **end_date** | **DATE_TIME**| The end date of timeframe. | [optional] 
+ **id** | **string**| Identifier, format: (pool address)-(day id). | [optional] 
+ **pool** | **string**| Pointer to pool. | [optional] 
 
 ### Return type
 
@@ -469,12 +469,12 @@ use WWW::OpenAPIClient::UniswapV3Api;
 my $api_instance = WWW::OpenAPIClient::UniswapV3Api->new(
 );
 
-my $start_block = 789; # int | 
-my $end_block = 789; # int | 
-my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
-my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
-my $id = "id_example"; # string | 
-my $pool = "pool_example"; # string | 
+my $start_block = 789; # int | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+my $end_block = 789; # int | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | The end date of timeframe.
+my $id = "id_example"; # string | Identifier, format: (pool address)-(day id)
+my $pool = "pool_example"; # string | Pointer to pool.
 
 eval {
     my $result = $api_instance->uniswap_v3_get_pool_hour_data__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, id => $id, pool => $pool);
@@ -489,12 +489,12 @@ if ($@) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **start_block** | **int**|  | [optional] 
- **end_block** | **int**|  | [optional] 
- **start_date** | **DATE_TIME**|  | [optional] 
- **end_date** | **DATE_TIME**|  | [optional] 
- **id** | **string**|  | [optional] 
- **pool** | **string**|  | [optional] 
+ **start_block** | **int**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
+ **end_block** | **int**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
+ **start_date** | **DATE_TIME**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
+ **end_date** | **DATE_TIME**| The end date of timeframe. | [optional] 
+ **id** | **string**| Identifier, format: (pool address)-(day id) | [optional] 
+ **pool** | **string**| Pointer to pool. | [optional] 
 
 ### Return type
 
@@ -583,12 +583,12 @@ use WWW::OpenAPIClient::UniswapV3Api;
 my $api_instance = WWW::OpenAPIClient::UniswapV3Api->new(
 );
 
-my $start_block = 789; # int | 
-my $end_block = 789; # int | 
-my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
-my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
-my $id = "id_example"; # string | 
-my $pool = "pool_example"; # string | 
+my $start_block = 789; # int | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+my $end_block = 789; # int | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | The end date of timeframe.
+my $id = "id_example"; # string | NFT token identifier, format: (NFT token id)#(block number).
+my $pool = "pool_example"; # string | Pool the position is within.
 
 eval {
     my $result = $api_instance->uniswap_v3_get_position_snapshots__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, id => $id, pool => $pool);
@@ -603,12 +603,12 @@ if ($@) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **start_block** | **int**|  | [optional] 
- **end_block** | **int**|  | [optional] 
- **start_date** | **DATE_TIME**|  | [optional] 
- **end_date** | **DATE_TIME**|  | [optional] 
- **id** | **string**|  | [optional] 
- **pool** | **string**|  | [optional] 
+ **start_block** | **int**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
+ **end_block** | **int**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
+ **start_date** | **DATE_TIME**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
+ **end_date** | **DATE_TIME**| The end date of timeframe. | [optional] 
+ **id** | **string**| NFT token identifier, format: (NFT token id)#(block number). | [optional] 
+ **pool** | **string**| Pool the position is within. | [optional] 
 
 ### Return type
 
@@ -703,7 +703,7 @@ my $start_block = 789; # int | The start block. If endblock is not given, only t
 my $end_block = 789; # int | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
 my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
 my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | The end date of timeframe.
-my $id = "id_example"; # string | Identifier, format: transaction hash + \"#\" + index in swaps Transaction array.
+my $id = "id_example"; # string | Identifier, format: (transaction hash) + # + (index in swaps Transaction array).
 my $pool = "pool_example"; # string | Pool swap occured within.
 my $token_0 = "token_0_example"; # string | Reference to token0 as stored in pair contract.
 my $token_1 = "token_1_example"; # string | Reference to token1 as stored in pair contract.
@@ -725,7 +725,7 @@ Name | Type | Description  | Notes
  **end_block** | **int**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
  **start_date** | **DATE_TIME**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
  **end_date** | **DATE_TIME**| The end date of timeframe. | [optional] 
- **id** | **string**| Identifier, format: transaction hash + \&quot;#\&quot; + index in swaps Transaction array. | [optional] 
+ **id** | **string**| Identifier, format: (transaction hash) + # + (index in swaps Transaction array). | [optional] 
  **pool** | **string**| Pool swap occured within. | [optional] 
  **token_0** | **string**| Reference to token0 as stored in pair contract. | [optional] 
  **token_1** | **string**| Reference to token1 as stored in pair contract. | [optional] 
@@ -759,12 +759,12 @@ use WWW::OpenAPIClient::UniswapV3Api;
 my $api_instance = WWW::OpenAPIClient::UniswapV3Api->new(
 );
 
-my $start_block = 789; # int | 
-my $end_block = 789; # int | 
-my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
-my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
-my $id = "id_example"; # string | 
-my $pool = "pool_example"; # string | 
+my $start_block = 789; # int | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+my $end_block = 789; # int | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | The end date of timeframe.
+my $id = "id_example"; # string | Identifier, format: (pool address)-(tick index)-(timestamp).
+my $pool = "pool_example"; # string | Pointer to pool.
 
 eval {
     my $result = $api_instance->uniswap_v3_get_tick_day_data__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, id => $id, pool => $pool);
@@ -779,12 +779,12 @@ if ($@) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **start_block** | **int**|  | [optional] 
- **end_block** | **int**|  | [optional] 
- **start_date** | **DATE_TIME**|  | [optional] 
- **end_date** | **DATE_TIME**|  | [optional] 
- **id** | **string**|  | [optional] 
- **pool** | **string**|  | [optional] 
+ **start_block** | **int**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
+ **end_block** | **int**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
+ **start_date** | **DATE_TIME**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
+ **end_date** | **DATE_TIME**| The end date of timeframe. | [optional] 
+ **id** | **string**| Identifier, format: (pool address)-(tick index)-(timestamp). | [optional] 
+ **pool** | **string**| Pointer to pool. | [optional] 
 
 ### Return type
 
@@ -815,12 +815,12 @@ use WWW::OpenAPIClient::UniswapV3Api;
 my $api_instance = WWW::OpenAPIClient::UniswapV3Api->new(
 );
 
-my $start_block = 789; # int | 
-my $end_block = 789; # int | 
-my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
-my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
-my $id = "id_example"; # string | 
-my $pool = "pool_example"; # string | 
+my $start_block = 789; # int | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+my $end_block = 789; # int | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | The end date of timeframe.
+my $id = "id_example"; # string | Identifier, format: (pool address)#(tick index)
+my $pool = "pool_example"; # string | Pool address.
 
 eval {
     my $result = $api_instance->uniswap_v3_get_ticks__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, id => $id, pool => $pool);
@@ -835,12 +835,12 @@ if ($@) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **start_block** | **int**|  | [optional] 
- **end_block** | **int**|  | [optional] 
- **start_date** | **DATE_TIME**|  | [optional] 
- **end_date** | **DATE_TIME**|  | [optional] 
- **id** | **string**|  | [optional] 
- **pool** | **string**|  | [optional] 
+ **start_block** | **int**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
+ **end_block** | **int**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
+ **start_date** | **DATE_TIME**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
+ **end_date** | **DATE_TIME**| The end date of timeframe. | [optional] 
+ **id** | **string**| Identifier, format: (pool address)#(tick index) | [optional] 
+ **pool** | **string**| Pool address. | [optional] 
 
 ### Return type
 

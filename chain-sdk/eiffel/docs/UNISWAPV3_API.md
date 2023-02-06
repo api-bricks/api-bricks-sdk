@@ -276,12 +276,12 @@ Gets poolDayData.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **start_block** | **INTEGER_64**|  | [optional] [default to null]
- **end_block** | **INTEGER_64**|  | [optional] [default to null]
- **start_date** | **DATE_TIME**|  | [optional] [default to null]
- **end_date** | **DATE_TIME**|  | [optional] [default to null]
- **id** | **STRING_32**|  | [optional] [default to null]
- **pool** | **STRING_32**|  | [optional] [default to null]
+ **start_block** | **INTEGER_64**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] [default to null]
+ **end_block** | **INTEGER_64**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] [default to null]
+ **start_date** | **DATE_TIME**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] [default to null]
+ **end_date** | **DATE_TIME**| The end date of timeframe. | [optional] [default to null]
+ **id** | **STRING_32**| Identifier, format: (pool address)-(day id). | [optional] [default to null]
+ **pool** | **STRING_32**| Pointer to pool. | [optional] [default to null]
 
 ### Return type
 
@@ -311,12 +311,12 @@ Gets poolHourData.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **start_block** | **INTEGER_64**|  | [optional] [default to null]
- **end_block** | **INTEGER_64**|  | [optional] [default to null]
- **start_date** | **DATE_TIME**|  | [optional] [default to null]
- **end_date** | **DATE_TIME**|  | [optional] [default to null]
- **id** | **STRING_32**|  | [optional] [default to null]
- **pool** | **STRING_32**|  | [optional] [default to null]
+ **start_block** | **INTEGER_64**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] [default to null]
+ **end_block** | **INTEGER_64**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] [default to null]
+ **start_date** | **DATE_TIME**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] [default to null]
+ **end_date** | **DATE_TIME**| The end date of timeframe. | [optional] [default to null]
+ **id** | **STRING_32**| Identifier, format: (pool address)-(day id) | [optional] [default to null]
+ **pool** | **STRING_32**| Pointer to pool. | [optional] [default to null]
 
 ### Return type
 
@@ -382,12 +382,12 @@ Gets positionSnapshots.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **start_block** | **INTEGER_64**|  | [optional] [default to null]
- **end_block** | **INTEGER_64**|  | [optional] [default to null]
- **start_date** | **DATE_TIME**|  | [optional] [default to null]
- **end_date** | **DATE_TIME**|  | [optional] [default to null]
- **id** | **STRING_32**|  | [optional] [default to null]
- **pool** | **STRING_32**|  | [optional] [default to null]
+ **start_block** | **INTEGER_64**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] [default to null]
+ **end_block** | **INTEGER_64**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] [default to null]
+ **start_date** | **DATE_TIME**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] [default to null]
+ **end_date** | **DATE_TIME**| The end date of timeframe. | [optional] [default to null]
+ **id** | **STRING_32**| NFT token identifier, format: (NFT token id)#(block number). | [optional] [default to null]
+ **pool** | **STRING_32**| Pool the position is within. | [optional] [default to null]
 
 ### Return type
 
@@ -458,7 +458,7 @@ Name | Type | Description  | Notes
  **end_block** | **INTEGER_64**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] [default to null]
  **start_date** | **DATE_TIME**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] [default to null]
  **end_date** | **DATE_TIME**| The end date of timeframe. | [optional] [default to null]
- **id** | **STRING_32**| Identifier, format: transaction hash + \&quot;#\&quot; + index in swaps Transaction array. | [optional] [default to null]
+ **id** | **STRING_32**| Identifier, format: (transaction hash) + # + (index in swaps Transaction array). | [optional] [default to null]
  **pool** | **STRING_32**| Pool swap occured within. | [optional] [default to null]
  **token_0** | **STRING_32**| Reference to token0 as stored in pair contract. | [optional] [default to null]
  **token_1** | **STRING_32**| Reference to token1 as stored in pair contract. | [optional] [default to null]
@@ -491,12 +491,12 @@ Gets tickDayData.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **start_block** | **INTEGER_64**|  | [optional] [default to null]
- **end_block** | **INTEGER_64**|  | [optional] [default to null]
- **start_date** | **DATE_TIME**|  | [optional] [default to null]
- **end_date** | **DATE_TIME**|  | [optional] [default to null]
- **id** | **STRING_32**|  | [optional] [default to null]
- **pool** | **STRING_32**|  | [optional] [default to null]
+ **start_block** | **INTEGER_64**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] [default to null]
+ **end_block** | **INTEGER_64**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] [default to null]
+ **start_date** | **DATE_TIME**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] [default to null]
+ **end_date** | **DATE_TIME**| The end date of timeframe. | [optional] [default to null]
+ **id** | **STRING_32**| Identifier, format: (pool address)-(tick index)-(timestamp). | [optional] [default to null]
+ **pool** | **STRING_32**| Pointer to pool. | [optional] [default to null]
 
 ### Return type
 
@@ -526,12 +526,12 @@ Gets ticks.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **start_block** | **INTEGER_64**|  | [optional] [default to null]
- **end_block** | **INTEGER_64**|  | [optional] [default to null]
- **start_date** | **DATE_TIME**|  | [optional] [default to null]
- **end_date** | **DATE_TIME**|  | [optional] [default to null]
- **id** | **STRING_32**|  | [optional] [default to null]
- **pool** | **STRING_32**|  | [optional] [default to null]
+ **start_block** | **INTEGER_64**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] [default to null]
+ **end_block** | **INTEGER_64**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] [default to null]
+ **start_date** | **DATE_TIME**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] [default to null]
+ **end_date** | **DATE_TIME**| The end date of timeframe. | [optional] [default to null]
+ **id** | **STRING_32**| Identifier, format: (pool address)#(tick index) | [optional] [default to null]
+ **pool** | **STRING_32**| Pool address. | [optional] [default to null]
 
 ### Return type
 

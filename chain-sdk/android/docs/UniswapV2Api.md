@@ -246,13 +246,13 @@ Gets liquidityPositionSnapshots.
 //import org.openapitools.client.api.UniswapV2Api;
 
 UniswapV2Api apiInstance = new UniswapV2Api();
-Long startBlock = null; // Long | 
-Long endBlock = null; // Long | 
-Date startDate = null; // Date | 
-Date endDate = null; // Date | 
-String id = null; // String | 
-String user = null; // String | 
-String pair = null; // String | 
+Long startBlock = null; // Long | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+Long endBlock = null; // Long | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+Date startDate = null; // Date | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+Date endDate = null; // Date | The end date of timeframe.
+String id = null; // String | Identifier, format: (pair address)-(user address)
+String user = null; // String | Reference to user.
+String pair = null; // String | Reference to the pair liquidity is being provided on.
 try {
     List<UniswapV2LiquidityPositionSnapshotDTO> result = apiInstance.uniswapV2GetLiquidityPositionSnapshotsHistorical(startBlock, endBlock, startDate, endDate, id, user, pair);
     System.out.println(result);
@@ -267,13 +267,13 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startBlock** | **Long**|  | [optional] [default to null]
- **endBlock** | **Long**|  | [optional] [default to null]
- **startDate** | **Date**|  | [optional] [default to null]
- **endDate** | **Date**|  | [optional] [default to null]
- **id** | **String**|  | [optional] [default to null]
- **user** | **String**|  | [optional] [default to null]
- **pair** | **String**|  | [optional] [default to null]
+ **startBlock** | **Long**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] [default to null]
+ **endBlock** | **Long**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] [default to null]
+ **startDate** | **Date**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] [default to null]
+ **endDate** | **Date**| The end date of timeframe. | [optional] [default to null]
+ **id** | **String**| Identifier, format: (pair address)-(user address) | [optional] [default to null]
+ **user** | **String**| Reference to user. | [optional] [default to null]
+ **pair** | **String**| Reference to the pair liquidity is being provided on. | [optional] [default to null]
 
 ### Return type
 

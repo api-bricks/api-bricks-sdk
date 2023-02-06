@@ -193,19 +193,19 @@ feature -- API Access
 			-- LiquidityPositionSnapshots (historical)
 			-- Gets liquidityPositionSnapshots.
 			-- 
-			-- argument: start_block  (optional, default to null)
+			-- argument: start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to null)
 			-- 
-			-- argument: end_block  (optional, default to null)
+			-- argument: end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional, default to null)
 			-- 
-			-- argument: start_date  (optional, default to null)
+			-- argument: start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional, default to null)
 			-- 
-			-- argument: end_date  (optional, default to null)
+			-- argument: end_date The end date of timeframe. (optional, default to null)
 			-- 
-			-- argument: id  (optional, default to null)
+			-- argument: id Identifier, format: (pair address)-(user address) (optional, default to null)
 			-- 
-			-- argument: user  (optional, default to null)
+			-- argument: user Reference to user. (optional, default to null)
 			-- 
-			-- argument: pair  (optional, default to null)
+			-- argument: pair Reference to the pair liquidity is being provided on. (optional, default to null)
 			-- 
 			-- 
 			-- Result LIST [UNISWAP_V2_LIQUIDITY_POSITION_SNAPSHOT_DTO]

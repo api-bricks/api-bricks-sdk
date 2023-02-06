@@ -229,7 +229,7 @@ dex_token_dto_t *dex_token_dto_parseFromJSON(cJSON *dex_token_dtoJSON){
     // dex_token_dto->entry_time
     cJSON *entry_time = cJSON_GetObjectItemCaseSensitive(dex_token_dtoJSON, "entry_time");
     if (entry_time) { 
-    if(!cJSON_IsString(entry_time))
+    if(!cJSON_IsString(entry_time) && !cJSON_IsNull(entry_time))
     {
     goto end; //DateTime
     }
@@ -238,7 +238,7 @@ dex_token_dto_t *dex_token_dto_parseFromJSON(cJSON *dex_token_dtoJSON){
     // dex_token_dto->recv_time
     cJSON *recv_time = cJSON_GetObjectItemCaseSensitive(dex_token_dtoJSON, "recv_time");
     if (recv_time) { 
-    if(!cJSON_IsString(recv_time))
+    if(!cJSON_IsString(recv_time) && !cJSON_IsNull(recv_time))
     {
     goto end; //DateTime
     }
@@ -256,7 +256,7 @@ dex_token_dto_t *dex_token_dto_parseFromJSON(cJSON *dex_token_dtoJSON){
     // dex_token_dto->id
     cJSON *id = cJSON_GetObjectItemCaseSensitive(dex_token_dtoJSON, "id");
     if (id) { 
-    if(!cJSON_IsString(id))
+    if(!cJSON_IsString(id) && !cJSON_IsNull(id))
     {
     goto end; //String
     }
@@ -265,7 +265,7 @@ dex_token_dto_t *dex_token_dto_parseFromJSON(cJSON *dex_token_dtoJSON){
     // dex_token_dto->address
     cJSON *address = cJSON_GetObjectItemCaseSensitive(dex_token_dtoJSON, "address");
     if (address) { 
-    if(!cJSON_IsString(address))
+    if(!cJSON_IsString(address) && !cJSON_IsNull(address))
     {
     goto end; //String
     }
@@ -274,7 +274,7 @@ dex_token_dto_t *dex_token_dto_parseFromJSON(cJSON *dex_token_dtoJSON){
     // dex_token_dto->from_batch_id
     cJSON *from_batch_id = cJSON_GetObjectItemCaseSensitive(dex_token_dtoJSON, "from_batch_id");
     if (from_batch_id) { 
-    if(!cJSON_IsString(from_batch_id))
+    if(!cJSON_IsString(from_batch_id) && !cJSON_IsNull(from_batch_id))
     {
     goto end; //String
     }
@@ -283,7 +283,7 @@ dex_token_dto_t *dex_token_dto_parseFromJSON(cJSON *dex_token_dtoJSON){
     // dex_token_dto->symbol
     cJSON *symbol = cJSON_GetObjectItemCaseSensitive(dex_token_dtoJSON, "symbol");
     if (symbol) { 
-    if(!cJSON_IsString(symbol))
+    if(!cJSON_IsString(symbol) && !cJSON_IsNull(symbol))
     {
     goto end; //String
     }
@@ -292,7 +292,7 @@ dex_token_dto_t *dex_token_dto_parseFromJSON(cJSON *dex_token_dtoJSON){
     // dex_token_dto->decimals
     cJSON *decimals = cJSON_GetObjectItemCaseSensitive(dex_token_dtoJSON, "decimals");
     if (decimals) { 
-    if(!cJSON_IsString(decimals))
+    if(!cJSON_IsString(decimals) && !cJSON_IsNull(decimals))
     {
     goto end; //String
     }
@@ -301,7 +301,7 @@ dex_token_dto_t *dex_token_dto_parseFromJSON(cJSON *dex_token_dtoJSON){
     // dex_token_dto->name
     cJSON *name = cJSON_GetObjectItemCaseSensitive(dex_token_dtoJSON, "name");
     if (name) { 
-    if(!cJSON_IsString(name))
+    if(!cJSON_IsString(name) && !cJSON_IsNull(name))
     {
     goto end; //String
     }
@@ -310,7 +310,7 @@ dex_token_dto_t *dex_token_dto_parseFromJSON(cJSON *dex_token_dtoJSON){
     // dex_token_dto->sell_volume
     cJSON *sell_volume = cJSON_GetObjectItemCaseSensitive(dex_token_dtoJSON, "sell_volume");
     if (sell_volume) { 
-    if(!cJSON_IsString(sell_volume))
+    if(!cJSON_IsString(sell_volume) && !cJSON_IsNull(sell_volume))
     {
     goto end; //String
     }
@@ -319,7 +319,7 @@ dex_token_dto_t *dex_token_dto_parseFromJSON(cJSON *dex_token_dtoJSON){
     // dex_token_dto->create_epoch
     cJSON *create_epoch = cJSON_GetObjectItemCaseSensitive(dex_token_dtoJSON, "create_epoch");
     if (create_epoch) { 
-    if(!cJSON_IsString(create_epoch))
+    if(!cJSON_IsString(create_epoch) && !cJSON_IsNull(create_epoch))
     {
     goto end; //String
     }
@@ -328,7 +328,7 @@ dex_token_dto_t *dex_token_dto_parseFromJSON(cJSON *dex_token_dtoJSON){
     // dex_token_dto->tx_hash
     cJSON *tx_hash = cJSON_GetObjectItemCaseSensitive(dex_token_dtoJSON, "tx_hash");
     if (tx_hash) { 
-    if(!cJSON_IsString(tx_hash))
+    if(!cJSON_IsString(tx_hash) && !cJSON_IsNull(tx_hash))
     {
     goto end; //String
     }
@@ -346,7 +346,7 @@ dex_token_dto_t *dex_token_dto_parseFromJSON(cJSON *dex_token_dtoJSON){
     // dex_token_dto->token_symbol
     cJSON *token_symbol = cJSON_GetObjectItemCaseSensitive(dex_token_dtoJSON, "token_symbol");
     if (token_symbol) { 
-    if(!cJSON_IsString(token_symbol))
+    if(!cJSON_IsString(token_symbol) && !cJSON_IsNull(token_symbol))
     {
     goto end; //String
     }
@@ -354,20 +354,20 @@ dex_token_dto_t *dex_token_dto_parseFromJSON(cJSON *dex_token_dtoJSON){
 
 
     dex_token_dto_local_var = dex_token_dto_create (
-        entry_time ? strdup(entry_time->valuestring) : NULL,
-        recv_time ? strdup(recv_time->valuestring) : NULL,
+        entry_time && !cJSON_IsNull(entry_time) ? strdup(entry_time->valuestring) : NULL,
+        recv_time && !cJSON_IsNull(recv_time) ? strdup(recv_time->valuestring) : NULL,
         block_number ? block_number->valuedouble : 0,
-        id ? strdup(id->valuestring) : NULL,
-        address ? strdup(address->valuestring) : NULL,
-        from_batch_id ? strdup(from_batch_id->valuestring) : NULL,
-        symbol ? strdup(symbol->valuestring) : NULL,
-        decimals ? strdup(decimals->valuestring) : NULL,
-        name ? strdup(name->valuestring) : NULL,
-        sell_volume ? strdup(sell_volume->valuestring) : NULL,
-        create_epoch ? strdup(create_epoch->valuestring) : NULL,
-        tx_hash ? strdup(tx_hash->valuestring) : NULL,
+        id && !cJSON_IsNull(id) ? strdup(id->valuestring) : NULL,
+        address && !cJSON_IsNull(address) ? strdup(address->valuestring) : NULL,
+        from_batch_id && !cJSON_IsNull(from_batch_id) ? strdup(from_batch_id->valuestring) : NULL,
+        symbol && !cJSON_IsNull(symbol) ? strdup(symbol->valuestring) : NULL,
+        decimals && !cJSON_IsNull(decimals) ? strdup(decimals->valuestring) : NULL,
+        name && !cJSON_IsNull(name) ? strdup(name->valuestring) : NULL,
+        sell_volume && !cJSON_IsNull(sell_volume) ? strdup(sell_volume->valuestring) : NULL,
+        create_epoch && !cJSON_IsNull(create_epoch) ? strdup(create_epoch->valuestring) : NULL,
+        tx_hash && !cJSON_IsNull(tx_hash) ? strdup(tx_hash->valuestring) : NULL,
         vid ? vid->valuedouble : 0,
-        token_symbol ? strdup(token_symbol->valuestring) : NULL
+        token_symbol && !cJSON_IsNull(token_symbol) ? strdup(token_symbol->valuestring) : NULL
         );
 
     return dex_token_dto_local_var;

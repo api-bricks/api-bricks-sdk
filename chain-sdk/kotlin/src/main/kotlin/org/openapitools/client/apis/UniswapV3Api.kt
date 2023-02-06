@@ -124,6 +124,7 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
             path = "/dapps/uniswapv3/bundles/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -191,6 +192,7 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
             path = "/dapps/uniswapv3/burns/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -258,6 +260,7 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
             path = "/dapps/uniswapv3/factories/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -357,6 +360,7 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
             path = "/dapps/uniswapv3/bundles/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -474,6 +478,7 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
             path = "/dapps/uniswapv3/burns/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -573,6 +578,7 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
             path = "/dapps/uniswapv3/factories/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -690,6 +696,7 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
             path = "/dapps/uniswapv3/mints/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -697,12 +704,12 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     /**
      * PoolDayData (historical)
      * Gets poolDayData.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param pool  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (pool address)-(day id). (optional)
+     * @param pool Pointer to pool. (optional)
      * @return kotlin.collections.List<UniswapV3PoolDayDataDTO>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
@@ -733,12 +740,12 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     /**
      * PoolDayData (historical)
      * Gets poolDayData.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param pool  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (pool address)-(day id). (optional)
+     * @param pool Pointer to pool. (optional)
      * @return ApiResponse<kotlin.collections.List<UniswapV3PoolDayDataDTO>?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
@@ -756,12 +763,12 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     /**
      * To obtain the request config of the operation uniswapV3GetPoolDayDataHistorical
      *
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param pool  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (pool address)-(day id). (optional)
+     * @param pool Pointer to pool. (optional)
      * @return RequestConfig
      */
     fun uniswapV3GetPoolDayDataHistoricalRequestConfig(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?, id: kotlin.String?, pool: kotlin.String?) : RequestConfig<Unit> {
@@ -795,6 +802,7 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
             path = "/dapps/uniswapv3/poolDayData/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -802,12 +810,12 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     /**
      * PoolHourData (historical)
      * Gets poolHourData.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param pool  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (pool address)-(day id) (optional)
+     * @param pool Pointer to pool. (optional)
      * @return kotlin.collections.List<UniswapV3PoolHourDataDTO>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
@@ -838,12 +846,12 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     /**
      * PoolHourData (historical)
      * Gets poolHourData.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param pool  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (pool address)-(day id) (optional)
+     * @param pool Pointer to pool. (optional)
      * @return ApiResponse<kotlin.collections.List<UniswapV3PoolHourDataDTO>?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
@@ -861,12 +869,12 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     /**
      * To obtain the request config of the operation uniswapV3GetPoolHourDataHistorical
      *
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param pool  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (pool address)-(day id) (optional)
+     * @param pool Pointer to pool. (optional)
      * @return RequestConfig
      */
     fun uniswapV3GetPoolHourDataHistoricalRequestConfig(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?, id: kotlin.String?, pool: kotlin.String?) : RequestConfig<Unit> {
@@ -900,6 +908,7 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
             path = "/dapps/uniswapv3/poolHourData/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -1011,6 +1020,7 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
             path = "/dapps/uniswapv3/pools/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -1018,12 +1028,12 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     /**
      * PositionSnapshots (historical)
      * Gets positionSnapshots.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param pool  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id NFT token identifier, format: (NFT token id)#(block number). (optional)
+     * @param pool Pool the position is within. (optional)
      * @return kotlin.collections.List<UniswapV3PositionSnapshotDTO>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
@@ -1054,12 +1064,12 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     /**
      * PositionSnapshots (historical)
      * Gets positionSnapshots.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param pool  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id NFT token identifier, format: (NFT token id)#(block number). (optional)
+     * @param pool Pool the position is within. (optional)
      * @return ApiResponse<kotlin.collections.List<UniswapV3PositionSnapshotDTO>?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
@@ -1077,12 +1087,12 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     /**
      * To obtain the request config of the operation uniswapV3GetPositionSnapshotsHistorical
      *
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param pool  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id NFT token identifier, format: (NFT token id)#(block number). (optional)
+     * @param pool Pool the position is within. (optional)
      * @return RequestConfig
      */
     fun uniswapV3GetPositionSnapshotsHistoricalRequestConfig(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?, id: kotlin.String?, pool: kotlin.String?) : RequestConfig<Unit> {
@@ -1116,6 +1126,7 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
             path = "/dapps/uniswapv3/positionSnapshots/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -1233,6 +1244,7 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
             path = "/dapps/uniswapv3/positions/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -1244,7 +1256,7 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
      * @param endDate The end date of timeframe. (optional)
-     * @param id Identifier, format: transaction hash + \&quot;#\&quot; + index in swaps Transaction array. (optional)
+     * @param id Identifier, format: (transaction hash) + # + (index in swaps Transaction array). (optional)
      * @param pool Pool swap occured within. (optional)
      * @param token0 Reference to token0 as stored in pair contract. (optional)
      * @param token1 Reference to token1 as stored in pair contract. (optional)
@@ -1282,7 +1294,7 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
      * @param endDate The end date of timeframe. (optional)
-     * @param id Identifier, format: transaction hash + \&quot;#\&quot; + index in swaps Transaction array. (optional)
+     * @param id Identifier, format: (transaction hash) + # + (index in swaps Transaction array). (optional)
      * @param pool Pool swap occured within. (optional)
      * @param token0 Reference to token0 as stored in pair contract. (optional)
      * @param token1 Reference to token1 as stored in pair contract. (optional)
@@ -1307,7 +1319,7 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
      * @param endDate The end date of timeframe. (optional)
-     * @param id Identifier, format: transaction hash + \&quot;#\&quot; + index in swaps Transaction array. (optional)
+     * @param id Identifier, format: (transaction hash) + # + (index in swaps Transaction array). (optional)
      * @param pool Pool swap occured within. (optional)
      * @param token0 Reference to token0 as stored in pair contract. (optional)
      * @param token1 Reference to token1 as stored in pair contract. (optional)
@@ -1350,6 +1362,7 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
             path = "/dapps/uniswapv3/swaps/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -1357,12 +1370,12 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     /**
      * TickDayData (historical)
      * Gets tickDayData.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param pool  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (pool address)-(tick index)-(timestamp). (optional)
+     * @param pool Pointer to pool. (optional)
      * @return kotlin.collections.List<UniswapV3TickDayDataDTO>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
@@ -1393,12 +1406,12 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     /**
      * TickDayData (historical)
      * Gets tickDayData.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param pool  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (pool address)-(tick index)-(timestamp). (optional)
+     * @param pool Pointer to pool. (optional)
      * @return ApiResponse<kotlin.collections.List<UniswapV3TickDayDataDTO>?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
@@ -1416,12 +1429,12 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     /**
      * To obtain the request config of the operation uniswapV3GetTickDayDataHistorical
      *
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param pool  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (pool address)-(tick index)-(timestamp). (optional)
+     * @param pool Pointer to pool. (optional)
      * @return RequestConfig
      */
     fun uniswapV3GetTickDayDataHistoricalRequestConfig(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?, id: kotlin.String?, pool: kotlin.String?) : RequestConfig<Unit> {
@@ -1455,6 +1468,7 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
             path = "/dapps/uniswapv3/tickDayData/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -1462,12 +1476,12 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     /**
      * Ticks (historical)
      * Gets ticks.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param pool  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (pool address)#(tick index) (optional)
+     * @param pool Pool address. (optional)
      * @return kotlin.collections.List<UniswapV3TickDTO>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
@@ -1498,12 +1512,12 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     /**
      * Ticks (historical)
      * Gets ticks.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param pool  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (pool address)#(tick index) (optional)
+     * @param pool Pool address. (optional)
      * @return ApiResponse<kotlin.collections.List<UniswapV3TickDTO>?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
@@ -1521,12 +1535,12 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     /**
      * To obtain the request config of the operation uniswapV3GetTicksHistorical
      *
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param pool  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (pool address)#(tick index) (optional)
+     * @param pool Pool address. (optional)
      * @return RequestConfig
      */
     fun uniswapV3GetTicksHistoricalRequestConfig(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?, id: kotlin.String?, pool: kotlin.String?) : RequestConfig<Unit> {
@@ -1560,6 +1574,7 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
             path = "/dapps/uniswapv3/ticks/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -1659,6 +1674,7 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
             path = "/dapps/uniswapv3/tokenHourData/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -1758,6 +1774,7 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
             path = "/dapps/uniswapv3/tokenV3DayData/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -1869,6 +1886,7 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
             path = "/dapps/uniswapv3/tokens/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -1968,6 +1986,7 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
             path = "/dapps/uniswapv3/transactions/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -2067,6 +2086,7 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
             path = "/dapps/uniswapv3/uniswapDayData/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -2134,6 +2154,7 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
             path = "/dapps/uniswapv3/mints/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -2201,6 +2222,7 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
             path = "/dapps/uniswapv3/poolDayData/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -2268,6 +2290,7 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
             path = "/dapps/uniswapv3/poolHourData/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -2343,6 +2366,7 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
             path = "/dapps/uniswapv3/pools/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -2410,6 +2434,7 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
             path = "/dapps/uniswapv3/positionSnapshots/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -2477,6 +2502,7 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
             path = "/dapps/uniswapv3/positions/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -2552,6 +2578,7 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
             path = "/dapps/uniswapv3/swaps/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -2619,6 +2646,7 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
             path = "/dapps/uniswapv3/tickDayData/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -2686,6 +2714,7 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
             path = "/dapps/uniswapv3/ticks/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -2753,6 +2782,7 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
             path = "/dapps/uniswapv3/tokenHourData/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -2820,6 +2850,7 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
             path = "/dapps/uniswapv3/tokenV3DayData/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -2887,6 +2918,7 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
             path = "/dapps/uniswapv3/tokens/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -2954,6 +2986,7 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
             path = "/dapps/uniswapv3/transactions/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -3021,6 +3054,7 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
             path = "/dapps/uniswapv3/uniswapDayData/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }

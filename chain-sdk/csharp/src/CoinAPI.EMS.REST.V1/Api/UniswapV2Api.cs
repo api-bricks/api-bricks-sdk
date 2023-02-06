@@ -130,13 +130,13 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// Gets liquidityPositionSnapshots.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock"> (optional)</param>
-        /// <param name="endBlock"> (optional)</param>
-        /// <param name="startDate"> (optional)</param>
-        /// <param name="endDate"> (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="user"> (optional)</param>
-        /// <param name="pair"> (optional)</param>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Identifier, format: (pair address)-(user address) (optional)</param>
+        /// <param name="user">Reference to user. (optional)</param>
+        /// <param name="pair">Reference to the pair liquidity is being provided on. (optional)</param>
         /// <returns>List<UniswapV2LiquidityPositionSnapshotDTO></returns>
         List<UniswapV2LiquidityPositionSnapshotDTO> UniswapV2GetLiquidityPositionSnapshotsHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string user = default(string), string pair = default(string));
 
@@ -147,13 +147,13 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// Gets liquidityPositionSnapshots.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock"> (optional)</param>
-        /// <param name="endBlock"> (optional)</param>
-        /// <param name="startDate"> (optional)</param>
-        /// <param name="endDate"> (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="user"> (optional)</param>
-        /// <param name="pair"> (optional)</param>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Identifier, format: (pair address)-(user address) (optional)</param>
+        /// <param name="user">Reference to user. (optional)</param>
+        /// <param name="pair">Reference to the pair liquidity is being provided on. (optional)</param>
         /// <returns>ApiResponse of List<UniswapV2LiquidityPositionSnapshotDTO></returns>
         ApiResponse<List<UniswapV2LiquidityPositionSnapshotDTO>> UniswapV2GetLiquidityPositionSnapshotsHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string user = default(string), string pair = default(string));
         /// <summary>
@@ -892,13 +892,13 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// Gets liquidityPositionSnapshots.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock"> (optional)</param>
-        /// <param name="endBlock"> (optional)</param>
-        /// <param name="startDate"> (optional)</param>
-        /// <param name="endDate"> (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="user"> (optional)</param>
-        /// <param name="pair"> (optional)</param>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Identifier, format: (pair address)-(user address) (optional)</param>
+        /// <param name="user">Reference to user. (optional)</param>
+        /// <param name="pair">Reference to the pair liquidity is being provided on. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of List<UniswapV2LiquidityPositionSnapshotDTO></returns>
         System.Threading.Tasks.Task<List<UniswapV2LiquidityPositionSnapshotDTO>> UniswapV2GetLiquidityPositionSnapshotsHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string user = default(string), string pair = default(string), CancellationToken cancellationToken = default(CancellationToken));
@@ -910,13 +910,13 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// Gets liquidityPositionSnapshots.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock"> (optional)</param>
-        /// <param name="endBlock"> (optional)</param>
-        /// <param name="startDate"> (optional)</param>
-        /// <param name="endDate"> (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="user"> (optional)</param>
-        /// <param name="pair"> (optional)</param>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Identifier, format: (pair address)-(user address) (optional)</param>
+        /// <param name="user">Reference to user. (optional)</param>
+        /// <param name="pair">Reference to the pair liquidity is being provided on. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (List&lt;UniswapV2LiquidityPositionSnapshotDTO&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<UniswapV2LiquidityPositionSnapshotDTO>>> UniswapV2GetLiquidityPositionSnapshotsHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string user = default(string), string pair = default(string), CancellationToken cancellationToken = default(CancellationToken));
@@ -2280,13 +2280,13 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// LiquidityPositionSnapshots (historical) Gets liquidityPositionSnapshots.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock"> (optional)</param>
-        /// <param name="endBlock"> (optional)</param>
-        /// <param name="startDate"> (optional)</param>
-        /// <param name="endDate"> (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="user"> (optional)</param>
-        /// <param name="pair"> (optional)</param>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Identifier, format: (pair address)-(user address) (optional)</param>
+        /// <param name="user">Reference to user. (optional)</param>
+        /// <param name="pair">Reference to the pair liquidity is being provided on. (optional)</param>
         /// <returns>List<UniswapV2LiquidityPositionSnapshotDTO></returns>
         public List<UniswapV2LiquidityPositionSnapshotDTO> UniswapV2GetLiquidityPositionSnapshotsHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string user = default(string), string pair = default(string))
         {
@@ -2298,13 +2298,13 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// LiquidityPositionSnapshots (historical) Gets liquidityPositionSnapshots.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock"> (optional)</param>
-        /// <param name="endBlock"> (optional)</param>
-        /// <param name="startDate"> (optional)</param>
-        /// <param name="endDate"> (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="user"> (optional)</param>
-        /// <param name="pair"> (optional)</param>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Identifier, format: (pair address)-(user address) (optional)</param>
+        /// <param name="user">Reference to user. (optional)</param>
+        /// <param name="pair">Reference to the pair liquidity is being provided on. (optional)</param>
         /// <returns>ApiResponse of List<UniswapV2LiquidityPositionSnapshotDTO></returns>
         public ApiResponse<List<UniswapV2LiquidityPositionSnapshotDTO>> UniswapV2GetLiquidityPositionSnapshotsHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string user = default(string), string pair = default(string))
         {
@@ -2363,13 +2363,13 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// LiquidityPositionSnapshots (historical) Gets liquidityPositionSnapshots.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock"> (optional)</param>
-        /// <param name="endBlock"> (optional)</param>
-        /// <param name="startDate"> (optional)</param>
-        /// <param name="endDate"> (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="user"> (optional)</param>
-        /// <param name="pair"> (optional)</param>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Identifier, format: (pair address)-(user address) (optional)</param>
+        /// <param name="user">Reference to user. (optional)</param>
+        /// <param name="pair">Reference to the pair liquidity is being provided on. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of List<UniswapV2LiquidityPositionSnapshotDTO></returns>
         public async System.Threading.Tasks.Task<List<UniswapV2LiquidityPositionSnapshotDTO>> UniswapV2GetLiquidityPositionSnapshotsHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string user = default(string), string pair = default(string), CancellationToken cancellationToken = default(CancellationToken))
@@ -2383,13 +2383,13 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// LiquidityPositionSnapshots (historical) Gets liquidityPositionSnapshots.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startBlock"> (optional)</param>
-        /// <param name="endBlock"> (optional)</param>
-        /// <param name="startDate"> (optional)</param>
-        /// <param name="endDate"> (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="user"> (optional)</param>
-        /// <param name="pair"> (optional)</param>
+        /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
+        /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)</param>
+        /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)</param>
+        /// <param name="endDate">The end date of timeframe. (optional)</param>
+        /// <param name="id">Identifier, format: (pair address)-(user address) (optional)</param>
+        /// <param name="user">Reference to user. (optional)</param>
+        /// <param name="pair">Reference to the pair liquidity is being provided on. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (List&lt;UniswapV2LiquidityPositionSnapshotDTO&gt;)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<List<UniswapV2LiquidityPositionSnapshotDTO>>> UniswapV2GetLiquidityPositionSnapshotsHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string user = default(string), string pair = default(string), CancellationToken cancellationToken = default(CancellationToken))

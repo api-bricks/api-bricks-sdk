@@ -1565,11 +1565,11 @@ import (
 )
 
 func main() {
-    startBlock := int64(789) // int64 |  (optional)
-    endBlock := int64(789) // int64 |  (optional)
-    startDate := time.Now() // time.Time |  (optional)
-    endDate := time.Now() // time.Time |  (optional)
-    id := "id_example" // string |  (optional)
+    startBlock := int64(789) // int64 | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+    endBlock := int64(789) // int64 | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+    startDate := time.Now() // time.Time | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+    endDate := time.Now() // time.Time | The end date of timeframe. (optional)
+    id := "id_example" // string | Identifier, format: (pool_id)-(coin_index). (optional)
     pool := "pool_example" // string |  (optional)
 
     configuration := openapiclient.NewConfiguration()
@@ -1595,11 +1595,11 @@ Other parameters are passed through a pointer to a apiCurveGetCoinsHistoricalReq
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startBlock** | **int64** |  | 
- **endBlock** | **int64** |  | 
- **startDate** | **time.Time** |  | 
- **endDate** | **time.Time** |  | 
- **id** | **string** |  | 
+ **startBlock** | **int64** | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | 
+ **endBlock** | **int64** | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | 
+ **startDate** | **time.Time** | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | 
+ **endDate** | **time.Time** | The end date of timeframe. | 
+ **id** | **string** | Identifier, format: (pool_id)-(coin_index). | 
  **pool** | **string** |  | 
 
 ### Return type
@@ -3484,11 +3484,11 @@ import (
 )
 
 func main() {
-    startBlock := int64(789) // int64 |  (optional)
-    endBlock := int64(789) // int64 |  (optional)
-    startDate := time.Now() // time.Time |  (optional)
-    endDate := time.Now() // time.Time |  (optional)
-    id := "id_example" // string |  (optional)
+    startBlock := int64(789) // int64 | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+    endBlock := int64(789) // int64 | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+    startDate := time.Now() // time.Time | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+    endDate := time.Now() // time.Time | The end date of timeframe. (optional)
+    id := "id_example" // string | Equals to: (pool_id)-(coin_index). (optional)
     pool := "pool_example" // string |  (optional)
 
     configuration := openapiclient.NewConfiguration()
@@ -3514,11 +3514,11 @@ Other parameters are passed through a pointer to a apiCurveGetUnderlyingCoinsHis
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startBlock** | **int64** |  | 
- **endBlock** | **int64** |  | 
- **startDate** | **time.Time** |  | 
- **endDate** | **time.Time** |  | 
- **id** | **string** |  | 
+ **startBlock** | **int64** | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | 
+ **endBlock** | **int64** | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | 
+ **startDate** | **time.Time** | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | 
+ **endDate** | **time.Time** | The end date of timeframe. | 
+ **id** | **string** | Equals to: (pool_id)-(coin_index). | 
  **pool** | **string** |  | 
 
 ### Return type

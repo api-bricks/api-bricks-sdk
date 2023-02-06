@@ -241,12 +241,12 @@ API.Client.SushiswapApi.prototype.sushiswapGetBundlesHistorical = function(opt_s
 /**
  * Burns (historical)
  * Gets burns.
- * @param {!number=} opt_startBlock 
- * @param {!number=} opt_endBlock 
- * @param {!Date=} opt_startDate 
- * @param {!Date=} opt_endDate 
- * @param {!string=} opt_id 
- * @param {!string=} opt_pair 
+ * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+ * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+ * @param {!Date=} opt_startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+ * @param {!Date=} opt_endDate The end date of timeframe.
+ * @param {!string=} opt_id Identifier, format: (transaction id):(transaction.burns.length).
+ * @param {!string=} opt_pair Reference to pair.
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
  * @return {!angular.$q.Promise<!Array<!API.Client.Sushiswap.BurnDTO>>}
  */
@@ -470,13 +470,13 @@ API.Client.SushiswapApi.prototype.sushiswapGetHourDataHistorical = function(opt_
 /**
  * LiquidityPositionSnapshots (historical)
  * Gets liquidityPositionSnapshots.
- * @param {!number=} opt_startBlock 
- * @param {!number=} opt_endBlock 
- * @param {!Date=} opt_startDate 
- * @param {!Date=} opt_endDate 
- * @param {!string=} opt_id 
- * @param {!string=} opt_user 
- * @param {!string=} opt_pair 
+ * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+ * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+ * @param {!Date=} opt_startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+ * @param {!Date=} opt_endDate The end date of timeframe.
+ * @param {!string=} opt_id Identifier, format: (pair address)-(user address)-(timestamp)
+ * @param {!string=} opt_user Reference to user.
+ * @param {!string=} opt_pair Reference to the pair liquidity is being provided on.
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
  * @return {!angular.$q.Promise<!Array<!API.Client.Sushiswap.LiquidityPositionSnapshotDTO>>}
  */
@@ -536,13 +536,13 @@ API.Client.SushiswapApi.prototype.sushiswapGetLiquidityPositionSnapshotsHistoric
 /**
  * LiquidityPositions (historical)
  * Gets liquidityPositions.
- * @param {!number=} opt_startBlock 
- * @param {!number=} opt_endBlock 
- * @param {!Date=} opt_startDate 
- * @param {!Date=} opt_endDate 
- * @param {!string=} opt_id 
- * @param {!string=} opt_user 
- * @param {!string=} opt_pair 
+ * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+ * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+ * @param {!Date=} opt_startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+ * @param {!Date=} opt_endDate The end date of timeframe.
+ * @param {!string=} opt_id Identifier, format: (pair address)-(user address)
+ * @param {!string=} opt_user User address.
+ * @param {!string=} opt_pair Pair address.
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
  * @return {!angular.$q.Promise<!Array<!API.Client.Sushiswap.LiquidityPositionDTO>>}
  */
@@ -602,12 +602,12 @@ API.Client.SushiswapApi.prototype.sushiswapGetLiquidityPositionsHistorical = fun
 /**
  * Mints (historical)
  * Gets mints.
- * @param {!number=} opt_startBlock 
- * @param {!number=} opt_endBlock 
- * @param {!Date=} opt_startDate 
- * @param {!Date=} opt_endDate 
- * @param {!string=} opt_id 
- * @param {!string=} opt_pair 
+ * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+ * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+ * @param {!Date=} opt_startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+ * @param {!Date=} opt_endDate The end date of timeframe.
+ * @param {!string=} opt_id Identifier, format: (transaction hash)-(index in the transaction mint array).
+ * @param {!string=} opt_pair Reference to pair.
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
  * @return {!angular.$q.Promise<!Array<!API.Client.Sushiswap.MintDTO>>}
  */
@@ -663,14 +663,14 @@ API.Client.SushiswapApi.prototype.sushiswapGetMintsHistorical = function(opt_sta
 /**
  * PairDayData (historical)
  * Gets pairDayData.
- * @param {!number=} opt_startBlock 
- * @param {!number=} opt_endBlock 
- * @param {!Date=} opt_startDate 
- * @param {!Date=} opt_endDate 
- * @param {!string=} opt_id 
- * @param {!string=} opt_pair 
- * @param {!string=} opt_token0 
- * @param {!string=} opt_token1 
+ * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+ * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+ * @param {!Date=} opt_startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+ * @param {!Date=} opt_endDate The end date of timeframe.
+ * @param {!string=} opt_id Identifier, format: (pair id)-(day start timestamp).
+ * @param {!string=} opt_pair Reference to pair.
+ * @param {!string=} opt_token0 Reference to token0.
+ * @param {!string=} opt_token1 Reference to token1.
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
  * @return {!angular.$q.Promise<!Array<!API.Client.Sushiswap.PairDayDataDTO>>}
  */
@@ -734,12 +734,12 @@ API.Client.SushiswapApi.prototype.sushiswapGetPairDayDataHistorical = function(o
 /**
  * PairHourData (historical)
  * Gets pairHourData.
- * @param {!number=} opt_startBlock 
- * @param {!number=} opt_endBlock 
- * @param {!Date=} opt_startDate 
- * @param {!Date=} opt_endDate 
- * @param {!string=} opt_id 
- * @param {!string=} opt_pair 
+ * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+ * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+ * @param {!Date=} opt_startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+ * @param {!Date=} opt_endDate The end date of timeframe.
+ * @param {!string=} opt_id Identifier, format: (pair id)-(hour start timestamp).
+ * @param {!string=} opt_pair Reference to pair.
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
  * @return {!angular.$q.Promise<!Array<!API.Client.Sushiswap.PairHourDataDTO>>}
  */
@@ -795,14 +795,14 @@ API.Client.SushiswapApi.prototype.sushiswapGetPairHourDataHistorical = function(
 /**
  * Pairs (historical)
  * Gets pairs.
- * @param {!number=} opt_startBlock 
- * @param {!number=} opt_endBlock 
- * @param {!Date=} opt_startDate 
- * @param {!Date=} opt_endDate 
- * @param {!string=} opt_id 
- * @param {!string=} opt_name 
- * @param {!string=} opt_token0 
- * @param {!string=} opt_token1 
+ * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+ * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+ * @param {!Date=} opt_startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+ * @param {!Date=} opt_endDate The end date of timeframe.
+ * @param {!string=} opt_id Pair contract address.
+ * @param {!string=} opt_name Friendly name, format: (token0 name)-(token1 name)
+ * @param {!string=} opt_token0 Reference to token0 as stored in pair contract.
+ * @param {!string=} opt_token1 Reference to token0 as stored in pair contract.
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
  * @return {!angular.$q.Promise<!Array<!API.Client.Sushiswap.PairDTO>>}
  */

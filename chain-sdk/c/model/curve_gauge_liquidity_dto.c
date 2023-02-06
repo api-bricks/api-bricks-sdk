@@ -229,7 +229,7 @@ curve_gauge_liquidity_dto_t *curve_gauge_liquidity_dto_parseFromJSON(cJSON *curv
     // curve_gauge_liquidity_dto->entry_time
     cJSON *entry_time = cJSON_GetObjectItemCaseSensitive(curve_gauge_liquidity_dtoJSON, "entry_time");
     if (entry_time) { 
-    if(!cJSON_IsString(entry_time))
+    if(!cJSON_IsString(entry_time) && !cJSON_IsNull(entry_time))
     {
     goto end; //DateTime
     }
@@ -238,7 +238,7 @@ curve_gauge_liquidity_dto_t *curve_gauge_liquidity_dto_parseFromJSON(cJSON *curv
     // curve_gauge_liquidity_dto->recv_time
     cJSON *recv_time = cJSON_GetObjectItemCaseSensitive(curve_gauge_liquidity_dtoJSON, "recv_time");
     if (recv_time) { 
-    if(!cJSON_IsString(recv_time))
+    if(!cJSON_IsString(recv_time) && !cJSON_IsNull(recv_time))
     {
     goto end; //DateTime
     }
@@ -256,7 +256,7 @@ curve_gauge_liquidity_dto_t *curve_gauge_liquidity_dto_parseFromJSON(cJSON *curv
     // curve_gauge_liquidity_dto->id
     cJSON *id = cJSON_GetObjectItemCaseSensitive(curve_gauge_liquidity_dtoJSON, "id");
     if (id) { 
-    if(!cJSON_IsString(id))
+    if(!cJSON_IsString(id) && !cJSON_IsNull(id))
     {
     goto end; //String
     }
@@ -265,7 +265,7 @@ curve_gauge_liquidity_dto_t *curve_gauge_liquidity_dto_parseFromJSON(cJSON *curv
     // curve_gauge_liquidity_dto->user
     cJSON *user = cJSON_GetObjectItemCaseSensitive(curve_gauge_liquidity_dtoJSON, "user");
     if (user) { 
-    if(!cJSON_IsString(user))
+    if(!cJSON_IsString(user) && !cJSON_IsNull(user))
     {
     goto end; //String
     }
@@ -274,7 +274,7 @@ curve_gauge_liquidity_dto_t *curve_gauge_liquidity_dto_parseFromJSON(cJSON *curv
     // curve_gauge_liquidity_dto->gauge
     cJSON *gauge = cJSON_GetObjectItemCaseSensitive(curve_gauge_liquidity_dtoJSON, "gauge");
     if (gauge) { 
-    if(!cJSON_IsString(gauge))
+    if(!cJSON_IsString(gauge) && !cJSON_IsNull(gauge))
     {
     goto end; //String
     }
@@ -283,7 +283,7 @@ curve_gauge_liquidity_dto_t *curve_gauge_liquidity_dto_parseFromJSON(cJSON *curv
     // curve_gauge_liquidity_dto->original_balance
     cJSON *original_balance = cJSON_GetObjectItemCaseSensitive(curve_gauge_liquidity_dtoJSON, "original_balance");
     if (original_balance) { 
-    if(!cJSON_IsString(original_balance))
+    if(!cJSON_IsString(original_balance) && !cJSON_IsNull(original_balance))
     {
     goto end; //String
     }
@@ -292,7 +292,7 @@ curve_gauge_liquidity_dto_t *curve_gauge_liquidity_dto_parseFromJSON(cJSON *curv
     // curve_gauge_liquidity_dto->original_supply
     cJSON *original_supply = cJSON_GetObjectItemCaseSensitive(curve_gauge_liquidity_dtoJSON, "original_supply");
     if (original_supply) { 
-    if(!cJSON_IsString(original_supply))
+    if(!cJSON_IsString(original_supply) && !cJSON_IsNull(original_supply))
     {
     goto end; //String
     }
@@ -301,7 +301,7 @@ curve_gauge_liquidity_dto_t *curve_gauge_liquidity_dto_parseFromJSON(cJSON *curv
     // curve_gauge_liquidity_dto->working_balance
     cJSON *working_balance = cJSON_GetObjectItemCaseSensitive(curve_gauge_liquidity_dtoJSON, "working_balance");
     if (working_balance) { 
-    if(!cJSON_IsString(working_balance))
+    if(!cJSON_IsString(working_balance) && !cJSON_IsNull(working_balance))
     {
     goto end; //String
     }
@@ -310,7 +310,7 @@ curve_gauge_liquidity_dto_t *curve_gauge_liquidity_dto_parseFromJSON(cJSON *curv
     // curve_gauge_liquidity_dto->working_supply
     cJSON *working_supply = cJSON_GetObjectItemCaseSensitive(curve_gauge_liquidity_dtoJSON, "working_supply");
     if (working_supply) { 
-    if(!cJSON_IsString(working_supply))
+    if(!cJSON_IsString(working_supply) && !cJSON_IsNull(working_supply))
     {
     goto end; //String
     }
@@ -319,7 +319,7 @@ curve_gauge_liquidity_dto_t *curve_gauge_liquidity_dto_parseFromJSON(cJSON *curv
     // curve_gauge_liquidity_dto->timestamp
     cJSON *timestamp = cJSON_GetObjectItemCaseSensitive(curve_gauge_liquidity_dtoJSON, "timestamp");
     if (timestamp) { 
-    if(!cJSON_IsString(timestamp))
+    if(!cJSON_IsString(timestamp) && !cJSON_IsNull(timestamp))
     {
     goto end; //String
     }
@@ -328,7 +328,7 @@ curve_gauge_liquidity_dto_t *curve_gauge_liquidity_dto_parseFromJSON(cJSON *curv
     // curve_gauge_liquidity_dto->block
     cJSON *block = cJSON_GetObjectItemCaseSensitive(curve_gauge_liquidity_dtoJSON, "block");
     if (block) { 
-    if(!cJSON_IsString(block))
+    if(!cJSON_IsString(block) && !cJSON_IsNull(block))
     {
     goto end; //String
     }
@@ -337,7 +337,7 @@ curve_gauge_liquidity_dto_t *curve_gauge_liquidity_dto_parseFromJSON(cJSON *curv
     // curve_gauge_liquidity_dto->transaction
     cJSON *transaction = cJSON_GetObjectItemCaseSensitive(curve_gauge_liquidity_dtoJSON, "transaction");
     if (transaction) { 
-    if(!cJSON_IsString(transaction))
+    if(!cJSON_IsString(transaction) && !cJSON_IsNull(transaction))
     {
     goto end; //String
     }
@@ -354,19 +354,19 @@ curve_gauge_liquidity_dto_t *curve_gauge_liquidity_dto_parseFromJSON(cJSON *curv
 
 
     curve_gauge_liquidity_dto_local_var = curve_gauge_liquidity_dto_create (
-        entry_time ? strdup(entry_time->valuestring) : NULL,
-        recv_time ? strdup(recv_time->valuestring) : NULL,
+        entry_time && !cJSON_IsNull(entry_time) ? strdup(entry_time->valuestring) : NULL,
+        recv_time && !cJSON_IsNull(recv_time) ? strdup(recv_time->valuestring) : NULL,
         block_number ? block_number->valuedouble : 0,
-        id ? strdup(id->valuestring) : NULL,
-        user ? strdup(user->valuestring) : NULL,
-        gauge ? strdup(gauge->valuestring) : NULL,
-        original_balance ? strdup(original_balance->valuestring) : NULL,
-        original_supply ? strdup(original_supply->valuestring) : NULL,
-        working_balance ? strdup(working_balance->valuestring) : NULL,
-        working_supply ? strdup(working_supply->valuestring) : NULL,
-        timestamp ? strdup(timestamp->valuestring) : NULL,
-        block ? strdup(block->valuestring) : NULL,
-        transaction ? strdup(transaction->valuestring) : NULL,
+        id && !cJSON_IsNull(id) ? strdup(id->valuestring) : NULL,
+        user && !cJSON_IsNull(user) ? strdup(user->valuestring) : NULL,
+        gauge && !cJSON_IsNull(gauge) ? strdup(gauge->valuestring) : NULL,
+        original_balance && !cJSON_IsNull(original_balance) ? strdup(original_balance->valuestring) : NULL,
+        original_supply && !cJSON_IsNull(original_supply) ? strdup(original_supply->valuestring) : NULL,
+        working_balance && !cJSON_IsNull(working_balance) ? strdup(working_balance->valuestring) : NULL,
+        working_supply && !cJSON_IsNull(working_supply) ? strdup(working_supply->valuestring) : NULL,
+        timestamp && !cJSON_IsNull(timestamp) ? strdup(timestamp->valuestring) : NULL,
+        block && !cJSON_IsNull(block) ? strdup(block->valuestring) : NULL,
+        transaction && !cJSON_IsNull(transaction) ? strdup(transaction->valuestring) : NULL,
         vid ? vid->valuedouble : 0
         );
 

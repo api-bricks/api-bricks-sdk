@@ -21,7 +21,7 @@ Name | Type | Description | Notes
 **vid** | **integer** |  | [optional] 
 **evaluated_price** | **numeric** |  | [optional] [readonly] 
 **evaluated_amount** | **numeric** |  | [optional] [readonly] 
-**evaluated_aggressor** | [**TransactionsETradeAggressiveSide**](Transactions.ETradeAggressiveSide.md) |  | [optional] 
+**evaluated_aggressor** | [**TransactionsETradeAggressiveSide**](Transactions.ETradeAggressiveSide.md) |  | [optional] [Enum: ] 
 **pool_id** | **character** |  | [optional] [readonly] 
 **transaction_id** | **character** |  | [optional] [readonly] 
 

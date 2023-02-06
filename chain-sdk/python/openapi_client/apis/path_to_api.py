@@ -1,6 +1,7 @@
 import typing_extensions
 
 from openapi_client.paths import PathValues
+from openapi_client.apis.paths.metadata_chains import MetadataChains
 from openapi_client.apis.paths.dapps_cow_orders_historical import DappsCowOrdersHistorical
 from openapi_client.apis.paths.dapps_cow_orders_current import DappsCowOrdersCurrent
 from openapi_client.apis.paths.dapps_cow_settlements_historical import DappsCowSettlementsHistorical
@@ -75,6 +76,7 @@ from openapi_client.apis.paths.dapps_curve_voting_apps_historical import DappsCu
 from openapi_client.apis.paths.dapps_curve_voting_apps_current import DappsCurveVotingAppsCurrent
 from openapi_client.apis.paths.dapps_curve_weekly_volumes_historical import DappsCurveWeeklyVolumesHistorical
 from openapi_client.apis.paths.dapps_curve_weekly_volumes_current import DappsCurveWeeklyVolumesCurrent
+from openapi_client.apis.paths.metadata_dapps import MetadataDapps
 from openapi_client.apis.paths.dapps_dex_batches_historical import DappsDexBatchesHistorical
 from openapi_client.apis.paths.dapps_dex_batches_current import DappsDexBatchesCurrent
 from openapi_client.apis.paths.dapps_dex_deposits_historical import DappsDexDepositsHistorical
@@ -197,6 +199,7 @@ from openapi_client.apis.paths.dapps_uniswapv3_uniswap_day_data_current import D
 PathToApi = typing_extensions.TypedDict(
     'PathToApi',
     {
+        PathValues.METADATA_CHAINS: MetadataChains,
         PathValues.DAPPS_COW_ORDERS_HISTORICAL: DappsCowOrdersHistorical,
         PathValues.DAPPS_COW_ORDERS_CURRENT: DappsCowOrdersCurrent,
         PathValues.DAPPS_COW_SETTLEMENTS_HISTORICAL: DappsCowSettlementsHistorical,
@@ -271,6 +274,7 @@ PathToApi = typing_extensions.TypedDict(
         PathValues.DAPPS_CURVE_VOTING_APPS_CURRENT: DappsCurveVotingAppsCurrent,
         PathValues.DAPPS_CURVE_WEEKLY_VOLUMES_HISTORICAL: DappsCurveWeeklyVolumesHistorical,
         PathValues.DAPPS_CURVE_WEEKLY_VOLUMES_CURRENT: DappsCurveWeeklyVolumesCurrent,
+        PathValues.METADATA_DAPPS: MetadataDapps,
         PathValues.DAPPS_DEX_BATCHES_HISTORICAL: DappsDexBatchesHistorical,
         PathValues.DAPPS_DEX_BATCHES_CURRENT: DappsDexBatchesCurrent,
         PathValues.DAPPS_DEX_DEPOSITS_HISTORICAL: DappsDexDepositsHistorical,
@@ -394,6 +398,7 @@ PathToApi = typing_extensions.TypedDict(
 
 path_to_api = PathToApi(
     {
+        PathValues.METADATA_CHAINS: MetadataChains,
         PathValues.DAPPS_COW_ORDERS_HISTORICAL: DappsCowOrdersHistorical,
         PathValues.DAPPS_COW_ORDERS_CURRENT: DappsCowOrdersCurrent,
         PathValues.DAPPS_COW_SETTLEMENTS_HISTORICAL: DappsCowSettlementsHistorical,
@@ -468,6 +473,7 @@ path_to_api = PathToApi(
         PathValues.DAPPS_CURVE_VOTING_APPS_CURRENT: DappsCurveVotingAppsCurrent,
         PathValues.DAPPS_CURVE_WEEKLY_VOLUMES_HISTORICAL: DappsCurveWeeklyVolumesHistorical,
         PathValues.DAPPS_CURVE_WEEKLY_VOLUMES_CURRENT: DappsCurveWeeklyVolumesCurrent,
+        PathValues.METADATA_DAPPS: MetadataDapps,
         PathValues.DAPPS_DEX_BATCHES_HISTORICAL: DappsDexBatchesHistorical,
         PathValues.DAPPS_DEX_BATCHES_CURRENT: DappsDexBatchesCurrent,
         PathValues.DAPPS_DEX_DEPOSITS_HISTORICAL: DappsDexDepositsHistorical,

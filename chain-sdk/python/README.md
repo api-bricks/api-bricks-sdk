@@ -278,6 +278,8 @@ Class | Method | HTTP request | Description
 *DexApi* | [**dex_users__current**](docs/apis/tags/DexApi.md#dex_users__current) | **get** /dapps/dex/users/current | Users (current)
 *DexApi* | [**dex_withdraw_requests__current**](docs/apis/tags/DexApi.md#dex_withdraw_requests__current) | **get** /dapps/dex/withdrawRequests/current | WithdrawRequests (current)
 *DexApi* | [**dex_withdraws__current**](docs/apis/tags/DexApi.md#dex_withdraws__current) | **get** /dapps/dex/withdraws/current | Withdraws (current)
+*MetadataApi* | [**metadata_chains_get**](docs/apis/tags/MetadataApi.md#metadata_chains_get) | **get** /metadata/chains | List all chains.
+*MetadataApi* | [**metadata_dapps_get**](docs/apis/tags/MetadataApi.md#metadata_dapps_get) | **get** /metadata/dapps | List all decentralized applications.
 *SushiswapApi* | [**sushiswap_bundles__current**](docs/apis/tags/SushiswapApi.md#sushiswap_bundles__current) | **get** /dapps/sushiswap/bundles/current | Bundles (current)
 *SushiswapApi* | [**sushiswap_burns__current**](docs/apis/tags/SushiswapApi.md#sushiswap_burns__current) | **get** /dapps/sushiswap/burns/current | Burns (current)
 *SushiswapApi* | [**sushiswap_day_data__current**](docs/apis/tags/SushiswapApi.md#sushiswap_day_data__current) | **get** /dapps/sushiswap/dayData/current | DayData (current)
@@ -482,6 +484,7 @@ Class | Method | HTTP request | Description
 
 ## Author
 
+support@coinapi.io
 support@coinapi.io
 support@coinapi.io
 support@coinapi.io

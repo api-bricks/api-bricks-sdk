@@ -104,12 +104,12 @@ public class OASDexApi {
     /**
      * Deposits (historical)
      * Gets deposits.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param user  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (transaction hash)-(token id). (optional)
+     * @param user User address. (optional)
      * @return List<OASDexDepositDTO>
      * @throws OAS.ApiException if fails to make API call
      */
@@ -140,13 +140,13 @@ public class OASDexApi {
     /**
      * Orders (historical)
      * Gets orders.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param buyToken  (optional)
-     * @param sellToken  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (owner address)-(order id) (optional)
+     * @param buyToken Identifier of token that was bought. (optional)
+     * @param sellToken Identifier of token that was sold. (optional)
      * @return List<OASDexOrderDTO>
      * @throws OAS.ApiException if fails to make API call
      */
@@ -178,11 +178,11 @@ public class OASDexApi {
     /**
      * Prices (historical)
      * Gets prices.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (token id)-(batch id). (optional)
      * @return List<OASDexPriceDTO>
      * @throws OAS.ApiException if fails to make API call
      */
@@ -392,11 +392,11 @@ public class OASDexApi {
     /**
      * WithdrawRequests (historical)
      * Gets withdrawRequests.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (transaction hash)-(id). (optional)
      * @param user  (optional)
      * @return List<OASDexWithdrawRequestDTO>
      * @throws OAS.ApiException if fails to make API call
@@ -428,11 +428,11 @@ public class OASDexApi {
     /**
      * Withdraws (historical)
      * Gets withdraws.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (transaction hash)-(id). (optional)
      * @param user  (optional)
      * @return List<OASDexWithdrawDTO>
      * @throws OAS.ApiException if fails to make API call

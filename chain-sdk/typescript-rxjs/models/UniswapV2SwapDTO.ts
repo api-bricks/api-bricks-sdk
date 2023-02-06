@@ -147,3 +147,5 @@ export interface UniswapV2SwapDTO {
      */
     readonly transaction_id?: string | null;
 }
+
+

@@ -7,6 +7,7 @@ composer.json
 docs/Api/CowApi.md
 docs/Api/CurveApi.md
 docs/Api/DexApi.md
+docs/Api/MetadataApi.md
 docs/Api/SushiswapApi.md
 docs/Api/UniswapV2Api.md
 docs/Api/UniswapV3Api.md
@@ -112,6 +113,7 @@ git_push.sh
 lib/Api/CowApi.php
 lib/Api/CurveApi.php
 lib/Api/DexApi.php
+lib/Api/MetadataApi.php
 lib/Api/SushiswapApi.php
 lib/Api/UniswapV2Api.php
 lib/Api/UniswapV3Api.php
@@ -222,6 +224,7 @@ phpunit.xml.dist
 test/Api/CowApiTest.php
 test/Api/CurveApiTest.php
 test/Api/DexApiTest.php
+test/Api/MetadataApiTest.php
 test/Api/SushiswapApiTest.php
 test/Api/UniswapV2ApiTest.php
 test/Api/UniswapV3ApiTest.php

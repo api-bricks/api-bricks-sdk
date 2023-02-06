@@ -54,6 +54,7 @@ docs/DexTradeDTO.md
 docs/DexUserDTO.md
 docs/DexWithdrawDTO.md
 docs/DexWithdrawRequestDTO.md
+docs/MetadataApi.md
 docs/NumericsBigInteger.md
 docs/SushiswapApi.md
 docs/SushiswapBundleDTO.md
@@ -111,6 +112,7 @@ git_push.sh
 src/CoinAPI.EMS.REST.V1.Test/Api/CowApiTests.cs
 src/CoinAPI.EMS.REST.V1.Test/Api/CurveApiTests.cs
 src/CoinAPI.EMS.REST.V1.Test/Api/DexApiTests.cs
+src/CoinAPI.EMS.REST.V1.Test/Api/MetadataApiTests.cs
 src/CoinAPI.EMS.REST.V1.Test/Api/SushiswapApiTests.cs
 src/CoinAPI.EMS.REST.V1.Test/Api/UniswapV2ApiTests.cs
 src/CoinAPI.EMS.REST.V1.Test/Api/UniswapV3ApiTests.cs
@@ -216,6 +218,7 @@ src/CoinAPI.EMS.REST.V1.Test/Model/UniswapV3UniswapDayDataDTOTests.cs
 src/CoinAPI.EMS.REST.V1/Api/CowApi.cs
 src/CoinAPI.EMS.REST.V1/Api/CurveApi.cs
 src/CoinAPI.EMS.REST.V1/Api/DexApi.cs
+src/CoinAPI.EMS.REST.V1/Api/MetadataApi.cs
 src/CoinAPI.EMS.REST.V1/Api/SushiswapApi.cs
 src/CoinAPI.EMS.REST.V1/Api/UniswapV2Api.cs
 src/CoinAPI.EMS.REST.V1/Api/UniswapV3Api.cs

@@ -16,6 +16,9 @@ import (
 	"time"
 )
 
+// checks if the CurveSystemStateDTO type satisfies the MappedNullable interface at compile time
+var _ MappedNullable = &CurveSystemStateDTO{}
+
 // CurveSystemStateDTO struct for CurveSystemStateDTO
 type CurveSystemStateDTO struct {
 	EntryTime *time.Time `json:"entry_time,omitempty"`
@@ -78,7 +81,7 @@ func (o *CurveSystemStateDTO) GetEntryTime() time.Time {
 // and a boolean to check if the value has been set.
 func (o *CurveSystemStateDTO) GetEntryTimeOk() (*time.Time, bool) {
 	if o == nil || isNil(o.EntryTime) {
-    return nil, false
+		return nil, false
 	}
 	return o.EntryTime, true
 }
@@ -110,7 +113,7 @@ func (o *CurveSystemStateDTO) GetRecvTime() time.Time {
 // and a boolean to check if the value has been set.
 func (o *CurveSystemStateDTO) GetRecvTimeOk() (*time.Time, bool) {
 	if o == nil || isNil(o.RecvTime) {
-    return nil, false
+		return nil, false
 	}
 	return o.RecvTime, true
 }
@@ -142,7 +145,7 @@ func (o *CurveSystemStateDTO) GetBlockNumber() int64 {
 // and a boolean to check if the value has been set.
 func (o *CurveSystemStateDTO) GetBlockNumberOk() (*int64, bool) {
 	if o == nil || isNil(o.BlockNumber) {
-    return nil, false
+		return nil, false
 	}
 	return o.BlockNumber, true
 }
@@ -175,7 +178,7 @@ func (o *CurveSystemStateDTO) GetId() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CurveSystemStateDTO) GetIdOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Id.Get(), o.Id.IsSet()
 }
@@ -217,7 +220,7 @@ func (o *CurveSystemStateDTO) GetRegistryContract() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CurveSystemStateDTO) GetRegistryContractOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.RegistryContract.Get(), o.RegistryContract.IsSet()
 }
@@ -259,7 +262,7 @@ func (o *CurveSystemStateDTO) GetContractCount() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CurveSystemStateDTO) GetContractCountOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.ContractCount.Get(), o.ContractCount.IsSet()
 }
@@ -301,7 +304,7 @@ func (o *CurveSystemStateDTO) GetGaugeCount() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CurveSystemStateDTO) GetGaugeCountOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.GaugeCount.Get(), o.GaugeCount.IsSet()
 }
@@ -343,7 +346,7 @@ func (o *CurveSystemStateDTO) GetGaugeTypeCount() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CurveSystemStateDTO) GetGaugeTypeCountOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.GaugeTypeCount.Get(), o.GaugeTypeCount.IsSet()
 }
@@ -385,7 +388,7 @@ func (o *CurveSystemStateDTO) GetPoolCount() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CurveSystemStateDTO) GetPoolCountOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.PoolCount.Get(), o.PoolCount.IsSet()
 }
@@ -427,7 +430,7 @@ func (o *CurveSystemStateDTO) GetTokenCount() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CurveSystemStateDTO) GetTokenCountOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.TokenCount.Get(), o.TokenCount.IsSet()
 }
@@ -469,7 +472,7 @@ func (o *CurveSystemStateDTO) GetTotalPoolCount() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CurveSystemStateDTO) GetTotalPoolCountOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.TotalPoolCount.Get(), o.TotalPoolCount.IsSet()
 }
@@ -511,7 +514,7 @@ func (o *CurveSystemStateDTO) GetUpdated() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CurveSystemStateDTO) GetUpdatedOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Updated.Get(), o.Updated.IsSet()
 }
@@ -553,7 +556,7 @@ func (o *CurveSystemStateDTO) GetUpdatedAtBlock() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CurveSystemStateDTO) GetUpdatedAtBlockOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.UpdatedAtBlock.Get(), o.UpdatedAtBlock.IsSet()
 }
@@ -595,7 +598,7 @@ func (o *CurveSystemStateDTO) GetUpdatedAtTransaction() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CurveSystemStateDTO) GetUpdatedAtTransactionOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.UpdatedAtTransaction.Get(), o.UpdatedAtTransaction.IsSet()
 }
@@ -636,7 +639,7 @@ func (o *CurveSystemStateDTO) GetVid() int64 {
 // and a boolean to check if the value has been set.
 func (o *CurveSystemStateDTO) GetVidOk() (*int64, bool) {
 	if o == nil || isNil(o.Vid) {
-    return nil, false
+		return nil, false
 	}
 	return o.Vid, true
 }
@@ -656,6 +659,14 @@ func (o *CurveSystemStateDTO) SetVid(v int64) {
 }
 
 func (o CurveSystemStateDTO) MarshalJSON() ([]byte, error) {
+	toSerialize,err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
+}
+
+func (o CurveSystemStateDTO) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
 	if !isNil(o.EntryTime) {
 		toSerialize["entry_time"] = o.EntryTime
@@ -702,7 +713,7 @@ func (o CurveSystemStateDTO) MarshalJSON() ([]byte, error) {
 	if !isNil(o.Vid) {
 		toSerialize["vid"] = o.Vid
 	}
-	return json.Marshal(toSerialize)
+	return toSerialize, nil
 }
 
 type NullableCurveSystemStateDTO struct {

@@ -1044,11 +1044,11 @@ Gets coins.
 import 'package:openapi/api.dart';
 
 final api_instance = CurveApi();
-final startBlock = 789; // int | 
-final endBlock = 789; // int | 
-final startDate = 2013-10-20T19:20:30+01:00; // DateTime | 
-final endDate = 2013-10-20T19:20:30+01:00; // DateTime | 
-final id = id_example; // String | 
+final startBlock = 789; // int | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+final endBlock = 789; // int | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+final startDate = 2013-10-20T19:20:30+01:00; // DateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+final endDate = 2013-10-20T19:20:30+01:00; // DateTime | The end date of timeframe.
+final id = id_example; // String | Identifier, format: (pool_id)-(coin_index).
 final pool = pool_example; // String | 
 
 try {
@@ -1063,11 +1063,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startBlock** | **int**|  | [optional] 
- **endBlock** | **int**|  | [optional] 
- **startDate** | **DateTime**|  | [optional] 
- **endDate** | **DateTime**|  | [optional] 
- **id** | **String**|  | [optional] 
+ **startBlock** | **int**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
+ **endBlock** | **int**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
+ **startDate** | **DateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
+ **endDate** | **DateTime**| The end date of timeframe. | [optional] 
+ **id** | **String**| Identifier, format: (pool_id)-(coin_index). | [optional] 
  **pool** | **String**|  | [optional] 
 
 ### Return type
@@ -2363,11 +2363,11 @@ Gets underlyingCoins.
 import 'package:openapi/api.dart';
 
 final api_instance = CurveApi();
-final startBlock = 789; // int | 
-final endBlock = 789; // int | 
-final startDate = 2013-10-20T19:20:30+01:00; // DateTime | 
-final endDate = 2013-10-20T19:20:30+01:00; // DateTime | 
-final id = id_example; // String | 
+final startBlock = 789; // int | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+final endBlock = 789; // int | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+final startDate = 2013-10-20T19:20:30+01:00; // DateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+final endDate = 2013-10-20T19:20:30+01:00; // DateTime | The end date of timeframe.
+final id = id_example; // String | Equals to: (pool_id)-(coin_index).
 final pool = pool_example; // String | 
 
 try {
@@ -2382,11 +2382,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startBlock** | **int**|  | [optional] 
- **endBlock** | **int**|  | [optional] 
- **startDate** | **DateTime**|  | [optional] 
- **endDate** | **DateTime**|  | [optional] 
- **id** | **String**|  | [optional] 
+ **startBlock** | **int**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
+ **endBlock** | **int**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
+ **startDate** | **DateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
+ **endDate** | **DateTime**| The end date of timeframe. | [optional] 
+ **id** | **String**| Equals to: (pool_id)-(coin_index). | [optional] 
  **pool** | **String**|  | [optional] 
 
 ### Return type

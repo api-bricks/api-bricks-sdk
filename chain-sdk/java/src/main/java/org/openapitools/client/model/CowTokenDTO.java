@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.time.OffsetDateTime;
 import org.openapitools.jackson.nullable.JsonNullable;
@@ -50,8 +48,7 @@ import org.openapitools.client.JSON;
 /**
  * Stores information for a specific token across all pairs that token is included in.
  */
-@ApiModel(description = "Stores information for a specific token across all pairs that token is included in.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-30T14:42:00.397192Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-06T14:47:06.037855Z[Etc/UTC]")
 public class CowTokenDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -123,7 +120,6 @@ public class CowTokenDTO {
    * @return entryTime
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public OffsetDateTime getEntryTime() {
     return entryTime;
@@ -146,7 +142,6 @@ public class CowTokenDTO {
    * @return recvTime
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public OffsetDateTime getRecvTime() {
     return recvTime;
@@ -169,7 +164,6 @@ public class CowTokenDTO {
    * @return blockNumber
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Number of block in which entity was recorded.")
 
   public Long getBlockNumber() {
     return blockNumber;
@@ -192,7 +186,6 @@ public class CowTokenDTO {
    * @return id
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Token's address.")
 
   public String getId() {
     return id;
@@ -215,7 +208,6 @@ public class CowTokenDTO {
    * @return address
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Token's address.")
 
   public String getAddress() {
     return address;
@@ -238,7 +230,6 @@ public class CowTokenDTO {
    * @return firstTradeTimestamp
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "First token trade block timestamp.")
 
   public String getFirstTradeTimestamp() {
     return firstTradeTimestamp;
@@ -261,7 +252,6 @@ public class CowTokenDTO {
    * @return name
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Token name fetched by ERC20 contract call.")
 
   public String getName() {
     return name;
@@ -284,7 +274,6 @@ public class CowTokenDTO {
    * @return symbol
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Token symbol fetched by contract call.")
 
   public String getSymbol() {
     return symbol;
@@ -307,7 +296,6 @@ public class CowTokenDTO {
    * @return decimals
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Token decimals fetched by contract call.")
 
   public Integer getDecimals() {
     return decimals;
@@ -330,7 +318,6 @@ public class CowTokenDTO {
    * @return totalVolume
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Sum of total amount traded for this token.")
 
   public String getTotalVolume() {
     return totalVolume;
@@ -353,7 +340,6 @@ public class CowTokenDTO {
    * @return vid
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public Long getVid() {
     return vid;
@@ -370,7 +356,6 @@ public class CowTokenDTO {
    * @return tokenSymbol
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getTokenSymbol() {
     return tokenSymbol;

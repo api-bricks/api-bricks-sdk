@@ -55,3 +55,6 @@ case class SwapDTO (
   transactionId: Option[String] = None
 ) extends ApiModel
 
+object SwapDTOEnums {
+
+}

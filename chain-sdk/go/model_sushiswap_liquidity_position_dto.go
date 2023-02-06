@@ -16,6 +16,9 @@ import (
 	"time"
 )
 
+// checks if the SushiswapLiquidityPositionDTO type satisfies the MappedNullable interface at compile time
+var _ MappedNullable = &SushiswapLiquidityPositionDTO{}
+
 // SushiswapLiquidityPositionDTO struct for SushiswapLiquidityPositionDTO
 type SushiswapLiquidityPositionDTO struct {
 	EntryTime *time.Time `json:"entry_time,omitempty"`
@@ -68,7 +71,7 @@ func (o *SushiswapLiquidityPositionDTO) GetEntryTime() time.Time {
 // and a boolean to check if the value has been set.
 func (o *SushiswapLiquidityPositionDTO) GetEntryTimeOk() (*time.Time, bool) {
 	if o == nil || isNil(o.EntryTime) {
-    return nil, false
+		return nil, false
 	}
 	return o.EntryTime, true
 }
@@ -100,7 +103,7 @@ func (o *SushiswapLiquidityPositionDTO) GetRecvTime() time.Time {
 // and a boolean to check if the value has been set.
 func (o *SushiswapLiquidityPositionDTO) GetRecvTimeOk() (*time.Time, bool) {
 	if o == nil || isNil(o.RecvTime) {
-    return nil, false
+		return nil, false
 	}
 	return o.RecvTime, true
 }
@@ -132,7 +135,7 @@ func (o *SushiswapLiquidityPositionDTO) GetBlockNumber() int64 {
 // and a boolean to check if the value has been set.
 func (o *SushiswapLiquidityPositionDTO) GetBlockNumberOk() (*int64, bool) {
 	if o == nil || isNil(o.BlockNumber) {
-    return nil, false
+		return nil, false
 	}
 	return o.BlockNumber, true
 }
@@ -165,7 +168,7 @@ func (o *SushiswapLiquidityPositionDTO) GetId() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *SushiswapLiquidityPositionDTO) GetIdOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Id.Get(), o.Id.IsSet()
 }
@@ -207,7 +210,7 @@ func (o *SushiswapLiquidityPositionDTO) GetUser() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *SushiswapLiquidityPositionDTO) GetUserOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.User.Get(), o.User.IsSet()
 }
@@ -249,7 +252,7 @@ func (o *SushiswapLiquidityPositionDTO) GetPair() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *SushiswapLiquidityPositionDTO) GetPairOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Pair.Get(), o.Pair.IsSet()
 }
@@ -291,7 +294,7 @@ func (o *SushiswapLiquidityPositionDTO) GetLiquidityTokenBalance() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *SushiswapLiquidityPositionDTO) GetLiquidityTokenBalanceOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.LiquidityTokenBalance.Get(), o.LiquidityTokenBalance.IsSet()
 }
@@ -332,7 +335,7 @@ func (o *SushiswapLiquidityPositionDTO) GetBlock() int32 {
 // and a boolean to check if the value has been set.
 func (o *SushiswapLiquidityPositionDTO) GetBlockOk() (*int32, bool) {
 	if o == nil || isNil(o.Block) {
-    return nil, false
+		return nil, false
 	}
 	return o.Block, true
 }
@@ -364,7 +367,7 @@ func (o *SushiswapLiquidityPositionDTO) GetTimestamp() int32 {
 // and a boolean to check if the value has been set.
 func (o *SushiswapLiquidityPositionDTO) GetTimestampOk() (*int32, bool) {
 	if o == nil || isNil(o.Timestamp) {
-    return nil, false
+		return nil, false
 	}
 	return o.Timestamp, true
 }
@@ -396,7 +399,7 @@ func (o *SushiswapLiquidityPositionDTO) GetVid() int64 {
 // and a boolean to check if the value has been set.
 func (o *SushiswapLiquidityPositionDTO) GetVidOk() (*int64, bool) {
 	if o == nil || isNil(o.Vid) {
-    return nil, false
+		return nil, false
 	}
 	return o.Vid, true
 }
@@ -416,6 +419,14 @@ func (o *SushiswapLiquidityPositionDTO) SetVid(v int64) {
 }
 
 func (o SushiswapLiquidityPositionDTO) MarshalJSON() ([]byte, error) {
+	toSerialize,err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
+}
+
+func (o SushiswapLiquidityPositionDTO) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
 	if !isNil(o.EntryTime) {
 		toSerialize["entry_time"] = o.EntryTime
@@ -447,7 +458,7 @@ func (o SushiswapLiquidityPositionDTO) MarshalJSON() ([]byte, error) {
 	if !isNil(o.Vid) {
 		toSerialize["vid"] = o.Vid
 	}
-	return json.Marshal(toSerialize)
+	return toSerialize, nil
 }
 
 type NullableSushiswapLiquidityPositionDTO struct {

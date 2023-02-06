@@ -52,6 +52,7 @@ docs/DexTradeDTO.md
 docs/DexUserDTO.md
 docs/DexWithdrawDTO.md
 docs/DexWithdrawRequestDTO.md
+docs/MetadataApi.md
 docs/NumericsBigInteger.md
 docs/SushiswapApi.md
 docs/SushiswapBundleDTO.md
@@ -113,6 +114,7 @@ settings.gradle
 src/main/kotlin/org/openapitools/client/apis/CowApi.kt
 src/main/kotlin/org/openapitools/client/apis/CurveApi.kt
 src/main/kotlin/org/openapitools/client/apis/DexApi.kt
+src/main/kotlin/org/openapitools/client/apis/MetadataApi.kt
 src/main/kotlin/org/openapitools/client/apis/SushiswapApi.kt
 src/main/kotlin/org/openapitools/client/apis/UniswapV2Api.kt
 src/main/kotlin/org/openapitools/client/apis/UniswapV3Api.kt

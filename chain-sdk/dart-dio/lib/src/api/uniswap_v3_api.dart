@@ -637,12 +637,12 @@ class UniswapV3Api {
   /// Gets poolDayData.
   ///
   /// Parameters:
-  /// * [startBlock] 
-  /// * [endBlock] 
-  /// * [startDate] 
-  /// * [endDate] 
-  /// * [id] 
-  /// * [pool] 
+  /// * [startBlock] - The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+  /// * [endBlock] - The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+  /// * [startDate] - The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+  /// * [endDate] - The end date of timeframe.
+  /// * [id] - Identifier, format: (pool address)-(day id).
+  /// * [pool] - Pointer to pool.
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -731,12 +731,12 @@ class UniswapV3Api {
   /// Gets poolHourData.
   ///
   /// Parameters:
-  /// * [startBlock] 
-  /// * [endBlock] 
-  /// * [startDate] 
-  /// * [endDate] 
-  /// * [id] 
-  /// * [pool] 
+  /// * [startBlock] - The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+  /// * [endBlock] - The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+  /// * [startDate] - The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+  /// * [endDate] - The end date of timeframe.
+  /// * [id] - Identifier, format: (pool address)-(day id)
+  /// * [pool] - Pointer to pool.
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -922,12 +922,12 @@ class UniswapV3Api {
   /// Gets positionSnapshots.
   ///
   /// Parameters:
-  /// * [startBlock] 
-  /// * [endBlock] 
-  /// * [startDate] 
-  /// * [endDate] 
-  /// * [id] 
-  /// * [pool] 
+  /// * [startBlock] - The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+  /// * [endBlock] - The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+  /// * [startDate] - The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+  /// * [endDate] - The end date of timeframe.
+  /// * [id] - NFT token identifier, format: (NFT token id)#(block number).
+  /// * [pool] - Pool the position is within.
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -1120,7 +1120,7 @@ class UniswapV3Api {
   /// * [endBlock] - The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
   /// * [startDate] - The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
   /// * [endDate] - The end date of timeframe.
-  /// * [id] - Identifier, format: transaction hash + \"#\" + index in swaps Transaction array.
+  /// * [id] - Identifier, format: (transaction hash) + # + (index in swaps Transaction array).
   /// * [pool] - Pool swap occured within.
   /// * [token0] - Reference to token0 as stored in pair contract.
   /// * [token1] - Reference to token1 as stored in pair contract.
@@ -1216,12 +1216,12 @@ class UniswapV3Api {
   /// Gets tickDayData.
   ///
   /// Parameters:
-  /// * [startBlock] 
-  /// * [endBlock] 
-  /// * [startDate] 
-  /// * [endDate] 
-  /// * [id] 
-  /// * [pool] 
+  /// * [startBlock] - The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+  /// * [endBlock] - The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+  /// * [startDate] - The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+  /// * [endDate] - The end date of timeframe.
+  /// * [id] - Identifier, format: (pool address)-(tick index)-(timestamp).
+  /// * [pool] - Pointer to pool.
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -1310,12 +1310,12 @@ class UniswapV3Api {
   /// Gets ticks.
   ///
   /// Parameters:
-  /// * [startBlock] 
-  /// * [endBlock] 
-  /// * [startDate] 
-  /// * [endDate] 
-  /// * [id] 
-  /// * [pool] 
+  /// * [startBlock] - The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+  /// * [endBlock] - The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+  /// * [startDate] - The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+  /// * [endDate] - The end date of timeframe.
+  /// * [id] - Identifier, format: (pool address)#(tick index)
+  /// * [pool] - Pool address.
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request

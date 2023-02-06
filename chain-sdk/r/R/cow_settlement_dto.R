@@ -328,7 +328,7 @@ CowSettlementDTO <- R6::R6Class(
 ## Uncomment below to unlock the class to allow modifications of the method or field
 # CowSettlementDTO$unlock()
 #
-## Below is an example to define the print fnuction
+## Below is an example to define the print function
 # CowSettlementDTO$set("public", "print", function(...) {
 #   print(jsonlite::prettify(self$toJSONString()))
 #   invisible(self)

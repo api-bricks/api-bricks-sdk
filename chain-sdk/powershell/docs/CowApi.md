@@ -207,13 +207,13 @@ Gets trades.
 
 ### Example
 ```powershell
-$StartBlock = 789 # Int64 |  (optional)
-$EndBlock = 789 # Int64 |  (optional)
-$StartDate = (Get-Date) # System.DateTime |  (optional)
-$EndDate = (Get-Date) # System.DateTime |  (optional)
-$Id = "MyId" # String |  (optional)
-$SellToken = "MySellToken" # String |  (optional)
-$BuyToken = "MyBuyToken" # String |  (optional)
+$StartBlock = 789 # Int64 | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+$EndBlock = 789 # Int64 | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+$StartDate = (Get-Date) # System.DateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+$EndDate = (Get-Date) # System.DateTime | The end date of timeframe. (optional)
+$Id = "MyId" # String | Identifier, format: (order id)|(transaction hash)|(event index). (optional)
+$SellToken = "MySellToken" # String | Address of token that is sold. (optional)
+$BuyToken = "MyBuyToken" # String | Address of token that is bought. (optional)
 
 # Trades (historical)
 try {
@@ -228,13 +228,13 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **StartBlock** | **Int64**|  | [optional] 
- **EndBlock** | **Int64**|  | [optional] 
- **StartDate** | **System.DateTime**|  | [optional] 
- **EndDate** | **System.DateTime**|  | [optional] 
- **Id** | **String**|  | [optional] 
- **SellToken** | **String**|  | [optional] 
- **BuyToken** | **String**|  | [optional] 
+ **StartBlock** | **Int64**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
+ **EndBlock** | **Int64**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
+ **StartDate** | **System.DateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
+ **EndDate** | **System.DateTime**| The end date of timeframe. | [optional] 
+ **Id** | **String**| Identifier, format: (order id)|(transaction hash)|(event index). | [optional] 
+ **SellToken** | **String**| Address of token that is sold. | [optional] 
+ **BuyToken** | **String**| Address of token that is bought. | [optional] 
 
 ### Return type
 

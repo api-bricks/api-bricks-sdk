@@ -389,7 +389,8 @@ case $state in
             "dexTradesCurrent[Trades (current)]" \
             "dexUsersCurrent[Users (current)]" \
             "dexWithdrawRequestsCurrent[WithdrawRequests (current)]" \
-            "dexWithdrawsCurrent[Withdraws (current)]"             "sushiswapBundlesCurrent[Bundles (current)]" \
+            "dexWithdrawsCurrent[Withdraws (current)]"             "metadataChainsGet[List all chains.]" \
+            "metadataDappsGet[List all decentralized applications.]"             "sushiswapBundlesCurrent[Bundles (current)]" \
             "sushiswapBurnsCurrent[Burns (current)]" \
             "sushiswapDayDataCurrent[DayData (current)]" \
             "sushiswapFactoriesCurrent[Factories (current)]" \
@@ -529,13 +530,13 @@ case $state in
       cowGetTradesHistorical)
         local -a _op_arguments
         _op_arguments=(
-                    "startBlock=:[QUERY] "
-"endBlock=:[QUERY] "
-"startDate=:[QUERY] "
-"endDate=:[QUERY] "
-"id=:[QUERY] "
-"sell_token=:[QUERY] "
-"buy_token=:[QUERY] "
+                    "startBlock=:[QUERY] The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock."
+"endBlock=:[QUERY] The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock)."
+"startDate=:[QUERY] The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included."
+"endDate=:[QUERY] The end date of timeframe."
+"id=:[QUERY] Identifier, format: (order id)|(transaction hash)|(event index)."
+"sell_token=:[QUERY] Address of token that is sold."
+"buy_token=:[QUERY] Address of token that is bought."
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
@@ -747,11 +748,11 @@ case $state in
       curveGetCoinsHistorical)
         local -a _op_arguments
         _op_arguments=(
-                    "startBlock=:[QUERY] "
-"endBlock=:[QUERY] "
-"startDate=:[QUERY] "
-"endDate=:[QUERY] "
-"id=:[QUERY] "
+                    "startBlock=:[QUERY] The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock."
+"endBlock=:[QUERY] The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock)."
+"startDate=:[QUERY] The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included."
+"endDate=:[QUERY] The end date of timeframe."
+"id=:[QUERY] Identifier, format: (pool_id)-(coin_index)."
 "pool=:[QUERY] "
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
@@ -1044,11 +1045,11 @@ case $state in
       curveGetUnderlyingCoinsHistorical)
         local -a _op_arguments
         _op_arguments=(
-                    "startBlock=:[QUERY] "
-"endBlock=:[QUERY] "
-"startDate=:[QUERY] "
-"endDate=:[QUERY] "
-"id=:[QUERY] "
+                    "startBlock=:[QUERY] The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock."
+"endBlock=:[QUERY] The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock)."
+"startDate=:[QUERY] The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included."
+"endDate=:[QUERY] The end date of timeframe."
+"id=:[QUERY] Equals to: (pool_id)-(coin_index)."
 "pool=:[QUERY] "
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
@@ -1182,36 +1183,36 @@ case $state in
       dexGetDepositsHistorical)
         local -a _op_arguments
         _op_arguments=(
-                    "startBlock=:[QUERY] "
-"endBlock=:[QUERY] "
-"startDate=:[QUERY] "
-"endDate=:[QUERY] "
-"id=:[QUERY] "
-"user=:[QUERY] "
+                    "startBlock=:[QUERY] The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock."
+"endBlock=:[QUERY] The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock)."
+"startDate=:[QUERY] The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included."
+"endDate=:[QUERY] The end date of timeframe."
+"id=:[QUERY] Identifier, format: (transaction hash)-(token id)."
+"user=:[QUERY] User address."
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       dexGetOrdersHistorical)
         local -a _op_arguments
         _op_arguments=(
-                    "startBlock=:[QUERY] "
-"endBlock=:[QUERY] "
-"startDate=:[QUERY] "
-"endDate=:[QUERY] "
-"id=:[QUERY] "
-"buy_token=:[QUERY] "
-"sell_token=:[QUERY] "
+                    "startBlock=:[QUERY] The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock."
+"endBlock=:[QUERY] The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock)."
+"startDate=:[QUERY] The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included."
+"endDate=:[QUERY] The end date of timeframe."
+"id=:[QUERY] Identifier, format: (owner address)-(order id)"
+"buy_token=:[QUERY] Identifier of token that was bought."
+"sell_token=:[QUERY] Identifier of token that was sold."
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       dexGetPricesHistorical)
         local -a _op_arguments
         _op_arguments=(
-                    "startBlock=:[QUERY] "
-"endBlock=:[QUERY] "
-"startDate=:[QUERY] "
-"endDate=:[QUERY] "
-"id=:[QUERY] "
+                    "startBlock=:[QUERY] The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock."
+"endBlock=:[QUERY] The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock)."
+"startDate=:[QUERY] The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included."
+"endDate=:[QUERY] The end date of timeframe."
+"id=:[QUERY] Identifier, format: (token id)-(batch id)."
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
@@ -1278,11 +1279,11 @@ case $state in
       dexGetWithdrawRequestsHistorical)
         local -a _op_arguments
         _op_arguments=(
-                    "startBlock=:[QUERY] "
-"endBlock=:[QUERY] "
-"startDate=:[QUERY] "
-"endDate=:[QUERY] "
-"id=:[QUERY] "
+                    "startBlock=:[QUERY] The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock."
+"endBlock=:[QUERY] The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock)."
+"startDate=:[QUERY] The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included."
+"endDate=:[QUERY] The end date of timeframe."
+"id=:[QUERY] Identifier, format: (transaction hash)-(id)."
 "user=:[QUERY] "
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
@@ -1290,11 +1291,11 @@ case $state in
       dexGetWithdrawsHistorical)
         local -a _op_arguments
         _op_arguments=(
-                    "startBlock=:[QUERY] "
-"endBlock=:[QUERY] "
-"startDate=:[QUERY] "
-"endDate=:[QUERY] "
-"id=:[QUERY] "
+                    "startBlock=:[QUERY] The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock."
+"endBlock=:[QUERY] The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock)."
+"startDate=:[QUERY] The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included."
+"endDate=:[QUERY] The end date of timeframe."
+"id=:[QUERY] Identifier, format: (transaction hash)-(id)."
 "user=:[QUERY] "
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
@@ -1353,6 +1354,18 @@ case $state in
                               )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
+      metadataChainsGet)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      metadataDappsGet)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
       sushiswapBundlesCurrent)
         local -a _op_arguments
         _op_arguments=(
@@ -1391,12 +1404,12 @@ case $state in
       sushiswapGetBurnsHistorical)
         local -a _op_arguments
         _op_arguments=(
-                    "startBlock=:[QUERY] "
-"endBlock=:[QUERY] "
-"startDate=:[QUERY] "
-"endDate=:[QUERY] "
-"id=:[QUERY] "
-"pair=:[QUERY] "
+                    "startBlock=:[QUERY] The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock."
+"endBlock=:[QUERY] The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock)."
+"startDate=:[QUERY] The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included."
+"endDate=:[QUERY] The end date of timeframe."
+"id=:[QUERY] Identifier, format: (transaction id):(transaction.burns.length)."
+"pair=:[QUERY] Reference to pair."
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
@@ -1436,78 +1449,78 @@ case $state in
       sushiswapGetLiquidityPositionSnapshotsHistorical)
         local -a _op_arguments
         _op_arguments=(
-                    "startBlock=:[QUERY] "
-"endBlock=:[QUERY] "
-"startDate=:[QUERY] "
-"endDate=:[QUERY] "
-"id=:[QUERY] "
-"user=:[QUERY] "
-"pair=:[QUERY] "
+                    "startBlock=:[QUERY] The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock."
+"endBlock=:[QUERY] The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock)."
+"startDate=:[QUERY] The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included."
+"endDate=:[QUERY] The end date of timeframe."
+"id=:[QUERY] Identifier, format: (pair address)-(user address)-(timestamp)"
+"user=:[QUERY] Reference to user."
+"pair=:[QUERY] Reference to the pair liquidity is being provided on."
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       sushiswapGetLiquidityPositionsHistorical)
         local -a _op_arguments
         _op_arguments=(
-                    "startBlock=:[QUERY] "
-"endBlock=:[QUERY] "
-"startDate=:[QUERY] "
-"endDate=:[QUERY] "
-"id=:[QUERY] "
-"user=:[QUERY] "
-"pair=:[QUERY] "
+                    "startBlock=:[QUERY] The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock."
+"endBlock=:[QUERY] The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock)."
+"startDate=:[QUERY] The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included."
+"endDate=:[QUERY] The end date of timeframe."
+"id=:[QUERY] Identifier, format: (pair address)-(user address)"
+"user=:[QUERY] User address."
+"pair=:[QUERY] Pair address."
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       sushiswapGetMintsHistorical)
         local -a _op_arguments
         _op_arguments=(
-                    "startBlock=:[QUERY] "
-"endBlock=:[QUERY] "
-"startDate=:[QUERY] "
-"endDate=:[QUERY] "
-"id=:[QUERY] "
-"pair=:[QUERY] "
+                    "startBlock=:[QUERY] The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock."
+"endBlock=:[QUERY] The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock)."
+"startDate=:[QUERY] The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included."
+"endDate=:[QUERY] The end date of timeframe."
+"id=:[QUERY] Identifier, format: (transaction hash)-(index in the transaction mint array)."
+"pair=:[QUERY] Reference to pair."
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       sushiswapGetPairDayDataHistorical)
         local -a _op_arguments
         _op_arguments=(
-                    "startBlock=:[QUERY] "
-"endBlock=:[QUERY] "
-"startDate=:[QUERY] "
-"endDate=:[QUERY] "
-"id=:[QUERY] "
-"pair=:[QUERY] "
-"token_0=:[QUERY] "
-"token_1=:[QUERY] "
+                    "startBlock=:[QUERY] The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock."
+"endBlock=:[QUERY] The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock)."
+"startDate=:[QUERY] The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included."
+"endDate=:[QUERY] The end date of timeframe."
+"id=:[QUERY] Identifier, format: (pair id)-(day start timestamp)."
+"pair=:[QUERY] Reference to pair."
+"token_0=:[QUERY] Reference to token0."
+"token_1=:[QUERY] Reference to token1."
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       sushiswapGetPairHourDataHistorical)
         local -a _op_arguments
         _op_arguments=(
-                    "startBlock=:[QUERY] "
-"endBlock=:[QUERY] "
-"startDate=:[QUERY] "
-"endDate=:[QUERY] "
-"id=:[QUERY] "
-"pair=:[QUERY] "
+                    "startBlock=:[QUERY] The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock."
+"endBlock=:[QUERY] The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock)."
+"startDate=:[QUERY] The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included."
+"endDate=:[QUERY] The end date of timeframe."
+"id=:[QUERY] Identifier, format: (pair id)-(hour start timestamp)."
+"pair=:[QUERY] Reference to pair."
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       sushiswapGetPairsHistorical)
         local -a _op_arguments
         _op_arguments=(
-                    "startBlock=:[QUERY] "
-"endBlock=:[QUERY] "
-"startDate=:[QUERY] "
-"endDate=:[QUERY] "
-"id=:[QUERY] "
-"name=:[QUERY] "
-"token_0=:[QUERY] "
-"token_1=:[QUERY] "
+                    "startBlock=:[QUERY] The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock."
+"endBlock=:[QUERY] The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock)."
+"startDate=:[QUERY] The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included."
+"endDate=:[QUERY] The end date of timeframe."
+"id=:[QUERY] Pair contract address."
+"name=:[QUERY] Friendly name, format: (token0 name)-(token1 name)"
+"token_0=:[QUERY] Reference to token0 as stored in pair contract."
+"token_1=:[QUERY] Reference to token0 as stored in pair contract."
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
@@ -1681,13 +1694,13 @@ case $state in
       uniswapV2GetLiquidityPositionSnapshotsHistorical)
         local -a _op_arguments
         _op_arguments=(
-                    "startBlock=:[QUERY] "
-"endBlock=:[QUERY] "
-"startDate=:[QUERY] "
-"endDate=:[QUERY] "
-"id=:[QUERY] "
-"user=:[QUERY] "
-"pair=:[QUERY] "
+                    "startBlock=:[QUERY] The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock."
+"endBlock=:[QUERY] The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock)."
+"startDate=:[QUERY] The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included."
+"endDate=:[QUERY] The end date of timeframe."
+"id=:[QUERY] Identifier, format: (pair address)-(user address)"
+"user=:[QUERY] Reference to user."
+"pair=:[QUERY] Reference to the pair liquidity is being provided on."
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
@@ -1985,24 +1998,24 @@ case $state in
       uniswapV3GetPoolDayDataHistorical)
         local -a _op_arguments
         _op_arguments=(
-                    "startBlock=:[QUERY] "
-"endBlock=:[QUERY] "
-"startDate=:[QUERY] "
-"endDate=:[QUERY] "
-"id=:[QUERY] "
-"pool=:[QUERY] "
+                    "startBlock=:[QUERY] The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock."
+"endBlock=:[QUERY] The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock)."
+"startDate=:[QUERY] The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included."
+"endDate=:[QUERY] The end date of timeframe."
+"id=:[QUERY] Identifier, format: (pool address)-(day id)."
+"pool=:[QUERY] Pointer to pool."
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       uniswapV3GetPoolHourDataHistorical)
         local -a _op_arguments
         _op_arguments=(
-                    "startBlock=:[QUERY] "
-"endBlock=:[QUERY] "
-"startDate=:[QUERY] "
-"endDate=:[QUERY] "
-"id=:[QUERY] "
-"pool=:[QUERY] "
+                    "startBlock=:[QUERY] The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock."
+"endBlock=:[QUERY] The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock)."
+"startDate=:[QUERY] The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included."
+"endDate=:[QUERY] The end date of timeframe."
+"id=:[QUERY] Identifier, format: (pool address)-(day id)"
+"pool=:[QUERY] Pointer to pool."
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
@@ -2022,12 +2035,12 @@ case $state in
       uniswapV3GetPositionSnapshotsHistorical)
         local -a _op_arguments
         _op_arguments=(
-                    "startBlock=:[QUERY] "
-"endBlock=:[QUERY] "
-"startDate=:[QUERY] "
-"endDate=:[QUERY] "
-"id=:[QUERY] "
-"pool=:[QUERY] "
+                    "startBlock=:[QUERY] The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock."
+"endBlock=:[QUERY] The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock)."
+"startDate=:[QUERY] The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included."
+"endDate=:[QUERY] The end date of timeframe."
+"id=:[QUERY] NFT token identifier, format: (NFT token id)#(block number)."
+"pool=:[QUERY] Pool the position is within."
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
@@ -2052,7 +2065,7 @@ case $state in
 "endBlock=:[QUERY] The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock)."
 "startDate=:[QUERY] The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included."
 "endDate=:[QUERY] The end date of timeframe."
-"id=:[QUERY] Identifier, format: transaction hash + \&quot;#\&quot; + index in swaps Transaction array."
+"id=:[QUERY] Identifier, format: (transaction hash) + # + (index in swaps Transaction array)."
 "pool=:[QUERY] Pool swap occured within."
 "token_0=:[QUERY] Reference to token0 as stored in pair contract."
 "token_1=:[QUERY] Reference to token1 as stored in pair contract."
@@ -2062,24 +2075,24 @@ case $state in
       uniswapV3GetTickDayDataHistorical)
         local -a _op_arguments
         _op_arguments=(
-                    "startBlock=:[QUERY] "
-"endBlock=:[QUERY] "
-"startDate=:[QUERY] "
-"endDate=:[QUERY] "
-"id=:[QUERY] "
-"pool=:[QUERY] "
+                    "startBlock=:[QUERY] The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock."
+"endBlock=:[QUERY] The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock)."
+"startDate=:[QUERY] The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included."
+"endDate=:[QUERY] The end date of timeframe."
+"id=:[QUERY] Identifier, format: (pool address)-(tick index)-(timestamp)."
+"pool=:[QUERY] Pointer to pool."
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       uniswapV3GetTicksHistorical)
         local -a _op_arguments
         _op_arguments=(
-                    "startBlock=:[QUERY] "
-"endBlock=:[QUERY] "
-"startDate=:[QUERY] "
-"endDate=:[QUERY] "
-"id=:[QUERY] "
-"pool=:[QUERY] "
+                    "startBlock=:[QUERY] The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock."
+"endBlock=:[QUERY] The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock)."
+"startDate=:[QUERY] The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included."
+"endDate=:[QUERY] The end date of timeframe."
+"id=:[QUERY] Identifier, format: (pool address)#(tick index)"
+"pool=:[QUERY] Pool address."
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;

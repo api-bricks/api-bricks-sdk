@@ -355,18 +355,25 @@ class CowApi {
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   ///
   /// * [int] endBlock:
+  ///   The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
   ///
   /// * [DateTime] startDate:
+  ///   The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
   ///
   /// * [DateTime] endDate:
+  ///   The end date of timeframe.
   ///
   /// * [String] id:
+  ///   Identifier, format: (order id)|(transaction hash)|(event index).
   ///
   /// * [String] sellToken:
+  ///   Address of token that is sold.
   ///
   /// * [String] buyToken:
+  ///   Address of token that is bought.
   Future<Response> cowGetTradesHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, String? sellToken, String? buyToken, }) async {
     // ignore: prefer_const_declarations
     final path = r'/dapps/cow/trades/historical';
@@ -421,18 +428,25 @@ class CowApi {
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   ///
   /// * [int] endBlock:
+  ///   The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
   ///
   /// * [DateTime] startDate:
+  ///   The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
   ///
   /// * [DateTime] endDate:
+  ///   The end date of timeframe.
   ///
   /// * [String] id:
+  ///   Identifier, format: (order id)|(transaction hash)|(event index).
   ///
   /// * [String] sellToken:
+  ///   Address of token that is sold.
   ///
   /// * [String] buyToken:
+  ///   Address of token that is bought.
   Future<List<CowTradeDTO>?> cowGetTradesHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, String? sellToken, String? buyToken, }) async {
     final response = await cowGetTradesHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, id: id, sellToken: sellToken, buyToken: buyToken, );
     if (response.statusCode >= HttpStatus.badRequest) {

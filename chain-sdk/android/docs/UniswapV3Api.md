@@ -410,12 +410,12 @@ Gets poolDayData.
 //import org.openapitools.client.api.UniswapV3Api;
 
 UniswapV3Api apiInstance = new UniswapV3Api();
-Long startBlock = null; // Long | 
-Long endBlock = null; // Long | 
-Date startDate = null; // Date | 
-Date endDate = null; // Date | 
-String id = null; // String | 
-String pool = null; // String | 
+Long startBlock = null; // Long | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+Long endBlock = null; // Long | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+Date startDate = null; // Date | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+Date endDate = null; // Date | The end date of timeframe.
+String id = null; // String | Identifier, format: (pool address)-(day id).
+String pool = null; // String | Pointer to pool.
 try {
     List<UniswapV3PoolDayDataDTO> result = apiInstance.uniswapV3GetPoolDayDataHistorical(startBlock, endBlock, startDate, endDate, id, pool);
     System.out.println(result);
@@ -430,12 +430,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startBlock** | **Long**|  | [optional] [default to null]
- **endBlock** | **Long**|  | [optional] [default to null]
- **startDate** | **Date**|  | [optional] [default to null]
- **endDate** | **Date**|  | [optional] [default to null]
- **id** | **String**|  | [optional] [default to null]
- **pool** | **String**|  | [optional] [default to null]
+ **startBlock** | **Long**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] [default to null]
+ **endBlock** | **Long**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] [default to null]
+ **startDate** | **Date**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] [default to null]
+ **endDate** | **Date**| The end date of timeframe. | [optional] [default to null]
+ **id** | **String**| Identifier, format: (pool address)-(day id). | [optional] [default to null]
+ **pool** | **String**| Pointer to pool. | [optional] [default to null]
 
 ### Return type
 
@@ -466,12 +466,12 @@ Gets poolHourData.
 //import org.openapitools.client.api.UniswapV3Api;
 
 UniswapV3Api apiInstance = new UniswapV3Api();
-Long startBlock = null; // Long | 
-Long endBlock = null; // Long | 
-Date startDate = null; // Date | 
-Date endDate = null; // Date | 
-String id = null; // String | 
-String pool = null; // String | 
+Long startBlock = null; // Long | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+Long endBlock = null; // Long | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+Date startDate = null; // Date | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+Date endDate = null; // Date | The end date of timeframe.
+String id = null; // String | Identifier, format: (pool address)-(day id)
+String pool = null; // String | Pointer to pool.
 try {
     List<UniswapV3PoolHourDataDTO> result = apiInstance.uniswapV3GetPoolHourDataHistorical(startBlock, endBlock, startDate, endDate, id, pool);
     System.out.println(result);
@@ -486,12 +486,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startBlock** | **Long**|  | [optional] [default to null]
- **endBlock** | **Long**|  | [optional] [default to null]
- **startDate** | **Date**|  | [optional] [default to null]
- **endDate** | **Date**|  | [optional] [default to null]
- **id** | **String**|  | [optional] [default to null]
- **pool** | **String**|  | [optional] [default to null]
+ **startBlock** | **Long**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] [default to null]
+ **endBlock** | **Long**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] [default to null]
+ **startDate** | **Date**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] [default to null]
+ **endDate** | **Date**| The end date of timeframe. | [optional] [default to null]
+ **id** | **String**| Identifier, format: (pool address)-(day id) | [optional] [default to null]
+ **pool** | **String**| Pointer to pool. | [optional] [default to null]
 
 ### Return type
 
@@ -580,12 +580,12 @@ Gets positionSnapshots.
 //import org.openapitools.client.api.UniswapV3Api;
 
 UniswapV3Api apiInstance = new UniswapV3Api();
-Long startBlock = null; // Long | 
-Long endBlock = null; // Long | 
-Date startDate = null; // Date | 
-Date endDate = null; // Date | 
-String id = null; // String | 
-String pool = null; // String | 
+Long startBlock = null; // Long | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+Long endBlock = null; // Long | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+Date startDate = null; // Date | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+Date endDate = null; // Date | The end date of timeframe.
+String id = null; // String | NFT token identifier, format: (NFT token id)#(block number).
+String pool = null; // String | Pool the position is within.
 try {
     List<UniswapV3PositionSnapshotDTO> result = apiInstance.uniswapV3GetPositionSnapshotsHistorical(startBlock, endBlock, startDate, endDate, id, pool);
     System.out.println(result);
@@ -600,12 +600,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startBlock** | **Long**|  | [optional] [default to null]
- **endBlock** | **Long**|  | [optional] [default to null]
- **startDate** | **Date**|  | [optional] [default to null]
- **endDate** | **Date**|  | [optional] [default to null]
- **id** | **String**|  | [optional] [default to null]
- **pool** | **String**|  | [optional] [default to null]
+ **startBlock** | **Long**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] [default to null]
+ **endBlock** | **Long**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] [default to null]
+ **startDate** | **Date**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] [default to null]
+ **endDate** | **Date**| The end date of timeframe. | [optional] [default to null]
+ **id** | **String**| NFT token identifier, format: (NFT token id)#(block number). | [optional] [default to null]
+ **pool** | **String**| Pool the position is within. | [optional] [default to null]
 
 ### Return type
 
@@ -700,7 +700,7 @@ Long startBlock = null; // Long | The start block. If endblock is not given, onl
 Long endBlock = null; // Long | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
 Date startDate = null; // Date | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
 Date endDate = null; // Date | The end date of timeframe.
-String id = null; // String | Identifier, format: transaction hash + \"#\" + index in swaps Transaction array.
+String id = null; // String | Identifier, format: (transaction hash) + # + (index in swaps Transaction array).
 String pool = null; // String | Pool swap occured within.
 String token0 = null; // String | Reference to token0 as stored in pair contract.
 String token1 = null; // String | Reference to token1 as stored in pair contract.
@@ -722,7 +722,7 @@ Name | Type | Description  | Notes
  **endBlock** | **Long**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] [default to null]
  **startDate** | **Date**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] [default to null]
  **endDate** | **Date**| The end date of timeframe. | [optional] [default to null]
- **id** | **String**| Identifier, format: transaction hash + \&quot;#\&quot; + index in swaps Transaction array. | [optional] [default to null]
+ **id** | **String**| Identifier, format: (transaction hash) + # + (index in swaps Transaction array). | [optional] [default to null]
  **pool** | **String**| Pool swap occured within. | [optional] [default to null]
  **token0** | **String**| Reference to token0 as stored in pair contract. | [optional] [default to null]
  **token1** | **String**| Reference to token1 as stored in pair contract. | [optional] [default to null]
@@ -756,12 +756,12 @@ Gets tickDayData.
 //import org.openapitools.client.api.UniswapV3Api;
 
 UniswapV3Api apiInstance = new UniswapV3Api();
-Long startBlock = null; // Long | 
-Long endBlock = null; // Long | 
-Date startDate = null; // Date | 
-Date endDate = null; // Date | 
-String id = null; // String | 
-String pool = null; // String | 
+Long startBlock = null; // Long | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+Long endBlock = null; // Long | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+Date startDate = null; // Date | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+Date endDate = null; // Date | The end date of timeframe.
+String id = null; // String | Identifier, format: (pool address)-(tick index)-(timestamp).
+String pool = null; // String | Pointer to pool.
 try {
     List<UniswapV3TickDayDataDTO> result = apiInstance.uniswapV3GetTickDayDataHistorical(startBlock, endBlock, startDate, endDate, id, pool);
     System.out.println(result);
@@ -776,12 +776,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startBlock** | **Long**|  | [optional] [default to null]
- **endBlock** | **Long**|  | [optional] [default to null]
- **startDate** | **Date**|  | [optional] [default to null]
- **endDate** | **Date**|  | [optional] [default to null]
- **id** | **String**|  | [optional] [default to null]
- **pool** | **String**|  | [optional] [default to null]
+ **startBlock** | **Long**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] [default to null]
+ **endBlock** | **Long**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] [default to null]
+ **startDate** | **Date**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] [default to null]
+ **endDate** | **Date**| The end date of timeframe. | [optional] [default to null]
+ **id** | **String**| Identifier, format: (pool address)-(tick index)-(timestamp). | [optional] [default to null]
+ **pool** | **String**| Pointer to pool. | [optional] [default to null]
 
 ### Return type
 
@@ -812,12 +812,12 @@ Gets ticks.
 //import org.openapitools.client.api.UniswapV3Api;
 
 UniswapV3Api apiInstance = new UniswapV3Api();
-Long startBlock = null; // Long | 
-Long endBlock = null; // Long | 
-Date startDate = null; // Date | 
-Date endDate = null; // Date | 
-String id = null; // String | 
-String pool = null; // String | 
+Long startBlock = null; // Long | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+Long endBlock = null; // Long | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+Date startDate = null; // Date | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+Date endDate = null; // Date | The end date of timeframe.
+String id = null; // String | Identifier, format: (pool address)#(tick index)
+String pool = null; // String | Pool address.
 try {
     List<UniswapV3TickDTO> result = apiInstance.uniswapV3GetTicksHistorical(startBlock, endBlock, startDate, endDate, id, pool);
     System.out.println(result);
@@ -832,12 +832,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startBlock** | **Long**|  | [optional] [default to null]
- **endBlock** | **Long**|  | [optional] [default to null]
- **startDate** | **Date**|  | [optional] [default to null]
- **endDate** | **Date**|  | [optional] [default to null]
- **id** | **String**|  | [optional] [default to null]
- **pool** | **String**|  | [optional] [default to null]
+ **startBlock** | **Long**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] [default to null]
+ **endBlock** | **Long**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] [default to null]
+ **startDate** | **Date**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] [default to null]
+ **endDate** | **Date**| The end date of timeframe. | [optional] [default to null]
+ **id** | **String**| Identifier, format: (pool address)#(tick index) | [optional] [default to null]
+ **pool** | **String**| Pool address. | [optional] [default to null]
 
 ### Return type
 

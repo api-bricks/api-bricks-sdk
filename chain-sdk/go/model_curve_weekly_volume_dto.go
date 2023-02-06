@@ -16,6 +16,9 @@ import (
 	"time"
 )
 
+// checks if the CurveWeeklyVolumeDTO type satisfies the MappedNullable interface at compile time
+var _ MappedNullable = &CurveWeeklyVolumeDTO{}
+
 // CurveWeeklyVolumeDTO struct for CurveWeeklyVolumeDTO
 type CurveWeeklyVolumeDTO struct {
 	EntryTime *time.Time `json:"entry_time,omitempty"`
@@ -64,7 +67,7 @@ func (o *CurveWeeklyVolumeDTO) GetEntryTime() time.Time {
 // and a boolean to check if the value has been set.
 func (o *CurveWeeklyVolumeDTO) GetEntryTimeOk() (*time.Time, bool) {
 	if o == nil || isNil(o.EntryTime) {
-    return nil, false
+		return nil, false
 	}
 	return o.EntryTime, true
 }
@@ -96,7 +99,7 @@ func (o *CurveWeeklyVolumeDTO) GetRecvTime() time.Time {
 // and a boolean to check if the value has been set.
 func (o *CurveWeeklyVolumeDTO) GetRecvTimeOk() (*time.Time, bool) {
 	if o == nil || isNil(o.RecvTime) {
-    return nil, false
+		return nil, false
 	}
 	return o.RecvTime, true
 }
@@ -128,7 +131,7 @@ func (o *CurveWeeklyVolumeDTO) GetBlockNumber() int64 {
 // and a boolean to check if the value has been set.
 func (o *CurveWeeklyVolumeDTO) GetBlockNumberOk() (*int64, bool) {
 	if o == nil || isNil(o.BlockNumber) {
-    return nil, false
+		return nil, false
 	}
 	return o.BlockNumber, true
 }
@@ -161,7 +164,7 @@ func (o *CurveWeeklyVolumeDTO) GetId() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CurveWeeklyVolumeDTO) GetIdOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Id.Get(), o.Id.IsSet()
 }
@@ -203,7 +206,7 @@ func (o *CurveWeeklyVolumeDTO) GetPool() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CurveWeeklyVolumeDTO) GetPoolOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Pool.Get(), o.Pool.IsSet()
 }
@@ -245,7 +248,7 @@ func (o *CurveWeeklyVolumeDTO) GetTimestamp() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CurveWeeklyVolumeDTO) GetTimestampOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Timestamp.Get(), o.Timestamp.IsSet()
 }
@@ -287,7 +290,7 @@ func (o *CurveWeeklyVolumeDTO) GetVolume() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CurveWeeklyVolumeDTO) GetVolumeOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Volume.Get(), o.Volume.IsSet()
 }
@@ -328,7 +331,7 @@ func (o *CurveWeeklyVolumeDTO) GetVid() int64 {
 // and a boolean to check if the value has been set.
 func (o *CurveWeeklyVolumeDTO) GetVidOk() (*int64, bool) {
 	if o == nil || isNil(o.Vid) {
-    return nil, false
+		return nil, false
 	}
 	return o.Vid, true
 }
@@ -348,6 +351,14 @@ func (o *CurveWeeklyVolumeDTO) SetVid(v int64) {
 }
 
 func (o CurveWeeklyVolumeDTO) MarshalJSON() ([]byte, error) {
+	toSerialize,err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
+}
+
+func (o CurveWeeklyVolumeDTO) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
 	if !isNil(o.EntryTime) {
 		toSerialize["entry_time"] = o.EntryTime
@@ -373,7 +384,7 @@ func (o CurveWeeklyVolumeDTO) MarshalJSON() ([]byte, error) {
 	if !isNil(o.Vid) {
 		toSerialize["vid"] = o.Vid
 	}
-	return json.Marshal(toSerialize)
+	return toSerialize, nil
 }
 
 type NullableCurveWeeklyVolumeDTO struct {

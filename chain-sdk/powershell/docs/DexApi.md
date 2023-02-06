@@ -175,12 +175,12 @@ Gets deposits.
 
 ### Example
 ```powershell
-$StartBlock = 789 # Int64 |  (optional)
-$EndBlock = 789 # Int64 |  (optional)
-$StartDate = (Get-Date) # System.DateTime |  (optional)
-$EndDate = (Get-Date) # System.DateTime |  (optional)
-$Id = "MyId" # String |  (optional)
-$User = "MyUser" # String |  (optional)
+$StartBlock = 789 # Int64 | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+$EndBlock = 789 # Int64 | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+$StartDate = (Get-Date) # System.DateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+$EndDate = (Get-Date) # System.DateTime | The end date of timeframe. (optional)
+$Id = "MyId" # String | Identifier, format: (transaction hash)-(token id). (optional)
+$User = "MyUser" # String | User address. (optional)
 
 # Deposits (historical)
 try {
@@ -195,12 +195,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **StartBlock** | **Int64**|  | [optional] 
- **EndBlock** | **Int64**|  | [optional] 
- **StartDate** | **System.DateTime**|  | [optional] 
- **EndDate** | **System.DateTime**|  | [optional] 
- **Id** | **String**|  | [optional] 
- **User** | **String**|  | [optional] 
+ **StartBlock** | **Int64**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
+ **EndBlock** | **Int64**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
+ **StartDate** | **System.DateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
+ **EndDate** | **System.DateTime**| The end date of timeframe. | [optional] 
+ **Id** | **String**| Identifier, format: (transaction hash)-(token id). | [optional] 
+ **User** | **String**| User address. | [optional] 
 
 ### Return type
 
@@ -234,13 +234,13 @@ Gets orders.
 
 ### Example
 ```powershell
-$StartBlock = 789 # Int64 |  (optional)
-$EndBlock = 789 # Int64 |  (optional)
-$StartDate = (Get-Date) # System.DateTime |  (optional)
-$EndDate = (Get-Date) # System.DateTime |  (optional)
-$Id = "MyId" # String |  (optional)
-$BuyToken = "MyBuyToken" # String |  (optional)
-$SellToken = "MySellToken" # String |  (optional)
+$StartBlock = 789 # Int64 | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+$EndBlock = 789 # Int64 | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+$StartDate = (Get-Date) # System.DateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+$EndDate = (Get-Date) # System.DateTime | The end date of timeframe. (optional)
+$Id = "MyId" # String | Identifier, format: (owner address)-(order id) (optional)
+$BuyToken = "MyBuyToken" # String | Identifier of token that was bought. (optional)
+$SellToken = "MySellToken" # String | Identifier of token that was sold. (optional)
 
 # Orders (historical)
 try {
@@ -255,13 +255,13 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **StartBlock** | **Int64**|  | [optional] 
- **EndBlock** | **Int64**|  | [optional] 
- **StartDate** | **System.DateTime**|  | [optional] 
- **EndDate** | **System.DateTime**|  | [optional] 
- **Id** | **String**|  | [optional] 
- **BuyToken** | **String**|  | [optional] 
- **SellToken** | **String**|  | [optional] 
+ **StartBlock** | **Int64**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
+ **EndBlock** | **Int64**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
+ **StartDate** | **System.DateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
+ **EndDate** | **System.DateTime**| The end date of timeframe. | [optional] 
+ **Id** | **String**| Identifier, format: (owner address)-(order id) | [optional] 
+ **BuyToken** | **String**| Identifier of token that was bought. | [optional] 
+ **SellToken** | **String**| Identifier of token that was sold. | [optional] 
 
 ### Return type
 
@@ -293,11 +293,11 @@ Gets prices.
 
 ### Example
 ```powershell
-$StartBlock = 789 # Int64 |  (optional)
-$EndBlock = 789 # Int64 |  (optional)
-$StartDate = (Get-Date) # System.DateTime |  (optional)
-$EndDate = (Get-Date) # System.DateTime |  (optional)
-$Id = "MyId" # String |  (optional)
+$StartBlock = 789 # Int64 | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+$EndBlock = 789 # Int64 | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+$StartDate = (Get-Date) # System.DateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+$EndDate = (Get-Date) # System.DateTime | The end date of timeframe. (optional)
+$Id = "MyId" # String | Identifier, format: (token id)-(batch id). (optional)
 
 # Prices (historical)
 try {
@@ -312,11 +312,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **StartBlock** | **Int64**|  | [optional] 
- **EndBlock** | **Int64**|  | [optional] 
- **StartDate** | **System.DateTime**|  | [optional] 
- **EndDate** | **System.DateTime**|  | [optional] 
- **Id** | **String**|  | [optional] 
+ **StartBlock** | **Int64**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
+ **EndBlock** | **Int64**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
+ **StartDate** | **System.DateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
+ **EndDate** | **System.DateTime**| The end date of timeframe. | [optional] 
+ **Id** | **String**| Identifier, format: (token id)-(batch id). | [optional] 
 
 ### Return type
 
@@ -639,11 +639,11 @@ Gets withdrawRequests.
 
 ### Example
 ```powershell
-$StartBlock = 789 # Int64 |  (optional)
-$EndBlock = 789 # Int64 |  (optional)
-$StartDate = (Get-Date) # System.DateTime |  (optional)
-$EndDate = (Get-Date) # System.DateTime |  (optional)
-$Id = "MyId" # String |  (optional)
+$StartBlock = 789 # Int64 | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+$EndBlock = 789 # Int64 | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+$StartDate = (Get-Date) # System.DateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+$EndDate = (Get-Date) # System.DateTime | The end date of timeframe. (optional)
+$Id = "MyId" # String | Identifier, format: (transaction hash)-(id). (optional)
 $User = "MyUser" # String |  (optional)
 
 # WithdrawRequests (historical)
@@ -659,11 +659,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **StartBlock** | **Int64**|  | [optional] 
- **EndBlock** | **Int64**|  | [optional] 
- **StartDate** | **System.DateTime**|  | [optional] 
- **EndDate** | **System.DateTime**|  | [optional] 
- **Id** | **String**|  | [optional] 
+ **StartBlock** | **Int64**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
+ **EndBlock** | **Int64**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
+ **StartDate** | **System.DateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
+ **EndDate** | **System.DateTime**| The end date of timeframe. | [optional] 
+ **Id** | **String**| Identifier, format: (transaction hash)-(id). | [optional] 
  **User** | **String**|  | [optional] 
 
 ### Return type
@@ -697,11 +697,11 @@ Gets withdraws.
 
 ### Example
 ```powershell
-$StartBlock = 789 # Int64 |  (optional)
-$EndBlock = 789 # Int64 |  (optional)
-$StartDate = (Get-Date) # System.DateTime |  (optional)
-$EndDate = (Get-Date) # System.DateTime |  (optional)
-$Id = "MyId" # String |  (optional)
+$StartBlock = 789 # Int64 | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+$EndBlock = 789 # Int64 | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+$StartDate = (Get-Date) # System.DateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+$EndDate = (Get-Date) # System.DateTime | The end date of timeframe. (optional)
+$Id = "MyId" # String | Identifier, format: (transaction hash)-(id). (optional)
 $User = "MyUser" # String |  (optional)
 
 # Withdraws (historical)
@@ -717,11 +717,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **StartBlock** | **Int64**|  | [optional] 
- **EndBlock** | **Int64**|  | [optional] 
- **StartDate** | **System.DateTime**|  | [optional] 
- **EndDate** | **System.DateTime**|  | [optional] 
- **Id** | **String**|  | [optional] 
+ **StartBlock** | **Int64**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
+ **EndBlock** | **Int64**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
+ **StartDate** | **System.DateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
+ **EndDate** | **System.DateTime**| The end date of timeframe. | [optional] 
+ **Id** | **String**| Identifier, format: (transaction hash)-(id). | [optional] 
  **User** | **String**|  | [optional] 
 
 ### Return type

@@ -103,3 +103,5 @@ export interface UniswapV2SwapDTO {
     transaction_id?: string;
 
 }
+export namespace UniswapV2SwapDTO {
+}

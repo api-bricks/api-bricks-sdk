@@ -403,7 +403,7 @@ curve_pool_dto_t *curve_pool_dto_parseFromJSON(cJSON *curve_pool_dtoJSON){
     // curve_pool_dto->entry_time
     cJSON *entry_time = cJSON_GetObjectItemCaseSensitive(curve_pool_dtoJSON, "entry_time");
     if (entry_time) { 
-    if(!cJSON_IsString(entry_time))
+    if(!cJSON_IsString(entry_time) && !cJSON_IsNull(entry_time))
     {
     goto end; //DateTime
     }
@@ -412,7 +412,7 @@ curve_pool_dto_t *curve_pool_dto_parseFromJSON(cJSON *curve_pool_dtoJSON){
     // curve_pool_dto->recv_time
     cJSON *recv_time = cJSON_GetObjectItemCaseSensitive(curve_pool_dtoJSON, "recv_time");
     if (recv_time) { 
-    if(!cJSON_IsString(recv_time))
+    if(!cJSON_IsString(recv_time) && !cJSON_IsNull(recv_time))
     {
     goto end; //DateTime
     }
@@ -430,7 +430,7 @@ curve_pool_dto_t *curve_pool_dto_parseFromJSON(cJSON *curve_pool_dtoJSON){
     // curve_pool_dto->id
     cJSON *id = cJSON_GetObjectItemCaseSensitive(curve_pool_dtoJSON, "id");
     if (id) { 
-    if(!cJSON_IsString(id))
+    if(!cJSON_IsString(id) && !cJSON_IsNull(id))
     {
     goto end; //String
     }
@@ -439,7 +439,7 @@ curve_pool_dto_t *curve_pool_dto_parseFromJSON(cJSON *curve_pool_dtoJSON){
     // curve_pool_dto->name
     cJSON *name = cJSON_GetObjectItemCaseSensitive(curve_pool_dtoJSON, "name");
     if (name) { 
-    if(!cJSON_IsString(name))
+    if(!cJSON_IsString(name) && !cJSON_IsNull(name))
     {
     goto end; //String
     }
@@ -457,7 +457,7 @@ curve_pool_dto_t *curve_pool_dto_parseFromJSON(cJSON *curve_pool_dtoJSON){
     // curve_pool_dto->registry_address
     cJSON *registry_address = cJSON_GetObjectItemCaseSensitive(curve_pool_dtoJSON, "registry_address");
     if (registry_address) { 
-    if(!cJSON_IsString(registry_address))
+    if(!cJSON_IsString(registry_address) && !cJSON_IsNull(registry_address))
     {
     goto end; //String
     }
@@ -466,7 +466,7 @@ curve_pool_dto_t *curve_pool_dto_parseFromJSON(cJSON *curve_pool_dtoJSON){
     // curve_pool_dto->swap_address
     cJSON *swap_address = cJSON_GetObjectItemCaseSensitive(curve_pool_dtoJSON, "swap_address");
     if (swap_address) { 
-    if(!cJSON_IsString(swap_address))
+    if(!cJSON_IsString(swap_address) && !cJSON_IsNull(swap_address))
     {
     goto end; //String
     }
@@ -475,7 +475,7 @@ curve_pool_dto_t *curve_pool_dto_parseFromJSON(cJSON *curve_pool_dtoJSON){
     // curve_pool_dto->lp_token
     cJSON *lp_token = cJSON_GetObjectItemCaseSensitive(curve_pool_dtoJSON, "lp_token");
     if (lp_token) { 
-    if(!cJSON_IsString(lp_token))
+    if(!cJSON_IsString(lp_token) && !cJSON_IsNull(lp_token))
     {
     goto end; //String
     }
@@ -484,7 +484,7 @@ curve_pool_dto_t *curve_pool_dto_parseFromJSON(cJSON *curve_pool_dtoJSON){
     // curve_pool_dto->coin_count
     cJSON *coin_count = cJSON_GetObjectItemCaseSensitive(curve_pool_dtoJSON, "coin_count");
     if (coin_count) { 
-    if(!cJSON_IsString(coin_count))
+    if(!cJSON_IsString(coin_count) && !cJSON_IsNull(coin_count))
     {
     goto end; //String
     }
@@ -493,7 +493,7 @@ curve_pool_dto_t *curve_pool_dto_parseFromJSON(cJSON *curve_pool_dtoJSON){
     // curve_pool_dto->underlying_count
     cJSON *underlying_count = cJSON_GetObjectItemCaseSensitive(curve_pool_dtoJSON, "underlying_count");
     if (underlying_count) { 
-    if(!cJSON_IsString(underlying_count))
+    if(!cJSON_IsString(underlying_count) && !cJSON_IsNull(underlying_count))
     {
     goto end; //String
     }
@@ -502,7 +502,7 @@ curve_pool_dto_t *curve_pool_dto_parseFromJSON(cJSON *curve_pool_dtoJSON){
     // curve_pool_dto->a
     cJSON *a = cJSON_GetObjectItemCaseSensitive(curve_pool_dtoJSON, "a");
     if (a) { 
-    if(!cJSON_IsString(a))
+    if(!cJSON_IsString(a) && !cJSON_IsNull(a))
     {
     goto end; //String
     }
@@ -511,7 +511,7 @@ curve_pool_dto_t *curve_pool_dto_parseFromJSON(cJSON *curve_pool_dtoJSON){
     // curve_pool_dto->fee
     cJSON *fee = cJSON_GetObjectItemCaseSensitive(curve_pool_dtoJSON, "fee");
     if (fee) { 
-    if(!cJSON_IsString(fee))
+    if(!cJSON_IsString(fee) && !cJSON_IsNull(fee))
     {
     goto end; //String
     }
@@ -520,7 +520,7 @@ curve_pool_dto_t *curve_pool_dto_parseFromJSON(cJSON *curve_pool_dtoJSON){
     // curve_pool_dto->admin_fee
     cJSON *admin_fee = cJSON_GetObjectItemCaseSensitive(curve_pool_dtoJSON, "admin_fee");
     if (admin_fee) { 
-    if(!cJSON_IsString(admin_fee))
+    if(!cJSON_IsString(admin_fee) && !cJSON_IsNull(admin_fee))
     {
     goto end; //String
     }
@@ -529,7 +529,7 @@ curve_pool_dto_t *curve_pool_dto_parseFromJSON(cJSON *curve_pool_dtoJSON){
     // curve_pool_dto->owner
     cJSON *owner = cJSON_GetObjectItemCaseSensitive(curve_pool_dtoJSON, "owner");
     if (owner) { 
-    if(!cJSON_IsString(owner))
+    if(!cJSON_IsString(owner) && !cJSON_IsNull(owner))
     {
     goto end; //String
     }
@@ -538,7 +538,7 @@ curve_pool_dto_t *curve_pool_dto_parseFromJSON(cJSON *curve_pool_dtoJSON){
     // curve_pool_dto->virtual_price
     cJSON *virtual_price = cJSON_GetObjectItemCaseSensitive(curve_pool_dtoJSON, "virtual_price");
     if (virtual_price) { 
-    if(!cJSON_IsString(virtual_price))
+    if(!cJSON_IsString(virtual_price) && !cJSON_IsNull(virtual_price))
     {
     goto end; //String
     }
@@ -547,7 +547,7 @@ curve_pool_dto_t *curve_pool_dto_parseFromJSON(cJSON *curve_pool_dtoJSON){
     // curve_pool_dto->locked
     cJSON *locked = cJSON_GetObjectItemCaseSensitive(curve_pool_dtoJSON, "locked");
     if (locked) { 
-    if(!cJSON_IsString(locked))
+    if(!cJSON_IsString(locked) && !cJSON_IsNull(locked))
     {
     goto end; //String
     }
@@ -556,7 +556,7 @@ curve_pool_dto_t *curve_pool_dto_parseFromJSON(cJSON *curve_pool_dtoJSON){
     // curve_pool_dto->added_at
     cJSON *added_at = cJSON_GetObjectItemCaseSensitive(curve_pool_dtoJSON, "added_at");
     if (added_at) { 
-    if(!cJSON_IsString(added_at))
+    if(!cJSON_IsString(added_at) && !cJSON_IsNull(added_at))
     {
     goto end; //DateTime
     }
@@ -565,7 +565,7 @@ curve_pool_dto_t *curve_pool_dto_parseFromJSON(cJSON *curve_pool_dtoJSON){
     // curve_pool_dto->added_at_block
     cJSON *added_at_block = cJSON_GetObjectItemCaseSensitive(curve_pool_dtoJSON, "added_at_block");
     if (added_at_block) { 
-    if(!cJSON_IsString(added_at_block))
+    if(!cJSON_IsString(added_at_block) && !cJSON_IsNull(added_at_block))
     {
     goto end; //String
     }
@@ -574,7 +574,7 @@ curve_pool_dto_t *curve_pool_dto_parseFromJSON(cJSON *curve_pool_dtoJSON){
     // curve_pool_dto->added_at_transaction
     cJSON *added_at_transaction = cJSON_GetObjectItemCaseSensitive(curve_pool_dtoJSON, "added_at_transaction");
     if (added_at_transaction) { 
-    if(!cJSON_IsString(added_at_transaction))
+    if(!cJSON_IsString(added_at_transaction) && !cJSON_IsNull(added_at_transaction))
     {
     goto end; //String
     }
@@ -583,7 +583,7 @@ curve_pool_dto_t *curve_pool_dto_parseFromJSON(cJSON *curve_pool_dtoJSON){
     // curve_pool_dto->removed_at
     cJSON *removed_at = cJSON_GetObjectItemCaseSensitive(curve_pool_dtoJSON, "removed_at");
     if (removed_at) { 
-    if(!cJSON_IsString(removed_at))
+    if(!cJSON_IsString(removed_at) && !cJSON_IsNull(removed_at))
     {
     goto end; //String
     }
@@ -592,7 +592,7 @@ curve_pool_dto_t *curve_pool_dto_parseFromJSON(cJSON *curve_pool_dtoJSON){
     // curve_pool_dto->removed_at_block
     cJSON *removed_at_block = cJSON_GetObjectItemCaseSensitive(curve_pool_dtoJSON, "removed_at_block");
     if (removed_at_block) { 
-    if(!cJSON_IsString(removed_at_block))
+    if(!cJSON_IsString(removed_at_block) && !cJSON_IsNull(removed_at_block))
     {
     goto end; //String
     }
@@ -601,7 +601,7 @@ curve_pool_dto_t *curve_pool_dto_parseFromJSON(cJSON *curve_pool_dtoJSON){
     // curve_pool_dto->removed_at_transaction
     cJSON *removed_at_transaction = cJSON_GetObjectItemCaseSensitive(curve_pool_dtoJSON, "removed_at_transaction");
     if (removed_at_transaction) { 
-    if(!cJSON_IsString(removed_at_transaction))
+    if(!cJSON_IsString(removed_at_transaction) && !cJSON_IsNull(removed_at_transaction))
     {
     goto end; //String
     }
@@ -610,7 +610,7 @@ curve_pool_dto_t *curve_pool_dto_parseFromJSON(cJSON *curve_pool_dtoJSON){
     // curve_pool_dto->exchange_count
     cJSON *exchange_count = cJSON_GetObjectItemCaseSensitive(curve_pool_dtoJSON, "exchange_count");
     if (exchange_count) { 
-    if(!cJSON_IsString(exchange_count))
+    if(!cJSON_IsString(exchange_count) && !cJSON_IsNull(exchange_count))
     {
     goto end; //String
     }
@@ -619,7 +619,7 @@ curve_pool_dto_t *curve_pool_dto_parseFromJSON(cJSON *curve_pool_dtoJSON){
     // curve_pool_dto->gauge_count
     cJSON *gauge_count = cJSON_GetObjectItemCaseSensitive(curve_pool_dtoJSON, "gauge_count");
     if (gauge_count) { 
-    if(!cJSON_IsString(gauge_count))
+    if(!cJSON_IsString(gauge_count) && !cJSON_IsNull(gauge_count))
     {
     goto end; //String
     }
@@ -645,31 +645,31 @@ curve_pool_dto_t *curve_pool_dto_parseFromJSON(cJSON *curve_pool_dtoJSON){
 
 
     curve_pool_dto_local_var = curve_pool_dto_create (
-        entry_time ? strdup(entry_time->valuestring) : NULL,
-        recv_time ? strdup(recv_time->valuestring) : NULL,
+        entry_time && !cJSON_IsNull(entry_time) ? strdup(entry_time->valuestring) : NULL,
+        recv_time && !cJSON_IsNull(recv_time) ? strdup(recv_time->valuestring) : NULL,
         block_number ? block_number->valuedouble : 0,
-        id ? strdup(id->valuestring) : NULL,
-        name ? strdup(name->valuestring) : NULL,
+        id && !cJSON_IsNull(id) ? strdup(id->valuestring) : NULL,
+        name && !cJSON_IsNull(name) ? strdup(name->valuestring) : NULL,
         is_meta ? is_meta->valueint : 0,
-        registry_address ? strdup(registry_address->valuestring) : NULL,
-        swap_address ? strdup(swap_address->valuestring) : NULL,
-        lp_token ? strdup(lp_token->valuestring) : NULL,
-        coin_count ? strdup(coin_count->valuestring) : NULL,
-        underlying_count ? strdup(underlying_count->valuestring) : NULL,
-        a ? strdup(a->valuestring) : NULL,
-        fee ? strdup(fee->valuestring) : NULL,
-        admin_fee ? strdup(admin_fee->valuestring) : NULL,
-        owner ? strdup(owner->valuestring) : NULL,
-        virtual_price ? strdup(virtual_price->valuestring) : NULL,
-        locked ? strdup(locked->valuestring) : NULL,
-        added_at ? strdup(added_at->valuestring) : NULL,
-        added_at_block ? strdup(added_at_block->valuestring) : NULL,
-        added_at_transaction ? strdup(added_at_transaction->valuestring) : NULL,
-        removed_at ? strdup(removed_at->valuestring) : NULL,
-        removed_at_block ? strdup(removed_at_block->valuestring) : NULL,
-        removed_at_transaction ? strdup(removed_at_transaction->valuestring) : NULL,
-        exchange_count ? strdup(exchange_count->valuestring) : NULL,
-        gauge_count ? strdup(gauge_count->valuestring) : NULL,
+        registry_address && !cJSON_IsNull(registry_address) ? strdup(registry_address->valuestring) : NULL,
+        swap_address && !cJSON_IsNull(swap_address) ? strdup(swap_address->valuestring) : NULL,
+        lp_token && !cJSON_IsNull(lp_token) ? strdup(lp_token->valuestring) : NULL,
+        coin_count && !cJSON_IsNull(coin_count) ? strdup(coin_count->valuestring) : NULL,
+        underlying_count && !cJSON_IsNull(underlying_count) ? strdup(underlying_count->valuestring) : NULL,
+        a && !cJSON_IsNull(a) ? strdup(a->valuestring) : NULL,
+        fee && !cJSON_IsNull(fee) ? strdup(fee->valuestring) : NULL,
+        admin_fee && !cJSON_IsNull(admin_fee) ? strdup(admin_fee->valuestring) : NULL,
+        owner && !cJSON_IsNull(owner) ? strdup(owner->valuestring) : NULL,
+        virtual_price && !cJSON_IsNull(virtual_price) ? strdup(virtual_price->valuestring) : NULL,
+        locked && !cJSON_IsNull(locked) ? strdup(locked->valuestring) : NULL,
+        added_at && !cJSON_IsNull(added_at) ? strdup(added_at->valuestring) : NULL,
+        added_at_block && !cJSON_IsNull(added_at_block) ? strdup(added_at_block->valuestring) : NULL,
+        added_at_transaction && !cJSON_IsNull(added_at_transaction) ? strdup(added_at_transaction->valuestring) : NULL,
+        removed_at && !cJSON_IsNull(removed_at) ? strdup(removed_at->valuestring) : NULL,
+        removed_at_block && !cJSON_IsNull(removed_at_block) ? strdup(removed_at_block->valuestring) : NULL,
+        removed_at_transaction && !cJSON_IsNull(removed_at_transaction) ? strdup(removed_at_transaction->valuestring) : NULL,
+        exchange_count && !cJSON_IsNull(exchange_count) ? strdup(exchange_count->valuestring) : NULL,
+        gauge_count && !cJSON_IsNull(gauge_count) ? strdup(gauge_count->valuestring) : NULL,
         vid ? vid->valuedouble : 0,
         evaluated_ask ? evaluated_ask->valuedouble : 0
         );

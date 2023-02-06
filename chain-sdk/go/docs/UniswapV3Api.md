@@ -558,12 +558,12 @@ import (
 )
 
 func main() {
-    startBlock := int64(789) // int64 |  (optional)
-    endBlock := int64(789) // int64 |  (optional)
-    startDate := time.Now() // time.Time |  (optional)
-    endDate := time.Now() // time.Time |  (optional)
-    id := "id_example" // string |  (optional)
-    pool := "pool_example" // string |  (optional)
+    startBlock := int64(789) // int64 | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+    endBlock := int64(789) // int64 | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+    startDate := time.Now() // time.Time | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+    endDate := time.Now() // time.Time | The end date of timeframe. (optional)
+    id := "id_example" // string | Identifier, format: (pool address)-(day id). (optional)
+    pool := "pool_example" // string | Pointer to pool. (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -588,12 +588,12 @@ Other parameters are passed through a pointer to a apiUniswapV3GetPoolDayDataHis
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startBlock** | **int64** |  | 
- **endBlock** | **int64** |  | 
- **startDate** | **time.Time** |  | 
- **endDate** | **time.Time** |  | 
- **id** | **string** |  | 
- **pool** | **string** |  | 
+ **startBlock** | **int64** | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | 
+ **endBlock** | **int64** | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | 
+ **startDate** | **time.Time** | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | 
+ **endDate** | **time.Time** | The end date of timeframe. | 
+ **id** | **string** | Identifier, format: (pool address)-(day id). | 
+ **pool** | **string** | Pointer to pool. | 
 
 ### Return type
 
@@ -635,12 +635,12 @@ import (
 )
 
 func main() {
-    startBlock := int64(789) // int64 |  (optional)
-    endBlock := int64(789) // int64 |  (optional)
-    startDate := time.Now() // time.Time |  (optional)
-    endDate := time.Now() // time.Time |  (optional)
-    id := "id_example" // string |  (optional)
-    pool := "pool_example" // string |  (optional)
+    startBlock := int64(789) // int64 | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+    endBlock := int64(789) // int64 | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+    startDate := time.Now() // time.Time | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+    endDate := time.Now() // time.Time | The end date of timeframe. (optional)
+    id := "id_example" // string | Identifier, format: (pool address)-(day id) (optional)
+    pool := "pool_example" // string | Pointer to pool. (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -665,12 +665,12 @@ Other parameters are passed through a pointer to a apiUniswapV3GetPoolHourDataHi
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startBlock** | **int64** |  | 
- **endBlock** | **int64** |  | 
- **startDate** | **time.Time** |  | 
- **endDate** | **time.Time** |  | 
- **id** | **string** |  | 
- **pool** | **string** |  | 
+ **startBlock** | **int64** | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | 
+ **endBlock** | **int64** | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | 
+ **startDate** | **time.Time** | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | 
+ **endDate** | **time.Time** | The end date of timeframe. | 
+ **id** | **string** | Identifier, format: (pool address)-(day id) | 
+ **pool** | **string** | Pointer to pool. | 
 
 ### Return type
 
@@ -791,12 +791,12 @@ import (
 )
 
 func main() {
-    startBlock := int64(789) // int64 |  (optional)
-    endBlock := int64(789) // int64 |  (optional)
-    startDate := time.Now() // time.Time |  (optional)
-    endDate := time.Now() // time.Time |  (optional)
-    id := "id_example" // string |  (optional)
-    pool := "pool_example" // string |  (optional)
+    startBlock := int64(789) // int64 | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+    endBlock := int64(789) // int64 | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+    startDate := time.Now() // time.Time | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+    endDate := time.Now() // time.Time | The end date of timeframe. (optional)
+    id := "id_example" // string | NFT token identifier, format: (NFT token id)#(block number). (optional)
+    pool := "pool_example" // string | Pool the position is within. (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -821,12 +821,12 @@ Other parameters are passed through a pointer to a apiUniswapV3GetPositionSnapsh
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startBlock** | **int64** |  | 
- **endBlock** | **int64** |  | 
- **startDate** | **time.Time** |  | 
- **endDate** | **time.Time** |  | 
- **id** | **string** |  | 
- **pool** | **string** |  | 
+ **startBlock** | **int64** | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | 
+ **endBlock** | **int64** | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | 
+ **startDate** | **time.Time** | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | 
+ **endDate** | **time.Time** | The end date of timeframe. | 
+ **id** | **string** | NFT token identifier, format: (NFT token id)#(block number). | 
+ **pool** | **string** | Pool the position is within. | 
 
 ### Return type
 
@@ -953,7 +953,7 @@ func main() {
     endBlock := int64(789) // int64 | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
     startDate := time.Now() // time.Time | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
     endDate := time.Now() // time.Time | The end date of timeframe. (optional)
-    id := "id_example" // string | Identifier, format: transaction hash + \"#\" + index in swaps Transaction array. (optional)
+    id := "id_example" // string | Identifier, format: (transaction hash) + # + (index in swaps Transaction array). (optional)
     pool := "pool_example" // string | Pool swap occured within. (optional)
     token0 := "token0_example" // string | Reference to token0 as stored in pair contract. (optional)
     token1 := "token1_example" // string | Reference to token1 as stored in pair contract. (optional)
@@ -985,7 +985,7 @@ Name | Type | Description  | Notes
  **endBlock** | **int64** | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | 
  **startDate** | **time.Time** | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | 
  **endDate** | **time.Time** | The end date of timeframe. | 
- **id** | **string** | Identifier, format: transaction hash + \&quot;#\&quot; + index in swaps Transaction array. | 
+ **id** | **string** | Identifier, format: (transaction hash) + # + (index in swaps Transaction array). | 
  **pool** | **string** | Pool swap occured within. | 
  **token0** | **string** | Reference to token0 as stored in pair contract. | 
  **token1** | **string** | Reference to token1 as stored in pair contract. | 
@@ -1030,12 +1030,12 @@ import (
 )
 
 func main() {
-    startBlock := int64(789) // int64 |  (optional)
-    endBlock := int64(789) // int64 |  (optional)
-    startDate := time.Now() // time.Time |  (optional)
-    endDate := time.Now() // time.Time |  (optional)
-    id := "id_example" // string |  (optional)
-    pool := "pool_example" // string |  (optional)
+    startBlock := int64(789) // int64 | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+    endBlock := int64(789) // int64 | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+    startDate := time.Now() // time.Time | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+    endDate := time.Now() // time.Time | The end date of timeframe. (optional)
+    id := "id_example" // string | Identifier, format: (pool address)-(tick index)-(timestamp). (optional)
+    pool := "pool_example" // string | Pointer to pool. (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1060,12 +1060,12 @@ Other parameters are passed through a pointer to a apiUniswapV3GetTickDayDataHis
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startBlock** | **int64** |  | 
- **endBlock** | **int64** |  | 
- **startDate** | **time.Time** |  | 
- **endDate** | **time.Time** |  | 
- **id** | **string** |  | 
- **pool** | **string** |  | 
+ **startBlock** | **int64** | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | 
+ **endBlock** | **int64** | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | 
+ **startDate** | **time.Time** | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | 
+ **endDate** | **time.Time** | The end date of timeframe. | 
+ **id** | **string** | Identifier, format: (pool address)-(tick index)-(timestamp). | 
+ **pool** | **string** | Pointer to pool. | 
 
 ### Return type
 
@@ -1107,12 +1107,12 @@ import (
 )
 
 func main() {
-    startBlock := int64(789) // int64 |  (optional)
-    endBlock := int64(789) // int64 |  (optional)
-    startDate := time.Now() // time.Time |  (optional)
-    endDate := time.Now() // time.Time |  (optional)
-    id := "id_example" // string |  (optional)
-    pool := "pool_example" // string |  (optional)
+    startBlock := int64(789) // int64 | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+    endBlock := int64(789) // int64 | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+    startDate := time.Now() // time.Time | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+    endDate := time.Now() // time.Time | The end date of timeframe. (optional)
+    id := "id_example" // string | Identifier, format: (pool address)#(tick index) (optional)
+    pool := "pool_example" // string | Pool address. (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1137,12 +1137,12 @@ Other parameters are passed through a pointer to a apiUniswapV3GetTicksHistorica
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startBlock** | **int64** |  | 
- **endBlock** | **int64** |  | 
- **startDate** | **time.Time** |  | 
- **endDate** | **time.Time** |  | 
- **id** | **string** |  | 
- **pool** | **string** |  | 
+ **startBlock** | **int64** | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | 
+ **endBlock** | **int64** | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | 
+ **startDate** | **time.Time** | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | 
+ **endDate** | **time.Time** | The end date of timeframe. | 
+ **id** | **string** | Identifier, format: (pool address)#(tick index) | 
+ **pool** | **string** | Pool address. | 
 
 ### Return type
 

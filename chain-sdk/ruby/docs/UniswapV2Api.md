@@ -324,13 +324,13 @@ require 'openapi_client'
 
 api_instance = OpenapiClient::UniswapV2Api.new
 opts = {
-  start_block: 789, # Integer | 
-  end_block: 789, # Integer | 
-  start_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
-  end_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
-  id: 'id_example', # String | 
-  user: 'user_example', # String | 
-  pair: 'pair_example' # String | 
+  start_block: 789, # Integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+  end_block: 789, # Integer | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+  start_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+  end_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | The end date of timeframe.
+  id: 'id_example', # String | Identifier, format: (pair address)-(user address)
+  user: 'user_example', # String | Reference to user.
+  pair: 'pair_example' # String | Reference to the pair liquidity is being provided on.
 }
 
 begin
@@ -364,13 +364,13 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **start_block** | **Integer** |  | [optional] |
-| **end_block** | **Integer** |  | [optional] |
-| **start_date** | **Time** |  | [optional] |
-| **end_date** | **Time** |  | [optional] |
-| **id** | **String** |  | [optional] |
-| **user** | **String** |  | [optional] |
-| **pair** | **String** |  | [optional] |
+| **start_block** | **Integer** | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] |
+| **end_block** | **Integer** | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] |
+| **start_date** | **Time** | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] |
+| **end_date** | **Time** | The end date of timeframe. | [optional] |
+| **id** | **String** | Identifier, format: (pair address)-(user address) | [optional] |
+| **user** | **String** | Reference to user. | [optional] |
+| **pair** | **String** | Reference to the pair liquidity is being provided on. | [optional] |
 
 ### Return type
 

@@ -410,7 +410,7 @@ uniswap_v3_swap_dto_t *uniswap_v3_swap_dto_parseFromJSON(cJSON *uniswap_v3_swap_
     // uniswap_v3_swap_dto->entry_time
     cJSON *entry_time = cJSON_GetObjectItemCaseSensitive(uniswap_v3_swap_dtoJSON, "entry_time");
     if (entry_time) { 
-    if(!cJSON_IsString(entry_time))
+    if(!cJSON_IsString(entry_time) && !cJSON_IsNull(entry_time))
     {
     goto end; //DateTime
     }
@@ -419,7 +419,7 @@ uniswap_v3_swap_dto_t *uniswap_v3_swap_dto_parseFromJSON(cJSON *uniswap_v3_swap_
     // uniswap_v3_swap_dto->recv_time
     cJSON *recv_time = cJSON_GetObjectItemCaseSensitive(uniswap_v3_swap_dtoJSON, "recv_time");
     if (recv_time) { 
-    if(!cJSON_IsString(recv_time))
+    if(!cJSON_IsString(recv_time) && !cJSON_IsNull(recv_time))
     {
     goto end; //DateTime
     }
@@ -446,7 +446,7 @@ uniswap_v3_swap_dto_t *uniswap_v3_swap_dto_parseFromJSON(cJSON *uniswap_v3_swap_
     // uniswap_v3_swap_dto->id
     cJSON *id = cJSON_GetObjectItemCaseSensitive(uniswap_v3_swap_dtoJSON, "id");
     if (id) { 
-    if(!cJSON_IsString(id))
+    if(!cJSON_IsString(id) && !cJSON_IsNull(id))
     {
     goto end; //String
     }
@@ -455,7 +455,7 @@ uniswap_v3_swap_dto_t *uniswap_v3_swap_dto_parseFromJSON(cJSON *uniswap_v3_swap_
     // uniswap_v3_swap_dto->transaction
     cJSON *transaction = cJSON_GetObjectItemCaseSensitive(uniswap_v3_swap_dtoJSON, "transaction");
     if (transaction) { 
-    if(!cJSON_IsString(transaction))
+    if(!cJSON_IsString(transaction) && !cJSON_IsNull(transaction))
     {
     goto end; //String
     }
@@ -464,7 +464,7 @@ uniswap_v3_swap_dto_t *uniswap_v3_swap_dto_parseFromJSON(cJSON *uniswap_v3_swap_
     // uniswap_v3_swap_dto->timestamp
     cJSON *timestamp = cJSON_GetObjectItemCaseSensitive(uniswap_v3_swap_dtoJSON, "timestamp");
     if (timestamp) { 
-    if(!cJSON_IsString(timestamp))
+    if(!cJSON_IsString(timestamp) && !cJSON_IsNull(timestamp))
     {
     goto end; //DateTime
     }
@@ -473,7 +473,7 @@ uniswap_v3_swap_dto_t *uniswap_v3_swap_dto_parseFromJSON(cJSON *uniswap_v3_swap_
     // uniswap_v3_swap_dto->pool
     cJSON *pool = cJSON_GetObjectItemCaseSensitive(uniswap_v3_swap_dtoJSON, "pool");
     if (pool) { 
-    if(!cJSON_IsString(pool))
+    if(!cJSON_IsString(pool) && !cJSON_IsNull(pool))
     {
     goto end; //String
     }
@@ -482,7 +482,7 @@ uniswap_v3_swap_dto_t *uniswap_v3_swap_dto_parseFromJSON(cJSON *uniswap_v3_swap_
     // uniswap_v3_swap_dto->token_0
     cJSON *token_0 = cJSON_GetObjectItemCaseSensitive(uniswap_v3_swap_dtoJSON, "token_0");
     if (token_0) { 
-    if(!cJSON_IsString(token_0))
+    if(!cJSON_IsString(token_0) && !cJSON_IsNull(token_0))
     {
     goto end; //String
     }
@@ -491,7 +491,7 @@ uniswap_v3_swap_dto_t *uniswap_v3_swap_dto_parseFromJSON(cJSON *uniswap_v3_swap_
     // uniswap_v3_swap_dto->token_1
     cJSON *token_1 = cJSON_GetObjectItemCaseSensitive(uniswap_v3_swap_dtoJSON, "token_1");
     if (token_1) { 
-    if(!cJSON_IsString(token_1))
+    if(!cJSON_IsString(token_1) && !cJSON_IsNull(token_1))
     {
     goto end; //String
     }
@@ -500,7 +500,7 @@ uniswap_v3_swap_dto_t *uniswap_v3_swap_dto_parseFromJSON(cJSON *uniswap_v3_swap_
     // uniswap_v3_swap_dto->sender
     cJSON *sender = cJSON_GetObjectItemCaseSensitive(uniswap_v3_swap_dtoJSON, "sender");
     if (sender) { 
-    if(!cJSON_IsString(sender))
+    if(!cJSON_IsString(sender) && !cJSON_IsNull(sender))
     {
     goto end; //String
     }
@@ -509,7 +509,7 @@ uniswap_v3_swap_dto_t *uniswap_v3_swap_dto_parseFromJSON(cJSON *uniswap_v3_swap_
     // uniswap_v3_swap_dto->recipient
     cJSON *recipient = cJSON_GetObjectItemCaseSensitive(uniswap_v3_swap_dtoJSON, "recipient");
     if (recipient) { 
-    if(!cJSON_IsString(recipient))
+    if(!cJSON_IsString(recipient) && !cJSON_IsNull(recipient))
     {
     goto end; //String
     }
@@ -518,7 +518,7 @@ uniswap_v3_swap_dto_t *uniswap_v3_swap_dto_parseFromJSON(cJSON *uniswap_v3_swap_
     // uniswap_v3_swap_dto->origin
     cJSON *origin = cJSON_GetObjectItemCaseSensitive(uniswap_v3_swap_dtoJSON, "origin");
     if (origin) { 
-    if(!cJSON_IsString(origin))
+    if(!cJSON_IsString(origin) && !cJSON_IsNull(origin))
     {
     goto end; //String
     }
@@ -527,7 +527,7 @@ uniswap_v3_swap_dto_t *uniswap_v3_swap_dto_parseFromJSON(cJSON *uniswap_v3_swap_
     // uniswap_v3_swap_dto->amount_0
     cJSON *amount_0 = cJSON_GetObjectItemCaseSensitive(uniswap_v3_swap_dtoJSON, "amount_0");
     if (amount_0) { 
-    if(!cJSON_IsString(amount_0))
+    if(!cJSON_IsString(amount_0) && !cJSON_IsNull(amount_0))
     {
     goto end; //String
     }
@@ -536,7 +536,7 @@ uniswap_v3_swap_dto_t *uniswap_v3_swap_dto_parseFromJSON(cJSON *uniswap_v3_swap_
     // uniswap_v3_swap_dto->amount_1
     cJSON *amount_1 = cJSON_GetObjectItemCaseSensitive(uniswap_v3_swap_dtoJSON, "amount_1");
     if (amount_1) { 
-    if(!cJSON_IsString(amount_1))
+    if(!cJSON_IsString(amount_1) && !cJSON_IsNull(amount_1))
     {
     goto end; //String
     }
@@ -545,7 +545,7 @@ uniswap_v3_swap_dto_t *uniswap_v3_swap_dto_parseFromJSON(cJSON *uniswap_v3_swap_
     // uniswap_v3_swap_dto->amount_usd
     cJSON *amount_usd = cJSON_GetObjectItemCaseSensitive(uniswap_v3_swap_dtoJSON, "amount_usd");
     if (amount_usd) { 
-    if(!cJSON_IsString(amount_usd))
+    if(!cJSON_IsString(amount_usd) && !cJSON_IsNull(amount_usd))
     {
     goto end; //String
     }
@@ -596,7 +596,7 @@ uniswap_v3_swap_dto_t *uniswap_v3_swap_dto_parseFromJSON(cJSON *uniswap_v3_swap_
     // uniswap_v3_swap_dto->pool_id
     cJSON *pool_id = cJSON_GetObjectItemCaseSensitive(uniswap_v3_swap_dtoJSON, "pool_id");
     if (pool_id) { 
-    if(!cJSON_IsString(pool_id))
+    if(!cJSON_IsString(pool_id) && !cJSON_IsNull(pool_id))
     {
     goto end; //String
     }
@@ -605,7 +605,7 @@ uniswap_v3_swap_dto_t *uniswap_v3_swap_dto_parseFromJSON(cJSON *uniswap_v3_swap_
     // uniswap_v3_swap_dto->transaction_id
     cJSON *transaction_id = cJSON_GetObjectItemCaseSensitive(uniswap_v3_swap_dtoJSON, "transaction_id");
     if (transaction_id) { 
-    if(!cJSON_IsString(transaction_id))
+    if(!cJSON_IsString(transaction_id) && !cJSON_IsNull(transaction_id))
     {
     goto end; //String
     }
@@ -613,30 +613,30 @@ uniswap_v3_swap_dto_t *uniswap_v3_swap_dto_parseFromJSON(cJSON *uniswap_v3_swap_
 
 
     uniswap_v3_swap_dto_local_var = uniswap_v3_swap_dto_create (
-        entry_time ? strdup(entry_time->valuestring) : NULL,
-        recv_time ? strdup(recv_time->valuestring) : NULL,
+        entry_time && !cJSON_IsNull(entry_time) ? strdup(entry_time->valuestring) : NULL,
+        recv_time && !cJSON_IsNull(recv_time) ? strdup(recv_time->valuestring) : NULL,
         block_number ? block_number->valuedouble : 0,
         vid ? vid->valuedouble : 0,
-        id ? strdup(id->valuestring) : NULL,
-        transaction ? strdup(transaction->valuestring) : NULL,
-        timestamp ? strdup(timestamp->valuestring) : NULL,
-        pool ? strdup(pool->valuestring) : NULL,
-        token_0 ? strdup(token_0->valuestring) : NULL,
-        token_1 ? strdup(token_1->valuestring) : NULL,
-        sender ? strdup(sender->valuestring) : NULL,
-        recipient ? strdup(recipient->valuestring) : NULL,
-        origin ? strdup(origin->valuestring) : NULL,
-        amount_0 ? strdup(amount_0->valuestring) : NULL,
-        amount_1 ? strdup(amount_1->valuestring) : NULL,
-        amount_usd ? strdup(amount_usd->valuestring) : NULL,
+        id && !cJSON_IsNull(id) ? strdup(id->valuestring) : NULL,
+        transaction && !cJSON_IsNull(transaction) ? strdup(transaction->valuestring) : NULL,
+        timestamp && !cJSON_IsNull(timestamp) ? strdup(timestamp->valuestring) : NULL,
+        pool && !cJSON_IsNull(pool) ? strdup(pool->valuestring) : NULL,
+        token_0 && !cJSON_IsNull(token_0) ? strdup(token_0->valuestring) : NULL,
+        token_1 && !cJSON_IsNull(token_1) ? strdup(token_1->valuestring) : NULL,
+        sender && !cJSON_IsNull(sender) ? strdup(sender->valuestring) : NULL,
+        recipient && !cJSON_IsNull(recipient) ? strdup(recipient->valuestring) : NULL,
+        origin && !cJSON_IsNull(origin) ? strdup(origin->valuestring) : NULL,
+        amount_0 && !cJSON_IsNull(amount_0) ? strdup(amount_0->valuestring) : NULL,
+        amount_1 && !cJSON_IsNull(amount_1) ? strdup(amount_1->valuestring) : NULL,
+        amount_usd && !cJSON_IsNull(amount_usd) ? strdup(amount_usd->valuestring) : NULL,
         sqrt_price_x96 ? sqrt_price_x96_local_nonprim : NULL,
         tick ? tick_local_nonprim : NULL,
         log_index ? log_index_local_nonprim : NULL,
         evaluated_price ? evaluated_price->valuedouble : 0,
         evaluated_amount ? evaluated_amount->valuedouble : 0,
         evaluated_aggressor ? evaluated_aggressor_local_nonprim : NULL,
-        pool_id ? strdup(pool_id->valuestring) : NULL,
-        transaction_id ? strdup(transaction_id->valuestring) : NULL
+        pool_id && !cJSON_IsNull(pool_id) ? strdup(pool_id->valuestring) : NULL,
+        transaction_id && !cJSON_IsNull(transaction_id) ? strdup(transaction_id->valuestring) : NULL
         );
 
     return uniswap_v3_swap_dto_local_var;

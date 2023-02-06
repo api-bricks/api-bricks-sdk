@@ -174,12 +174,12 @@ Gets deposits.
 import 'package:openapi/api.dart';
 
 final api_instance = DexApi();
-final startBlock = 789; // int | 
-final endBlock = 789; // int | 
-final startDate = 2013-10-20T19:20:30+01:00; // DateTime | 
-final endDate = 2013-10-20T19:20:30+01:00; // DateTime | 
-final id = id_example; // String | 
-final user = user_example; // String | 
+final startBlock = 789; // int | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+final endBlock = 789; // int | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+final startDate = 2013-10-20T19:20:30+01:00; // DateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+final endDate = 2013-10-20T19:20:30+01:00; // DateTime | The end date of timeframe.
+final id = id_example; // String | Identifier, format: (transaction hash)-(token id).
+final user = user_example; // String | User address.
 
 try {
     final result = api_instance.dexGetDepositsHistorical(startBlock, endBlock, startDate, endDate, id, user);
@@ -193,12 +193,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startBlock** | **int**|  | [optional] 
- **endBlock** | **int**|  | [optional] 
- **startDate** | **DateTime**|  | [optional] 
- **endDate** | **DateTime**|  | [optional] 
- **id** | **String**|  | [optional] 
- **user** | **String**|  | [optional] 
+ **startBlock** | **int**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
+ **endBlock** | **int**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
+ **startDate** | **DateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
+ **endDate** | **DateTime**| The end date of timeframe. | [optional] 
+ **id** | **String**| Identifier, format: (transaction hash)-(token id). | [optional] 
+ **user** | **String**| User address. | [optional] 
 
 ### Return type
 
@@ -227,13 +227,13 @@ Gets orders.
 import 'package:openapi/api.dart';
 
 final api_instance = DexApi();
-final startBlock = 789; // int | 
-final endBlock = 789; // int | 
-final startDate = 2013-10-20T19:20:30+01:00; // DateTime | 
-final endDate = 2013-10-20T19:20:30+01:00; // DateTime | 
-final id = id_example; // String | 
-final buyToken = buyToken_example; // String | 
-final sellToken = sellToken_example; // String | 
+final startBlock = 789; // int | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+final endBlock = 789; // int | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+final startDate = 2013-10-20T19:20:30+01:00; // DateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+final endDate = 2013-10-20T19:20:30+01:00; // DateTime | The end date of timeframe.
+final id = id_example; // String | Identifier, format: (owner address)-(order id)
+final buyToken = buyToken_example; // String | Identifier of token that was bought.
+final sellToken = sellToken_example; // String | Identifier of token that was sold.
 
 try {
     final result = api_instance.dexGetOrdersHistorical(startBlock, endBlock, startDate, endDate, id, buyToken, sellToken);
@@ -247,13 +247,13 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startBlock** | **int**|  | [optional] 
- **endBlock** | **int**|  | [optional] 
- **startDate** | **DateTime**|  | [optional] 
- **endDate** | **DateTime**|  | [optional] 
- **id** | **String**|  | [optional] 
- **buyToken** | **String**|  | [optional] 
- **sellToken** | **String**|  | [optional] 
+ **startBlock** | **int**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
+ **endBlock** | **int**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
+ **startDate** | **DateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
+ **endDate** | **DateTime**| The end date of timeframe. | [optional] 
+ **id** | **String**| Identifier, format: (owner address)-(order id) | [optional] 
+ **buyToken** | **String**| Identifier of token that was bought. | [optional] 
+ **sellToken** | **String**| Identifier of token that was sold. | [optional] 
 
 ### Return type
 
@@ -282,11 +282,11 @@ Gets prices.
 import 'package:openapi/api.dart';
 
 final api_instance = DexApi();
-final startBlock = 789; // int | 
-final endBlock = 789; // int | 
-final startDate = 2013-10-20T19:20:30+01:00; // DateTime | 
-final endDate = 2013-10-20T19:20:30+01:00; // DateTime | 
-final id = id_example; // String | 
+final startBlock = 789; // int | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+final endBlock = 789; // int | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+final startDate = 2013-10-20T19:20:30+01:00; // DateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+final endDate = 2013-10-20T19:20:30+01:00; // DateTime | The end date of timeframe.
+final id = id_example; // String | Identifier, format: (token id)-(batch id).
 
 try {
     final result = api_instance.dexGetPricesHistorical(startBlock, endBlock, startDate, endDate, id);
@@ -300,11 +300,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startBlock** | **int**|  | [optional] 
- **endBlock** | **int**|  | [optional] 
- **startDate** | **DateTime**|  | [optional] 
- **endDate** | **DateTime**|  | [optional] 
- **id** | **String**|  | [optional] 
+ **startBlock** | **int**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
+ **endBlock** | **int**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
+ **startDate** | **DateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
+ **endDate** | **DateTime**| The end date of timeframe. | [optional] 
+ **id** | **String**| Identifier, format: (token id)-(batch id). | [optional] 
 
 ### Return type
 
@@ -598,11 +598,11 @@ Gets withdrawRequests.
 import 'package:openapi/api.dart';
 
 final api_instance = DexApi();
-final startBlock = 789; // int | 
-final endBlock = 789; // int | 
-final startDate = 2013-10-20T19:20:30+01:00; // DateTime | 
-final endDate = 2013-10-20T19:20:30+01:00; // DateTime | 
-final id = id_example; // String | 
+final startBlock = 789; // int | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+final endBlock = 789; // int | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+final startDate = 2013-10-20T19:20:30+01:00; // DateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+final endDate = 2013-10-20T19:20:30+01:00; // DateTime | The end date of timeframe.
+final id = id_example; // String | Identifier, format: (transaction hash)-(id).
 final user = user_example; // String | 
 
 try {
@@ -617,11 +617,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startBlock** | **int**|  | [optional] 
- **endBlock** | **int**|  | [optional] 
- **startDate** | **DateTime**|  | [optional] 
- **endDate** | **DateTime**|  | [optional] 
- **id** | **String**|  | [optional] 
+ **startBlock** | **int**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
+ **endBlock** | **int**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
+ **startDate** | **DateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
+ **endDate** | **DateTime**| The end date of timeframe. | [optional] 
+ **id** | **String**| Identifier, format: (transaction hash)-(id). | [optional] 
  **user** | **String**|  | [optional] 
 
 ### Return type
@@ -651,11 +651,11 @@ Gets withdraws.
 import 'package:openapi/api.dart';
 
 final api_instance = DexApi();
-final startBlock = 789; // int | 
-final endBlock = 789; // int | 
-final startDate = 2013-10-20T19:20:30+01:00; // DateTime | 
-final endDate = 2013-10-20T19:20:30+01:00; // DateTime | 
-final id = id_example; // String | 
+final startBlock = 789; // int | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+final endBlock = 789; // int | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+final startDate = 2013-10-20T19:20:30+01:00; // DateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+final endDate = 2013-10-20T19:20:30+01:00; // DateTime | The end date of timeframe.
+final id = id_example; // String | Identifier, format: (transaction hash)-(id).
 final user = user_example; // String | 
 
 try {
@@ -670,11 +670,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startBlock** | **int**|  | [optional] 
- **endBlock** | **int**|  | [optional] 
- **startDate** | **DateTime**|  | [optional] 
- **endDate** | **DateTime**|  | [optional] 
- **id** | **String**|  | [optional] 
+ **startBlock** | **int**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
+ **endBlock** | **int**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
+ **startDate** | **DateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
+ **endDate** | **DateTime**| The end date of timeframe. | [optional] 
+ **id** | **String**| Identifier, format: (transaction hash)-(id). | [optional] 
  **user** | **String**|  | [optional] 
 
 ### Return type

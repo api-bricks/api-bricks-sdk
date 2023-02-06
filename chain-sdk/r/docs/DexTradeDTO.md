@@ -26,6 +26,6 @@ Name | Type | Description | Notes
 **transaction_id** | **character** |  | [optional] [readonly] 
 **evaluated_price** | **numeric** |  | [optional] [readonly] 
 **evaluated_amount** | **numeric** |  | [optional] [readonly] 
-**evaluated_aggressor** | [**TransactionsETradeAggressiveSide**](Transactions.ETradeAggressiveSide.md) |  | [optional] 
+**evaluated_aggressor** | [**TransactionsETradeAggressiveSide**](Transactions.ETradeAggressiveSide.md) |  | [optional] [Enum: ] 
 
 

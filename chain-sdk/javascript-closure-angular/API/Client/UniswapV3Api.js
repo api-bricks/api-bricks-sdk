@@ -409,12 +409,12 @@ API.Client.UniswapV3Api.prototype.uniswapV3GetMintsHistorical = function(opt_sta
 /**
  * PoolDayData (historical)
  * Gets poolDayData.
- * @param {!number=} opt_startBlock 
- * @param {!number=} opt_endBlock 
- * @param {!Date=} opt_startDate 
- * @param {!Date=} opt_endDate 
- * @param {!string=} opt_id 
- * @param {!string=} opt_pool 
+ * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+ * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+ * @param {!Date=} opt_startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+ * @param {!Date=} opt_endDate The end date of timeframe.
+ * @param {!string=} opt_id Identifier, format: (pool address)-(day id).
+ * @param {!string=} opt_pool Pointer to pool.
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
  * @return {!angular.$q.Promise<!Array<!API.Client.UniswapV3.PoolDayDataDTO>>}
  */
@@ -470,12 +470,12 @@ API.Client.UniswapV3Api.prototype.uniswapV3GetPoolDayDataHistorical = function(o
 /**
  * PoolHourData (historical)
  * Gets poolHourData.
- * @param {!number=} opt_startBlock 
- * @param {!number=} opt_endBlock 
- * @param {!Date=} opt_startDate 
- * @param {!Date=} opt_endDate 
- * @param {!string=} opt_id 
- * @param {!string=} opt_pool 
+ * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+ * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+ * @param {!Date=} opt_startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+ * @param {!Date=} opt_endDate The end date of timeframe.
+ * @param {!string=} opt_id Identifier, format: (pool address)-(day id)
+ * @param {!string=} opt_pool Pointer to pool.
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
  * @return {!angular.$q.Promise<!Array<!API.Client.UniswapV3.PoolHourDataDTO>>}
  */
@@ -597,12 +597,12 @@ API.Client.UniswapV3Api.prototype.uniswapV3GetPoolsHistorical = function(opt_sta
 /**
  * PositionSnapshots (historical)
  * Gets positionSnapshots.
- * @param {!number=} opt_startBlock 
- * @param {!number=} opt_endBlock 
- * @param {!Date=} opt_startDate 
- * @param {!Date=} opt_endDate 
- * @param {!string=} opt_id 
- * @param {!string=} opt_pool 
+ * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+ * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+ * @param {!Date=} opt_startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+ * @param {!Date=} opt_endDate The end date of timeframe.
+ * @param {!string=} opt_id NFT token identifier, format: (NFT token id)#(block number).
+ * @param {!string=} opt_pool Pool the position is within.
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
  * @return {!angular.$q.Promise<!Array<!API.Client.UniswapV3.PositionSnapshotDTO>>}
  */
@@ -733,7 +733,7 @@ API.Client.UniswapV3Api.prototype.uniswapV3GetPositionsHistorical = function(opt
  * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * @param {!Date=} opt_startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
  * @param {!Date=} opt_endDate The end date of timeframe.
- * @param {!string=} opt_id Identifier, format: transaction hash + \&quot;#\&quot; + index in swaps Transaction array.
+ * @param {!string=} opt_id Identifier, format: (transaction hash) + # + (index in swaps Transaction array).
  * @param {!string=} opt_pool Pool swap occured within.
  * @param {!string=} opt_token0 Reference to token0 as stored in pair contract.
  * @param {!string=} opt_token1 Reference to token1 as stored in pair contract.
@@ -800,12 +800,12 @@ API.Client.UniswapV3Api.prototype.uniswapV3GetSwapsHistorical = function(opt_sta
 /**
  * TickDayData (historical)
  * Gets tickDayData.
- * @param {!number=} opt_startBlock 
- * @param {!number=} opt_endBlock 
- * @param {!Date=} opt_startDate 
- * @param {!Date=} opt_endDate 
- * @param {!string=} opt_id 
- * @param {!string=} opt_pool 
+ * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+ * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+ * @param {!Date=} opt_startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+ * @param {!Date=} opt_endDate The end date of timeframe.
+ * @param {!string=} opt_id Identifier, format: (pool address)-(tick index)-(timestamp).
+ * @param {!string=} opt_pool Pointer to pool.
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
  * @return {!angular.$q.Promise<!Array<!API.Client.UniswapV3.TickDayDataDTO>>}
  */
@@ -861,12 +861,12 @@ API.Client.UniswapV3Api.prototype.uniswapV3GetTickDayDataHistorical = function(o
 /**
  * Ticks (historical)
  * Gets ticks.
- * @param {!number=} opt_startBlock 
- * @param {!number=} opt_endBlock 
- * @param {!Date=} opt_startDate 
- * @param {!Date=} opt_endDate 
- * @param {!string=} opt_id 
- * @param {!string=} opt_pool 
+ * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+ * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+ * @param {!Date=} opt_startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+ * @param {!Date=} opt_endDate The end date of timeframe.
+ * @param {!string=} opt_id Identifier, format: (pool address)#(tick index)
+ * @param {!string=} opt_pool Pool address.
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
  * @return {!angular.$q.Promise<!Array<!API.Client.UniswapV3.TickDTO>>}
  */

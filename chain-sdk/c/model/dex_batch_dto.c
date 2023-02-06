@@ -187,7 +187,7 @@ dex_batch_dto_t *dex_batch_dto_parseFromJSON(cJSON *dex_batch_dtoJSON){
     // dex_batch_dto->entry_time
     cJSON *entry_time = cJSON_GetObjectItemCaseSensitive(dex_batch_dtoJSON, "entry_time");
     if (entry_time) { 
-    if(!cJSON_IsString(entry_time))
+    if(!cJSON_IsString(entry_time) && !cJSON_IsNull(entry_time))
     {
     goto end; //DateTime
     }
@@ -196,7 +196,7 @@ dex_batch_dto_t *dex_batch_dto_parseFromJSON(cJSON *dex_batch_dtoJSON){
     // dex_batch_dto->recv_time
     cJSON *recv_time = cJSON_GetObjectItemCaseSensitive(dex_batch_dtoJSON, "recv_time");
     if (recv_time) { 
-    if(!cJSON_IsString(recv_time))
+    if(!cJSON_IsString(recv_time) && !cJSON_IsNull(recv_time))
     {
     goto end; //DateTime
     }
@@ -214,7 +214,7 @@ dex_batch_dto_t *dex_batch_dto_parseFromJSON(cJSON *dex_batch_dtoJSON){
     // dex_batch_dto->id
     cJSON *id = cJSON_GetObjectItemCaseSensitive(dex_batch_dtoJSON, "id");
     if (id) { 
-    if(!cJSON_IsString(id))
+    if(!cJSON_IsString(id) && !cJSON_IsNull(id))
     {
     goto end; //String
     }
@@ -223,7 +223,7 @@ dex_batch_dto_t *dex_batch_dto_parseFromJSON(cJSON *dex_batch_dtoJSON){
     // dex_batch_dto->start_epoch
     cJSON *start_epoch = cJSON_GetObjectItemCaseSensitive(dex_batch_dtoJSON, "start_epoch");
     if (start_epoch) { 
-    if(!cJSON_IsString(start_epoch))
+    if(!cJSON_IsString(start_epoch) && !cJSON_IsNull(start_epoch))
     {
     goto end; //String
     }
@@ -232,7 +232,7 @@ dex_batch_dto_t *dex_batch_dto_parseFromJSON(cJSON *dex_batch_dtoJSON){
     // dex_batch_dto->end_epoch
     cJSON *end_epoch = cJSON_GetObjectItemCaseSensitive(dex_batch_dtoJSON, "end_epoch");
     if (end_epoch) { 
-    if(!cJSON_IsString(end_epoch))
+    if(!cJSON_IsString(end_epoch) && !cJSON_IsNull(end_epoch))
     {
     goto end; //String
     }
@@ -241,7 +241,7 @@ dex_batch_dto_t *dex_batch_dto_parseFromJSON(cJSON *dex_batch_dtoJSON){
     // dex_batch_dto->solution
     cJSON *solution = cJSON_GetObjectItemCaseSensitive(dex_batch_dtoJSON, "solution");
     if (solution) { 
-    if(!cJSON_IsString(solution))
+    if(!cJSON_IsString(solution) && !cJSON_IsNull(solution))
     {
     goto end; //String
     }
@@ -250,7 +250,7 @@ dex_batch_dto_t *dex_batch_dto_parseFromJSON(cJSON *dex_batch_dtoJSON){
     // dex_batch_dto->first_solution_epoch
     cJSON *first_solution_epoch = cJSON_GetObjectItemCaseSensitive(dex_batch_dtoJSON, "first_solution_epoch");
     if (first_solution_epoch) { 
-    if(!cJSON_IsString(first_solution_epoch))
+    if(!cJSON_IsString(first_solution_epoch) && !cJSON_IsNull(first_solution_epoch))
     {
     goto end; //String
     }
@@ -259,7 +259,7 @@ dex_batch_dto_t *dex_batch_dto_parseFromJSON(cJSON *dex_batch_dtoJSON){
     // dex_batch_dto->last_revert_epoch
     cJSON *last_revert_epoch = cJSON_GetObjectItemCaseSensitive(dex_batch_dtoJSON, "last_revert_epoch");
     if (last_revert_epoch) { 
-    if(!cJSON_IsString(last_revert_epoch))
+    if(!cJSON_IsString(last_revert_epoch) && !cJSON_IsNull(last_revert_epoch))
     {
     goto end; //String
     }
@@ -268,7 +268,7 @@ dex_batch_dto_t *dex_batch_dto_parseFromJSON(cJSON *dex_batch_dtoJSON){
     // dex_batch_dto->tx_hash
     cJSON *tx_hash = cJSON_GetObjectItemCaseSensitive(dex_batch_dtoJSON, "tx_hash");
     if (tx_hash) { 
-    if(!cJSON_IsString(tx_hash))
+    if(!cJSON_IsString(tx_hash) && !cJSON_IsNull(tx_hash))
     {
     goto end; //String
     }
@@ -285,16 +285,16 @@ dex_batch_dto_t *dex_batch_dto_parseFromJSON(cJSON *dex_batch_dtoJSON){
 
 
     dex_batch_dto_local_var = dex_batch_dto_create (
-        entry_time ? strdup(entry_time->valuestring) : NULL,
-        recv_time ? strdup(recv_time->valuestring) : NULL,
+        entry_time && !cJSON_IsNull(entry_time) ? strdup(entry_time->valuestring) : NULL,
+        recv_time && !cJSON_IsNull(recv_time) ? strdup(recv_time->valuestring) : NULL,
         block_number ? block_number->valuedouble : 0,
-        id ? strdup(id->valuestring) : NULL,
-        start_epoch ? strdup(start_epoch->valuestring) : NULL,
-        end_epoch ? strdup(end_epoch->valuestring) : NULL,
-        solution ? strdup(solution->valuestring) : NULL,
-        first_solution_epoch ? strdup(first_solution_epoch->valuestring) : NULL,
-        last_revert_epoch ? strdup(last_revert_epoch->valuestring) : NULL,
-        tx_hash ? strdup(tx_hash->valuestring) : NULL,
+        id && !cJSON_IsNull(id) ? strdup(id->valuestring) : NULL,
+        start_epoch && !cJSON_IsNull(start_epoch) ? strdup(start_epoch->valuestring) : NULL,
+        end_epoch && !cJSON_IsNull(end_epoch) ? strdup(end_epoch->valuestring) : NULL,
+        solution && !cJSON_IsNull(solution) ? strdup(solution->valuestring) : NULL,
+        first_solution_epoch && !cJSON_IsNull(first_solution_epoch) ? strdup(first_solution_epoch->valuestring) : NULL,
+        last_revert_epoch && !cJSON_IsNull(last_revert_epoch) ? strdup(last_revert_epoch->valuestring) : NULL,
+        tx_hash && !cJSON_IsNull(tx_hash) ? strdup(tx_hash->valuestring) : NULL,
         vid ? vid->valuedouble : 0
         );
 

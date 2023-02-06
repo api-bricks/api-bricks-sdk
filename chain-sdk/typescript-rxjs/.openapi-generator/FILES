@@ -3,6 +3,7 @@
 apis/CowApi.ts
 apis/CurveApi.ts
 apis/DexApi.ts
+apis/MetadataApi.ts
 apis/SushiswapApi.ts
 apis/UniswapV2Api.ts
 apis/UniswapV3Api.ts

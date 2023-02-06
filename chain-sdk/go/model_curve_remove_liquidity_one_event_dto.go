@@ -16,6 +16,9 @@ import (
 	"time"
 )
 
+// checks if the CurveRemoveLiquidityOneEventDTO type satisfies the MappedNullable interface at compile time
+var _ MappedNullable = &CurveRemoveLiquidityOneEventDTO{}
+
 // CurveRemoveLiquidityOneEventDTO struct for CurveRemoveLiquidityOneEventDTO
 type CurveRemoveLiquidityOneEventDTO struct {
 	EntryTime *time.Time `json:"entry_time,omitempty"`
@@ -72,7 +75,7 @@ func (o *CurveRemoveLiquidityOneEventDTO) GetEntryTime() time.Time {
 // and a boolean to check if the value has been set.
 func (o *CurveRemoveLiquidityOneEventDTO) GetEntryTimeOk() (*time.Time, bool) {
 	if o == nil || isNil(o.EntryTime) {
-    return nil, false
+		return nil, false
 	}
 	return o.EntryTime, true
 }
@@ -104,7 +107,7 @@ func (o *CurveRemoveLiquidityOneEventDTO) GetRecvTime() time.Time {
 // and a boolean to check if the value has been set.
 func (o *CurveRemoveLiquidityOneEventDTO) GetRecvTimeOk() (*time.Time, bool) {
 	if o == nil || isNil(o.RecvTime) {
-    return nil, false
+		return nil, false
 	}
 	return o.RecvTime, true
 }
@@ -136,7 +139,7 @@ func (o *CurveRemoveLiquidityOneEventDTO) GetBlockNumber() int64 {
 // and a boolean to check if the value has been set.
 func (o *CurveRemoveLiquidityOneEventDTO) GetBlockNumberOk() (*int64, bool) {
 	if o == nil || isNil(o.BlockNumber) {
-    return nil, false
+		return nil, false
 	}
 	return o.BlockNumber, true
 }
@@ -169,7 +172,7 @@ func (o *CurveRemoveLiquidityOneEventDTO) GetId() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CurveRemoveLiquidityOneEventDTO) GetIdOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Id.Get(), o.Id.IsSet()
 }
@@ -211,7 +214,7 @@ func (o *CurveRemoveLiquidityOneEventDTO) GetPool() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CurveRemoveLiquidityOneEventDTO) GetPoolOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Pool.Get(), o.Pool.IsSet()
 }
@@ -253,7 +256,7 @@ func (o *CurveRemoveLiquidityOneEventDTO) GetProvider() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CurveRemoveLiquidityOneEventDTO) GetProviderOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Provider.Get(), o.Provider.IsSet()
 }
@@ -295,7 +298,7 @@ func (o *CurveRemoveLiquidityOneEventDTO) GetTokenAmount() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CurveRemoveLiquidityOneEventDTO) GetTokenAmountOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.TokenAmount.Get(), o.TokenAmount.IsSet()
 }
@@ -337,7 +340,7 @@ func (o *CurveRemoveLiquidityOneEventDTO) GetCoinAmount() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CurveRemoveLiquidityOneEventDTO) GetCoinAmountOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.CoinAmount.Get(), o.CoinAmount.IsSet()
 }
@@ -379,7 +382,7 @@ func (o *CurveRemoveLiquidityOneEventDTO) GetBlock() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CurveRemoveLiquidityOneEventDTO) GetBlockOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Block.Get(), o.Block.IsSet()
 }
@@ -421,7 +424,7 @@ func (o *CurveRemoveLiquidityOneEventDTO) GetTimestamp() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CurveRemoveLiquidityOneEventDTO) GetTimestampOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Timestamp.Get(), o.Timestamp.IsSet()
 }
@@ -463,7 +466,7 @@ func (o *CurveRemoveLiquidityOneEventDTO) GetTransaction() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CurveRemoveLiquidityOneEventDTO) GetTransactionOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Transaction.Get(), o.Transaction.IsSet()
 }
@@ -504,7 +507,7 @@ func (o *CurveRemoveLiquidityOneEventDTO) GetVid() int64 {
 // and a boolean to check if the value has been set.
 func (o *CurveRemoveLiquidityOneEventDTO) GetVidOk() (*int64, bool) {
 	if o == nil || isNil(o.Vid) {
-    return nil, false
+		return nil, false
 	}
 	return o.Vid, true
 }
@@ -524,6 +527,14 @@ func (o *CurveRemoveLiquidityOneEventDTO) SetVid(v int64) {
 }
 
 func (o CurveRemoveLiquidityOneEventDTO) MarshalJSON() ([]byte, error) {
+	toSerialize,err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
+}
+
+func (o CurveRemoveLiquidityOneEventDTO) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
 	if !isNil(o.EntryTime) {
 		toSerialize["entry_time"] = o.EntryTime
@@ -561,7 +572,7 @@ func (o CurveRemoveLiquidityOneEventDTO) MarshalJSON() ([]byte, error) {
 	if !isNil(o.Vid) {
 		toSerialize["vid"] = o.Vid
 	}
-	return json.Marshal(toSerialize)
+	return toSerialize, nil
 }
 
 type NullableCurveRemoveLiquidityOneEventDTO struct {

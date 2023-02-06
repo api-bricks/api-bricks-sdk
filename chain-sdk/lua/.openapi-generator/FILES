@@ -5,6 +5,7 @@ openapiclient-1.0.0-1.rockspec
 openapiclient/api/cow_api.lua
 openapiclient/api/curve_api.lua
 openapiclient/api/dex_api.lua
+openapiclient/api/metadata_api.lua
 openapiclient/api/sushiswap_api.lua
 openapiclient/api/uniswap_v2_api.lua
 openapiclient/api/uniswap_v3_api.lua
@@ -157,6 +158,7 @@ spec/dex_trade_dto_spec.lua
 spec/dex_user_dto_spec.lua
 spec/dex_withdraw_dto_spec.lua
 spec/dex_withdraw_request_dto_spec.lua
+spec/metadata_api_spec.lua
 spec/numerics_big_integer_spec.lua
 spec/sushiswap_api_spec.lua
 spec/sushiswap_bundle_dto_spec.lua

@@ -16,6 +16,9 @@ import (
 	"time"
 )
 
+// checks if the DexDepositDTO type satisfies the MappedNullable interface at compile time
+var _ MappedNullable = &DexDepositDTO{}
+
 // DexDepositDTO Deposit of an user.
 type DexDepositDTO struct {
 	EntryTime *time.Time `json:"entry_time,omitempty"`
@@ -70,7 +73,7 @@ func (o *DexDepositDTO) GetEntryTime() time.Time {
 // and a boolean to check if the value has been set.
 func (o *DexDepositDTO) GetEntryTimeOk() (*time.Time, bool) {
 	if o == nil || isNil(o.EntryTime) {
-    return nil, false
+		return nil, false
 	}
 	return o.EntryTime, true
 }
@@ -102,7 +105,7 @@ func (o *DexDepositDTO) GetRecvTime() time.Time {
 // and a boolean to check if the value has been set.
 func (o *DexDepositDTO) GetRecvTimeOk() (*time.Time, bool) {
 	if o == nil || isNil(o.RecvTime) {
-    return nil, false
+		return nil, false
 	}
 	return o.RecvTime, true
 }
@@ -134,7 +137,7 @@ func (o *DexDepositDTO) GetBlockNumber() int64 {
 // and a boolean to check if the value has been set.
 func (o *DexDepositDTO) GetBlockNumberOk() (*int64, bool) {
 	if o == nil || isNil(o.BlockNumber) {
-    return nil, false
+		return nil, false
 	}
 	return o.BlockNumber, true
 }
@@ -167,7 +170,7 @@ func (o *DexDepositDTO) GetId() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *DexDepositDTO) GetIdOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Id.Get(), o.Id.IsSet()
 }
@@ -209,7 +212,7 @@ func (o *DexDepositDTO) GetUser() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *DexDepositDTO) GetUserOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.User.Get(), o.User.IsSet()
 }
@@ -251,7 +254,7 @@ func (o *DexDepositDTO) GetTokenAddress() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *DexDepositDTO) GetTokenAddressOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.TokenAddress.Get(), o.TokenAddress.IsSet()
 }
@@ -293,7 +296,7 @@ func (o *DexDepositDTO) GetAmount() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *DexDepositDTO) GetAmountOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Amount.Get(), o.Amount.IsSet()
 }
@@ -335,7 +338,7 @@ func (o *DexDepositDTO) GetBatchId() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *DexDepositDTO) GetBatchIdOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.BatchId.Get(), o.BatchId.IsSet()
 }
@@ -377,7 +380,7 @@ func (o *DexDepositDTO) GetCreateEpoch() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *DexDepositDTO) GetCreateEpochOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.CreateEpoch.Get(), o.CreateEpoch.IsSet()
 }
@@ -419,7 +422,7 @@ func (o *DexDepositDTO) GetTxHash() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *DexDepositDTO) GetTxHashOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.TxHash.Get(), o.TxHash.IsSet()
 }
@@ -460,7 +463,7 @@ func (o *DexDepositDTO) GetVid() int64 {
 // and a boolean to check if the value has been set.
 func (o *DexDepositDTO) GetVidOk() (*int64, bool) {
 	if o == nil || isNil(o.Vid) {
-    return nil, false
+		return nil, false
 	}
 	return o.Vid, true
 }
@@ -480,6 +483,14 @@ func (o *DexDepositDTO) SetVid(v int64) {
 }
 
 func (o DexDepositDTO) MarshalJSON() ([]byte, error) {
+	toSerialize,err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
+}
+
+func (o DexDepositDTO) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
 	if !isNil(o.EntryTime) {
 		toSerialize["entry_time"] = o.EntryTime
@@ -514,7 +525,7 @@ func (o DexDepositDTO) MarshalJSON() ([]byte, error) {
 	if !isNil(o.Vid) {
 		toSerialize["vid"] = o.Vid
 	}
-	return json.Marshal(toSerialize)
+	return toSerialize, nil
 }
 
 type NullableDexDepositDTO struct {

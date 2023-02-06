@@ -208,17 +208,17 @@ feature -- API Access
 			-- Burns (historical)
 			-- Gets burns.
 			-- 
-			-- argument: start_block  (optional, default to null)
+			-- argument: start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to null)
 			-- 
-			-- argument: end_block  (optional, default to null)
+			-- argument: end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional, default to null)
 			-- 
-			-- argument: start_date  (optional, default to null)
+			-- argument: start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional, default to null)
 			-- 
-			-- argument: end_date  (optional, default to null)
+			-- argument: end_date The end date of timeframe. (optional, default to null)
 			-- 
-			-- argument: id  (optional, default to null)
+			-- argument: id Identifier, format: (transaction id):(transaction.burns.length). (optional, default to null)
 			-- 
-			-- argument: pair  (optional, default to null)
+			-- argument: pair Reference to pair. (optional, default to null)
 			-- 
 			-- 
 			-- Result LIST [SUSHISWAP_BURN_DTO]
@@ -403,19 +403,19 @@ feature -- API Access
 			-- LiquidityPositionSnapshots (historical)
 			-- Gets liquidityPositionSnapshots.
 			-- 
-			-- argument: start_block  (optional, default to null)
+			-- argument: start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to null)
 			-- 
-			-- argument: end_block  (optional, default to null)
+			-- argument: end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional, default to null)
 			-- 
-			-- argument: start_date  (optional, default to null)
+			-- argument: start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional, default to null)
 			-- 
-			-- argument: end_date  (optional, default to null)
+			-- argument: end_date The end date of timeframe. (optional, default to null)
 			-- 
-			-- argument: id  (optional, default to null)
+			-- argument: id Identifier, format: (pair address)-(user address)-(timestamp) (optional, default to null)
 			-- 
-			-- argument: user  (optional, default to null)
+			-- argument: user Reference to user. (optional, default to null)
 			-- 
-			-- argument: pair  (optional, default to null)
+			-- argument: pair Reference to the pair liquidity is being provided on. (optional, default to null)
 			-- 
 			-- 
 			-- Result LIST [SUSHISWAP_LIQUIDITY_POSITION_SNAPSHOT_DTO]
@@ -457,19 +457,19 @@ feature -- API Access
 			-- LiquidityPositions (historical)
 			-- Gets liquidityPositions.
 			-- 
-			-- argument: start_block  (optional, default to null)
+			-- argument: start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to null)
 			-- 
-			-- argument: end_block  (optional, default to null)
+			-- argument: end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional, default to null)
 			-- 
-			-- argument: start_date  (optional, default to null)
+			-- argument: start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional, default to null)
 			-- 
-			-- argument: end_date  (optional, default to null)
+			-- argument: end_date The end date of timeframe. (optional, default to null)
 			-- 
-			-- argument: id  (optional, default to null)
+			-- argument: id Identifier, format: (pair address)-(user address) (optional, default to null)
 			-- 
-			-- argument: user  (optional, default to null)
+			-- argument: user User address. (optional, default to null)
 			-- 
-			-- argument: pair  (optional, default to null)
+			-- argument: pair Pair address. (optional, default to null)
 			-- 
 			-- 
 			-- Result LIST [SUSHISWAP_LIQUIDITY_POSITION_DTO]
@@ -511,17 +511,17 @@ feature -- API Access
 			-- Mints (historical)
 			-- Gets mints.
 			-- 
-			-- argument: start_block  (optional, default to null)
+			-- argument: start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to null)
 			-- 
-			-- argument: end_block  (optional, default to null)
+			-- argument: end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional, default to null)
 			-- 
-			-- argument: start_date  (optional, default to null)
+			-- argument: start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional, default to null)
 			-- 
-			-- argument: end_date  (optional, default to null)
+			-- argument: end_date The end date of timeframe. (optional, default to null)
 			-- 
-			-- argument: id  (optional, default to null)
+			-- argument: id Identifier, format: (transaction hash)-(index in the transaction mint array). (optional, default to null)
 			-- 
-			-- argument: pair  (optional, default to null)
+			-- argument: pair Reference to pair. (optional, default to null)
 			-- 
 			-- 
 			-- Result LIST [SUSHISWAP_MINT_DTO]
@@ -562,21 +562,21 @@ feature -- API Access
 			-- PairDayData (historical)
 			-- Gets pairDayData.
 			-- 
-			-- argument: start_block  (optional, default to null)
+			-- argument: start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to null)
 			-- 
-			-- argument: end_block  (optional, default to null)
+			-- argument: end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional, default to null)
 			-- 
-			-- argument: start_date  (optional, default to null)
+			-- argument: start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional, default to null)
 			-- 
-			-- argument: end_date  (optional, default to null)
+			-- argument: end_date The end date of timeframe. (optional, default to null)
 			-- 
-			-- argument: id  (optional, default to null)
+			-- argument: id Identifier, format: (pair id)-(day start timestamp). (optional, default to null)
 			-- 
-			-- argument: pair  (optional, default to null)
+			-- argument: pair Reference to pair. (optional, default to null)
 			-- 
-			-- argument: token_0  (optional, default to null)
+			-- argument: token_0 Reference to token0. (optional, default to null)
 			-- 
-			-- argument: token_1  (optional, default to null)
+			-- argument: token_1 Reference to token1. (optional, default to null)
 			-- 
 			-- 
 			-- Result LIST [SUSHISWAP_PAIR_DAY_DATA_DTO]
@@ -619,17 +619,17 @@ feature -- API Access
 			-- PairHourData (historical)
 			-- Gets pairHourData.
 			-- 
-			-- argument: start_block  (optional, default to null)
+			-- argument: start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to null)
 			-- 
-			-- argument: end_block  (optional, default to null)
+			-- argument: end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional, default to null)
 			-- 
-			-- argument: start_date  (optional, default to null)
+			-- argument: start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional, default to null)
 			-- 
-			-- argument: end_date  (optional, default to null)
+			-- argument: end_date The end date of timeframe. (optional, default to null)
 			-- 
-			-- argument: id  (optional, default to null)
+			-- argument: id Identifier, format: (pair id)-(hour start timestamp). (optional, default to null)
 			-- 
-			-- argument: pair  (optional, default to null)
+			-- argument: pair Reference to pair. (optional, default to null)
 			-- 
 			-- 
 			-- Result LIST [SUSHISWAP_PAIR_HOUR_DATA_DTO]
@@ -670,21 +670,21 @@ feature -- API Access
 			-- Pairs (historical)
 			-- Gets pairs.
 			-- 
-			-- argument: start_block  (optional, default to null)
+			-- argument: start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to null)
 			-- 
-			-- argument: end_block  (optional, default to null)
+			-- argument: end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional, default to null)
 			-- 
-			-- argument: start_date  (optional, default to null)
+			-- argument: start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional, default to null)
 			-- 
-			-- argument: end_date  (optional, default to null)
+			-- argument: end_date The end date of timeframe. (optional, default to null)
 			-- 
-			-- argument: id  (optional, default to null)
+			-- argument: id Pair contract address. (optional, default to null)
 			-- 
-			-- argument: name  (optional, default to null)
+			-- argument: name Friendly name, format: (token0 name)-(token1 name) (optional, default to null)
 			-- 
-			-- argument: token_0  (optional, default to null)
+			-- argument: token_0 Reference to token0 as stored in pair contract. (optional, default to null)
 			-- 
-			-- argument: token_1  (optional, default to null)
+			-- argument: token_1 Reference to token0 as stored in pair contract. (optional, default to null)
 			-- 
 			-- 
 			-- Result LIST [SUSHISWAP_PAIR_DTO]

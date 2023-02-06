@@ -233,13 +233,13 @@ API.Client.CowApi.prototype.cowGetTokensHistorical = function(opt_startBlock, op
 /**
  * Trades (historical)
  * Gets trades.
- * @param {!number=} opt_startBlock 
- * @param {!number=} opt_endBlock 
- * @param {!Date=} opt_startDate 
- * @param {!Date=} opt_endDate 
- * @param {!string=} opt_id 
- * @param {!string=} opt_sellToken 
- * @param {!string=} opt_buyToken 
+ * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+ * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+ * @param {!Date=} opt_startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+ * @param {!Date=} opt_endDate The end date of timeframe.
+ * @param {!string=} opt_id Identifier, format: (order id)|(transaction hash)|(event index).
+ * @param {!string=} opt_sellToken Address of token that is sold.
+ * @param {!string=} opt_buyToken Address of token that is bought.
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
  * @return {!angular.$q.Promise<!Array<!API.Client.Cow.TradeDTO>>}
  */

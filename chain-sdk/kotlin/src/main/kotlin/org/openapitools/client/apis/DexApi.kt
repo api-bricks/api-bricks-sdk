@@ -118,6 +118,7 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
             path = "/dapps/dex/batches/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -185,6 +186,7 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
             path = "/dapps/dex/deposits/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -284,6 +286,7 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
             path = "/dapps/dex/batches/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -291,12 +294,12 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
     /**
      * Deposits (historical)
      * Gets deposits.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param user  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (transaction hash)-(token id). (optional)
+     * @param user User address. (optional)
      * @return kotlin.collections.List<DexDepositDTO>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
@@ -327,12 +330,12 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
     /**
      * Deposits (historical)
      * Gets deposits.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param user  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (transaction hash)-(token id). (optional)
+     * @param user User address. (optional)
      * @return ApiResponse<kotlin.collections.List<DexDepositDTO>?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
@@ -350,12 +353,12 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
     /**
      * To obtain the request config of the operation dexGetDepositsHistorical
      *
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param user  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (transaction hash)-(token id). (optional)
+     * @param user User address. (optional)
      * @return RequestConfig
      */
     fun dexGetDepositsHistoricalRequestConfig(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?, id: kotlin.String?, user: kotlin.String?) : RequestConfig<Unit> {
@@ -389,6 +392,7 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
             path = "/dapps/dex/deposits/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -396,13 +400,13 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
     /**
      * Orders (historical)
      * Gets orders.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param buyToken  (optional)
-     * @param sellToken  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (owner address)-(order id) (optional)
+     * @param buyToken Identifier of token that was bought. (optional)
+     * @param sellToken Identifier of token that was sold. (optional)
      * @return kotlin.collections.List<DexOrderDTO>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
@@ -433,13 +437,13 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
     /**
      * Orders (historical)
      * Gets orders.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param buyToken  (optional)
-     * @param sellToken  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (owner address)-(order id) (optional)
+     * @param buyToken Identifier of token that was bought. (optional)
+     * @param sellToken Identifier of token that was sold. (optional)
      * @return ApiResponse<kotlin.collections.List<DexOrderDTO>?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
@@ -457,13 +461,13 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
     /**
      * To obtain the request config of the operation dexGetOrdersHistorical
      *
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param buyToken  (optional)
-     * @param sellToken  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (owner address)-(order id) (optional)
+     * @param buyToken Identifier of token that was bought. (optional)
+     * @param sellToken Identifier of token that was sold. (optional)
      * @return RequestConfig
      */
     fun dexGetOrdersHistoricalRequestConfig(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?, id: kotlin.String?, buyToken: kotlin.String?, sellToken: kotlin.String?) : RequestConfig<Unit> {
@@ -500,6 +504,7 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
             path = "/dapps/dex/orders/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -507,11 +512,11 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
     /**
      * Prices (historical)
      * Gets prices.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (token id)-(batch id). (optional)
      * @return kotlin.collections.List<DexPriceDTO>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
@@ -542,11 +547,11 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
     /**
      * Prices (historical)
      * Gets prices.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (token id)-(batch id). (optional)
      * @return ApiResponse<kotlin.collections.List<DexPriceDTO>?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
@@ -564,11 +569,11 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
     /**
      * To obtain the request config of the operation dexGetPricesHistorical
      *
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (token id)-(batch id). (optional)
      * @return RequestConfig
      */
     fun dexGetPricesHistoricalRequestConfig(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?, id: kotlin.String?) : RequestConfig<Unit> {
@@ -599,6 +604,7 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
             path = "/dapps/dex/prices/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -698,6 +704,7 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
             path = "/dapps/dex/solutions/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -797,6 +804,7 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
             path = "/dapps/dex/stats/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -914,6 +922,7 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
             path = "/dapps/dex/tokens/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -1025,6 +1034,7 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
             path = "/dapps/dex/trades/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -1124,6 +1134,7 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
             path = "/dapps/dex/users/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -1131,11 +1142,11 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
     /**
      * WithdrawRequests (historical)
      * Gets withdrawRequests.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (transaction hash)-(id). (optional)
      * @param user  (optional)
      * @return kotlin.collections.List<DexWithdrawRequestDTO>
      * @throws IllegalStateException If the request is not correctly configured
@@ -1167,11 +1178,11 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
     /**
      * WithdrawRequests (historical)
      * Gets withdrawRequests.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (transaction hash)-(id). (optional)
      * @param user  (optional)
      * @return ApiResponse<kotlin.collections.List<DexWithdrawRequestDTO>?>
      * @throws IllegalStateException If the request is not correctly configured
@@ -1190,11 +1201,11 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
     /**
      * To obtain the request config of the operation dexGetWithdrawRequestsHistorical
      *
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (transaction hash)-(id). (optional)
      * @param user  (optional)
      * @return RequestConfig
      */
@@ -1229,6 +1240,7 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
             path = "/dapps/dex/withdrawRequests/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -1236,11 +1248,11 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
     /**
      * Withdraws (historical)
      * Gets withdraws.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (transaction hash)-(id). (optional)
      * @param user  (optional)
      * @return kotlin.collections.List<DexWithdrawDTO>
      * @throws IllegalStateException If the request is not correctly configured
@@ -1272,11 +1284,11 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
     /**
      * Withdraws (historical)
      * Gets withdraws.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (transaction hash)-(id). (optional)
      * @param user  (optional)
      * @return ApiResponse<kotlin.collections.List<DexWithdrawDTO>?>
      * @throws IllegalStateException If the request is not correctly configured
@@ -1295,11 +1307,11 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
     /**
      * To obtain the request config of the operation dexGetWithdrawsHistorical
      *
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (transaction hash)-(id). (optional)
      * @param user  (optional)
      * @return RequestConfig
      */
@@ -1334,6 +1346,7 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
             path = "/dapps/dex/withdraws/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -1401,6 +1414,7 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
             path = "/dapps/dex/orders/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -1468,6 +1482,7 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
             path = "/dapps/dex/prices/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -1535,6 +1550,7 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
             path = "/dapps/dex/solutions/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -1602,6 +1618,7 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
             path = "/dapps/dex/stats/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -1669,6 +1686,7 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
             path = "/dapps/dex/tokens/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -1736,6 +1754,7 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
             path = "/dapps/dex/trades/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -1803,6 +1822,7 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
             path = "/dapps/dex/users/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -1870,6 +1890,7 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
             path = "/dapps/dex/withdrawRequests/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -1937,6 +1958,7 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
             path = "/dapps/dex/withdraws/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }

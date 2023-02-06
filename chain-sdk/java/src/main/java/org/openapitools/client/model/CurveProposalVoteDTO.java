@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.time.OffsetDateTime;
 import org.openapitools.jackson.nullable.JsonNullable;
@@ -50,7 +48,7 @@ import org.openapitools.client.JSON;
 /**
  * CurveProposalVoteDTO
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-30T14:42:00.397192Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-06T14:47:06.037855Z[Etc/UTC]")
 public class CurveProposalVoteDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -114,7 +112,6 @@ public class CurveProposalVoteDTO {
    * @return entryTime
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public OffsetDateTime getEntryTime() {
     return entryTime;
@@ -137,7 +134,6 @@ public class CurveProposalVoteDTO {
    * @return recvTime
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public OffsetDateTime getRecvTime() {
     return recvTime;
@@ -160,7 +156,6 @@ public class CurveProposalVoteDTO {
    * @return blockNumber
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Number of block in which entity was recorded.")
 
   public Long getBlockNumber() {
     return blockNumber;
@@ -183,7 +178,6 @@ public class CurveProposalVoteDTO {
    * @return id
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getId() {
     return id;
@@ -206,7 +200,6 @@ public class CurveProposalVoteDTO {
    * @return proposal
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getProposal() {
     return proposal;
@@ -229,7 +222,6 @@ public class CurveProposalVoteDTO {
    * @return supports
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public Boolean getSupports() {
     return supports;
@@ -252,7 +244,6 @@ public class CurveProposalVoteDTO {
    * @return stake
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getStake() {
     return stake;
@@ -275,7 +266,6 @@ public class CurveProposalVoteDTO {
    * @return voter
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getVoter() {
     return voter;
@@ -298,7 +288,6 @@ public class CurveProposalVoteDTO {
    * @return created
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getCreated() {
     return created;
@@ -321,7 +310,6 @@ public class CurveProposalVoteDTO {
    * @return createdAtBlock
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getCreatedAtBlock() {
     return createdAtBlock;
@@ -344,7 +332,6 @@ public class CurveProposalVoteDTO {
    * @return createdAtTransaction
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getCreatedAtTransaction() {
     return createdAtTransaction;
@@ -367,7 +354,6 @@ public class CurveProposalVoteDTO {
    * @return vid
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public Long getVid() {
     return vid;

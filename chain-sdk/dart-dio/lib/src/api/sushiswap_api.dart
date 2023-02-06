@@ -417,12 +417,12 @@ class SushiswapApi {
   /// Gets burns.
   ///
   /// Parameters:
-  /// * [startBlock] 
-  /// * [endBlock] 
-  /// * [startDate] 
-  /// * [endDate] 
-  /// * [id] 
-  /// * [pair] 
+  /// * [startBlock] - The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+  /// * [endBlock] - The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+  /// * [startDate] - The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+  /// * [endDate] - The end date of timeframe.
+  /// * [id] - Identifier, format: (transaction id):(transaction.burns.length).
+  /// * [pair] - Reference to pair.
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -784,13 +784,13 @@ class SushiswapApi {
   /// Gets liquidityPositionSnapshots.
   ///
   /// Parameters:
-  /// * [startBlock] 
-  /// * [endBlock] 
-  /// * [startDate] 
-  /// * [endDate] 
-  /// * [id] 
-  /// * [user] 
-  /// * [pair] 
+  /// * [startBlock] - The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+  /// * [endBlock] - The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+  /// * [startDate] - The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+  /// * [endDate] - The end date of timeframe.
+  /// * [id] - Identifier, format: (pair address)-(user address)-(timestamp)
+  /// * [user] - Reference to user.
+  /// * [pair] - Reference to the pair liquidity is being provided on.
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -881,13 +881,13 @@ class SushiswapApi {
   /// Gets liquidityPositions.
   ///
   /// Parameters:
-  /// * [startBlock] 
-  /// * [endBlock] 
-  /// * [startDate] 
-  /// * [endDate] 
-  /// * [id] 
-  /// * [user] 
-  /// * [pair] 
+  /// * [startBlock] - The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+  /// * [endBlock] - The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+  /// * [startDate] - The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+  /// * [endDate] - The end date of timeframe.
+  /// * [id] - Identifier, format: (pair address)-(user address)
+  /// * [user] - User address.
+  /// * [pair] - Pair address.
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -978,12 +978,12 @@ class SushiswapApi {
   /// Gets mints.
   ///
   /// Parameters:
-  /// * [startBlock] 
-  /// * [endBlock] 
-  /// * [startDate] 
-  /// * [endDate] 
-  /// * [id] 
-  /// * [pair] 
+  /// * [startBlock] - The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+  /// * [endBlock] - The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+  /// * [startDate] - The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+  /// * [endDate] - The end date of timeframe.
+  /// * [id] - Identifier, format: (transaction hash)-(index in the transaction mint array).
+  /// * [pair] - Reference to pair.
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -1072,14 +1072,14 @@ class SushiswapApi {
   /// Gets pairDayData.
   ///
   /// Parameters:
-  /// * [startBlock] 
-  /// * [endBlock] 
-  /// * [startDate] 
-  /// * [endDate] 
-  /// * [id] 
-  /// * [pair] 
-  /// * [token0] 
-  /// * [token1] 
+  /// * [startBlock] - The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+  /// * [endBlock] - The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+  /// * [startDate] - The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+  /// * [endDate] - The end date of timeframe.
+  /// * [id] - Identifier, format: (pair id)-(day start timestamp).
+  /// * [pair] - Reference to pair.
+  /// * [token0] - Reference to token0.
+  /// * [token1] - Reference to token1.
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -1172,12 +1172,12 @@ class SushiswapApi {
   /// Gets pairHourData.
   ///
   /// Parameters:
-  /// * [startBlock] 
-  /// * [endBlock] 
-  /// * [startDate] 
-  /// * [endDate] 
-  /// * [id] 
-  /// * [pair] 
+  /// * [startBlock] - The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+  /// * [endBlock] - The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+  /// * [startDate] - The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+  /// * [endDate] - The end date of timeframe.
+  /// * [id] - Identifier, format: (pair id)-(hour start timestamp).
+  /// * [pair] - Reference to pair.
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -1266,14 +1266,14 @@ class SushiswapApi {
   /// Gets pairs.
   ///
   /// Parameters:
-  /// * [startBlock] 
-  /// * [endBlock] 
-  /// * [startDate] 
-  /// * [endDate] 
-  /// * [id] 
-  /// * [name] 
-  /// * [token0] 
-  /// * [token1] 
+  /// * [startBlock] - The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+  /// * [endBlock] - The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+  /// * [startDate] - The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+  /// * [endDate] - The end date of timeframe.
+  /// * [id] - Pair contract address.
+  /// * [name] - Friendly name, format: (token0 name)-(token1 name)
+  /// * [token0] - Reference to token0 as stored in pair contract.
+  /// * [token1] - Reference to token0 as stored in pair contract.
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request

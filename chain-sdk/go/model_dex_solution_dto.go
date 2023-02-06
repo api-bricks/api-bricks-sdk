@@ -16,6 +16,9 @@ import (
 	"time"
 )
 
+// checks if the DexSolutionDTO type satisfies the MappedNullable interface at compile time
+var _ MappedNullable = &DexSolutionDTO{}
+
 // DexSolutionDTO struct for DexSolutionDTO
 type DexSolutionDTO struct {
 	EntryTime *time.Time `json:"entry_time,omitempty"`
@@ -78,7 +81,7 @@ func (o *DexSolutionDTO) GetEntryTime() time.Time {
 // and a boolean to check if the value has been set.
 func (o *DexSolutionDTO) GetEntryTimeOk() (*time.Time, bool) {
 	if o == nil || isNil(o.EntryTime) {
-    return nil, false
+		return nil, false
 	}
 	return o.EntryTime, true
 }
@@ -110,7 +113,7 @@ func (o *DexSolutionDTO) GetRecvTime() time.Time {
 // and a boolean to check if the value has been set.
 func (o *DexSolutionDTO) GetRecvTimeOk() (*time.Time, bool) {
 	if o == nil || isNil(o.RecvTime) {
-    return nil, false
+		return nil, false
 	}
 	return o.RecvTime, true
 }
@@ -142,7 +145,7 @@ func (o *DexSolutionDTO) GetBlockNumber() int64 {
 // and a boolean to check if the value has been set.
 func (o *DexSolutionDTO) GetBlockNumberOk() (*int64, bool) {
 	if o == nil || isNil(o.BlockNumber) {
-    return nil, false
+		return nil, false
 	}
 	return o.BlockNumber, true
 }
@@ -175,7 +178,7 @@ func (o *DexSolutionDTO) GetId() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *DexSolutionDTO) GetIdOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Id.Get(), o.Id.IsSet()
 }
@@ -217,7 +220,7 @@ func (o *DexSolutionDTO) GetBatch() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *DexSolutionDTO) GetBatchOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Batch.Get(), o.Batch.IsSet()
 }
@@ -259,7 +262,7 @@ func (o *DexSolutionDTO) GetSolver() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *DexSolutionDTO) GetSolverOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Solver.Get(), o.Solver.IsSet()
 }
@@ -301,7 +304,7 @@ func (o *DexSolutionDTO) GetFeeReward() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *DexSolutionDTO) GetFeeRewardOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.FeeReward.Get(), o.FeeReward.IsSet()
 }
@@ -343,7 +346,7 @@ func (o *DexSolutionDTO) GetObjectiveValue() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *DexSolutionDTO) GetObjectiveValueOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.ObjectiveValue.Get(), o.ObjectiveValue.IsSet()
 }
@@ -385,7 +388,7 @@ func (o *DexSolutionDTO) GetUtility() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *DexSolutionDTO) GetUtilityOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Utility.Get(), o.Utility.IsSet()
 }
@@ -427,7 +430,7 @@ func (o *DexSolutionDTO) GetTrades() []string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *DexSolutionDTO) GetTradesOk() ([]string, bool) {
 	if o == nil || isNil(o.Trades) {
-    return nil, false
+		return nil, false
 	}
 	return o.Trades, true
 }
@@ -460,7 +463,7 @@ func (o *DexSolutionDTO) GetCreateEpoch() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *DexSolutionDTO) GetCreateEpochOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.CreateEpoch.Get(), o.CreateEpoch.IsSet()
 }
@@ -502,7 +505,7 @@ func (o *DexSolutionDTO) GetRevertEpoch() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *DexSolutionDTO) GetRevertEpochOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.RevertEpoch.Get(), o.RevertEpoch.IsSet()
 }
@@ -544,7 +547,7 @@ func (o *DexSolutionDTO) GetTxHash() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *DexSolutionDTO) GetTxHashOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.TxHash.Get(), o.TxHash.IsSet()
 }
@@ -586,7 +589,7 @@ func (o *DexSolutionDTO) GetTxLogIndex() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *DexSolutionDTO) GetTxLogIndexOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.TxLogIndex.Get(), o.TxLogIndex.IsSet()
 }
@@ -627,7 +630,7 @@ func (o *DexSolutionDTO) GetVid() int64 {
 // and a boolean to check if the value has been set.
 func (o *DexSolutionDTO) GetVidOk() (*int64, bool) {
 	if o == nil || isNil(o.Vid) {
-    return nil, false
+		return nil, false
 	}
 	return o.Vid, true
 }
@@ -647,6 +650,14 @@ func (o *DexSolutionDTO) SetVid(v int64) {
 }
 
 func (o DexSolutionDTO) MarshalJSON() ([]byte, error) {
+	toSerialize,err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
+}
+
+func (o DexSolutionDTO) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
 	if !isNil(o.EntryTime) {
 		toSerialize["entry_time"] = o.EntryTime
@@ -693,7 +704,7 @@ func (o DexSolutionDTO) MarshalJSON() ([]byte, error) {
 	if !isNil(o.Vid) {
 		toSerialize["vid"] = o.Vid
 	}
-	return json.Marshal(toSerialize)
+	return toSerialize, nil
 }
 
 type NullableDexSolutionDTO struct {

@@ -5,6 +5,7 @@ import { HttpClient } from '@angular/common/http';
 import { CowService } from './api/cow.service';
 import { CurveService } from './api/curve.service';
 import { DexService } from './api/dex.service';
+import { MetadataService } from './api/metadata.service';
 import { SushiswapService } from './api/sushiswap.service';
 import { UniswapV2Service } from './api/uniswapV2.service';
 import { UniswapV3Service } from './api/uniswapV3.service';

@@ -173,7 +173,7 @@ curve_amplification_coeff_change_log_dto_t *curve_amplification_coeff_change_log
     // curve_amplification_coeff_change_log_dto->entry_time
     cJSON *entry_time = cJSON_GetObjectItemCaseSensitive(curve_amplification_coeff_change_log_dtoJSON, "entry_time");
     if (entry_time) { 
-    if(!cJSON_IsString(entry_time))
+    if(!cJSON_IsString(entry_time) && !cJSON_IsNull(entry_time))
     {
     goto end; //DateTime
     }
@@ -182,7 +182,7 @@ curve_amplification_coeff_change_log_dto_t *curve_amplification_coeff_change_log
     // curve_amplification_coeff_change_log_dto->recv_time
     cJSON *recv_time = cJSON_GetObjectItemCaseSensitive(curve_amplification_coeff_change_log_dtoJSON, "recv_time");
     if (recv_time) { 
-    if(!cJSON_IsString(recv_time))
+    if(!cJSON_IsString(recv_time) && !cJSON_IsNull(recv_time))
     {
     goto end; //DateTime
     }
@@ -200,7 +200,7 @@ curve_amplification_coeff_change_log_dto_t *curve_amplification_coeff_change_log
     // curve_amplification_coeff_change_log_dto->id
     cJSON *id = cJSON_GetObjectItemCaseSensitive(curve_amplification_coeff_change_log_dtoJSON, "id");
     if (id) { 
-    if(!cJSON_IsString(id))
+    if(!cJSON_IsString(id) && !cJSON_IsNull(id))
     {
     goto end; //String
     }
@@ -209,7 +209,7 @@ curve_amplification_coeff_change_log_dto_t *curve_amplification_coeff_change_log
     // curve_amplification_coeff_change_log_dto->pool
     cJSON *pool = cJSON_GetObjectItemCaseSensitive(curve_amplification_coeff_change_log_dtoJSON, "pool");
     if (pool) { 
-    if(!cJSON_IsString(pool))
+    if(!cJSON_IsString(pool) && !cJSON_IsNull(pool))
     {
     goto end; //String
     }
@@ -218,7 +218,7 @@ curve_amplification_coeff_change_log_dto_t *curve_amplification_coeff_change_log
     // curve_amplification_coeff_change_log_dto->value
     cJSON *value = cJSON_GetObjectItemCaseSensitive(curve_amplification_coeff_change_log_dtoJSON, "value");
     if (value) { 
-    if(!cJSON_IsString(value))
+    if(!cJSON_IsString(value) && !cJSON_IsNull(value))
     {
     goto end; //String
     }
@@ -227,7 +227,7 @@ curve_amplification_coeff_change_log_dto_t *curve_amplification_coeff_change_log
     // curve_amplification_coeff_change_log_dto->block
     cJSON *block = cJSON_GetObjectItemCaseSensitive(curve_amplification_coeff_change_log_dtoJSON, "block");
     if (block) { 
-    if(!cJSON_IsString(block))
+    if(!cJSON_IsString(block) && !cJSON_IsNull(block))
     {
     goto end; //String
     }
@@ -236,7 +236,7 @@ curve_amplification_coeff_change_log_dto_t *curve_amplification_coeff_change_log
     // curve_amplification_coeff_change_log_dto->timestamp
     cJSON *timestamp = cJSON_GetObjectItemCaseSensitive(curve_amplification_coeff_change_log_dtoJSON, "timestamp");
     if (timestamp) { 
-    if(!cJSON_IsString(timestamp))
+    if(!cJSON_IsString(timestamp) && !cJSON_IsNull(timestamp))
     {
     goto end; //String
     }
@@ -245,7 +245,7 @@ curve_amplification_coeff_change_log_dto_t *curve_amplification_coeff_change_log
     // curve_amplification_coeff_change_log_dto->transaction
     cJSON *transaction = cJSON_GetObjectItemCaseSensitive(curve_amplification_coeff_change_log_dtoJSON, "transaction");
     if (transaction) { 
-    if(!cJSON_IsString(transaction))
+    if(!cJSON_IsString(transaction) && !cJSON_IsNull(transaction))
     {
     goto end; //String
     }
@@ -262,15 +262,15 @@ curve_amplification_coeff_change_log_dto_t *curve_amplification_coeff_change_log
 
 
     curve_amplification_coeff_change_log_dto_local_var = curve_amplification_coeff_change_log_dto_create (
-        entry_time ? strdup(entry_time->valuestring) : NULL,
-        recv_time ? strdup(recv_time->valuestring) : NULL,
+        entry_time && !cJSON_IsNull(entry_time) ? strdup(entry_time->valuestring) : NULL,
+        recv_time && !cJSON_IsNull(recv_time) ? strdup(recv_time->valuestring) : NULL,
         block_number ? block_number->valuedouble : 0,
-        id ? strdup(id->valuestring) : NULL,
-        pool ? strdup(pool->valuestring) : NULL,
-        value ? strdup(value->valuestring) : NULL,
-        block ? strdup(block->valuestring) : NULL,
-        timestamp ? strdup(timestamp->valuestring) : NULL,
-        transaction ? strdup(transaction->valuestring) : NULL,
+        id && !cJSON_IsNull(id) ? strdup(id->valuestring) : NULL,
+        pool && !cJSON_IsNull(pool) ? strdup(pool->valuestring) : NULL,
+        value && !cJSON_IsNull(value) ? strdup(value->valuestring) : NULL,
+        block && !cJSON_IsNull(block) ? strdup(block->valuestring) : NULL,
+        timestamp && !cJSON_IsNull(timestamp) ? strdup(timestamp->valuestring) : NULL,
+        transaction && !cJSON_IsNull(transaction) ? strdup(transaction->valuestring) : NULL,
         vid ? vid->valuedouble : 0
         );
 

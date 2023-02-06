@@ -505,12 +505,12 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://onchain.coinapi.io";
             var apiInstance = new SushiswapApi(config);
-            var startBlock = 789L;  // long? |  (optional) 
-            var endBlock = 789L;  // long? |  (optional) 
-            var startDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
-            var endDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
-            var id = "id_example";  // string |  (optional) 
-            var pair = "pair_example";  // string |  (optional) 
+            var startBlock = 789L;  // long? | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional) 
+            var endBlock = 789L;  // long? | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional) 
+            var startDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional) 
+            var endDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? | The end date of timeframe. (optional) 
+            var id = "id_example";  // string | Identifier, format: (transaction id):(transaction.burns.length). (optional) 
+            var pair = "pair_example";  // string | Reference to pair. (optional) 
 
             try
             {
@@ -553,12 +553,12 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **startBlock** | **long?** |  | [optional]  |
-| **endBlock** | **long?** |  | [optional]  |
-| **startDate** | **DateTime?** |  | [optional]  |
-| **endDate** | **DateTime?** |  | [optional]  |
-| **id** | **string** |  | [optional]  |
-| **pair** | **string** |  | [optional]  |
+| **startBlock** | **long?** | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional]  |
+| **endBlock** | **long?** | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional]  |
+| **startDate** | **DateTime?** | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional]  |
+| **endDate** | **DateTime?** | The end date of timeframe. | [optional]  |
+| **id** | **string** | Identifier, format: (transaction id):(transaction.burns.length). | [optional]  |
+| **pair** | **string** | Reference to pair. | [optional]  |
 
 ### Return type
 
@@ -903,13 +903,13 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://onchain.coinapi.io";
             var apiInstance = new SushiswapApi(config);
-            var startBlock = 789L;  // long? |  (optional) 
-            var endBlock = 789L;  // long? |  (optional) 
-            var startDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
-            var endDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
-            var id = "id_example";  // string |  (optional) 
-            var user = "user_example";  // string |  (optional) 
-            var pair = "pair_example";  // string |  (optional) 
+            var startBlock = 789L;  // long? | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional) 
+            var endBlock = 789L;  // long? | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional) 
+            var startDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional) 
+            var endDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? | The end date of timeframe. (optional) 
+            var id = "id_example";  // string | Identifier, format: (pair address)-(user address)-(timestamp) (optional) 
+            var user = "user_example";  // string | Reference to user. (optional) 
+            var pair = "pair_example";  // string | Reference to the pair liquidity is being provided on. (optional) 
 
             try
             {
@@ -952,13 +952,13 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **startBlock** | **long?** |  | [optional]  |
-| **endBlock** | **long?** |  | [optional]  |
-| **startDate** | **DateTime?** |  | [optional]  |
-| **endDate** | **DateTime?** |  | [optional]  |
-| **id** | **string** |  | [optional]  |
-| **user** | **string** |  | [optional]  |
-| **pair** | **string** |  | [optional]  |
+| **startBlock** | **long?** | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional]  |
+| **endBlock** | **long?** | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional]  |
+| **startDate** | **DateTime?** | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional]  |
+| **endDate** | **DateTime?** | The end date of timeframe. | [optional]  |
+| **id** | **string** | Identifier, format: (pair address)-(user address)-(timestamp) | [optional]  |
+| **user** | **string** | Reference to user. | [optional]  |
+| **pair** | **string** | Reference to the pair liquidity is being provided on. | [optional]  |
 
 ### Return type
 
@@ -1006,13 +1006,13 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://onchain.coinapi.io";
             var apiInstance = new SushiswapApi(config);
-            var startBlock = 789L;  // long? |  (optional) 
-            var endBlock = 789L;  // long? |  (optional) 
-            var startDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
-            var endDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
-            var id = "id_example";  // string |  (optional) 
-            var user = "user_example";  // string |  (optional) 
-            var pair = "pair_example";  // string |  (optional) 
+            var startBlock = 789L;  // long? | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional) 
+            var endBlock = 789L;  // long? | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional) 
+            var startDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional) 
+            var endDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? | The end date of timeframe. (optional) 
+            var id = "id_example";  // string | Identifier, format: (pair address)-(user address) (optional) 
+            var user = "user_example";  // string | User address. (optional) 
+            var pair = "pair_example";  // string | Pair address. (optional) 
 
             try
             {
@@ -1055,13 +1055,13 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **startBlock** | **long?** |  | [optional]  |
-| **endBlock** | **long?** |  | [optional]  |
-| **startDate** | **DateTime?** |  | [optional]  |
-| **endDate** | **DateTime?** |  | [optional]  |
-| **id** | **string** |  | [optional]  |
-| **user** | **string** |  | [optional]  |
-| **pair** | **string** |  | [optional]  |
+| **startBlock** | **long?** | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional]  |
+| **endBlock** | **long?** | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional]  |
+| **startDate** | **DateTime?** | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional]  |
+| **endDate** | **DateTime?** | The end date of timeframe. | [optional]  |
+| **id** | **string** | Identifier, format: (pair address)-(user address) | [optional]  |
+| **user** | **string** | User address. | [optional]  |
+| **pair** | **string** | Pair address. | [optional]  |
 
 ### Return type
 
@@ -1109,12 +1109,12 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://onchain.coinapi.io";
             var apiInstance = new SushiswapApi(config);
-            var startBlock = 789L;  // long? |  (optional) 
-            var endBlock = 789L;  // long? |  (optional) 
-            var startDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
-            var endDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
-            var id = "id_example";  // string |  (optional) 
-            var pair = "pair_example";  // string |  (optional) 
+            var startBlock = 789L;  // long? | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional) 
+            var endBlock = 789L;  // long? | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional) 
+            var startDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional) 
+            var endDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? | The end date of timeframe. (optional) 
+            var id = "id_example";  // string | Identifier, format: (transaction hash)-(index in the transaction mint array). (optional) 
+            var pair = "pair_example";  // string | Reference to pair. (optional) 
 
             try
             {
@@ -1157,12 +1157,12 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **startBlock** | **long?** |  | [optional]  |
-| **endBlock** | **long?** |  | [optional]  |
-| **startDate** | **DateTime?** |  | [optional]  |
-| **endDate** | **DateTime?** |  | [optional]  |
-| **id** | **string** |  | [optional]  |
-| **pair** | **string** |  | [optional]  |
+| **startBlock** | **long?** | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional]  |
+| **endBlock** | **long?** | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional]  |
+| **startDate** | **DateTime?** | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional]  |
+| **endDate** | **DateTime?** | The end date of timeframe. | [optional]  |
+| **id** | **string** | Identifier, format: (transaction hash)-(index in the transaction mint array). | [optional]  |
+| **pair** | **string** | Reference to pair. | [optional]  |
 
 ### Return type
 
@@ -1210,14 +1210,14 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://onchain.coinapi.io";
             var apiInstance = new SushiswapApi(config);
-            var startBlock = 789L;  // long? |  (optional) 
-            var endBlock = 789L;  // long? |  (optional) 
-            var startDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
-            var endDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
-            var id = "id_example";  // string |  (optional) 
-            var pair = "pair_example";  // string |  (optional) 
-            var token0 = "token0_example";  // string |  (optional) 
-            var token1 = "token1_example";  // string |  (optional) 
+            var startBlock = 789L;  // long? | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional) 
+            var endBlock = 789L;  // long? | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional) 
+            var startDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional) 
+            var endDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? | The end date of timeframe. (optional) 
+            var id = "id_example";  // string | Identifier, format: (pair id)-(day start timestamp). (optional) 
+            var pair = "pair_example";  // string | Reference to pair. (optional) 
+            var token0 = "token0_example";  // string | Reference to token0. (optional) 
+            var token1 = "token1_example";  // string | Reference to token1. (optional) 
 
             try
             {
@@ -1260,14 +1260,14 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **startBlock** | **long?** |  | [optional]  |
-| **endBlock** | **long?** |  | [optional]  |
-| **startDate** | **DateTime?** |  | [optional]  |
-| **endDate** | **DateTime?** |  | [optional]  |
-| **id** | **string** |  | [optional]  |
-| **pair** | **string** |  | [optional]  |
-| **token0** | **string** |  | [optional]  |
-| **token1** | **string** |  | [optional]  |
+| **startBlock** | **long?** | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional]  |
+| **endBlock** | **long?** | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional]  |
+| **startDate** | **DateTime?** | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional]  |
+| **endDate** | **DateTime?** | The end date of timeframe. | [optional]  |
+| **id** | **string** | Identifier, format: (pair id)-(day start timestamp). | [optional]  |
+| **pair** | **string** | Reference to pair. | [optional]  |
+| **token0** | **string** | Reference to token0. | [optional]  |
+| **token1** | **string** | Reference to token1. | [optional]  |
 
 ### Return type
 
@@ -1315,12 +1315,12 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://onchain.coinapi.io";
             var apiInstance = new SushiswapApi(config);
-            var startBlock = 789L;  // long? |  (optional) 
-            var endBlock = 789L;  // long? |  (optional) 
-            var startDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
-            var endDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
-            var id = "id_example";  // string |  (optional) 
-            var pair = "pair_example";  // string |  (optional) 
+            var startBlock = 789L;  // long? | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional) 
+            var endBlock = 789L;  // long? | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional) 
+            var startDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional) 
+            var endDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? | The end date of timeframe. (optional) 
+            var id = "id_example";  // string | Identifier, format: (pair id)-(hour start timestamp). (optional) 
+            var pair = "pair_example";  // string | Reference to pair. (optional) 
 
             try
             {
@@ -1363,12 +1363,12 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **startBlock** | **long?** |  | [optional]  |
-| **endBlock** | **long?** |  | [optional]  |
-| **startDate** | **DateTime?** |  | [optional]  |
-| **endDate** | **DateTime?** |  | [optional]  |
-| **id** | **string** |  | [optional]  |
-| **pair** | **string** |  | [optional]  |
+| **startBlock** | **long?** | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional]  |
+| **endBlock** | **long?** | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional]  |
+| **startDate** | **DateTime?** | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional]  |
+| **endDate** | **DateTime?** | The end date of timeframe. | [optional]  |
+| **id** | **string** | Identifier, format: (pair id)-(hour start timestamp). | [optional]  |
+| **pair** | **string** | Reference to pair. | [optional]  |
 
 ### Return type
 
@@ -1416,14 +1416,14 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://onchain.coinapi.io";
             var apiInstance = new SushiswapApi(config);
-            var startBlock = 789L;  // long? |  (optional) 
-            var endBlock = 789L;  // long? |  (optional) 
-            var startDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
-            var endDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
-            var id = "id_example";  // string |  (optional) 
-            var name = "name_example";  // string |  (optional) 
-            var token0 = "token0_example";  // string |  (optional) 
-            var token1 = "token1_example";  // string |  (optional) 
+            var startBlock = 789L;  // long? | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional) 
+            var endBlock = 789L;  // long? | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional) 
+            var startDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional) 
+            var endDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? | The end date of timeframe. (optional) 
+            var id = "id_example";  // string | Pair contract address. (optional) 
+            var name = "name_example";  // string | Friendly name, format: (token0 name)-(token1 name) (optional) 
+            var token0 = "token0_example";  // string | Reference to token0 as stored in pair contract. (optional) 
+            var token1 = "token1_example";  // string | Reference to token0 as stored in pair contract. (optional) 
 
             try
             {
@@ -1466,14 +1466,14 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **startBlock** | **long?** |  | [optional]  |
-| **endBlock** | **long?** |  | [optional]  |
-| **startDate** | **DateTime?** |  | [optional]  |
-| **endDate** | **DateTime?** |  | [optional]  |
-| **id** | **string** |  | [optional]  |
-| **name** | **string** |  | [optional]  |
-| **token0** | **string** |  | [optional]  |
-| **token1** | **string** |  | [optional]  |
+| **startBlock** | **long?** | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional]  |
+| **endBlock** | **long?** | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional]  |
+| **startDate** | **DateTime?** | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional]  |
+| **endDate** | **DateTime?** | The end date of timeframe. | [optional]  |
+| **id** | **string** | Pair contract address. | [optional]  |
+| **name** | **string** | Friendly name, format: (token0 name)-(token1 name) | [optional]  |
+| **token0** | **string** | Reference to token0 as stored in pair contract. | [optional]  |
+| **token1** | **string** | Reference to token0 as stored in pair contract. | [optional]  |
 
 ### Return type
 

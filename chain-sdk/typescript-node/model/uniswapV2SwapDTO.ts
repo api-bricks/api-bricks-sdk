@@ -202,3 +202,5 @@ export class UniswapV2SwapDTO {
     }
 }
 
+export namespace UniswapV2SwapDTO {
+}

@@ -239,12 +239,12 @@ public class OASUniswapV3Api {
     /**
      * PoolDayData (historical)
      * Gets poolDayData.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param pool  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (pool address)-(day id). (optional)
+     * @param pool Pointer to pool. (optional)
      * @return List<OASUniswapV3PoolDayDataDTO>
      * @throws OAS.ApiException if fails to make API call
      */
@@ -275,12 +275,12 @@ public class OASUniswapV3Api {
     /**
      * PoolHourData (historical)
      * Gets poolHourData.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param pool  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (pool address)-(day id) (optional)
+     * @param pool Pointer to pool. (optional)
      * @return List<OASUniswapV3PoolHourDataDTO>
      * @throws OAS.ApiException if fails to make API call
      */
@@ -349,12 +349,12 @@ public class OASUniswapV3Api {
     /**
      * PositionSnapshots (historical)
      * Gets positionSnapshots.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param pool  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id NFT token identifier, format: (NFT token id)#(block number). (optional)
+     * @param pool Pool the position is within. (optional)
      * @return List<OASUniswapV3PositionSnapshotDTO>
      * @throws OAS.ApiException if fails to make API call
      */
@@ -429,7 +429,7 @@ public class OASUniswapV3Api {
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
      * @param endDate The end date of timeframe. (optional)
-     * @param id Identifier, format: transaction hash + &quot;#&quot; + index in swaps Transaction array. (optional)
+     * @param id Identifier, format: (transaction hash) + # + (index in swaps Transaction array). (optional)
      * @param pool Pool swap occured within. (optional)
      * @param token0 Reference to token0 as stored in pair contract. (optional)
      * @param token1 Reference to token1 as stored in pair contract. (optional)
@@ -465,12 +465,12 @@ public class OASUniswapV3Api {
     /**
      * TickDayData (historical)
      * Gets tickDayData.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param pool  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (pool address)-(tick index)-(timestamp). (optional)
+     * @param pool Pointer to pool. (optional)
      * @return List<OASUniswapV3TickDayDataDTO>
      * @throws OAS.ApiException if fails to make API call
      */
@@ -501,12 +501,12 @@ public class OASUniswapV3Api {
     /**
      * Ticks (historical)
      * Gets ticks.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param id  (optional)
-     * @param pool  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe. (optional)
+     * @param id Identifier, format: (pool address)#(tick index) (optional)
+     * @param pool Pool address. (optional)
      * @return List<OASUniswapV3TickDTO>
      * @throws OAS.ApiException if fails to make API call
      */

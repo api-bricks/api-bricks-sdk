@@ -281,7 +281,7 @@ uniswap_v3_token_v3_day_data_dto_t *uniswap_v3_token_v3_day_data_dto_parseFromJS
     // uniswap_v3_token_v3_day_data_dto->entry_time
     cJSON *entry_time = cJSON_GetObjectItemCaseSensitive(uniswap_v3_token_v3_day_data_dtoJSON, "entry_time");
     if (entry_time) { 
-    if(!cJSON_IsString(entry_time))
+    if(!cJSON_IsString(entry_time) && !cJSON_IsNull(entry_time))
     {
     goto end; //DateTime
     }
@@ -290,7 +290,7 @@ uniswap_v3_token_v3_day_data_dto_t *uniswap_v3_token_v3_day_data_dto_parseFromJS
     // uniswap_v3_token_v3_day_data_dto->recv_time
     cJSON *recv_time = cJSON_GetObjectItemCaseSensitive(uniswap_v3_token_v3_day_data_dtoJSON, "recv_time");
     if (recv_time) { 
-    if(!cJSON_IsString(recv_time))
+    if(!cJSON_IsString(recv_time) && !cJSON_IsNull(recv_time))
     {
     goto end; //DateTime
     }
@@ -317,7 +317,7 @@ uniswap_v3_token_v3_day_data_dto_t *uniswap_v3_token_v3_day_data_dto_parseFromJS
     // uniswap_v3_token_v3_day_data_dto->id
     cJSON *id = cJSON_GetObjectItemCaseSensitive(uniswap_v3_token_v3_day_data_dtoJSON, "id");
     if (id) { 
-    if(!cJSON_IsString(id))
+    if(!cJSON_IsString(id) && !cJSON_IsNull(id))
     {
     goto end; //String
     }
@@ -335,7 +335,7 @@ uniswap_v3_token_v3_day_data_dto_t *uniswap_v3_token_v3_day_data_dto_parseFromJS
     // uniswap_v3_token_v3_day_data_dto->token
     cJSON *token = cJSON_GetObjectItemCaseSensitive(uniswap_v3_token_v3_day_data_dtoJSON, "token");
     if (token) { 
-    if(!cJSON_IsString(token))
+    if(!cJSON_IsString(token) && !cJSON_IsNull(token))
     {
     goto end; //String
     }
@@ -344,7 +344,7 @@ uniswap_v3_token_v3_day_data_dto_t *uniswap_v3_token_v3_day_data_dto_parseFromJS
     // uniswap_v3_token_v3_day_data_dto->volume
     cJSON *volume = cJSON_GetObjectItemCaseSensitive(uniswap_v3_token_v3_day_data_dtoJSON, "volume");
     if (volume) { 
-    if(!cJSON_IsString(volume))
+    if(!cJSON_IsString(volume) && !cJSON_IsNull(volume))
     {
     goto end; //String
     }
@@ -353,7 +353,7 @@ uniswap_v3_token_v3_day_data_dto_t *uniswap_v3_token_v3_day_data_dto_parseFromJS
     // uniswap_v3_token_v3_day_data_dto->volume_usd
     cJSON *volume_usd = cJSON_GetObjectItemCaseSensitive(uniswap_v3_token_v3_day_data_dtoJSON, "volume_usd");
     if (volume_usd) { 
-    if(!cJSON_IsString(volume_usd))
+    if(!cJSON_IsString(volume_usd) && !cJSON_IsNull(volume_usd))
     {
     goto end; //String
     }
@@ -362,7 +362,7 @@ uniswap_v3_token_v3_day_data_dto_t *uniswap_v3_token_v3_day_data_dto_parseFromJS
     // uniswap_v3_token_v3_day_data_dto->untracked_volume_usd
     cJSON *untracked_volume_usd = cJSON_GetObjectItemCaseSensitive(uniswap_v3_token_v3_day_data_dtoJSON, "untracked_volume_usd");
     if (untracked_volume_usd) { 
-    if(!cJSON_IsString(untracked_volume_usd))
+    if(!cJSON_IsString(untracked_volume_usd) && !cJSON_IsNull(untracked_volume_usd))
     {
     goto end; //String
     }
@@ -371,7 +371,7 @@ uniswap_v3_token_v3_day_data_dto_t *uniswap_v3_token_v3_day_data_dto_parseFromJS
     // uniswap_v3_token_v3_day_data_dto->total_value_locked
     cJSON *total_value_locked = cJSON_GetObjectItemCaseSensitive(uniswap_v3_token_v3_day_data_dtoJSON, "total_value_locked");
     if (total_value_locked) { 
-    if(!cJSON_IsString(total_value_locked))
+    if(!cJSON_IsString(total_value_locked) && !cJSON_IsNull(total_value_locked))
     {
     goto end; //String
     }
@@ -380,7 +380,7 @@ uniswap_v3_token_v3_day_data_dto_t *uniswap_v3_token_v3_day_data_dto_parseFromJS
     // uniswap_v3_token_v3_day_data_dto->total_value_locked_usd
     cJSON *total_value_locked_usd = cJSON_GetObjectItemCaseSensitive(uniswap_v3_token_v3_day_data_dtoJSON, "total_value_locked_usd");
     if (total_value_locked_usd) { 
-    if(!cJSON_IsString(total_value_locked_usd))
+    if(!cJSON_IsString(total_value_locked_usd) && !cJSON_IsNull(total_value_locked_usd))
     {
     goto end; //String
     }
@@ -389,7 +389,7 @@ uniswap_v3_token_v3_day_data_dto_t *uniswap_v3_token_v3_day_data_dto_parseFromJS
     // uniswap_v3_token_v3_day_data_dto->price_usd
     cJSON *price_usd = cJSON_GetObjectItemCaseSensitive(uniswap_v3_token_v3_day_data_dtoJSON, "price_usd");
     if (price_usd) { 
-    if(!cJSON_IsString(price_usd))
+    if(!cJSON_IsString(price_usd) && !cJSON_IsNull(price_usd))
     {
     goto end; //String
     }
@@ -398,7 +398,7 @@ uniswap_v3_token_v3_day_data_dto_t *uniswap_v3_token_v3_day_data_dto_parseFromJS
     // uniswap_v3_token_v3_day_data_dto->fees_usd
     cJSON *fees_usd = cJSON_GetObjectItemCaseSensitive(uniswap_v3_token_v3_day_data_dtoJSON, "fees_usd");
     if (fees_usd) { 
-    if(!cJSON_IsString(fees_usd))
+    if(!cJSON_IsString(fees_usd) && !cJSON_IsNull(fees_usd))
     {
     goto end; //String
     }
@@ -407,7 +407,7 @@ uniswap_v3_token_v3_day_data_dto_t *uniswap_v3_token_v3_day_data_dto_parseFromJS
     // uniswap_v3_token_v3_day_data_dto->open
     cJSON *open = cJSON_GetObjectItemCaseSensitive(uniswap_v3_token_v3_day_data_dtoJSON, "open");
     if (open) { 
-    if(!cJSON_IsString(open))
+    if(!cJSON_IsString(open) && !cJSON_IsNull(open))
     {
     goto end; //String
     }
@@ -416,7 +416,7 @@ uniswap_v3_token_v3_day_data_dto_t *uniswap_v3_token_v3_day_data_dto_parseFromJS
     // uniswap_v3_token_v3_day_data_dto->high
     cJSON *high = cJSON_GetObjectItemCaseSensitive(uniswap_v3_token_v3_day_data_dtoJSON, "high");
     if (high) { 
-    if(!cJSON_IsString(high))
+    if(!cJSON_IsString(high) && !cJSON_IsNull(high))
     {
     goto end; //String
     }
@@ -425,7 +425,7 @@ uniswap_v3_token_v3_day_data_dto_t *uniswap_v3_token_v3_day_data_dto_parseFromJS
     // uniswap_v3_token_v3_day_data_dto->low
     cJSON *low = cJSON_GetObjectItemCaseSensitive(uniswap_v3_token_v3_day_data_dtoJSON, "low");
     if (low) { 
-    if(!cJSON_IsString(low))
+    if(!cJSON_IsString(low) && !cJSON_IsNull(low))
     {
     goto end; //String
     }
@@ -434,7 +434,7 @@ uniswap_v3_token_v3_day_data_dto_t *uniswap_v3_token_v3_day_data_dto_parseFromJS
     // uniswap_v3_token_v3_day_data_dto->close
     cJSON *close = cJSON_GetObjectItemCaseSensitive(uniswap_v3_token_v3_day_data_dtoJSON, "close");
     if (close) { 
-    if(!cJSON_IsString(close))
+    if(!cJSON_IsString(close) && !cJSON_IsNull(close))
     {
     goto end; //String
     }
@@ -442,24 +442,24 @@ uniswap_v3_token_v3_day_data_dto_t *uniswap_v3_token_v3_day_data_dto_parseFromJS
 
 
     uniswap_v3_token_v3_day_data_dto_local_var = uniswap_v3_token_v3_day_data_dto_create (
-        entry_time ? strdup(entry_time->valuestring) : NULL,
-        recv_time ? strdup(recv_time->valuestring) : NULL,
+        entry_time && !cJSON_IsNull(entry_time) ? strdup(entry_time->valuestring) : NULL,
+        recv_time && !cJSON_IsNull(recv_time) ? strdup(recv_time->valuestring) : NULL,
         block_number ? block_number->valuedouble : 0,
         vid ? vid->valuedouble : 0,
-        id ? strdup(id->valuestring) : NULL,
+        id && !cJSON_IsNull(id) ? strdup(id->valuestring) : NULL,
         date ? date->valuedouble : 0,
-        token ? strdup(token->valuestring) : NULL,
-        volume ? strdup(volume->valuestring) : NULL,
-        volume_usd ? strdup(volume_usd->valuestring) : NULL,
-        untracked_volume_usd ? strdup(untracked_volume_usd->valuestring) : NULL,
-        total_value_locked ? strdup(total_value_locked->valuestring) : NULL,
-        total_value_locked_usd ? strdup(total_value_locked_usd->valuestring) : NULL,
-        price_usd ? strdup(price_usd->valuestring) : NULL,
-        fees_usd ? strdup(fees_usd->valuestring) : NULL,
-        open ? strdup(open->valuestring) : NULL,
-        high ? strdup(high->valuestring) : NULL,
-        low ? strdup(low->valuestring) : NULL,
-        close ? strdup(close->valuestring) : NULL
+        token && !cJSON_IsNull(token) ? strdup(token->valuestring) : NULL,
+        volume && !cJSON_IsNull(volume) ? strdup(volume->valuestring) : NULL,
+        volume_usd && !cJSON_IsNull(volume_usd) ? strdup(volume_usd->valuestring) : NULL,
+        untracked_volume_usd && !cJSON_IsNull(untracked_volume_usd) ? strdup(untracked_volume_usd->valuestring) : NULL,
+        total_value_locked && !cJSON_IsNull(total_value_locked) ? strdup(total_value_locked->valuestring) : NULL,
+        total_value_locked_usd && !cJSON_IsNull(total_value_locked_usd) ? strdup(total_value_locked_usd->valuestring) : NULL,
+        price_usd && !cJSON_IsNull(price_usd) ? strdup(price_usd->valuestring) : NULL,
+        fees_usd && !cJSON_IsNull(fees_usd) ? strdup(fees_usd->valuestring) : NULL,
+        open && !cJSON_IsNull(open) ? strdup(open->valuestring) : NULL,
+        high && !cJSON_IsNull(high) ? strdup(high->valuestring) : NULL,
+        low && !cJSON_IsNull(low) ? strdup(low->valuestring) : NULL,
+        close && !cJSON_IsNull(close) ? strdup(close->valuestring) : NULL
         );
 
     return uniswap_v3_token_v3_day_data_dto_local_var;

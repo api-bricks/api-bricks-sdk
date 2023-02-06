@@ -13978,6 +13978,106 @@ export const DexApi = function(configuration?: Configuration, fetch: FetchAPI = 
 
 
 /**
+ * MetadataApi - fetch parameter creator
+ * @export
+ */
+export const MetadataApiFetchParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * 
+         * @summary List all chains.
+         * @throws {RequiredError}
+         */
+        metadataChainsGet(options: RequestOptions): FetchArgs {
+            const localVarPath = `/metadata/chains`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @summary List all decentralized applications.
+         * @throws {RequiredError}
+         */
+        metadataDappsGet(options: RequestOptions): FetchArgs {
+            const localVarPath = `/metadata/dapps`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+export type MetadataApiType = { 
+    metadataChainsGet(options?: RequestOptions): Promise<Response>,
+
+    metadataDappsGet(options?: RequestOptions): Promise<Response>,
+}
+
+/**
+ * MetadataApi - factory function to inject configuration 
+ * @export
+ */
+export const MetadataApi = function(configuration?: Configuration, fetch: FetchAPI = portableFetch): MetadataApiType {
+    const basePath: string = (configuration && configuration.basePath) || BASE_PATH;
+    return {
+        /**
+         * 
+         * @summary List all chains.
+         * @throws {RequiredError}
+         */
+        metadataChainsGet(options?: RequestOptions = {}): Promise<Response> {
+            const localVarFetchArgs = MetadataApiFetchParamCreator(configuration).metadataChainsGet(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response;
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * 
+         * @summary List all decentralized applications.
+         * @throws {RequiredError}
+         */
+        metadataDappsGet(options?: RequestOptions = {}): Promise<Response> {
+            const localVarFetchArgs = MetadataApiFetchParamCreator(configuration).metadataDappsGet(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response;
+                } else {
+                    throw response;
+                }
+            });
+        },
+    }
+};
+
+
+/**
  * SushiswapApi - fetch parameter creator
  * @export
  */
@@ -18981,6 +19081,8 @@ export type ApiTypes = {
     CurveApi: CurveApiType,
 
     DexApi: DexApiType,
+
+    MetadataApi: MetadataApiType,
 
     SushiswapApi: SushiswapApiType,
 

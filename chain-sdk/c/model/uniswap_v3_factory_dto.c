@@ -271,7 +271,7 @@ uniswap_v3_factory_dto_t *uniswap_v3_factory_dto_parseFromJSON(cJSON *uniswap_v3
     // uniswap_v3_factory_dto->entry_time
     cJSON *entry_time = cJSON_GetObjectItemCaseSensitive(uniswap_v3_factory_dtoJSON, "entry_time");
     if (entry_time) { 
-    if(!cJSON_IsString(entry_time))
+    if(!cJSON_IsString(entry_time) && !cJSON_IsNull(entry_time))
     {
     goto end; //DateTime
     }
@@ -280,7 +280,7 @@ uniswap_v3_factory_dto_t *uniswap_v3_factory_dto_parseFromJSON(cJSON *uniswap_v3
     // uniswap_v3_factory_dto->recv_time
     cJSON *recv_time = cJSON_GetObjectItemCaseSensitive(uniswap_v3_factory_dtoJSON, "recv_time");
     if (recv_time) { 
-    if(!cJSON_IsString(recv_time))
+    if(!cJSON_IsString(recv_time) && !cJSON_IsNull(recv_time))
     {
     goto end; //DateTime
     }
@@ -298,7 +298,7 @@ uniswap_v3_factory_dto_t *uniswap_v3_factory_dto_parseFromJSON(cJSON *uniswap_v3
     // uniswap_v3_factory_dto->id
     cJSON *id = cJSON_GetObjectItemCaseSensitive(uniswap_v3_factory_dtoJSON, "id");
     if (id) { 
-    if(!cJSON_IsString(id))
+    if(!cJSON_IsString(id) && !cJSON_IsNull(id))
     {
     goto end; //String
     }
@@ -307,7 +307,7 @@ uniswap_v3_factory_dto_t *uniswap_v3_factory_dto_parseFromJSON(cJSON *uniswap_v3
     // uniswap_v3_factory_dto->pool_count
     cJSON *pool_count = cJSON_GetObjectItemCaseSensitive(uniswap_v3_factory_dtoJSON, "pool_count");
     if (pool_count) { 
-    if(!cJSON_IsString(pool_count))
+    if(!cJSON_IsString(pool_count) && !cJSON_IsNull(pool_count))
     {
     goto end; //String
     }
@@ -316,7 +316,7 @@ uniswap_v3_factory_dto_t *uniswap_v3_factory_dto_parseFromJSON(cJSON *uniswap_v3
     // uniswap_v3_factory_dto->tx_count
     cJSON *tx_count = cJSON_GetObjectItemCaseSensitive(uniswap_v3_factory_dtoJSON, "tx_count");
     if (tx_count) { 
-    if(!cJSON_IsString(tx_count))
+    if(!cJSON_IsString(tx_count) && !cJSON_IsNull(tx_count))
     {
     goto end; //String
     }
@@ -325,7 +325,7 @@ uniswap_v3_factory_dto_t *uniswap_v3_factory_dto_parseFromJSON(cJSON *uniswap_v3
     // uniswap_v3_factory_dto->total_volume_usd
     cJSON *total_volume_usd = cJSON_GetObjectItemCaseSensitive(uniswap_v3_factory_dtoJSON, "total_volume_usd");
     if (total_volume_usd) { 
-    if(!cJSON_IsString(total_volume_usd))
+    if(!cJSON_IsString(total_volume_usd) && !cJSON_IsNull(total_volume_usd))
     {
     goto end; //String
     }
@@ -334,7 +334,7 @@ uniswap_v3_factory_dto_t *uniswap_v3_factory_dto_parseFromJSON(cJSON *uniswap_v3
     // uniswap_v3_factory_dto->total_volume_eth
     cJSON *total_volume_eth = cJSON_GetObjectItemCaseSensitive(uniswap_v3_factory_dtoJSON, "total_volume_eth");
     if (total_volume_eth) { 
-    if(!cJSON_IsString(total_volume_eth))
+    if(!cJSON_IsString(total_volume_eth) && !cJSON_IsNull(total_volume_eth))
     {
     goto end; //String
     }
@@ -343,7 +343,7 @@ uniswap_v3_factory_dto_t *uniswap_v3_factory_dto_parseFromJSON(cJSON *uniswap_v3
     // uniswap_v3_factory_dto->total_fees_usd
     cJSON *total_fees_usd = cJSON_GetObjectItemCaseSensitive(uniswap_v3_factory_dtoJSON, "total_fees_usd");
     if (total_fees_usd) { 
-    if(!cJSON_IsString(total_fees_usd))
+    if(!cJSON_IsString(total_fees_usd) && !cJSON_IsNull(total_fees_usd))
     {
     goto end; //String
     }
@@ -352,7 +352,7 @@ uniswap_v3_factory_dto_t *uniswap_v3_factory_dto_parseFromJSON(cJSON *uniswap_v3
     // uniswap_v3_factory_dto->total_fees_eth
     cJSON *total_fees_eth = cJSON_GetObjectItemCaseSensitive(uniswap_v3_factory_dtoJSON, "total_fees_eth");
     if (total_fees_eth) { 
-    if(!cJSON_IsString(total_fees_eth))
+    if(!cJSON_IsString(total_fees_eth) && !cJSON_IsNull(total_fees_eth))
     {
     goto end; //String
     }
@@ -361,7 +361,7 @@ uniswap_v3_factory_dto_t *uniswap_v3_factory_dto_parseFromJSON(cJSON *uniswap_v3
     // uniswap_v3_factory_dto->untracked_volume_usd
     cJSON *untracked_volume_usd = cJSON_GetObjectItemCaseSensitive(uniswap_v3_factory_dtoJSON, "untracked_volume_usd");
     if (untracked_volume_usd) { 
-    if(!cJSON_IsString(untracked_volume_usd))
+    if(!cJSON_IsString(untracked_volume_usd) && !cJSON_IsNull(untracked_volume_usd))
     {
     goto end; //String
     }
@@ -370,7 +370,7 @@ uniswap_v3_factory_dto_t *uniswap_v3_factory_dto_parseFromJSON(cJSON *uniswap_v3
     // uniswap_v3_factory_dto->total_value_locked_usd
     cJSON *total_value_locked_usd = cJSON_GetObjectItemCaseSensitive(uniswap_v3_factory_dtoJSON, "total_value_locked_usd");
     if (total_value_locked_usd) { 
-    if(!cJSON_IsString(total_value_locked_usd))
+    if(!cJSON_IsString(total_value_locked_usd) && !cJSON_IsNull(total_value_locked_usd))
     {
     goto end; //String
     }
@@ -379,7 +379,7 @@ uniswap_v3_factory_dto_t *uniswap_v3_factory_dto_parseFromJSON(cJSON *uniswap_v3
     // uniswap_v3_factory_dto->total_value_locked_eth
     cJSON *total_value_locked_eth = cJSON_GetObjectItemCaseSensitive(uniswap_v3_factory_dtoJSON, "total_value_locked_eth");
     if (total_value_locked_eth) { 
-    if(!cJSON_IsString(total_value_locked_eth))
+    if(!cJSON_IsString(total_value_locked_eth) && !cJSON_IsNull(total_value_locked_eth))
     {
     goto end; //String
     }
@@ -388,7 +388,7 @@ uniswap_v3_factory_dto_t *uniswap_v3_factory_dto_parseFromJSON(cJSON *uniswap_v3
     // uniswap_v3_factory_dto->total_value_locked_usd_untracked
     cJSON *total_value_locked_usd_untracked = cJSON_GetObjectItemCaseSensitive(uniswap_v3_factory_dtoJSON, "total_value_locked_usd_untracked");
     if (total_value_locked_usd_untracked) { 
-    if(!cJSON_IsString(total_value_locked_usd_untracked))
+    if(!cJSON_IsString(total_value_locked_usd_untracked) && !cJSON_IsNull(total_value_locked_usd_untracked))
     {
     goto end; //String
     }
@@ -397,7 +397,7 @@ uniswap_v3_factory_dto_t *uniswap_v3_factory_dto_parseFromJSON(cJSON *uniswap_v3
     // uniswap_v3_factory_dto->total_value_locked_eth_untracked
     cJSON *total_value_locked_eth_untracked = cJSON_GetObjectItemCaseSensitive(uniswap_v3_factory_dtoJSON, "total_value_locked_eth_untracked");
     if (total_value_locked_eth_untracked) { 
-    if(!cJSON_IsString(total_value_locked_eth_untracked))
+    if(!cJSON_IsString(total_value_locked_eth_untracked) && !cJSON_IsNull(total_value_locked_eth_untracked))
     {
     goto end; //String
     }
@@ -406,7 +406,7 @@ uniswap_v3_factory_dto_t *uniswap_v3_factory_dto_parseFromJSON(cJSON *uniswap_v3
     // uniswap_v3_factory_dto->owner
     cJSON *owner = cJSON_GetObjectItemCaseSensitive(uniswap_v3_factory_dtoJSON, "owner");
     if (owner) { 
-    if(!cJSON_IsString(owner))
+    if(!cJSON_IsString(owner) && !cJSON_IsNull(owner))
     {
     goto end; //String
     }
@@ -423,22 +423,22 @@ uniswap_v3_factory_dto_t *uniswap_v3_factory_dto_parseFromJSON(cJSON *uniswap_v3
 
 
     uniswap_v3_factory_dto_local_var = uniswap_v3_factory_dto_create (
-        entry_time ? strdup(entry_time->valuestring) : NULL,
-        recv_time ? strdup(recv_time->valuestring) : NULL,
+        entry_time && !cJSON_IsNull(entry_time) ? strdup(entry_time->valuestring) : NULL,
+        recv_time && !cJSON_IsNull(recv_time) ? strdup(recv_time->valuestring) : NULL,
         block_number ? block_number->valuedouble : 0,
-        id ? strdup(id->valuestring) : NULL,
-        pool_count ? strdup(pool_count->valuestring) : NULL,
-        tx_count ? strdup(tx_count->valuestring) : NULL,
-        total_volume_usd ? strdup(total_volume_usd->valuestring) : NULL,
-        total_volume_eth ? strdup(total_volume_eth->valuestring) : NULL,
-        total_fees_usd ? strdup(total_fees_usd->valuestring) : NULL,
-        total_fees_eth ? strdup(total_fees_eth->valuestring) : NULL,
-        untracked_volume_usd ? strdup(untracked_volume_usd->valuestring) : NULL,
-        total_value_locked_usd ? strdup(total_value_locked_usd->valuestring) : NULL,
-        total_value_locked_eth ? strdup(total_value_locked_eth->valuestring) : NULL,
-        total_value_locked_usd_untracked ? strdup(total_value_locked_usd_untracked->valuestring) : NULL,
-        total_value_locked_eth_untracked ? strdup(total_value_locked_eth_untracked->valuestring) : NULL,
-        owner ? strdup(owner->valuestring) : NULL,
+        id && !cJSON_IsNull(id) ? strdup(id->valuestring) : NULL,
+        pool_count && !cJSON_IsNull(pool_count) ? strdup(pool_count->valuestring) : NULL,
+        tx_count && !cJSON_IsNull(tx_count) ? strdup(tx_count->valuestring) : NULL,
+        total_volume_usd && !cJSON_IsNull(total_volume_usd) ? strdup(total_volume_usd->valuestring) : NULL,
+        total_volume_eth && !cJSON_IsNull(total_volume_eth) ? strdup(total_volume_eth->valuestring) : NULL,
+        total_fees_usd && !cJSON_IsNull(total_fees_usd) ? strdup(total_fees_usd->valuestring) : NULL,
+        total_fees_eth && !cJSON_IsNull(total_fees_eth) ? strdup(total_fees_eth->valuestring) : NULL,
+        untracked_volume_usd && !cJSON_IsNull(untracked_volume_usd) ? strdup(untracked_volume_usd->valuestring) : NULL,
+        total_value_locked_usd && !cJSON_IsNull(total_value_locked_usd) ? strdup(total_value_locked_usd->valuestring) : NULL,
+        total_value_locked_eth && !cJSON_IsNull(total_value_locked_eth) ? strdup(total_value_locked_eth->valuestring) : NULL,
+        total_value_locked_usd_untracked && !cJSON_IsNull(total_value_locked_usd_untracked) ? strdup(total_value_locked_usd_untracked->valuestring) : NULL,
+        total_value_locked_eth_untracked && !cJSON_IsNull(total_value_locked_eth_untracked) ? strdup(total_value_locked_eth_untracked->valuestring) : NULL,
+        owner && !cJSON_IsNull(owner) ? strdup(owner->valuestring) : NULL,
         vid ? vid->valuedouble : 0
         );
 

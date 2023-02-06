@@ -362,7 +362,7 @@ uniswap_v3_token_dto_t *uniswap_v3_token_dto_parseFromJSON(cJSON *uniswap_v3_tok
     // uniswap_v3_token_dto->entry_time
     cJSON *entry_time = cJSON_GetObjectItemCaseSensitive(uniswap_v3_token_dtoJSON, "entry_time");
     if (entry_time) { 
-    if(!cJSON_IsString(entry_time))
+    if(!cJSON_IsString(entry_time) && !cJSON_IsNull(entry_time))
     {
     goto end; //DateTime
     }
@@ -371,7 +371,7 @@ uniswap_v3_token_dto_t *uniswap_v3_token_dto_parseFromJSON(cJSON *uniswap_v3_tok
     // uniswap_v3_token_dto->recv_time
     cJSON *recv_time = cJSON_GetObjectItemCaseSensitive(uniswap_v3_token_dtoJSON, "recv_time");
     if (recv_time) { 
-    if(!cJSON_IsString(recv_time))
+    if(!cJSON_IsString(recv_time) && !cJSON_IsNull(recv_time))
     {
     goto end; //DateTime
     }
@@ -398,7 +398,7 @@ uniswap_v3_token_dto_t *uniswap_v3_token_dto_parseFromJSON(cJSON *uniswap_v3_tok
     // uniswap_v3_token_dto->id
     cJSON *id = cJSON_GetObjectItemCaseSensitive(uniswap_v3_token_dtoJSON, "id");
     if (id) { 
-    if(!cJSON_IsString(id))
+    if(!cJSON_IsString(id) && !cJSON_IsNull(id))
     {
     goto end; //String
     }
@@ -407,7 +407,7 @@ uniswap_v3_token_dto_t *uniswap_v3_token_dto_parseFromJSON(cJSON *uniswap_v3_tok
     // uniswap_v3_token_dto->symbol
     cJSON *symbol = cJSON_GetObjectItemCaseSensitive(uniswap_v3_token_dtoJSON, "symbol");
     if (symbol) { 
-    if(!cJSON_IsString(symbol))
+    if(!cJSON_IsString(symbol) && !cJSON_IsNull(symbol))
     {
     goto end; //String
     }
@@ -416,7 +416,7 @@ uniswap_v3_token_dto_t *uniswap_v3_token_dto_parseFromJSON(cJSON *uniswap_v3_tok
     // uniswap_v3_token_dto->name
     cJSON *name = cJSON_GetObjectItemCaseSensitive(uniswap_v3_token_dtoJSON, "name");
     if (name) { 
-    if(!cJSON_IsString(name))
+    if(!cJSON_IsString(name) && !cJSON_IsNull(name))
     {
     goto end; //String
     }
@@ -440,7 +440,7 @@ uniswap_v3_token_dto_t *uniswap_v3_token_dto_parseFromJSON(cJSON *uniswap_v3_tok
     // uniswap_v3_token_dto->volume
     cJSON *volume = cJSON_GetObjectItemCaseSensitive(uniswap_v3_token_dtoJSON, "volume");
     if (volume) { 
-    if(!cJSON_IsString(volume))
+    if(!cJSON_IsString(volume) && !cJSON_IsNull(volume))
     {
     goto end; //String
     }
@@ -449,7 +449,7 @@ uniswap_v3_token_dto_t *uniswap_v3_token_dto_parseFromJSON(cJSON *uniswap_v3_tok
     // uniswap_v3_token_dto->volume_usd
     cJSON *volume_usd = cJSON_GetObjectItemCaseSensitive(uniswap_v3_token_dtoJSON, "volume_usd");
     if (volume_usd) { 
-    if(!cJSON_IsString(volume_usd))
+    if(!cJSON_IsString(volume_usd) && !cJSON_IsNull(volume_usd))
     {
     goto end; //String
     }
@@ -458,7 +458,7 @@ uniswap_v3_token_dto_t *uniswap_v3_token_dto_parseFromJSON(cJSON *uniswap_v3_tok
     // uniswap_v3_token_dto->untracked_volume_usd
     cJSON *untracked_volume_usd = cJSON_GetObjectItemCaseSensitive(uniswap_v3_token_dtoJSON, "untracked_volume_usd");
     if (untracked_volume_usd) { 
-    if(!cJSON_IsString(untracked_volume_usd))
+    if(!cJSON_IsString(untracked_volume_usd) && !cJSON_IsNull(untracked_volume_usd))
     {
     goto end; //String
     }
@@ -467,7 +467,7 @@ uniswap_v3_token_dto_t *uniswap_v3_token_dto_parseFromJSON(cJSON *uniswap_v3_tok
     // uniswap_v3_token_dto->fees_usd
     cJSON *fees_usd = cJSON_GetObjectItemCaseSensitive(uniswap_v3_token_dtoJSON, "fees_usd");
     if (fees_usd) { 
-    if(!cJSON_IsString(fees_usd))
+    if(!cJSON_IsString(fees_usd) && !cJSON_IsNull(fees_usd))
     {
     goto end; //String
     }
@@ -488,7 +488,7 @@ uniswap_v3_token_dto_t *uniswap_v3_token_dto_parseFromJSON(cJSON *uniswap_v3_tok
     // uniswap_v3_token_dto->total_value_locked
     cJSON *total_value_locked = cJSON_GetObjectItemCaseSensitive(uniswap_v3_token_dtoJSON, "total_value_locked");
     if (total_value_locked) { 
-    if(!cJSON_IsString(total_value_locked))
+    if(!cJSON_IsString(total_value_locked) && !cJSON_IsNull(total_value_locked))
     {
     goto end; //String
     }
@@ -497,7 +497,7 @@ uniswap_v3_token_dto_t *uniswap_v3_token_dto_parseFromJSON(cJSON *uniswap_v3_tok
     // uniswap_v3_token_dto->total_value_locked_usd
     cJSON *total_value_locked_usd = cJSON_GetObjectItemCaseSensitive(uniswap_v3_token_dtoJSON, "total_value_locked_usd");
     if (total_value_locked_usd) { 
-    if(!cJSON_IsString(total_value_locked_usd))
+    if(!cJSON_IsString(total_value_locked_usd) && !cJSON_IsNull(total_value_locked_usd))
     {
     goto end; //String
     }
@@ -506,7 +506,7 @@ uniswap_v3_token_dto_t *uniswap_v3_token_dto_parseFromJSON(cJSON *uniswap_v3_tok
     // uniswap_v3_token_dto->total_value_locked_usd_untracked
     cJSON *total_value_locked_usd_untracked = cJSON_GetObjectItemCaseSensitive(uniswap_v3_token_dtoJSON, "total_value_locked_usd_untracked");
     if (total_value_locked_usd_untracked) { 
-    if(!cJSON_IsString(total_value_locked_usd_untracked))
+    if(!cJSON_IsString(total_value_locked_usd_untracked) && !cJSON_IsNull(total_value_locked_usd_untracked))
     {
     goto end; //String
     }
@@ -515,7 +515,7 @@ uniswap_v3_token_dto_t *uniswap_v3_token_dto_parseFromJSON(cJSON *uniswap_v3_tok
     // uniswap_v3_token_dto->derived_eth
     cJSON *derived_eth = cJSON_GetObjectItemCaseSensitive(uniswap_v3_token_dtoJSON, "derived_eth");
     if (derived_eth) { 
-    if(!cJSON_IsString(derived_eth))
+    if(!cJSON_IsString(derived_eth) && !cJSON_IsNull(derived_eth))
     {
     goto end; //String
     }
@@ -543,7 +543,7 @@ uniswap_v3_token_dto_t *uniswap_v3_token_dto_parseFromJSON(cJSON *uniswap_v3_tok
     // uniswap_v3_token_dto->token_symbol
     cJSON *token_symbol = cJSON_GetObjectItemCaseSensitive(uniswap_v3_token_dtoJSON, "token_symbol");
     if (token_symbol) { 
-    if(!cJSON_IsString(token_symbol))
+    if(!cJSON_IsString(token_symbol) && !cJSON_IsNull(token_symbol))
     {
     goto end; //String
     }
@@ -551,27 +551,27 @@ uniswap_v3_token_dto_t *uniswap_v3_token_dto_parseFromJSON(cJSON *uniswap_v3_tok
 
 
     uniswap_v3_token_dto_local_var = uniswap_v3_token_dto_create (
-        entry_time ? strdup(entry_time->valuestring) : NULL,
-        recv_time ? strdup(recv_time->valuestring) : NULL,
+        entry_time && !cJSON_IsNull(entry_time) ? strdup(entry_time->valuestring) : NULL,
+        recv_time && !cJSON_IsNull(recv_time) ? strdup(recv_time->valuestring) : NULL,
         block_number ? block_number->valuedouble : 0,
         vid ? vid->valuedouble : 0,
-        id ? strdup(id->valuestring) : NULL,
-        symbol ? strdup(symbol->valuestring) : NULL,
-        name ? strdup(name->valuestring) : NULL,
+        id && !cJSON_IsNull(id) ? strdup(id->valuestring) : NULL,
+        symbol && !cJSON_IsNull(symbol) ? strdup(symbol->valuestring) : NULL,
+        name && !cJSON_IsNull(name) ? strdup(name->valuestring) : NULL,
         decimals ? decimals->valuedouble : 0,
         total_supply ? total_supply_local_nonprim : NULL,
-        volume ? strdup(volume->valuestring) : NULL,
-        volume_usd ? strdup(volume_usd->valuestring) : NULL,
-        untracked_volume_usd ? strdup(untracked_volume_usd->valuestring) : NULL,
-        fees_usd ? strdup(fees_usd->valuestring) : NULL,
+        volume && !cJSON_IsNull(volume) ? strdup(volume->valuestring) : NULL,
+        volume_usd && !cJSON_IsNull(volume_usd) ? strdup(volume_usd->valuestring) : NULL,
+        untracked_volume_usd && !cJSON_IsNull(untracked_volume_usd) ? strdup(untracked_volume_usd->valuestring) : NULL,
+        fees_usd && !cJSON_IsNull(fees_usd) ? strdup(fees_usd->valuestring) : NULL,
         tx_count ? tx_count_local_nonprim : NULL,
         pool_count ? pool_count_local_nonprim : NULL,
-        total_value_locked ? strdup(total_value_locked->valuestring) : NULL,
-        total_value_locked_usd ? strdup(total_value_locked_usd->valuestring) : NULL,
-        total_value_locked_usd_untracked ? strdup(total_value_locked_usd_untracked->valuestring) : NULL,
-        derived_eth ? strdup(derived_eth->valuestring) : NULL,
+        total_value_locked && !cJSON_IsNull(total_value_locked) ? strdup(total_value_locked->valuestring) : NULL,
+        total_value_locked_usd && !cJSON_IsNull(total_value_locked_usd) ? strdup(total_value_locked_usd->valuestring) : NULL,
+        total_value_locked_usd_untracked && !cJSON_IsNull(total_value_locked_usd_untracked) ? strdup(total_value_locked_usd_untracked->valuestring) : NULL,
+        derived_eth && !cJSON_IsNull(derived_eth) ? strdup(derived_eth->valuestring) : NULL,
         whitelist_pools ? whitelist_poolsList : NULL,
-        token_symbol ? strdup(token_symbol->valuestring) : NULL
+        token_symbol && !cJSON_IsNull(token_symbol) ? strdup(token_symbol->valuestring) : NULL
         );
 
     return uniswap_v3_token_dto_local_var;

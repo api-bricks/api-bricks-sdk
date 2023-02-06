@@ -6,6 +6,7 @@ import enum
 
 
 class PathValues(str, enum.Enum):
+    METADATA_CHAINS = "/metadata/chains"
     DAPPS_COW_ORDERS_HISTORICAL = "/dapps/cow/orders/historical"
     DAPPS_COW_ORDERS_CURRENT = "/dapps/cow/orders/current"
     DAPPS_COW_SETTLEMENTS_HISTORICAL = "/dapps/cow/settlements/historical"
@@ -80,6 +81,7 @@ class PathValues(str, enum.Enum):
     DAPPS_CURVE_VOTING_APPS_CURRENT = "/dapps/curve/votingApps/current"
     DAPPS_CURVE_WEEKLY_VOLUMES_HISTORICAL = "/dapps/curve/weeklyVolumes/historical"
     DAPPS_CURVE_WEEKLY_VOLUMES_CURRENT = "/dapps/curve/weeklyVolumes/current"
+    METADATA_DAPPS = "/metadata/dapps"
     DAPPS_DEX_BATCHES_HISTORICAL = "/dapps/dex/batches/historical"
     DAPPS_DEX_BATCHES_CURRENT = "/dapps/dex/batches/current"
     DAPPS_DEX_DEPOSITS_HISTORICAL = "/dapps/dex/deposits/historical"

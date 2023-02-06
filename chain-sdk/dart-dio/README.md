@@ -169,6 +169,8 @@ Class | Method | HTTP request | Description
 [*DexApi*](doc/DexApi.md) | [**dexUsersCurrent**](doc/DexApi.md#dexuserscurrent) | **GET** /dapps/dex/users/current | Users (current)
 [*DexApi*](doc/DexApi.md) | [**dexWithdrawRequestsCurrent**](doc/DexApi.md#dexwithdrawrequestscurrent) | **GET** /dapps/dex/withdrawRequests/current | WithdrawRequests (current)
 [*DexApi*](doc/DexApi.md) | [**dexWithdrawsCurrent**](doc/DexApi.md#dexwithdrawscurrent) | **GET** /dapps/dex/withdraws/current | Withdraws (current)
+[*MetadataApi*](doc/MetadataApi.md) | [**metadataChainsGet**](doc/MetadataApi.md#metadatachainsget) | **GET** /metadata/chains | List all chains.
+[*MetadataApi*](doc/MetadataApi.md) | [**metadataDappsGet**](doc/MetadataApi.md#metadatadappsget) | **GET** /metadata/dapps | List all decentralized applications.
 [*SushiswapApi*](doc/SushiswapApi.md) | [**sushiswapBundlesCurrent**](doc/SushiswapApi.md#sushiswapbundlescurrent) | **GET** /dapps/sushiswap/bundles/current | Bundles (current)
 [*SushiswapApi*](doc/SushiswapApi.md) | [**sushiswapBurnsCurrent**](doc/SushiswapApi.md#sushiswapburnscurrent) | **GET** /dapps/sushiswap/burns/current | Burns (current)
 [*SushiswapApi*](doc/SushiswapApi.md) | [**sushiswapDayDataCurrent**](doc/SushiswapApi.md#sushiswapdaydatacurrent) | **GET** /dapps/sushiswap/dayData/current | DayData (current)

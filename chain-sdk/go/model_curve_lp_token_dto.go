@@ -16,6 +16,9 @@ import (
 	"time"
 )
 
+// checks if the CurveLpTokenDTO type satisfies the MappedNullable interface at compile time
+var _ MappedNullable = &CurveLpTokenDTO{}
+
 // CurveLpTokenDTO struct for CurveLpTokenDTO
 type CurveLpTokenDTO struct {
 	EntryTime *time.Time `json:"entry_time,omitempty"`
@@ -70,7 +73,7 @@ func (o *CurveLpTokenDTO) GetEntryTime() time.Time {
 // and a boolean to check if the value has been set.
 func (o *CurveLpTokenDTO) GetEntryTimeOk() (*time.Time, bool) {
 	if o == nil || isNil(o.EntryTime) {
-    return nil, false
+		return nil, false
 	}
 	return o.EntryTime, true
 }
@@ -102,7 +105,7 @@ func (o *CurveLpTokenDTO) GetRecvTime() time.Time {
 // and a boolean to check if the value has been set.
 func (o *CurveLpTokenDTO) GetRecvTimeOk() (*time.Time, bool) {
 	if o == nil || isNil(o.RecvTime) {
-    return nil, false
+		return nil, false
 	}
 	return o.RecvTime, true
 }
@@ -134,7 +137,7 @@ func (o *CurveLpTokenDTO) GetBlockNumber() int64 {
 // and a boolean to check if the value has been set.
 func (o *CurveLpTokenDTO) GetBlockNumberOk() (*int64, bool) {
 	if o == nil || isNil(o.BlockNumber) {
-    return nil, false
+		return nil, false
 	}
 	return o.BlockNumber, true
 }
@@ -167,7 +170,7 @@ func (o *CurveLpTokenDTO) GetId() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CurveLpTokenDTO) GetIdOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Id.Get(), o.Id.IsSet()
 }
@@ -209,7 +212,7 @@ func (o *CurveLpTokenDTO) GetAddress() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CurveLpTokenDTO) GetAddressOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Address.Get(), o.Address.IsSet()
 }
@@ -251,7 +254,7 @@ func (o *CurveLpTokenDTO) GetDecimals() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CurveLpTokenDTO) GetDecimalsOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Decimals.Get(), o.Decimals.IsSet()
 }
@@ -293,7 +296,7 @@ func (o *CurveLpTokenDTO) GetName() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CurveLpTokenDTO) GetNameOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Name.Get(), o.Name.IsSet()
 }
@@ -335,7 +338,7 @@ func (o *CurveLpTokenDTO) GetSymbol() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CurveLpTokenDTO) GetSymbolOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Symbol.Get(), o.Symbol.IsSet()
 }
@@ -377,7 +380,7 @@ func (o *CurveLpTokenDTO) GetGauge() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CurveLpTokenDTO) GetGaugeOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Gauge.Get(), o.Gauge.IsSet()
 }
@@ -419,7 +422,7 @@ func (o *CurveLpTokenDTO) GetPool() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CurveLpTokenDTO) GetPoolOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Pool.Get(), o.Pool.IsSet()
 }
@@ -460,7 +463,7 @@ func (o *CurveLpTokenDTO) GetVid() int64 {
 // and a boolean to check if the value has been set.
 func (o *CurveLpTokenDTO) GetVidOk() (*int64, bool) {
 	if o == nil || isNil(o.Vid) {
-    return nil, false
+		return nil, false
 	}
 	return o.Vid, true
 }
@@ -480,6 +483,14 @@ func (o *CurveLpTokenDTO) SetVid(v int64) {
 }
 
 func (o CurveLpTokenDTO) MarshalJSON() ([]byte, error) {
+	toSerialize,err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
+}
+
+func (o CurveLpTokenDTO) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
 	if !isNil(o.EntryTime) {
 		toSerialize["entry_time"] = o.EntryTime
@@ -514,7 +525,7 @@ func (o CurveLpTokenDTO) MarshalJSON() ([]byte, error) {
 	if !isNil(o.Vid) {
 		toSerialize["vid"] = o.Vid
 	}
-	return json.Marshal(toSerialize)
+	return toSerialize, nil
 }
 
 type NullableCurveLpTokenDTO struct {

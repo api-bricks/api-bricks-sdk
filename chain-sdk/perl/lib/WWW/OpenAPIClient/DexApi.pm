@@ -255,42 +255,42 @@ sub dex_get_batches__historical {
 #
 # Deposits (historical)
 #
-# @param int $start_block  (optional)
-# @param int $end_block  (optional)
-# @param DATE_TIME $start_date  (optional)
-# @param DATE_TIME $end_date  (optional)
-# @param string $id  (optional)
-# @param string $user  (optional)
+# @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+# @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+# @param DATE_TIME $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+# @param DATE_TIME $end_date The end date of timeframe. (optional)
+# @param string $id Identifier, format: (transaction hash)-(token id). (optional)
+# @param string $user User address. (optional)
 {
     my $params = {
     'start_block' => {
         data_type => 'int',
-        description => '',
+        description => 'The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.',
         required => '0',
     },
     'end_block' => {
         data_type => 'int',
-        description => '',
+        description => 'The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).',
         required => '0',
     },
     'start_date' => {
         data_type => 'DATE_TIME',
-        description => '',
+        description => 'The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.',
         required => '0',
     },
     'end_date' => {
         data_type => 'DATE_TIME',
-        description => '',
+        description => 'The end date of timeframe.',
         required => '0',
     },
     'id' => {
         data_type => 'string',
-        description => '',
+        description => 'Identifier, format: (transaction hash)-(token id).',
         required => '0',
     },
     'user' => {
         data_type => 'string',
-        description => '',
+        description => 'User address.',
         required => '0',
     },
     };
@@ -370,48 +370,48 @@ sub dex_get_deposits__historical {
 #
 # Orders (historical)
 #
-# @param int $start_block  (optional)
-# @param int $end_block  (optional)
-# @param DATE_TIME $start_date  (optional)
-# @param DATE_TIME $end_date  (optional)
-# @param string $id  (optional)
-# @param string $buy_token  (optional)
-# @param string $sell_token  (optional)
+# @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+# @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+# @param DATE_TIME $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+# @param DATE_TIME $end_date The end date of timeframe. (optional)
+# @param string $id Identifier, format: (owner address)-(order id) (optional)
+# @param string $buy_token Identifier of token that was bought. (optional)
+# @param string $sell_token Identifier of token that was sold. (optional)
 {
     my $params = {
     'start_block' => {
         data_type => 'int',
-        description => '',
+        description => 'The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.',
         required => '0',
     },
     'end_block' => {
         data_type => 'int',
-        description => '',
+        description => 'The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).',
         required => '0',
     },
     'start_date' => {
         data_type => 'DATE_TIME',
-        description => '',
+        description => 'The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.',
         required => '0',
     },
     'end_date' => {
         data_type => 'DATE_TIME',
-        description => '',
+        description => 'The end date of timeframe.',
         required => '0',
     },
     'id' => {
         data_type => 'string',
-        description => '',
+        description => 'Identifier, format: (owner address)-(order id)',
         required => '0',
     },
     'buy_token' => {
         data_type => 'string',
-        description => '',
+        description => 'Identifier of token that was bought.',
         required => '0',
     },
     'sell_token' => {
         data_type => 'string',
-        description => '',
+        description => 'Identifier of token that was sold.',
         required => '0',
     },
     };
@@ -496,36 +496,36 @@ sub dex_get_orders__historical {
 #
 # Prices (historical)
 #
-# @param int $start_block  (optional)
-# @param int $end_block  (optional)
-# @param DATE_TIME $start_date  (optional)
-# @param DATE_TIME $end_date  (optional)
-# @param string $id  (optional)
+# @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+# @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+# @param DATE_TIME $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+# @param DATE_TIME $end_date The end date of timeframe. (optional)
+# @param string $id Identifier, format: (token id)-(batch id). (optional)
 {
     my $params = {
     'start_block' => {
         data_type => 'int',
-        description => '',
+        description => 'The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.',
         required => '0',
     },
     'end_block' => {
         data_type => 'int',
-        description => '',
+        description => 'The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).',
         required => '0',
     },
     'start_date' => {
         data_type => 'DATE_TIME',
-        description => '',
+        description => 'The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.',
         required => '0',
     },
     'end_date' => {
         data_type => 'DATE_TIME',
-        description => '',
+        description => 'The end date of timeframe.',
         required => '0',
     },
     'id' => {
         data_type => 'string',
-        description => '',
+        description => 'Identifier, format: (token id)-(batch id).',
         required => '0',
     },
     };
@@ -1175,37 +1175,37 @@ sub dex_get_users__historical {
 #
 # WithdrawRequests (historical)
 #
-# @param int $start_block  (optional)
-# @param int $end_block  (optional)
-# @param DATE_TIME $start_date  (optional)
-# @param DATE_TIME $end_date  (optional)
-# @param string $id  (optional)
+# @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+# @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+# @param DATE_TIME $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+# @param DATE_TIME $end_date The end date of timeframe. (optional)
+# @param string $id Identifier, format: (transaction hash)-(id). (optional)
 # @param string $user  (optional)
 {
     my $params = {
     'start_block' => {
         data_type => 'int',
-        description => '',
+        description => 'The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.',
         required => '0',
     },
     'end_block' => {
         data_type => 'int',
-        description => '',
+        description => 'The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).',
         required => '0',
     },
     'start_date' => {
         data_type => 'DATE_TIME',
-        description => '',
+        description => 'The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.',
         required => '0',
     },
     'end_date' => {
         data_type => 'DATE_TIME',
-        description => '',
+        description => 'The end date of timeframe.',
         required => '0',
     },
     'id' => {
         data_type => 'string',
-        description => '',
+        description => 'Identifier, format: (transaction hash)-(id).',
         required => '0',
     },
     'user' => {
@@ -1290,37 +1290,37 @@ sub dex_get_withdraw_requests__historical {
 #
 # Withdraws (historical)
 #
-# @param int $start_block  (optional)
-# @param int $end_block  (optional)
-# @param DATE_TIME $start_date  (optional)
-# @param DATE_TIME $end_date  (optional)
-# @param string $id  (optional)
+# @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+# @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+# @param DATE_TIME $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+# @param DATE_TIME $end_date The end date of timeframe. (optional)
+# @param string $id Identifier, format: (transaction hash)-(id). (optional)
 # @param string $user  (optional)
 {
     my $params = {
     'start_block' => {
         data_type => 'int',
-        description => '',
+        description => 'The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.',
         required => '0',
     },
     'end_block' => {
         data_type => 'int',
-        description => '',
+        description => 'The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).',
         required => '0',
     },
     'start_date' => {
         data_type => 'DATE_TIME',
-        description => '',
+        description => 'The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.',
         required => '0',
     },
     'end_date' => {
         data_type => 'DATE_TIME',
-        description => '',
+        description => 'The end date of timeframe.',
         required => '0',
     },
     'id' => {
         data_type => 'string',
-        description => '',
+        description => 'Identifier, format: (transaction hash)-(id).',
         required => '0',
     },
     'user' => {

@@ -154,13 +154,13 @@ Gets trades.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startBlock** | **integer** |  | [optional] [default to null]
- **endBlock** | **integer** |  | [optional] [default to null]
- **startDate** | **string** |  | [optional] [default to null]
- **endDate** | **string** |  | [optional] [default to null]
- **id** | **string** |  | [optional] [default to null]
- **sellToken** | **string** |  | [optional] [default to null]
- **buyToken** | **string** |  | [optional] [default to null]
+ **startBlock** | **integer** | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] [default to null]
+ **endBlock** | **integer** | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] [default to null]
+ **startDate** | **string** | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] [default to null]
+ **endDate** | **string** | The end date of timeframe. | [optional] [default to null]
+ **id** | **string** | Identifier, format: (order id)|(transaction hash)|(event index). | [optional] [default to null]
+ **sellToken** | **string** | Address of token that is sold. | [optional] [default to null]
+ **buyToken** | **string** | Address of token that is bought. | [optional] [default to null]
 
 ### Return type
 

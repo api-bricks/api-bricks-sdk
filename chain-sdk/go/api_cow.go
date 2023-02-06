@@ -105,19 +105,19 @@ func (a *CowApiService) CowGetOrdersHistoricalExecute(r ApiCowGetOrdersHistorica
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		localVarQueryParams.Add("id", parameterToString(*r.id, ""))
+		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -254,19 +254,19 @@ func (a *CowApiService) CowGetSettlementsHistoricalExecute(r ApiCowGetSettlement
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		localVarQueryParams.Add("id", parameterToString(*r.id, ""))
+		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -424,28 +424,28 @@ func (a *CowApiService) CowGetTokensHistoricalExecute(r ApiCowGetTokensHistorica
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		localVarQueryParams.Add("id", parameterToString(*r.id, ""))
+		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
 	}
 	if r.address != nil {
-		localVarQueryParams.Add("address", parameterToString(*r.address, ""))
+		parameterAddToQuery(localVarQueryParams, "address", r.address, "")
 	}
 	if r.name != nil {
-		localVarQueryParams.Add("name", parameterToString(*r.name, ""))
+		parameterAddToQuery(localVarQueryParams, "name", r.name, "")
 	}
 	if r.symbol != nil {
-		localVarQueryParams.Add("symbol", parameterToString(*r.symbol, ""))
+		parameterAddToQuery(localVarQueryParams, "symbol", r.symbol, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -513,36 +513,43 @@ type ApiCowGetTradesHistoricalRequest struct {
 	buyToken *string
 }
 
+// The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
 func (r ApiCowGetTradesHistoricalRequest) StartBlock(startBlock int64) ApiCowGetTradesHistoricalRequest {
 	r.startBlock = &startBlock
 	return r
 }
 
+// The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
 func (r ApiCowGetTradesHistoricalRequest) EndBlock(endBlock int64) ApiCowGetTradesHistoricalRequest {
 	r.endBlock = &endBlock
 	return r
 }
 
+// The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
 func (r ApiCowGetTradesHistoricalRequest) StartDate(startDate time.Time) ApiCowGetTradesHistoricalRequest {
 	r.startDate = &startDate
 	return r
 }
 
+// The end date of timeframe.
 func (r ApiCowGetTradesHistoricalRequest) EndDate(endDate time.Time) ApiCowGetTradesHistoricalRequest {
 	r.endDate = &endDate
 	return r
 }
 
+// Identifier, format: (order id)|(transaction hash)|(event index).
 func (r ApiCowGetTradesHistoricalRequest) Id(id string) ApiCowGetTradesHistoricalRequest {
 	r.id = &id
 	return r
 }
 
+// Address of token that is sold.
 func (r ApiCowGetTradesHistoricalRequest) SellToken(sellToken string) ApiCowGetTradesHistoricalRequest {
 	r.sellToken = &sellToken
 	return r
 }
 
+// Address of token that is bought.
 func (r ApiCowGetTradesHistoricalRequest) BuyToken(buyToken string) ApiCowGetTradesHistoricalRequest {
 	r.buyToken = &buyToken
 	return r
@@ -589,25 +596,25 @@ func (a *CowApiService) CowGetTradesHistoricalExecute(r ApiCowGetTradesHistorica
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		localVarQueryParams.Add("id", parameterToString(*r.id, ""))
+		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
 	}
 	if r.sellToken != nil {
-		localVarQueryParams.Add("sell_token", parameterToString(*r.sellToken, ""))
+		parameterAddToQuery(localVarQueryParams, "sell_token", r.sellToken, "")
 	}
 	if r.buyToken != nil {
-		localVarQueryParams.Add("buy_token", parameterToString(*r.buyToken, ""))
+		parameterAddToQuery(localVarQueryParams, "buy_token", r.buyToken, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -751,22 +758,22 @@ func (a *CowApiService) CowGetUsersHistoricalExecute(r ApiCowGetUsersHistoricalR
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		localVarQueryParams.Add("id", parameterToString(*r.id, ""))
+		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
 	}
 	if r.address != nil {
-		localVarQueryParams.Add("address", parameterToString(*r.address, ""))
+		parameterAddToQuery(localVarQueryParams, "address", r.address, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}

@@ -195,3 +195,5 @@ export class SushiswapSwapDTO {
     }
 }
 
+export namespace SushiswapSwapDTO {
+}

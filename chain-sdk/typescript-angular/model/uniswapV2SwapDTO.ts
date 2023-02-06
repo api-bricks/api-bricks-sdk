@@ -82,4 +82,7 @@ export interface UniswapV2SwapDTO {
     readonly pool_id?: string | null;
     readonly transaction_id?: string | null;
 }
+export namespace UniswapV2SwapDTO {
+}
+
 

@@ -323,17 +323,17 @@ object Example extends App {
 
     val apiInvoker = ApiInvoker()
     val apiInstance = DexApi("https://onchain.coinapi.io")
-    val startBlock: Long = 789 // Long | 
+    val startBlock: Long = 789 // Long | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
 
-    val endBlock: Long = 789 // Long | 
+    val endBlock: Long = 789 // Long | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
 
-    val startDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
+    val startDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
 
-    val endDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
+    val endDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | The end date of timeframe.
 
-    val id: String = id_example // String | 
+    val id: String = id_example // String | Identifier, format: (transaction hash)-(token id).
 
-    val user: String = user_example // String | 
+    val user: String = user_example // String | User address.
     
     val request = apiInstance.dexGetDepositsHistorical(startBlock, endBlock, startDate, endDate, id, user)
     val response = apiInvoker.execute(request)
@@ -363,12 +363,12 @@ object Example extends App {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startBlock** | **Long**|  | [optional]
- **endBlock** | **Long**|  | [optional]
- **startDate** | **OffsetDateTime**|  | [optional]
- **endDate** | **OffsetDateTime**|  | [optional]
- **id** | **String**|  | [optional]
- **user** | **String**|  | [optional]
+ **startBlock** | **Long**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional]
+ **endBlock** | **Long**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional]
+ **startDate** | **OffsetDateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional]
+ **endDate** | **OffsetDateTime**| The end date of timeframe. | [optional]
+ **id** | **String**| Identifier, format: (transaction hash)-(token id). | [optional]
+ **user** | **String**| User address. | [optional]
 
 ### Return type
 
@@ -419,19 +419,19 @@ object Example extends App {
 
     val apiInvoker = ApiInvoker()
     val apiInstance = DexApi("https://onchain.coinapi.io")
-    val startBlock: Long = 789 // Long | 
+    val startBlock: Long = 789 // Long | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
 
-    val endBlock: Long = 789 // Long | 
+    val endBlock: Long = 789 // Long | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
 
-    val startDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
+    val startDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
 
-    val endDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
+    val endDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | The end date of timeframe.
 
-    val id: String = id_example // String | 
+    val id: String = id_example // String | Identifier, format: (owner address)-(order id)
 
-    val buyToken: String = buyToken_example // String | 
+    val buyToken: String = buyToken_example // String | Identifier of token that was bought.
 
-    val sellToken: String = sellToken_example // String | 
+    val sellToken: String = sellToken_example // String | Identifier of token that was sold.
     
     val request = apiInstance.dexGetOrdersHistorical(startBlock, endBlock, startDate, endDate, id, buyToken, sellToken)
     val response = apiInvoker.execute(request)
@@ -461,13 +461,13 @@ object Example extends App {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startBlock** | **Long**|  | [optional]
- **endBlock** | **Long**|  | [optional]
- **startDate** | **OffsetDateTime**|  | [optional]
- **endDate** | **OffsetDateTime**|  | [optional]
- **id** | **String**|  | [optional]
- **buyToken** | **String**|  | [optional]
- **sellToken** | **String**|  | [optional]
+ **startBlock** | **Long**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional]
+ **endBlock** | **Long**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional]
+ **startDate** | **OffsetDateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional]
+ **endDate** | **OffsetDateTime**| The end date of timeframe. | [optional]
+ **id** | **String**| Identifier, format: (owner address)-(order id) | [optional]
+ **buyToken** | **String**| Identifier of token that was bought. | [optional]
+ **sellToken** | **String**| Identifier of token that was sold. | [optional]
 
 ### Return type
 
@@ -518,15 +518,15 @@ object Example extends App {
 
     val apiInvoker = ApiInvoker()
     val apiInstance = DexApi("https://onchain.coinapi.io")
-    val startBlock: Long = 789 // Long | 
+    val startBlock: Long = 789 // Long | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
 
-    val endBlock: Long = 789 // Long | 
+    val endBlock: Long = 789 // Long | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
 
-    val startDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
+    val startDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
 
-    val endDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
+    val endDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | The end date of timeframe.
 
-    val id: String = id_example // String | 
+    val id: String = id_example // String | Identifier, format: (token id)-(batch id).
     
     val request = apiInstance.dexGetPricesHistorical(startBlock, endBlock, startDate, endDate, id)
     val response = apiInvoker.execute(request)
@@ -556,11 +556,11 @@ object Example extends App {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startBlock** | **Long**|  | [optional]
- **endBlock** | **Long**|  | [optional]
- **startDate** | **OffsetDateTime**|  | [optional]
- **endDate** | **OffsetDateTime**|  | [optional]
- **id** | **String**|  | [optional]
+ **startBlock** | **Long**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional]
+ **endBlock** | **Long**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional]
+ **startDate** | **OffsetDateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional]
+ **endDate** | **OffsetDateTime**| The end date of timeframe. | [optional]
+ **id** | **String**| Identifier, format: (token id)-(batch id). | [optional]
 
 ### Return type
 
@@ -1091,15 +1091,15 @@ object Example extends App {
 
     val apiInvoker = ApiInvoker()
     val apiInstance = DexApi("https://onchain.coinapi.io")
-    val startBlock: Long = 789 // Long | 
+    val startBlock: Long = 789 // Long | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
 
-    val endBlock: Long = 789 // Long | 
+    val endBlock: Long = 789 // Long | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
 
-    val startDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
+    val startDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
 
-    val endDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
+    val endDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | The end date of timeframe.
 
-    val id: String = id_example // String | 
+    val id: String = id_example // String | Identifier, format: (transaction hash)-(id).
 
     val user: String = user_example // String | 
     
@@ -1131,11 +1131,11 @@ object Example extends App {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startBlock** | **Long**|  | [optional]
- **endBlock** | **Long**|  | [optional]
- **startDate** | **OffsetDateTime**|  | [optional]
- **endDate** | **OffsetDateTime**|  | [optional]
- **id** | **String**|  | [optional]
+ **startBlock** | **Long**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional]
+ **endBlock** | **Long**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional]
+ **startDate** | **OffsetDateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional]
+ **endDate** | **OffsetDateTime**| The end date of timeframe. | [optional]
+ **id** | **String**| Identifier, format: (transaction hash)-(id). | [optional]
  **user** | **String**|  | [optional]
 
 ### Return type
@@ -1187,15 +1187,15 @@ object Example extends App {
 
     val apiInvoker = ApiInvoker()
     val apiInstance = DexApi("https://onchain.coinapi.io")
-    val startBlock: Long = 789 // Long | 
+    val startBlock: Long = 789 // Long | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
 
-    val endBlock: Long = 789 // Long | 
+    val endBlock: Long = 789 // Long | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
 
-    val startDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
+    val startDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
 
-    val endDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
+    val endDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | The end date of timeframe.
 
-    val id: String = id_example // String | 
+    val id: String = id_example // String | Identifier, format: (transaction hash)-(id).
 
     val user: String = user_example // String | 
     
@@ -1227,11 +1227,11 @@ object Example extends App {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startBlock** | **Long**|  | [optional]
- **endBlock** | **Long**|  | [optional]
- **startDate** | **OffsetDateTime**|  | [optional]
- **endDate** | **OffsetDateTime**|  | [optional]
- **id** | **String**|  | [optional]
+ **startBlock** | **Long**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional]
+ **endBlock** | **Long**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional]
+ **startDate** | **OffsetDateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional]
+ **endDate** | **OffsetDateTime**| The end date of timeframe. | [optional]
+ **id** | **String**| Identifier, format: (transaction hash)-(id). | [optional]
  **user** | **String**|  | [optional]
 
 ### Return type

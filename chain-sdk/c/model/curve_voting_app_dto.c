@@ -243,7 +243,7 @@ curve_voting_app_dto_t *curve_voting_app_dto_parseFromJSON(cJSON *curve_voting_a
     // curve_voting_app_dto->entry_time
     cJSON *entry_time = cJSON_GetObjectItemCaseSensitive(curve_voting_app_dtoJSON, "entry_time");
     if (entry_time) { 
-    if(!cJSON_IsString(entry_time))
+    if(!cJSON_IsString(entry_time) && !cJSON_IsNull(entry_time))
     {
     goto end; //DateTime
     }
@@ -252,7 +252,7 @@ curve_voting_app_dto_t *curve_voting_app_dto_parseFromJSON(cJSON *curve_voting_a
     // curve_voting_app_dto->recv_time
     cJSON *recv_time = cJSON_GetObjectItemCaseSensitive(curve_voting_app_dtoJSON, "recv_time");
     if (recv_time) { 
-    if(!cJSON_IsString(recv_time))
+    if(!cJSON_IsString(recv_time) && !cJSON_IsNull(recv_time))
     {
     goto end; //DateTime
     }
@@ -270,7 +270,7 @@ curve_voting_app_dto_t *curve_voting_app_dto_parseFromJSON(cJSON *curve_voting_a
     // curve_voting_app_dto->id
     cJSON *id = cJSON_GetObjectItemCaseSensitive(curve_voting_app_dtoJSON, "id");
     if (id) { 
-    if(!cJSON_IsString(id))
+    if(!cJSON_IsString(id) && !cJSON_IsNull(id))
     {
     goto end; //String
     }
@@ -279,7 +279,7 @@ curve_voting_app_dto_t *curve_voting_app_dto_parseFromJSON(cJSON *curve_voting_a
     // curve_voting_app_dto->address
     cJSON *address = cJSON_GetObjectItemCaseSensitive(curve_voting_app_dtoJSON, "address");
     if (address) { 
-    if(!cJSON_IsString(address))
+    if(!cJSON_IsString(address) && !cJSON_IsNull(address))
     {
     goto end; //String
     }
@@ -288,7 +288,7 @@ curve_voting_app_dto_t *curve_voting_app_dto_parseFromJSON(cJSON *curve_voting_a
     // curve_voting_app_dto->codename
     cJSON *codename = cJSON_GetObjectItemCaseSensitive(curve_voting_app_dtoJSON, "codename");
     if (codename) { 
-    if(!cJSON_IsString(codename))
+    if(!cJSON_IsString(codename) && !cJSON_IsNull(codename))
     {
     goto end; //String
     }
@@ -297,7 +297,7 @@ curve_voting_app_dto_t *curve_voting_app_dto_parseFromJSON(cJSON *curve_voting_a
     // curve_voting_app_dto->minimum_balance
     cJSON *minimum_balance = cJSON_GetObjectItemCaseSensitive(curve_voting_app_dtoJSON, "minimum_balance");
     if (minimum_balance) { 
-    if(!cJSON_IsString(minimum_balance))
+    if(!cJSON_IsString(minimum_balance) && !cJSON_IsNull(minimum_balance))
     {
     goto end; //String
     }
@@ -306,7 +306,7 @@ curve_voting_app_dto_t *curve_voting_app_dto_parseFromJSON(cJSON *curve_voting_a
     // curve_voting_app_dto->minimum_quorum
     cJSON *minimum_quorum = cJSON_GetObjectItemCaseSensitive(curve_voting_app_dtoJSON, "minimum_quorum");
     if (minimum_quorum) { 
-    if(!cJSON_IsString(minimum_quorum))
+    if(!cJSON_IsString(minimum_quorum) && !cJSON_IsNull(minimum_quorum))
     {
     goto end; //String
     }
@@ -315,7 +315,7 @@ curve_voting_app_dto_t *curve_voting_app_dto_parseFromJSON(cJSON *curve_voting_a
     // curve_voting_app_dto->minimum_time
     cJSON *minimum_time = cJSON_GetObjectItemCaseSensitive(curve_voting_app_dtoJSON, "minimum_time");
     if (minimum_time) { 
-    if(!cJSON_IsString(minimum_time))
+    if(!cJSON_IsString(minimum_time) && !cJSON_IsNull(minimum_time))
     {
     goto end; //String
     }
@@ -324,7 +324,7 @@ curve_voting_app_dto_t *curve_voting_app_dto_parseFromJSON(cJSON *curve_voting_a
     // curve_voting_app_dto->required_support
     cJSON *required_support = cJSON_GetObjectItemCaseSensitive(curve_voting_app_dtoJSON, "required_support");
     if (required_support) { 
-    if(!cJSON_IsString(required_support))
+    if(!cJSON_IsString(required_support) && !cJSON_IsNull(required_support))
     {
     goto end; //String
     }
@@ -333,7 +333,7 @@ curve_voting_app_dto_t *curve_voting_app_dto_parseFromJSON(cJSON *curve_voting_a
     // curve_voting_app_dto->vote_time
     cJSON *vote_time = cJSON_GetObjectItemCaseSensitive(curve_voting_app_dtoJSON, "vote_time");
     if (vote_time) { 
-    if(!cJSON_IsString(vote_time))
+    if(!cJSON_IsString(vote_time) && !cJSON_IsNull(vote_time))
     {
     goto end; //String
     }
@@ -342,7 +342,7 @@ curve_voting_app_dto_t *curve_voting_app_dto_parseFromJSON(cJSON *curve_voting_a
     // curve_voting_app_dto->proposal_count
     cJSON *proposal_count = cJSON_GetObjectItemCaseSensitive(curve_voting_app_dtoJSON, "proposal_count");
     if (proposal_count) { 
-    if(!cJSON_IsString(proposal_count))
+    if(!cJSON_IsString(proposal_count) && !cJSON_IsNull(proposal_count))
     {
     goto end; //String
     }
@@ -351,7 +351,7 @@ curve_voting_app_dto_t *curve_voting_app_dto_parseFromJSON(cJSON *curve_voting_a
     // curve_voting_app_dto->vote_count
     cJSON *vote_count = cJSON_GetObjectItemCaseSensitive(curve_voting_app_dtoJSON, "vote_count");
     if (vote_count) { 
-    if(!cJSON_IsString(vote_count))
+    if(!cJSON_IsString(vote_count) && !cJSON_IsNull(vote_count))
     {
     goto end; //String
     }
@@ -360,7 +360,7 @@ curve_voting_app_dto_t *curve_voting_app_dto_parseFromJSON(cJSON *curve_voting_a
     // curve_voting_app_dto->token
     cJSON *token = cJSON_GetObjectItemCaseSensitive(curve_voting_app_dtoJSON, "token");
     if (token) { 
-    if(!cJSON_IsString(token))
+    if(!cJSON_IsString(token) && !cJSON_IsNull(token))
     {
     goto end; //String
     }
@@ -377,20 +377,20 @@ curve_voting_app_dto_t *curve_voting_app_dto_parseFromJSON(cJSON *curve_voting_a
 
 
     curve_voting_app_dto_local_var = curve_voting_app_dto_create (
-        entry_time ? strdup(entry_time->valuestring) : NULL,
-        recv_time ? strdup(recv_time->valuestring) : NULL,
+        entry_time && !cJSON_IsNull(entry_time) ? strdup(entry_time->valuestring) : NULL,
+        recv_time && !cJSON_IsNull(recv_time) ? strdup(recv_time->valuestring) : NULL,
         block_number ? block_number->valuedouble : 0,
-        id ? strdup(id->valuestring) : NULL,
-        address ? strdup(address->valuestring) : NULL,
-        codename ? strdup(codename->valuestring) : NULL,
-        minimum_balance ? strdup(minimum_balance->valuestring) : NULL,
-        minimum_quorum ? strdup(minimum_quorum->valuestring) : NULL,
-        minimum_time ? strdup(minimum_time->valuestring) : NULL,
-        required_support ? strdup(required_support->valuestring) : NULL,
-        vote_time ? strdup(vote_time->valuestring) : NULL,
-        proposal_count ? strdup(proposal_count->valuestring) : NULL,
-        vote_count ? strdup(vote_count->valuestring) : NULL,
-        token ? strdup(token->valuestring) : NULL,
+        id && !cJSON_IsNull(id) ? strdup(id->valuestring) : NULL,
+        address && !cJSON_IsNull(address) ? strdup(address->valuestring) : NULL,
+        codename && !cJSON_IsNull(codename) ? strdup(codename->valuestring) : NULL,
+        minimum_balance && !cJSON_IsNull(minimum_balance) ? strdup(minimum_balance->valuestring) : NULL,
+        minimum_quorum && !cJSON_IsNull(minimum_quorum) ? strdup(minimum_quorum->valuestring) : NULL,
+        minimum_time && !cJSON_IsNull(minimum_time) ? strdup(minimum_time->valuestring) : NULL,
+        required_support && !cJSON_IsNull(required_support) ? strdup(required_support->valuestring) : NULL,
+        vote_time && !cJSON_IsNull(vote_time) ? strdup(vote_time->valuestring) : NULL,
+        proposal_count && !cJSON_IsNull(proposal_count) ? strdup(proposal_count->valuestring) : NULL,
+        vote_count && !cJSON_IsNull(vote_count) ? strdup(vote_count->valuestring) : NULL,
+        token && !cJSON_IsNull(token) ? strdup(token->valuestring) : NULL,
         vid ? vid->valuedouble : 0
         );
 

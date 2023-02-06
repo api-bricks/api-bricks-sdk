@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.time.OffsetDateTime;
 import org.openapitools.jackson.nullable.JsonNullable;
@@ -50,7 +48,7 @@ import org.openapitools.client.JSON;
 /**
  * CurveVotingAppDTO
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-30T14:42:00.397192Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-06T14:47:06.037855Z[Etc/UTC]")
 public class CurveVotingAppDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -126,7 +124,6 @@ public class CurveVotingAppDTO {
    * @return entryTime
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public OffsetDateTime getEntryTime() {
     return entryTime;
@@ -149,7 +146,6 @@ public class CurveVotingAppDTO {
    * @return recvTime
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public OffsetDateTime getRecvTime() {
     return recvTime;
@@ -172,7 +168,6 @@ public class CurveVotingAppDTO {
    * @return blockNumber
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Number of block in which entity was recorded.")
 
   public Long getBlockNumber() {
     return blockNumber;
@@ -195,7 +190,6 @@ public class CurveVotingAppDTO {
    * @return id
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "App address.")
 
   public String getId() {
     return id;
@@ -218,7 +212,6 @@ public class CurveVotingAppDTO {
    * @return address
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getAddress() {
     return address;
@@ -241,7 +234,6 @@ public class CurveVotingAppDTO {
    * @return codename
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getCodename() {
     return codename;
@@ -264,7 +256,6 @@ public class CurveVotingAppDTO {
    * @return minimumBalance
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Minimum balance needed to create a proposal.")
 
   public String getMinimumBalance() {
     return minimumBalance;
@@ -287,7 +278,6 @@ public class CurveVotingAppDTO {
    * @return minimumQuorum
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Percentage of positive votes in total possible votes for a proposal to be accepted.")
 
   public String getMinimumQuorum() {
     return minimumQuorum;
@@ -310,7 +300,6 @@ public class CurveVotingAppDTO {
    * @return minimumTime
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Minimum time needed to pass between user's previous proposal and a user creating a new proposal.")
 
   public String getMinimumTime() {
     return minimumTime;
@@ -333,7 +322,6 @@ public class CurveVotingAppDTO {
    * @return requiredSupport
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Percentage of positive votes needed for a proposal to be accepted.")
 
   public String getRequiredSupport() {
     return requiredSupport;
@@ -356,7 +344,6 @@ public class CurveVotingAppDTO {
    * @return voteTime
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Seconds that a proposal will be open for vote (unless enough votes have been cast to make an early decision).")
 
   public String getVoteTime() {
     return voteTime;
@@ -379,7 +366,6 @@ public class CurveVotingAppDTO {
    * @return proposalCount
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Number of proposals created with this app.")
 
   public String getProposalCount() {
     return proposalCount;
@@ -402,7 +388,6 @@ public class CurveVotingAppDTO {
    * @return voteCount
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Number of votes received by all the proposals created with this app.")
 
   public String getVoteCount() {
     return voteCount;
@@ -425,7 +410,6 @@ public class CurveVotingAppDTO {
    * @return token
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Address of the token used for voting.")
 
   public String getToken() {
     return token;
@@ -448,7 +432,6 @@ public class CurveVotingAppDTO {
    * @return vid
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public Long getVid() {
     return vid;

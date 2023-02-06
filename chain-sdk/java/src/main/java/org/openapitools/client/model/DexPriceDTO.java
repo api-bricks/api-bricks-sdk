@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.time.OffsetDateTime;
 import org.openapitools.jackson.nullable.JsonNullable;
@@ -50,8 +48,7 @@ import org.openapitools.client.JSON;
 /**
  * Token price in conjuction with batch id.
  */
-@ApiModel(description = "Token price in conjuction with batch id.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-30T14:42:00.397192Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-06T14:47:06.037855Z[Etc/UTC]")
 public class DexPriceDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -115,7 +112,6 @@ public class DexPriceDTO {
    * @return entryTime
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public OffsetDateTime getEntryTime() {
     return entryTime;
@@ -138,7 +134,6 @@ public class DexPriceDTO {
    * @return recvTime
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public OffsetDateTime getRecvTime() {
     return recvTime;
@@ -161,7 +156,6 @@ public class DexPriceDTO {
    * @return blockNumber
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Number of block in which entity was recorded.")
 
   public Long getBlockNumber() {
     return blockNumber;
@@ -184,7 +178,6 @@ public class DexPriceDTO {
    * @return id
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Identifier, format: (token id)-(batch id).")
 
   public String getId() {
     return id;
@@ -207,7 +200,6 @@ public class DexPriceDTO {
    * @return token
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Token identifier.")
 
   public String getToken() {
     return token;
@@ -230,7 +222,6 @@ public class DexPriceDTO {
    * @return batchId
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Batch identifier.")
 
   public String getBatchId() {
     return batchId;
@@ -253,7 +244,6 @@ public class DexPriceDTO {
    * @return priceInOwlNumerator
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Price enumerator in OWL (derivative of the GNO token).")
 
   public String getPriceInOwlNumerator() {
     return priceInOwlNumerator;
@@ -276,7 +266,6 @@ public class DexPriceDTO {
    * @return priceInOwlDenominator
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Price denominator in OWL (derivative of the GNO token).")
 
   public String getPriceInOwlDenominator() {
     return priceInOwlDenominator;
@@ -299,7 +288,6 @@ public class DexPriceDTO {
    * @return volume
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Volume.")
 
   public String getVolume() {
     return volume;
@@ -322,7 +310,6 @@ public class DexPriceDTO {
    * @return createEpoch
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Create epoch.")
 
   public String getCreateEpoch() {
     return createEpoch;
@@ -345,7 +332,6 @@ public class DexPriceDTO {
    * @return txHash
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Transaction hash.")
 
   public String getTxHash() {
     return txHash;
@@ -368,7 +354,6 @@ public class DexPriceDTO {
    * @return vid
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public Long getVid() {
     return vid;

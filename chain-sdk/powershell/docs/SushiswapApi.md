@@ -261,12 +261,12 @@ Gets burns.
 
 ### Example
 ```powershell
-$StartBlock = 789 # Int64 |  (optional)
-$EndBlock = 789 # Int64 |  (optional)
-$StartDate = (Get-Date) # System.DateTime |  (optional)
-$EndDate = (Get-Date) # System.DateTime |  (optional)
-$Id = "MyId" # String |  (optional)
-$Pair = "MyPair" # String |  (optional)
+$StartBlock = 789 # Int64 | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+$EndBlock = 789 # Int64 | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+$StartDate = (Get-Date) # System.DateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+$EndDate = (Get-Date) # System.DateTime | The end date of timeframe. (optional)
+$Id = "MyId" # String | Identifier, format: (transaction id):(transaction.burns.length). (optional)
+$Pair = "MyPair" # String | Reference to pair. (optional)
 
 # Burns (historical)
 try {
@@ -281,12 +281,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **StartBlock** | **Int64**|  | [optional] 
- **EndBlock** | **Int64**|  | [optional] 
- **StartDate** | **System.DateTime**|  | [optional] 
- **EndDate** | **System.DateTime**|  | [optional] 
- **Id** | **String**|  | [optional] 
- **Pair** | **String**|  | [optional] 
+ **StartBlock** | **Int64**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
+ **EndBlock** | **Int64**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
+ **StartDate** | **System.DateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
+ **EndDate** | **System.DateTime**| The end date of timeframe. | [optional] 
+ **Id** | **String**| Identifier, format: (transaction id):(transaction.burns.length). | [optional] 
+ **Pair** | **String**| Reference to pair. | [optional] 
 
 ### Return type
 
@@ -485,13 +485,13 @@ Gets liquidityPositionSnapshots.
 
 ### Example
 ```powershell
-$StartBlock = 789 # Int64 |  (optional)
-$EndBlock = 789 # Int64 |  (optional)
-$StartDate = (Get-Date) # System.DateTime |  (optional)
-$EndDate = (Get-Date) # System.DateTime |  (optional)
-$Id = "MyId" # String |  (optional)
-$User = "MyUser" # String |  (optional)
-$Pair = "MyPair" # String |  (optional)
+$StartBlock = 789 # Int64 | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+$EndBlock = 789 # Int64 | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+$StartDate = (Get-Date) # System.DateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+$EndDate = (Get-Date) # System.DateTime | The end date of timeframe. (optional)
+$Id = "MyId" # String | Identifier, format: (pair address)-(user address)-(timestamp) (optional)
+$User = "MyUser" # String | Reference to user. (optional)
+$Pair = "MyPair" # String | Reference to the pair liquidity is being provided on. (optional)
 
 # LiquidityPositionSnapshots (historical)
 try {
@@ -506,13 +506,13 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **StartBlock** | **Int64**|  | [optional] 
- **EndBlock** | **Int64**|  | [optional] 
- **StartDate** | **System.DateTime**|  | [optional] 
- **EndDate** | **System.DateTime**|  | [optional] 
- **Id** | **String**|  | [optional] 
- **User** | **String**|  | [optional] 
- **Pair** | **String**|  | [optional] 
+ **StartBlock** | **Int64**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
+ **EndBlock** | **Int64**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
+ **StartDate** | **System.DateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
+ **EndDate** | **System.DateTime**| The end date of timeframe. | [optional] 
+ **Id** | **String**| Identifier, format: (pair address)-(user address)-(timestamp) | [optional] 
+ **User** | **String**| Reference to user. | [optional] 
+ **Pair** | **String**| Reference to the pair liquidity is being provided on. | [optional] 
 
 ### Return type
 
@@ -546,13 +546,13 @@ Gets liquidityPositions.
 
 ### Example
 ```powershell
-$StartBlock = 789 # Int64 |  (optional)
-$EndBlock = 789 # Int64 |  (optional)
-$StartDate = (Get-Date) # System.DateTime |  (optional)
-$EndDate = (Get-Date) # System.DateTime |  (optional)
-$Id = "MyId" # String |  (optional)
-$User = "MyUser" # String |  (optional)
-$Pair = "MyPair" # String |  (optional)
+$StartBlock = 789 # Int64 | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+$EndBlock = 789 # Int64 | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+$StartDate = (Get-Date) # System.DateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+$EndDate = (Get-Date) # System.DateTime | The end date of timeframe. (optional)
+$Id = "MyId" # String | Identifier, format: (pair address)-(user address) (optional)
+$User = "MyUser" # String | User address. (optional)
+$Pair = "MyPair" # String | Pair address. (optional)
 
 # LiquidityPositions (historical)
 try {
@@ -567,13 +567,13 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **StartBlock** | **Int64**|  | [optional] 
- **EndBlock** | **Int64**|  | [optional] 
- **StartDate** | **System.DateTime**|  | [optional] 
- **EndDate** | **System.DateTime**|  | [optional] 
- **Id** | **String**|  | [optional] 
- **User** | **String**|  | [optional] 
- **Pair** | **String**|  | [optional] 
+ **StartBlock** | **Int64**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
+ **EndBlock** | **Int64**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
+ **StartDate** | **System.DateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
+ **EndDate** | **System.DateTime**| The end date of timeframe. | [optional] 
+ **Id** | **String**| Identifier, format: (pair address)-(user address) | [optional] 
+ **User** | **String**| User address. | [optional] 
+ **Pair** | **String**| Pair address. | [optional] 
 
 ### Return type
 
@@ -606,12 +606,12 @@ Gets mints.
 
 ### Example
 ```powershell
-$StartBlock = 789 # Int64 |  (optional)
-$EndBlock = 789 # Int64 |  (optional)
-$StartDate = (Get-Date) # System.DateTime |  (optional)
-$EndDate = (Get-Date) # System.DateTime |  (optional)
-$Id = "MyId" # String |  (optional)
-$Pair = "MyPair" # String |  (optional)
+$StartBlock = 789 # Int64 | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+$EndBlock = 789 # Int64 | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+$StartDate = (Get-Date) # System.DateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+$EndDate = (Get-Date) # System.DateTime | The end date of timeframe. (optional)
+$Id = "MyId" # String | Identifier, format: (transaction hash)-(index in the transaction mint array). (optional)
+$Pair = "MyPair" # String | Reference to pair. (optional)
 
 # Mints (historical)
 try {
@@ -626,12 +626,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **StartBlock** | **Int64**|  | [optional] 
- **EndBlock** | **Int64**|  | [optional] 
- **StartDate** | **System.DateTime**|  | [optional] 
- **EndDate** | **System.DateTime**|  | [optional] 
- **Id** | **String**|  | [optional] 
- **Pair** | **String**|  | [optional] 
+ **StartBlock** | **Int64**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
+ **EndBlock** | **Int64**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
+ **StartDate** | **System.DateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
+ **EndDate** | **System.DateTime**| The end date of timeframe. | [optional] 
+ **Id** | **String**| Identifier, format: (transaction hash)-(index in the transaction mint array). | [optional] 
+ **Pair** | **String**| Reference to pair. | [optional] 
 
 ### Return type
 
@@ -666,14 +666,14 @@ Gets pairDayData.
 
 ### Example
 ```powershell
-$StartBlock = 789 # Int64 |  (optional)
-$EndBlock = 789 # Int64 |  (optional)
-$StartDate = (Get-Date) # System.DateTime |  (optional)
-$EndDate = (Get-Date) # System.DateTime |  (optional)
-$Id = "MyId" # String |  (optional)
-$Pair = "MyPair" # String |  (optional)
-$Token0 = "MyToken0" # String |  (optional)
-$Token1 = "MyToken1" # String |  (optional)
+$StartBlock = 789 # Int64 | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+$EndBlock = 789 # Int64 | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+$StartDate = (Get-Date) # System.DateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+$EndDate = (Get-Date) # System.DateTime | The end date of timeframe. (optional)
+$Id = "MyId" # String | Identifier, format: (pair id)-(day start timestamp). (optional)
+$Pair = "MyPair" # String | Reference to pair. (optional)
+$Token0 = "MyToken0" # String | Reference to token0. (optional)
+$Token1 = "MyToken1" # String | Reference to token1. (optional)
 
 # PairDayData (historical)
 try {
@@ -688,14 +688,14 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **StartBlock** | **Int64**|  | [optional] 
- **EndBlock** | **Int64**|  | [optional] 
- **StartDate** | **System.DateTime**|  | [optional] 
- **EndDate** | **System.DateTime**|  | [optional] 
- **Id** | **String**|  | [optional] 
- **Pair** | **String**|  | [optional] 
- **Token0** | **String**|  | [optional] 
- **Token1** | **String**|  | [optional] 
+ **StartBlock** | **Int64**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
+ **EndBlock** | **Int64**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
+ **StartDate** | **System.DateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
+ **EndDate** | **System.DateTime**| The end date of timeframe. | [optional] 
+ **Id** | **String**| Identifier, format: (pair id)-(day start timestamp). | [optional] 
+ **Pair** | **String**| Reference to pair. | [optional] 
+ **Token0** | **String**| Reference to token0. | [optional] 
+ **Token1** | **String**| Reference to token1. | [optional] 
 
 ### Return type
 
@@ -728,12 +728,12 @@ Gets pairHourData.
 
 ### Example
 ```powershell
-$StartBlock = 789 # Int64 |  (optional)
-$EndBlock = 789 # Int64 |  (optional)
-$StartDate = (Get-Date) # System.DateTime |  (optional)
-$EndDate = (Get-Date) # System.DateTime |  (optional)
-$Id = "MyId" # String |  (optional)
-$Pair = "MyPair" # String |  (optional)
+$StartBlock = 789 # Int64 | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+$EndBlock = 789 # Int64 | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+$StartDate = (Get-Date) # System.DateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+$EndDate = (Get-Date) # System.DateTime | The end date of timeframe. (optional)
+$Id = "MyId" # String | Identifier, format: (pair id)-(hour start timestamp). (optional)
+$Pair = "MyPair" # String | Reference to pair. (optional)
 
 # PairHourData (historical)
 try {
@@ -748,12 +748,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **StartBlock** | **Int64**|  | [optional] 
- **EndBlock** | **Int64**|  | [optional] 
- **StartDate** | **System.DateTime**|  | [optional] 
- **EndDate** | **System.DateTime**|  | [optional] 
- **Id** | **String**|  | [optional] 
- **Pair** | **String**|  | [optional] 
+ **StartBlock** | **Int64**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
+ **EndBlock** | **Int64**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
+ **StartDate** | **System.DateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
+ **EndDate** | **System.DateTime**| The end date of timeframe. | [optional] 
+ **Id** | **String**| Identifier, format: (pair id)-(hour start timestamp). | [optional] 
+ **Pair** | **String**| Reference to pair. | [optional] 
 
 ### Return type
 
@@ -788,14 +788,14 @@ Gets pairs.
 
 ### Example
 ```powershell
-$StartBlock = 789 # Int64 |  (optional)
-$EndBlock = 789 # Int64 |  (optional)
-$StartDate = (Get-Date) # System.DateTime |  (optional)
-$EndDate = (Get-Date) # System.DateTime |  (optional)
-$Id = "MyId" # String |  (optional)
-$Name = "MyName" # String |  (optional)
-$Token0 = "MyToken0" # String |  (optional)
-$Token1 = "MyToken1" # String |  (optional)
+$StartBlock = 789 # Int64 | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+$EndBlock = 789 # Int64 | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+$StartDate = (Get-Date) # System.DateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+$EndDate = (Get-Date) # System.DateTime | The end date of timeframe. (optional)
+$Id = "MyId" # String | Pair contract address. (optional)
+$Name = "MyName" # String | Friendly name, format: (token0 name)-(token1 name) (optional)
+$Token0 = "MyToken0" # String | Reference to token0 as stored in pair contract. (optional)
+$Token1 = "MyToken1" # String | Reference to token0 as stored in pair contract. (optional)
 
 # Pairs (historical)
 try {
@@ -810,14 +810,14 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **StartBlock** | **Int64**|  | [optional] 
- **EndBlock** | **Int64**|  | [optional] 
- **StartDate** | **System.DateTime**|  | [optional] 
- **EndDate** | **System.DateTime**|  | [optional] 
- **Id** | **String**|  | [optional] 
- **Name** | **String**|  | [optional] 
- **Token0** | **String**|  | [optional] 
- **Token1** | **String**|  | [optional] 
+ **StartBlock** | **Int64**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
+ **EndBlock** | **Int64**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
+ **StartDate** | **System.DateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
+ **EndDate** | **System.DateTime**| The end date of timeframe. | [optional] 
+ **Id** | **String**| Pair contract address. | [optional] 
+ **Name** | **String**| Friendly name, format: (token0 name)-(token1 name) | [optional] 
+ **Token0** | **String**| Reference to token0 as stored in pair contract. | [optional] 
+ **Token1** | **String**| Reference to token0 as stored in pair contract. | [optional] 
 
 ### Return type
 

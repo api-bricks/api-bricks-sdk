@@ -16,6 +16,9 @@ import (
 	"time"
 )
 
+// checks if the DexPriceDTO type satisfies the MappedNullable interface at compile time
+var _ MappedNullable = &DexPriceDTO{}
+
 // DexPriceDTO Token price in conjuction with batch id.
 type DexPriceDTO struct {
 	EntryTime *time.Time `json:"entry_time,omitempty"`
@@ -72,7 +75,7 @@ func (o *DexPriceDTO) GetEntryTime() time.Time {
 // and a boolean to check if the value has been set.
 func (o *DexPriceDTO) GetEntryTimeOk() (*time.Time, bool) {
 	if o == nil || isNil(o.EntryTime) {
-    return nil, false
+		return nil, false
 	}
 	return o.EntryTime, true
 }
@@ -104,7 +107,7 @@ func (o *DexPriceDTO) GetRecvTime() time.Time {
 // and a boolean to check if the value has been set.
 func (o *DexPriceDTO) GetRecvTimeOk() (*time.Time, bool) {
 	if o == nil || isNil(o.RecvTime) {
-    return nil, false
+		return nil, false
 	}
 	return o.RecvTime, true
 }
@@ -136,7 +139,7 @@ func (o *DexPriceDTO) GetBlockNumber() int64 {
 // and a boolean to check if the value has been set.
 func (o *DexPriceDTO) GetBlockNumberOk() (*int64, bool) {
 	if o == nil || isNil(o.BlockNumber) {
-    return nil, false
+		return nil, false
 	}
 	return o.BlockNumber, true
 }
@@ -169,7 +172,7 @@ func (o *DexPriceDTO) GetId() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *DexPriceDTO) GetIdOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Id.Get(), o.Id.IsSet()
 }
@@ -211,7 +214,7 @@ func (o *DexPriceDTO) GetToken() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *DexPriceDTO) GetTokenOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Token.Get(), o.Token.IsSet()
 }
@@ -253,7 +256,7 @@ func (o *DexPriceDTO) GetBatchId() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *DexPriceDTO) GetBatchIdOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.BatchId.Get(), o.BatchId.IsSet()
 }
@@ -295,7 +298,7 @@ func (o *DexPriceDTO) GetPriceInOwlNumerator() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *DexPriceDTO) GetPriceInOwlNumeratorOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.PriceInOwlNumerator.Get(), o.PriceInOwlNumerator.IsSet()
 }
@@ -337,7 +340,7 @@ func (o *DexPriceDTO) GetPriceInOwlDenominator() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *DexPriceDTO) GetPriceInOwlDenominatorOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.PriceInOwlDenominator.Get(), o.PriceInOwlDenominator.IsSet()
 }
@@ -379,7 +382,7 @@ func (o *DexPriceDTO) GetVolume() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *DexPriceDTO) GetVolumeOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Volume.Get(), o.Volume.IsSet()
 }
@@ -421,7 +424,7 @@ func (o *DexPriceDTO) GetCreateEpoch() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *DexPriceDTO) GetCreateEpochOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.CreateEpoch.Get(), o.CreateEpoch.IsSet()
 }
@@ -463,7 +466,7 @@ func (o *DexPriceDTO) GetTxHash() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *DexPriceDTO) GetTxHashOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.TxHash.Get(), o.TxHash.IsSet()
 }
@@ -504,7 +507,7 @@ func (o *DexPriceDTO) GetVid() int64 {
 // and a boolean to check if the value has been set.
 func (o *DexPriceDTO) GetVidOk() (*int64, bool) {
 	if o == nil || isNil(o.Vid) {
-    return nil, false
+		return nil, false
 	}
 	return o.Vid, true
 }
@@ -524,6 +527,14 @@ func (o *DexPriceDTO) SetVid(v int64) {
 }
 
 func (o DexPriceDTO) MarshalJSON() ([]byte, error) {
+	toSerialize,err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
+}
+
+func (o DexPriceDTO) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
 	if !isNil(o.EntryTime) {
 		toSerialize["entry_time"] = o.EntryTime
@@ -561,7 +572,7 @@ func (o DexPriceDTO) MarshalJSON() ([]byte, error) {
 	if !isNil(o.Vid) {
 		toSerialize["vid"] = o.Vid
 	}
-	return json.Marshal(toSerialize)
+	return toSerialize, nil
 }
 
 type NullableDexPriceDTO struct {

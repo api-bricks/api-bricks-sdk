@@ -177,12 +177,12 @@ bool sushiswapGetBundles (historical)Async(char * accessToken,
 /*! \brief Burns (historical). *Synchronous*
  *
  * Gets burns.
- * \param startBlock 
- * \param endBlock 
- * \param startDate 
- * \param endDate 
- * \param id 
- * \param pair 
+ * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+ * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+ * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+ * \param endDate The end date of timeframe.
+ * \param id Identifier, format: (transaction id):(transaction.burns.length).
+ * \param pair Reference to pair.
  * \param handler The callback function to be invoked on completion. *Required*
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
@@ -195,12 +195,12 @@ bool sushiswapGetBurns (historical)Sync(char * accessToken,
 /*! \brief Burns (historical). *Asynchronous*
  *
  * Gets burns.
- * \param startBlock 
- * \param endBlock 
- * \param startDate 
- * \param endDate 
- * \param id 
- * \param pair 
+ * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+ * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+ * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+ * \param endDate The end date of timeframe.
+ * \param id Identifier, format: (transaction id):(transaction.burns.length).
+ * \param pair Reference to pair.
  * \param handler The callback function to be invoked on completion. *Required*
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
@@ -319,13 +319,13 @@ bool sushiswapGetHourData (historical)Async(char * accessToken,
 /*! \brief LiquidityPositionSnapshots (historical). *Synchronous*
  *
  * Gets liquidityPositionSnapshots.
- * \param startBlock 
- * \param endBlock 
- * \param startDate 
- * \param endDate 
- * \param id 
- * \param user 
- * \param pair 
+ * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+ * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+ * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+ * \param endDate The end date of timeframe.
+ * \param id Identifier, format: (pair address)-(user address)-(timestamp)
+ * \param user Reference to user.
+ * \param pair Reference to the pair liquidity is being provided on.
  * \param handler The callback function to be invoked on completion. *Required*
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
@@ -338,13 +338,13 @@ bool sushiswapGetLiquidityPositionSnapshots (historical)Sync(char * accessToken,
 /*! \brief LiquidityPositionSnapshots (historical). *Asynchronous*
  *
  * Gets liquidityPositionSnapshots.
- * \param startBlock 
- * \param endBlock 
- * \param startDate 
- * \param endDate 
- * \param id 
- * \param user 
- * \param pair 
+ * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+ * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+ * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+ * \param endDate The end date of timeframe.
+ * \param id Identifier, format: (pair address)-(user address)-(timestamp)
+ * \param user Reference to user.
+ * \param pair Reference to the pair liquidity is being provided on.
  * \param handler The callback function to be invoked on completion. *Required*
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
@@ -358,13 +358,13 @@ bool sushiswapGetLiquidityPositionSnapshots (historical)Async(char * accessToken
 /*! \brief LiquidityPositions (historical). *Synchronous*
  *
  * Gets liquidityPositions.
- * \param startBlock 
- * \param endBlock 
- * \param startDate 
- * \param endDate 
- * \param id 
- * \param user 
- * \param pair 
+ * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+ * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+ * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+ * \param endDate The end date of timeframe.
+ * \param id Identifier, format: (pair address)-(user address)
+ * \param user User address.
+ * \param pair Pair address.
  * \param handler The callback function to be invoked on completion. *Required*
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
@@ -377,13 +377,13 @@ bool sushiswapGetLiquidityPositions (historical)Sync(char * accessToken,
 /*! \brief LiquidityPositions (historical). *Asynchronous*
  *
  * Gets liquidityPositions.
- * \param startBlock 
- * \param endBlock 
- * \param startDate 
- * \param endDate 
- * \param id 
- * \param user 
- * \param pair 
+ * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+ * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+ * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+ * \param endDate The end date of timeframe.
+ * \param id Identifier, format: (pair address)-(user address)
+ * \param user User address.
+ * \param pair Pair address.
  * \param handler The callback function to be invoked on completion. *Required*
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
@@ -397,12 +397,12 @@ bool sushiswapGetLiquidityPositions (historical)Async(char * accessToken,
 /*! \brief Mints (historical). *Synchronous*
  *
  * Gets mints.
- * \param startBlock 
- * \param endBlock 
- * \param startDate 
- * \param endDate 
- * \param id 
- * \param pair 
+ * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+ * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+ * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+ * \param endDate The end date of timeframe.
+ * \param id Identifier, format: (transaction hash)-(index in the transaction mint array).
+ * \param pair Reference to pair.
  * \param handler The callback function to be invoked on completion. *Required*
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
@@ -415,12 +415,12 @@ bool sushiswapGetMints (historical)Sync(char * accessToken,
 /*! \brief Mints (historical). *Asynchronous*
  *
  * Gets mints.
- * \param startBlock 
- * \param endBlock 
- * \param startDate 
- * \param endDate 
- * \param id 
- * \param pair 
+ * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+ * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+ * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+ * \param endDate The end date of timeframe.
+ * \param id Identifier, format: (transaction hash)-(index in the transaction mint array).
+ * \param pair Reference to pair.
  * \param handler The callback function to be invoked on completion. *Required*
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
@@ -434,14 +434,14 @@ bool sushiswapGetMints (historical)Async(char * accessToken,
 /*! \brief PairDayData (historical). *Synchronous*
  *
  * Gets pairDayData.
- * \param startBlock 
- * \param endBlock 
- * \param startDate 
- * \param endDate 
- * \param id 
- * \param pair 
- * \param token0 
- * \param token1 
+ * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+ * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+ * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+ * \param endDate The end date of timeframe.
+ * \param id Identifier, format: (pair id)-(day start timestamp).
+ * \param pair Reference to pair.
+ * \param token0 Reference to token0.
+ * \param token1 Reference to token1.
  * \param handler The callback function to be invoked on completion. *Required*
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
@@ -454,14 +454,14 @@ bool sushiswapGetPairDayData (historical)Sync(char * accessToken,
 /*! \brief PairDayData (historical). *Asynchronous*
  *
  * Gets pairDayData.
- * \param startBlock 
- * \param endBlock 
- * \param startDate 
- * \param endDate 
- * \param id 
- * \param pair 
- * \param token0 
- * \param token1 
+ * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+ * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+ * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+ * \param endDate The end date of timeframe.
+ * \param id Identifier, format: (pair id)-(day start timestamp).
+ * \param pair Reference to pair.
+ * \param token0 Reference to token0.
+ * \param token1 Reference to token1.
  * \param handler The callback function to be invoked on completion. *Required*
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
@@ -475,12 +475,12 @@ bool sushiswapGetPairDayData (historical)Async(char * accessToken,
 /*! \brief PairHourData (historical). *Synchronous*
  *
  * Gets pairHourData.
- * \param startBlock 
- * \param endBlock 
- * \param startDate 
- * \param endDate 
- * \param id 
- * \param pair 
+ * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+ * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+ * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+ * \param endDate The end date of timeframe.
+ * \param id Identifier, format: (pair id)-(hour start timestamp).
+ * \param pair Reference to pair.
  * \param handler The callback function to be invoked on completion. *Required*
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
@@ -493,12 +493,12 @@ bool sushiswapGetPairHourData (historical)Sync(char * accessToken,
 /*! \brief PairHourData (historical). *Asynchronous*
  *
  * Gets pairHourData.
- * \param startBlock 
- * \param endBlock 
- * \param startDate 
- * \param endDate 
- * \param id 
- * \param pair 
+ * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+ * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+ * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+ * \param endDate The end date of timeframe.
+ * \param id Identifier, format: (pair id)-(hour start timestamp).
+ * \param pair Reference to pair.
  * \param handler The callback function to be invoked on completion. *Required*
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
@@ -512,14 +512,14 @@ bool sushiswapGetPairHourData (historical)Async(char * accessToken,
 /*! \brief Pairs (historical). *Synchronous*
  *
  * Gets pairs.
- * \param startBlock 
- * \param endBlock 
- * \param startDate 
- * \param endDate 
- * \param id 
- * \param name 
- * \param token0 
- * \param token1 
+ * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+ * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+ * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+ * \param endDate The end date of timeframe.
+ * \param id Pair contract address.
+ * \param name Friendly name, format: (token0 name)-(token1 name)
+ * \param token0 Reference to token0 as stored in pair contract.
+ * \param token1 Reference to token0 as stored in pair contract.
  * \param handler The callback function to be invoked on completion. *Required*
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
@@ -532,14 +532,14 @@ bool sushiswapGetPairs (historical)Sync(char * accessToken,
 /*! \brief Pairs (historical). *Asynchronous*
  *
  * Gets pairs.
- * \param startBlock 
- * \param endBlock 
- * \param startDate 
- * \param endDate 
- * \param id 
- * \param name 
- * \param token0 
- * \param token1 
+ * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+ * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+ * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+ * \param endDate The end date of timeframe.
+ * \param id Pair contract address.
+ * \param name Friendly name, format: (token0 name)-(token1 name)
+ * \param token0 Reference to token0 as stored in pair contract.
+ * \param token1 Reference to token0 as stored in pair contract.
  * \param handler The callback function to be invoked on completion. *Required*
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.

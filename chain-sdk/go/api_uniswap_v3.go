@@ -402,19 +402,19 @@ func (a *UniswapV3ApiService) UniswapV3GetBundlesHistoricalExecute(r ApiUniswapV
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		localVarQueryParams.Add("id", parameterToString(*r.id, ""))
+		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -572,28 +572,28 @@ func (a *UniswapV3ApiService) UniswapV3GetBurnsHistoricalExecute(r ApiUniswapV3G
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		localVarQueryParams.Add("id", parameterToString(*r.id, ""))
+		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
 	}
 	if r.pool != nil {
-		localVarQueryParams.Add("pool", parameterToString(*r.pool, ""))
+		parameterAddToQuery(localVarQueryParams, "pool", r.pool, "")
 	}
 	if r.token0 != nil {
-		localVarQueryParams.Add("token_0", parameterToString(*r.token0, ""))
+		parameterAddToQuery(localVarQueryParams, "token_0", r.token0, "")
 	}
 	if r.token1 != nil {
-		localVarQueryParams.Add("token_1", parameterToString(*r.token1, ""))
+		parameterAddToQuery(localVarQueryParams, "token_1", r.token1, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -730,19 +730,19 @@ func (a *UniswapV3ApiService) UniswapV3GetFactoriesHistoricalExecute(r ApiUniswa
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		localVarQueryParams.Add("id", parameterToString(*r.id, ""))
+		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -900,28 +900,28 @@ func (a *UniswapV3ApiService) UniswapV3GetMintsHistoricalExecute(r ApiUniswapV3G
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		localVarQueryParams.Add("id", parameterToString(*r.id, ""))
+		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
 	}
 	if r.pool != nil {
-		localVarQueryParams.Add("pool", parameterToString(*r.pool, ""))
+		parameterAddToQuery(localVarQueryParams, "pool", r.pool, "")
 	}
 	if r.token0 != nil {
-		localVarQueryParams.Add("token_0", parameterToString(*r.token0, ""))
+		parameterAddToQuery(localVarQueryParams, "token_0", r.token0, "")
 	}
 	if r.token1 != nil {
-		localVarQueryParams.Add("token_1", parameterToString(*r.token1, ""))
+		parameterAddToQuery(localVarQueryParams, "token_1", r.token1, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -988,31 +988,37 @@ type ApiUniswapV3GetPoolDayDataHistoricalRequest struct {
 	pool *string
 }
 
+// The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
 func (r ApiUniswapV3GetPoolDayDataHistoricalRequest) StartBlock(startBlock int64) ApiUniswapV3GetPoolDayDataHistoricalRequest {
 	r.startBlock = &startBlock
 	return r
 }
 
+// The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
 func (r ApiUniswapV3GetPoolDayDataHistoricalRequest) EndBlock(endBlock int64) ApiUniswapV3GetPoolDayDataHistoricalRequest {
 	r.endBlock = &endBlock
 	return r
 }
 
+// The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
 func (r ApiUniswapV3GetPoolDayDataHistoricalRequest) StartDate(startDate time.Time) ApiUniswapV3GetPoolDayDataHistoricalRequest {
 	r.startDate = &startDate
 	return r
 }
 
+// The end date of timeframe.
 func (r ApiUniswapV3GetPoolDayDataHistoricalRequest) EndDate(endDate time.Time) ApiUniswapV3GetPoolDayDataHistoricalRequest {
 	r.endDate = &endDate
 	return r
 }
 
+// Identifier, format: (pool address)-(day id).
 func (r ApiUniswapV3GetPoolDayDataHistoricalRequest) Id(id string) ApiUniswapV3GetPoolDayDataHistoricalRequest {
 	r.id = &id
 	return r
 }
 
+// Pointer to pool.
 func (r ApiUniswapV3GetPoolDayDataHistoricalRequest) Pool(pool string) ApiUniswapV3GetPoolDayDataHistoricalRequest {
 	r.pool = &pool
 	return r
@@ -1059,22 +1065,22 @@ func (a *UniswapV3ApiService) UniswapV3GetPoolDayDataHistoricalExecute(r ApiUnis
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		localVarQueryParams.Add("id", parameterToString(*r.id, ""))
+		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
 	}
 	if r.pool != nil {
-		localVarQueryParams.Add("pool", parameterToString(*r.pool, ""))
+		parameterAddToQuery(localVarQueryParams, "pool", r.pool, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -1141,31 +1147,37 @@ type ApiUniswapV3GetPoolHourDataHistoricalRequest struct {
 	pool *string
 }
 
+// The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
 func (r ApiUniswapV3GetPoolHourDataHistoricalRequest) StartBlock(startBlock int64) ApiUniswapV3GetPoolHourDataHistoricalRequest {
 	r.startBlock = &startBlock
 	return r
 }
 
+// The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
 func (r ApiUniswapV3GetPoolHourDataHistoricalRequest) EndBlock(endBlock int64) ApiUniswapV3GetPoolHourDataHistoricalRequest {
 	r.endBlock = &endBlock
 	return r
 }
 
+// The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
 func (r ApiUniswapV3GetPoolHourDataHistoricalRequest) StartDate(startDate time.Time) ApiUniswapV3GetPoolHourDataHistoricalRequest {
 	r.startDate = &startDate
 	return r
 }
 
+// The end date of timeframe.
 func (r ApiUniswapV3GetPoolHourDataHistoricalRequest) EndDate(endDate time.Time) ApiUniswapV3GetPoolHourDataHistoricalRequest {
 	r.endDate = &endDate
 	return r
 }
 
+// Identifier, format: (pool address)-(day id)
 func (r ApiUniswapV3GetPoolHourDataHistoricalRequest) Id(id string) ApiUniswapV3GetPoolHourDataHistoricalRequest {
 	r.id = &id
 	return r
 }
 
+// Pointer to pool.
 func (r ApiUniswapV3GetPoolHourDataHistoricalRequest) Pool(pool string) ApiUniswapV3GetPoolHourDataHistoricalRequest {
 	r.pool = &pool
 	return r
@@ -1212,22 +1224,22 @@ func (a *UniswapV3ApiService) UniswapV3GetPoolHourDataHistoricalExecute(r ApiUni
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		localVarQueryParams.Add("id", parameterToString(*r.id, ""))
+		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
 	}
 	if r.pool != nil {
-		localVarQueryParams.Add("pool", parameterToString(*r.pool, ""))
+		parameterAddToQuery(localVarQueryParams, "pool", r.pool, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -1378,25 +1390,25 @@ func (a *UniswapV3ApiService) UniswapV3GetPoolsHistoricalExecute(r ApiUniswapV3G
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		localVarQueryParams.Add("id", parameterToString(*r.id, ""))
+		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
 	}
 	if r.token0 != nil {
-		localVarQueryParams.Add("token_0", parameterToString(*r.token0, ""))
+		parameterAddToQuery(localVarQueryParams, "token_0", r.token0, "")
 	}
 	if r.token1 != nil {
-		localVarQueryParams.Add("token_1", parameterToString(*r.token1, ""))
+		parameterAddToQuery(localVarQueryParams, "token_1", r.token1, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -1463,31 +1475,37 @@ type ApiUniswapV3GetPositionSnapshotsHistoricalRequest struct {
 	pool *string
 }
 
+// The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
 func (r ApiUniswapV3GetPositionSnapshotsHistoricalRequest) StartBlock(startBlock int64) ApiUniswapV3GetPositionSnapshotsHistoricalRequest {
 	r.startBlock = &startBlock
 	return r
 }
 
+// The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
 func (r ApiUniswapV3GetPositionSnapshotsHistoricalRequest) EndBlock(endBlock int64) ApiUniswapV3GetPositionSnapshotsHistoricalRequest {
 	r.endBlock = &endBlock
 	return r
 }
 
+// The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
 func (r ApiUniswapV3GetPositionSnapshotsHistoricalRequest) StartDate(startDate time.Time) ApiUniswapV3GetPositionSnapshotsHistoricalRequest {
 	r.startDate = &startDate
 	return r
 }
 
+// The end date of timeframe.
 func (r ApiUniswapV3GetPositionSnapshotsHistoricalRequest) EndDate(endDate time.Time) ApiUniswapV3GetPositionSnapshotsHistoricalRequest {
 	r.endDate = &endDate
 	return r
 }
 
+// NFT token identifier, format: (NFT token id)#(block number).
 func (r ApiUniswapV3GetPositionSnapshotsHistoricalRequest) Id(id string) ApiUniswapV3GetPositionSnapshotsHistoricalRequest {
 	r.id = &id
 	return r
 }
 
+// Pool the position is within.
 func (r ApiUniswapV3GetPositionSnapshotsHistoricalRequest) Pool(pool string) ApiUniswapV3GetPositionSnapshotsHistoricalRequest {
 	r.pool = &pool
 	return r
@@ -1534,22 +1552,22 @@ func (a *UniswapV3ApiService) UniswapV3GetPositionSnapshotsHistoricalExecute(r A
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		localVarQueryParams.Add("id", parameterToString(*r.id, ""))
+		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
 	}
 	if r.pool != nil {
-		localVarQueryParams.Add("pool", parameterToString(*r.pool, ""))
+		parameterAddToQuery(localVarQueryParams, "pool", r.pool, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -1707,28 +1725,28 @@ func (a *UniswapV3ApiService) UniswapV3GetPositionsHistoricalExecute(r ApiUniswa
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		localVarQueryParams.Add("id", parameterToString(*r.id, ""))
+		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
 	}
 	if r.pool != nil {
-		localVarQueryParams.Add("pool", parameterToString(*r.pool, ""))
+		parameterAddToQuery(localVarQueryParams, "pool", r.pool, "")
 	}
 	if r.token0 != nil {
-		localVarQueryParams.Add("token_0", parameterToString(*r.token0, ""))
+		parameterAddToQuery(localVarQueryParams, "token_0", r.token0, "")
 	}
 	if r.token1 != nil {
-		localVarQueryParams.Add("token_1", parameterToString(*r.token1, ""))
+		parameterAddToQuery(localVarQueryParams, "token_1", r.token1, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -1821,7 +1839,7 @@ func (r ApiUniswapV3GetSwapsHistoricalRequest) EndDate(endDate time.Time) ApiUni
 	return r
 }
 
-// Identifier, format: transaction hash + \&quot;#\&quot; + index in swaps Transaction array.
+// Identifier, format: (transaction hash) + # + (index in swaps Transaction array).
 func (r ApiUniswapV3GetSwapsHistoricalRequest) Id(id string) ApiUniswapV3GetSwapsHistoricalRequest {
 	r.id = &id
 	return r
@@ -1886,28 +1904,28 @@ func (a *UniswapV3ApiService) UniswapV3GetSwapsHistoricalExecute(r ApiUniswapV3G
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		localVarQueryParams.Add("id", parameterToString(*r.id, ""))
+		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
 	}
 	if r.pool != nil {
-		localVarQueryParams.Add("pool", parameterToString(*r.pool, ""))
+		parameterAddToQuery(localVarQueryParams, "pool", r.pool, "")
 	}
 	if r.token0 != nil {
-		localVarQueryParams.Add("token_0", parameterToString(*r.token0, ""))
+		parameterAddToQuery(localVarQueryParams, "token_0", r.token0, "")
 	}
 	if r.token1 != nil {
-		localVarQueryParams.Add("token_1", parameterToString(*r.token1, ""))
+		parameterAddToQuery(localVarQueryParams, "token_1", r.token1, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -1974,31 +1992,37 @@ type ApiUniswapV3GetTickDayDataHistoricalRequest struct {
 	pool *string
 }
 
+// The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
 func (r ApiUniswapV3GetTickDayDataHistoricalRequest) StartBlock(startBlock int64) ApiUniswapV3GetTickDayDataHistoricalRequest {
 	r.startBlock = &startBlock
 	return r
 }
 
+// The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
 func (r ApiUniswapV3GetTickDayDataHistoricalRequest) EndBlock(endBlock int64) ApiUniswapV3GetTickDayDataHistoricalRequest {
 	r.endBlock = &endBlock
 	return r
 }
 
+// The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
 func (r ApiUniswapV3GetTickDayDataHistoricalRequest) StartDate(startDate time.Time) ApiUniswapV3GetTickDayDataHistoricalRequest {
 	r.startDate = &startDate
 	return r
 }
 
+// The end date of timeframe.
 func (r ApiUniswapV3GetTickDayDataHistoricalRequest) EndDate(endDate time.Time) ApiUniswapV3GetTickDayDataHistoricalRequest {
 	r.endDate = &endDate
 	return r
 }
 
+// Identifier, format: (pool address)-(tick index)-(timestamp).
 func (r ApiUniswapV3GetTickDayDataHistoricalRequest) Id(id string) ApiUniswapV3GetTickDayDataHistoricalRequest {
 	r.id = &id
 	return r
 }
 
+// Pointer to pool.
 func (r ApiUniswapV3GetTickDayDataHistoricalRequest) Pool(pool string) ApiUniswapV3GetTickDayDataHistoricalRequest {
 	r.pool = &pool
 	return r
@@ -2045,22 +2069,22 @@ func (a *UniswapV3ApiService) UniswapV3GetTickDayDataHistoricalExecute(r ApiUnis
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		localVarQueryParams.Add("id", parameterToString(*r.id, ""))
+		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
 	}
 	if r.pool != nil {
-		localVarQueryParams.Add("pool", parameterToString(*r.pool, ""))
+		parameterAddToQuery(localVarQueryParams, "pool", r.pool, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -2127,31 +2151,37 @@ type ApiUniswapV3GetTicksHistoricalRequest struct {
 	pool *string
 }
 
+// The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
 func (r ApiUniswapV3GetTicksHistoricalRequest) StartBlock(startBlock int64) ApiUniswapV3GetTicksHistoricalRequest {
 	r.startBlock = &startBlock
 	return r
 }
 
+// The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
 func (r ApiUniswapV3GetTicksHistoricalRequest) EndBlock(endBlock int64) ApiUniswapV3GetTicksHistoricalRequest {
 	r.endBlock = &endBlock
 	return r
 }
 
+// The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
 func (r ApiUniswapV3GetTicksHistoricalRequest) StartDate(startDate time.Time) ApiUniswapV3GetTicksHistoricalRequest {
 	r.startDate = &startDate
 	return r
 }
 
+// The end date of timeframe.
 func (r ApiUniswapV3GetTicksHistoricalRequest) EndDate(endDate time.Time) ApiUniswapV3GetTicksHistoricalRequest {
 	r.endDate = &endDate
 	return r
 }
 
+// Identifier, format: (pool address)#(tick index)
 func (r ApiUniswapV3GetTicksHistoricalRequest) Id(id string) ApiUniswapV3GetTicksHistoricalRequest {
 	r.id = &id
 	return r
 }
 
+// Pool address.
 func (r ApiUniswapV3GetTicksHistoricalRequest) Pool(pool string) ApiUniswapV3GetTicksHistoricalRequest {
 	r.pool = &pool
 	return r
@@ -2198,22 +2228,22 @@ func (a *UniswapV3ApiService) UniswapV3GetTicksHistoricalExecute(r ApiUniswapV3G
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		localVarQueryParams.Add("id", parameterToString(*r.id, ""))
+		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
 	}
 	if r.pool != nil {
-		localVarQueryParams.Add("pool", parameterToString(*r.pool, ""))
+		parameterAddToQuery(localVarQueryParams, "pool", r.pool, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -2350,19 +2380,19 @@ func (a *UniswapV3ApiService) UniswapV3GetTokenHourDataHistoricalExecute(r ApiUn
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		localVarQueryParams.Add("id", parameterToString(*r.id, ""))
+		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -2499,19 +2529,19 @@ func (a *UniswapV3ApiService) UniswapV3GetTokenV3DayDataHistoricalExecute(r ApiU
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		localVarQueryParams.Add("id", parameterToString(*r.id, ""))
+		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -2662,25 +2692,25 @@ func (a *UniswapV3ApiService) UniswapV3GetTokensHistoricalExecute(r ApiUniswapV3
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		localVarQueryParams.Add("id", parameterToString(*r.id, ""))
+		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
 	}
 	if r.symbol != nil {
-		localVarQueryParams.Add("symbol", parameterToString(*r.symbol, ""))
+		parameterAddToQuery(localVarQueryParams, "symbol", r.symbol, "")
 	}
 	if r.name != nil {
-		localVarQueryParams.Add("name", parameterToString(*r.name, ""))
+		parameterAddToQuery(localVarQueryParams, "name", r.name, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -2817,19 +2847,19 @@ func (a *UniswapV3ApiService) UniswapV3GetTransactionsHistoricalExecute(r ApiUni
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		localVarQueryParams.Add("id", parameterToString(*r.id, ""))
+		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -2966,19 +2996,19 @@ func (a *UniswapV3ApiService) UniswapV3GetUniswapDayDataHistoricalExecute(r ApiU
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		localVarQueryParams.Add("id", parameterToString(*r.id, ""))
+		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -3384,7 +3414,7 @@ func (a *UniswapV3ApiService) UniswapV3PoolsCurrentExecute(r ApiUniswapV3PoolsCu
 	localVarFormParams := url.Values{}
 
 	if r.id != nil {
-		localVarQueryParams.Add("id", parameterToString(*r.id, ""))
+		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -3691,7 +3721,7 @@ func (a *UniswapV3ApiService) UniswapV3SwapsCurrentExecute(r ApiUniswapV3SwapsCu
 	localVarFormParams := url.Values{}
 
 	if r.pool != nil {
-		localVarQueryParams.Add("pool", parameterToString(*r.pool, ""))
+		parameterAddToQuery(localVarQueryParams, "pool", r.pool, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}

@@ -16,6 +16,9 @@ import (
 	"time"
 )
 
+// checks if the CowTokenDTO type satisfies the MappedNullable interface at compile time
+var _ MappedNullable = &CowTokenDTO{}
+
 // CowTokenDTO Stores information for a specific token across all pairs that token is included in.
 type CowTokenDTO struct {
 	EntryTime *time.Time `json:"entry_time,omitempty"`
@@ -71,7 +74,7 @@ func (o *CowTokenDTO) GetEntryTime() time.Time {
 // and a boolean to check if the value has been set.
 func (o *CowTokenDTO) GetEntryTimeOk() (*time.Time, bool) {
 	if o == nil || isNil(o.EntryTime) {
-    return nil, false
+		return nil, false
 	}
 	return o.EntryTime, true
 }
@@ -103,7 +106,7 @@ func (o *CowTokenDTO) GetRecvTime() time.Time {
 // and a boolean to check if the value has been set.
 func (o *CowTokenDTO) GetRecvTimeOk() (*time.Time, bool) {
 	if o == nil || isNil(o.RecvTime) {
-    return nil, false
+		return nil, false
 	}
 	return o.RecvTime, true
 }
@@ -135,7 +138,7 @@ func (o *CowTokenDTO) GetBlockNumber() int64 {
 // and a boolean to check if the value has been set.
 func (o *CowTokenDTO) GetBlockNumberOk() (*int64, bool) {
 	if o == nil || isNil(o.BlockNumber) {
-    return nil, false
+		return nil, false
 	}
 	return o.BlockNumber, true
 }
@@ -168,7 +171,7 @@ func (o *CowTokenDTO) GetId() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CowTokenDTO) GetIdOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Id.Get(), o.Id.IsSet()
 }
@@ -210,7 +213,7 @@ func (o *CowTokenDTO) GetAddress() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CowTokenDTO) GetAddressOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Address.Get(), o.Address.IsSet()
 }
@@ -252,7 +255,7 @@ func (o *CowTokenDTO) GetFirstTradeTimestamp() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CowTokenDTO) GetFirstTradeTimestampOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.FirstTradeTimestamp.Get(), o.FirstTradeTimestamp.IsSet()
 }
@@ -294,7 +297,7 @@ func (o *CowTokenDTO) GetName() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CowTokenDTO) GetNameOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Name.Get(), o.Name.IsSet()
 }
@@ -336,7 +339,7 @@ func (o *CowTokenDTO) GetSymbol() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CowTokenDTO) GetSymbolOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Symbol.Get(), o.Symbol.IsSet()
 }
@@ -377,7 +380,7 @@ func (o *CowTokenDTO) GetDecimals() int32 {
 // and a boolean to check if the value has been set.
 func (o *CowTokenDTO) GetDecimalsOk() (*int32, bool) {
 	if o == nil || isNil(o.Decimals) {
-    return nil, false
+		return nil, false
 	}
 	return o.Decimals, true
 }
@@ -410,7 +413,7 @@ func (o *CowTokenDTO) GetTotalVolume() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CowTokenDTO) GetTotalVolumeOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.TotalVolume.Get(), o.TotalVolume.IsSet()
 }
@@ -451,7 +454,7 @@ func (o *CowTokenDTO) GetVid() int64 {
 // and a boolean to check if the value has been set.
 func (o *CowTokenDTO) GetVidOk() (*int64, bool) {
 	if o == nil || isNil(o.Vid) {
-    return nil, false
+		return nil, false
 	}
 	return o.Vid, true
 }
@@ -484,7 +487,7 @@ func (o *CowTokenDTO) GetTokenSymbol() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CowTokenDTO) GetTokenSymbolOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.TokenSymbol.Get(), o.TokenSymbol.IsSet()
 }
@@ -513,6 +516,14 @@ func (o *CowTokenDTO) UnsetTokenSymbol() {
 }
 
 func (o CowTokenDTO) MarshalJSON() ([]byte, error) {
+	toSerialize,err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
+}
+
+func (o CowTokenDTO) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
 	if !isNil(o.EntryTime) {
 		toSerialize["entry_time"] = o.EntryTime
@@ -550,7 +561,7 @@ func (o CowTokenDTO) MarshalJSON() ([]byte, error) {
 	if o.TokenSymbol.IsSet() {
 		toSerialize["token_symbol"] = o.TokenSymbol.Get()
 	}
-	return json.Marshal(toSerialize)
+	return toSerialize, nil
 }
 
 type NullableCowTokenDTO struct {

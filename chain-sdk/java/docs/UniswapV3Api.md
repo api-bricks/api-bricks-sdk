@@ -529,12 +529,12 @@ public class Example {
     defaultClient.setBasePath("https://onchain.coinapi.io");
 
     UniswapV3Api apiInstance = new UniswapV3Api(defaultClient);
-    Long startBlock = 56L; // Long | 
-    Long endBlock = 56L; // Long | 
-    OffsetDateTime startDate = OffsetDateTime.now(); // OffsetDateTime | 
-    OffsetDateTime endDate = OffsetDateTime.now(); // OffsetDateTime | 
-    String id = "id_example"; // String | 
-    String pool = "pool_example"; // String | 
+    Long startBlock = 56L; // Long | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+    Long endBlock = 56L; // Long | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+    OffsetDateTime startDate = OffsetDateTime.now(); // OffsetDateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+    OffsetDateTime endDate = OffsetDateTime.now(); // OffsetDateTime | The end date of timeframe.
+    String id = "id_example"; // String | Identifier, format: (pool address)-(day id).
+    String pool = "pool_example"; // String | Pointer to pool.
     try {
       List<UniswapV3PoolDayDataDTO> result = apiInstance.uniswapV3GetPoolDayDataHistorical(startBlock, endBlock, startDate, endDate, id, pool);
       System.out.println(result);
@@ -553,12 +553,12 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **startBlock** | **Long**|  | [optional] |
-| **endBlock** | **Long**|  | [optional] |
-| **startDate** | **OffsetDateTime**|  | [optional] |
-| **endDate** | **OffsetDateTime**|  | [optional] |
-| **id** | **String**|  | [optional] |
-| **pool** | **String**|  | [optional] |
+| **startBlock** | **Long**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] |
+| **endBlock** | **Long**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] |
+| **startDate** | **OffsetDateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] |
+| **endDate** | **OffsetDateTime**| The end date of timeframe. | [optional] |
+| **id** | **String**| Identifier, format: (pool address)-(day id). | [optional] |
+| **pool** | **String**| Pointer to pool. | [optional] |
 
 ### Return type
 
@@ -601,12 +601,12 @@ public class Example {
     defaultClient.setBasePath("https://onchain.coinapi.io");
 
     UniswapV3Api apiInstance = new UniswapV3Api(defaultClient);
-    Long startBlock = 56L; // Long | 
-    Long endBlock = 56L; // Long | 
-    OffsetDateTime startDate = OffsetDateTime.now(); // OffsetDateTime | 
-    OffsetDateTime endDate = OffsetDateTime.now(); // OffsetDateTime | 
-    String id = "id_example"; // String | 
-    String pool = "pool_example"; // String | 
+    Long startBlock = 56L; // Long | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+    Long endBlock = 56L; // Long | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+    OffsetDateTime startDate = OffsetDateTime.now(); // OffsetDateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+    OffsetDateTime endDate = OffsetDateTime.now(); // OffsetDateTime | The end date of timeframe.
+    String id = "id_example"; // String | Identifier, format: (pool address)-(day id)
+    String pool = "pool_example"; // String | Pointer to pool.
     try {
       List<UniswapV3PoolHourDataDTO> result = apiInstance.uniswapV3GetPoolHourDataHistorical(startBlock, endBlock, startDate, endDate, id, pool);
       System.out.println(result);
@@ -625,12 +625,12 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **startBlock** | **Long**|  | [optional] |
-| **endBlock** | **Long**|  | [optional] |
-| **startDate** | **OffsetDateTime**|  | [optional] |
-| **endDate** | **OffsetDateTime**|  | [optional] |
-| **id** | **String**|  | [optional] |
-| **pool** | **String**|  | [optional] |
+| **startBlock** | **Long**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] |
+| **endBlock** | **Long**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] |
+| **startDate** | **OffsetDateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] |
+| **endDate** | **OffsetDateTime**| The end date of timeframe. | [optional] |
+| **id** | **String**| Identifier, format: (pool address)-(day id) | [optional] |
+| **pool** | **String**| Pointer to pool. | [optional] |
 
 ### Return type
 
@@ -747,12 +747,12 @@ public class Example {
     defaultClient.setBasePath("https://onchain.coinapi.io");
 
     UniswapV3Api apiInstance = new UniswapV3Api(defaultClient);
-    Long startBlock = 56L; // Long | 
-    Long endBlock = 56L; // Long | 
-    OffsetDateTime startDate = OffsetDateTime.now(); // OffsetDateTime | 
-    OffsetDateTime endDate = OffsetDateTime.now(); // OffsetDateTime | 
-    String id = "id_example"; // String | 
-    String pool = "pool_example"; // String | 
+    Long startBlock = 56L; // Long | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+    Long endBlock = 56L; // Long | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+    OffsetDateTime startDate = OffsetDateTime.now(); // OffsetDateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+    OffsetDateTime endDate = OffsetDateTime.now(); // OffsetDateTime | The end date of timeframe.
+    String id = "id_example"; // String | NFT token identifier, format: (NFT token id)#(block number).
+    String pool = "pool_example"; // String | Pool the position is within.
     try {
       List<UniswapV3PositionSnapshotDTO> result = apiInstance.uniswapV3GetPositionSnapshotsHistorical(startBlock, endBlock, startDate, endDate, id, pool);
       System.out.println(result);
@@ -771,12 +771,12 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **startBlock** | **Long**|  | [optional] |
-| **endBlock** | **Long**|  | [optional] |
-| **startDate** | **OffsetDateTime**|  | [optional] |
-| **endDate** | **OffsetDateTime**|  | [optional] |
-| **id** | **String**|  | [optional] |
-| **pool** | **String**|  | [optional] |
+| **startBlock** | **Long**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] |
+| **endBlock** | **Long**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] |
+| **startDate** | **OffsetDateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] |
+| **endDate** | **OffsetDateTime**| The end date of timeframe. | [optional] |
+| **id** | **String**| NFT token identifier, format: (NFT token id)#(block number). | [optional] |
+| **pool** | **String**| Pool the position is within. | [optional] |
 
 ### Return type
 
@@ -899,7 +899,7 @@ public class Example {
     Long endBlock = 56L; // Long | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
     OffsetDateTime startDate = OffsetDateTime.now(); // OffsetDateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
     OffsetDateTime endDate = OffsetDateTime.now(); // OffsetDateTime | The end date of timeframe.
-    String id = "id_example"; // String | Identifier, format: transaction hash + \"#\" + index in swaps Transaction array.
+    String id = "id_example"; // String | Identifier, format: (transaction hash) + # + (index in swaps Transaction array).
     String pool = "pool_example"; // String | Pool swap occured within.
     String token0 = "token0_example"; // String | Reference to token0 as stored in pair contract.
     String token1 = "token1_example"; // String | Reference to token1 as stored in pair contract.
@@ -925,7 +925,7 @@ public class Example {
 | **endBlock** | **Long**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] |
 | **startDate** | **OffsetDateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] |
 | **endDate** | **OffsetDateTime**| The end date of timeframe. | [optional] |
-| **id** | **String**| Identifier, format: transaction hash + \&quot;#\&quot; + index in swaps Transaction array. | [optional] |
+| **id** | **String**| Identifier, format: (transaction hash) + # + (index in swaps Transaction array). | [optional] |
 | **pool** | **String**| Pool swap occured within. | [optional] |
 | **token0** | **String**| Reference to token0 as stored in pair contract. | [optional] |
 | **token1** | **String**| Reference to token1 as stored in pair contract. | [optional] |
@@ -971,12 +971,12 @@ public class Example {
     defaultClient.setBasePath("https://onchain.coinapi.io");
 
     UniswapV3Api apiInstance = new UniswapV3Api(defaultClient);
-    Long startBlock = 56L; // Long | 
-    Long endBlock = 56L; // Long | 
-    OffsetDateTime startDate = OffsetDateTime.now(); // OffsetDateTime | 
-    OffsetDateTime endDate = OffsetDateTime.now(); // OffsetDateTime | 
-    String id = "id_example"; // String | 
-    String pool = "pool_example"; // String | 
+    Long startBlock = 56L; // Long | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+    Long endBlock = 56L; // Long | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+    OffsetDateTime startDate = OffsetDateTime.now(); // OffsetDateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+    OffsetDateTime endDate = OffsetDateTime.now(); // OffsetDateTime | The end date of timeframe.
+    String id = "id_example"; // String | Identifier, format: (pool address)-(tick index)-(timestamp).
+    String pool = "pool_example"; // String | Pointer to pool.
     try {
       List<UniswapV3TickDayDataDTO> result = apiInstance.uniswapV3GetTickDayDataHistorical(startBlock, endBlock, startDate, endDate, id, pool);
       System.out.println(result);
@@ -995,12 +995,12 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **startBlock** | **Long**|  | [optional] |
-| **endBlock** | **Long**|  | [optional] |
-| **startDate** | **OffsetDateTime**|  | [optional] |
-| **endDate** | **OffsetDateTime**|  | [optional] |
-| **id** | **String**|  | [optional] |
-| **pool** | **String**|  | [optional] |
+| **startBlock** | **Long**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] |
+| **endBlock** | **Long**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] |
+| **startDate** | **OffsetDateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] |
+| **endDate** | **OffsetDateTime**| The end date of timeframe. | [optional] |
+| **id** | **String**| Identifier, format: (pool address)-(tick index)-(timestamp). | [optional] |
+| **pool** | **String**| Pointer to pool. | [optional] |
 
 ### Return type
 
@@ -1043,12 +1043,12 @@ public class Example {
     defaultClient.setBasePath("https://onchain.coinapi.io");
 
     UniswapV3Api apiInstance = new UniswapV3Api(defaultClient);
-    Long startBlock = 56L; // Long | 
-    Long endBlock = 56L; // Long | 
-    OffsetDateTime startDate = OffsetDateTime.now(); // OffsetDateTime | 
-    OffsetDateTime endDate = OffsetDateTime.now(); // OffsetDateTime | 
-    String id = "id_example"; // String | 
-    String pool = "pool_example"; // String | 
+    Long startBlock = 56L; // Long | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+    Long endBlock = 56L; // Long | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+    OffsetDateTime startDate = OffsetDateTime.now(); // OffsetDateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+    OffsetDateTime endDate = OffsetDateTime.now(); // OffsetDateTime | The end date of timeframe.
+    String id = "id_example"; // String | Identifier, format: (pool address)#(tick index)
+    String pool = "pool_example"; // String | Pool address.
     try {
       List<UniswapV3TickDTO> result = apiInstance.uniswapV3GetTicksHistorical(startBlock, endBlock, startDate, endDate, id, pool);
       System.out.println(result);
@@ -1067,12 +1067,12 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **startBlock** | **Long**|  | [optional] |
-| **endBlock** | **Long**|  | [optional] |
-| **startDate** | **OffsetDateTime**|  | [optional] |
-| **endDate** | **OffsetDateTime**|  | [optional] |
-| **id** | **String**|  | [optional] |
-| **pool** | **String**|  | [optional] |
+| **startBlock** | **Long**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] |
+| **endBlock** | **Long**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] |
+| **startDate** | **OffsetDateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] |
+| **endDate** | **OffsetDateTime**| The end date of timeframe. | [optional] |
+| **id** | **String**| Identifier, format: (pool address)#(tick index) | [optional] |
+| **pool** | **String**| Pool address. | [optional] |
 
 ### Return type
 

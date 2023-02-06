@@ -408,12 +408,12 @@ Gets poolDayData.
 
 ### Example
 ```powershell
-$StartBlock = 789 # Int64 |  (optional)
-$EndBlock = 789 # Int64 |  (optional)
-$StartDate = (Get-Date) # System.DateTime |  (optional)
-$EndDate = (Get-Date) # System.DateTime |  (optional)
-$Id = "MyId" # String |  (optional)
-$Pool = "MyPool" # String |  (optional)
+$StartBlock = 789 # Int64 | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+$EndBlock = 789 # Int64 | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+$StartDate = (Get-Date) # System.DateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+$EndDate = (Get-Date) # System.DateTime | The end date of timeframe. (optional)
+$Id = "MyId" # String | Identifier, format: (pool address)-(day id). (optional)
+$Pool = "MyPool" # String | Pointer to pool. (optional)
 
 # PoolDayData (historical)
 try {
@@ -428,12 +428,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **StartBlock** | **Int64**|  | [optional] 
- **EndBlock** | **Int64**|  | [optional] 
- **StartDate** | **System.DateTime**|  | [optional] 
- **EndDate** | **System.DateTime**|  | [optional] 
- **Id** | **String**|  | [optional] 
- **Pool** | **String**|  | [optional] 
+ **StartBlock** | **Int64**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
+ **EndBlock** | **Int64**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
+ **StartDate** | **System.DateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
+ **EndDate** | **System.DateTime**| The end date of timeframe. | [optional] 
+ **Id** | **String**| Identifier, format: (pool address)-(day id). | [optional] 
+ **Pool** | **String**| Pointer to pool. | [optional] 
 
 ### Return type
 
@@ -466,12 +466,12 @@ Gets poolHourData.
 
 ### Example
 ```powershell
-$StartBlock = 789 # Int64 |  (optional)
-$EndBlock = 789 # Int64 |  (optional)
-$StartDate = (Get-Date) # System.DateTime |  (optional)
-$EndDate = (Get-Date) # System.DateTime |  (optional)
-$Id = "MyId" # String |  (optional)
-$Pool = "MyPool" # String |  (optional)
+$StartBlock = 789 # Int64 | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+$EndBlock = 789 # Int64 | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+$StartDate = (Get-Date) # System.DateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+$EndDate = (Get-Date) # System.DateTime | The end date of timeframe. (optional)
+$Id = "MyId" # String | Identifier, format: (pool address)-(day id) (optional)
+$Pool = "MyPool" # String | Pointer to pool. (optional)
 
 # PoolHourData (historical)
 try {
@@ -486,12 +486,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **StartBlock** | **Int64**|  | [optional] 
- **EndBlock** | **Int64**|  | [optional] 
- **StartDate** | **System.DateTime**|  | [optional] 
- **EndDate** | **System.DateTime**|  | [optional] 
- **Id** | **String**|  | [optional] 
- **Pool** | **String**|  | [optional] 
+ **StartBlock** | **Int64**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
+ **EndBlock** | **Int64**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
+ **StartDate** | **System.DateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
+ **EndDate** | **System.DateTime**| The end date of timeframe. | [optional] 
+ **Id** | **String**| Identifier, format: (pool address)-(day id) | [optional] 
+ **Pool** | **String**| Pointer to pool. | [optional] 
 
 ### Return type
 
@@ -585,12 +585,12 @@ Gets positionSnapshots.
 
 ### Example
 ```powershell
-$StartBlock = 789 # Int64 |  (optional)
-$EndBlock = 789 # Int64 |  (optional)
-$StartDate = (Get-Date) # System.DateTime |  (optional)
-$EndDate = (Get-Date) # System.DateTime |  (optional)
-$Id = "MyId" # String |  (optional)
-$Pool = "MyPool" # String |  (optional)
+$StartBlock = 789 # Int64 | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+$EndBlock = 789 # Int64 | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+$StartDate = (Get-Date) # System.DateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+$EndDate = (Get-Date) # System.DateTime | The end date of timeframe. (optional)
+$Id = "MyId" # String | NFT token identifier, format: (NFT token id)#(block number). (optional)
+$Pool = "MyPool" # String | Pool the position is within. (optional)
 
 # PositionSnapshots (historical)
 try {
@@ -605,12 +605,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **StartBlock** | **Int64**|  | [optional] 
- **EndBlock** | **Int64**|  | [optional] 
- **StartDate** | **System.DateTime**|  | [optional] 
- **EndDate** | **System.DateTime**|  | [optional] 
- **Id** | **String**|  | [optional] 
- **Pool** | **String**|  | [optional] 
+ **StartBlock** | **Int64**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
+ **EndBlock** | **Int64**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
+ **StartDate** | **System.DateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
+ **EndDate** | **System.DateTime**| The end date of timeframe. | [optional] 
+ **Id** | **String**| NFT token identifier, format: (NFT token id)#(block number). | [optional] 
+ **Pool** | **String**| Pool the position is within. | [optional] 
 
 ### Return type
 
@@ -713,7 +713,7 @@ $StartBlock = 789 # Int64 | The start block. If endblock is not given, only thos
 $EndBlock = 789 # Int64 | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
 $StartDate = (Get-Date) # System.DateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
 $EndDate = (Get-Date) # System.DateTime | The end date of timeframe. (optional)
-$Id = "MyId" # String | Identifier, format: transaction hash + ""#"" + index in swaps Transaction array. (optional)
+$Id = "MyId" # String | Identifier, format: (transaction hash) + # + (index in swaps Transaction array). (optional)
 $Pool = "MyPool" # String | Pool swap occured within. (optional)
 $Token0 = "MyToken0" # String | Reference to token0 as stored in pair contract. (optional)
 $Token1 = "MyToken1" # String | Reference to token1 as stored in pair contract. (optional)
@@ -735,7 +735,7 @@ Name | Type | Description  | Notes
  **EndBlock** | **Int64**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
  **StartDate** | **System.DateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
  **EndDate** | **System.DateTime**| The end date of timeframe. | [optional] 
- **Id** | **String**| Identifier, format: transaction hash + &quot;&quot;#&quot;&quot; + index in swaps Transaction array. | [optional] 
+ **Id** | **String**| Identifier, format: (transaction hash) + # + (index in swaps Transaction array). | [optional] 
  **Pool** | **String**| Pool swap occured within. | [optional] 
  **Token0** | **String**| Reference to token0 as stored in pair contract. | [optional] 
  **Token1** | **String**| Reference to token1 as stored in pair contract. | [optional] 
@@ -771,12 +771,12 @@ Gets tickDayData.
 
 ### Example
 ```powershell
-$StartBlock = 789 # Int64 |  (optional)
-$EndBlock = 789 # Int64 |  (optional)
-$StartDate = (Get-Date) # System.DateTime |  (optional)
-$EndDate = (Get-Date) # System.DateTime |  (optional)
-$Id = "MyId" # String |  (optional)
-$Pool = "MyPool" # String |  (optional)
+$StartBlock = 789 # Int64 | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+$EndBlock = 789 # Int64 | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+$StartDate = (Get-Date) # System.DateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+$EndDate = (Get-Date) # System.DateTime | The end date of timeframe. (optional)
+$Id = "MyId" # String | Identifier, format: (pool address)-(tick index)-(timestamp). (optional)
+$Pool = "MyPool" # String | Pointer to pool. (optional)
 
 # TickDayData (historical)
 try {
@@ -791,12 +791,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **StartBlock** | **Int64**|  | [optional] 
- **EndBlock** | **Int64**|  | [optional] 
- **StartDate** | **System.DateTime**|  | [optional] 
- **EndDate** | **System.DateTime**|  | [optional] 
- **Id** | **String**|  | [optional] 
- **Pool** | **String**|  | [optional] 
+ **StartBlock** | **Int64**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
+ **EndBlock** | **Int64**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
+ **StartDate** | **System.DateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
+ **EndDate** | **System.DateTime**| The end date of timeframe. | [optional] 
+ **Id** | **String**| Identifier, format: (pool address)-(tick index)-(timestamp). | [optional] 
+ **Pool** | **String**| Pointer to pool. | [optional] 
 
 ### Return type
 
@@ -829,12 +829,12 @@ Gets ticks.
 
 ### Example
 ```powershell
-$StartBlock = 789 # Int64 |  (optional)
-$EndBlock = 789 # Int64 |  (optional)
-$StartDate = (Get-Date) # System.DateTime |  (optional)
-$EndDate = (Get-Date) # System.DateTime |  (optional)
-$Id = "MyId" # String |  (optional)
-$Pool = "MyPool" # String |  (optional)
+$StartBlock = 789 # Int64 | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+$EndBlock = 789 # Int64 | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+$StartDate = (Get-Date) # System.DateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+$EndDate = (Get-Date) # System.DateTime | The end date of timeframe. (optional)
+$Id = "MyId" # String | Identifier, format: (pool address)#(tick index) (optional)
+$Pool = "MyPool" # String | Pool address. (optional)
 
 # Ticks (historical)
 try {
@@ -849,12 +849,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **StartBlock** | **Int64**|  | [optional] 
- **EndBlock** | **Int64**|  | [optional] 
- **StartDate** | **System.DateTime**|  | [optional] 
- **EndDate** | **System.DateTime**|  | [optional] 
- **Id** | **String**|  | [optional] 
- **Pool** | **String**|  | [optional] 
+ **StartBlock** | **Int64**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] 
+ **EndBlock** | **Int64**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] 
+ **StartDate** | **System.DateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] 
+ **EndDate** | **System.DateTime**| The end date of timeframe. | [optional] 
+ **Id** | **String**| Identifier, format: (pool address)#(tick index) | [optional] 
+ **Pool** | **String**| Pool address. | [optional] 
 
 ### Return type
 

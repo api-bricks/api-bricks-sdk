@@ -135,6 +135,7 @@ function Initialize-UniswapV3SwapDTO {
         [System.Nullable[Double]]
         ${EvaluatedAmount},
         [Parameter(Position = 21, ValueFromPipelineByPropertyName = $true)]
+        [ValidateSet("Buy", "Sell", "EstimatedBuy", "EstimatedSell", "Unknown")]
         [PSCustomObject]
         ${EvaluatedAggressor},
         [Parameter(Position = 22, ValueFromPipelineByPropertyName = $true)]

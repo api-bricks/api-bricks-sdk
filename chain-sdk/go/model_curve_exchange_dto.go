@@ -16,6 +16,9 @@ import (
 	"time"
 )
 
+// checks if the CurveExchangeDTO type satisfies the MappedNullable interface at compile time
+var _ MappedNullable = &CurveExchangeDTO{}
+
 // CurveExchangeDTO struct for CurveExchangeDTO
 type CurveExchangeDTO struct {
 	EntryTime *time.Time `json:"entry_time,omitempty"`
@@ -83,7 +86,7 @@ func (o *CurveExchangeDTO) GetEntryTime() time.Time {
 // and a boolean to check if the value has been set.
 func (o *CurveExchangeDTO) GetEntryTimeOk() (*time.Time, bool) {
 	if o == nil || isNil(o.EntryTime) {
-    return nil, false
+		return nil, false
 	}
 	return o.EntryTime, true
 }
@@ -115,7 +118,7 @@ func (o *CurveExchangeDTO) GetRecvTime() time.Time {
 // and a boolean to check if the value has been set.
 func (o *CurveExchangeDTO) GetRecvTimeOk() (*time.Time, bool) {
 	if o == nil || isNil(o.RecvTime) {
-    return nil, false
+		return nil, false
 	}
 	return o.RecvTime, true
 }
@@ -147,7 +150,7 @@ func (o *CurveExchangeDTO) GetBlockNumber() int64 {
 // and a boolean to check if the value has been set.
 func (o *CurveExchangeDTO) GetBlockNumberOk() (*int64, bool) {
 	if o == nil || isNil(o.BlockNumber) {
-    return nil, false
+		return nil, false
 	}
 	return o.BlockNumber, true
 }
@@ -180,7 +183,7 @@ func (o *CurveExchangeDTO) GetId() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CurveExchangeDTO) GetIdOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Id.Get(), o.Id.IsSet()
 }
@@ -222,7 +225,7 @@ func (o *CurveExchangeDTO) GetPool() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CurveExchangeDTO) GetPoolOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Pool.Get(), o.Pool.IsSet()
 }
@@ -264,7 +267,7 @@ func (o *CurveExchangeDTO) GetBuyer() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CurveExchangeDTO) GetBuyerOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Buyer.Get(), o.Buyer.IsSet()
 }
@@ -306,7 +309,7 @@ func (o *CurveExchangeDTO) GetReceiver() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CurveExchangeDTO) GetReceiverOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Receiver.Get(), o.Receiver.IsSet()
 }
@@ -348,7 +351,7 @@ func (o *CurveExchangeDTO) GetTokenSold() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CurveExchangeDTO) GetTokenSoldOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.TokenSold.Get(), o.TokenSold.IsSet()
 }
@@ -390,7 +393,7 @@ func (o *CurveExchangeDTO) GetTokenBought() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CurveExchangeDTO) GetTokenBoughtOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.TokenBought.Get(), o.TokenBought.IsSet()
 }
@@ -432,7 +435,7 @@ func (o *CurveExchangeDTO) GetAmountSold() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CurveExchangeDTO) GetAmountSoldOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.AmountSold.Get(), o.AmountSold.IsSet()
 }
@@ -474,7 +477,7 @@ func (o *CurveExchangeDTO) GetAmountBought() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CurveExchangeDTO) GetAmountBoughtOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.AmountBought.Get(), o.AmountBought.IsSet()
 }
@@ -516,7 +519,7 @@ func (o *CurveExchangeDTO) GetBlock() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CurveExchangeDTO) GetBlockOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Block.Get(), o.Block.IsSet()
 }
@@ -558,7 +561,7 @@ func (o *CurveExchangeDTO) GetTimestamp() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CurveExchangeDTO) GetTimestampOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Timestamp.Get(), o.Timestamp.IsSet()
 }
@@ -600,7 +603,7 @@ func (o *CurveExchangeDTO) GetTransaction() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CurveExchangeDTO) GetTransactionOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.Transaction.Get(), o.Transaction.IsSet()
 }
@@ -641,7 +644,7 @@ func (o *CurveExchangeDTO) GetVid() int64 {
 // and a boolean to check if the value has been set.
 func (o *CurveExchangeDTO) GetVidOk() (*int64, bool) {
 	if o == nil || isNil(o.Vid) {
-    return nil, false
+		return nil, false
 	}
 	return o.Vid, true
 }
@@ -673,7 +676,7 @@ func (o *CurveExchangeDTO) GetEvaluatedPrice() float64 {
 // and a boolean to check if the value has been set.
 func (o *CurveExchangeDTO) GetEvaluatedPriceOk() (*float64, bool) {
 	if o == nil || isNil(o.EvaluatedPrice) {
-    return nil, false
+		return nil, false
 	}
 	return o.EvaluatedPrice, true
 }
@@ -705,7 +708,7 @@ func (o *CurveExchangeDTO) GetEvaluatedAmount() float64 {
 // and a boolean to check if the value has been set.
 func (o *CurveExchangeDTO) GetEvaluatedAmountOk() (*float64, bool) {
 	if o == nil || isNil(o.EvaluatedAmount) {
-    return nil, false
+		return nil, false
 	}
 	return o.EvaluatedAmount, true
 }
@@ -737,7 +740,7 @@ func (o *CurveExchangeDTO) GetEvaluatedAggressor() TransactionsETradeAggressiveS
 // and a boolean to check if the value has been set.
 func (o *CurveExchangeDTO) GetEvaluatedAggressorOk() (*TransactionsETradeAggressiveSide, bool) {
 	if o == nil || isNil(o.EvaluatedAggressor) {
-    return nil, false
+		return nil, false
 	}
 	return o.EvaluatedAggressor, true
 }
@@ -770,7 +773,7 @@ func (o *CurveExchangeDTO) GetPoolId() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CurveExchangeDTO) GetPoolIdOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.PoolId.Get(), o.PoolId.IsSet()
 }
@@ -812,7 +815,7 @@ func (o *CurveExchangeDTO) GetTransactionId() string {
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *CurveExchangeDTO) GetTransactionIdOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return o.TransactionId.Get(), o.TransactionId.IsSet()
 }
@@ -841,6 +844,14 @@ func (o *CurveExchangeDTO) UnsetTransactionId() {
 }
 
 func (o CurveExchangeDTO) MarshalJSON() ([]byte, error) {
+	toSerialize,err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
+}
+
+func (o CurveExchangeDTO) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
 	if !isNil(o.EntryTime) {
 		toSerialize["entry_time"] = o.EntryTime
@@ -887,12 +898,8 @@ func (o CurveExchangeDTO) MarshalJSON() ([]byte, error) {
 	if !isNil(o.Vid) {
 		toSerialize["vid"] = o.Vid
 	}
-	if !isNil(o.EvaluatedPrice) {
-		toSerialize["evaluated_price"] = o.EvaluatedPrice
-	}
-	if !isNil(o.EvaluatedAmount) {
-		toSerialize["evaluated_amount"] = o.EvaluatedAmount
-	}
+	// skip: evaluated_price is readOnly
+	// skip: evaluated_amount is readOnly
 	if !isNil(o.EvaluatedAggressor) {
 		toSerialize["evaluated_aggressor"] = o.EvaluatedAggressor
 	}
@@ -902,7 +909,7 @@ func (o CurveExchangeDTO) MarshalJSON() ([]byte, error) {
 	if o.TransactionId.IsSet() {
 		toSerialize["transaction_id"] = o.TransactionId.Get()
 	}
-	return json.Marshal(toSerialize)
+	return toSerialize, nil
 }
 
 type NullableCurveExchangeDTO struct {

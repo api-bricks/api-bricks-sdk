@@ -372,12 +372,12 @@ require 'openapi_client'
 
 api_instance = OpenapiClient::SushiswapApi.new
 opts = {
-  start_block: 789, # Integer | 
-  end_block: 789, # Integer | 
-  start_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
-  end_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
-  id: 'id_example', # String | 
-  pair: 'pair_example' # String | 
+  start_block: 789, # Integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+  end_block: 789, # Integer | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+  start_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+  end_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | The end date of timeframe.
+  id: 'id_example', # String | Identifier, format: (transaction id):(transaction.burns.length).
+  pair: 'pair_example' # String | Reference to pair.
 }
 
 begin
@@ -411,12 +411,12 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **start_block** | **Integer** |  | [optional] |
-| **end_block** | **Integer** |  | [optional] |
-| **start_date** | **Time** |  | [optional] |
-| **end_date** | **Time** |  | [optional] |
-| **id** | **String** |  | [optional] |
-| **pair** | **String** |  | [optional] |
+| **start_block** | **Integer** | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] |
+| **end_block** | **Integer** | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] |
+| **start_date** | **Time** | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] |
+| **end_date** | **Time** | The end date of timeframe. | [optional] |
+| **id** | **String** | Identifier, format: (transaction id):(transaction.burns.length). | [optional] |
+| **pair** | **String** | Reference to pair. | [optional] |
 
 ### Return type
 
@@ -670,13 +670,13 @@ require 'openapi_client'
 
 api_instance = OpenapiClient::SushiswapApi.new
 opts = {
-  start_block: 789, # Integer | 
-  end_block: 789, # Integer | 
-  start_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
-  end_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
-  id: 'id_example', # String | 
-  user: 'user_example', # String | 
-  pair: 'pair_example' # String | 
+  start_block: 789, # Integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+  end_block: 789, # Integer | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+  start_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+  end_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | The end date of timeframe.
+  id: 'id_example', # String | Identifier, format: (pair address)-(user address)-(timestamp)
+  user: 'user_example', # String | Reference to user.
+  pair: 'pair_example' # String | Reference to the pair liquidity is being provided on.
 }
 
 begin
@@ -710,13 +710,13 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **start_block** | **Integer** |  | [optional] |
-| **end_block** | **Integer** |  | [optional] |
-| **start_date** | **Time** |  | [optional] |
-| **end_date** | **Time** |  | [optional] |
-| **id** | **String** |  | [optional] |
-| **user** | **String** |  | [optional] |
-| **pair** | **String** |  | [optional] |
+| **start_block** | **Integer** | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] |
+| **end_block** | **Integer** | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] |
+| **start_date** | **Time** | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] |
+| **end_date** | **Time** | The end date of timeframe. | [optional] |
+| **id** | **String** | Identifier, format: (pair address)-(user address)-(timestamp) | [optional] |
+| **user** | **String** | Reference to user. | [optional] |
+| **pair** | **String** | Reference to the pair liquidity is being provided on. | [optional] |
 
 ### Return type
 
@@ -748,13 +748,13 @@ require 'openapi_client'
 
 api_instance = OpenapiClient::SushiswapApi.new
 opts = {
-  start_block: 789, # Integer | 
-  end_block: 789, # Integer | 
-  start_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
-  end_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
-  id: 'id_example', # String | 
-  user: 'user_example', # String | 
-  pair: 'pair_example' # String | 
+  start_block: 789, # Integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+  end_block: 789, # Integer | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+  start_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+  end_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | The end date of timeframe.
+  id: 'id_example', # String | Identifier, format: (pair address)-(user address)
+  user: 'user_example', # String | User address.
+  pair: 'pair_example' # String | Pair address.
 }
 
 begin
@@ -788,13 +788,13 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **start_block** | **Integer** |  | [optional] |
-| **end_block** | **Integer** |  | [optional] |
-| **start_date** | **Time** |  | [optional] |
-| **end_date** | **Time** |  | [optional] |
-| **id** | **String** |  | [optional] |
-| **user** | **String** |  | [optional] |
-| **pair** | **String** |  | [optional] |
+| **start_block** | **Integer** | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] |
+| **end_block** | **Integer** | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] |
+| **start_date** | **Time** | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] |
+| **end_date** | **Time** | The end date of timeframe. | [optional] |
+| **id** | **String** | Identifier, format: (pair address)-(user address) | [optional] |
+| **user** | **String** | User address. | [optional] |
+| **pair** | **String** | Pair address. | [optional] |
 
 ### Return type
 
@@ -826,12 +826,12 @@ require 'openapi_client'
 
 api_instance = OpenapiClient::SushiswapApi.new
 opts = {
-  start_block: 789, # Integer | 
-  end_block: 789, # Integer | 
-  start_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
-  end_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
-  id: 'id_example', # String | 
-  pair: 'pair_example' # String | 
+  start_block: 789, # Integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+  end_block: 789, # Integer | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+  start_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+  end_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | The end date of timeframe.
+  id: 'id_example', # String | Identifier, format: (transaction hash)-(index in the transaction mint array).
+  pair: 'pair_example' # String | Reference to pair.
 }
 
 begin
@@ -865,12 +865,12 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **start_block** | **Integer** |  | [optional] |
-| **end_block** | **Integer** |  | [optional] |
-| **start_date** | **Time** |  | [optional] |
-| **end_date** | **Time** |  | [optional] |
-| **id** | **String** |  | [optional] |
-| **pair** | **String** |  | [optional] |
+| **start_block** | **Integer** | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] |
+| **end_block** | **Integer** | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] |
+| **start_date** | **Time** | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] |
+| **end_date** | **Time** | The end date of timeframe. | [optional] |
+| **id** | **String** | Identifier, format: (transaction hash)-(index in the transaction mint array). | [optional] |
+| **pair** | **String** | Reference to pair. | [optional] |
 
 ### Return type
 
@@ -902,14 +902,14 @@ require 'openapi_client'
 
 api_instance = OpenapiClient::SushiswapApi.new
 opts = {
-  start_block: 789, # Integer | 
-  end_block: 789, # Integer | 
-  start_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
-  end_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
-  id: 'id_example', # String | 
-  pair: 'pair_example', # String | 
-  token_0: 'token_0_example', # String | 
-  token_1: 'token_1_example' # String | 
+  start_block: 789, # Integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+  end_block: 789, # Integer | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+  start_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+  end_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | The end date of timeframe.
+  id: 'id_example', # String | Identifier, format: (pair id)-(day start timestamp).
+  pair: 'pair_example', # String | Reference to pair.
+  token_0: 'token_0_example', # String | Reference to token0.
+  token_1: 'token_1_example' # String | Reference to token1.
 }
 
 begin
@@ -943,14 +943,14 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **start_block** | **Integer** |  | [optional] |
-| **end_block** | **Integer** |  | [optional] |
-| **start_date** | **Time** |  | [optional] |
-| **end_date** | **Time** |  | [optional] |
-| **id** | **String** |  | [optional] |
-| **pair** | **String** |  | [optional] |
-| **token_0** | **String** |  | [optional] |
-| **token_1** | **String** |  | [optional] |
+| **start_block** | **Integer** | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] |
+| **end_block** | **Integer** | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] |
+| **start_date** | **Time** | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] |
+| **end_date** | **Time** | The end date of timeframe. | [optional] |
+| **id** | **String** | Identifier, format: (pair id)-(day start timestamp). | [optional] |
+| **pair** | **String** | Reference to pair. | [optional] |
+| **token_0** | **String** | Reference to token0. | [optional] |
+| **token_1** | **String** | Reference to token1. | [optional] |
 
 ### Return type
 
@@ -982,12 +982,12 @@ require 'openapi_client'
 
 api_instance = OpenapiClient::SushiswapApi.new
 opts = {
-  start_block: 789, # Integer | 
-  end_block: 789, # Integer | 
-  start_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
-  end_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
-  id: 'id_example', # String | 
-  pair: 'pair_example' # String | 
+  start_block: 789, # Integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+  end_block: 789, # Integer | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+  start_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+  end_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | The end date of timeframe.
+  id: 'id_example', # String | Identifier, format: (pair id)-(hour start timestamp).
+  pair: 'pair_example' # String | Reference to pair.
 }
 
 begin
@@ -1021,12 +1021,12 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **start_block** | **Integer** |  | [optional] |
-| **end_block** | **Integer** |  | [optional] |
-| **start_date** | **Time** |  | [optional] |
-| **end_date** | **Time** |  | [optional] |
-| **id** | **String** |  | [optional] |
-| **pair** | **String** |  | [optional] |
+| **start_block** | **Integer** | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] |
+| **end_block** | **Integer** | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] |
+| **start_date** | **Time** | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] |
+| **end_date** | **Time** | The end date of timeframe. | [optional] |
+| **id** | **String** | Identifier, format: (pair id)-(hour start timestamp). | [optional] |
+| **pair** | **String** | Reference to pair. | [optional] |
 
 ### Return type
 
@@ -1058,14 +1058,14 @@ require 'openapi_client'
 
 api_instance = OpenapiClient::SushiswapApi.new
 opts = {
-  start_block: 789, # Integer | 
-  end_block: 789, # Integer | 
-  start_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
-  end_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
-  id: 'id_example', # String | 
-  name: 'name_example', # String | 
-  token_0: 'token_0_example', # String | 
-  token_1: 'token_1_example' # String | 
+  start_block: 789, # Integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+  end_block: 789, # Integer | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+  start_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+  end_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | The end date of timeframe.
+  id: 'id_example', # String | Pair contract address.
+  name: 'name_example', # String | Friendly name, format: (token0 name)-(token1 name)
+  token_0: 'token_0_example', # String | Reference to token0 as stored in pair contract.
+  token_1: 'token_1_example' # String | Reference to token0 as stored in pair contract.
 }
 
 begin
@@ -1099,14 +1099,14 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **start_block** | **Integer** |  | [optional] |
-| **end_block** | **Integer** |  | [optional] |
-| **start_date** | **Time** |  | [optional] |
-| **end_date** | **Time** |  | [optional] |
-| **id** | **String** |  | [optional] |
-| **name** | **String** |  | [optional] |
-| **token_0** | **String** |  | [optional] |
-| **token_1** | **String** |  | [optional] |
+| **start_block** | **Integer** | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] |
+| **end_block** | **Integer** | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] |
+| **start_date** | **Time** | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] |
+| **end_date** | **Time** | The end date of timeframe. | [optional] |
+| **id** | **String** | Pair contract address. | [optional] |
+| **name** | **String** | Friendly name, format: (token0 name)-(token1 name) | [optional] |
+| **token_0** | **String** | Reference to token0 as stored in pair contract. | [optional] |
+| **token_1** | **String** | Reference to token0 as stored in pair contract. | [optional] |
 
 ### Return type
 
