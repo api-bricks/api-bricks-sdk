@@ -512,7 +512,7 @@ public class OASOrderExecutionReport implements OASOrderNewSingleRequest, OASOrd
     }
 
     public OASOrderExecutionReport() {
-        execInst = new List<ExecInstEnum>();
+        execInst = new List<String>();
         statusHistory = new List<List<String>>();
         fills = new List<OASFills>();
     }

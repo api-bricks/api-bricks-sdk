@@ -159,7 +159,7 @@ class Position(
                     
                         def __new__(
                             cls,
-                            *args: typing.Union[dict, frozendict.frozendict, ],
+                            *_args: typing.Union[dict, frozendict.frozendict, ],
                             symbol_id_exchange: typing.Union[MetaOapg.properties.symbol_id_exchange, str, schemas.Unset] = schemas.unset,
                             symbol_id_coinapi: typing.Union[MetaOapg.properties.symbol_id_coinapi, str, schemas.Unset] = schemas.unset,
                             avg_entry_price: typing.Union[MetaOapg.properties.avg_entry_price, decimal.Decimal, int, float, schemas.Unset] = schemas.unset,
@@ -175,7 +175,7 @@ class Position(
                         ) -> 'items':
                             return super().__new__(
                                 cls,
-                                *args,
+                                *_args,
                                 symbol_id_exchange=symbol_id_exchange,
                                 symbol_id_coinapi=symbol_id_coinapi,
                                 avg_entry_price=avg_entry_price,
@@ -192,12 +192,12 @@ class Position(
             
                 def __new__(
                     cls,
-                    arg: typing.Union[typing.Tuple[typing.Union[MetaOapg.items, dict, frozendict.frozendict, ]], typing.List[typing.Union[MetaOapg.items, dict, frozendict.frozendict, ]]],
+                    _arg: typing.Union[typing.Tuple[typing.Union[MetaOapg.items, dict, frozendict.frozendict, ]], typing.List[typing.Union[MetaOapg.items, dict, frozendict.frozendict, ]]],
                     _configuration: typing.Optional[schemas.Configuration] = None,
                 ) -> 'data':
                     return super().__new__(
                         cls,
-                        arg,
+                        _arg,
                         _configuration=_configuration,
                     )
             
@@ -237,7 +237,7 @@ class Position(
 
     def __new__(
         cls,
-        *args: typing.Union[dict, frozendict.frozendict, ],
+        *_args: typing.Union[dict, frozendict.frozendict, ],
         exchange_id: typing.Union[MetaOapg.properties.exchange_id, str, schemas.Unset] = schemas.unset,
         data: typing.Union[MetaOapg.properties.data, list, tuple, schemas.Unset] = schemas.unset,
         _configuration: typing.Optional[schemas.Configuration] = None,
@@ -245,7 +245,7 @@ class Position(
     ) -> 'Position':
         return super().__new__(
             cls,
-            *args,
+            *_args,
             exchange_id=exchange_id,
             data=data,
             _configuration=_configuration,

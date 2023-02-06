@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.math.BigDecimal;
 import java.time.LocalDate;
@@ -52,7 +50,7 @@ import org.openapitools.client.JSON;
 /**
  * OrderHistory
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-30T14:41:54.163130Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-06T14:42:09.513003Z[Etc/UTC]")
 public class OrderHistory {
   public static final String SERIALIZED_NAME_APIKEY = "apikey";
   @SerializedName(SERIALIZED_NAME_APIKEY)
@@ -176,7 +174,6 @@ public class OrderHistory {
    * @return apikey
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "9a55567a-b5ff-4b78-b6aa-xxxx", value = "Apikey")
 
   public String getApikey() {
     return apikey;
@@ -199,7 +196,6 @@ public class OrderHistory {
    * @return exchangeId
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "BINANCE", value = "Exchange id")
 
   public String getExchangeId() {
     return exchangeId;
@@ -222,7 +218,6 @@ public class OrderHistory {
    * @return clientOrderId
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "6ab36bc1-344d-432e-ac6d-0bf44ee64c2b", value = "Client order id")
 
   public String getClientOrderId() {
     return clientOrderId;
@@ -245,7 +240,6 @@ public class OrderHistory {
    * @return symbolIdExchange
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "BTCUSDT", value = "Symbol id exchange")
 
   public String getSymbolIdExchange() {
     return symbolIdExchange;
@@ -268,7 +262,6 @@ public class OrderHistory {
    * @return symbolIdCoinapi
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "BINANCE_SPOT_BTC_USDT", value = "Symbol id in coinapi")
 
   public String getSymbolIdCoinapi() {
     return symbolIdCoinapi;
@@ -291,7 +284,6 @@ public class OrderHistory {
    * @return amountOrder
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "0.00034", value = "Amount")
 
   public BigDecimal getAmountOrder() {
     return amountOrder;
@@ -314,7 +306,6 @@ public class OrderHistory {
    * @return price
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "31939.47", value = "Price")
 
   public BigDecimal getPrice() {
     return price;
@@ -337,7 +328,6 @@ public class OrderHistory {
    * @return side
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "2", value = "1-buy, 2-sell")
 
   public BigDecimal getSide() {
     return side;
@@ -360,7 +350,6 @@ public class OrderHistory {
    * @return orderType
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "LIMIT", value = "Order type")
 
   public String getOrderType() {
     return orderType;
@@ -383,7 +372,6 @@ public class OrderHistory {
    * @return timeInForce
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "GOOD_TILL_CANCEL", value = "Time in force")
 
   public String getTimeInForce() {
     return timeInForce;
@@ -406,7 +394,6 @@ public class OrderHistory {
    * @return expireTime
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "2022-05-01T00:00:00", value = "Expire time")
 
   public LocalDate getExpireTime() {
     return expireTime;
@@ -437,7 +424,6 @@ public class OrderHistory {
    * @return execInst
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Exec inst")
 
   public List<String> getExecInst() {
     return execInst;
@@ -460,7 +446,6 @@ public class OrderHistory {
    * @return clientOrderIdFormatExchange
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "6ab36bc1-344d-432e-ac6d-0bf44ee64c2b", value = "Client order id format")
 
   public String getClientOrderIdFormatExchange() {
     return clientOrderIdFormatExchange;
@@ -483,7 +468,6 @@ public class OrderHistory {
    * @return exchangeOrderId
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "6ab36bc1-344d-432e-ac6d-0bf44ee64c2b", value = "Exchange order id")
 
   public String getExchangeOrderId() {
     return exchangeOrderId;
@@ -506,7 +490,6 @@ public class OrderHistory {
    * @return amountOpen
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "0.00034", value = "Amount open")
 
   public BigDecimal getAmountOpen() {
     return amountOpen;
@@ -529,7 +512,6 @@ public class OrderHistory {
    * @return amountFilled
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "0", value = "Amount filled")
 
   public BigDecimal getAmountFilled() {
     return amountFilled;
@@ -552,7 +534,6 @@ public class OrderHistory {
    * @return avgPx
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "0", value = "Average price")
 
   public BigDecimal getAvgPx() {
     return avgPx;
@@ -575,7 +556,6 @@ public class OrderHistory {
    * @return status
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "REJECTED", value = "Status")
 
   public String getStatus() {
     return status;
@@ -606,7 +586,6 @@ public class OrderHistory {
    * @return statusHistoryStatus
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "History status")
 
   public List<String> getStatusHistoryStatus() {
     return statusHistoryStatus;
@@ -637,7 +616,6 @@ public class OrderHistory {
    * @return statusHistoryTime
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "History status time")
 
   public List<LocalDate> getStatusHistoryTime() {
     return statusHistoryTime;
@@ -660,7 +638,6 @@ public class OrderHistory {
    * @return errorMessageResult
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Error message")
 
   public String getErrorMessageResult() {
     return errorMessageResult;
@@ -683,7 +660,6 @@ public class OrderHistory {
    * @return errorMessageReason
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Error message reason")
 
   public String getErrorMessageReason() {
     return errorMessageReason;
@@ -706,7 +682,6 @@ public class OrderHistory {
    * @return errorMessageMessage
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "-2015 Invalid API-key, IP, or permissions for action. https://api.binance.com/api/v3/order?newOrderRespType", value = "Error message")
 
   public String getErrorMessageMessage() {
     return errorMessageMessage;
@@ -737,7 +712,6 @@ public class OrderHistory {
    * @return fillsTime
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Fills time")
 
   public List<LocalDate> getFillsTime() {
     return fillsTime;
@@ -768,7 +742,6 @@ public class OrderHistory {
    * @return fillsPrice
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Fills price")
 
   public List<BigDecimal> getFillsPrice() {
     return fillsPrice;
@@ -799,7 +772,6 @@ public class OrderHistory {
    * @return fillsAmount
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Fills amount")
 
   public List<BigDecimal> getFillsAmount() {
     return fillsAmount;
@@ -822,7 +794,6 @@ public class OrderHistory {
    * @return createdTime
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "2022-06-27T07:02:33.1977903Z", value = "Created time")
 
   public LocalDate getCreatedTime() {
     return createdTime;

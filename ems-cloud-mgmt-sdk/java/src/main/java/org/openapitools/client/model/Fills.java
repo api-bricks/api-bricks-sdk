@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.math.BigDecimal;
 import java.time.LocalDate;
@@ -50,7 +48,7 @@ import org.openapitools.client.JSON;
 /**
  * Fills
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-30T14:41:54.163130Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-06T14:42:09.513003Z[Etc/UTC]")
 public class Fills {
   public static final String SERIALIZED_NAME_TIME = "time";
   @SerializedName(SERIALIZED_NAME_TIME)
@@ -78,7 +76,6 @@ public class Fills {
    * @return time
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "2020-01-01T10:45:20.1677709Z", value = "Execution time.")
 
   public LocalDate getTime() {
     return time;
@@ -101,7 +98,6 @@ public class Fills {
    * @return price
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "10799.2", value = "Execution price.")
 
   public BigDecimal getPrice() {
     return price;
@@ -124,7 +120,6 @@ public class Fills {
    * @return amount
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "0.002", value = "Executed quantity.")
 
   public BigDecimal getAmount() {
     return amount;

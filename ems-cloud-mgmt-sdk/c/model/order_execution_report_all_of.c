@@ -225,7 +225,7 @@ order_execution_report_all_of_t *order_execution_report_all_of_parseFromJSON(cJS
     // order_execution_report_all_of->exchange_order_id
     cJSON *exchange_order_id = cJSON_GetObjectItemCaseSensitive(order_execution_report_all_ofJSON, "exchange_order_id");
     if (exchange_order_id) { 
-    if(!cJSON_IsString(exchange_order_id))
+    if(!cJSON_IsString(exchange_order_id) && !cJSON_IsNull(exchange_order_id))
     {
     goto end; //String
     }
@@ -290,7 +290,7 @@ order_execution_report_all_of_t *order_execution_report_all_of_parseFromJSON(cJS
     // order_execution_report_all_of->error_message
     cJSON *error_message = cJSON_GetObjectItemCaseSensitive(order_execution_report_all_ofJSON, "error_message");
     if (error_message) { 
-    if(!cJSON_IsString(error_message))
+    if(!cJSON_IsString(error_message) && !cJSON_IsNull(error_message))
     {
     goto end; //String
     }
@@ -320,13 +320,13 @@ order_execution_report_all_of_t *order_execution_report_all_of_parseFromJSON(cJS
 
     order_execution_report_all_of_local_var = order_execution_report_all_of_create (
         strdup(client_order_id_format_exchange->valuestring),
-        exchange_order_id ? strdup(exchange_order_id->valuestring) : NULL,
+        exchange_order_id && !cJSON_IsNull(exchange_order_id) ? strdup(exchange_order_id->valuestring) : NULL,
         amount_open->valuedouble,
         amount_filled->valuedouble,
         avg_px ? avg_px->valuedouble : 0,
         status_local_nonprim,
         status_history ? status_historyList : NULL,
-        error_message ? strdup(error_message->valuestring) : NULL,
+        error_message && !cJSON_IsNull(error_message) ? strdup(error_message->valuestring) : NULL,
         fills ? fillsList : NULL
         );
 

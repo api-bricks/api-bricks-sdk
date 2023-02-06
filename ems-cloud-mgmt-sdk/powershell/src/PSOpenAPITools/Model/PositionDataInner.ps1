@@ -56,6 +56,7 @@ function Initialize-PositionDataInner {
         [System.Nullable[Decimal]]
         ${Quantity},
         [Parameter(Position = 4, ValueFromPipelineByPropertyName = $true)]
+        [ValidateSet("BUY", "SELL")]
         [PSCustomObject]
         ${Side},
         [Parameter(Position = 5, ValueFromPipelineByPropertyName = $true)]

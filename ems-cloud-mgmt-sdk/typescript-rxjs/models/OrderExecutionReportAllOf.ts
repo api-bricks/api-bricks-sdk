@@ -76,3 +76,5 @@ export interface OrderExecutionReportAllOf {
      */
     fills?: Array<Fills>;
 }
+
+

@@ -15,6 +15,9 @@ import (
 	"encoding/json"
 )
 
+// checks if the OrderCancelAllRequest type satisfies the MappedNullable interface at compile time
+var _ MappedNullable = &OrderCancelAllRequest{}
+
 // OrderCancelAllRequest Cancel all orders request object.
 type OrderCancelAllRequest struct {
 	// Identifier of the exchange from which active orders should be canceled.
@@ -53,7 +56,7 @@ func (o *OrderCancelAllRequest) GetExchangeId() string {
 // and a boolean to check if the value has been set.
 func (o *OrderCancelAllRequest) GetExchangeIdOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return &o.ExchangeId, true
 }
@@ -64,11 +67,17 @@ func (o *OrderCancelAllRequest) SetExchangeId(v string) {
 }
 
 func (o OrderCancelAllRequest) MarshalJSON() ([]byte, error) {
-	toSerialize := map[string]interface{}{}
-	if true {
-		toSerialize["exchange_id"] = o.ExchangeId
+	toSerialize,err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
 	}
 	return json.Marshal(toSerialize)
+}
+
+func (o OrderCancelAllRequest) ToMap() (map[string]interface{}, error) {
+	toSerialize := map[string]interface{}{}
+	toSerialize["exchange_id"] = o.ExchangeId
+	return toSerialize, nil
 }
 
 type NullableOrderCancelAllRequest struct {

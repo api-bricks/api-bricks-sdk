@@ -60,12 +60,12 @@ class OrderHistory(
             
                 def __new__(
                     cls,
-                    arg: typing.Union[typing.Tuple[typing.Union[MetaOapg.items, str, ]], typing.List[typing.Union[MetaOapg.items, str, ]]],
+                    _arg: typing.Union[typing.Tuple[typing.Union[MetaOapg.items, str, ]], typing.List[typing.Union[MetaOapg.items, str, ]]],
                     _configuration: typing.Optional[schemas.Configuration] = None,
                 ) -> 'execInst':
                     return super().__new__(
                         cls,
-                        arg,
+                        _arg,
                         _configuration=_configuration,
                     )
             
@@ -89,12 +89,12 @@ class OrderHistory(
             
                 def __new__(
                     cls,
-                    arg: typing.Union[typing.Tuple[typing.Union[MetaOapg.items, str, ]], typing.List[typing.Union[MetaOapg.items, str, ]]],
+                    _arg: typing.Union[typing.Tuple[typing.Union[MetaOapg.items, str, ]], typing.List[typing.Union[MetaOapg.items, str, ]]],
                     _configuration: typing.Optional[schemas.Configuration] = None,
                 ) -> 'statusHistoryStatus':
                     return super().__new__(
                         cls,
-                        arg,
+                        _arg,
                         _configuration=_configuration,
                     )
             
@@ -112,12 +112,12 @@ class OrderHistory(
             
                 def __new__(
                     cls,
-                    arg: typing.Union[typing.Tuple[typing.Union[MetaOapg.items, ]], typing.List[typing.Union[MetaOapg.items, ]]],
+                    _arg: typing.Union[typing.Tuple[typing.Union[MetaOapg.items, ]], typing.List[typing.Union[MetaOapg.items, ]]],
                     _configuration: typing.Optional[schemas.Configuration] = None,
                 ) -> 'statusHistoryTime':
                     return super().__new__(
                         cls,
-                        arg,
+                        _arg,
                         _configuration=_configuration,
                     )
             
@@ -138,12 +138,12 @@ class OrderHistory(
             
                 def __new__(
                     cls,
-                    arg: typing.Union[typing.Tuple[typing.Union[MetaOapg.items, ]], typing.List[typing.Union[MetaOapg.items, ]]],
+                    _arg: typing.Union[typing.Tuple[typing.Union[MetaOapg.items, ]], typing.List[typing.Union[MetaOapg.items, ]]],
                     _configuration: typing.Optional[schemas.Configuration] = None,
                 ) -> 'fillsTime':
                     return super().__new__(
                         cls,
-                        arg,
+                        _arg,
                         _configuration=_configuration,
                     )
             
@@ -161,12 +161,12 @@ class OrderHistory(
             
                 def __new__(
                     cls,
-                    arg: typing.Union[typing.Tuple[typing.Union[MetaOapg.items, decimal.Decimal, int, float, ]], typing.List[typing.Union[MetaOapg.items, decimal.Decimal, int, float, ]]],
+                    _arg: typing.Union[typing.Tuple[typing.Union[MetaOapg.items, decimal.Decimal, int, float, ]], typing.List[typing.Union[MetaOapg.items, decimal.Decimal, int, float, ]]],
                     _configuration: typing.Optional[schemas.Configuration] = None,
                 ) -> 'fillsPrice':
                     return super().__new__(
                         cls,
-                        arg,
+                        _arg,
                         _configuration=_configuration,
                     )
             
@@ -184,12 +184,12 @@ class OrderHistory(
             
                 def __new__(
                     cls,
-                    arg: typing.Union[typing.Tuple[typing.Union[MetaOapg.items, decimal.Decimal, int, float, ]], typing.List[typing.Union[MetaOapg.items, decimal.Decimal, int, float, ]]],
+                    _arg: typing.Union[typing.Tuple[typing.Union[MetaOapg.items, decimal.Decimal, int, float, ]], typing.List[typing.Union[MetaOapg.items, decimal.Decimal, int, float, ]]],
                     _configuration: typing.Optional[schemas.Configuration] = None,
                 ) -> 'fillsAmount':
                     return super().__new__(
                         cls,
-                        arg,
+                        _arg,
                         _configuration=_configuration,
                     )
             
@@ -405,7 +405,7 @@ class OrderHistory(
 
     def __new__(
         cls,
-        *args: typing.Union[dict, frozendict.frozendict, ],
+        *_args: typing.Union[dict, frozendict.frozendict, ],
         apikey: typing.Union[MetaOapg.properties.apikey, str, schemas.Unset] = schemas.unset,
         exchangeId: typing.Union[MetaOapg.properties.exchangeId, str, schemas.Unset] = schemas.unset,
         clientOrderId: typing.Union[MetaOapg.properties.clientOrderId, str, schemas.Unset] = schemas.unset,
@@ -438,7 +438,7 @@ class OrderHistory(
     ) -> 'OrderHistory':
         return super().__new__(
             cls,
-            *args,
+            *_args,
             apikey=apikey,
             exchangeId=exchangeId,
             clientOrderId=clientOrderId,

@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -53,8 +51,7 @@ import org.openapitools.client.JSON;
 /**
  * The order execution report message.
  */
-@ApiModel(description = "The order execution report message.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-30T14:41:54.163130Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-06T14:42:09.513003Z[Etc/UTC]")
 public class OrderExecutionReportAllOf {
   public static final String SERIALIZED_NAME_CLIENT_ORDER_ID_FORMAT_EXCHANGE = "client_order_id_format_exchange";
   @SerializedName(SERIALIZED_NAME_CLIENT_ORDER_ID_FORMAT_EXCHANGE)
@@ -106,7 +103,6 @@ public class OrderExecutionReportAllOf {
    * @return clientOrderIdFormatExchange
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "f81211e2-27c4-b86a-8143-01088ba9222c", required = true, value = "The unique identifier of the order assigned by the client converted to the exchange order tag format for the purpose of tracking it.")
 
   public String getClientOrderIdFormatExchange() {
     return clientOrderIdFormatExchange;
@@ -129,7 +125,6 @@ public class OrderExecutionReportAllOf {
    * @return exchangeOrderId
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "3456456754", value = "Unique identifier of the order assigned by the exchange or executing system.")
 
   public String getExchangeOrderId() {
     return exchangeOrderId;
@@ -152,7 +147,6 @@ public class OrderExecutionReportAllOf {
    * @return amountOpen
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "0.22", required = true, value = "Quantity open for further execution. `amount_open` = `amount_order` - `amount_filled`")
 
   public BigDecimal getAmountOpen() {
     return amountOpen;
@@ -175,7 +169,6 @@ public class OrderExecutionReportAllOf {
    * @return amountFilled
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "0.0", required = true, value = "Total quantity filled.")
 
   public BigDecimal getAmountFilled() {
     return amountFilled;
@@ -198,7 +191,6 @@ public class OrderExecutionReportAllOf {
    * @return avgPx
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "0.0783", value = "Calculated average price of all fills on this order.")
 
   public BigDecimal getAvgPx() {
     return avgPx;
@@ -221,7 +213,6 @@ public class OrderExecutionReportAllOf {
    * @return status
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public OrdStatus getStatus() {
     return status;
@@ -252,7 +243,6 @@ public class OrderExecutionReportAllOf {
    * @return statusHistory
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Timestamped history of order status changes.")
 
   public List<List<String>> getStatusHistory() {
     return statusHistory;
@@ -275,7 +265,6 @@ public class OrderExecutionReportAllOf {
    * @return errorMessage
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "{\"result\":\"error\",\"reason\":\"InsufficientFunds\",\"message\":\"Failed to place buy order on symbol 'BTCUSD' for price $7,000.00 and quantity 0.22 BTC due to insufficient funds\"}", value = "Error message.")
 
   public String getErrorMessage() {
     return errorMessage;
@@ -306,7 +295,6 @@ public class OrderExecutionReportAllOf {
    * @return fills
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Relay fill information on working orders.")
 
   public List<Fills> getFills() {
     return fills;

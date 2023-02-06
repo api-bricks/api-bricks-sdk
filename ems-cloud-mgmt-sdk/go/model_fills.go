@@ -15,6 +15,9 @@ import (
 	"encoding/json"
 )
 
+// checks if the Fills type satisfies the MappedNullable interface at compile time
+var _ MappedNullable = &Fills{}
+
 // Fills struct for Fills
 type Fills struct {
 	// Execution time.
@@ -55,7 +58,7 @@ func (o *Fills) GetTime() string {
 // and a boolean to check if the value has been set.
 func (o *Fills) GetTimeOk() (*string, bool) {
 	if o == nil || isNil(o.Time) {
-    return nil, false
+		return nil, false
 	}
 	return o.Time, true
 }
@@ -87,7 +90,7 @@ func (o *Fills) GetPrice() float32 {
 // and a boolean to check if the value has been set.
 func (o *Fills) GetPriceOk() (*float32, bool) {
 	if o == nil || isNil(o.Price) {
-    return nil, false
+		return nil, false
 	}
 	return o.Price, true
 }
@@ -119,7 +122,7 @@ func (o *Fills) GetAmount() float32 {
 // and a boolean to check if the value has been set.
 func (o *Fills) GetAmountOk() (*float32, bool) {
 	if o == nil || isNil(o.Amount) {
-    return nil, false
+		return nil, false
 	}
 	return o.Amount, true
 }
@@ -139,6 +142,14 @@ func (o *Fills) SetAmount(v float32) {
 }
 
 func (o Fills) MarshalJSON() ([]byte, error) {
+	toSerialize,err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
+}
+
+func (o Fills) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
 	if !isNil(o.Time) {
 		toSerialize["time"] = o.Time
@@ -149,7 +160,7 @@ func (o Fills) MarshalJSON() ([]byte, error) {
 	if !isNil(o.Amount) {
 		toSerialize["amount"] = o.Amount
 	}
-	return json.Marshal(toSerialize)
+	return toSerialize, nil
 }
 
 type NullableFills struct {

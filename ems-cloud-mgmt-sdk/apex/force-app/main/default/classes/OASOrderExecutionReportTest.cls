@@ -94,7 +94,7 @@ private class OASOrderExecutionReportTest {
     @isTest
     private static void defaultValuesPopulated() {
         OASOrderExecutionReport orderExecutionReport = new OASOrderExecutionReport();
-        System.assertEquals(new List<ExecInstEnum>(), orderExecutionReport.execInst);
+        System.assertEquals(new List<String>(), orderExecutionReport.execInst);
         System.assertEquals(new List<List<String>>(), orderExecutionReport.statusHistory);
         System.assertEquals(new List<OASFills>(), orderExecutionReport.fills);
         System.assertEquals(null, orderExecutionReport.exchangeId);

@@ -76,7 +76,7 @@ func (a *BalancesApiService) V1BalancesGetExecute(r ApiV1BalancesGetRequest) ([]
 	localVarFormParams := url.Values{}
 
 	if r.exchangeId != nil {
-		localVarQueryParams.Add("exchange_id", parameterToString(*r.exchangeId, ""))
+		parameterAddToQuery(localVarQueryParams, "exchange_id", r.exchangeId, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -124,8 +124,8 @@ func (a *BalancesApiService) V1BalancesGetExecute(r ApiV1BalancesGetRequest) ([]
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-            		newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-            		newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}

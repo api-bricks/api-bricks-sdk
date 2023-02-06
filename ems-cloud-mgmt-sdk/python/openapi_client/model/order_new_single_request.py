@@ -176,7 +176,7 @@ class OrderNewSingleRequest(
 
     def __new__(
         cls,
-        *args: typing.Union[dict, frozendict.frozendict, ],
+        *_args: typing.Union[dict, frozendict.frozendict, ],
         client_order_id: typing.Union[MetaOapg.properties.client_order_id, str, ],
         exchange_id: typing.Union[MetaOapg.properties.exchange_id, str, ],
         side: 'OrdSide',
@@ -193,7 +193,7 @@ class OrderNewSingleRequest(
     ) -> 'OrderNewSingleRequest':
         return super().__new__(
             cls,
-            *args,
+            *_args,
             client_order_id=client_order_id,
             exchange_id=exchange_id,
             side=side,

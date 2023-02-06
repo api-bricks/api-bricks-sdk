@@ -87,7 +87,7 @@ private class OASOrderNewSingleRequestTest {
     @isTest
     private static void defaultValuesPopulated() {
         OASOrderNewSingleRequest orderNewSingleRequest = new OASOrderNewSingleRequest();
-        System.assertEquals(new List<ExecInstEnum>(), orderNewSingleRequest.execInst);
+        System.assertEquals(new List<String>(), orderNewSingleRequest.execInst);
         System.assertEquals(null, orderNewSingleRequest.exchangeId);
         System.assertEquals(null, orderNewSingleRequest.clientOrderId);
         System.assertEquals(null, orderNewSingleRequest.symbolIdExchange);

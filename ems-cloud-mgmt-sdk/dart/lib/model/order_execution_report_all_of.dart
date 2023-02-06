@@ -154,10 +154,10 @@ class OrderExecutionReportAllOf {
             : num.parse(json[r'avg_px'].toString()),
         status: OrdStatus.fromJson(json[r'status'])!,
         statusHistory: json[r'status_history'] is List
-          ? (json[r'status_history'] as List).map(
-              (e) => e == null ? null : (e as List).cast<String>()
+          ? (json[r'status_history'] as List).map((e) =>
+              e == null ? const  <String>[] : (e as List).cast<String>()
             ).toList()
-          : null,
+          :  const [],
         errorMessage: mapValueOfType<String>(json, r'error_message'),
         fills: Fills.listFromJson(json[r'fills']) ?? const [],
       );

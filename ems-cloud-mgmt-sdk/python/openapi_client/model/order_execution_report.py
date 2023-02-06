@@ -83,12 +83,12 @@ class OrderExecutionReport(
                             
                                 def __new__(
                                     cls,
-                                    arg: typing.Union[typing.Tuple[typing.Union[MetaOapg.items, str, ]], typing.List[typing.Union[MetaOapg.items, str, ]]],
+                                    _arg: typing.Union[typing.Tuple[typing.Union[MetaOapg.items, str, ]], typing.List[typing.Union[MetaOapg.items, str, ]]],
                                     _configuration: typing.Optional[schemas.Configuration] = None,
                                 ) -> 'items':
                                     return super().__new__(
                                         cls,
-                                        arg,
+                                        _arg,
                                         _configuration=_configuration,
                                     )
                             
@@ -97,12 +97,12 @@ class OrderExecutionReport(
                     
                         def __new__(
                             cls,
-                            arg: typing.Union[typing.Tuple[typing.Union[MetaOapg.items, list, tuple, ]], typing.List[typing.Union[MetaOapg.items, list, tuple, ]]],
+                            _arg: typing.Union[typing.Tuple[typing.Union[MetaOapg.items, list, tuple, ]], typing.List[typing.Union[MetaOapg.items, list, tuple, ]]],
                             _configuration: typing.Optional[schemas.Configuration] = None,
                         ) -> 'status_history':
                             return super().__new__(
                                 cls,
-                                arg,
+                                _arg,
                                 _configuration=_configuration,
                             )
                     
@@ -124,12 +124,12 @@ class OrderExecutionReport(
                     
                         def __new__(
                             cls,
-                            arg: typing.Union[typing.Tuple['Fills'], typing.List['Fills']],
+                            _arg: typing.Union[typing.Tuple['Fills'], typing.List['Fills']],
                             _configuration: typing.Optional[schemas.Configuration] = None,
                         ) -> 'fills':
                             return super().__new__(
                                 cls,
-                                arg,
+                                _arg,
                                 _configuration=_configuration,
                             )
                     
@@ -224,7 +224,7 @@ class OrderExecutionReport(
         
             def __new__(
                 cls,
-                *args: typing.Union[dict, frozendict.frozendict, ],
+                *_args: typing.Union[dict, frozendict.frozendict, ],
                 amount_open: typing.Union[MetaOapg.properties.amount_open, decimal.Decimal, int, float, ],
                 time_order: typing.Union[schemas.AnyTypeSchema, dict, frozendict.frozendict, str, date, datetime, uuid.UUID, int, float, decimal.Decimal, bool, None, list, tuple, bytes, io.FileIO, io.BufferedReader, ],
                 client_order_id_format_exchange: typing.Union[MetaOapg.properties.client_order_id_format_exchange, str, ],
@@ -240,7 +240,7 @@ class OrderExecutionReport(
             ) -> 'all_of_1':
                 return super().__new__(
                     cls,
-                    *args,
+                    *_args,
                     amount_open=amount_open,
                     time_order=time_order,
                     client_order_id_format_exchange=client_order_id_format_exchange,
@@ -273,13 +273,13 @@ class OrderExecutionReport(
 
     def __new__(
         cls,
-        *args: typing.Union[dict, frozendict.frozendict, str, date, datetime, uuid.UUID, int, float, decimal.Decimal, bool, None, list, tuple, bytes, io.FileIO, io.BufferedReader, ],
+        *_args: typing.Union[dict, frozendict.frozendict, str, date, datetime, uuid.UUID, int, float, decimal.Decimal, bool, None, list, tuple, bytes, io.FileIO, io.BufferedReader, ],
         _configuration: typing.Optional[schemas.Configuration] = None,
         **kwargs: typing.Union[schemas.AnyTypeSchema, dict, frozendict.frozendict, str, date, datetime, uuid.UUID, int, float, decimal.Decimal, None, list, tuple, bytes],
     ) -> 'OrderExecutionReport':
         return super().__new__(
             cls,
-            *args,
+            *_args,
             _configuration=_configuration,
             **kwargs,
         )

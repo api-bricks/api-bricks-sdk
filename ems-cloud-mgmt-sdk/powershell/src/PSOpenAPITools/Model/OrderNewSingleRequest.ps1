@@ -64,12 +64,15 @@ function Initialize-OrderNewSingleRequest {
         [Decimal]
         ${Price},
         [Parameter(Position = 6, ValueFromPipelineByPropertyName = $true)]
+        [ValidateSet("BUY", "SELL")]
         [PSCustomObject]
         ${Side},
         [Parameter(Position = 7, ValueFromPipelineByPropertyName = $true)]
+        [ValidateSet("LIMIT")]
         [PSCustomObject]
         ${OrderType},
         [Parameter(Position = 8, ValueFromPipelineByPropertyName = $true)]
+        [ValidateSet("GOOD_TILL_CANCEL", "GOOD_TILL_TIME_EXCHANGE", "GOOD_TILL_TIME_OMS", "FILL_OR_KILL", "IMMEDIATE_OR_CANCEL")]
         [PSCustomObject]
         ${TimeInForce},
         [Parameter(Position = 9, ValueFromPipelineByPropertyName = $true)]

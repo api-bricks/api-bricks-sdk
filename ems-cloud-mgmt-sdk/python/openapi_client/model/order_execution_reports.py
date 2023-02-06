@@ -44,12 +44,12 @@ class OrderExecutionReports(
 
     def __new__(
         cls,
-        arg: typing.Union[typing.Tuple['OrderExecutionReport'], typing.List['OrderExecutionReport']],
+        _arg: typing.Union[typing.Tuple['OrderExecutionReport'], typing.List['OrderExecutionReport']],
         _configuration: typing.Optional[schemas.Configuration] = None,
     ) -> 'OrderExecutionReports':
         return super().__new__(
             cls,
-            arg,
+            _arg,
             _configuration=_configuration,
         )
 

@@ -15,6 +15,9 @@ import (
 	"encoding/json"
 )
 
+// checks if the OrderCancelSingleRequest type satisfies the MappedNullable interface at compile time
+var _ MappedNullable = &OrderCancelSingleRequest{}
+
 // OrderCancelSingleRequest Cancel single order request object.
 type OrderCancelSingleRequest struct {
 	// Exchange identifier used to identify the routing destination.
@@ -57,7 +60,7 @@ func (o *OrderCancelSingleRequest) GetExchangeId() string {
 // and a boolean to check if the value has been set.
 func (o *OrderCancelSingleRequest) GetExchangeIdOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return &o.ExchangeId, true
 }
@@ -80,7 +83,7 @@ func (o *OrderCancelSingleRequest) GetExchangeOrderId() string {
 // and a boolean to check if the value has been set.
 func (o *OrderCancelSingleRequest) GetExchangeOrderIdOk() (*string, bool) {
 	if o == nil || isNil(o.ExchangeOrderId) {
-    return nil, false
+		return nil, false
 	}
 	return o.ExchangeOrderId, true
 }
@@ -112,7 +115,7 @@ func (o *OrderCancelSingleRequest) GetClientOrderId() string {
 // and a boolean to check if the value has been set.
 func (o *OrderCancelSingleRequest) GetClientOrderIdOk() (*string, bool) {
 	if o == nil || isNil(o.ClientOrderId) {
-    return nil, false
+		return nil, false
 	}
 	return o.ClientOrderId, true
 }
@@ -132,17 +135,23 @@ func (o *OrderCancelSingleRequest) SetClientOrderId(v string) {
 }
 
 func (o OrderCancelSingleRequest) MarshalJSON() ([]byte, error) {
-	toSerialize := map[string]interface{}{}
-	if true {
-		toSerialize["exchange_id"] = o.ExchangeId
+	toSerialize,err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
 	}
+	return json.Marshal(toSerialize)
+}
+
+func (o OrderCancelSingleRequest) ToMap() (map[string]interface{}, error) {
+	toSerialize := map[string]interface{}{}
+	toSerialize["exchange_id"] = o.ExchangeId
 	if !isNil(o.ExchangeOrderId) {
 		toSerialize["exchange_order_id"] = o.ExchangeOrderId
 	}
 	if !isNil(o.ClientOrderId) {
 		toSerialize["client_order_id"] = o.ClientOrderId
 	}
-	return json.Marshal(toSerialize)
+	return toSerialize, nil
 }
 
 type NullableOrderCancelSingleRequest struct {

@@ -51,4 +51,7 @@ export interface PositionDataInner {
     liquidation_price?: number;
     raw_data?: object;
 }
+export namespace PositionDataInner {
+}
+
 

@@ -117,6 +117,7 @@ class BalancesApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClien
             path = "/v1/balances",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }

@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 import com.google.gson.Gson;
@@ -48,7 +46,7 @@ import org.openapitools.client.JSON;
 /**
  * BalanceDataInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-30T14:41:54.163130Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-06T14:42:09.513003Z[Etc/UTC]")
 public class BalanceDataInner {
   public static final String SERIALIZED_NAME_ASSET_ID_EXCHANGE = "asset_id_exchange";
   @SerializedName(SERIALIZED_NAME_ASSET_ID_EXCHANGE)
@@ -145,7 +143,6 @@ public class BalanceDataInner {
    * @return assetIdExchange
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "XBT", value = "Exchange currency code.")
 
   public String getAssetIdExchange() {
     return assetIdExchange;
@@ -168,7 +165,6 @@ public class BalanceDataInner {
    * @return assetIdCoinapi
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "BTC", value = "CoinAPI currency code.")
 
   public String getAssetIdCoinapi() {
     return assetIdCoinapi;
@@ -191,7 +187,6 @@ public class BalanceDataInner {
    * @return balance
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "0.00134444", value = "Value of the current total currency balance on the exchange.")
 
   public Double getBalance() {
     return balance;
@@ -214,7 +209,6 @@ public class BalanceDataInner {
    * @return available
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "0.00134444", value = "Value of the current available currency balance on the exchange that can be used as collateral.")
 
   public Double getAvailable() {
     return available;
@@ -237,7 +231,6 @@ public class BalanceDataInner {
    * @return locked
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "0.0", value = "Value of the current locked currency balance by the exchange.")
 
   public Double getLocked() {
     return locked;
@@ -260,7 +253,6 @@ public class BalanceDataInner {
    * @return lastUpdatedBy
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "EXCHANGE", value = "Source of the last modification. ")
 
   public LastUpdatedByEnum getLastUpdatedBy() {
     return lastUpdatedBy;
@@ -283,7 +275,6 @@ public class BalanceDataInner {
    * @return rateUsd
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "1355.12", value = "Current exchange rate to the USD for the single unit of the currency. ")
 
   public Double getRateUsd() {
     return rateUsd;
@@ -306,7 +297,6 @@ public class BalanceDataInner {
    * @return traded
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "0.007", value = "Value of the current total traded.")
 
   public Double getTraded() {
     return traded;

@@ -100,7 +100,7 @@ class MessageReject(
 
     def __new__(
         cls,
-        *args: typing.Union[dict, frozendict.frozendict, ],
+        *_args: typing.Union[dict, frozendict.frozendict, ],
         type: typing.Union[MetaOapg.properties.type, str, schemas.Unset] = schemas.unset,
         reject_reason: typing.Union['RejectReason', schemas.Unset] = schemas.unset,
         exchange_id: typing.Union[MetaOapg.properties.exchange_id, str, schemas.Unset] = schemas.unset,
@@ -111,7 +111,7 @@ class MessageReject(
     ) -> 'MessageReject':
         return super().__new__(
             cls,
-            *args,
+            *_args,
             type=type,
             reject_reason=reject_reason,
             exchange_id=exchange_id,

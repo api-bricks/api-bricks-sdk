@@ -187,7 +187,7 @@ position_data_inner_t *position_data_inner_parseFromJSON(cJSON *position_data_in
     // position_data_inner->symbol_id_exchange
     cJSON *symbol_id_exchange = cJSON_GetObjectItemCaseSensitive(position_data_innerJSON, "symbol_id_exchange");
     if (symbol_id_exchange) { 
-    if(!cJSON_IsString(symbol_id_exchange))
+    if(!cJSON_IsString(symbol_id_exchange) && !cJSON_IsNull(symbol_id_exchange))
     {
     goto end; //String
     }
@@ -196,7 +196,7 @@ position_data_inner_t *position_data_inner_parseFromJSON(cJSON *position_data_in
     // position_data_inner->symbol_id_coinapi
     cJSON *symbol_id_coinapi = cJSON_GetObjectItemCaseSensitive(position_data_innerJSON, "symbol_id_coinapi");
     if (symbol_id_coinapi) { 
-    if(!cJSON_IsString(symbol_id_coinapi))
+    if(!cJSON_IsString(symbol_id_coinapi) && !cJSON_IsNull(symbol_id_coinapi))
     {
     goto end; //String
     }
@@ -271,8 +271,8 @@ position_data_inner_t *position_data_inner_parseFromJSON(cJSON *position_data_in
 
 
     position_data_inner_local_var = position_data_inner_create (
-        symbol_id_exchange ? strdup(symbol_id_exchange->valuestring) : NULL,
-        symbol_id_coinapi ? strdup(symbol_id_coinapi->valuestring) : NULL,
+        symbol_id_exchange && !cJSON_IsNull(symbol_id_exchange) ? strdup(symbol_id_exchange->valuestring) : NULL,
+        symbol_id_coinapi && !cJSON_IsNull(symbol_id_coinapi) ? strdup(symbol_id_coinapi->valuestring) : NULL,
         avg_entry_price ? avg_entry_price->valuedouble : 0,
         quantity ? quantity->valuedouble : 0,
         side ? side_local_nonprim : NULL,

@@ -44,12 +44,12 @@ class Positions(
 
     def __new__(
         cls,
-        arg: typing.Union[typing.Tuple['Position'], typing.List['Position']],
+        _arg: typing.Union[typing.Tuple['Position'], typing.List['Position']],
         _configuration: typing.Optional[schemas.Configuration] = None,
     ) -> 'Positions':
         return super().__new__(
             cls,
-            arg,
+            _arg,
             _configuration=_configuration,
         )
 

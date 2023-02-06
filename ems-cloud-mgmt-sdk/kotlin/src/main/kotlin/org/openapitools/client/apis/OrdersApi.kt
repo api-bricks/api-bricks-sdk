@@ -119,6 +119,7 @@ class OrdersApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient 
             path = "/v1/orders/cancel/all",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -190,6 +191,7 @@ class OrdersApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient 
             path = "/v1/orders/cancel",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -265,6 +267,7 @@ class OrdersApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient 
             path = "/v1/orders",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -342,6 +345,7 @@ class OrdersApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient 
             path = "/v1/orders/history",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -413,6 +417,7 @@ class OrdersApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient 
             path = "/v1/orders",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }
@@ -483,6 +488,7 @@ class OrdersApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient 
             path = "/v1/orders/status/{client_order_id}".replace("{"+"client_order_id"+"}", encodeURIComponent(clientOrderId.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }

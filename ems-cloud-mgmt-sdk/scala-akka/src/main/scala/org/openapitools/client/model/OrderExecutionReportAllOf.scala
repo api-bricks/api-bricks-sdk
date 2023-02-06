@@ -33,3 +33,6 @@ case class OrderExecutionReportAllOf (
   fills: Option[Seq[Fills]] = None
 ) extends ApiModel
 
+object OrderExecutionReportAllOfEnums {
+
+}

@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.math.BigDecimal;
 import java.time.LocalDate;
@@ -55,8 +53,7 @@ import org.openapitools.client.JSON;
 /**
  * The new order message.
  */
-@ApiModel(description = "The new order message.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-30T14:41:54.163130Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-06T14:42:09.513003Z[Etc/UTC]")
 public class OrderNewSingleRequest {
   public static final String SERIALIZED_NAME_EXCHANGE_ID = "exchange_id";
   @SerializedName(SERIALIZED_NAME_EXCHANGE_ID)
@@ -165,7 +162,6 @@ public class OrderNewSingleRequest {
    * @return exchangeId
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "KRAKEN", required = true, value = "Exchange identifier used to identify the routing destination.")
 
   public String getExchangeId() {
     return exchangeId;
@@ -188,7 +184,6 @@ public class OrderNewSingleRequest {
    * @return clientOrderId
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "6ab36bc1-344d-432e-ac6d-0bf44ee64c2b", required = true, value = "The unique identifier of the order assigned by the client.")
 
   public String getClientOrderId() {
     return clientOrderId;
@@ -211,7 +206,6 @@ public class OrderNewSingleRequest {
    * @return symbolIdExchange
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "XBT/USDT", value = "Exchange symbol. One of the properties (`symbol_id_exchange`, `symbol_id_coinapi`) is required to identify the market for the new order.")
 
   public String getSymbolIdExchange() {
     return symbolIdExchange;
@@ -234,7 +228,6 @@ public class OrderNewSingleRequest {
    * @return symbolIdCoinapi
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "KRAKEN_SPOT_BTC_USDT", value = "CoinAPI symbol. One of the properties (`symbol_id_exchange`, `symbol_id_coinapi`) is required to identify the market for the new order.")
 
   public String getSymbolIdCoinapi() {
     return symbolIdCoinapi;
@@ -257,7 +250,6 @@ public class OrderNewSingleRequest {
    * @return amountOrder
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "0.045", required = true, value = "Order quantity.")
 
   public BigDecimal getAmountOrder() {
     return amountOrder;
@@ -280,7 +272,6 @@ public class OrderNewSingleRequest {
    * @return price
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "0.0783", required = true, value = "Order price.")
 
   public BigDecimal getPrice() {
     return price;
@@ -303,7 +294,6 @@ public class OrderNewSingleRequest {
    * @return side
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public OrdSide getSide() {
     return side;
@@ -326,7 +316,6 @@ public class OrderNewSingleRequest {
    * @return orderType
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public OrdType getOrderType() {
     return orderType;
@@ -349,7 +338,6 @@ public class OrderNewSingleRequest {
    * @return timeInForce
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public TimeInForce getTimeInForce() {
     return timeInForce;
@@ -372,7 +360,6 @@ public class OrderNewSingleRequest {
    * @return expireTime
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "2020-01-01T10:45:20.1677709Z", value = "Expiration time. Conditionaly required for orders with time_in_force = `GOOD_TILL_TIME_EXCHANGE` or `GOOD_TILL_TIME_OEML`.")
 
   public LocalDate getExpireTime() {
     return expireTime;
@@ -403,7 +390,6 @@ public class OrderNewSingleRequest {
    * @return execInst
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "[\"MAKER_OR_CANCEL\"]", value = "Order execution instructions are documented in the separate section: <a href=\"#ems-order-params-exec\">EMS / Starter Guide / Order parameters / Execution instructions</a> ")
 
   public List<ExecInstEnum> getExecInst() {
     return execInst;

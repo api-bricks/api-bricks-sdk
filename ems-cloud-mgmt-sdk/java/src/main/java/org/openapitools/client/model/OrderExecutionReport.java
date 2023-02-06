@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.math.BigDecimal;
 import java.time.LocalDate;
@@ -57,8 +55,7 @@ import org.openapitools.client.JSON;
 /**
  * The order execution report object.
  */
-@ApiModel(description = "The order execution report object.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-30T14:41:54.163130Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-06T14:42:09.513003Z[Etc/UTC]")
 public class OrderExecutionReport {
   public static final String SERIALIZED_NAME_EXCHANGE_ID = "exchange_id";
   @SerializedName(SERIALIZED_NAME_EXCHANGE_ID)
@@ -203,7 +200,6 @@ public class OrderExecutionReport {
    * @return exchangeId
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "KRAKEN", required = true, value = "Exchange identifier used to identify the routing destination.")
 
   public String getExchangeId() {
     return exchangeId;
@@ -226,7 +222,6 @@ public class OrderExecutionReport {
    * @return clientOrderId
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "6ab36bc1-344d-432e-ac6d-0bf44ee64c2b", required = true, value = "The unique identifier of the order assigned by the client.")
 
   public String getClientOrderId() {
     return clientOrderId;
@@ -249,7 +244,6 @@ public class OrderExecutionReport {
    * @return symbolIdExchange
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "XBT/USDT", value = "Exchange symbol. One of the properties (`symbol_id_exchange`, `symbol_id_coinapi`) is required to identify the market for the new order.")
 
   public String getSymbolIdExchange() {
     return symbolIdExchange;
@@ -272,7 +266,6 @@ public class OrderExecutionReport {
    * @return symbolIdCoinapi
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "KRAKEN_SPOT_BTC_USDT", value = "CoinAPI symbol. One of the properties (`symbol_id_exchange`, `symbol_id_coinapi`) is required to identify the market for the new order.")
 
   public String getSymbolIdCoinapi() {
     return symbolIdCoinapi;
@@ -295,7 +288,6 @@ public class OrderExecutionReport {
    * @return amountOrder
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "0.045", required = true, value = "Order quantity.")
 
   public BigDecimal getAmountOrder() {
     return amountOrder;
@@ -318,7 +310,6 @@ public class OrderExecutionReport {
    * @return price
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "0.0783", required = true, value = "Order price.")
 
   public BigDecimal getPrice() {
     return price;
@@ -341,7 +332,6 @@ public class OrderExecutionReport {
    * @return side
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public OrdSide getSide() {
     return side;
@@ -364,7 +354,6 @@ public class OrderExecutionReport {
    * @return orderType
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public OrdType getOrderType() {
     return orderType;
@@ -387,7 +376,6 @@ public class OrderExecutionReport {
    * @return timeInForce
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public TimeInForce getTimeInForce() {
     return timeInForce;
@@ -410,7 +398,6 @@ public class OrderExecutionReport {
    * @return expireTime
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "2020-01-01T10:45:20.1677709Z", value = "Expiration time. Conditionaly required for orders with time_in_force = `GOOD_TILL_TIME_EXCHANGE` or `GOOD_TILL_TIME_OEML`.")
 
   public LocalDate getExpireTime() {
     return expireTime;
@@ -441,7 +428,6 @@ public class OrderExecutionReport {
    * @return execInst
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "[\"MAKER_OR_CANCEL\"]", value = "Order execution instructions are documented in the separate section: <a href=\"#ems-order-params-exec\">EMS / Starter Guide / Order parameters / Execution instructions</a> ")
 
   public List<ExecInstEnum> getExecInst() {
     return execInst;
@@ -464,7 +450,6 @@ public class OrderExecutionReport {
    * @return clientOrderIdFormatExchange
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "f81211e2-27c4-b86a-8143-01088ba9222c", required = true, value = "The unique identifier of the order assigned by the client converted to the exchange order tag format for the purpose of tracking it.")
 
   public String getClientOrderIdFormatExchange() {
     return clientOrderIdFormatExchange;
@@ -487,7 +472,6 @@ public class OrderExecutionReport {
    * @return exchangeOrderId
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "3456456754", value = "Unique identifier of the order assigned by the exchange or executing system.")
 
   public String getExchangeOrderId() {
     return exchangeOrderId;
@@ -510,7 +494,6 @@ public class OrderExecutionReport {
    * @return amountOpen
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "0.22", required = true, value = "Quantity open for further execution. `amount_open` = `amount_order` - `amount_filled`")
 
   public BigDecimal getAmountOpen() {
     return amountOpen;
@@ -533,7 +516,6 @@ public class OrderExecutionReport {
    * @return amountFilled
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "0.0", required = true, value = "Total quantity filled.")
 
   public BigDecimal getAmountFilled() {
     return amountFilled;
@@ -556,7 +538,6 @@ public class OrderExecutionReport {
    * @return avgPx
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "0.0783", value = "Calculated average price of all fills on this order.")
 
   public BigDecimal getAvgPx() {
     return avgPx;
@@ -579,7 +560,6 @@ public class OrderExecutionReport {
    * @return status
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public OrdStatus getStatus() {
     return status;
@@ -610,7 +590,6 @@ public class OrderExecutionReport {
    * @return statusHistory
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Timestamped history of order status changes.")
 
   public List<List<String>> getStatusHistory() {
     return statusHistory;
@@ -633,7 +612,6 @@ public class OrderExecutionReport {
    * @return errorMessage
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "{\"result\":\"error\",\"reason\":\"InsufficientFunds\",\"message\":\"Failed to place buy order on symbol 'BTCUSD' for price $7,000.00 and quantity 0.22 BTC due to insufficient funds\"}", value = "Error message.")
 
   public String getErrorMessage() {
     return errorMessage;
@@ -664,7 +642,6 @@ public class OrderExecutionReport {
    * @return fills
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Relay fill information on working orders.")
 
   public List<Fills> getFills() {
     return fills;

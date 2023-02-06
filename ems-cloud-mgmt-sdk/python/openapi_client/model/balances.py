@@ -44,12 +44,12 @@ class Balances(
 
     def __new__(
         cls,
-        arg: typing.Union[typing.Tuple['Balance'], typing.List['Balance']],
+        _arg: typing.Union[typing.Tuple['Balance'], typing.List['Balance']],
         _configuration: typing.Optional[schemas.Configuration] = None,
     ) -> 'Balances':
         return super().__new__(
             cls,
-            arg,
+            _arg,
             _configuration=_configuration,
         )
 

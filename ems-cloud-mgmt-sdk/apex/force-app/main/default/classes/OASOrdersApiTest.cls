@@ -108,13 +108,6 @@ private class OASOrdersApiTest {
         expectedResponse = List.getExample();
         response = (List<OASOrderExecutionReport>) api.v1OrdersGet(params);
         System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(List.getExample());
-        res.setHeader('Content-Type', 'appliction/json');
-        res.setBody(js);
-        expectedResponse = List.getExample();
-        response = (List<OASOrderExecutionReport>) api.v1OrdersGet(params);
-        System.assertEquals(expectedResponse, response);
     }
 
     /**

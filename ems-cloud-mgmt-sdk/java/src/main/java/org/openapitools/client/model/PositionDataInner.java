@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.math.BigDecimal;
 import org.openapitools.client.model.OrdSide;
@@ -50,8 +48,7 @@ import org.openapitools.client.JSON;
 /**
  * The Position object.
  */
-@ApiModel(description = "The Position object.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-30T14:41:54.163130Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-06T14:42:09.513003Z[Etc/UTC]")
 public class PositionDataInner {
   public static final String SERIALIZED_NAME_SYMBOL_ID_EXCHANGE = "symbol_id_exchange";
   @SerializedName(SERIALIZED_NAME_SYMBOL_ID_EXCHANGE)
@@ -107,7 +104,6 @@ public class PositionDataInner {
    * @return symbolIdExchange
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "XBTUSD", value = "Exchange symbol.")
 
   public String getSymbolIdExchange() {
     return symbolIdExchange;
@@ -130,7 +126,6 @@ public class PositionDataInner {
    * @return symbolIdCoinapi
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "BITMEX_PERP_BTC_USD", value = "CoinAPI symbol.")
 
   public String getSymbolIdCoinapi() {
     return symbolIdCoinapi;
@@ -153,7 +148,6 @@ public class PositionDataInner {
    * @return avgEntryPrice
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "0.00134444", value = "Calculated average price of all fills on this position.")
 
   public BigDecimal getAvgEntryPrice() {
     return avgEntryPrice;
@@ -176,7 +170,6 @@ public class PositionDataInner {
    * @return quantity
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "7", value = "The current position quantity.")
 
   public BigDecimal getQuantity() {
     return quantity;
@@ -199,7 +192,6 @@ public class PositionDataInner {
    * @return side
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public OrdSide getSide() {
     return side;
@@ -222,7 +214,6 @@ public class PositionDataInner {
    * @return unrealizedPnl
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "0.0", value = "Unrealised profit or loss (PNL) of this position.")
 
   public BigDecimal getUnrealizedPnl() {
     return unrealizedPnl;
@@ -245,7 +236,6 @@ public class PositionDataInner {
    * @return leverage
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "0.0", value = "Leverage for this position reported by the exchange.")
 
   public BigDecimal getLeverage() {
     return leverage;
@@ -268,7 +258,6 @@ public class PositionDataInner {
    * @return crossMargin
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "true", value = "Is cross margin mode enable for this position?")
 
   public Boolean getCrossMargin() {
     return crossMargin;
@@ -291,7 +280,6 @@ public class PositionDataInner {
    * @return liquidationPrice
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "0.072323", value = "Liquidation price. If mark price will reach this value, the position will be liquidated.")
 
   public BigDecimal getLiquidationPrice() {
     return liquidationPrice;
@@ -314,7 +302,6 @@ public class PositionDataInner {
    * @return rawData
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "Other information provided by the exchange on this position.", value = "")
 
   public Object getRawData() {
     return rawData;

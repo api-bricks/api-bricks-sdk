@@ -147,7 +147,7 @@ balance_data_inner_t *balance_data_inner_parseFromJSON(cJSON *balance_data_inner
     // balance_data_inner->asset_id_exchange
     cJSON *asset_id_exchange = cJSON_GetObjectItemCaseSensitive(balance_data_innerJSON, "asset_id_exchange");
     if (asset_id_exchange) { 
-    if(!cJSON_IsString(asset_id_exchange))
+    if(!cJSON_IsString(asset_id_exchange) && !cJSON_IsNull(asset_id_exchange))
     {
     goto end; //String
     }
@@ -156,7 +156,7 @@ balance_data_inner_t *balance_data_inner_parseFromJSON(cJSON *balance_data_inner
     // balance_data_inner->asset_id_coinapi
     cJSON *asset_id_coinapi = cJSON_GetObjectItemCaseSensitive(balance_data_innerJSON, "asset_id_coinapi");
     if (asset_id_coinapi) { 
-    if(!cJSON_IsString(asset_id_coinapi))
+    if(!cJSON_IsString(asset_id_coinapi) && !cJSON_IsNull(asset_id_coinapi))
     {
     goto end; //String
     }
@@ -220,8 +220,8 @@ balance_data_inner_t *balance_data_inner_parseFromJSON(cJSON *balance_data_inner
 
 
     balance_data_inner_local_var = balance_data_inner_create (
-        asset_id_exchange ? strdup(asset_id_exchange->valuestring) : NULL,
-        asset_id_coinapi ? strdup(asset_id_coinapi->valuestring) : NULL,
+        asset_id_exchange && !cJSON_IsNull(asset_id_exchange) ? strdup(asset_id_exchange->valuestring) : NULL,
+        asset_id_coinapi && !cJSON_IsNull(asset_id_coinapi) ? strdup(asset_id_coinapi->valuestring) : NULL,
         balance ? balance->valuedouble : 0,
         available ? available->valuedouble : 0,
         locked ? locked->valuedouble : 0,

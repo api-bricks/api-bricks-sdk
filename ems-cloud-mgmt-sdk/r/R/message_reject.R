@@ -43,6 +43,9 @@ MessageReject <- R6::R6Class(
         self$`type` <- `type`
       }
       if (!is.null(`reject_reason`)) {
+        if (!(`reject_reason` %in% c())) {
+          stop(paste("Error! \"", `reject_reason`, "\" cannot be assigned to `reject_reason`. Must be .", sep = ""))
+        }
         stopifnot(R6::is.R6(`reject_reason`))
         self$`reject_reason` <- `reject_reason`
       }
@@ -253,7 +256,7 @@ MessageReject <- R6::R6Class(
 ## Uncomment below to unlock the class to allow modifications of the method or field
 # MessageReject$unlock()
 #
-## Below is an example to define the print fnuction
+## Below is an example to define the print function
 # MessageReject$set("public", "print", function(...) {
 #   print(jsonlite::prettify(self$toJSONString()))
 #   invisible(self)
