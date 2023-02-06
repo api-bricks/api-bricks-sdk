@@ -52,6 +52,53 @@ class MetadataApi {
     }
   }
 
+  /// Gets dapp by name.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [String] dappName (required):
+  ///   
+  Future<Response> metadataDappsDappNameGetWithHttpInfo(String dappName,) async {
+    // ignore: prefer_const_declarations
+    final path = r'/metadata/dapps/{dappName}'
+      .replaceAll('{dappName}', dappName);
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Gets dapp by name.
+  ///
+  /// Parameters:
+  ///
+  /// * [String] dappName (required):
+  ///   
+  Future<void> metadataDappsDappNameGet(String dappName,) async {
+    final response = await metadataDappsDappNameGetWithHttpInfo(dappName,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+  }
+
   /// List all decentralized applications.
   ///
   /// Note: This method returns the HTTP [Response].

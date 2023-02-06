@@ -42,6 +42,18 @@ public class MetadataApiTest {
     }
 
     /**
+     * Gets dapp by name.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void metadataDappsDappNameGetTest() throws ApiException {
+        String dappName = null;
+        api.metadataDappsDappNameGet(dappName);
+        // TODO: test validations
+    }
+
+    /**
      * List all decentralized applications.
      *
      * @throws ApiException if the Api call fails

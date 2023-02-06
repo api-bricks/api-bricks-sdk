@@ -34,6 +34,18 @@ class MetadataApi(baseUrl: String) {
   /**
    * Expected answers:
    *   code 200 :  (Success)
+   * 
+   * @param dappName 
+   */
+  def metadataDappsDappNameGet(dappName: String): ApiRequest[Unit] =
+    ApiRequest[Unit](ApiMethods.GET, baseUrl, "/metadata/dapps/{dappName}", "application/json")
+      .withPathParam("dappName", dappName)
+      .withSuccessResponse[Unit](200)
+      
+
+  /**
+   * Expected answers:
+   *   code 200 :  (Success)
    */
   def metadataDappsGet(): ApiRequest[Unit] =
     ApiRequest[Unit](ApiMethods.GET, baseUrl, "/metadata/dapps", "application/json")

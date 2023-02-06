@@ -14,6 +14,13 @@ void main() {
       // TODO
     });
 
+    // Gets dapp by name.
+    //
+    //Future metadataDappsDappNameGet(String dappName) async
+    test('test metadataDappsDappNameGet', () async {
+      // TODO
+    });
+
     // List all decentralized applications.
     //
     //Future metadataDappsGet() async

@@ -73,6 +73,9 @@ newtype Address = Address { unAddress :: Text } deriving (P.Eq, P.Show)
 -- ** BuyToken
 newtype BuyToken = BuyToken { unBuyToken :: Text } deriving (P.Eq, P.Show)
 
+-- ** DappName
+newtype DappName = DappName { unDappName :: Text } deriving (P.Eq, P.Show)
+
 -- ** EndBlock
 newtype EndBlock = EndBlock { unEndBlock :: Integer } deriving (P.Eq, P.Show)
 

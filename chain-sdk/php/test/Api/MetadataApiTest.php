@@ -85,6 +85,18 @@ class MetadataApiTest extends TestCase
     }
 
     /**
+     * Test case for metadataDappsDappNameGet
+     *
+     * Gets dapp by name..
+     *
+     */
+    public function testMetadataDappsDappNameGet()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test case for metadataDappsGet
      *
      * List all decentralized applications..

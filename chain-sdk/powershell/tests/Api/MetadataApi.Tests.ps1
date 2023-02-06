@@ -15,6 +15,14 @@ Describe -tag 'PSOpenAPITools' -name 'MetadataApi' {
         }
     }
 
+    Context 'Invoke-MetadataDappsDappNameGet' {
+        It 'Test Invoke-MetadataDappsDappNameGet' {
+            #$TestResult = Invoke-MetadataDappsDappNameGet -DappName "TEST_VALUE"
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
     Context 'Invoke-MetadataDappsGet' {
         It 'Test Invoke-MetadataDappsGet' {
             #$TestResult = Invoke-MetadataDappsGet

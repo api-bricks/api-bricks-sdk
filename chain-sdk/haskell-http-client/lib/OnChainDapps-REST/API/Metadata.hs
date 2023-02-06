@@ -73,6 +73,22 @@ data MetadataChainsGet
 instance Produces MetadataChainsGet MimeNoContent
 
 
+-- *** metadataDappsDappNameGet
+
+-- | @GET \/metadata\/dapps\/{dappName}@
+-- 
+-- Gets dapp by name.
+-- 
+metadataDappsDappNameGet
+  :: DappName -- ^ "dappName" -  
+  -> OnChainDapps-RESTRequest MetadataDappsDappNameGet MimeNoContent NoContent MimeNoContent
+metadataDappsDappNameGet (DappName dappName) =
+  _mkRequest "GET" ["/metadata/dapps/",toPath dappName]
+
+data MetadataDappsDappNameGet  
+instance Produces MetadataDappsDappNameGet MimeNoContent
+
+
 -- *** metadataDappsGet
 
 -- | @GET \/metadata\/dapps@

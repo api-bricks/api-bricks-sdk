@@ -251,6 +251,8 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 *metadataChainsGetSync* | *GET* /metadata/chains | List all chains..
 *metadataChainsGetASync* | *GET* /metadata/chains | List all chains..
+*metadataDappsDappNameGetSync* | *GET* /metadata/dapps/{dappName} | Gets dapp by name..
+*metadataDappsDappNameGetASync* | *GET* /metadata/dapps/{dappName} | Gets dapp by name..
 *metadataDappsGetSync* | *GET* /metadata/dapps | List all decentralized applications..
 *metadataDappsGetASync* | *GET* /metadata/dapps | List all decentralized applications..
 

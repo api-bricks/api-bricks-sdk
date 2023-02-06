@@ -23,6 +23,7 @@
 
 #include "CppRestOpenAPIClient/ApiClient.h"
 #include "CppRestOpenAPIClient/ModelBase.h"
+#include <cpprest/details/basic_types.h>
 #include <boost/optional.hpp>
 
 namespace org {
@@ -49,6 +50,16 @@ public:
     /// 
     /// </remarks>
     pplx::task<void> metadataChainsGet(
+    ) const;
+    /// <summary>
+    /// Gets dapp by name.
+    /// </summary>
+    /// <remarks>
+    /// 
+    /// </remarks>
+    /// <param name="dappName"></param>
+    pplx::task<void> metadataDappsDappNameGet(
+        utility::string_t dappName
     ) const;
     /// <summary>
     /// List all decentralized applications.

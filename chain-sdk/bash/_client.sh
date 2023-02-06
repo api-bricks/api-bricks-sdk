@@ -390,6 +390,7 @@ case $state in
             "dexUsersCurrent[Users (current)]" \
             "dexWithdrawRequestsCurrent[WithdrawRequests (current)]" \
             "dexWithdrawsCurrent[Withdraws (current)]"             "metadataChainsGet[List all chains.]" \
+            "metadataDappsDappNameGet[Gets dapp by name.]" \
             "metadataDappsGet[List all decentralized applications.]"             "sushiswapBundlesCurrent[Bundles (current)]" \
             "sushiswapBurnsCurrent[Burns (current)]" \
             "sushiswapDayDataCurrent[DayData (current)]" \
@@ -1358,6 +1359,13 @@ case $state in
         local -a _op_arguments
         _op_arguments=(
                               )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      metadataDappsDappNameGet)
+        local -a _op_arguments
+        _op_arguments=(
+          "dappName=:[PATH] "
+                    )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       metadataDappsGet)

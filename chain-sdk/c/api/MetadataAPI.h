@@ -13,6 +13,12 @@ void
 MetadataAPI_metadataChainsGet(apiClient_t *apiClient);
 
 
+// Gets dapp by name.
+//
+void
+MetadataAPI_metadataDappsDappNameGet(apiClient_t *apiClient, char * dappName );
+
+
 // List all decentralized applications.
 //
 void

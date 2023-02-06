@@ -36,6 +36,13 @@ isa_ok($api, 'WWW::OpenAPIClient::MetadataApi');
 #my $metadata_chains_get_result = $api->metadata_chains_get();
 
 #
+# metadata_dapps_dapp_name_get test
+#
+# uncomment below and update the test
+#my $metadata_dapps_dapp_name_get_dapp_name = undef; # replace NULL with a proper value
+#my $metadata_dapps_dapp_name_get_result = $api->metadata_dapps_dapp_name_get(dapp_name => $metadata_dapps_dapp_name_get_dapp_name);
+
+#
 # metadata_dapps_get test
 #
 # uncomment below and update the test

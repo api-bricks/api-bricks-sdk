@@ -82,6 +82,7 @@ class PathValues(str, enum.Enum):
     DAPPS_CURVE_WEEKLY_VOLUMES_HISTORICAL = "/dapps/curve/weeklyVolumes/historical"
     DAPPS_CURVE_WEEKLY_VOLUMES_CURRENT = "/dapps/curve/weeklyVolumes/current"
     METADATA_DAPPS = "/metadata/dapps"
+    METADATA_DAPPS_DAPP_NAME = "/metadata/dapps/{dappName}"
     DAPPS_DEX_BATCHES_HISTORICAL = "/dapps/dex/batches/historical"
     DAPPS_DEX_BATCHES_CURRENT = "/dapps/dex/batches/current"
     DAPPS_DEX_DEPOSITS_HISTORICAL = "/dapps/dex/deposits/historical"

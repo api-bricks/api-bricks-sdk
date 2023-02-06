@@ -228,6 +228,7 @@ Class | Method | HTTP request | Description
 *OnChainDappsRestApi.DexApi* | [**dexWithdrawRequestsCurrent**](docs/DexApi.md#dexWithdrawRequestsCurrent) | **GET** /dapps/dex/withdrawRequests/current | WithdrawRequests (current)
 *OnChainDappsRestApi.DexApi* | [**dexWithdrawsCurrent**](docs/DexApi.md#dexWithdrawsCurrent) | **GET** /dapps/dex/withdraws/current | Withdraws (current)
 *OnChainDappsRestApi.MetadataApi* | [**metadataChainsGet**](docs/MetadataApi.md#metadataChainsGet) | **GET** /metadata/chains | List all chains.
+*OnChainDappsRestApi.MetadataApi* | [**metadataDappsDappNameGet**](docs/MetadataApi.md#metadataDappsDappNameGet) | **GET** /metadata/dapps/{dappName} | Gets dapp by name.
 *OnChainDappsRestApi.MetadataApi* | [**metadataDappsGet**](docs/MetadataApi.md#metadataDappsGet) | **GET** /metadata/dapps | List all decentralized applications.
 *OnChainDappsRestApi.SushiswapApi* | [**sushiswapBundlesCurrent**](docs/SushiswapApi.md#sushiswapBundlesCurrent) | **GET** /dapps/sushiswap/bundles/current | Bundles (current)
 *OnChainDappsRestApi.SushiswapApi* | [**sushiswapBurnsCurrent**](docs/SushiswapApi.md#sushiswapBurnsCurrent) | **GET** /dapps/sushiswap/burns/current | Burns (current)

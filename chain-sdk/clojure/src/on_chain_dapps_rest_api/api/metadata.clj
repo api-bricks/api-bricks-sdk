@@ -126,6 +126,28 @@
        res)))
 
 
+(defn-spec metadata-dapps-dapp-name-get-with-http-info any?
+  "Gets dapp by name."
+  [dappName string?]
+  (check-required-params dappName)
+  (call-api "/metadata/dapps/{dappName}" :get
+            {:path-params   {"dappName" dappName }
+             :header-params {}
+             :query-params  {}
+             :form-params   {}
+             :content-types []
+             :accepts       []
+             :auth-names    []}))
+
+(defn-spec metadata-dapps-dapp-name-get any?
+  "Gets dapp by name."
+  [dappName string?]
+  (let [res (:data (metadata-dapps-dapp-name-get-with-http-info dappName))]
+    (if (:decode-models *api-context*)
+       (st/decode any? res st/string-transformer)
+       res)))
+
+
 (defn-spec metadata-dapps-get-with-http-info any?
   "List all decentralized applications."
   []

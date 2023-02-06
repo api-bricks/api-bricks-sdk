@@ -16,6 +16,7 @@
 
 module Api.Request.Metadata exposing
     ( metadataChainsGet
+    , metadataDappsDappNameGet
     , metadataDappsGet
     )
 
@@ -34,6 +35,19 @@ metadataChainsGet =
         "GET"
         "/metadata/chains"
         []
+        []
+        []
+        Nothing
+        (Json.Decode.succeed ())
+
+
+
+metadataDappsDappNameGet : String -> Api.Request ()
+metadataDappsDappNameGet dappName_path =
+    Api.request
+        "GET"
+        "/metadata/dapps/{dappName}"
+        [ ( "dappName", identity dappName_path ) ]
         []
         []
         Nothing

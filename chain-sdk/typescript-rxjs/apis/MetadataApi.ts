@@ -13,8 +13,12 @@
 
 import type { Observable } from 'rxjs';
 import type { AjaxResponse } from 'rxjs/ajax';
-import { BaseAPI } from '../runtime';
+import { BaseAPI, throwIfNullOrUndefined, encodeURI } from '../runtime';
 import type { OperationOpts } from '../runtime';
+
+export interface MetadataDappsDappNameGetRequest {
+    dappName: string;
+}
 
 /**
  * no description
@@ -29,6 +33,20 @@ export class MetadataApi extends BaseAPI {
     metadataChainsGet(opts?: OperationOpts): Observable<void | AjaxResponse<void>> {
         return this.request<void>({
             url: '/metadata/chains',
+            method: 'GET',
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets dapp by name.
+     */
+    metadataDappsDappNameGet({ dappName }: MetadataDappsDappNameGetRequest): Observable<void>
+    metadataDappsDappNameGet({ dappName }: MetadataDappsDappNameGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>>
+    metadataDappsDappNameGet({ dappName }: MetadataDappsDappNameGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>> {
+        throwIfNullOrUndefined(dappName, 'dappName', 'metadataDappsDappNameGet');
+
+        return this.request<void>({
+            url: '/metadata/dapps/{dappName}'.replace('{dappName}', encodeURI(dappName)),
             method: 'GET',
         }, opts?.responseOpts);
     };

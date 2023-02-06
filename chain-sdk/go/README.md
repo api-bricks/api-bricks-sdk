@@ -179,6 +179,7 @@ Class | Method | HTTP request | Description
 *DexApi* | [**DexWithdrawRequestsCurrent**](docs/DexApi.md#dexwithdrawrequestscurrent) | **Get** /dapps/dex/withdrawRequests/current | WithdrawRequests (current)
 *DexApi* | [**DexWithdrawsCurrent**](docs/DexApi.md#dexwithdrawscurrent) | **Get** /dapps/dex/withdraws/current | Withdraws (current)
 *MetadataApi* | [**MetadataChainsGet**](docs/MetadataApi.md#metadatachainsget) | **Get** /metadata/chains | List all chains.
+*MetadataApi* | [**MetadataDappsDappNameGet**](docs/MetadataApi.md#metadatadappsdappnameget) | **Get** /metadata/dapps/{dappName} | Gets dapp by name.
 *MetadataApi* | [**MetadataDappsGet**](docs/MetadataApi.md#metadatadappsget) | **Get** /metadata/dapps | List all decentralized applications.
 *SushiswapApi* | [**SushiswapBundlesCurrent**](docs/SushiswapApi.md#sushiswapbundlescurrent) | **Get** /dapps/sushiswap/bundles/current | Bundles (current)
 *SushiswapApi* | [**SushiswapBurnsCurrent**](docs/SushiswapApi.md#sushiswapburnscurrent) | **Get** /dapps/sushiswap/burns/current | Burns (current)

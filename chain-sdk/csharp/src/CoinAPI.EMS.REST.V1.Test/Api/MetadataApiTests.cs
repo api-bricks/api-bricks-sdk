@@ -74,6 +74,18 @@ namespace CoinAPI.EMS.REST.V1.Test
         }
         
         /// <summary>
+        /// Test MetadataDappsDappNameGet
+        /// </summary>
+        [Test]
+        public void MetadataDappsDappNameGetTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string dappName = null;
+            //instance.MetadataDappsDappNameGet(dappName);
+            
+        }
+        
+        /// <summary>
         /// Test MetadataDappsGet
         /// </summary>
         [Test]

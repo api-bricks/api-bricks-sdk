@@ -882,6 +882,11 @@ package .Clients is
    procedure Metadata_Chains_Get
       (Client : in out Client_Type);
 
+   --  Gets dapp by name.
+   procedure Metadata_Dapps_Dapp_Name_Get
+      (Client : in out Client_Type;
+       Dapp_Name : in Swagger.UString);
+
    --  List all decentralized applications.
    procedure Metadata_Dapps_Get
       (Client : in out Client_Type);

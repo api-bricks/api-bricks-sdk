@@ -58,6 +58,16 @@
         done();
       });
     });
+    describe('metadataDappsDappNameGet', function() {
+      it('should call metadataDappsDappNameGet successfully', function(done) {
+        //uncomment below and update the code to test metadataDappsDappNameGet
+        //instance.metadataDappsDappNameGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('metadataDappsGet', function() {
       it('should call metadataDappsGet successfully', function(done) {
         //uncomment below and update the code to test metadataDappsGet

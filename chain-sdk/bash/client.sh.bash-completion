@@ -165,6 +165,7 @@ _()
     operations["dexWithdrawRequestsCurrent"]=1
     operations["dexWithdrawsCurrent"]=1
     operations["metadataChainsGet"]=1
+    operations["metadataDappsDappNameGet"]=1
     operations["metadataDappsGet"]=1
     operations["sushiswapBundlesCurrent"]=1
     operations["sushiswapBurnsCurrent"]=1
@@ -363,6 +364,7 @@ _()
     operation_parameters["dexWithdrawRequestsCurrent"]=""
     operation_parameters["dexWithdrawsCurrent"]=""
     operation_parameters["metadataChainsGet"]=""
+    operation_parameters["metadataDappsDappNameGet"]="dappName= "
     operation_parameters["metadataDappsGet"]=""
     operation_parameters["sushiswapBundlesCurrent"]=""
     operation_parameters["sushiswapBurnsCurrent"]=""

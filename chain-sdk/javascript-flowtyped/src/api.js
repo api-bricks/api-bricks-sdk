@@ -14007,6 +14007,33 @@ export const MetadataApiFetchParamCreator = function (configuration?: Configurat
         },
         /**
          * 
+         * @summary Gets dapp by name.
+         * @throws {RequiredError}
+         */
+        metadataDappsDappNameGet(dappName: string, options: RequestOptions): FetchArgs {
+            // verify required parameter 'dappName' is not null or undefined
+            if (dappName === null || dappName === undefined) {
+                throw new RequiredError('dappName','Required parameter dappName was null or undefined when calling metadataDappsDappNameGet.');
+            }
+            const localVarPath = `/metadata/dapps/{dappName}`
+                .replace(`{${"dappName"}}`, encodeURIComponent(String(dappName)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
          * @summary List all decentralized applications.
          * @throws {RequiredError}
          */
@@ -14033,6 +14060,8 @@ export const MetadataApiFetchParamCreator = function (configuration?: Configurat
 export type MetadataApiType = { 
     metadataChainsGet(options?: RequestOptions): Promise<Response>,
 
+    metadataDappsDappNameGet(dappName: string, options?: RequestOptions): Promise<Response>,
+
     metadataDappsGet(options?: RequestOptions): Promise<Response>,
 }
 
@@ -14050,6 +14079,21 @@ export const MetadataApi = function(configuration?: Configuration, fetch: FetchA
          */
         metadataChainsGet(options?: RequestOptions = {}): Promise<Response> {
             const localVarFetchArgs = MetadataApiFetchParamCreator(configuration).metadataChainsGet(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response;
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * 
+         * @summary Gets dapp by name.
+         * @throws {RequiredError}
+         */
+        metadataDappsDappNameGet(dappName: string, options?: RequestOptions = {}): Promise<Response> {
+            const localVarFetchArgs = MetadataApiFetchParamCreator(configuration).metadataDappsDappNameGet(dappName, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response;

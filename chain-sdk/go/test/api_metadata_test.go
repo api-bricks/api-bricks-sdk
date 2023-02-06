@@ -33,6 +33,19 @@ func Test_openapi_MetadataApiService(t *testing.T) {
 
 	})
 
+	t.Run("Test MetadataApiService MetadataDappsDappNameGet", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		var dappName string
+
+		httpRes, err := apiClient.MetadataApi.MetadataDappsDappNameGet(context.Background(), dappName).Execute()
+
+		require.Nil(t, err)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
 	t.Run("Test MetadataApiService MetadataDappsGet", func(t *testing.T) {
 
 		t.Skip("skip test")  // remove to run test

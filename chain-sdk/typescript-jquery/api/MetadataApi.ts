@@ -103,6 +103,67 @@ export class MetadataApi {
 
     /**
      * 
+     * @summary Gets dapp by name.
+     * @param dappName 
+     */
+    public metadataDappsDappNameGet(dappName: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    { response: JQueryXHR; body?: any;  },
+    { response: JQueryXHR; errorThrown: string }
+    > {
+        let localVarPath = this.basePath + '/metadata/dapps/{dappName}'.replace('{' + 'dappName' + '}', encodeURIComponent(String(dappName)));
+
+        let queryParameters: any = {};
+        let headerParams: any = {};
+        // verify required parameter 'dappName' is not null or undefined
+        if (dappName === null || dappName === undefined) {
+            throw new Error('Required parameter dappName was null or undefined when calling metadataDappsDappNameGet.');
+        }
+
+
+        localVarPath = localVarPath + "?" + $.param(queryParameters);
+        // to determine the Content-Type header
+        let consumes: string[] = [
+        ];
+
+        // to determine the Accept header
+        let produces: string[] = [
+        ];
+
+
+        let requestOptions: JQueryAjaxSettings = {
+            url: localVarPath,
+            type: 'GET',
+            headers: headerParams,
+            processData: false
+        };
+
+        if (headerParams['Content-Type']) {
+            requestOptions.contentType = headerParams['Content-Type'];
+        }
+
+        if (extraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, extraJQueryAjaxSettings);
+        }
+
+        if (this.defaultExtraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, this.defaultExtraJQueryAjaxSettings);
+        }
+
+        let dfd = $.Deferred<
+            { response: JQueryXHR; body?: any;  },
+            { response: JQueryXHR; errorThrown: string }
+        >();
+        $.ajax(requestOptions).then(
+            (data: any, textStatus: string, jqXHR: JQueryXHR) =>
+                dfd.resolve({response: jqXHR, body: data}),
+            (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
+                dfd.reject({response: xhr, errorThrown: errorThrown})
+        );
+        return dfd.promise();
+    }
+
+    /**
+     * 
      * @summary List all decentralized applications.
      */
     public metadataDappsGet(extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<

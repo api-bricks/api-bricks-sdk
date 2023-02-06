@@ -28,6 +28,21 @@
 #' }
 #' }
 #'
+#' \strong{ MetadataDappsDappNameGet } \emph{ Gets dapp by name. }
+#'
+#' \itemize{
+#' \item \emph{ @param } dapp_name character
+#'
+#'
+#' \item status code : 200 | Success
+#'
+#'
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
 #' \strong{ MetadataDappsGet } \emph{ List all decentralized applications. }
 #'
 #' \itemize{
@@ -55,6 +70,17 @@
 #' api_instance <- MetadataApi$new()
 #'
 #' api_instance$MetadataChainsGet()
+#'
+#'
+#' ####################  MetadataDappsDappNameGet  ####################
+#'
+#' library(openapi)
+#' var_dapp_name <- "dapp_name_example" # character | 
+#'
+#' #Gets dapp by name.
+#' api_instance <- MetadataApi$new()
+#'
+#' api_instance$MetadataDappsDappNameGet(var_dapp_name)
 #'
 #'
 #' ####################  MetadataDappsGet  ####################
@@ -128,6 +154,90 @@ MetadataApi <- R6::R6Class(
       is_oauth <- FALSE
 
       local_var_url_path <- "/metadata/chains"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list()
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        local_var_resp$content <- NULL
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
+    #' Gets dapp by name.
+    #'
+    #' @description
+    #' Gets dapp by name.
+    #'
+    #' @param dapp_name 
+    #' @param ... Other optional arguments
+    #' @return void
+    #' @export
+    MetadataDappsDappNameGet = function(dapp_name, ...) {
+      local_var_response <- self$MetadataDappsDappNameGetWithHttpInfo(dapp_name, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' Gets dapp by name.
+    #'
+    #' @description
+    #' Gets dapp by name.
+    #'
+    #' @param dapp_name 
+    #' @param ... Other optional arguments
+    #' @return API response (void) with additional information such as HTTP status code, headers
+    #' @export
+    MetadataDappsDappNameGetWithHttpInfo = function(dapp_name, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+      if (missing(`dapp_name`)) {
+        stop("Missing required parameter `dapp_name`.")
+      }
+
+
+      local_var_url_path <- "/metadata/dapps/{dappName}"
+      if (!missing(`dapp_name`)) {
+        local_var_url_path <- gsub("\\{dappName\\}", URLencode(as.character(`dapp_name`), reserved = TRUE), local_var_url_path)
+      }
+
 
       # The Accept request HTTP header
       local_var_accepts <- list()

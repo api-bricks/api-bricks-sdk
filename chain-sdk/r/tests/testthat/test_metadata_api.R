@@ -15,6 +15,17 @@ test_that("MetadataChainsGet", {
   #expect_equal(result, "EXPECTED_RESULT")
 })
 
+test_that("MetadataDappsDappNameGet", {
+  # tests for MetadataDappsDappNameGet
+  # base path: https://onchain.coinapi.io
+  # Gets dapp by name.
+  # @param dapp_name character 
+  # @return [Void]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
 test_that("MetadataDappsGet", {
   # tests for MetadataDappsGet
   # base path: https://onchain.coinapi.io

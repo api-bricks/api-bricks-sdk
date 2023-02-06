@@ -44,6 +44,27 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> MetadataChainsGetWithHttpInfo ();
         /// <summary>
+        /// Gets dapp by name.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dappName"></param>
+        /// <returns></returns>
+        void MetadataDappsDappNameGet (string dappName);
+
+        /// <summary>
+        /// Gets dapp by name.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dappName"></param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> MetadataDappsDappNameGetWithHttpInfo (string dappName);
+        /// <summary>
         /// List all decentralized applications.
         /// </summary>
         /// <remarks>
@@ -85,6 +106,29 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> MetadataChainsGetWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// Gets dapp by name.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dappName"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task MetadataDappsDappNameGetAsync (string dappName, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Gets dapp by name.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dappName"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> MetadataDappsDappNameGetWithHttpInfoAsync (string dappName, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// List all decentralized applications.
         /// </summary>
@@ -328,6 +372,137 @@ namespace CoinAPI.EMS.REST.V1.Api
             if (ExceptionFactory != null)
             {
                 Exception exception = ExceptionFactory("MetadataChainsGet", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                null);
+        }
+
+        /// <summary>
+        /// Gets dapp by name. 
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dappName"></param>
+        /// <returns></returns>
+        public void MetadataDappsDappNameGet (string dappName)
+        {
+             MetadataDappsDappNameGetWithHttpInfo(dappName);
+        }
+
+        /// <summary>
+        /// Gets dapp by name. 
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dappName"></param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> MetadataDappsDappNameGetWithHttpInfo (string dappName)
+        {
+            // verify the required parameter 'dappName' is set
+            if (dappName == null)
+                throw new ApiException(400, "Missing required parameter 'dappName' when calling MetadataApi->MetadataDappsDappNameGet");
+
+            var localVarPath = "/metadata/dapps/{dappName}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (dappName != null) localVarPathParams.Add("dappName", this.Configuration.ApiClient.ParameterToString(dappName)); // path parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("MetadataDappsDappNameGet", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                null);
+        }
+
+        /// <summary>
+        /// Gets dapp by name. 
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dappName"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task MetadataDappsDappNameGetAsync (string dappName, CancellationToken cancellationToken = default(CancellationToken))
+        {
+             await MetadataDappsDappNameGetWithHttpInfoAsync(dappName, cancellationToken);
+
+        }
+
+        /// <summary>
+        /// Gets dapp by name. 
+        /// </summary>
+        /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dappName"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> MetadataDappsDappNameGetWithHttpInfoAsync (string dappName, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'dappName' is set
+            if (dappName == null)
+                throw new ApiException(400, "Missing required parameter 'dappName' when calling MetadataApi->MetadataDappsDappNameGet");
+
+            var localVarPath = "/metadata/dapps/{dappName}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (dappName != null) localVarPathParams.Add("dappName", this.Configuration.ApiClient.ParameterToString(dappName)); // path parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("MetadataDappsDappNameGet", localVarResponse);
                 if (exception != null) throw exception;
             }
 

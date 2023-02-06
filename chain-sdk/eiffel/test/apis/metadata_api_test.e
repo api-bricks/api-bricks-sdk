@@ -25,6 +25,20 @@ feature -- Test routines
             assert ("not_implemented", False)
         end
 
+    test_metadata_dapps_dapp_name_get
+            -- Gets dapp by name.
+            --
+            -- 
+        local
+            l_dapp_name: STRING_32
+        do
+            -- TODO: Initialize required params.
+            -- l_dapp_name
+
+            -- api.metadata_dapps_dapp_name_get(l_dapp_name)
+            assert ("not_implemented", False)
+        end
+
     test_metadata_dapps_get
             -- List all decentralized applications.
             --

@@ -22,6 +22,13 @@ describe("metadata_api", function()
     end)
   end)
 
+  -- unit tests for metadata_dapps_dapp_name_get
+  describe("metadata_dapps_dapp_name_get test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
   -- unit tests for metadata_dapps_get
   describe("metadata_dapps_get test", function()
     it("should work", function()

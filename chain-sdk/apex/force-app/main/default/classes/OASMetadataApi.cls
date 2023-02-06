@@ -46,6 +46,30 @@ public class OASMetadataApi {
         );
     }
     /**
+     * Gets dapp by name.
+     * 
+     * @param dappName  (required)
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public void metadataDappsDappNameGet(Map<String, Object> params) {
+        client.assertNotNull(params.get('dappName'), 'dappName');
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        client.invoke(
+            'GET', '/metadata/dapps/{dappName}', '',
+            query, form,
+            new Map<String, Object>{
+                'dappName' => (String) params.get('dappName')
+            },
+            new Map<String, Object>(),
+            new List<String>(),
+            new List<String>(),
+            new List<String>(),
+            null
+        );
+    }
+    /**
      * List all decentralized applications.
      * 
      * @throws OAS.ApiException if fails to make API call

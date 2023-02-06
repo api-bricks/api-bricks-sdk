@@ -382,6 +382,7 @@ operation_parameters_minimum_occurrences["dexGetWithdrawsHistorical:::startDate"
 operation_parameters_minimum_occurrences["dexGetWithdrawsHistorical:::endDate"]=0
 operation_parameters_minimum_occurrences["dexGetWithdrawsHistorical:::id"]=0
 operation_parameters_minimum_occurrences["dexGetWithdrawsHistorical:::user"]=0
+operation_parameters_minimum_occurrences["metadataDappsDappNameGet:::dappName"]=1
 operation_parameters_minimum_occurrences["sushiswapGetBundlesHistorical:::startBlock"]=0
 operation_parameters_minimum_occurrences["sushiswapGetBundlesHistorical:::endBlock"]=0
 operation_parameters_minimum_occurrences["sushiswapGetBundlesHistorical:::startDate"]=0
@@ -974,6 +975,7 @@ operation_parameters_maximum_occurrences["dexGetWithdrawsHistorical:::startDate"
 operation_parameters_maximum_occurrences["dexGetWithdrawsHistorical:::endDate"]=0
 operation_parameters_maximum_occurrences["dexGetWithdrawsHistorical:::id"]=0
 operation_parameters_maximum_occurrences["dexGetWithdrawsHistorical:::user"]=0
+operation_parameters_maximum_occurrences["metadataDappsDappNameGet:::dappName"]=0
 operation_parameters_maximum_occurrences["sushiswapGetBundlesHistorical:::startBlock"]=0
 operation_parameters_maximum_occurrences["sushiswapGetBundlesHistorical:::endBlock"]=0
 operation_parameters_maximum_occurrences["sushiswapGetBundlesHistorical:::startDate"]=0
@@ -1563,6 +1565,7 @@ operation_parameters_collection_type["dexGetWithdrawsHistorical:::startDate"]=""
 operation_parameters_collection_type["dexGetWithdrawsHistorical:::endDate"]=""
 operation_parameters_collection_type["dexGetWithdrawsHistorical:::id"]=""
 operation_parameters_collection_type["dexGetWithdrawsHistorical:::user"]=""
+operation_parameters_collection_type["metadataDappsDappNameGet:::dappName"]=""
 operation_parameters_collection_type["sushiswapGetBundlesHistorical:::startBlock"]=""
 operation_parameters_collection_type["sushiswapGetBundlesHistorical:::endBlock"]=""
 operation_parameters_collection_type["sushiswapGetBundlesHistorical:::startDate"]=""
@@ -2356,6 +2359,7 @@ echo "  $ops" | column -t -s ';'
     echo -e "${BOLD}${WHITE}[metadata]${OFF}"
 read -r -d '' ops <<EOF
   ${CYAN}metadataChainsGet${OFF};List all chains.
+  ${CYAN}metadataDappsDappNameGet${OFF};Gets dapp by name.
   ${CYAN}metadataDappsGet${OFF};List all decentralized applications.
 EOF
 echo "  $ops" | column -t -s ';'
@@ -4692,6 +4696,22 @@ print_metadataChainsGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}metadataChainsGet - List all chains.${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for metadataDappsDappNameGet operation
+#
+##############################################################################
+print_metadataDappsDappNameGet_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}metadataDappsDappNameGet - Gets dapp by name.${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}dappName${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} -  ${YELLOW}Specify as: dappName=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
     code=200
@@ -10391,6 +10411,42 @@ call_metadataChainsGet() {
 
 ##############################################################################
 #
+# Call metadataDappsDappNameGet operation
+#
+##############################################################################
+call_metadataDappsDappNameGet() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(dappName)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=()
+    local path
+
+    if ! path=$(build_request_path "/metadata/dapps/{dappName}" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
 # Call metadataDappsGet operation
 #
 ##############################################################################
@@ -14269,6 +14325,9 @@ case $key in
     metadataChainsGet)
     operation="metadataChainsGet"
     ;;
+    metadataDappsDappNameGet)
+    operation="metadataDappsDappNameGet"
+    ;;
     metadataDappsGet)
     operation="metadataDappsGet"
     ;;
@@ -14927,6 +14986,9 @@ case $operation in
     ;;
     metadataChainsGet)
     call_metadataChainsGet
+    ;;
+    metadataDappsDappNameGet)
+    call_metadataDappsDappNameGet
     ;;
     metadataDappsGet)
     call_metadataDappsGet

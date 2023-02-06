@@ -42,6 +42,17 @@ describe 'MetadataApi' do
     end
   end
 
+  # unit tests for metadata_dapps_dapp_name_get
+  # Gets dapp by name.
+  # @param dapp_name 
+  # @param [Hash] opts the optional parameters
+  # @return [nil]
+  describe 'metadata_dapps_dapp_name_get test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
   # unit tests for metadata_dapps_get
   # List all decentralized applications.
   # @param [Hash] opts the optional parameters

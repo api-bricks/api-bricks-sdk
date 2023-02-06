@@ -77,6 +77,7 @@ from openapi_client.apis.paths.dapps_curve_voting_apps_current import DappsCurve
 from openapi_client.apis.paths.dapps_curve_weekly_volumes_historical import DappsCurveWeeklyVolumesHistorical
 from openapi_client.apis.paths.dapps_curve_weekly_volumes_current import DappsCurveWeeklyVolumesCurrent
 from openapi_client.apis.paths.metadata_dapps import MetadataDapps
+from openapi_client.apis.paths.metadata_dapps_dapp_name import MetadataDappsDappName
 from openapi_client.apis.paths.dapps_dex_batches_historical import DappsDexBatchesHistorical
 from openapi_client.apis.paths.dapps_dex_batches_current import DappsDexBatchesCurrent
 from openapi_client.apis.paths.dapps_dex_deposits_historical import DappsDexDepositsHistorical
@@ -275,6 +276,7 @@ PathToApi = typing_extensions.TypedDict(
         PathValues.DAPPS_CURVE_WEEKLY_VOLUMES_HISTORICAL: DappsCurveWeeklyVolumesHistorical,
         PathValues.DAPPS_CURVE_WEEKLY_VOLUMES_CURRENT: DappsCurveWeeklyVolumesCurrent,
         PathValues.METADATA_DAPPS: MetadataDapps,
+        PathValues.METADATA_DAPPS_DAPP_NAME: MetadataDappsDappName,
         PathValues.DAPPS_DEX_BATCHES_HISTORICAL: DappsDexBatchesHistorical,
         PathValues.DAPPS_DEX_BATCHES_CURRENT: DappsDexBatchesCurrent,
         PathValues.DAPPS_DEX_DEPOSITS_HISTORICAL: DappsDexDepositsHistorical,
@@ -474,6 +476,7 @@ path_to_api = PathToApi(
         PathValues.DAPPS_CURVE_WEEKLY_VOLUMES_HISTORICAL: DappsCurveWeeklyVolumesHistorical,
         PathValues.DAPPS_CURVE_WEEKLY_VOLUMES_CURRENT: DappsCurveWeeklyVolumesCurrent,
         PathValues.METADATA_DAPPS: MetadataDapps,
+        PathValues.METADATA_DAPPS_DAPP_NAME: MetadataDappsDappName,
         PathValues.DAPPS_DEX_BATCHES_HISTORICAL: DappsDexBatchesHistorical,
         PathValues.DAPPS_DEX_BATCHES_CURRENT: DappsDexBatchesCurrent,
         PathValues.DAPPS_DEX_DEPOSITS_HISTORICAL: DappsDexDepositsHistorical,

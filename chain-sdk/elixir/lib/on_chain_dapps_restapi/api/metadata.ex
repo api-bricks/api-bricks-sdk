@@ -38,6 +38,35 @@ defmodule OnChainDapps-RESTAPI.Api.Metadata do
   end
 
   @doc """
+  Gets dapp by name.
+
+  ### Parameters
+
+  - `connection` (OnChainDapps-RESTAPI.Connection): Connection to server
+  - `dapp_name` (String.t): 
+  - `opts` (keyword): Optional parameters
+
+  ### Returns
+
+  - `{:ok, nil}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec metadata_dapps_dapp_name_get(Tesla.Env.client, String.t, keyword()) :: {:ok, nil} | {:error, Tesla.Env.t}
+  def metadata_dapps_dapp_name_get(connection, dapp_name, _opts \\ []) do
+    request =
+      %{}
+      |> method(:get)
+      |> url("/metadata/dapps/#{dapp_name}")
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, false}
+    ])
+  end
+
+  @doc """
   List all decentralized applications.
 
   ### Parameters

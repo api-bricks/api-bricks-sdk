@@ -2326,6 +2326,19 @@ package body .Clients is
       Client.Call (Swagger.Clients.GET, URI);
    end Metadata_Chains_Get;
 
+   --  Gets dapp by name.
+   procedure Metadata_Dapps_Dapp_Name_Get
+      (Client : in out Client_Type;
+       Dapp_Name : in Swagger.UString) is
+      URI   : Swagger.Clients.URI_Type;
+   begin
+
+
+      URI.Set_Path ("/metadata/dapps/{dappName}");
+      URI.Set_Path_Param ("dappName", Dapp_Name);
+      Client.Call (Swagger.Clients.GET, URI);
+   end Metadata_Dapps_Dapp_Name_Get;
+
    --  List all decentralized applications.
    procedure Metadata_Dapps_Get
       (Client : in out Client_Type) is

@@ -34,6 +34,8 @@ tags:
   name: Cow
 - description: Dex tag descriptor ...
   name: Dex
+- description: Metadata tag descriptor ...
+  name: Metadata
 paths:
   /metadata/chains:
     get:
@@ -4122,6 +4124,24 @@ paths:
         "200":
           description: Success
       summary: List all decentralized applications.
+      tags:
+      - Metadata
+      x-accepts: application/json
+  /metadata/dapps/{dappName}:
+    get:
+      parameters:
+      - description: ""
+        explode: false
+        in: path
+        name: dappName
+        required: true
+        schema:
+          type: string
+        style: simple
+      responses:
+        "200":
+          description: Success
+      summary: Gets dapp by name.
       tags:
       - Metadata
       x-accepts: application/json

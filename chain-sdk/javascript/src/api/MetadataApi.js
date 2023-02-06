@@ -69,6 +69,47 @@ export default class MetadataApi {
     }
 
     /**
+     * Callback function to receive the result of the metadataDappsDappNameGet operation.
+     * @callback module:api/MetadataApi~metadataDappsDappNameGetCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Gets dapp by name.
+     * @param {String} dappName 
+     * @param {module:api/MetadataApi~metadataDappsDappNameGetCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    metadataDappsDappNameGet(dappName, callback) {
+      let postBody = null;
+      // verify the required parameter 'dappName' is set
+      if (dappName === undefined || dappName === null) {
+        throw new Error("Missing the required parameter 'dappName' when calling metadataDappsDappNameGet");
+      }
+
+      let pathParams = {
+        'dappName': dappName
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = [];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/metadata/dapps/{dappName}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the metadataDappsGet operation.
      * @callback module:api/MetadataApi~metadataDappsGetCallback
      * @param {String} error Error message, if any.
