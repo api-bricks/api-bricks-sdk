@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 import com.google.gson.Gson;
@@ -48,8 +46,7 @@ import org.openapitools.client.JSON;
 /**
  * Cancel single order request object.
  */
-@ApiModel(description = "Cancel single order request object.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-30T14:41:50.887872Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-06T14:42:10.168910Z[Etc/UTC]")
 public class OrderCancelSingleRequest {
   public static final String SERIALIZED_NAME_EXCHANGE_ID = "exchange_id";
   @SerializedName(SERIALIZED_NAME_EXCHANGE_ID)
@@ -77,7 +74,6 @@ public class OrderCancelSingleRequest {
    * @return exchangeId
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "KRAKEN", required = true, value = "Exchange identifier used to identify the routing destination.")
 
   public String getExchangeId() {
     return exchangeId;
@@ -100,7 +96,6 @@ public class OrderCancelSingleRequest {
    * @return exchangeOrderId
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "3456456754", value = "Unique identifier of the order assigned by the exchange or executing system. One of the properties (`exchange_order_id`, `client_order_id`) is required to identify the new order.")
 
   public String getExchangeOrderId() {
     return exchangeOrderId;
@@ -123,7 +118,6 @@ public class OrderCancelSingleRequest {
    * @return clientOrderId
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "6ab36bc1-344d-432e-ac6d-0bf44ee64c2b", value = "The unique identifier of the order assigned by the client. One of the properties (`exchange_order_id`, `client_order_id`) is required to identify the new order.")
 
   public String getClientOrderId() {
     return clientOrderId;

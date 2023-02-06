@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import org.openapitools.client.model.RejectReason;
 
@@ -49,7 +47,7 @@ import org.openapitools.client.JSON;
 /**
  * MessageReject
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-30T14:41:50.887872Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-06T14:42:10.168910Z[Etc/UTC]")
 public class MessageReject {
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
@@ -85,7 +83,6 @@ public class MessageReject {
    * @return type
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "MESSAGE_REJECT", value = "Message type, constant.")
 
   public String getType() {
     return type;
@@ -108,7 +105,6 @@ public class MessageReject {
    * @return rejectReason
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public RejectReason getRejectReason() {
     return rejectReason;
@@ -131,7 +127,6 @@ public class MessageReject {
    * @return exchangeId
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "BINANCE", value = "If the message related to exchange, then the identifier of the exchange will be provided.")
 
   public String getExchangeId() {
     return exchangeId;
@@ -154,7 +149,6 @@ public class MessageReject {
    * @return message
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "Order with ID: BINANCE-7d8a-4888 not found", value = "Message text.")
 
   public String getMessage() {
     return message;
@@ -177,7 +171,6 @@ public class MessageReject {
    * @return rejectedMessage
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "{\"client_order_id\":\"BINANCE-7d8a-4888\",\"exchange_id\":\"BINANCE\",\"type\":\"ORDER_CANCEL_SINGLE_REQUEST\"}", value = "Value of rejected request, if available.")
 
   public String getRejectedMessage() {
     return rejectedMessage;

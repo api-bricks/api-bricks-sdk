@@ -71,7 +71,7 @@ For more information, please visit [https://www.coinapi.io](https://www.coinapi.
 
 ## Requires
 
-* Kotlin 1.6.10
+* Kotlin 1.7.21
 * Gradle 7.5
 
 ## Build

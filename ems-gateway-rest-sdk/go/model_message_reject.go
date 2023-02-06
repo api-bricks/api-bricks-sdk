@@ -15,6 +15,9 @@ import (
 	"encoding/json"
 )
 
+// checks if the MessageReject type satisfies the MappedNullable interface at compile time
+var _ MappedNullable = &MessageReject{}
+
 // MessageReject struct for MessageReject
 type MessageReject struct {
 	// Message type, constant.
@@ -58,7 +61,7 @@ func (o *MessageReject) GetType() string {
 // and a boolean to check if the value has been set.
 func (o *MessageReject) GetTypeOk() (*string, bool) {
 	if o == nil || isNil(o.Type) {
-    return nil, false
+		return nil, false
 	}
 	return o.Type, true
 }
@@ -90,7 +93,7 @@ func (o *MessageReject) GetRejectReason() RejectReason {
 // and a boolean to check if the value has been set.
 func (o *MessageReject) GetRejectReasonOk() (*RejectReason, bool) {
 	if o == nil || isNil(o.RejectReason) {
-    return nil, false
+		return nil, false
 	}
 	return o.RejectReason, true
 }
@@ -122,7 +125,7 @@ func (o *MessageReject) GetExchangeId() string {
 // and a boolean to check if the value has been set.
 func (o *MessageReject) GetExchangeIdOk() (*string, bool) {
 	if o == nil || isNil(o.ExchangeId) {
-    return nil, false
+		return nil, false
 	}
 	return o.ExchangeId, true
 }
@@ -154,7 +157,7 @@ func (o *MessageReject) GetMessage() string {
 // and a boolean to check if the value has been set.
 func (o *MessageReject) GetMessageOk() (*string, bool) {
 	if o == nil || isNil(o.Message) {
-    return nil, false
+		return nil, false
 	}
 	return o.Message, true
 }
@@ -186,7 +189,7 @@ func (o *MessageReject) GetRejectedMessage() string {
 // and a boolean to check if the value has been set.
 func (o *MessageReject) GetRejectedMessageOk() (*string, bool) {
 	if o == nil || isNil(o.RejectedMessage) {
-    return nil, false
+		return nil, false
 	}
 	return o.RejectedMessage, true
 }
@@ -206,6 +209,14 @@ func (o *MessageReject) SetRejectedMessage(v string) {
 }
 
 func (o MessageReject) MarshalJSON() ([]byte, error) {
+	toSerialize,err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
+}
+
+func (o MessageReject) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
 	if !isNil(o.Type) {
 		toSerialize["type"] = o.Type
@@ -222,7 +233,7 @@ func (o MessageReject) MarshalJSON() ([]byte, error) {
 	if !isNil(o.RejectedMessage) {
 		toSerialize["rejected_message"] = o.RejectedMessage
 	}
-	return json.Marshal(toSerialize)
+	return toSerialize, nil
 }
 
 type NullableMessageReject struct {

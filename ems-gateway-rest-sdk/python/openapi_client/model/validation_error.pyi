@@ -97,7 +97,7 @@ class ValidationError(
 
     def __new__(
         cls,
-        *args: typing.Union[dict, frozendict.frozendict, ],
+        *_args: typing.Union[dict, frozendict.frozendict, ],
         type: typing.Union[MetaOapg.properties.type, str, schemas.Unset] = schemas.unset,
         title: typing.Union[MetaOapg.properties.title, str, schemas.Unset] = schemas.unset,
         status: typing.Union[MetaOapg.properties.status, decimal.Decimal, int, float, schemas.Unset] = schemas.unset,
@@ -108,7 +108,7 @@ class ValidationError(
     ) -> 'ValidationError':
         return super().__new__(
             cls,
-            *args,
+            *_args,
             type=type,
             title=title,
             status=status,

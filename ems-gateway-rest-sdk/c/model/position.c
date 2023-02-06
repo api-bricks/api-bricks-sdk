@@ -87,7 +87,7 @@ position_t *position_parseFromJSON(cJSON *positionJSON){
     // position->exchange_id
     cJSON *exchange_id = cJSON_GetObjectItemCaseSensitive(positionJSON, "exchange_id");
     if (exchange_id) { 
-    if(!cJSON_IsString(exchange_id))
+    if(!cJSON_IsString(exchange_id) && !cJSON_IsNull(exchange_id))
     {
     goto end; //String
     }
@@ -116,7 +116,7 @@ position_t *position_parseFromJSON(cJSON *positionJSON){
 
 
     position_local_var = position_create (
-        exchange_id ? strdup(exchange_id->valuestring) : NULL,
+        exchange_id && !cJSON_IsNull(exchange_id) ? strdup(exchange_id->valuestring) : NULL,
         data ? dataList : NULL
         );
 

@@ -117,6 +117,7 @@ class PositionsApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
             path = "/v1/positions",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }

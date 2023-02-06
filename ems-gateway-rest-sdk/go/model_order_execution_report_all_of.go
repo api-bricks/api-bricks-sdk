@@ -15,6 +15,9 @@ import (
 	"encoding/json"
 )
 
+// checks if the OrderExecutionReportAllOf type satisfies the MappedNullable interface at compile time
+var _ MappedNullable = &OrderExecutionReportAllOf{}
+
 // OrderExecutionReportAllOf The order execution report message.
 type OrderExecutionReportAllOf struct {
 	// The unique identifier of the order assigned by the client converted to the exchange order tag format for the purpose of tracking it.
@@ -71,7 +74,7 @@ func (o *OrderExecutionReportAllOf) GetClientOrderIdFormatExchange() string {
 // and a boolean to check if the value has been set.
 func (o *OrderExecutionReportAllOf) GetClientOrderIdFormatExchangeOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return &o.ClientOrderIdFormatExchange, true
 }
@@ -94,7 +97,7 @@ func (o *OrderExecutionReportAllOf) GetExchangeOrderId() string {
 // and a boolean to check if the value has been set.
 func (o *OrderExecutionReportAllOf) GetExchangeOrderIdOk() (*string, bool) {
 	if o == nil || isNil(o.ExchangeOrderId) {
-    return nil, false
+		return nil, false
 	}
 	return o.ExchangeOrderId, true
 }
@@ -127,7 +130,7 @@ func (o *OrderExecutionReportAllOf) GetAmountOpen() float32 {
 // and a boolean to check if the value has been set.
 func (o *OrderExecutionReportAllOf) GetAmountOpenOk() (*float32, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return &o.AmountOpen, true
 }
@@ -151,7 +154,7 @@ func (o *OrderExecutionReportAllOf) GetAmountFilled() float32 {
 // and a boolean to check if the value has been set.
 func (o *OrderExecutionReportAllOf) GetAmountFilledOk() (*float32, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return &o.AmountFilled, true
 }
@@ -174,7 +177,7 @@ func (o *OrderExecutionReportAllOf) GetAvgPx() float32 {
 // and a boolean to check if the value has been set.
 func (o *OrderExecutionReportAllOf) GetAvgPxOk() (*float32, bool) {
 	if o == nil || isNil(o.AvgPx) {
-    return nil, false
+		return nil, false
 	}
 	return o.AvgPx, true
 }
@@ -207,7 +210,7 @@ func (o *OrderExecutionReportAllOf) GetStatus() OrdStatus {
 // and a boolean to check if the value has been set.
 func (o *OrderExecutionReportAllOf) GetStatusOk() (*OrdStatus, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return &o.Status, true
 }
@@ -230,7 +233,7 @@ func (o *OrderExecutionReportAllOf) GetStatusHistory() [][]string {
 // and a boolean to check if the value has been set.
 func (o *OrderExecutionReportAllOf) GetStatusHistoryOk() ([][]string, bool) {
 	if o == nil || isNil(o.StatusHistory) {
-    return nil, false
+		return nil, false
 	}
 	return o.StatusHistory, true
 }
@@ -262,7 +265,7 @@ func (o *OrderExecutionReportAllOf) GetErrorMessage() string {
 // and a boolean to check if the value has been set.
 func (o *OrderExecutionReportAllOf) GetErrorMessageOk() (*string, bool) {
 	if o == nil || isNil(o.ErrorMessage) {
-    return nil, false
+		return nil, false
 	}
 	return o.ErrorMessage, true
 }
@@ -294,7 +297,7 @@ func (o *OrderExecutionReportAllOf) GetFills() []Fills {
 // and a boolean to check if the value has been set.
 func (o *OrderExecutionReportAllOf) GetFillsOk() ([]Fills, bool) {
 	if o == nil || isNil(o.Fills) {
-    return nil, false
+		return nil, false
 	}
 	return o.Fills, true
 }
@@ -314,25 +317,25 @@ func (o *OrderExecutionReportAllOf) SetFills(v []Fills) {
 }
 
 func (o OrderExecutionReportAllOf) MarshalJSON() ([]byte, error) {
-	toSerialize := map[string]interface{}{}
-	if true {
-		toSerialize["client_order_id_format_exchange"] = o.ClientOrderIdFormatExchange
+	toSerialize,err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
 	}
+	return json.Marshal(toSerialize)
+}
+
+func (o OrderExecutionReportAllOf) ToMap() (map[string]interface{}, error) {
+	toSerialize := map[string]interface{}{}
+	toSerialize["client_order_id_format_exchange"] = o.ClientOrderIdFormatExchange
 	if !isNil(o.ExchangeOrderId) {
 		toSerialize["exchange_order_id"] = o.ExchangeOrderId
 	}
-	if true {
-		toSerialize["amount_open"] = o.AmountOpen
-	}
-	if true {
-		toSerialize["amount_filled"] = o.AmountFilled
-	}
+	toSerialize["amount_open"] = o.AmountOpen
+	toSerialize["amount_filled"] = o.AmountFilled
 	if !isNil(o.AvgPx) {
 		toSerialize["avg_px"] = o.AvgPx
 	}
-	if true {
-		toSerialize["status"] = o.Status
-	}
+	toSerialize["status"] = o.Status
 	if !isNil(o.StatusHistory) {
 		toSerialize["status_history"] = o.StatusHistory
 	}
@@ -342,7 +345,7 @@ func (o OrderExecutionReportAllOf) MarshalJSON() ([]byte, error) {
 	if !isNil(o.Fills) {
 		toSerialize["fills"] = o.Fills
 	}
-	return json.Marshal(toSerialize)
+	return toSerialize, nil
 }
 
 type NullableOrderExecutionReportAllOf struct {

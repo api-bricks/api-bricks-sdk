@@ -37,6 +37,7 @@ function Initialize-MessageReject {
         [String]
         ${Type},
         [Parameter(Position = 1, ValueFromPipelineByPropertyName = $true)]
+        [ValidateSet("OTHER", "EXCHANGE_UNREACHABLE", "EXCHANGE_RESPONSE_TIMEOUT", "ORDER_ID_NOT_FOUND", "INVALID_TYPE", "METHOD_NOT_SUPPORTED", "JSON_ERROR")]
         [PSCustomObject]
         ${RejectReason},
         [Parameter(Position = 2, ValueFromPipelineByPropertyName = $true)]

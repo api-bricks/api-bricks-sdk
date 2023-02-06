@@ -15,6 +15,9 @@ import (
 	"encoding/json"
 )
 
+// checks if the OrderNewSingleRequest type satisfies the MappedNullable interface at compile time
+var _ MappedNullable = &OrderNewSingleRequest{}
+
 // OrderNewSingleRequest The new order message.
 type OrderNewSingleRequest struct {
 	// Exchange identifier used to identify the routing destination.
@@ -76,7 +79,7 @@ func (o *OrderNewSingleRequest) GetExchangeId() string {
 // and a boolean to check if the value has been set.
 func (o *OrderNewSingleRequest) GetExchangeIdOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return &o.ExchangeId, true
 }
@@ -100,7 +103,7 @@ func (o *OrderNewSingleRequest) GetClientOrderId() string {
 // and a boolean to check if the value has been set.
 func (o *OrderNewSingleRequest) GetClientOrderIdOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return &o.ClientOrderId, true
 }
@@ -123,7 +126,7 @@ func (o *OrderNewSingleRequest) GetSymbolIdExchange() string {
 // and a boolean to check if the value has been set.
 func (o *OrderNewSingleRequest) GetSymbolIdExchangeOk() (*string, bool) {
 	if o == nil || isNil(o.SymbolIdExchange) {
-    return nil, false
+		return nil, false
 	}
 	return o.SymbolIdExchange, true
 }
@@ -155,7 +158,7 @@ func (o *OrderNewSingleRequest) GetSymbolIdCoinapi() string {
 // and a boolean to check if the value has been set.
 func (o *OrderNewSingleRequest) GetSymbolIdCoinapiOk() (*string, bool) {
 	if o == nil || isNil(o.SymbolIdCoinapi) {
-    return nil, false
+		return nil, false
 	}
 	return o.SymbolIdCoinapi, true
 }
@@ -188,7 +191,7 @@ func (o *OrderNewSingleRequest) GetAmountOrder() float32 {
 // and a boolean to check if the value has been set.
 func (o *OrderNewSingleRequest) GetAmountOrderOk() (*float32, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return &o.AmountOrder, true
 }
@@ -212,7 +215,7 @@ func (o *OrderNewSingleRequest) GetPrice() float32 {
 // and a boolean to check if the value has been set.
 func (o *OrderNewSingleRequest) GetPriceOk() (*float32, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return &o.Price, true
 }
@@ -236,7 +239,7 @@ func (o *OrderNewSingleRequest) GetSide() OrdSide {
 // and a boolean to check if the value has been set.
 func (o *OrderNewSingleRequest) GetSideOk() (*OrdSide, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return &o.Side, true
 }
@@ -260,7 +263,7 @@ func (o *OrderNewSingleRequest) GetOrderType() OrdType {
 // and a boolean to check if the value has been set.
 func (o *OrderNewSingleRequest) GetOrderTypeOk() (*OrdType, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return &o.OrderType, true
 }
@@ -284,7 +287,7 @@ func (o *OrderNewSingleRequest) GetTimeInForce() TimeInForce {
 // and a boolean to check if the value has been set.
 func (o *OrderNewSingleRequest) GetTimeInForceOk() (*TimeInForce, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return &o.TimeInForce, true
 }
@@ -307,7 +310,7 @@ func (o *OrderNewSingleRequest) GetExpireTime() string {
 // and a boolean to check if the value has been set.
 func (o *OrderNewSingleRequest) GetExpireTimeOk() (*string, bool) {
 	if o == nil || isNil(o.ExpireTime) {
-    return nil, false
+		return nil, false
 	}
 	return o.ExpireTime, true
 }
@@ -339,7 +342,7 @@ func (o *OrderNewSingleRequest) GetExecInst() []string {
 // and a boolean to check if the value has been set.
 func (o *OrderNewSingleRequest) GetExecInstOk() ([]string, bool) {
 	if o == nil || isNil(o.ExecInst) {
-    return nil, false
+		return nil, false
 	}
 	return o.ExecInst, true
 }
@@ -359,41 +362,35 @@ func (o *OrderNewSingleRequest) SetExecInst(v []string) {
 }
 
 func (o OrderNewSingleRequest) MarshalJSON() ([]byte, error) {
+	toSerialize,err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
+}
+
+func (o OrderNewSingleRequest) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if true {
-		toSerialize["exchange_id"] = o.ExchangeId
-	}
-	if true {
-		toSerialize["client_order_id"] = o.ClientOrderId
-	}
+	toSerialize["exchange_id"] = o.ExchangeId
+	toSerialize["client_order_id"] = o.ClientOrderId
 	if !isNil(o.SymbolIdExchange) {
 		toSerialize["symbol_id_exchange"] = o.SymbolIdExchange
 	}
 	if !isNil(o.SymbolIdCoinapi) {
 		toSerialize["symbol_id_coinapi"] = o.SymbolIdCoinapi
 	}
-	if true {
-		toSerialize["amount_order"] = o.AmountOrder
-	}
-	if true {
-		toSerialize["price"] = o.Price
-	}
-	if true {
-		toSerialize["side"] = o.Side
-	}
-	if true {
-		toSerialize["order_type"] = o.OrderType
-	}
-	if true {
-		toSerialize["time_in_force"] = o.TimeInForce
-	}
+	toSerialize["amount_order"] = o.AmountOrder
+	toSerialize["price"] = o.Price
+	toSerialize["side"] = o.Side
+	toSerialize["order_type"] = o.OrderType
+	toSerialize["time_in_force"] = o.TimeInForce
 	if !isNil(o.ExpireTime) {
 		toSerialize["expire_time"] = o.ExpireTime
 	}
 	if !isNil(o.ExecInst) {
 		toSerialize["exec_inst"] = o.ExecInst
 	}
-	return json.Marshal(toSerialize)
+	return toSerialize, nil
 }
 
 type NullableOrderNewSingleRequest struct {

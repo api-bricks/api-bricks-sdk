@@ -25,3 +25,6 @@ case class MessageReject (
   rejectedMessage: Option[String] = None
 ) extends ApiModel
 
+object MessageRejectEnums {
+
+}

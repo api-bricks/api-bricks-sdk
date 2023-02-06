@@ -82,12 +82,15 @@ function Initialize-OrderExecutionReport {
         [Decimal]
         ${Price},
         [Parameter(Position = 6, ValueFromPipelineByPropertyName = $true)]
+        [ValidateSet("BUY", "SELL")]
         [PSCustomObject]
         ${Side},
         [Parameter(Position = 7, ValueFromPipelineByPropertyName = $true)]
+        [ValidateSet("LIMIT")]
         [PSCustomObject]
         ${OrderType},
         [Parameter(Position = 8, ValueFromPipelineByPropertyName = $true)]
+        [ValidateSet("GOOD_TILL_CANCEL", "GOOD_TILL_TIME_EXCHANGE", "GOOD_TILL_TIME_OMS", "FILL_OR_KILL", "IMMEDIATE_OR_CANCEL")]
         [PSCustomObject]
         ${TimeInForce},
         [Parameter(Position = 9, ValueFromPipelineByPropertyName = $true)]
@@ -113,6 +116,7 @@ function Initialize-OrderExecutionReport {
         [System.Nullable[Decimal]]
         ${AvgPx},
         [Parameter(Position = 16, ValueFromPipelineByPropertyName = $true)]
+        [ValidateSet("RECEIVED", "ROUTING", "ROUTED", "NEW", "PENDING_CANCEL", "PARTIALLY_FILLED", "FILLED", "CANCELED", "REJECTED")]
         [PSCustomObject]
         ${Status},
         [Parameter(Position = 17, ValueFromPipelineByPropertyName = $true)]

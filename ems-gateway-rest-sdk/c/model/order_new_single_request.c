@@ -317,7 +317,7 @@ order_new_single_request_t *order_new_single_request_parseFromJSON(cJSON *order_
     // order_new_single_request->symbol_id_exchange
     cJSON *symbol_id_exchange = cJSON_GetObjectItemCaseSensitive(order_new_single_requestJSON, "symbol_id_exchange");
     if (symbol_id_exchange) { 
-    if(!cJSON_IsString(symbol_id_exchange))
+    if(!cJSON_IsString(symbol_id_exchange) && !cJSON_IsNull(symbol_id_exchange))
     {
     goto end; //String
     }
@@ -326,7 +326,7 @@ order_new_single_request_t *order_new_single_request_parseFromJSON(cJSON *order_
     // order_new_single_request->symbol_id_coinapi
     cJSON *symbol_id_coinapi = cJSON_GetObjectItemCaseSensitive(order_new_single_requestJSON, "symbol_id_coinapi");
     if (symbol_id_coinapi) { 
-    if(!cJSON_IsString(symbol_id_coinapi))
+    if(!cJSON_IsString(symbol_id_coinapi) && !cJSON_IsNull(symbol_id_coinapi))
     {
     goto end; //String
     }
@@ -410,8 +410,8 @@ order_new_single_request_t *order_new_single_request_parseFromJSON(cJSON *order_
     order_new_single_request_local_var = order_new_single_request_create (
         strdup(exchange_id->valuestring),
         strdup(client_order_id->valuestring),
-        symbol_id_exchange ? strdup(symbol_id_exchange->valuestring) : NULL,
-        symbol_id_coinapi ? strdup(symbol_id_coinapi->valuestring) : NULL,
+        symbol_id_exchange && !cJSON_IsNull(symbol_id_exchange) ? strdup(symbol_id_exchange->valuestring) : NULL,
+        symbol_id_coinapi && !cJSON_IsNull(symbol_id_coinapi) ? strdup(symbol_id_coinapi->valuestring) : NULL,
         amount_order->valuedouble,
         price->valuedouble,
         side_local_nonprim,

@@ -234,7 +234,7 @@ public class OASOrderNewSingleRequest implements OAS.MappedProperties {
     }
 
     public OASOrderNewSingleRequest() {
-        execInst = new List<ExecInstEnum>();
+        execInst = new List<String>();
     }
 
     public static OASOrderNewSingleRequest getExample() {

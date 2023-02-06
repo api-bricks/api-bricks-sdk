@@ -157,7 +157,7 @@ class Balance(
                     
                         def __new__(
                             cls,
-                            *args: typing.Union[dict, frozendict.frozendict, ],
+                            *_args: typing.Union[dict, frozendict.frozendict, ],
                             asset_id_exchange: typing.Union[MetaOapg.properties.asset_id_exchange, str, schemas.Unset] = schemas.unset,
                             asset_id_coinapi: typing.Union[MetaOapg.properties.asset_id_coinapi, str, schemas.Unset] = schemas.unset,
                             balance: typing.Union[MetaOapg.properties.balance, decimal.Decimal, int, float, schemas.Unset] = schemas.unset,
@@ -171,7 +171,7 @@ class Balance(
                         ) -> 'items':
                             return super().__new__(
                                 cls,
-                                *args,
+                                *_args,
                                 asset_id_exchange=asset_id_exchange,
                                 asset_id_coinapi=asset_id_coinapi,
                                 balance=balance,
@@ -186,12 +186,12 @@ class Balance(
             
                 def __new__(
                     cls,
-                    arg: typing.Union[typing.Tuple[typing.Union[MetaOapg.items, dict, frozendict.frozendict, ]], typing.List[typing.Union[MetaOapg.items, dict, frozendict.frozendict, ]]],
+                    _arg: typing.Union[typing.Tuple[typing.Union[MetaOapg.items, dict, frozendict.frozendict, ]], typing.List[typing.Union[MetaOapg.items, dict, frozendict.frozendict, ]]],
                     _configuration: typing.Optional[schemas.Configuration] = None,
                 ) -> 'data':
                     return super().__new__(
                         cls,
-                        arg,
+                        _arg,
                         _configuration=_configuration,
                     )
             
@@ -231,7 +231,7 @@ class Balance(
 
     def __new__(
         cls,
-        *args: typing.Union[dict, frozendict.frozendict, ],
+        *_args: typing.Union[dict, frozendict.frozendict, ],
         exchange_id: typing.Union[MetaOapg.properties.exchange_id, str, schemas.Unset] = schemas.unset,
         data: typing.Union[MetaOapg.properties.data, list, tuple, schemas.Unset] = schemas.unset,
         _configuration: typing.Optional[schemas.Configuration] = None,
@@ -239,7 +239,7 @@ class Balance(
     ) -> 'Balance':
         return super().__new__(
             cls,
-            *args,
+            *_args,
             exchange_id=exchange_id,
             data=data,
             _configuration=_configuration,

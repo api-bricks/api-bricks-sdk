@@ -111,3 +111,5 @@ export class PositionDataInner {
     }
 }
 
+export namespace PositionDataInner {
+}

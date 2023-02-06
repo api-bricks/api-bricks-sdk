@@ -73,14 +73,23 @@ OrderNewSingleRequest <- R6::R6Class(
         self$`price` <- `price`
       }
       if (!missing(`side`)) {
+        if (!(`side` %in% c())) {
+          stop(paste("Error! \"", `side`, "\" cannot be assigned to `side`. Must be .", sep = ""))
+        }
         stopifnot(R6::is.R6(`side`))
         self$`side` <- `side`
       }
       if (!missing(`order_type`)) {
+        if (!(`order_type` %in% c())) {
+          stop(paste("Error! \"", `order_type`, "\" cannot be assigned to `order_type`. Must be .", sep = ""))
+        }
         stopifnot(R6::is.R6(`order_type`))
         self$`order_type` <- `order_type`
       }
       if (!missing(`time_in_force`)) {
+        if (!(`time_in_force` %in% c())) {
+          stop(paste("Error! \"", `time_in_force`, "\" cannot be assigned to `time_in_force`. Must be .", sep = ""))
+        }
         stopifnot(R6::is.R6(`time_in_force`))
         self$`time_in_force` <- `time_in_force`
       }
@@ -507,7 +516,7 @@ OrderNewSingleRequest <- R6::R6Class(
 ## Uncomment below to unlock the class to allow modifications of the method or field
 # OrderNewSingleRequest$unlock()
 #
-## Below is an example to define the print fnuction
+## Below is an example to define the print function
 # OrderNewSingleRequest$set("public", "print", function(...) {
 #   print(jsonlite::prettify(self$toJSONString()))
 #   invisible(self)

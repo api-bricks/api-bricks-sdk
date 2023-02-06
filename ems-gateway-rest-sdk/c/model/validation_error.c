@@ -107,7 +107,7 @@ validation_error_t *validation_error_parseFromJSON(cJSON *validation_errorJSON){
     // validation_error->type
     cJSON *type = cJSON_GetObjectItemCaseSensitive(validation_errorJSON, "type");
     if (type) { 
-    if(!cJSON_IsString(type))
+    if(!cJSON_IsString(type) && !cJSON_IsNull(type))
     {
     goto end; //String
     }
@@ -116,7 +116,7 @@ validation_error_t *validation_error_parseFromJSON(cJSON *validation_errorJSON){
     // validation_error->title
     cJSON *title = cJSON_GetObjectItemCaseSensitive(validation_errorJSON, "title");
     if (title) { 
-    if(!cJSON_IsString(title))
+    if(!cJSON_IsString(title) && !cJSON_IsNull(title))
     {
     goto end; //String
     }
@@ -134,7 +134,7 @@ validation_error_t *validation_error_parseFromJSON(cJSON *validation_errorJSON){
     // validation_error->trace_id
     cJSON *trace_id = cJSON_GetObjectItemCaseSensitive(validation_errorJSON, "traceId");
     if (trace_id) { 
-    if(!cJSON_IsString(trace_id))
+    if(!cJSON_IsString(trace_id) && !cJSON_IsNull(trace_id))
     {
     goto end; //String
     }
@@ -143,7 +143,7 @@ validation_error_t *validation_error_parseFromJSON(cJSON *validation_errorJSON){
     // validation_error->errors
     cJSON *errors = cJSON_GetObjectItemCaseSensitive(validation_errorJSON, "errors");
     if (errors) { 
-    if(!cJSON_IsString(errors))
+    if(!cJSON_IsString(errors) && !cJSON_IsNull(errors))
     {
     goto end; //String
     }
@@ -151,11 +151,11 @@ validation_error_t *validation_error_parseFromJSON(cJSON *validation_errorJSON){
 
 
     validation_error_local_var = validation_error_create (
-        type ? strdup(type->valuestring) : NULL,
-        title ? strdup(title->valuestring) : NULL,
+        type && !cJSON_IsNull(type) ? strdup(type->valuestring) : NULL,
+        title && !cJSON_IsNull(title) ? strdup(title->valuestring) : NULL,
         status ? status->valuedouble : 0,
-        trace_id ? strdup(trace_id->valuestring) : NULL,
-        errors ? strdup(errors->valuestring) : NULL
+        trace_id && !cJSON_IsNull(trace_id) ? strdup(trace_id->valuestring) : NULL,
+        errors && !cJSON_IsNull(errors) ? strdup(errors->valuestring) : NULL
         );
 
     return validation_error_local_var;

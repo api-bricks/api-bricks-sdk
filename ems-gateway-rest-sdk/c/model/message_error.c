@@ -55,7 +55,7 @@ message_error_t *message_error_parseFromJSON(cJSON *message_errorJSON){
     // message_error->message
     cJSON *message = cJSON_GetObjectItemCaseSensitive(message_errorJSON, "message");
     if (message) { 
-    if(!cJSON_IsString(message))
+    if(!cJSON_IsString(message) && !cJSON_IsNull(message))
     {
     goto end; //String
     }
@@ -63,7 +63,7 @@ message_error_t *message_error_parseFromJSON(cJSON *message_errorJSON){
 
 
     message_error_local_var = message_error_create (
-        message ? strdup(message->valuestring) : NULL
+        message && !cJSON_IsNull(message) ? strdup(message->valuestring) : NULL
         );
 
     return message_error_local_var;

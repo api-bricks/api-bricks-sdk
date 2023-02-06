@@ -44,12 +44,12 @@ class OrderHistoryArray(
 
     def __new__(
         cls,
-        arg: typing.Union[typing.Tuple['OrderHistory'], typing.List['OrderHistory']],
+        _arg: typing.Union[typing.Tuple['OrderHistory'], typing.List['OrderHistory']],
         _configuration: typing.Optional[schemas.Configuration] = None,
     ) -> 'OrderHistoryArray':
         return super().__new__(
             cls,
-            arg,
+            _arg,
             _configuration=_configuration,
         )
 

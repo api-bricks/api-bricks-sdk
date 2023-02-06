@@ -61,6 +61,9 @@ OrderExecutionReportAllOf <- R6::R6Class(
         self$`amount_filled` <- `amount_filled`
       }
       if (!missing(`status`)) {
+        if (!(`status` %in% c())) {
+          stop(paste("Error! \"", `status`, "\" cannot be assigned to `status`. Must be .", sep = ""))
+        }
         stopifnot(R6::is.R6(`status`))
         self$`status` <- `status`
       }
@@ -406,7 +409,7 @@ OrderExecutionReportAllOf <- R6::R6Class(
 ## Uncomment below to unlock the class to allow modifications of the method or field
 # OrderExecutionReportAllOf$unlock()
 #
-## Below is an example to define the print fnuction
+## Below is an example to define the print function
 # OrderExecutionReportAllOf$set("public", "print", function(...) {
 #   print(jsonlite::prettify(self$toJSONString()))
 #   invisible(self)

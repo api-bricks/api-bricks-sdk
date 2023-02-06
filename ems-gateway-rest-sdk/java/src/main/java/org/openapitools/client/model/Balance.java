@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -51,7 +49,7 @@ import org.openapitools.client.JSON;
 /**
  * Balance
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-30T14:41:50.887872Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-06T14:42:10.168910Z[Etc/UTC]")
 public class Balance {
   public static final String SERIALIZED_NAME_EXCHANGE_ID = "exchange_id";
   @SerializedName(SERIALIZED_NAME_EXCHANGE_ID)
@@ -75,7 +73,6 @@ public class Balance {
    * @return exchangeId
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "KRAKEN", value = "Exchange identifier used to identify the routing destination.")
 
   public String getExchangeId() {
     return exchangeId;
@@ -106,7 +103,6 @@ public class Balance {
    * @return data
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public List<BalanceDataInner> getData() {
     return data;

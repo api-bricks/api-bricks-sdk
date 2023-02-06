@@ -70,6 +70,9 @@ PositionDataInner <- R6::R6Class(
         self$`quantity` <- `quantity`
       }
       if (!is.null(`side`)) {
+        if (!(`side` %in% c())) {
+          stop(paste("Error! \"", `side`, "\" cannot be assigned to `side`. Must be .", sep = ""))
+        }
         stopifnot(R6::is.R6(`side`))
         self$`side` <- `side`
       }
@@ -360,7 +363,7 @@ PositionDataInner <- R6::R6Class(
 ## Uncomment below to unlock the class to allow modifications of the method or field
 # PositionDataInner$unlock()
 #
-## Below is an example to define the print fnuction
+## Below is an example to define the print function
 # PositionDataInner$set("public", "print", function(...) {
 #   print(jsonlite::prettify(self$toJSONString()))
 #   invisible(self)

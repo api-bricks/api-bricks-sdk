@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **symbol_id_coinapi** | **character** | CoinAPI symbol. | [optional] 
 **avg_entry_price** | **numeric** | Calculated average price of all fills on this position. | [optional] 
 **quantity** | **numeric** | The current position quantity. | [optional] 
-**side** | [**OrdSide**](OrdSide.md) |  | [optional] 
+**side** | [**OrdSide**](OrdSide.md) |  | [optional] [Enum: ] 
 **unrealized_pnl** | **numeric** | Unrealised profit or loss (PNL) of this position. | [optional] 
 **leverage** | **numeric** | Leverage for this position reported by the exchange. | [optional] 
 **cross_margin** | **character** | Is cross margin mode enable for this position? | [optional] 

@@ -30,12 +30,5 @@ private class OASBalancesApiTest {
         expectedResponse = List.getExample();
         response = (List<OASBalance>) api.v1BalancesGet(params);
         System.assertEquals(expectedResponse, response);
-
-        js = JSON.serialize(List.getExample());
-        res.setHeader('Content-Type', 'appliction/json');
-        res.setBody(js);
-        expectedResponse = List.getExample();
-        response = (List<OASBalance>) api.v1BalancesGet(params);
-        System.assertEquals(expectedResponse, response);
     }
 }

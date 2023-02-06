@@ -65,14 +65,14 @@ class MessageError(
 
     def __new__(
         cls,
-        *args: typing.Union[dict, frozendict.frozendict, ],
+        *_args: typing.Union[dict, frozendict.frozendict, ],
         message: typing.Union[MetaOapg.properties.message, str, schemas.Unset] = schemas.unset,
         _configuration: typing.Optional[schemas.Configuration] = None,
         **kwargs: typing.Union[schemas.AnyTypeSchema, dict, frozendict.frozendict, str, date, datetime, uuid.UUID, int, float, decimal.Decimal, None, list, tuple, bytes],
     ) -> 'MessageError':
         return super().__new__(
             cls,
-            *args,
+            *_args,
             message=message,
             _configuration=_configuration,
             **kwargs,

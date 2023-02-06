@@ -15,6 +15,9 @@ import (
 	"encoding/json"
 )
 
+// checks if the OrderHistory type satisfies the MappedNullable interface at compile time
+var _ MappedNullable = &OrderHistory{}
+
 // OrderHistory struct for OrderHistory
 type OrderHistory struct {
 	// Apikey
@@ -103,7 +106,7 @@ func (o *OrderHistory) GetApikey() string {
 // and a boolean to check if the value has been set.
 func (o *OrderHistory) GetApikeyOk() (*string, bool) {
 	if o == nil || isNil(o.Apikey) {
-    return nil, false
+		return nil, false
 	}
 	return o.Apikey, true
 }
@@ -135,7 +138,7 @@ func (o *OrderHistory) GetExchangeId() string {
 // and a boolean to check if the value has been set.
 func (o *OrderHistory) GetExchangeIdOk() (*string, bool) {
 	if o == nil || isNil(o.ExchangeId) {
-    return nil, false
+		return nil, false
 	}
 	return o.ExchangeId, true
 }
@@ -167,7 +170,7 @@ func (o *OrderHistory) GetClientOrderId() string {
 // and a boolean to check if the value has been set.
 func (o *OrderHistory) GetClientOrderIdOk() (*string, bool) {
 	if o == nil || isNil(o.ClientOrderId) {
-    return nil, false
+		return nil, false
 	}
 	return o.ClientOrderId, true
 }
@@ -199,7 +202,7 @@ func (o *OrderHistory) GetSymbolIdExchange() string {
 // and a boolean to check if the value has been set.
 func (o *OrderHistory) GetSymbolIdExchangeOk() (*string, bool) {
 	if o == nil || isNil(o.SymbolIdExchange) {
-    return nil, false
+		return nil, false
 	}
 	return o.SymbolIdExchange, true
 }
@@ -231,7 +234,7 @@ func (o *OrderHistory) GetSymbolIdCoinapi() string {
 // and a boolean to check if the value has been set.
 func (o *OrderHistory) GetSymbolIdCoinapiOk() (*string, bool) {
 	if o == nil || isNil(o.SymbolIdCoinapi) {
-    return nil, false
+		return nil, false
 	}
 	return o.SymbolIdCoinapi, true
 }
@@ -263,7 +266,7 @@ func (o *OrderHistory) GetAmountOrder() float32 {
 // and a boolean to check if the value has been set.
 func (o *OrderHistory) GetAmountOrderOk() (*float32, bool) {
 	if o == nil || isNil(o.AmountOrder) {
-    return nil, false
+		return nil, false
 	}
 	return o.AmountOrder, true
 }
@@ -295,7 +298,7 @@ func (o *OrderHistory) GetPrice() float32 {
 // and a boolean to check if the value has been set.
 func (o *OrderHistory) GetPriceOk() (*float32, bool) {
 	if o == nil || isNil(o.Price) {
-    return nil, false
+		return nil, false
 	}
 	return o.Price, true
 }
@@ -327,7 +330,7 @@ func (o *OrderHistory) GetSide() float32 {
 // and a boolean to check if the value has been set.
 func (o *OrderHistory) GetSideOk() (*float32, bool) {
 	if o == nil || isNil(o.Side) {
-    return nil, false
+		return nil, false
 	}
 	return o.Side, true
 }
@@ -359,7 +362,7 @@ func (o *OrderHistory) GetOrderType() string {
 // and a boolean to check if the value has been set.
 func (o *OrderHistory) GetOrderTypeOk() (*string, bool) {
 	if o == nil || isNil(o.OrderType) {
-    return nil, false
+		return nil, false
 	}
 	return o.OrderType, true
 }
@@ -391,7 +394,7 @@ func (o *OrderHistory) GetTimeInForce() string {
 // and a boolean to check if the value has been set.
 func (o *OrderHistory) GetTimeInForceOk() (*string, bool) {
 	if o == nil || isNil(o.TimeInForce) {
-    return nil, false
+		return nil, false
 	}
 	return o.TimeInForce, true
 }
@@ -423,7 +426,7 @@ func (o *OrderHistory) GetExpireTime() string {
 // and a boolean to check if the value has been set.
 func (o *OrderHistory) GetExpireTimeOk() (*string, bool) {
 	if o == nil || isNil(o.ExpireTime) {
-    return nil, false
+		return nil, false
 	}
 	return o.ExpireTime, true
 }
@@ -455,7 +458,7 @@ func (o *OrderHistory) GetExecInst() []string {
 // and a boolean to check if the value has been set.
 func (o *OrderHistory) GetExecInstOk() ([]string, bool) {
 	if o == nil || isNil(o.ExecInst) {
-    return nil, false
+		return nil, false
 	}
 	return o.ExecInst, true
 }
@@ -487,7 +490,7 @@ func (o *OrderHistory) GetClientOrderIdFormatExchange() string {
 // and a boolean to check if the value has been set.
 func (o *OrderHistory) GetClientOrderIdFormatExchangeOk() (*string, bool) {
 	if o == nil || isNil(o.ClientOrderIdFormatExchange) {
-    return nil, false
+		return nil, false
 	}
 	return o.ClientOrderIdFormatExchange, true
 }
@@ -519,7 +522,7 @@ func (o *OrderHistory) GetExchangeOrderId() string {
 // and a boolean to check if the value has been set.
 func (o *OrderHistory) GetExchangeOrderIdOk() (*string, bool) {
 	if o == nil || isNil(o.ExchangeOrderId) {
-    return nil, false
+		return nil, false
 	}
 	return o.ExchangeOrderId, true
 }
@@ -551,7 +554,7 @@ func (o *OrderHistory) GetAmountOpen() float32 {
 // and a boolean to check if the value has been set.
 func (o *OrderHistory) GetAmountOpenOk() (*float32, bool) {
 	if o == nil || isNil(o.AmountOpen) {
-    return nil, false
+		return nil, false
 	}
 	return o.AmountOpen, true
 }
@@ -583,7 +586,7 @@ func (o *OrderHistory) GetAmountFilled() float32 {
 // and a boolean to check if the value has been set.
 func (o *OrderHistory) GetAmountFilledOk() (*float32, bool) {
 	if o == nil || isNil(o.AmountFilled) {
-    return nil, false
+		return nil, false
 	}
 	return o.AmountFilled, true
 }
@@ -615,7 +618,7 @@ func (o *OrderHistory) GetAvgPx() float32 {
 // and a boolean to check if the value has been set.
 func (o *OrderHistory) GetAvgPxOk() (*float32, bool) {
 	if o == nil || isNil(o.AvgPx) {
-    return nil, false
+		return nil, false
 	}
 	return o.AvgPx, true
 }
@@ -647,7 +650,7 @@ func (o *OrderHistory) GetStatus() string {
 // and a boolean to check if the value has been set.
 func (o *OrderHistory) GetStatusOk() (*string, bool) {
 	if o == nil || isNil(o.Status) {
-    return nil, false
+		return nil, false
 	}
 	return o.Status, true
 }
@@ -679,7 +682,7 @@ func (o *OrderHistory) GetStatusHistoryStatus() []string {
 // and a boolean to check if the value has been set.
 func (o *OrderHistory) GetStatusHistoryStatusOk() ([]string, bool) {
 	if o == nil || isNil(o.StatusHistoryStatus) {
-    return nil, false
+		return nil, false
 	}
 	return o.StatusHistoryStatus, true
 }
@@ -711,7 +714,7 @@ func (o *OrderHistory) GetStatusHistoryTime() []string {
 // and a boolean to check if the value has been set.
 func (o *OrderHistory) GetStatusHistoryTimeOk() ([]string, bool) {
 	if o == nil || isNil(o.StatusHistoryTime) {
-    return nil, false
+		return nil, false
 	}
 	return o.StatusHistoryTime, true
 }
@@ -743,7 +746,7 @@ func (o *OrderHistory) GetErrorMessageResult() string {
 // and a boolean to check if the value has been set.
 func (o *OrderHistory) GetErrorMessageResultOk() (*string, bool) {
 	if o == nil || isNil(o.ErrorMessageResult) {
-    return nil, false
+		return nil, false
 	}
 	return o.ErrorMessageResult, true
 }
@@ -775,7 +778,7 @@ func (o *OrderHistory) GetErrorMessageReason() string {
 // and a boolean to check if the value has been set.
 func (o *OrderHistory) GetErrorMessageReasonOk() (*string, bool) {
 	if o == nil || isNil(o.ErrorMessageReason) {
-    return nil, false
+		return nil, false
 	}
 	return o.ErrorMessageReason, true
 }
@@ -807,7 +810,7 @@ func (o *OrderHistory) GetErrorMessageMessage() string {
 // and a boolean to check if the value has been set.
 func (o *OrderHistory) GetErrorMessageMessageOk() (*string, bool) {
 	if o == nil || isNil(o.ErrorMessageMessage) {
-    return nil, false
+		return nil, false
 	}
 	return o.ErrorMessageMessage, true
 }
@@ -839,7 +842,7 @@ func (o *OrderHistory) GetFillsTime() []string {
 // and a boolean to check if the value has been set.
 func (o *OrderHistory) GetFillsTimeOk() ([]string, bool) {
 	if o == nil || isNil(o.FillsTime) {
-    return nil, false
+		return nil, false
 	}
 	return o.FillsTime, true
 }
@@ -871,7 +874,7 @@ func (o *OrderHistory) GetFillsPrice() []float32 {
 // and a boolean to check if the value has been set.
 func (o *OrderHistory) GetFillsPriceOk() ([]float32, bool) {
 	if o == nil || isNil(o.FillsPrice) {
-    return nil, false
+		return nil, false
 	}
 	return o.FillsPrice, true
 }
@@ -903,7 +906,7 @@ func (o *OrderHistory) GetFillsAmount() []float32 {
 // and a boolean to check if the value has been set.
 func (o *OrderHistory) GetFillsAmountOk() ([]float32, bool) {
 	if o == nil || isNil(o.FillsAmount) {
-    return nil, false
+		return nil, false
 	}
 	return o.FillsAmount, true
 }
@@ -935,7 +938,7 @@ func (o *OrderHistory) GetCreatedTime() string {
 // and a boolean to check if the value has been set.
 func (o *OrderHistory) GetCreatedTimeOk() (*string, bool) {
 	if o == nil || isNil(o.CreatedTime) {
-    return nil, false
+		return nil, false
 	}
 	return o.CreatedTime, true
 }
@@ -955,6 +958,14 @@ func (o *OrderHistory) SetCreatedTime(v string) {
 }
 
 func (o OrderHistory) MarshalJSON() ([]byte, error) {
+	toSerialize,err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
+}
+
+func (o OrderHistory) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
 	if !isNil(o.Apikey) {
 		toSerialize["apikey"] = o.Apikey
@@ -1037,7 +1048,7 @@ func (o OrderHistory) MarshalJSON() ([]byte, error) {
 	if !isNil(o.CreatedTime) {
 		toSerialize["createdTime"] = o.CreatedTime
 	}
-	return json.Marshal(toSerialize)
+	return toSerialize, nil
 }
 
 type NullableOrderHistory struct {

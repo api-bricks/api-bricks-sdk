@@ -15,6 +15,9 @@ import (
 	"encoding/json"
 )
 
+// checks if the MessageError type satisfies the MappedNullable interface at compile time
+var _ MappedNullable = &MessageError{}
+
 // MessageError struct for MessageError
 type MessageError struct {
 	// Message text.
@@ -51,7 +54,7 @@ func (o *MessageError) GetMessage() string {
 // and a boolean to check if the value has been set.
 func (o *MessageError) GetMessageOk() (*string, bool) {
 	if o == nil || isNil(o.Message) {
-    return nil, false
+		return nil, false
 	}
 	return o.Message, true
 }
@@ -71,11 +74,19 @@ func (o *MessageError) SetMessage(v string) {
 }
 
 func (o MessageError) MarshalJSON() ([]byte, error) {
+	toSerialize,err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
+}
+
+func (o MessageError) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
 	if !isNil(o.Message) {
 		toSerialize["message"] = o.Message
 	}
-	return json.Marshal(toSerialize)
+	return toSerialize, nil
 }
 
 type NullableMessageError struct {

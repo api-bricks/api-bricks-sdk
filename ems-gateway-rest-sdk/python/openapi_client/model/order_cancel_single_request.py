@@ -88,7 +88,7 @@ class OrderCancelSingleRequest(
 
     def __new__(
         cls,
-        *args: typing.Union[dict, frozendict.frozendict, ],
+        *_args: typing.Union[dict, frozendict.frozendict, ],
         exchange_id: typing.Union[MetaOapg.properties.exchange_id, str, ],
         exchange_order_id: typing.Union[MetaOapg.properties.exchange_order_id, str, schemas.Unset] = schemas.unset,
         client_order_id: typing.Union[MetaOapg.properties.client_order_id, str, schemas.Unset] = schemas.unset,
@@ -97,7 +97,7 @@ class OrderCancelSingleRequest(
     ) -> 'OrderCancelSingleRequest':
         return super().__new__(
             cls,
-            *args,
+            *_args,
             exchange_id=exchange_id,
             exchange_order_id=exchange_order_id,
             client_order_id=client_order_id,

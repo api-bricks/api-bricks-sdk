@@ -136,7 +136,7 @@ message_reject_t *message_reject_parseFromJSON(cJSON *message_rejectJSON){
     // message_reject->type
     cJSON *type = cJSON_GetObjectItemCaseSensitive(message_rejectJSON, "type");
     if (type) { 
-    if(!cJSON_IsString(type))
+    if(!cJSON_IsString(type) && !cJSON_IsNull(type))
     {
     goto end; //String
     }
@@ -151,7 +151,7 @@ message_reject_t *message_reject_parseFromJSON(cJSON *message_rejectJSON){
     // message_reject->exchange_id
     cJSON *exchange_id = cJSON_GetObjectItemCaseSensitive(message_rejectJSON, "exchange_id");
     if (exchange_id) { 
-    if(!cJSON_IsString(exchange_id))
+    if(!cJSON_IsString(exchange_id) && !cJSON_IsNull(exchange_id))
     {
     goto end; //String
     }
@@ -160,7 +160,7 @@ message_reject_t *message_reject_parseFromJSON(cJSON *message_rejectJSON){
     // message_reject->message
     cJSON *message = cJSON_GetObjectItemCaseSensitive(message_rejectJSON, "message");
     if (message) { 
-    if(!cJSON_IsString(message))
+    if(!cJSON_IsString(message) && !cJSON_IsNull(message))
     {
     goto end; //String
     }
@@ -169,7 +169,7 @@ message_reject_t *message_reject_parseFromJSON(cJSON *message_rejectJSON){
     // message_reject->rejected_message
     cJSON *rejected_message = cJSON_GetObjectItemCaseSensitive(message_rejectJSON, "rejected_message");
     if (rejected_message) { 
-    if(!cJSON_IsString(rejected_message))
+    if(!cJSON_IsString(rejected_message) && !cJSON_IsNull(rejected_message))
     {
     goto end; //String
     }
@@ -177,11 +177,11 @@ message_reject_t *message_reject_parseFromJSON(cJSON *message_rejectJSON){
 
 
     message_reject_local_var = message_reject_create (
-        type ? strdup(type->valuestring) : NULL,
+        type && !cJSON_IsNull(type) ? strdup(type->valuestring) : NULL,
         reject_reason ? reject_reason_local_nonprim : NULL,
-        exchange_id ? strdup(exchange_id->valuestring) : NULL,
-        message ? strdup(message->valuestring) : NULL,
-        rejected_message ? strdup(rejected_message->valuestring) : NULL
+        exchange_id && !cJSON_IsNull(exchange_id) ? strdup(exchange_id->valuestring) : NULL,
+        message && !cJSON_IsNull(message) ? strdup(message->valuestring) : NULL,
+        rejected_message && !cJSON_IsNull(rejected_message) ? strdup(rejected_message->valuestring) : NULL
         );
 
     return message_reject_local_var;

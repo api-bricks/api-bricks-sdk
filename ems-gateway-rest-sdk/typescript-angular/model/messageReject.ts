@@ -31,4 +31,7 @@ export interface MessageReject {
      */
     rejected_message?: string;
 }
+export namespace MessageReject {
+}
+
 

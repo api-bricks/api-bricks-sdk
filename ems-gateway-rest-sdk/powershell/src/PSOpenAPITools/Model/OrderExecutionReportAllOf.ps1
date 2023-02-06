@@ -57,6 +57,7 @@ function Initialize-OrderExecutionReportAllOf {
         [System.Nullable[Decimal]]
         ${AvgPx},
         [Parameter(Position = 5, ValueFromPipelineByPropertyName = $true)]
+        [ValidateSet("RECEIVED", "ROUTING", "ROUTED", "NEW", "PENDING_CANCEL", "PARTIALLY_FILLED", "FILLED", "CANCELED", "REJECTED")]
         [PSCustomObject]
         ${Status},
         [Parameter(Position = 6, ValueFromPipelineByPropertyName = $true)]

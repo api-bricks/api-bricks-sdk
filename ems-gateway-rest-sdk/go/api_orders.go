@@ -127,8 +127,8 @@ func (a *OrdersApiService) V1OrdersCancelAllPostExecute(r ApiV1OrdersCancelAllPo
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-            		newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-            		newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 490 {
@@ -138,8 +138,8 @@ func (a *OrdersApiService) V1OrdersCancelAllPostExecute(r ApiV1OrdersCancelAllPo
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-            		newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-            		newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -259,8 +259,8 @@ func (a *OrdersApiService) V1OrdersCancelPostExecute(r ApiV1OrdersCancelPostRequ
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-            		newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-            		newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 490 {
@@ -270,8 +270,8 @@ func (a *OrdersApiService) V1OrdersCancelPostExecute(r ApiV1OrdersCancelPostRequ
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-            		newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-            		newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -341,7 +341,7 @@ func (a *OrdersApiService) V1OrdersGetExecute(r ApiV1OrdersGetRequest) ([]OrderE
 	localVarFormParams := url.Values{}
 
 	if r.exchangeId != nil {
-		localVarQueryParams.Add("exchange_id", parameterToString(*r.exchangeId, ""))
+		parameterAddToQuery(localVarQueryParams, "exchange_id", r.exchangeId, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -389,8 +389,8 @@ func (a *OrdersApiService) V1OrdersGetExecute(r ApiV1OrdersGetRequest) ([]OrderE
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-            		newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-            		newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -472,8 +472,8 @@ func (a *OrdersApiService) V1OrdersHistoryGetExecute(r ApiV1OrdersHistoryGetRequ
 		return localVarReturnValue, nil, reportError("timeEnd is required and must be specified")
 	}
 
-	localVarQueryParams.Add("time_start", parameterToString(*r.timeStart, ""))
-	localVarQueryParams.Add("time_end", parameterToString(*r.timeEnd, ""))
+	parameterAddToQuery(localVarQueryParams, "time_start", r.timeStart, "")
+	parameterAddToQuery(localVarQueryParams, "time_end", r.timeEnd, "")
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
 
@@ -520,8 +520,8 @@ func (a *OrdersApiService) V1OrdersHistoryGetExecute(r ApiV1OrdersHistoryGetRequ
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-            		newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-            		newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -641,8 +641,8 @@ func (a *OrdersApiService) V1OrdersPostExecute(r ApiV1OrdersPostRequest) (*Order
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-            		newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-            		newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 490 {
@@ -652,8 +652,8 @@ func (a *OrdersApiService) V1OrdersPostExecute(r ApiV1OrdersPostRequest) (*Order
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-            		newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-            		newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 504 {
@@ -663,8 +663,8 @@ func (a *OrdersApiService) V1OrdersPostExecute(r ApiV1OrdersPostRequest) (*Order
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-            		newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-            		newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -724,7 +724,7 @@ func (a *OrdersApiService) V1OrdersStatusClientOrderIdGetExecute(r ApiV1OrdersSt
 	}
 
 	localVarPath := localBasePath + "/v1/orders/status/{client_order_id}"
-	localVarPath = strings.Replace(localVarPath, "{"+"client_order_id"+"}", url.PathEscape(parameterToString(r.clientOrderId, "")), -1)
+	localVarPath = strings.Replace(localVarPath, "{"+"client_order_id"+"}", url.PathEscape(parameterValueToString(r.clientOrderId, "clientOrderId")), -1)
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -776,8 +776,8 @@ func (a *OrdersApiService) V1OrdersStatusClientOrderIdGetExecute(r ApiV1OrdersSt
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-            		newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-            		newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}

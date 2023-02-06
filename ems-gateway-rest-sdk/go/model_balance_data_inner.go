@@ -15,6 +15,9 @@ import (
 	"encoding/json"
 )
 
+// checks if the BalanceDataInner type satisfies the MappedNullable interface at compile time
+var _ MappedNullable = &BalanceDataInner{}
+
 // BalanceDataInner struct for BalanceDataInner
 type BalanceDataInner struct {
 	// Exchange currency code.
@@ -65,7 +68,7 @@ func (o *BalanceDataInner) GetAssetIdExchange() string {
 // and a boolean to check if the value has been set.
 func (o *BalanceDataInner) GetAssetIdExchangeOk() (*string, bool) {
 	if o == nil || isNil(o.AssetIdExchange) {
-    return nil, false
+		return nil, false
 	}
 	return o.AssetIdExchange, true
 }
@@ -97,7 +100,7 @@ func (o *BalanceDataInner) GetAssetIdCoinapi() string {
 // and a boolean to check if the value has been set.
 func (o *BalanceDataInner) GetAssetIdCoinapiOk() (*string, bool) {
 	if o == nil || isNil(o.AssetIdCoinapi) {
-    return nil, false
+		return nil, false
 	}
 	return o.AssetIdCoinapi, true
 }
@@ -129,7 +132,7 @@ func (o *BalanceDataInner) GetBalance() float64 {
 // and a boolean to check if the value has been set.
 func (o *BalanceDataInner) GetBalanceOk() (*float64, bool) {
 	if o == nil || isNil(o.Balance) {
-    return nil, false
+		return nil, false
 	}
 	return o.Balance, true
 }
@@ -161,7 +164,7 @@ func (o *BalanceDataInner) GetAvailable() float64 {
 // and a boolean to check if the value has been set.
 func (o *BalanceDataInner) GetAvailableOk() (*float64, bool) {
 	if o == nil || isNil(o.Available) {
-    return nil, false
+		return nil, false
 	}
 	return o.Available, true
 }
@@ -193,7 +196,7 @@ func (o *BalanceDataInner) GetLocked() float64 {
 // and a boolean to check if the value has been set.
 func (o *BalanceDataInner) GetLockedOk() (*float64, bool) {
 	if o == nil || isNil(o.Locked) {
-    return nil, false
+		return nil, false
 	}
 	return o.Locked, true
 }
@@ -225,7 +228,7 @@ func (o *BalanceDataInner) GetLastUpdatedBy() string {
 // and a boolean to check if the value has been set.
 func (o *BalanceDataInner) GetLastUpdatedByOk() (*string, bool) {
 	if o == nil || isNil(o.LastUpdatedBy) {
-    return nil, false
+		return nil, false
 	}
 	return o.LastUpdatedBy, true
 }
@@ -257,7 +260,7 @@ func (o *BalanceDataInner) GetRateUsd() float64 {
 // and a boolean to check if the value has been set.
 func (o *BalanceDataInner) GetRateUsdOk() (*float64, bool) {
 	if o == nil || isNil(o.RateUsd) {
-    return nil, false
+		return nil, false
 	}
 	return o.RateUsd, true
 }
@@ -289,7 +292,7 @@ func (o *BalanceDataInner) GetTraded() float64 {
 // and a boolean to check if the value has been set.
 func (o *BalanceDataInner) GetTradedOk() (*float64, bool) {
 	if o == nil || isNil(o.Traded) {
-    return nil, false
+		return nil, false
 	}
 	return o.Traded, true
 }
@@ -309,6 +312,14 @@ func (o *BalanceDataInner) SetTraded(v float64) {
 }
 
 func (o BalanceDataInner) MarshalJSON() ([]byte, error) {
+	toSerialize,err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
+}
+
+func (o BalanceDataInner) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
 	if !isNil(o.AssetIdExchange) {
 		toSerialize["asset_id_exchange"] = o.AssetIdExchange
@@ -334,7 +345,7 @@ func (o BalanceDataInner) MarshalJSON() ([]byte, error) {
 	if !isNil(o.Traded) {
 		toSerialize["traded"] = o.Traded
 	}
-	return json.Marshal(toSerialize)
+	return toSerialize, nil
 }
 
 type NullableBalanceDataInner struct {

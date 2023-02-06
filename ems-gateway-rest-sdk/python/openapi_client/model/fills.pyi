@@ -81,7 +81,7 @@ class Fills(
 
     def __new__(
         cls,
-        *args: typing.Union[dict, frozendict.frozendict, ],
+        *_args: typing.Union[dict, frozendict.frozendict, ],
         time: typing.Union[MetaOapg.properties.time, schemas.Unset] = schemas.unset,
         price: typing.Union[MetaOapg.properties.price, decimal.Decimal, int, float, schemas.Unset] = schemas.unset,
         amount: typing.Union[MetaOapg.properties.amount, decimal.Decimal, int, float, schemas.Unset] = schemas.unset,
@@ -90,7 +90,7 @@ class Fills(
     ) -> 'Fills':
         return super().__new__(
             cls,
-            *args,
+            *_args,
             time=time,
             price=price,
             amount=amount,

@@ -461,7 +461,7 @@ order_history_t *order_history_parseFromJSON(cJSON *order_historyJSON){
     // order_history->apikey
     cJSON *apikey = cJSON_GetObjectItemCaseSensitive(order_historyJSON, "apikey");
     if (apikey) { 
-    if(!cJSON_IsString(apikey))
+    if(!cJSON_IsString(apikey) && !cJSON_IsNull(apikey))
     {
     goto end; //String
     }
@@ -470,7 +470,7 @@ order_history_t *order_history_parseFromJSON(cJSON *order_historyJSON){
     // order_history->exchange_id
     cJSON *exchange_id = cJSON_GetObjectItemCaseSensitive(order_historyJSON, "exchangeId");
     if (exchange_id) { 
-    if(!cJSON_IsString(exchange_id))
+    if(!cJSON_IsString(exchange_id) && !cJSON_IsNull(exchange_id))
     {
     goto end; //String
     }
@@ -479,7 +479,7 @@ order_history_t *order_history_parseFromJSON(cJSON *order_historyJSON){
     // order_history->client_order_id
     cJSON *client_order_id = cJSON_GetObjectItemCaseSensitive(order_historyJSON, "clientOrderId");
     if (client_order_id) { 
-    if(!cJSON_IsString(client_order_id))
+    if(!cJSON_IsString(client_order_id) && !cJSON_IsNull(client_order_id))
     {
     goto end; //String
     }
@@ -488,7 +488,7 @@ order_history_t *order_history_parseFromJSON(cJSON *order_historyJSON){
     // order_history->symbol_id_exchange
     cJSON *symbol_id_exchange = cJSON_GetObjectItemCaseSensitive(order_historyJSON, "symbolIdExchange");
     if (symbol_id_exchange) { 
-    if(!cJSON_IsString(symbol_id_exchange))
+    if(!cJSON_IsString(symbol_id_exchange) && !cJSON_IsNull(symbol_id_exchange))
     {
     goto end; //String
     }
@@ -497,7 +497,7 @@ order_history_t *order_history_parseFromJSON(cJSON *order_historyJSON){
     // order_history->symbol_id_coinapi
     cJSON *symbol_id_coinapi = cJSON_GetObjectItemCaseSensitive(order_historyJSON, "symbolIdCoinapi");
     if (symbol_id_coinapi) { 
-    if(!cJSON_IsString(symbol_id_coinapi))
+    if(!cJSON_IsString(symbol_id_coinapi) && !cJSON_IsNull(symbol_id_coinapi))
     {
     goto end; //String
     }
@@ -533,7 +533,7 @@ order_history_t *order_history_parseFromJSON(cJSON *order_historyJSON){
     // order_history->order_type
     cJSON *order_type = cJSON_GetObjectItemCaseSensitive(order_historyJSON, "orderType");
     if (order_type) { 
-    if(!cJSON_IsString(order_type))
+    if(!cJSON_IsString(order_type) && !cJSON_IsNull(order_type))
     {
     goto end; //String
     }
@@ -542,7 +542,7 @@ order_history_t *order_history_parseFromJSON(cJSON *order_historyJSON){
     // order_history->time_in_force
     cJSON *time_in_force = cJSON_GetObjectItemCaseSensitive(order_historyJSON, "timeInForce");
     if (time_in_force) { 
-    if(!cJSON_IsString(time_in_force))
+    if(!cJSON_IsString(time_in_force) && !cJSON_IsNull(time_in_force))
     {
     goto end; //String
     }
@@ -574,7 +574,7 @@ order_history_t *order_history_parseFromJSON(cJSON *order_historyJSON){
     // order_history->client_order_id_format_exchange
     cJSON *client_order_id_format_exchange = cJSON_GetObjectItemCaseSensitive(order_historyJSON, "clientOrderIdFormatExchange");
     if (client_order_id_format_exchange) { 
-    if(!cJSON_IsString(client_order_id_format_exchange))
+    if(!cJSON_IsString(client_order_id_format_exchange) && !cJSON_IsNull(client_order_id_format_exchange))
     {
     goto end; //String
     }
@@ -583,7 +583,7 @@ order_history_t *order_history_parseFromJSON(cJSON *order_historyJSON){
     // order_history->exchange_order_id
     cJSON *exchange_order_id = cJSON_GetObjectItemCaseSensitive(order_historyJSON, "exchangeOrderId");
     if (exchange_order_id) { 
-    if(!cJSON_IsString(exchange_order_id))
+    if(!cJSON_IsString(exchange_order_id) && !cJSON_IsNull(exchange_order_id))
     {
     goto end; //String
     }
@@ -619,7 +619,7 @@ order_history_t *order_history_parseFromJSON(cJSON *order_historyJSON){
     // order_history->status
     cJSON *status = cJSON_GetObjectItemCaseSensitive(order_historyJSON, "status");
     if (status) { 
-    if(!cJSON_IsString(status))
+    if(!cJSON_IsString(status) && !cJSON_IsNull(status))
     {
     goto end; //String
     }
@@ -661,7 +661,7 @@ order_history_t *order_history_parseFromJSON(cJSON *order_historyJSON){
     // order_history->error_message_result
     cJSON *error_message_result = cJSON_GetObjectItemCaseSensitive(order_historyJSON, "errorMessageResult");
     if (error_message_result) { 
-    if(!cJSON_IsString(error_message_result))
+    if(!cJSON_IsString(error_message_result) && !cJSON_IsNull(error_message_result))
     {
     goto end; //String
     }
@@ -670,7 +670,7 @@ order_history_t *order_history_parseFromJSON(cJSON *order_historyJSON){
     // order_history->error_message_reason
     cJSON *error_message_reason = cJSON_GetObjectItemCaseSensitive(order_historyJSON, "errorMessageReason");
     if (error_message_reason) { 
-    if(!cJSON_IsString(error_message_reason))
+    if(!cJSON_IsString(error_message_reason) && !cJSON_IsNull(error_message_reason))
     {
     goto end; //String
     }
@@ -679,7 +679,7 @@ order_history_t *order_history_parseFromJSON(cJSON *order_historyJSON){
     // order_history->error_message_message
     cJSON *error_message_message = cJSON_GetObjectItemCaseSensitive(order_historyJSON, "errorMessageMessage");
     if (error_message_message) { 
-    if(!cJSON_IsString(error_message_message))
+    if(!cJSON_IsString(error_message_message) && !cJSON_IsNull(error_message_message))
     {
     goto end; //String
     }
@@ -755,28 +755,28 @@ order_history_t *order_history_parseFromJSON(cJSON *order_historyJSON){
 
 
     order_history_local_var = order_history_create (
-        apikey ? strdup(apikey->valuestring) : NULL,
-        exchange_id ? strdup(exchange_id->valuestring) : NULL,
-        client_order_id ? strdup(client_order_id->valuestring) : NULL,
-        symbol_id_exchange ? strdup(symbol_id_exchange->valuestring) : NULL,
-        symbol_id_coinapi ? strdup(symbol_id_coinapi->valuestring) : NULL,
+        apikey && !cJSON_IsNull(apikey) ? strdup(apikey->valuestring) : NULL,
+        exchange_id && !cJSON_IsNull(exchange_id) ? strdup(exchange_id->valuestring) : NULL,
+        client_order_id && !cJSON_IsNull(client_order_id) ? strdup(client_order_id->valuestring) : NULL,
+        symbol_id_exchange && !cJSON_IsNull(symbol_id_exchange) ? strdup(symbol_id_exchange->valuestring) : NULL,
+        symbol_id_coinapi && !cJSON_IsNull(symbol_id_coinapi) ? strdup(symbol_id_coinapi->valuestring) : NULL,
         amount_order ? amount_order->valuedouble : 0,
         price ? price->valuedouble : 0,
         side ? side->valuedouble : 0,
-        order_type ? strdup(order_type->valuestring) : NULL,
-        time_in_force ? strdup(time_in_force->valuestring) : NULL,
+        order_type && !cJSON_IsNull(order_type) ? strdup(order_type->valuestring) : NULL,
+        time_in_force && !cJSON_IsNull(time_in_force) ? strdup(time_in_force->valuestring) : NULL,
         exec_inst ? exec_instList : NULL,
-        client_order_id_format_exchange ? strdup(client_order_id_format_exchange->valuestring) : NULL,
-        exchange_order_id ? strdup(exchange_order_id->valuestring) : NULL,
+        client_order_id_format_exchange && !cJSON_IsNull(client_order_id_format_exchange) ? strdup(client_order_id_format_exchange->valuestring) : NULL,
+        exchange_order_id && !cJSON_IsNull(exchange_order_id) ? strdup(exchange_order_id->valuestring) : NULL,
         amount_open ? amount_open->valuedouble : 0,
         amount_filled ? amount_filled->valuedouble : 0,
         avg_px ? avg_px->valuedouble : 0,
-        status ? strdup(status->valuestring) : NULL,
+        status && !cJSON_IsNull(status) ? strdup(status->valuestring) : NULL,
         status_history_status ? status_history_statusList : NULL,
         status_history_time ? status_history_timeList : NULL,
-        error_message_result ? strdup(error_message_result->valuestring) : NULL,
-        error_message_reason ? strdup(error_message_reason->valuestring) : NULL,
-        error_message_message ? strdup(error_message_message->valuestring) : NULL,
+        error_message_result && !cJSON_IsNull(error_message_result) ? strdup(error_message_result->valuestring) : NULL,
+        error_message_reason && !cJSON_IsNull(error_message_reason) ? strdup(error_message_reason->valuestring) : NULL,
+        error_message_message && !cJSON_IsNull(error_message_message) ? strdup(error_message_message->valuestring) : NULL,
         fills_time ? fills_timeList : NULL,
         fills_price ? fills_priceList : NULL,
         fills_amount ? fills_amountList : NULL,

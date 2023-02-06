@@ -15,6 +15,9 @@ import (
 	"encoding/json"
 )
 
+// checks if the PositionDataInner type satisfies the MappedNullable interface at compile time
+var _ MappedNullable = &PositionDataInner{}
+
 // PositionDataInner The Position object.
 type PositionDataInner struct {
 	// Exchange symbol.
@@ -67,7 +70,7 @@ func (o *PositionDataInner) GetSymbolIdExchange() string {
 // and a boolean to check if the value has been set.
 func (o *PositionDataInner) GetSymbolIdExchangeOk() (*string, bool) {
 	if o == nil || isNil(o.SymbolIdExchange) {
-    return nil, false
+		return nil, false
 	}
 	return o.SymbolIdExchange, true
 }
@@ -99,7 +102,7 @@ func (o *PositionDataInner) GetSymbolIdCoinapi() string {
 // and a boolean to check if the value has been set.
 func (o *PositionDataInner) GetSymbolIdCoinapiOk() (*string, bool) {
 	if o == nil || isNil(o.SymbolIdCoinapi) {
-    return nil, false
+		return nil, false
 	}
 	return o.SymbolIdCoinapi, true
 }
@@ -131,7 +134,7 @@ func (o *PositionDataInner) GetAvgEntryPrice() float32 {
 // and a boolean to check if the value has been set.
 func (o *PositionDataInner) GetAvgEntryPriceOk() (*float32, bool) {
 	if o == nil || isNil(o.AvgEntryPrice) {
-    return nil, false
+		return nil, false
 	}
 	return o.AvgEntryPrice, true
 }
@@ -163,7 +166,7 @@ func (o *PositionDataInner) GetQuantity() float32 {
 // and a boolean to check if the value has been set.
 func (o *PositionDataInner) GetQuantityOk() (*float32, bool) {
 	if o == nil || isNil(o.Quantity) {
-    return nil, false
+		return nil, false
 	}
 	return o.Quantity, true
 }
@@ -195,7 +198,7 @@ func (o *PositionDataInner) GetSide() OrdSide {
 // and a boolean to check if the value has been set.
 func (o *PositionDataInner) GetSideOk() (*OrdSide, bool) {
 	if o == nil || isNil(o.Side) {
-    return nil, false
+		return nil, false
 	}
 	return o.Side, true
 }
@@ -227,7 +230,7 @@ func (o *PositionDataInner) GetUnrealizedPnl() float32 {
 // and a boolean to check if the value has been set.
 func (o *PositionDataInner) GetUnrealizedPnlOk() (*float32, bool) {
 	if o == nil || isNil(o.UnrealizedPnl) {
-    return nil, false
+		return nil, false
 	}
 	return o.UnrealizedPnl, true
 }
@@ -259,7 +262,7 @@ func (o *PositionDataInner) GetLeverage() float32 {
 // and a boolean to check if the value has been set.
 func (o *PositionDataInner) GetLeverageOk() (*float32, bool) {
 	if o == nil || isNil(o.Leverage) {
-    return nil, false
+		return nil, false
 	}
 	return o.Leverage, true
 }
@@ -291,7 +294,7 @@ func (o *PositionDataInner) GetCrossMargin() bool {
 // and a boolean to check if the value has been set.
 func (o *PositionDataInner) GetCrossMarginOk() (*bool, bool) {
 	if o == nil || isNil(o.CrossMargin) {
-    return nil, false
+		return nil, false
 	}
 	return o.CrossMargin, true
 }
@@ -323,7 +326,7 @@ func (o *PositionDataInner) GetLiquidationPrice() float32 {
 // and a boolean to check if the value has been set.
 func (o *PositionDataInner) GetLiquidationPriceOk() (*float32, bool) {
 	if o == nil || isNil(o.LiquidationPrice) {
-    return nil, false
+		return nil, false
 	}
 	return o.LiquidationPrice, true
 }
@@ -355,7 +358,7 @@ func (o *PositionDataInner) GetRawData() map[string]interface{} {
 // and a boolean to check if the value has been set.
 func (o *PositionDataInner) GetRawDataOk() (map[string]interface{}, bool) {
 	if o == nil || isNil(o.RawData) {
-    return map[string]interface{}{}, false
+		return map[string]interface{}{}, false
 	}
 	return o.RawData, true
 }
@@ -375,6 +378,14 @@ func (o *PositionDataInner) SetRawData(v map[string]interface{}) {
 }
 
 func (o PositionDataInner) MarshalJSON() ([]byte, error) {
+	toSerialize,err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
+}
+
+func (o PositionDataInner) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
 	if !isNil(o.SymbolIdExchange) {
 		toSerialize["symbol_id_exchange"] = o.SymbolIdExchange
@@ -406,7 +417,7 @@ func (o PositionDataInner) MarshalJSON() ([]byte, error) {
 	if !isNil(o.RawData) {
 		toSerialize["raw_data"] = o.RawData
 	}
-	return json.Marshal(toSerialize)
+	return toSerialize, nil
 }
 
 type NullablePositionDataInner struct {

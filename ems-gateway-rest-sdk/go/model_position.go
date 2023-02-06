@@ -15,6 +15,9 @@ import (
 	"encoding/json"
 )
 
+// checks if the Position type satisfies the MappedNullable interface at compile time
+var _ MappedNullable = &Position{}
+
 // Position struct for Position
 type Position struct {
 	// Exchange identifier used to identify the routing destination.
@@ -52,7 +55,7 @@ func (o *Position) GetExchangeId() string {
 // and a boolean to check if the value has been set.
 func (o *Position) GetExchangeIdOk() (*string, bool) {
 	if o == nil || isNil(o.ExchangeId) {
-    return nil, false
+		return nil, false
 	}
 	return o.ExchangeId, true
 }
@@ -84,7 +87,7 @@ func (o *Position) GetData() []PositionDataInner {
 // and a boolean to check if the value has been set.
 func (o *Position) GetDataOk() ([]PositionDataInner, bool) {
 	if o == nil || isNil(o.Data) {
-    return nil, false
+		return nil, false
 	}
 	return o.Data, true
 }
@@ -104,6 +107,14 @@ func (o *Position) SetData(v []PositionDataInner) {
 }
 
 func (o Position) MarshalJSON() ([]byte, error) {
+	toSerialize,err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
+}
+
+func (o Position) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
 	if !isNil(o.ExchangeId) {
 		toSerialize["exchange_id"] = o.ExchangeId
@@ -111,7 +122,7 @@ func (o Position) MarshalJSON() ([]byte, error) {
 	if !isNil(o.Data) {
 		toSerialize["data"] = o.Data
 	}
-	return json.Marshal(toSerialize)
+	return toSerialize, nil
 }
 
 type NullablePosition struct {

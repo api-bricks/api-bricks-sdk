@@ -34,3 +34,6 @@ case class PositionDataInner (
   rawData: Option[Any] = None
 ) extends ApiModel
 
+object PositionDataInnerEnums {
+
+}

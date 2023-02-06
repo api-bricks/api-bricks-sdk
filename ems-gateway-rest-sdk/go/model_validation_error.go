@@ -15,6 +15,9 @@ import (
 	"encoding/json"
 )
 
+// checks if the ValidationError type satisfies the MappedNullable interface at compile time
+var _ MappedNullable = &ValidationError{}
+
 // ValidationError struct for ValidationError
 type ValidationError struct {
 	Type *string `json:"type,omitempty"`
@@ -54,7 +57,7 @@ func (o *ValidationError) GetType() string {
 // and a boolean to check if the value has been set.
 func (o *ValidationError) GetTypeOk() (*string, bool) {
 	if o == nil || isNil(o.Type) {
-    return nil, false
+		return nil, false
 	}
 	return o.Type, true
 }
@@ -86,7 +89,7 @@ func (o *ValidationError) GetTitle() string {
 // and a boolean to check if the value has been set.
 func (o *ValidationError) GetTitleOk() (*string, bool) {
 	if o == nil || isNil(o.Title) {
-    return nil, false
+		return nil, false
 	}
 	return o.Title, true
 }
@@ -118,7 +121,7 @@ func (o *ValidationError) GetStatus() float32 {
 // and a boolean to check if the value has been set.
 func (o *ValidationError) GetStatusOk() (*float32, bool) {
 	if o == nil || isNil(o.Status) {
-    return nil, false
+		return nil, false
 	}
 	return o.Status, true
 }
@@ -150,7 +153,7 @@ func (o *ValidationError) GetTraceId() string {
 // and a boolean to check if the value has been set.
 func (o *ValidationError) GetTraceIdOk() (*string, bool) {
 	if o == nil || isNil(o.TraceId) {
-    return nil, false
+		return nil, false
 	}
 	return o.TraceId, true
 }
@@ -182,7 +185,7 @@ func (o *ValidationError) GetErrors() string {
 // and a boolean to check if the value has been set.
 func (o *ValidationError) GetErrorsOk() (*string, bool) {
 	if o == nil || isNil(o.Errors) {
-    return nil, false
+		return nil, false
 	}
 	return o.Errors, true
 }
@@ -202,6 +205,14 @@ func (o *ValidationError) SetErrors(v string) {
 }
 
 func (o ValidationError) MarshalJSON() ([]byte, error) {
+	toSerialize,err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
+}
+
+func (o ValidationError) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
 	if !isNil(o.Type) {
 		toSerialize["type"] = o.Type
@@ -218,7 +229,7 @@ func (o ValidationError) MarshalJSON() ([]byte, error) {
 	if !isNil(o.Errors) {
 		toSerialize["errors"] = o.Errors
 	}
-	return json.Marshal(toSerialize)
+	return toSerialize, nil
 }
 
 type NullableValidationError struct {

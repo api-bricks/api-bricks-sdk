@@ -489,7 +489,7 @@ order_execution_report_t *order_execution_report_parseFromJSON(cJSON *order_exec
     // order_execution_report->symbol_id_exchange
     cJSON *symbol_id_exchange = cJSON_GetObjectItemCaseSensitive(order_execution_reportJSON, "symbol_id_exchange");
     if (symbol_id_exchange) { 
-    if(!cJSON_IsString(symbol_id_exchange))
+    if(!cJSON_IsString(symbol_id_exchange) && !cJSON_IsNull(symbol_id_exchange))
     {
     goto end; //String
     }
@@ -498,7 +498,7 @@ order_execution_report_t *order_execution_report_parseFromJSON(cJSON *order_exec
     // order_execution_report->symbol_id_coinapi
     cJSON *symbol_id_coinapi = cJSON_GetObjectItemCaseSensitive(order_execution_reportJSON, "symbol_id_coinapi");
     if (symbol_id_coinapi) { 
-    if(!cJSON_IsString(symbol_id_coinapi))
+    if(!cJSON_IsString(symbol_id_coinapi) && !cJSON_IsNull(symbol_id_coinapi))
     {
     goto end; //String
     }
@@ -593,7 +593,7 @@ order_execution_report_t *order_execution_report_parseFromJSON(cJSON *order_exec
     // order_execution_report->exchange_order_id
     cJSON *exchange_order_id = cJSON_GetObjectItemCaseSensitive(order_execution_reportJSON, "exchange_order_id");
     if (exchange_order_id) { 
-    if(!cJSON_IsString(exchange_order_id))
+    if(!cJSON_IsString(exchange_order_id) && !cJSON_IsNull(exchange_order_id))
     {
     goto end; //String
     }
@@ -658,7 +658,7 @@ order_execution_report_t *order_execution_report_parseFromJSON(cJSON *order_exec
     // order_execution_report->error_message
     cJSON *error_message = cJSON_GetObjectItemCaseSensitive(order_execution_reportJSON, "error_message");
     if (error_message) { 
-    if(!cJSON_IsString(error_message))
+    if(!cJSON_IsString(error_message) && !cJSON_IsNull(error_message))
     {
     goto end; //String
     }
@@ -689,8 +689,8 @@ order_execution_report_t *order_execution_report_parseFromJSON(cJSON *order_exec
     order_execution_report_local_var = order_execution_report_create (
         strdup(exchange_id->valuestring),
         strdup(client_order_id->valuestring),
-        symbol_id_exchange ? strdup(symbol_id_exchange->valuestring) : NULL,
-        symbol_id_coinapi ? strdup(symbol_id_coinapi->valuestring) : NULL,
+        symbol_id_exchange && !cJSON_IsNull(symbol_id_exchange) ? strdup(symbol_id_exchange->valuestring) : NULL,
+        symbol_id_coinapi && !cJSON_IsNull(symbol_id_coinapi) ? strdup(symbol_id_coinapi->valuestring) : NULL,
         amount_order->valuedouble,
         price->valuedouble,
         side_local_nonprim,
@@ -698,13 +698,13 @@ order_execution_report_t *order_execution_report_parseFromJSON(cJSON *order_exec
         time_in_force_local_nonprim,
         exec_inst ? exec_instList : NULL,
         strdup(client_order_id_format_exchange->valuestring),
-        exchange_order_id ? strdup(exchange_order_id->valuestring) : NULL,
+        exchange_order_id && !cJSON_IsNull(exchange_order_id) ? strdup(exchange_order_id->valuestring) : NULL,
         amount_open->valuedouble,
         amount_filled->valuedouble,
         avg_px ? avg_px->valuedouble : 0,
         status_local_nonprim,
         status_history ? status_historyList : NULL,
-        error_message ? strdup(error_message->valuestring) : NULL,
+        error_message && !cJSON_IsNull(error_message) ? strdup(error_message->valuestring) : NULL,
         fills ? fillsList : NULL
         );
 

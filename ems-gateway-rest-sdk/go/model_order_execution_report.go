@@ -15,6 +15,9 @@ import (
 	"encoding/json"
 )
 
+// checks if the OrderExecutionReport type satisfies the MappedNullable interface at compile time
+var _ MappedNullable = &OrderExecutionReport{}
+
 // OrderExecutionReport The order execution report object.
 type OrderExecutionReport struct {
 	// Exchange identifier used to identify the routing destination.
@@ -97,7 +100,7 @@ func (o *OrderExecutionReport) GetExchangeId() string {
 // and a boolean to check if the value has been set.
 func (o *OrderExecutionReport) GetExchangeIdOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return &o.ExchangeId, true
 }
@@ -121,7 +124,7 @@ func (o *OrderExecutionReport) GetClientOrderId() string {
 // and a boolean to check if the value has been set.
 func (o *OrderExecutionReport) GetClientOrderIdOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return &o.ClientOrderId, true
 }
@@ -144,7 +147,7 @@ func (o *OrderExecutionReport) GetSymbolIdExchange() string {
 // and a boolean to check if the value has been set.
 func (o *OrderExecutionReport) GetSymbolIdExchangeOk() (*string, bool) {
 	if o == nil || isNil(o.SymbolIdExchange) {
-    return nil, false
+		return nil, false
 	}
 	return o.SymbolIdExchange, true
 }
@@ -176,7 +179,7 @@ func (o *OrderExecutionReport) GetSymbolIdCoinapi() string {
 // and a boolean to check if the value has been set.
 func (o *OrderExecutionReport) GetSymbolIdCoinapiOk() (*string, bool) {
 	if o == nil || isNil(o.SymbolIdCoinapi) {
-    return nil, false
+		return nil, false
 	}
 	return o.SymbolIdCoinapi, true
 }
@@ -209,7 +212,7 @@ func (o *OrderExecutionReport) GetAmountOrder() float32 {
 // and a boolean to check if the value has been set.
 func (o *OrderExecutionReport) GetAmountOrderOk() (*float32, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return &o.AmountOrder, true
 }
@@ -233,7 +236,7 @@ func (o *OrderExecutionReport) GetPrice() float32 {
 // and a boolean to check if the value has been set.
 func (o *OrderExecutionReport) GetPriceOk() (*float32, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return &o.Price, true
 }
@@ -257,7 +260,7 @@ func (o *OrderExecutionReport) GetSide() OrdSide {
 // and a boolean to check if the value has been set.
 func (o *OrderExecutionReport) GetSideOk() (*OrdSide, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return &o.Side, true
 }
@@ -281,7 +284,7 @@ func (o *OrderExecutionReport) GetOrderType() OrdType {
 // and a boolean to check if the value has been set.
 func (o *OrderExecutionReport) GetOrderTypeOk() (*OrdType, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return &o.OrderType, true
 }
@@ -305,7 +308,7 @@ func (o *OrderExecutionReport) GetTimeInForce() TimeInForce {
 // and a boolean to check if the value has been set.
 func (o *OrderExecutionReport) GetTimeInForceOk() (*TimeInForce, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return &o.TimeInForce, true
 }
@@ -328,7 +331,7 @@ func (o *OrderExecutionReport) GetExpireTime() string {
 // and a boolean to check if the value has been set.
 func (o *OrderExecutionReport) GetExpireTimeOk() (*string, bool) {
 	if o == nil || isNil(o.ExpireTime) {
-    return nil, false
+		return nil, false
 	}
 	return o.ExpireTime, true
 }
@@ -360,7 +363,7 @@ func (o *OrderExecutionReport) GetExecInst() []string {
 // and a boolean to check if the value has been set.
 func (o *OrderExecutionReport) GetExecInstOk() ([]string, bool) {
 	if o == nil || isNil(o.ExecInst) {
-    return nil, false
+		return nil, false
 	}
 	return o.ExecInst, true
 }
@@ -393,7 +396,7 @@ func (o *OrderExecutionReport) GetClientOrderIdFormatExchange() string {
 // and a boolean to check if the value has been set.
 func (o *OrderExecutionReport) GetClientOrderIdFormatExchangeOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return &o.ClientOrderIdFormatExchange, true
 }
@@ -416,7 +419,7 @@ func (o *OrderExecutionReport) GetExchangeOrderId() string {
 // and a boolean to check if the value has been set.
 func (o *OrderExecutionReport) GetExchangeOrderIdOk() (*string, bool) {
 	if o == nil || isNil(o.ExchangeOrderId) {
-    return nil, false
+		return nil, false
 	}
 	return o.ExchangeOrderId, true
 }
@@ -449,7 +452,7 @@ func (o *OrderExecutionReport) GetAmountOpen() float32 {
 // and a boolean to check if the value has been set.
 func (o *OrderExecutionReport) GetAmountOpenOk() (*float32, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return &o.AmountOpen, true
 }
@@ -473,7 +476,7 @@ func (o *OrderExecutionReport) GetAmountFilled() float32 {
 // and a boolean to check if the value has been set.
 func (o *OrderExecutionReport) GetAmountFilledOk() (*float32, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return &o.AmountFilled, true
 }
@@ -496,7 +499,7 @@ func (o *OrderExecutionReport) GetAvgPx() float32 {
 // and a boolean to check if the value has been set.
 func (o *OrderExecutionReport) GetAvgPxOk() (*float32, bool) {
 	if o == nil || isNil(o.AvgPx) {
-    return nil, false
+		return nil, false
 	}
 	return o.AvgPx, true
 }
@@ -529,7 +532,7 @@ func (o *OrderExecutionReport) GetStatus() OrdStatus {
 // and a boolean to check if the value has been set.
 func (o *OrderExecutionReport) GetStatusOk() (*OrdStatus, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return &o.Status, true
 }
@@ -552,7 +555,7 @@ func (o *OrderExecutionReport) GetStatusHistory() [][]string {
 // and a boolean to check if the value has been set.
 func (o *OrderExecutionReport) GetStatusHistoryOk() ([][]string, bool) {
 	if o == nil || isNil(o.StatusHistory) {
-    return nil, false
+		return nil, false
 	}
 	return o.StatusHistory, true
 }
@@ -584,7 +587,7 @@ func (o *OrderExecutionReport) GetErrorMessage() string {
 // and a boolean to check if the value has been set.
 func (o *OrderExecutionReport) GetErrorMessageOk() (*string, bool) {
 	if o == nil || isNil(o.ErrorMessage) {
-    return nil, false
+		return nil, false
 	}
 	return o.ErrorMessage, true
 }
@@ -616,7 +619,7 @@ func (o *OrderExecutionReport) GetFills() []Fills {
 // and a boolean to check if the value has been set.
 func (o *OrderExecutionReport) GetFillsOk() ([]Fills, bool) {
 	if o == nil || isNil(o.Fills) {
-    return nil, false
+		return nil, false
 	}
 	return o.Fills, true
 }
@@ -636,58 +639,44 @@ func (o *OrderExecutionReport) SetFills(v []Fills) {
 }
 
 func (o OrderExecutionReport) MarshalJSON() ([]byte, error) {
+	toSerialize,err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
+}
+
+func (o OrderExecutionReport) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if true {
-		toSerialize["exchange_id"] = o.ExchangeId
-	}
-	if true {
-		toSerialize["client_order_id"] = o.ClientOrderId
-	}
+	toSerialize["exchange_id"] = o.ExchangeId
+	toSerialize["client_order_id"] = o.ClientOrderId
 	if !isNil(o.SymbolIdExchange) {
 		toSerialize["symbol_id_exchange"] = o.SymbolIdExchange
 	}
 	if !isNil(o.SymbolIdCoinapi) {
 		toSerialize["symbol_id_coinapi"] = o.SymbolIdCoinapi
 	}
-	if true {
-		toSerialize["amount_order"] = o.AmountOrder
-	}
-	if true {
-		toSerialize["price"] = o.Price
-	}
-	if true {
-		toSerialize["side"] = o.Side
-	}
-	if true {
-		toSerialize["order_type"] = o.OrderType
-	}
-	if true {
-		toSerialize["time_in_force"] = o.TimeInForce
-	}
+	toSerialize["amount_order"] = o.AmountOrder
+	toSerialize["price"] = o.Price
+	toSerialize["side"] = o.Side
+	toSerialize["order_type"] = o.OrderType
+	toSerialize["time_in_force"] = o.TimeInForce
 	if !isNil(o.ExpireTime) {
 		toSerialize["expire_time"] = o.ExpireTime
 	}
 	if !isNil(o.ExecInst) {
 		toSerialize["exec_inst"] = o.ExecInst
 	}
-	if true {
-		toSerialize["client_order_id_format_exchange"] = o.ClientOrderIdFormatExchange
-	}
+	toSerialize["client_order_id_format_exchange"] = o.ClientOrderIdFormatExchange
 	if !isNil(o.ExchangeOrderId) {
 		toSerialize["exchange_order_id"] = o.ExchangeOrderId
 	}
-	if true {
-		toSerialize["amount_open"] = o.AmountOpen
-	}
-	if true {
-		toSerialize["amount_filled"] = o.AmountFilled
-	}
+	toSerialize["amount_open"] = o.AmountOpen
+	toSerialize["amount_filled"] = o.AmountFilled
 	if !isNil(o.AvgPx) {
 		toSerialize["avg_px"] = o.AvgPx
 	}
-	if true {
-		toSerialize["status"] = o.Status
-	}
+	toSerialize["status"] = o.Status
 	if !isNil(o.StatusHistory) {
 		toSerialize["status_history"] = o.StatusHistory
 	}
@@ -697,7 +686,7 @@ func (o OrderExecutionReport) MarshalJSON() ([]byte, error) {
 	if !isNil(o.Fills) {
 		toSerialize["fills"] = o.Fills
 	}
-	return json.Marshal(toSerialize)
+	return toSerialize, nil
 }
 
 type NullableOrderExecutionReport struct {

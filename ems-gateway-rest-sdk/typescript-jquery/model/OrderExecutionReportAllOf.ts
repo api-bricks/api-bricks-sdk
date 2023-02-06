@@ -59,3 +59,5 @@ export interface OrderExecutionReportAllOf {
     fills?: Array<models.Fills>;
 
 }
+export namespace OrderExecutionReportAllOf {
+}

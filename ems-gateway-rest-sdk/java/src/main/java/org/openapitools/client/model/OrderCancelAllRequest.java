@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 import com.google.gson.Gson;
@@ -48,8 +46,7 @@ import org.openapitools.client.JSON;
 /**
  * Cancel all orders request object.
  */
-@ApiModel(description = "Cancel all orders request object.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-30T14:41:50.887872Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-06T14:42:10.168910Z[Etc/UTC]")
 public class OrderCancelAllRequest {
   public static final String SERIALIZED_NAME_EXCHANGE_ID = "exchange_id";
   @SerializedName(SERIALIZED_NAME_EXCHANGE_ID)
@@ -69,7 +66,6 @@ public class OrderCancelAllRequest {
    * @return exchangeId
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "KRAKEN", required = true, value = "Identifier of the exchange from which active orders should be canceled.")
 
   public String getExchangeId() {
     return exchangeId;
