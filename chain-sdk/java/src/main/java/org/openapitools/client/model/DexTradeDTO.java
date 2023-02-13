@@ -49,7 +49,7 @@ import org.openapitools.client.JSON;
 /**
  * Trade for a single user, as part of a ring trade. It&#39;s part of the solution submitted by a solver for a given batch.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-07T09:28:25.467314Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-13T15:06:11.595492Z[Etc/UTC]")
 public class DexTradeDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
