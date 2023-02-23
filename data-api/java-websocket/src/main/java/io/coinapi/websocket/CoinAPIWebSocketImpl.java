@@ -27,6 +27,7 @@ public class CoinAPIWebSocketImpl implements CoinAPIWebSocket {
     private final String sandboxUrl = "wss://ws-sandbox.coinapi.io/v1/";
     private final String noSandboxUrl = "wss://ws.coinapi.io/v1/";
 
+    private String alternateUrl;
     private Boolean isSandbox;
     private DslJson<Object> json = new DslJson<>();
 
@@ -46,13 +47,8 @@ public class CoinAPIWebSocketImpl implements CoinAPIWebSocket {
     private InvokeFunction errorInvoke;
     private InvokeFunction reconnectInvoke;
 
-    /**
-     *
-     * @param isSandbox
-     */
-    public CoinAPIWebSocketImpl(Boolean isSandbox) {
+    private void init() {
 
-        this.isSandbox = isSandbox;
         client = ClientManager.createClient();
         client.getProperties().put(ClientProperties.RECONNECT_HANDLER, new WebsocketReconnectHandler());
 
@@ -101,6 +97,26 @@ public class CoinAPIWebSocketImpl implements CoinAPIWebSocket {
 
     /**
      *
+     * @param alternateUrl
+     */
+    public CoinAPIWebSocketImpl(String alternateUrl) {
+        this.isSandbox = null;
+        this.alternateUrl = alternateUrl;
+        init();
+    }
+
+    /**
+     *
+     * @param isSandbox
+     */
+    public CoinAPIWebSocketImpl(Boolean isSandbox) {
+        this.isSandbox = isSandbox;
+        this.alternateUrl = null;
+        init();
+    }
+
+    /**
+     *
      * @param hello
      * @throws IOException
      */
@@ -141,7 +157,10 @@ public class CoinAPIWebSocketImpl implements CoinAPIWebSocket {
                 }
             };
 
-            connection = Optional.ofNullable(client.connectToServer(endpoint, cec, new URI(isSandbox ? sandboxUrl : noSandboxUrl)));
+            String url = alternateUrl != null ? alternateUrl : isSandbox ? sandboxUrl : noSandboxUrl;
+            URI uri = new URI(url);
+            connection = Optional.ofNullable(client.connectToServer(endpoint, cec, uri));
+
             latch.await(100, TimeUnit.SECONDS);
         } catch (Exception e) {
             e.printStackTrace();
@@ -217,8 +236,8 @@ public class CoinAPIWebSocketImpl implements CoinAPIWebSocket {
      * @param function
      */
     @Override
-    public void setErrorInvoke(InvokeFunction function) { 
-        this.errorInvoke = function; 
+    public void setErrorInvoke(InvokeFunction function) {
+        this.errorInvoke = function;
     }
 
     /**
@@ -226,8 +245,8 @@ public class CoinAPIWebSocketImpl implements CoinAPIWebSocket {
      * @param function
      */
     @Override
-    public void setReconnectInvoke(InvokeFunction function) { 
-        this.reconnectInvoke = function; 
+    public void setReconnectInvoke(InvokeFunction function) {
+        this.reconnectInvoke = function;
     }
 
     private void handle(String message, Class deserializeClass, InvokeFunction invokeFunction) throws IOException, NotImplementedException {
