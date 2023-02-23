@@ -1,13 +1,16 @@
 package io.coinapi.websocket;
 
 import com.dslplatform.json.DslJson;
+import io.coinapi.websocket.communication.WebsocketReconnectHandler;
 import io.coinapi.websocket.exception.NotImplementedException;
 import io.coinapi.websocket.interfaces.InvokeFunction;
 import io.coinapi.websocket.model.*;
 import io.coinapi.websocket.model.Error;
 import org.glassfish.tyrus.client.ClientManager;
 
-import javax.websocket.*;
+import jakarta.websocket.*;
+import org.glassfish.tyrus.client.ClientProperties;
+
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -51,6 +54,7 @@ public class CoinAPIWebSocketImpl implements CoinAPIWebSocket {
 
         this.isSandbox = isSandbox;
         client = ClientManager.createClient();
+        client.getProperties().put(ClientProperties.RECONNECT_HANDLER, new WebsocketReconnectHandler());
 
         Runnable task = () -> {
             while (running) {
@@ -113,8 +117,7 @@ public class CoinAPIWebSocketImpl implements CoinAPIWebSocket {
 
             final ClientEndpointConfig cec = ClientEndpointConfig.Builder.create().build();
 
-            connection = Optional.ofNullable(client.connectToServer(new Endpoint() {
-
+            Endpoint endpoint = new Endpoint() {
                 @Override
                 public void onOpen(Session session, EndpointConfig config) {
                     try {
@@ -136,7 +139,9 @@ public class CoinAPIWebSocketImpl implements CoinAPIWebSocket {
                 public void onClose(Session session, CloseReason closeReason) {
                     super.onClose(session, closeReason);
                 }
-            }, cec, new URI(isSandbox ? sandboxUrl : noSandboxUrl)));
+            };
+
+            connection = Optional.ofNullable(client.connectToServer(endpoint, cec, new URI(isSandbox ? sandboxUrl : noSandboxUrl)));
             latch.await(100, TimeUnit.SECONDS);
         } catch (Exception e) {
             e.printStackTrace();
@@ -212,21 +217,25 @@ public class CoinAPIWebSocketImpl implements CoinAPIWebSocket {
      * @param function
      */
     @Override
-    public void setErrorInvoke(InvokeFunction function) { this.errorInvoke = function; }
+    public void setErrorInvoke(InvokeFunction function) { 
+        this.errorInvoke = function; 
+    }
 
     /**
      *
      * @param function
      */
     @Override
-    public void setReconnectInvoke(InvokeFunction function) { this.reconnectInvoke = function; }
+    public void setReconnectInvoke(InvokeFunction function) { 
+        this.reconnectInvoke = function; 
+    }
 
     private void handle(String message, Class deserializeClass, InvokeFunction invokeFunction) throws IOException, NotImplementedException {
 
         Object deserialize = json.deserialize(deserializeClass, new ByteArrayInputStream(message.getBytes()));
 
         if (invokeFunction == null) {
-            throw new NotImplementedException();
+            return;
         }
         invokeFunction.preprocesMessages((MessageBase) deserialize);
     }

@@ -43,12 +43,12 @@ namespace CoinAPI.REST.V1
                     {
                         client.DefaultRequestHeaders.Add("X-CoinAPI-Key", apikey);
 
-                        HttpResponseMessage response = await client.GetAsync(WebUrl + url);
+                        HttpResponseMessage response = await client.GetAsync(WebUrl + url).ConfigureAwait(false);
 
                         if (!response.IsSuccessStatusCode)
-                            await RaiseError(response);
+                            await RaiseError(response).ConfigureAwait(false);
 
-                        return await Deserialize<T>(response);
+                        return await Deserialize<T>(response).ConfigureAwait(false);
                     }
                 }
             }
@@ -64,7 +64,7 @@ namespace CoinAPI.REST.V1
 
         private static async Task RaiseError(HttpResponseMessage response)
         {
-            var message = (await Deserialize<ErrorMessage>(response)).message;
+            var message = (await Deserialize<ErrorMessage>(response).ConfigureAwait(false)).message;
 
             switch ((int)response.StatusCode)
             {
@@ -85,7 +85,7 @@ namespace CoinAPI.REST.V1
 
         private static async Task<T> Deserialize<T>(HttpResponseMessage responseMessage)
         {
-            var responseString = await responseMessage.Content.ReadAsStringAsync();
+            var responseString = await responseMessage.Content.ReadAsStringAsync().ConfigureAwait(false);
             var data = JsonConvert.DeserializeObject<T>(responseString);
             return data;
         }
@@ -119,13 +119,6 @@ namespace CoinAPI.REST.V1
         {
             return GetData<List<Icon>>(CoinApiEndpointUrls.Exchanges_Icons(iconSize));
         }
-
-        public Task<List<SymbolMapping>> Metadata_symbol_mappingAsync(string idExchange)
-        {
-            var url = CoinApiEndpointUrls.Symbols_Map(idExchange);
-            return GetData<List<SymbolMapping>>(url);
-        }
-
         public Task<Exchangerate> Exchange_rates_get_specific_rateAsync(string baseId, string quoteId, DateTime time)
         {
             var url = CoinApiEndpointUrls.ExchangeRateSpecific(baseId, quoteId, time.ToString(DateFormat));

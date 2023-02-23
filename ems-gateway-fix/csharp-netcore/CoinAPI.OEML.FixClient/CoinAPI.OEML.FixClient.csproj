@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="FixSettings.cfg" />
+    <None Remove="FIX\FIX44.xml" />
+    <None Remove="FIX\FIX50.xml" />
+    <None Remove="FIX\FIXT11.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="FixSettings.cfg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="FIX\FIX44.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="FIX\FIX50.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="FIX\FIXT11.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CoinAPI.REST.V1" Version="1.4.5" />
+    <PackageReference Include="QuickFIXn.FIX4.4" Version="1.10.0" />
+    <PackageReference Include="QuickFIXn.FIX5.0" Version="1.10.0" />
+  </ItemGroup>
+
+</Project>

@@ -8,8 +8,10 @@ Welcome to the CoinAPI SDK. This repository contain SDK for our API documented a
 
 Directory | Description |
 --- | --- |
-data-sdk | SDK for CoinAPI Market Data API
-oeml-sdk | SDK for CoinAPI OEML API (Order and Execution Management Layer)
+data-api | SDK for CoinAPI Market Data API
+ems-cloud-mgmt-sdk | SDK for CoinAPI Execution Management System Managed Cloud REST API
+ems-gateway-rest-sdk | SDK for CoinAPI Execution Management System REST API 
+ems-gateway-fix | SDK for CoinAPI Execution Management System FIX API 
 cryptotick-samples | Examples related to processing CryptoTick GZIP+CSV flat files
 
 ## Package managers coverage

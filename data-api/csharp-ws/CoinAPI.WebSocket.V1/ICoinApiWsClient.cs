@@ -4,6 +4,9 @@ namespace CoinAPI.WebSocket.V1
 {
     public delegate void OHLCVEventHandler(object sender, OHLCV item);
     public delegate void OrderBookEventHandler(object sender, OrderBook item);
+    public delegate void OrderBook5EventHandler(object sender, OrderBook item);
+    public delegate void OrderBook20EventHandler(object sender, OrderBook item);
+    public delegate void OrderBook50EventHandler(object sender, OrderBook item);
     public delegate void OrderBookL3EventHandler(object sender, OrderBookL3 item);
     public delegate void QuoteEventHandler(object sender, Quote item);
     public delegate void TradeEventHandler(object sender, Trade item);
@@ -17,6 +20,9 @@ namespace CoinAPI.WebSocket.V1
         long UnprocessedMessagesQueueSize { get; }
         event OHLCVEventHandler OHLCVEvent;
         event OrderBookEventHandler OrderBookEvent;
+        event OrderBook5EventHandler OrderBook5Event;
+        event OrderBook20EventHandler OrderBook20Event;
+        event OrderBook50EventHandler OrderBook50Event;
         event OrderBookL3EventHandler OrderBookL3Event;
         event QuoteEventHandler QuoteEvent;
         event TradeEventHandler TradeEvent;

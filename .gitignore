@@ -5,3 +5,6 @@
 /csharp-ws/CoinApi.WEBSOCKET/.vs/CoinApi.WEBSOCKET/v16
 .idea
 **/target
+
+# Visual Studo 2015 cache/options directory
+.vs/

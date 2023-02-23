@@ -13,7 +13,7 @@ public class Book extends MessageBase {
     private Integer sequence;
     private OffsetDateTime timeExchange;
     private OffsetDateTime timeCoinApi;
-    private Boolean isSnapshot = true;
+    private String isSnapshot = "true";
     private List<Asks> asks;
     private List<Bids> bids;
 
@@ -53,11 +53,11 @@ public class Book extends MessageBase {
     }
 
     public Boolean getSnapshot() {
-        return isSnapshot;
+        return isSnapshot.equalsIgnoreCase("true");
     }
 
     @JsonAttribute(name = "is_snapshot")
-    public void setSnapshot(Boolean snapshot) {
+    public void setSnapshot(String snapshot) {
         isSnapshot = snapshot;
     }
 

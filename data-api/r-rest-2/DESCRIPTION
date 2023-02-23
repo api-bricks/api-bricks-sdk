@@ -1,0 +1,23 @@
+Package: rcoinapi
+Title: What the Package Does (One Line, Title Case)
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Ramshreyas",
+           family = "Rao",
+           role = c("aut", "cre"),
+           email = "ramshreyas.rao@gmail.com",
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+Description: R package for the CoinAPI API. Designed to give outputs similar to quantmod when it comes to OHLCV data. Requires an API key from coinapi.io - the Author is not responsible for the quality of the data!
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1.9001
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
+Imports: 
+    lubridate,
+    httr,
+    jsonlite,
+    xts

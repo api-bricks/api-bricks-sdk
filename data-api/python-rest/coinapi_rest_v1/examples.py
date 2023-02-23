@@ -1,4 +1,4 @@
-from coinapi_rest_v1 import CoinAPIv1
+from coinapi_rest_v1.restapi import CoinAPIv1
 import datetime, sys
 
 test_key = sys.argv[1]

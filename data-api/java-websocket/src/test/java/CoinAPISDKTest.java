@@ -7,19 +7,19 @@ import java.io.IOException;
 
 public abstract class CoinAPISDKTest {
 
-    protected String apiKey;
+    protected String apikey;
     protected CoinAPIWebSocket coinAPIWebSocket;
 
     @Before
     public void configuration() throws IOException {
         Config config = new Config();
-        apiKey = config.getPropValues("coinapi_key");
+        apikey = config.getPropValues("coinapi_key");
         coinAPIWebSocket = new CoinAPIWebSocketImpl(true);
     }
 
     public Hello createHello(String type) {
         Hello hello = new Hello();
-        hello.setApiKey(apiKey);
+        hello.setApikey(apikey);
         hello.setSubscribeDataType(new String[]{type});
         return hello;
     }
