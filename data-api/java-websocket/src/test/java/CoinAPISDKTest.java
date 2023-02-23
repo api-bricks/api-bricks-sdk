@@ -14,7 +14,7 @@ public abstract class CoinAPISDKTest {
     public void configuration() throws IOException {
         Config config = new Config();
         apikey = config.getPropValues("coinapi_key");
-        coinAPIWebSocket = new CoinAPIWebSocketImpl(true);
+        coinAPIWebSocket = new CoinAPIWebSocketImpl(true, null);
     }
 
     public Hello createHello(String type) {

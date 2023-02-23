@@ -27,8 +27,7 @@ public class CoinAPIWebSocketImpl implements CoinAPIWebSocket {
     private final String sandboxUrl = "wss://ws-sandbox.coinapi.io/v1/";
     private final String noSandboxUrl = "wss://ws.coinapi.io/v1/";
 
-    private String alternateUrl;
-    private Boolean isSandbox;
+    private String url;
     private DslJson<Object> json = new DslJson<>();
 
     private static CountDownLatch latch;
@@ -47,7 +46,13 @@ public class CoinAPIWebSocketImpl implements CoinAPIWebSocket {
     private InvokeFunction errorInvoke;
     private InvokeFunction reconnectInvoke;
 
-    private void init() {
+    /**
+     *
+     * @param isSandbox if isSandbox is true the sandboxUrl will be used
+     * @param url if null, one of the default urls will be used
+     */
+    public CoinAPIWebSocketImpl(Boolean isSandbox, String url) {
+        this.url = isSandbox ? sandboxUrl : url != null ? url : noSandboxUrl;
 
         client = ClientManager.createClient();
         client.getProperties().put(ClientProperties.RECONNECT_HANDLER, new WebsocketReconnectHandler());
@@ -97,26 +102,6 @@ public class CoinAPIWebSocketImpl implements CoinAPIWebSocket {
 
     /**
      *
-     * @param alternateUrl
-     */
-    public CoinAPIWebSocketImpl(String alternateUrl) {
-        this.isSandbox = null;
-        this.alternateUrl = alternateUrl;
-        init();
-    }
-
-    /**
-     *
-     * @param isSandbox
-     */
-    public CoinAPIWebSocketImpl(Boolean isSandbox) {
-        this.isSandbox = isSandbox;
-        this.alternateUrl = null;
-        init();
-    }
-
-    /**
-     *
      * @param hello
      * @throws IOException
      */
@@ -157,9 +142,7 @@ public class CoinAPIWebSocketImpl implements CoinAPIWebSocket {
                 }
             };
 
-            String url = alternateUrl != null ? alternateUrl : isSandbox ? sandboxUrl : noSandboxUrl;
-            URI uri = new URI(url);
-            connection = Optional.ofNullable(client.connectToServer(endpoint, cec, uri));
+            connection = Optional.ofNullable(client.connectToServer(endpoint, cec, new URI(url)));
 
             latch.await(100, TimeUnit.SECONDS);
         } catch (Exception e) {
