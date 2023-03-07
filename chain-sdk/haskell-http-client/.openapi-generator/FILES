@@ -6,6 +6,7 @@ Setup.hs
 git_push.sh
 lib/OnChainDapps-REST.hs
 lib/OnChainDapps-REST/API.hs
+lib/OnChainDapps-REST/API/CRYPTOPUNKS.hs
 lib/OnChainDapps-REST/API/Cow.hs
 lib/OnChainDapps-REST/API/Curve.hs
 lib/OnChainDapps-REST/API/Dex.hs

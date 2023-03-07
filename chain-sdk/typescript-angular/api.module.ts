@@ -2,6 +2,7 @@ import { NgModule, ModuleWithProviders, SkipSelf, Optional } from '@angular/core
 import { Configuration } from './configuration';
 import { HttpClient } from '@angular/common/http';
 
+import { CRYPTOPUNKSService } from './api/cRYPTOPUNKS.service';
 import { CowService } from './api/cow.service';
 import { CurveService } from './api/curve.service';
 import { DexService } from './api/dex.service';

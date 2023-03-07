@@ -20,11 +20,11 @@ class SushiswapTransactionDTO {
     /* Timestamp. */
     String timestamp
     /* Array of Mint events within the transaction, 0 or greater. */
-    List<String> mints = null
+    List<String> mints
     /* Array of Burn events within transaction, 0 or greater. */
-    List<String> burns = null
+    List<String> burns
     /* Array of Swap events within transaction, 0 or greater. */
-    List<String> swaps = null
+    List<String> swaps
     /*  */
     Long vid
 }

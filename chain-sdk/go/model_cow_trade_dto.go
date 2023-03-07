@@ -77,7 +77,7 @@ func NewCowTradeDTOWithDefaults() *CowTradeDTO {
 
 // GetEntryTime returns the EntryTime field value if set, zero value otherwise.
 func (o *CowTradeDTO) GetEntryTime() time.Time {
-	if o == nil || isNil(o.EntryTime) {
+	if o == nil || IsNil(o.EntryTime) {
 		var ret time.Time
 		return ret
 	}
@@ -87,7 +87,7 @@ func (o *CowTradeDTO) GetEntryTime() time.Time {
 // GetEntryTimeOk returns a tuple with the EntryTime field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CowTradeDTO) GetEntryTimeOk() (*time.Time, bool) {
-	if o == nil || isNil(o.EntryTime) {
+	if o == nil || IsNil(o.EntryTime) {
 		return nil, false
 	}
 	return o.EntryTime, true
@@ -95,7 +95,7 @@ func (o *CowTradeDTO) GetEntryTimeOk() (*time.Time, bool) {
 
 // HasEntryTime returns a boolean if a field has been set.
 func (o *CowTradeDTO) HasEntryTime() bool {
-	if o != nil && !isNil(o.EntryTime) {
+	if o != nil && !IsNil(o.EntryTime) {
 		return true
 	}
 
@@ -109,7 +109,7 @@ func (o *CowTradeDTO) SetEntryTime(v time.Time) {
 
 // GetRecvTime returns the RecvTime field value if set, zero value otherwise.
 func (o *CowTradeDTO) GetRecvTime() time.Time {
-	if o == nil || isNil(o.RecvTime) {
+	if o == nil || IsNil(o.RecvTime) {
 		var ret time.Time
 		return ret
 	}
@@ -119,7 +119,7 @@ func (o *CowTradeDTO) GetRecvTime() time.Time {
 // GetRecvTimeOk returns a tuple with the RecvTime field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CowTradeDTO) GetRecvTimeOk() (*time.Time, bool) {
-	if o == nil || isNil(o.RecvTime) {
+	if o == nil || IsNil(o.RecvTime) {
 		return nil, false
 	}
 	return o.RecvTime, true
@@ -127,7 +127,7 @@ func (o *CowTradeDTO) GetRecvTimeOk() (*time.Time, bool) {
 
 // HasRecvTime returns a boolean if a field has been set.
 func (o *CowTradeDTO) HasRecvTime() bool {
-	if o != nil && !isNil(o.RecvTime) {
+	if o != nil && !IsNil(o.RecvTime) {
 		return true
 	}
 
@@ -141,7 +141,7 @@ func (o *CowTradeDTO) SetRecvTime(v time.Time) {
 
 // GetBlockNumber returns the BlockNumber field value if set, zero value otherwise.
 func (o *CowTradeDTO) GetBlockNumber() int64 {
-	if o == nil || isNil(o.BlockNumber) {
+	if o == nil || IsNil(o.BlockNumber) {
 		var ret int64
 		return ret
 	}
@@ -151,7 +151,7 @@ func (o *CowTradeDTO) GetBlockNumber() int64 {
 // GetBlockNumberOk returns a tuple with the BlockNumber field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CowTradeDTO) GetBlockNumberOk() (*int64, bool) {
-	if o == nil || isNil(o.BlockNumber) {
+	if o == nil || IsNil(o.BlockNumber) {
 		return nil, false
 	}
 	return o.BlockNumber, true
@@ -159,7 +159,7 @@ func (o *CowTradeDTO) GetBlockNumberOk() (*int64, bool) {
 
 // HasBlockNumber returns a boolean if a field has been set.
 func (o *CowTradeDTO) HasBlockNumber() bool {
-	if o != nil && !isNil(o.BlockNumber) {
+	if o != nil && !IsNil(o.BlockNumber) {
 		return true
 	}
 
@@ -173,7 +173,7 @@ func (o *CowTradeDTO) SetBlockNumber(v int64) {
 
 // GetId returns the Id field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CowTradeDTO) GetId() string {
-	if o == nil || isNil(o.Id.Get()) {
+	if o == nil || IsNil(o.Id.Get()) {
 		var ret string
 		return ret
 	}
@@ -215,7 +215,7 @@ func (o *CowTradeDTO) UnsetId() {
 
 // GetTimestamp returns the Timestamp field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CowTradeDTO) GetTimestamp() string {
-	if o == nil || isNil(o.Timestamp.Get()) {
+	if o == nil || IsNil(o.Timestamp.Get()) {
 		var ret string
 		return ret
 	}
@@ -257,7 +257,7 @@ func (o *CowTradeDTO) UnsetTimestamp() {
 
 // GetGasPrice returns the GasPrice field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CowTradeDTO) GetGasPrice() string {
-	if o == nil || isNil(o.GasPrice.Get()) {
+	if o == nil || IsNil(o.GasPrice.Get()) {
 		var ret string
 		return ret
 	}
@@ -299,7 +299,7 @@ func (o *CowTradeDTO) UnsetGasPrice() {
 
 // GetGasLimit returns the GasLimit field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CowTradeDTO) GetGasLimit() string {
-	if o == nil || isNil(o.GasLimit.Get()) {
+	if o == nil || IsNil(o.GasLimit.Get()) {
 		var ret string
 		return ret
 	}
@@ -341,7 +341,7 @@ func (o *CowTradeDTO) UnsetGasLimit() {
 
 // GetFeeAmount returns the FeeAmount field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CowTradeDTO) GetFeeAmount() string {
-	if o == nil || isNil(o.FeeAmount.Get()) {
+	if o == nil || IsNil(o.FeeAmount.Get()) {
 		var ret string
 		return ret
 	}
@@ -383,7 +383,7 @@ func (o *CowTradeDTO) UnsetFeeAmount() {
 
 // GetTxHash returns the TxHash field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CowTradeDTO) GetTxHash() string {
-	if o == nil || isNil(o.TxHash.Get()) {
+	if o == nil || IsNil(o.TxHash.Get()) {
 		var ret string
 		return ret
 	}
@@ -425,7 +425,7 @@ func (o *CowTradeDTO) UnsetTxHash() {
 
 // GetSettlement returns the Settlement field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CowTradeDTO) GetSettlement() string {
-	if o == nil || isNil(o.Settlement.Get()) {
+	if o == nil || IsNil(o.Settlement.Get()) {
 		var ret string
 		return ret
 	}
@@ -467,7 +467,7 @@ func (o *CowTradeDTO) UnsetSettlement() {
 
 // GetBuyAmount returns the BuyAmount field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CowTradeDTO) GetBuyAmount() string {
-	if o == nil || isNil(o.BuyAmount.Get()) {
+	if o == nil || IsNil(o.BuyAmount.Get()) {
 		var ret string
 		return ret
 	}
@@ -509,7 +509,7 @@ func (o *CowTradeDTO) UnsetBuyAmount() {
 
 // GetSellAmount returns the SellAmount field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CowTradeDTO) GetSellAmount() string {
-	if o == nil || isNil(o.SellAmount.Get()) {
+	if o == nil || IsNil(o.SellAmount.Get()) {
 		var ret string
 		return ret
 	}
@@ -551,7 +551,7 @@ func (o *CowTradeDTO) UnsetSellAmount() {
 
 // GetSellToken returns the SellToken field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CowTradeDTO) GetSellToken() string {
-	if o == nil || isNil(o.SellToken.Get()) {
+	if o == nil || IsNil(o.SellToken.Get()) {
 		var ret string
 		return ret
 	}
@@ -593,7 +593,7 @@ func (o *CowTradeDTO) UnsetSellToken() {
 
 // GetBuyToken returns the BuyToken field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CowTradeDTO) GetBuyToken() string {
-	if o == nil || isNil(o.BuyToken.Get()) {
+	if o == nil || IsNil(o.BuyToken.Get()) {
 		var ret string
 		return ret
 	}
@@ -635,7 +635,7 @@ func (o *CowTradeDTO) UnsetBuyToken() {
 
 // GetOrder returns the Order field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CowTradeDTO) GetOrder() string {
-	if o == nil || isNil(o.Order.Get()) {
+	if o == nil || IsNil(o.Order.Get()) {
 		var ret string
 		return ret
 	}
@@ -677,7 +677,7 @@ func (o *CowTradeDTO) UnsetOrder() {
 
 // GetVid returns the Vid field value if set, zero value otherwise.
 func (o *CowTradeDTO) GetVid() int64 {
-	if o == nil || isNil(o.Vid) {
+	if o == nil || IsNil(o.Vid) {
 		var ret int64
 		return ret
 	}
@@ -687,7 +687,7 @@ func (o *CowTradeDTO) GetVid() int64 {
 // GetVidOk returns a tuple with the Vid field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CowTradeDTO) GetVidOk() (*int64, bool) {
-	if o == nil || isNil(o.Vid) {
+	if o == nil || IsNil(o.Vid) {
 		return nil, false
 	}
 	return o.Vid, true
@@ -695,7 +695,7 @@ func (o *CowTradeDTO) GetVidOk() (*int64, bool) {
 
 // HasVid returns a boolean if a field has been set.
 func (o *CowTradeDTO) HasVid() bool {
-	if o != nil && !isNil(o.Vid) {
+	if o != nil && !IsNil(o.Vid) {
 		return true
 	}
 
@@ -709,7 +709,7 @@ func (o *CowTradeDTO) SetVid(v int64) {
 
 // GetPoolId returns the PoolId field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CowTradeDTO) GetPoolId() string {
-	if o == nil || isNil(o.PoolId.Get()) {
+	if o == nil || IsNil(o.PoolId.Get()) {
 		var ret string
 		return ret
 	}
@@ -751,7 +751,7 @@ func (o *CowTradeDTO) UnsetPoolId() {
 
 // GetTransactionId returns the TransactionId field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CowTradeDTO) GetTransactionId() string {
-	if o == nil || isNil(o.TransactionId.Get()) {
+	if o == nil || IsNil(o.TransactionId.Get()) {
 		var ret string
 		return ret
 	}
@@ -793,7 +793,7 @@ func (o *CowTradeDTO) UnsetTransactionId() {
 
 // GetEvaluatedPrice returns the EvaluatedPrice field value if set, zero value otherwise.
 func (o *CowTradeDTO) GetEvaluatedPrice() float64 {
-	if o == nil || isNil(o.EvaluatedPrice) {
+	if o == nil || IsNil(o.EvaluatedPrice) {
 		var ret float64
 		return ret
 	}
@@ -803,7 +803,7 @@ func (o *CowTradeDTO) GetEvaluatedPrice() float64 {
 // GetEvaluatedPriceOk returns a tuple with the EvaluatedPrice field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CowTradeDTO) GetEvaluatedPriceOk() (*float64, bool) {
-	if o == nil || isNil(o.EvaluatedPrice) {
+	if o == nil || IsNil(o.EvaluatedPrice) {
 		return nil, false
 	}
 	return o.EvaluatedPrice, true
@@ -811,7 +811,7 @@ func (o *CowTradeDTO) GetEvaluatedPriceOk() (*float64, bool) {
 
 // HasEvaluatedPrice returns a boolean if a field has been set.
 func (o *CowTradeDTO) HasEvaluatedPrice() bool {
-	if o != nil && !isNil(o.EvaluatedPrice) {
+	if o != nil && !IsNil(o.EvaluatedPrice) {
 		return true
 	}
 
@@ -825,7 +825,7 @@ func (o *CowTradeDTO) SetEvaluatedPrice(v float64) {
 
 // GetEvaluatedAmount returns the EvaluatedAmount field value if set, zero value otherwise.
 func (o *CowTradeDTO) GetEvaluatedAmount() float64 {
-	if o == nil || isNil(o.EvaluatedAmount) {
+	if o == nil || IsNil(o.EvaluatedAmount) {
 		var ret float64
 		return ret
 	}
@@ -835,7 +835,7 @@ func (o *CowTradeDTO) GetEvaluatedAmount() float64 {
 // GetEvaluatedAmountOk returns a tuple with the EvaluatedAmount field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CowTradeDTO) GetEvaluatedAmountOk() (*float64, bool) {
-	if o == nil || isNil(o.EvaluatedAmount) {
+	if o == nil || IsNil(o.EvaluatedAmount) {
 		return nil, false
 	}
 	return o.EvaluatedAmount, true
@@ -843,7 +843,7 @@ func (o *CowTradeDTO) GetEvaluatedAmountOk() (*float64, bool) {
 
 // HasEvaluatedAmount returns a boolean if a field has been set.
 func (o *CowTradeDTO) HasEvaluatedAmount() bool {
-	if o != nil && !isNil(o.EvaluatedAmount) {
+	if o != nil && !IsNil(o.EvaluatedAmount) {
 		return true
 	}
 
@@ -857,7 +857,7 @@ func (o *CowTradeDTO) SetEvaluatedAmount(v float64) {
 
 // GetEvaluatedAggressor returns the EvaluatedAggressor field value if set, zero value otherwise.
 func (o *CowTradeDTO) GetEvaluatedAggressor() TransactionsETradeAggressiveSide {
-	if o == nil || isNil(o.EvaluatedAggressor) {
+	if o == nil || IsNil(o.EvaluatedAggressor) {
 		var ret TransactionsETradeAggressiveSide
 		return ret
 	}
@@ -867,7 +867,7 @@ func (o *CowTradeDTO) GetEvaluatedAggressor() TransactionsETradeAggressiveSide {
 // GetEvaluatedAggressorOk returns a tuple with the EvaluatedAggressor field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CowTradeDTO) GetEvaluatedAggressorOk() (*TransactionsETradeAggressiveSide, bool) {
-	if o == nil || isNil(o.EvaluatedAggressor) {
+	if o == nil || IsNil(o.EvaluatedAggressor) {
 		return nil, false
 	}
 	return o.EvaluatedAggressor, true
@@ -875,7 +875,7 @@ func (o *CowTradeDTO) GetEvaluatedAggressorOk() (*TransactionsETradeAggressiveSi
 
 // HasEvaluatedAggressor returns a boolean if a field has been set.
 func (o *CowTradeDTO) HasEvaluatedAggressor() bool {
-	if o != nil && !isNil(o.EvaluatedAggressor) {
+	if o != nil && !IsNil(o.EvaluatedAggressor) {
 		return true
 	}
 
@@ -897,13 +897,13 @@ func (o CowTradeDTO) MarshalJSON() ([]byte, error) {
 
 func (o CowTradeDTO) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if !isNil(o.EntryTime) {
+	if !IsNil(o.EntryTime) {
 		toSerialize["entry_time"] = o.EntryTime
 	}
-	if !isNil(o.RecvTime) {
+	if !IsNil(o.RecvTime) {
 		toSerialize["recv_time"] = o.RecvTime
 	}
-	if !isNil(o.BlockNumber) {
+	if !IsNil(o.BlockNumber) {
 		toSerialize["block_number"] = o.BlockNumber
 	}
 	if o.Id.IsSet() {
@@ -942,7 +942,7 @@ func (o CowTradeDTO) ToMap() (map[string]interface{}, error) {
 	if o.Order.IsSet() {
 		toSerialize["order"] = o.Order.Get()
 	}
-	if !isNil(o.Vid) {
+	if !IsNil(o.Vid) {
 		toSerialize["vid"] = o.Vid
 	}
 	if o.PoolId.IsSet() {
@@ -953,7 +953,7 @@ func (o CowTradeDTO) ToMap() (map[string]interface{}, error) {
 	}
 	// skip: evaluated_price is readOnly
 	// skip: evaluated_amount is readOnly
-	if !isNil(o.EvaluatedAggressor) {
+	if !IsNil(o.EvaluatedAggressor) {
 		toSerialize["evaluated_aggressor"] = o.EvaluatedAggressor
 	}
 	return toSerialize, nil

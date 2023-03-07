@@ -57,6 +57,42 @@ public class JsonUtil {
   public static Type getListTypeForDeserialization(Class cls) {
     String className = cls.getSimpleName();
     
+    if ("CRYPTOPUNKSBidDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CRYPTOPUNKSBidDTO>>(){}.getType();
+    }
+    
+    if ("CRYPTOPUNKSCollectionDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CRYPTOPUNKSCollectionDTO>>(){}.getType();
+    }
+    
+    if ("CRYPTOPUNKSCollectionDailySnapshotDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CRYPTOPUNKSCollectionDailySnapshotDTO>>(){}.getType();
+    }
+    
+    if ("CRYPTOPUNKSDataSourcesDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CRYPTOPUNKSDataSourcesDTO>>(){}.getType();
+    }
+    
+    if ("CRYPTOPUNKSItemDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CRYPTOPUNKSItemDTO>>(){}.getType();
+    }
+    
+    if ("CRYPTOPUNKSMarketPlaceDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CRYPTOPUNKSMarketPlaceDTO>>(){}.getType();
+    }
+    
+    if ("CRYPTOPUNKSMarketplaceDailySnapshotDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CRYPTOPUNKSMarketplaceDailySnapshotDTO>>(){}.getType();
+    }
+    
+    if ("CRYPTOPUNKSTradeDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CRYPTOPUNKSTradeDTO>>(){}.getType();
+    }
+    
+    if ("CRYPTOPUNKSUserDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CRYPTOPUNKSUserDTO>>(){}.getType();
+    }
+    
     if ("CowOrderDTO".equalsIgnoreCase(className)) {
       return new TypeToken<List<CowOrderDTO>>(){}.getType();
     }
@@ -454,6 +490,42 @@ public class JsonUtil {
 
   public static Type getTypeForDeserialization(Class cls) {
     String className = cls.getSimpleName();
+    
+    if ("CRYPTOPUNKSBidDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<CRYPTOPUNKSBidDTO>(){}.getType();
+    }
+    
+    if ("CRYPTOPUNKSCollectionDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<CRYPTOPUNKSCollectionDTO>(){}.getType();
+    }
+    
+    if ("CRYPTOPUNKSCollectionDailySnapshotDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<CRYPTOPUNKSCollectionDailySnapshotDTO>(){}.getType();
+    }
+    
+    if ("CRYPTOPUNKSDataSourcesDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<CRYPTOPUNKSDataSourcesDTO>(){}.getType();
+    }
+    
+    if ("CRYPTOPUNKSItemDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<CRYPTOPUNKSItemDTO>(){}.getType();
+    }
+    
+    if ("CRYPTOPUNKSMarketPlaceDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<CRYPTOPUNKSMarketPlaceDTO>(){}.getType();
+    }
+    
+    if ("CRYPTOPUNKSMarketplaceDailySnapshotDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<CRYPTOPUNKSMarketplaceDailySnapshotDTO>(){}.getType();
+    }
+    
+    if ("CRYPTOPUNKSTradeDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<CRYPTOPUNKSTradeDTO>(){}.getType();
+    }
+    
+    if ("CRYPTOPUNKSUserDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<CRYPTOPUNKSUserDTO>(){}.getType();
+    }
     
     if ("CowOrderDTO".equalsIgnoreCase(className)) {
       return new TypeToken<CowOrderDTO>(){}.getType();

@@ -58,7 +58,7 @@ func NewCurveGaugeWeightVoteDTOWithDefaults() *CurveGaugeWeightVoteDTO {
 
 // GetEntryTime returns the EntryTime field value if set, zero value otherwise.
 func (o *CurveGaugeWeightVoteDTO) GetEntryTime() time.Time {
-	if o == nil || isNil(o.EntryTime) {
+	if o == nil || IsNil(o.EntryTime) {
 		var ret time.Time
 		return ret
 	}
@@ -68,7 +68,7 @@ func (o *CurveGaugeWeightVoteDTO) GetEntryTime() time.Time {
 // GetEntryTimeOk returns a tuple with the EntryTime field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CurveGaugeWeightVoteDTO) GetEntryTimeOk() (*time.Time, bool) {
-	if o == nil || isNil(o.EntryTime) {
+	if o == nil || IsNil(o.EntryTime) {
 		return nil, false
 	}
 	return o.EntryTime, true
@@ -76,7 +76,7 @@ func (o *CurveGaugeWeightVoteDTO) GetEntryTimeOk() (*time.Time, bool) {
 
 // HasEntryTime returns a boolean if a field has been set.
 func (o *CurveGaugeWeightVoteDTO) HasEntryTime() bool {
-	if o != nil && !isNil(o.EntryTime) {
+	if o != nil && !IsNil(o.EntryTime) {
 		return true
 	}
 
@@ -90,7 +90,7 @@ func (o *CurveGaugeWeightVoteDTO) SetEntryTime(v time.Time) {
 
 // GetRecvTime returns the RecvTime field value if set, zero value otherwise.
 func (o *CurveGaugeWeightVoteDTO) GetRecvTime() time.Time {
-	if o == nil || isNil(o.RecvTime) {
+	if o == nil || IsNil(o.RecvTime) {
 		var ret time.Time
 		return ret
 	}
@@ -100,7 +100,7 @@ func (o *CurveGaugeWeightVoteDTO) GetRecvTime() time.Time {
 // GetRecvTimeOk returns a tuple with the RecvTime field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CurveGaugeWeightVoteDTO) GetRecvTimeOk() (*time.Time, bool) {
-	if o == nil || isNil(o.RecvTime) {
+	if o == nil || IsNil(o.RecvTime) {
 		return nil, false
 	}
 	return o.RecvTime, true
@@ -108,7 +108,7 @@ func (o *CurveGaugeWeightVoteDTO) GetRecvTimeOk() (*time.Time, bool) {
 
 // HasRecvTime returns a boolean if a field has been set.
 func (o *CurveGaugeWeightVoteDTO) HasRecvTime() bool {
-	if o != nil && !isNil(o.RecvTime) {
+	if o != nil && !IsNil(o.RecvTime) {
 		return true
 	}
 
@@ -122,7 +122,7 @@ func (o *CurveGaugeWeightVoteDTO) SetRecvTime(v time.Time) {
 
 // GetBlockNumber returns the BlockNumber field value if set, zero value otherwise.
 func (o *CurveGaugeWeightVoteDTO) GetBlockNumber() int64 {
-	if o == nil || isNil(o.BlockNumber) {
+	if o == nil || IsNil(o.BlockNumber) {
 		var ret int64
 		return ret
 	}
@@ -132,7 +132,7 @@ func (o *CurveGaugeWeightVoteDTO) GetBlockNumber() int64 {
 // GetBlockNumberOk returns a tuple with the BlockNumber field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CurveGaugeWeightVoteDTO) GetBlockNumberOk() (*int64, bool) {
-	if o == nil || isNil(o.BlockNumber) {
+	if o == nil || IsNil(o.BlockNumber) {
 		return nil, false
 	}
 	return o.BlockNumber, true
@@ -140,7 +140,7 @@ func (o *CurveGaugeWeightVoteDTO) GetBlockNumberOk() (*int64, bool) {
 
 // HasBlockNumber returns a boolean if a field has been set.
 func (o *CurveGaugeWeightVoteDTO) HasBlockNumber() bool {
-	if o != nil && !isNil(o.BlockNumber) {
+	if o != nil && !IsNil(o.BlockNumber) {
 		return true
 	}
 
@@ -154,7 +154,7 @@ func (o *CurveGaugeWeightVoteDTO) SetBlockNumber(v int64) {
 
 // GetId returns the Id field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurveGaugeWeightVoteDTO) GetId() string {
-	if o == nil || isNil(o.Id.Get()) {
+	if o == nil || IsNil(o.Id.Get()) {
 		var ret string
 		return ret
 	}
@@ -196,7 +196,7 @@ func (o *CurveGaugeWeightVoteDTO) UnsetId() {
 
 // GetGauge returns the Gauge field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurveGaugeWeightVoteDTO) GetGauge() string {
-	if o == nil || isNil(o.Gauge.Get()) {
+	if o == nil || IsNil(o.Gauge.Get()) {
 		var ret string
 		return ret
 	}
@@ -238,7 +238,7 @@ func (o *CurveGaugeWeightVoteDTO) UnsetGauge() {
 
 // GetUser returns the User field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurveGaugeWeightVoteDTO) GetUser() string {
-	if o == nil || isNil(o.User.Get()) {
+	if o == nil || IsNil(o.User.Get()) {
 		var ret string
 		return ret
 	}
@@ -280,7 +280,7 @@ func (o *CurveGaugeWeightVoteDTO) UnsetUser() {
 
 // GetTime returns the Time field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurveGaugeWeightVoteDTO) GetTime() string {
-	if o == nil || isNil(o.Time.Get()) {
+	if o == nil || IsNil(o.Time.Get()) {
 		var ret string
 		return ret
 	}
@@ -322,7 +322,7 @@ func (o *CurveGaugeWeightVoteDTO) UnsetTime() {
 
 // GetWeight returns the Weight field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurveGaugeWeightVoteDTO) GetWeight() string {
-	if o == nil || isNil(o.Weight.Get()) {
+	if o == nil || IsNil(o.Weight.Get()) {
 		var ret string
 		return ret
 	}
@@ -364,7 +364,7 @@ func (o *CurveGaugeWeightVoteDTO) UnsetWeight() {
 
 // GetVid returns the Vid field value if set, zero value otherwise.
 func (o *CurveGaugeWeightVoteDTO) GetVid() int64 {
-	if o == nil || isNil(o.Vid) {
+	if o == nil || IsNil(o.Vid) {
 		var ret int64
 		return ret
 	}
@@ -374,7 +374,7 @@ func (o *CurveGaugeWeightVoteDTO) GetVid() int64 {
 // GetVidOk returns a tuple with the Vid field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CurveGaugeWeightVoteDTO) GetVidOk() (*int64, bool) {
-	if o == nil || isNil(o.Vid) {
+	if o == nil || IsNil(o.Vid) {
 		return nil, false
 	}
 	return o.Vid, true
@@ -382,7 +382,7 @@ func (o *CurveGaugeWeightVoteDTO) GetVidOk() (*int64, bool) {
 
 // HasVid returns a boolean if a field has been set.
 func (o *CurveGaugeWeightVoteDTO) HasVid() bool {
-	if o != nil && !isNil(o.Vid) {
+	if o != nil && !IsNil(o.Vid) {
 		return true
 	}
 
@@ -404,13 +404,13 @@ func (o CurveGaugeWeightVoteDTO) MarshalJSON() ([]byte, error) {
 
 func (o CurveGaugeWeightVoteDTO) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if !isNil(o.EntryTime) {
+	if !IsNil(o.EntryTime) {
 		toSerialize["entry_time"] = o.EntryTime
 	}
-	if !isNil(o.RecvTime) {
+	if !IsNil(o.RecvTime) {
 		toSerialize["recv_time"] = o.RecvTime
 	}
-	if !isNil(o.BlockNumber) {
+	if !IsNil(o.BlockNumber) {
 		toSerialize["block_number"] = o.BlockNumber
 	}
 	if o.Id.IsSet() {
@@ -428,7 +428,7 @@ func (o CurveGaugeWeightVoteDTO) ToMap() (map[string]interface{}, error) {
 	if o.Weight.IsSet() {
 		toSerialize["weight"] = o.Weight.Get()
 	}
-	if !isNil(o.Vid) {
+	if !IsNil(o.Vid) {
 		toSerialize["vid"] = o.Vid
 	}
 	return toSerialize, nil

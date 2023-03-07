@@ -1,3 +1,5 @@
+export * from './cRYPTOPUNKSApi';
+import { CRYPTOPUNKSApi } from './cRYPTOPUNKSApi';
 export * from './cowApi';
 import { CowApi } from './cowApi';
 export * from './curveApi';
@@ -23,4 +25,4 @@ export class HttpError extends Error {
 
 export { RequestFile } from '../model/models';
 
-export const APIS = [CowApi, CurveApi, DexApi, MetadataApi, SushiswapApi, UniswapV2Api, UniswapV3Api];
+export const APIS = [CRYPTOPUNKSApi, CowApi, CurveApi, DexApi, MetadataApi, SushiswapApi, UniswapV2Api, UniswapV3Api];

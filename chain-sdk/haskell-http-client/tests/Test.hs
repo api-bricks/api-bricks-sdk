@@ -20,6 +20,15 @@ main =
   hspec $ modifyMaxSize (const 10) $ do
     describe "JSON instances" $ do
       pure ()
+      propMimeEq MimeJSON (Proxy :: Proxy CRYPTOPUNKSBidDTO)
+      propMimeEq MimeJSON (Proxy :: Proxy CRYPTOPUNKSCollectionDTO)
+      propMimeEq MimeJSON (Proxy :: Proxy CRYPTOPUNKSCollectionDailySnapshotDTO)
+      propMimeEq MimeJSON (Proxy :: Proxy CRYPTOPUNKSDataSourcesDTO)
+      propMimeEq MimeJSON (Proxy :: Proxy CRYPTOPUNKSItemDTO)
+      propMimeEq MimeJSON (Proxy :: Proxy CRYPTOPUNKSMarketPlaceDTO)
+      propMimeEq MimeJSON (Proxy :: Proxy CRYPTOPUNKSMarketplaceDailySnapshotDTO)
+      propMimeEq MimeJSON (Proxy :: Proxy CRYPTOPUNKSTradeDTO)
+      propMimeEq MimeJSON (Proxy :: Proxy CRYPTOPUNKSUserDTO)
       propMimeEq MimeJSON (Proxy :: Proxy CowOrderDTO)
       propMimeEq MimeJSON (Proxy :: Proxy CowSettlementDTO)
       propMimeEq MimeJSON (Proxy :: Proxy CowTokenDTO)

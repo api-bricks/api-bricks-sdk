@@ -95,6 +95,49 @@ declare -a result_color_table=( "$WHITE" "$WHITE" "$GREEN" "$YELLOW" "$WHITE" "$
 # 0 - optional
 # 1 - required
 declare -A operation_parameters_minimum_occurrences
+operation_parameters_minimum_occurrences["cRYPTOPUNKSGetBidsHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["cRYPTOPUNKSGetBidsHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["cRYPTOPUNKSGetBidsHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["cRYPTOPUNKSGetBidsHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["cRYPTOPUNKSGetBidsHistorical:::id"]=0
+operation_parameters_minimum_occurrences["cRYPTOPUNKSGetCollectionDailySnapshotsHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["cRYPTOPUNKSGetCollectionDailySnapshotsHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["cRYPTOPUNKSGetCollectionDailySnapshotsHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["cRYPTOPUNKSGetCollectionDailySnapshotsHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["cRYPTOPUNKSGetCollectionsHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["cRYPTOPUNKSGetCollectionsHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["cRYPTOPUNKSGetCollectionsHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["cRYPTOPUNKSGetCollectionsHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["cRYPTOPUNKSGetCollectionsHistorical:::id"]=0
+operation_parameters_minimum_occurrences["cRYPTOPUNKSGetDataSourcesHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["cRYPTOPUNKSGetDataSourcesHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["cRYPTOPUNKSGetDataSourcesHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["cRYPTOPUNKSGetDataSourcesHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["cRYPTOPUNKSGetDataSourcesHistorical:::id"]=0
+operation_parameters_minimum_occurrences["cRYPTOPUNKSGetItemsHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["cRYPTOPUNKSGetItemsHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["cRYPTOPUNKSGetItemsHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["cRYPTOPUNKSGetItemsHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["cRYPTOPUNKSGetMarketPlacesHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["cRYPTOPUNKSGetMarketPlacesHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["cRYPTOPUNKSGetMarketPlacesHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["cRYPTOPUNKSGetMarketPlacesHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["cRYPTOPUNKSGetMarketPlacesHistorical:::id"]=0
+operation_parameters_minimum_occurrences["cRYPTOPUNKSGetMarketplaceDailySnapshotsHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["cRYPTOPUNKSGetMarketplaceDailySnapshotsHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["cRYPTOPUNKSGetMarketplaceDailySnapshotsHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["cRYPTOPUNKSGetMarketplaceDailySnapshotsHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["cRYPTOPUNKSGetMarketplaceDailySnapshotsHistorical:::id"]=0
+operation_parameters_minimum_occurrences["cRYPTOPUNKSGetTradesHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["cRYPTOPUNKSGetTradesHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["cRYPTOPUNKSGetTradesHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["cRYPTOPUNKSGetTradesHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["cRYPTOPUNKSGetTradesHistorical:::id"]=0
+operation_parameters_minimum_occurrences["cRYPTOPUNKSGetUsersHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["cRYPTOPUNKSGetUsersHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["cRYPTOPUNKSGetUsersHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["cRYPTOPUNKSGetUsersHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["cRYPTOPUNKSGetUsersHistorical:::id"]=0
 operation_parameters_minimum_occurrences["cowGetOrdersHistorical:::startBlock"]=0
 operation_parameters_minimum_occurrences["cowGetOrdersHistorical:::endBlock"]=0
 operation_parameters_minimum_occurrences["cowGetOrdersHistorical:::startDate"]=0
@@ -688,6 +731,49 @@ operation_parameters_minimum_occurrences["uniswapV3SwapsCurrent:::pool"]=0
 # N - N values
 # 0 - unlimited
 declare -A operation_parameters_maximum_occurrences
+operation_parameters_maximum_occurrences["cRYPTOPUNKSGetBidsHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["cRYPTOPUNKSGetBidsHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["cRYPTOPUNKSGetBidsHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["cRYPTOPUNKSGetBidsHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["cRYPTOPUNKSGetBidsHistorical:::id"]=0
+operation_parameters_maximum_occurrences["cRYPTOPUNKSGetCollectionDailySnapshotsHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["cRYPTOPUNKSGetCollectionDailySnapshotsHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["cRYPTOPUNKSGetCollectionDailySnapshotsHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["cRYPTOPUNKSGetCollectionDailySnapshotsHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["cRYPTOPUNKSGetCollectionsHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["cRYPTOPUNKSGetCollectionsHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["cRYPTOPUNKSGetCollectionsHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["cRYPTOPUNKSGetCollectionsHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["cRYPTOPUNKSGetCollectionsHistorical:::id"]=0
+operation_parameters_maximum_occurrences["cRYPTOPUNKSGetDataSourcesHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["cRYPTOPUNKSGetDataSourcesHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["cRYPTOPUNKSGetDataSourcesHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["cRYPTOPUNKSGetDataSourcesHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["cRYPTOPUNKSGetDataSourcesHistorical:::id"]=0
+operation_parameters_maximum_occurrences["cRYPTOPUNKSGetItemsHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["cRYPTOPUNKSGetItemsHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["cRYPTOPUNKSGetItemsHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["cRYPTOPUNKSGetItemsHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["cRYPTOPUNKSGetMarketPlacesHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["cRYPTOPUNKSGetMarketPlacesHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["cRYPTOPUNKSGetMarketPlacesHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["cRYPTOPUNKSGetMarketPlacesHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["cRYPTOPUNKSGetMarketPlacesHistorical:::id"]=0
+operation_parameters_maximum_occurrences["cRYPTOPUNKSGetMarketplaceDailySnapshotsHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["cRYPTOPUNKSGetMarketplaceDailySnapshotsHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["cRYPTOPUNKSGetMarketplaceDailySnapshotsHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["cRYPTOPUNKSGetMarketplaceDailySnapshotsHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["cRYPTOPUNKSGetMarketplaceDailySnapshotsHistorical:::id"]=0
+operation_parameters_maximum_occurrences["cRYPTOPUNKSGetTradesHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["cRYPTOPUNKSGetTradesHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["cRYPTOPUNKSGetTradesHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["cRYPTOPUNKSGetTradesHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["cRYPTOPUNKSGetTradesHistorical:::id"]=0
+operation_parameters_maximum_occurrences["cRYPTOPUNKSGetUsersHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["cRYPTOPUNKSGetUsersHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["cRYPTOPUNKSGetUsersHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["cRYPTOPUNKSGetUsersHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["cRYPTOPUNKSGetUsersHistorical:::id"]=0
 operation_parameters_maximum_occurrences["cowGetOrdersHistorical:::startBlock"]=0
 operation_parameters_maximum_occurrences["cowGetOrdersHistorical:::endBlock"]=0
 operation_parameters_maximum_occurrences["cowGetOrdersHistorical:::startDate"]=0
@@ -1278,6 +1364,49 @@ operation_parameters_maximum_occurrences["uniswapV3SwapsCurrent:::pool"]=0
 # The type of collection for specifying multiple values for parameter:
 # - multi, csv, ssv, tsv
 declare -A operation_parameters_collection_type
+operation_parameters_collection_type["cRYPTOPUNKSGetBidsHistorical:::startBlock"]=""
+operation_parameters_collection_type["cRYPTOPUNKSGetBidsHistorical:::endBlock"]=""
+operation_parameters_collection_type["cRYPTOPUNKSGetBidsHistorical:::startDate"]=""
+operation_parameters_collection_type["cRYPTOPUNKSGetBidsHistorical:::endDate"]=""
+operation_parameters_collection_type["cRYPTOPUNKSGetBidsHistorical:::id"]=""
+operation_parameters_collection_type["cRYPTOPUNKSGetCollectionDailySnapshotsHistorical:::startBlock"]=""
+operation_parameters_collection_type["cRYPTOPUNKSGetCollectionDailySnapshotsHistorical:::endBlock"]=""
+operation_parameters_collection_type["cRYPTOPUNKSGetCollectionDailySnapshotsHistorical:::startDate"]=""
+operation_parameters_collection_type["cRYPTOPUNKSGetCollectionDailySnapshotsHistorical:::endDate"]=""
+operation_parameters_collection_type["cRYPTOPUNKSGetCollectionsHistorical:::startBlock"]=""
+operation_parameters_collection_type["cRYPTOPUNKSGetCollectionsHistorical:::endBlock"]=""
+operation_parameters_collection_type["cRYPTOPUNKSGetCollectionsHistorical:::startDate"]=""
+operation_parameters_collection_type["cRYPTOPUNKSGetCollectionsHistorical:::endDate"]=""
+operation_parameters_collection_type["cRYPTOPUNKSGetCollectionsHistorical:::id"]=""
+operation_parameters_collection_type["cRYPTOPUNKSGetDataSourcesHistorical:::startBlock"]=""
+operation_parameters_collection_type["cRYPTOPUNKSGetDataSourcesHistorical:::endBlock"]=""
+operation_parameters_collection_type["cRYPTOPUNKSGetDataSourcesHistorical:::startDate"]=""
+operation_parameters_collection_type["cRYPTOPUNKSGetDataSourcesHistorical:::endDate"]=""
+operation_parameters_collection_type["cRYPTOPUNKSGetDataSourcesHistorical:::id"]=""
+operation_parameters_collection_type["cRYPTOPUNKSGetItemsHistorical:::startBlock"]=""
+operation_parameters_collection_type["cRYPTOPUNKSGetItemsHistorical:::endBlock"]=""
+operation_parameters_collection_type["cRYPTOPUNKSGetItemsHistorical:::startDate"]=""
+operation_parameters_collection_type["cRYPTOPUNKSGetItemsHistorical:::endDate"]=""
+operation_parameters_collection_type["cRYPTOPUNKSGetMarketPlacesHistorical:::startBlock"]=""
+operation_parameters_collection_type["cRYPTOPUNKSGetMarketPlacesHistorical:::endBlock"]=""
+operation_parameters_collection_type["cRYPTOPUNKSGetMarketPlacesHistorical:::startDate"]=""
+operation_parameters_collection_type["cRYPTOPUNKSGetMarketPlacesHistorical:::endDate"]=""
+operation_parameters_collection_type["cRYPTOPUNKSGetMarketPlacesHistorical:::id"]=""
+operation_parameters_collection_type["cRYPTOPUNKSGetMarketplaceDailySnapshotsHistorical:::startBlock"]=""
+operation_parameters_collection_type["cRYPTOPUNKSGetMarketplaceDailySnapshotsHistorical:::endBlock"]=""
+operation_parameters_collection_type["cRYPTOPUNKSGetMarketplaceDailySnapshotsHistorical:::startDate"]=""
+operation_parameters_collection_type["cRYPTOPUNKSGetMarketplaceDailySnapshotsHistorical:::endDate"]=""
+operation_parameters_collection_type["cRYPTOPUNKSGetMarketplaceDailySnapshotsHistorical:::id"]=""
+operation_parameters_collection_type["cRYPTOPUNKSGetTradesHistorical:::startBlock"]=""
+operation_parameters_collection_type["cRYPTOPUNKSGetTradesHistorical:::endBlock"]=""
+operation_parameters_collection_type["cRYPTOPUNKSGetTradesHistorical:::startDate"]=""
+operation_parameters_collection_type["cRYPTOPUNKSGetTradesHistorical:::endDate"]=""
+operation_parameters_collection_type["cRYPTOPUNKSGetTradesHistorical:::id"]=""
+operation_parameters_collection_type["cRYPTOPUNKSGetUsersHistorical:::startBlock"]=""
+operation_parameters_collection_type["cRYPTOPUNKSGetUsersHistorical:::endBlock"]=""
+operation_parameters_collection_type["cRYPTOPUNKSGetUsersHistorical:::startDate"]=""
+operation_parameters_collection_type["cRYPTOPUNKSGetUsersHistorical:::endDate"]=""
+operation_parameters_collection_type["cRYPTOPUNKSGetUsersHistorical:::id"]=""
 operation_parameters_collection_type["cowGetOrdersHistorical:::startBlock"]=""
 operation_parameters_collection_type["cowGetOrdersHistorical:::endBlock"]=""
 operation_parameters_collection_type["cowGetOrdersHistorical:::startDate"]=""
@@ -2245,6 +2374,29 @@ ${BOLD}${WHITE}Usage${OFF}
 EOF
     echo -e "${BOLD}${WHITE}Operations (grouped by tags)${OFF}"
     echo ""
+    echo -e "${BOLD}${WHITE}[cRYPTOPUNKS]${OFF}"
+read -r -d '' ops <<EOF
+  ${CYAN}cRYPTOPUNKSBidsCurrent${OFF};Bids (current)
+  ${CYAN}cRYPTOPUNKSCollectionDailySnapshotsCurrent${OFF};CollectionDailySnapshots (current)
+  ${CYAN}cRYPTOPUNKSCollectionsCurrent${OFF};Collections (current)
+  ${CYAN}cRYPTOPUNKSDataSourcesCurrent${OFF};DataSources (current)
+  ${CYAN}cRYPTOPUNKSGetBidsHistorical${OFF};Bids (historical)
+  ${CYAN}cRYPTOPUNKSGetCollectionDailySnapshotsHistorical${OFF};CollectionDailySnapshots (historical)
+  ${CYAN}cRYPTOPUNKSGetCollectionsHistorical${OFF};Collections (historical)
+  ${CYAN}cRYPTOPUNKSGetDataSourcesHistorical${OFF};DataSources (historical)
+  ${CYAN}cRYPTOPUNKSGetItemsHistorical${OFF};Items (historical)
+  ${CYAN}cRYPTOPUNKSGetMarketPlacesHistorical${OFF};MarketPlaces (historical)
+  ${CYAN}cRYPTOPUNKSGetMarketplaceDailySnapshotsHistorical${OFF};MarketplaceDailySnapshots (historical)
+  ${CYAN}cRYPTOPUNKSGetTradesHistorical${OFF};Trades (historical)
+  ${CYAN}cRYPTOPUNKSGetUsersHistorical${OFF};Users (historical)
+  ${CYAN}cRYPTOPUNKSItemsCurrent${OFF};Items (current)
+  ${CYAN}cRYPTOPUNKSMarketPlacesCurrent${OFF};MarketPlaces (current)
+  ${CYAN}cRYPTOPUNKSMarketplaceDailySnapshotsCurrent${OFF};MarketplaceDailySnapshots (current)
+  ${CYAN}cRYPTOPUNKSTradesCurrent${OFF};Trades (current)
+  ${CYAN}cRYPTOPUNKSUsersCurrent${OFF};Users (current)
+EOF
+echo "  $ops" | column -t -s ';'
+    echo ""
     echo -e "${BOLD}${WHITE}[cow]${OFF}"
 read -r -d '' ops <<EOF
   ${CYAN}cowGetOrdersHistorical${OFF};Orders (historical)
@@ -2527,6 +2679,389 @@ print_version() {
     echo ""
 }
 
+##############################################################################
+#
+# Print help for cRYPTOPUNKSBidsCurrent operation
+#
+##############################################################################
+print_cRYPTOPUNKSBidsCurrent_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}cRYPTOPUNKSBidsCurrent - Bids (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets bids." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for cRYPTOPUNKSCollectionDailySnapshotsCurrent operation
+#
+##############################################################################
+print_cRYPTOPUNKSCollectionDailySnapshotsCurrent_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}cRYPTOPUNKSCollectionDailySnapshotsCurrent - CollectionDailySnapshots (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets collectionDailySnapshots." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for cRYPTOPUNKSCollectionsCurrent operation
+#
+##############################################################################
+print_cRYPTOPUNKSCollectionsCurrent_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}cRYPTOPUNKSCollectionsCurrent - Collections (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets collections." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for cRYPTOPUNKSDataSourcesCurrent operation
+#
+##############################################################################
+print_cRYPTOPUNKSDataSourcesCurrent_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}cRYPTOPUNKSDataSourcesCurrent - DataSources (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets dataSources." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for cRYPTOPUNKSGetBidsHistorical operation
+#
+##############################################################################
+print_cRYPTOPUNKSGetBidsHistorical_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}cRYPTOPUNKSGetBidsHistorical - Bids (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets bids." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.${YELLOW} Specify as: startBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).${YELLOW} Specify as: endBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.${YELLOW} Specify as: startDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - The end date of timeframe.${YELLOW} Specify as: endDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}id${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: id=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for cRYPTOPUNKSGetCollectionDailySnapshotsHistorical operation
+#
+##############################################################################
+print_cRYPTOPUNKSGetCollectionDailySnapshotsHistorical_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}cRYPTOPUNKSGetCollectionDailySnapshotsHistorical - CollectionDailySnapshots (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets collectionDailySnapshots." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.${YELLOW} Specify as: startBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).${YELLOW} Specify as: endBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.${YELLOW} Specify as: startDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - The end date of timeframe.${YELLOW} Specify as: endDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for cRYPTOPUNKSGetCollectionsHistorical operation
+#
+##############################################################################
+print_cRYPTOPUNKSGetCollectionsHistorical_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}cRYPTOPUNKSGetCollectionsHistorical - Collections (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets collections." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.${YELLOW} Specify as: startBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).${YELLOW} Specify as: endBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.${YELLOW} Specify as: startDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - The end date of timeframe.${YELLOW} Specify as: endDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}id${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: id=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for cRYPTOPUNKSGetDataSourcesHistorical operation
+#
+##############################################################################
+print_cRYPTOPUNKSGetDataSourcesHistorical_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}cRYPTOPUNKSGetDataSourcesHistorical - DataSources (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets dataSources." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.${YELLOW} Specify as: startBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).${YELLOW} Specify as: endBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.${YELLOW} Specify as: startDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - The end date of timeframe.${YELLOW} Specify as: endDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}id${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: id=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for cRYPTOPUNKSGetItemsHistorical operation
+#
+##############################################################################
+print_cRYPTOPUNKSGetItemsHistorical_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}cRYPTOPUNKSGetItemsHistorical - Items (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets items." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.${YELLOW} Specify as: startBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).${YELLOW} Specify as: endBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.${YELLOW} Specify as: startDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - The end date of timeframe.${YELLOW} Specify as: endDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for cRYPTOPUNKSGetMarketPlacesHistorical operation
+#
+##############################################################################
+print_cRYPTOPUNKSGetMarketPlacesHistorical_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}cRYPTOPUNKSGetMarketPlacesHistorical - MarketPlaces (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets marketPlaces." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.${YELLOW} Specify as: startBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).${YELLOW} Specify as: endBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.${YELLOW} Specify as: startDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - The end date of timeframe.${YELLOW} Specify as: endDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}id${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: id=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for cRYPTOPUNKSGetMarketplaceDailySnapshotsHistorical operation
+#
+##############################################################################
+print_cRYPTOPUNKSGetMarketplaceDailySnapshotsHistorical_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}cRYPTOPUNKSGetMarketplaceDailySnapshotsHistorical - MarketplaceDailySnapshots (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets marketplaceDailySnapshots." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.${YELLOW} Specify as: startBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).${YELLOW} Specify as: endBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.${YELLOW} Specify as: startDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - The end date of timeframe.${YELLOW} Specify as: endDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}id${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: id=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for cRYPTOPUNKSGetTradesHistorical operation
+#
+##############################################################################
+print_cRYPTOPUNKSGetTradesHistorical_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}cRYPTOPUNKSGetTradesHistorical - Trades (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets trades." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.${YELLOW} Specify as: startBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).${YELLOW} Specify as: endBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.${YELLOW} Specify as: startDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - The end date of timeframe.${YELLOW} Specify as: endDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}id${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: id=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for cRYPTOPUNKSGetUsersHistorical operation
+#
+##############################################################################
+print_cRYPTOPUNKSGetUsersHistorical_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}cRYPTOPUNKSGetUsersHistorical - Users (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets users." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.${YELLOW} Specify as: startBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).${YELLOW} Specify as: endBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.${YELLOW} Specify as: startDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - The end date of timeframe.${YELLOW} Specify as: endDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}id${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: id=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for cRYPTOPUNKSItemsCurrent operation
+#
+##############################################################################
+print_cRYPTOPUNKSItemsCurrent_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}cRYPTOPUNKSItemsCurrent - Items (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets items." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for cRYPTOPUNKSMarketPlacesCurrent operation
+#
+##############################################################################
+print_cRYPTOPUNKSMarketPlacesCurrent_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}cRYPTOPUNKSMarketPlacesCurrent - MarketPlaces (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets marketPlaces." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for cRYPTOPUNKSMarketplaceDailySnapshotsCurrent operation
+#
+##############################################################################
+print_cRYPTOPUNKSMarketplaceDailySnapshotsCurrent_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}cRYPTOPUNKSMarketplaceDailySnapshotsCurrent - MarketplaceDailySnapshots (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets marketplaceDailySnapshots." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for cRYPTOPUNKSTradesCurrent operation
+#
+##############################################################################
+print_cRYPTOPUNKSTradesCurrent_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}cRYPTOPUNKSTradesCurrent - Trades (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets trades." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for cRYPTOPUNKSUsersCurrent operation
+#
+##############################################################################
+print_cRYPTOPUNKSUsersCurrent_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}cRYPTOPUNKSUsersCurrent - Users (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets users." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
 ##############################################################################
 #
 # Print help for cowGetOrdersHistorical operation
@@ -6916,6 +7451,654 @@ print_uniswapV3UniswapDayDataCurrent_help() {
     echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 
+
+##############################################################################
+#
+# Call cRYPTOPUNKSBidsCurrent operation
+#
+##############################################################################
+call_cRYPTOPUNKSBidsCurrent() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=()
+    local path
+
+    if ! path=$(build_request_path "/dapps/cryptopunks/bids/current" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call cRYPTOPUNKSCollectionDailySnapshotsCurrent operation
+#
+##############################################################################
+call_cRYPTOPUNKSCollectionDailySnapshotsCurrent() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=()
+    local path
+
+    if ! path=$(build_request_path "/dapps/cryptopunks/collectionDailySnapshots/current" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call cRYPTOPUNKSCollectionsCurrent operation
+#
+##############################################################################
+call_cRYPTOPUNKSCollectionsCurrent() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=()
+    local path
+
+    if ! path=$(build_request_path "/dapps/cryptopunks/collections/current" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call cRYPTOPUNKSDataSourcesCurrent operation
+#
+##############################################################################
+call_cRYPTOPUNKSDataSourcesCurrent() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=()
+    local path
+
+    if ! path=$(build_request_path "/dapps/cryptopunks/dataSources/current" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call cRYPTOPUNKSGetBidsHistorical operation
+#
+##############################################################################
+call_cRYPTOPUNKSGetBidsHistorical() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(startBlock endBlock startDate endDate id)
+    local path
+
+    if ! path=$(build_request_path "/dapps/cryptopunks/bids/historical" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call cRYPTOPUNKSGetCollectionDailySnapshotsHistorical operation
+#
+##############################################################################
+call_cRYPTOPUNKSGetCollectionDailySnapshotsHistorical() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(startBlock endBlock startDate endDate)
+    local path
+
+    if ! path=$(build_request_path "/dapps/cryptopunks/collectionDailySnapshots/historical" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call cRYPTOPUNKSGetCollectionsHistorical operation
+#
+##############################################################################
+call_cRYPTOPUNKSGetCollectionsHistorical() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(startBlock endBlock startDate endDate id)
+    local path
+
+    if ! path=$(build_request_path "/dapps/cryptopunks/collections/historical" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call cRYPTOPUNKSGetDataSourcesHistorical operation
+#
+##############################################################################
+call_cRYPTOPUNKSGetDataSourcesHistorical() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(startBlock endBlock startDate endDate id)
+    local path
+
+    if ! path=$(build_request_path "/dapps/cryptopunks/dataSources/historical" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call cRYPTOPUNKSGetItemsHistorical operation
+#
+##############################################################################
+call_cRYPTOPUNKSGetItemsHistorical() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(startBlock endBlock startDate endDate)
+    local path
+
+    if ! path=$(build_request_path "/dapps/cryptopunks/items/historical" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call cRYPTOPUNKSGetMarketPlacesHistorical operation
+#
+##############################################################################
+call_cRYPTOPUNKSGetMarketPlacesHistorical() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(startBlock endBlock startDate endDate id)
+    local path
+
+    if ! path=$(build_request_path "/dapps/cryptopunks/marketPlaces/historical" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call cRYPTOPUNKSGetMarketplaceDailySnapshotsHistorical operation
+#
+##############################################################################
+call_cRYPTOPUNKSGetMarketplaceDailySnapshotsHistorical() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(startBlock endBlock startDate endDate id)
+    local path
+
+    if ! path=$(build_request_path "/dapps/cryptopunks/marketplaceDailySnapshots/historical" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call cRYPTOPUNKSGetTradesHistorical operation
+#
+##############################################################################
+call_cRYPTOPUNKSGetTradesHistorical() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(startBlock endBlock startDate endDate id)
+    local path
+
+    if ! path=$(build_request_path "/dapps/cryptopunks/trades/historical" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call cRYPTOPUNKSGetUsersHistorical operation
+#
+##############################################################################
+call_cRYPTOPUNKSGetUsersHistorical() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(startBlock endBlock startDate endDate id)
+    local path
+
+    if ! path=$(build_request_path "/dapps/cryptopunks/users/historical" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call cRYPTOPUNKSItemsCurrent operation
+#
+##############################################################################
+call_cRYPTOPUNKSItemsCurrent() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=()
+    local path
+
+    if ! path=$(build_request_path "/dapps/cryptopunks/items/current" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call cRYPTOPUNKSMarketPlacesCurrent operation
+#
+##############################################################################
+call_cRYPTOPUNKSMarketPlacesCurrent() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=()
+    local path
+
+    if ! path=$(build_request_path "/dapps/cryptopunks/marketPlaces/current" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call cRYPTOPUNKSMarketplaceDailySnapshotsCurrent operation
+#
+##############################################################################
+call_cRYPTOPUNKSMarketplaceDailySnapshotsCurrent() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=()
+    local path
+
+    if ! path=$(build_request_path "/dapps/cryptopunks/marketplaceDailySnapshots/current" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call cRYPTOPUNKSTradesCurrent operation
+#
+##############################################################################
+call_cRYPTOPUNKSTradesCurrent() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=()
+    local path
+
+    if ! path=$(build_request_path "/dapps/cryptopunks/trades/current" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call cRYPTOPUNKSUsersCurrent operation
+#
+##############################################################################
+call_cRYPTOPUNKSUsersCurrent() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=()
+    local path
+
+    if ! path=$(build_request_path "/dapps/cryptopunks/users/current" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
 
 ##############################################################################
 #
@@ -14034,6 +15217,60 @@ case $key in
         OFF=""
         result_color_table=( "" "" "" "" "" "" "" )
     ;;
+    cRYPTOPUNKSBidsCurrent)
+    operation="cRYPTOPUNKSBidsCurrent"
+    ;;
+    cRYPTOPUNKSCollectionDailySnapshotsCurrent)
+    operation="cRYPTOPUNKSCollectionDailySnapshotsCurrent"
+    ;;
+    cRYPTOPUNKSCollectionsCurrent)
+    operation="cRYPTOPUNKSCollectionsCurrent"
+    ;;
+    cRYPTOPUNKSDataSourcesCurrent)
+    operation="cRYPTOPUNKSDataSourcesCurrent"
+    ;;
+    cRYPTOPUNKSGetBidsHistorical)
+    operation="cRYPTOPUNKSGetBidsHistorical"
+    ;;
+    cRYPTOPUNKSGetCollectionDailySnapshotsHistorical)
+    operation="cRYPTOPUNKSGetCollectionDailySnapshotsHistorical"
+    ;;
+    cRYPTOPUNKSGetCollectionsHistorical)
+    operation="cRYPTOPUNKSGetCollectionsHistorical"
+    ;;
+    cRYPTOPUNKSGetDataSourcesHistorical)
+    operation="cRYPTOPUNKSGetDataSourcesHistorical"
+    ;;
+    cRYPTOPUNKSGetItemsHistorical)
+    operation="cRYPTOPUNKSGetItemsHistorical"
+    ;;
+    cRYPTOPUNKSGetMarketPlacesHistorical)
+    operation="cRYPTOPUNKSGetMarketPlacesHistorical"
+    ;;
+    cRYPTOPUNKSGetMarketplaceDailySnapshotsHistorical)
+    operation="cRYPTOPUNKSGetMarketplaceDailySnapshotsHistorical"
+    ;;
+    cRYPTOPUNKSGetTradesHistorical)
+    operation="cRYPTOPUNKSGetTradesHistorical"
+    ;;
+    cRYPTOPUNKSGetUsersHistorical)
+    operation="cRYPTOPUNKSGetUsersHistorical"
+    ;;
+    cRYPTOPUNKSItemsCurrent)
+    operation="cRYPTOPUNKSItemsCurrent"
+    ;;
+    cRYPTOPUNKSMarketPlacesCurrent)
+    operation="cRYPTOPUNKSMarketPlacesCurrent"
+    ;;
+    cRYPTOPUNKSMarketplaceDailySnapshotsCurrent)
+    operation="cRYPTOPUNKSMarketplaceDailySnapshotsCurrent"
+    ;;
+    cRYPTOPUNKSTradesCurrent)
+    operation="cRYPTOPUNKSTradesCurrent"
+    ;;
+    cRYPTOPUNKSUsersCurrent)
+    operation="cRYPTOPUNKSUsersCurrent"
+    ;;
     cowGetOrdersHistorical)
     operation="cowGetOrdersHistorical"
     ;;
@@ -14696,6 +15933,60 @@ fi
 
 # Run cURL command based on the operation ID
 case $operation in
+    cRYPTOPUNKSBidsCurrent)
+    call_cRYPTOPUNKSBidsCurrent
+    ;;
+    cRYPTOPUNKSCollectionDailySnapshotsCurrent)
+    call_cRYPTOPUNKSCollectionDailySnapshotsCurrent
+    ;;
+    cRYPTOPUNKSCollectionsCurrent)
+    call_cRYPTOPUNKSCollectionsCurrent
+    ;;
+    cRYPTOPUNKSDataSourcesCurrent)
+    call_cRYPTOPUNKSDataSourcesCurrent
+    ;;
+    cRYPTOPUNKSGetBidsHistorical)
+    call_cRYPTOPUNKSGetBidsHistorical
+    ;;
+    cRYPTOPUNKSGetCollectionDailySnapshotsHistorical)
+    call_cRYPTOPUNKSGetCollectionDailySnapshotsHistorical
+    ;;
+    cRYPTOPUNKSGetCollectionsHistorical)
+    call_cRYPTOPUNKSGetCollectionsHistorical
+    ;;
+    cRYPTOPUNKSGetDataSourcesHistorical)
+    call_cRYPTOPUNKSGetDataSourcesHistorical
+    ;;
+    cRYPTOPUNKSGetItemsHistorical)
+    call_cRYPTOPUNKSGetItemsHistorical
+    ;;
+    cRYPTOPUNKSGetMarketPlacesHistorical)
+    call_cRYPTOPUNKSGetMarketPlacesHistorical
+    ;;
+    cRYPTOPUNKSGetMarketplaceDailySnapshotsHistorical)
+    call_cRYPTOPUNKSGetMarketplaceDailySnapshotsHistorical
+    ;;
+    cRYPTOPUNKSGetTradesHistorical)
+    call_cRYPTOPUNKSGetTradesHistorical
+    ;;
+    cRYPTOPUNKSGetUsersHistorical)
+    call_cRYPTOPUNKSGetUsersHistorical
+    ;;
+    cRYPTOPUNKSItemsCurrent)
+    call_cRYPTOPUNKSItemsCurrent
+    ;;
+    cRYPTOPUNKSMarketPlacesCurrent)
+    call_cRYPTOPUNKSMarketPlacesCurrent
+    ;;
+    cRYPTOPUNKSMarketplaceDailySnapshotsCurrent)
+    call_cRYPTOPUNKSMarketplaceDailySnapshotsCurrent
+    ;;
+    cRYPTOPUNKSTradesCurrent)
+    call_cRYPTOPUNKSTradesCurrent
+    ;;
+    cRYPTOPUNKSUsersCurrent)
+    call_cRYPTOPUNKSUsersCurrent
+    ;;
     cowGetOrdersHistorical)
     call_cowGetOrdersHistorical
     ;;

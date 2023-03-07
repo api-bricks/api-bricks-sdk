@@ -1,5 +1,14 @@
 import localVarRequest from 'request';
 
+export * from './cRYPTOPUNKSBidDTO';
+export * from './cRYPTOPUNKSCollectionDTO';
+export * from './cRYPTOPUNKSCollectionDailySnapshotDTO';
+export * from './cRYPTOPUNKSDataSourcesDTO';
+export * from './cRYPTOPUNKSItemDTO';
+export * from './cRYPTOPUNKSMarketPlaceDTO';
+export * from './cRYPTOPUNKSMarketplaceDailySnapshotDTO';
+export * from './cRYPTOPUNKSTradeDTO';
+export * from './cRYPTOPUNKSUserDTO';
 export * from './cowOrderDTO';
 export * from './cowSettlementDTO';
 export * from './cowTokenDTO';
@@ -112,6 +121,15 @@ export interface RequestDetailedFile {
 export type RequestFile = string | Buffer | fs.ReadStream | RequestDetailedFile;
 
 
+import { CRYPTOPUNKSBidDTO } from './cRYPTOPUNKSBidDTO';
+import { CRYPTOPUNKSCollectionDTO } from './cRYPTOPUNKSCollectionDTO';
+import { CRYPTOPUNKSCollectionDailySnapshotDTO } from './cRYPTOPUNKSCollectionDailySnapshotDTO';
+import { CRYPTOPUNKSDataSourcesDTO } from './cRYPTOPUNKSDataSourcesDTO';
+import { CRYPTOPUNKSItemDTO } from './cRYPTOPUNKSItemDTO';
+import { CRYPTOPUNKSMarketPlaceDTO } from './cRYPTOPUNKSMarketPlaceDTO';
+import { CRYPTOPUNKSMarketplaceDailySnapshotDTO } from './cRYPTOPUNKSMarketplaceDailySnapshotDTO';
+import { CRYPTOPUNKSTradeDTO } from './cRYPTOPUNKSTradeDTO';
+import { CRYPTOPUNKSUserDTO } from './cRYPTOPUNKSUserDTO';
 import { CowOrderDTO } from './cowOrderDTO';
 import { CowSettlementDTO } from './cowSettlementDTO';
 import { CowTokenDTO } from './cowTokenDTO';
@@ -228,6 +246,15 @@ let enumsMap: {[index: string]: any} = {
 }
 
 let typeMap: {[index: string]: any} = {
+    "CRYPTOPUNKSBidDTO": CRYPTOPUNKSBidDTO,
+    "CRYPTOPUNKSCollectionDTO": CRYPTOPUNKSCollectionDTO,
+    "CRYPTOPUNKSCollectionDailySnapshotDTO": CRYPTOPUNKSCollectionDailySnapshotDTO,
+    "CRYPTOPUNKSDataSourcesDTO": CRYPTOPUNKSDataSourcesDTO,
+    "CRYPTOPUNKSItemDTO": CRYPTOPUNKSItemDTO,
+    "CRYPTOPUNKSMarketPlaceDTO": CRYPTOPUNKSMarketPlaceDTO,
+    "CRYPTOPUNKSMarketplaceDailySnapshotDTO": CRYPTOPUNKSMarketplaceDailySnapshotDTO,
+    "CRYPTOPUNKSTradeDTO": CRYPTOPUNKSTradeDTO,
+    "CRYPTOPUNKSUserDTO": CRYPTOPUNKSUserDTO,
     "CowOrderDTO": CowOrderDTO,
     "CowSettlementDTO": CowSettlementDTO,
     "CowTokenDTO": CowTokenDTO,

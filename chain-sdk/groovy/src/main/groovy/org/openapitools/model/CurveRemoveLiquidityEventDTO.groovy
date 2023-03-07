@@ -22,9 +22,9 @@ class CurveRemoveLiquidityEventDTO {
     /*  */
     String provider
     /*  */
-    List<String> tokenAmounts = null
+    List<String> tokenAmounts
     /*  */
-    List<String> fees = null
+    List<String> fees
     /*  */
     String tokenSupply
     /*  */

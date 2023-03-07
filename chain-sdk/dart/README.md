@@ -45,18 +45,13 @@ Please follow the [installation procedure](#installation--usage) and then run th
 import 'package:openapi/api.dart';
 
 
-final api_instance = CowApi();
-final startBlock = 789; // int | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
-final endBlock = 789; // int | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
-final startDate = 2013-10-20T19:20:30+01:00; // DateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
-final endDate = 2013-10-20T19:20:30+01:00; // DateTime | The end date of timeframe.
-final id = id_example; // String | User's address.
+final api_instance = CRYPTOPUNKSApi();
 
 try {
-    final result = api_instance.cowGetOrdersHistorical(startBlock, endBlock, startDate, endDate, id);
+    final result = api_instance.cRYPTOPUNKSBidsCurrent();
     print(result);
 } catch (e) {
-    print('Exception when calling CowApi->cowGetOrdersHistorical: $e\n');
+    print('Exception when calling CRYPTOPUNKSApi->cRYPTOPUNKSBidsCurrent: $e\n');
 }
 
 ```
@@ -67,6 +62,24 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*CRYPTOPUNKSApi* | [**cRYPTOPUNKSBidsCurrent**](doc//CRYPTOPUNKSApi.md#cryptopunksbidscurrent) | **GET** /dapps/cryptopunks/bids/current | Bids (current)
+*CRYPTOPUNKSApi* | [**cRYPTOPUNKSCollectionDailySnapshotsCurrent**](doc//CRYPTOPUNKSApi.md#cryptopunkscollectiondailysnapshotscurrent) | **GET** /dapps/cryptopunks/collectionDailySnapshots/current | CollectionDailySnapshots (current)
+*CRYPTOPUNKSApi* | [**cRYPTOPUNKSCollectionsCurrent**](doc//CRYPTOPUNKSApi.md#cryptopunkscollectionscurrent) | **GET** /dapps/cryptopunks/collections/current | Collections (current)
+*CRYPTOPUNKSApi* | [**cRYPTOPUNKSDataSourcesCurrent**](doc//CRYPTOPUNKSApi.md#cryptopunksdatasourcescurrent) | **GET** /dapps/cryptopunks/dataSources/current | DataSources (current)
+*CRYPTOPUNKSApi* | [**cRYPTOPUNKSGetBidsHistorical**](doc//CRYPTOPUNKSApi.md#cryptopunksgetbidshistorical) | **GET** /dapps/cryptopunks/bids/historical | Bids (historical)
+*CRYPTOPUNKSApi* | [**cRYPTOPUNKSGetCollectionDailySnapshotsHistorical**](doc//CRYPTOPUNKSApi.md#cryptopunksgetcollectiondailysnapshotshistorical) | **GET** /dapps/cryptopunks/collectionDailySnapshots/historical | CollectionDailySnapshots (historical)
+*CRYPTOPUNKSApi* | [**cRYPTOPUNKSGetCollectionsHistorical**](doc//CRYPTOPUNKSApi.md#cryptopunksgetcollectionshistorical) | **GET** /dapps/cryptopunks/collections/historical | Collections (historical)
+*CRYPTOPUNKSApi* | [**cRYPTOPUNKSGetDataSourcesHistorical**](doc//CRYPTOPUNKSApi.md#cryptopunksgetdatasourceshistorical) | **GET** /dapps/cryptopunks/dataSources/historical | DataSources (historical)
+*CRYPTOPUNKSApi* | [**cRYPTOPUNKSGetItemsHistorical**](doc//CRYPTOPUNKSApi.md#cryptopunksgetitemshistorical) | **GET** /dapps/cryptopunks/items/historical | Items (historical)
+*CRYPTOPUNKSApi* | [**cRYPTOPUNKSGetMarketPlacesHistorical**](doc//CRYPTOPUNKSApi.md#cryptopunksgetmarketplaceshistorical) | **GET** /dapps/cryptopunks/marketPlaces/historical | MarketPlaces (historical)
+*CRYPTOPUNKSApi* | [**cRYPTOPUNKSGetMarketplaceDailySnapshotsHistorical**](doc//CRYPTOPUNKSApi.md#cryptopunksgetmarketplacedailysnapshotshistorical) | **GET** /dapps/cryptopunks/marketplaceDailySnapshots/historical | MarketplaceDailySnapshots (historical)
+*CRYPTOPUNKSApi* | [**cRYPTOPUNKSGetTradesHistorical**](doc//CRYPTOPUNKSApi.md#cryptopunksgettradeshistorical) | **GET** /dapps/cryptopunks/trades/historical | Trades (historical)
+*CRYPTOPUNKSApi* | [**cRYPTOPUNKSGetUsersHistorical**](doc//CRYPTOPUNKSApi.md#cryptopunksgetusershistorical) | **GET** /dapps/cryptopunks/users/historical | Users (historical)
+*CRYPTOPUNKSApi* | [**cRYPTOPUNKSItemsCurrent**](doc//CRYPTOPUNKSApi.md#cryptopunksitemscurrent) | **GET** /dapps/cryptopunks/items/current | Items (current)
+*CRYPTOPUNKSApi* | [**cRYPTOPUNKSMarketPlacesCurrent**](doc//CRYPTOPUNKSApi.md#cryptopunksmarketplacescurrent) | **GET** /dapps/cryptopunks/marketPlaces/current | MarketPlaces (current)
+*CRYPTOPUNKSApi* | [**cRYPTOPUNKSMarketplaceDailySnapshotsCurrent**](doc//CRYPTOPUNKSApi.md#cryptopunksmarketplacedailysnapshotscurrent) | **GET** /dapps/cryptopunks/marketplaceDailySnapshots/current | MarketplaceDailySnapshots (current)
+*CRYPTOPUNKSApi* | [**cRYPTOPUNKSTradesCurrent**](doc//CRYPTOPUNKSApi.md#cryptopunkstradescurrent) | **GET** /dapps/cryptopunks/trades/current | Trades (current)
+*CRYPTOPUNKSApi* | [**cRYPTOPUNKSUsersCurrent**](doc//CRYPTOPUNKSApi.md#cryptopunksuserscurrent) | **GET** /dapps/cryptopunks/users/current | Users (current)
 *CowApi* | [**cowGetOrdersHistorical**](doc//CowApi.md#cowgetordershistorical) | **GET** /dapps/cow/orders/historical | Orders (historical)
 *CowApi* | [**cowGetSettlementsHistorical**](doc//CowApi.md#cowgetsettlementshistorical) | **GET** /dapps/cow/settlements/historical | Settlements (historical)
 *CowApi* | [**cowGetTokensHistorical**](doc//CowApi.md#cowgettokenshistorical) | **GET** /dapps/cow/tokens/historical | Tokens (historical)
@@ -266,6 +279,15 @@ Class | Method | HTTP request | Description
 
 ## Documentation For Models
 
+ - [CRYPTOPUNKSBidDTO](doc//CRYPTOPUNKSBidDTO.md)
+ - [CRYPTOPUNKSCollectionDTO](doc//CRYPTOPUNKSCollectionDTO.md)
+ - [CRYPTOPUNKSCollectionDailySnapshotDTO](doc//CRYPTOPUNKSCollectionDailySnapshotDTO.md)
+ - [CRYPTOPUNKSDataSourcesDTO](doc//CRYPTOPUNKSDataSourcesDTO.md)
+ - [CRYPTOPUNKSItemDTO](doc//CRYPTOPUNKSItemDTO.md)
+ - [CRYPTOPUNKSMarketPlaceDTO](doc//CRYPTOPUNKSMarketPlaceDTO.md)
+ - [CRYPTOPUNKSMarketplaceDailySnapshotDTO](doc//CRYPTOPUNKSMarketplaceDailySnapshotDTO.md)
+ - [CRYPTOPUNKSTradeDTO](doc//CRYPTOPUNKSTradeDTO.md)
+ - [CRYPTOPUNKSUserDTO](doc//CRYPTOPUNKSUserDTO.md)
  - [CowOrderDTO](doc//CowOrderDTO.md)
  - [CowSettlementDTO](doc//CowSettlementDTO.md)
  - [CowTokenDTO](doc//CowTokenDTO.md)

@@ -9,6 +9,7 @@ export 'package:openapi/src/auth/oauth.dart';
 export 'package:openapi/src/serializers.dart';
 export 'package:openapi/src/model/date.dart';
 
+export 'package:openapi/src/api/cryptopunks_api.dart';
 export 'package:openapi/src/api/cow_api.dart';
 export 'package:openapi/src/api/curve_api.dart';
 export 'package:openapi/src/api/dex_api.dart';
@@ -17,6 +18,15 @@ export 'package:openapi/src/api/sushiswap_api.dart';
 export 'package:openapi/src/api/uniswap_v2_api.dart';
 export 'package:openapi/src/api/uniswap_v3_api.dart';
 
+export 'package:openapi/src/model/cryptopunks_bid_dto.dart';
+export 'package:openapi/src/model/cryptopunks_collection_dto.dart';
+export 'package:openapi/src/model/cryptopunks_collection_daily_snapshot_dto.dart';
+export 'package:openapi/src/model/cryptopunks_data_sources_dto.dart';
+export 'package:openapi/src/model/cryptopunks_item_dto.dart';
+export 'package:openapi/src/model/cryptopunks_market_place_dto.dart';
+export 'package:openapi/src/model/cryptopunks_marketplace_daily_snapshot_dto.dart';
+export 'package:openapi/src/model/cryptopunks_trade_dto.dart';
+export 'package:openapi/src/model/cryptopunks_user_dto.dart';
 export 'package:openapi/src/model/cow_order_dto.dart';
 export 'package:openapi/src/model/cow_settlement_dto.dart';
 export 'package:openapi/src/model/cow_token_dto.dart';

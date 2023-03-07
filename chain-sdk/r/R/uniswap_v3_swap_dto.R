@@ -399,19 +399,19 @@ UniswapV3SwapDTO <- R6::R6Class(
         self$`amount_usd` <- this_object$`amount_usd`
       }
       if (!is.null(this_object$`sqrt_price_x96`)) {
-        sqrt_price_x96_object <- NumericsBigInteger$new()
-        sqrt_price_x96_object$fromJSON(jsonlite::toJSON(this_object$sqrt_price_x96, auto_unbox = TRUE, digits = NA))
-        self$`sqrt_price_x96` <- sqrt_price_x96_object
+        `sqrt_price_x96_object` <- NumericsBigInteger$new()
+        `sqrt_price_x96_object`$fromJSON(jsonlite::toJSON(this_object$`sqrt_price_x96`, auto_unbox = TRUE, digits = NA))
+        self$`sqrt_price_x96` <- `sqrt_price_x96_object`
       }
       if (!is.null(this_object$`tick`)) {
-        tick_object <- NumericsBigInteger$new()
-        tick_object$fromJSON(jsonlite::toJSON(this_object$tick, auto_unbox = TRUE, digits = NA))
-        self$`tick` <- tick_object
+        `tick_object` <- NumericsBigInteger$new()
+        `tick_object`$fromJSON(jsonlite::toJSON(this_object$`tick`, auto_unbox = TRUE, digits = NA))
+        self$`tick` <- `tick_object`
       }
       if (!is.null(this_object$`log_index`)) {
-        log_index_object <- NumericsBigInteger$new()
-        log_index_object$fromJSON(jsonlite::toJSON(this_object$log_index, auto_unbox = TRUE, digits = NA))
-        self$`log_index` <- log_index_object
+        `log_index_object` <- NumericsBigInteger$new()
+        `log_index_object`$fromJSON(jsonlite::toJSON(this_object$`log_index`, auto_unbox = TRUE, digits = NA))
+        self$`log_index` <- `log_index_object`
       }
       if (!is.null(this_object$`evaluated_price`)) {
         self$`evaluated_price` <- this_object$`evaluated_price`
@@ -420,9 +420,9 @@ UniswapV3SwapDTO <- R6::R6Class(
         self$`evaluated_amount` <- this_object$`evaluated_amount`
       }
       if (!is.null(this_object$`evaluated_aggressor`)) {
-        evaluated_aggressor_object <- TransactionsETradeAggressiveSide$new()
-        evaluated_aggressor_object$fromJSON(jsonlite::toJSON(this_object$evaluated_aggressor, auto_unbox = TRUE, digits = NA))
-        self$`evaluated_aggressor` <- evaluated_aggressor_object
+        `evaluated_aggressor_object` <- TransactionsETradeAggressiveSide$new()
+        `evaluated_aggressor_object`$fromJSON(jsonlite::toJSON(this_object$`evaluated_aggressor`, auto_unbox = TRUE, digits = NA))
+        self$`evaluated_aggressor` <- `evaluated_aggressor_object`
       }
       if (!is.null(this_object$`pool_id`)) {
         self$`pool_id` <- this_object$`pool_id`
@@ -663,12 +663,12 @@ UniswapV3SwapDTO <- R6::R6Class(
       self$`amount_0` <- this_object$`amount_0`
       self$`amount_1` <- this_object$`amount_1`
       self$`amount_usd` <- this_object$`amount_usd`
-      self$`sqrt_price_x96` <- NumericsBigInteger$new()$fromJSON(jsonlite::toJSON(this_object$sqrt_price_x96, auto_unbox = TRUE, digits = NA))
-      self$`tick` <- NumericsBigInteger$new()$fromJSON(jsonlite::toJSON(this_object$tick, auto_unbox = TRUE, digits = NA))
-      self$`log_index` <- NumericsBigInteger$new()$fromJSON(jsonlite::toJSON(this_object$log_index, auto_unbox = TRUE, digits = NA))
+      self$`sqrt_price_x96` <- NumericsBigInteger$new()$fromJSON(jsonlite::toJSON(this_object$`sqrt_price_x96`, auto_unbox = TRUE, digits = NA))
+      self$`tick` <- NumericsBigInteger$new()$fromJSON(jsonlite::toJSON(this_object$`tick`, auto_unbox = TRUE, digits = NA))
+      self$`log_index` <- NumericsBigInteger$new()$fromJSON(jsonlite::toJSON(this_object$`log_index`, auto_unbox = TRUE, digits = NA))
       self$`evaluated_price` <- this_object$`evaluated_price`
       self$`evaluated_amount` <- this_object$`evaluated_amount`
-      self$`evaluated_aggressor` <- TransactionsETradeAggressiveSide$new()$fromJSON(jsonlite::toJSON(this_object$evaluated_aggressor, auto_unbox = TRUE, digits = NA))
+      self$`evaluated_aggressor` <- TransactionsETradeAggressiveSide$new()$fromJSON(jsonlite::toJSON(this_object$`evaluated_aggressor`, auto_unbox = TRUE, digits = NA))
       self$`pool_id` <- this_object$`pool_id`
       self$`transaction_id` <- this_object$`transaction_id`
       self

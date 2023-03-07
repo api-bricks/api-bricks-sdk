@@ -50,7 +50,7 @@ import org.openapitools.client.JSON;
 /**
  * Transaction entities are created for each Ethereum transaction that contains an interaction within Sushiswap contracts. Each transaction contains 3 arrays, and at least one of these arrays has a length of 1.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-13T15:06:11.595492Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-07T11:26:43.643580Z[Etc/UTC]")
 public class SushiswapTransactionDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -74,15 +74,15 @@ public class SushiswapTransactionDTO {
 
   public static final String SERIALIZED_NAME_MINTS = "mints";
   @SerializedName(SERIALIZED_NAME_MINTS)
-  private List<String> mints = null;
+  private List<String> mints;
 
   public static final String SERIALIZED_NAME_BURNS = "burns";
   @SerializedName(SERIALIZED_NAME_BURNS)
-  private List<String> burns = null;
+  private List<String> burns;
 
   public static final String SERIALIZED_NAME_SWAPS = "swaps";
   @SerializedName(SERIALIZED_NAME_SWAPS)
-  private List<String> swaps = null;
+  private List<String> swaps;
 
   public static final String SERIALIZED_NAME_VID = "vid";
   @SerializedName(SERIALIZED_NAME_VID)
@@ -208,9 +208,6 @@ public class SushiswapTransactionDTO {
   }
 
   public SushiswapTransactionDTO addMintsItem(String mintsItem) {
-    if (this.mints == null) {
-      this.mints = null;
-    }
     this.mints.add(mintsItem);
     return this;
   }
@@ -238,9 +235,6 @@ public class SushiswapTransactionDTO {
   }
 
   public SushiswapTransactionDTO addBurnsItem(String burnsItem) {
-    if (this.burns == null) {
-      this.burns = null;
-    }
     this.burns.add(burnsItem);
     return this;
   }
@@ -268,9 +262,6 @@ public class SushiswapTransactionDTO {
   }
 
   public SushiswapTransactionDTO addSwapsItem(String swapsItem) {
-    if (this.swaps == null) {
-      this.swaps = null;
-    }
     this.swaps.add(swapsItem);
     return this;
   }

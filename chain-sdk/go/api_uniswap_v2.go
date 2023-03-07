@@ -14,7 +14,7 @@ package openapi
 import (
 	"bytes"
 	"context"
-	"io/ioutil"
+	"io"
 	"net/http"
 	"net/url"
 	"time"
@@ -96,9 +96,9 @@ func (a *UniswapV2ApiService) UniswapV2BundlesCurrentExecute(r ApiUniswapV2Bundl
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -195,9 +195,9 @@ func (a *UniswapV2ApiService) UniswapV2BurnsCurrentExecute(r ApiUniswapV2BurnsCu
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -303,19 +303,19 @@ func (a *UniswapV2ApiService) UniswapV2GetBundlesHistoricalExecute(r ApiUniswapV
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "id", r.id, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -344,9 +344,9 @@ func (a *UniswapV2ApiService) UniswapV2GetBundlesHistoricalExecute(r ApiUniswapV
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -459,22 +459,22 @@ func (a *UniswapV2ApiService) UniswapV2GetBurnsHistoricalExecute(r ApiUniswapV2G
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "id", r.id, "")
 	}
 	if r.pair != nil {
-		parameterAddToQuery(localVarQueryParams, "pair", r.pair, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "pair", r.pair, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -503,9 +503,9 @@ func (a *UniswapV2ApiService) UniswapV2GetBurnsHistoricalExecute(r ApiUniswapV2G
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -625,25 +625,25 @@ func (a *UniswapV2ApiService) UniswapV2GetLiquidityPositionSnapshotsHistoricalEx
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "id", r.id, "")
 	}
 	if r.user != nil {
-		parameterAddToQuery(localVarQueryParams, "user", r.user, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "user", r.user, "")
 	}
 	if r.pair != nil {
-		parameterAddToQuery(localVarQueryParams, "pair", r.pair, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "pair", r.pair, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -672,9 +672,9 @@ func (a *UniswapV2ApiService) UniswapV2GetLiquidityPositionSnapshotsHistoricalEx
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -794,25 +794,25 @@ func (a *UniswapV2ApiService) UniswapV2GetLiquidityPositionsHistoricalExecute(r 
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "id", r.id, "")
 	}
 	if r.user != nil {
-		parameterAddToQuery(localVarQueryParams, "user", r.user, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "user", r.user, "")
 	}
 	if r.pair != nil {
-		parameterAddToQuery(localVarQueryParams, "pair", r.pair, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "pair", r.pair, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -841,9 +841,9 @@ func (a *UniswapV2ApiService) UniswapV2GetLiquidityPositionsHistoricalExecute(r 
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -956,22 +956,22 @@ func (a *UniswapV2ApiService) UniswapV2GetMintsHistoricalExecute(r ApiUniswapV2G
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "id", r.id, "")
 	}
 	if r.pair != nil {
-		parameterAddToQuery(localVarQueryParams, "pair", r.pair, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "pair", r.pair, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -1000,9 +1000,9 @@ func (a *UniswapV2ApiService) UniswapV2GetMintsHistoricalExecute(r ApiUniswapV2G
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -1122,25 +1122,25 @@ func (a *UniswapV2ApiService) UniswapV2GetPairDayDataHistoricalExecute(r ApiUnis
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "id", r.id, "")
 	}
 	if r.token0 != nil {
-		parameterAddToQuery(localVarQueryParams, "token_0", r.token0, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "token_0", r.token0, "")
 	}
 	if r.token1 != nil {
-		parameterAddToQuery(localVarQueryParams, "token_1", r.token1, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "token_1", r.token1, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -1169,9 +1169,9 @@ func (a *UniswapV2ApiService) UniswapV2GetPairDayDataHistoricalExecute(r ApiUnis
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -1284,22 +1284,22 @@ func (a *UniswapV2ApiService) UniswapV2GetPairHourDataHistoricalExecute(r ApiUni
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "id", r.id, "")
 	}
 	if r.pair != nil {
-		parameterAddToQuery(localVarQueryParams, "pair", r.pair, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "pair", r.pair, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -1328,9 +1328,9 @@ func (a *UniswapV2ApiService) UniswapV2GetPairHourDataHistoricalExecute(r ApiUni
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -1450,25 +1450,25 @@ func (a *UniswapV2ApiService) UniswapV2GetPairsHistoricalExecute(r ApiUniswapV2G
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "id", r.id, "")
 	}
 	if r.token0 != nil {
-		parameterAddToQuery(localVarQueryParams, "token_0", r.token0, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "token_0", r.token0, "")
 	}
 	if r.token1 != nil {
-		parameterAddToQuery(localVarQueryParams, "token_1", r.token1, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "token_1", r.token1, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -1497,9 +1497,9 @@ func (a *UniswapV2ApiService) UniswapV2GetPairsHistoricalExecute(r ApiUniswapV2G
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -1612,22 +1612,22 @@ func (a *UniswapV2ApiService) UniswapV2GetSwapsHistoricalExecute(r ApiUniswapV2G
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "id", r.id, "")
 	}
 	if r.pair != nil {
-		parameterAddToQuery(localVarQueryParams, "pair", r.pair, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "pair", r.pair, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -1656,9 +1656,9 @@ func (a *UniswapV2ApiService) UniswapV2GetSwapsHistoricalExecute(r ApiUniswapV2G
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -1764,19 +1764,19 @@ func (a *UniswapV2ApiService) UniswapV2GetTokenDayDataHistoricalExecute(r ApiUni
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "id", r.id, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -1805,9 +1805,9 @@ func (a *UniswapV2ApiService) UniswapV2GetTokenDayDataHistoricalExecute(r ApiUni
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -1927,25 +1927,25 @@ func (a *UniswapV2ApiService) UniswapV2GetTokensHistoricalExecute(r ApiUniswapV2
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "id", r.id, "")
 	}
 	if r.symbol != nil {
-		parameterAddToQuery(localVarQueryParams, "symbol", r.symbol, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "symbol", r.symbol, "")
 	}
 	if r.name != nil {
-		parameterAddToQuery(localVarQueryParams, "name", r.name, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "name", r.name, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -1974,9 +1974,9 @@ func (a *UniswapV2ApiService) UniswapV2GetTokensHistoricalExecute(r ApiUniswapV2
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -2082,19 +2082,19 @@ func (a *UniswapV2ApiService) UniswapV2GetTransactionsHistoricalExecute(r ApiUni
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "id", r.id, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -2123,9 +2123,9 @@ func (a *UniswapV2ApiService) UniswapV2GetTransactionsHistoricalExecute(r ApiUni
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -2231,19 +2231,19 @@ func (a *UniswapV2ApiService) UniswapV2GetUniswapDayDataHistoricalExecute(r ApiU
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "id", r.id, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -2272,9 +2272,9 @@ func (a *UniswapV2ApiService) UniswapV2GetUniswapDayDataHistoricalExecute(r ApiU
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -2380,19 +2380,19 @@ func (a *UniswapV2ApiService) UniswapV2GetUniswapFactoriesHistoricalExecute(r Ap
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "id", r.id, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -2421,9 +2421,9 @@ func (a *UniswapV2ApiService) UniswapV2GetUniswapFactoriesHistoricalExecute(r Ap
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -2529,19 +2529,19 @@ func (a *UniswapV2ApiService) UniswapV2GetUsersHistoricalExecute(r ApiUniswapV2G
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "id", r.id, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -2570,9 +2570,9 @@ func (a *UniswapV2ApiService) UniswapV2GetUsersHistoricalExecute(r ApiUniswapV2G
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -2669,9 +2669,9 @@ func (a *UniswapV2ApiService) UniswapV2LiquidityPositionSnapshotsCurrentExecute(
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -2768,9 +2768,9 @@ func (a *UniswapV2ApiService) UniswapV2LiquidityPositionsCurrentExecute(r ApiUni
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -2867,9 +2867,9 @@ func (a *UniswapV2ApiService) UniswapV2MintsCurrentExecute(r ApiUniswapV2MintsCu
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -2966,9 +2966,9 @@ func (a *UniswapV2ApiService) UniswapV2PairDayDataCurrentExecute(r ApiUniswapV2P
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -3065,9 +3065,9 @@ func (a *UniswapV2ApiService) UniswapV2PairHourDataCurrentExecute(r ApiUniswapV2
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -3145,7 +3145,7 @@ func (a *UniswapV2ApiService) UniswapV2PairsCurrentExecute(r ApiUniswapV2PairsCu
 	localVarFormParams := url.Values{}
 
 	if r.id != nil {
-		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "id", r.id, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -3174,9 +3174,9 @@ func (a *UniswapV2ApiService) UniswapV2PairsCurrentExecute(r ApiUniswapV2PairsCu
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -3254,7 +3254,7 @@ func (a *UniswapV2ApiService) UniswapV2SwapsCurrentExecute(r ApiUniswapV2SwapsCu
 	localVarFormParams := url.Values{}
 
 	if r.pair != nil {
-		parameterAddToQuery(localVarQueryParams, "pair", r.pair, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "pair", r.pair, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -3283,9 +3283,9 @@ func (a *UniswapV2ApiService) UniswapV2SwapsCurrentExecute(r ApiUniswapV2SwapsCu
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -3382,9 +3382,9 @@ func (a *UniswapV2ApiService) UniswapV2TokenDayDataCurrentExecute(r ApiUniswapV2
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -3481,9 +3481,9 @@ func (a *UniswapV2ApiService) UniswapV2TokensCurrentExecute(r ApiUniswapV2Tokens
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -3580,9 +3580,9 @@ func (a *UniswapV2ApiService) UniswapV2TransactionsCurrentExecute(r ApiUniswapV2
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -3679,9 +3679,9 @@ func (a *UniswapV2ApiService) UniswapV2UniswapDayDataCurrentExecute(r ApiUniswap
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -3778,9 +3778,9 @@ func (a *UniswapV2ApiService) UniswapV2UniswapFactoriesCurrentExecute(r ApiUnisw
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -3877,9 +3877,9 @@ func (a *UniswapV2ApiService) UniswapV2UsersCurrentExecute(r ApiUniswapV2UsersCu
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}

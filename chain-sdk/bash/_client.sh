@@ -296,7 +296,24 @@ case $state in
   ops)
     # Operations
     _values "Operations" \
-            "cowGetOrdersHistorical[Orders (historical)]" \
+            "cRYPTOPUNKSBidsCurrent[Bids (current)]" \
+            "cRYPTOPUNKSCollectionDailySnapshotsCurrent[CollectionDailySnapshots (current)]" \
+            "cRYPTOPUNKSCollectionsCurrent[Collections (current)]" \
+            "cRYPTOPUNKSDataSourcesCurrent[DataSources (current)]" \
+            "cRYPTOPUNKSGetBidsHistorical[Bids (historical)]" \
+            "cRYPTOPUNKSGetCollectionDailySnapshotsHistorical[CollectionDailySnapshots (historical)]" \
+            "cRYPTOPUNKSGetCollectionsHistorical[Collections (historical)]" \
+            "cRYPTOPUNKSGetDataSourcesHistorical[DataSources (historical)]" \
+            "cRYPTOPUNKSGetItemsHistorical[Items (historical)]" \
+            "cRYPTOPUNKSGetMarketPlacesHistorical[MarketPlaces (historical)]" \
+            "cRYPTOPUNKSGetMarketplaceDailySnapshotsHistorical[MarketplaceDailySnapshots (historical)]" \
+            "cRYPTOPUNKSGetTradesHistorical[Trades (historical)]" \
+            "cRYPTOPUNKSGetUsersHistorical[Users (historical)]" \
+            "cRYPTOPUNKSItemsCurrent[Items (current)]" \
+            "cRYPTOPUNKSMarketPlacesCurrent[MarketPlaces (current)]" \
+            "cRYPTOPUNKSMarketplaceDailySnapshotsCurrent[MarketplaceDailySnapshots (current)]" \
+            "cRYPTOPUNKSTradesCurrent[Trades (current)]" \
+            "cRYPTOPUNKSUsersCurrent[Users (current)]"             "cowGetOrdersHistorical[Orders (historical)]" \
             "cowGetSettlementsHistorical[Settlements (historical)]" \
             "cowGetTokensHistorical[Tokens (historical)]" \
             "cowGetTradesHistorical[Trades (historical)]" \
@@ -492,6 +509,157 @@ case $state in
     ;;
   args)
     case $line[1] in
+      cRYPTOPUNKSBidsCurrent)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      cRYPTOPUNKSCollectionDailySnapshotsCurrent)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      cRYPTOPUNKSCollectionsCurrent)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      cRYPTOPUNKSDataSourcesCurrent)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      cRYPTOPUNKSGetBidsHistorical)
+        local -a _op_arguments
+        _op_arguments=(
+                    "startBlock=:[QUERY] The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock."
+"endBlock=:[QUERY] The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock)."
+"startDate=:[QUERY] The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included."
+"endDate=:[QUERY] The end date of timeframe."
+"id=:[QUERY] "
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      cRYPTOPUNKSGetCollectionDailySnapshotsHistorical)
+        local -a _op_arguments
+        _op_arguments=(
+                    "startBlock=:[QUERY] The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock."
+"endBlock=:[QUERY] The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock)."
+"startDate=:[QUERY] The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included."
+"endDate=:[QUERY] The end date of timeframe."
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      cRYPTOPUNKSGetCollectionsHistorical)
+        local -a _op_arguments
+        _op_arguments=(
+                    "startBlock=:[QUERY] The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock."
+"endBlock=:[QUERY] The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock)."
+"startDate=:[QUERY] The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included."
+"endDate=:[QUERY] The end date of timeframe."
+"id=:[QUERY] "
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      cRYPTOPUNKSGetDataSourcesHistorical)
+        local -a _op_arguments
+        _op_arguments=(
+                    "startBlock=:[QUERY] The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock."
+"endBlock=:[QUERY] The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock)."
+"startDate=:[QUERY] The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included."
+"endDate=:[QUERY] The end date of timeframe."
+"id=:[QUERY] "
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      cRYPTOPUNKSGetItemsHistorical)
+        local -a _op_arguments
+        _op_arguments=(
+                    "startBlock=:[QUERY] The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock."
+"endBlock=:[QUERY] The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock)."
+"startDate=:[QUERY] The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included."
+"endDate=:[QUERY] The end date of timeframe."
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      cRYPTOPUNKSGetMarketPlacesHistorical)
+        local -a _op_arguments
+        _op_arguments=(
+                    "startBlock=:[QUERY] The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock."
+"endBlock=:[QUERY] The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock)."
+"startDate=:[QUERY] The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included."
+"endDate=:[QUERY] The end date of timeframe."
+"id=:[QUERY] "
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      cRYPTOPUNKSGetMarketplaceDailySnapshotsHistorical)
+        local -a _op_arguments
+        _op_arguments=(
+                    "startBlock=:[QUERY] The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock."
+"endBlock=:[QUERY] The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock)."
+"startDate=:[QUERY] The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included."
+"endDate=:[QUERY] The end date of timeframe."
+"id=:[QUERY] "
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      cRYPTOPUNKSGetTradesHistorical)
+        local -a _op_arguments
+        _op_arguments=(
+                    "startBlock=:[QUERY] The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock."
+"endBlock=:[QUERY] The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock)."
+"startDate=:[QUERY] The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included."
+"endDate=:[QUERY] The end date of timeframe."
+"id=:[QUERY] "
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      cRYPTOPUNKSGetUsersHistorical)
+        local -a _op_arguments
+        _op_arguments=(
+                    "startBlock=:[QUERY] The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock."
+"endBlock=:[QUERY] The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock)."
+"startDate=:[QUERY] The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included."
+"endDate=:[QUERY] The end date of timeframe."
+"id=:[QUERY] "
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      cRYPTOPUNKSItemsCurrent)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      cRYPTOPUNKSMarketPlacesCurrent)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      cRYPTOPUNKSMarketplaceDailySnapshotsCurrent)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      cRYPTOPUNKSTradesCurrent)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      cRYPTOPUNKSUsersCurrent)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
       cowGetOrdersHistorical)
         local -a _op_arguments
         _op_arguments=(

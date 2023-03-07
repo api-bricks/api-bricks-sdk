@@ -67,7 +67,7 @@ func NewDexTokenDTOWithDefaults() *DexTokenDTO {
 
 // GetEntryTime returns the EntryTime field value if set, zero value otherwise.
 func (o *DexTokenDTO) GetEntryTime() time.Time {
-	if o == nil || isNil(o.EntryTime) {
+	if o == nil || IsNil(o.EntryTime) {
 		var ret time.Time
 		return ret
 	}
@@ -77,7 +77,7 @@ func (o *DexTokenDTO) GetEntryTime() time.Time {
 // GetEntryTimeOk returns a tuple with the EntryTime field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DexTokenDTO) GetEntryTimeOk() (*time.Time, bool) {
-	if o == nil || isNil(o.EntryTime) {
+	if o == nil || IsNil(o.EntryTime) {
 		return nil, false
 	}
 	return o.EntryTime, true
@@ -85,7 +85,7 @@ func (o *DexTokenDTO) GetEntryTimeOk() (*time.Time, bool) {
 
 // HasEntryTime returns a boolean if a field has been set.
 func (o *DexTokenDTO) HasEntryTime() bool {
-	if o != nil && !isNil(o.EntryTime) {
+	if o != nil && !IsNil(o.EntryTime) {
 		return true
 	}
 
@@ -99,7 +99,7 @@ func (o *DexTokenDTO) SetEntryTime(v time.Time) {
 
 // GetRecvTime returns the RecvTime field value if set, zero value otherwise.
 func (o *DexTokenDTO) GetRecvTime() time.Time {
-	if o == nil || isNil(o.RecvTime) {
+	if o == nil || IsNil(o.RecvTime) {
 		var ret time.Time
 		return ret
 	}
@@ -109,7 +109,7 @@ func (o *DexTokenDTO) GetRecvTime() time.Time {
 // GetRecvTimeOk returns a tuple with the RecvTime field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DexTokenDTO) GetRecvTimeOk() (*time.Time, bool) {
-	if o == nil || isNil(o.RecvTime) {
+	if o == nil || IsNil(o.RecvTime) {
 		return nil, false
 	}
 	return o.RecvTime, true
@@ -117,7 +117,7 @@ func (o *DexTokenDTO) GetRecvTimeOk() (*time.Time, bool) {
 
 // HasRecvTime returns a boolean if a field has been set.
 func (o *DexTokenDTO) HasRecvTime() bool {
-	if o != nil && !isNil(o.RecvTime) {
+	if o != nil && !IsNil(o.RecvTime) {
 		return true
 	}
 
@@ -131,7 +131,7 @@ func (o *DexTokenDTO) SetRecvTime(v time.Time) {
 
 // GetBlockNumber returns the BlockNumber field value if set, zero value otherwise.
 func (o *DexTokenDTO) GetBlockNumber() int64 {
-	if o == nil || isNil(o.BlockNumber) {
+	if o == nil || IsNil(o.BlockNumber) {
 		var ret int64
 		return ret
 	}
@@ -141,7 +141,7 @@ func (o *DexTokenDTO) GetBlockNumber() int64 {
 // GetBlockNumberOk returns a tuple with the BlockNumber field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DexTokenDTO) GetBlockNumberOk() (*int64, bool) {
-	if o == nil || isNil(o.BlockNumber) {
+	if o == nil || IsNil(o.BlockNumber) {
 		return nil, false
 	}
 	return o.BlockNumber, true
@@ -149,7 +149,7 @@ func (o *DexTokenDTO) GetBlockNumberOk() (*int64, bool) {
 
 // HasBlockNumber returns a boolean if a field has been set.
 func (o *DexTokenDTO) HasBlockNumber() bool {
-	if o != nil && !isNil(o.BlockNumber) {
+	if o != nil && !IsNil(o.BlockNumber) {
 		return true
 	}
 
@@ -163,7 +163,7 @@ func (o *DexTokenDTO) SetBlockNumber(v int64) {
 
 // GetId returns the Id field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *DexTokenDTO) GetId() string {
-	if o == nil || isNil(o.Id.Get()) {
+	if o == nil || IsNil(o.Id.Get()) {
 		var ret string
 		return ret
 	}
@@ -205,7 +205,7 @@ func (o *DexTokenDTO) UnsetId() {
 
 // GetAddress returns the Address field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *DexTokenDTO) GetAddress() string {
-	if o == nil || isNil(o.Address.Get()) {
+	if o == nil || IsNil(o.Address.Get()) {
 		var ret string
 		return ret
 	}
@@ -247,7 +247,7 @@ func (o *DexTokenDTO) UnsetAddress() {
 
 // GetFromBatchId returns the FromBatchId field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *DexTokenDTO) GetFromBatchId() string {
-	if o == nil || isNil(o.FromBatchId.Get()) {
+	if o == nil || IsNil(o.FromBatchId.Get()) {
 		var ret string
 		return ret
 	}
@@ -289,7 +289,7 @@ func (o *DexTokenDTO) UnsetFromBatchId() {
 
 // GetSymbol returns the Symbol field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *DexTokenDTO) GetSymbol() string {
-	if o == nil || isNil(o.Symbol.Get()) {
+	if o == nil || IsNil(o.Symbol.Get()) {
 		var ret string
 		return ret
 	}
@@ -331,7 +331,7 @@ func (o *DexTokenDTO) UnsetSymbol() {
 
 // GetDecimals returns the Decimals field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *DexTokenDTO) GetDecimals() string {
-	if o == nil || isNil(o.Decimals.Get()) {
+	if o == nil || IsNil(o.Decimals.Get()) {
 		var ret string
 		return ret
 	}
@@ -373,7 +373,7 @@ func (o *DexTokenDTO) UnsetDecimals() {
 
 // GetName returns the Name field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *DexTokenDTO) GetName() string {
-	if o == nil || isNil(o.Name.Get()) {
+	if o == nil || IsNil(o.Name.Get()) {
 		var ret string
 		return ret
 	}
@@ -415,7 +415,7 @@ func (o *DexTokenDTO) UnsetName() {
 
 // GetSellVolume returns the SellVolume field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *DexTokenDTO) GetSellVolume() string {
-	if o == nil || isNil(o.SellVolume.Get()) {
+	if o == nil || IsNil(o.SellVolume.Get()) {
 		var ret string
 		return ret
 	}
@@ -457,7 +457,7 @@ func (o *DexTokenDTO) UnsetSellVolume() {
 
 // GetCreateEpoch returns the CreateEpoch field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *DexTokenDTO) GetCreateEpoch() string {
-	if o == nil || isNil(o.CreateEpoch.Get()) {
+	if o == nil || IsNil(o.CreateEpoch.Get()) {
 		var ret string
 		return ret
 	}
@@ -499,7 +499,7 @@ func (o *DexTokenDTO) UnsetCreateEpoch() {
 
 // GetTxHash returns the TxHash field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *DexTokenDTO) GetTxHash() string {
-	if o == nil || isNil(o.TxHash.Get()) {
+	if o == nil || IsNil(o.TxHash.Get()) {
 		var ret string
 		return ret
 	}
@@ -541,7 +541,7 @@ func (o *DexTokenDTO) UnsetTxHash() {
 
 // GetVid returns the Vid field value if set, zero value otherwise.
 func (o *DexTokenDTO) GetVid() int64 {
-	if o == nil || isNil(o.Vid) {
+	if o == nil || IsNil(o.Vid) {
 		var ret int64
 		return ret
 	}
@@ -551,7 +551,7 @@ func (o *DexTokenDTO) GetVid() int64 {
 // GetVidOk returns a tuple with the Vid field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DexTokenDTO) GetVidOk() (*int64, bool) {
-	if o == nil || isNil(o.Vid) {
+	if o == nil || IsNil(o.Vid) {
 		return nil, false
 	}
 	return o.Vid, true
@@ -559,7 +559,7 @@ func (o *DexTokenDTO) GetVidOk() (*int64, bool) {
 
 // HasVid returns a boolean if a field has been set.
 func (o *DexTokenDTO) HasVid() bool {
-	if o != nil && !isNil(o.Vid) {
+	if o != nil && !IsNil(o.Vid) {
 		return true
 	}
 
@@ -573,7 +573,7 @@ func (o *DexTokenDTO) SetVid(v int64) {
 
 // GetTokenSymbol returns the TokenSymbol field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *DexTokenDTO) GetTokenSymbol() string {
-	if o == nil || isNil(o.TokenSymbol.Get()) {
+	if o == nil || IsNil(o.TokenSymbol.Get()) {
 		var ret string
 		return ret
 	}
@@ -623,13 +623,13 @@ func (o DexTokenDTO) MarshalJSON() ([]byte, error) {
 
 func (o DexTokenDTO) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if !isNil(o.EntryTime) {
+	if !IsNil(o.EntryTime) {
 		toSerialize["entry_time"] = o.EntryTime
 	}
-	if !isNil(o.RecvTime) {
+	if !IsNil(o.RecvTime) {
 		toSerialize["recv_time"] = o.RecvTime
 	}
-	if !isNil(o.BlockNumber) {
+	if !IsNil(o.BlockNumber) {
 		toSerialize["block_number"] = o.BlockNumber
 	}
 	if o.Id.IsSet() {
@@ -659,7 +659,7 @@ func (o DexTokenDTO) ToMap() (map[string]interface{}, error) {
 	if o.TxHash.IsSet() {
 		toSerialize["tx_hash"] = o.TxHash.Get()
 	}
-	if !isNil(o.Vid) {
+	if !IsNil(o.Vid) {
 		toSerialize["vid"] = o.Vid
 	}
 	if o.TokenSymbol.IsSet() {

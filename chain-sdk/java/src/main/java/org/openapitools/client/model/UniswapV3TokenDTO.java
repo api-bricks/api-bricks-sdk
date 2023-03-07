@@ -51,7 +51,7 @@ import org.openapitools.client.JSON;
 /**
  * Stores aggregated information for a specific token across all pairs that token is included in.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-13T15:06:11.595492Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-07T11:26:43.643580Z[Etc/UTC]")
 public class UniswapV3TokenDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -131,7 +131,7 @@ public class UniswapV3TokenDTO {
 
   public static final String SERIALIZED_NAME_WHITELIST_POOLS = "whitelist_pools";
   @SerializedName(SERIALIZED_NAME_WHITELIST_POOLS)
-  private List<String> whitelistPools = null;
+  private List<String> whitelistPools;
 
   public static final String SERIALIZED_NAME_TOKEN_SYMBOL = "token_symbol";
   @SerializedName(SERIALIZED_NAME_TOKEN_SYMBOL)
@@ -573,9 +573,6 @@ public class UniswapV3TokenDTO {
   }
 
   public UniswapV3TokenDTO addWhitelistPoolsItem(String whitelistPoolsItem) {
-    if (this.whitelistPools == null) {
-      this.whitelistPools = null;
-    }
     this.whitelistPools.add(whitelistPoolsItem);
     return this;
   }

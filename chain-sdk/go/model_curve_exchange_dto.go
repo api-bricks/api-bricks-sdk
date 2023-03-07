@@ -75,7 +75,7 @@ func NewCurveExchangeDTOWithDefaults() *CurveExchangeDTO {
 
 // GetEntryTime returns the EntryTime field value if set, zero value otherwise.
 func (o *CurveExchangeDTO) GetEntryTime() time.Time {
-	if o == nil || isNil(o.EntryTime) {
+	if o == nil || IsNil(o.EntryTime) {
 		var ret time.Time
 		return ret
 	}
@@ -85,7 +85,7 @@ func (o *CurveExchangeDTO) GetEntryTime() time.Time {
 // GetEntryTimeOk returns a tuple with the EntryTime field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CurveExchangeDTO) GetEntryTimeOk() (*time.Time, bool) {
-	if o == nil || isNil(o.EntryTime) {
+	if o == nil || IsNil(o.EntryTime) {
 		return nil, false
 	}
 	return o.EntryTime, true
@@ -93,7 +93,7 @@ func (o *CurveExchangeDTO) GetEntryTimeOk() (*time.Time, bool) {
 
 // HasEntryTime returns a boolean if a field has been set.
 func (o *CurveExchangeDTO) HasEntryTime() bool {
-	if o != nil && !isNil(o.EntryTime) {
+	if o != nil && !IsNil(o.EntryTime) {
 		return true
 	}
 
@@ -107,7 +107,7 @@ func (o *CurveExchangeDTO) SetEntryTime(v time.Time) {
 
 // GetRecvTime returns the RecvTime field value if set, zero value otherwise.
 func (o *CurveExchangeDTO) GetRecvTime() time.Time {
-	if o == nil || isNil(o.RecvTime) {
+	if o == nil || IsNil(o.RecvTime) {
 		var ret time.Time
 		return ret
 	}
@@ -117,7 +117,7 @@ func (o *CurveExchangeDTO) GetRecvTime() time.Time {
 // GetRecvTimeOk returns a tuple with the RecvTime field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CurveExchangeDTO) GetRecvTimeOk() (*time.Time, bool) {
-	if o == nil || isNil(o.RecvTime) {
+	if o == nil || IsNil(o.RecvTime) {
 		return nil, false
 	}
 	return o.RecvTime, true
@@ -125,7 +125,7 @@ func (o *CurveExchangeDTO) GetRecvTimeOk() (*time.Time, bool) {
 
 // HasRecvTime returns a boolean if a field has been set.
 func (o *CurveExchangeDTO) HasRecvTime() bool {
-	if o != nil && !isNil(o.RecvTime) {
+	if o != nil && !IsNil(o.RecvTime) {
 		return true
 	}
 
@@ -139,7 +139,7 @@ func (o *CurveExchangeDTO) SetRecvTime(v time.Time) {
 
 // GetBlockNumber returns the BlockNumber field value if set, zero value otherwise.
 func (o *CurveExchangeDTO) GetBlockNumber() int64 {
-	if o == nil || isNil(o.BlockNumber) {
+	if o == nil || IsNil(o.BlockNumber) {
 		var ret int64
 		return ret
 	}
@@ -149,7 +149,7 @@ func (o *CurveExchangeDTO) GetBlockNumber() int64 {
 // GetBlockNumberOk returns a tuple with the BlockNumber field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CurveExchangeDTO) GetBlockNumberOk() (*int64, bool) {
-	if o == nil || isNil(o.BlockNumber) {
+	if o == nil || IsNil(o.BlockNumber) {
 		return nil, false
 	}
 	return o.BlockNumber, true
@@ -157,7 +157,7 @@ func (o *CurveExchangeDTO) GetBlockNumberOk() (*int64, bool) {
 
 // HasBlockNumber returns a boolean if a field has been set.
 func (o *CurveExchangeDTO) HasBlockNumber() bool {
-	if o != nil && !isNil(o.BlockNumber) {
+	if o != nil && !IsNil(o.BlockNumber) {
 		return true
 	}
 
@@ -171,7 +171,7 @@ func (o *CurveExchangeDTO) SetBlockNumber(v int64) {
 
 // GetId returns the Id field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurveExchangeDTO) GetId() string {
-	if o == nil || isNil(o.Id.Get()) {
+	if o == nil || IsNil(o.Id.Get()) {
 		var ret string
 		return ret
 	}
@@ -213,7 +213,7 @@ func (o *CurveExchangeDTO) UnsetId() {
 
 // GetPool returns the Pool field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurveExchangeDTO) GetPool() string {
-	if o == nil || isNil(o.Pool.Get()) {
+	if o == nil || IsNil(o.Pool.Get()) {
 		var ret string
 		return ret
 	}
@@ -255,7 +255,7 @@ func (o *CurveExchangeDTO) UnsetPool() {
 
 // GetBuyer returns the Buyer field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurveExchangeDTO) GetBuyer() string {
-	if o == nil || isNil(o.Buyer.Get()) {
+	if o == nil || IsNil(o.Buyer.Get()) {
 		var ret string
 		return ret
 	}
@@ -297,7 +297,7 @@ func (o *CurveExchangeDTO) UnsetBuyer() {
 
 // GetReceiver returns the Receiver field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurveExchangeDTO) GetReceiver() string {
-	if o == nil || isNil(o.Receiver.Get()) {
+	if o == nil || IsNil(o.Receiver.Get()) {
 		var ret string
 		return ret
 	}
@@ -339,7 +339,7 @@ func (o *CurveExchangeDTO) UnsetReceiver() {
 
 // GetTokenSold returns the TokenSold field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurveExchangeDTO) GetTokenSold() string {
-	if o == nil || isNil(o.TokenSold.Get()) {
+	if o == nil || IsNil(o.TokenSold.Get()) {
 		var ret string
 		return ret
 	}
@@ -381,7 +381,7 @@ func (o *CurveExchangeDTO) UnsetTokenSold() {
 
 // GetTokenBought returns the TokenBought field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurveExchangeDTO) GetTokenBought() string {
-	if o == nil || isNil(o.TokenBought.Get()) {
+	if o == nil || IsNil(o.TokenBought.Get()) {
 		var ret string
 		return ret
 	}
@@ -423,7 +423,7 @@ func (o *CurveExchangeDTO) UnsetTokenBought() {
 
 // GetAmountSold returns the AmountSold field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurveExchangeDTO) GetAmountSold() string {
-	if o == nil || isNil(o.AmountSold.Get()) {
+	if o == nil || IsNil(o.AmountSold.Get()) {
 		var ret string
 		return ret
 	}
@@ -465,7 +465,7 @@ func (o *CurveExchangeDTO) UnsetAmountSold() {
 
 // GetAmountBought returns the AmountBought field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurveExchangeDTO) GetAmountBought() string {
-	if o == nil || isNil(o.AmountBought.Get()) {
+	if o == nil || IsNil(o.AmountBought.Get()) {
 		var ret string
 		return ret
 	}
@@ -507,7 +507,7 @@ func (o *CurveExchangeDTO) UnsetAmountBought() {
 
 // GetBlock returns the Block field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurveExchangeDTO) GetBlock() string {
-	if o == nil || isNil(o.Block.Get()) {
+	if o == nil || IsNil(o.Block.Get()) {
 		var ret string
 		return ret
 	}
@@ -549,7 +549,7 @@ func (o *CurveExchangeDTO) UnsetBlock() {
 
 // GetTimestamp returns the Timestamp field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurveExchangeDTO) GetTimestamp() string {
-	if o == nil || isNil(o.Timestamp.Get()) {
+	if o == nil || IsNil(o.Timestamp.Get()) {
 		var ret string
 		return ret
 	}
@@ -591,7 +591,7 @@ func (o *CurveExchangeDTO) UnsetTimestamp() {
 
 // GetTransaction returns the Transaction field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurveExchangeDTO) GetTransaction() string {
-	if o == nil || isNil(o.Transaction.Get()) {
+	if o == nil || IsNil(o.Transaction.Get()) {
 		var ret string
 		return ret
 	}
@@ -633,7 +633,7 @@ func (o *CurveExchangeDTO) UnsetTransaction() {
 
 // GetVid returns the Vid field value if set, zero value otherwise.
 func (o *CurveExchangeDTO) GetVid() int64 {
-	if o == nil || isNil(o.Vid) {
+	if o == nil || IsNil(o.Vid) {
 		var ret int64
 		return ret
 	}
@@ -643,7 +643,7 @@ func (o *CurveExchangeDTO) GetVid() int64 {
 // GetVidOk returns a tuple with the Vid field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CurveExchangeDTO) GetVidOk() (*int64, bool) {
-	if o == nil || isNil(o.Vid) {
+	if o == nil || IsNil(o.Vid) {
 		return nil, false
 	}
 	return o.Vid, true
@@ -651,7 +651,7 @@ func (o *CurveExchangeDTO) GetVidOk() (*int64, bool) {
 
 // HasVid returns a boolean if a field has been set.
 func (o *CurveExchangeDTO) HasVid() bool {
-	if o != nil && !isNil(o.Vid) {
+	if o != nil && !IsNil(o.Vid) {
 		return true
 	}
 
@@ -665,7 +665,7 @@ func (o *CurveExchangeDTO) SetVid(v int64) {
 
 // GetEvaluatedPrice returns the EvaluatedPrice field value if set, zero value otherwise.
 func (o *CurveExchangeDTO) GetEvaluatedPrice() float64 {
-	if o == nil || isNil(o.EvaluatedPrice) {
+	if o == nil || IsNil(o.EvaluatedPrice) {
 		var ret float64
 		return ret
 	}
@@ -675,7 +675,7 @@ func (o *CurveExchangeDTO) GetEvaluatedPrice() float64 {
 // GetEvaluatedPriceOk returns a tuple with the EvaluatedPrice field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CurveExchangeDTO) GetEvaluatedPriceOk() (*float64, bool) {
-	if o == nil || isNil(o.EvaluatedPrice) {
+	if o == nil || IsNil(o.EvaluatedPrice) {
 		return nil, false
 	}
 	return o.EvaluatedPrice, true
@@ -683,7 +683,7 @@ func (o *CurveExchangeDTO) GetEvaluatedPriceOk() (*float64, bool) {
 
 // HasEvaluatedPrice returns a boolean if a field has been set.
 func (o *CurveExchangeDTO) HasEvaluatedPrice() bool {
-	if o != nil && !isNil(o.EvaluatedPrice) {
+	if o != nil && !IsNil(o.EvaluatedPrice) {
 		return true
 	}
 
@@ -697,7 +697,7 @@ func (o *CurveExchangeDTO) SetEvaluatedPrice(v float64) {
 
 // GetEvaluatedAmount returns the EvaluatedAmount field value if set, zero value otherwise.
 func (o *CurveExchangeDTO) GetEvaluatedAmount() float64 {
-	if o == nil || isNil(o.EvaluatedAmount) {
+	if o == nil || IsNil(o.EvaluatedAmount) {
 		var ret float64
 		return ret
 	}
@@ -707,7 +707,7 @@ func (o *CurveExchangeDTO) GetEvaluatedAmount() float64 {
 // GetEvaluatedAmountOk returns a tuple with the EvaluatedAmount field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CurveExchangeDTO) GetEvaluatedAmountOk() (*float64, bool) {
-	if o == nil || isNil(o.EvaluatedAmount) {
+	if o == nil || IsNil(o.EvaluatedAmount) {
 		return nil, false
 	}
 	return o.EvaluatedAmount, true
@@ -715,7 +715,7 @@ func (o *CurveExchangeDTO) GetEvaluatedAmountOk() (*float64, bool) {
 
 // HasEvaluatedAmount returns a boolean if a field has been set.
 func (o *CurveExchangeDTO) HasEvaluatedAmount() bool {
-	if o != nil && !isNil(o.EvaluatedAmount) {
+	if o != nil && !IsNil(o.EvaluatedAmount) {
 		return true
 	}
 
@@ -729,7 +729,7 @@ func (o *CurveExchangeDTO) SetEvaluatedAmount(v float64) {
 
 // GetEvaluatedAggressor returns the EvaluatedAggressor field value if set, zero value otherwise.
 func (o *CurveExchangeDTO) GetEvaluatedAggressor() TransactionsETradeAggressiveSide {
-	if o == nil || isNil(o.EvaluatedAggressor) {
+	if o == nil || IsNil(o.EvaluatedAggressor) {
 		var ret TransactionsETradeAggressiveSide
 		return ret
 	}
@@ -739,7 +739,7 @@ func (o *CurveExchangeDTO) GetEvaluatedAggressor() TransactionsETradeAggressiveS
 // GetEvaluatedAggressorOk returns a tuple with the EvaluatedAggressor field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CurveExchangeDTO) GetEvaluatedAggressorOk() (*TransactionsETradeAggressiveSide, bool) {
-	if o == nil || isNil(o.EvaluatedAggressor) {
+	if o == nil || IsNil(o.EvaluatedAggressor) {
 		return nil, false
 	}
 	return o.EvaluatedAggressor, true
@@ -747,7 +747,7 @@ func (o *CurveExchangeDTO) GetEvaluatedAggressorOk() (*TransactionsETradeAggress
 
 // HasEvaluatedAggressor returns a boolean if a field has been set.
 func (o *CurveExchangeDTO) HasEvaluatedAggressor() bool {
-	if o != nil && !isNil(o.EvaluatedAggressor) {
+	if o != nil && !IsNil(o.EvaluatedAggressor) {
 		return true
 	}
 
@@ -761,7 +761,7 @@ func (o *CurveExchangeDTO) SetEvaluatedAggressor(v TransactionsETradeAggressiveS
 
 // GetPoolId returns the PoolId field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurveExchangeDTO) GetPoolId() string {
-	if o == nil || isNil(o.PoolId.Get()) {
+	if o == nil || IsNil(o.PoolId.Get()) {
 		var ret string
 		return ret
 	}
@@ -803,7 +803,7 @@ func (o *CurveExchangeDTO) UnsetPoolId() {
 
 // GetTransactionId returns the TransactionId field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurveExchangeDTO) GetTransactionId() string {
-	if o == nil || isNil(o.TransactionId.Get()) {
+	if o == nil || IsNil(o.TransactionId.Get()) {
 		var ret string
 		return ret
 	}
@@ -853,13 +853,13 @@ func (o CurveExchangeDTO) MarshalJSON() ([]byte, error) {
 
 func (o CurveExchangeDTO) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if !isNil(o.EntryTime) {
+	if !IsNil(o.EntryTime) {
 		toSerialize["entry_time"] = o.EntryTime
 	}
-	if !isNil(o.RecvTime) {
+	if !IsNil(o.RecvTime) {
 		toSerialize["recv_time"] = o.RecvTime
 	}
-	if !isNil(o.BlockNumber) {
+	if !IsNil(o.BlockNumber) {
 		toSerialize["block_number"] = o.BlockNumber
 	}
 	if o.Id.IsSet() {
@@ -895,12 +895,12 @@ func (o CurveExchangeDTO) ToMap() (map[string]interface{}, error) {
 	if o.Transaction.IsSet() {
 		toSerialize["transaction"] = o.Transaction.Get()
 	}
-	if !isNil(o.Vid) {
+	if !IsNil(o.Vid) {
 		toSerialize["vid"] = o.Vid
 	}
 	// skip: evaluated_price is readOnly
 	// skip: evaluated_amount is readOnly
-	if !isNil(o.EvaluatedAggressor) {
+	if !IsNil(o.EvaluatedAggressor) {
 		toSerialize["evaluated_aggressor"] = o.EvaluatedAggressor
 	}
 	if o.PoolId.IsSet() {

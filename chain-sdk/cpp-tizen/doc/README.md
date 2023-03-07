@@ -39,6 +39,47 @@ Check out [Doxygen](https://www.doxygen.org/) for additional information about t
 All URIs are relative to https://onchain.coinapi.iohttps://onchain.coinapi.io
 
 
+### CRYPTOPUNKSManager
+Method | HTTP request | Description
+------------- | ------------- | -------------
+*cRYPTOPUNKSBids (current)Sync* | *GET* /dapps/cryptopunks/bids/current | Bids (current).
+*cRYPTOPUNKSBids (current)ASync* | *GET* /dapps/cryptopunks/bids/current | Bids (current).
+*cRYPTOPUNKSCollectionDailySnapshots (current)Sync* | *GET* /dapps/cryptopunks/collectionDailySnapshots/current | CollectionDailySnapshots (current).
+*cRYPTOPUNKSCollectionDailySnapshots (current)ASync* | *GET* /dapps/cryptopunks/collectionDailySnapshots/current | CollectionDailySnapshots (current).
+*cRYPTOPUNKSCollections (current)Sync* | *GET* /dapps/cryptopunks/collections/current | Collections (current).
+*cRYPTOPUNKSCollections (current)ASync* | *GET* /dapps/cryptopunks/collections/current | Collections (current).
+*cRYPTOPUNKSDataSources (current)Sync* | *GET* /dapps/cryptopunks/dataSources/current | DataSources (current).
+*cRYPTOPUNKSDataSources (current)ASync* | *GET* /dapps/cryptopunks/dataSources/current | DataSources (current).
+*cRYPTOPUNKSGetBids (historical)Sync* | *GET* /dapps/cryptopunks/bids/historical | Bids (historical).
+*cRYPTOPUNKSGetBids (historical)ASync* | *GET* /dapps/cryptopunks/bids/historical | Bids (historical).
+*cRYPTOPUNKSGetCollectionDailySnapshots (historical)Sync* | *GET* /dapps/cryptopunks/collectionDailySnapshots/historical | CollectionDailySnapshots (historical).
+*cRYPTOPUNKSGetCollectionDailySnapshots (historical)ASync* | *GET* /dapps/cryptopunks/collectionDailySnapshots/historical | CollectionDailySnapshots (historical).
+*cRYPTOPUNKSGetCollections (historical)Sync* | *GET* /dapps/cryptopunks/collections/historical | Collections (historical).
+*cRYPTOPUNKSGetCollections (historical)ASync* | *GET* /dapps/cryptopunks/collections/historical | Collections (historical).
+*cRYPTOPUNKSGetDataSources (historical)Sync* | *GET* /dapps/cryptopunks/dataSources/historical | DataSources (historical).
+*cRYPTOPUNKSGetDataSources (historical)ASync* | *GET* /dapps/cryptopunks/dataSources/historical | DataSources (historical).
+*cRYPTOPUNKSGetItems (historical)Sync* | *GET* /dapps/cryptopunks/items/historical | Items (historical).
+*cRYPTOPUNKSGetItems (historical)ASync* | *GET* /dapps/cryptopunks/items/historical | Items (historical).
+*cRYPTOPUNKSGetMarketPlaces (historical)Sync* | *GET* /dapps/cryptopunks/marketPlaces/historical | MarketPlaces (historical).
+*cRYPTOPUNKSGetMarketPlaces (historical)ASync* | *GET* /dapps/cryptopunks/marketPlaces/historical | MarketPlaces (historical).
+*cRYPTOPUNKSGetMarketplaceDailySnapshots (historical)Sync* | *GET* /dapps/cryptopunks/marketplaceDailySnapshots/historical | MarketplaceDailySnapshots (historical).
+*cRYPTOPUNKSGetMarketplaceDailySnapshots (historical)ASync* | *GET* /dapps/cryptopunks/marketplaceDailySnapshots/historical | MarketplaceDailySnapshots (historical).
+*cRYPTOPUNKSGetTrades (historical)Sync* | *GET* /dapps/cryptopunks/trades/historical | Trades (historical).
+*cRYPTOPUNKSGetTrades (historical)ASync* | *GET* /dapps/cryptopunks/trades/historical | Trades (historical).
+*cRYPTOPUNKSGetUsers (historical)Sync* | *GET* /dapps/cryptopunks/users/historical | Users (historical).
+*cRYPTOPUNKSGetUsers (historical)ASync* | *GET* /dapps/cryptopunks/users/historical | Users (historical).
+*cRYPTOPUNKSItems (current)Sync* | *GET* /dapps/cryptopunks/items/current | Items (current).
+*cRYPTOPUNKSItems (current)ASync* | *GET* /dapps/cryptopunks/items/current | Items (current).
+*cRYPTOPUNKSMarketPlaces (current)Sync* | *GET* /dapps/cryptopunks/marketPlaces/current | MarketPlaces (current).
+*cRYPTOPUNKSMarketPlaces (current)ASync* | *GET* /dapps/cryptopunks/marketPlaces/current | MarketPlaces (current).
+*cRYPTOPUNKSMarketplaceDailySnapshots (current)Sync* | *GET* /dapps/cryptopunks/marketplaceDailySnapshots/current | MarketplaceDailySnapshots (current).
+*cRYPTOPUNKSMarketplaceDailySnapshots (current)ASync* | *GET* /dapps/cryptopunks/marketplaceDailySnapshots/current | MarketplaceDailySnapshots (current).
+*cRYPTOPUNKSTrades (current)Sync* | *GET* /dapps/cryptopunks/trades/current | Trades (current).
+*cRYPTOPUNKSTrades (current)ASync* | *GET* /dapps/cryptopunks/trades/current | Trades (current).
+*cRYPTOPUNKSUsers (current)Sync* | *GET* /dapps/cryptopunks/users/current | Users (current).
+*cRYPTOPUNKSUsers (current)ASync* | *GET* /dapps/cryptopunks/users/current | Users (current).
+
+
 ### CowManager
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -467,6 +508,15 @@ Method | HTTP request | Description
 ## What are the Model files for the data structures/objects?
 Class | Description
 ------------- | -------------
+ *CRYPTOPUNKS.BidDTO* | 
+ *CRYPTOPUNKS.CollectionDTO* | 
+ *CRYPTOPUNKS.CollectionDailySnapshotDTO* | 
+ *CRYPTOPUNKS.DataSourcesDTO* | 
+ *CRYPTOPUNKS.ItemDTO* | 
+ *CRYPTOPUNKS.MarketPlaceDTO* | 
+ *CRYPTOPUNKS.MarketplaceDailySnapshotDTO* | 
+ *CRYPTOPUNKS.TradeDTO* | 
+ *CRYPTOPUNKS.UserDTO* | 
  *Cow.OrderDTO* | 
  *Cow.SettlementDTO* | A settlement comprises a list of traded tokens with their corresponding price in the batch.
  *Cow.TokenDTO* | Stores information for a specific token across all pairs that token is included in.

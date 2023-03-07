@@ -58,7 +58,7 @@ func NewCurveDailyVolumeDTOWithDefaults() *CurveDailyVolumeDTO {
 
 // GetEntryTime returns the EntryTime field value if set, zero value otherwise.
 func (o *CurveDailyVolumeDTO) GetEntryTime() time.Time {
-	if o == nil || isNil(o.EntryTime) {
+	if o == nil || IsNil(o.EntryTime) {
 		var ret time.Time
 		return ret
 	}
@@ -68,7 +68,7 @@ func (o *CurveDailyVolumeDTO) GetEntryTime() time.Time {
 // GetEntryTimeOk returns a tuple with the EntryTime field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CurveDailyVolumeDTO) GetEntryTimeOk() (*time.Time, bool) {
-	if o == nil || isNil(o.EntryTime) {
+	if o == nil || IsNil(o.EntryTime) {
 		return nil, false
 	}
 	return o.EntryTime, true
@@ -76,7 +76,7 @@ func (o *CurveDailyVolumeDTO) GetEntryTimeOk() (*time.Time, bool) {
 
 // HasEntryTime returns a boolean if a field has been set.
 func (o *CurveDailyVolumeDTO) HasEntryTime() bool {
-	if o != nil && !isNil(o.EntryTime) {
+	if o != nil && !IsNil(o.EntryTime) {
 		return true
 	}
 
@@ -90,7 +90,7 @@ func (o *CurveDailyVolumeDTO) SetEntryTime(v time.Time) {
 
 // GetRecvTime returns the RecvTime field value if set, zero value otherwise.
 func (o *CurveDailyVolumeDTO) GetRecvTime() time.Time {
-	if o == nil || isNil(o.RecvTime) {
+	if o == nil || IsNil(o.RecvTime) {
 		var ret time.Time
 		return ret
 	}
@@ -100,7 +100,7 @@ func (o *CurveDailyVolumeDTO) GetRecvTime() time.Time {
 // GetRecvTimeOk returns a tuple with the RecvTime field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CurveDailyVolumeDTO) GetRecvTimeOk() (*time.Time, bool) {
-	if o == nil || isNil(o.RecvTime) {
+	if o == nil || IsNil(o.RecvTime) {
 		return nil, false
 	}
 	return o.RecvTime, true
@@ -108,7 +108,7 @@ func (o *CurveDailyVolumeDTO) GetRecvTimeOk() (*time.Time, bool) {
 
 // HasRecvTime returns a boolean if a field has been set.
 func (o *CurveDailyVolumeDTO) HasRecvTime() bool {
-	if o != nil && !isNil(o.RecvTime) {
+	if o != nil && !IsNil(o.RecvTime) {
 		return true
 	}
 
@@ -122,7 +122,7 @@ func (o *CurveDailyVolumeDTO) SetRecvTime(v time.Time) {
 
 // GetBlockNumber returns the BlockNumber field value if set, zero value otherwise.
 func (o *CurveDailyVolumeDTO) GetBlockNumber() int64 {
-	if o == nil || isNil(o.BlockNumber) {
+	if o == nil || IsNil(o.BlockNumber) {
 		var ret int64
 		return ret
 	}
@@ -132,7 +132,7 @@ func (o *CurveDailyVolumeDTO) GetBlockNumber() int64 {
 // GetBlockNumberOk returns a tuple with the BlockNumber field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CurveDailyVolumeDTO) GetBlockNumberOk() (*int64, bool) {
-	if o == nil || isNil(o.BlockNumber) {
+	if o == nil || IsNil(o.BlockNumber) {
 		return nil, false
 	}
 	return o.BlockNumber, true
@@ -140,7 +140,7 @@ func (o *CurveDailyVolumeDTO) GetBlockNumberOk() (*int64, bool) {
 
 // HasBlockNumber returns a boolean if a field has been set.
 func (o *CurveDailyVolumeDTO) HasBlockNumber() bool {
-	if o != nil && !isNil(o.BlockNumber) {
+	if o != nil && !IsNil(o.BlockNumber) {
 		return true
 	}
 
@@ -154,7 +154,7 @@ func (o *CurveDailyVolumeDTO) SetBlockNumber(v int64) {
 
 // GetId returns the Id field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurveDailyVolumeDTO) GetId() string {
-	if o == nil || isNil(o.Id.Get()) {
+	if o == nil || IsNil(o.Id.Get()) {
 		var ret string
 		return ret
 	}
@@ -196,7 +196,7 @@ func (o *CurveDailyVolumeDTO) UnsetId() {
 
 // GetPool returns the Pool field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurveDailyVolumeDTO) GetPool() string {
-	if o == nil || isNil(o.Pool.Get()) {
+	if o == nil || IsNil(o.Pool.Get()) {
 		var ret string
 		return ret
 	}
@@ -238,7 +238,7 @@ func (o *CurveDailyVolumeDTO) UnsetPool() {
 
 // GetTimestamp returns the Timestamp field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurveDailyVolumeDTO) GetTimestamp() string {
-	if o == nil || isNil(o.Timestamp.Get()) {
+	if o == nil || IsNil(o.Timestamp.Get()) {
 		var ret string
 		return ret
 	}
@@ -280,7 +280,7 @@ func (o *CurveDailyVolumeDTO) UnsetTimestamp() {
 
 // GetVolume returns the Volume field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurveDailyVolumeDTO) GetVolume() string {
-	if o == nil || isNil(o.Volume.Get()) {
+	if o == nil || IsNil(o.Volume.Get()) {
 		var ret string
 		return ret
 	}
@@ -322,7 +322,7 @@ func (o *CurveDailyVolumeDTO) UnsetVolume() {
 
 // GetVid returns the Vid field value if set, zero value otherwise.
 func (o *CurveDailyVolumeDTO) GetVid() int64 {
-	if o == nil || isNil(o.Vid) {
+	if o == nil || IsNil(o.Vid) {
 		var ret int64
 		return ret
 	}
@@ -332,7 +332,7 @@ func (o *CurveDailyVolumeDTO) GetVid() int64 {
 // GetVidOk returns a tuple with the Vid field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CurveDailyVolumeDTO) GetVidOk() (*int64, bool) {
-	if o == nil || isNil(o.Vid) {
+	if o == nil || IsNil(o.Vid) {
 		return nil, false
 	}
 	return o.Vid, true
@@ -340,7 +340,7 @@ func (o *CurveDailyVolumeDTO) GetVidOk() (*int64, bool) {
 
 // HasVid returns a boolean if a field has been set.
 func (o *CurveDailyVolumeDTO) HasVid() bool {
-	if o != nil && !isNil(o.Vid) {
+	if o != nil && !IsNil(o.Vid) {
 		return true
 	}
 
@@ -354,7 +354,7 @@ func (o *CurveDailyVolumeDTO) SetVid(v int64) {
 
 // GetBlockRange returns the BlockRange field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurveDailyVolumeDTO) GetBlockRange() string {
-	if o == nil || isNil(o.BlockRange.Get()) {
+	if o == nil || IsNil(o.BlockRange.Get()) {
 		var ret string
 		return ret
 	}
@@ -404,13 +404,13 @@ func (o CurveDailyVolumeDTO) MarshalJSON() ([]byte, error) {
 
 func (o CurveDailyVolumeDTO) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if !isNil(o.EntryTime) {
+	if !IsNil(o.EntryTime) {
 		toSerialize["entry_time"] = o.EntryTime
 	}
-	if !isNil(o.RecvTime) {
+	if !IsNil(o.RecvTime) {
 		toSerialize["recv_time"] = o.RecvTime
 	}
-	if !isNil(o.BlockNumber) {
+	if !IsNil(o.BlockNumber) {
 		toSerialize["block_number"] = o.BlockNumber
 	}
 	if o.Id.IsSet() {
@@ -425,7 +425,7 @@ func (o CurveDailyVolumeDTO) ToMap() (map[string]interface{}, error) {
 	if o.Volume.IsSet() {
 		toSerialize["volume"] = o.Volume.Get()
 	}
-	if !isNil(o.Vid) {
+	if !IsNil(o.Vid) {
 		toSerialize["vid"] = o.Vid
 	}
 	if o.BlockRange.IsSet() {

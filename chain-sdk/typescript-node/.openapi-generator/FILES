@@ -2,6 +2,7 @@
 .openapi-generator-ignore
 api.ts
 api/apis.ts
+api/cRYPTOPUNKSApi.ts
 api/cowApi.ts
 api/curveApi.ts
 api/dexApi.ts
@@ -10,6 +11,15 @@ api/sushiswapApi.ts
 api/uniswapV2Api.ts
 api/uniswapV3Api.ts
 git_push.sh
+model/cRYPTOPUNKSBidDTO.ts
+model/cRYPTOPUNKSCollectionDTO.ts
+model/cRYPTOPUNKSCollectionDailySnapshotDTO.ts
+model/cRYPTOPUNKSDataSourcesDTO.ts
+model/cRYPTOPUNKSItemDTO.ts
+model/cRYPTOPUNKSMarketPlaceDTO.ts
+model/cRYPTOPUNKSMarketplaceDailySnapshotDTO.ts
+model/cRYPTOPUNKSTradeDTO.ts
+model/cRYPTOPUNKSUserDTO.ts
 model/cowOrderDTO.ts
 model/cowSettlementDTO.ts
 model/cowTokenDTO.ts

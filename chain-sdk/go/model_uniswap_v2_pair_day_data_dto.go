@@ -74,7 +74,7 @@ func NewUniswapV2PairDayDataDTOWithDefaults() *UniswapV2PairDayDataDTO {
 
 // GetEntryTime returns the EntryTime field value if set, zero value otherwise.
 func (o *UniswapV2PairDayDataDTO) GetEntryTime() time.Time {
-	if o == nil || isNil(o.EntryTime) {
+	if o == nil || IsNil(o.EntryTime) {
 		var ret time.Time
 		return ret
 	}
@@ -84,7 +84,7 @@ func (o *UniswapV2PairDayDataDTO) GetEntryTime() time.Time {
 // GetEntryTimeOk returns a tuple with the EntryTime field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *UniswapV2PairDayDataDTO) GetEntryTimeOk() (*time.Time, bool) {
-	if o == nil || isNil(o.EntryTime) {
+	if o == nil || IsNil(o.EntryTime) {
 		return nil, false
 	}
 	return o.EntryTime, true
@@ -92,7 +92,7 @@ func (o *UniswapV2PairDayDataDTO) GetEntryTimeOk() (*time.Time, bool) {
 
 // HasEntryTime returns a boolean if a field has been set.
 func (o *UniswapV2PairDayDataDTO) HasEntryTime() bool {
-	if o != nil && !isNil(o.EntryTime) {
+	if o != nil && !IsNil(o.EntryTime) {
 		return true
 	}
 
@@ -106,7 +106,7 @@ func (o *UniswapV2PairDayDataDTO) SetEntryTime(v time.Time) {
 
 // GetRecvTime returns the RecvTime field value if set, zero value otherwise.
 func (o *UniswapV2PairDayDataDTO) GetRecvTime() time.Time {
-	if o == nil || isNil(o.RecvTime) {
+	if o == nil || IsNil(o.RecvTime) {
 		var ret time.Time
 		return ret
 	}
@@ -116,7 +116,7 @@ func (o *UniswapV2PairDayDataDTO) GetRecvTime() time.Time {
 // GetRecvTimeOk returns a tuple with the RecvTime field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *UniswapV2PairDayDataDTO) GetRecvTimeOk() (*time.Time, bool) {
-	if o == nil || isNil(o.RecvTime) {
+	if o == nil || IsNil(o.RecvTime) {
 		return nil, false
 	}
 	return o.RecvTime, true
@@ -124,7 +124,7 @@ func (o *UniswapV2PairDayDataDTO) GetRecvTimeOk() (*time.Time, bool) {
 
 // HasRecvTime returns a boolean if a field has been set.
 func (o *UniswapV2PairDayDataDTO) HasRecvTime() bool {
-	if o != nil && !isNil(o.RecvTime) {
+	if o != nil && !IsNil(o.RecvTime) {
 		return true
 	}
 
@@ -138,7 +138,7 @@ func (o *UniswapV2PairDayDataDTO) SetRecvTime(v time.Time) {
 
 // GetBlockNumber returns the BlockNumber field value if set, zero value otherwise.
 func (o *UniswapV2PairDayDataDTO) GetBlockNumber() int64 {
-	if o == nil || isNil(o.BlockNumber) {
+	if o == nil || IsNil(o.BlockNumber) {
 		var ret int64
 		return ret
 	}
@@ -148,7 +148,7 @@ func (o *UniswapV2PairDayDataDTO) GetBlockNumber() int64 {
 // GetBlockNumberOk returns a tuple with the BlockNumber field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *UniswapV2PairDayDataDTO) GetBlockNumberOk() (*int64, bool) {
-	if o == nil || isNil(o.BlockNumber) {
+	if o == nil || IsNil(o.BlockNumber) {
 		return nil, false
 	}
 	return o.BlockNumber, true
@@ -156,7 +156,7 @@ func (o *UniswapV2PairDayDataDTO) GetBlockNumberOk() (*int64, bool) {
 
 // HasBlockNumber returns a boolean if a field has been set.
 func (o *UniswapV2PairDayDataDTO) HasBlockNumber() bool {
-	if o != nil && !isNil(o.BlockNumber) {
+	if o != nil && !IsNil(o.BlockNumber) {
 		return true
 	}
 
@@ -170,7 +170,7 @@ func (o *UniswapV2PairDayDataDTO) SetBlockNumber(v int64) {
 
 // GetId returns the Id field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *UniswapV2PairDayDataDTO) GetId() string {
-	if o == nil || isNil(o.Id.Get()) {
+	if o == nil || IsNil(o.Id.Get()) {
 		var ret string
 		return ret
 	}
@@ -212,7 +212,7 @@ func (o *UniswapV2PairDayDataDTO) UnsetId() {
 
 // GetDate returns the Date field value if set, zero value otherwise.
 func (o *UniswapV2PairDayDataDTO) GetDate() int32 {
-	if o == nil || isNil(o.Date) {
+	if o == nil || IsNil(o.Date) {
 		var ret int32
 		return ret
 	}
@@ -222,7 +222,7 @@ func (o *UniswapV2PairDayDataDTO) GetDate() int32 {
 // GetDateOk returns a tuple with the Date field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *UniswapV2PairDayDataDTO) GetDateOk() (*int32, bool) {
-	if o == nil || isNil(o.Date) {
+	if o == nil || IsNil(o.Date) {
 		return nil, false
 	}
 	return o.Date, true
@@ -230,7 +230,7 @@ func (o *UniswapV2PairDayDataDTO) GetDateOk() (*int32, bool) {
 
 // HasDate returns a boolean if a field has been set.
 func (o *UniswapV2PairDayDataDTO) HasDate() bool {
-	if o != nil && !isNil(o.Date) {
+	if o != nil && !IsNil(o.Date) {
 		return true
 	}
 
@@ -244,7 +244,7 @@ func (o *UniswapV2PairDayDataDTO) SetDate(v int32) {
 
 // GetPairAddress returns the PairAddress field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *UniswapV2PairDayDataDTO) GetPairAddress() string {
-	if o == nil || isNil(o.PairAddress.Get()) {
+	if o == nil || IsNil(o.PairAddress.Get()) {
 		var ret string
 		return ret
 	}
@@ -286,7 +286,7 @@ func (o *UniswapV2PairDayDataDTO) UnsetPairAddress() {
 
 // GetToken0 returns the Token0 field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *UniswapV2PairDayDataDTO) GetToken0() string {
-	if o == nil || isNil(o.Token0.Get()) {
+	if o == nil || IsNil(o.Token0.Get()) {
 		var ret string
 		return ret
 	}
@@ -328,7 +328,7 @@ func (o *UniswapV2PairDayDataDTO) UnsetToken0() {
 
 // GetToken1 returns the Token1 field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *UniswapV2PairDayDataDTO) GetToken1() string {
-	if o == nil || isNil(o.Token1.Get()) {
+	if o == nil || IsNil(o.Token1.Get()) {
 		var ret string
 		return ret
 	}
@@ -370,7 +370,7 @@ func (o *UniswapV2PairDayDataDTO) UnsetToken1() {
 
 // GetReserve0 returns the Reserve0 field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *UniswapV2PairDayDataDTO) GetReserve0() string {
-	if o == nil || isNil(o.Reserve0.Get()) {
+	if o == nil || IsNil(o.Reserve0.Get()) {
 		var ret string
 		return ret
 	}
@@ -412,7 +412,7 @@ func (o *UniswapV2PairDayDataDTO) UnsetReserve0() {
 
 // GetReserve1 returns the Reserve1 field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *UniswapV2PairDayDataDTO) GetReserve1() string {
-	if o == nil || isNil(o.Reserve1.Get()) {
+	if o == nil || IsNil(o.Reserve1.Get()) {
 		var ret string
 		return ret
 	}
@@ -454,7 +454,7 @@ func (o *UniswapV2PairDayDataDTO) UnsetReserve1() {
 
 // GetTotalSupply returns the TotalSupply field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *UniswapV2PairDayDataDTO) GetTotalSupply() string {
-	if o == nil || isNil(o.TotalSupply.Get()) {
+	if o == nil || IsNil(o.TotalSupply.Get()) {
 		var ret string
 		return ret
 	}
@@ -496,7 +496,7 @@ func (o *UniswapV2PairDayDataDTO) UnsetTotalSupply() {
 
 // GetReserveUsd returns the ReserveUsd field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *UniswapV2PairDayDataDTO) GetReserveUsd() string {
-	if o == nil || isNil(o.ReserveUsd.Get()) {
+	if o == nil || IsNil(o.ReserveUsd.Get()) {
 		var ret string
 		return ret
 	}
@@ -538,7 +538,7 @@ func (o *UniswapV2PairDayDataDTO) UnsetReserveUsd() {
 
 // GetDailyVolumeToken0 returns the DailyVolumeToken0 field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *UniswapV2PairDayDataDTO) GetDailyVolumeToken0() string {
-	if o == nil || isNil(o.DailyVolumeToken0.Get()) {
+	if o == nil || IsNil(o.DailyVolumeToken0.Get()) {
 		var ret string
 		return ret
 	}
@@ -580,7 +580,7 @@ func (o *UniswapV2PairDayDataDTO) UnsetDailyVolumeToken0() {
 
 // GetDailyVolumeToken1 returns the DailyVolumeToken1 field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *UniswapV2PairDayDataDTO) GetDailyVolumeToken1() string {
-	if o == nil || isNil(o.DailyVolumeToken1.Get()) {
+	if o == nil || IsNil(o.DailyVolumeToken1.Get()) {
 		var ret string
 		return ret
 	}
@@ -622,7 +622,7 @@ func (o *UniswapV2PairDayDataDTO) UnsetDailyVolumeToken1() {
 
 // GetDailyVolumeUsd returns the DailyVolumeUsd field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *UniswapV2PairDayDataDTO) GetDailyVolumeUsd() string {
-	if o == nil || isNil(o.DailyVolumeUsd.Get()) {
+	if o == nil || IsNil(o.DailyVolumeUsd.Get()) {
 		var ret string
 		return ret
 	}
@@ -664,7 +664,7 @@ func (o *UniswapV2PairDayDataDTO) UnsetDailyVolumeUsd() {
 
 // GetDailyTxns returns the DailyTxns field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *UniswapV2PairDayDataDTO) GetDailyTxns() string {
-	if o == nil || isNil(o.DailyTxns.Get()) {
+	if o == nil || IsNil(o.DailyTxns.Get()) {
 		var ret string
 		return ret
 	}
@@ -706,7 +706,7 @@ func (o *UniswapV2PairDayDataDTO) UnsetDailyTxns() {
 
 // GetVid returns the Vid field value if set, zero value otherwise.
 func (o *UniswapV2PairDayDataDTO) GetVid() int64 {
-	if o == nil || isNil(o.Vid) {
+	if o == nil || IsNil(o.Vid) {
 		var ret int64
 		return ret
 	}
@@ -716,7 +716,7 @@ func (o *UniswapV2PairDayDataDTO) GetVid() int64 {
 // GetVidOk returns a tuple with the Vid field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *UniswapV2PairDayDataDTO) GetVidOk() (*int64, bool) {
-	if o == nil || isNil(o.Vid) {
+	if o == nil || IsNil(o.Vid) {
 		return nil, false
 	}
 	return o.Vid, true
@@ -724,7 +724,7 @@ func (o *UniswapV2PairDayDataDTO) GetVidOk() (*int64, bool) {
 
 // HasVid returns a boolean if a field has been set.
 func (o *UniswapV2PairDayDataDTO) HasVid() bool {
-	if o != nil && !isNil(o.Vid) {
+	if o != nil && !IsNil(o.Vid) {
 		return true
 	}
 
@@ -746,19 +746,19 @@ func (o UniswapV2PairDayDataDTO) MarshalJSON() ([]byte, error) {
 
 func (o UniswapV2PairDayDataDTO) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if !isNil(o.EntryTime) {
+	if !IsNil(o.EntryTime) {
 		toSerialize["entry_time"] = o.EntryTime
 	}
-	if !isNil(o.RecvTime) {
+	if !IsNil(o.RecvTime) {
 		toSerialize["recv_time"] = o.RecvTime
 	}
-	if !isNil(o.BlockNumber) {
+	if !IsNil(o.BlockNumber) {
 		toSerialize["block_number"] = o.BlockNumber
 	}
 	if o.Id.IsSet() {
 		toSerialize["id"] = o.Id.Get()
 	}
-	if !isNil(o.Date) {
+	if !IsNil(o.Date) {
 		toSerialize["date"] = o.Date
 	}
 	if o.PairAddress.IsSet() {
@@ -794,7 +794,7 @@ func (o UniswapV2PairDayDataDTO) ToMap() (map[string]interface{}, error) {
 	if o.DailyTxns.IsSet() {
 		toSerialize["daily_txns"] = o.DailyTxns.Get()
 	}
-	if !isNil(o.Vid) {
+	if !IsNil(o.Vid) {
 		toSerialize["vid"] = o.Vid
 	}
 	return toSerialize, nil

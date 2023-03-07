@@ -42,19 +42,11 @@ If everything is set correctly:
 Please follow the [installation](#installation) instruction and execute the following Apex code:
 
 ```java
-OASCowApi api = new OASCowApi();
-
-Map<String, Object> params = new Map<String, Object>{
-    'startBlock' => 2147483648L,
-    'endBlock' => 2147483648L,
-    'startDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
-    'endDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
-    'id' => 'null'
-};
+OASCRYPTOPUNKSApi api = new OASCRYPTOPUNKSApi();
 
 try {
     // cross your fingers
-    List<OASCowOrderDTO> result = api.cowGetOrdersHistorical(params);
+    List<OASCRYPTOPUNKSBidDTO> result = api.cRYPTOPUNKSBidsCurrent();
     System.debug(result);
 } catch (OAS.ApiException e) {
     // ...handle your exceptions
@@ -67,6 +59,24 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*OASCRYPTOPUNKSApi* | [**cRYPTOPUNKSBidsCurrent**](OASCRYPTOPUNKSApi.md#cRYPTOPUNKSBidsCurrent) | **GET** /dapps/cryptopunks/bids/current | Bids (current)
+*OASCRYPTOPUNKSApi* | [**cRYPTOPUNKSCollectionDailySnapshotsCurrent**](OASCRYPTOPUNKSApi.md#cRYPTOPUNKSCollectionDailySnapshotsCurrent) | **GET** /dapps/cryptopunks/collectionDailySnapshots/current | CollectionDailySnapshots (current)
+*OASCRYPTOPUNKSApi* | [**cRYPTOPUNKSCollectionsCurrent**](OASCRYPTOPUNKSApi.md#cRYPTOPUNKSCollectionsCurrent) | **GET** /dapps/cryptopunks/collections/current | Collections (current)
+*OASCRYPTOPUNKSApi* | [**cRYPTOPUNKSDataSourcesCurrent**](OASCRYPTOPUNKSApi.md#cRYPTOPUNKSDataSourcesCurrent) | **GET** /dapps/cryptopunks/dataSources/current | DataSources (current)
+*OASCRYPTOPUNKSApi* | [**cRYPTOPUNKSGetBidsHistorical**](OASCRYPTOPUNKSApi.md#cRYPTOPUNKSGetBidsHistorical) | **GET** /dapps/cryptopunks/bids/historical | Bids (historical)
+*OASCRYPTOPUNKSApi* | [**cRYPTOPUNKSGetCollectionDailySnapshotsHistorical**](OASCRYPTOPUNKSApi.md#cRYPTOPUNKSGetCollectionDailySnapshotsHistorical) | **GET** /dapps/cryptopunks/collectionDailySnapshots/historical | CollectionDailySnapshots (historical)
+*OASCRYPTOPUNKSApi* | [**cRYPTOPUNKSGetCollectionsHistorical**](OASCRYPTOPUNKSApi.md#cRYPTOPUNKSGetCollectionsHistorical) | **GET** /dapps/cryptopunks/collections/historical | Collections (historical)
+*OASCRYPTOPUNKSApi* | [**cRYPTOPUNKSGetDataSourcesHistorical**](OASCRYPTOPUNKSApi.md#cRYPTOPUNKSGetDataSourcesHistorical) | **GET** /dapps/cryptopunks/dataSources/historical | DataSources (historical)
+*OASCRYPTOPUNKSApi* | [**cRYPTOPUNKSGetItemsHistorical**](OASCRYPTOPUNKSApi.md#cRYPTOPUNKSGetItemsHistorical) | **GET** /dapps/cryptopunks/items/historical | Items (historical)
+*OASCRYPTOPUNKSApi* | [**cRYPTOPUNKSGetMarketPlacesHistorical**](OASCRYPTOPUNKSApi.md#cRYPTOPUNKSGetMarketPlacesHistorical) | **GET** /dapps/cryptopunks/marketPlaces/historical | MarketPlaces (historical)
+*OASCRYPTOPUNKSApi* | [**cRYPTOPUNKSGetMarketplaceDailySnapshotsHistorical**](OASCRYPTOPUNKSApi.md#cRYPTOPUNKSGetMarketplaceDailySnapshotsHistorical) | **GET** /dapps/cryptopunks/marketplaceDailySnapshots/historical | MarketplaceDailySnapshots (historical)
+*OASCRYPTOPUNKSApi* | [**cRYPTOPUNKSGetTradesHistorical**](OASCRYPTOPUNKSApi.md#cRYPTOPUNKSGetTradesHistorical) | **GET** /dapps/cryptopunks/trades/historical | Trades (historical)
+*OASCRYPTOPUNKSApi* | [**cRYPTOPUNKSGetUsersHistorical**](OASCRYPTOPUNKSApi.md#cRYPTOPUNKSGetUsersHistorical) | **GET** /dapps/cryptopunks/users/historical | Users (historical)
+*OASCRYPTOPUNKSApi* | [**cRYPTOPUNKSItemsCurrent**](OASCRYPTOPUNKSApi.md#cRYPTOPUNKSItemsCurrent) | **GET** /dapps/cryptopunks/items/current | Items (current)
+*OASCRYPTOPUNKSApi* | [**cRYPTOPUNKSMarketPlacesCurrent**](OASCRYPTOPUNKSApi.md#cRYPTOPUNKSMarketPlacesCurrent) | **GET** /dapps/cryptopunks/marketPlaces/current | MarketPlaces (current)
+*OASCRYPTOPUNKSApi* | [**cRYPTOPUNKSMarketplaceDailySnapshotsCurrent**](OASCRYPTOPUNKSApi.md#cRYPTOPUNKSMarketplaceDailySnapshotsCurrent) | **GET** /dapps/cryptopunks/marketplaceDailySnapshots/current | MarketplaceDailySnapshots (current)
+*OASCRYPTOPUNKSApi* | [**cRYPTOPUNKSTradesCurrent**](OASCRYPTOPUNKSApi.md#cRYPTOPUNKSTradesCurrent) | **GET** /dapps/cryptopunks/trades/current | Trades (current)
+*OASCRYPTOPUNKSApi* | [**cRYPTOPUNKSUsersCurrent**](OASCRYPTOPUNKSApi.md#cRYPTOPUNKSUsersCurrent) | **GET** /dapps/cryptopunks/users/current | Users (current)
 *OASCowApi* | [**cowGetOrdersHistorical**](OASCowApi.md#cowGetOrdersHistorical) | **GET** /dapps/cow/orders/historical | Orders (historical)
 *OASCowApi* | [**cowGetSettlementsHistorical**](OASCowApi.md#cowGetSettlementsHistorical) | **GET** /dapps/cow/settlements/historical | Settlements (historical)
 *OASCowApi* | [**cowGetTokensHistorical**](OASCowApi.md#cowGetTokensHistorical) | **GET** /dapps/cow/tokens/historical | Tokens (historical)
@@ -266,6 +276,15 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
+ - [OASCRYPTOPUNKSBidDTO](OASCRYPTOPUNKSBidDTO.md)
+ - [OASCRYPTOPUNKSCollectionDTO](OASCRYPTOPUNKSCollectionDTO.md)
+ - [OASCRYPTOPUNKSCollectionDailySnapsho](OASCRYPTOPUNKSCollectionDailySnapsho.md)
+ - [OASCRYPTOPUNKSDataSourcesDTO](OASCRYPTOPUNKSDataSourcesDTO.md)
+ - [OASCRYPTOPUNKSItemDTO](OASCRYPTOPUNKSItemDTO.md)
+ - [OASCRYPTOPUNKSMarketPlaceDTO](OASCRYPTOPUNKSMarketPlaceDTO.md)
+ - [OASCRYPTOPUNKSMarketplaceDailySnapsh](OASCRYPTOPUNKSMarketplaceDailySnapsh.md)
+ - [OASCRYPTOPUNKSTradeDTO](OASCRYPTOPUNKSTradeDTO.md)
+ - [OASCRYPTOPUNKSUserDTO](OASCRYPTOPUNKSUserDTO.md)
  - [OASCowOrderDTO](OASCowOrderDTO.md)
  - [OASCowSettlementDTO](OASCowSettlementDTO.md)
  - [OASCowTokenDTO](OASCowTokenDTO.md)

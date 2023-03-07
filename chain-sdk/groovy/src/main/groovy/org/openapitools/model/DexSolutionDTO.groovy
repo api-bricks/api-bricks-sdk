@@ -28,7 +28,7 @@ class DexSolutionDTO {
     /*  */
     String utility
     /*  */
-    List<String> trades = null
+    List<String> trades
     /*  */
     String createEpoch
     /*  */

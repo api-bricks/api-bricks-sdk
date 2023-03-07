@@ -106,14 +106,7 @@ Please follow the [installation](#installation) instruction and execute the foll
 var OnChainDappsRestApi = require('on_chain_dapps_rest_api');
 
 
-var api = new OnChainDappsRestApi.CowApi()
-var opts = {
-  'startBlock': 789, // {Number} The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
-  'endBlock': 789, // {Number} The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
-  'startDate': new Date("2013-10-20T19:20:30+01:00"), // {Date} The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
-  'endDate': new Date("2013-10-20T19:20:30+01:00"), // {Date} The end date of timeframe.
-  'id': "id_example" // {String} User's address.
-};
+var api = new OnChainDappsRestApi.CRYPTOPUNKSApi()
 var callback = function(error, data, response) {
   if (error) {
     console.error(error);
@@ -121,7 +114,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.cowGetOrdersHistorical(opts, callback);
+api.cRYPTOPUNKSBidsCurrent(callback);
 
 ```
 
@@ -131,6 +124,24 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*OnChainDappsRestApi.CRYPTOPUNKSApi* | [**cRYPTOPUNKSBidsCurrent**](docs/CRYPTOPUNKSApi.md#cRYPTOPUNKSBidsCurrent) | **GET** /dapps/cryptopunks/bids/current | Bids (current)
+*OnChainDappsRestApi.CRYPTOPUNKSApi* | [**cRYPTOPUNKSCollectionDailySnapshotsCurrent**](docs/CRYPTOPUNKSApi.md#cRYPTOPUNKSCollectionDailySnapshotsCurrent) | **GET** /dapps/cryptopunks/collectionDailySnapshots/current | CollectionDailySnapshots (current)
+*OnChainDappsRestApi.CRYPTOPUNKSApi* | [**cRYPTOPUNKSCollectionsCurrent**](docs/CRYPTOPUNKSApi.md#cRYPTOPUNKSCollectionsCurrent) | **GET** /dapps/cryptopunks/collections/current | Collections (current)
+*OnChainDappsRestApi.CRYPTOPUNKSApi* | [**cRYPTOPUNKSDataSourcesCurrent**](docs/CRYPTOPUNKSApi.md#cRYPTOPUNKSDataSourcesCurrent) | **GET** /dapps/cryptopunks/dataSources/current | DataSources (current)
+*OnChainDappsRestApi.CRYPTOPUNKSApi* | [**cRYPTOPUNKSGetBidsHistorical**](docs/CRYPTOPUNKSApi.md#cRYPTOPUNKSGetBidsHistorical) | **GET** /dapps/cryptopunks/bids/historical | Bids (historical)
+*OnChainDappsRestApi.CRYPTOPUNKSApi* | [**cRYPTOPUNKSGetCollectionDailySnapshotsHistorical**](docs/CRYPTOPUNKSApi.md#cRYPTOPUNKSGetCollectionDailySnapshotsHistorical) | **GET** /dapps/cryptopunks/collectionDailySnapshots/historical | CollectionDailySnapshots (historical)
+*OnChainDappsRestApi.CRYPTOPUNKSApi* | [**cRYPTOPUNKSGetCollectionsHistorical**](docs/CRYPTOPUNKSApi.md#cRYPTOPUNKSGetCollectionsHistorical) | **GET** /dapps/cryptopunks/collections/historical | Collections (historical)
+*OnChainDappsRestApi.CRYPTOPUNKSApi* | [**cRYPTOPUNKSGetDataSourcesHistorical**](docs/CRYPTOPUNKSApi.md#cRYPTOPUNKSGetDataSourcesHistorical) | **GET** /dapps/cryptopunks/dataSources/historical | DataSources (historical)
+*OnChainDappsRestApi.CRYPTOPUNKSApi* | [**cRYPTOPUNKSGetItemsHistorical**](docs/CRYPTOPUNKSApi.md#cRYPTOPUNKSGetItemsHistorical) | **GET** /dapps/cryptopunks/items/historical | Items (historical)
+*OnChainDappsRestApi.CRYPTOPUNKSApi* | [**cRYPTOPUNKSGetMarketPlacesHistorical**](docs/CRYPTOPUNKSApi.md#cRYPTOPUNKSGetMarketPlacesHistorical) | **GET** /dapps/cryptopunks/marketPlaces/historical | MarketPlaces (historical)
+*OnChainDappsRestApi.CRYPTOPUNKSApi* | [**cRYPTOPUNKSGetMarketplaceDailySnapshotsHistorical**](docs/CRYPTOPUNKSApi.md#cRYPTOPUNKSGetMarketplaceDailySnapshotsHistorical) | **GET** /dapps/cryptopunks/marketplaceDailySnapshots/historical | MarketplaceDailySnapshots (historical)
+*OnChainDappsRestApi.CRYPTOPUNKSApi* | [**cRYPTOPUNKSGetTradesHistorical**](docs/CRYPTOPUNKSApi.md#cRYPTOPUNKSGetTradesHistorical) | **GET** /dapps/cryptopunks/trades/historical | Trades (historical)
+*OnChainDappsRestApi.CRYPTOPUNKSApi* | [**cRYPTOPUNKSGetUsersHistorical**](docs/CRYPTOPUNKSApi.md#cRYPTOPUNKSGetUsersHistorical) | **GET** /dapps/cryptopunks/users/historical | Users (historical)
+*OnChainDappsRestApi.CRYPTOPUNKSApi* | [**cRYPTOPUNKSItemsCurrent**](docs/CRYPTOPUNKSApi.md#cRYPTOPUNKSItemsCurrent) | **GET** /dapps/cryptopunks/items/current | Items (current)
+*OnChainDappsRestApi.CRYPTOPUNKSApi* | [**cRYPTOPUNKSMarketPlacesCurrent**](docs/CRYPTOPUNKSApi.md#cRYPTOPUNKSMarketPlacesCurrent) | **GET** /dapps/cryptopunks/marketPlaces/current | MarketPlaces (current)
+*OnChainDappsRestApi.CRYPTOPUNKSApi* | [**cRYPTOPUNKSMarketplaceDailySnapshotsCurrent**](docs/CRYPTOPUNKSApi.md#cRYPTOPUNKSMarketplaceDailySnapshotsCurrent) | **GET** /dapps/cryptopunks/marketplaceDailySnapshots/current | MarketplaceDailySnapshots (current)
+*OnChainDappsRestApi.CRYPTOPUNKSApi* | [**cRYPTOPUNKSTradesCurrent**](docs/CRYPTOPUNKSApi.md#cRYPTOPUNKSTradesCurrent) | **GET** /dapps/cryptopunks/trades/current | Trades (current)
+*OnChainDappsRestApi.CRYPTOPUNKSApi* | [**cRYPTOPUNKSUsersCurrent**](docs/CRYPTOPUNKSApi.md#cRYPTOPUNKSUsersCurrent) | **GET** /dapps/cryptopunks/users/current | Users (current)
 *OnChainDappsRestApi.CowApi* | [**cowGetOrdersHistorical**](docs/CowApi.md#cowGetOrdersHistorical) | **GET** /dapps/cow/orders/historical | Orders (historical)
 *OnChainDappsRestApi.CowApi* | [**cowGetSettlementsHistorical**](docs/CowApi.md#cowGetSettlementsHistorical) | **GET** /dapps/cow/settlements/historical | Settlements (historical)
 *OnChainDappsRestApi.CowApi* | [**cowGetTokensHistorical**](docs/CowApi.md#cowGetTokensHistorical) | **GET** /dapps/cow/tokens/historical | Tokens (historical)
@@ -330,6 +341,15 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
+ - [OnChainDappsRestApi.CRYPTOPUNKSBidDTO](docs/CRYPTOPUNKSBidDTO.md)
+ - [OnChainDappsRestApi.CRYPTOPUNKSCollectionDTO](docs/CRYPTOPUNKSCollectionDTO.md)
+ - [OnChainDappsRestApi.CRYPTOPUNKSCollectionDailySnapshotDTO](docs/CRYPTOPUNKSCollectionDailySnapshotDTO.md)
+ - [OnChainDappsRestApi.CRYPTOPUNKSDataSourcesDTO](docs/CRYPTOPUNKSDataSourcesDTO.md)
+ - [OnChainDappsRestApi.CRYPTOPUNKSItemDTO](docs/CRYPTOPUNKSItemDTO.md)
+ - [OnChainDappsRestApi.CRYPTOPUNKSMarketPlaceDTO](docs/CRYPTOPUNKSMarketPlaceDTO.md)
+ - [OnChainDappsRestApi.CRYPTOPUNKSMarketplaceDailySnapshotDTO](docs/CRYPTOPUNKSMarketplaceDailySnapshotDTO.md)
+ - [OnChainDappsRestApi.CRYPTOPUNKSTradeDTO](docs/CRYPTOPUNKSTradeDTO.md)
+ - [OnChainDappsRestApi.CRYPTOPUNKSUserDTO](docs/CRYPTOPUNKSUserDTO.md)
  - [OnChainDappsRestApi.CowOrderDTO](docs/CowOrderDTO.md)
  - [OnChainDappsRestApi.CowSettlementDTO](docs/CowSettlementDTO.md)
  - [OnChainDappsRestApi.CowTokenDTO](docs/CowTokenDTO.md)

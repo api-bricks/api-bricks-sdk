@@ -12,6 +12,24 @@ from openapi_client.apis.paths.dapps_cow_trades_historical import DappsCowTrades
 from openapi_client.apis.paths.dapps_cow_trades_current import DappsCowTradesCurrent
 from openapi_client.apis.paths.dapps_cow_users_historical import DappsCowUsersHistorical
 from openapi_client.apis.paths.dapps_cow_users_current import DappsCowUsersCurrent
+from openapi_client.apis.paths.dapps_cryptopunks_bids_historical import DappsCryptopunksBidsHistorical
+from openapi_client.apis.paths.dapps_cryptopunks_bids_current import DappsCryptopunksBidsCurrent
+from openapi_client.apis.paths.dapps_cryptopunks_collection_daily_snapshots_historical import DappsCryptopunksCollectionDailySnapshotsHistorical
+from openapi_client.apis.paths.dapps_cryptopunks_collection_daily_snapshots_current import DappsCryptopunksCollectionDailySnapshotsCurrent
+from openapi_client.apis.paths.dapps_cryptopunks_collections_historical import DappsCryptopunksCollectionsHistorical
+from openapi_client.apis.paths.dapps_cryptopunks_collections_current import DappsCryptopunksCollectionsCurrent
+from openapi_client.apis.paths.dapps_cryptopunks_data_sources_historical import DappsCryptopunksDataSourcesHistorical
+from openapi_client.apis.paths.dapps_cryptopunks_data_sources_current import DappsCryptopunksDataSourcesCurrent
+from openapi_client.apis.paths.dapps_cryptopunks_items_historical import DappsCryptopunksItemsHistorical
+from openapi_client.apis.paths.dapps_cryptopunks_items_current import DappsCryptopunksItemsCurrent
+from openapi_client.apis.paths.dapps_cryptopunks_marketplace_daily_snapshots_historical import DappsCryptopunksMarketplaceDailySnapshotsHistorical
+from openapi_client.apis.paths.dapps_cryptopunks_marketplace_daily_snapshots_current import DappsCryptopunksMarketplaceDailySnapshotsCurrent
+from openapi_client.apis.paths.dapps_cryptopunks_market_places_historical import DappsCryptopunksMarketPlacesHistorical
+from openapi_client.apis.paths.dapps_cryptopunks_market_places_current import DappsCryptopunksMarketPlacesCurrent
+from openapi_client.apis.paths.dapps_cryptopunks_trades_historical import DappsCryptopunksTradesHistorical
+from openapi_client.apis.paths.dapps_cryptopunks_trades_current import DappsCryptopunksTradesCurrent
+from openapi_client.apis.paths.dapps_cryptopunks_users_historical import DappsCryptopunksUsersHistorical
+from openapi_client.apis.paths.dapps_cryptopunks_users_current import DappsCryptopunksUsersCurrent
 from openapi_client.apis.paths.dapps_curve_accounts_historical import DappsCurveAccountsHistorical
 from openapi_client.apis.paths.dapps_curve_accounts_current import DappsCurveAccountsCurrent
 from openapi_client.apis.paths.dapps_curve_add_liquidity_events_historical import DappsCurveAddLiquidityEventsHistorical
@@ -211,6 +229,24 @@ PathToApi = typing_extensions.TypedDict(
         PathValues.DAPPS_COW_TRADES_CURRENT: DappsCowTradesCurrent,
         PathValues.DAPPS_COW_USERS_HISTORICAL: DappsCowUsersHistorical,
         PathValues.DAPPS_COW_USERS_CURRENT: DappsCowUsersCurrent,
+        PathValues.DAPPS_CRYPTOPUNKS_BIDS_HISTORICAL: DappsCryptopunksBidsHistorical,
+        PathValues.DAPPS_CRYPTOPUNKS_BIDS_CURRENT: DappsCryptopunksBidsCurrent,
+        PathValues.DAPPS_CRYPTOPUNKS_COLLECTION_DAILY_SNAPSHOTS_HISTORICAL: DappsCryptopunksCollectionDailySnapshotsHistorical,
+        PathValues.DAPPS_CRYPTOPUNKS_COLLECTION_DAILY_SNAPSHOTS_CURRENT: DappsCryptopunksCollectionDailySnapshotsCurrent,
+        PathValues.DAPPS_CRYPTOPUNKS_COLLECTIONS_HISTORICAL: DappsCryptopunksCollectionsHistorical,
+        PathValues.DAPPS_CRYPTOPUNKS_COLLECTIONS_CURRENT: DappsCryptopunksCollectionsCurrent,
+        PathValues.DAPPS_CRYPTOPUNKS_DATA_SOURCES_HISTORICAL: DappsCryptopunksDataSourcesHistorical,
+        PathValues.DAPPS_CRYPTOPUNKS_DATA_SOURCES_CURRENT: DappsCryptopunksDataSourcesCurrent,
+        PathValues.DAPPS_CRYPTOPUNKS_ITEMS_HISTORICAL: DappsCryptopunksItemsHistorical,
+        PathValues.DAPPS_CRYPTOPUNKS_ITEMS_CURRENT: DappsCryptopunksItemsCurrent,
+        PathValues.DAPPS_CRYPTOPUNKS_MARKETPLACE_DAILY_SNAPSHOTS_HISTORICAL: DappsCryptopunksMarketplaceDailySnapshotsHistorical,
+        PathValues.DAPPS_CRYPTOPUNKS_MARKETPLACE_DAILY_SNAPSHOTS_CURRENT: DappsCryptopunksMarketplaceDailySnapshotsCurrent,
+        PathValues.DAPPS_CRYPTOPUNKS_MARKET_PLACES_HISTORICAL: DappsCryptopunksMarketPlacesHistorical,
+        PathValues.DAPPS_CRYPTOPUNKS_MARKET_PLACES_CURRENT: DappsCryptopunksMarketPlacesCurrent,
+        PathValues.DAPPS_CRYPTOPUNKS_TRADES_HISTORICAL: DappsCryptopunksTradesHistorical,
+        PathValues.DAPPS_CRYPTOPUNKS_TRADES_CURRENT: DappsCryptopunksTradesCurrent,
+        PathValues.DAPPS_CRYPTOPUNKS_USERS_HISTORICAL: DappsCryptopunksUsersHistorical,
+        PathValues.DAPPS_CRYPTOPUNKS_USERS_CURRENT: DappsCryptopunksUsersCurrent,
         PathValues.DAPPS_CURVE_ACCOUNTS_HISTORICAL: DappsCurveAccountsHistorical,
         PathValues.DAPPS_CURVE_ACCOUNTS_CURRENT: DappsCurveAccountsCurrent,
         PathValues.DAPPS_CURVE_ADD_LIQUIDITY_EVENTS_HISTORICAL: DappsCurveAddLiquidityEventsHistorical,
@@ -411,6 +447,24 @@ path_to_api = PathToApi(
         PathValues.DAPPS_COW_TRADES_CURRENT: DappsCowTradesCurrent,
         PathValues.DAPPS_COW_USERS_HISTORICAL: DappsCowUsersHistorical,
         PathValues.DAPPS_COW_USERS_CURRENT: DappsCowUsersCurrent,
+        PathValues.DAPPS_CRYPTOPUNKS_BIDS_HISTORICAL: DappsCryptopunksBidsHistorical,
+        PathValues.DAPPS_CRYPTOPUNKS_BIDS_CURRENT: DappsCryptopunksBidsCurrent,
+        PathValues.DAPPS_CRYPTOPUNKS_COLLECTION_DAILY_SNAPSHOTS_HISTORICAL: DappsCryptopunksCollectionDailySnapshotsHistorical,
+        PathValues.DAPPS_CRYPTOPUNKS_COLLECTION_DAILY_SNAPSHOTS_CURRENT: DappsCryptopunksCollectionDailySnapshotsCurrent,
+        PathValues.DAPPS_CRYPTOPUNKS_COLLECTIONS_HISTORICAL: DappsCryptopunksCollectionsHistorical,
+        PathValues.DAPPS_CRYPTOPUNKS_COLLECTIONS_CURRENT: DappsCryptopunksCollectionsCurrent,
+        PathValues.DAPPS_CRYPTOPUNKS_DATA_SOURCES_HISTORICAL: DappsCryptopunksDataSourcesHistorical,
+        PathValues.DAPPS_CRYPTOPUNKS_DATA_SOURCES_CURRENT: DappsCryptopunksDataSourcesCurrent,
+        PathValues.DAPPS_CRYPTOPUNKS_ITEMS_HISTORICAL: DappsCryptopunksItemsHistorical,
+        PathValues.DAPPS_CRYPTOPUNKS_ITEMS_CURRENT: DappsCryptopunksItemsCurrent,
+        PathValues.DAPPS_CRYPTOPUNKS_MARKETPLACE_DAILY_SNAPSHOTS_HISTORICAL: DappsCryptopunksMarketplaceDailySnapshotsHistorical,
+        PathValues.DAPPS_CRYPTOPUNKS_MARKETPLACE_DAILY_SNAPSHOTS_CURRENT: DappsCryptopunksMarketplaceDailySnapshotsCurrent,
+        PathValues.DAPPS_CRYPTOPUNKS_MARKET_PLACES_HISTORICAL: DappsCryptopunksMarketPlacesHistorical,
+        PathValues.DAPPS_CRYPTOPUNKS_MARKET_PLACES_CURRENT: DappsCryptopunksMarketPlacesCurrent,
+        PathValues.DAPPS_CRYPTOPUNKS_TRADES_HISTORICAL: DappsCryptopunksTradesHistorical,
+        PathValues.DAPPS_CRYPTOPUNKS_TRADES_CURRENT: DappsCryptopunksTradesCurrent,
+        PathValues.DAPPS_CRYPTOPUNKS_USERS_HISTORICAL: DappsCryptopunksUsersHistorical,
+        PathValues.DAPPS_CRYPTOPUNKS_USERS_CURRENT: DappsCryptopunksUsersCurrent,
         PathValues.DAPPS_CURVE_ACCOUNTS_HISTORICAL: DappsCurveAccountsHistorical,
         PathValues.DAPPS_CURVE_ACCOUNTS_CURRENT: DappsCurveAccountsCurrent,
         PathValues.DAPPS_CURVE_ADD_LIQUIDITY_EVENTS_HISTORICAL: DappsCurveAddLiquidityEventsHistorical,

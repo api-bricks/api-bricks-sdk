@@ -14,7 +14,7 @@ package openapi
 import (
 	"bytes"
 	"context"
-	"io/ioutil"
+	"io"
 	"net/http"
 	"net/url"
 	"time"
@@ -96,9 +96,9 @@ func (a *SushiswapApiService) SushiswapBundlesCurrentExecute(r ApiSushiswapBundl
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -195,9 +195,9 @@ func (a *SushiswapApiService) SushiswapBurnsCurrentExecute(r ApiSushiswapBurnsCu
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -294,9 +294,9 @@ func (a *SushiswapApiService) SushiswapDayDataCurrentExecute(r ApiSushiswapDayDa
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -393,9 +393,9 @@ func (a *SushiswapApiService) SushiswapFactoriesCurrentExecute(r ApiSushiswapFac
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -501,19 +501,19 @@ func (a *SushiswapApiService) SushiswapGetBundlesHistoricalExecute(r ApiSushiswa
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "id", r.id, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -542,9 +542,9 @@ func (a *SushiswapApiService) SushiswapGetBundlesHistoricalExecute(r ApiSushiswa
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -657,22 +657,22 @@ func (a *SushiswapApiService) SushiswapGetBurnsHistoricalExecute(r ApiSushiswapG
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "id", r.id, "")
 	}
 	if r.pair != nil {
-		parameterAddToQuery(localVarQueryParams, "pair", r.pair, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "pair", r.pair, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -701,9 +701,9 @@ func (a *SushiswapApiService) SushiswapGetBurnsHistoricalExecute(r ApiSushiswapG
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -809,19 +809,19 @@ func (a *SushiswapApiService) SushiswapGetDayDataHistoricalExecute(r ApiSushiswa
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "id", r.id, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -850,9 +850,9 @@ func (a *SushiswapApiService) SushiswapGetDayDataHistoricalExecute(r ApiSushiswa
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -958,19 +958,19 @@ func (a *SushiswapApiService) SushiswapGetFactoriesHistoricalExecute(r ApiSushis
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "id", r.id, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -999,9 +999,9 @@ func (a *SushiswapApiService) SushiswapGetFactoriesHistoricalExecute(r ApiSushis
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -1107,19 +1107,19 @@ func (a *SushiswapApiService) SushiswapGetHourDataHistoricalExecute(r ApiSushisw
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "id", r.id, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -1148,9 +1148,9 @@ func (a *SushiswapApiService) SushiswapGetHourDataHistoricalExecute(r ApiSushisw
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -1270,25 +1270,25 @@ func (a *SushiswapApiService) SushiswapGetLiquidityPositionSnapshotsHistoricalEx
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "id", r.id, "")
 	}
 	if r.user != nil {
-		parameterAddToQuery(localVarQueryParams, "user", r.user, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "user", r.user, "")
 	}
 	if r.pair != nil {
-		parameterAddToQuery(localVarQueryParams, "pair", r.pair, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "pair", r.pair, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -1317,9 +1317,9 @@ func (a *SushiswapApiService) SushiswapGetLiquidityPositionSnapshotsHistoricalEx
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -1439,25 +1439,25 @@ func (a *SushiswapApiService) SushiswapGetLiquidityPositionsHistoricalExecute(r 
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "id", r.id, "")
 	}
 	if r.user != nil {
-		parameterAddToQuery(localVarQueryParams, "user", r.user, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "user", r.user, "")
 	}
 	if r.pair != nil {
-		parameterAddToQuery(localVarQueryParams, "pair", r.pair, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "pair", r.pair, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -1486,9 +1486,9 @@ func (a *SushiswapApiService) SushiswapGetLiquidityPositionsHistoricalExecute(r 
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -1601,22 +1601,22 @@ func (a *SushiswapApiService) SushiswapGetMintsHistoricalExecute(r ApiSushiswapG
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "id", r.id, "")
 	}
 	if r.pair != nil {
-		parameterAddToQuery(localVarQueryParams, "pair", r.pair, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "pair", r.pair, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -1645,9 +1645,9 @@ func (a *SushiswapApiService) SushiswapGetMintsHistoricalExecute(r ApiSushiswapG
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -1774,28 +1774,28 @@ func (a *SushiswapApiService) SushiswapGetPairDayDataHistoricalExecute(r ApiSush
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "id", r.id, "")
 	}
 	if r.pair != nil {
-		parameterAddToQuery(localVarQueryParams, "pair", r.pair, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "pair", r.pair, "")
 	}
 	if r.token0 != nil {
-		parameterAddToQuery(localVarQueryParams, "token_0", r.token0, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "token_0", r.token0, "")
 	}
 	if r.token1 != nil {
-		parameterAddToQuery(localVarQueryParams, "token_1", r.token1, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "token_1", r.token1, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -1824,9 +1824,9 @@ func (a *SushiswapApiService) SushiswapGetPairDayDataHistoricalExecute(r ApiSush
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -1939,22 +1939,22 @@ func (a *SushiswapApiService) SushiswapGetPairHourDataHistoricalExecute(r ApiSus
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "id", r.id, "")
 	}
 	if r.pair != nil {
-		parameterAddToQuery(localVarQueryParams, "pair", r.pair, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "pair", r.pair, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -1983,9 +1983,9 @@ func (a *SushiswapApiService) SushiswapGetPairHourDataHistoricalExecute(r ApiSus
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -2112,28 +2112,28 @@ func (a *SushiswapApiService) SushiswapGetPairsHistoricalExecute(r ApiSushiswapG
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "id", r.id, "")
 	}
 	if r.name != nil {
-		parameterAddToQuery(localVarQueryParams, "name", r.name, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "name", r.name, "")
 	}
 	if r.token0 != nil {
-		parameterAddToQuery(localVarQueryParams, "token_0", r.token0, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "token_0", r.token0, "")
 	}
 	if r.token1 != nil {
-		parameterAddToQuery(localVarQueryParams, "token_1", r.token1, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "token_1", r.token1, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -2162,9 +2162,9 @@ func (a *SushiswapApiService) SushiswapGetPairsHistoricalExecute(r ApiSushiswapG
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -2277,22 +2277,22 @@ func (a *SushiswapApiService) SushiswapGetSwapsHistoricalExecute(r ApiSushiswapG
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "id", r.id, "")
 	}
 	if r.pair != nil {
-		parameterAddToQuery(localVarQueryParams, "pair", r.pair, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "pair", r.pair, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -2321,9 +2321,9 @@ func (a *SushiswapApiService) SushiswapGetSwapsHistoricalExecute(r ApiSushiswapG
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -2429,19 +2429,19 @@ func (a *SushiswapApiService) SushiswapGetTokenDayDataHistoricalExecute(r ApiSus
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "id", r.id, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -2470,9 +2470,9 @@ func (a *SushiswapApiService) SushiswapGetTokenDayDataHistoricalExecute(r ApiSus
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -2592,25 +2592,25 @@ func (a *SushiswapApiService) SushiswapGetTokensHistoricalExecute(r ApiSushiswap
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "id", r.id, "")
 	}
 	if r.symbol != nil {
-		parameterAddToQuery(localVarQueryParams, "symbol", r.symbol, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "symbol", r.symbol, "")
 	}
 	if r.name != nil {
-		parameterAddToQuery(localVarQueryParams, "name", r.name, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "name", r.name, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -2639,9 +2639,9 @@ func (a *SushiswapApiService) SushiswapGetTokensHistoricalExecute(r ApiSushiswap
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -2747,19 +2747,19 @@ func (a *SushiswapApiService) SushiswapGetTransactionsHistoricalExecute(r ApiSus
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "id", r.id, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -2788,9 +2788,9 @@ func (a *SushiswapApiService) SushiswapGetTransactionsHistoricalExecute(r ApiSus
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -2896,19 +2896,19 @@ func (a *SushiswapApiService) SushiswapGetUsersHistoricalExecute(r ApiSushiswapG
 	localVarFormParams := url.Values{}
 
 	if r.startBlock != nil {
-		parameterAddToQuery(localVarQueryParams, "startBlock", r.startBlock, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "startBlock", r.startBlock, "")
 	}
 	if r.endBlock != nil {
-		parameterAddToQuery(localVarQueryParams, "endBlock", r.endBlock, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "endBlock", r.endBlock, "")
 	}
 	if r.startDate != nil {
-		parameterAddToQuery(localVarQueryParams, "startDate", r.startDate, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "startDate", r.startDate, "")
 	}
 	if r.endDate != nil {
-		parameterAddToQuery(localVarQueryParams, "endDate", r.endDate, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "endDate", r.endDate, "")
 	}
 	if r.id != nil {
-		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "id", r.id, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -2937,9 +2937,9 @@ func (a *SushiswapApiService) SushiswapGetUsersHistoricalExecute(r ApiSushiswapG
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -3036,9 +3036,9 @@ func (a *SushiswapApiService) SushiswapHourDataCurrentExecute(r ApiSushiswapHour
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -3135,9 +3135,9 @@ func (a *SushiswapApiService) SushiswapLiquidityPositionSnapshotsCurrentExecute(
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -3234,9 +3234,9 @@ func (a *SushiswapApiService) SushiswapLiquidityPositionsCurrentExecute(r ApiSus
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -3333,9 +3333,9 @@ func (a *SushiswapApiService) SushiswapMintsCurrentExecute(r ApiSushiswapMintsCu
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -3432,9 +3432,9 @@ func (a *SushiswapApiService) SushiswapPairDayDataCurrentExecute(r ApiSushiswapP
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -3531,9 +3531,9 @@ func (a *SushiswapApiService) SushiswapPairHourDataCurrentExecute(r ApiSushiswap
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -3611,7 +3611,7 @@ func (a *SushiswapApiService) SushiswapPairsCurrentExecute(r ApiSushiswapPairsCu
 	localVarFormParams := url.Values{}
 
 	if r.id != nil {
-		parameterAddToQuery(localVarQueryParams, "id", r.id, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "id", r.id, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -3640,9 +3640,9 @@ func (a *SushiswapApiService) SushiswapPairsCurrentExecute(r ApiSushiswapPairsCu
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -3720,7 +3720,7 @@ func (a *SushiswapApiService) SushiswapSwapsCurrentExecute(r ApiSushiswapSwapsCu
 	localVarFormParams := url.Values{}
 
 	if r.pair != nil {
-		parameterAddToQuery(localVarQueryParams, "pair", r.pair, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "pair", r.pair, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -3749,9 +3749,9 @@ func (a *SushiswapApiService) SushiswapSwapsCurrentExecute(r ApiSushiswapSwapsCu
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -3848,9 +3848,9 @@ func (a *SushiswapApiService) SushiswapTokenDayDataCurrentExecute(r ApiSushiswap
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -3947,9 +3947,9 @@ func (a *SushiswapApiService) SushiswapTokensCurrentExecute(r ApiSushiswapTokens
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -4046,9 +4046,9 @@ func (a *SushiswapApiService) SushiswapTransactionsCurrentExecute(r ApiSushiswap
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -4145,9 +4145,9 @@ func (a *SushiswapApiService) SushiswapUsersCurrentExecute(r ApiSushiswapUsersCu
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}

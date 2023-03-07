@@ -76,7 +76,7 @@ func NewSushiswapBurnDTOWithDefaults() *SushiswapBurnDTO {
 
 // GetEntryTime returns the EntryTime field value if set, zero value otherwise.
 func (o *SushiswapBurnDTO) GetEntryTime() time.Time {
-	if o == nil || isNil(o.EntryTime) {
+	if o == nil || IsNil(o.EntryTime) {
 		var ret time.Time
 		return ret
 	}
@@ -86,7 +86,7 @@ func (o *SushiswapBurnDTO) GetEntryTime() time.Time {
 // GetEntryTimeOk returns a tuple with the EntryTime field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SushiswapBurnDTO) GetEntryTimeOk() (*time.Time, bool) {
-	if o == nil || isNil(o.EntryTime) {
+	if o == nil || IsNil(o.EntryTime) {
 		return nil, false
 	}
 	return o.EntryTime, true
@@ -94,7 +94,7 @@ func (o *SushiswapBurnDTO) GetEntryTimeOk() (*time.Time, bool) {
 
 // HasEntryTime returns a boolean if a field has been set.
 func (o *SushiswapBurnDTO) HasEntryTime() bool {
-	if o != nil && !isNil(o.EntryTime) {
+	if o != nil && !IsNil(o.EntryTime) {
 		return true
 	}
 
@@ -108,7 +108,7 @@ func (o *SushiswapBurnDTO) SetEntryTime(v time.Time) {
 
 // GetRecvTime returns the RecvTime field value if set, zero value otherwise.
 func (o *SushiswapBurnDTO) GetRecvTime() time.Time {
-	if o == nil || isNil(o.RecvTime) {
+	if o == nil || IsNil(o.RecvTime) {
 		var ret time.Time
 		return ret
 	}
@@ -118,7 +118,7 @@ func (o *SushiswapBurnDTO) GetRecvTime() time.Time {
 // GetRecvTimeOk returns a tuple with the RecvTime field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SushiswapBurnDTO) GetRecvTimeOk() (*time.Time, bool) {
-	if o == nil || isNil(o.RecvTime) {
+	if o == nil || IsNil(o.RecvTime) {
 		return nil, false
 	}
 	return o.RecvTime, true
@@ -126,7 +126,7 @@ func (o *SushiswapBurnDTO) GetRecvTimeOk() (*time.Time, bool) {
 
 // HasRecvTime returns a boolean if a field has been set.
 func (o *SushiswapBurnDTO) HasRecvTime() bool {
-	if o != nil && !isNil(o.RecvTime) {
+	if o != nil && !IsNil(o.RecvTime) {
 		return true
 	}
 
@@ -140,7 +140,7 @@ func (o *SushiswapBurnDTO) SetRecvTime(v time.Time) {
 
 // GetBlockNumber returns the BlockNumber field value if set, zero value otherwise.
 func (o *SushiswapBurnDTO) GetBlockNumber() int64 {
-	if o == nil || isNil(o.BlockNumber) {
+	if o == nil || IsNil(o.BlockNumber) {
 		var ret int64
 		return ret
 	}
@@ -150,7 +150,7 @@ func (o *SushiswapBurnDTO) GetBlockNumber() int64 {
 // GetBlockNumberOk returns a tuple with the BlockNumber field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SushiswapBurnDTO) GetBlockNumberOk() (*int64, bool) {
-	if o == nil || isNil(o.BlockNumber) {
+	if o == nil || IsNil(o.BlockNumber) {
 		return nil, false
 	}
 	return o.BlockNumber, true
@@ -158,7 +158,7 @@ func (o *SushiswapBurnDTO) GetBlockNumberOk() (*int64, bool) {
 
 // HasBlockNumber returns a boolean if a field has been set.
 func (o *SushiswapBurnDTO) HasBlockNumber() bool {
-	if o != nil && !isNil(o.BlockNumber) {
+	if o != nil && !IsNil(o.BlockNumber) {
 		return true
 	}
 
@@ -172,7 +172,7 @@ func (o *SushiswapBurnDTO) SetBlockNumber(v int64) {
 
 // GetId returns the Id field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *SushiswapBurnDTO) GetId() string {
-	if o == nil || isNil(o.Id.Get()) {
+	if o == nil || IsNil(o.Id.Get()) {
 		var ret string
 		return ret
 	}
@@ -214,7 +214,7 @@ func (o *SushiswapBurnDTO) UnsetId() {
 
 // GetTransaction returns the Transaction field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *SushiswapBurnDTO) GetTransaction() string {
-	if o == nil || isNil(o.Transaction.Get()) {
+	if o == nil || IsNil(o.Transaction.Get()) {
 		var ret string
 		return ret
 	}
@@ -256,7 +256,7 @@ func (o *SushiswapBurnDTO) UnsetTransaction() {
 
 // GetTimestamp returns the Timestamp field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *SushiswapBurnDTO) GetTimestamp() string {
-	if o == nil || isNil(o.Timestamp.Get()) {
+	if o == nil || IsNil(o.Timestamp.Get()) {
 		var ret string
 		return ret
 	}
@@ -298,7 +298,7 @@ func (o *SushiswapBurnDTO) UnsetTimestamp() {
 
 // GetPair returns the Pair field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *SushiswapBurnDTO) GetPair() string {
-	if o == nil || isNil(o.Pair.Get()) {
+	if o == nil || IsNil(o.Pair.Get()) {
 		var ret string
 		return ret
 	}
@@ -340,7 +340,7 @@ func (o *SushiswapBurnDTO) UnsetPair() {
 
 // GetLiquidity returns the Liquidity field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *SushiswapBurnDTO) GetLiquidity() string {
-	if o == nil || isNil(o.Liquidity.Get()) {
+	if o == nil || IsNil(o.Liquidity.Get()) {
 		var ret string
 		return ret
 	}
@@ -382,7 +382,7 @@ func (o *SushiswapBurnDTO) UnsetLiquidity() {
 
 // GetSender returns the Sender field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *SushiswapBurnDTO) GetSender() string {
-	if o == nil || isNil(o.Sender.Get()) {
+	if o == nil || IsNil(o.Sender.Get()) {
 		var ret string
 		return ret
 	}
@@ -424,7 +424,7 @@ func (o *SushiswapBurnDTO) UnsetSender() {
 
 // GetAmount0 returns the Amount0 field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *SushiswapBurnDTO) GetAmount0() string {
-	if o == nil || isNil(o.Amount0.Get()) {
+	if o == nil || IsNil(o.Amount0.Get()) {
 		var ret string
 		return ret
 	}
@@ -466,7 +466,7 @@ func (o *SushiswapBurnDTO) UnsetAmount0() {
 
 // GetAmount1 returns the Amount1 field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *SushiswapBurnDTO) GetAmount1() string {
-	if o == nil || isNil(o.Amount1.Get()) {
+	if o == nil || IsNil(o.Amount1.Get()) {
 		var ret string
 		return ret
 	}
@@ -508,7 +508,7 @@ func (o *SushiswapBurnDTO) UnsetAmount1() {
 
 // GetTo returns the To field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *SushiswapBurnDTO) GetTo() string {
-	if o == nil || isNil(o.To.Get()) {
+	if o == nil || IsNil(o.To.Get()) {
 		var ret string
 		return ret
 	}
@@ -550,7 +550,7 @@ func (o *SushiswapBurnDTO) UnsetTo() {
 
 // GetLogIndex returns the LogIndex field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *SushiswapBurnDTO) GetLogIndex() string {
-	if o == nil || isNil(o.LogIndex.Get()) {
+	if o == nil || IsNil(o.LogIndex.Get()) {
 		var ret string
 		return ret
 	}
@@ -592,7 +592,7 @@ func (o *SushiswapBurnDTO) UnsetLogIndex() {
 
 // GetAmountUsd returns the AmountUsd field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *SushiswapBurnDTO) GetAmountUsd() string {
-	if o == nil || isNil(o.AmountUsd.Get()) {
+	if o == nil || IsNil(o.AmountUsd.Get()) {
 		var ret string
 		return ret
 	}
@@ -634,7 +634,7 @@ func (o *SushiswapBurnDTO) UnsetAmountUsd() {
 
 // GetComplete returns the Complete field value if set, zero value otherwise.
 func (o *SushiswapBurnDTO) GetComplete() bool {
-	if o == nil || isNil(o.Complete) {
+	if o == nil || IsNil(o.Complete) {
 		var ret bool
 		return ret
 	}
@@ -644,7 +644,7 @@ func (o *SushiswapBurnDTO) GetComplete() bool {
 // GetCompleteOk returns a tuple with the Complete field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SushiswapBurnDTO) GetCompleteOk() (*bool, bool) {
-	if o == nil || isNil(o.Complete) {
+	if o == nil || IsNil(o.Complete) {
 		return nil, false
 	}
 	return o.Complete, true
@@ -652,7 +652,7 @@ func (o *SushiswapBurnDTO) GetCompleteOk() (*bool, bool) {
 
 // HasComplete returns a boolean if a field has been set.
 func (o *SushiswapBurnDTO) HasComplete() bool {
-	if o != nil && !isNil(o.Complete) {
+	if o != nil && !IsNil(o.Complete) {
 		return true
 	}
 
@@ -666,7 +666,7 @@ func (o *SushiswapBurnDTO) SetComplete(v bool) {
 
 // GetFeeTo returns the FeeTo field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *SushiswapBurnDTO) GetFeeTo() string {
-	if o == nil || isNil(o.FeeTo.Get()) {
+	if o == nil || IsNil(o.FeeTo.Get()) {
 		var ret string
 		return ret
 	}
@@ -708,7 +708,7 @@ func (o *SushiswapBurnDTO) UnsetFeeTo() {
 
 // GetFeeLiquidity returns the FeeLiquidity field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *SushiswapBurnDTO) GetFeeLiquidity() string {
-	if o == nil || isNil(o.FeeLiquidity.Get()) {
+	if o == nil || IsNil(o.FeeLiquidity.Get()) {
 		var ret string
 		return ret
 	}
@@ -750,7 +750,7 @@ func (o *SushiswapBurnDTO) UnsetFeeLiquidity() {
 
 // GetVid returns the Vid field value if set, zero value otherwise.
 func (o *SushiswapBurnDTO) GetVid() int64 {
-	if o == nil || isNil(o.Vid) {
+	if o == nil || IsNil(o.Vid) {
 		var ret int64
 		return ret
 	}
@@ -760,7 +760,7 @@ func (o *SushiswapBurnDTO) GetVid() int64 {
 // GetVidOk returns a tuple with the Vid field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SushiswapBurnDTO) GetVidOk() (*int64, bool) {
-	if o == nil || isNil(o.Vid) {
+	if o == nil || IsNil(o.Vid) {
 		return nil, false
 	}
 	return o.Vid, true
@@ -768,7 +768,7 @@ func (o *SushiswapBurnDTO) GetVidOk() (*int64, bool) {
 
 // HasVid returns a boolean if a field has been set.
 func (o *SushiswapBurnDTO) HasVid() bool {
-	if o != nil && !isNil(o.Vid) {
+	if o != nil && !IsNil(o.Vid) {
 		return true
 	}
 
@@ -790,13 +790,13 @@ func (o SushiswapBurnDTO) MarshalJSON() ([]byte, error) {
 
 func (o SushiswapBurnDTO) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if !isNil(o.EntryTime) {
+	if !IsNil(o.EntryTime) {
 		toSerialize["entry_time"] = o.EntryTime
 	}
-	if !isNil(o.RecvTime) {
+	if !IsNil(o.RecvTime) {
 		toSerialize["recv_time"] = o.RecvTime
 	}
-	if !isNil(o.BlockNumber) {
+	if !IsNil(o.BlockNumber) {
 		toSerialize["block_number"] = o.BlockNumber
 	}
 	if o.Id.IsSet() {
@@ -832,7 +832,7 @@ func (o SushiswapBurnDTO) ToMap() (map[string]interface{}, error) {
 	if o.AmountUsd.IsSet() {
 		toSerialize["amount_usd"] = o.AmountUsd.Get()
 	}
-	if !isNil(o.Complete) {
+	if !IsNil(o.Complete) {
 		toSerialize["complete"] = o.Complete
 	}
 	if o.FeeTo.IsSet() {
@@ -841,7 +841,7 @@ func (o SushiswapBurnDTO) ToMap() (map[string]interface{}, error) {
 	if o.FeeLiquidity.IsSet() {
 		toSerialize["fee_liquidity"] = o.FeeLiquidity.Get()
 	}
-	if !isNil(o.Vid) {
+	if !IsNil(o.Vid) {
 		toSerialize["vid"] = o.Vid
 	}
 	return toSerialize, nil

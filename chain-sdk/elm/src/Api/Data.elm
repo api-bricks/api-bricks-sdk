@@ -15,7 +15,16 @@
 
 
 module Api.Data exposing
-    ( CowOrderDTO
+    ( CRYPTOPUNKSBidDTO
+    , CRYPTOPUNKSCollectionDTO
+    , CRYPTOPUNKSCollectionDailySnapshotDTO
+    , CRYPTOPUNKSDataSourcesDTO
+    , CRYPTOPUNKSItemDTO
+    , CRYPTOPUNKSMarketPlaceDTO
+    , CRYPTOPUNKSMarketplaceDailySnapshotDTO
+    , CRYPTOPUNKSTradeDTO
+    , CRYPTOPUNKSUserDTO
+    , CowOrderDTO
     , CowSettlementDTO
     , CowTokenDTO
     , CowTradeDTO
@@ -113,6 +122,15 @@ module Api.Data exposing
     , UniswapV3TokenV3DayDataDTO
     , UniswapV3TransactionDTO
     , UniswapV3UniswapDayDataDTO
+    , encodeCRYPTOPUNKSBidDTO
+    , encodeCRYPTOPUNKSCollectionDTO
+    , encodeCRYPTOPUNKSCollectionDailySnapshotDTO
+    , encodeCRYPTOPUNKSDataSourcesDTO
+    , encodeCRYPTOPUNKSItemDTO
+    , encodeCRYPTOPUNKSMarketPlaceDTO
+    , encodeCRYPTOPUNKSMarketplaceDailySnapshotDTO
+    , encodeCRYPTOPUNKSTradeDTO
+    , encodeCRYPTOPUNKSUserDTO
     , encodeCowOrderDTO
     , encodeCowSettlementDTO
     , encodeCowTokenDTO
@@ -211,6 +229,15 @@ module Api.Data exposing
     , encodeUniswapV3TokenV3DayDataDTO
     , encodeUniswapV3TransactionDTO
     , encodeUniswapV3UniswapDayDataDTO
+    , cRYPTOPUNKSBidDTODecoder
+    , cRYPTOPUNKSCollectionDTODecoder
+    , cRYPTOPUNKSCollectionDailySnapshotDTODecoder
+    , cRYPTOPUNKSDataSourcesDTODecoder
+    , cRYPTOPUNKSItemDTODecoder
+    , cRYPTOPUNKSMarketPlaceDTODecoder
+    , cRYPTOPUNKSMarketplaceDailySnapshotDTODecoder
+    , cRYPTOPUNKSTradeDTODecoder
+    , cRYPTOPUNKSUserDTODecoder
     , cowOrderDTODecoder
     , cowSettlementDTODecoder
     , cowTokenDTODecoder
@@ -319,6 +346,163 @@ import Json.Encode
 
 
 -- MODEL
+
+
+type alias CRYPTOPUNKSBidDTO =
+    { entryTime : Maybe Posix
+    , recvTime : Maybe Posix
+    , blockNumber : Maybe String
+    , vid : Maybe Int
+    , blockRange : Maybe String
+    , id : Maybe String
+    , tokensBid : Maybe String
+    , tokenId : Maybe String
+    , timestamp : Maybe String
+    , bidder : Maybe String
+    }
+
+
+type alias CRYPTOPUNKSCollectionDTO =
+    { entryTime : Maybe Posix
+    , recvTime : Maybe Posix
+    , blockNumber : Maybe Int
+    , vid : Maybe Int
+    , blockRange : Maybe String
+    , id : Maybe String
+    , name : Maybe String
+    , symbol : Maybe String
+    , totalSupply : Maybe String
+    , royaltyFee : Maybe String
+    , cumulativeTradeVolumeEth : Maybe String
+    , marketplaceRevenueEth : Maybe String
+    , creatorRevenueEth : Maybe String
+    , totalRevenueEth : Maybe String
+    , tradeCount : Maybe Int
+    , buyerCount : Maybe Int
+    , sellerCount : Maybe Int
+    }
+
+
+type alias CRYPTOPUNKSCollectionDailySnapshotDTO =
+    { entryTime : Maybe Posix
+    , recvTime : Maybe Posix
+    , blockNumber : Maybe String
+    , vid : Maybe Int
+    , blockRange : Maybe String
+    , id : Maybe String
+    , collection : Maybe String
+    , timestamp : Maybe String
+    , royaltyFee : Maybe String
+    , dailyMinSalePrice : Maybe String
+    , dailyMaxSalePrice : Maybe String
+    , cumulativeTradeVolumeEth : Maybe String
+    , dailyTradeVolumeEth : Maybe String
+    , marketplaceRevenueEth : Maybe String
+    , creatorRevenueEth : Maybe String
+    , totalRevenueEth : Maybe String
+    , tradeCount : Maybe Int
+    , dailyTradedItemCount : Maybe Int
+    }
+
+
+type alias CRYPTOPUNKSDataSourcesDTO =
+    { entryTime : Maybe Posix
+    , recvTime : Maybe Posix
+    , blockNumber : Maybe Int
+    , vid : Maybe Int
+    , blockRange : Maybe String
+    , causalityRegion : Maybe Int
+    , manifestIdx : Maybe Int
+    , parent : Maybe Int
+    , id : Maybe String
+    , param : Maybe String
+    , context : Maybe String
+    , doneAt : Maybe Int
+    }
+
+
+type alias CRYPTOPUNKSItemDTO =
+    { entryTime : Maybe Posix
+    , recvTime : Maybe Posix
+    , blockNumber : Maybe Int
+    , vid : Maybe Int
+    , blockRange : Maybe String
+    , id : Maybe String
+    }
+
+
+type alias CRYPTOPUNKSMarketPlaceDTO =
+    { entryTime : Maybe Posix
+    , recvTime : Maybe Posix
+    , blockNumber : Maybe Int
+    , vid : Maybe Int
+    , blockRange : Maybe String
+    , id : Maybe String
+    , name : Maybe String
+    , slug : Maybe String
+    , schemaVersion : Maybe String
+    , subgraphVersion : Maybe String
+    , methodologyVersion : Maybe String
+    , collectionCount : Maybe Int
+    , tradeCount : Maybe Int
+    , cumulativeTradeVolumeEth : Maybe String
+    , marketplaceRevenueEth : Maybe String
+    , creatorRevenueEth : Maybe String
+    , totalRevenueEth : Maybe String
+    , cumulativeUniqueTraders : Maybe Int
+    }
+
+
+type alias CRYPTOPUNKSMarketplaceDailySnapshotDTO =
+    { entryTime : Maybe Posix
+    , recvTime : Maybe Posix
+    , blockNumber : Maybe String
+    , vid : Maybe Int
+    , blockRange : Maybe String
+    , id : Maybe String
+    , marketplace : Maybe String
+    , timestamp : Maybe String
+    , collectionCount : Maybe Int
+    , cumulativeTradeVolumeEth : Maybe String
+    , marketplaceRevenueEth : Maybe String
+    , creatorRevenueEth : Maybe String
+    , totalRevenueEth : Maybe String
+    , tradeCount : Maybe Int
+    , cumulativeUniqueTraders : Maybe Int
+    , dailyActiveTraders : Maybe Int
+    , dailyTradedCollectionCount : Maybe Int
+    , dailyTradedItemCount : Maybe Int
+    }
+
+
+type alias CRYPTOPUNKSTradeDTO =
+    { entryTime : Maybe Posix
+    , recvTime : Maybe Posix
+    , blockNumber : Maybe String
+    , vid : Maybe Int
+    , blockRange : Maybe String
+    , id : Maybe String
+    , transactionHash : Maybe String
+    , logIndex : Maybe Int
+    , timestamp : Maybe String
+    , isBundle : Maybe Bool
+    , collection : Maybe String
+    , tokenId : Maybe String
+    , amount : Maybe String
+    , priceEth : Maybe String
+    , buyer : Maybe String
+    , seller : Maybe String
+    }
+
+
+type alias CRYPTOPUNKSUserDTO =
+    { entryTime : Maybe Posix
+    , recvTime : Maybe Posix
+    , blockNumber : Maybe Int
+    , vid : Maybe Int
+    , blockRange : Maybe String
+    , id : Maybe String
+    }
 
 
 type alias CowOrderDTO =
@@ -2217,6 +2401,298 @@ type alias UniswapV3UniswapDayDataDTO =
 
 
 -- ENCODER
+
+
+encodeCRYPTOPUNKSBidDTO : CRYPTOPUNKSBidDTO -> Json.Encode.Value
+encodeCRYPTOPUNKSBidDTO =
+    encodeObject << encodeCRYPTOPUNKSBidDTOPairs
+
+
+encodeCRYPTOPUNKSBidDTOWithTag : ( String, String ) -> CRYPTOPUNKSBidDTO -> Json.Encode.Value
+encodeCRYPTOPUNKSBidDTOWithTag (tagField, tag) model =
+    encodeObject (encodeCRYPTOPUNKSBidDTOPairs model ++ [ encode tagField Json.Encode.string tag ])
+
+
+encodeCRYPTOPUNKSBidDTOPairs : CRYPTOPUNKSBidDTO -> List EncodedField
+encodeCRYPTOPUNKSBidDTOPairs model =
+    let
+        pairs =
+            [ maybeEncode "entry_time" Api.Time.encodeDateTime model.entryTime
+            , maybeEncode "recv_time" Api.Time.encodeDateTime model.recvTime
+            , maybeEncodeNullable "block_number" Json.Encode.string model.blockNumber
+            , maybeEncode "vid" Json.Encode.int model.vid
+            , maybeEncodeNullable "block_range" Json.Encode.string model.blockRange
+            , maybeEncodeNullable "id" Json.Encode.string model.id
+            , maybeEncodeNullable "tokens_bid" Json.Encode.string model.tokensBid
+            , maybeEncodeNullable "token_id" Json.Encode.string model.tokenId
+            , maybeEncodeNullable "timestamp" Json.Encode.string model.timestamp
+            , maybeEncodeNullable "bidder" Json.Encode.string model.bidder
+            ]
+    in
+    pairs
+
+
+encodeCRYPTOPUNKSCollectionDTO : CRYPTOPUNKSCollectionDTO -> Json.Encode.Value
+encodeCRYPTOPUNKSCollectionDTO =
+    encodeObject << encodeCRYPTOPUNKSCollectionDTOPairs
+
+
+encodeCRYPTOPUNKSCollectionDTOWithTag : ( String, String ) -> CRYPTOPUNKSCollectionDTO -> Json.Encode.Value
+encodeCRYPTOPUNKSCollectionDTOWithTag (tagField, tag) model =
+    encodeObject (encodeCRYPTOPUNKSCollectionDTOPairs model ++ [ encode tagField Json.Encode.string tag ])
+
+
+encodeCRYPTOPUNKSCollectionDTOPairs : CRYPTOPUNKSCollectionDTO -> List EncodedField
+encodeCRYPTOPUNKSCollectionDTOPairs model =
+    let
+        pairs =
+            [ maybeEncode "entry_time" Api.Time.encodeDateTime model.entryTime
+            , maybeEncode "recv_time" Api.Time.encodeDateTime model.recvTime
+            , maybeEncode "block_number" Json.Encode.int model.blockNumber
+            , maybeEncode "vid" Json.Encode.int model.vid
+            , maybeEncodeNullable "block_range" Json.Encode.string model.blockRange
+            , maybeEncodeNullable "id" Json.Encode.string model.id
+            , maybeEncodeNullable "name" Json.Encode.string model.name
+            , maybeEncodeNullable "symbol" Json.Encode.string model.symbol
+            , maybeEncodeNullable "total_supply" Json.Encode.string model.totalSupply
+            , maybeEncodeNullable "royalty_fee" Json.Encode.string model.royaltyFee
+            , maybeEncodeNullable "cumulative_trade_volume_eth" Json.Encode.string model.cumulativeTradeVolumeEth
+            , maybeEncodeNullable "marketplace_revenue_eth" Json.Encode.string model.marketplaceRevenueEth
+            , maybeEncodeNullable "creator_revenue_eth" Json.Encode.string model.creatorRevenueEth
+            , maybeEncodeNullable "total_revenue_eth" Json.Encode.string model.totalRevenueEth
+            , maybeEncode "trade_count" Json.Encode.int model.tradeCount
+            , maybeEncode "buyer_count" Json.Encode.int model.buyerCount
+            , maybeEncode "seller_count" Json.Encode.int model.sellerCount
+            ]
+    in
+    pairs
+
+
+encodeCRYPTOPUNKSCollectionDailySnapshotDTO : CRYPTOPUNKSCollectionDailySnapshotDTO -> Json.Encode.Value
+encodeCRYPTOPUNKSCollectionDailySnapshotDTO =
+    encodeObject << encodeCRYPTOPUNKSCollectionDailySnapshotDTOPairs
+
+
+encodeCRYPTOPUNKSCollectionDailySnapshotDTOWithTag : ( String, String ) -> CRYPTOPUNKSCollectionDailySnapshotDTO -> Json.Encode.Value
+encodeCRYPTOPUNKSCollectionDailySnapshotDTOWithTag (tagField, tag) model =
+    encodeObject (encodeCRYPTOPUNKSCollectionDailySnapshotDTOPairs model ++ [ encode tagField Json.Encode.string tag ])
+
+
+encodeCRYPTOPUNKSCollectionDailySnapshotDTOPairs : CRYPTOPUNKSCollectionDailySnapshotDTO -> List EncodedField
+encodeCRYPTOPUNKSCollectionDailySnapshotDTOPairs model =
+    let
+        pairs =
+            [ maybeEncode "entry_time" Api.Time.encodeDateTime model.entryTime
+            , maybeEncode "recv_time" Api.Time.encodeDateTime model.recvTime
+            , maybeEncodeNullable "block_number" Json.Encode.string model.blockNumber
+            , maybeEncode "vid" Json.Encode.int model.vid
+            , maybeEncodeNullable "block_range" Json.Encode.string model.blockRange
+            , maybeEncodeNullable "id" Json.Encode.string model.id
+            , maybeEncodeNullable "collection" Json.Encode.string model.collection
+            , maybeEncodeNullable "timestamp" Json.Encode.string model.timestamp
+            , maybeEncodeNullable "royalty_fee" Json.Encode.string model.royaltyFee
+            , maybeEncodeNullable "daily_min_sale_price" Json.Encode.string model.dailyMinSalePrice
+            , maybeEncodeNullable "daily_max_sale_price" Json.Encode.string model.dailyMaxSalePrice
+            , maybeEncodeNullable "cumulative_trade_volume_eth" Json.Encode.string model.cumulativeTradeVolumeEth
+            , maybeEncodeNullable "daily_trade_volume_eth" Json.Encode.string model.dailyTradeVolumeEth
+            , maybeEncodeNullable "marketplace_revenue_eth" Json.Encode.string model.marketplaceRevenueEth
+            , maybeEncodeNullable "creator_revenue_eth" Json.Encode.string model.creatorRevenueEth
+            , maybeEncodeNullable "total_revenue_eth" Json.Encode.string model.totalRevenueEth
+            , maybeEncode "trade_count" Json.Encode.int model.tradeCount
+            , maybeEncode "daily_traded_item_count" Json.Encode.int model.dailyTradedItemCount
+            ]
+    in
+    pairs
+
+
+encodeCRYPTOPUNKSDataSourcesDTO : CRYPTOPUNKSDataSourcesDTO -> Json.Encode.Value
+encodeCRYPTOPUNKSDataSourcesDTO =
+    encodeObject << encodeCRYPTOPUNKSDataSourcesDTOPairs
+
+
+encodeCRYPTOPUNKSDataSourcesDTOWithTag : ( String, String ) -> CRYPTOPUNKSDataSourcesDTO -> Json.Encode.Value
+encodeCRYPTOPUNKSDataSourcesDTOWithTag (tagField, tag) model =
+    encodeObject (encodeCRYPTOPUNKSDataSourcesDTOPairs model ++ [ encode tagField Json.Encode.string tag ])
+
+
+encodeCRYPTOPUNKSDataSourcesDTOPairs : CRYPTOPUNKSDataSourcesDTO -> List EncodedField
+encodeCRYPTOPUNKSDataSourcesDTOPairs model =
+    let
+        pairs =
+            [ maybeEncode "entry_time" Api.Time.encodeDateTime model.entryTime
+            , maybeEncode "recv_time" Api.Time.encodeDateTime model.recvTime
+            , maybeEncode "block_number" Json.Encode.int model.blockNumber
+            , maybeEncode "vid" Json.Encode.int model.vid
+            , maybeEncodeNullable "block_range" Json.Encode.string model.blockRange
+            , maybeEncode "causality_region" Json.Encode.int model.causalityRegion
+            , maybeEncode "manifest_idx" Json.Encode.int model.manifestIdx
+            , maybeEncodeNullable "parent" Json.Encode.int model.parent
+            , maybeEncodeNullable "id" Json.Encode.string model.id
+            , maybeEncodeNullable "param" Json.Encode.string model.param
+            , maybeEncodeNullable "context" Json.Encode.string model.context
+            , maybeEncodeNullable "done_at" Json.Encode.int model.doneAt
+            ]
+    in
+    pairs
+
+
+encodeCRYPTOPUNKSItemDTO : CRYPTOPUNKSItemDTO -> Json.Encode.Value
+encodeCRYPTOPUNKSItemDTO =
+    encodeObject << encodeCRYPTOPUNKSItemDTOPairs
+
+
+encodeCRYPTOPUNKSItemDTOWithTag : ( String, String ) -> CRYPTOPUNKSItemDTO -> Json.Encode.Value
+encodeCRYPTOPUNKSItemDTOWithTag (tagField, tag) model =
+    encodeObject (encodeCRYPTOPUNKSItemDTOPairs model ++ [ encode tagField Json.Encode.string tag ])
+
+
+encodeCRYPTOPUNKSItemDTOPairs : CRYPTOPUNKSItemDTO -> List EncodedField
+encodeCRYPTOPUNKSItemDTOPairs model =
+    let
+        pairs =
+            [ maybeEncode "entry_time" Api.Time.encodeDateTime model.entryTime
+            , maybeEncode "recv_time" Api.Time.encodeDateTime model.recvTime
+            , maybeEncode "block_number" Json.Encode.int model.blockNumber
+            , maybeEncode "vid" Json.Encode.int model.vid
+            , maybeEncodeNullable "block_range" Json.Encode.string model.blockRange
+            , maybeEncodeNullable "id" Json.Encode.string model.id
+            ]
+    in
+    pairs
+
+
+encodeCRYPTOPUNKSMarketPlaceDTO : CRYPTOPUNKSMarketPlaceDTO -> Json.Encode.Value
+encodeCRYPTOPUNKSMarketPlaceDTO =
+    encodeObject << encodeCRYPTOPUNKSMarketPlaceDTOPairs
+
+
+encodeCRYPTOPUNKSMarketPlaceDTOWithTag : ( String, String ) -> CRYPTOPUNKSMarketPlaceDTO -> Json.Encode.Value
+encodeCRYPTOPUNKSMarketPlaceDTOWithTag (tagField, tag) model =
+    encodeObject (encodeCRYPTOPUNKSMarketPlaceDTOPairs model ++ [ encode tagField Json.Encode.string tag ])
+
+
+encodeCRYPTOPUNKSMarketPlaceDTOPairs : CRYPTOPUNKSMarketPlaceDTO -> List EncodedField
+encodeCRYPTOPUNKSMarketPlaceDTOPairs model =
+    let
+        pairs =
+            [ maybeEncode "entry_time" Api.Time.encodeDateTime model.entryTime
+            , maybeEncode "recv_time" Api.Time.encodeDateTime model.recvTime
+            , maybeEncode "block_number" Json.Encode.int model.blockNumber
+            , maybeEncode "vid" Json.Encode.int model.vid
+            , maybeEncodeNullable "block_range" Json.Encode.string model.blockRange
+            , maybeEncodeNullable "id" Json.Encode.string model.id
+            , maybeEncodeNullable "name" Json.Encode.string model.name
+            , maybeEncodeNullable "slug" Json.Encode.string model.slug
+            , maybeEncodeNullable "schema_version" Json.Encode.string model.schemaVersion
+            , maybeEncodeNullable "subgraph_version" Json.Encode.string model.subgraphVersion
+            , maybeEncodeNullable "methodology_version" Json.Encode.string model.methodologyVersion
+            , maybeEncode "collection_count" Json.Encode.int model.collectionCount
+            , maybeEncode "trade_count" Json.Encode.int model.tradeCount
+            , maybeEncodeNullable "cumulative_trade_volume_eth" Json.Encode.string model.cumulativeTradeVolumeEth
+            , maybeEncodeNullable "marketplace_revenue_eth" Json.Encode.string model.marketplaceRevenueEth
+            , maybeEncodeNullable "creator_revenue_eth" Json.Encode.string model.creatorRevenueEth
+            , maybeEncodeNullable "total_revenue_eth" Json.Encode.string model.totalRevenueEth
+            , maybeEncode "cumulative_unique_traders" Json.Encode.int model.cumulativeUniqueTraders
+            ]
+    in
+    pairs
+
+
+encodeCRYPTOPUNKSMarketplaceDailySnapshotDTO : CRYPTOPUNKSMarketplaceDailySnapshotDTO -> Json.Encode.Value
+encodeCRYPTOPUNKSMarketplaceDailySnapshotDTO =
+    encodeObject << encodeCRYPTOPUNKSMarketplaceDailySnapshotDTOPairs
+
+
+encodeCRYPTOPUNKSMarketplaceDailySnapshotDTOWithTag : ( String, String ) -> CRYPTOPUNKSMarketplaceDailySnapshotDTO -> Json.Encode.Value
+encodeCRYPTOPUNKSMarketplaceDailySnapshotDTOWithTag (tagField, tag) model =
+    encodeObject (encodeCRYPTOPUNKSMarketplaceDailySnapshotDTOPairs model ++ [ encode tagField Json.Encode.string tag ])
+
+
+encodeCRYPTOPUNKSMarketplaceDailySnapshotDTOPairs : CRYPTOPUNKSMarketplaceDailySnapshotDTO -> List EncodedField
+encodeCRYPTOPUNKSMarketplaceDailySnapshotDTOPairs model =
+    let
+        pairs =
+            [ maybeEncode "entry_time" Api.Time.encodeDateTime model.entryTime
+            , maybeEncode "recv_time" Api.Time.encodeDateTime model.recvTime
+            , maybeEncodeNullable "block_number" Json.Encode.string model.blockNumber
+            , maybeEncode "vid" Json.Encode.int model.vid
+            , maybeEncodeNullable "block_range" Json.Encode.string model.blockRange
+            , maybeEncodeNullable "id" Json.Encode.string model.id
+            , maybeEncodeNullable "marketplace" Json.Encode.string model.marketplace
+            , maybeEncodeNullable "timestamp" Json.Encode.string model.timestamp
+            , maybeEncode "collection_count" Json.Encode.int model.collectionCount
+            , maybeEncodeNullable "cumulative_trade_volume_eth" Json.Encode.string model.cumulativeTradeVolumeEth
+            , maybeEncodeNullable "marketplace_revenue_eth" Json.Encode.string model.marketplaceRevenueEth
+            , maybeEncodeNullable "creator_revenue_eth" Json.Encode.string model.creatorRevenueEth
+            , maybeEncodeNullable "total_revenue_eth" Json.Encode.string model.totalRevenueEth
+            , maybeEncode "trade_count" Json.Encode.int model.tradeCount
+            , maybeEncode "cumulative_unique_traders" Json.Encode.int model.cumulativeUniqueTraders
+            , maybeEncode "daily_active_traders" Json.Encode.int model.dailyActiveTraders
+            , maybeEncode "daily_traded_collection_count" Json.Encode.int model.dailyTradedCollectionCount
+            , maybeEncode "daily_traded_item_count" Json.Encode.int model.dailyTradedItemCount
+            ]
+    in
+    pairs
+
+
+encodeCRYPTOPUNKSTradeDTO : CRYPTOPUNKSTradeDTO -> Json.Encode.Value
+encodeCRYPTOPUNKSTradeDTO =
+    encodeObject << encodeCRYPTOPUNKSTradeDTOPairs
+
+
+encodeCRYPTOPUNKSTradeDTOWithTag : ( String, String ) -> CRYPTOPUNKSTradeDTO -> Json.Encode.Value
+encodeCRYPTOPUNKSTradeDTOWithTag (tagField, tag) model =
+    encodeObject (encodeCRYPTOPUNKSTradeDTOPairs model ++ [ encode tagField Json.Encode.string tag ])
+
+
+encodeCRYPTOPUNKSTradeDTOPairs : CRYPTOPUNKSTradeDTO -> List EncodedField
+encodeCRYPTOPUNKSTradeDTOPairs model =
+    let
+        pairs =
+            [ maybeEncode "entry_time" Api.Time.encodeDateTime model.entryTime
+            , maybeEncode "recv_time" Api.Time.encodeDateTime model.recvTime
+            , maybeEncodeNullable "block_number" Json.Encode.string model.blockNumber
+            , maybeEncode "vid" Json.Encode.int model.vid
+            , maybeEncodeNullable "block_range" Json.Encode.string model.blockRange
+            , maybeEncodeNullable "id" Json.Encode.string model.id
+            , maybeEncodeNullable "transaction_hash" Json.Encode.string model.transactionHash
+            , maybeEncode "log_index" Json.Encode.int model.logIndex
+            , maybeEncodeNullable "timestamp" Json.Encode.string model.timestamp
+            , maybeEncode "is_bundle" Json.Encode.bool model.isBundle
+            , maybeEncodeNullable "collection" Json.Encode.string model.collection
+            , maybeEncodeNullable "token_id" Json.Encode.string model.tokenId
+            , maybeEncodeNullable "amount" Json.Encode.string model.amount
+            , maybeEncodeNullable "price_eth" Json.Encode.string model.priceEth
+            , maybeEncodeNullable "buyer" Json.Encode.string model.buyer
+            , maybeEncodeNullable "seller" Json.Encode.string model.seller
+            ]
+    in
+    pairs
+
+
+encodeCRYPTOPUNKSUserDTO : CRYPTOPUNKSUserDTO -> Json.Encode.Value
+encodeCRYPTOPUNKSUserDTO =
+    encodeObject << encodeCRYPTOPUNKSUserDTOPairs
+
+
+encodeCRYPTOPUNKSUserDTOWithTag : ( String, String ) -> CRYPTOPUNKSUserDTO -> Json.Encode.Value
+encodeCRYPTOPUNKSUserDTOWithTag (tagField, tag) model =
+    encodeObject (encodeCRYPTOPUNKSUserDTOPairs model ++ [ encode tagField Json.Encode.string tag ])
+
+
+encodeCRYPTOPUNKSUserDTOPairs : CRYPTOPUNKSUserDTO -> List EncodedField
+encodeCRYPTOPUNKSUserDTOPairs model =
+    let
+        pairs =
+            [ maybeEncode "entry_time" Api.Time.encodeDateTime model.entryTime
+            , maybeEncode "recv_time" Api.Time.encodeDateTime model.recvTime
+            , maybeEncode "block_number" Json.Encode.int model.blockNumber
+            , maybeEncode "vid" Json.Encode.int model.vid
+            , maybeEncodeNullable "block_range" Json.Encode.string model.blockRange
+            , maybeEncodeNullable "id" Json.Encode.string model.id
+            ]
+    in
+    pairs
 
 
 encodeCowOrderDTO : CowOrderDTO -> Json.Encode.Value
@@ -5464,6 +5940,172 @@ encodeUniswapV3UniswapDayDataDTOPairs model =
 
 
 -- DECODER
+
+
+cRYPTOPUNKSBidDTODecoder : Json.Decode.Decoder CRYPTOPUNKSBidDTO
+cRYPTOPUNKSBidDTODecoder =
+    Json.Decode.succeed CRYPTOPUNKSBidDTO
+        |> maybeDecode "entry_time" Api.Time.dateTimeDecoder Nothing
+        |> maybeDecode "recv_time" Api.Time.dateTimeDecoder Nothing
+        |> maybeDecodeNullable "block_number" Json.Decode.string Nothing
+        |> maybeDecode "vid" Json.Decode.int Nothing
+        |> maybeDecodeNullable "block_range" Json.Decode.string Nothing
+        |> maybeDecodeNullable "id" Json.Decode.string Nothing
+        |> maybeDecodeNullable "tokens_bid" Json.Decode.string Nothing
+        |> maybeDecodeNullable "token_id" Json.Decode.string Nothing
+        |> maybeDecodeNullable "timestamp" Json.Decode.string Nothing
+        |> maybeDecodeNullable "bidder" Json.Decode.string Nothing
+
+
+cRYPTOPUNKSCollectionDTODecoder : Json.Decode.Decoder CRYPTOPUNKSCollectionDTO
+cRYPTOPUNKSCollectionDTODecoder =
+    Json.Decode.succeed CRYPTOPUNKSCollectionDTO
+        |> maybeDecode "entry_time" Api.Time.dateTimeDecoder Nothing
+        |> maybeDecode "recv_time" Api.Time.dateTimeDecoder Nothing
+        |> maybeDecode "block_number" Json.Decode.int Nothing
+        |> maybeDecode "vid" Json.Decode.int Nothing
+        |> maybeDecodeNullable "block_range" Json.Decode.string Nothing
+        |> maybeDecodeNullable "id" Json.Decode.string Nothing
+        |> maybeDecodeNullable "name" Json.Decode.string Nothing
+        |> maybeDecodeNullable "symbol" Json.Decode.string Nothing
+        |> maybeDecodeNullable "total_supply" Json.Decode.string Nothing
+        |> maybeDecodeNullable "royalty_fee" Json.Decode.string Nothing
+        |> maybeDecodeNullable "cumulative_trade_volume_eth" Json.Decode.string Nothing
+        |> maybeDecodeNullable "marketplace_revenue_eth" Json.Decode.string Nothing
+        |> maybeDecodeNullable "creator_revenue_eth" Json.Decode.string Nothing
+        |> maybeDecodeNullable "total_revenue_eth" Json.Decode.string Nothing
+        |> maybeDecode "trade_count" Json.Decode.int Nothing
+        |> maybeDecode "buyer_count" Json.Decode.int Nothing
+        |> maybeDecode "seller_count" Json.Decode.int Nothing
+
+
+cRYPTOPUNKSCollectionDailySnapshotDTODecoder : Json.Decode.Decoder CRYPTOPUNKSCollectionDailySnapshotDTO
+cRYPTOPUNKSCollectionDailySnapshotDTODecoder =
+    Json.Decode.succeed CRYPTOPUNKSCollectionDailySnapshotDTO
+        |> maybeDecode "entry_time" Api.Time.dateTimeDecoder Nothing
+        |> maybeDecode "recv_time" Api.Time.dateTimeDecoder Nothing
+        |> maybeDecodeNullable "block_number" Json.Decode.string Nothing
+        |> maybeDecode "vid" Json.Decode.int Nothing
+        |> maybeDecodeNullable "block_range" Json.Decode.string Nothing
+        |> maybeDecodeNullable "id" Json.Decode.string Nothing
+        |> maybeDecodeNullable "collection" Json.Decode.string Nothing
+        |> maybeDecodeNullable "timestamp" Json.Decode.string Nothing
+        |> maybeDecodeNullable "royalty_fee" Json.Decode.string Nothing
+        |> maybeDecodeNullable "daily_min_sale_price" Json.Decode.string Nothing
+        |> maybeDecodeNullable "daily_max_sale_price" Json.Decode.string Nothing
+        |> maybeDecodeNullable "cumulative_trade_volume_eth" Json.Decode.string Nothing
+        |> maybeDecodeNullable "daily_trade_volume_eth" Json.Decode.string Nothing
+        |> maybeDecodeNullable "marketplace_revenue_eth" Json.Decode.string Nothing
+        |> maybeDecodeNullable "creator_revenue_eth" Json.Decode.string Nothing
+        |> maybeDecodeNullable "total_revenue_eth" Json.Decode.string Nothing
+        |> maybeDecode "trade_count" Json.Decode.int Nothing
+        |> maybeDecode "daily_traded_item_count" Json.Decode.int Nothing
+
+
+cRYPTOPUNKSDataSourcesDTODecoder : Json.Decode.Decoder CRYPTOPUNKSDataSourcesDTO
+cRYPTOPUNKSDataSourcesDTODecoder =
+    Json.Decode.succeed CRYPTOPUNKSDataSourcesDTO
+        |> maybeDecode "entry_time" Api.Time.dateTimeDecoder Nothing
+        |> maybeDecode "recv_time" Api.Time.dateTimeDecoder Nothing
+        |> maybeDecode "block_number" Json.Decode.int Nothing
+        |> maybeDecode "vid" Json.Decode.int Nothing
+        |> maybeDecodeNullable "block_range" Json.Decode.string Nothing
+        |> maybeDecode "causality_region" Json.Decode.int Nothing
+        |> maybeDecode "manifest_idx" Json.Decode.int Nothing
+        |> maybeDecodeNullable "parent" Json.Decode.int Nothing
+        |> maybeDecodeNullable "id" Json.Decode.string Nothing
+        |> maybeDecodeNullable "param" Json.Decode.string Nothing
+        |> maybeDecodeNullable "context" Json.Decode.string Nothing
+        |> maybeDecodeNullable "done_at" Json.Decode.int Nothing
+
+
+cRYPTOPUNKSItemDTODecoder : Json.Decode.Decoder CRYPTOPUNKSItemDTO
+cRYPTOPUNKSItemDTODecoder =
+    Json.Decode.succeed CRYPTOPUNKSItemDTO
+        |> maybeDecode "entry_time" Api.Time.dateTimeDecoder Nothing
+        |> maybeDecode "recv_time" Api.Time.dateTimeDecoder Nothing
+        |> maybeDecode "block_number" Json.Decode.int Nothing
+        |> maybeDecode "vid" Json.Decode.int Nothing
+        |> maybeDecodeNullable "block_range" Json.Decode.string Nothing
+        |> maybeDecodeNullable "id" Json.Decode.string Nothing
+
+
+cRYPTOPUNKSMarketPlaceDTODecoder : Json.Decode.Decoder CRYPTOPUNKSMarketPlaceDTO
+cRYPTOPUNKSMarketPlaceDTODecoder =
+    Json.Decode.succeed CRYPTOPUNKSMarketPlaceDTO
+        |> maybeDecode "entry_time" Api.Time.dateTimeDecoder Nothing
+        |> maybeDecode "recv_time" Api.Time.dateTimeDecoder Nothing
+        |> maybeDecode "block_number" Json.Decode.int Nothing
+        |> maybeDecode "vid" Json.Decode.int Nothing
+        |> maybeDecodeNullable "block_range" Json.Decode.string Nothing
+        |> maybeDecodeNullable "id" Json.Decode.string Nothing
+        |> maybeDecodeNullable "name" Json.Decode.string Nothing
+        |> maybeDecodeNullable "slug" Json.Decode.string Nothing
+        |> maybeDecodeNullable "schema_version" Json.Decode.string Nothing
+        |> maybeDecodeNullable "subgraph_version" Json.Decode.string Nothing
+        |> maybeDecodeNullable "methodology_version" Json.Decode.string Nothing
+        |> maybeDecode "collection_count" Json.Decode.int Nothing
+        |> maybeDecode "trade_count" Json.Decode.int Nothing
+        |> maybeDecodeNullable "cumulative_trade_volume_eth" Json.Decode.string Nothing
+        |> maybeDecodeNullable "marketplace_revenue_eth" Json.Decode.string Nothing
+        |> maybeDecodeNullable "creator_revenue_eth" Json.Decode.string Nothing
+        |> maybeDecodeNullable "total_revenue_eth" Json.Decode.string Nothing
+        |> maybeDecode "cumulative_unique_traders" Json.Decode.int Nothing
+
+
+cRYPTOPUNKSMarketplaceDailySnapshotDTODecoder : Json.Decode.Decoder CRYPTOPUNKSMarketplaceDailySnapshotDTO
+cRYPTOPUNKSMarketplaceDailySnapshotDTODecoder =
+    Json.Decode.succeed CRYPTOPUNKSMarketplaceDailySnapshotDTO
+        |> maybeDecode "entry_time" Api.Time.dateTimeDecoder Nothing
+        |> maybeDecode "recv_time" Api.Time.dateTimeDecoder Nothing
+        |> maybeDecodeNullable "block_number" Json.Decode.string Nothing
+        |> maybeDecode "vid" Json.Decode.int Nothing
+        |> maybeDecodeNullable "block_range" Json.Decode.string Nothing
+        |> maybeDecodeNullable "id" Json.Decode.string Nothing
+        |> maybeDecodeNullable "marketplace" Json.Decode.string Nothing
+        |> maybeDecodeNullable "timestamp" Json.Decode.string Nothing
+        |> maybeDecode "collection_count" Json.Decode.int Nothing
+        |> maybeDecodeNullable "cumulative_trade_volume_eth" Json.Decode.string Nothing
+        |> maybeDecodeNullable "marketplace_revenue_eth" Json.Decode.string Nothing
+        |> maybeDecodeNullable "creator_revenue_eth" Json.Decode.string Nothing
+        |> maybeDecodeNullable "total_revenue_eth" Json.Decode.string Nothing
+        |> maybeDecode "trade_count" Json.Decode.int Nothing
+        |> maybeDecode "cumulative_unique_traders" Json.Decode.int Nothing
+        |> maybeDecode "daily_active_traders" Json.Decode.int Nothing
+        |> maybeDecode "daily_traded_collection_count" Json.Decode.int Nothing
+        |> maybeDecode "daily_traded_item_count" Json.Decode.int Nothing
+
+
+cRYPTOPUNKSTradeDTODecoder : Json.Decode.Decoder CRYPTOPUNKSTradeDTO
+cRYPTOPUNKSTradeDTODecoder =
+    Json.Decode.succeed CRYPTOPUNKSTradeDTO
+        |> maybeDecode "entry_time" Api.Time.dateTimeDecoder Nothing
+        |> maybeDecode "recv_time" Api.Time.dateTimeDecoder Nothing
+        |> maybeDecodeNullable "block_number" Json.Decode.string Nothing
+        |> maybeDecode "vid" Json.Decode.int Nothing
+        |> maybeDecodeNullable "block_range" Json.Decode.string Nothing
+        |> maybeDecodeNullable "id" Json.Decode.string Nothing
+        |> maybeDecodeNullable "transaction_hash" Json.Decode.string Nothing
+        |> maybeDecode "log_index" Json.Decode.int Nothing
+        |> maybeDecodeNullable "timestamp" Json.Decode.string Nothing
+        |> maybeDecode "is_bundle" Json.Decode.bool Nothing
+        |> maybeDecodeNullable "collection" Json.Decode.string Nothing
+        |> maybeDecodeNullable "token_id" Json.Decode.string Nothing
+        |> maybeDecodeNullable "amount" Json.Decode.string Nothing
+        |> maybeDecodeNullable "price_eth" Json.Decode.string Nothing
+        |> maybeDecodeNullable "buyer" Json.Decode.string Nothing
+        |> maybeDecodeNullable "seller" Json.Decode.string Nothing
+
+
+cRYPTOPUNKSUserDTODecoder : Json.Decode.Decoder CRYPTOPUNKSUserDTO
+cRYPTOPUNKSUserDTODecoder =
+    Json.Decode.succeed CRYPTOPUNKSUserDTO
+        |> maybeDecode "entry_time" Api.Time.dateTimeDecoder Nothing
+        |> maybeDecode "recv_time" Api.Time.dateTimeDecoder Nothing
+        |> maybeDecode "block_number" Json.Decode.int Nothing
+        |> maybeDecode "vid" Json.Decode.int Nothing
+        |> maybeDecodeNullable "block_range" Json.Decode.string Nothing
+        |> maybeDecodeNullable "id" Json.Decode.string Nothing
 
 
 cowOrderDTODecoder : Json.Decode.Decoder CowOrderDTO

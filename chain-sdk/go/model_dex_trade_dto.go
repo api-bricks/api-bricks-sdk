@@ -79,7 +79,7 @@ func NewDexTradeDTOWithDefaults() *DexTradeDTO {
 
 // GetEntryTime returns the EntryTime field value if set, zero value otherwise.
 func (o *DexTradeDTO) GetEntryTime() time.Time {
-	if o == nil || isNil(o.EntryTime) {
+	if o == nil || IsNil(o.EntryTime) {
 		var ret time.Time
 		return ret
 	}
@@ -89,7 +89,7 @@ func (o *DexTradeDTO) GetEntryTime() time.Time {
 // GetEntryTimeOk returns a tuple with the EntryTime field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DexTradeDTO) GetEntryTimeOk() (*time.Time, bool) {
-	if o == nil || isNil(o.EntryTime) {
+	if o == nil || IsNil(o.EntryTime) {
 		return nil, false
 	}
 	return o.EntryTime, true
@@ -97,7 +97,7 @@ func (o *DexTradeDTO) GetEntryTimeOk() (*time.Time, bool) {
 
 // HasEntryTime returns a boolean if a field has been set.
 func (o *DexTradeDTO) HasEntryTime() bool {
-	if o != nil && !isNil(o.EntryTime) {
+	if o != nil && !IsNil(o.EntryTime) {
 		return true
 	}
 
@@ -111,7 +111,7 @@ func (o *DexTradeDTO) SetEntryTime(v time.Time) {
 
 // GetRecvTime returns the RecvTime field value if set, zero value otherwise.
 func (o *DexTradeDTO) GetRecvTime() time.Time {
-	if o == nil || isNil(o.RecvTime) {
+	if o == nil || IsNil(o.RecvTime) {
 		var ret time.Time
 		return ret
 	}
@@ -121,7 +121,7 @@ func (o *DexTradeDTO) GetRecvTime() time.Time {
 // GetRecvTimeOk returns a tuple with the RecvTime field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DexTradeDTO) GetRecvTimeOk() (*time.Time, bool) {
-	if o == nil || isNil(o.RecvTime) {
+	if o == nil || IsNil(o.RecvTime) {
 		return nil, false
 	}
 	return o.RecvTime, true
@@ -129,7 +129,7 @@ func (o *DexTradeDTO) GetRecvTimeOk() (*time.Time, bool) {
 
 // HasRecvTime returns a boolean if a field has been set.
 func (o *DexTradeDTO) HasRecvTime() bool {
-	if o != nil && !isNil(o.RecvTime) {
+	if o != nil && !IsNil(o.RecvTime) {
 		return true
 	}
 
@@ -143,7 +143,7 @@ func (o *DexTradeDTO) SetRecvTime(v time.Time) {
 
 // GetBlockNumber returns the BlockNumber field value if set, zero value otherwise.
 func (o *DexTradeDTO) GetBlockNumber() int64 {
-	if o == nil || isNil(o.BlockNumber) {
+	if o == nil || IsNil(o.BlockNumber) {
 		var ret int64
 		return ret
 	}
@@ -153,7 +153,7 @@ func (o *DexTradeDTO) GetBlockNumber() int64 {
 // GetBlockNumberOk returns a tuple with the BlockNumber field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DexTradeDTO) GetBlockNumberOk() (*int64, bool) {
-	if o == nil || isNil(o.BlockNumber) {
+	if o == nil || IsNil(o.BlockNumber) {
 		return nil, false
 	}
 	return o.BlockNumber, true
@@ -161,7 +161,7 @@ func (o *DexTradeDTO) GetBlockNumberOk() (*int64, bool) {
 
 // HasBlockNumber returns a boolean if a field has been set.
 func (o *DexTradeDTO) HasBlockNumber() bool {
-	if o != nil && !isNil(o.BlockNumber) {
+	if o != nil && !IsNil(o.BlockNumber) {
 		return true
 	}
 
@@ -175,7 +175,7 @@ func (o *DexTradeDTO) SetBlockNumber(v int64) {
 
 // GetId returns the Id field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *DexTradeDTO) GetId() string {
-	if o == nil || isNil(o.Id.Get()) {
+	if o == nil || IsNil(o.Id.Get()) {
 		var ret string
 		return ret
 	}
@@ -217,7 +217,7 @@ func (o *DexTradeDTO) UnsetId() {
 
 // GetOrder returns the Order field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *DexTradeDTO) GetOrder() string {
-	if o == nil || isNil(o.Order.Get()) {
+	if o == nil || IsNil(o.Order.Get()) {
 		var ret string
 		return ret
 	}
@@ -259,7 +259,7 @@ func (o *DexTradeDTO) UnsetOrder() {
 
 // GetOwner returns the Owner field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *DexTradeDTO) GetOwner() string {
-	if o == nil || isNil(o.Owner.Get()) {
+	if o == nil || IsNil(o.Owner.Get()) {
 		var ret string
 		return ret
 	}
@@ -301,7 +301,7 @@ func (o *DexTradeDTO) UnsetOwner() {
 
 // GetSellVolume returns the SellVolume field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *DexTradeDTO) GetSellVolume() string {
-	if o == nil || isNil(o.SellVolume.Get()) {
+	if o == nil || IsNil(o.SellVolume.Get()) {
 		var ret string
 		return ret
 	}
@@ -343,7 +343,7 @@ func (o *DexTradeDTO) UnsetSellVolume() {
 
 // GetBuyVolume returns the BuyVolume field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *DexTradeDTO) GetBuyVolume() string {
-	if o == nil || isNil(o.BuyVolume.Get()) {
+	if o == nil || IsNil(o.BuyVolume.Get()) {
 		var ret string
 		return ret
 	}
@@ -385,7 +385,7 @@ func (o *DexTradeDTO) UnsetBuyVolume() {
 
 // GetTradeBatchId returns the TradeBatchId field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *DexTradeDTO) GetTradeBatchId() string {
-	if o == nil || isNil(o.TradeBatchId.Get()) {
+	if o == nil || IsNil(o.TradeBatchId.Get()) {
 		var ret string
 		return ret
 	}
@@ -427,7 +427,7 @@ func (o *DexTradeDTO) UnsetTradeBatchId() {
 
 // GetTradeEpoch returns the TradeEpoch field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *DexTradeDTO) GetTradeEpoch() string {
-	if o == nil || isNil(o.TradeEpoch.Get()) {
+	if o == nil || IsNil(o.TradeEpoch.Get()) {
 		var ret string
 		return ret
 	}
@@ -469,7 +469,7 @@ func (o *DexTradeDTO) UnsetTradeEpoch() {
 
 // GetBuyToken returns the BuyToken field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *DexTradeDTO) GetBuyToken() string {
-	if o == nil || isNil(o.BuyToken.Get()) {
+	if o == nil || IsNil(o.BuyToken.Get()) {
 		var ret string
 		return ret
 	}
@@ -511,7 +511,7 @@ func (o *DexTradeDTO) UnsetBuyToken() {
 
 // GetSellToken returns the SellToken field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *DexTradeDTO) GetSellToken() string {
-	if o == nil || isNil(o.SellToken.Get()) {
+	if o == nil || IsNil(o.SellToken.Get()) {
 		var ret string
 		return ret
 	}
@@ -553,7 +553,7 @@ func (o *DexTradeDTO) UnsetSellToken() {
 
 // GetCreateEpoch returns the CreateEpoch field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *DexTradeDTO) GetCreateEpoch() string {
-	if o == nil || isNil(o.CreateEpoch.Get()) {
+	if o == nil || IsNil(o.CreateEpoch.Get()) {
 		var ret string
 		return ret
 	}
@@ -595,7 +595,7 @@ func (o *DexTradeDTO) UnsetCreateEpoch() {
 
 // GetRevertEpoch returns the RevertEpoch field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *DexTradeDTO) GetRevertEpoch() string {
-	if o == nil || isNil(o.RevertEpoch.Get()) {
+	if o == nil || IsNil(o.RevertEpoch.Get()) {
 		var ret string
 		return ret
 	}
@@ -637,7 +637,7 @@ func (o *DexTradeDTO) UnsetRevertEpoch() {
 
 // GetTxHash returns the TxHash field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *DexTradeDTO) GetTxHash() string {
-	if o == nil || isNil(o.TxHash.Get()) {
+	if o == nil || IsNil(o.TxHash.Get()) {
 		var ret string
 		return ret
 	}
@@ -679,7 +679,7 @@ func (o *DexTradeDTO) UnsetTxHash() {
 
 // GetTxLogIndex returns the TxLogIndex field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *DexTradeDTO) GetTxLogIndex() string {
-	if o == nil || isNil(o.TxLogIndex.Get()) {
+	if o == nil || IsNil(o.TxLogIndex.Get()) {
 		var ret string
 		return ret
 	}
@@ -721,7 +721,7 @@ func (o *DexTradeDTO) UnsetTxLogIndex() {
 
 // GetVid returns the Vid field value if set, zero value otherwise.
 func (o *DexTradeDTO) GetVid() int64 {
-	if o == nil || isNil(o.Vid) {
+	if o == nil || IsNil(o.Vid) {
 		var ret int64
 		return ret
 	}
@@ -731,7 +731,7 @@ func (o *DexTradeDTO) GetVid() int64 {
 // GetVidOk returns a tuple with the Vid field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DexTradeDTO) GetVidOk() (*int64, bool) {
-	if o == nil || isNil(o.Vid) {
+	if o == nil || IsNil(o.Vid) {
 		return nil, false
 	}
 	return o.Vid, true
@@ -739,7 +739,7 @@ func (o *DexTradeDTO) GetVidOk() (*int64, bool) {
 
 // HasVid returns a boolean if a field has been set.
 func (o *DexTradeDTO) HasVid() bool {
-	if o != nil && !isNil(o.Vid) {
+	if o != nil && !IsNil(o.Vid) {
 		return true
 	}
 
@@ -753,7 +753,7 @@ func (o *DexTradeDTO) SetVid(v int64) {
 
 // GetPoolId returns the PoolId field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *DexTradeDTO) GetPoolId() string {
-	if o == nil || isNil(o.PoolId.Get()) {
+	if o == nil || IsNil(o.PoolId.Get()) {
 		var ret string
 		return ret
 	}
@@ -795,7 +795,7 @@ func (o *DexTradeDTO) UnsetPoolId() {
 
 // GetTransactionId returns the TransactionId field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *DexTradeDTO) GetTransactionId() string {
-	if o == nil || isNil(o.TransactionId.Get()) {
+	if o == nil || IsNil(o.TransactionId.Get()) {
 		var ret string
 		return ret
 	}
@@ -837,7 +837,7 @@ func (o *DexTradeDTO) UnsetTransactionId() {
 
 // GetEvaluatedPrice returns the EvaluatedPrice field value if set, zero value otherwise.
 func (o *DexTradeDTO) GetEvaluatedPrice() float64 {
-	if o == nil || isNil(o.EvaluatedPrice) {
+	if o == nil || IsNil(o.EvaluatedPrice) {
 		var ret float64
 		return ret
 	}
@@ -847,7 +847,7 @@ func (o *DexTradeDTO) GetEvaluatedPrice() float64 {
 // GetEvaluatedPriceOk returns a tuple with the EvaluatedPrice field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DexTradeDTO) GetEvaluatedPriceOk() (*float64, bool) {
-	if o == nil || isNil(o.EvaluatedPrice) {
+	if o == nil || IsNil(o.EvaluatedPrice) {
 		return nil, false
 	}
 	return o.EvaluatedPrice, true
@@ -855,7 +855,7 @@ func (o *DexTradeDTO) GetEvaluatedPriceOk() (*float64, bool) {
 
 // HasEvaluatedPrice returns a boolean if a field has been set.
 func (o *DexTradeDTO) HasEvaluatedPrice() bool {
-	if o != nil && !isNil(o.EvaluatedPrice) {
+	if o != nil && !IsNil(o.EvaluatedPrice) {
 		return true
 	}
 
@@ -869,7 +869,7 @@ func (o *DexTradeDTO) SetEvaluatedPrice(v float64) {
 
 // GetEvaluatedAmount returns the EvaluatedAmount field value if set, zero value otherwise.
 func (o *DexTradeDTO) GetEvaluatedAmount() float64 {
-	if o == nil || isNil(o.EvaluatedAmount) {
+	if o == nil || IsNil(o.EvaluatedAmount) {
 		var ret float64
 		return ret
 	}
@@ -879,7 +879,7 @@ func (o *DexTradeDTO) GetEvaluatedAmount() float64 {
 // GetEvaluatedAmountOk returns a tuple with the EvaluatedAmount field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DexTradeDTO) GetEvaluatedAmountOk() (*float64, bool) {
-	if o == nil || isNil(o.EvaluatedAmount) {
+	if o == nil || IsNil(o.EvaluatedAmount) {
 		return nil, false
 	}
 	return o.EvaluatedAmount, true
@@ -887,7 +887,7 @@ func (o *DexTradeDTO) GetEvaluatedAmountOk() (*float64, bool) {
 
 // HasEvaluatedAmount returns a boolean if a field has been set.
 func (o *DexTradeDTO) HasEvaluatedAmount() bool {
-	if o != nil && !isNil(o.EvaluatedAmount) {
+	if o != nil && !IsNil(o.EvaluatedAmount) {
 		return true
 	}
 
@@ -901,7 +901,7 @@ func (o *DexTradeDTO) SetEvaluatedAmount(v float64) {
 
 // GetEvaluatedAggressor returns the EvaluatedAggressor field value if set, zero value otherwise.
 func (o *DexTradeDTO) GetEvaluatedAggressor() TransactionsETradeAggressiveSide {
-	if o == nil || isNil(o.EvaluatedAggressor) {
+	if o == nil || IsNil(o.EvaluatedAggressor) {
 		var ret TransactionsETradeAggressiveSide
 		return ret
 	}
@@ -911,7 +911,7 @@ func (o *DexTradeDTO) GetEvaluatedAggressor() TransactionsETradeAggressiveSide {
 // GetEvaluatedAggressorOk returns a tuple with the EvaluatedAggressor field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DexTradeDTO) GetEvaluatedAggressorOk() (*TransactionsETradeAggressiveSide, bool) {
-	if o == nil || isNil(o.EvaluatedAggressor) {
+	if o == nil || IsNil(o.EvaluatedAggressor) {
 		return nil, false
 	}
 	return o.EvaluatedAggressor, true
@@ -919,7 +919,7 @@ func (o *DexTradeDTO) GetEvaluatedAggressorOk() (*TransactionsETradeAggressiveSi
 
 // HasEvaluatedAggressor returns a boolean if a field has been set.
 func (o *DexTradeDTO) HasEvaluatedAggressor() bool {
-	if o != nil && !isNil(o.EvaluatedAggressor) {
+	if o != nil && !IsNil(o.EvaluatedAggressor) {
 		return true
 	}
 
@@ -941,13 +941,13 @@ func (o DexTradeDTO) MarshalJSON() ([]byte, error) {
 
 func (o DexTradeDTO) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if !isNil(o.EntryTime) {
+	if !IsNil(o.EntryTime) {
 		toSerialize["entry_time"] = o.EntryTime
 	}
-	if !isNil(o.RecvTime) {
+	if !IsNil(o.RecvTime) {
 		toSerialize["recv_time"] = o.RecvTime
 	}
-	if !isNil(o.BlockNumber) {
+	if !IsNil(o.BlockNumber) {
 		toSerialize["block_number"] = o.BlockNumber
 	}
 	if o.Id.IsSet() {
@@ -989,7 +989,7 @@ func (o DexTradeDTO) ToMap() (map[string]interface{}, error) {
 	if o.TxLogIndex.IsSet() {
 		toSerialize["tx_log_index"] = o.TxLogIndex.Get()
 	}
-	if !isNil(o.Vid) {
+	if !IsNil(o.Vid) {
 		toSerialize["vid"] = o.Vid
 	}
 	if o.PoolId.IsSet() {
@@ -1000,7 +1000,7 @@ func (o DexTradeDTO) ToMap() (map[string]interface{}, error) {
 	}
 	// skip: evaluated_price is readOnly
 	// skip: evaluated_amount is readOnly
-	if !isNil(o.EvaluatedAggressor) {
+	if !IsNil(o.EvaluatedAggressor) {
 		toSerialize["evaluated_aggressor"] = o.EvaluatedAggressor
 	}
 	return toSerialize, nil

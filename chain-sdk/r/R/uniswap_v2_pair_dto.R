@@ -398,9 +398,9 @@ UniswapV2PairDTO <- R6::R6Class(
         self$`untracked_volume_usd` <- this_object$`untracked_volume_usd`
       }
       if (!is.null(this_object$`tx_count`)) {
-        tx_count_object <- NumericsBigInteger$new()
-        tx_count_object$fromJSON(jsonlite::toJSON(this_object$tx_count, auto_unbox = TRUE, digits = NA))
-        self$`tx_count` <- tx_count_object
+        `tx_count_object` <- NumericsBigInteger$new()
+        `tx_count_object`$fromJSON(jsonlite::toJSON(this_object$`tx_count`, auto_unbox = TRUE, digits = NA))
+        self$`tx_count` <- `tx_count_object`
       }
       if (!is.null(this_object$`created_at_timestamp`)) {
         self$`created_at_timestamp` <- this_object$`created_at_timestamp`
@@ -639,7 +639,7 @@ UniswapV2PairDTO <- R6::R6Class(
       self$`volume_token_1` <- this_object$`volume_token_1`
       self$`volume_usd` <- this_object$`volume_usd`
       self$`untracked_volume_usd` <- this_object$`untracked_volume_usd`
-      self$`tx_count` <- NumericsBigInteger$new()$fromJSON(jsonlite::toJSON(this_object$tx_count, auto_unbox = TRUE, digits = NA))
+      self$`tx_count` <- NumericsBigInteger$new()$fromJSON(jsonlite::toJSON(this_object$`tx_count`, auto_unbox = TRUE, digits = NA))
       self$`created_at_timestamp` <- this_object$`created_at_timestamp`
       self$`liquidity_provider_count` <- this_object$`liquidity_provider_count`
       self$`evaluated_ask` <- this_object$`evaluated_ask`

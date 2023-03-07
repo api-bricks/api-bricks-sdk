@@ -61,21 +61,14 @@ Please follow the [installation](#installation) procedure and then run the follo
 # Load the gem
 require 'openapi_client'
 
-api_instance = OpenapiClient::CowApi.new
-opts = {
-  start_block: 789, # Integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
-  end_block: 789, # Integer | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
-  start_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
-  end_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | The end date of timeframe.
-  id: 'id_example' # String | User's address.
-}
+api_instance = OpenapiClient::CRYPTOPUNKSApi.new
 
 begin
-  #Orders (historical)
-  result = api_instance.cow_get_orders__historical(opts)
+  #Bids (current)
+  result = api_instance.c_ryptopunks_bids__current
   p result
 rescue OpenapiClient::ApiError => e
-  puts "Exception when calling CowApi->cow_get_orders__historical: #{e}"
+  puts "Exception when calling CRYPTOPUNKSApi->c_ryptopunks_bids__current: #{e}"
 end
 
 ```
@@ -86,6 +79,24 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*OpenapiClient::CRYPTOPUNKSApi* | [**c_ryptopunks_bids__current**](docs/CRYPTOPUNKSApi.md#c_ryptopunks_bids__current) | **GET** /dapps/cryptopunks/bids/current | Bids (current)
+*OpenapiClient::CRYPTOPUNKSApi* | [**c_ryptopunks_collection_daily_snapshots__current**](docs/CRYPTOPUNKSApi.md#c_ryptopunks_collection_daily_snapshots__current) | **GET** /dapps/cryptopunks/collectionDailySnapshots/current | CollectionDailySnapshots (current)
+*OpenapiClient::CRYPTOPUNKSApi* | [**c_ryptopunks_collections__current**](docs/CRYPTOPUNKSApi.md#c_ryptopunks_collections__current) | **GET** /dapps/cryptopunks/collections/current | Collections (current)
+*OpenapiClient::CRYPTOPUNKSApi* | [**c_ryptopunks_data_sources__current**](docs/CRYPTOPUNKSApi.md#c_ryptopunks_data_sources__current) | **GET** /dapps/cryptopunks/dataSources/current | DataSources (current)
+*OpenapiClient::CRYPTOPUNKSApi* | [**c_ryptopunks_get_bids__historical**](docs/CRYPTOPUNKSApi.md#c_ryptopunks_get_bids__historical) | **GET** /dapps/cryptopunks/bids/historical | Bids (historical)
+*OpenapiClient::CRYPTOPUNKSApi* | [**c_ryptopunks_get_collection_daily_snapshots__historical**](docs/CRYPTOPUNKSApi.md#c_ryptopunks_get_collection_daily_snapshots__historical) | **GET** /dapps/cryptopunks/collectionDailySnapshots/historical | CollectionDailySnapshots (historical)
+*OpenapiClient::CRYPTOPUNKSApi* | [**c_ryptopunks_get_collections__historical**](docs/CRYPTOPUNKSApi.md#c_ryptopunks_get_collections__historical) | **GET** /dapps/cryptopunks/collections/historical | Collections (historical)
+*OpenapiClient::CRYPTOPUNKSApi* | [**c_ryptopunks_get_data_sources__historical**](docs/CRYPTOPUNKSApi.md#c_ryptopunks_get_data_sources__historical) | **GET** /dapps/cryptopunks/dataSources/historical | DataSources (historical)
+*OpenapiClient::CRYPTOPUNKSApi* | [**c_ryptopunks_get_items__historical**](docs/CRYPTOPUNKSApi.md#c_ryptopunks_get_items__historical) | **GET** /dapps/cryptopunks/items/historical | Items (historical)
+*OpenapiClient::CRYPTOPUNKSApi* | [**c_ryptopunks_get_market_places__historical**](docs/CRYPTOPUNKSApi.md#c_ryptopunks_get_market_places__historical) | **GET** /dapps/cryptopunks/marketPlaces/historical | MarketPlaces (historical)
+*OpenapiClient::CRYPTOPUNKSApi* | [**c_ryptopunks_get_marketplace_daily_snapshots__historical**](docs/CRYPTOPUNKSApi.md#c_ryptopunks_get_marketplace_daily_snapshots__historical) | **GET** /dapps/cryptopunks/marketplaceDailySnapshots/historical | MarketplaceDailySnapshots (historical)
+*OpenapiClient::CRYPTOPUNKSApi* | [**c_ryptopunks_get_trades__historical**](docs/CRYPTOPUNKSApi.md#c_ryptopunks_get_trades__historical) | **GET** /dapps/cryptopunks/trades/historical | Trades (historical)
+*OpenapiClient::CRYPTOPUNKSApi* | [**c_ryptopunks_get_users__historical**](docs/CRYPTOPUNKSApi.md#c_ryptopunks_get_users__historical) | **GET** /dapps/cryptopunks/users/historical | Users (historical)
+*OpenapiClient::CRYPTOPUNKSApi* | [**c_ryptopunks_items__current**](docs/CRYPTOPUNKSApi.md#c_ryptopunks_items__current) | **GET** /dapps/cryptopunks/items/current | Items (current)
+*OpenapiClient::CRYPTOPUNKSApi* | [**c_ryptopunks_market_places__current**](docs/CRYPTOPUNKSApi.md#c_ryptopunks_market_places__current) | **GET** /dapps/cryptopunks/marketPlaces/current | MarketPlaces (current)
+*OpenapiClient::CRYPTOPUNKSApi* | [**c_ryptopunks_marketplace_daily_snapshots__current**](docs/CRYPTOPUNKSApi.md#c_ryptopunks_marketplace_daily_snapshots__current) | **GET** /dapps/cryptopunks/marketplaceDailySnapshots/current | MarketplaceDailySnapshots (current)
+*OpenapiClient::CRYPTOPUNKSApi* | [**c_ryptopunks_trades__current**](docs/CRYPTOPUNKSApi.md#c_ryptopunks_trades__current) | **GET** /dapps/cryptopunks/trades/current | Trades (current)
+*OpenapiClient::CRYPTOPUNKSApi* | [**c_ryptopunks_users__current**](docs/CRYPTOPUNKSApi.md#c_ryptopunks_users__current) | **GET** /dapps/cryptopunks/users/current | Users (current)
 *OpenapiClient::CowApi* | [**cow_get_orders__historical**](docs/CowApi.md#cow_get_orders__historical) | **GET** /dapps/cow/orders/historical | Orders (historical)
 *OpenapiClient::CowApi* | [**cow_get_settlements__historical**](docs/CowApi.md#cow_get_settlements__historical) | **GET** /dapps/cow/settlements/historical | Settlements (historical)
 *OpenapiClient::CowApi* | [**cow_get_tokens__historical**](docs/CowApi.md#cow_get_tokens__historical) | **GET** /dapps/cow/tokens/historical | Tokens (historical)
@@ -285,6 +296,15 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
+ - [OpenapiClient::CRYPTOPUNKSBidDTO](docs/CRYPTOPUNKSBidDTO.md)
+ - [OpenapiClient::CRYPTOPUNKSCollectionDTO](docs/CRYPTOPUNKSCollectionDTO.md)
+ - [OpenapiClient::CRYPTOPUNKSCollectionDailySnapshotDTO](docs/CRYPTOPUNKSCollectionDailySnapshotDTO.md)
+ - [OpenapiClient::CRYPTOPUNKSDataSourcesDTO](docs/CRYPTOPUNKSDataSourcesDTO.md)
+ - [OpenapiClient::CRYPTOPUNKSItemDTO](docs/CRYPTOPUNKSItemDTO.md)
+ - [OpenapiClient::CRYPTOPUNKSMarketPlaceDTO](docs/CRYPTOPUNKSMarketPlaceDTO.md)
+ - [OpenapiClient::CRYPTOPUNKSMarketplaceDailySnapshotDTO](docs/CRYPTOPUNKSMarketplaceDailySnapshotDTO.md)
+ - [OpenapiClient::CRYPTOPUNKSTradeDTO](docs/CRYPTOPUNKSTradeDTO.md)
+ - [OpenapiClient::CRYPTOPUNKSUserDTO](docs/CRYPTOPUNKSUserDTO.md)
  - [OpenapiClient::CowOrderDTO](docs/CowOrderDTO.md)
  - [OpenapiClient::CowSettlementDTO](docs/CowSettlementDTO.md)
  - [OpenapiClient::CowTokenDTO](docs/CowTokenDTO.md)

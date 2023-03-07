@@ -604,6 +604,908 @@ paths:
       tags:
       - Cow
       x-accepts: application/json
+  /dapps/cryptopunks/bids/historical:
+    get:
+      description: Gets bids.
+      operationId: CRYPTOPUNKS.GetBids (historical)
+      parameters:
+      - description: "The start block. If endblock is not given, only those entities\
+          \ will be included that were exactly created in startBlock."
+        explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: The end block. Useful to filter data in range of blocks (FROM
+          startBlock TO endBlock).
+        explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: "The start date of timeframe. If endDate is not given, entities\
+          \ created FROM startDate TO startDate plus 24 hours will be included."
+        explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: The end date of timeframe.
+        explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: id
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/CRYPTOPUNKS.BidDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/CRYPTOPUNKS.BidDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/CRYPTOPUNKS.BidDTO'
+                type: array
+          description: successful operation
+      summary: Bids (historical)
+      tags:
+      - CRYPTOPUNKS
+      x-accepts: application/json
+  /dapps/cryptopunks/bids/current:
+    get:
+      description: Gets bids.
+      operationId: CRYPTOPUNKS.Bids (current)
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/CRYPTOPUNKS.BidDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/CRYPTOPUNKS.BidDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/CRYPTOPUNKS.BidDTO'
+                type: array
+          description: successful operation
+      summary: Bids (current)
+      tags:
+      - CRYPTOPUNKS
+      x-accepts: application/json
+  /dapps/cryptopunks/collectionDailySnapshots/historical:
+    get:
+      description: Gets collectionDailySnapshots.
+      operationId: CRYPTOPUNKS.GetCollectionDailySnapshots (historical)
+      parameters:
+      - description: "The start block. If endblock is not given, only those entities\
+          \ will be included that were exactly created in startBlock."
+        explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: The end block. Useful to filter data in range of blocks (FROM
+          startBlock TO endBlock).
+        explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: "The start date of timeframe. If endDate is not given, entities\
+          \ created FROM startDate TO startDate plus 24 hours will be included."
+        explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: The end date of timeframe.
+        explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/CRYPTOPUNKS.CollectionDailySnapshotDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/CRYPTOPUNKS.CollectionDailySnapshotDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/CRYPTOPUNKS.CollectionDailySnapshotDTO'
+                type: array
+          description: successful operation
+      summary: CollectionDailySnapshots (historical)
+      tags:
+      - CRYPTOPUNKS
+      x-accepts: application/json
+  /dapps/cryptopunks/collectionDailySnapshots/current:
+    get:
+      description: Gets collectionDailySnapshots.
+      operationId: CRYPTOPUNKS.CollectionDailySnapshots (current)
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/CRYPTOPUNKS.CollectionDailySnapshotDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/CRYPTOPUNKS.CollectionDailySnapshotDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/CRYPTOPUNKS.CollectionDailySnapshotDTO'
+                type: array
+          description: successful operation
+      summary: CollectionDailySnapshots (current)
+      tags:
+      - CRYPTOPUNKS
+      x-accepts: application/json
+  /dapps/cryptopunks/collections/historical:
+    get:
+      description: Gets collections.
+      operationId: CRYPTOPUNKS.GetCollections (historical)
+      parameters:
+      - description: "The start block. If endblock is not given, only those entities\
+          \ will be included that were exactly created in startBlock."
+        explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: The end block. Useful to filter data in range of blocks (FROM
+          startBlock TO endBlock).
+        explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: "The start date of timeframe. If endDate is not given, entities\
+          \ created FROM startDate TO startDate plus 24 hours will be included."
+        explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: The end date of timeframe.
+        explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: id
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/CRYPTOPUNKS.CollectionDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/CRYPTOPUNKS.CollectionDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/CRYPTOPUNKS.CollectionDTO'
+                type: array
+          description: successful operation
+      summary: Collections (historical)
+      tags:
+      - CRYPTOPUNKS
+      x-accepts: application/json
+  /dapps/cryptopunks/collections/current:
+    get:
+      description: Gets collections.
+      operationId: CRYPTOPUNKS.Collections (current)
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/CRYPTOPUNKS.CollectionDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/CRYPTOPUNKS.CollectionDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/CRYPTOPUNKS.CollectionDTO'
+                type: array
+          description: successful operation
+      summary: Collections (current)
+      tags:
+      - CRYPTOPUNKS
+      x-accepts: application/json
+  /dapps/cryptopunks/dataSources/historical:
+    get:
+      description: Gets dataSources.
+      operationId: CRYPTOPUNKS.GetDataSources (historical)
+      parameters:
+      - description: "The start block. If endblock is not given, only those entities\
+          \ will be included that were exactly created in startBlock."
+        explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: The end block. Useful to filter data in range of blocks (FROM
+          startBlock TO endBlock).
+        explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: "The start date of timeframe. If endDate is not given, entities\
+          \ created FROM startDate TO startDate plus 24 hours will be included."
+        explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: The end date of timeframe.
+        explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: id
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/CRYPTOPUNKS.DataSourcesDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/CRYPTOPUNKS.DataSourcesDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/CRYPTOPUNKS.DataSourcesDTO'
+                type: array
+          description: successful operation
+      summary: DataSources (historical)
+      tags:
+      - CRYPTOPUNKS
+      x-accepts: application/json
+  /dapps/cryptopunks/dataSources/current:
+    get:
+      description: Gets dataSources.
+      operationId: CRYPTOPUNKS.DataSources (current)
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/CRYPTOPUNKS.DataSourcesDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/CRYPTOPUNKS.DataSourcesDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/CRYPTOPUNKS.DataSourcesDTO'
+                type: array
+          description: successful operation
+      summary: DataSources (current)
+      tags:
+      - CRYPTOPUNKS
+      x-accepts: application/json
+  /dapps/cryptopunks/items/historical:
+    get:
+      description: Gets items.
+      operationId: CRYPTOPUNKS.GetItems (historical)
+      parameters:
+      - description: "The start block. If endblock is not given, only those entities\
+          \ will be included that were exactly created in startBlock."
+        explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: The end block. Useful to filter data in range of blocks (FROM
+          startBlock TO endBlock).
+        explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: "The start date of timeframe. If endDate is not given, entities\
+          \ created FROM startDate TO startDate plus 24 hours will be included."
+        explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: The end date of timeframe.
+        explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/CRYPTOPUNKS.ItemDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/CRYPTOPUNKS.ItemDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/CRYPTOPUNKS.ItemDTO'
+                type: array
+          description: successful operation
+      summary: Items (historical)
+      tags:
+      - CRYPTOPUNKS
+      x-accepts: application/json
+  /dapps/cryptopunks/items/current:
+    get:
+      description: Gets items.
+      operationId: CRYPTOPUNKS.Items (current)
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/CRYPTOPUNKS.ItemDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/CRYPTOPUNKS.ItemDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/CRYPTOPUNKS.ItemDTO'
+                type: array
+          description: successful operation
+      summary: Items (current)
+      tags:
+      - CRYPTOPUNKS
+      x-accepts: application/json
+  /dapps/cryptopunks/marketplaceDailySnapshots/historical:
+    get:
+      description: Gets marketplaceDailySnapshots.
+      operationId: CRYPTOPUNKS.GetMarketplaceDailySnapshots (historical)
+      parameters:
+      - description: "The start block. If endblock is not given, only those entities\
+          \ will be included that were exactly created in startBlock."
+        explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: The end block. Useful to filter data in range of blocks (FROM
+          startBlock TO endBlock).
+        explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: "The start date of timeframe. If endDate is not given, entities\
+          \ created FROM startDate TO startDate plus 24 hours will be included."
+        explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: The end date of timeframe.
+        explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: id
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/CRYPTOPUNKS.MarketplaceDailySnapshotDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/CRYPTOPUNKS.MarketplaceDailySnapshotDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/CRYPTOPUNKS.MarketplaceDailySnapshotDTO'
+                type: array
+          description: successful operation
+      summary: MarketplaceDailySnapshots (historical)
+      tags:
+      - CRYPTOPUNKS
+      x-accepts: application/json
+  /dapps/cryptopunks/marketplaceDailySnapshots/current:
+    get:
+      description: Gets marketplaceDailySnapshots.
+      operationId: CRYPTOPUNKS.MarketplaceDailySnapshots (current)
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/CRYPTOPUNKS.MarketplaceDailySnapshotDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/CRYPTOPUNKS.MarketplaceDailySnapshotDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/CRYPTOPUNKS.MarketplaceDailySnapshotDTO'
+                type: array
+          description: successful operation
+      summary: MarketplaceDailySnapshots (current)
+      tags:
+      - CRYPTOPUNKS
+      x-accepts: application/json
+  /dapps/cryptopunks/marketPlaces/historical:
+    get:
+      description: Gets marketPlaces.
+      operationId: CRYPTOPUNKS.GetMarketPlaces (historical)
+      parameters:
+      - description: "The start block. If endblock is not given, only those entities\
+          \ will be included that were exactly created in startBlock."
+        explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: The end block. Useful to filter data in range of blocks (FROM
+          startBlock TO endBlock).
+        explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: "The start date of timeframe. If endDate is not given, entities\
+          \ created FROM startDate TO startDate plus 24 hours will be included."
+        explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: The end date of timeframe.
+        explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: id
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/CRYPTOPUNKS.MarketPlaceDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/CRYPTOPUNKS.MarketPlaceDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/CRYPTOPUNKS.MarketPlaceDTO'
+                type: array
+          description: successful operation
+      summary: MarketPlaces (historical)
+      tags:
+      - CRYPTOPUNKS
+      x-accepts: application/json
+  /dapps/cryptopunks/marketPlaces/current:
+    get:
+      description: Gets marketPlaces.
+      operationId: CRYPTOPUNKS.MarketPlaces (current)
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/CRYPTOPUNKS.MarketPlaceDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/CRYPTOPUNKS.MarketPlaceDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/CRYPTOPUNKS.MarketPlaceDTO'
+                type: array
+          description: successful operation
+      summary: MarketPlaces (current)
+      tags:
+      - CRYPTOPUNKS
+      x-accepts: application/json
+  /dapps/cryptopunks/trades/historical:
+    get:
+      description: Gets trades.
+      operationId: CRYPTOPUNKS.GetTrades (historical)
+      parameters:
+      - description: "The start block. If endblock is not given, only those entities\
+          \ will be included that were exactly created in startBlock."
+        explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: The end block. Useful to filter data in range of blocks (FROM
+          startBlock TO endBlock).
+        explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: "The start date of timeframe. If endDate is not given, entities\
+          \ created FROM startDate TO startDate plus 24 hours will be included."
+        explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: The end date of timeframe.
+        explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: id
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/CRYPTOPUNKS.TradeDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/CRYPTOPUNKS.TradeDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/CRYPTOPUNKS.TradeDTO'
+                type: array
+          description: successful operation
+      summary: Trades (historical)
+      tags:
+      - CRYPTOPUNKS
+      x-accepts: application/json
+  /dapps/cryptopunks/trades/current:
+    get:
+      description: Gets trades.
+      operationId: CRYPTOPUNKS.Trades (current)
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/CRYPTOPUNKS.TradeDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/CRYPTOPUNKS.TradeDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/CRYPTOPUNKS.TradeDTO'
+                type: array
+          description: successful operation
+      summary: Trades (current)
+      tags:
+      - CRYPTOPUNKS
+      x-accepts: application/json
+  /dapps/cryptopunks/users/historical:
+    get:
+      description: Gets users.
+      operationId: CRYPTOPUNKS.GetUsers (historical)
+      parameters:
+      - description: "The start block. If endblock is not given, only those entities\
+          \ will be included that were exactly created in startBlock."
+        explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: The end block. Useful to filter data in range of blocks (FROM
+          startBlock TO endBlock).
+        explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: "The start date of timeframe. If endDate is not given, entities\
+          \ created FROM startDate TO startDate plus 24 hours will be included."
+        explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: The end date of timeframe.
+        explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: id
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/CRYPTOPUNKS.UserDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/CRYPTOPUNKS.UserDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/CRYPTOPUNKS.UserDTO'
+                type: array
+          description: successful operation
+      summary: Users (historical)
+      tags:
+      - CRYPTOPUNKS
+      x-accepts: application/json
+  /dapps/cryptopunks/users/current:
+    get:
+      description: Gets users.
+      operationId: CRYPTOPUNKS.Users (current)
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/CRYPTOPUNKS.UserDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/CRYPTOPUNKS.UserDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/CRYPTOPUNKS.UserDTO'
+                type: array
+          description: successful operation
+      summary: Users (current)
+      tags:
+      - CRYPTOPUNKS
+      x-accepts: application/json
   /dapps/curve/accounts/historical:
     get:
       description: Gets accounts.
@@ -10710,6 +11612,639 @@ paths:
       x-accepts: application/json
 components:
   schemas:
+    CRYPTOPUNKS.BidDTO:
+      additionalProperties: false
+      example:
+        vid: 0
+        entry_time: 2000-01-23T04:56:07.000+00:00
+        recv_time: 2000-01-23T04:56:07.000+00:00
+        tokens_bid: tokens_bid
+        token_id: token_id
+        bidder: bidder
+        block_number: block_number
+        id: id
+        block_range: block_range
+        timestamp: timestamp
+      properties:
+        entry_time:
+          format: date-time
+          type: string
+        recv_time:
+          format: date-time
+          type: string
+        block_number:
+          description: ""
+          nullable: true
+          type: string
+        vid:
+          description: ""
+          format: int64
+          type: integer
+        block_range:
+          description: ""
+          nullable: true
+          type: string
+        id:
+          description: ""
+          nullable: true
+          type: string
+        tokens_bid:
+          description: ""
+          nullable: true
+          type: string
+        token_id:
+          description: ""
+          nullable: true
+          type: string
+        timestamp:
+          description: ""
+          nullable: true
+          type: string
+        bidder:
+          description: ""
+          nullable: true
+          type: string
+      type: object
+    CRYPTOPUNKS.CollectionDTO:
+      additionalProperties: false
+      example:
+        creator_revenue_eth: creator_revenue_eth
+        entry_time: 2000-01-23T04:56:07.000+00:00
+        symbol: symbol
+        marketplace_revenue_eth: marketplace_revenue_eth
+        recv_time: 2000-01-23T04:56:07.000+00:00
+        total_supply: total_supply
+        trade_count: 1
+        block_number: 0
+        cumulative_trade_volume_eth: cumulative_trade_volume_eth
+        seller_count: 5
+        vid: 6
+        royalty_fee: royalty_fee
+        buyer_count: 5
+        name: name
+        id: id
+        block_range: block_range
+        total_revenue_eth: total_revenue_eth
+      properties:
+        entry_time:
+          format: date-time
+          type: string
+        recv_time:
+          format: date-time
+          type: string
+        block_number:
+          description: Number of block in which entity was recorded.
+          format: int64
+          type: integer
+        vid:
+          description: ""
+          format: int64
+          type: integer
+        block_range:
+          description: ""
+          nullable: true
+          type: string
+        id:
+          description: ""
+          nullable: true
+          type: string
+        name:
+          description: ""
+          nullable: true
+          type: string
+        symbol:
+          description: ""
+          nullable: true
+          type: string
+        total_supply:
+          description: ""
+          nullable: true
+          type: string
+        royalty_fee:
+          description: ""
+          nullable: true
+          type: string
+        cumulative_trade_volume_eth:
+          description: ""
+          nullable: true
+          type: string
+        marketplace_revenue_eth:
+          description: ""
+          nullable: true
+          type: string
+        creator_revenue_eth:
+          description: ""
+          nullable: true
+          type: string
+        total_revenue_eth:
+          description: ""
+          nullable: true
+          type: string
+        trade_count:
+          description: ""
+          format: int32
+          type: integer
+        buyer_count:
+          description: ""
+          format: int32
+          type: integer
+        seller_count:
+          description: ""
+          format: int32
+          type: integer
+      type: object
+    CRYPTOPUNKS.CollectionDailySnapshotDTO:
+      additionalProperties: false
+      example:
+        creator_revenue_eth: creator_revenue_eth
+        entry_time: 2000-01-23T04:56:07.000+00:00
+        marketplace_revenue_eth: marketplace_revenue_eth
+        recv_time: 2000-01-23T04:56:07.000+00:00
+        daily_min_sale_price: daily_min_sale_price
+        trade_count: 6
+        block_number: block_number
+        daily_max_sale_price: daily_max_sale_price
+        cumulative_trade_volume_eth: cumulative_trade_volume_eth
+        collection: collection
+        vid: 0
+        royalty_fee: royalty_fee
+        daily_trade_volume_eth: daily_trade_volume_eth
+        daily_traded_item_count: 1
+        id: id
+        block_range: block_range
+        timestamp: timestamp
+        total_revenue_eth: total_revenue_eth
+      properties:
+        entry_time:
+          format: date-time
+          type: string
+        recv_time:
+          format: date-time
+          type: string
+        block_number:
+          description: ""
+          nullable: true
+          type: string
+        vid:
+          description: ""
+          format: int64
+          type: integer
+        block_range:
+          description: ""
+          nullable: true
+          type: string
+        id:
+          description: ""
+          nullable: true
+          type: string
+        collection:
+          description: ""
+          nullable: true
+          type: string
+        timestamp:
+          description: ""
+          nullable: true
+          type: string
+        royalty_fee:
+          description: ""
+          nullable: true
+          type: string
+        daily_min_sale_price:
+          description: ""
+          nullable: true
+          type: string
+        daily_max_sale_price:
+          description: ""
+          nullable: true
+          type: string
+        cumulative_trade_volume_eth:
+          description: ""
+          nullable: true
+          type: string
+        daily_trade_volume_eth:
+          description: ""
+          nullable: true
+          type: string
+        marketplace_revenue_eth:
+          description: ""
+          nullable: true
+          type: string
+        creator_revenue_eth:
+          description: ""
+          nullable: true
+          type: string
+        total_revenue_eth:
+          description: ""
+          nullable: true
+          type: string
+        trade_count:
+          description: ""
+          format: int32
+          type: integer
+        daily_traded_item_count:
+          description: ""
+          format: int32
+          type: integer
+      type: object
+    CRYPTOPUNKS.DataSourcesDTO:
+      additionalProperties: false
+      example:
+        vid: 6
+        entry_time: 2000-01-23T04:56:07.000+00:00
+        parent: 5
+        recv_time: 2000-01-23T04:56:07.000+00:00
+        causality_region: 1
+        param: param
+        done_at: 2
+        manifest_idx: 5
+        context: context
+        block_number: 0
+        id: id
+        block_range: block_range
+      properties:
+        entry_time:
+          format: date-time
+          type: string
+        recv_time:
+          format: date-time
+          type: string
+        block_number:
+          description: Number of block in which entity was recorded.
+          format: int64
+          type: integer
+        vid:
+          description: ""
+          format: int32
+          type: integer
+        block_range:
+          description: ""
+          nullable: true
+          type: string
+        causality_region:
+          description: ""
+          format: int32
+          type: integer
+        manifest_idx:
+          description: ""
+          format: int32
+          type: integer
+        parent:
+          description: ""
+          format: int32
+          nullable: true
+          type: integer
+        id:
+          description: ""
+          nullable: true
+          type: string
+        param:
+          description: ""
+          nullable: true
+          type: string
+        context:
+          description: ""
+          nullable: true
+          type: string
+        done_at:
+          description: ""
+          format: int32
+          nullable: true
+          type: integer
+      type: object
+    CRYPTOPUNKS.ItemDTO:
+      additionalProperties: false
+      example:
+        vid: 6
+        entry_time: 2000-01-23T04:56:07.000+00:00
+        recv_time: 2000-01-23T04:56:07.000+00:00
+        block_number: 0
+        id: id
+        block_range: block_range
+      properties:
+        entry_time:
+          format: date-time
+          type: string
+        recv_time:
+          format: date-time
+          type: string
+        block_number:
+          description: Number of block in which entity was recorded.
+          format: int64
+          type: integer
+        vid:
+          description: ""
+          format: int64
+          type: integer
+        block_range:
+          description: ""
+          nullable: true
+          type: string
+        id:
+          description: ""
+          nullable: true
+          type: string
+      type: object
+    CRYPTOPUNKS.MarketPlaceDTO:
+      additionalProperties: false
+      example:
+        creator_revenue_eth: creator_revenue_eth
+        entry_time: 2000-01-23T04:56:07.000+00:00
+        marketplace_revenue_eth: marketplace_revenue_eth
+        recv_time: 2000-01-23T04:56:07.000+00:00
+        subgraph_version: subgraph_version
+        trade_count: 5
+        cumulative_unique_traders: 5
+        block_number: 0
+        cumulative_trade_volume_eth: cumulative_trade_volume_eth
+        vid: 6
+        schema_version: schema_version
+        methodology_version: methodology_version
+        name: name
+        collection_count: 1
+        id: id
+        slug: slug
+        block_range: block_range
+        total_revenue_eth: total_revenue_eth
+      properties:
+        entry_time:
+          format: date-time
+          type: string
+        recv_time:
+          format: date-time
+          type: string
+        block_number:
+          description: Number of block in which entity was recorded.
+          format: int64
+          type: integer
+        vid:
+          description: ""
+          format: int64
+          type: integer
+        block_range:
+          description: ""
+          nullable: true
+          type: string
+        id:
+          description: ""
+          nullable: true
+          type: string
+        name:
+          description: ""
+          nullable: true
+          type: string
+        slug:
+          description: ""
+          nullable: true
+          type: string
+        schema_version:
+          description: ""
+          nullable: true
+          type: string
+        subgraph_version:
+          description: ""
+          nullable: true
+          type: string
+        methodology_version:
+          description: ""
+          nullable: true
+          type: string
+        collection_count:
+          description: ""
+          format: int32
+          type: integer
+        trade_count:
+          description: ""
+          format: int32
+          type: integer
+        cumulative_trade_volume_eth:
+          description: ""
+          nullable: true
+          type: string
+        marketplace_revenue_eth:
+          description: ""
+          nullable: true
+          type: string
+        creator_revenue_eth:
+          description: ""
+          nullable: true
+          type: string
+        total_revenue_eth:
+          description: ""
+          nullable: true
+          type: string
+        cumulative_unique_traders:
+          description: ""
+          format: int32
+          type: integer
+      type: object
+    CRYPTOPUNKS.MarketplaceDailySnapshotDTO:
+      additionalProperties: false
+      example:
+        creator_revenue_eth: creator_revenue_eth
+        entry_time: 2000-01-23T04:56:07.000+00:00
+        marketplace_revenue_eth: marketplace_revenue_eth
+        daily_active_traders: 5
+        recv_time: 2000-01-23T04:56:07.000+00:00
+        marketplace: marketplace
+        trade_count: 1
+        cumulative_unique_traders: 5
+        block_number: block_number
+        cumulative_trade_volume_eth: cumulative_trade_volume_eth
+        daily_traded_collection_count: 2
+        vid: 0
+        collection_count: 6
+        daily_traded_item_count: 7
+        id: id
+        block_range: block_range
+        timestamp: timestamp
+        total_revenue_eth: total_revenue_eth
+      properties:
+        entry_time:
+          format: date-time
+          type: string
+        recv_time:
+          format: date-time
+          type: string
+        block_number:
+          description: ""
+          nullable: true
+          type: string
+        vid:
+          description: ""
+          format: int64
+          type: integer
+        block_range:
+          description: ""
+          nullable: true
+          type: string
+        id:
+          description: ""
+          nullable: true
+          type: string
+        marketplace:
+          description: ""
+          nullable: true
+          type: string
+        timestamp:
+          description: ""
+          nullable: true
+          type: string
+        collection_count:
+          description: ""
+          format: int32
+          type: integer
+        cumulative_trade_volume_eth:
+          description: ""
+          nullable: true
+          type: string
+        marketplace_revenue_eth:
+          description: ""
+          nullable: true
+          type: string
+        creator_revenue_eth:
+          description: ""
+          nullable: true
+          type: string
+        total_revenue_eth:
+          description: ""
+          nullable: true
+          type: string
+        trade_count:
+          description: ""
+          format: int32
+          type: integer
+        cumulative_unique_traders:
+          description: ""
+          format: int32
+          type: integer
+        daily_active_traders:
+          description: ""
+          format: int32
+          type: integer
+        daily_traded_collection_count:
+          description: ""
+          format: int32
+          type: integer
+        daily_traded_item_count:
+          description: ""
+          format: int32
+          type: integer
+      type: object
+    CRYPTOPUNKS.TradeDTO:
+      additionalProperties: false
+      example:
+        seller: seller
+        entry_time: 2000-01-23T04:56:07.000+00:00
+        amount: amount
+        recv_time: 2000-01-23T04:56:07.000+00:00
+        block_number: block_number
+        collection: collection
+        log_index: 6
+        buyer: buyer
+        vid: 0
+        is_bundle: true
+        price_eth: price_eth
+        token_id: token_id
+        id: id
+        transaction_hash: transaction_hash
+        block_range: block_range
+        timestamp: timestamp
+      properties:
+        entry_time:
+          format: date-time
+          type: string
+        recv_time:
+          format: date-time
+          type: string
+        block_number:
+          description: ""
+          nullable: true
+          type: string
+        vid:
+          description: ""
+          format: int64
+          type: integer
+        block_range:
+          description: ""
+          nullable: true
+          type: string
+        id:
+          description: ""
+          nullable: true
+          type: string
+        transaction_hash:
+          description: ""
+          nullable: true
+          type: string
+        log_index:
+          description: ""
+          format: int32
+          type: integer
+        timestamp:
+          description: ""
+          nullable: true
+          type: string
+        is_bundle:
+          description: ""
+          type: boolean
+        collection:
+          description: ""
+          nullable: true
+          type: string
+        token_id:
+          description: ""
+          nullable: true
+          type: string
+        amount:
+          description: ""
+          nullable: true
+          type: string
+        price_eth:
+          description: ""
+          nullable: true
+          type: string
+        buyer:
+          description: ""
+          nullable: true
+          type: string
+        seller:
+          description: ""
+          nullable: true
+          type: string
+      type: object
+    CRYPTOPUNKS.UserDTO:
+      additionalProperties: false
+      example:
+        vid: 6
+        entry_time: 2000-01-23T04:56:07.000+00:00
+        recv_time: 2000-01-23T04:56:07.000+00:00
+        block_number: 0
+        id: id
+        block_range: block_range
+      properties:
+        entry_time:
+          format: date-time
+          type: string
+        recv_time:
+          format: date-time
+          type: string
+        block_number:
+          description: Number of block in which entity was recorded.
+          format: int64
+          type: integer
+        vid:
+          description: ""
+          format: int64
+          type: integer
+        block_range:
+          description: ""
+          nullable: true
+          type: string
+        id:
+          description: ""
+          nullable: true
+          type: string
+      type: object
     Cow.OrderDTO:
       additionalProperties: false
       example:

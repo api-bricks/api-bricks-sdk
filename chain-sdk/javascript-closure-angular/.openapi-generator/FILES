@@ -1,4 +1,14 @@
 .openapi-generator-ignore
+API/Client/CRYPTOPUNKSApi.js
+API/Client/CRYPTOPUNKSBidDTO.js
+API/Client/CRYPTOPUNKSCollectionDTO.js
+API/Client/CRYPTOPUNKSCollectionDailySnapshotDTO.js
+API/Client/CRYPTOPUNKSDataSourcesDTO.js
+API/Client/CRYPTOPUNKSItemDTO.js
+API/Client/CRYPTOPUNKSMarketPlaceDTO.js
+API/Client/CRYPTOPUNKSMarketplaceDailySnapshotDTO.js
+API/Client/CRYPTOPUNKSTradeDTO.js
+API/Client/CRYPTOPUNKSUserDTO.js
 API/Client/CowApi.js
 API/Client/CowOrderDTO.js
 API/Client/CowSettlementDTO.js

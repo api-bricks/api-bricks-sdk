@@ -63,7 +63,7 @@ func NewCowTokenDTOWithDefaults() *CowTokenDTO {
 
 // GetEntryTime returns the EntryTime field value if set, zero value otherwise.
 func (o *CowTokenDTO) GetEntryTime() time.Time {
-	if o == nil || isNil(o.EntryTime) {
+	if o == nil || IsNil(o.EntryTime) {
 		var ret time.Time
 		return ret
 	}
@@ -73,7 +73,7 @@ func (o *CowTokenDTO) GetEntryTime() time.Time {
 // GetEntryTimeOk returns a tuple with the EntryTime field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CowTokenDTO) GetEntryTimeOk() (*time.Time, bool) {
-	if o == nil || isNil(o.EntryTime) {
+	if o == nil || IsNil(o.EntryTime) {
 		return nil, false
 	}
 	return o.EntryTime, true
@@ -81,7 +81,7 @@ func (o *CowTokenDTO) GetEntryTimeOk() (*time.Time, bool) {
 
 // HasEntryTime returns a boolean if a field has been set.
 func (o *CowTokenDTO) HasEntryTime() bool {
-	if o != nil && !isNil(o.EntryTime) {
+	if o != nil && !IsNil(o.EntryTime) {
 		return true
 	}
 
@@ -95,7 +95,7 @@ func (o *CowTokenDTO) SetEntryTime(v time.Time) {
 
 // GetRecvTime returns the RecvTime field value if set, zero value otherwise.
 func (o *CowTokenDTO) GetRecvTime() time.Time {
-	if o == nil || isNil(o.RecvTime) {
+	if o == nil || IsNil(o.RecvTime) {
 		var ret time.Time
 		return ret
 	}
@@ -105,7 +105,7 @@ func (o *CowTokenDTO) GetRecvTime() time.Time {
 // GetRecvTimeOk returns a tuple with the RecvTime field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CowTokenDTO) GetRecvTimeOk() (*time.Time, bool) {
-	if o == nil || isNil(o.RecvTime) {
+	if o == nil || IsNil(o.RecvTime) {
 		return nil, false
 	}
 	return o.RecvTime, true
@@ -113,7 +113,7 @@ func (o *CowTokenDTO) GetRecvTimeOk() (*time.Time, bool) {
 
 // HasRecvTime returns a boolean if a field has been set.
 func (o *CowTokenDTO) HasRecvTime() bool {
-	if o != nil && !isNil(o.RecvTime) {
+	if o != nil && !IsNil(o.RecvTime) {
 		return true
 	}
 
@@ -127,7 +127,7 @@ func (o *CowTokenDTO) SetRecvTime(v time.Time) {
 
 // GetBlockNumber returns the BlockNumber field value if set, zero value otherwise.
 func (o *CowTokenDTO) GetBlockNumber() int64 {
-	if o == nil || isNil(o.BlockNumber) {
+	if o == nil || IsNil(o.BlockNumber) {
 		var ret int64
 		return ret
 	}
@@ -137,7 +137,7 @@ func (o *CowTokenDTO) GetBlockNumber() int64 {
 // GetBlockNumberOk returns a tuple with the BlockNumber field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CowTokenDTO) GetBlockNumberOk() (*int64, bool) {
-	if o == nil || isNil(o.BlockNumber) {
+	if o == nil || IsNil(o.BlockNumber) {
 		return nil, false
 	}
 	return o.BlockNumber, true
@@ -145,7 +145,7 @@ func (o *CowTokenDTO) GetBlockNumberOk() (*int64, bool) {
 
 // HasBlockNumber returns a boolean if a field has been set.
 func (o *CowTokenDTO) HasBlockNumber() bool {
-	if o != nil && !isNil(o.BlockNumber) {
+	if o != nil && !IsNil(o.BlockNumber) {
 		return true
 	}
 
@@ -159,7 +159,7 @@ func (o *CowTokenDTO) SetBlockNumber(v int64) {
 
 // GetId returns the Id field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CowTokenDTO) GetId() string {
-	if o == nil || isNil(o.Id.Get()) {
+	if o == nil || IsNil(o.Id.Get()) {
 		var ret string
 		return ret
 	}
@@ -201,7 +201,7 @@ func (o *CowTokenDTO) UnsetId() {
 
 // GetAddress returns the Address field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CowTokenDTO) GetAddress() string {
-	if o == nil || isNil(o.Address.Get()) {
+	if o == nil || IsNil(o.Address.Get()) {
 		var ret string
 		return ret
 	}
@@ -243,7 +243,7 @@ func (o *CowTokenDTO) UnsetAddress() {
 
 // GetFirstTradeTimestamp returns the FirstTradeTimestamp field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CowTokenDTO) GetFirstTradeTimestamp() string {
-	if o == nil || isNil(o.FirstTradeTimestamp.Get()) {
+	if o == nil || IsNil(o.FirstTradeTimestamp.Get()) {
 		var ret string
 		return ret
 	}
@@ -285,7 +285,7 @@ func (o *CowTokenDTO) UnsetFirstTradeTimestamp() {
 
 // GetName returns the Name field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CowTokenDTO) GetName() string {
-	if o == nil || isNil(o.Name.Get()) {
+	if o == nil || IsNil(o.Name.Get()) {
 		var ret string
 		return ret
 	}
@@ -327,7 +327,7 @@ func (o *CowTokenDTO) UnsetName() {
 
 // GetSymbol returns the Symbol field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CowTokenDTO) GetSymbol() string {
-	if o == nil || isNil(o.Symbol.Get()) {
+	if o == nil || IsNil(o.Symbol.Get()) {
 		var ret string
 		return ret
 	}
@@ -369,7 +369,7 @@ func (o *CowTokenDTO) UnsetSymbol() {
 
 // GetDecimals returns the Decimals field value if set, zero value otherwise.
 func (o *CowTokenDTO) GetDecimals() int32 {
-	if o == nil || isNil(o.Decimals) {
+	if o == nil || IsNil(o.Decimals) {
 		var ret int32
 		return ret
 	}
@@ -379,7 +379,7 @@ func (o *CowTokenDTO) GetDecimals() int32 {
 // GetDecimalsOk returns a tuple with the Decimals field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CowTokenDTO) GetDecimalsOk() (*int32, bool) {
-	if o == nil || isNil(o.Decimals) {
+	if o == nil || IsNil(o.Decimals) {
 		return nil, false
 	}
 	return o.Decimals, true
@@ -387,7 +387,7 @@ func (o *CowTokenDTO) GetDecimalsOk() (*int32, bool) {
 
 // HasDecimals returns a boolean if a field has been set.
 func (o *CowTokenDTO) HasDecimals() bool {
-	if o != nil && !isNil(o.Decimals) {
+	if o != nil && !IsNil(o.Decimals) {
 		return true
 	}
 
@@ -401,7 +401,7 @@ func (o *CowTokenDTO) SetDecimals(v int32) {
 
 // GetTotalVolume returns the TotalVolume field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CowTokenDTO) GetTotalVolume() string {
-	if o == nil || isNil(o.TotalVolume.Get()) {
+	if o == nil || IsNil(o.TotalVolume.Get()) {
 		var ret string
 		return ret
 	}
@@ -443,7 +443,7 @@ func (o *CowTokenDTO) UnsetTotalVolume() {
 
 // GetVid returns the Vid field value if set, zero value otherwise.
 func (o *CowTokenDTO) GetVid() int64 {
-	if o == nil || isNil(o.Vid) {
+	if o == nil || IsNil(o.Vid) {
 		var ret int64
 		return ret
 	}
@@ -453,7 +453,7 @@ func (o *CowTokenDTO) GetVid() int64 {
 // GetVidOk returns a tuple with the Vid field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CowTokenDTO) GetVidOk() (*int64, bool) {
-	if o == nil || isNil(o.Vid) {
+	if o == nil || IsNil(o.Vid) {
 		return nil, false
 	}
 	return o.Vid, true
@@ -461,7 +461,7 @@ func (o *CowTokenDTO) GetVidOk() (*int64, bool) {
 
 // HasVid returns a boolean if a field has been set.
 func (o *CowTokenDTO) HasVid() bool {
-	if o != nil && !isNil(o.Vid) {
+	if o != nil && !IsNil(o.Vid) {
 		return true
 	}
 
@@ -475,7 +475,7 @@ func (o *CowTokenDTO) SetVid(v int64) {
 
 // GetTokenSymbol returns the TokenSymbol field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CowTokenDTO) GetTokenSymbol() string {
-	if o == nil || isNil(o.TokenSymbol.Get()) {
+	if o == nil || IsNil(o.TokenSymbol.Get()) {
 		var ret string
 		return ret
 	}
@@ -525,13 +525,13 @@ func (o CowTokenDTO) MarshalJSON() ([]byte, error) {
 
 func (o CowTokenDTO) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if !isNil(o.EntryTime) {
+	if !IsNil(o.EntryTime) {
 		toSerialize["entry_time"] = o.EntryTime
 	}
-	if !isNil(o.RecvTime) {
+	if !IsNil(o.RecvTime) {
 		toSerialize["recv_time"] = o.RecvTime
 	}
-	if !isNil(o.BlockNumber) {
+	if !IsNil(o.BlockNumber) {
 		toSerialize["block_number"] = o.BlockNumber
 	}
 	if o.Id.IsSet() {
@@ -549,13 +549,13 @@ func (o CowTokenDTO) ToMap() (map[string]interface{}, error) {
 	if o.Symbol.IsSet() {
 		toSerialize["symbol"] = o.Symbol.Get()
 	}
-	if !isNil(o.Decimals) {
+	if !IsNil(o.Decimals) {
 		toSerialize["decimals"] = o.Decimals
 	}
 	if o.TotalVolume.IsSet() {
 		toSerialize["total_volume"] = o.TotalVolume.Get()
 	}
-	if !isNil(o.Vid) {
+	if !IsNil(o.Vid) {
 		toSerialize["vid"] = o.Vid
 	}
 	if o.TokenSymbol.IsSet() {

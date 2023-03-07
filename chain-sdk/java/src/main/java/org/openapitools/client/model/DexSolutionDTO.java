@@ -50,7 +50,7 @@ import org.openapitools.client.JSON;
 /**
  * DexSolutionDTO
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-13T15:06:11.595492Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-07T11:26:43.643580Z[Etc/UTC]")
 public class DexSolutionDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -90,7 +90,7 @@ public class DexSolutionDTO {
 
   public static final String SERIALIZED_NAME_TRADES = "trades";
   @SerializedName(SERIALIZED_NAME_TRADES)
-  private List<String> trades = null;
+  private List<String> trades;
 
   public static final String SERIALIZED_NAME_CREATE_EPOCH = "create_epoch";
   @SerializedName(SERIALIZED_NAME_CREATE_EPOCH)
@@ -320,9 +320,6 @@ public class DexSolutionDTO {
   }
 
   public DexSolutionDTO addTradesItem(String tradesItem) {
-    if (this.trades == null) {
-      this.trades = null;
-    }
     this.trades.add(tradesItem);
     return this;
   }

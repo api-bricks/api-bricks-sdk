@@ -1,3 +1,4 @@
+export * from './CRYPTOPUNKSApi';
 export * from './CowApi';
 export * from './CurveApi';
 export * from './DexApi';

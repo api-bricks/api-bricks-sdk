@@ -272,9 +272,9 @@ UniswapV2TokenDTO <- R6::R6Class(
         self$`decimals` <- this_object$`decimals`
       }
       if (!is.null(this_object$`total_supply`)) {
-        total_supply_object <- NumericsBigInteger$new()
-        total_supply_object$fromJSON(jsonlite::toJSON(this_object$total_supply, auto_unbox = TRUE, digits = NA))
-        self$`total_supply` <- total_supply_object
+        `total_supply_object` <- NumericsBigInteger$new()
+        `total_supply_object`$fromJSON(jsonlite::toJSON(this_object$`total_supply`, auto_unbox = TRUE, digits = NA))
+        self$`total_supply` <- `total_supply_object`
       }
       if (!is.null(this_object$`trade_volume`)) {
         self$`trade_volume` <- this_object$`trade_volume`
@@ -286,9 +286,9 @@ UniswapV2TokenDTO <- R6::R6Class(
         self$`untracked_volume_usd` <- this_object$`untracked_volume_usd`
       }
       if (!is.null(this_object$`tx_count`)) {
-        tx_count_object <- NumericsBigInteger$new()
-        tx_count_object$fromJSON(jsonlite::toJSON(this_object$tx_count, auto_unbox = TRUE, digits = NA))
-        self$`tx_count` <- tx_count_object
+        `tx_count_object` <- NumericsBigInteger$new()
+        `tx_count_object`$fromJSON(jsonlite::toJSON(this_object$`tx_count`, auto_unbox = TRUE, digits = NA))
+        self$`tx_count` <- `tx_count_object`
       }
       if (!is.null(this_object$`total_liquidity`)) {
         self$`total_liquidity` <- this_object$`total_liquidity`
@@ -460,11 +460,11 @@ UniswapV2TokenDTO <- R6::R6Class(
       self$`symbol` <- this_object$`symbol`
       self$`name` <- this_object$`name`
       self$`decimals` <- this_object$`decimals`
-      self$`total_supply` <- NumericsBigInteger$new()$fromJSON(jsonlite::toJSON(this_object$total_supply, auto_unbox = TRUE, digits = NA))
+      self$`total_supply` <- NumericsBigInteger$new()$fromJSON(jsonlite::toJSON(this_object$`total_supply`, auto_unbox = TRUE, digits = NA))
       self$`trade_volume` <- this_object$`trade_volume`
       self$`trade_volume_usd` <- this_object$`trade_volume_usd`
       self$`untracked_volume_usd` <- this_object$`untracked_volume_usd`
-      self$`tx_count` <- NumericsBigInteger$new()$fromJSON(jsonlite::toJSON(this_object$tx_count, auto_unbox = TRUE, digits = NA))
+      self$`tx_count` <- NumericsBigInteger$new()$fromJSON(jsonlite::toJSON(this_object$`tx_count`, auto_unbox = TRUE, digits = NA))
       self$`total_liquidity` <- this_object$`total_liquidity`
       self$`derived_eth` <- this_object$`derived_eth`
       self$`token_symbol` <- this_object$`token_symbol`

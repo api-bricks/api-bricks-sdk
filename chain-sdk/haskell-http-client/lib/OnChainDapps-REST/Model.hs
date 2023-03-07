@@ -118,6 +118,706 @@ newtype User = User { unUser :: Text } deriving (P.Eq, P.Show)
 -- * Models
 
 
+-- ** CRYPTOPUNKSBidDTO
+-- | CRYPTOPUNKSBidDTO
+data CRYPTOPUNKSBidDTO = CRYPTOPUNKSBidDTO
+  { cRYPTOPUNKSBidDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , cRYPTOPUNKSBidDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , cRYPTOPUNKSBidDTOBlockNumber :: !(Maybe Text) -- ^ "block_number" - 
+  , cRYPTOPUNKSBidDTOVid :: !(Maybe Integer) -- ^ "vid" - 
+  , cRYPTOPUNKSBidDTOBlockRange :: !(Maybe Text) -- ^ "block_range" - 
+  , cRYPTOPUNKSBidDTOId :: !(Maybe Text) -- ^ "id" - 
+  , cRYPTOPUNKSBidDTOTokensBid :: !(Maybe Text) -- ^ "tokens_bid" - 
+  , cRYPTOPUNKSBidDTOTokenId :: !(Maybe Text) -- ^ "token_id" - 
+  , cRYPTOPUNKSBidDTOTimestamp :: !(Maybe Text) -- ^ "timestamp" - 
+  , cRYPTOPUNKSBidDTOBidder :: !(Maybe Text) -- ^ "bidder" - 
+  } deriving (P.Show, P.Eq, P.Typeable)
+
+-- | FromJSON CRYPTOPUNKSBidDTO
+instance A.FromJSON CRYPTOPUNKSBidDTO where
+  parseJSON = A.withObject "CRYPTOPUNKSBidDTO" $ \o ->
+    CRYPTOPUNKSBidDTO
+      <$> (o .:? "entry_time")
+      <*> (o .:? "recv_time")
+      <*> (o .:? "block_number")
+      <*> (o .:? "vid")
+      <*> (o .:? "block_range")
+      <*> (o .:? "id")
+      <*> (o .:? "tokens_bid")
+      <*> (o .:? "token_id")
+      <*> (o .:? "timestamp")
+      <*> (o .:? "bidder")
+
+-- | ToJSON CRYPTOPUNKSBidDTO
+instance A.ToJSON CRYPTOPUNKSBidDTO where
+  toJSON CRYPTOPUNKSBidDTO {..} =
+   _omitNulls
+      [ "entry_time" .= cRYPTOPUNKSBidDTOEntryTime
+      , "recv_time" .= cRYPTOPUNKSBidDTORecvTime
+      , "block_number" .= cRYPTOPUNKSBidDTOBlockNumber
+      , "vid" .= cRYPTOPUNKSBidDTOVid
+      , "block_range" .= cRYPTOPUNKSBidDTOBlockRange
+      , "id" .= cRYPTOPUNKSBidDTOId
+      , "tokens_bid" .= cRYPTOPUNKSBidDTOTokensBid
+      , "token_id" .= cRYPTOPUNKSBidDTOTokenId
+      , "timestamp" .= cRYPTOPUNKSBidDTOTimestamp
+      , "bidder" .= cRYPTOPUNKSBidDTOBidder
+      ]
+
+
+-- | Construct a value of type 'CRYPTOPUNKSBidDTO' (by applying it's required fields, if any)
+mkCRYPTOPUNKSBidDTO
+  :: CRYPTOPUNKSBidDTO
+mkCRYPTOPUNKSBidDTO =
+  CRYPTOPUNKSBidDTO
+  { cRYPTOPUNKSBidDTOEntryTime = Nothing
+  , cRYPTOPUNKSBidDTORecvTime = Nothing
+  , cRYPTOPUNKSBidDTOBlockNumber = Nothing
+  , cRYPTOPUNKSBidDTOVid = Nothing
+  , cRYPTOPUNKSBidDTOBlockRange = Nothing
+  , cRYPTOPUNKSBidDTOId = Nothing
+  , cRYPTOPUNKSBidDTOTokensBid = Nothing
+  , cRYPTOPUNKSBidDTOTokenId = Nothing
+  , cRYPTOPUNKSBidDTOTimestamp = Nothing
+  , cRYPTOPUNKSBidDTOBidder = Nothing
+  }
+
+-- ** CRYPTOPUNKSCollectionDTO
+-- | CRYPTOPUNKSCollectionDTO
+data CRYPTOPUNKSCollectionDTO = CRYPTOPUNKSCollectionDTO
+  { cRYPTOPUNKSCollectionDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , cRYPTOPUNKSCollectionDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , cRYPTOPUNKSCollectionDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , cRYPTOPUNKSCollectionDTOVid :: !(Maybe Integer) -- ^ "vid" - 
+  , cRYPTOPUNKSCollectionDTOBlockRange :: !(Maybe Text) -- ^ "block_range" - 
+  , cRYPTOPUNKSCollectionDTOId :: !(Maybe Text) -- ^ "id" - 
+  , cRYPTOPUNKSCollectionDTOName :: !(Maybe Text) -- ^ "name" - 
+  , cRYPTOPUNKSCollectionDTOSymbol :: !(Maybe Text) -- ^ "symbol" - 
+  , cRYPTOPUNKSCollectionDTOTotalSupply :: !(Maybe Text) -- ^ "total_supply" - 
+  , cRYPTOPUNKSCollectionDTORoyaltyFee :: !(Maybe Text) -- ^ "royalty_fee" - 
+  , cRYPTOPUNKSCollectionDTOCumulativeTradeVolumeEth :: !(Maybe Text) -- ^ "cumulative_trade_volume_eth" - 
+  , cRYPTOPUNKSCollectionDTOMarketplaceRevenueEth :: !(Maybe Text) -- ^ "marketplace_revenue_eth" - 
+  , cRYPTOPUNKSCollectionDTOCreatorRevenueEth :: !(Maybe Text) -- ^ "creator_revenue_eth" - 
+  , cRYPTOPUNKSCollectionDTOTotalRevenueEth :: !(Maybe Text) -- ^ "total_revenue_eth" - 
+  , cRYPTOPUNKSCollectionDTOTradeCount :: !(Maybe Int) -- ^ "trade_count" - 
+  , cRYPTOPUNKSCollectionDTOBuyerCount :: !(Maybe Int) -- ^ "buyer_count" - 
+  , cRYPTOPUNKSCollectionDTOSellerCount :: !(Maybe Int) -- ^ "seller_count" - 
+  } deriving (P.Show, P.Eq, P.Typeable)
+
+-- | FromJSON CRYPTOPUNKSCollectionDTO
+instance A.FromJSON CRYPTOPUNKSCollectionDTO where
+  parseJSON = A.withObject "CRYPTOPUNKSCollectionDTO" $ \o ->
+    CRYPTOPUNKSCollectionDTO
+      <$> (o .:? "entry_time")
+      <*> (o .:? "recv_time")
+      <*> (o .:? "block_number")
+      <*> (o .:? "vid")
+      <*> (o .:? "block_range")
+      <*> (o .:? "id")
+      <*> (o .:? "name")
+      <*> (o .:? "symbol")
+      <*> (o .:? "total_supply")
+      <*> (o .:? "royalty_fee")
+      <*> (o .:? "cumulative_trade_volume_eth")
+      <*> (o .:? "marketplace_revenue_eth")
+      <*> (o .:? "creator_revenue_eth")
+      <*> (o .:? "total_revenue_eth")
+      <*> (o .:? "trade_count")
+      <*> (o .:? "buyer_count")
+      <*> (o .:? "seller_count")
+
+-- | ToJSON CRYPTOPUNKSCollectionDTO
+instance A.ToJSON CRYPTOPUNKSCollectionDTO where
+  toJSON CRYPTOPUNKSCollectionDTO {..} =
+   _omitNulls
+      [ "entry_time" .= cRYPTOPUNKSCollectionDTOEntryTime
+      , "recv_time" .= cRYPTOPUNKSCollectionDTORecvTime
+      , "block_number" .= cRYPTOPUNKSCollectionDTOBlockNumber
+      , "vid" .= cRYPTOPUNKSCollectionDTOVid
+      , "block_range" .= cRYPTOPUNKSCollectionDTOBlockRange
+      , "id" .= cRYPTOPUNKSCollectionDTOId
+      , "name" .= cRYPTOPUNKSCollectionDTOName
+      , "symbol" .= cRYPTOPUNKSCollectionDTOSymbol
+      , "total_supply" .= cRYPTOPUNKSCollectionDTOTotalSupply
+      , "royalty_fee" .= cRYPTOPUNKSCollectionDTORoyaltyFee
+      , "cumulative_trade_volume_eth" .= cRYPTOPUNKSCollectionDTOCumulativeTradeVolumeEth
+      , "marketplace_revenue_eth" .= cRYPTOPUNKSCollectionDTOMarketplaceRevenueEth
+      , "creator_revenue_eth" .= cRYPTOPUNKSCollectionDTOCreatorRevenueEth
+      , "total_revenue_eth" .= cRYPTOPUNKSCollectionDTOTotalRevenueEth
+      , "trade_count" .= cRYPTOPUNKSCollectionDTOTradeCount
+      , "buyer_count" .= cRYPTOPUNKSCollectionDTOBuyerCount
+      , "seller_count" .= cRYPTOPUNKSCollectionDTOSellerCount
+      ]
+
+
+-- | Construct a value of type 'CRYPTOPUNKSCollectionDTO' (by applying it's required fields, if any)
+mkCRYPTOPUNKSCollectionDTO
+  :: CRYPTOPUNKSCollectionDTO
+mkCRYPTOPUNKSCollectionDTO =
+  CRYPTOPUNKSCollectionDTO
+  { cRYPTOPUNKSCollectionDTOEntryTime = Nothing
+  , cRYPTOPUNKSCollectionDTORecvTime = Nothing
+  , cRYPTOPUNKSCollectionDTOBlockNumber = Nothing
+  , cRYPTOPUNKSCollectionDTOVid = Nothing
+  , cRYPTOPUNKSCollectionDTOBlockRange = Nothing
+  , cRYPTOPUNKSCollectionDTOId = Nothing
+  , cRYPTOPUNKSCollectionDTOName = Nothing
+  , cRYPTOPUNKSCollectionDTOSymbol = Nothing
+  , cRYPTOPUNKSCollectionDTOTotalSupply = Nothing
+  , cRYPTOPUNKSCollectionDTORoyaltyFee = Nothing
+  , cRYPTOPUNKSCollectionDTOCumulativeTradeVolumeEth = Nothing
+  , cRYPTOPUNKSCollectionDTOMarketplaceRevenueEth = Nothing
+  , cRYPTOPUNKSCollectionDTOCreatorRevenueEth = Nothing
+  , cRYPTOPUNKSCollectionDTOTotalRevenueEth = Nothing
+  , cRYPTOPUNKSCollectionDTOTradeCount = Nothing
+  , cRYPTOPUNKSCollectionDTOBuyerCount = Nothing
+  , cRYPTOPUNKSCollectionDTOSellerCount = Nothing
+  }
+
+-- ** CRYPTOPUNKSCollectionDailySnapshotDTO
+-- | CRYPTOPUNKSCollectionDailySnapshotDTO
+data CRYPTOPUNKSCollectionDailySnapshotDTO = CRYPTOPUNKSCollectionDailySnapshotDTO
+  { cRYPTOPUNKSCollectionDailySnapshotDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , cRYPTOPUNKSCollectionDailySnapshotDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , cRYPTOPUNKSCollectionDailySnapshotDTOBlockNumber :: !(Maybe Text) -- ^ "block_number" - 
+  , cRYPTOPUNKSCollectionDailySnapshotDTOVid :: !(Maybe Integer) -- ^ "vid" - 
+  , cRYPTOPUNKSCollectionDailySnapshotDTOBlockRange :: !(Maybe Text) -- ^ "block_range" - 
+  , cRYPTOPUNKSCollectionDailySnapshotDTOId :: !(Maybe Text) -- ^ "id" - 
+  , cRYPTOPUNKSCollectionDailySnapshotDTOCollection :: !(Maybe Text) -- ^ "collection" - 
+  , cRYPTOPUNKSCollectionDailySnapshotDTOTimestamp :: !(Maybe Text) -- ^ "timestamp" - 
+  , cRYPTOPUNKSCollectionDailySnapshotDTORoyaltyFee :: !(Maybe Text) -- ^ "royalty_fee" - 
+  , cRYPTOPUNKSCollectionDailySnapshotDTODailyMinSalePrice :: !(Maybe Text) -- ^ "daily_min_sale_price" - 
+  , cRYPTOPUNKSCollectionDailySnapshotDTODailyMaxSalePrice :: !(Maybe Text) -- ^ "daily_max_sale_price" - 
+  , cRYPTOPUNKSCollectionDailySnapshotDTOCumulativeTradeVolumeEth :: !(Maybe Text) -- ^ "cumulative_trade_volume_eth" - 
+  , cRYPTOPUNKSCollectionDailySnapshotDTODailyTradeVolumeEth :: !(Maybe Text) -- ^ "daily_trade_volume_eth" - 
+  , cRYPTOPUNKSCollectionDailySnapshotDTOMarketplaceRevenueEth :: !(Maybe Text) -- ^ "marketplace_revenue_eth" - 
+  , cRYPTOPUNKSCollectionDailySnapshotDTOCreatorRevenueEth :: !(Maybe Text) -- ^ "creator_revenue_eth" - 
+  , cRYPTOPUNKSCollectionDailySnapshotDTOTotalRevenueEth :: !(Maybe Text) -- ^ "total_revenue_eth" - 
+  , cRYPTOPUNKSCollectionDailySnapshotDTOTradeCount :: !(Maybe Int) -- ^ "trade_count" - 
+  , cRYPTOPUNKSCollectionDailySnapshotDTODailyTradedItemCount :: !(Maybe Int) -- ^ "daily_traded_item_count" - 
+  } deriving (P.Show, P.Eq, P.Typeable)
+
+-- | FromJSON CRYPTOPUNKSCollectionDailySnapshotDTO
+instance A.FromJSON CRYPTOPUNKSCollectionDailySnapshotDTO where
+  parseJSON = A.withObject "CRYPTOPUNKSCollectionDailySnapshotDTO" $ \o ->
+    CRYPTOPUNKSCollectionDailySnapshotDTO
+      <$> (o .:? "entry_time")
+      <*> (o .:? "recv_time")
+      <*> (o .:? "block_number")
+      <*> (o .:? "vid")
+      <*> (o .:? "block_range")
+      <*> (o .:? "id")
+      <*> (o .:? "collection")
+      <*> (o .:? "timestamp")
+      <*> (o .:? "royalty_fee")
+      <*> (o .:? "daily_min_sale_price")
+      <*> (o .:? "daily_max_sale_price")
+      <*> (o .:? "cumulative_trade_volume_eth")
+      <*> (o .:? "daily_trade_volume_eth")
+      <*> (o .:? "marketplace_revenue_eth")
+      <*> (o .:? "creator_revenue_eth")
+      <*> (o .:? "total_revenue_eth")
+      <*> (o .:? "trade_count")
+      <*> (o .:? "daily_traded_item_count")
+
+-- | ToJSON CRYPTOPUNKSCollectionDailySnapshotDTO
+instance A.ToJSON CRYPTOPUNKSCollectionDailySnapshotDTO where
+  toJSON CRYPTOPUNKSCollectionDailySnapshotDTO {..} =
+   _omitNulls
+      [ "entry_time" .= cRYPTOPUNKSCollectionDailySnapshotDTOEntryTime
+      , "recv_time" .= cRYPTOPUNKSCollectionDailySnapshotDTORecvTime
+      , "block_number" .= cRYPTOPUNKSCollectionDailySnapshotDTOBlockNumber
+      , "vid" .= cRYPTOPUNKSCollectionDailySnapshotDTOVid
+      , "block_range" .= cRYPTOPUNKSCollectionDailySnapshotDTOBlockRange
+      , "id" .= cRYPTOPUNKSCollectionDailySnapshotDTOId
+      , "collection" .= cRYPTOPUNKSCollectionDailySnapshotDTOCollection
+      , "timestamp" .= cRYPTOPUNKSCollectionDailySnapshotDTOTimestamp
+      , "royalty_fee" .= cRYPTOPUNKSCollectionDailySnapshotDTORoyaltyFee
+      , "daily_min_sale_price" .= cRYPTOPUNKSCollectionDailySnapshotDTODailyMinSalePrice
+      , "daily_max_sale_price" .= cRYPTOPUNKSCollectionDailySnapshotDTODailyMaxSalePrice
+      , "cumulative_trade_volume_eth" .= cRYPTOPUNKSCollectionDailySnapshotDTOCumulativeTradeVolumeEth
+      , "daily_trade_volume_eth" .= cRYPTOPUNKSCollectionDailySnapshotDTODailyTradeVolumeEth
+      , "marketplace_revenue_eth" .= cRYPTOPUNKSCollectionDailySnapshotDTOMarketplaceRevenueEth
+      , "creator_revenue_eth" .= cRYPTOPUNKSCollectionDailySnapshotDTOCreatorRevenueEth
+      , "total_revenue_eth" .= cRYPTOPUNKSCollectionDailySnapshotDTOTotalRevenueEth
+      , "trade_count" .= cRYPTOPUNKSCollectionDailySnapshotDTOTradeCount
+      , "daily_traded_item_count" .= cRYPTOPUNKSCollectionDailySnapshotDTODailyTradedItemCount
+      ]
+
+
+-- | Construct a value of type 'CRYPTOPUNKSCollectionDailySnapshotDTO' (by applying it's required fields, if any)
+mkCRYPTOPUNKSCollectionDailySnapshotDTO
+  :: CRYPTOPUNKSCollectionDailySnapshotDTO
+mkCRYPTOPUNKSCollectionDailySnapshotDTO =
+  CRYPTOPUNKSCollectionDailySnapshotDTO
+  { cRYPTOPUNKSCollectionDailySnapshotDTOEntryTime = Nothing
+  , cRYPTOPUNKSCollectionDailySnapshotDTORecvTime = Nothing
+  , cRYPTOPUNKSCollectionDailySnapshotDTOBlockNumber = Nothing
+  , cRYPTOPUNKSCollectionDailySnapshotDTOVid = Nothing
+  , cRYPTOPUNKSCollectionDailySnapshotDTOBlockRange = Nothing
+  , cRYPTOPUNKSCollectionDailySnapshotDTOId = Nothing
+  , cRYPTOPUNKSCollectionDailySnapshotDTOCollection = Nothing
+  , cRYPTOPUNKSCollectionDailySnapshotDTOTimestamp = Nothing
+  , cRYPTOPUNKSCollectionDailySnapshotDTORoyaltyFee = Nothing
+  , cRYPTOPUNKSCollectionDailySnapshotDTODailyMinSalePrice = Nothing
+  , cRYPTOPUNKSCollectionDailySnapshotDTODailyMaxSalePrice = Nothing
+  , cRYPTOPUNKSCollectionDailySnapshotDTOCumulativeTradeVolumeEth = Nothing
+  , cRYPTOPUNKSCollectionDailySnapshotDTODailyTradeVolumeEth = Nothing
+  , cRYPTOPUNKSCollectionDailySnapshotDTOMarketplaceRevenueEth = Nothing
+  , cRYPTOPUNKSCollectionDailySnapshotDTOCreatorRevenueEth = Nothing
+  , cRYPTOPUNKSCollectionDailySnapshotDTOTotalRevenueEth = Nothing
+  , cRYPTOPUNKSCollectionDailySnapshotDTOTradeCount = Nothing
+  , cRYPTOPUNKSCollectionDailySnapshotDTODailyTradedItemCount = Nothing
+  }
+
+-- ** CRYPTOPUNKSDataSourcesDTO
+-- | CRYPTOPUNKSDataSourcesDTO
+data CRYPTOPUNKSDataSourcesDTO = CRYPTOPUNKSDataSourcesDTO
+  { cRYPTOPUNKSDataSourcesDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , cRYPTOPUNKSDataSourcesDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , cRYPTOPUNKSDataSourcesDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , cRYPTOPUNKSDataSourcesDTOVid :: !(Maybe Int) -- ^ "vid" - 
+  , cRYPTOPUNKSDataSourcesDTOBlockRange :: !(Maybe Text) -- ^ "block_range" - 
+  , cRYPTOPUNKSDataSourcesDTOCausalityRegion :: !(Maybe Int) -- ^ "causality_region" - 
+  , cRYPTOPUNKSDataSourcesDTOManifestIdx :: !(Maybe Int) -- ^ "manifest_idx" - 
+  , cRYPTOPUNKSDataSourcesDTOParent :: !(Maybe Int) -- ^ "parent" - 
+  , cRYPTOPUNKSDataSourcesDTOId :: !(Maybe Text) -- ^ "id" - 
+  , cRYPTOPUNKSDataSourcesDTOParam :: !(Maybe Text) -- ^ "param" - 
+  , cRYPTOPUNKSDataSourcesDTOContext :: !(Maybe Text) -- ^ "context" - 
+  , cRYPTOPUNKSDataSourcesDTODoneAt :: !(Maybe Int) -- ^ "done_at" - 
+  } deriving (P.Show, P.Eq, P.Typeable)
+
+-- | FromJSON CRYPTOPUNKSDataSourcesDTO
+instance A.FromJSON CRYPTOPUNKSDataSourcesDTO where
+  parseJSON = A.withObject "CRYPTOPUNKSDataSourcesDTO" $ \o ->
+    CRYPTOPUNKSDataSourcesDTO
+      <$> (o .:? "entry_time")
+      <*> (o .:? "recv_time")
+      <*> (o .:? "block_number")
+      <*> (o .:? "vid")
+      <*> (o .:? "block_range")
+      <*> (o .:? "causality_region")
+      <*> (o .:? "manifest_idx")
+      <*> (o .:? "parent")
+      <*> (o .:? "id")
+      <*> (o .:? "param")
+      <*> (o .:? "context")
+      <*> (o .:? "done_at")
+
+-- | ToJSON CRYPTOPUNKSDataSourcesDTO
+instance A.ToJSON CRYPTOPUNKSDataSourcesDTO where
+  toJSON CRYPTOPUNKSDataSourcesDTO {..} =
+   _omitNulls
+      [ "entry_time" .= cRYPTOPUNKSDataSourcesDTOEntryTime
+      , "recv_time" .= cRYPTOPUNKSDataSourcesDTORecvTime
+      , "block_number" .= cRYPTOPUNKSDataSourcesDTOBlockNumber
+      , "vid" .= cRYPTOPUNKSDataSourcesDTOVid
+      , "block_range" .= cRYPTOPUNKSDataSourcesDTOBlockRange
+      , "causality_region" .= cRYPTOPUNKSDataSourcesDTOCausalityRegion
+      , "manifest_idx" .= cRYPTOPUNKSDataSourcesDTOManifestIdx
+      , "parent" .= cRYPTOPUNKSDataSourcesDTOParent
+      , "id" .= cRYPTOPUNKSDataSourcesDTOId
+      , "param" .= cRYPTOPUNKSDataSourcesDTOParam
+      , "context" .= cRYPTOPUNKSDataSourcesDTOContext
+      , "done_at" .= cRYPTOPUNKSDataSourcesDTODoneAt
+      ]
+
+
+-- | Construct a value of type 'CRYPTOPUNKSDataSourcesDTO' (by applying it's required fields, if any)
+mkCRYPTOPUNKSDataSourcesDTO
+  :: CRYPTOPUNKSDataSourcesDTO
+mkCRYPTOPUNKSDataSourcesDTO =
+  CRYPTOPUNKSDataSourcesDTO
+  { cRYPTOPUNKSDataSourcesDTOEntryTime = Nothing
+  , cRYPTOPUNKSDataSourcesDTORecvTime = Nothing
+  , cRYPTOPUNKSDataSourcesDTOBlockNumber = Nothing
+  , cRYPTOPUNKSDataSourcesDTOVid = Nothing
+  , cRYPTOPUNKSDataSourcesDTOBlockRange = Nothing
+  , cRYPTOPUNKSDataSourcesDTOCausalityRegion = Nothing
+  , cRYPTOPUNKSDataSourcesDTOManifestIdx = Nothing
+  , cRYPTOPUNKSDataSourcesDTOParent = Nothing
+  , cRYPTOPUNKSDataSourcesDTOId = Nothing
+  , cRYPTOPUNKSDataSourcesDTOParam = Nothing
+  , cRYPTOPUNKSDataSourcesDTOContext = Nothing
+  , cRYPTOPUNKSDataSourcesDTODoneAt = Nothing
+  }
+
+-- ** CRYPTOPUNKSItemDTO
+-- | CRYPTOPUNKSItemDTO
+data CRYPTOPUNKSItemDTO = CRYPTOPUNKSItemDTO
+  { cRYPTOPUNKSItemDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , cRYPTOPUNKSItemDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , cRYPTOPUNKSItemDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , cRYPTOPUNKSItemDTOVid :: !(Maybe Integer) -- ^ "vid" - 
+  , cRYPTOPUNKSItemDTOBlockRange :: !(Maybe Text) -- ^ "block_range" - 
+  , cRYPTOPUNKSItemDTOId :: !(Maybe Text) -- ^ "id" - 
+  } deriving (P.Show, P.Eq, P.Typeable)
+
+-- | FromJSON CRYPTOPUNKSItemDTO
+instance A.FromJSON CRYPTOPUNKSItemDTO where
+  parseJSON = A.withObject "CRYPTOPUNKSItemDTO" $ \o ->
+    CRYPTOPUNKSItemDTO
+      <$> (o .:? "entry_time")
+      <*> (o .:? "recv_time")
+      <*> (o .:? "block_number")
+      <*> (o .:? "vid")
+      <*> (o .:? "block_range")
+      <*> (o .:? "id")
+
+-- | ToJSON CRYPTOPUNKSItemDTO
+instance A.ToJSON CRYPTOPUNKSItemDTO where
+  toJSON CRYPTOPUNKSItemDTO {..} =
+   _omitNulls
+      [ "entry_time" .= cRYPTOPUNKSItemDTOEntryTime
+      , "recv_time" .= cRYPTOPUNKSItemDTORecvTime
+      , "block_number" .= cRYPTOPUNKSItemDTOBlockNumber
+      , "vid" .= cRYPTOPUNKSItemDTOVid
+      , "block_range" .= cRYPTOPUNKSItemDTOBlockRange
+      , "id" .= cRYPTOPUNKSItemDTOId
+      ]
+
+
+-- | Construct a value of type 'CRYPTOPUNKSItemDTO' (by applying it's required fields, if any)
+mkCRYPTOPUNKSItemDTO
+  :: CRYPTOPUNKSItemDTO
+mkCRYPTOPUNKSItemDTO =
+  CRYPTOPUNKSItemDTO
+  { cRYPTOPUNKSItemDTOEntryTime = Nothing
+  , cRYPTOPUNKSItemDTORecvTime = Nothing
+  , cRYPTOPUNKSItemDTOBlockNumber = Nothing
+  , cRYPTOPUNKSItemDTOVid = Nothing
+  , cRYPTOPUNKSItemDTOBlockRange = Nothing
+  , cRYPTOPUNKSItemDTOId = Nothing
+  }
+
+-- ** CRYPTOPUNKSMarketPlaceDTO
+-- | CRYPTOPUNKSMarketPlaceDTO
+data CRYPTOPUNKSMarketPlaceDTO = CRYPTOPUNKSMarketPlaceDTO
+  { cRYPTOPUNKSMarketPlaceDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , cRYPTOPUNKSMarketPlaceDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , cRYPTOPUNKSMarketPlaceDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , cRYPTOPUNKSMarketPlaceDTOVid :: !(Maybe Integer) -- ^ "vid" - 
+  , cRYPTOPUNKSMarketPlaceDTOBlockRange :: !(Maybe Text) -- ^ "block_range" - 
+  , cRYPTOPUNKSMarketPlaceDTOId :: !(Maybe Text) -- ^ "id" - 
+  , cRYPTOPUNKSMarketPlaceDTOName :: !(Maybe Text) -- ^ "name" - 
+  , cRYPTOPUNKSMarketPlaceDTOSlug :: !(Maybe Text) -- ^ "slug" - 
+  , cRYPTOPUNKSMarketPlaceDTOSchemaVersion :: !(Maybe Text) -- ^ "schema_version" - 
+  , cRYPTOPUNKSMarketPlaceDTOSubgraphVersion :: !(Maybe Text) -- ^ "subgraph_version" - 
+  , cRYPTOPUNKSMarketPlaceDTOMethodologyVersion :: !(Maybe Text) -- ^ "methodology_version" - 
+  , cRYPTOPUNKSMarketPlaceDTOCollectionCount :: !(Maybe Int) -- ^ "collection_count" - 
+  , cRYPTOPUNKSMarketPlaceDTOTradeCount :: !(Maybe Int) -- ^ "trade_count" - 
+  , cRYPTOPUNKSMarketPlaceDTOCumulativeTradeVolumeEth :: !(Maybe Text) -- ^ "cumulative_trade_volume_eth" - 
+  , cRYPTOPUNKSMarketPlaceDTOMarketplaceRevenueEth :: !(Maybe Text) -- ^ "marketplace_revenue_eth" - 
+  , cRYPTOPUNKSMarketPlaceDTOCreatorRevenueEth :: !(Maybe Text) -- ^ "creator_revenue_eth" - 
+  , cRYPTOPUNKSMarketPlaceDTOTotalRevenueEth :: !(Maybe Text) -- ^ "total_revenue_eth" - 
+  , cRYPTOPUNKSMarketPlaceDTOCumulativeUniqueTraders :: !(Maybe Int) -- ^ "cumulative_unique_traders" - 
+  } deriving (P.Show, P.Eq, P.Typeable)
+
+-- | FromJSON CRYPTOPUNKSMarketPlaceDTO
+instance A.FromJSON CRYPTOPUNKSMarketPlaceDTO where
+  parseJSON = A.withObject "CRYPTOPUNKSMarketPlaceDTO" $ \o ->
+    CRYPTOPUNKSMarketPlaceDTO
+      <$> (o .:? "entry_time")
+      <*> (o .:? "recv_time")
+      <*> (o .:? "block_number")
+      <*> (o .:? "vid")
+      <*> (o .:? "block_range")
+      <*> (o .:? "id")
+      <*> (o .:? "name")
+      <*> (o .:? "slug")
+      <*> (o .:? "schema_version")
+      <*> (o .:? "subgraph_version")
+      <*> (o .:? "methodology_version")
+      <*> (o .:? "collection_count")
+      <*> (o .:? "trade_count")
+      <*> (o .:? "cumulative_trade_volume_eth")
+      <*> (o .:? "marketplace_revenue_eth")
+      <*> (o .:? "creator_revenue_eth")
+      <*> (o .:? "total_revenue_eth")
+      <*> (o .:? "cumulative_unique_traders")
+
+-- | ToJSON CRYPTOPUNKSMarketPlaceDTO
+instance A.ToJSON CRYPTOPUNKSMarketPlaceDTO where
+  toJSON CRYPTOPUNKSMarketPlaceDTO {..} =
+   _omitNulls
+      [ "entry_time" .= cRYPTOPUNKSMarketPlaceDTOEntryTime
+      , "recv_time" .= cRYPTOPUNKSMarketPlaceDTORecvTime
+      , "block_number" .= cRYPTOPUNKSMarketPlaceDTOBlockNumber
+      , "vid" .= cRYPTOPUNKSMarketPlaceDTOVid
+      , "block_range" .= cRYPTOPUNKSMarketPlaceDTOBlockRange
+      , "id" .= cRYPTOPUNKSMarketPlaceDTOId
+      , "name" .= cRYPTOPUNKSMarketPlaceDTOName
+      , "slug" .= cRYPTOPUNKSMarketPlaceDTOSlug
+      , "schema_version" .= cRYPTOPUNKSMarketPlaceDTOSchemaVersion
+      , "subgraph_version" .= cRYPTOPUNKSMarketPlaceDTOSubgraphVersion
+      , "methodology_version" .= cRYPTOPUNKSMarketPlaceDTOMethodologyVersion
+      , "collection_count" .= cRYPTOPUNKSMarketPlaceDTOCollectionCount
+      , "trade_count" .= cRYPTOPUNKSMarketPlaceDTOTradeCount
+      , "cumulative_trade_volume_eth" .= cRYPTOPUNKSMarketPlaceDTOCumulativeTradeVolumeEth
+      , "marketplace_revenue_eth" .= cRYPTOPUNKSMarketPlaceDTOMarketplaceRevenueEth
+      , "creator_revenue_eth" .= cRYPTOPUNKSMarketPlaceDTOCreatorRevenueEth
+      , "total_revenue_eth" .= cRYPTOPUNKSMarketPlaceDTOTotalRevenueEth
+      , "cumulative_unique_traders" .= cRYPTOPUNKSMarketPlaceDTOCumulativeUniqueTraders
+      ]
+
+
+-- | Construct a value of type 'CRYPTOPUNKSMarketPlaceDTO' (by applying it's required fields, if any)
+mkCRYPTOPUNKSMarketPlaceDTO
+  :: CRYPTOPUNKSMarketPlaceDTO
+mkCRYPTOPUNKSMarketPlaceDTO =
+  CRYPTOPUNKSMarketPlaceDTO
+  { cRYPTOPUNKSMarketPlaceDTOEntryTime = Nothing
+  , cRYPTOPUNKSMarketPlaceDTORecvTime = Nothing
+  , cRYPTOPUNKSMarketPlaceDTOBlockNumber = Nothing
+  , cRYPTOPUNKSMarketPlaceDTOVid = Nothing
+  , cRYPTOPUNKSMarketPlaceDTOBlockRange = Nothing
+  , cRYPTOPUNKSMarketPlaceDTOId = Nothing
+  , cRYPTOPUNKSMarketPlaceDTOName = Nothing
+  , cRYPTOPUNKSMarketPlaceDTOSlug = Nothing
+  , cRYPTOPUNKSMarketPlaceDTOSchemaVersion = Nothing
+  , cRYPTOPUNKSMarketPlaceDTOSubgraphVersion = Nothing
+  , cRYPTOPUNKSMarketPlaceDTOMethodologyVersion = Nothing
+  , cRYPTOPUNKSMarketPlaceDTOCollectionCount = Nothing
+  , cRYPTOPUNKSMarketPlaceDTOTradeCount = Nothing
+  , cRYPTOPUNKSMarketPlaceDTOCumulativeTradeVolumeEth = Nothing
+  , cRYPTOPUNKSMarketPlaceDTOMarketplaceRevenueEth = Nothing
+  , cRYPTOPUNKSMarketPlaceDTOCreatorRevenueEth = Nothing
+  , cRYPTOPUNKSMarketPlaceDTOTotalRevenueEth = Nothing
+  , cRYPTOPUNKSMarketPlaceDTOCumulativeUniqueTraders = Nothing
+  }
+
+-- ** CRYPTOPUNKSMarketplaceDailySnapshotDTO
+-- | CRYPTOPUNKSMarketplaceDailySnapshotDTO
+data CRYPTOPUNKSMarketplaceDailySnapshotDTO = CRYPTOPUNKSMarketplaceDailySnapshotDTO
+  { cRYPTOPUNKSMarketplaceDailySnapshotDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , cRYPTOPUNKSMarketplaceDailySnapshotDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , cRYPTOPUNKSMarketplaceDailySnapshotDTOBlockNumber :: !(Maybe Text) -- ^ "block_number" - 
+  , cRYPTOPUNKSMarketplaceDailySnapshotDTOVid :: !(Maybe Integer) -- ^ "vid" - 
+  , cRYPTOPUNKSMarketplaceDailySnapshotDTOBlockRange :: !(Maybe Text) -- ^ "block_range" - 
+  , cRYPTOPUNKSMarketplaceDailySnapshotDTOId :: !(Maybe Text) -- ^ "id" - 
+  , cRYPTOPUNKSMarketplaceDailySnapshotDTOMarketplace :: !(Maybe Text) -- ^ "marketplace" - 
+  , cRYPTOPUNKSMarketplaceDailySnapshotDTOTimestamp :: !(Maybe Text) -- ^ "timestamp" - 
+  , cRYPTOPUNKSMarketplaceDailySnapshotDTOCollectionCount :: !(Maybe Int) -- ^ "collection_count" - 
+  , cRYPTOPUNKSMarketplaceDailySnapshotDTOCumulativeTradeVolumeEth :: !(Maybe Text) -- ^ "cumulative_trade_volume_eth" - 
+  , cRYPTOPUNKSMarketplaceDailySnapshotDTOMarketplaceRevenueEth :: !(Maybe Text) -- ^ "marketplace_revenue_eth" - 
+  , cRYPTOPUNKSMarketplaceDailySnapshotDTOCreatorRevenueEth :: !(Maybe Text) -- ^ "creator_revenue_eth" - 
+  , cRYPTOPUNKSMarketplaceDailySnapshotDTOTotalRevenueEth :: !(Maybe Text) -- ^ "total_revenue_eth" - 
+  , cRYPTOPUNKSMarketplaceDailySnapshotDTOTradeCount :: !(Maybe Int) -- ^ "trade_count" - 
+  , cRYPTOPUNKSMarketplaceDailySnapshotDTOCumulativeUniqueTraders :: !(Maybe Int) -- ^ "cumulative_unique_traders" - 
+  , cRYPTOPUNKSMarketplaceDailySnapshotDTODailyActiveTraders :: !(Maybe Int) -- ^ "daily_active_traders" - 
+  , cRYPTOPUNKSMarketplaceDailySnapshotDTODailyTradedCollectionCount :: !(Maybe Int) -- ^ "daily_traded_collection_count" - 
+  , cRYPTOPUNKSMarketplaceDailySnapshotDTODailyTradedItemCount :: !(Maybe Int) -- ^ "daily_traded_item_count" - 
+  } deriving (P.Show, P.Eq, P.Typeable)
+
+-- | FromJSON CRYPTOPUNKSMarketplaceDailySnapshotDTO
+instance A.FromJSON CRYPTOPUNKSMarketplaceDailySnapshotDTO where
+  parseJSON = A.withObject "CRYPTOPUNKSMarketplaceDailySnapshotDTO" $ \o ->
+    CRYPTOPUNKSMarketplaceDailySnapshotDTO
+      <$> (o .:? "entry_time")
+      <*> (o .:? "recv_time")
+      <*> (o .:? "block_number")
+      <*> (o .:? "vid")
+      <*> (o .:? "block_range")
+      <*> (o .:? "id")
+      <*> (o .:? "marketplace")
+      <*> (o .:? "timestamp")
+      <*> (o .:? "collection_count")
+      <*> (o .:? "cumulative_trade_volume_eth")
+      <*> (o .:? "marketplace_revenue_eth")
+      <*> (o .:? "creator_revenue_eth")
+      <*> (o .:? "total_revenue_eth")
+      <*> (o .:? "trade_count")
+      <*> (o .:? "cumulative_unique_traders")
+      <*> (o .:? "daily_active_traders")
+      <*> (o .:? "daily_traded_collection_count")
+      <*> (o .:? "daily_traded_item_count")
+
+-- | ToJSON CRYPTOPUNKSMarketplaceDailySnapshotDTO
+instance A.ToJSON CRYPTOPUNKSMarketplaceDailySnapshotDTO where
+  toJSON CRYPTOPUNKSMarketplaceDailySnapshotDTO {..} =
+   _omitNulls
+      [ "entry_time" .= cRYPTOPUNKSMarketplaceDailySnapshotDTOEntryTime
+      , "recv_time" .= cRYPTOPUNKSMarketplaceDailySnapshotDTORecvTime
+      , "block_number" .= cRYPTOPUNKSMarketplaceDailySnapshotDTOBlockNumber
+      , "vid" .= cRYPTOPUNKSMarketplaceDailySnapshotDTOVid
+      , "block_range" .= cRYPTOPUNKSMarketplaceDailySnapshotDTOBlockRange
+      , "id" .= cRYPTOPUNKSMarketplaceDailySnapshotDTOId
+      , "marketplace" .= cRYPTOPUNKSMarketplaceDailySnapshotDTOMarketplace
+      , "timestamp" .= cRYPTOPUNKSMarketplaceDailySnapshotDTOTimestamp
+      , "collection_count" .= cRYPTOPUNKSMarketplaceDailySnapshotDTOCollectionCount
+      , "cumulative_trade_volume_eth" .= cRYPTOPUNKSMarketplaceDailySnapshotDTOCumulativeTradeVolumeEth
+      , "marketplace_revenue_eth" .= cRYPTOPUNKSMarketplaceDailySnapshotDTOMarketplaceRevenueEth
+      , "creator_revenue_eth" .= cRYPTOPUNKSMarketplaceDailySnapshotDTOCreatorRevenueEth
+      , "total_revenue_eth" .= cRYPTOPUNKSMarketplaceDailySnapshotDTOTotalRevenueEth
+      , "trade_count" .= cRYPTOPUNKSMarketplaceDailySnapshotDTOTradeCount
+      , "cumulative_unique_traders" .= cRYPTOPUNKSMarketplaceDailySnapshotDTOCumulativeUniqueTraders
+      , "daily_active_traders" .= cRYPTOPUNKSMarketplaceDailySnapshotDTODailyActiveTraders
+      , "daily_traded_collection_count" .= cRYPTOPUNKSMarketplaceDailySnapshotDTODailyTradedCollectionCount
+      , "daily_traded_item_count" .= cRYPTOPUNKSMarketplaceDailySnapshotDTODailyTradedItemCount
+      ]
+
+
+-- | Construct a value of type 'CRYPTOPUNKSMarketplaceDailySnapshotDTO' (by applying it's required fields, if any)
+mkCRYPTOPUNKSMarketplaceDailySnapshotDTO
+  :: CRYPTOPUNKSMarketplaceDailySnapshotDTO
+mkCRYPTOPUNKSMarketplaceDailySnapshotDTO =
+  CRYPTOPUNKSMarketplaceDailySnapshotDTO
+  { cRYPTOPUNKSMarketplaceDailySnapshotDTOEntryTime = Nothing
+  , cRYPTOPUNKSMarketplaceDailySnapshotDTORecvTime = Nothing
+  , cRYPTOPUNKSMarketplaceDailySnapshotDTOBlockNumber = Nothing
+  , cRYPTOPUNKSMarketplaceDailySnapshotDTOVid = Nothing
+  , cRYPTOPUNKSMarketplaceDailySnapshotDTOBlockRange = Nothing
+  , cRYPTOPUNKSMarketplaceDailySnapshotDTOId = Nothing
+  , cRYPTOPUNKSMarketplaceDailySnapshotDTOMarketplace = Nothing
+  , cRYPTOPUNKSMarketplaceDailySnapshotDTOTimestamp = Nothing
+  , cRYPTOPUNKSMarketplaceDailySnapshotDTOCollectionCount = Nothing
+  , cRYPTOPUNKSMarketplaceDailySnapshotDTOCumulativeTradeVolumeEth = Nothing
+  , cRYPTOPUNKSMarketplaceDailySnapshotDTOMarketplaceRevenueEth = Nothing
+  , cRYPTOPUNKSMarketplaceDailySnapshotDTOCreatorRevenueEth = Nothing
+  , cRYPTOPUNKSMarketplaceDailySnapshotDTOTotalRevenueEth = Nothing
+  , cRYPTOPUNKSMarketplaceDailySnapshotDTOTradeCount = Nothing
+  , cRYPTOPUNKSMarketplaceDailySnapshotDTOCumulativeUniqueTraders = Nothing
+  , cRYPTOPUNKSMarketplaceDailySnapshotDTODailyActiveTraders = Nothing
+  , cRYPTOPUNKSMarketplaceDailySnapshotDTODailyTradedCollectionCount = Nothing
+  , cRYPTOPUNKSMarketplaceDailySnapshotDTODailyTradedItemCount = Nothing
+  }
+
+-- ** CRYPTOPUNKSTradeDTO
+-- | CRYPTOPUNKSTradeDTO
+data CRYPTOPUNKSTradeDTO = CRYPTOPUNKSTradeDTO
+  { cRYPTOPUNKSTradeDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , cRYPTOPUNKSTradeDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , cRYPTOPUNKSTradeDTOBlockNumber :: !(Maybe Text) -- ^ "block_number" - 
+  , cRYPTOPUNKSTradeDTOVid :: !(Maybe Integer) -- ^ "vid" - 
+  , cRYPTOPUNKSTradeDTOBlockRange :: !(Maybe Text) -- ^ "block_range" - 
+  , cRYPTOPUNKSTradeDTOId :: !(Maybe Text) -- ^ "id" - 
+  , cRYPTOPUNKSTradeDTOTransactionHash :: !(Maybe Text) -- ^ "transaction_hash" - 
+  , cRYPTOPUNKSTradeDTOLogIndex :: !(Maybe Int) -- ^ "log_index" - 
+  , cRYPTOPUNKSTradeDTOTimestamp :: !(Maybe Text) -- ^ "timestamp" - 
+  , cRYPTOPUNKSTradeDTOIsBundle :: !(Maybe Bool) -- ^ "is_bundle" - 
+  , cRYPTOPUNKSTradeDTOCollection :: !(Maybe Text) -- ^ "collection" - 
+  , cRYPTOPUNKSTradeDTOTokenId :: !(Maybe Text) -- ^ "token_id" - 
+  , cRYPTOPUNKSTradeDTOAmount :: !(Maybe Text) -- ^ "amount" - 
+  , cRYPTOPUNKSTradeDTOPriceEth :: !(Maybe Text) -- ^ "price_eth" - 
+  , cRYPTOPUNKSTradeDTOBuyer :: !(Maybe Text) -- ^ "buyer" - 
+  , cRYPTOPUNKSTradeDTOSeller :: !(Maybe Text) -- ^ "seller" - 
+  } deriving (P.Show, P.Eq, P.Typeable)
+
+-- | FromJSON CRYPTOPUNKSTradeDTO
+instance A.FromJSON CRYPTOPUNKSTradeDTO where
+  parseJSON = A.withObject "CRYPTOPUNKSTradeDTO" $ \o ->
+    CRYPTOPUNKSTradeDTO
+      <$> (o .:? "entry_time")
+      <*> (o .:? "recv_time")
+      <*> (o .:? "block_number")
+      <*> (o .:? "vid")
+      <*> (o .:? "block_range")
+      <*> (o .:? "id")
+      <*> (o .:? "transaction_hash")
+      <*> (o .:? "log_index")
+      <*> (o .:? "timestamp")
+      <*> (o .:? "is_bundle")
+      <*> (o .:? "collection")
+      <*> (o .:? "token_id")
+      <*> (o .:? "amount")
+      <*> (o .:? "price_eth")
+      <*> (o .:? "buyer")
+      <*> (o .:? "seller")
+
+-- | ToJSON CRYPTOPUNKSTradeDTO
+instance A.ToJSON CRYPTOPUNKSTradeDTO where
+  toJSON CRYPTOPUNKSTradeDTO {..} =
+   _omitNulls
+      [ "entry_time" .= cRYPTOPUNKSTradeDTOEntryTime
+      , "recv_time" .= cRYPTOPUNKSTradeDTORecvTime
+      , "block_number" .= cRYPTOPUNKSTradeDTOBlockNumber
+      , "vid" .= cRYPTOPUNKSTradeDTOVid
+      , "block_range" .= cRYPTOPUNKSTradeDTOBlockRange
+      , "id" .= cRYPTOPUNKSTradeDTOId
+      , "transaction_hash" .= cRYPTOPUNKSTradeDTOTransactionHash
+      , "log_index" .= cRYPTOPUNKSTradeDTOLogIndex
+      , "timestamp" .= cRYPTOPUNKSTradeDTOTimestamp
+      , "is_bundle" .= cRYPTOPUNKSTradeDTOIsBundle
+      , "collection" .= cRYPTOPUNKSTradeDTOCollection
+      , "token_id" .= cRYPTOPUNKSTradeDTOTokenId
+      , "amount" .= cRYPTOPUNKSTradeDTOAmount
+      , "price_eth" .= cRYPTOPUNKSTradeDTOPriceEth
+      , "buyer" .= cRYPTOPUNKSTradeDTOBuyer
+      , "seller" .= cRYPTOPUNKSTradeDTOSeller
+      ]
+
+
+-- | Construct a value of type 'CRYPTOPUNKSTradeDTO' (by applying it's required fields, if any)
+mkCRYPTOPUNKSTradeDTO
+  :: CRYPTOPUNKSTradeDTO
+mkCRYPTOPUNKSTradeDTO =
+  CRYPTOPUNKSTradeDTO
+  { cRYPTOPUNKSTradeDTOEntryTime = Nothing
+  , cRYPTOPUNKSTradeDTORecvTime = Nothing
+  , cRYPTOPUNKSTradeDTOBlockNumber = Nothing
+  , cRYPTOPUNKSTradeDTOVid = Nothing
+  , cRYPTOPUNKSTradeDTOBlockRange = Nothing
+  , cRYPTOPUNKSTradeDTOId = Nothing
+  , cRYPTOPUNKSTradeDTOTransactionHash = Nothing
+  , cRYPTOPUNKSTradeDTOLogIndex = Nothing
+  , cRYPTOPUNKSTradeDTOTimestamp = Nothing
+  , cRYPTOPUNKSTradeDTOIsBundle = Nothing
+  , cRYPTOPUNKSTradeDTOCollection = Nothing
+  , cRYPTOPUNKSTradeDTOTokenId = Nothing
+  , cRYPTOPUNKSTradeDTOAmount = Nothing
+  , cRYPTOPUNKSTradeDTOPriceEth = Nothing
+  , cRYPTOPUNKSTradeDTOBuyer = Nothing
+  , cRYPTOPUNKSTradeDTOSeller = Nothing
+  }
+
+-- ** CRYPTOPUNKSUserDTO
+-- | CRYPTOPUNKSUserDTO
+data CRYPTOPUNKSUserDTO = CRYPTOPUNKSUserDTO
+  { cRYPTOPUNKSUserDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , cRYPTOPUNKSUserDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , cRYPTOPUNKSUserDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , cRYPTOPUNKSUserDTOVid :: !(Maybe Integer) -- ^ "vid" - 
+  , cRYPTOPUNKSUserDTOBlockRange :: !(Maybe Text) -- ^ "block_range" - 
+  , cRYPTOPUNKSUserDTOId :: !(Maybe Text) -- ^ "id" - 
+  } deriving (P.Show, P.Eq, P.Typeable)
+
+-- | FromJSON CRYPTOPUNKSUserDTO
+instance A.FromJSON CRYPTOPUNKSUserDTO where
+  parseJSON = A.withObject "CRYPTOPUNKSUserDTO" $ \o ->
+    CRYPTOPUNKSUserDTO
+      <$> (o .:? "entry_time")
+      <*> (o .:? "recv_time")
+      <*> (o .:? "block_number")
+      <*> (o .:? "vid")
+      <*> (o .:? "block_range")
+      <*> (o .:? "id")
+
+-- | ToJSON CRYPTOPUNKSUserDTO
+instance A.ToJSON CRYPTOPUNKSUserDTO where
+  toJSON CRYPTOPUNKSUserDTO {..} =
+   _omitNulls
+      [ "entry_time" .= cRYPTOPUNKSUserDTOEntryTime
+      , "recv_time" .= cRYPTOPUNKSUserDTORecvTime
+      , "block_number" .= cRYPTOPUNKSUserDTOBlockNumber
+      , "vid" .= cRYPTOPUNKSUserDTOVid
+      , "block_range" .= cRYPTOPUNKSUserDTOBlockRange
+      , "id" .= cRYPTOPUNKSUserDTOId
+      ]
+
+
+-- | Construct a value of type 'CRYPTOPUNKSUserDTO' (by applying it's required fields, if any)
+mkCRYPTOPUNKSUserDTO
+  :: CRYPTOPUNKSUserDTO
+mkCRYPTOPUNKSUserDTO =
+  CRYPTOPUNKSUserDTO
+  { cRYPTOPUNKSUserDTOEntryTime = Nothing
+  , cRYPTOPUNKSUserDTORecvTime = Nothing
+  , cRYPTOPUNKSUserDTOBlockNumber = Nothing
+  , cRYPTOPUNKSUserDTOVid = Nothing
+  , cRYPTOPUNKSUserDTOBlockRange = Nothing
+  , cRYPTOPUNKSUserDTOId = Nothing
+  }
+
 -- ** CowOrderDTO
 -- | CowOrderDTO
 data CowOrderDTO = CowOrderDTO

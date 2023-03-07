@@ -13,6 +13,15 @@
 
 
 import ApiClient from './ApiClient';
+import CRYPTOPUNKSBidDTO from './model/CRYPTOPUNKSBidDTO';
+import CRYPTOPUNKSCollectionDTO from './model/CRYPTOPUNKSCollectionDTO';
+import CRYPTOPUNKSCollectionDailySnapshotDTO from './model/CRYPTOPUNKSCollectionDailySnapshotDTO';
+import CRYPTOPUNKSDataSourcesDTO from './model/CRYPTOPUNKSDataSourcesDTO';
+import CRYPTOPUNKSItemDTO from './model/CRYPTOPUNKSItemDTO';
+import CRYPTOPUNKSMarketPlaceDTO from './model/CRYPTOPUNKSMarketPlaceDTO';
+import CRYPTOPUNKSMarketplaceDailySnapshotDTO from './model/CRYPTOPUNKSMarketplaceDailySnapshotDTO';
+import CRYPTOPUNKSTradeDTO from './model/CRYPTOPUNKSTradeDTO';
+import CRYPTOPUNKSUserDTO from './model/CRYPTOPUNKSUserDTO';
 import CowOrderDTO from './model/CowOrderDTO';
 import CowSettlementDTO from './model/CowSettlementDTO';
 import CowTokenDTO from './model/CowTokenDTO';
@@ -111,6 +120,7 @@ import UniswapV3TokenHourDataDTO from './model/UniswapV3TokenHourDataDTO';
 import UniswapV3TokenV3DayDataDTO from './model/UniswapV3TokenV3DayDataDTO';
 import UniswapV3TransactionDTO from './model/UniswapV3TransactionDTO';
 import UniswapV3UniswapDayDataDTO from './model/UniswapV3UniswapDayDataDTO';
+import CRYPTOPUNKSApi from './api/CRYPTOPUNKSApi';
 import CowApi from './api/CowApi';
 import CurveApi from './api/CurveApi';
 import DexApi from './api/DexApi';
@@ -157,6 +167,60 @@ export {
      * @property {module:ApiClient}
      */
     ApiClient,
+
+    /**
+     * The CRYPTOPUNKSBidDTO model constructor.
+     * @property {module:model/CRYPTOPUNKSBidDTO}
+     */
+    CRYPTOPUNKSBidDTO,
+
+    /**
+     * The CRYPTOPUNKSCollectionDTO model constructor.
+     * @property {module:model/CRYPTOPUNKSCollectionDTO}
+     */
+    CRYPTOPUNKSCollectionDTO,
+
+    /**
+     * The CRYPTOPUNKSCollectionDailySnapshotDTO model constructor.
+     * @property {module:model/CRYPTOPUNKSCollectionDailySnapshotDTO}
+     */
+    CRYPTOPUNKSCollectionDailySnapshotDTO,
+
+    /**
+     * The CRYPTOPUNKSDataSourcesDTO model constructor.
+     * @property {module:model/CRYPTOPUNKSDataSourcesDTO}
+     */
+    CRYPTOPUNKSDataSourcesDTO,
+
+    /**
+     * The CRYPTOPUNKSItemDTO model constructor.
+     * @property {module:model/CRYPTOPUNKSItemDTO}
+     */
+    CRYPTOPUNKSItemDTO,
+
+    /**
+     * The CRYPTOPUNKSMarketPlaceDTO model constructor.
+     * @property {module:model/CRYPTOPUNKSMarketPlaceDTO}
+     */
+    CRYPTOPUNKSMarketPlaceDTO,
+
+    /**
+     * The CRYPTOPUNKSMarketplaceDailySnapshotDTO model constructor.
+     * @property {module:model/CRYPTOPUNKSMarketplaceDailySnapshotDTO}
+     */
+    CRYPTOPUNKSMarketplaceDailySnapshotDTO,
+
+    /**
+     * The CRYPTOPUNKSTradeDTO model constructor.
+     * @property {module:model/CRYPTOPUNKSTradeDTO}
+     */
+    CRYPTOPUNKSTradeDTO,
+
+    /**
+     * The CRYPTOPUNKSUserDTO model constructor.
+     * @property {module:model/CRYPTOPUNKSUserDTO}
+     */
+    CRYPTOPUNKSUserDTO,
 
     /**
      * The CowOrderDTO model constructor.
@@ -745,6 +809,12 @@ export {
      * @property {module:model/UniswapV3UniswapDayDataDTO}
      */
     UniswapV3UniswapDayDataDTO,
+
+    /**
+    * The CRYPTOPUNKSApi service constructor.
+    * @property {module:api/CRYPTOPUNKSApi}
+    */
+    CRYPTOPUNKSApi,
 
     /**
     * The CowApi service constructor.

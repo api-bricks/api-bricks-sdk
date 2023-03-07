@@ -50,7 +50,7 @@ import org.openapitools.client.JSON;
 /**
  * CurveRemoveLiquidityEventDTO
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-13T15:06:11.595492Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-07T11:26:43.643580Z[Etc/UTC]")
 public class CurveRemoveLiquidityEventDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -78,11 +78,11 @@ public class CurveRemoveLiquidityEventDTO {
 
   public static final String SERIALIZED_NAME_TOKEN_AMOUNTS = "token_amounts";
   @SerializedName(SERIALIZED_NAME_TOKEN_AMOUNTS)
-  private List<String> tokenAmounts = null;
+  private List<String> tokenAmounts;
 
   public static final String SERIALIZED_NAME_FEES = "fees";
   @SerializedName(SERIALIZED_NAME_FEES)
-  private List<String> fees = null;
+  private List<String> fees;
 
   public static final String SERIALIZED_NAME_TOKEN_SUPPLY = "token_supply";
   @SerializedName(SERIALIZED_NAME_TOKEN_SUPPLY)
@@ -250,9 +250,6 @@ public class CurveRemoveLiquidityEventDTO {
   }
 
   public CurveRemoveLiquidityEventDTO addTokenAmountsItem(String tokenAmountsItem) {
-    if (this.tokenAmounts == null) {
-      this.tokenAmounts = null;
-    }
     this.tokenAmounts.add(tokenAmountsItem);
     return this;
   }
@@ -280,9 +277,6 @@ public class CurveRemoveLiquidityEventDTO {
   }
 
   public CurveRemoveLiquidityEventDTO addFeesItem(String feesItem) {
-    if (this.fees == null) {
-      this.fees = null;
-    }
     this.fees.add(feesItem);
     return this;
   }

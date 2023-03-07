@@ -374,9 +374,9 @@ UniswapV2SwapDTO <- R6::R6Class(
         self$`to` <- this_object$`to`
       }
       if (!is.null(this_object$`log_index`)) {
-        log_index_object <- NumericsBigInteger$new()
-        log_index_object$fromJSON(jsonlite::toJSON(this_object$log_index, auto_unbox = TRUE, digits = NA))
-        self$`log_index` <- log_index_object
+        `log_index_object` <- NumericsBigInteger$new()
+        `log_index_object`$fromJSON(jsonlite::toJSON(this_object$`log_index`, auto_unbox = TRUE, digits = NA))
+        self$`log_index` <- `log_index_object`
       }
       if (!is.null(this_object$`amount_usd`)) {
         self$`amount_usd` <- this_object$`amount_usd`
@@ -388,9 +388,9 @@ UniswapV2SwapDTO <- R6::R6Class(
         self$`evaluated_amount` <- this_object$`evaluated_amount`
       }
       if (!is.null(this_object$`evaluated_aggressor`)) {
-        evaluated_aggressor_object <- TransactionsETradeAggressiveSide$new()
-        evaluated_aggressor_object$fromJSON(jsonlite::toJSON(this_object$evaluated_aggressor, auto_unbox = TRUE, digits = NA))
-        self$`evaluated_aggressor` <- evaluated_aggressor_object
+        `evaluated_aggressor_object` <- TransactionsETradeAggressiveSide$new()
+        `evaluated_aggressor_object`$fromJSON(jsonlite::toJSON(this_object$`evaluated_aggressor`, auto_unbox = TRUE, digits = NA))
+        self$`evaluated_aggressor` <- `evaluated_aggressor_object`
       }
       if (!is.null(this_object$`pool_id`)) {
         self$`pool_id` <- this_object$`pool_id`
@@ -614,11 +614,11 @@ UniswapV2SwapDTO <- R6::R6Class(
       self$`amount_0_out` <- this_object$`amount_0_out`
       self$`amount_1_out` <- this_object$`amount_1_out`
       self$`to` <- this_object$`to`
-      self$`log_index` <- NumericsBigInteger$new()$fromJSON(jsonlite::toJSON(this_object$log_index, auto_unbox = TRUE, digits = NA))
+      self$`log_index` <- NumericsBigInteger$new()$fromJSON(jsonlite::toJSON(this_object$`log_index`, auto_unbox = TRUE, digits = NA))
       self$`amount_usd` <- this_object$`amount_usd`
       self$`evaluated_price` <- this_object$`evaluated_price`
       self$`evaluated_amount` <- this_object$`evaluated_amount`
-      self$`evaluated_aggressor` <- TransactionsETradeAggressiveSide$new()$fromJSON(jsonlite::toJSON(this_object$evaluated_aggressor, auto_unbox = TRUE, digits = NA))
+      self$`evaluated_aggressor` <- TransactionsETradeAggressiveSide$new()$fromJSON(jsonlite::toJSON(this_object$`evaluated_aggressor`, auto_unbox = TRUE, digits = NA))
       self$`pool_id` <- this_object$`pool_id`
       self$`transaction_id` <- this_object$`transaction_id`
       self

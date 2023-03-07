@@ -70,7 +70,7 @@ func NewCurveSystemStateDTOWithDefaults() *CurveSystemStateDTO {
 
 // GetEntryTime returns the EntryTime field value if set, zero value otherwise.
 func (o *CurveSystemStateDTO) GetEntryTime() time.Time {
-	if o == nil || isNil(o.EntryTime) {
+	if o == nil || IsNil(o.EntryTime) {
 		var ret time.Time
 		return ret
 	}
@@ -80,7 +80,7 @@ func (o *CurveSystemStateDTO) GetEntryTime() time.Time {
 // GetEntryTimeOk returns a tuple with the EntryTime field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CurveSystemStateDTO) GetEntryTimeOk() (*time.Time, bool) {
-	if o == nil || isNil(o.EntryTime) {
+	if o == nil || IsNil(o.EntryTime) {
 		return nil, false
 	}
 	return o.EntryTime, true
@@ -88,7 +88,7 @@ func (o *CurveSystemStateDTO) GetEntryTimeOk() (*time.Time, bool) {
 
 // HasEntryTime returns a boolean if a field has been set.
 func (o *CurveSystemStateDTO) HasEntryTime() bool {
-	if o != nil && !isNil(o.EntryTime) {
+	if o != nil && !IsNil(o.EntryTime) {
 		return true
 	}
 
@@ -102,7 +102,7 @@ func (o *CurveSystemStateDTO) SetEntryTime(v time.Time) {
 
 // GetRecvTime returns the RecvTime field value if set, zero value otherwise.
 func (o *CurveSystemStateDTO) GetRecvTime() time.Time {
-	if o == nil || isNil(o.RecvTime) {
+	if o == nil || IsNil(o.RecvTime) {
 		var ret time.Time
 		return ret
 	}
@@ -112,7 +112,7 @@ func (o *CurveSystemStateDTO) GetRecvTime() time.Time {
 // GetRecvTimeOk returns a tuple with the RecvTime field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CurveSystemStateDTO) GetRecvTimeOk() (*time.Time, bool) {
-	if o == nil || isNil(o.RecvTime) {
+	if o == nil || IsNil(o.RecvTime) {
 		return nil, false
 	}
 	return o.RecvTime, true
@@ -120,7 +120,7 @@ func (o *CurveSystemStateDTO) GetRecvTimeOk() (*time.Time, bool) {
 
 // HasRecvTime returns a boolean if a field has been set.
 func (o *CurveSystemStateDTO) HasRecvTime() bool {
-	if o != nil && !isNil(o.RecvTime) {
+	if o != nil && !IsNil(o.RecvTime) {
 		return true
 	}
 
@@ -134,7 +134,7 @@ func (o *CurveSystemStateDTO) SetRecvTime(v time.Time) {
 
 // GetBlockNumber returns the BlockNumber field value if set, zero value otherwise.
 func (o *CurveSystemStateDTO) GetBlockNumber() int64 {
-	if o == nil || isNil(o.BlockNumber) {
+	if o == nil || IsNil(o.BlockNumber) {
 		var ret int64
 		return ret
 	}
@@ -144,7 +144,7 @@ func (o *CurveSystemStateDTO) GetBlockNumber() int64 {
 // GetBlockNumberOk returns a tuple with the BlockNumber field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CurveSystemStateDTO) GetBlockNumberOk() (*int64, bool) {
-	if o == nil || isNil(o.BlockNumber) {
+	if o == nil || IsNil(o.BlockNumber) {
 		return nil, false
 	}
 	return o.BlockNumber, true
@@ -152,7 +152,7 @@ func (o *CurveSystemStateDTO) GetBlockNumberOk() (*int64, bool) {
 
 // HasBlockNumber returns a boolean if a field has been set.
 func (o *CurveSystemStateDTO) HasBlockNumber() bool {
-	if o != nil && !isNil(o.BlockNumber) {
+	if o != nil && !IsNil(o.BlockNumber) {
 		return true
 	}
 
@@ -166,7 +166,7 @@ func (o *CurveSystemStateDTO) SetBlockNumber(v int64) {
 
 // GetId returns the Id field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurveSystemStateDTO) GetId() string {
-	if o == nil || isNil(o.Id.Get()) {
+	if o == nil || IsNil(o.Id.Get()) {
 		var ret string
 		return ret
 	}
@@ -208,7 +208,7 @@ func (o *CurveSystemStateDTO) UnsetId() {
 
 // GetRegistryContract returns the RegistryContract field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurveSystemStateDTO) GetRegistryContract() string {
-	if o == nil || isNil(o.RegistryContract.Get()) {
+	if o == nil || IsNil(o.RegistryContract.Get()) {
 		var ret string
 		return ret
 	}
@@ -250,7 +250,7 @@ func (o *CurveSystemStateDTO) UnsetRegistryContract() {
 
 // GetContractCount returns the ContractCount field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurveSystemStateDTO) GetContractCount() string {
-	if o == nil || isNil(o.ContractCount.Get()) {
+	if o == nil || IsNil(o.ContractCount.Get()) {
 		var ret string
 		return ret
 	}
@@ -292,7 +292,7 @@ func (o *CurveSystemStateDTO) UnsetContractCount() {
 
 // GetGaugeCount returns the GaugeCount field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurveSystemStateDTO) GetGaugeCount() string {
-	if o == nil || isNil(o.GaugeCount.Get()) {
+	if o == nil || IsNil(o.GaugeCount.Get()) {
 		var ret string
 		return ret
 	}
@@ -334,7 +334,7 @@ func (o *CurveSystemStateDTO) UnsetGaugeCount() {
 
 // GetGaugeTypeCount returns the GaugeTypeCount field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurveSystemStateDTO) GetGaugeTypeCount() string {
-	if o == nil || isNil(o.GaugeTypeCount.Get()) {
+	if o == nil || IsNil(o.GaugeTypeCount.Get()) {
 		var ret string
 		return ret
 	}
@@ -376,7 +376,7 @@ func (o *CurveSystemStateDTO) UnsetGaugeTypeCount() {
 
 // GetPoolCount returns the PoolCount field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurveSystemStateDTO) GetPoolCount() string {
-	if o == nil || isNil(o.PoolCount.Get()) {
+	if o == nil || IsNil(o.PoolCount.Get()) {
 		var ret string
 		return ret
 	}
@@ -418,7 +418,7 @@ func (o *CurveSystemStateDTO) UnsetPoolCount() {
 
 // GetTokenCount returns the TokenCount field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurveSystemStateDTO) GetTokenCount() string {
-	if o == nil || isNil(o.TokenCount.Get()) {
+	if o == nil || IsNil(o.TokenCount.Get()) {
 		var ret string
 		return ret
 	}
@@ -460,7 +460,7 @@ func (o *CurveSystemStateDTO) UnsetTokenCount() {
 
 // GetTotalPoolCount returns the TotalPoolCount field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurveSystemStateDTO) GetTotalPoolCount() string {
-	if o == nil || isNil(o.TotalPoolCount.Get()) {
+	if o == nil || IsNil(o.TotalPoolCount.Get()) {
 		var ret string
 		return ret
 	}
@@ -502,7 +502,7 @@ func (o *CurveSystemStateDTO) UnsetTotalPoolCount() {
 
 // GetUpdated returns the Updated field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurveSystemStateDTO) GetUpdated() string {
-	if o == nil || isNil(o.Updated.Get()) {
+	if o == nil || IsNil(o.Updated.Get()) {
 		var ret string
 		return ret
 	}
@@ -544,7 +544,7 @@ func (o *CurveSystemStateDTO) UnsetUpdated() {
 
 // GetUpdatedAtBlock returns the UpdatedAtBlock field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurveSystemStateDTO) GetUpdatedAtBlock() string {
-	if o == nil || isNil(o.UpdatedAtBlock.Get()) {
+	if o == nil || IsNil(o.UpdatedAtBlock.Get()) {
 		var ret string
 		return ret
 	}
@@ -586,7 +586,7 @@ func (o *CurveSystemStateDTO) UnsetUpdatedAtBlock() {
 
 // GetUpdatedAtTransaction returns the UpdatedAtTransaction field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurveSystemStateDTO) GetUpdatedAtTransaction() string {
-	if o == nil || isNil(o.UpdatedAtTransaction.Get()) {
+	if o == nil || IsNil(o.UpdatedAtTransaction.Get()) {
 		var ret string
 		return ret
 	}
@@ -628,7 +628,7 @@ func (o *CurveSystemStateDTO) UnsetUpdatedAtTransaction() {
 
 // GetVid returns the Vid field value if set, zero value otherwise.
 func (o *CurveSystemStateDTO) GetVid() int64 {
-	if o == nil || isNil(o.Vid) {
+	if o == nil || IsNil(o.Vid) {
 		var ret int64
 		return ret
 	}
@@ -638,7 +638,7 @@ func (o *CurveSystemStateDTO) GetVid() int64 {
 // GetVidOk returns a tuple with the Vid field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CurveSystemStateDTO) GetVidOk() (*int64, bool) {
-	if o == nil || isNil(o.Vid) {
+	if o == nil || IsNil(o.Vid) {
 		return nil, false
 	}
 	return o.Vid, true
@@ -646,7 +646,7 @@ func (o *CurveSystemStateDTO) GetVidOk() (*int64, bool) {
 
 // HasVid returns a boolean if a field has been set.
 func (o *CurveSystemStateDTO) HasVid() bool {
-	if o != nil && !isNil(o.Vid) {
+	if o != nil && !IsNil(o.Vid) {
 		return true
 	}
 
@@ -668,13 +668,13 @@ func (o CurveSystemStateDTO) MarshalJSON() ([]byte, error) {
 
 func (o CurveSystemStateDTO) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if !isNil(o.EntryTime) {
+	if !IsNil(o.EntryTime) {
 		toSerialize["entry_time"] = o.EntryTime
 	}
-	if !isNil(o.RecvTime) {
+	if !IsNil(o.RecvTime) {
 		toSerialize["recv_time"] = o.RecvTime
 	}
-	if !isNil(o.BlockNumber) {
+	if !IsNil(o.BlockNumber) {
 		toSerialize["block_number"] = o.BlockNumber
 	}
 	if o.Id.IsSet() {
@@ -710,7 +710,7 @@ func (o CurveSystemStateDTO) ToMap() (map[string]interface{}, error) {
 	if o.UpdatedAtTransaction.IsSet() {
 		toSerialize["updated_at_transaction"] = o.UpdatedAtTransaction.Get()
 	}
-	if !isNil(o.Vid) {
+	if !IsNil(o.Vid) {
 		toSerialize["vid"] = o.Vid
 	}
 	return toSerialize, nil

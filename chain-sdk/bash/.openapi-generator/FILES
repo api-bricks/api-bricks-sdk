@@ -4,6 +4,16 @@ README.md
 _client.sh
 client.sh
 client.sh.bash-completion
+docs/CRYPTOPUNKSApi.md
+docs/CRYPTOPUNKSBidDTO.md
+docs/CRYPTOPUNKSCollectionDTO.md
+docs/CRYPTOPUNKSCollectionDailySnapshotDTO.md
+docs/CRYPTOPUNKSDataSourcesDTO.md
+docs/CRYPTOPUNKSItemDTO.md
+docs/CRYPTOPUNKSMarketPlaceDTO.md
+docs/CRYPTOPUNKSMarketplaceDailySnapshotDTO.md
+docs/CRYPTOPUNKSTradeDTO.md
+docs/CRYPTOPUNKSUserDTO.md
 docs/CowApi.md
 docs/CowOrderDTO.md
 docs/CowSettlementDTO.md

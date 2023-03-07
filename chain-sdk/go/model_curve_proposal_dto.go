@@ -104,7 +104,7 @@ func NewCurveProposalDTOWithDefaults() *CurveProposalDTO {
 
 // GetEntryTime returns the EntryTime field value if set, zero value otherwise.
 func (o *CurveProposalDTO) GetEntryTime() time.Time {
-	if o == nil || isNil(o.EntryTime) {
+	if o == nil || IsNil(o.EntryTime) {
 		var ret time.Time
 		return ret
 	}
@@ -114,7 +114,7 @@ func (o *CurveProposalDTO) GetEntryTime() time.Time {
 // GetEntryTimeOk returns a tuple with the EntryTime field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CurveProposalDTO) GetEntryTimeOk() (*time.Time, bool) {
-	if o == nil || isNil(o.EntryTime) {
+	if o == nil || IsNil(o.EntryTime) {
 		return nil, false
 	}
 	return o.EntryTime, true
@@ -122,7 +122,7 @@ func (o *CurveProposalDTO) GetEntryTimeOk() (*time.Time, bool) {
 
 // HasEntryTime returns a boolean if a field has been set.
 func (o *CurveProposalDTO) HasEntryTime() bool {
-	if o != nil && !isNil(o.EntryTime) {
+	if o != nil && !IsNil(o.EntryTime) {
 		return true
 	}
 
@@ -136,7 +136,7 @@ func (o *CurveProposalDTO) SetEntryTime(v time.Time) {
 
 // GetRecvTime returns the RecvTime field value if set, zero value otherwise.
 func (o *CurveProposalDTO) GetRecvTime() time.Time {
-	if o == nil || isNil(o.RecvTime) {
+	if o == nil || IsNil(o.RecvTime) {
 		var ret time.Time
 		return ret
 	}
@@ -146,7 +146,7 @@ func (o *CurveProposalDTO) GetRecvTime() time.Time {
 // GetRecvTimeOk returns a tuple with the RecvTime field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CurveProposalDTO) GetRecvTimeOk() (*time.Time, bool) {
-	if o == nil || isNil(o.RecvTime) {
+	if o == nil || IsNil(o.RecvTime) {
 		return nil, false
 	}
 	return o.RecvTime, true
@@ -154,7 +154,7 @@ func (o *CurveProposalDTO) GetRecvTimeOk() (*time.Time, bool) {
 
 // HasRecvTime returns a boolean if a field has been set.
 func (o *CurveProposalDTO) HasRecvTime() bool {
-	if o != nil && !isNil(o.RecvTime) {
+	if o != nil && !IsNil(o.RecvTime) {
 		return true
 	}
 
@@ -168,7 +168,7 @@ func (o *CurveProposalDTO) SetRecvTime(v time.Time) {
 
 // GetBlockNumber returns the BlockNumber field value if set, zero value otherwise.
 func (o *CurveProposalDTO) GetBlockNumber() int64 {
-	if o == nil || isNil(o.BlockNumber) {
+	if o == nil || IsNil(o.BlockNumber) {
 		var ret int64
 		return ret
 	}
@@ -178,7 +178,7 @@ func (o *CurveProposalDTO) GetBlockNumber() int64 {
 // GetBlockNumberOk returns a tuple with the BlockNumber field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CurveProposalDTO) GetBlockNumberOk() (*int64, bool) {
-	if o == nil || isNil(o.BlockNumber) {
+	if o == nil || IsNil(o.BlockNumber) {
 		return nil, false
 	}
 	return o.BlockNumber, true
@@ -186,7 +186,7 @@ func (o *CurveProposalDTO) GetBlockNumberOk() (*int64, bool) {
 
 // HasBlockNumber returns a boolean if a field has been set.
 func (o *CurveProposalDTO) HasBlockNumber() bool {
-	if o != nil && !isNil(o.BlockNumber) {
+	if o != nil && !IsNil(o.BlockNumber) {
 		return true
 	}
 
@@ -200,7 +200,7 @@ func (o *CurveProposalDTO) SetBlockNumber(v int64) {
 
 // GetId returns the Id field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurveProposalDTO) GetId() string {
-	if o == nil || isNil(o.Id.Get()) {
+	if o == nil || IsNil(o.Id.Get()) {
 		var ret string
 		return ret
 	}
@@ -242,7 +242,7 @@ func (o *CurveProposalDTO) UnsetId() {
 
 // GetNumber returns the Number field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurveProposalDTO) GetNumber() string {
-	if o == nil || isNil(o.Number.Get()) {
+	if o == nil || IsNil(o.Number.Get()) {
 		var ret string
 		return ret
 	}
@@ -284,7 +284,7 @@ func (o *CurveProposalDTO) UnsetNumber() {
 
 // GetApp returns the App field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurveProposalDTO) GetApp() string {
-	if o == nil || isNil(o.App.Get()) {
+	if o == nil || IsNil(o.App.Get()) {
 		var ret string
 		return ret
 	}
@@ -326,7 +326,7 @@ func (o *CurveProposalDTO) UnsetApp() {
 
 // GetCreator returns the Creator field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurveProposalDTO) GetCreator() string {
-	if o == nil || isNil(o.Creator.Get()) {
+	if o == nil || IsNil(o.Creator.Get()) {
 		var ret string
 		return ret
 	}
@@ -368,7 +368,7 @@ func (o *CurveProposalDTO) UnsetCreator() {
 
 // GetExecutionScript returns the ExecutionScript field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurveProposalDTO) GetExecutionScript() string {
-	if o == nil || isNil(o.ExecutionScript.Get()) {
+	if o == nil || IsNil(o.ExecutionScript.Get()) {
 		var ret string
 		return ret
 	}
@@ -410,7 +410,7 @@ func (o *CurveProposalDTO) UnsetExecutionScript() {
 
 // GetExpireDate returns the ExpireDate field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurveProposalDTO) GetExpireDate() string {
-	if o == nil || isNil(o.ExpireDate.Get()) {
+	if o == nil || IsNil(o.ExpireDate.Get()) {
 		var ret string
 		return ret
 	}
@@ -452,7 +452,7 @@ func (o *CurveProposalDTO) UnsetExpireDate() {
 
 // GetMinimumQuorum returns the MinimumQuorum field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurveProposalDTO) GetMinimumQuorum() string {
-	if o == nil || isNil(o.MinimumQuorum.Get()) {
+	if o == nil || IsNil(o.MinimumQuorum.Get()) {
 		var ret string
 		return ret
 	}
@@ -494,7 +494,7 @@ func (o *CurveProposalDTO) UnsetMinimumQuorum() {
 
 // GetRequiredSupport returns the RequiredSupport field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurveProposalDTO) GetRequiredSupport() string {
-	if o == nil || isNil(o.RequiredSupport.Get()) {
+	if o == nil || IsNil(o.RequiredSupport.Get()) {
 		var ret string
 		return ret
 	}
@@ -536,7 +536,7 @@ func (o *CurveProposalDTO) UnsetRequiredSupport() {
 
 // GetSnapshotBlock returns the SnapshotBlock field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurveProposalDTO) GetSnapshotBlock() string {
-	if o == nil || isNil(o.SnapshotBlock.Get()) {
+	if o == nil || IsNil(o.SnapshotBlock.Get()) {
 		var ret string
 		return ret
 	}
@@ -578,7 +578,7 @@ func (o *CurveProposalDTO) UnsetSnapshotBlock() {
 
 // GetVotingPower returns the VotingPower field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurveProposalDTO) GetVotingPower() string {
-	if o == nil || isNil(o.VotingPower.Get()) {
+	if o == nil || IsNil(o.VotingPower.Get()) {
 		var ret string
 		return ret
 	}
@@ -620,7 +620,7 @@ func (o *CurveProposalDTO) UnsetVotingPower() {
 
 // GetMetadata returns the Metadata field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurveProposalDTO) GetMetadata() string {
-	if o == nil || isNil(o.Metadata.Get()) {
+	if o == nil || IsNil(o.Metadata.Get()) {
 		var ret string
 		return ret
 	}
@@ -662,7 +662,7 @@ func (o *CurveProposalDTO) UnsetMetadata() {
 
 // GetText returns the Text field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurveProposalDTO) GetText() string {
-	if o == nil || isNil(o.Text.Get()) {
+	if o == nil || IsNil(o.Text.Get()) {
 		var ret string
 		return ret
 	}
@@ -704,7 +704,7 @@ func (o *CurveProposalDTO) UnsetText() {
 
 // GetVoteCount returns the VoteCount field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurveProposalDTO) GetVoteCount() string {
-	if o == nil || isNil(o.VoteCount.Get()) {
+	if o == nil || IsNil(o.VoteCount.Get()) {
 		var ret string
 		return ret
 	}
@@ -746,7 +746,7 @@ func (o *CurveProposalDTO) UnsetVoteCount() {
 
 // GetPositiveVoteCount returns the PositiveVoteCount field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurveProposalDTO) GetPositiveVoteCount() string {
-	if o == nil || isNil(o.PositiveVoteCount.Get()) {
+	if o == nil || IsNil(o.PositiveVoteCount.Get()) {
 		var ret string
 		return ret
 	}
@@ -788,7 +788,7 @@ func (o *CurveProposalDTO) UnsetPositiveVoteCount() {
 
 // GetNegativeVoteCount returns the NegativeVoteCount field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurveProposalDTO) GetNegativeVoteCount() string {
-	if o == nil || isNil(o.NegativeVoteCount.Get()) {
+	if o == nil || IsNil(o.NegativeVoteCount.Get()) {
 		var ret string
 		return ret
 	}
@@ -830,7 +830,7 @@ func (o *CurveProposalDTO) UnsetNegativeVoteCount() {
 
 // GetCurrentQuorum returns the CurrentQuorum field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurveProposalDTO) GetCurrentQuorum() string {
-	if o == nil || isNil(o.CurrentQuorum.Get()) {
+	if o == nil || IsNil(o.CurrentQuorum.Get()) {
 		var ret string
 		return ret
 	}
@@ -872,7 +872,7 @@ func (o *CurveProposalDTO) UnsetCurrentQuorum() {
 
 // GetCurrentSupport returns the CurrentSupport field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurveProposalDTO) GetCurrentSupport() string {
-	if o == nil || isNil(o.CurrentSupport.Get()) {
+	if o == nil || IsNil(o.CurrentSupport.Get()) {
 		var ret string
 		return ret
 	}
@@ -914,7 +914,7 @@ func (o *CurveProposalDTO) UnsetCurrentSupport() {
 
 // GetStakedSupport returns the StakedSupport field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurveProposalDTO) GetStakedSupport() string {
-	if o == nil || isNil(o.StakedSupport.Get()) {
+	if o == nil || IsNil(o.StakedSupport.Get()) {
 		var ret string
 		return ret
 	}
@@ -956,7 +956,7 @@ func (o *CurveProposalDTO) UnsetStakedSupport() {
 
 // GetTotalStaked returns the TotalStaked field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurveProposalDTO) GetTotalStaked() string {
-	if o == nil || isNil(o.TotalStaked.Get()) {
+	if o == nil || IsNil(o.TotalStaked.Get()) {
 		var ret string
 		return ret
 	}
@@ -998,7 +998,7 @@ func (o *CurveProposalDTO) UnsetTotalStaked() {
 
 // GetCreated returns the Created field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurveProposalDTO) GetCreated() string {
-	if o == nil || isNil(o.Created.Get()) {
+	if o == nil || IsNil(o.Created.Get()) {
 		var ret string
 		return ret
 	}
@@ -1040,7 +1040,7 @@ func (o *CurveProposalDTO) UnsetCreated() {
 
 // GetCreatedAtBlock returns the CreatedAtBlock field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurveProposalDTO) GetCreatedAtBlock() string {
-	if o == nil || isNil(o.CreatedAtBlock.Get()) {
+	if o == nil || IsNil(o.CreatedAtBlock.Get()) {
 		var ret string
 		return ret
 	}
@@ -1082,7 +1082,7 @@ func (o *CurveProposalDTO) UnsetCreatedAtBlock() {
 
 // GetCreatedAtTransaction returns the CreatedAtTransaction field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurveProposalDTO) GetCreatedAtTransaction() string {
-	if o == nil || isNil(o.CreatedAtTransaction.Get()) {
+	if o == nil || IsNil(o.CreatedAtTransaction.Get()) {
 		var ret string
 		return ret
 	}
@@ -1124,7 +1124,7 @@ func (o *CurveProposalDTO) UnsetCreatedAtTransaction() {
 
 // GetUpdated returns the Updated field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurveProposalDTO) GetUpdated() string {
-	if o == nil || isNil(o.Updated.Get()) {
+	if o == nil || IsNil(o.Updated.Get()) {
 		var ret string
 		return ret
 	}
@@ -1166,7 +1166,7 @@ func (o *CurveProposalDTO) UnsetUpdated() {
 
 // GetUpdatedAtBlock returns the UpdatedAtBlock field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurveProposalDTO) GetUpdatedAtBlock() string {
-	if o == nil || isNil(o.UpdatedAtBlock.Get()) {
+	if o == nil || IsNil(o.UpdatedAtBlock.Get()) {
 		var ret string
 		return ret
 	}
@@ -1208,7 +1208,7 @@ func (o *CurveProposalDTO) UnsetUpdatedAtBlock() {
 
 // GetUpdatedAtTransaction returns the UpdatedAtTransaction field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurveProposalDTO) GetUpdatedAtTransaction() string {
-	if o == nil || isNil(o.UpdatedAtTransaction.Get()) {
+	if o == nil || IsNil(o.UpdatedAtTransaction.Get()) {
 		var ret string
 		return ret
 	}
@@ -1250,7 +1250,7 @@ func (o *CurveProposalDTO) UnsetUpdatedAtTransaction() {
 
 // GetExecuted returns the Executed field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurveProposalDTO) GetExecuted() string {
-	if o == nil || isNil(o.Executed.Get()) {
+	if o == nil || IsNil(o.Executed.Get()) {
 		var ret string
 		return ret
 	}
@@ -1292,7 +1292,7 @@ func (o *CurveProposalDTO) UnsetExecuted() {
 
 // GetExecutedAtBlock returns the ExecutedAtBlock field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurveProposalDTO) GetExecutedAtBlock() string {
-	if o == nil || isNil(o.ExecutedAtBlock.Get()) {
+	if o == nil || IsNil(o.ExecutedAtBlock.Get()) {
 		var ret string
 		return ret
 	}
@@ -1334,7 +1334,7 @@ func (o *CurveProposalDTO) UnsetExecutedAtBlock() {
 
 // GetExecutedAtTransaction returns the ExecutedAtTransaction field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurveProposalDTO) GetExecutedAtTransaction() string {
-	if o == nil || isNil(o.ExecutedAtTransaction.Get()) {
+	if o == nil || IsNil(o.ExecutedAtTransaction.Get()) {
 		var ret string
 		return ret
 	}
@@ -1376,7 +1376,7 @@ func (o *CurveProposalDTO) UnsetExecutedAtTransaction() {
 
 // GetVid returns the Vid field value if set, zero value otherwise.
 func (o *CurveProposalDTO) GetVid() int64 {
-	if o == nil || isNil(o.Vid) {
+	if o == nil || IsNil(o.Vid) {
 		var ret int64
 		return ret
 	}
@@ -1386,7 +1386,7 @@ func (o *CurveProposalDTO) GetVid() int64 {
 // GetVidOk returns a tuple with the Vid field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CurveProposalDTO) GetVidOk() (*int64, bool) {
-	if o == nil || isNil(o.Vid) {
+	if o == nil || IsNil(o.Vid) {
 		return nil, false
 	}
 	return o.Vid, true
@@ -1394,7 +1394,7 @@ func (o *CurveProposalDTO) GetVidOk() (*int64, bool) {
 
 // HasVid returns a boolean if a field has been set.
 func (o *CurveProposalDTO) HasVid() bool {
-	if o != nil && !isNil(o.Vid) {
+	if o != nil && !IsNil(o.Vid) {
 		return true
 	}
 
@@ -1416,13 +1416,13 @@ func (o CurveProposalDTO) MarshalJSON() ([]byte, error) {
 
 func (o CurveProposalDTO) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if !isNil(o.EntryTime) {
+	if !IsNil(o.EntryTime) {
 		toSerialize["entry_time"] = o.EntryTime
 	}
-	if !isNil(o.RecvTime) {
+	if !IsNil(o.RecvTime) {
 		toSerialize["recv_time"] = o.RecvTime
 	}
-	if !isNil(o.BlockNumber) {
+	if !IsNil(o.BlockNumber) {
 		toSerialize["block_number"] = o.BlockNumber
 	}
 	if o.Id.IsSet() {
@@ -1509,7 +1509,7 @@ func (o CurveProposalDTO) ToMap() (map[string]interface{}, error) {
 	if o.ExecutedAtTransaction.IsSet() {
 		toSerialize["executed_at_transaction"] = o.ExecutedAtTransaction.Get()
 	}
-	if !isNil(o.Vid) {
+	if !IsNil(o.Vid) {
 		toSerialize["vid"] = o.Vid
 	}
 	return toSerialize, nil

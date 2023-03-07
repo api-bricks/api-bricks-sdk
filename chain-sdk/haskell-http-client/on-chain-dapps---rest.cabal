@@ -64,6 +64,7 @@ library
   exposed-modules:
       OnChainDapps-REST
       OnChainDapps-REST.API
+      OnChainDapps-REST.API.CRYPTOPUNKS
       OnChainDapps-REST.API.Cow
       OnChainDapps-REST.API.Curve
       OnChainDapps-REST.API.Dex

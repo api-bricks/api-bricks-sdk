@@ -78,7 +78,7 @@ func NewUniswapV3TokenDTOWithDefaults() *UniswapV3TokenDTO {
 
 // GetEntryTime returns the EntryTime field value if set, zero value otherwise.
 func (o *UniswapV3TokenDTO) GetEntryTime() time.Time {
-	if o == nil || isNil(o.EntryTime) {
+	if o == nil || IsNil(o.EntryTime) {
 		var ret time.Time
 		return ret
 	}
@@ -88,7 +88,7 @@ func (o *UniswapV3TokenDTO) GetEntryTime() time.Time {
 // GetEntryTimeOk returns a tuple with the EntryTime field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *UniswapV3TokenDTO) GetEntryTimeOk() (*time.Time, bool) {
-	if o == nil || isNil(o.EntryTime) {
+	if o == nil || IsNil(o.EntryTime) {
 		return nil, false
 	}
 	return o.EntryTime, true
@@ -96,7 +96,7 @@ func (o *UniswapV3TokenDTO) GetEntryTimeOk() (*time.Time, bool) {
 
 // HasEntryTime returns a boolean if a field has been set.
 func (o *UniswapV3TokenDTO) HasEntryTime() bool {
-	if o != nil && !isNil(o.EntryTime) {
+	if o != nil && !IsNil(o.EntryTime) {
 		return true
 	}
 
@@ -110,7 +110,7 @@ func (o *UniswapV3TokenDTO) SetEntryTime(v time.Time) {
 
 // GetRecvTime returns the RecvTime field value if set, zero value otherwise.
 func (o *UniswapV3TokenDTO) GetRecvTime() time.Time {
-	if o == nil || isNil(o.RecvTime) {
+	if o == nil || IsNil(o.RecvTime) {
 		var ret time.Time
 		return ret
 	}
@@ -120,7 +120,7 @@ func (o *UniswapV3TokenDTO) GetRecvTime() time.Time {
 // GetRecvTimeOk returns a tuple with the RecvTime field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *UniswapV3TokenDTO) GetRecvTimeOk() (*time.Time, bool) {
-	if o == nil || isNil(o.RecvTime) {
+	if o == nil || IsNil(o.RecvTime) {
 		return nil, false
 	}
 	return o.RecvTime, true
@@ -128,7 +128,7 @@ func (o *UniswapV3TokenDTO) GetRecvTimeOk() (*time.Time, bool) {
 
 // HasRecvTime returns a boolean if a field has been set.
 func (o *UniswapV3TokenDTO) HasRecvTime() bool {
-	if o != nil && !isNil(o.RecvTime) {
+	if o != nil && !IsNil(o.RecvTime) {
 		return true
 	}
 
@@ -142,7 +142,7 @@ func (o *UniswapV3TokenDTO) SetRecvTime(v time.Time) {
 
 // GetBlockNumber returns the BlockNumber field value if set, zero value otherwise.
 func (o *UniswapV3TokenDTO) GetBlockNumber() int64 {
-	if o == nil || isNil(o.BlockNumber) {
+	if o == nil || IsNil(o.BlockNumber) {
 		var ret int64
 		return ret
 	}
@@ -152,7 +152,7 @@ func (o *UniswapV3TokenDTO) GetBlockNumber() int64 {
 // GetBlockNumberOk returns a tuple with the BlockNumber field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *UniswapV3TokenDTO) GetBlockNumberOk() (*int64, bool) {
-	if o == nil || isNil(o.BlockNumber) {
+	if o == nil || IsNil(o.BlockNumber) {
 		return nil, false
 	}
 	return o.BlockNumber, true
@@ -160,7 +160,7 @@ func (o *UniswapV3TokenDTO) GetBlockNumberOk() (*int64, bool) {
 
 // HasBlockNumber returns a boolean if a field has been set.
 func (o *UniswapV3TokenDTO) HasBlockNumber() bool {
-	if o != nil && !isNil(o.BlockNumber) {
+	if o != nil && !IsNil(o.BlockNumber) {
 		return true
 	}
 
@@ -174,7 +174,7 @@ func (o *UniswapV3TokenDTO) SetBlockNumber(v int64) {
 
 // GetVid returns the Vid field value if set, zero value otherwise.
 func (o *UniswapV3TokenDTO) GetVid() int64 {
-	if o == nil || isNil(o.Vid) {
+	if o == nil || IsNil(o.Vid) {
 		var ret int64
 		return ret
 	}
@@ -184,7 +184,7 @@ func (o *UniswapV3TokenDTO) GetVid() int64 {
 // GetVidOk returns a tuple with the Vid field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *UniswapV3TokenDTO) GetVidOk() (*int64, bool) {
-	if o == nil || isNil(o.Vid) {
+	if o == nil || IsNil(o.Vid) {
 		return nil, false
 	}
 	return o.Vid, true
@@ -192,7 +192,7 @@ func (o *UniswapV3TokenDTO) GetVidOk() (*int64, bool) {
 
 // HasVid returns a boolean if a field has been set.
 func (o *UniswapV3TokenDTO) HasVid() bool {
-	if o != nil && !isNil(o.Vid) {
+	if o != nil && !IsNil(o.Vid) {
 		return true
 	}
 
@@ -206,7 +206,7 @@ func (o *UniswapV3TokenDTO) SetVid(v int64) {
 
 // GetId returns the Id field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *UniswapV3TokenDTO) GetId() string {
-	if o == nil || isNil(o.Id.Get()) {
+	if o == nil || IsNil(o.Id.Get()) {
 		var ret string
 		return ret
 	}
@@ -248,7 +248,7 @@ func (o *UniswapV3TokenDTO) UnsetId() {
 
 // GetSymbol returns the Symbol field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *UniswapV3TokenDTO) GetSymbol() string {
-	if o == nil || isNil(o.Symbol.Get()) {
+	if o == nil || IsNil(o.Symbol.Get()) {
 		var ret string
 		return ret
 	}
@@ -290,7 +290,7 @@ func (o *UniswapV3TokenDTO) UnsetSymbol() {
 
 // GetName returns the Name field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *UniswapV3TokenDTO) GetName() string {
-	if o == nil || isNil(o.Name.Get()) {
+	if o == nil || IsNil(o.Name.Get()) {
 		var ret string
 		return ret
 	}
@@ -332,7 +332,7 @@ func (o *UniswapV3TokenDTO) UnsetName() {
 
 // GetDecimals returns the Decimals field value if set, zero value otherwise.
 func (o *UniswapV3TokenDTO) GetDecimals() int32 {
-	if o == nil || isNil(o.Decimals) {
+	if o == nil || IsNil(o.Decimals) {
 		var ret int32
 		return ret
 	}
@@ -342,7 +342,7 @@ func (o *UniswapV3TokenDTO) GetDecimals() int32 {
 // GetDecimalsOk returns a tuple with the Decimals field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *UniswapV3TokenDTO) GetDecimalsOk() (*int32, bool) {
-	if o == nil || isNil(o.Decimals) {
+	if o == nil || IsNil(o.Decimals) {
 		return nil, false
 	}
 	return o.Decimals, true
@@ -350,7 +350,7 @@ func (o *UniswapV3TokenDTO) GetDecimalsOk() (*int32, bool) {
 
 // HasDecimals returns a boolean if a field has been set.
 func (o *UniswapV3TokenDTO) HasDecimals() bool {
-	if o != nil && !isNil(o.Decimals) {
+	if o != nil && !IsNil(o.Decimals) {
 		return true
 	}
 
@@ -364,7 +364,7 @@ func (o *UniswapV3TokenDTO) SetDecimals(v int32) {
 
 // GetTotalSupply returns the TotalSupply field value if set, zero value otherwise.
 func (o *UniswapV3TokenDTO) GetTotalSupply() NumericsBigInteger {
-	if o == nil || isNil(o.TotalSupply) {
+	if o == nil || IsNil(o.TotalSupply) {
 		var ret NumericsBigInteger
 		return ret
 	}
@@ -374,7 +374,7 @@ func (o *UniswapV3TokenDTO) GetTotalSupply() NumericsBigInteger {
 // GetTotalSupplyOk returns a tuple with the TotalSupply field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *UniswapV3TokenDTO) GetTotalSupplyOk() (*NumericsBigInteger, bool) {
-	if o == nil || isNil(o.TotalSupply) {
+	if o == nil || IsNil(o.TotalSupply) {
 		return nil, false
 	}
 	return o.TotalSupply, true
@@ -382,7 +382,7 @@ func (o *UniswapV3TokenDTO) GetTotalSupplyOk() (*NumericsBigInteger, bool) {
 
 // HasTotalSupply returns a boolean if a field has been set.
 func (o *UniswapV3TokenDTO) HasTotalSupply() bool {
-	if o != nil && !isNil(o.TotalSupply) {
+	if o != nil && !IsNil(o.TotalSupply) {
 		return true
 	}
 
@@ -396,7 +396,7 @@ func (o *UniswapV3TokenDTO) SetTotalSupply(v NumericsBigInteger) {
 
 // GetVolume returns the Volume field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *UniswapV3TokenDTO) GetVolume() string {
-	if o == nil || isNil(o.Volume.Get()) {
+	if o == nil || IsNil(o.Volume.Get()) {
 		var ret string
 		return ret
 	}
@@ -438,7 +438,7 @@ func (o *UniswapV3TokenDTO) UnsetVolume() {
 
 // GetVolumeUsd returns the VolumeUsd field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *UniswapV3TokenDTO) GetVolumeUsd() string {
-	if o == nil || isNil(o.VolumeUsd.Get()) {
+	if o == nil || IsNil(o.VolumeUsd.Get()) {
 		var ret string
 		return ret
 	}
@@ -480,7 +480,7 @@ func (o *UniswapV3TokenDTO) UnsetVolumeUsd() {
 
 // GetUntrackedVolumeUsd returns the UntrackedVolumeUsd field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *UniswapV3TokenDTO) GetUntrackedVolumeUsd() string {
-	if o == nil || isNil(o.UntrackedVolumeUsd.Get()) {
+	if o == nil || IsNil(o.UntrackedVolumeUsd.Get()) {
 		var ret string
 		return ret
 	}
@@ -522,7 +522,7 @@ func (o *UniswapV3TokenDTO) UnsetUntrackedVolumeUsd() {
 
 // GetFeesUsd returns the FeesUsd field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *UniswapV3TokenDTO) GetFeesUsd() string {
-	if o == nil || isNil(o.FeesUsd.Get()) {
+	if o == nil || IsNil(o.FeesUsd.Get()) {
 		var ret string
 		return ret
 	}
@@ -564,7 +564,7 @@ func (o *UniswapV3TokenDTO) UnsetFeesUsd() {
 
 // GetTxCount returns the TxCount field value if set, zero value otherwise.
 func (o *UniswapV3TokenDTO) GetTxCount() NumericsBigInteger {
-	if o == nil || isNil(o.TxCount) {
+	if o == nil || IsNil(o.TxCount) {
 		var ret NumericsBigInteger
 		return ret
 	}
@@ -574,7 +574,7 @@ func (o *UniswapV3TokenDTO) GetTxCount() NumericsBigInteger {
 // GetTxCountOk returns a tuple with the TxCount field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *UniswapV3TokenDTO) GetTxCountOk() (*NumericsBigInteger, bool) {
-	if o == nil || isNil(o.TxCount) {
+	if o == nil || IsNil(o.TxCount) {
 		return nil, false
 	}
 	return o.TxCount, true
@@ -582,7 +582,7 @@ func (o *UniswapV3TokenDTO) GetTxCountOk() (*NumericsBigInteger, bool) {
 
 // HasTxCount returns a boolean if a field has been set.
 func (o *UniswapV3TokenDTO) HasTxCount() bool {
-	if o != nil && !isNil(o.TxCount) {
+	if o != nil && !IsNil(o.TxCount) {
 		return true
 	}
 
@@ -596,7 +596,7 @@ func (o *UniswapV3TokenDTO) SetTxCount(v NumericsBigInteger) {
 
 // GetPoolCount returns the PoolCount field value if set, zero value otherwise.
 func (o *UniswapV3TokenDTO) GetPoolCount() NumericsBigInteger {
-	if o == nil || isNil(o.PoolCount) {
+	if o == nil || IsNil(o.PoolCount) {
 		var ret NumericsBigInteger
 		return ret
 	}
@@ -606,7 +606,7 @@ func (o *UniswapV3TokenDTO) GetPoolCount() NumericsBigInteger {
 // GetPoolCountOk returns a tuple with the PoolCount field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *UniswapV3TokenDTO) GetPoolCountOk() (*NumericsBigInteger, bool) {
-	if o == nil || isNil(o.PoolCount) {
+	if o == nil || IsNil(o.PoolCount) {
 		return nil, false
 	}
 	return o.PoolCount, true
@@ -614,7 +614,7 @@ func (o *UniswapV3TokenDTO) GetPoolCountOk() (*NumericsBigInteger, bool) {
 
 // HasPoolCount returns a boolean if a field has been set.
 func (o *UniswapV3TokenDTO) HasPoolCount() bool {
-	if o != nil && !isNil(o.PoolCount) {
+	if o != nil && !IsNil(o.PoolCount) {
 		return true
 	}
 
@@ -628,7 +628,7 @@ func (o *UniswapV3TokenDTO) SetPoolCount(v NumericsBigInteger) {
 
 // GetTotalValueLocked returns the TotalValueLocked field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *UniswapV3TokenDTO) GetTotalValueLocked() string {
-	if o == nil || isNil(o.TotalValueLocked.Get()) {
+	if o == nil || IsNil(o.TotalValueLocked.Get()) {
 		var ret string
 		return ret
 	}
@@ -670,7 +670,7 @@ func (o *UniswapV3TokenDTO) UnsetTotalValueLocked() {
 
 // GetTotalValueLockedUsd returns the TotalValueLockedUsd field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *UniswapV3TokenDTO) GetTotalValueLockedUsd() string {
-	if o == nil || isNil(o.TotalValueLockedUsd.Get()) {
+	if o == nil || IsNil(o.TotalValueLockedUsd.Get()) {
 		var ret string
 		return ret
 	}
@@ -712,7 +712,7 @@ func (o *UniswapV3TokenDTO) UnsetTotalValueLockedUsd() {
 
 // GetTotalValueLockedUsdUntracked returns the TotalValueLockedUsdUntracked field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *UniswapV3TokenDTO) GetTotalValueLockedUsdUntracked() string {
-	if o == nil || isNil(o.TotalValueLockedUsdUntracked.Get()) {
+	if o == nil || IsNil(o.TotalValueLockedUsdUntracked.Get()) {
 		var ret string
 		return ret
 	}
@@ -754,7 +754,7 @@ func (o *UniswapV3TokenDTO) UnsetTotalValueLockedUsdUntracked() {
 
 // GetDerivedEth returns the DerivedEth field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *UniswapV3TokenDTO) GetDerivedEth() string {
-	if o == nil || isNil(o.DerivedEth.Get()) {
+	if o == nil || IsNil(o.DerivedEth.Get()) {
 		var ret string
 		return ret
 	}
@@ -807,7 +807,7 @@ func (o *UniswapV3TokenDTO) GetWhitelistPools() []string {
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *UniswapV3TokenDTO) GetWhitelistPoolsOk() ([]string, bool) {
-	if o == nil || isNil(o.WhitelistPools) {
+	if o == nil || IsNil(o.WhitelistPools) {
 		return nil, false
 	}
 	return o.WhitelistPools, true
@@ -815,7 +815,7 @@ func (o *UniswapV3TokenDTO) GetWhitelistPoolsOk() ([]string, bool) {
 
 // HasWhitelistPools returns a boolean if a field has been set.
 func (o *UniswapV3TokenDTO) HasWhitelistPools() bool {
-	if o != nil && isNil(o.WhitelistPools) {
+	if o != nil && IsNil(o.WhitelistPools) {
 		return true
 	}
 
@@ -829,7 +829,7 @@ func (o *UniswapV3TokenDTO) SetWhitelistPools(v []string) {
 
 // GetTokenSymbol returns the TokenSymbol field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *UniswapV3TokenDTO) GetTokenSymbol() string {
-	if o == nil || isNil(o.TokenSymbol.Get()) {
+	if o == nil || IsNil(o.TokenSymbol.Get()) {
 		var ret string
 		return ret
 	}
@@ -879,16 +879,16 @@ func (o UniswapV3TokenDTO) MarshalJSON() ([]byte, error) {
 
 func (o UniswapV3TokenDTO) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if !isNil(o.EntryTime) {
+	if !IsNil(o.EntryTime) {
 		toSerialize["entry_time"] = o.EntryTime
 	}
-	if !isNil(o.RecvTime) {
+	if !IsNil(o.RecvTime) {
 		toSerialize["recv_time"] = o.RecvTime
 	}
-	if !isNil(o.BlockNumber) {
+	if !IsNil(o.BlockNumber) {
 		toSerialize["block_number"] = o.BlockNumber
 	}
-	if !isNil(o.Vid) {
+	if !IsNil(o.Vid) {
 		toSerialize["vid"] = o.Vid
 	}
 	if o.Id.IsSet() {
@@ -900,10 +900,10 @@ func (o UniswapV3TokenDTO) ToMap() (map[string]interface{}, error) {
 	if o.Name.IsSet() {
 		toSerialize["name"] = o.Name.Get()
 	}
-	if !isNil(o.Decimals) {
+	if !IsNil(o.Decimals) {
 		toSerialize["decimals"] = o.Decimals
 	}
-	if !isNil(o.TotalSupply) {
+	if !IsNil(o.TotalSupply) {
 		toSerialize["total_supply"] = o.TotalSupply
 	}
 	if o.Volume.IsSet() {
@@ -918,10 +918,10 @@ func (o UniswapV3TokenDTO) ToMap() (map[string]interface{}, error) {
 	if o.FeesUsd.IsSet() {
 		toSerialize["fees_usd"] = o.FeesUsd.Get()
 	}
-	if !isNil(o.TxCount) {
+	if !IsNil(o.TxCount) {
 		toSerialize["tx_count"] = o.TxCount
 	}
-	if !isNil(o.PoolCount) {
+	if !IsNil(o.PoolCount) {
 		toSerialize["pool_count"] = o.PoolCount
 	}
 	if o.TotalValueLocked.IsSet() {

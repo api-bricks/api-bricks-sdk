@@ -26,7 +26,7 @@ class CurveTokenDTO {
     /*  */
     String symbol
     /*  */
-    List<String> pools = null
+    List<String> pools
     /*  */
     Long vid
     

@@ -59,6 +59,15 @@ set(SRCS
     model/cow_token_dto.c
     model/cow_trade_dto.c
     model/cow_user_dto.c
+    model/cryptopunks_bid_dto.c
+    model/cryptopunks_collection_daily_snapshot_dto.c
+    model/cryptopunks_collection_dto.c
+    model/cryptopunks_data_sources_dto.c
+    model/cryptopunks_item_dto.c
+    model/cryptopunks_market_place_dto.c
+    model/cryptopunks_marketplace_daily_snapshot_dto.c
+    model/cryptopunks_trade_dto.c
+    model/cryptopunks_user_dto.c
     model/curve_account_dto.c
     model/curve_add_liquidity_event_dto.c
     model/curve_admin_fee_change_log_dto.c
@@ -152,6 +161,7 @@ set(SRCS
     model/uniswap_v3_token_v3_day_data_dto.c
     model/uniswap_v3_transaction_dto.c
     model/uniswap_v3_uniswap_day_data_dto.c
+    api/CRYPTOPUNKSAPI.c
     api/CowAPI.c
     api/CurveAPI.c
     api/DexAPI.c
@@ -174,6 +184,15 @@ set(HDRS
     model/cow_token_dto.h
     model/cow_trade_dto.h
     model/cow_user_dto.h
+    model/cryptopunks_bid_dto.h
+    model/cryptopunks_collection_daily_snapshot_dto.h
+    model/cryptopunks_collection_dto.h
+    model/cryptopunks_data_sources_dto.h
+    model/cryptopunks_item_dto.h
+    model/cryptopunks_market_place_dto.h
+    model/cryptopunks_marketplace_daily_snapshot_dto.h
+    model/cryptopunks_trade_dto.h
+    model/cryptopunks_user_dto.h
     model/curve_account_dto.h
     model/curve_add_liquidity_event_dto.h
     model/curve_admin_fee_change_log_dto.h
@@ -267,6 +286,7 @@ set(HDRS
     model/uniswap_v3_token_v3_day_data_dto.h
     model/uniswap_v3_transaction_dto.h
     model/uniswap_v3_uniswap_day_data_dto.h
+    api/CRYPTOPUNKSAPI.h
     api/CowAPI.h
     api/CurveAPI.h
     api/DexAPI.h
@@ -355,6 +375,7 @@ set(HDRS "")
 ## This section shows how to use the above compiled library to compile the source files
 ## set source files
 #set(SRCS
+#    unit-tests/manual-CRYPTOPUNKSAPI.c
 #    unit-tests/manual-CowAPI.c
 #    unit-tests/manual-CurveAPI.c
 #    unit-tests/manual-DexAPI.c

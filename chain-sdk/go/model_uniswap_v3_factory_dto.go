@@ -74,7 +74,7 @@ func NewUniswapV3FactoryDTOWithDefaults() *UniswapV3FactoryDTO {
 
 // GetEntryTime returns the EntryTime field value if set, zero value otherwise.
 func (o *UniswapV3FactoryDTO) GetEntryTime() time.Time {
-	if o == nil || isNil(o.EntryTime) {
+	if o == nil || IsNil(o.EntryTime) {
 		var ret time.Time
 		return ret
 	}
@@ -84,7 +84,7 @@ func (o *UniswapV3FactoryDTO) GetEntryTime() time.Time {
 // GetEntryTimeOk returns a tuple with the EntryTime field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *UniswapV3FactoryDTO) GetEntryTimeOk() (*time.Time, bool) {
-	if o == nil || isNil(o.EntryTime) {
+	if o == nil || IsNil(o.EntryTime) {
 		return nil, false
 	}
 	return o.EntryTime, true
@@ -92,7 +92,7 @@ func (o *UniswapV3FactoryDTO) GetEntryTimeOk() (*time.Time, bool) {
 
 // HasEntryTime returns a boolean if a field has been set.
 func (o *UniswapV3FactoryDTO) HasEntryTime() bool {
-	if o != nil && !isNil(o.EntryTime) {
+	if o != nil && !IsNil(o.EntryTime) {
 		return true
 	}
 
@@ -106,7 +106,7 @@ func (o *UniswapV3FactoryDTO) SetEntryTime(v time.Time) {
 
 // GetRecvTime returns the RecvTime field value if set, zero value otherwise.
 func (o *UniswapV3FactoryDTO) GetRecvTime() time.Time {
-	if o == nil || isNil(o.RecvTime) {
+	if o == nil || IsNil(o.RecvTime) {
 		var ret time.Time
 		return ret
 	}
@@ -116,7 +116,7 @@ func (o *UniswapV3FactoryDTO) GetRecvTime() time.Time {
 // GetRecvTimeOk returns a tuple with the RecvTime field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *UniswapV3FactoryDTO) GetRecvTimeOk() (*time.Time, bool) {
-	if o == nil || isNil(o.RecvTime) {
+	if o == nil || IsNil(o.RecvTime) {
 		return nil, false
 	}
 	return o.RecvTime, true
@@ -124,7 +124,7 @@ func (o *UniswapV3FactoryDTO) GetRecvTimeOk() (*time.Time, bool) {
 
 // HasRecvTime returns a boolean if a field has been set.
 func (o *UniswapV3FactoryDTO) HasRecvTime() bool {
-	if o != nil && !isNil(o.RecvTime) {
+	if o != nil && !IsNil(o.RecvTime) {
 		return true
 	}
 
@@ -138,7 +138,7 @@ func (o *UniswapV3FactoryDTO) SetRecvTime(v time.Time) {
 
 // GetBlockNumber returns the BlockNumber field value if set, zero value otherwise.
 func (o *UniswapV3FactoryDTO) GetBlockNumber() int64 {
-	if o == nil || isNil(o.BlockNumber) {
+	if o == nil || IsNil(o.BlockNumber) {
 		var ret int64
 		return ret
 	}
@@ -148,7 +148,7 @@ func (o *UniswapV3FactoryDTO) GetBlockNumber() int64 {
 // GetBlockNumberOk returns a tuple with the BlockNumber field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *UniswapV3FactoryDTO) GetBlockNumberOk() (*int64, bool) {
-	if o == nil || isNil(o.BlockNumber) {
+	if o == nil || IsNil(o.BlockNumber) {
 		return nil, false
 	}
 	return o.BlockNumber, true
@@ -156,7 +156,7 @@ func (o *UniswapV3FactoryDTO) GetBlockNumberOk() (*int64, bool) {
 
 // HasBlockNumber returns a boolean if a field has been set.
 func (o *UniswapV3FactoryDTO) HasBlockNumber() bool {
-	if o != nil && !isNil(o.BlockNumber) {
+	if o != nil && !IsNil(o.BlockNumber) {
 		return true
 	}
 
@@ -170,7 +170,7 @@ func (o *UniswapV3FactoryDTO) SetBlockNumber(v int64) {
 
 // GetId returns the Id field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *UniswapV3FactoryDTO) GetId() string {
-	if o == nil || isNil(o.Id.Get()) {
+	if o == nil || IsNil(o.Id.Get()) {
 		var ret string
 		return ret
 	}
@@ -212,7 +212,7 @@ func (o *UniswapV3FactoryDTO) UnsetId() {
 
 // GetPoolCount returns the PoolCount field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *UniswapV3FactoryDTO) GetPoolCount() string {
-	if o == nil || isNil(o.PoolCount.Get()) {
+	if o == nil || IsNil(o.PoolCount.Get()) {
 		var ret string
 		return ret
 	}
@@ -254,7 +254,7 @@ func (o *UniswapV3FactoryDTO) UnsetPoolCount() {
 
 // GetTxCount returns the TxCount field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *UniswapV3FactoryDTO) GetTxCount() string {
-	if o == nil || isNil(o.TxCount.Get()) {
+	if o == nil || IsNil(o.TxCount.Get()) {
 		var ret string
 		return ret
 	}
@@ -296,7 +296,7 @@ func (o *UniswapV3FactoryDTO) UnsetTxCount() {
 
 // GetTotalVolumeUsd returns the TotalVolumeUsd field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *UniswapV3FactoryDTO) GetTotalVolumeUsd() string {
-	if o == nil || isNil(o.TotalVolumeUsd.Get()) {
+	if o == nil || IsNil(o.TotalVolumeUsd.Get()) {
 		var ret string
 		return ret
 	}
@@ -338,7 +338,7 @@ func (o *UniswapV3FactoryDTO) UnsetTotalVolumeUsd() {
 
 // GetTotalVolumeEth returns the TotalVolumeEth field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *UniswapV3FactoryDTO) GetTotalVolumeEth() string {
-	if o == nil || isNil(o.TotalVolumeEth.Get()) {
+	if o == nil || IsNil(o.TotalVolumeEth.Get()) {
 		var ret string
 		return ret
 	}
@@ -380,7 +380,7 @@ func (o *UniswapV3FactoryDTO) UnsetTotalVolumeEth() {
 
 // GetTotalFeesUsd returns the TotalFeesUsd field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *UniswapV3FactoryDTO) GetTotalFeesUsd() string {
-	if o == nil || isNil(o.TotalFeesUsd.Get()) {
+	if o == nil || IsNil(o.TotalFeesUsd.Get()) {
 		var ret string
 		return ret
 	}
@@ -422,7 +422,7 @@ func (o *UniswapV3FactoryDTO) UnsetTotalFeesUsd() {
 
 // GetTotalFeesEth returns the TotalFeesEth field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *UniswapV3FactoryDTO) GetTotalFeesEth() string {
-	if o == nil || isNil(o.TotalFeesEth.Get()) {
+	if o == nil || IsNil(o.TotalFeesEth.Get()) {
 		var ret string
 		return ret
 	}
@@ -464,7 +464,7 @@ func (o *UniswapV3FactoryDTO) UnsetTotalFeesEth() {
 
 // GetUntrackedVolumeUsd returns the UntrackedVolumeUsd field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *UniswapV3FactoryDTO) GetUntrackedVolumeUsd() string {
-	if o == nil || isNil(o.UntrackedVolumeUsd.Get()) {
+	if o == nil || IsNil(o.UntrackedVolumeUsd.Get()) {
 		var ret string
 		return ret
 	}
@@ -506,7 +506,7 @@ func (o *UniswapV3FactoryDTO) UnsetUntrackedVolumeUsd() {
 
 // GetTotalValueLockedUsd returns the TotalValueLockedUsd field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *UniswapV3FactoryDTO) GetTotalValueLockedUsd() string {
-	if o == nil || isNil(o.TotalValueLockedUsd.Get()) {
+	if o == nil || IsNil(o.TotalValueLockedUsd.Get()) {
 		var ret string
 		return ret
 	}
@@ -548,7 +548,7 @@ func (o *UniswapV3FactoryDTO) UnsetTotalValueLockedUsd() {
 
 // GetTotalValueLockedEth returns the TotalValueLockedEth field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *UniswapV3FactoryDTO) GetTotalValueLockedEth() string {
-	if o == nil || isNil(o.TotalValueLockedEth.Get()) {
+	if o == nil || IsNil(o.TotalValueLockedEth.Get()) {
 		var ret string
 		return ret
 	}
@@ -590,7 +590,7 @@ func (o *UniswapV3FactoryDTO) UnsetTotalValueLockedEth() {
 
 // GetTotalValueLockedUsdUntracked returns the TotalValueLockedUsdUntracked field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *UniswapV3FactoryDTO) GetTotalValueLockedUsdUntracked() string {
-	if o == nil || isNil(o.TotalValueLockedUsdUntracked.Get()) {
+	if o == nil || IsNil(o.TotalValueLockedUsdUntracked.Get()) {
 		var ret string
 		return ret
 	}
@@ -632,7 +632,7 @@ func (o *UniswapV3FactoryDTO) UnsetTotalValueLockedUsdUntracked() {
 
 // GetTotalValueLockedEthUntracked returns the TotalValueLockedEthUntracked field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *UniswapV3FactoryDTO) GetTotalValueLockedEthUntracked() string {
-	if o == nil || isNil(o.TotalValueLockedEthUntracked.Get()) {
+	if o == nil || IsNil(o.TotalValueLockedEthUntracked.Get()) {
 		var ret string
 		return ret
 	}
@@ -674,7 +674,7 @@ func (o *UniswapV3FactoryDTO) UnsetTotalValueLockedEthUntracked() {
 
 // GetOwner returns the Owner field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *UniswapV3FactoryDTO) GetOwner() string {
-	if o == nil || isNil(o.Owner.Get()) {
+	if o == nil || IsNil(o.Owner.Get()) {
 		var ret string
 		return ret
 	}
@@ -716,7 +716,7 @@ func (o *UniswapV3FactoryDTO) UnsetOwner() {
 
 // GetVid returns the Vid field value if set, zero value otherwise.
 func (o *UniswapV3FactoryDTO) GetVid() int64 {
-	if o == nil || isNil(o.Vid) {
+	if o == nil || IsNil(o.Vid) {
 		var ret int64
 		return ret
 	}
@@ -726,7 +726,7 @@ func (o *UniswapV3FactoryDTO) GetVid() int64 {
 // GetVidOk returns a tuple with the Vid field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *UniswapV3FactoryDTO) GetVidOk() (*int64, bool) {
-	if o == nil || isNil(o.Vid) {
+	if o == nil || IsNil(o.Vid) {
 		return nil, false
 	}
 	return o.Vid, true
@@ -734,7 +734,7 @@ func (o *UniswapV3FactoryDTO) GetVidOk() (*int64, bool) {
 
 // HasVid returns a boolean if a field has been set.
 func (o *UniswapV3FactoryDTO) HasVid() bool {
-	if o != nil && !isNil(o.Vid) {
+	if o != nil && !IsNil(o.Vid) {
 		return true
 	}
 
@@ -756,13 +756,13 @@ func (o UniswapV3FactoryDTO) MarshalJSON() ([]byte, error) {
 
 func (o UniswapV3FactoryDTO) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if !isNil(o.EntryTime) {
+	if !IsNil(o.EntryTime) {
 		toSerialize["entry_time"] = o.EntryTime
 	}
-	if !isNil(o.RecvTime) {
+	if !IsNil(o.RecvTime) {
 		toSerialize["recv_time"] = o.RecvTime
 	}
-	if !isNil(o.BlockNumber) {
+	if !IsNil(o.BlockNumber) {
 		toSerialize["block_number"] = o.BlockNumber
 	}
 	if o.Id.IsSet() {
@@ -804,7 +804,7 @@ func (o UniswapV3FactoryDTO) ToMap() (map[string]interface{}, error) {
 	if o.Owner.IsSet() {
 		toSerialize["owner"] = o.Owner.Get()
 	}
-	if !isNil(o.Vid) {
+	if !IsNil(o.Vid) {
 		toSerialize["vid"] = o.Vid
 	}
 	return toSerialize, nil

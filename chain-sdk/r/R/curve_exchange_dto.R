@@ -356,9 +356,9 @@ CurveExchangeDTO <- R6::R6Class(
         self$`evaluated_amount` <- this_object$`evaluated_amount`
       }
       if (!is.null(this_object$`evaluated_aggressor`)) {
-        evaluated_aggressor_object <- TransactionsETradeAggressiveSide$new()
-        evaluated_aggressor_object$fromJSON(jsonlite::toJSON(this_object$evaluated_aggressor, auto_unbox = TRUE, digits = NA))
-        self$`evaluated_aggressor` <- evaluated_aggressor_object
+        `evaluated_aggressor_object` <- TransactionsETradeAggressiveSide$new()
+        `evaluated_aggressor_object`$fromJSON(jsonlite::toJSON(this_object$`evaluated_aggressor`, auto_unbox = TRUE, digits = NA))
+        self$`evaluated_aggressor` <- `evaluated_aggressor_object`
       }
       if (!is.null(this_object$`pool_id`)) {
         self$`pool_id` <- this_object$`pool_id`
@@ -568,7 +568,7 @@ CurveExchangeDTO <- R6::R6Class(
       self$`vid` <- this_object$`vid`
       self$`evaluated_price` <- this_object$`evaluated_price`
       self$`evaluated_amount` <- this_object$`evaluated_amount`
-      self$`evaluated_aggressor` <- TransactionsETradeAggressiveSide$new()$fromJSON(jsonlite::toJSON(this_object$evaluated_aggressor, auto_unbox = TRUE, digits = NA))
+      self$`evaluated_aggressor` <- TransactionsETradeAggressiveSide$new()$fromJSON(jsonlite::toJSON(this_object$`evaluated_aggressor`, auto_unbox = TRUE, digits = NA))
       self$`pool_id` <- this_object$`pool_id`
       self$`transaction_id` <- this_object$`transaction_id`
       self

@@ -145,12 +145,16 @@ Please follow the [installation procedure](#installation--usage) and then run th
 import time
 import openapi_client
 from pprint import pprint
-from openapi_client.apis.tags import cow_api
-from openapi_client.model.cow_order_dto import CowOrderDTO
-from openapi_client.model.cow_settlement_dto import CowSettlementDTO
-from openapi_client.model.cow_token_dto import CowTokenDTO
-from openapi_client.model.cow_trade_dto import CowTradeDTO
-from openapi_client.model.cow_user_dto import CowUserDTO
+from openapi_client.apis.tags import cryptopunks_api
+from openapi_client.model.cryptopunks_bid_dto import CRYPTOPUNKSBidDTO
+from openapi_client.model.cryptopunks_collection_dto import CRYPTOPUNKSCollectionDTO
+from openapi_client.model.cryptopunks_collection_daily_snapshot_dto import CRYPTOPUNKSCollectionDailySnapshotDTO
+from openapi_client.model.cryptopunks_data_sources_dto import CRYPTOPUNKSDataSourcesDTO
+from openapi_client.model.cryptopunks_item_dto import CRYPTOPUNKSItemDTO
+from openapi_client.model.cryptopunks_market_place_dto import CRYPTOPUNKSMarketPlaceDTO
+from openapi_client.model.cryptopunks_marketplace_daily_snapshot_dto import CRYPTOPUNKSMarketplaceDailySnapshotDTO
+from openapi_client.model.cryptopunks_trade_dto import CRYPTOPUNKSTradeDTO
+from openapi_client.model.cryptopunks_user_dto import CRYPTOPUNKSUserDTO
 # Defining the host is optional and defaults to https://onchain.coinapi.io
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
@@ -161,19 +165,14 @@ configuration = openapi_client.Configuration(
 # Enter a context with an instance of the API client
 with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = cow_api.CowApi(api_client)
-    start_block = 1 # int | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
-end_block = 1 # int | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
-start_date = "1970-01-01T00:00:00.00Z" # datetime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
-end_date = "1970-01-01T00:00:00.00Z" # datetime | The end date of timeframe. (optional)
-id = "id_example" # str | User's address. (optional)
-
+    api_instance = cryptopunks_api.CRYPTOPUNKSApi(api_client)
+    
     try:
-        # Orders (historical)
-        api_response = api_instance.cow_get_orders__historical(start_block=start_blockend_block=end_blockstart_date=start_dateend_date=end_dateid=id)
+        # Bids (current)
+        api_response = api_instance.c_ryptopunks_bids__current()
         pprint(api_response)
     except openapi_client.ApiException as e:
-        print("Exception when calling CowApi->cow_get_orders__historical: %s\n" % e)
+        print("Exception when calling CRYPTOPUNKSApi->c_ryptopunks_bids__current: %s\n" % e)
 ```
 
 ## Documentation for API Endpoints
@@ -182,6 +181,24 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*CRYPTOPUNKSApi* | [**c_ryptopunks_bids__current**](docs/apis/tags/CRYPTOPUNKSApi.md#c_ryptopunks_bids__current) | **get** /dapps/cryptopunks/bids/current | Bids (current)
+*CRYPTOPUNKSApi* | [**c_ryptopunks_collection_daily_snapshots__current**](docs/apis/tags/CRYPTOPUNKSApi.md#c_ryptopunks_collection_daily_snapshots__current) | **get** /dapps/cryptopunks/collectionDailySnapshots/current | CollectionDailySnapshots (current)
+*CRYPTOPUNKSApi* | [**c_ryptopunks_collections__current**](docs/apis/tags/CRYPTOPUNKSApi.md#c_ryptopunks_collections__current) | **get** /dapps/cryptopunks/collections/current | Collections (current)
+*CRYPTOPUNKSApi* | [**c_ryptopunks_data_sources__current**](docs/apis/tags/CRYPTOPUNKSApi.md#c_ryptopunks_data_sources__current) | **get** /dapps/cryptopunks/dataSources/current | DataSources (current)
+*CRYPTOPUNKSApi* | [**c_ryptopunks_get_bids__historical**](docs/apis/tags/CRYPTOPUNKSApi.md#c_ryptopunks_get_bids__historical) | **get** /dapps/cryptopunks/bids/historical | Bids (historical)
+*CRYPTOPUNKSApi* | [**c_ryptopunks_get_collection_daily_snapshots__historical**](docs/apis/tags/CRYPTOPUNKSApi.md#c_ryptopunks_get_collection_daily_snapshots__historical) | **get** /dapps/cryptopunks/collectionDailySnapshots/historical | CollectionDailySnapshots (historical)
+*CRYPTOPUNKSApi* | [**c_ryptopunks_get_collections__historical**](docs/apis/tags/CRYPTOPUNKSApi.md#c_ryptopunks_get_collections__historical) | **get** /dapps/cryptopunks/collections/historical | Collections (historical)
+*CRYPTOPUNKSApi* | [**c_ryptopunks_get_data_sources__historical**](docs/apis/tags/CRYPTOPUNKSApi.md#c_ryptopunks_get_data_sources__historical) | **get** /dapps/cryptopunks/dataSources/historical | DataSources (historical)
+*CRYPTOPUNKSApi* | [**c_ryptopunks_get_items__historical**](docs/apis/tags/CRYPTOPUNKSApi.md#c_ryptopunks_get_items__historical) | **get** /dapps/cryptopunks/items/historical | Items (historical)
+*CRYPTOPUNKSApi* | [**c_ryptopunks_get_market_places__historical**](docs/apis/tags/CRYPTOPUNKSApi.md#c_ryptopunks_get_market_places__historical) | **get** /dapps/cryptopunks/marketPlaces/historical | MarketPlaces (historical)
+*CRYPTOPUNKSApi* | [**c_ryptopunks_get_marketplace_daily_snapshots__historical**](docs/apis/tags/CRYPTOPUNKSApi.md#c_ryptopunks_get_marketplace_daily_snapshots__historical) | **get** /dapps/cryptopunks/marketplaceDailySnapshots/historical | MarketplaceDailySnapshots (historical)
+*CRYPTOPUNKSApi* | [**c_ryptopunks_get_trades__historical**](docs/apis/tags/CRYPTOPUNKSApi.md#c_ryptopunks_get_trades__historical) | **get** /dapps/cryptopunks/trades/historical | Trades (historical)
+*CRYPTOPUNKSApi* | [**c_ryptopunks_get_users__historical**](docs/apis/tags/CRYPTOPUNKSApi.md#c_ryptopunks_get_users__historical) | **get** /dapps/cryptopunks/users/historical | Users (historical)
+*CRYPTOPUNKSApi* | [**c_ryptopunks_items__current**](docs/apis/tags/CRYPTOPUNKSApi.md#c_ryptopunks_items__current) | **get** /dapps/cryptopunks/items/current | Items (current)
+*CRYPTOPUNKSApi* | [**c_ryptopunks_market_places__current**](docs/apis/tags/CRYPTOPUNKSApi.md#c_ryptopunks_market_places__current) | **get** /dapps/cryptopunks/marketPlaces/current | MarketPlaces (current)
+*CRYPTOPUNKSApi* | [**c_ryptopunks_marketplace_daily_snapshots__current**](docs/apis/tags/CRYPTOPUNKSApi.md#c_ryptopunks_marketplace_daily_snapshots__current) | **get** /dapps/cryptopunks/marketplaceDailySnapshots/current | MarketplaceDailySnapshots (current)
+*CRYPTOPUNKSApi* | [**c_ryptopunks_trades__current**](docs/apis/tags/CRYPTOPUNKSApi.md#c_ryptopunks_trades__current) | **get** /dapps/cryptopunks/trades/current | Trades (current)
+*CRYPTOPUNKSApi* | [**c_ryptopunks_users__current**](docs/apis/tags/CRYPTOPUNKSApi.md#c_ryptopunks_users__current) | **get** /dapps/cryptopunks/users/current | Users (current)
 *CowApi* | [**cow_get_orders__historical**](docs/apis/tags/CowApi.md#cow_get_orders__historical) | **get** /dapps/cow/orders/historical | Orders (historical)
 *CowApi* | [**cow_get_settlements__historical**](docs/apis/tags/CowApi.md#cow_get_settlements__historical) | **get** /dapps/cow/settlements/historical | Settlements (historical)
 *CowApi* | [**cow_get_tokens__historical**](docs/apis/tags/CowApi.md#cow_get_tokens__historical) | **get** /dapps/cow/tokens/historical | Tokens (historical)
@@ -380,6 +397,15 @@ Class | Method | HTTP request | Description
 
 ## Documentation For Models
 
+ - [CRYPTOPUNKSBidDTO](docs/models/CRYPTOPUNKSBidDTO.md)
+ - [CRYPTOPUNKSCollectionDTO](docs/models/CRYPTOPUNKSCollectionDTO.md)
+ - [CRYPTOPUNKSCollectionDailySnapshotDTO](docs/models/CRYPTOPUNKSCollectionDailySnapshotDTO.md)
+ - [CRYPTOPUNKSDataSourcesDTO](docs/models/CRYPTOPUNKSDataSourcesDTO.md)
+ - [CRYPTOPUNKSItemDTO](docs/models/CRYPTOPUNKSItemDTO.md)
+ - [CRYPTOPUNKSMarketPlaceDTO](docs/models/CRYPTOPUNKSMarketPlaceDTO.md)
+ - [CRYPTOPUNKSMarketplaceDailySnapshotDTO](docs/models/CRYPTOPUNKSMarketplaceDailySnapshotDTO.md)
+ - [CRYPTOPUNKSTradeDTO](docs/models/CRYPTOPUNKSTradeDTO.md)
+ - [CRYPTOPUNKSUserDTO](docs/models/CRYPTOPUNKSUserDTO.md)
  - [CowOrderDTO](docs/models/CowOrderDTO.md)
  - [CowSettlementDTO](docs/models/CowSettlementDTO.md)
  - [CowTokenDTO](docs/models/CowTokenDTO.md)
@@ -485,6 +511,7 @@ Class | Method | HTTP request | Description
 
 ## Author
 
+support@coinapi.io
 support@coinapi.io
 support@coinapi.io
 support@coinapi.io

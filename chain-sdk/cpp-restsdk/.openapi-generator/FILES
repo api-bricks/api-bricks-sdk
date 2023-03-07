@@ -13,6 +13,7 @@ include/CppRestOpenAPIClient/JsonBody.h
 include/CppRestOpenAPIClient/ModelBase.h
 include/CppRestOpenAPIClient/MultipartFormData.h
 include/CppRestOpenAPIClient/Object.h
+include/CppRestOpenAPIClient/api/CRYPTOPUNKSApi.h
 include/CppRestOpenAPIClient/api/CowApi.h
 include/CppRestOpenAPIClient/api/CurveApi.h
 include/CppRestOpenAPIClient/api/DexApi.h
@@ -20,6 +21,15 @@ include/CppRestOpenAPIClient/api/MetadataApi.h
 include/CppRestOpenAPIClient/api/SushiswapApi.h
 include/CppRestOpenAPIClient/api/UniswapV2Api.h
 include/CppRestOpenAPIClient/api/UniswapV3Api.h
+include/CppRestOpenAPIClient/model/CRYPTOPUNKS_BidDTO.h
+include/CppRestOpenAPIClient/model/CRYPTOPUNKS_CollectionDTO.h
+include/CppRestOpenAPIClient/model/CRYPTOPUNKS_CollectionDailySnapshotDTO.h
+include/CppRestOpenAPIClient/model/CRYPTOPUNKS_DataSourcesDTO.h
+include/CppRestOpenAPIClient/model/CRYPTOPUNKS_ItemDTO.h
+include/CppRestOpenAPIClient/model/CRYPTOPUNKS_MarketPlaceDTO.h
+include/CppRestOpenAPIClient/model/CRYPTOPUNKS_MarketplaceDailySnapshotDTO.h
+include/CppRestOpenAPIClient/model/CRYPTOPUNKS_TradeDTO.h
+include/CppRestOpenAPIClient/model/CRYPTOPUNKS_UserDTO.h
 include/CppRestOpenAPIClient/model/Cow_OrderDTO.h
 include/CppRestOpenAPIClient/model/Cow_SettlementDTO.h
 include/CppRestOpenAPIClient/model/Cow_TokenDTO.h
@@ -126,6 +136,7 @@ src/JsonBody.cpp
 src/ModelBase.cpp
 src/MultipartFormData.cpp
 src/Object.cpp
+src/api/CRYPTOPUNKSApi.cpp
 src/api/CowApi.cpp
 src/api/CurveApi.cpp
 src/api/DexApi.cpp
@@ -133,6 +144,15 @@ src/api/MetadataApi.cpp
 src/api/SushiswapApi.cpp
 src/api/UniswapV2Api.cpp
 src/api/UniswapV3Api.cpp
+src/model/CRYPTOPUNKS_BidDTO.cpp
+src/model/CRYPTOPUNKS_CollectionDTO.cpp
+src/model/CRYPTOPUNKS_CollectionDailySnapshotDTO.cpp
+src/model/CRYPTOPUNKS_DataSourcesDTO.cpp
+src/model/CRYPTOPUNKS_ItemDTO.cpp
+src/model/CRYPTOPUNKS_MarketPlaceDTO.cpp
+src/model/CRYPTOPUNKS_MarketplaceDailySnapshotDTO.cpp
+src/model/CRYPTOPUNKS_TradeDTO.cpp
+src/model/CRYPTOPUNKS_UserDTO.cpp
 src/model/Cow_OrderDTO.cpp
 src/model/Cow_SettlementDTO.cpp
 src/model/Cow_TokenDTO.cpp

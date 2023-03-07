@@ -3,6 +3,7 @@
 git_push.sh
 project.clj
 src/on_chain_dapps_rest_api/api/cow.clj
+src/on_chain_dapps_rest_api/api/cryptopunks.clj
 src/on_chain_dapps_rest_api/api/curve.clj
 src/on_chain_dapps_rest_api/api/dex.clj
 src/on_chain_dapps_rest_api/api/metadata.clj
@@ -14,6 +15,15 @@ src/on_chain_dapps_rest_api/specs/cow/settlement_dto.clj
 src/on_chain_dapps_rest_api/specs/cow/token_dto.clj
 src/on_chain_dapps_rest_api/specs/cow/trade_dto.clj
 src/on_chain_dapps_rest_api/specs/cow/user_dto.clj
+src/on_chain_dapps_rest_api/specs/cryptopunks/bid_dto.clj
+src/on_chain_dapps_rest_api/specs/cryptopunks/collection_daily_snapshot_dto.clj
+src/on_chain_dapps_rest_api/specs/cryptopunks/collection_dto.clj
+src/on_chain_dapps_rest_api/specs/cryptopunks/data_sources_dto.clj
+src/on_chain_dapps_rest_api/specs/cryptopunks/item_dto.clj
+src/on_chain_dapps_rest_api/specs/cryptopunks/market_place_dto.clj
+src/on_chain_dapps_rest_api/specs/cryptopunks/marketplace_daily_snapshot_dto.clj
+src/on_chain_dapps_rest_api/specs/cryptopunks/trade_dto.clj
+src/on_chain_dapps_rest_api/specs/cryptopunks/user_dto.clj
 src/on_chain_dapps_rest_api/specs/curve/account_dto.clj
 src/on_chain_dapps_rest_api/specs/curve/add_liquidity_event_dto.clj
 src/on_chain_dapps_rest_api/specs/curve/admin_fee_change_log_dto.clj

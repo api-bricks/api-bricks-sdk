@@ -40,7 +40,7 @@ class SushiswapTokenDTO {
     /* ETH per token. */
     String derivedEth
     /* Array of whitelisted pairs. */
-    List<String> whitelistPairs = null
+    List<String> whitelistPairs
     /*  */
     Long vid
     

@@ -84,7 +84,7 @@ func NewUniswapV2PairDTOWithDefaults() *UniswapV2PairDTO {
 
 // GetEntryTime returns the EntryTime field value if set, zero value otherwise.
 func (o *UniswapV2PairDTO) GetEntryTime() time.Time {
-	if o == nil || isNil(o.EntryTime) {
+	if o == nil || IsNil(o.EntryTime) {
 		var ret time.Time
 		return ret
 	}
@@ -94,7 +94,7 @@ func (o *UniswapV2PairDTO) GetEntryTime() time.Time {
 // GetEntryTimeOk returns a tuple with the EntryTime field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *UniswapV2PairDTO) GetEntryTimeOk() (*time.Time, bool) {
-	if o == nil || isNil(o.EntryTime) {
+	if o == nil || IsNil(o.EntryTime) {
 		return nil, false
 	}
 	return o.EntryTime, true
@@ -102,7 +102,7 @@ func (o *UniswapV2PairDTO) GetEntryTimeOk() (*time.Time, bool) {
 
 // HasEntryTime returns a boolean if a field has been set.
 func (o *UniswapV2PairDTO) HasEntryTime() bool {
-	if o != nil && !isNil(o.EntryTime) {
+	if o != nil && !IsNil(o.EntryTime) {
 		return true
 	}
 
@@ -116,7 +116,7 @@ func (o *UniswapV2PairDTO) SetEntryTime(v time.Time) {
 
 // GetRecvTime returns the RecvTime field value if set, zero value otherwise.
 func (o *UniswapV2PairDTO) GetRecvTime() time.Time {
-	if o == nil || isNil(o.RecvTime) {
+	if o == nil || IsNil(o.RecvTime) {
 		var ret time.Time
 		return ret
 	}
@@ -126,7 +126,7 @@ func (o *UniswapV2PairDTO) GetRecvTime() time.Time {
 // GetRecvTimeOk returns a tuple with the RecvTime field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *UniswapV2PairDTO) GetRecvTimeOk() (*time.Time, bool) {
-	if o == nil || isNil(o.RecvTime) {
+	if o == nil || IsNil(o.RecvTime) {
 		return nil, false
 	}
 	return o.RecvTime, true
@@ -134,7 +134,7 @@ func (o *UniswapV2PairDTO) GetRecvTimeOk() (*time.Time, bool) {
 
 // HasRecvTime returns a boolean if a field has been set.
 func (o *UniswapV2PairDTO) HasRecvTime() bool {
-	if o != nil && !isNil(o.RecvTime) {
+	if o != nil && !IsNil(o.RecvTime) {
 		return true
 	}
 
@@ -148,7 +148,7 @@ func (o *UniswapV2PairDTO) SetRecvTime(v time.Time) {
 
 // GetBlockNumber returns the BlockNumber field value if set, zero value otherwise.
 func (o *UniswapV2PairDTO) GetBlockNumber() int64 {
-	if o == nil || isNil(o.BlockNumber) {
+	if o == nil || IsNil(o.BlockNumber) {
 		var ret int64
 		return ret
 	}
@@ -158,7 +158,7 @@ func (o *UniswapV2PairDTO) GetBlockNumber() int64 {
 // GetBlockNumberOk returns a tuple with the BlockNumber field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *UniswapV2PairDTO) GetBlockNumberOk() (*int64, bool) {
-	if o == nil || isNil(o.BlockNumber) {
+	if o == nil || IsNil(o.BlockNumber) {
 		return nil, false
 	}
 	return o.BlockNumber, true
@@ -166,7 +166,7 @@ func (o *UniswapV2PairDTO) GetBlockNumberOk() (*int64, bool) {
 
 // HasBlockNumber returns a boolean if a field has been set.
 func (o *UniswapV2PairDTO) HasBlockNumber() bool {
-	if o != nil && !isNil(o.BlockNumber) {
+	if o != nil && !IsNil(o.BlockNumber) {
 		return true
 	}
 
@@ -180,7 +180,7 @@ func (o *UniswapV2PairDTO) SetBlockNumber(v int64) {
 
 // GetVid returns the Vid field value if set, zero value otherwise.
 func (o *UniswapV2PairDTO) GetVid() int64 {
-	if o == nil || isNil(o.Vid) {
+	if o == nil || IsNil(o.Vid) {
 		var ret int64
 		return ret
 	}
@@ -190,7 +190,7 @@ func (o *UniswapV2PairDTO) GetVid() int64 {
 // GetVidOk returns a tuple with the Vid field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *UniswapV2PairDTO) GetVidOk() (*int64, bool) {
-	if o == nil || isNil(o.Vid) {
+	if o == nil || IsNil(o.Vid) {
 		return nil, false
 	}
 	return o.Vid, true
@@ -198,7 +198,7 @@ func (o *UniswapV2PairDTO) GetVidOk() (*int64, bool) {
 
 // HasVid returns a boolean if a field has been set.
 func (o *UniswapV2PairDTO) HasVid() bool {
-	if o != nil && !isNil(o.Vid) {
+	if o != nil && !IsNil(o.Vid) {
 		return true
 	}
 
@@ -212,7 +212,7 @@ func (o *UniswapV2PairDTO) SetVid(v int64) {
 
 // GetId returns the Id field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *UniswapV2PairDTO) GetId() string {
-	if o == nil || isNil(o.Id.Get()) {
+	if o == nil || IsNil(o.Id.Get()) {
 		var ret string
 		return ret
 	}
@@ -254,7 +254,7 @@ func (o *UniswapV2PairDTO) UnsetId() {
 
 // GetToken0 returns the Token0 field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *UniswapV2PairDTO) GetToken0() string {
-	if o == nil || isNil(o.Token0.Get()) {
+	if o == nil || IsNil(o.Token0.Get()) {
 		var ret string
 		return ret
 	}
@@ -296,7 +296,7 @@ func (o *UniswapV2PairDTO) UnsetToken0() {
 
 // GetToken1 returns the Token1 field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *UniswapV2PairDTO) GetToken1() string {
-	if o == nil || isNil(o.Token1.Get()) {
+	if o == nil || IsNil(o.Token1.Get()) {
 		var ret string
 		return ret
 	}
@@ -338,7 +338,7 @@ func (o *UniswapV2PairDTO) UnsetToken1() {
 
 // GetReserve0 returns the Reserve0 field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *UniswapV2PairDTO) GetReserve0() string {
-	if o == nil || isNil(o.Reserve0.Get()) {
+	if o == nil || IsNil(o.Reserve0.Get()) {
 		var ret string
 		return ret
 	}
@@ -380,7 +380,7 @@ func (o *UniswapV2PairDTO) UnsetReserve0() {
 
 // GetReserve1 returns the Reserve1 field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *UniswapV2PairDTO) GetReserve1() string {
-	if o == nil || isNil(o.Reserve1.Get()) {
+	if o == nil || IsNil(o.Reserve1.Get()) {
 		var ret string
 		return ret
 	}
@@ -422,7 +422,7 @@ func (o *UniswapV2PairDTO) UnsetReserve1() {
 
 // GetTotalSupply returns the TotalSupply field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *UniswapV2PairDTO) GetTotalSupply() string {
-	if o == nil || isNil(o.TotalSupply.Get()) {
+	if o == nil || IsNil(o.TotalSupply.Get()) {
 		var ret string
 		return ret
 	}
@@ -464,7 +464,7 @@ func (o *UniswapV2PairDTO) UnsetTotalSupply() {
 
 // GetReserveEth returns the ReserveEth field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *UniswapV2PairDTO) GetReserveEth() string {
-	if o == nil || isNil(o.ReserveEth.Get()) {
+	if o == nil || IsNil(o.ReserveEth.Get()) {
 		var ret string
 		return ret
 	}
@@ -506,7 +506,7 @@ func (o *UniswapV2PairDTO) UnsetReserveEth() {
 
 // GetReserveUsd returns the ReserveUsd field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *UniswapV2PairDTO) GetReserveUsd() string {
-	if o == nil || isNil(o.ReserveUsd.Get()) {
+	if o == nil || IsNil(o.ReserveUsd.Get()) {
 		var ret string
 		return ret
 	}
@@ -548,7 +548,7 @@ func (o *UniswapV2PairDTO) UnsetReserveUsd() {
 
 // GetTrackedReserveEth returns the TrackedReserveEth field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *UniswapV2PairDTO) GetTrackedReserveEth() string {
-	if o == nil || isNil(o.TrackedReserveEth.Get()) {
+	if o == nil || IsNil(o.TrackedReserveEth.Get()) {
 		var ret string
 		return ret
 	}
@@ -590,7 +590,7 @@ func (o *UniswapV2PairDTO) UnsetTrackedReserveEth() {
 
 // GetToken0Price returns the Token0Price field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *UniswapV2PairDTO) GetToken0Price() string {
-	if o == nil || isNil(o.Token0Price.Get()) {
+	if o == nil || IsNil(o.Token0Price.Get()) {
 		var ret string
 		return ret
 	}
@@ -632,7 +632,7 @@ func (o *UniswapV2PairDTO) UnsetToken0Price() {
 
 // GetToken1Price returns the Token1Price field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *UniswapV2PairDTO) GetToken1Price() string {
-	if o == nil || isNil(o.Token1Price.Get()) {
+	if o == nil || IsNil(o.Token1Price.Get()) {
 		var ret string
 		return ret
 	}
@@ -674,7 +674,7 @@ func (o *UniswapV2PairDTO) UnsetToken1Price() {
 
 // GetVolumeToken0 returns the VolumeToken0 field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *UniswapV2PairDTO) GetVolumeToken0() string {
-	if o == nil || isNil(o.VolumeToken0.Get()) {
+	if o == nil || IsNil(o.VolumeToken0.Get()) {
 		var ret string
 		return ret
 	}
@@ -716,7 +716,7 @@ func (o *UniswapV2PairDTO) UnsetVolumeToken0() {
 
 // GetVolumeToken1 returns the VolumeToken1 field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *UniswapV2PairDTO) GetVolumeToken1() string {
-	if o == nil || isNil(o.VolumeToken1.Get()) {
+	if o == nil || IsNil(o.VolumeToken1.Get()) {
 		var ret string
 		return ret
 	}
@@ -758,7 +758,7 @@ func (o *UniswapV2PairDTO) UnsetVolumeToken1() {
 
 // GetVolumeUsd returns the VolumeUsd field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *UniswapV2PairDTO) GetVolumeUsd() string {
-	if o == nil || isNil(o.VolumeUsd.Get()) {
+	if o == nil || IsNil(o.VolumeUsd.Get()) {
 		var ret string
 		return ret
 	}
@@ -800,7 +800,7 @@ func (o *UniswapV2PairDTO) UnsetVolumeUsd() {
 
 // GetUntrackedVolumeUsd returns the UntrackedVolumeUsd field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *UniswapV2PairDTO) GetUntrackedVolumeUsd() string {
-	if o == nil || isNil(o.UntrackedVolumeUsd.Get()) {
+	if o == nil || IsNil(o.UntrackedVolumeUsd.Get()) {
 		var ret string
 		return ret
 	}
@@ -842,7 +842,7 @@ func (o *UniswapV2PairDTO) UnsetUntrackedVolumeUsd() {
 
 // GetTxCount returns the TxCount field value if set, zero value otherwise.
 func (o *UniswapV2PairDTO) GetTxCount() NumericsBigInteger {
-	if o == nil || isNil(o.TxCount) {
+	if o == nil || IsNil(o.TxCount) {
 		var ret NumericsBigInteger
 		return ret
 	}
@@ -852,7 +852,7 @@ func (o *UniswapV2PairDTO) GetTxCount() NumericsBigInteger {
 // GetTxCountOk returns a tuple with the TxCount field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *UniswapV2PairDTO) GetTxCountOk() (*NumericsBigInteger, bool) {
-	if o == nil || isNil(o.TxCount) {
+	if o == nil || IsNil(o.TxCount) {
 		return nil, false
 	}
 	return o.TxCount, true
@@ -860,7 +860,7 @@ func (o *UniswapV2PairDTO) GetTxCountOk() (*NumericsBigInteger, bool) {
 
 // HasTxCount returns a boolean if a field has been set.
 func (o *UniswapV2PairDTO) HasTxCount() bool {
-	if o != nil && !isNil(o.TxCount) {
+	if o != nil && !IsNil(o.TxCount) {
 		return true
 	}
 
@@ -874,7 +874,7 @@ func (o *UniswapV2PairDTO) SetTxCount(v NumericsBigInteger) {
 
 // GetCreatedAtTimestamp returns the CreatedAtTimestamp field value if set, zero value otherwise.
 func (o *UniswapV2PairDTO) GetCreatedAtTimestamp() time.Time {
-	if o == nil || isNil(o.CreatedAtTimestamp) {
+	if o == nil || IsNil(o.CreatedAtTimestamp) {
 		var ret time.Time
 		return ret
 	}
@@ -884,7 +884,7 @@ func (o *UniswapV2PairDTO) GetCreatedAtTimestamp() time.Time {
 // GetCreatedAtTimestampOk returns a tuple with the CreatedAtTimestamp field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *UniswapV2PairDTO) GetCreatedAtTimestampOk() (*time.Time, bool) {
-	if o == nil || isNil(o.CreatedAtTimestamp) {
+	if o == nil || IsNil(o.CreatedAtTimestamp) {
 		return nil, false
 	}
 	return o.CreatedAtTimestamp, true
@@ -892,7 +892,7 @@ func (o *UniswapV2PairDTO) GetCreatedAtTimestampOk() (*time.Time, bool) {
 
 // HasCreatedAtTimestamp returns a boolean if a field has been set.
 func (o *UniswapV2PairDTO) HasCreatedAtTimestamp() bool {
-	if o != nil && !isNil(o.CreatedAtTimestamp) {
+	if o != nil && !IsNil(o.CreatedAtTimestamp) {
 		return true
 	}
 
@@ -906,7 +906,7 @@ func (o *UniswapV2PairDTO) SetCreatedAtTimestamp(v time.Time) {
 
 // GetLiquidityProviderCount returns the LiquidityProviderCount field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *UniswapV2PairDTO) GetLiquidityProviderCount() string {
-	if o == nil || isNil(o.LiquidityProviderCount.Get()) {
+	if o == nil || IsNil(o.LiquidityProviderCount.Get()) {
 		var ret string
 		return ret
 	}
@@ -948,7 +948,7 @@ func (o *UniswapV2PairDTO) UnsetLiquidityProviderCount() {
 
 // GetEvaluatedAsk returns the EvaluatedAsk field value if set, zero value otherwise.
 func (o *UniswapV2PairDTO) GetEvaluatedAsk() float64 {
-	if o == nil || isNil(o.EvaluatedAsk) {
+	if o == nil || IsNil(o.EvaluatedAsk) {
 		var ret float64
 		return ret
 	}
@@ -958,7 +958,7 @@ func (o *UniswapV2PairDTO) GetEvaluatedAsk() float64 {
 // GetEvaluatedAskOk returns a tuple with the EvaluatedAsk field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *UniswapV2PairDTO) GetEvaluatedAskOk() (*float64, bool) {
-	if o == nil || isNil(o.EvaluatedAsk) {
+	if o == nil || IsNil(o.EvaluatedAsk) {
 		return nil, false
 	}
 	return o.EvaluatedAsk, true
@@ -966,7 +966,7 @@ func (o *UniswapV2PairDTO) GetEvaluatedAskOk() (*float64, bool) {
 
 // HasEvaluatedAsk returns a boolean if a field has been set.
 func (o *UniswapV2PairDTO) HasEvaluatedAsk() bool {
-	if o != nil && !isNil(o.EvaluatedAsk) {
+	if o != nil && !IsNil(o.EvaluatedAsk) {
 		return true
 	}
 
@@ -988,16 +988,16 @@ func (o UniswapV2PairDTO) MarshalJSON() ([]byte, error) {
 
 func (o UniswapV2PairDTO) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if !isNil(o.EntryTime) {
+	if !IsNil(o.EntryTime) {
 		toSerialize["entry_time"] = o.EntryTime
 	}
-	if !isNil(o.RecvTime) {
+	if !IsNil(o.RecvTime) {
 		toSerialize["recv_time"] = o.RecvTime
 	}
-	if !isNil(o.BlockNumber) {
+	if !IsNil(o.BlockNumber) {
 		toSerialize["block_number"] = o.BlockNumber
 	}
-	if !isNil(o.Vid) {
+	if !IsNil(o.Vid) {
 		toSerialize["vid"] = o.Vid
 	}
 	if o.Id.IsSet() {
@@ -1045,10 +1045,10 @@ func (o UniswapV2PairDTO) ToMap() (map[string]interface{}, error) {
 	if o.UntrackedVolumeUsd.IsSet() {
 		toSerialize["untracked_volume_usd"] = o.UntrackedVolumeUsd.Get()
 	}
-	if !isNil(o.TxCount) {
+	if !IsNil(o.TxCount) {
 		toSerialize["tx_count"] = o.TxCount
 	}
-	if !isNil(o.CreatedAtTimestamp) {
+	if !IsNil(o.CreatedAtTimestamp) {
 		toSerialize["created_at_timestamp"] = o.CreatedAtTimestamp
 	}
 	if o.LiquidityProviderCount.IsSet() {

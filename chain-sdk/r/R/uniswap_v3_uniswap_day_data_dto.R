@@ -228,9 +228,9 @@ UniswapV3UniswapDayDataDTO <- R6::R6Class(
         self$`fees_usd` <- this_object$`fees_usd`
       }
       if (!is.null(this_object$`tx_count`)) {
-        tx_count_object <- NumericsBigInteger$new()
-        tx_count_object$fromJSON(jsonlite::toJSON(this_object$tx_count, auto_unbox = TRUE, digits = NA))
-        self$`tx_count` <- tx_count_object
+        `tx_count_object` <- NumericsBigInteger$new()
+        `tx_count_object`$fromJSON(jsonlite::toJSON(this_object$`tx_count`, auto_unbox = TRUE, digits = NA))
+        self$`tx_count` <- `tx_count_object`
       }
       if (!is.null(this_object$`tvl_usd`)) {
         self$`tvl_usd` <- this_object$`tvl_usd`
@@ -366,7 +366,7 @@ UniswapV3UniswapDayDataDTO <- R6::R6Class(
       self$`volume_usd` <- this_object$`volume_usd`
       self$`volume_usd_untracked` <- this_object$`volume_usd_untracked`
       self$`fees_usd` <- this_object$`fees_usd`
-      self$`tx_count` <- NumericsBigInteger$new()$fromJSON(jsonlite::toJSON(this_object$tx_count, auto_unbox = TRUE, digits = NA))
+      self$`tx_count` <- NumericsBigInteger$new()$fromJSON(jsonlite::toJSON(this_object$`tx_count`, auto_unbox = TRUE, digits = NA))
       self$`tvl_usd` <- this_object$`tvl_usd`
       self
     },

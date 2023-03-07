@@ -88,7 +88,7 @@ func NewUniswapV3PoolDayDataDTOWithDefaults() *UniswapV3PoolDayDataDTO {
 
 // GetEntryTime returns the EntryTime field value if set, zero value otherwise.
 func (o *UniswapV3PoolDayDataDTO) GetEntryTime() time.Time {
-	if o == nil || isNil(o.EntryTime) {
+	if o == nil || IsNil(o.EntryTime) {
 		var ret time.Time
 		return ret
 	}
@@ -98,7 +98,7 @@ func (o *UniswapV3PoolDayDataDTO) GetEntryTime() time.Time {
 // GetEntryTimeOk returns a tuple with the EntryTime field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *UniswapV3PoolDayDataDTO) GetEntryTimeOk() (*time.Time, bool) {
-	if o == nil || isNil(o.EntryTime) {
+	if o == nil || IsNil(o.EntryTime) {
 		return nil, false
 	}
 	return o.EntryTime, true
@@ -106,7 +106,7 @@ func (o *UniswapV3PoolDayDataDTO) GetEntryTimeOk() (*time.Time, bool) {
 
 // HasEntryTime returns a boolean if a field has been set.
 func (o *UniswapV3PoolDayDataDTO) HasEntryTime() bool {
-	if o != nil && !isNil(o.EntryTime) {
+	if o != nil && !IsNil(o.EntryTime) {
 		return true
 	}
 
@@ -120,7 +120,7 @@ func (o *UniswapV3PoolDayDataDTO) SetEntryTime(v time.Time) {
 
 // GetRecvTime returns the RecvTime field value if set, zero value otherwise.
 func (o *UniswapV3PoolDayDataDTO) GetRecvTime() time.Time {
-	if o == nil || isNil(o.RecvTime) {
+	if o == nil || IsNil(o.RecvTime) {
 		var ret time.Time
 		return ret
 	}
@@ -130,7 +130,7 @@ func (o *UniswapV3PoolDayDataDTO) GetRecvTime() time.Time {
 // GetRecvTimeOk returns a tuple with the RecvTime field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *UniswapV3PoolDayDataDTO) GetRecvTimeOk() (*time.Time, bool) {
-	if o == nil || isNil(o.RecvTime) {
+	if o == nil || IsNil(o.RecvTime) {
 		return nil, false
 	}
 	return o.RecvTime, true
@@ -138,7 +138,7 @@ func (o *UniswapV3PoolDayDataDTO) GetRecvTimeOk() (*time.Time, bool) {
 
 // HasRecvTime returns a boolean if a field has been set.
 func (o *UniswapV3PoolDayDataDTO) HasRecvTime() bool {
-	if o != nil && !isNil(o.RecvTime) {
+	if o != nil && !IsNil(o.RecvTime) {
 		return true
 	}
 
@@ -152,7 +152,7 @@ func (o *UniswapV3PoolDayDataDTO) SetRecvTime(v time.Time) {
 
 // GetBlockNumber returns the BlockNumber field value if set, zero value otherwise.
 func (o *UniswapV3PoolDayDataDTO) GetBlockNumber() int64 {
-	if o == nil || isNil(o.BlockNumber) {
+	if o == nil || IsNil(o.BlockNumber) {
 		var ret int64
 		return ret
 	}
@@ -162,7 +162,7 @@ func (o *UniswapV3PoolDayDataDTO) GetBlockNumber() int64 {
 // GetBlockNumberOk returns a tuple with the BlockNumber field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *UniswapV3PoolDayDataDTO) GetBlockNumberOk() (*int64, bool) {
-	if o == nil || isNil(o.BlockNumber) {
+	if o == nil || IsNil(o.BlockNumber) {
 		return nil, false
 	}
 	return o.BlockNumber, true
@@ -170,7 +170,7 @@ func (o *UniswapV3PoolDayDataDTO) GetBlockNumberOk() (*int64, bool) {
 
 // HasBlockNumber returns a boolean if a field has been set.
 func (o *UniswapV3PoolDayDataDTO) HasBlockNumber() bool {
-	if o != nil && !isNil(o.BlockNumber) {
+	if o != nil && !IsNil(o.BlockNumber) {
 		return true
 	}
 
@@ -184,7 +184,7 @@ func (o *UniswapV3PoolDayDataDTO) SetBlockNumber(v int64) {
 
 // GetId returns the Id field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *UniswapV3PoolDayDataDTO) GetId() string {
-	if o == nil || isNil(o.Id.Get()) {
+	if o == nil || IsNil(o.Id.Get()) {
 		var ret string
 		return ret
 	}
@@ -226,7 +226,7 @@ func (o *UniswapV3PoolDayDataDTO) UnsetId() {
 
 // GetDate returns the Date field value if set, zero value otherwise.
 func (o *UniswapV3PoolDayDataDTO) GetDate() int32 {
-	if o == nil || isNil(o.Date) {
+	if o == nil || IsNil(o.Date) {
 		var ret int32
 		return ret
 	}
@@ -236,7 +236,7 @@ func (o *UniswapV3PoolDayDataDTO) GetDate() int32 {
 // GetDateOk returns a tuple with the Date field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *UniswapV3PoolDayDataDTO) GetDateOk() (*int32, bool) {
-	if o == nil || isNil(o.Date) {
+	if o == nil || IsNil(o.Date) {
 		return nil, false
 	}
 	return o.Date, true
@@ -244,7 +244,7 @@ func (o *UniswapV3PoolDayDataDTO) GetDateOk() (*int32, bool) {
 
 // HasDate returns a boolean if a field has been set.
 func (o *UniswapV3PoolDayDataDTO) HasDate() bool {
-	if o != nil && !isNil(o.Date) {
+	if o != nil && !IsNil(o.Date) {
 		return true
 	}
 
@@ -258,7 +258,7 @@ func (o *UniswapV3PoolDayDataDTO) SetDate(v int32) {
 
 // GetPool returns the Pool field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *UniswapV3PoolDayDataDTO) GetPool() string {
-	if o == nil || isNil(o.Pool.Get()) {
+	if o == nil || IsNil(o.Pool.Get()) {
 		var ret string
 		return ret
 	}
@@ -300,7 +300,7 @@ func (o *UniswapV3PoolDayDataDTO) UnsetPool() {
 
 // GetLiquidity returns the Liquidity field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *UniswapV3PoolDayDataDTO) GetLiquidity() string {
-	if o == nil || isNil(o.Liquidity.Get()) {
+	if o == nil || IsNil(o.Liquidity.Get()) {
 		var ret string
 		return ret
 	}
@@ -342,7 +342,7 @@ func (o *UniswapV3PoolDayDataDTO) UnsetLiquidity() {
 
 // GetSqrtPrice returns the SqrtPrice field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *UniswapV3PoolDayDataDTO) GetSqrtPrice() string {
-	if o == nil || isNil(o.SqrtPrice.Get()) {
+	if o == nil || IsNil(o.SqrtPrice.Get()) {
 		var ret string
 		return ret
 	}
@@ -384,7 +384,7 @@ func (o *UniswapV3PoolDayDataDTO) UnsetSqrtPrice() {
 
 // GetToken0Price returns the Token0Price field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *UniswapV3PoolDayDataDTO) GetToken0Price() string {
-	if o == nil || isNil(o.Token0Price.Get()) {
+	if o == nil || IsNil(o.Token0Price.Get()) {
 		var ret string
 		return ret
 	}
@@ -426,7 +426,7 @@ func (o *UniswapV3PoolDayDataDTO) UnsetToken0Price() {
 
 // GetToken1Price returns the Token1Price field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *UniswapV3PoolDayDataDTO) GetToken1Price() string {
-	if o == nil || isNil(o.Token1Price.Get()) {
+	if o == nil || IsNil(o.Token1Price.Get()) {
 		var ret string
 		return ret
 	}
@@ -468,7 +468,7 @@ func (o *UniswapV3PoolDayDataDTO) UnsetToken1Price() {
 
 // GetTick returns the Tick field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *UniswapV3PoolDayDataDTO) GetTick() string {
-	if o == nil || isNil(o.Tick.Get()) {
+	if o == nil || IsNil(o.Tick.Get()) {
 		var ret string
 		return ret
 	}
@@ -510,7 +510,7 @@ func (o *UniswapV3PoolDayDataDTO) UnsetTick() {
 
 // GetFeeGrowthGlobal0x128 returns the FeeGrowthGlobal0x128 field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *UniswapV3PoolDayDataDTO) GetFeeGrowthGlobal0x128() string {
-	if o == nil || isNil(o.FeeGrowthGlobal0x128.Get()) {
+	if o == nil || IsNil(o.FeeGrowthGlobal0x128.Get()) {
 		var ret string
 		return ret
 	}
@@ -552,7 +552,7 @@ func (o *UniswapV3PoolDayDataDTO) UnsetFeeGrowthGlobal0x128() {
 
 // GetFeeGrowthGlobal1x128 returns the FeeGrowthGlobal1x128 field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *UniswapV3PoolDayDataDTO) GetFeeGrowthGlobal1x128() string {
-	if o == nil || isNil(o.FeeGrowthGlobal1x128.Get()) {
+	if o == nil || IsNil(o.FeeGrowthGlobal1x128.Get()) {
 		var ret string
 		return ret
 	}
@@ -594,7 +594,7 @@ func (o *UniswapV3PoolDayDataDTO) UnsetFeeGrowthGlobal1x128() {
 
 // GetTvlUsd returns the TvlUsd field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *UniswapV3PoolDayDataDTO) GetTvlUsd() string {
-	if o == nil || isNil(o.TvlUsd.Get()) {
+	if o == nil || IsNil(o.TvlUsd.Get()) {
 		var ret string
 		return ret
 	}
@@ -636,7 +636,7 @@ func (o *UniswapV3PoolDayDataDTO) UnsetTvlUsd() {
 
 // GetVolumeToken0 returns the VolumeToken0 field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *UniswapV3PoolDayDataDTO) GetVolumeToken0() string {
-	if o == nil || isNil(o.VolumeToken0.Get()) {
+	if o == nil || IsNil(o.VolumeToken0.Get()) {
 		var ret string
 		return ret
 	}
@@ -678,7 +678,7 @@ func (o *UniswapV3PoolDayDataDTO) UnsetVolumeToken0() {
 
 // GetVolumeToken1 returns the VolumeToken1 field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *UniswapV3PoolDayDataDTO) GetVolumeToken1() string {
-	if o == nil || isNil(o.VolumeToken1.Get()) {
+	if o == nil || IsNil(o.VolumeToken1.Get()) {
 		var ret string
 		return ret
 	}
@@ -720,7 +720,7 @@ func (o *UniswapV3PoolDayDataDTO) UnsetVolumeToken1() {
 
 // GetVolumeUsd returns the VolumeUsd field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *UniswapV3PoolDayDataDTO) GetVolumeUsd() string {
-	if o == nil || isNil(o.VolumeUsd.Get()) {
+	if o == nil || IsNil(o.VolumeUsd.Get()) {
 		var ret string
 		return ret
 	}
@@ -762,7 +762,7 @@ func (o *UniswapV3PoolDayDataDTO) UnsetVolumeUsd() {
 
 // GetFeesUsd returns the FeesUsd field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *UniswapV3PoolDayDataDTO) GetFeesUsd() string {
-	if o == nil || isNil(o.FeesUsd.Get()) {
+	if o == nil || IsNil(o.FeesUsd.Get()) {
 		var ret string
 		return ret
 	}
@@ -804,7 +804,7 @@ func (o *UniswapV3PoolDayDataDTO) UnsetFeesUsd() {
 
 // GetTxCount returns the TxCount field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *UniswapV3PoolDayDataDTO) GetTxCount() string {
-	if o == nil || isNil(o.TxCount.Get()) {
+	if o == nil || IsNil(o.TxCount.Get()) {
 		var ret string
 		return ret
 	}
@@ -846,7 +846,7 @@ func (o *UniswapV3PoolDayDataDTO) UnsetTxCount() {
 
 // GetOpen returns the Open field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *UniswapV3PoolDayDataDTO) GetOpen() string {
-	if o == nil || isNil(o.Open.Get()) {
+	if o == nil || IsNil(o.Open.Get()) {
 		var ret string
 		return ret
 	}
@@ -888,7 +888,7 @@ func (o *UniswapV3PoolDayDataDTO) UnsetOpen() {
 
 // GetHigh returns the High field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *UniswapV3PoolDayDataDTO) GetHigh() string {
-	if o == nil || isNil(o.High.Get()) {
+	if o == nil || IsNil(o.High.Get()) {
 		var ret string
 		return ret
 	}
@@ -930,7 +930,7 @@ func (o *UniswapV3PoolDayDataDTO) UnsetHigh() {
 
 // GetLow returns the Low field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *UniswapV3PoolDayDataDTO) GetLow() string {
-	if o == nil || isNil(o.Low.Get()) {
+	if o == nil || IsNil(o.Low.Get()) {
 		var ret string
 		return ret
 	}
@@ -972,7 +972,7 @@ func (o *UniswapV3PoolDayDataDTO) UnsetLow() {
 
 // GetClose returns the Close field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *UniswapV3PoolDayDataDTO) GetClose() string {
-	if o == nil || isNil(o.Close.Get()) {
+	if o == nil || IsNil(o.Close.Get()) {
 		var ret string
 		return ret
 	}
@@ -1014,7 +1014,7 @@ func (o *UniswapV3PoolDayDataDTO) UnsetClose() {
 
 // GetVid returns the Vid field value if set, zero value otherwise.
 func (o *UniswapV3PoolDayDataDTO) GetVid() int64 {
-	if o == nil || isNil(o.Vid) {
+	if o == nil || IsNil(o.Vid) {
 		var ret int64
 		return ret
 	}
@@ -1024,7 +1024,7 @@ func (o *UniswapV3PoolDayDataDTO) GetVid() int64 {
 // GetVidOk returns a tuple with the Vid field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *UniswapV3PoolDayDataDTO) GetVidOk() (*int64, bool) {
-	if o == nil || isNil(o.Vid) {
+	if o == nil || IsNil(o.Vid) {
 		return nil, false
 	}
 	return o.Vid, true
@@ -1032,7 +1032,7 @@ func (o *UniswapV3PoolDayDataDTO) GetVidOk() (*int64, bool) {
 
 // HasVid returns a boolean if a field has been set.
 func (o *UniswapV3PoolDayDataDTO) HasVid() bool {
-	if o != nil && !isNil(o.Vid) {
+	if o != nil && !IsNil(o.Vid) {
 		return true
 	}
 
@@ -1054,19 +1054,19 @@ func (o UniswapV3PoolDayDataDTO) MarshalJSON() ([]byte, error) {
 
 func (o UniswapV3PoolDayDataDTO) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if !isNil(o.EntryTime) {
+	if !IsNil(o.EntryTime) {
 		toSerialize["entry_time"] = o.EntryTime
 	}
-	if !isNil(o.RecvTime) {
+	if !IsNil(o.RecvTime) {
 		toSerialize["recv_time"] = o.RecvTime
 	}
-	if !isNil(o.BlockNumber) {
+	if !IsNil(o.BlockNumber) {
 		toSerialize["block_number"] = o.BlockNumber
 	}
 	if o.Id.IsSet() {
 		toSerialize["id"] = o.Id.Get()
 	}
-	if !isNil(o.Date) {
+	if !IsNil(o.Date) {
 		toSerialize["date"] = o.Date
 	}
 	if o.Pool.IsSet() {
@@ -1123,7 +1123,7 @@ func (o UniswapV3PoolDayDataDTO) ToMap() (map[string]interface{}, error) {
 	if o.Close.IsSet() {
 		toSerialize["close"] = o.Close.Get()
 	}
-	if !isNil(o.Vid) {
+	if !IsNil(o.Vid) {
 		toSerialize["vid"] = o.Vid
 	}
 	return toSerialize, nil

@@ -481,29 +481,29 @@ UniswapV3PoolDTO <- R6::R6Class(
         self$`token_1` <- this_object$`token_1`
       }
       if (!is.null(this_object$`fee_tier`)) {
-        fee_tier_object <- NumericsBigInteger$new()
-        fee_tier_object$fromJSON(jsonlite::toJSON(this_object$fee_tier, auto_unbox = TRUE, digits = NA))
-        self$`fee_tier` <- fee_tier_object
+        `fee_tier_object` <- NumericsBigInteger$new()
+        `fee_tier_object`$fromJSON(jsonlite::toJSON(this_object$`fee_tier`, auto_unbox = TRUE, digits = NA))
+        self$`fee_tier` <- `fee_tier_object`
       }
       if (!is.null(this_object$`liquidity`)) {
-        liquidity_object <- NumericsBigInteger$new()
-        liquidity_object$fromJSON(jsonlite::toJSON(this_object$liquidity, auto_unbox = TRUE, digits = NA))
-        self$`liquidity` <- liquidity_object
+        `liquidity_object` <- NumericsBigInteger$new()
+        `liquidity_object`$fromJSON(jsonlite::toJSON(this_object$`liquidity`, auto_unbox = TRUE, digits = NA))
+        self$`liquidity` <- `liquidity_object`
       }
       if (!is.null(this_object$`sqrt_price`)) {
-        sqrt_price_object <- NumericsBigInteger$new()
-        sqrt_price_object$fromJSON(jsonlite::toJSON(this_object$sqrt_price, auto_unbox = TRUE, digits = NA))
-        self$`sqrt_price` <- sqrt_price_object
+        `sqrt_price_object` <- NumericsBigInteger$new()
+        `sqrt_price_object`$fromJSON(jsonlite::toJSON(this_object$`sqrt_price`, auto_unbox = TRUE, digits = NA))
+        self$`sqrt_price` <- `sqrt_price_object`
       }
       if (!is.null(this_object$`fee_growth_global_0x128`)) {
-        fee_growth_global_0x128_object <- NumericsBigInteger$new()
-        fee_growth_global_0x128_object$fromJSON(jsonlite::toJSON(this_object$fee_growth_global_0x128, auto_unbox = TRUE, digits = NA))
-        self$`fee_growth_global_0x128` <- fee_growth_global_0x128_object
+        `fee_growth_global_0x128_object` <- NumericsBigInteger$new()
+        `fee_growth_global_0x128_object`$fromJSON(jsonlite::toJSON(this_object$`fee_growth_global_0x128`, auto_unbox = TRUE, digits = NA))
+        self$`fee_growth_global_0x128` <- `fee_growth_global_0x128_object`
       }
       if (!is.null(this_object$`fee_growth_global_1x128`)) {
-        fee_growth_global_1x128_object <- NumericsBigInteger$new()
-        fee_growth_global_1x128_object$fromJSON(jsonlite::toJSON(this_object$fee_growth_global_1x128, auto_unbox = TRUE, digits = NA))
-        self$`fee_growth_global_1x128` <- fee_growth_global_1x128_object
+        `fee_growth_global_1x128_object` <- NumericsBigInteger$new()
+        `fee_growth_global_1x128_object`$fromJSON(jsonlite::toJSON(this_object$`fee_growth_global_1x128`, auto_unbox = TRUE, digits = NA))
+        self$`fee_growth_global_1x128` <- `fee_growth_global_1x128_object`
       }
       if (!is.null(this_object$`token_0_price`)) {
         self$`token_0_price` <- this_object$`token_0_price`
@@ -512,14 +512,14 @@ UniswapV3PoolDTO <- R6::R6Class(
         self$`token_1_price` <- this_object$`token_1_price`
       }
       if (!is.null(this_object$`tick`)) {
-        tick_object <- NumericsBigInteger$new()
-        tick_object$fromJSON(jsonlite::toJSON(this_object$tick, auto_unbox = TRUE, digits = NA))
-        self$`tick` <- tick_object
+        `tick_object` <- NumericsBigInteger$new()
+        `tick_object`$fromJSON(jsonlite::toJSON(this_object$`tick`, auto_unbox = TRUE, digits = NA))
+        self$`tick` <- `tick_object`
       }
       if (!is.null(this_object$`observation_index`)) {
-        observation_index_object <- NumericsBigInteger$new()
-        observation_index_object$fromJSON(jsonlite::toJSON(this_object$observation_index, auto_unbox = TRUE, digits = NA))
-        self$`observation_index` <- observation_index_object
+        `observation_index_object` <- NumericsBigInteger$new()
+        `observation_index_object`$fromJSON(jsonlite::toJSON(this_object$`observation_index`, auto_unbox = TRUE, digits = NA))
+        self$`observation_index` <- `observation_index_object`
       }
       if (!is.null(this_object$`volume_token_0`)) {
         self$`volume_token_0` <- this_object$`volume_token_0`
@@ -537,9 +537,9 @@ UniswapV3PoolDTO <- R6::R6Class(
         self$`fees_usd` <- this_object$`fees_usd`
       }
       if (!is.null(this_object$`tx_count`)) {
-        tx_count_object <- NumericsBigInteger$new()
-        tx_count_object$fromJSON(jsonlite::toJSON(this_object$tx_count, auto_unbox = TRUE, digits = NA))
-        self$`tx_count` <- tx_count_object
+        `tx_count_object` <- NumericsBigInteger$new()
+        `tx_count_object`$fromJSON(jsonlite::toJSON(this_object$`tx_count`, auto_unbox = TRUE, digits = NA))
+        self$`tx_count` <- `tx_count_object`
       }
       if (!is.null(this_object$`collected_fees_token_0`)) {
         self$`collected_fees_token_0` <- this_object$`collected_fees_token_0`
@@ -868,21 +868,21 @@ UniswapV3PoolDTO <- R6::R6Class(
       self$`created_at_timestamp` <- this_object$`created_at_timestamp`
       self$`token_0` <- this_object$`token_0`
       self$`token_1` <- this_object$`token_1`
-      self$`fee_tier` <- NumericsBigInteger$new()$fromJSON(jsonlite::toJSON(this_object$fee_tier, auto_unbox = TRUE, digits = NA))
-      self$`liquidity` <- NumericsBigInteger$new()$fromJSON(jsonlite::toJSON(this_object$liquidity, auto_unbox = TRUE, digits = NA))
-      self$`sqrt_price` <- NumericsBigInteger$new()$fromJSON(jsonlite::toJSON(this_object$sqrt_price, auto_unbox = TRUE, digits = NA))
-      self$`fee_growth_global_0x128` <- NumericsBigInteger$new()$fromJSON(jsonlite::toJSON(this_object$fee_growth_global_0x128, auto_unbox = TRUE, digits = NA))
-      self$`fee_growth_global_1x128` <- NumericsBigInteger$new()$fromJSON(jsonlite::toJSON(this_object$fee_growth_global_1x128, auto_unbox = TRUE, digits = NA))
+      self$`fee_tier` <- NumericsBigInteger$new()$fromJSON(jsonlite::toJSON(this_object$`fee_tier`, auto_unbox = TRUE, digits = NA))
+      self$`liquidity` <- NumericsBigInteger$new()$fromJSON(jsonlite::toJSON(this_object$`liquidity`, auto_unbox = TRUE, digits = NA))
+      self$`sqrt_price` <- NumericsBigInteger$new()$fromJSON(jsonlite::toJSON(this_object$`sqrt_price`, auto_unbox = TRUE, digits = NA))
+      self$`fee_growth_global_0x128` <- NumericsBigInteger$new()$fromJSON(jsonlite::toJSON(this_object$`fee_growth_global_0x128`, auto_unbox = TRUE, digits = NA))
+      self$`fee_growth_global_1x128` <- NumericsBigInteger$new()$fromJSON(jsonlite::toJSON(this_object$`fee_growth_global_1x128`, auto_unbox = TRUE, digits = NA))
       self$`token_0_price` <- this_object$`token_0_price`
       self$`token_1_price` <- this_object$`token_1_price`
-      self$`tick` <- NumericsBigInteger$new()$fromJSON(jsonlite::toJSON(this_object$tick, auto_unbox = TRUE, digits = NA))
-      self$`observation_index` <- NumericsBigInteger$new()$fromJSON(jsonlite::toJSON(this_object$observation_index, auto_unbox = TRUE, digits = NA))
+      self$`tick` <- NumericsBigInteger$new()$fromJSON(jsonlite::toJSON(this_object$`tick`, auto_unbox = TRUE, digits = NA))
+      self$`observation_index` <- NumericsBigInteger$new()$fromJSON(jsonlite::toJSON(this_object$`observation_index`, auto_unbox = TRUE, digits = NA))
       self$`volume_token_0` <- this_object$`volume_token_0`
       self$`volume_token_1` <- this_object$`volume_token_1`
       self$`volume_usd` <- this_object$`volume_usd`
       self$`untracked_volume_usd` <- this_object$`untracked_volume_usd`
       self$`fees_usd` <- this_object$`fees_usd`
-      self$`tx_count` <- NumericsBigInteger$new()$fromJSON(jsonlite::toJSON(this_object$tx_count, auto_unbox = TRUE, digits = NA))
+      self$`tx_count` <- NumericsBigInteger$new()$fromJSON(jsonlite::toJSON(this_object$`tx_count`, auto_unbox = TRUE, digits = NA))
       self$`collected_fees_token_0` <- this_object$`collected_fees_token_0`
       self$`collected_fees_token_1` <- this_object$`collected_fees_token_1`
       self$`collected_fees_usd` <- this_object$`collected_fees_usd`

@@ -62,7 +62,7 @@ func NewCurveGaugeDTOWithDefaults() *CurveGaugeDTO {
 
 // GetEntryTime returns the EntryTime field value if set, zero value otherwise.
 func (o *CurveGaugeDTO) GetEntryTime() time.Time {
-	if o == nil || isNil(o.EntryTime) {
+	if o == nil || IsNil(o.EntryTime) {
 		var ret time.Time
 		return ret
 	}
@@ -72,7 +72,7 @@ func (o *CurveGaugeDTO) GetEntryTime() time.Time {
 // GetEntryTimeOk returns a tuple with the EntryTime field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CurveGaugeDTO) GetEntryTimeOk() (*time.Time, bool) {
-	if o == nil || isNil(o.EntryTime) {
+	if o == nil || IsNil(o.EntryTime) {
 		return nil, false
 	}
 	return o.EntryTime, true
@@ -80,7 +80,7 @@ func (o *CurveGaugeDTO) GetEntryTimeOk() (*time.Time, bool) {
 
 // HasEntryTime returns a boolean if a field has been set.
 func (o *CurveGaugeDTO) HasEntryTime() bool {
-	if o != nil && !isNil(o.EntryTime) {
+	if o != nil && !IsNil(o.EntryTime) {
 		return true
 	}
 
@@ -94,7 +94,7 @@ func (o *CurveGaugeDTO) SetEntryTime(v time.Time) {
 
 // GetRecvTime returns the RecvTime field value if set, zero value otherwise.
 func (o *CurveGaugeDTO) GetRecvTime() time.Time {
-	if o == nil || isNil(o.RecvTime) {
+	if o == nil || IsNil(o.RecvTime) {
 		var ret time.Time
 		return ret
 	}
@@ -104,7 +104,7 @@ func (o *CurveGaugeDTO) GetRecvTime() time.Time {
 // GetRecvTimeOk returns a tuple with the RecvTime field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CurveGaugeDTO) GetRecvTimeOk() (*time.Time, bool) {
-	if o == nil || isNil(o.RecvTime) {
+	if o == nil || IsNil(o.RecvTime) {
 		return nil, false
 	}
 	return o.RecvTime, true
@@ -112,7 +112,7 @@ func (o *CurveGaugeDTO) GetRecvTimeOk() (*time.Time, bool) {
 
 // HasRecvTime returns a boolean if a field has been set.
 func (o *CurveGaugeDTO) HasRecvTime() bool {
-	if o != nil && !isNil(o.RecvTime) {
+	if o != nil && !IsNil(o.RecvTime) {
 		return true
 	}
 
@@ -126,7 +126,7 @@ func (o *CurveGaugeDTO) SetRecvTime(v time.Time) {
 
 // GetBlockNumber returns the BlockNumber field value if set, zero value otherwise.
 func (o *CurveGaugeDTO) GetBlockNumber() int64 {
-	if o == nil || isNil(o.BlockNumber) {
+	if o == nil || IsNil(o.BlockNumber) {
 		var ret int64
 		return ret
 	}
@@ -136,7 +136,7 @@ func (o *CurveGaugeDTO) GetBlockNumber() int64 {
 // GetBlockNumberOk returns a tuple with the BlockNumber field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CurveGaugeDTO) GetBlockNumberOk() (*int64, bool) {
-	if o == nil || isNil(o.BlockNumber) {
+	if o == nil || IsNil(o.BlockNumber) {
 		return nil, false
 	}
 	return o.BlockNumber, true
@@ -144,7 +144,7 @@ func (o *CurveGaugeDTO) GetBlockNumberOk() (*int64, bool) {
 
 // HasBlockNumber returns a boolean if a field has been set.
 func (o *CurveGaugeDTO) HasBlockNumber() bool {
-	if o != nil && !isNil(o.BlockNumber) {
+	if o != nil && !IsNil(o.BlockNumber) {
 		return true
 	}
 
@@ -158,7 +158,7 @@ func (o *CurveGaugeDTO) SetBlockNumber(v int64) {
 
 // GetId returns the Id field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurveGaugeDTO) GetId() string {
-	if o == nil || isNil(o.Id.Get()) {
+	if o == nil || IsNil(o.Id.Get()) {
 		var ret string
 		return ret
 	}
@@ -200,7 +200,7 @@ func (o *CurveGaugeDTO) UnsetId() {
 
 // GetAddress returns the Address field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurveGaugeDTO) GetAddress() string {
-	if o == nil || isNil(o.Address.Get()) {
+	if o == nil || IsNil(o.Address.Get()) {
 		var ret string
 		return ret
 	}
@@ -242,7 +242,7 @@ func (o *CurveGaugeDTO) UnsetAddress() {
 
 // GetType returns the Type field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurveGaugeDTO) GetType() string {
-	if o == nil || isNil(o.Type.Get()) {
+	if o == nil || IsNil(o.Type.Get()) {
 		var ret string
 		return ret
 	}
@@ -284,7 +284,7 @@ func (o *CurveGaugeDTO) UnsetType() {
 
 // GetPool returns the Pool field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurveGaugeDTO) GetPool() string {
-	if o == nil || isNil(o.Pool.Get()) {
+	if o == nil || IsNil(o.Pool.Get()) {
 		var ret string
 		return ret
 	}
@@ -326,7 +326,7 @@ func (o *CurveGaugeDTO) UnsetPool() {
 
 // GetCreated returns the Created field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurveGaugeDTO) GetCreated() string {
-	if o == nil || isNil(o.Created.Get()) {
+	if o == nil || IsNil(o.Created.Get()) {
 		var ret string
 		return ret
 	}
@@ -368,7 +368,7 @@ func (o *CurveGaugeDTO) UnsetCreated() {
 
 // GetCreatedAtBlock returns the CreatedAtBlock field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurveGaugeDTO) GetCreatedAtBlock() string {
-	if o == nil || isNil(o.CreatedAtBlock.Get()) {
+	if o == nil || IsNil(o.CreatedAtBlock.Get()) {
 		var ret string
 		return ret
 	}
@@ -410,7 +410,7 @@ func (o *CurveGaugeDTO) UnsetCreatedAtBlock() {
 
 // GetCreatedAtTransaction returns the CreatedAtTransaction field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurveGaugeDTO) GetCreatedAtTransaction() string {
-	if o == nil || isNil(o.CreatedAtTransaction.Get()) {
+	if o == nil || IsNil(o.CreatedAtTransaction.Get()) {
 		var ret string
 		return ret
 	}
@@ -452,7 +452,7 @@ func (o *CurveGaugeDTO) UnsetCreatedAtTransaction() {
 
 // GetVid returns the Vid field value if set, zero value otherwise.
 func (o *CurveGaugeDTO) GetVid() int64 {
-	if o == nil || isNil(o.Vid) {
+	if o == nil || IsNil(o.Vid) {
 		var ret int64
 		return ret
 	}
@@ -462,7 +462,7 @@ func (o *CurveGaugeDTO) GetVid() int64 {
 // GetVidOk returns a tuple with the Vid field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CurveGaugeDTO) GetVidOk() (*int64, bool) {
-	if o == nil || isNil(o.Vid) {
+	if o == nil || IsNil(o.Vid) {
 		return nil, false
 	}
 	return o.Vid, true
@@ -470,7 +470,7 @@ func (o *CurveGaugeDTO) GetVidOk() (*int64, bool) {
 
 // HasVid returns a boolean if a field has been set.
 func (o *CurveGaugeDTO) HasVid() bool {
-	if o != nil && !isNil(o.Vid) {
+	if o != nil && !IsNil(o.Vid) {
 		return true
 	}
 
@@ -492,13 +492,13 @@ func (o CurveGaugeDTO) MarshalJSON() ([]byte, error) {
 
 func (o CurveGaugeDTO) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if !isNil(o.EntryTime) {
+	if !IsNil(o.EntryTime) {
 		toSerialize["entry_time"] = o.EntryTime
 	}
-	if !isNil(o.RecvTime) {
+	if !IsNil(o.RecvTime) {
 		toSerialize["recv_time"] = o.RecvTime
 	}
-	if !isNil(o.BlockNumber) {
+	if !IsNil(o.BlockNumber) {
 		toSerialize["block_number"] = o.BlockNumber
 	}
 	if o.Id.IsSet() {
@@ -522,7 +522,7 @@ func (o CurveGaugeDTO) ToMap() (map[string]interface{}, error) {
 	if o.CreatedAtTransaction.IsSet() {
 		toSerialize["created_at_transaction"] = o.CreatedAtTransaction.Get()
 	}
-	if !isNil(o.Vid) {
+	if !IsNil(o.Vid) {
 		toSerialize["vid"] = o.Vid
 	}
 	return toSerialize, nil

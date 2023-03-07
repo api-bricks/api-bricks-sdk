@@ -334,9 +334,9 @@ UniswapV3TokenDTO <- R6::R6Class(
         self$`decimals` <- this_object$`decimals`
       }
       if (!is.null(this_object$`total_supply`)) {
-        total_supply_object <- NumericsBigInteger$new()
-        total_supply_object$fromJSON(jsonlite::toJSON(this_object$total_supply, auto_unbox = TRUE, digits = NA))
-        self$`total_supply` <- total_supply_object
+        `total_supply_object` <- NumericsBigInteger$new()
+        `total_supply_object`$fromJSON(jsonlite::toJSON(this_object$`total_supply`, auto_unbox = TRUE, digits = NA))
+        self$`total_supply` <- `total_supply_object`
       }
       if (!is.null(this_object$`volume`)) {
         self$`volume` <- this_object$`volume`
@@ -351,14 +351,14 @@ UniswapV3TokenDTO <- R6::R6Class(
         self$`fees_usd` <- this_object$`fees_usd`
       }
       if (!is.null(this_object$`tx_count`)) {
-        tx_count_object <- NumericsBigInteger$new()
-        tx_count_object$fromJSON(jsonlite::toJSON(this_object$tx_count, auto_unbox = TRUE, digits = NA))
-        self$`tx_count` <- tx_count_object
+        `tx_count_object` <- NumericsBigInteger$new()
+        `tx_count_object`$fromJSON(jsonlite::toJSON(this_object$`tx_count`, auto_unbox = TRUE, digits = NA))
+        self$`tx_count` <- `tx_count_object`
       }
       if (!is.null(this_object$`pool_count`)) {
-        pool_count_object <- NumericsBigInteger$new()
-        pool_count_object$fromJSON(jsonlite::toJSON(this_object$pool_count, auto_unbox = TRUE, digits = NA))
-        self$`pool_count` <- pool_count_object
+        `pool_count_object` <- NumericsBigInteger$new()
+        `pool_count_object`$fromJSON(jsonlite::toJSON(this_object$`pool_count`, auto_unbox = TRUE, digits = NA))
+        self$`pool_count` <- `pool_count_object`
       }
       if (!is.null(this_object$`total_value_locked`)) {
         self$`total_value_locked` <- this_object$`total_value_locked`
@@ -579,13 +579,13 @@ UniswapV3TokenDTO <- R6::R6Class(
       self$`symbol` <- this_object$`symbol`
       self$`name` <- this_object$`name`
       self$`decimals` <- this_object$`decimals`
-      self$`total_supply` <- NumericsBigInteger$new()$fromJSON(jsonlite::toJSON(this_object$total_supply, auto_unbox = TRUE, digits = NA))
+      self$`total_supply` <- NumericsBigInteger$new()$fromJSON(jsonlite::toJSON(this_object$`total_supply`, auto_unbox = TRUE, digits = NA))
       self$`volume` <- this_object$`volume`
       self$`volume_usd` <- this_object$`volume_usd`
       self$`untracked_volume_usd` <- this_object$`untracked_volume_usd`
       self$`fees_usd` <- this_object$`fees_usd`
-      self$`tx_count` <- NumericsBigInteger$new()$fromJSON(jsonlite::toJSON(this_object$tx_count, auto_unbox = TRUE, digits = NA))
-      self$`pool_count` <- NumericsBigInteger$new()$fromJSON(jsonlite::toJSON(this_object$pool_count, auto_unbox = TRUE, digits = NA))
+      self$`tx_count` <- NumericsBigInteger$new()$fromJSON(jsonlite::toJSON(this_object$`tx_count`, auto_unbox = TRUE, digits = NA))
+      self$`pool_count` <- NumericsBigInteger$new()$fromJSON(jsonlite::toJSON(this_object$`pool_count`, auto_unbox = TRUE, digits = NA))
       self$`total_value_locked` <- this_object$`total_value_locked`
       self$`total_value_locked_usd` <- this_object$`total_value_locked_usd`
       self$`total_value_locked_usd_untracked` <- this_object$`total_value_locked_usd_untracked`

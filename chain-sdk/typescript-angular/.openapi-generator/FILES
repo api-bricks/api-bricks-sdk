@@ -3,6 +3,7 @@
 README.md
 api.module.ts
 api/api.ts
+api/cRYPTOPUNKS.service.ts
 api/cow.service.ts
 api/curve.service.ts
 api/dex.service.ts
@@ -14,6 +15,15 @@ configuration.ts
 encoder.ts
 git_push.sh
 index.ts
+model/cRYPTOPUNKSBidDTO.ts
+model/cRYPTOPUNKSCollectionDTO.ts
+model/cRYPTOPUNKSCollectionDailySnapshotDTO.ts
+model/cRYPTOPUNKSDataSourcesDTO.ts
+model/cRYPTOPUNKSItemDTO.ts
+model/cRYPTOPUNKSMarketPlaceDTO.ts
+model/cRYPTOPUNKSMarketplaceDailySnapshotDTO.ts
+model/cRYPTOPUNKSTradeDTO.ts
+model/cRYPTOPUNKSUserDTO.ts
 model/cowOrderDTO.ts
 model/cowSettlementDTO.ts
 model/cowTokenDTO.ts

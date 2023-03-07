@@ -64,7 +64,7 @@ func NewCurveRemoveLiquidityOneEventDTOWithDefaults() *CurveRemoveLiquidityOneEv
 
 // GetEntryTime returns the EntryTime field value if set, zero value otherwise.
 func (o *CurveRemoveLiquidityOneEventDTO) GetEntryTime() time.Time {
-	if o == nil || isNil(o.EntryTime) {
+	if o == nil || IsNil(o.EntryTime) {
 		var ret time.Time
 		return ret
 	}
@@ -74,7 +74,7 @@ func (o *CurveRemoveLiquidityOneEventDTO) GetEntryTime() time.Time {
 // GetEntryTimeOk returns a tuple with the EntryTime field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CurveRemoveLiquidityOneEventDTO) GetEntryTimeOk() (*time.Time, bool) {
-	if o == nil || isNil(o.EntryTime) {
+	if o == nil || IsNil(o.EntryTime) {
 		return nil, false
 	}
 	return o.EntryTime, true
@@ -82,7 +82,7 @@ func (o *CurveRemoveLiquidityOneEventDTO) GetEntryTimeOk() (*time.Time, bool) {
 
 // HasEntryTime returns a boolean if a field has been set.
 func (o *CurveRemoveLiquidityOneEventDTO) HasEntryTime() bool {
-	if o != nil && !isNil(o.EntryTime) {
+	if o != nil && !IsNil(o.EntryTime) {
 		return true
 	}
 
@@ -96,7 +96,7 @@ func (o *CurveRemoveLiquidityOneEventDTO) SetEntryTime(v time.Time) {
 
 // GetRecvTime returns the RecvTime field value if set, zero value otherwise.
 func (o *CurveRemoveLiquidityOneEventDTO) GetRecvTime() time.Time {
-	if o == nil || isNil(o.RecvTime) {
+	if o == nil || IsNil(o.RecvTime) {
 		var ret time.Time
 		return ret
 	}
@@ -106,7 +106,7 @@ func (o *CurveRemoveLiquidityOneEventDTO) GetRecvTime() time.Time {
 // GetRecvTimeOk returns a tuple with the RecvTime field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CurveRemoveLiquidityOneEventDTO) GetRecvTimeOk() (*time.Time, bool) {
-	if o == nil || isNil(o.RecvTime) {
+	if o == nil || IsNil(o.RecvTime) {
 		return nil, false
 	}
 	return o.RecvTime, true
@@ -114,7 +114,7 @@ func (o *CurveRemoveLiquidityOneEventDTO) GetRecvTimeOk() (*time.Time, bool) {
 
 // HasRecvTime returns a boolean if a field has been set.
 func (o *CurveRemoveLiquidityOneEventDTO) HasRecvTime() bool {
-	if o != nil && !isNil(o.RecvTime) {
+	if o != nil && !IsNil(o.RecvTime) {
 		return true
 	}
 
@@ -128,7 +128,7 @@ func (o *CurveRemoveLiquidityOneEventDTO) SetRecvTime(v time.Time) {
 
 // GetBlockNumber returns the BlockNumber field value if set, zero value otherwise.
 func (o *CurveRemoveLiquidityOneEventDTO) GetBlockNumber() int64 {
-	if o == nil || isNil(o.BlockNumber) {
+	if o == nil || IsNil(o.BlockNumber) {
 		var ret int64
 		return ret
 	}
@@ -138,7 +138,7 @@ func (o *CurveRemoveLiquidityOneEventDTO) GetBlockNumber() int64 {
 // GetBlockNumberOk returns a tuple with the BlockNumber field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CurveRemoveLiquidityOneEventDTO) GetBlockNumberOk() (*int64, bool) {
-	if o == nil || isNil(o.BlockNumber) {
+	if o == nil || IsNil(o.BlockNumber) {
 		return nil, false
 	}
 	return o.BlockNumber, true
@@ -146,7 +146,7 @@ func (o *CurveRemoveLiquidityOneEventDTO) GetBlockNumberOk() (*int64, bool) {
 
 // HasBlockNumber returns a boolean if a field has been set.
 func (o *CurveRemoveLiquidityOneEventDTO) HasBlockNumber() bool {
-	if o != nil && !isNil(o.BlockNumber) {
+	if o != nil && !IsNil(o.BlockNumber) {
 		return true
 	}
 
@@ -160,7 +160,7 @@ func (o *CurveRemoveLiquidityOneEventDTO) SetBlockNumber(v int64) {
 
 // GetId returns the Id field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurveRemoveLiquidityOneEventDTO) GetId() string {
-	if o == nil || isNil(o.Id.Get()) {
+	if o == nil || IsNil(o.Id.Get()) {
 		var ret string
 		return ret
 	}
@@ -202,7 +202,7 @@ func (o *CurveRemoveLiquidityOneEventDTO) UnsetId() {
 
 // GetPool returns the Pool field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurveRemoveLiquidityOneEventDTO) GetPool() string {
-	if o == nil || isNil(o.Pool.Get()) {
+	if o == nil || IsNil(o.Pool.Get()) {
 		var ret string
 		return ret
 	}
@@ -244,7 +244,7 @@ func (o *CurveRemoveLiquidityOneEventDTO) UnsetPool() {
 
 // GetProvider returns the Provider field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurveRemoveLiquidityOneEventDTO) GetProvider() string {
-	if o == nil || isNil(o.Provider.Get()) {
+	if o == nil || IsNil(o.Provider.Get()) {
 		var ret string
 		return ret
 	}
@@ -286,7 +286,7 @@ func (o *CurveRemoveLiquidityOneEventDTO) UnsetProvider() {
 
 // GetTokenAmount returns the TokenAmount field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurveRemoveLiquidityOneEventDTO) GetTokenAmount() string {
-	if o == nil || isNil(o.TokenAmount.Get()) {
+	if o == nil || IsNil(o.TokenAmount.Get()) {
 		var ret string
 		return ret
 	}
@@ -328,7 +328,7 @@ func (o *CurveRemoveLiquidityOneEventDTO) UnsetTokenAmount() {
 
 // GetCoinAmount returns the CoinAmount field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurveRemoveLiquidityOneEventDTO) GetCoinAmount() string {
-	if o == nil || isNil(o.CoinAmount.Get()) {
+	if o == nil || IsNil(o.CoinAmount.Get()) {
 		var ret string
 		return ret
 	}
@@ -370,7 +370,7 @@ func (o *CurveRemoveLiquidityOneEventDTO) UnsetCoinAmount() {
 
 // GetBlock returns the Block field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurveRemoveLiquidityOneEventDTO) GetBlock() string {
-	if o == nil || isNil(o.Block.Get()) {
+	if o == nil || IsNil(o.Block.Get()) {
 		var ret string
 		return ret
 	}
@@ -412,7 +412,7 @@ func (o *CurveRemoveLiquidityOneEventDTO) UnsetBlock() {
 
 // GetTimestamp returns the Timestamp field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurveRemoveLiquidityOneEventDTO) GetTimestamp() string {
-	if o == nil || isNil(o.Timestamp.Get()) {
+	if o == nil || IsNil(o.Timestamp.Get()) {
 		var ret string
 		return ret
 	}
@@ -454,7 +454,7 @@ func (o *CurveRemoveLiquidityOneEventDTO) UnsetTimestamp() {
 
 // GetTransaction returns the Transaction field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurveRemoveLiquidityOneEventDTO) GetTransaction() string {
-	if o == nil || isNil(o.Transaction.Get()) {
+	if o == nil || IsNil(o.Transaction.Get()) {
 		var ret string
 		return ret
 	}
@@ -496,7 +496,7 @@ func (o *CurveRemoveLiquidityOneEventDTO) UnsetTransaction() {
 
 // GetVid returns the Vid field value if set, zero value otherwise.
 func (o *CurveRemoveLiquidityOneEventDTO) GetVid() int64 {
-	if o == nil || isNil(o.Vid) {
+	if o == nil || IsNil(o.Vid) {
 		var ret int64
 		return ret
 	}
@@ -506,7 +506,7 @@ func (o *CurveRemoveLiquidityOneEventDTO) GetVid() int64 {
 // GetVidOk returns a tuple with the Vid field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CurveRemoveLiquidityOneEventDTO) GetVidOk() (*int64, bool) {
-	if o == nil || isNil(o.Vid) {
+	if o == nil || IsNil(o.Vid) {
 		return nil, false
 	}
 	return o.Vid, true
@@ -514,7 +514,7 @@ func (o *CurveRemoveLiquidityOneEventDTO) GetVidOk() (*int64, bool) {
 
 // HasVid returns a boolean if a field has been set.
 func (o *CurveRemoveLiquidityOneEventDTO) HasVid() bool {
-	if o != nil && !isNil(o.Vid) {
+	if o != nil && !IsNil(o.Vid) {
 		return true
 	}
 
@@ -536,13 +536,13 @@ func (o CurveRemoveLiquidityOneEventDTO) MarshalJSON() ([]byte, error) {
 
 func (o CurveRemoveLiquidityOneEventDTO) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if !isNil(o.EntryTime) {
+	if !IsNil(o.EntryTime) {
 		toSerialize["entry_time"] = o.EntryTime
 	}
-	if !isNil(o.RecvTime) {
+	if !IsNil(o.RecvTime) {
 		toSerialize["recv_time"] = o.RecvTime
 	}
-	if !isNil(o.BlockNumber) {
+	if !IsNil(o.BlockNumber) {
 		toSerialize["block_number"] = o.BlockNumber
 	}
 	if o.Id.IsSet() {
@@ -569,7 +569,7 @@ func (o CurveRemoveLiquidityOneEventDTO) ToMap() (map[string]interface{}, error)
 	if o.Transaction.IsSet() {
 		toSerialize["transaction"] = o.Transaction.Get()
 	}
-	if !isNil(o.Vid) {
+	if !IsNil(o.Vid) {
 		toSerialize["vid"] = o.Vid
 	}
 	return toSerialize, nil

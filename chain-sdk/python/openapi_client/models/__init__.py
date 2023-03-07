@@ -11,6 +11,15 @@
 # import sys
 # sys.setrecursionlimit(n)
 
+from openapi_client.model.cryptopunks_bid_dto import CRYPTOPUNKSBidDTO
+from openapi_client.model.cryptopunks_collection_dto import CRYPTOPUNKSCollectionDTO
+from openapi_client.model.cryptopunks_collection_daily_snapshot_dto import CRYPTOPUNKSCollectionDailySnapshotDTO
+from openapi_client.model.cryptopunks_data_sources_dto import CRYPTOPUNKSDataSourcesDTO
+from openapi_client.model.cryptopunks_item_dto import CRYPTOPUNKSItemDTO
+from openapi_client.model.cryptopunks_market_place_dto import CRYPTOPUNKSMarketPlaceDTO
+from openapi_client.model.cryptopunks_marketplace_daily_snapshot_dto import CRYPTOPUNKSMarketplaceDailySnapshotDTO
+from openapi_client.model.cryptopunks_trade_dto import CRYPTOPUNKSTradeDTO
+from openapi_client.model.cryptopunks_user_dto import CRYPTOPUNKSUserDTO
 from openapi_client.model.cow_order_dto import CowOrderDTO
 from openapi_client.model.cow_settlement_dto import CowSettlementDTO
 from openapi_client.model.cow_token_dto import CowTokenDTO

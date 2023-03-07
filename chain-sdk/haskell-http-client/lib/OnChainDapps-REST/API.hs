@@ -14,7 +14,8 @@ Module : OnChainDapps-REST.API
 -}
 
 module OnChainDapps-REST.API
-  ( module OnChainDapps-REST.API.Cow
+  ( module OnChainDapps-REST.API.CRYPTOPUNKS
+  , module OnChainDapps-REST.API.Cow
   , module OnChainDapps-REST.API.Curve
   , module OnChainDapps-REST.API.Dex
   , module OnChainDapps-REST.API.Metadata
@@ -23,6 +24,7 @@ module OnChainDapps-REST.API
   , module OnChainDapps-REST.API.UniswapV3
   ) where
 
+import OnChainDapps-REST.API.CRYPTOPUNKS
 import OnChainDapps-REST.API.Cow
 import OnChainDapps-REST.API.Curve
 import OnChainDapps-REST.API.Dex

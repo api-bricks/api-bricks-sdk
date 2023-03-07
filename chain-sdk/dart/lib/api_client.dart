@@ -181,6 +181,24 @@ class ApiClient {
           return valueString == 'true' || valueString == '1';
         case 'DateTime':
           return value is DateTime ? value : DateTime.tryParse(value);
+        case 'CRYPTOPUNKSBidDTO':
+          return CRYPTOPUNKSBidDTO.fromJson(value);
+        case 'CRYPTOPUNKSCollectionDTO':
+          return CRYPTOPUNKSCollectionDTO.fromJson(value);
+        case 'CRYPTOPUNKSCollectionDailySnapshotDTO':
+          return CRYPTOPUNKSCollectionDailySnapshotDTO.fromJson(value);
+        case 'CRYPTOPUNKSDataSourcesDTO':
+          return CRYPTOPUNKSDataSourcesDTO.fromJson(value);
+        case 'CRYPTOPUNKSItemDTO':
+          return CRYPTOPUNKSItemDTO.fromJson(value);
+        case 'CRYPTOPUNKSMarketPlaceDTO':
+          return CRYPTOPUNKSMarketPlaceDTO.fromJson(value);
+        case 'CRYPTOPUNKSMarketplaceDailySnapshotDTO':
+          return CRYPTOPUNKSMarketplaceDailySnapshotDTO.fromJson(value);
+        case 'CRYPTOPUNKSTradeDTO':
+          return CRYPTOPUNKSTradeDTO.fromJson(value);
+        case 'CRYPTOPUNKSUserDTO':
+          return CRYPTOPUNKSUserDTO.fromJson(value);
         case 'CowOrderDTO':
           return CowOrderDTO.fromJson(value);
         case 'CowSettlementDTO':

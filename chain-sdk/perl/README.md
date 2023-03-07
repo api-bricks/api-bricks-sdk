@@ -235,6 +235,7 @@ cpanm --quiet --no-interactive Class::Accessor Test::Exception Test::More Log::A
 
 To load the API packages:
 ```perl
+use WWW::OpenAPIClient::CRYPTOPUNKSApi;
 use WWW::OpenAPIClient::CowApi;
 use WWW::OpenAPIClient::CurveApi;
 use WWW::OpenAPIClient::DexApi;
@@ -247,6 +248,15 @@ use WWW::OpenAPIClient::UniswapV3Api;
 
 To load the models:
 ```perl
+use WWW::OpenAPIClient::Object::CRYPTOPUNKSBidDTO;
+use WWW::OpenAPIClient::Object::CRYPTOPUNKSCollectionDTO;
+use WWW::OpenAPIClient::Object::CRYPTOPUNKSCollectionDailySnapshotDTO;
+use WWW::OpenAPIClient::Object::CRYPTOPUNKSDataSourcesDTO;
+use WWW::OpenAPIClient::Object::CRYPTOPUNKSItemDTO;
+use WWW::OpenAPIClient::Object::CRYPTOPUNKSMarketPlaceDTO;
+use WWW::OpenAPIClient::Object::CRYPTOPUNKSMarketplaceDailySnapshotDTO;
+use WWW::OpenAPIClient::Object::CRYPTOPUNKSTradeDTO;
+use WWW::OpenAPIClient::Object::CRYPTOPUNKSUserDTO;
 use WWW::OpenAPIClient::Object::CowOrderDTO;
 use WWW::OpenAPIClient::Object::CowSettlementDTO;
 use WWW::OpenAPIClient::Object::CowTokenDTO;
@@ -356,6 +366,7 @@ use lib 'lib';
 use strict;
 use warnings;
 # load the API package
+use WWW::OpenAPIClient::CRYPTOPUNKSApi;
 use WWW::OpenAPIClient::CowApi;
 use WWW::OpenAPIClient::CurveApi;
 use WWW::OpenAPIClient::DexApi;
@@ -365,6 +376,15 @@ use WWW::OpenAPIClient::UniswapV2Api;
 use WWW::OpenAPIClient::UniswapV3Api;
 
 # load the models
+use WWW::OpenAPIClient::Object::CRYPTOPUNKSBidDTO;
+use WWW::OpenAPIClient::Object::CRYPTOPUNKSCollectionDTO;
+use WWW::OpenAPIClient::Object::CRYPTOPUNKSCollectionDailySnapshotDTO;
+use WWW::OpenAPIClient::Object::CRYPTOPUNKSDataSourcesDTO;
+use WWW::OpenAPIClient::Object::CRYPTOPUNKSItemDTO;
+use WWW::OpenAPIClient::Object::CRYPTOPUNKSMarketPlaceDTO;
+use WWW::OpenAPIClient::Object::CRYPTOPUNKSMarketplaceDailySnapshotDTO;
+use WWW::OpenAPIClient::Object::CRYPTOPUNKSTradeDTO;
+use WWW::OpenAPIClient::Object::CRYPTOPUNKSUserDTO;
 use WWW::OpenAPIClient::Object::CowOrderDTO;
 use WWW::OpenAPIClient::Object::CowSettlementDTO;
 use WWW::OpenAPIClient::Object::CowTokenDTO;
@@ -468,21 +488,16 @@ use WWW::OpenAPIClient::Object::UniswapV3UniswapDayDataDTO;
 use Data::Dumper;
 
 
-my $api_instance = WWW::OpenAPIClient::CowApi->new(
+my $api_instance = WWW::OpenAPIClient::CRYPTOPUNKSApi->new(
 );
 
-my $start_block = 789; # int | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
-my $end_block = 789; # int | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
-my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
-my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | The end date of timeframe.
-my $id = "id_example"; # string | User's address.
 
 eval {
-    my $result = $api_instance->cow_get_orders__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, id => $id);
+    my $result = $api_instance->c_ryptopunks_bids__current();
     print Dumper($result);
 };
 if ($@) {
-    warn "Exception when calling CowApi->cow_get_orders__historical: $@\n";
+    warn "Exception when calling CRYPTOPUNKSApi->c_ryptopunks_bids__current: $@\n";
 }
 
 ```
@@ -493,6 +508,24 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*CRYPTOPUNKSApi* | [**c_ryptopunks_bids__current**](docs/CRYPTOPUNKSApi.md#c_ryptopunks_bids__current) | **GET** /dapps/cryptopunks/bids/current | Bids (current)
+*CRYPTOPUNKSApi* | [**c_ryptopunks_collection_daily_snapshots__current**](docs/CRYPTOPUNKSApi.md#c_ryptopunks_collection_daily_snapshots__current) | **GET** /dapps/cryptopunks/collectionDailySnapshots/current | CollectionDailySnapshots (current)
+*CRYPTOPUNKSApi* | [**c_ryptopunks_collections__current**](docs/CRYPTOPUNKSApi.md#c_ryptopunks_collections__current) | **GET** /dapps/cryptopunks/collections/current | Collections (current)
+*CRYPTOPUNKSApi* | [**c_ryptopunks_data_sources__current**](docs/CRYPTOPUNKSApi.md#c_ryptopunks_data_sources__current) | **GET** /dapps/cryptopunks/dataSources/current | DataSources (current)
+*CRYPTOPUNKSApi* | [**c_ryptopunks_get_bids__historical**](docs/CRYPTOPUNKSApi.md#c_ryptopunks_get_bids__historical) | **GET** /dapps/cryptopunks/bids/historical | Bids (historical)
+*CRYPTOPUNKSApi* | [**c_ryptopunks_get_collection_daily_snapshots__historical**](docs/CRYPTOPUNKSApi.md#c_ryptopunks_get_collection_daily_snapshots__historical) | **GET** /dapps/cryptopunks/collectionDailySnapshots/historical | CollectionDailySnapshots (historical)
+*CRYPTOPUNKSApi* | [**c_ryptopunks_get_collections__historical**](docs/CRYPTOPUNKSApi.md#c_ryptopunks_get_collections__historical) | **GET** /dapps/cryptopunks/collections/historical | Collections (historical)
+*CRYPTOPUNKSApi* | [**c_ryptopunks_get_data_sources__historical**](docs/CRYPTOPUNKSApi.md#c_ryptopunks_get_data_sources__historical) | **GET** /dapps/cryptopunks/dataSources/historical | DataSources (historical)
+*CRYPTOPUNKSApi* | [**c_ryptopunks_get_items__historical**](docs/CRYPTOPUNKSApi.md#c_ryptopunks_get_items__historical) | **GET** /dapps/cryptopunks/items/historical | Items (historical)
+*CRYPTOPUNKSApi* | [**c_ryptopunks_get_market_places__historical**](docs/CRYPTOPUNKSApi.md#c_ryptopunks_get_market_places__historical) | **GET** /dapps/cryptopunks/marketPlaces/historical | MarketPlaces (historical)
+*CRYPTOPUNKSApi* | [**c_ryptopunks_get_marketplace_daily_snapshots__historical**](docs/CRYPTOPUNKSApi.md#c_ryptopunks_get_marketplace_daily_snapshots__historical) | **GET** /dapps/cryptopunks/marketplaceDailySnapshots/historical | MarketplaceDailySnapshots (historical)
+*CRYPTOPUNKSApi* | [**c_ryptopunks_get_trades__historical**](docs/CRYPTOPUNKSApi.md#c_ryptopunks_get_trades__historical) | **GET** /dapps/cryptopunks/trades/historical | Trades (historical)
+*CRYPTOPUNKSApi* | [**c_ryptopunks_get_users__historical**](docs/CRYPTOPUNKSApi.md#c_ryptopunks_get_users__historical) | **GET** /dapps/cryptopunks/users/historical | Users (historical)
+*CRYPTOPUNKSApi* | [**c_ryptopunks_items__current**](docs/CRYPTOPUNKSApi.md#c_ryptopunks_items__current) | **GET** /dapps/cryptopunks/items/current | Items (current)
+*CRYPTOPUNKSApi* | [**c_ryptopunks_market_places__current**](docs/CRYPTOPUNKSApi.md#c_ryptopunks_market_places__current) | **GET** /dapps/cryptopunks/marketPlaces/current | MarketPlaces (current)
+*CRYPTOPUNKSApi* | [**c_ryptopunks_marketplace_daily_snapshots__current**](docs/CRYPTOPUNKSApi.md#c_ryptopunks_marketplace_daily_snapshots__current) | **GET** /dapps/cryptopunks/marketplaceDailySnapshots/current | MarketplaceDailySnapshots (current)
+*CRYPTOPUNKSApi* | [**c_ryptopunks_trades__current**](docs/CRYPTOPUNKSApi.md#c_ryptopunks_trades__current) | **GET** /dapps/cryptopunks/trades/current | Trades (current)
+*CRYPTOPUNKSApi* | [**c_ryptopunks_users__current**](docs/CRYPTOPUNKSApi.md#c_ryptopunks_users__current) | **GET** /dapps/cryptopunks/users/current | Users (current)
 *CowApi* | [**cow_get_orders__historical**](docs/CowApi.md#cow_get_orders__historical) | **GET** /dapps/cow/orders/historical | Orders (historical)
 *CowApi* | [**cow_get_settlements__historical**](docs/CowApi.md#cow_get_settlements__historical) | **GET** /dapps/cow/settlements/historical | Settlements (historical)
 *CowApi* | [**cow_get_tokens__historical**](docs/CowApi.md#cow_get_tokens__historical) | **GET** /dapps/cow/tokens/historical | Tokens (historical)
@@ -691,6 +724,15 @@ Class | Method | HTTP request | Description
 
 
 # DOCUMENTATION FOR MODELS
+ - [WWW::OpenAPIClient::Object::CRYPTOPUNKSBidDTO](docs/CRYPTOPUNKSBidDTO.md)
+ - [WWW::OpenAPIClient::Object::CRYPTOPUNKSCollectionDTO](docs/CRYPTOPUNKSCollectionDTO.md)
+ - [WWW::OpenAPIClient::Object::CRYPTOPUNKSCollectionDailySnapshotDTO](docs/CRYPTOPUNKSCollectionDailySnapshotDTO.md)
+ - [WWW::OpenAPIClient::Object::CRYPTOPUNKSDataSourcesDTO](docs/CRYPTOPUNKSDataSourcesDTO.md)
+ - [WWW::OpenAPIClient::Object::CRYPTOPUNKSItemDTO](docs/CRYPTOPUNKSItemDTO.md)
+ - [WWW::OpenAPIClient::Object::CRYPTOPUNKSMarketPlaceDTO](docs/CRYPTOPUNKSMarketPlaceDTO.md)
+ - [WWW::OpenAPIClient::Object::CRYPTOPUNKSMarketplaceDailySnapshotDTO](docs/CRYPTOPUNKSMarketplaceDailySnapshotDTO.md)
+ - [WWW::OpenAPIClient::Object::CRYPTOPUNKSTradeDTO](docs/CRYPTOPUNKSTradeDTO.md)
+ - [WWW::OpenAPIClient::Object::CRYPTOPUNKSUserDTO](docs/CRYPTOPUNKSUserDTO.md)
  - [WWW::OpenAPIClient::Object::CowOrderDTO](docs/CowOrderDTO.md)
  - [WWW::OpenAPIClient::Object::CowSettlementDTO](docs/CowSettlementDTO.md)
  - [WWW::OpenAPIClient::Object::CowTokenDTO](docs/CowTokenDTO.md)

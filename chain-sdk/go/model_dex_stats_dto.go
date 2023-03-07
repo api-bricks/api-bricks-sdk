@@ -62,7 +62,7 @@ func NewDexStatsDTOWithDefaults() *DexStatsDTO {
 
 // GetEntryTime returns the EntryTime field value if set, zero value otherwise.
 func (o *DexStatsDTO) GetEntryTime() time.Time {
-	if o == nil || isNil(o.EntryTime) {
+	if o == nil || IsNil(o.EntryTime) {
 		var ret time.Time
 		return ret
 	}
@@ -72,7 +72,7 @@ func (o *DexStatsDTO) GetEntryTime() time.Time {
 // GetEntryTimeOk returns a tuple with the EntryTime field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DexStatsDTO) GetEntryTimeOk() (*time.Time, bool) {
-	if o == nil || isNil(o.EntryTime) {
+	if o == nil || IsNil(o.EntryTime) {
 		return nil, false
 	}
 	return o.EntryTime, true
@@ -80,7 +80,7 @@ func (o *DexStatsDTO) GetEntryTimeOk() (*time.Time, bool) {
 
 // HasEntryTime returns a boolean if a field has been set.
 func (o *DexStatsDTO) HasEntryTime() bool {
-	if o != nil && !isNil(o.EntryTime) {
+	if o != nil && !IsNil(o.EntryTime) {
 		return true
 	}
 
@@ -94,7 +94,7 @@ func (o *DexStatsDTO) SetEntryTime(v time.Time) {
 
 // GetRecvTime returns the RecvTime field value if set, zero value otherwise.
 func (o *DexStatsDTO) GetRecvTime() time.Time {
-	if o == nil || isNil(o.RecvTime) {
+	if o == nil || IsNil(o.RecvTime) {
 		var ret time.Time
 		return ret
 	}
@@ -104,7 +104,7 @@ func (o *DexStatsDTO) GetRecvTime() time.Time {
 // GetRecvTimeOk returns a tuple with the RecvTime field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DexStatsDTO) GetRecvTimeOk() (*time.Time, bool) {
-	if o == nil || isNil(o.RecvTime) {
+	if o == nil || IsNil(o.RecvTime) {
 		return nil, false
 	}
 	return o.RecvTime, true
@@ -112,7 +112,7 @@ func (o *DexStatsDTO) GetRecvTimeOk() (*time.Time, bool) {
 
 // HasRecvTime returns a boolean if a field has been set.
 func (o *DexStatsDTO) HasRecvTime() bool {
-	if o != nil && !isNil(o.RecvTime) {
+	if o != nil && !IsNil(o.RecvTime) {
 		return true
 	}
 
@@ -126,7 +126,7 @@ func (o *DexStatsDTO) SetRecvTime(v time.Time) {
 
 // GetBlockNumber returns the BlockNumber field value if set, zero value otherwise.
 func (o *DexStatsDTO) GetBlockNumber() int64 {
-	if o == nil || isNil(o.BlockNumber) {
+	if o == nil || IsNil(o.BlockNumber) {
 		var ret int64
 		return ret
 	}
@@ -136,7 +136,7 @@ func (o *DexStatsDTO) GetBlockNumber() int64 {
 // GetBlockNumberOk returns a tuple with the BlockNumber field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DexStatsDTO) GetBlockNumberOk() (*int64, bool) {
-	if o == nil || isNil(o.BlockNumber) {
+	if o == nil || IsNil(o.BlockNumber) {
 		return nil, false
 	}
 	return o.BlockNumber, true
@@ -144,7 +144,7 @@ func (o *DexStatsDTO) GetBlockNumberOk() (*int64, bool) {
 
 // HasBlockNumber returns a boolean if a field has been set.
 func (o *DexStatsDTO) HasBlockNumber() bool {
-	if o != nil && !isNil(o.BlockNumber) {
+	if o != nil && !IsNil(o.BlockNumber) {
 		return true
 	}
 
@@ -158,7 +158,7 @@ func (o *DexStatsDTO) SetBlockNumber(v int64) {
 
 // GetId returns the Id field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *DexStatsDTO) GetId() string {
-	if o == nil || isNil(o.Id.Get()) {
+	if o == nil || IsNil(o.Id.Get()) {
 		var ret string
 		return ret
 	}
@@ -200,7 +200,7 @@ func (o *DexStatsDTO) UnsetId() {
 
 // GetVolumeInOwl returns the VolumeInOwl field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *DexStatsDTO) GetVolumeInOwl() string {
-	if o == nil || isNil(o.VolumeInOwl.Get()) {
+	if o == nil || IsNil(o.VolumeInOwl.Get()) {
 		var ret string
 		return ret
 	}
@@ -242,7 +242,7 @@ func (o *DexStatsDTO) UnsetVolumeInOwl() {
 
 // GetUtilityInOwl returns the UtilityInOwl field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *DexStatsDTO) GetUtilityInOwl() string {
-	if o == nil || isNil(o.UtilityInOwl.Get()) {
+	if o == nil || IsNil(o.UtilityInOwl.Get()) {
 		var ret string
 		return ret
 	}
@@ -284,7 +284,7 @@ func (o *DexStatsDTO) UnsetUtilityInOwl() {
 
 // GetOwlBurnt returns the OwlBurnt field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *DexStatsDTO) GetOwlBurnt() string {
-	if o == nil || isNil(o.OwlBurnt.Get()) {
+	if o == nil || IsNil(o.OwlBurnt.Get()) {
 		var ret string
 		return ret
 	}
@@ -326,7 +326,7 @@ func (o *DexStatsDTO) UnsetOwlBurnt() {
 
 // GetSettledBatchCount returns the SettledBatchCount field value if set, zero value otherwise.
 func (o *DexStatsDTO) GetSettledBatchCount() int32 {
-	if o == nil || isNil(o.SettledBatchCount) {
+	if o == nil || IsNil(o.SettledBatchCount) {
 		var ret int32
 		return ret
 	}
@@ -336,7 +336,7 @@ func (o *DexStatsDTO) GetSettledBatchCount() int32 {
 // GetSettledBatchCountOk returns a tuple with the SettledBatchCount field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DexStatsDTO) GetSettledBatchCountOk() (*int32, bool) {
-	if o == nil || isNil(o.SettledBatchCount) {
+	if o == nil || IsNil(o.SettledBatchCount) {
 		return nil, false
 	}
 	return o.SettledBatchCount, true
@@ -344,7 +344,7 @@ func (o *DexStatsDTO) GetSettledBatchCountOk() (*int32, bool) {
 
 // HasSettledBatchCount returns a boolean if a field has been set.
 func (o *DexStatsDTO) HasSettledBatchCount() bool {
-	if o != nil && !isNil(o.SettledBatchCount) {
+	if o != nil && !IsNil(o.SettledBatchCount) {
 		return true
 	}
 
@@ -358,7 +358,7 @@ func (o *DexStatsDTO) SetSettledBatchCount(v int32) {
 
 // GetSettledTradeCount returns the SettledTradeCount field value if set, zero value otherwise.
 func (o *DexStatsDTO) GetSettledTradeCount() int32 {
-	if o == nil || isNil(o.SettledTradeCount) {
+	if o == nil || IsNil(o.SettledTradeCount) {
 		var ret int32
 		return ret
 	}
@@ -368,7 +368,7 @@ func (o *DexStatsDTO) GetSettledTradeCount() int32 {
 // GetSettledTradeCountOk returns a tuple with the SettledTradeCount field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DexStatsDTO) GetSettledTradeCountOk() (*int32, bool) {
-	if o == nil || isNil(o.SettledTradeCount) {
+	if o == nil || IsNil(o.SettledTradeCount) {
 		return nil, false
 	}
 	return o.SettledTradeCount, true
@@ -376,7 +376,7 @@ func (o *DexStatsDTO) GetSettledTradeCountOk() (*int32, bool) {
 
 // HasSettledTradeCount returns a boolean if a field has been set.
 func (o *DexStatsDTO) HasSettledTradeCount() bool {
-	if o != nil && !isNil(o.SettledTradeCount) {
+	if o != nil && !IsNil(o.SettledTradeCount) {
 		return true
 	}
 
@@ -390,7 +390,7 @@ func (o *DexStatsDTO) SetSettledTradeCount(v int32) {
 
 // GetListedTokens returns the ListedTokens field value if set, zero value otherwise.
 func (o *DexStatsDTO) GetListedTokens() int32 {
-	if o == nil || isNil(o.ListedTokens) {
+	if o == nil || IsNil(o.ListedTokens) {
 		var ret int32
 		return ret
 	}
@@ -400,7 +400,7 @@ func (o *DexStatsDTO) GetListedTokens() int32 {
 // GetListedTokensOk returns a tuple with the ListedTokens field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DexStatsDTO) GetListedTokensOk() (*int32, bool) {
-	if o == nil || isNil(o.ListedTokens) {
+	if o == nil || IsNil(o.ListedTokens) {
 		return nil, false
 	}
 	return o.ListedTokens, true
@@ -408,7 +408,7 @@ func (o *DexStatsDTO) GetListedTokensOk() (*int32, bool) {
 
 // HasListedTokens returns a boolean if a field has been set.
 func (o *DexStatsDTO) HasListedTokens() bool {
-	if o != nil && !isNil(o.ListedTokens) {
+	if o != nil && !IsNil(o.ListedTokens) {
 		return true
 	}
 
@@ -422,7 +422,7 @@ func (o *DexStatsDTO) SetListedTokens(v int32) {
 
 // GetVid returns the Vid field value if set, zero value otherwise.
 func (o *DexStatsDTO) GetVid() int64 {
-	if o == nil || isNil(o.Vid) {
+	if o == nil || IsNil(o.Vid) {
 		var ret int64
 		return ret
 	}
@@ -432,7 +432,7 @@ func (o *DexStatsDTO) GetVid() int64 {
 // GetVidOk returns a tuple with the Vid field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DexStatsDTO) GetVidOk() (*int64, bool) {
-	if o == nil || isNil(o.Vid) {
+	if o == nil || IsNil(o.Vid) {
 		return nil, false
 	}
 	return o.Vid, true
@@ -440,7 +440,7 @@ func (o *DexStatsDTO) GetVidOk() (*int64, bool) {
 
 // HasVid returns a boolean if a field has been set.
 func (o *DexStatsDTO) HasVid() bool {
-	if o != nil && !isNil(o.Vid) {
+	if o != nil && !IsNil(o.Vid) {
 		return true
 	}
 
@@ -462,13 +462,13 @@ func (o DexStatsDTO) MarshalJSON() ([]byte, error) {
 
 func (o DexStatsDTO) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if !isNil(o.EntryTime) {
+	if !IsNil(o.EntryTime) {
 		toSerialize["entry_time"] = o.EntryTime
 	}
-	if !isNil(o.RecvTime) {
+	if !IsNil(o.RecvTime) {
 		toSerialize["recv_time"] = o.RecvTime
 	}
-	if !isNil(o.BlockNumber) {
+	if !IsNil(o.BlockNumber) {
 		toSerialize["block_number"] = o.BlockNumber
 	}
 	if o.Id.IsSet() {
@@ -483,16 +483,16 @@ func (o DexStatsDTO) ToMap() (map[string]interface{}, error) {
 	if o.OwlBurnt.IsSet() {
 		toSerialize["owl_burnt"] = o.OwlBurnt.Get()
 	}
-	if !isNil(o.SettledBatchCount) {
+	if !IsNil(o.SettledBatchCount) {
 		toSerialize["settled_batch_count"] = o.SettledBatchCount
 	}
-	if !isNil(o.SettledTradeCount) {
+	if !IsNil(o.SettledTradeCount) {
 		toSerialize["settled_trade_count"] = o.SettledTradeCount
 	}
-	if !isNil(o.ListedTokens) {
+	if !IsNil(o.ListedTokens) {
 		toSerialize["listed_tokens"] = o.ListedTokens
 	}
-	if !isNil(o.Vid) {
+	if !IsNil(o.Vid) {
 		toSerialize["vid"] = o.Vid
 	}
 	return toSerialize, nil

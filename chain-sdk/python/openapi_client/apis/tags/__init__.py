@@ -13,3 +13,4 @@ class TagValues(str, enum.Enum):
     COW = "Cow"
     DEX = "Dex"
     METADATA = "Metadata"
+    CRYPTOPUNKS = "CRYPTOPUNKS"

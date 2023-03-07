@@ -70,7 +70,7 @@ func NewCurveVotingAppDTOWithDefaults() *CurveVotingAppDTO {
 
 // GetEntryTime returns the EntryTime field value if set, zero value otherwise.
 func (o *CurveVotingAppDTO) GetEntryTime() time.Time {
-	if o == nil || isNil(o.EntryTime) {
+	if o == nil || IsNil(o.EntryTime) {
 		var ret time.Time
 		return ret
 	}
@@ -80,7 +80,7 @@ func (o *CurveVotingAppDTO) GetEntryTime() time.Time {
 // GetEntryTimeOk returns a tuple with the EntryTime field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CurveVotingAppDTO) GetEntryTimeOk() (*time.Time, bool) {
-	if o == nil || isNil(o.EntryTime) {
+	if o == nil || IsNil(o.EntryTime) {
 		return nil, false
 	}
 	return o.EntryTime, true
@@ -88,7 +88,7 @@ func (o *CurveVotingAppDTO) GetEntryTimeOk() (*time.Time, bool) {
 
 // HasEntryTime returns a boolean if a field has been set.
 func (o *CurveVotingAppDTO) HasEntryTime() bool {
-	if o != nil && !isNil(o.EntryTime) {
+	if o != nil && !IsNil(o.EntryTime) {
 		return true
 	}
 
@@ -102,7 +102,7 @@ func (o *CurveVotingAppDTO) SetEntryTime(v time.Time) {
 
 // GetRecvTime returns the RecvTime field value if set, zero value otherwise.
 func (o *CurveVotingAppDTO) GetRecvTime() time.Time {
-	if o == nil || isNil(o.RecvTime) {
+	if o == nil || IsNil(o.RecvTime) {
 		var ret time.Time
 		return ret
 	}
@@ -112,7 +112,7 @@ func (o *CurveVotingAppDTO) GetRecvTime() time.Time {
 // GetRecvTimeOk returns a tuple with the RecvTime field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CurveVotingAppDTO) GetRecvTimeOk() (*time.Time, bool) {
-	if o == nil || isNil(o.RecvTime) {
+	if o == nil || IsNil(o.RecvTime) {
 		return nil, false
 	}
 	return o.RecvTime, true
@@ -120,7 +120,7 @@ func (o *CurveVotingAppDTO) GetRecvTimeOk() (*time.Time, bool) {
 
 // HasRecvTime returns a boolean if a field has been set.
 func (o *CurveVotingAppDTO) HasRecvTime() bool {
-	if o != nil && !isNil(o.RecvTime) {
+	if o != nil && !IsNil(o.RecvTime) {
 		return true
 	}
 
@@ -134,7 +134,7 @@ func (o *CurveVotingAppDTO) SetRecvTime(v time.Time) {
 
 // GetBlockNumber returns the BlockNumber field value if set, zero value otherwise.
 func (o *CurveVotingAppDTO) GetBlockNumber() int64 {
-	if o == nil || isNil(o.BlockNumber) {
+	if o == nil || IsNil(o.BlockNumber) {
 		var ret int64
 		return ret
 	}
@@ -144,7 +144,7 @@ func (o *CurveVotingAppDTO) GetBlockNumber() int64 {
 // GetBlockNumberOk returns a tuple with the BlockNumber field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CurveVotingAppDTO) GetBlockNumberOk() (*int64, bool) {
-	if o == nil || isNil(o.BlockNumber) {
+	if o == nil || IsNil(o.BlockNumber) {
 		return nil, false
 	}
 	return o.BlockNumber, true
@@ -152,7 +152,7 @@ func (o *CurveVotingAppDTO) GetBlockNumberOk() (*int64, bool) {
 
 // HasBlockNumber returns a boolean if a field has been set.
 func (o *CurveVotingAppDTO) HasBlockNumber() bool {
-	if o != nil && !isNil(o.BlockNumber) {
+	if o != nil && !IsNil(o.BlockNumber) {
 		return true
 	}
 
@@ -166,7 +166,7 @@ func (o *CurveVotingAppDTO) SetBlockNumber(v int64) {
 
 // GetId returns the Id field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurveVotingAppDTO) GetId() string {
-	if o == nil || isNil(o.Id.Get()) {
+	if o == nil || IsNil(o.Id.Get()) {
 		var ret string
 		return ret
 	}
@@ -208,7 +208,7 @@ func (o *CurveVotingAppDTO) UnsetId() {
 
 // GetAddress returns the Address field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurveVotingAppDTO) GetAddress() string {
-	if o == nil || isNil(o.Address.Get()) {
+	if o == nil || IsNil(o.Address.Get()) {
 		var ret string
 		return ret
 	}
@@ -250,7 +250,7 @@ func (o *CurveVotingAppDTO) UnsetAddress() {
 
 // GetCodename returns the Codename field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurveVotingAppDTO) GetCodename() string {
-	if o == nil || isNil(o.Codename.Get()) {
+	if o == nil || IsNil(o.Codename.Get()) {
 		var ret string
 		return ret
 	}
@@ -292,7 +292,7 @@ func (o *CurveVotingAppDTO) UnsetCodename() {
 
 // GetMinimumBalance returns the MinimumBalance field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurveVotingAppDTO) GetMinimumBalance() string {
-	if o == nil || isNil(o.MinimumBalance.Get()) {
+	if o == nil || IsNil(o.MinimumBalance.Get()) {
 		var ret string
 		return ret
 	}
@@ -334,7 +334,7 @@ func (o *CurveVotingAppDTO) UnsetMinimumBalance() {
 
 // GetMinimumQuorum returns the MinimumQuorum field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurveVotingAppDTO) GetMinimumQuorum() string {
-	if o == nil || isNil(o.MinimumQuorum.Get()) {
+	if o == nil || IsNil(o.MinimumQuorum.Get()) {
 		var ret string
 		return ret
 	}
@@ -376,7 +376,7 @@ func (o *CurveVotingAppDTO) UnsetMinimumQuorum() {
 
 // GetMinimumTime returns the MinimumTime field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurveVotingAppDTO) GetMinimumTime() string {
-	if o == nil || isNil(o.MinimumTime.Get()) {
+	if o == nil || IsNil(o.MinimumTime.Get()) {
 		var ret string
 		return ret
 	}
@@ -418,7 +418,7 @@ func (o *CurveVotingAppDTO) UnsetMinimumTime() {
 
 // GetRequiredSupport returns the RequiredSupport field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurveVotingAppDTO) GetRequiredSupport() string {
-	if o == nil || isNil(o.RequiredSupport.Get()) {
+	if o == nil || IsNil(o.RequiredSupport.Get()) {
 		var ret string
 		return ret
 	}
@@ -460,7 +460,7 @@ func (o *CurveVotingAppDTO) UnsetRequiredSupport() {
 
 // GetVoteTime returns the VoteTime field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurveVotingAppDTO) GetVoteTime() string {
-	if o == nil || isNil(o.VoteTime.Get()) {
+	if o == nil || IsNil(o.VoteTime.Get()) {
 		var ret string
 		return ret
 	}
@@ -502,7 +502,7 @@ func (o *CurveVotingAppDTO) UnsetVoteTime() {
 
 // GetProposalCount returns the ProposalCount field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurveVotingAppDTO) GetProposalCount() string {
-	if o == nil || isNil(o.ProposalCount.Get()) {
+	if o == nil || IsNil(o.ProposalCount.Get()) {
 		var ret string
 		return ret
 	}
@@ -544,7 +544,7 @@ func (o *CurveVotingAppDTO) UnsetProposalCount() {
 
 // GetVoteCount returns the VoteCount field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurveVotingAppDTO) GetVoteCount() string {
-	if o == nil || isNil(o.VoteCount.Get()) {
+	if o == nil || IsNil(o.VoteCount.Get()) {
 		var ret string
 		return ret
 	}
@@ -586,7 +586,7 @@ func (o *CurveVotingAppDTO) UnsetVoteCount() {
 
 // GetToken returns the Token field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurveVotingAppDTO) GetToken() string {
-	if o == nil || isNil(o.Token.Get()) {
+	if o == nil || IsNil(o.Token.Get()) {
 		var ret string
 		return ret
 	}
@@ -628,7 +628,7 @@ func (o *CurveVotingAppDTO) UnsetToken() {
 
 // GetVid returns the Vid field value if set, zero value otherwise.
 func (o *CurveVotingAppDTO) GetVid() int64 {
-	if o == nil || isNil(o.Vid) {
+	if o == nil || IsNil(o.Vid) {
 		var ret int64
 		return ret
 	}
@@ -638,7 +638,7 @@ func (o *CurveVotingAppDTO) GetVid() int64 {
 // GetVidOk returns a tuple with the Vid field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CurveVotingAppDTO) GetVidOk() (*int64, bool) {
-	if o == nil || isNil(o.Vid) {
+	if o == nil || IsNil(o.Vid) {
 		return nil, false
 	}
 	return o.Vid, true
@@ -646,7 +646,7 @@ func (o *CurveVotingAppDTO) GetVidOk() (*int64, bool) {
 
 // HasVid returns a boolean if a field has been set.
 func (o *CurveVotingAppDTO) HasVid() bool {
-	if o != nil && !isNil(o.Vid) {
+	if o != nil && !IsNil(o.Vid) {
 		return true
 	}
 
@@ -668,13 +668,13 @@ func (o CurveVotingAppDTO) MarshalJSON() ([]byte, error) {
 
 func (o CurveVotingAppDTO) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if !isNil(o.EntryTime) {
+	if !IsNil(o.EntryTime) {
 		toSerialize["entry_time"] = o.EntryTime
 	}
-	if !isNil(o.RecvTime) {
+	if !IsNil(o.RecvTime) {
 		toSerialize["recv_time"] = o.RecvTime
 	}
-	if !isNil(o.BlockNumber) {
+	if !IsNil(o.BlockNumber) {
 		toSerialize["block_number"] = o.BlockNumber
 	}
 	if o.Id.IsSet() {
@@ -710,7 +710,7 @@ func (o CurveVotingAppDTO) ToMap() (map[string]interface{}, error) {
 	if o.Token.IsSet() {
 		toSerialize["token"] = o.Token.Get()
 	}
-	if !isNil(o.Vid) {
+	if !IsNil(o.Vid) {
 		toSerialize["vid"] = o.Vid
 	}
 	return toSerialize, nil

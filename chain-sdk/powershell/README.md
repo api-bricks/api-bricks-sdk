@@ -56,6 +56,24 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*CRYPTOPUNKSApi* | [**Invoke-CRYPTOPUNKSBidsCurrent**](docs/CRYPTOPUNKSApi.md#Invoke-CRYPTOPUNKSBidsCurrent) | **GET** /dapps/cryptopunks/bids/current | Bids (current)
+*CRYPTOPUNKSApi* | [**Invoke-CRYPTOPUNKSCollectionDailySnapshotsCurrent**](docs/CRYPTOPUNKSApi.md#Invoke-CRYPTOPUNKSCollectionDailySnapshotsCurrent) | **GET** /dapps/cryptopunks/collectionDailySnapshots/current | CollectionDailySnapshots (current)
+*CRYPTOPUNKSApi* | [**Invoke-CRYPTOPUNKSCollectionsCurrent**](docs/CRYPTOPUNKSApi.md#Invoke-CRYPTOPUNKSCollectionsCurrent) | **GET** /dapps/cryptopunks/collections/current | Collections (current)
+*CRYPTOPUNKSApi* | [**Invoke-CRYPTOPUNKSDataSourcesCurrent**](docs/CRYPTOPUNKSApi.md#Invoke-CRYPTOPUNKSDataSourcesCurrent) | **GET** /dapps/cryptopunks/dataSources/current | DataSources (current)
+*CRYPTOPUNKSApi* | [**Invoke-CRYPTOPUNKSGetBidsHistorical**](docs/CRYPTOPUNKSApi.md#Invoke-CRYPTOPUNKSGetBidsHistorical) | **GET** /dapps/cryptopunks/bids/historical | Bids (historical)
+*CRYPTOPUNKSApi* | [**Invoke-CRYPTOPUNKSGetCollectionDailySnapshotsHistorical**](docs/CRYPTOPUNKSApi.md#Invoke-CRYPTOPUNKSGetCollectionDailySnapshotsHistorical) | **GET** /dapps/cryptopunks/collectionDailySnapshots/historical | CollectionDailySnapshots (historical)
+*CRYPTOPUNKSApi* | [**Invoke-CRYPTOPUNKSGetCollectionsHistorical**](docs/CRYPTOPUNKSApi.md#Invoke-CRYPTOPUNKSGetCollectionsHistorical) | **GET** /dapps/cryptopunks/collections/historical | Collections (historical)
+*CRYPTOPUNKSApi* | [**Invoke-CRYPTOPUNKSGetDataSourcesHistorical**](docs/CRYPTOPUNKSApi.md#Invoke-CRYPTOPUNKSGetDataSourcesHistorical) | **GET** /dapps/cryptopunks/dataSources/historical | DataSources (historical)
+*CRYPTOPUNKSApi* | [**Invoke-CRYPTOPUNKSGetItemsHistorical**](docs/CRYPTOPUNKSApi.md#Invoke-CRYPTOPUNKSGetItemsHistorical) | **GET** /dapps/cryptopunks/items/historical | Items (historical)
+*CRYPTOPUNKSApi* | [**Invoke-CRYPTOPUNKSGetMarketPlacesHistorical**](docs/CRYPTOPUNKSApi.md#Invoke-CRYPTOPUNKSGetMarketPlacesHistorical) | **GET** /dapps/cryptopunks/marketPlaces/historical | MarketPlaces (historical)
+*CRYPTOPUNKSApi* | [**Invoke-CRYPTOPUNKSGetMarketplaceDailySnapshotsHistorical**](docs/CRYPTOPUNKSApi.md#Invoke-CRYPTOPUNKSGetMarketplaceDailySnapshotsHistorical) | **GET** /dapps/cryptopunks/marketplaceDailySnapshots/historical | MarketplaceDailySnapshots (historical)
+*CRYPTOPUNKSApi* | [**Invoke-CRYPTOPUNKSGetTradesHistorical**](docs/CRYPTOPUNKSApi.md#Invoke-CRYPTOPUNKSGetTradesHistorical) | **GET** /dapps/cryptopunks/trades/historical | Trades (historical)
+*CRYPTOPUNKSApi* | [**Invoke-CRYPTOPUNKSGetUsersHistorical**](docs/CRYPTOPUNKSApi.md#Invoke-CRYPTOPUNKSGetUsersHistorical) | **GET** /dapps/cryptopunks/users/historical | Users (historical)
+*CRYPTOPUNKSApi* | [**Invoke-CRYPTOPUNKSItemsCurrent**](docs/CRYPTOPUNKSApi.md#Invoke-CRYPTOPUNKSItemsCurrent) | **GET** /dapps/cryptopunks/items/current | Items (current)
+*CRYPTOPUNKSApi* | [**Invoke-CRYPTOPUNKSMarketPlacesCurrent**](docs/CRYPTOPUNKSApi.md#Invoke-CRYPTOPUNKSMarketPlacesCurrent) | **GET** /dapps/cryptopunks/marketPlaces/current | MarketPlaces (current)
+*CRYPTOPUNKSApi* | [**Invoke-CRYPTOPUNKSMarketplaceDailySnapshotsCurrent**](docs/CRYPTOPUNKSApi.md#Invoke-CRYPTOPUNKSMarketplaceDailySnapshotsCurrent) | **GET** /dapps/cryptopunks/marketplaceDailySnapshots/current | MarketplaceDailySnapshots (current)
+*CRYPTOPUNKSApi* | [**Invoke-CRYPTOPUNKSTradesCurrent**](docs/CRYPTOPUNKSApi.md#Invoke-CRYPTOPUNKSTradesCurrent) | **GET** /dapps/cryptopunks/trades/current | Trades (current)
+*CRYPTOPUNKSApi* | [**Invoke-CRYPTOPUNKSUsersCurrent**](docs/CRYPTOPUNKSApi.md#Invoke-CRYPTOPUNKSUsersCurrent) | **GET** /dapps/cryptopunks/users/current | Users (current)
 *CowApi* | [**Invoke-CowGetOrdersHistorical**](docs/CowApi.md#Invoke-CowGetOrdersHistorical) | **GET** /dapps/cow/orders/historical | Orders (historical)
 *CowApi* | [**Invoke-CowGetSettlementsHistorical**](docs/CowApi.md#Invoke-CowGetSettlementsHistorical) | **GET** /dapps/cow/settlements/historical | Settlements (historical)
 *CowApi* | [**Invoke-CowGetTokensHistorical**](docs/CowApi.md#Invoke-CowGetTokensHistorical) | **GET** /dapps/cow/tokens/historical | Tokens (historical)
@@ -255,6 +273,15 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
+ - [PSOpenAPITools/Model.CRYPTOPUNKSBidDTO](docs/CRYPTOPUNKSBidDTO.md)
+ - [PSOpenAPITools/Model.CRYPTOPUNKSCollectionDTO](docs/CRYPTOPUNKSCollectionDTO.md)
+ - [PSOpenAPITools/Model.CRYPTOPUNKSCollectionDailySnapshotDTO](docs/CRYPTOPUNKSCollectionDailySnapshotDTO.md)
+ - [PSOpenAPITools/Model.CRYPTOPUNKSDataSourcesDTO](docs/CRYPTOPUNKSDataSourcesDTO.md)
+ - [PSOpenAPITools/Model.CRYPTOPUNKSItemDTO](docs/CRYPTOPUNKSItemDTO.md)
+ - [PSOpenAPITools/Model.CRYPTOPUNKSMarketPlaceDTO](docs/CRYPTOPUNKSMarketPlaceDTO.md)
+ - [PSOpenAPITools/Model.CRYPTOPUNKSMarketplaceDailySnapshotDTO](docs/CRYPTOPUNKSMarketplaceDailySnapshotDTO.md)
+ - [PSOpenAPITools/Model.CRYPTOPUNKSTradeDTO](docs/CRYPTOPUNKSTradeDTO.md)
+ - [PSOpenAPITools/Model.CRYPTOPUNKSUserDTO](docs/CRYPTOPUNKSUserDTO.md)
  - [PSOpenAPITools/Model.CowOrderDTO](docs/CowOrderDTO.md)
  - [PSOpenAPITools/Model.CowSettlementDTO](docs/CowSettlementDTO.md)
  - [PSOpenAPITools/Model.CowTokenDTO](docs/CowTokenDTO.md)

@@ -6,6 +6,15 @@ src/model/openapi_cow_settlement_dto.erl
 src/model/openapi_cow_token_dto.erl
 src/model/openapi_cow_trade_dto.erl
 src/model/openapi_cow_user_dto.erl
+src/model/openapi_cryptopunks_bid_dto.erl
+src/model/openapi_cryptopunks_collection_daily_snapshot_dto.erl
+src/model/openapi_cryptopunks_collection_dto.erl
+src/model/openapi_cryptopunks_data_sources_dto.erl
+src/model/openapi_cryptopunks_item_dto.erl
+src/model/openapi_cryptopunks_market_place_dto.erl
+src/model/openapi_cryptopunks_marketplace_daily_snapshot_dto.erl
+src/model/openapi_cryptopunks_trade_dto.erl
+src/model/openapi_cryptopunks_user_dto.erl
 src/model/openapi_curve_account_dto.erl
 src/model/openapi_curve_add_liquidity_event_dto.erl
 src/model/openapi_curve_admin_fee_change_log_dto.erl
@@ -108,7 +117,9 @@ src/openapi_api.erl
 src/openapi_api.erl
 src/openapi_api.erl
 src/openapi_api.erl
+src/openapi_api.erl
 src/openapi_gen.erl
+src/openapi_statem.erl
 src/openapi_statem.erl
 src/openapi_statem.erl
 src/openapi_statem.erl

@@ -50,7 +50,7 @@ import org.openapitools.client.JSON;
 /**
  * Stores aggregated information for a specific token across all pairs that token is included in.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-13T15:06:11.595492Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-07T11:26:43.643580Z[Etc/UTC]")
 public class SushiswapTokenDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -114,7 +114,7 @@ public class SushiswapTokenDTO {
 
   public static final String SERIALIZED_NAME_WHITELIST_PAIRS = "whitelist_pairs";
   @SerializedName(SERIALIZED_NAME_WHITELIST_PAIRS)
-  private List<String> whitelistPairs = null;
+  private List<String> whitelistPairs;
 
   public static final String SERIALIZED_NAME_VID = "vid";
   @SerializedName(SERIALIZED_NAME_VID)
@@ -472,9 +472,6 @@ public class SushiswapTokenDTO {
   }
 
   public SushiswapTokenDTO addWhitelistPairsItem(String whitelistPairsItem) {
-    if (this.whitelistPairs == null) {
-      this.whitelistPairs = null;
-    }
     this.whitelistPairs.add(whitelistPairsItem);
     return this;
   }

@@ -362,22 +362,22 @@ UniswapV3TickDTO <- R6::R6Class(
         self$`pool_address` <- this_object$`pool_address`
       }
       if (!is.null(this_object$`tick_idx`)) {
-        tick_idx_object <- NumericsBigInteger$new()
-        tick_idx_object$fromJSON(jsonlite::toJSON(this_object$tick_idx, auto_unbox = TRUE, digits = NA))
-        self$`tick_idx` <- tick_idx_object
+        `tick_idx_object` <- NumericsBigInteger$new()
+        `tick_idx_object`$fromJSON(jsonlite::toJSON(this_object$`tick_idx`, auto_unbox = TRUE, digits = NA))
+        self$`tick_idx` <- `tick_idx_object`
       }
       if (!is.null(this_object$`pool`)) {
         self$`pool` <- this_object$`pool`
       }
       if (!is.null(this_object$`liquidity_gross`)) {
-        liquidity_gross_object <- NumericsBigInteger$new()
-        liquidity_gross_object$fromJSON(jsonlite::toJSON(this_object$liquidity_gross, auto_unbox = TRUE, digits = NA))
-        self$`liquidity_gross` <- liquidity_gross_object
+        `liquidity_gross_object` <- NumericsBigInteger$new()
+        `liquidity_gross_object`$fromJSON(jsonlite::toJSON(this_object$`liquidity_gross`, auto_unbox = TRUE, digits = NA))
+        self$`liquidity_gross` <- `liquidity_gross_object`
       }
       if (!is.null(this_object$`liquidity_net`)) {
-        liquidity_net_object <- NumericsBigInteger$new()
-        liquidity_net_object$fromJSON(jsonlite::toJSON(this_object$liquidity_net, auto_unbox = TRUE, digits = NA))
-        self$`liquidity_net` <- liquidity_net_object
+        `liquidity_net_object` <- NumericsBigInteger$new()
+        `liquidity_net_object`$fromJSON(jsonlite::toJSON(this_object$`liquidity_net`, auto_unbox = TRUE, digits = NA))
+        self$`liquidity_net` <- `liquidity_net_object`
       }
       if (!is.null(this_object$`price_0`)) {
         self$`price_0` <- this_object$`price_0`
@@ -413,19 +413,19 @@ UniswapV3TickDTO <- R6::R6Class(
         self$`created_at_timestamp` <- this_object$`created_at_timestamp`
       }
       if (!is.null(this_object$`liquidity_provider_count`)) {
-        liquidity_provider_count_object <- NumericsBigInteger$new()
-        liquidity_provider_count_object$fromJSON(jsonlite::toJSON(this_object$liquidity_provider_count, auto_unbox = TRUE, digits = NA))
-        self$`liquidity_provider_count` <- liquidity_provider_count_object
+        `liquidity_provider_count_object` <- NumericsBigInteger$new()
+        `liquidity_provider_count_object`$fromJSON(jsonlite::toJSON(this_object$`liquidity_provider_count`, auto_unbox = TRUE, digits = NA))
+        self$`liquidity_provider_count` <- `liquidity_provider_count_object`
       }
       if (!is.null(this_object$`fee_growth_outside_0x128`)) {
-        fee_growth_outside_0x128_object <- NumericsBigInteger$new()
-        fee_growth_outside_0x128_object$fromJSON(jsonlite::toJSON(this_object$fee_growth_outside_0x128, auto_unbox = TRUE, digits = NA))
-        self$`fee_growth_outside_0x128` <- fee_growth_outside_0x128_object
+        `fee_growth_outside_0x128_object` <- NumericsBigInteger$new()
+        `fee_growth_outside_0x128_object`$fromJSON(jsonlite::toJSON(this_object$`fee_growth_outside_0x128`, auto_unbox = TRUE, digits = NA))
+        self$`fee_growth_outside_0x128` <- `fee_growth_outside_0x128_object`
       }
       if (!is.null(this_object$`fee_growth_outside_1x128`)) {
-        fee_growth_outside_1x128_object <- NumericsBigInteger$new()
-        fee_growth_outside_1x128_object$fromJSON(jsonlite::toJSON(this_object$fee_growth_outside_1x128, auto_unbox = TRUE, digits = NA))
-        self$`fee_growth_outside_1x128` <- fee_growth_outside_1x128_object
+        `fee_growth_outside_1x128_object` <- NumericsBigInteger$new()
+        `fee_growth_outside_1x128_object`$fromJSON(jsonlite::toJSON(this_object$`fee_growth_outside_1x128`, auto_unbox = TRUE, digits = NA))
+        self$`fee_growth_outside_1x128` <- `fee_growth_outside_1x128_object`
       }
       self
     },
@@ -650,10 +650,10 @@ UniswapV3TickDTO <- R6::R6Class(
       self$`vid` <- this_object$`vid`
       self$`id` <- this_object$`id`
       self$`pool_address` <- this_object$`pool_address`
-      self$`tick_idx` <- NumericsBigInteger$new()$fromJSON(jsonlite::toJSON(this_object$tick_idx, auto_unbox = TRUE, digits = NA))
+      self$`tick_idx` <- NumericsBigInteger$new()$fromJSON(jsonlite::toJSON(this_object$`tick_idx`, auto_unbox = TRUE, digits = NA))
       self$`pool` <- this_object$`pool`
-      self$`liquidity_gross` <- NumericsBigInteger$new()$fromJSON(jsonlite::toJSON(this_object$liquidity_gross, auto_unbox = TRUE, digits = NA))
-      self$`liquidity_net` <- NumericsBigInteger$new()$fromJSON(jsonlite::toJSON(this_object$liquidity_net, auto_unbox = TRUE, digits = NA))
+      self$`liquidity_gross` <- NumericsBigInteger$new()$fromJSON(jsonlite::toJSON(this_object$`liquidity_gross`, auto_unbox = TRUE, digits = NA))
+      self$`liquidity_net` <- NumericsBigInteger$new()$fromJSON(jsonlite::toJSON(this_object$`liquidity_net`, auto_unbox = TRUE, digits = NA))
       self$`price_0` <- this_object$`price_0`
       self$`price_1` <- this_object$`price_1`
       self$`volume_token_0` <- this_object$`volume_token_0`
@@ -665,9 +665,9 @@ UniswapV3TickDTO <- R6::R6Class(
       self$`collected_fees_token_1` <- this_object$`collected_fees_token_1`
       self$`collected_fees_usd` <- this_object$`collected_fees_usd`
       self$`created_at_timestamp` <- this_object$`created_at_timestamp`
-      self$`liquidity_provider_count` <- NumericsBigInteger$new()$fromJSON(jsonlite::toJSON(this_object$liquidity_provider_count, auto_unbox = TRUE, digits = NA))
-      self$`fee_growth_outside_0x128` <- NumericsBigInteger$new()$fromJSON(jsonlite::toJSON(this_object$fee_growth_outside_0x128, auto_unbox = TRUE, digits = NA))
-      self$`fee_growth_outside_1x128` <- NumericsBigInteger$new()$fromJSON(jsonlite::toJSON(this_object$fee_growth_outside_1x128, auto_unbox = TRUE, digits = NA))
+      self$`liquidity_provider_count` <- NumericsBigInteger$new()$fromJSON(jsonlite::toJSON(this_object$`liquidity_provider_count`, auto_unbox = TRUE, digits = NA))
+      self$`fee_growth_outside_0x128` <- NumericsBigInteger$new()$fromJSON(jsonlite::toJSON(this_object$`fee_growth_outside_0x128`, auto_unbox = TRUE, digits = NA))
+      self$`fee_growth_outside_1x128` <- NumericsBigInteger$new()$fromJSON(jsonlite::toJSON(this_object$`fee_growth_outside_1x128`, auto_unbox = TRUE, digits = NA))
       self
     },
     #' Validate JSON input with respect to UniswapV3TickDTO

@@ -4,6 +4,7 @@ README.md
 elm.json
 src/Api.elm
 src/Api/Data.elm
+src/Api/Request/CRYPTOPUNKS.elm
 src/Api/Request/Cow.elm
 src/Api/Request/Curve.elm
 src/Api/Request/Dex.elm

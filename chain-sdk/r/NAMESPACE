@@ -13,6 +13,15 @@ export(ApiClient)
 export(ApiResponse)
 
 # Models
+export(CRYPTOPUNKSBidDTO)
+export(CRYPTOPUNKSCollectionDTO)
+export(CRYPTOPUNKSCollectionDailySnapshotDTO)
+export(CRYPTOPUNKSDataSourcesDTO)
+export(CRYPTOPUNKSItemDTO)
+export(CRYPTOPUNKSMarketPlaceDTO)
+export(CRYPTOPUNKSMarketplaceDailySnapshotDTO)
+export(CRYPTOPUNKSTradeDTO)
+export(CRYPTOPUNKSUserDTO)
 export(CowOrderDTO)
 export(CowSettlementDTO)
 export(CowTokenDTO)
@@ -113,6 +122,7 @@ export(UniswapV3TransactionDTO)
 export(UniswapV3UniswapDayDataDTO)
 
 # APIs
+export(CRYPTOPUNKSApi)
 export(CowApi)
 export(CurveApi)
 export(DexApi)

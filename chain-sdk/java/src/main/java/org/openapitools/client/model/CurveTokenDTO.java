@@ -50,7 +50,7 @@ import org.openapitools.client.JSON;
 /**
  * CurveTokenDTO
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-13T15:06:11.595492Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-07T11:26:43.643580Z[Etc/UTC]")
 public class CurveTokenDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -86,7 +86,7 @@ public class CurveTokenDTO {
 
   public static final String SERIALIZED_NAME_POOLS = "pools";
   @SerializedName(SERIALIZED_NAME_POOLS)
-  private List<String> pools = null;
+  private List<String> pools;
 
   public static final String SERIALIZED_NAME_VID = "vid";
   @SerializedName(SERIALIZED_NAME_VID)
@@ -290,9 +290,6 @@ public class CurveTokenDTO {
   }
 
   public CurveTokenDTO addPoolsItem(String poolsItem) {
-    if (this.pools == null) {
-      this.pools = null;
-    }
     this.pools.add(poolsItem);
     return this;
   }

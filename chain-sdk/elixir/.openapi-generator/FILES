@@ -5,6 +5,7 @@ README.md
 config/config.exs
 config/runtime.exs
 lib/on_chain_dapps_restapi/api/cow.ex
+lib/on_chain_dapps_restapi/api/cryptopunks.ex
 lib/on_chain_dapps_restapi/api/curve.ex
 lib/on_chain_dapps_restapi/api/dex.ex
 lib/on_chain_dapps_restapi/api/metadata.ex
@@ -18,6 +19,15 @@ lib/on_chain_dapps_restapi/model/cow_settlement_dto.ex
 lib/on_chain_dapps_restapi/model/cow_token_dto.ex
 lib/on_chain_dapps_restapi/model/cow_trade_dto.ex
 lib/on_chain_dapps_restapi/model/cow_user_dto.ex
+lib/on_chain_dapps_restapi/model/cryptopunks_bid_dto.ex
+lib/on_chain_dapps_restapi/model/cryptopunks_collection_daily_snapshot_dto.ex
+lib/on_chain_dapps_restapi/model/cryptopunks_collection_dto.ex
+lib/on_chain_dapps_restapi/model/cryptopunks_data_sources_dto.ex
+lib/on_chain_dapps_restapi/model/cryptopunks_item_dto.ex
+lib/on_chain_dapps_restapi/model/cryptopunks_market_place_dto.ex
+lib/on_chain_dapps_restapi/model/cryptopunks_marketplace_daily_snapshot_dto.ex
+lib/on_chain_dapps_restapi/model/cryptopunks_trade_dto.ex
+lib/on_chain_dapps_restapi/model/cryptopunks_user_dto.ex
 lib/on_chain_dapps_restapi/model/curve_account_dto.ex
 lib/on_chain_dapps_restapi/model/curve_add_liquidity_event_dto.ex
 lib/on_chain_dapps_restapi/model/curve_admin_fee_change_log_dto.ex

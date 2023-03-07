@@ -1,3 +1,5 @@
+export * from './CRYPTOPUNKSApi';
+import { CRYPTOPUNKSApi } from './CRYPTOPUNKSApi';
 export * from './CowApi';
 import { CowApi } from './CowApi';
 export * from './CurveApi';
@@ -12,4 +14,4 @@ export * from './UniswapV2Api';
 import { UniswapV2Api } from './UniswapV2Api';
 export * from './UniswapV3Api';
 import { UniswapV3Api } from './UniswapV3Api';
-export const APIS = [CowApi, CurveApi, DexApi, MetadataApi, SushiswapApi, UniswapV2Api, UniswapV3Api];
+export const APIS = [CRYPTOPUNKSApi, CowApi, CurveApi, DexApi, MetadataApi, SushiswapApi, UniswapV2Api, UniswapV3Api];

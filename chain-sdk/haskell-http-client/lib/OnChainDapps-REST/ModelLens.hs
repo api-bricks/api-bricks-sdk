@@ -37,6 +37,647 @@ import OnChainDapps-REST.Model
 import OnChainDapps-REST.Core
 
 
+-- * CRYPTOPUNKSBidDTO
+
+-- | 'cRYPTOPUNKSBidDTOEntryTime' Lens
+cRYPTOPUNKSBidDTOEntryTimeL :: Lens_' CRYPTOPUNKSBidDTO (Maybe DateTime)
+cRYPTOPUNKSBidDTOEntryTimeL f CRYPTOPUNKSBidDTO{..} = (\cRYPTOPUNKSBidDTOEntryTime -> CRYPTOPUNKSBidDTO { cRYPTOPUNKSBidDTOEntryTime, ..} ) <$> f cRYPTOPUNKSBidDTOEntryTime
+{-# INLINE cRYPTOPUNKSBidDTOEntryTimeL #-}
+
+-- | 'cRYPTOPUNKSBidDTORecvTime' Lens
+cRYPTOPUNKSBidDTORecvTimeL :: Lens_' CRYPTOPUNKSBidDTO (Maybe DateTime)
+cRYPTOPUNKSBidDTORecvTimeL f CRYPTOPUNKSBidDTO{..} = (\cRYPTOPUNKSBidDTORecvTime -> CRYPTOPUNKSBidDTO { cRYPTOPUNKSBidDTORecvTime, ..} ) <$> f cRYPTOPUNKSBidDTORecvTime
+{-# INLINE cRYPTOPUNKSBidDTORecvTimeL #-}
+
+-- | 'cRYPTOPUNKSBidDTOBlockNumber' Lens
+cRYPTOPUNKSBidDTOBlockNumberL :: Lens_' CRYPTOPUNKSBidDTO (Maybe Text)
+cRYPTOPUNKSBidDTOBlockNumberL f CRYPTOPUNKSBidDTO{..} = (\cRYPTOPUNKSBidDTOBlockNumber -> CRYPTOPUNKSBidDTO { cRYPTOPUNKSBidDTOBlockNumber, ..} ) <$> f cRYPTOPUNKSBidDTOBlockNumber
+{-# INLINE cRYPTOPUNKSBidDTOBlockNumberL #-}
+
+-- | 'cRYPTOPUNKSBidDTOVid' Lens
+cRYPTOPUNKSBidDTOVidL :: Lens_' CRYPTOPUNKSBidDTO (Maybe Integer)
+cRYPTOPUNKSBidDTOVidL f CRYPTOPUNKSBidDTO{..} = (\cRYPTOPUNKSBidDTOVid -> CRYPTOPUNKSBidDTO { cRYPTOPUNKSBidDTOVid, ..} ) <$> f cRYPTOPUNKSBidDTOVid
+{-# INLINE cRYPTOPUNKSBidDTOVidL #-}
+
+-- | 'cRYPTOPUNKSBidDTOBlockRange' Lens
+cRYPTOPUNKSBidDTOBlockRangeL :: Lens_' CRYPTOPUNKSBidDTO (Maybe Text)
+cRYPTOPUNKSBidDTOBlockRangeL f CRYPTOPUNKSBidDTO{..} = (\cRYPTOPUNKSBidDTOBlockRange -> CRYPTOPUNKSBidDTO { cRYPTOPUNKSBidDTOBlockRange, ..} ) <$> f cRYPTOPUNKSBidDTOBlockRange
+{-# INLINE cRYPTOPUNKSBidDTOBlockRangeL #-}
+
+-- | 'cRYPTOPUNKSBidDTOId' Lens
+cRYPTOPUNKSBidDTOIdL :: Lens_' CRYPTOPUNKSBidDTO (Maybe Text)
+cRYPTOPUNKSBidDTOIdL f CRYPTOPUNKSBidDTO{..} = (\cRYPTOPUNKSBidDTOId -> CRYPTOPUNKSBidDTO { cRYPTOPUNKSBidDTOId, ..} ) <$> f cRYPTOPUNKSBidDTOId
+{-# INLINE cRYPTOPUNKSBidDTOIdL #-}
+
+-- | 'cRYPTOPUNKSBidDTOTokensBid' Lens
+cRYPTOPUNKSBidDTOTokensBidL :: Lens_' CRYPTOPUNKSBidDTO (Maybe Text)
+cRYPTOPUNKSBidDTOTokensBidL f CRYPTOPUNKSBidDTO{..} = (\cRYPTOPUNKSBidDTOTokensBid -> CRYPTOPUNKSBidDTO { cRYPTOPUNKSBidDTOTokensBid, ..} ) <$> f cRYPTOPUNKSBidDTOTokensBid
+{-# INLINE cRYPTOPUNKSBidDTOTokensBidL #-}
+
+-- | 'cRYPTOPUNKSBidDTOTokenId' Lens
+cRYPTOPUNKSBidDTOTokenIdL :: Lens_' CRYPTOPUNKSBidDTO (Maybe Text)
+cRYPTOPUNKSBidDTOTokenIdL f CRYPTOPUNKSBidDTO{..} = (\cRYPTOPUNKSBidDTOTokenId -> CRYPTOPUNKSBidDTO { cRYPTOPUNKSBidDTOTokenId, ..} ) <$> f cRYPTOPUNKSBidDTOTokenId
+{-# INLINE cRYPTOPUNKSBidDTOTokenIdL #-}
+
+-- | 'cRYPTOPUNKSBidDTOTimestamp' Lens
+cRYPTOPUNKSBidDTOTimestampL :: Lens_' CRYPTOPUNKSBidDTO (Maybe Text)
+cRYPTOPUNKSBidDTOTimestampL f CRYPTOPUNKSBidDTO{..} = (\cRYPTOPUNKSBidDTOTimestamp -> CRYPTOPUNKSBidDTO { cRYPTOPUNKSBidDTOTimestamp, ..} ) <$> f cRYPTOPUNKSBidDTOTimestamp
+{-# INLINE cRYPTOPUNKSBidDTOTimestampL #-}
+
+-- | 'cRYPTOPUNKSBidDTOBidder' Lens
+cRYPTOPUNKSBidDTOBidderL :: Lens_' CRYPTOPUNKSBidDTO (Maybe Text)
+cRYPTOPUNKSBidDTOBidderL f CRYPTOPUNKSBidDTO{..} = (\cRYPTOPUNKSBidDTOBidder -> CRYPTOPUNKSBidDTO { cRYPTOPUNKSBidDTOBidder, ..} ) <$> f cRYPTOPUNKSBidDTOBidder
+{-# INLINE cRYPTOPUNKSBidDTOBidderL #-}
+
+
+
+-- * CRYPTOPUNKSCollectionDTO
+
+-- | 'cRYPTOPUNKSCollectionDTOEntryTime' Lens
+cRYPTOPUNKSCollectionDTOEntryTimeL :: Lens_' CRYPTOPUNKSCollectionDTO (Maybe DateTime)
+cRYPTOPUNKSCollectionDTOEntryTimeL f CRYPTOPUNKSCollectionDTO{..} = (\cRYPTOPUNKSCollectionDTOEntryTime -> CRYPTOPUNKSCollectionDTO { cRYPTOPUNKSCollectionDTOEntryTime, ..} ) <$> f cRYPTOPUNKSCollectionDTOEntryTime
+{-# INLINE cRYPTOPUNKSCollectionDTOEntryTimeL #-}
+
+-- | 'cRYPTOPUNKSCollectionDTORecvTime' Lens
+cRYPTOPUNKSCollectionDTORecvTimeL :: Lens_' CRYPTOPUNKSCollectionDTO (Maybe DateTime)
+cRYPTOPUNKSCollectionDTORecvTimeL f CRYPTOPUNKSCollectionDTO{..} = (\cRYPTOPUNKSCollectionDTORecvTime -> CRYPTOPUNKSCollectionDTO { cRYPTOPUNKSCollectionDTORecvTime, ..} ) <$> f cRYPTOPUNKSCollectionDTORecvTime
+{-# INLINE cRYPTOPUNKSCollectionDTORecvTimeL #-}
+
+-- | 'cRYPTOPUNKSCollectionDTOBlockNumber' Lens
+cRYPTOPUNKSCollectionDTOBlockNumberL :: Lens_' CRYPTOPUNKSCollectionDTO (Maybe Integer)
+cRYPTOPUNKSCollectionDTOBlockNumberL f CRYPTOPUNKSCollectionDTO{..} = (\cRYPTOPUNKSCollectionDTOBlockNumber -> CRYPTOPUNKSCollectionDTO { cRYPTOPUNKSCollectionDTOBlockNumber, ..} ) <$> f cRYPTOPUNKSCollectionDTOBlockNumber
+{-# INLINE cRYPTOPUNKSCollectionDTOBlockNumberL #-}
+
+-- | 'cRYPTOPUNKSCollectionDTOVid' Lens
+cRYPTOPUNKSCollectionDTOVidL :: Lens_' CRYPTOPUNKSCollectionDTO (Maybe Integer)
+cRYPTOPUNKSCollectionDTOVidL f CRYPTOPUNKSCollectionDTO{..} = (\cRYPTOPUNKSCollectionDTOVid -> CRYPTOPUNKSCollectionDTO { cRYPTOPUNKSCollectionDTOVid, ..} ) <$> f cRYPTOPUNKSCollectionDTOVid
+{-# INLINE cRYPTOPUNKSCollectionDTOVidL #-}
+
+-- | 'cRYPTOPUNKSCollectionDTOBlockRange' Lens
+cRYPTOPUNKSCollectionDTOBlockRangeL :: Lens_' CRYPTOPUNKSCollectionDTO (Maybe Text)
+cRYPTOPUNKSCollectionDTOBlockRangeL f CRYPTOPUNKSCollectionDTO{..} = (\cRYPTOPUNKSCollectionDTOBlockRange -> CRYPTOPUNKSCollectionDTO { cRYPTOPUNKSCollectionDTOBlockRange, ..} ) <$> f cRYPTOPUNKSCollectionDTOBlockRange
+{-# INLINE cRYPTOPUNKSCollectionDTOBlockRangeL #-}
+
+-- | 'cRYPTOPUNKSCollectionDTOId' Lens
+cRYPTOPUNKSCollectionDTOIdL :: Lens_' CRYPTOPUNKSCollectionDTO (Maybe Text)
+cRYPTOPUNKSCollectionDTOIdL f CRYPTOPUNKSCollectionDTO{..} = (\cRYPTOPUNKSCollectionDTOId -> CRYPTOPUNKSCollectionDTO { cRYPTOPUNKSCollectionDTOId, ..} ) <$> f cRYPTOPUNKSCollectionDTOId
+{-# INLINE cRYPTOPUNKSCollectionDTOIdL #-}
+
+-- | 'cRYPTOPUNKSCollectionDTOName' Lens
+cRYPTOPUNKSCollectionDTONameL :: Lens_' CRYPTOPUNKSCollectionDTO (Maybe Text)
+cRYPTOPUNKSCollectionDTONameL f CRYPTOPUNKSCollectionDTO{..} = (\cRYPTOPUNKSCollectionDTOName -> CRYPTOPUNKSCollectionDTO { cRYPTOPUNKSCollectionDTOName, ..} ) <$> f cRYPTOPUNKSCollectionDTOName
+{-# INLINE cRYPTOPUNKSCollectionDTONameL #-}
+
+-- | 'cRYPTOPUNKSCollectionDTOSymbol' Lens
+cRYPTOPUNKSCollectionDTOSymbolL :: Lens_' CRYPTOPUNKSCollectionDTO (Maybe Text)
+cRYPTOPUNKSCollectionDTOSymbolL f CRYPTOPUNKSCollectionDTO{..} = (\cRYPTOPUNKSCollectionDTOSymbol -> CRYPTOPUNKSCollectionDTO { cRYPTOPUNKSCollectionDTOSymbol, ..} ) <$> f cRYPTOPUNKSCollectionDTOSymbol
+{-# INLINE cRYPTOPUNKSCollectionDTOSymbolL #-}
+
+-- | 'cRYPTOPUNKSCollectionDTOTotalSupply' Lens
+cRYPTOPUNKSCollectionDTOTotalSupplyL :: Lens_' CRYPTOPUNKSCollectionDTO (Maybe Text)
+cRYPTOPUNKSCollectionDTOTotalSupplyL f CRYPTOPUNKSCollectionDTO{..} = (\cRYPTOPUNKSCollectionDTOTotalSupply -> CRYPTOPUNKSCollectionDTO { cRYPTOPUNKSCollectionDTOTotalSupply, ..} ) <$> f cRYPTOPUNKSCollectionDTOTotalSupply
+{-# INLINE cRYPTOPUNKSCollectionDTOTotalSupplyL #-}
+
+-- | 'cRYPTOPUNKSCollectionDTORoyaltyFee' Lens
+cRYPTOPUNKSCollectionDTORoyaltyFeeL :: Lens_' CRYPTOPUNKSCollectionDTO (Maybe Text)
+cRYPTOPUNKSCollectionDTORoyaltyFeeL f CRYPTOPUNKSCollectionDTO{..} = (\cRYPTOPUNKSCollectionDTORoyaltyFee -> CRYPTOPUNKSCollectionDTO { cRYPTOPUNKSCollectionDTORoyaltyFee, ..} ) <$> f cRYPTOPUNKSCollectionDTORoyaltyFee
+{-# INLINE cRYPTOPUNKSCollectionDTORoyaltyFeeL #-}
+
+-- | 'cRYPTOPUNKSCollectionDTOCumulativeTradeVolumeEth' Lens
+cRYPTOPUNKSCollectionDTOCumulativeTradeVolumeEthL :: Lens_' CRYPTOPUNKSCollectionDTO (Maybe Text)
+cRYPTOPUNKSCollectionDTOCumulativeTradeVolumeEthL f CRYPTOPUNKSCollectionDTO{..} = (\cRYPTOPUNKSCollectionDTOCumulativeTradeVolumeEth -> CRYPTOPUNKSCollectionDTO { cRYPTOPUNKSCollectionDTOCumulativeTradeVolumeEth, ..} ) <$> f cRYPTOPUNKSCollectionDTOCumulativeTradeVolumeEth
+{-# INLINE cRYPTOPUNKSCollectionDTOCumulativeTradeVolumeEthL #-}
+
+-- | 'cRYPTOPUNKSCollectionDTOMarketplaceRevenueEth' Lens
+cRYPTOPUNKSCollectionDTOMarketplaceRevenueEthL :: Lens_' CRYPTOPUNKSCollectionDTO (Maybe Text)
+cRYPTOPUNKSCollectionDTOMarketplaceRevenueEthL f CRYPTOPUNKSCollectionDTO{..} = (\cRYPTOPUNKSCollectionDTOMarketplaceRevenueEth -> CRYPTOPUNKSCollectionDTO { cRYPTOPUNKSCollectionDTOMarketplaceRevenueEth, ..} ) <$> f cRYPTOPUNKSCollectionDTOMarketplaceRevenueEth
+{-# INLINE cRYPTOPUNKSCollectionDTOMarketplaceRevenueEthL #-}
+
+-- | 'cRYPTOPUNKSCollectionDTOCreatorRevenueEth' Lens
+cRYPTOPUNKSCollectionDTOCreatorRevenueEthL :: Lens_' CRYPTOPUNKSCollectionDTO (Maybe Text)
+cRYPTOPUNKSCollectionDTOCreatorRevenueEthL f CRYPTOPUNKSCollectionDTO{..} = (\cRYPTOPUNKSCollectionDTOCreatorRevenueEth -> CRYPTOPUNKSCollectionDTO { cRYPTOPUNKSCollectionDTOCreatorRevenueEth, ..} ) <$> f cRYPTOPUNKSCollectionDTOCreatorRevenueEth
+{-# INLINE cRYPTOPUNKSCollectionDTOCreatorRevenueEthL #-}
+
+-- | 'cRYPTOPUNKSCollectionDTOTotalRevenueEth' Lens
+cRYPTOPUNKSCollectionDTOTotalRevenueEthL :: Lens_' CRYPTOPUNKSCollectionDTO (Maybe Text)
+cRYPTOPUNKSCollectionDTOTotalRevenueEthL f CRYPTOPUNKSCollectionDTO{..} = (\cRYPTOPUNKSCollectionDTOTotalRevenueEth -> CRYPTOPUNKSCollectionDTO { cRYPTOPUNKSCollectionDTOTotalRevenueEth, ..} ) <$> f cRYPTOPUNKSCollectionDTOTotalRevenueEth
+{-# INLINE cRYPTOPUNKSCollectionDTOTotalRevenueEthL #-}
+
+-- | 'cRYPTOPUNKSCollectionDTOTradeCount' Lens
+cRYPTOPUNKSCollectionDTOTradeCountL :: Lens_' CRYPTOPUNKSCollectionDTO (Maybe Int)
+cRYPTOPUNKSCollectionDTOTradeCountL f CRYPTOPUNKSCollectionDTO{..} = (\cRYPTOPUNKSCollectionDTOTradeCount -> CRYPTOPUNKSCollectionDTO { cRYPTOPUNKSCollectionDTOTradeCount, ..} ) <$> f cRYPTOPUNKSCollectionDTOTradeCount
+{-# INLINE cRYPTOPUNKSCollectionDTOTradeCountL #-}
+
+-- | 'cRYPTOPUNKSCollectionDTOBuyerCount' Lens
+cRYPTOPUNKSCollectionDTOBuyerCountL :: Lens_' CRYPTOPUNKSCollectionDTO (Maybe Int)
+cRYPTOPUNKSCollectionDTOBuyerCountL f CRYPTOPUNKSCollectionDTO{..} = (\cRYPTOPUNKSCollectionDTOBuyerCount -> CRYPTOPUNKSCollectionDTO { cRYPTOPUNKSCollectionDTOBuyerCount, ..} ) <$> f cRYPTOPUNKSCollectionDTOBuyerCount
+{-# INLINE cRYPTOPUNKSCollectionDTOBuyerCountL #-}
+
+-- | 'cRYPTOPUNKSCollectionDTOSellerCount' Lens
+cRYPTOPUNKSCollectionDTOSellerCountL :: Lens_' CRYPTOPUNKSCollectionDTO (Maybe Int)
+cRYPTOPUNKSCollectionDTOSellerCountL f CRYPTOPUNKSCollectionDTO{..} = (\cRYPTOPUNKSCollectionDTOSellerCount -> CRYPTOPUNKSCollectionDTO { cRYPTOPUNKSCollectionDTOSellerCount, ..} ) <$> f cRYPTOPUNKSCollectionDTOSellerCount
+{-# INLINE cRYPTOPUNKSCollectionDTOSellerCountL #-}
+
+
+
+-- * CRYPTOPUNKSCollectionDailySnapshotDTO
+
+-- | 'cRYPTOPUNKSCollectionDailySnapshotDTOEntryTime' Lens
+cRYPTOPUNKSCollectionDailySnapshotDTOEntryTimeL :: Lens_' CRYPTOPUNKSCollectionDailySnapshotDTO (Maybe DateTime)
+cRYPTOPUNKSCollectionDailySnapshotDTOEntryTimeL f CRYPTOPUNKSCollectionDailySnapshotDTO{..} = (\cRYPTOPUNKSCollectionDailySnapshotDTOEntryTime -> CRYPTOPUNKSCollectionDailySnapshotDTO { cRYPTOPUNKSCollectionDailySnapshotDTOEntryTime, ..} ) <$> f cRYPTOPUNKSCollectionDailySnapshotDTOEntryTime
+{-# INLINE cRYPTOPUNKSCollectionDailySnapshotDTOEntryTimeL #-}
+
+-- | 'cRYPTOPUNKSCollectionDailySnapshotDTORecvTime' Lens
+cRYPTOPUNKSCollectionDailySnapshotDTORecvTimeL :: Lens_' CRYPTOPUNKSCollectionDailySnapshotDTO (Maybe DateTime)
+cRYPTOPUNKSCollectionDailySnapshotDTORecvTimeL f CRYPTOPUNKSCollectionDailySnapshotDTO{..} = (\cRYPTOPUNKSCollectionDailySnapshotDTORecvTime -> CRYPTOPUNKSCollectionDailySnapshotDTO { cRYPTOPUNKSCollectionDailySnapshotDTORecvTime, ..} ) <$> f cRYPTOPUNKSCollectionDailySnapshotDTORecvTime
+{-# INLINE cRYPTOPUNKSCollectionDailySnapshotDTORecvTimeL #-}
+
+-- | 'cRYPTOPUNKSCollectionDailySnapshotDTOBlockNumber' Lens
+cRYPTOPUNKSCollectionDailySnapshotDTOBlockNumberL :: Lens_' CRYPTOPUNKSCollectionDailySnapshotDTO (Maybe Text)
+cRYPTOPUNKSCollectionDailySnapshotDTOBlockNumberL f CRYPTOPUNKSCollectionDailySnapshotDTO{..} = (\cRYPTOPUNKSCollectionDailySnapshotDTOBlockNumber -> CRYPTOPUNKSCollectionDailySnapshotDTO { cRYPTOPUNKSCollectionDailySnapshotDTOBlockNumber, ..} ) <$> f cRYPTOPUNKSCollectionDailySnapshotDTOBlockNumber
+{-# INLINE cRYPTOPUNKSCollectionDailySnapshotDTOBlockNumberL #-}
+
+-- | 'cRYPTOPUNKSCollectionDailySnapshotDTOVid' Lens
+cRYPTOPUNKSCollectionDailySnapshotDTOVidL :: Lens_' CRYPTOPUNKSCollectionDailySnapshotDTO (Maybe Integer)
+cRYPTOPUNKSCollectionDailySnapshotDTOVidL f CRYPTOPUNKSCollectionDailySnapshotDTO{..} = (\cRYPTOPUNKSCollectionDailySnapshotDTOVid -> CRYPTOPUNKSCollectionDailySnapshotDTO { cRYPTOPUNKSCollectionDailySnapshotDTOVid, ..} ) <$> f cRYPTOPUNKSCollectionDailySnapshotDTOVid
+{-# INLINE cRYPTOPUNKSCollectionDailySnapshotDTOVidL #-}
+
+-- | 'cRYPTOPUNKSCollectionDailySnapshotDTOBlockRange' Lens
+cRYPTOPUNKSCollectionDailySnapshotDTOBlockRangeL :: Lens_' CRYPTOPUNKSCollectionDailySnapshotDTO (Maybe Text)
+cRYPTOPUNKSCollectionDailySnapshotDTOBlockRangeL f CRYPTOPUNKSCollectionDailySnapshotDTO{..} = (\cRYPTOPUNKSCollectionDailySnapshotDTOBlockRange -> CRYPTOPUNKSCollectionDailySnapshotDTO { cRYPTOPUNKSCollectionDailySnapshotDTOBlockRange, ..} ) <$> f cRYPTOPUNKSCollectionDailySnapshotDTOBlockRange
+{-# INLINE cRYPTOPUNKSCollectionDailySnapshotDTOBlockRangeL #-}
+
+-- | 'cRYPTOPUNKSCollectionDailySnapshotDTOId' Lens
+cRYPTOPUNKSCollectionDailySnapshotDTOIdL :: Lens_' CRYPTOPUNKSCollectionDailySnapshotDTO (Maybe Text)
+cRYPTOPUNKSCollectionDailySnapshotDTOIdL f CRYPTOPUNKSCollectionDailySnapshotDTO{..} = (\cRYPTOPUNKSCollectionDailySnapshotDTOId -> CRYPTOPUNKSCollectionDailySnapshotDTO { cRYPTOPUNKSCollectionDailySnapshotDTOId, ..} ) <$> f cRYPTOPUNKSCollectionDailySnapshotDTOId
+{-# INLINE cRYPTOPUNKSCollectionDailySnapshotDTOIdL #-}
+
+-- | 'cRYPTOPUNKSCollectionDailySnapshotDTOCollection' Lens
+cRYPTOPUNKSCollectionDailySnapshotDTOCollectionL :: Lens_' CRYPTOPUNKSCollectionDailySnapshotDTO (Maybe Text)
+cRYPTOPUNKSCollectionDailySnapshotDTOCollectionL f CRYPTOPUNKSCollectionDailySnapshotDTO{..} = (\cRYPTOPUNKSCollectionDailySnapshotDTOCollection -> CRYPTOPUNKSCollectionDailySnapshotDTO { cRYPTOPUNKSCollectionDailySnapshotDTOCollection, ..} ) <$> f cRYPTOPUNKSCollectionDailySnapshotDTOCollection
+{-# INLINE cRYPTOPUNKSCollectionDailySnapshotDTOCollectionL #-}
+
+-- | 'cRYPTOPUNKSCollectionDailySnapshotDTOTimestamp' Lens
+cRYPTOPUNKSCollectionDailySnapshotDTOTimestampL :: Lens_' CRYPTOPUNKSCollectionDailySnapshotDTO (Maybe Text)
+cRYPTOPUNKSCollectionDailySnapshotDTOTimestampL f CRYPTOPUNKSCollectionDailySnapshotDTO{..} = (\cRYPTOPUNKSCollectionDailySnapshotDTOTimestamp -> CRYPTOPUNKSCollectionDailySnapshotDTO { cRYPTOPUNKSCollectionDailySnapshotDTOTimestamp, ..} ) <$> f cRYPTOPUNKSCollectionDailySnapshotDTOTimestamp
+{-# INLINE cRYPTOPUNKSCollectionDailySnapshotDTOTimestampL #-}
+
+-- | 'cRYPTOPUNKSCollectionDailySnapshotDTORoyaltyFee' Lens
+cRYPTOPUNKSCollectionDailySnapshotDTORoyaltyFeeL :: Lens_' CRYPTOPUNKSCollectionDailySnapshotDTO (Maybe Text)
+cRYPTOPUNKSCollectionDailySnapshotDTORoyaltyFeeL f CRYPTOPUNKSCollectionDailySnapshotDTO{..} = (\cRYPTOPUNKSCollectionDailySnapshotDTORoyaltyFee -> CRYPTOPUNKSCollectionDailySnapshotDTO { cRYPTOPUNKSCollectionDailySnapshotDTORoyaltyFee, ..} ) <$> f cRYPTOPUNKSCollectionDailySnapshotDTORoyaltyFee
+{-# INLINE cRYPTOPUNKSCollectionDailySnapshotDTORoyaltyFeeL #-}
+
+-- | 'cRYPTOPUNKSCollectionDailySnapshotDTODailyMinSalePrice' Lens
+cRYPTOPUNKSCollectionDailySnapshotDTODailyMinSalePriceL :: Lens_' CRYPTOPUNKSCollectionDailySnapshotDTO (Maybe Text)
+cRYPTOPUNKSCollectionDailySnapshotDTODailyMinSalePriceL f CRYPTOPUNKSCollectionDailySnapshotDTO{..} = (\cRYPTOPUNKSCollectionDailySnapshotDTODailyMinSalePrice -> CRYPTOPUNKSCollectionDailySnapshotDTO { cRYPTOPUNKSCollectionDailySnapshotDTODailyMinSalePrice, ..} ) <$> f cRYPTOPUNKSCollectionDailySnapshotDTODailyMinSalePrice
+{-# INLINE cRYPTOPUNKSCollectionDailySnapshotDTODailyMinSalePriceL #-}
+
+-- | 'cRYPTOPUNKSCollectionDailySnapshotDTODailyMaxSalePrice' Lens
+cRYPTOPUNKSCollectionDailySnapshotDTODailyMaxSalePriceL :: Lens_' CRYPTOPUNKSCollectionDailySnapshotDTO (Maybe Text)
+cRYPTOPUNKSCollectionDailySnapshotDTODailyMaxSalePriceL f CRYPTOPUNKSCollectionDailySnapshotDTO{..} = (\cRYPTOPUNKSCollectionDailySnapshotDTODailyMaxSalePrice -> CRYPTOPUNKSCollectionDailySnapshotDTO { cRYPTOPUNKSCollectionDailySnapshotDTODailyMaxSalePrice, ..} ) <$> f cRYPTOPUNKSCollectionDailySnapshotDTODailyMaxSalePrice
+{-# INLINE cRYPTOPUNKSCollectionDailySnapshotDTODailyMaxSalePriceL #-}
+
+-- | 'cRYPTOPUNKSCollectionDailySnapshotDTOCumulativeTradeVolumeEth' Lens
+cRYPTOPUNKSCollectionDailySnapshotDTOCumulativeTradeVolumeEthL :: Lens_' CRYPTOPUNKSCollectionDailySnapshotDTO (Maybe Text)
+cRYPTOPUNKSCollectionDailySnapshotDTOCumulativeTradeVolumeEthL f CRYPTOPUNKSCollectionDailySnapshotDTO{..} = (\cRYPTOPUNKSCollectionDailySnapshotDTOCumulativeTradeVolumeEth -> CRYPTOPUNKSCollectionDailySnapshotDTO { cRYPTOPUNKSCollectionDailySnapshotDTOCumulativeTradeVolumeEth, ..} ) <$> f cRYPTOPUNKSCollectionDailySnapshotDTOCumulativeTradeVolumeEth
+{-# INLINE cRYPTOPUNKSCollectionDailySnapshotDTOCumulativeTradeVolumeEthL #-}
+
+-- | 'cRYPTOPUNKSCollectionDailySnapshotDTODailyTradeVolumeEth' Lens
+cRYPTOPUNKSCollectionDailySnapshotDTODailyTradeVolumeEthL :: Lens_' CRYPTOPUNKSCollectionDailySnapshotDTO (Maybe Text)
+cRYPTOPUNKSCollectionDailySnapshotDTODailyTradeVolumeEthL f CRYPTOPUNKSCollectionDailySnapshotDTO{..} = (\cRYPTOPUNKSCollectionDailySnapshotDTODailyTradeVolumeEth -> CRYPTOPUNKSCollectionDailySnapshotDTO { cRYPTOPUNKSCollectionDailySnapshotDTODailyTradeVolumeEth, ..} ) <$> f cRYPTOPUNKSCollectionDailySnapshotDTODailyTradeVolumeEth
+{-# INLINE cRYPTOPUNKSCollectionDailySnapshotDTODailyTradeVolumeEthL #-}
+
+-- | 'cRYPTOPUNKSCollectionDailySnapshotDTOMarketplaceRevenueEth' Lens
+cRYPTOPUNKSCollectionDailySnapshotDTOMarketplaceRevenueEthL :: Lens_' CRYPTOPUNKSCollectionDailySnapshotDTO (Maybe Text)
+cRYPTOPUNKSCollectionDailySnapshotDTOMarketplaceRevenueEthL f CRYPTOPUNKSCollectionDailySnapshotDTO{..} = (\cRYPTOPUNKSCollectionDailySnapshotDTOMarketplaceRevenueEth -> CRYPTOPUNKSCollectionDailySnapshotDTO { cRYPTOPUNKSCollectionDailySnapshotDTOMarketplaceRevenueEth, ..} ) <$> f cRYPTOPUNKSCollectionDailySnapshotDTOMarketplaceRevenueEth
+{-# INLINE cRYPTOPUNKSCollectionDailySnapshotDTOMarketplaceRevenueEthL #-}
+
+-- | 'cRYPTOPUNKSCollectionDailySnapshotDTOCreatorRevenueEth' Lens
+cRYPTOPUNKSCollectionDailySnapshotDTOCreatorRevenueEthL :: Lens_' CRYPTOPUNKSCollectionDailySnapshotDTO (Maybe Text)
+cRYPTOPUNKSCollectionDailySnapshotDTOCreatorRevenueEthL f CRYPTOPUNKSCollectionDailySnapshotDTO{..} = (\cRYPTOPUNKSCollectionDailySnapshotDTOCreatorRevenueEth -> CRYPTOPUNKSCollectionDailySnapshotDTO { cRYPTOPUNKSCollectionDailySnapshotDTOCreatorRevenueEth, ..} ) <$> f cRYPTOPUNKSCollectionDailySnapshotDTOCreatorRevenueEth
+{-# INLINE cRYPTOPUNKSCollectionDailySnapshotDTOCreatorRevenueEthL #-}
+
+-- | 'cRYPTOPUNKSCollectionDailySnapshotDTOTotalRevenueEth' Lens
+cRYPTOPUNKSCollectionDailySnapshotDTOTotalRevenueEthL :: Lens_' CRYPTOPUNKSCollectionDailySnapshotDTO (Maybe Text)
+cRYPTOPUNKSCollectionDailySnapshotDTOTotalRevenueEthL f CRYPTOPUNKSCollectionDailySnapshotDTO{..} = (\cRYPTOPUNKSCollectionDailySnapshotDTOTotalRevenueEth -> CRYPTOPUNKSCollectionDailySnapshotDTO { cRYPTOPUNKSCollectionDailySnapshotDTOTotalRevenueEth, ..} ) <$> f cRYPTOPUNKSCollectionDailySnapshotDTOTotalRevenueEth
+{-# INLINE cRYPTOPUNKSCollectionDailySnapshotDTOTotalRevenueEthL #-}
+
+-- | 'cRYPTOPUNKSCollectionDailySnapshotDTOTradeCount' Lens
+cRYPTOPUNKSCollectionDailySnapshotDTOTradeCountL :: Lens_' CRYPTOPUNKSCollectionDailySnapshotDTO (Maybe Int)
+cRYPTOPUNKSCollectionDailySnapshotDTOTradeCountL f CRYPTOPUNKSCollectionDailySnapshotDTO{..} = (\cRYPTOPUNKSCollectionDailySnapshotDTOTradeCount -> CRYPTOPUNKSCollectionDailySnapshotDTO { cRYPTOPUNKSCollectionDailySnapshotDTOTradeCount, ..} ) <$> f cRYPTOPUNKSCollectionDailySnapshotDTOTradeCount
+{-# INLINE cRYPTOPUNKSCollectionDailySnapshotDTOTradeCountL #-}
+
+-- | 'cRYPTOPUNKSCollectionDailySnapshotDTODailyTradedItemCount' Lens
+cRYPTOPUNKSCollectionDailySnapshotDTODailyTradedItemCountL :: Lens_' CRYPTOPUNKSCollectionDailySnapshotDTO (Maybe Int)
+cRYPTOPUNKSCollectionDailySnapshotDTODailyTradedItemCountL f CRYPTOPUNKSCollectionDailySnapshotDTO{..} = (\cRYPTOPUNKSCollectionDailySnapshotDTODailyTradedItemCount -> CRYPTOPUNKSCollectionDailySnapshotDTO { cRYPTOPUNKSCollectionDailySnapshotDTODailyTradedItemCount, ..} ) <$> f cRYPTOPUNKSCollectionDailySnapshotDTODailyTradedItemCount
+{-# INLINE cRYPTOPUNKSCollectionDailySnapshotDTODailyTradedItemCountL #-}
+
+
+
+-- * CRYPTOPUNKSDataSourcesDTO
+
+-- | 'cRYPTOPUNKSDataSourcesDTOEntryTime' Lens
+cRYPTOPUNKSDataSourcesDTOEntryTimeL :: Lens_' CRYPTOPUNKSDataSourcesDTO (Maybe DateTime)
+cRYPTOPUNKSDataSourcesDTOEntryTimeL f CRYPTOPUNKSDataSourcesDTO{..} = (\cRYPTOPUNKSDataSourcesDTOEntryTime -> CRYPTOPUNKSDataSourcesDTO { cRYPTOPUNKSDataSourcesDTOEntryTime, ..} ) <$> f cRYPTOPUNKSDataSourcesDTOEntryTime
+{-# INLINE cRYPTOPUNKSDataSourcesDTOEntryTimeL #-}
+
+-- | 'cRYPTOPUNKSDataSourcesDTORecvTime' Lens
+cRYPTOPUNKSDataSourcesDTORecvTimeL :: Lens_' CRYPTOPUNKSDataSourcesDTO (Maybe DateTime)
+cRYPTOPUNKSDataSourcesDTORecvTimeL f CRYPTOPUNKSDataSourcesDTO{..} = (\cRYPTOPUNKSDataSourcesDTORecvTime -> CRYPTOPUNKSDataSourcesDTO { cRYPTOPUNKSDataSourcesDTORecvTime, ..} ) <$> f cRYPTOPUNKSDataSourcesDTORecvTime
+{-# INLINE cRYPTOPUNKSDataSourcesDTORecvTimeL #-}
+
+-- | 'cRYPTOPUNKSDataSourcesDTOBlockNumber' Lens
+cRYPTOPUNKSDataSourcesDTOBlockNumberL :: Lens_' CRYPTOPUNKSDataSourcesDTO (Maybe Integer)
+cRYPTOPUNKSDataSourcesDTOBlockNumberL f CRYPTOPUNKSDataSourcesDTO{..} = (\cRYPTOPUNKSDataSourcesDTOBlockNumber -> CRYPTOPUNKSDataSourcesDTO { cRYPTOPUNKSDataSourcesDTOBlockNumber, ..} ) <$> f cRYPTOPUNKSDataSourcesDTOBlockNumber
+{-# INLINE cRYPTOPUNKSDataSourcesDTOBlockNumberL #-}
+
+-- | 'cRYPTOPUNKSDataSourcesDTOVid' Lens
+cRYPTOPUNKSDataSourcesDTOVidL :: Lens_' CRYPTOPUNKSDataSourcesDTO (Maybe Int)
+cRYPTOPUNKSDataSourcesDTOVidL f CRYPTOPUNKSDataSourcesDTO{..} = (\cRYPTOPUNKSDataSourcesDTOVid -> CRYPTOPUNKSDataSourcesDTO { cRYPTOPUNKSDataSourcesDTOVid, ..} ) <$> f cRYPTOPUNKSDataSourcesDTOVid
+{-# INLINE cRYPTOPUNKSDataSourcesDTOVidL #-}
+
+-- | 'cRYPTOPUNKSDataSourcesDTOBlockRange' Lens
+cRYPTOPUNKSDataSourcesDTOBlockRangeL :: Lens_' CRYPTOPUNKSDataSourcesDTO (Maybe Text)
+cRYPTOPUNKSDataSourcesDTOBlockRangeL f CRYPTOPUNKSDataSourcesDTO{..} = (\cRYPTOPUNKSDataSourcesDTOBlockRange -> CRYPTOPUNKSDataSourcesDTO { cRYPTOPUNKSDataSourcesDTOBlockRange, ..} ) <$> f cRYPTOPUNKSDataSourcesDTOBlockRange
+{-# INLINE cRYPTOPUNKSDataSourcesDTOBlockRangeL #-}
+
+-- | 'cRYPTOPUNKSDataSourcesDTOCausalityRegion' Lens
+cRYPTOPUNKSDataSourcesDTOCausalityRegionL :: Lens_' CRYPTOPUNKSDataSourcesDTO (Maybe Int)
+cRYPTOPUNKSDataSourcesDTOCausalityRegionL f CRYPTOPUNKSDataSourcesDTO{..} = (\cRYPTOPUNKSDataSourcesDTOCausalityRegion -> CRYPTOPUNKSDataSourcesDTO { cRYPTOPUNKSDataSourcesDTOCausalityRegion, ..} ) <$> f cRYPTOPUNKSDataSourcesDTOCausalityRegion
+{-# INLINE cRYPTOPUNKSDataSourcesDTOCausalityRegionL #-}
+
+-- | 'cRYPTOPUNKSDataSourcesDTOManifestIdx' Lens
+cRYPTOPUNKSDataSourcesDTOManifestIdxL :: Lens_' CRYPTOPUNKSDataSourcesDTO (Maybe Int)
+cRYPTOPUNKSDataSourcesDTOManifestIdxL f CRYPTOPUNKSDataSourcesDTO{..} = (\cRYPTOPUNKSDataSourcesDTOManifestIdx -> CRYPTOPUNKSDataSourcesDTO { cRYPTOPUNKSDataSourcesDTOManifestIdx, ..} ) <$> f cRYPTOPUNKSDataSourcesDTOManifestIdx
+{-# INLINE cRYPTOPUNKSDataSourcesDTOManifestIdxL #-}
+
+-- | 'cRYPTOPUNKSDataSourcesDTOParent' Lens
+cRYPTOPUNKSDataSourcesDTOParentL :: Lens_' CRYPTOPUNKSDataSourcesDTO (Maybe Int)
+cRYPTOPUNKSDataSourcesDTOParentL f CRYPTOPUNKSDataSourcesDTO{..} = (\cRYPTOPUNKSDataSourcesDTOParent -> CRYPTOPUNKSDataSourcesDTO { cRYPTOPUNKSDataSourcesDTOParent, ..} ) <$> f cRYPTOPUNKSDataSourcesDTOParent
+{-# INLINE cRYPTOPUNKSDataSourcesDTOParentL #-}
+
+-- | 'cRYPTOPUNKSDataSourcesDTOId' Lens
+cRYPTOPUNKSDataSourcesDTOIdL :: Lens_' CRYPTOPUNKSDataSourcesDTO (Maybe Text)
+cRYPTOPUNKSDataSourcesDTOIdL f CRYPTOPUNKSDataSourcesDTO{..} = (\cRYPTOPUNKSDataSourcesDTOId -> CRYPTOPUNKSDataSourcesDTO { cRYPTOPUNKSDataSourcesDTOId, ..} ) <$> f cRYPTOPUNKSDataSourcesDTOId
+{-# INLINE cRYPTOPUNKSDataSourcesDTOIdL #-}
+
+-- | 'cRYPTOPUNKSDataSourcesDTOParam' Lens
+cRYPTOPUNKSDataSourcesDTOParamL :: Lens_' CRYPTOPUNKSDataSourcesDTO (Maybe Text)
+cRYPTOPUNKSDataSourcesDTOParamL f CRYPTOPUNKSDataSourcesDTO{..} = (\cRYPTOPUNKSDataSourcesDTOParam -> CRYPTOPUNKSDataSourcesDTO { cRYPTOPUNKSDataSourcesDTOParam, ..} ) <$> f cRYPTOPUNKSDataSourcesDTOParam
+{-# INLINE cRYPTOPUNKSDataSourcesDTOParamL #-}
+
+-- | 'cRYPTOPUNKSDataSourcesDTOContext' Lens
+cRYPTOPUNKSDataSourcesDTOContextL :: Lens_' CRYPTOPUNKSDataSourcesDTO (Maybe Text)
+cRYPTOPUNKSDataSourcesDTOContextL f CRYPTOPUNKSDataSourcesDTO{..} = (\cRYPTOPUNKSDataSourcesDTOContext -> CRYPTOPUNKSDataSourcesDTO { cRYPTOPUNKSDataSourcesDTOContext, ..} ) <$> f cRYPTOPUNKSDataSourcesDTOContext
+{-# INLINE cRYPTOPUNKSDataSourcesDTOContextL #-}
+
+-- | 'cRYPTOPUNKSDataSourcesDTODoneAt' Lens
+cRYPTOPUNKSDataSourcesDTODoneAtL :: Lens_' CRYPTOPUNKSDataSourcesDTO (Maybe Int)
+cRYPTOPUNKSDataSourcesDTODoneAtL f CRYPTOPUNKSDataSourcesDTO{..} = (\cRYPTOPUNKSDataSourcesDTODoneAt -> CRYPTOPUNKSDataSourcesDTO { cRYPTOPUNKSDataSourcesDTODoneAt, ..} ) <$> f cRYPTOPUNKSDataSourcesDTODoneAt
+{-# INLINE cRYPTOPUNKSDataSourcesDTODoneAtL #-}
+
+
+
+-- * CRYPTOPUNKSItemDTO
+
+-- | 'cRYPTOPUNKSItemDTOEntryTime' Lens
+cRYPTOPUNKSItemDTOEntryTimeL :: Lens_' CRYPTOPUNKSItemDTO (Maybe DateTime)
+cRYPTOPUNKSItemDTOEntryTimeL f CRYPTOPUNKSItemDTO{..} = (\cRYPTOPUNKSItemDTOEntryTime -> CRYPTOPUNKSItemDTO { cRYPTOPUNKSItemDTOEntryTime, ..} ) <$> f cRYPTOPUNKSItemDTOEntryTime
+{-# INLINE cRYPTOPUNKSItemDTOEntryTimeL #-}
+
+-- | 'cRYPTOPUNKSItemDTORecvTime' Lens
+cRYPTOPUNKSItemDTORecvTimeL :: Lens_' CRYPTOPUNKSItemDTO (Maybe DateTime)
+cRYPTOPUNKSItemDTORecvTimeL f CRYPTOPUNKSItemDTO{..} = (\cRYPTOPUNKSItemDTORecvTime -> CRYPTOPUNKSItemDTO { cRYPTOPUNKSItemDTORecvTime, ..} ) <$> f cRYPTOPUNKSItemDTORecvTime
+{-# INLINE cRYPTOPUNKSItemDTORecvTimeL #-}
+
+-- | 'cRYPTOPUNKSItemDTOBlockNumber' Lens
+cRYPTOPUNKSItemDTOBlockNumberL :: Lens_' CRYPTOPUNKSItemDTO (Maybe Integer)
+cRYPTOPUNKSItemDTOBlockNumberL f CRYPTOPUNKSItemDTO{..} = (\cRYPTOPUNKSItemDTOBlockNumber -> CRYPTOPUNKSItemDTO { cRYPTOPUNKSItemDTOBlockNumber, ..} ) <$> f cRYPTOPUNKSItemDTOBlockNumber
+{-# INLINE cRYPTOPUNKSItemDTOBlockNumberL #-}
+
+-- | 'cRYPTOPUNKSItemDTOVid' Lens
+cRYPTOPUNKSItemDTOVidL :: Lens_' CRYPTOPUNKSItemDTO (Maybe Integer)
+cRYPTOPUNKSItemDTOVidL f CRYPTOPUNKSItemDTO{..} = (\cRYPTOPUNKSItemDTOVid -> CRYPTOPUNKSItemDTO { cRYPTOPUNKSItemDTOVid, ..} ) <$> f cRYPTOPUNKSItemDTOVid
+{-# INLINE cRYPTOPUNKSItemDTOVidL #-}
+
+-- | 'cRYPTOPUNKSItemDTOBlockRange' Lens
+cRYPTOPUNKSItemDTOBlockRangeL :: Lens_' CRYPTOPUNKSItemDTO (Maybe Text)
+cRYPTOPUNKSItemDTOBlockRangeL f CRYPTOPUNKSItemDTO{..} = (\cRYPTOPUNKSItemDTOBlockRange -> CRYPTOPUNKSItemDTO { cRYPTOPUNKSItemDTOBlockRange, ..} ) <$> f cRYPTOPUNKSItemDTOBlockRange
+{-# INLINE cRYPTOPUNKSItemDTOBlockRangeL #-}
+
+-- | 'cRYPTOPUNKSItemDTOId' Lens
+cRYPTOPUNKSItemDTOIdL :: Lens_' CRYPTOPUNKSItemDTO (Maybe Text)
+cRYPTOPUNKSItemDTOIdL f CRYPTOPUNKSItemDTO{..} = (\cRYPTOPUNKSItemDTOId -> CRYPTOPUNKSItemDTO { cRYPTOPUNKSItemDTOId, ..} ) <$> f cRYPTOPUNKSItemDTOId
+{-# INLINE cRYPTOPUNKSItemDTOIdL #-}
+
+
+
+-- * CRYPTOPUNKSMarketPlaceDTO
+
+-- | 'cRYPTOPUNKSMarketPlaceDTOEntryTime' Lens
+cRYPTOPUNKSMarketPlaceDTOEntryTimeL :: Lens_' CRYPTOPUNKSMarketPlaceDTO (Maybe DateTime)
+cRYPTOPUNKSMarketPlaceDTOEntryTimeL f CRYPTOPUNKSMarketPlaceDTO{..} = (\cRYPTOPUNKSMarketPlaceDTOEntryTime -> CRYPTOPUNKSMarketPlaceDTO { cRYPTOPUNKSMarketPlaceDTOEntryTime, ..} ) <$> f cRYPTOPUNKSMarketPlaceDTOEntryTime
+{-# INLINE cRYPTOPUNKSMarketPlaceDTOEntryTimeL #-}
+
+-- | 'cRYPTOPUNKSMarketPlaceDTORecvTime' Lens
+cRYPTOPUNKSMarketPlaceDTORecvTimeL :: Lens_' CRYPTOPUNKSMarketPlaceDTO (Maybe DateTime)
+cRYPTOPUNKSMarketPlaceDTORecvTimeL f CRYPTOPUNKSMarketPlaceDTO{..} = (\cRYPTOPUNKSMarketPlaceDTORecvTime -> CRYPTOPUNKSMarketPlaceDTO { cRYPTOPUNKSMarketPlaceDTORecvTime, ..} ) <$> f cRYPTOPUNKSMarketPlaceDTORecvTime
+{-# INLINE cRYPTOPUNKSMarketPlaceDTORecvTimeL #-}
+
+-- | 'cRYPTOPUNKSMarketPlaceDTOBlockNumber' Lens
+cRYPTOPUNKSMarketPlaceDTOBlockNumberL :: Lens_' CRYPTOPUNKSMarketPlaceDTO (Maybe Integer)
+cRYPTOPUNKSMarketPlaceDTOBlockNumberL f CRYPTOPUNKSMarketPlaceDTO{..} = (\cRYPTOPUNKSMarketPlaceDTOBlockNumber -> CRYPTOPUNKSMarketPlaceDTO { cRYPTOPUNKSMarketPlaceDTOBlockNumber, ..} ) <$> f cRYPTOPUNKSMarketPlaceDTOBlockNumber
+{-# INLINE cRYPTOPUNKSMarketPlaceDTOBlockNumberL #-}
+
+-- | 'cRYPTOPUNKSMarketPlaceDTOVid' Lens
+cRYPTOPUNKSMarketPlaceDTOVidL :: Lens_' CRYPTOPUNKSMarketPlaceDTO (Maybe Integer)
+cRYPTOPUNKSMarketPlaceDTOVidL f CRYPTOPUNKSMarketPlaceDTO{..} = (\cRYPTOPUNKSMarketPlaceDTOVid -> CRYPTOPUNKSMarketPlaceDTO { cRYPTOPUNKSMarketPlaceDTOVid, ..} ) <$> f cRYPTOPUNKSMarketPlaceDTOVid
+{-# INLINE cRYPTOPUNKSMarketPlaceDTOVidL #-}
+
+-- | 'cRYPTOPUNKSMarketPlaceDTOBlockRange' Lens
+cRYPTOPUNKSMarketPlaceDTOBlockRangeL :: Lens_' CRYPTOPUNKSMarketPlaceDTO (Maybe Text)
+cRYPTOPUNKSMarketPlaceDTOBlockRangeL f CRYPTOPUNKSMarketPlaceDTO{..} = (\cRYPTOPUNKSMarketPlaceDTOBlockRange -> CRYPTOPUNKSMarketPlaceDTO { cRYPTOPUNKSMarketPlaceDTOBlockRange, ..} ) <$> f cRYPTOPUNKSMarketPlaceDTOBlockRange
+{-# INLINE cRYPTOPUNKSMarketPlaceDTOBlockRangeL #-}
+
+-- | 'cRYPTOPUNKSMarketPlaceDTOId' Lens
+cRYPTOPUNKSMarketPlaceDTOIdL :: Lens_' CRYPTOPUNKSMarketPlaceDTO (Maybe Text)
+cRYPTOPUNKSMarketPlaceDTOIdL f CRYPTOPUNKSMarketPlaceDTO{..} = (\cRYPTOPUNKSMarketPlaceDTOId -> CRYPTOPUNKSMarketPlaceDTO { cRYPTOPUNKSMarketPlaceDTOId, ..} ) <$> f cRYPTOPUNKSMarketPlaceDTOId
+{-# INLINE cRYPTOPUNKSMarketPlaceDTOIdL #-}
+
+-- | 'cRYPTOPUNKSMarketPlaceDTOName' Lens
+cRYPTOPUNKSMarketPlaceDTONameL :: Lens_' CRYPTOPUNKSMarketPlaceDTO (Maybe Text)
+cRYPTOPUNKSMarketPlaceDTONameL f CRYPTOPUNKSMarketPlaceDTO{..} = (\cRYPTOPUNKSMarketPlaceDTOName -> CRYPTOPUNKSMarketPlaceDTO { cRYPTOPUNKSMarketPlaceDTOName, ..} ) <$> f cRYPTOPUNKSMarketPlaceDTOName
+{-# INLINE cRYPTOPUNKSMarketPlaceDTONameL #-}
+
+-- | 'cRYPTOPUNKSMarketPlaceDTOSlug' Lens
+cRYPTOPUNKSMarketPlaceDTOSlugL :: Lens_' CRYPTOPUNKSMarketPlaceDTO (Maybe Text)
+cRYPTOPUNKSMarketPlaceDTOSlugL f CRYPTOPUNKSMarketPlaceDTO{..} = (\cRYPTOPUNKSMarketPlaceDTOSlug -> CRYPTOPUNKSMarketPlaceDTO { cRYPTOPUNKSMarketPlaceDTOSlug, ..} ) <$> f cRYPTOPUNKSMarketPlaceDTOSlug
+{-# INLINE cRYPTOPUNKSMarketPlaceDTOSlugL #-}
+
+-- | 'cRYPTOPUNKSMarketPlaceDTOSchemaVersion' Lens
+cRYPTOPUNKSMarketPlaceDTOSchemaVersionL :: Lens_' CRYPTOPUNKSMarketPlaceDTO (Maybe Text)
+cRYPTOPUNKSMarketPlaceDTOSchemaVersionL f CRYPTOPUNKSMarketPlaceDTO{..} = (\cRYPTOPUNKSMarketPlaceDTOSchemaVersion -> CRYPTOPUNKSMarketPlaceDTO { cRYPTOPUNKSMarketPlaceDTOSchemaVersion, ..} ) <$> f cRYPTOPUNKSMarketPlaceDTOSchemaVersion
+{-# INLINE cRYPTOPUNKSMarketPlaceDTOSchemaVersionL #-}
+
+-- | 'cRYPTOPUNKSMarketPlaceDTOSubgraphVersion' Lens
+cRYPTOPUNKSMarketPlaceDTOSubgraphVersionL :: Lens_' CRYPTOPUNKSMarketPlaceDTO (Maybe Text)
+cRYPTOPUNKSMarketPlaceDTOSubgraphVersionL f CRYPTOPUNKSMarketPlaceDTO{..} = (\cRYPTOPUNKSMarketPlaceDTOSubgraphVersion -> CRYPTOPUNKSMarketPlaceDTO { cRYPTOPUNKSMarketPlaceDTOSubgraphVersion, ..} ) <$> f cRYPTOPUNKSMarketPlaceDTOSubgraphVersion
+{-# INLINE cRYPTOPUNKSMarketPlaceDTOSubgraphVersionL #-}
+
+-- | 'cRYPTOPUNKSMarketPlaceDTOMethodologyVersion' Lens
+cRYPTOPUNKSMarketPlaceDTOMethodologyVersionL :: Lens_' CRYPTOPUNKSMarketPlaceDTO (Maybe Text)
+cRYPTOPUNKSMarketPlaceDTOMethodologyVersionL f CRYPTOPUNKSMarketPlaceDTO{..} = (\cRYPTOPUNKSMarketPlaceDTOMethodologyVersion -> CRYPTOPUNKSMarketPlaceDTO { cRYPTOPUNKSMarketPlaceDTOMethodologyVersion, ..} ) <$> f cRYPTOPUNKSMarketPlaceDTOMethodologyVersion
+{-# INLINE cRYPTOPUNKSMarketPlaceDTOMethodologyVersionL #-}
+
+-- | 'cRYPTOPUNKSMarketPlaceDTOCollectionCount' Lens
+cRYPTOPUNKSMarketPlaceDTOCollectionCountL :: Lens_' CRYPTOPUNKSMarketPlaceDTO (Maybe Int)
+cRYPTOPUNKSMarketPlaceDTOCollectionCountL f CRYPTOPUNKSMarketPlaceDTO{..} = (\cRYPTOPUNKSMarketPlaceDTOCollectionCount -> CRYPTOPUNKSMarketPlaceDTO { cRYPTOPUNKSMarketPlaceDTOCollectionCount, ..} ) <$> f cRYPTOPUNKSMarketPlaceDTOCollectionCount
+{-# INLINE cRYPTOPUNKSMarketPlaceDTOCollectionCountL #-}
+
+-- | 'cRYPTOPUNKSMarketPlaceDTOTradeCount' Lens
+cRYPTOPUNKSMarketPlaceDTOTradeCountL :: Lens_' CRYPTOPUNKSMarketPlaceDTO (Maybe Int)
+cRYPTOPUNKSMarketPlaceDTOTradeCountL f CRYPTOPUNKSMarketPlaceDTO{..} = (\cRYPTOPUNKSMarketPlaceDTOTradeCount -> CRYPTOPUNKSMarketPlaceDTO { cRYPTOPUNKSMarketPlaceDTOTradeCount, ..} ) <$> f cRYPTOPUNKSMarketPlaceDTOTradeCount
+{-# INLINE cRYPTOPUNKSMarketPlaceDTOTradeCountL #-}
+
+-- | 'cRYPTOPUNKSMarketPlaceDTOCumulativeTradeVolumeEth' Lens
+cRYPTOPUNKSMarketPlaceDTOCumulativeTradeVolumeEthL :: Lens_' CRYPTOPUNKSMarketPlaceDTO (Maybe Text)
+cRYPTOPUNKSMarketPlaceDTOCumulativeTradeVolumeEthL f CRYPTOPUNKSMarketPlaceDTO{..} = (\cRYPTOPUNKSMarketPlaceDTOCumulativeTradeVolumeEth -> CRYPTOPUNKSMarketPlaceDTO { cRYPTOPUNKSMarketPlaceDTOCumulativeTradeVolumeEth, ..} ) <$> f cRYPTOPUNKSMarketPlaceDTOCumulativeTradeVolumeEth
+{-# INLINE cRYPTOPUNKSMarketPlaceDTOCumulativeTradeVolumeEthL #-}
+
+-- | 'cRYPTOPUNKSMarketPlaceDTOMarketplaceRevenueEth' Lens
+cRYPTOPUNKSMarketPlaceDTOMarketplaceRevenueEthL :: Lens_' CRYPTOPUNKSMarketPlaceDTO (Maybe Text)
+cRYPTOPUNKSMarketPlaceDTOMarketplaceRevenueEthL f CRYPTOPUNKSMarketPlaceDTO{..} = (\cRYPTOPUNKSMarketPlaceDTOMarketplaceRevenueEth -> CRYPTOPUNKSMarketPlaceDTO { cRYPTOPUNKSMarketPlaceDTOMarketplaceRevenueEth, ..} ) <$> f cRYPTOPUNKSMarketPlaceDTOMarketplaceRevenueEth
+{-# INLINE cRYPTOPUNKSMarketPlaceDTOMarketplaceRevenueEthL #-}
+
+-- | 'cRYPTOPUNKSMarketPlaceDTOCreatorRevenueEth' Lens
+cRYPTOPUNKSMarketPlaceDTOCreatorRevenueEthL :: Lens_' CRYPTOPUNKSMarketPlaceDTO (Maybe Text)
+cRYPTOPUNKSMarketPlaceDTOCreatorRevenueEthL f CRYPTOPUNKSMarketPlaceDTO{..} = (\cRYPTOPUNKSMarketPlaceDTOCreatorRevenueEth -> CRYPTOPUNKSMarketPlaceDTO { cRYPTOPUNKSMarketPlaceDTOCreatorRevenueEth, ..} ) <$> f cRYPTOPUNKSMarketPlaceDTOCreatorRevenueEth
+{-# INLINE cRYPTOPUNKSMarketPlaceDTOCreatorRevenueEthL #-}
+
+-- | 'cRYPTOPUNKSMarketPlaceDTOTotalRevenueEth' Lens
+cRYPTOPUNKSMarketPlaceDTOTotalRevenueEthL :: Lens_' CRYPTOPUNKSMarketPlaceDTO (Maybe Text)
+cRYPTOPUNKSMarketPlaceDTOTotalRevenueEthL f CRYPTOPUNKSMarketPlaceDTO{..} = (\cRYPTOPUNKSMarketPlaceDTOTotalRevenueEth -> CRYPTOPUNKSMarketPlaceDTO { cRYPTOPUNKSMarketPlaceDTOTotalRevenueEth, ..} ) <$> f cRYPTOPUNKSMarketPlaceDTOTotalRevenueEth
+{-# INLINE cRYPTOPUNKSMarketPlaceDTOTotalRevenueEthL #-}
+
+-- | 'cRYPTOPUNKSMarketPlaceDTOCumulativeUniqueTraders' Lens
+cRYPTOPUNKSMarketPlaceDTOCumulativeUniqueTradersL :: Lens_' CRYPTOPUNKSMarketPlaceDTO (Maybe Int)
+cRYPTOPUNKSMarketPlaceDTOCumulativeUniqueTradersL f CRYPTOPUNKSMarketPlaceDTO{..} = (\cRYPTOPUNKSMarketPlaceDTOCumulativeUniqueTraders -> CRYPTOPUNKSMarketPlaceDTO { cRYPTOPUNKSMarketPlaceDTOCumulativeUniqueTraders, ..} ) <$> f cRYPTOPUNKSMarketPlaceDTOCumulativeUniqueTraders
+{-# INLINE cRYPTOPUNKSMarketPlaceDTOCumulativeUniqueTradersL #-}
+
+
+
+-- * CRYPTOPUNKSMarketplaceDailySnapshotDTO
+
+-- | 'cRYPTOPUNKSMarketplaceDailySnapshotDTOEntryTime' Lens
+cRYPTOPUNKSMarketplaceDailySnapshotDTOEntryTimeL :: Lens_' CRYPTOPUNKSMarketplaceDailySnapshotDTO (Maybe DateTime)
+cRYPTOPUNKSMarketplaceDailySnapshotDTOEntryTimeL f CRYPTOPUNKSMarketplaceDailySnapshotDTO{..} = (\cRYPTOPUNKSMarketplaceDailySnapshotDTOEntryTime -> CRYPTOPUNKSMarketplaceDailySnapshotDTO { cRYPTOPUNKSMarketplaceDailySnapshotDTOEntryTime, ..} ) <$> f cRYPTOPUNKSMarketplaceDailySnapshotDTOEntryTime
+{-# INLINE cRYPTOPUNKSMarketplaceDailySnapshotDTOEntryTimeL #-}
+
+-- | 'cRYPTOPUNKSMarketplaceDailySnapshotDTORecvTime' Lens
+cRYPTOPUNKSMarketplaceDailySnapshotDTORecvTimeL :: Lens_' CRYPTOPUNKSMarketplaceDailySnapshotDTO (Maybe DateTime)
+cRYPTOPUNKSMarketplaceDailySnapshotDTORecvTimeL f CRYPTOPUNKSMarketplaceDailySnapshotDTO{..} = (\cRYPTOPUNKSMarketplaceDailySnapshotDTORecvTime -> CRYPTOPUNKSMarketplaceDailySnapshotDTO { cRYPTOPUNKSMarketplaceDailySnapshotDTORecvTime, ..} ) <$> f cRYPTOPUNKSMarketplaceDailySnapshotDTORecvTime
+{-# INLINE cRYPTOPUNKSMarketplaceDailySnapshotDTORecvTimeL #-}
+
+-- | 'cRYPTOPUNKSMarketplaceDailySnapshotDTOBlockNumber' Lens
+cRYPTOPUNKSMarketplaceDailySnapshotDTOBlockNumberL :: Lens_' CRYPTOPUNKSMarketplaceDailySnapshotDTO (Maybe Text)
+cRYPTOPUNKSMarketplaceDailySnapshotDTOBlockNumberL f CRYPTOPUNKSMarketplaceDailySnapshotDTO{..} = (\cRYPTOPUNKSMarketplaceDailySnapshotDTOBlockNumber -> CRYPTOPUNKSMarketplaceDailySnapshotDTO { cRYPTOPUNKSMarketplaceDailySnapshotDTOBlockNumber, ..} ) <$> f cRYPTOPUNKSMarketplaceDailySnapshotDTOBlockNumber
+{-# INLINE cRYPTOPUNKSMarketplaceDailySnapshotDTOBlockNumberL #-}
+
+-- | 'cRYPTOPUNKSMarketplaceDailySnapshotDTOVid' Lens
+cRYPTOPUNKSMarketplaceDailySnapshotDTOVidL :: Lens_' CRYPTOPUNKSMarketplaceDailySnapshotDTO (Maybe Integer)
+cRYPTOPUNKSMarketplaceDailySnapshotDTOVidL f CRYPTOPUNKSMarketplaceDailySnapshotDTO{..} = (\cRYPTOPUNKSMarketplaceDailySnapshotDTOVid -> CRYPTOPUNKSMarketplaceDailySnapshotDTO { cRYPTOPUNKSMarketplaceDailySnapshotDTOVid, ..} ) <$> f cRYPTOPUNKSMarketplaceDailySnapshotDTOVid
+{-# INLINE cRYPTOPUNKSMarketplaceDailySnapshotDTOVidL #-}
+
+-- | 'cRYPTOPUNKSMarketplaceDailySnapshotDTOBlockRange' Lens
+cRYPTOPUNKSMarketplaceDailySnapshotDTOBlockRangeL :: Lens_' CRYPTOPUNKSMarketplaceDailySnapshotDTO (Maybe Text)
+cRYPTOPUNKSMarketplaceDailySnapshotDTOBlockRangeL f CRYPTOPUNKSMarketplaceDailySnapshotDTO{..} = (\cRYPTOPUNKSMarketplaceDailySnapshotDTOBlockRange -> CRYPTOPUNKSMarketplaceDailySnapshotDTO { cRYPTOPUNKSMarketplaceDailySnapshotDTOBlockRange, ..} ) <$> f cRYPTOPUNKSMarketplaceDailySnapshotDTOBlockRange
+{-# INLINE cRYPTOPUNKSMarketplaceDailySnapshotDTOBlockRangeL #-}
+
+-- | 'cRYPTOPUNKSMarketplaceDailySnapshotDTOId' Lens
+cRYPTOPUNKSMarketplaceDailySnapshotDTOIdL :: Lens_' CRYPTOPUNKSMarketplaceDailySnapshotDTO (Maybe Text)
+cRYPTOPUNKSMarketplaceDailySnapshotDTOIdL f CRYPTOPUNKSMarketplaceDailySnapshotDTO{..} = (\cRYPTOPUNKSMarketplaceDailySnapshotDTOId -> CRYPTOPUNKSMarketplaceDailySnapshotDTO { cRYPTOPUNKSMarketplaceDailySnapshotDTOId, ..} ) <$> f cRYPTOPUNKSMarketplaceDailySnapshotDTOId
+{-# INLINE cRYPTOPUNKSMarketplaceDailySnapshotDTOIdL #-}
+
+-- | 'cRYPTOPUNKSMarketplaceDailySnapshotDTOMarketplace' Lens
+cRYPTOPUNKSMarketplaceDailySnapshotDTOMarketplaceL :: Lens_' CRYPTOPUNKSMarketplaceDailySnapshotDTO (Maybe Text)
+cRYPTOPUNKSMarketplaceDailySnapshotDTOMarketplaceL f CRYPTOPUNKSMarketplaceDailySnapshotDTO{..} = (\cRYPTOPUNKSMarketplaceDailySnapshotDTOMarketplace -> CRYPTOPUNKSMarketplaceDailySnapshotDTO { cRYPTOPUNKSMarketplaceDailySnapshotDTOMarketplace, ..} ) <$> f cRYPTOPUNKSMarketplaceDailySnapshotDTOMarketplace
+{-# INLINE cRYPTOPUNKSMarketplaceDailySnapshotDTOMarketplaceL #-}
+
+-- | 'cRYPTOPUNKSMarketplaceDailySnapshotDTOTimestamp' Lens
+cRYPTOPUNKSMarketplaceDailySnapshotDTOTimestampL :: Lens_' CRYPTOPUNKSMarketplaceDailySnapshotDTO (Maybe Text)
+cRYPTOPUNKSMarketplaceDailySnapshotDTOTimestampL f CRYPTOPUNKSMarketplaceDailySnapshotDTO{..} = (\cRYPTOPUNKSMarketplaceDailySnapshotDTOTimestamp -> CRYPTOPUNKSMarketplaceDailySnapshotDTO { cRYPTOPUNKSMarketplaceDailySnapshotDTOTimestamp, ..} ) <$> f cRYPTOPUNKSMarketplaceDailySnapshotDTOTimestamp
+{-# INLINE cRYPTOPUNKSMarketplaceDailySnapshotDTOTimestampL #-}
+
+-- | 'cRYPTOPUNKSMarketplaceDailySnapshotDTOCollectionCount' Lens
+cRYPTOPUNKSMarketplaceDailySnapshotDTOCollectionCountL :: Lens_' CRYPTOPUNKSMarketplaceDailySnapshotDTO (Maybe Int)
+cRYPTOPUNKSMarketplaceDailySnapshotDTOCollectionCountL f CRYPTOPUNKSMarketplaceDailySnapshotDTO{..} = (\cRYPTOPUNKSMarketplaceDailySnapshotDTOCollectionCount -> CRYPTOPUNKSMarketplaceDailySnapshotDTO { cRYPTOPUNKSMarketplaceDailySnapshotDTOCollectionCount, ..} ) <$> f cRYPTOPUNKSMarketplaceDailySnapshotDTOCollectionCount
+{-# INLINE cRYPTOPUNKSMarketplaceDailySnapshotDTOCollectionCountL #-}
+
+-- | 'cRYPTOPUNKSMarketplaceDailySnapshotDTOCumulativeTradeVolumeEth' Lens
+cRYPTOPUNKSMarketplaceDailySnapshotDTOCumulativeTradeVolumeEthL :: Lens_' CRYPTOPUNKSMarketplaceDailySnapshotDTO (Maybe Text)
+cRYPTOPUNKSMarketplaceDailySnapshotDTOCumulativeTradeVolumeEthL f CRYPTOPUNKSMarketplaceDailySnapshotDTO{..} = (\cRYPTOPUNKSMarketplaceDailySnapshotDTOCumulativeTradeVolumeEth -> CRYPTOPUNKSMarketplaceDailySnapshotDTO { cRYPTOPUNKSMarketplaceDailySnapshotDTOCumulativeTradeVolumeEth, ..} ) <$> f cRYPTOPUNKSMarketplaceDailySnapshotDTOCumulativeTradeVolumeEth
+{-# INLINE cRYPTOPUNKSMarketplaceDailySnapshotDTOCumulativeTradeVolumeEthL #-}
+
+-- | 'cRYPTOPUNKSMarketplaceDailySnapshotDTOMarketplaceRevenueEth' Lens
+cRYPTOPUNKSMarketplaceDailySnapshotDTOMarketplaceRevenueEthL :: Lens_' CRYPTOPUNKSMarketplaceDailySnapshotDTO (Maybe Text)
+cRYPTOPUNKSMarketplaceDailySnapshotDTOMarketplaceRevenueEthL f CRYPTOPUNKSMarketplaceDailySnapshotDTO{..} = (\cRYPTOPUNKSMarketplaceDailySnapshotDTOMarketplaceRevenueEth -> CRYPTOPUNKSMarketplaceDailySnapshotDTO { cRYPTOPUNKSMarketplaceDailySnapshotDTOMarketplaceRevenueEth, ..} ) <$> f cRYPTOPUNKSMarketplaceDailySnapshotDTOMarketplaceRevenueEth
+{-# INLINE cRYPTOPUNKSMarketplaceDailySnapshotDTOMarketplaceRevenueEthL #-}
+
+-- | 'cRYPTOPUNKSMarketplaceDailySnapshotDTOCreatorRevenueEth' Lens
+cRYPTOPUNKSMarketplaceDailySnapshotDTOCreatorRevenueEthL :: Lens_' CRYPTOPUNKSMarketplaceDailySnapshotDTO (Maybe Text)
+cRYPTOPUNKSMarketplaceDailySnapshotDTOCreatorRevenueEthL f CRYPTOPUNKSMarketplaceDailySnapshotDTO{..} = (\cRYPTOPUNKSMarketplaceDailySnapshotDTOCreatorRevenueEth -> CRYPTOPUNKSMarketplaceDailySnapshotDTO { cRYPTOPUNKSMarketplaceDailySnapshotDTOCreatorRevenueEth, ..} ) <$> f cRYPTOPUNKSMarketplaceDailySnapshotDTOCreatorRevenueEth
+{-# INLINE cRYPTOPUNKSMarketplaceDailySnapshotDTOCreatorRevenueEthL #-}
+
+-- | 'cRYPTOPUNKSMarketplaceDailySnapshotDTOTotalRevenueEth' Lens
+cRYPTOPUNKSMarketplaceDailySnapshotDTOTotalRevenueEthL :: Lens_' CRYPTOPUNKSMarketplaceDailySnapshotDTO (Maybe Text)
+cRYPTOPUNKSMarketplaceDailySnapshotDTOTotalRevenueEthL f CRYPTOPUNKSMarketplaceDailySnapshotDTO{..} = (\cRYPTOPUNKSMarketplaceDailySnapshotDTOTotalRevenueEth -> CRYPTOPUNKSMarketplaceDailySnapshotDTO { cRYPTOPUNKSMarketplaceDailySnapshotDTOTotalRevenueEth, ..} ) <$> f cRYPTOPUNKSMarketplaceDailySnapshotDTOTotalRevenueEth
+{-# INLINE cRYPTOPUNKSMarketplaceDailySnapshotDTOTotalRevenueEthL #-}
+
+-- | 'cRYPTOPUNKSMarketplaceDailySnapshotDTOTradeCount' Lens
+cRYPTOPUNKSMarketplaceDailySnapshotDTOTradeCountL :: Lens_' CRYPTOPUNKSMarketplaceDailySnapshotDTO (Maybe Int)
+cRYPTOPUNKSMarketplaceDailySnapshotDTOTradeCountL f CRYPTOPUNKSMarketplaceDailySnapshotDTO{..} = (\cRYPTOPUNKSMarketplaceDailySnapshotDTOTradeCount -> CRYPTOPUNKSMarketplaceDailySnapshotDTO { cRYPTOPUNKSMarketplaceDailySnapshotDTOTradeCount, ..} ) <$> f cRYPTOPUNKSMarketplaceDailySnapshotDTOTradeCount
+{-# INLINE cRYPTOPUNKSMarketplaceDailySnapshotDTOTradeCountL #-}
+
+-- | 'cRYPTOPUNKSMarketplaceDailySnapshotDTOCumulativeUniqueTraders' Lens
+cRYPTOPUNKSMarketplaceDailySnapshotDTOCumulativeUniqueTradersL :: Lens_' CRYPTOPUNKSMarketplaceDailySnapshotDTO (Maybe Int)
+cRYPTOPUNKSMarketplaceDailySnapshotDTOCumulativeUniqueTradersL f CRYPTOPUNKSMarketplaceDailySnapshotDTO{..} = (\cRYPTOPUNKSMarketplaceDailySnapshotDTOCumulativeUniqueTraders -> CRYPTOPUNKSMarketplaceDailySnapshotDTO { cRYPTOPUNKSMarketplaceDailySnapshotDTOCumulativeUniqueTraders, ..} ) <$> f cRYPTOPUNKSMarketplaceDailySnapshotDTOCumulativeUniqueTraders
+{-# INLINE cRYPTOPUNKSMarketplaceDailySnapshotDTOCumulativeUniqueTradersL #-}
+
+-- | 'cRYPTOPUNKSMarketplaceDailySnapshotDTODailyActiveTraders' Lens
+cRYPTOPUNKSMarketplaceDailySnapshotDTODailyActiveTradersL :: Lens_' CRYPTOPUNKSMarketplaceDailySnapshotDTO (Maybe Int)
+cRYPTOPUNKSMarketplaceDailySnapshotDTODailyActiveTradersL f CRYPTOPUNKSMarketplaceDailySnapshotDTO{..} = (\cRYPTOPUNKSMarketplaceDailySnapshotDTODailyActiveTraders -> CRYPTOPUNKSMarketplaceDailySnapshotDTO { cRYPTOPUNKSMarketplaceDailySnapshotDTODailyActiveTraders, ..} ) <$> f cRYPTOPUNKSMarketplaceDailySnapshotDTODailyActiveTraders
+{-# INLINE cRYPTOPUNKSMarketplaceDailySnapshotDTODailyActiveTradersL #-}
+
+-- | 'cRYPTOPUNKSMarketplaceDailySnapshotDTODailyTradedCollectionCount' Lens
+cRYPTOPUNKSMarketplaceDailySnapshotDTODailyTradedCollectionCountL :: Lens_' CRYPTOPUNKSMarketplaceDailySnapshotDTO (Maybe Int)
+cRYPTOPUNKSMarketplaceDailySnapshotDTODailyTradedCollectionCountL f CRYPTOPUNKSMarketplaceDailySnapshotDTO{..} = (\cRYPTOPUNKSMarketplaceDailySnapshotDTODailyTradedCollectionCount -> CRYPTOPUNKSMarketplaceDailySnapshotDTO { cRYPTOPUNKSMarketplaceDailySnapshotDTODailyTradedCollectionCount, ..} ) <$> f cRYPTOPUNKSMarketplaceDailySnapshotDTODailyTradedCollectionCount
+{-# INLINE cRYPTOPUNKSMarketplaceDailySnapshotDTODailyTradedCollectionCountL #-}
+
+-- | 'cRYPTOPUNKSMarketplaceDailySnapshotDTODailyTradedItemCount' Lens
+cRYPTOPUNKSMarketplaceDailySnapshotDTODailyTradedItemCountL :: Lens_' CRYPTOPUNKSMarketplaceDailySnapshotDTO (Maybe Int)
+cRYPTOPUNKSMarketplaceDailySnapshotDTODailyTradedItemCountL f CRYPTOPUNKSMarketplaceDailySnapshotDTO{..} = (\cRYPTOPUNKSMarketplaceDailySnapshotDTODailyTradedItemCount -> CRYPTOPUNKSMarketplaceDailySnapshotDTO { cRYPTOPUNKSMarketplaceDailySnapshotDTODailyTradedItemCount, ..} ) <$> f cRYPTOPUNKSMarketplaceDailySnapshotDTODailyTradedItemCount
+{-# INLINE cRYPTOPUNKSMarketplaceDailySnapshotDTODailyTradedItemCountL #-}
+
+
+
+-- * CRYPTOPUNKSTradeDTO
+
+-- | 'cRYPTOPUNKSTradeDTOEntryTime' Lens
+cRYPTOPUNKSTradeDTOEntryTimeL :: Lens_' CRYPTOPUNKSTradeDTO (Maybe DateTime)
+cRYPTOPUNKSTradeDTOEntryTimeL f CRYPTOPUNKSTradeDTO{..} = (\cRYPTOPUNKSTradeDTOEntryTime -> CRYPTOPUNKSTradeDTO { cRYPTOPUNKSTradeDTOEntryTime, ..} ) <$> f cRYPTOPUNKSTradeDTOEntryTime
+{-# INLINE cRYPTOPUNKSTradeDTOEntryTimeL #-}
+
+-- | 'cRYPTOPUNKSTradeDTORecvTime' Lens
+cRYPTOPUNKSTradeDTORecvTimeL :: Lens_' CRYPTOPUNKSTradeDTO (Maybe DateTime)
+cRYPTOPUNKSTradeDTORecvTimeL f CRYPTOPUNKSTradeDTO{..} = (\cRYPTOPUNKSTradeDTORecvTime -> CRYPTOPUNKSTradeDTO { cRYPTOPUNKSTradeDTORecvTime, ..} ) <$> f cRYPTOPUNKSTradeDTORecvTime
+{-# INLINE cRYPTOPUNKSTradeDTORecvTimeL #-}
+
+-- | 'cRYPTOPUNKSTradeDTOBlockNumber' Lens
+cRYPTOPUNKSTradeDTOBlockNumberL :: Lens_' CRYPTOPUNKSTradeDTO (Maybe Text)
+cRYPTOPUNKSTradeDTOBlockNumberL f CRYPTOPUNKSTradeDTO{..} = (\cRYPTOPUNKSTradeDTOBlockNumber -> CRYPTOPUNKSTradeDTO { cRYPTOPUNKSTradeDTOBlockNumber, ..} ) <$> f cRYPTOPUNKSTradeDTOBlockNumber
+{-# INLINE cRYPTOPUNKSTradeDTOBlockNumberL #-}
+
+-- | 'cRYPTOPUNKSTradeDTOVid' Lens
+cRYPTOPUNKSTradeDTOVidL :: Lens_' CRYPTOPUNKSTradeDTO (Maybe Integer)
+cRYPTOPUNKSTradeDTOVidL f CRYPTOPUNKSTradeDTO{..} = (\cRYPTOPUNKSTradeDTOVid -> CRYPTOPUNKSTradeDTO { cRYPTOPUNKSTradeDTOVid, ..} ) <$> f cRYPTOPUNKSTradeDTOVid
+{-# INLINE cRYPTOPUNKSTradeDTOVidL #-}
+
+-- | 'cRYPTOPUNKSTradeDTOBlockRange' Lens
+cRYPTOPUNKSTradeDTOBlockRangeL :: Lens_' CRYPTOPUNKSTradeDTO (Maybe Text)
+cRYPTOPUNKSTradeDTOBlockRangeL f CRYPTOPUNKSTradeDTO{..} = (\cRYPTOPUNKSTradeDTOBlockRange -> CRYPTOPUNKSTradeDTO { cRYPTOPUNKSTradeDTOBlockRange, ..} ) <$> f cRYPTOPUNKSTradeDTOBlockRange
+{-# INLINE cRYPTOPUNKSTradeDTOBlockRangeL #-}
+
+-- | 'cRYPTOPUNKSTradeDTOId' Lens
+cRYPTOPUNKSTradeDTOIdL :: Lens_' CRYPTOPUNKSTradeDTO (Maybe Text)
+cRYPTOPUNKSTradeDTOIdL f CRYPTOPUNKSTradeDTO{..} = (\cRYPTOPUNKSTradeDTOId -> CRYPTOPUNKSTradeDTO { cRYPTOPUNKSTradeDTOId, ..} ) <$> f cRYPTOPUNKSTradeDTOId
+{-# INLINE cRYPTOPUNKSTradeDTOIdL #-}
+
+-- | 'cRYPTOPUNKSTradeDTOTransactionHash' Lens
+cRYPTOPUNKSTradeDTOTransactionHashL :: Lens_' CRYPTOPUNKSTradeDTO (Maybe Text)
+cRYPTOPUNKSTradeDTOTransactionHashL f CRYPTOPUNKSTradeDTO{..} = (\cRYPTOPUNKSTradeDTOTransactionHash -> CRYPTOPUNKSTradeDTO { cRYPTOPUNKSTradeDTOTransactionHash, ..} ) <$> f cRYPTOPUNKSTradeDTOTransactionHash
+{-# INLINE cRYPTOPUNKSTradeDTOTransactionHashL #-}
+
+-- | 'cRYPTOPUNKSTradeDTOLogIndex' Lens
+cRYPTOPUNKSTradeDTOLogIndexL :: Lens_' CRYPTOPUNKSTradeDTO (Maybe Int)
+cRYPTOPUNKSTradeDTOLogIndexL f CRYPTOPUNKSTradeDTO{..} = (\cRYPTOPUNKSTradeDTOLogIndex -> CRYPTOPUNKSTradeDTO { cRYPTOPUNKSTradeDTOLogIndex, ..} ) <$> f cRYPTOPUNKSTradeDTOLogIndex
+{-# INLINE cRYPTOPUNKSTradeDTOLogIndexL #-}
+
+-- | 'cRYPTOPUNKSTradeDTOTimestamp' Lens
+cRYPTOPUNKSTradeDTOTimestampL :: Lens_' CRYPTOPUNKSTradeDTO (Maybe Text)
+cRYPTOPUNKSTradeDTOTimestampL f CRYPTOPUNKSTradeDTO{..} = (\cRYPTOPUNKSTradeDTOTimestamp -> CRYPTOPUNKSTradeDTO { cRYPTOPUNKSTradeDTOTimestamp, ..} ) <$> f cRYPTOPUNKSTradeDTOTimestamp
+{-# INLINE cRYPTOPUNKSTradeDTOTimestampL #-}
+
+-- | 'cRYPTOPUNKSTradeDTOIsBundle' Lens
+cRYPTOPUNKSTradeDTOIsBundleL :: Lens_' CRYPTOPUNKSTradeDTO (Maybe Bool)
+cRYPTOPUNKSTradeDTOIsBundleL f CRYPTOPUNKSTradeDTO{..} = (\cRYPTOPUNKSTradeDTOIsBundle -> CRYPTOPUNKSTradeDTO { cRYPTOPUNKSTradeDTOIsBundle, ..} ) <$> f cRYPTOPUNKSTradeDTOIsBundle
+{-# INLINE cRYPTOPUNKSTradeDTOIsBundleL #-}
+
+-- | 'cRYPTOPUNKSTradeDTOCollection' Lens
+cRYPTOPUNKSTradeDTOCollectionL :: Lens_' CRYPTOPUNKSTradeDTO (Maybe Text)
+cRYPTOPUNKSTradeDTOCollectionL f CRYPTOPUNKSTradeDTO{..} = (\cRYPTOPUNKSTradeDTOCollection -> CRYPTOPUNKSTradeDTO { cRYPTOPUNKSTradeDTOCollection, ..} ) <$> f cRYPTOPUNKSTradeDTOCollection
+{-# INLINE cRYPTOPUNKSTradeDTOCollectionL #-}
+
+-- | 'cRYPTOPUNKSTradeDTOTokenId' Lens
+cRYPTOPUNKSTradeDTOTokenIdL :: Lens_' CRYPTOPUNKSTradeDTO (Maybe Text)
+cRYPTOPUNKSTradeDTOTokenIdL f CRYPTOPUNKSTradeDTO{..} = (\cRYPTOPUNKSTradeDTOTokenId -> CRYPTOPUNKSTradeDTO { cRYPTOPUNKSTradeDTOTokenId, ..} ) <$> f cRYPTOPUNKSTradeDTOTokenId
+{-# INLINE cRYPTOPUNKSTradeDTOTokenIdL #-}
+
+-- | 'cRYPTOPUNKSTradeDTOAmount' Lens
+cRYPTOPUNKSTradeDTOAmountL :: Lens_' CRYPTOPUNKSTradeDTO (Maybe Text)
+cRYPTOPUNKSTradeDTOAmountL f CRYPTOPUNKSTradeDTO{..} = (\cRYPTOPUNKSTradeDTOAmount -> CRYPTOPUNKSTradeDTO { cRYPTOPUNKSTradeDTOAmount, ..} ) <$> f cRYPTOPUNKSTradeDTOAmount
+{-# INLINE cRYPTOPUNKSTradeDTOAmountL #-}
+
+-- | 'cRYPTOPUNKSTradeDTOPriceEth' Lens
+cRYPTOPUNKSTradeDTOPriceEthL :: Lens_' CRYPTOPUNKSTradeDTO (Maybe Text)
+cRYPTOPUNKSTradeDTOPriceEthL f CRYPTOPUNKSTradeDTO{..} = (\cRYPTOPUNKSTradeDTOPriceEth -> CRYPTOPUNKSTradeDTO { cRYPTOPUNKSTradeDTOPriceEth, ..} ) <$> f cRYPTOPUNKSTradeDTOPriceEth
+{-# INLINE cRYPTOPUNKSTradeDTOPriceEthL #-}
+
+-- | 'cRYPTOPUNKSTradeDTOBuyer' Lens
+cRYPTOPUNKSTradeDTOBuyerL :: Lens_' CRYPTOPUNKSTradeDTO (Maybe Text)
+cRYPTOPUNKSTradeDTOBuyerL f CRYPTOPUNKSTradeDTO{..} = (\cRYPTOPUNKSTradeDTOBuyer -> CRYPTOPUNKSTradeDTO { cRYPTOPUNKSTradeDTOBuyer, ..} ) <$> f cRYPTOPUNKSTradeDTOBuyer
+{-# INLINE cRYPTOPUNKSTradeDTOBuyerL #-}
+
+-- | 'cRYPTOPUNKSTradeDTOSeller' Lens
+cRYPTOPUNKSTradeDTOSellerL :: Lens_' CRYPTOPUNKSTradeDTO (Maybe Text)
+cRYPTOPUNKSTradeDTOSellerL f CRYPTOPUNKSTradeDTO{..} = (\cRYPTOPUNKSTradeDTOSeller -> CRYPTOPUNKSTradeDTO { cRYPTOPUNKSTradeDTOSeller, ..} ) <$> f cRYPTOPUNKSTradeDTOSeller
+{-# INLINE cRYPTOPUNKSTradeDTOSellerL #-}
+
+
+
+-- * CRYPTOPUNKSUserDTO
+
+-- | 'cRYPTOPUNKSUserDTOEntryTime' Lens
+cRYPTOPUNKSUserDTOEntryTimeL :: Lens_' CRYPTOPUNKSUserDTO (Maybe DateTime)
+cRYPTOPUNKSUserDTOEntryTimeL f CRYPTOPUNKSUserDTO{..} = (\cRYPTOPUNKSUserDTOEntryTime -> CRYPTOPUNKSUserDTO { cRYPTOPUNKSUserDTOEntryTime, ..} ) <$> f cRYPTOPUNKSUserDTOEntryTime
+{-# INLINE cRYPTOPUNKSUserDTOEntryTimeL #-}
+
+-- | 'cRYPTOPUNKSUserDTORecvTime' Lens
+cRYPTOPUNKSUserDTORecvTimeL :: Lens_' CRYPTOPUNKSUserDTO (Maybe DateTime)
+cRYPTOPUNKSUserDTORecvTimeL f CRYPTOPUNKSUserDTO{..} = (\cRYPTOPUNKSUserDTORecvTime -> CRYPTOPUNKSUserDTO { cRYPTOPUNKSUserDTORecvTime, ..} ) <$> f cRYPTOPUNKSUserDTORecvTime
+{-# INLINE cRYPTOPUNKSUserDTORecvTimeL #-}
+
+-- | 'cRYPTOPUNKSUserDTOBlockNumber' Lens
+cRYPTOPUNKSUserDTOBlockNumberL :: Lens_' CRYPTOPUNKSUserDTO (Maybe Integer)
+cRYPTOPUNKSUserDTOBlockNumberL f CRYPTOPUNKSUserDTO{..} = (\cRYPTOPUNKSUserDTOBlockNumber -> CRYPTOPUNKSUserDTO { cRYPTOPUNKSUserDTOBlockNumber, ..} ) <$> f cRYPTOPUNKSUserDTOBlockNumber
+{-# INLINE cRYPTOPUNKSUserDTOBlockNumberL #-}
+
+-- | 'cRYPTOPUNKSUserDTOVid' Lens
+cRYPTOPUNKSUserDTOVidL :: Lens_' CRYPTOPUNKSUserDTO (Maybe Integer)
+cRYPTOPUNKSUserDTOVidL f CRYPTOPUNKSUserDTO{..} = (\cRYPTOPUNKSUserDTOVid -> CRYPTOPUNKSUserDTO { cRYPTOPUNKSUserDTOVid, ..} ) <$> f cRYPTOPUNKSUserDTOVid
+{-# INLINE cRYPTOPUNKSUserDTOVidL #-}
+
+-- | 'cRYPTOPUNKSUserDTOBlockRange' Lens
+cRYPTOPUNKSUserDTOBlockRangeL :: Lens_' CRYPTOPUNKSUserDTO (Maybe Text)
+cRYPTOPUNKSUserDTOBlockRangeL f CRYPTOPUNKSUserDTO{..} = (\cRYPTOPUNKSUserDTOBlockRange -> CRYPTOPUNKSUserDTO { cRYPTOPUNKSUserDTOBlockRange, ..} ) <$> f cRYPTOPUNKSUserDTOBlockRange
+{-# INLINE cRYPTOPUNKSUserDTOBlockRangeL #-}
+
+-- | 'cRYPTOPUNKSUserDTOId' Lens
+cRYPTOPUNKSUserDTOIdL :: Lens_' CRYPTOPUNKSUserDTO (Maybe Text)
+cRYPTOPUNKSUserDTOIdL f CRYPTOPUNKSUserDTO{..} = (\cRYPTOPUNKSUserDTOId -> CRYPTOPUNKSUserDTO { cRYPTOPUNKSUserDTOId, ..} ) <$> f cRYPTOPUNKSUserDTOId
+{-# INLINE cRYPTOPUNKSUserDTOIdL #-}
+
+
+
 -- * CowOrderDTO
 
 -- | 'cowOrderDTOEntryTime' Lens

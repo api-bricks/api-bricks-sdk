@@ -73,6 +73,795 @@ export class RequiredError extends Error {
  * 
  * @export
  */
+export type CRYPTOPUNKSBidDTO = {
+    /**
+     * 
+     * @type {Date}
+     * @memberof CRYPTOPUNKSBidDTO
+     */
+    entry_time?: Date;
+    /**
+     * 
+     * @type {Date}
+     * @memberof CRYPTOPUNKSBidDTO
+     */
+    recv_time?: Date;
+    /**
+     * 
+     * @type {string}
+     * @memberof CRYPTOPUNKSBidDTO
+     */
+    block_number?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof CRYPTOPUNKSBidDTO
+     */
+    vid?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof CRYPTOPUNKSBidDTO
+     */
+    block_range?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CRYPTOPUNKSBidDTO
+     */
+    id?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CRYPTOPUNKSBidDTO
+     */
+    tokens_bid?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CRYPTOPUNKSBidDTO
+     */
+    token_id?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CRYPTOPUNKSBidDTO
+     */
+    timestamp?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CRYPTOPUNKSBidDTO
+     */
+    bidder?: string;
+}
+
+/**
+ * 
+ * @export
+ */
+export type CRYPTOPUNKSCollectionDTO = {
+    /**
+     * 
+     * @type {Date}
+     * @memberof CRYPTOPUNKSCollectionDTO
+     */
+    entry_time?: Date;
+    /**
+     * 
+     * @type {Date}
+     * @memberof CRYPTOPUNKSCollectionDTO
+     */
+    recv_time?: Date;
+    /**
+     * Number of block in which entity was recorded.
+     * @type {number}
+     * @memberof CRYPTOPUNKSCollectionDTO
+     */
+    block_number?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof CRYPTOPUNKSCollectionDTO
+     */
+    vid?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof CRYPTOPUNKSCollectionDTO
+     */
+    block_range?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CRYPTOPUNKSCollectionDTO
+     */
+    id?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CRYPTOPUNKSCollectionDTO
+     */
+    name?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CRYPTOPUNKSCollectionDTO
+     */
+    symbol?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CRYPTOPUNKSCollectionDTO
+     */
+    total_supply?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CRYPTOPUNKSCollectionDTO
+     */
+    royalty_fee?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CRYPTOPUNKSCollectionDTO
+     */
+    cumulative_trade_volume_eth?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CRYPTOPUNKSCollectionDTO
+     */
+    marketplace_revenue_eth?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CRYPTOPUNKSCollectionDTO
+     */
+    creator_revenue_eth?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CRYPTOPUNKSCollectionDTO
+     */
+    total_revenue_eth?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof CRYPTOPUNKSCollectionDTO
+     */
+    trade_count?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof CRYPTOPUNKSCollectionDTO
+     */
+    buyer_count?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof CRYPTOPUNKSCollectionDTO
+     */
+    seller_count?: number;
+}
+
+/**
+ * 
+ * @export
+ */
+export type CRYPTOPUNKSCollectionDailySnapshotDTO = {
+    /**
+     * 
+     * @type {Date}
+     * @memberof CRYPTOPUNKSCollectionDailySnapshotDTO
+     */
+    entry_time?: Date;
+    /**
+     * 
+     * @type {Date}
+     * @memberof CRYPTOPUNKSCollectionDailySnapshotDTO
+     */
+    recv_time?: Date;
+    /**
+     * 
+     * @type {string}
+     * @memberof CRYPTOPUNKSCollectionDailySnapshotDTO
+     */
+    block_number?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof CRYPTOPUNKSCollectionDailySnapshotDTO
+     */
+    vid?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof CRYPTOPUNKSCollectionDailySnapshotDTO
+     */
+    block_range?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CRYPTOPUNKSCollectionDailySnapshotDTO
+     */
+    id?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CRYPTOPUNKSCollectionDailySnapshotDTO
+     */
+    collection?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CRYPTOPUNKSCollectionDailySnapshotDTO
+     */
+    timestamp?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CRYPTOPUNKSCollectionDailySnapshotDTO
+     */
+    royalty_fee?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CRYPTOPUNKSCollectionDailySnapshotDTO
+     */
+    daily_min_sale_price?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CRYPTOPUNKSCollectionDailySnapshotDTO
+     */
+    daily_max_sale_price?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CRYPTOPUNKSCollectionDailySnapshotDTO
+     */
+    cumulative_trade_volume_eth?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CRYPTOPUNKSCollectionDailySnapshotDTO
+     */
+    daily_trade_volume_eth?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CRYPTOPUNKSCollectionDailySnapshotDTO
+     */
+    marketplace_revenue_eth?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CRYPTOPUNKSCollectionDailySnapshotDTO
+     */
+    creator_revenue_eth?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CRYPTOPUNKSCollectionDailySnapshotDTO
+     */
+    total_revenue_eth?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof CRYPTOPUNKSCollectionDailySnapshotDTO
+     */
+    trade_count?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof CRYPTOPUNKSCollectionDailySnapshotDTO
+     */
+    daily_traded_item_count?: number;
+}
+
+/**
+ * 
+ * @export
+ */
+export type CRYPTOPUNKSDataSourcesDTO = {
+    /**
+     * 
+     * @type {Date}
+     * @memberof CRYPTOPUNKSDataSourcesDTO
+     */
+    entry_time?: Date;
+    /**
+     * 
+     * @type {Date}
+     * @memberof CRYPTOPUNKSDataSourcesDTO
+     */
+    recv_time?: Date;
+    /**
+     * Number of block in which entity was recorded.
+     * @type {number}
+     * @memberof CRYPTOPUNKSDataSourcesDTO
+     */
+    block_number?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof CRYPTOPUNKSDataSourcesDTO
+     */
+    vid?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof CRYPTOPUNKSDataSourcesDTO
+     */
+    block_range?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof CRYPTOPUNKSDataSourcesDTO
+     */
+    causality_region?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof CRYPTOPUNKSDataSourcesDTO
+     */
+    manifest_idx?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof CRYPTOPUNKSDataSourcesDTO
+     */
+    parent?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof CRYPTOPUNKSDataSourcesDTO
+     */
+    id?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CRYPTOPUNKSDataSourcesDTO
+     */
+    param?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CRYPTOPUNKSDataSourcesDTO
+     */
+    context?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof CRYPTOPUNKSDataSourcesDTO
+     */
+    done_at?: number;
+}
+
+/**
+ * 
+ * @export
+ */
+export type CRYPTOPUNKSItemDTO = {
+    /**
+     * 
+     * @type {Date}
+     * @memberof CRYPTOPUNKSItemDTO
+     */
+    entry_time?: Date;
+    /**
+     * 
+     * @type {Date}
+     * @memberof CRYPTOPUNKSItemDTO
+     */
+    recv_time?: Date;
+    /**
+     * Number of block in which entity was recorded.
+     * @type {number}
+     * @memberof CRYPTOPUNKSItemDTO
+     */
+    block_number?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof CRYPTOPUNKSItemDTO
+     */
+    vid?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof CRYPTOPUNKSItemDTO
+     */
+    block_range?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CRYPTOPUNKSItemDTO
+     */
+    id?: string;
+}
+
+/**
+ * 
+ * @export
+ */
+export type CRYPTOPUNKSMarketPlaceDTO = {
+    /**
+     * 
+     * @type {Date}
+     * @memberof CRYPTOPUNKSMarketPlaceDTO
+     */
+    entry_time?: Date;
+    /**
+     * 
+     * @type {Date}
+     * @memberof CRYPTOPUNKSMarketPlaceDTO
+     */
+    recv_time?: Date;
+    /**
+     * Number of block in which entity was recorded.
+     * @type {number}
+     * @memberof CRYPTOPUNKSMarketPlaceDTO
+     */
+    block_number?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof CRYPTOPUNKSMarketPlaceDTO
+     */
+    vid?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof CRYPTOPUNKSMarketPlaceDTO
+     */
+    block_range?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CRYPTOPUNKSMarketPlaceDTO
+     */
+    id?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CRYPTOPUNKSMarketPlaceDTO
+     */
+    name?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CRYPTOPUNKSMarketPlaceDTO
+     */
+    slug?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CRYPTOPUNKSMarketPlaceDTO
+     */
+    schema_version?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CRYPTOPUNKSMarketPlaceDTO
+     */
+    subgraph_version?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CRYPTOPUNKSMarketPlaceDTO
+     */
+    methodology_version?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof CRYPTOPUNKSMarketPlaceDTO
+     */
+    collection_count?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof CRYPTOPUNKSMarketPlaceDTO
+     */
+    trade_count?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof CRYPTOPUNKSMarketPlaceDTO
+     */
+    cumulative_trade_volume_eth?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CRYPTOPUNKSMarketPlaceDTO
+     */
+    marketplace_revenue_eth?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CRYPTOPUNKSMarketPlaceDTO
+     */
+    creator_revenue_eth?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CRYPTOPUNKSMarketPlaceDTO
+     */
+    total_revenue_eth?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof CRYPTOPUNKSMarketPlaceDTO
+     */
+    cumulative_unique_traders?: number;
+}
+
+/**
+ * 
+ * @export
+ */
+export type CRYPTOPUNKSMarketplaceDailySnapshotDTO = {
+    /**
+     * 
+     * @type {Date}
+     * @memberof CRYPTOPUNKSMarketplaceDailySnapshotDTO
+     */
+    entry_time?: Date;
+    /**
+     * 
+     * @type {Date}
+     * @memberof CRYPTOPUNKSMarketplaceDailySnapshotDTO
+     */
+    recv_time?: Date;
+    /**
+     * 
+     * @type {string}
+     * @memberof CRYPTOPUNKSMarketplaceDailySnapshotDTO
+     */
+    block_number?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof CRYPTOPUNKSMarketplaceDailySnapshotDTO
+     */
+    vid?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof CRYPTOPUNKSMarketplaceDailySnapshotDTO
+     */
+    block_range?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CRYPTOPUNKSMarketplaceDailySnapshotDTO
+     */
+    id?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CRYPTOPUNKSMarketplaceDailySnapshotDTO
+     */
+    marketplace?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CRYPTOPUNKSMarketplaceDailySnapshotDTO
+     */
+    timestamp?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof CRYPTOPUNKSMarketplaceDailySnapshotDTO
+     */
+    collection_count?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof CRYPTOPUNKSMarketplaceDailySnapshotDTO
+     */
+    cumulative_trade_volume_eth?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CRYPTOPUNKSMarketplaceDailySnapshotDTO
+     */
+    marketplace_revenue_eth?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CRYPTOPUNKSMarketplaceDailySnapshotDTO
+     */
+    creator_revenue_eth?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CRYPTOPUNKSMarketplaceDailySnapshotDTO
+     */
+    total_revenue_eth?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof CRYPTOPUNKSMarketplaceDailySnapshotDTO
+     */
+    trade_count?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof CRYPTOPUNKSMarketplaceDailySnapshotDTO
+     */
+    cumulative_unique_traders?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof CRYPTOPUNKSMarketplaceDailySnapshotDTO
+     */
+    daily_active_traders?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof CRYPTOPUNKSMarketplaceDailySnapshotDTO
+     */
+    daily_traded_collection_count?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof CRYPTOPUNKSMarketplaceDailySnapshotDTO
+     */
+    daily_traded_item_count?: number;
+}
+
+/**
+ * 
+ * @export
+ */
+export type CRYPTOPUNKSTradeDTO = {
+    /**
+     * 
+     * @type {Date}
+     * @memberof CRYPTOPUNKSTradeDTO
+     */
+    entry_time?: Date;
+    /**
+     * 
+     * @type {Date}
+     * @memberof CRYPTOPUNKSTradeDTO
+     */
+    recv_time?: Date;
+    /**
+     * 
+     * @type {string}
+     * @memberof CRYPTOPUNKSTradeDTO
+     */
+    block_number?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof CRYPTOPUNKSTradeDTO
+     */
+    vid?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof CRYPTOPUNKSTradeDTO
+     */
+    block_range?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CRYPTOPUNKSTradeDTO
+     */
+    id?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CRYPTOPUNKSTradeDTO
+     */
+    transaction_hash?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof CRYPTOPUNKSTradeDTO
+     */
+    log_index?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof CRYPTOPUNKSTradeDTO
+     */
+    timestamp?: string;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof CRYPTOPUNKSTradeDTO
+     */
+    is_bundle?: boolean;
+    /**
+     * 
+     * @type {string}
+     * @memberof CRYPTOPUNKSTradeDTO
+     */
+    collection?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CRYPTOPUNKSTradeDTO
+     */
+    token_id?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CRYPTOPUNKSTradeDTO
+     */
+    amount?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CRYPTOPUNKSTradeDTO
+     */
+    price_eth?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CRYPTOPUNKSTradeDTO
+     */
+    buyer?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CRYPTOPUNKSTradeDTO
+     */
+    seller?: string;
+}
+
+/**
+ * 
+ * @export
+ */
+export type CRYPTOPUNKSUserDTO = {
+    /**
+     * 
+     * @type {Date}
+     * @memberof CRYPTOPUNKSUserDTO
+     */
+    entry_time?: Date;
+    /**
+     * 
+     * @type {Date}
+     * @memberof CRYPTOPUNKSUserDTO
+     */
+    recv_time?: Date;
+    /**
+     * Number of block in which entity was recorded.
+     * @type {number}
+     * @memberof CRYPTOPUNKSUserDTO
+     */
+    block_number?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof CRYPTOPUNKSUserDTO
+     */
+    vid?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof CRYPTOPUNKSUserDTO
+     */
+    block_range?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CRYPTOPUNKSUserDTO
+     */
+    id?: string;
+}
+
+/**
+ * 
+ * @export
+ */
 export type CowOrderDTO = {
     /**
      * 
@@ -9017,6 +9806,902 @@ export type UniswapV3UniswapDayDataDTO = {
     tvl_usd?: string;
 }
 
+
+
+/**
+ * CRYPTOPUNKSApi - fetch parameter creator
+ * @export
+ */
+export const CRYPTOPUNKSApiFetchParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * Gets bids.
+         * @summary Bids (current)
+         * @throws {RequiredError}
+         */
+        cRYPTOPUNKSBidsCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/cryptopunks/bids/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets collectionDailySnapshots.
+         * @summary CollectionDailySnapshots (current)
+         * @throws {RequiredError}
+         */
+        cRYPTOPUNKSCollectionDailySnapshotsCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/cryptopunks/collectionDailySnapshots/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets collections.
+         * @summary Collections (current)
+         * @throws {RequiredError}
+         */
+        cRYPTOPUNKSCollectionsCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/cryptopunks/collections/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets dataSources.
+         * @summary DataSources (current)
+         * @throws {RequiredError}
+         */
+        cRYPTOPUNKSDataSourcesCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/cryptopunks/dataSources/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets bids.
+         * @summary Bids (historical)
+         * @throws {RequiredError}
+         */
+        cRYPTOPUNKSGetBidsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/cryptopunks/bids/historical`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            if (startBlock !== undefined) {
+                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
+            }
+
+            if (endBlock !== undefined) {
+                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
+            }
+
+            if (startDate !== undefined) {
+                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
+            }
+
+            if (endDate !== undefined) {
+                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
+            }
+
+            if (id !== undefined) {
+                localVarQueryParameter['id'] = ((id:any):string);
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets collectionDailySnapshots.
+         * @summary CollectionDailySnapshots (historical)
+         * @throws {RequiredError}
+         */
+        cRYPTOPUNKSGetCollectionDailySnapshotsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/cryptopunks/collectionDailySnapshots/historical`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            if (startBlock !== undefined) {
+                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
+            }
+
+            if (endBlock !== undefined) {
+                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
+            }
+
+            if (startDate !== undefined) {
+                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
+            }
+
+            if (endDate !== undefined) {
+                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets collections.
+         * @summary Collections (historical)
+         * @throws {RequiredError}
+         */
+        cRYPTOPUNKSGetCollectionsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/cryptopunks/collections/historical`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            if (startBlock !== undefined) {
+                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
+            }
+
+            if (endBlock !== undefined) {
+                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
+            }
+
+            if (startDate !== undefined) {
+                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
+            }
+
+            if (endDate !== undefined) {
+                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
+            }
+
+            if (id !== undefined) {
+                localVarQueryParameter['id'] = ((id:any):string);
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets dataSources.
+         * @summary DataSources (historical)
+         * @throws {RequiredError}
+         */
+        cRYPTOPUNKSGetDataSourcesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/cryptopunks/dataSources/historical`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            if (startBlock !== undefined) {
+                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
+            }
+
+            if (endBlock !== undefined) {
+                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
+            }
+
+            if (startDate !== undefined) {
+                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
+            }
+
+            if (endDate !== undefined) {
+                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
+            }
+
+            if (id !== undefined) {
+                localVarQueryParameter['id'] = ((id:any):string);
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets items.
+         * @summary Items (historical)
+         * @throws {RequiredError}
+         */
+        cRYPTOPUNKSGetItemsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/cryptopunks/items/historical`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            if (startBlock !== undefined) {
+                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
+            }
+
+            if (endBlock !== undefined) {
+                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
+            }
+
+            if (startDate !== undefined) {
+                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
+            }
+
+            if (endDate !== undefined) {
+                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets marketPlaces.
+         * @summary MarketPlaces (historical)
+         * @throws {RequiredError}
+         */
+        cRYPTOPUNKSGetMarketPlacesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/cryptopunks/marketPlaces/historical`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            if (startBlock !== undefined) {
+                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
+            }
+
+            if (endBlock !== undefined) {
+                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
+            }
+
+            if (startDate !== undefined) {
+                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
+            }
+
+            if (endDate !== undefined) {
+                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
+            }
+
+            if (id !== undefined) {
+                localVarQueryParameter['id'] = ((id:any):string);
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets marketplaceDailySnapshots.
+         * @summary MarketplaceDailySnapshots (historical)
+         * @throws {RequiredError}
+         */
+        cRYPTOPUNKSGetMarketplaceDailySnapshotsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/cryptopunks/marketplaceDailySnapshots/historical`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            if (startBlock !== undefined) {
+                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
+            }
+
+            if (endBlock !== undefined) {
+                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
+            }
+
+            if (startDate !== undefined) {
+                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
+            }
+
+            if (endDate !== undefined) {
+                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
+            }
+
+            if (id !== undefined) {
+                localVarQueryParameter['id'] = ((id:any):string);
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets trades.
+         * @summary Trades (historical)
+         * @throws {RequiredError}
+         */
+        cRYPTOPUNKSGetTradesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/cryptopunks/trades/historical`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            if (startBlock !== undefined) {
+                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
+            }
+
+            if (endBlock !== undefined) {
+                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
+            }
+
+            if (startDate !== undefined) {
+                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
+            }
+
+            if (endDate !== undefined) {
+                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
+            }
+
+            if (id !== undefined) {
+                localVarQueryParameter['id'] = ((id:any):string);
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets users.
+         * @summary Users (historical)
+         * @throws {RequiredError}
+         */
+        cRYPTOPUNKSGetUsersHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/cryptopunks/users/historical`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            if (startBlock !== undefined) {
+                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
+            }
+
+            if (endBlock !== undefined) {
+                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
+            }
+
+            if (startDate !== undefined) {
+                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
+            }
+
+            if (endDate !== undefined) {
+                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
+            }
+
+            if (id !== undefined) {
+                localVarQueryParameter['id'] = ((id:any):string);
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets items.
+         * @summary Items (current)
+         * @throws {RequiredError}
+         */
+        cRYPTOPUNKSItemsCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/cryptopunks/items/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets marketPlaces.
+         * @summary MarketPlaces (current)
+         * @throws {RequiredError}
+         */
+        cRYPTOPUNKSMarketPlacesCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/cryptopunks/marketPlaces/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets marketplaceDailySnapshots.
+         * @summary MarketplaceDailySnapshots (current)
+         * @throws {RequiredError}
+         */
+        cRYPTOPUNKSMarketplaceDailySnapshotsCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/cryptopunks/marketplaceDailySnapshots/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets trades.
+         * @summary Trades (current)
+         * @throws {RequiredError}
+         */
+        cRYPTOPUNKSTradesCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/cryptopunks/trades/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets users.
+         * @summary Users (current)
+         * @throws {RequiredError}
+         */
+        cRYPTOPUNKSUsersCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/cryptopunks/users/current`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+export type CRYPTOPUNKSApiType = { 
+    cRYPTOPUNKSBidsCurrent(options?: RequestOptions): Promise<Array<CRYPTOPUNKSBidDTO>>,
+
+    cRYPTOPUNKSCollectionDailySnapshotsCurrent(options?: RequestOptions): Promise<Array<CRYPTOPUNKSCollectionDailySnapshotDTO>>,
+
+    cRYPTOPUNKSCollectionsCurrent(options?: RequestOptions): Promise<Array<CRYPTOPUNKSCollectionDTO>>,
+
+    cRYPTOPUNKSDataSourcesCurrent(options?: RequestOptions): Promise<Array<CRYPTOPUNKSDataSourcesDTO>>,
+
+    cRYPTOPUNKSGetBidsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions): Promise<Array<CRYPTOPUNKSBidDTO>>,
+
+    cRYPTOPUNKSGetCollectionDailySnapshotsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions): Promise<Array<CRYPTOPUNKSCollectionDailySnapshotDTO>>,
+
+    cRYPTOPUNKSGetCollectionsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions): Promise<Array<CRYPTOPUNKSCollectionDTO>>,
+
+    cRYPTOPUNKSGetDataSourcesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions): Promise<Array<CRYPTOPUNKSDataSourcesDTO>>,
+
+    cRYPTOPUNKSGetItemsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions): Promise<Array<CRYPTOPUNKSItemDTO>>,
+
+    cRYPTOPUNKSGetMarketPlacesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions): Promise<Array<CRYPTOPUNKSMarketPlaceDTO>>,
+
+    cRYPTOPUNKSGetMarketplaceDailySnapshotsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions): Promise<Array<CRYPTOPUNKSMarketplaceDailySnapshotDTO>>,
+
+    cRYPTOPUNKSGetTradesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions): Promise<Array<CRYPTOPUNKSTradeDTO>>,
+
+    cRYPTOPUNKSGetUsersHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions): Promise<Array<CRYPTOPUNKSUserDTO>>,
+
+    cRYPTOPUNKSItemsCurrent(options?: RequestOptions): Promise<Array<CRYPTOPUNKSItemDTO>>,
+
+    cRYPTOPUNKSMarketPlacesCurrent(options?: RequestOptions): Promise<Array<CRYPTOPUNKSMarketPlaceDTO>>,
+
+    cRYPTOPUNKSMarketplaceDailySnapshotsCurrent(options?: RequestOptions): Promise<Array<CRYPTOPUNKSMarketplaceDailySnapshotDTO>>,
+
+    cRYPTOPUNKSTradesCurrent(options?: RequestOptions): Promise<Array<CRYPTOPUNKSTradeDTO>>,
+
+    cRYPTOPUNKSUsersCurrent(options?: RequestOptions): Promise<Array<CRYPTOPUNKSUserDTO>>,
+}
+
+/**
+ * CRYPTOPUNKSApi - factory function to inject configuration 
+ * @export
+ */
+export const CRYPTOPUNKSApi = function(configuration?: Configuration, fetch: FetchAPI = portableFetch): CRYPTOPUNKSApiType {
+    const basePath: string = (configuration && configuration.basePath) || BASE_PATH;
+    return {
+        /**
+         * Gets bids.
+         * @summary Bids (current)
+         * @throws {RequiredError}
+         */
+        cRYPTOPUNKSBidsCurrent(options?: RequestOptions = {}): Promise<Array<CRYPTOPUNKSBidDTO>> {
+            const localVarFetchArgs = CRYPTOPUNKSApiFetchParamCreator(configuration).cRYPTOPUNKSBidsCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets collectionDailySnapshots.
+         * @summary CollectionDailySnapshots (current)
+         * @throws {RequiredError}
+         */
+        cRYPTOPUNKSCollectionDailySnapshotsCurrent(options?: RequestOptions = {}): Promise<Array<CRYPTOPUNKSCollectionDailySnapshotDTO>> {
+            const localVarFetchArgs = CRYPTOPUNKSApiFetchParamCreator(configuration).cRYPTOPUNKSCollectionDailySnapshotsCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets collections.
+         * @summary Collections (current)
+         * @throws {RequiredError}
+         */
+        cRYPTOPUNKSCollectionsCurrent(options?: RequestOptions = {}): Promise<Array<CRYPTOPUNKSCollectionDTO>> {
+            const localVarFetchArgs = CRYPTOPUNKSApiFetchParamCreator(configuration).cRYPTOPUNKSCollectionsCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets dataSources.
+         * @summary DataSources (current)
+         * @throws {RequiredError}
+         */
+        cRYPTOPUNKSDataSourcesCurrent(options?: RequestOptions = {}): Promise<Array<CRYPTOPUNKSDataSourcesDTO>> {
+            const localVarFetchArgs = CRYPTOPUNKSApiFetchParamCreator(configuration).cRYPTOPUNKSDataSourcesCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets bids.
+         * @summary Bids (historical)
+         * @throws {RequiredError}
+         */
+        cRYPTOPUNKSGetBidsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions = {}): Promise<Array<CRYPTOPUNKSBidDTO>> {
+            const localVarFetchArgs = CRYPTOPUNKSApiFetchParamCreator(configuration).cRYPTOPUNKSGetBidsHistorical(startBlock, endBlock, startDate, endDate, id, options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets collectionDailySnapshots.
+         * @summary CollectionDailySnapshots (historical)
+         * @throws {RequiredError}
+         */
+        cRYPTOPUNKSGetCollectionDailySnapshotsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions = {}): Promise<Array<CRYPTOPUNKSCollectionDailySnapshotDTO>> {
+            const localVarFetchArgs = CRYPTOPUNKSApiFetchParamCreator(configuration).cRYPTOPUNKSGetCollectionDailySnapshotsHistorical(startBlock, endBlock, startDate, endDate, options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets collections.
+         * @summary Collections (historical)
+         * @throws {RequiredError}
+         */
+        cRYPTOPUNKSGetCollectionsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions = {}): Promise<Array<CRYPTOPUNKSCollectionDTO>> {
+            const localVarFetchArgs = CRYPTOPUNKSApiFetchParamCreator(configuration).cRYPTOPUNKSGetCollectionsHistorical(startBlock, endBlock, startDate, endDate, id, options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets dataSources.
+         * @summary DataSources (historical)
+         * @throws {RequiredError}
+         */
+        cRYPTOPUNKSGetDataSourcesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions = {}): Promise<Array<CRYPTOPUNKSDataSourcesDTO>> {
+            const localVarFetchArgs = CRYPTOPUNKSApiFetchParamCreator(configuration).cRYPTOPUNKSGetDataSourcesHistorical(startBlock, endBlock, startDate, endDate, id, options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets items.
+         * @summary Items (historical)
+         * @throws {RequiredError}
+         */
+        cRYPTOPUNKSGetItemsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions = {}): Promise<Array<CRYPTOPUNKSItemDTO>> {
+            const localVarFetchArgs = CRYPTOPUNKSApiFetchParamCreator(configuration).cRYPTOPUNKSGetItemsHistorical(startBlock, endBlock, startDate, endDate, options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets marketPlaces.
+         * @summary MarketPlaces (historical)
+         * @throws {RequiredError}
+         */
+        cRYPTOPUNKSGetMarketPlacesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions = {}): Promise<Array<CRYPTOPUNKSMarketPlaceDTO>> {
+            const localVarFetchArgs = CRYPTOPUNKSApiFetchParamCreator(configuration).cRYPTOPUNKSGetMarketPlacesHistorical(startBlock, endBlock, startDate, endDate, id, options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets marketplaceDailySnapshots.
+         * @summary MarketplaceDailySnapshots (historical)
+         * @throws {RequiredError}
+         */
+        cRYPTOPUNKSGetMarketplaceDailySnapshotsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions = {}): Promise<Array<CRYPTOPUNKSMarketplaceDailySnapshotDTO>> {
+            const localVarFetchArgs = CRYPTOPUNKSApiFetchParamCreator(configuration).cRYPTOPUNKSGetMarketplaceDailySnapshotsHistorical(startBlock, endBlock, startDate, endDate, id, options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets trades.
+         * @summary Trades (historical)
+         * @throws {RequiredError}
+         */
+        cRYPTOPUNKSGetTradesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions = {}): Promise<Array<CRYPTOPUNKSTradeDTO>> {
+            const localVarFetchArgs = CRYPTOPUNKSApiFetchParamCreator(configuration).cRYPTOPUNKSGetTradesHistorical(startBlock, endBlock, startDate, endDate, id, options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets users.
+         * @summary Users (historical)
+         * @throws {RequiredError}
+         */
+        cRYPTOPUNKSGetUsersHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions = {}): Promise<Array<CRYPTOPUNKSUserDTO>> {
+            const localVarFetchArgs = CRYPTOPUNKSApiFetchParamCreator(configuration).cRYPTOPUNKSGetUsersHistorical(startBlock, endBlock, startDate, endDate, id, options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets items.
+         * @summary Items (current)
+         * @throws {RequiredError}
+         */
+        cRYPTOPUNKSItemsCurrent(options?: RequestOptions = {}): Promise<Array<CRYPTOPUNKSItemDTO>> {
+            const localVarFetchArgs = CRYPTOPUNKSApiFetchParamCreator(configuration).cRYPTOPUNKSItemsCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets marketPlaces.
+         * @summary MarketPlaces (current)
+         * @throws {RequiredError}
+         */
+        cRYPTOPUNKSMarketPlacesCurrent(options?: RequestOptions = {}): Promise<Array<CRYPTOPUNKSMarketPlaceDTO>> {
+            const localVarFetchArgs = CRYPTOPUNKSApiFetchParamCreator(configuration).cRYPTOPUNKSMarketPlacesCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets marketplaceDailySnapshots.
+         * @summary MarketplaceDailySnapshots (current)
+         * @throws {RequiredError}
+         */
+        cRYPTOPUNKSMarketplaceDailySnapshotsCurrent(options?: RequestOptions = {}): Promise<Array<CRYPTOPUNKSMarketplaceDailySnapshotDTO>> {
+            const localVarFetchArgs = CRYPTOPUNKSApiFetchParamCreator(configuration).cRYPTOPUNKSMarketplaceDailySnapshotsCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets trades.
+         * @summary Trades (current)
+         * @throws {RequiredError}
+         */
+        cRYPTOPUNKSTradesCurrent(options?: RequestOptions = {}): Promise<Array<CRYPTOPUNKSTradeDTO>> {
+            const localVarFetchArgs = CRYPTOPUNKSApiFetchParamCreator(configuration).cRYPTOPUNKSTradesCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets users.
+         * @summary Users (current)
+         * @throws {RequiredError}
+         */
+        cRYPTOPUNKSUsersCurrent(options?: RequestOptions = {}): Promise<Array<CRYPTOPUNKSUserDTO>> {
+            const localVarFetchArgs = CRYPTOPUNKSApiFetchParamCreator(configuration).cRYPTOPUNKSUsersCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+    }
+};
 
 
 /**
@@ -19120,6 +20805,8 @@ export const UniswapV3Api = function(configuration?: Configuration, fetch: Fetch
 
 
 export type ApiTypes = { 
+    CRYPTOPUNKSApi: CRYPTOPUNKSApiType,
+
     CowApi: CowApiType,
 
     CurveApi: CurveApiType,

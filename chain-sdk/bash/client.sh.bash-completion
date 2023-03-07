@@ -68,6 +68,24 @@ _()
     # The list of available operation in the REST service
     # It's modelled as an associative array for efficient key lookup
     declare -A operations
+    operations["cRYPTOPUNKSBidsCurrent"]=1
+    operations["cRYPTOPUNKSCollectionDailySnapshotsCurrent"]=1
+    operations["cRYPTOPUNKSCollectionsCurrent"]=1
+    operations["cRYPTOPUNKSDataSourcesCurrent"]=1
+    operations["cRYPTOPUNKSGetBidsHistorical"]=1
+    operations["cRYPTOPUNKSGetCollectionDailySnapshotsHistorical"]=1
+    operations["cRYPTOPUNKSGetCollectionsHistorical"]=1
+    operations["cRYPTOPUNKSGetDataSourcesHistorical"]=1
+    operations["cRYPTOPUNKSGetItemsHistorical"]=1
+    operations["cRYPTOPUNKSGetMarketPlacesHistorical"]=1
+    operations["cRYPTOPUNKSGetMarketplaceDailySnapshotsHistorical"]=1
+    operations["cRYPTOPUNKSGetTradesHistorical"]=1
+    operations["cRYPTOPUNKSGetUsersHistorical"]=1
+    operations["cRYPTOPUNKSItemsCurrent"]=1
+    operations["cRYPTOPUNKSMarketPlacesCurrent"]=1
+    operations["cRYPTOPUNKSMarketplaceDailySnapshotsCurrent"]=1
+    operations["cRYPTOPUNKSTradesCurrent"]=1
+    operations["cRYPTOPUNKSUsersCurrent"]=1
     operations["cowGetOrdersHistorical"]=1
     operations["cowGetSettlementsHistorical"]=1
     operations["cowGetTokensHistorical"]=1
@@ -267,6 +285,24 @@ _()
     # An associative array of operations to their parameters
     # Only include path, query and header parameters
     declare -A operation_parameters
+    operation_parameters["cRYPTOPUNKSBidsCurrent"]=""
+    operation_parameters["cRYPTOPUNKSCollectionDailySnapshotsCurrent"]=""
+    operation_parameters["cRYPTOPUNKSCollectionsCurrent"]=""
+    operation_parameters["cRYPTOPUNKSDataSourcesCurrent"]=""
+    operation_parameters["cRYPTOPUNKSGetBidsHistorical"]="startBlock= endBlock= startDate= endDate= id= "
+    operation_parameters["cRYPTOPUNKSGetCollectionDailySnapshotsHistorical"]="startBlock= endBlock= startDate= endDate= "
+    operation_parameters["cRYPTOPUNKSGetCollectionsHistorical"]="startBlock= endBlock= startDate= endDate= id= "
+    operation_parameters["cRYPTOPUNKSGetDataSourcesHistorical"]="startBlock= endBlock= startDate= endDate= id= "
+    operation_parameters["cRYPTOPUNKSGetItemsHistorical"]="startBlock= endBlock= startDate= endDate= "
+    operation_parameters["cRYPTOPUNKSGetMarketPlacesHistorical"]="startBlock= endBlock= startDate= endDate= id= "
+    operation_parameters["cRYPTOPUNKSGetMarketplaceDailySnapshotsHistorical"]="startBlock= endBlock= startDate= endDate= id= "
+    operation_parameters["cRYPTOPUNKSGetTradesHistorical"]="startBlock= endBlock= startDate= endDate= id= "
+    operation_parameters["cRYPTOPUNKSGetUsersHistorical"]="startBlock= endBlock= startDate= endDate= id= "
+    operation_parameters["cRYPTOPUNKSItemsCurrent"]=""
+    operation_parameters["cRYPTOPUNKSMarketPlacesCurrent"]=""
+    operation_parameters["cRYPTOPUNKSMarketplaceDailySnapshotsCurrent"]=""
+    operation_parameters["cRYPTOPUNKSTradesCurrent"]=""
+    operation_parameters["cRYPTOPUNKSUsersCurrent"]=""
     operation_parameters["cowGetOrdersHistorical"]="startBlock= endBlock= startDate= endDate= id= "
     operation_parameters["cowGetSettlementsHistorical"]="startBlock= endBlock= startDate= endDate= id= "
     operation_parameters["cowGetTokensHistorical"]="startBlock= endBlock= startDate= endDate= id= address= name= symbol= "

@@ -93,7 +93,7 @@ func NewCurvePoolDTOWithDefaults() *CurvePoolDTO {
 
 // GetEntryTime returns the EntryTime field value if set, zero value otherwise.
 func (o *CurvePoolDTO) GetEntryTime() time.Time {
-	if o == nil || isNil(o.EntryTime) {
+	if o == nil || IsNil(o.EntryTime) {
 		var ret time.Time
 		return ret
 	}
@@ -103,7 +103,7 @@ func (o *CurvePoolDTO) GetEntryTime() time.Time {
 // GetEntryTimeOk returns a tuple with the EntryTime field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CurvePoolDTO) GetEntryTimeOk() (*time.Time, bool) {
-	if o == nil || isNil(o.EntryTime) {
+	if o == nil || IsNil(o.EntryTime) {
 		return nil, false
 	}
 	return o.EntryTime, true
@@ -111,7 +111,7 @@ func (o *CurvePoolDTO) GetEntryTimeOk() (*time.Time, bool) {
 
 // HasEntryTime returns a boolean if a field has been set.
 func (o *CurvePoolDTO) HasEntryTime() bool {
-	if o != nil && !isNil(o.EntryTime) {
+	if o != nil && !IsNil(o.EntryTime) {
 		return true
 	}
 
@@ -125,7 +125,7 @@ func (o *CurvePoolDTO) SetEntryTime(v time.Time) {
 
 // GetRecvTime returns the RecvTime field value if set, zero value otherwise.
 func (o *CurvePoolDTO) GetRecvTime() time.Time {
-	if o == nil || isNil(o.RecvTime) {
+	if o == nil || IsNil(o.RecvTime) {
 		var ret time.Time
 		return ret
 	}
@@ -135,7 +135,7 @@ func (o *CurvePoolDTO) GetRecvTime() time.Time {
 // GetRecvTimeOk returns a tuple with the RecvTime field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CurvePoolDTO) GetRecvTimeOk() (*time.Time, bool) {
-	if o == nil || isNil(o.RecvTime) {
+	if o == nil || IsNil(o.RecvTime) {
 		return nil, false
 	}
 	return o.RecvTime, true
@@ -143,7 +143,7 @@ func (o *CurvePoolDTO) GetRecvTimeOk() (*time.Time, bool) {
 
 // HasRecvTime returns a boolean if a field has been set.
 func (o *CurvePoolDTO) HasRecvTime() bool {
-	if o != nil && !isNil(o.RecvTime) {
+	if o != nil && !IsNil(o.RecvTime) {
 		return true
 	}
 
@@ -157,7 +157,7 @@ func (o *CurvePoolDTO) SetRecvTime(v time.Time) {
 
 // GetBlockNumber returns the BlockNumber field value if set, zero value otherwise.
 func (o *CurvePoolDTO) GetBlockNumber() int64 {
-	if o == nil || isNil(o.BlockNumber) {
+	if o == nil || IsNil(o.BlockNumber) {
 		var ret int64
 		return ret
 	}
@@ -167,7 +167,7 @@ func (o *CurvePoolDTO) GetBlockNumber() int64 {
 // GetBlockNumberOk returns a tuple with the BlockNumber field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CurvePoolDTO) GetBlockNumberOk() (*int64, bool) {
-	if o == nil || isNil(o.BlockNumber) {
+	if o == nil || IsNil(o.BlockNumber) {
 		return nil, false
 	}
 	return o.BlockNumber, true
@@ -175,7 +175,7 @@ func (o *CurvePoolDTO) GetBlockNumberOk() (*int64, bool) {
 
 // HasBlockNumber returns a boolean if a field has been set.
 func (o *CurvePoolDTO) HasBlockNumber() bool {
-	if o != nil && !isNil(o.BlockNumber) {
+	if o != nil && !IsNil(o.BlockNumber) {
 		return true
 	}
 
@@ -189,7 +189,7 @@ func (o *CurvePoolDTO) SetBlockNumber(v int64) {
 
 // GetId returns the Id field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurvePoolDTO) GetId() string {
-	if o == nil || isNil(o.Id.Get()) {
+	if o == nil || IsNil(o.Id.Get()) {
 		var ret string
 		return ret
 	}
@@ -231,7 +231,7 @@ func (o *CurvePoolDTO) UnsetId() {
 
 // GetName returns the Name field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurvePoolDTO) GetName() string {
-	if o == nil || isNil(o.Name.Get()) {
+	if o == nil || IsNil(o.Name.Get()) {
 		var ret string
 		return ret
 	}
@@ -273,7 +273,7 @@ func (o *CurvePoolDTO) UnsetName() {
 
 // GetIsMeta returns the IsMeta field value if set, zero value otherwise.
 func (o *CurvePoolDTO) GetIsMeta() bool {
-	if o == nil || isNil(o.IsMeta) {
+	if o == nil || IsNil(o.IsMeta) {
 		var ret bool
 		return ret
 	}
@@ -283,7 +283,7 @@ func (o *CurvePoolDTO) GetIsMeta() bool {
 // GetIsMetaOk returns a tuple with the IsMeta field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CurvePoolDTO) GetIsMetaOk() (*bool, bool) {
-	if o == nil || isNil(o.IsMeta) {
+	if o == nil || IsNil(o.IsMeta) {
 		return nil, false
 	}
 	return o.IsMeta, true
@@ -291,7 +291,7 @@ func (o *CurvePoolDTO) GetIsMetaOk() (*bool, bool) {
 
 // HasIsMeta returns a boolean if a field has been set.
 func (o *CurvePoolDTO) HasIsMeta() bool {
-	if o != nil && !isNil(o.IsMeta) {
+	if o != nil && !IsNil(o.IsMeta) {
 		return true
 	}
 
@@ -305,7 +305,7 @@ func (o *CurvePoolDTO) SetIsMeta(v bool) {
 
 // GetRegistryAddress returns the RegistryAddress field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurvePoolDTO) GetRegistryAddress() string {
-	if o == nil || isNil(o.RegistryAddress.Get()) {
+	if o == nil || IsNil(o.RegistryAddress.Get()) {
 		var ret string
 		return ret
 	}
@@ -347,7 +347,7 @@ func (o *CurvePoolDTO) UnsetRegistryAddress() {
 
 // GetSwapAddress returns the SwapAddress field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurvePoolDTO) GetSwapAddress() string {
-	if o == nil || isNil(o.SwapAddress.Get()) {
+	if o == nil || IsNil(o.SwapAddress.Get()) {
 		var ret string
 		return ret
 	}
@@ -389,7 +389,7 @@ func (o *CurvePoolDTO) UnsetSwapAddress() {
 
 // GetLpToken returns the LpToken field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurvePoolDTO) GetLpToken() string {
-	if o == nil || isNil(o.LpToken.Get()) {
+	if o == nil || IsNil(o.LpToken.Get()) {
 		var ret string
 		return ret
 	}
@@ -431,7 +431,7 @@ func (o *CurvePoolDTO) UnsetLpToken() {
 
 // GetCoinCount returns the CoinCount field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurvePoolDTO) GetCoinCount() string {
-	if o == nil || isNil(o.CoinCount.Get()) {
+	if o == nil || IsNil(o.CoinCount.Get()) {
 		var ret string
 		return ret
 	}
@@ -473,7 +473,7 @@ func (o *CurvePoolDTO) UnsetCoinCount() {
 
 // GetUnderlyingCount returns the UnderlyingCount field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurvePoolDTO) GetUnderlyingCount() string {
-	if o == nil || isNil(o.UnderlyingCount.Get()) {
+	if o == nil || IsNil(o.UnderlyingCount.Get()) {
 		var ret string
 		return ret
 	}
@@ -515,7 +515,7 @@ func (o *CurvePoolDTO) UnsetUnderlyingCount() {
 
 // GetA returns the A field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurvePoolDTO) GetA() string {
-	if o == nil || isNil(o.A.Get()) {
+	if o == nil || IsNil(o.A.Get()) {
 		var ret string
 		return ret
 	}
@@ -557,7 +557,7 @@ func (o *CurvePoolDTO) UnsetA() {
 
 // GetFee returns the Fee field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurvePoolDTO) GetFee() string {
-	if o == nil || isNil(o.Fee.Get()) {
+	if o == nil || IsNil(o.Fee.Get()) {
 		var ret string
 		return ret
 	}
@@ -599,7 +599,7 @@ func (o *CurvePoolDTO) UnsetFee() {
 
 // GetAdminFee returns the AdminFee field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurvePoolDTO) GetAdminFee() string {
-	if o == nil || isNil(o.AdminFee.Get()) {
+	if o == nil || IsNil(o.AdminFee.Get()) {
 		var ret string
 		return ret
 	}
@@ -641,7 +641,7 @@ func (o *CurvePoolDTO) UnsetAdminFee() {
 
 // GetOwner returns the Owner field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurvePoolDTO) GetOwner() string {
-	if o == nil || isNil(o.Owner.Get()) {
+	if o == nil || IsNil(o.Owner.Get()) {
 		var ret string
 		return ret
 	}
@@ -683,7 +683,7 @@ func (o *CurvePoolDTO) UnsetOwner() {
 
 // GetVirtualPrice returns the VirtualPrice field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurvePoolDTO) GetVirtualPrice() string {
-	if o == nil || isNil(o.VirtualPrice.Get()) {
+	if o == nil || IsNil(o.VirtualPrice.Get()) {
 		var ret string
 		return ret
 	}
@@ -725,7 +725,7 @@ func (o *CurvePoolDTO) UnsetVirtualPrice() {
 
 // GetLocked returns the Locked field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurvePoolDTO) GetLocked() string {
-	if o == nil || isNil(o.Locked.Get()) {
+	if o == nil || IsNil(o.Locked.Get()) {
 		var ret string
 		return ret
 	}
@@ -767,7 +767,7 @@ func (o *CurvePoolDTO) UnsetLocked() {
 
 // GetAddedAt returns the AddedAt field value if set, zero value otherwise.
 func (o *CurvePoolDTO) GetAddedAt() time.Time {
-	if o == nil || isNil(o.AddedAt) {
+	if o == nil || IsNil(o.AddedAt) {
 		var ret time.Time
 		return ret
 	}
@@ -777,7 +777,7 @@ func (o *CurvePoolDTO) GetAddedAt() time.Time {
 // GetAddedAtOk returns a tuple with the AddedAt field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CurvePoolDTO) GetAddedAtOk() (*time.Time, bool) {
-	if o == nil || isNil(o.AddedAt) {
+	if o == nil || IsNil(o.AddedAt) {
 		return nil, false
 	}
 	return o.AddedAt, true
@@ -785,7 +785,7 @@ func (o *CurvePoolDTO) GetAddedAtOk() (*time.Time, bool) {
 
 // HasAddedAt returns a boolean if a field has been set.
 func (o *CurvePoolDTO) HasAddedAt() bool {
-	if o != nil && !isNil(o.AddedAt) {
+	if o != nil && !IsNil(o.AddedAt) {
 		return true
 	}
 
@@ -799,7 +799,7 @@ func (o *CurvePoolDTO) SetAddedAt(v time.Time) {
 
 // GetAddedAtBlock returns the AddedAtBlock field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurvePoolDTO) GetAddedAtBlock() string {
-	if o == nil || isNil(o.AddedAtBlock.Get()) {
+	if o == nil || IsNil(o.AddedAtBlock.Get()) {
 		var ret string
 		return ret
 	}
@@ -841,7 +841,7 @@ func (o *CurvePoolDTO) UnsetAddedAtBlock() {
 
 // GetAddedAtTransaction returns the AddedAtTransaction field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurvePoolDTO) GetAddedAtTransaction() string {
-	if o == nil || isNil(o.AddedAtTransaction.Get()) {
+	if o == nil || IsNil(o.AddedAtTransaction.Get()) {
 		var ret string
 		return ret
 	}
@@ -883,7 +883,7 @@ func (o *CurvePoolDTO) UnsetAddedAtTransaction() {
 
 // GetRemovedAt returns the RemovedAt field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurvePoolDTO) GetRemovedAt() string {
-	if o == nil || isNil(o.RemovedAt.Get()) {
+	if o == nil || IsNil(o.RemovedAt.Get()) {
 		var ret string
 		return ret
 	}
@@ -925,7 +925,7 @@ func (o *CurvePoolDTO) UnsetRemovedAt() {
 
 // GetRemovedAtBlock returns the RemovedAtBlock field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurvePoolDTO) GetRemovedAtBlock() string {
-	if o == nil || isNil(o.RemovedAtBlock.Get()) {
+	if o == nil || IsNil(o.RemovedAtBlock.Get()) {
 		var ret string
 		return ret
 	}
@@ -967,7 +967,7 @@ func (o *CurvePoolDTO) UnsetRemovedAtBlock() {
 
 // GetRemovedAtTransaction returns the RemovedAtTransaction field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurvePoolDTO) GetRemovedAtTransaction() string {
-	if o == nil || isNil(o.RemovedAtTransaction.Get()) {
+	if o == nil || IsNil(o.RemovedAtTransaction.Get()) {
 		var ret string
 		return ret
 	}
@@ -1009,7 +1009,7 @@ func (o *CurvePoolDTO) UnsetRemovedAtTransaction() {
 
 // GetExchangeCount returns the ExchangeCount field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurvePoolDTO) GetExchangeCount() string {
-	if o == nil || isNil(o.ExchangeCount.Get()) {
+	if o == nil || IsNil(o.ExchangeCount.Get()) {
 		var ret string
 		return ret
 	}
@@ -1051,7 +1051,7 @@ func (o *CurvePoolDTO) UnsetExchangeCount() {
 
 // GetGaugeCount returns the GaugeCount field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CurvePoolDTO) GetGaugeCount() string {
-	if o == nil || isNil(o.GaugeCount.Get()) {
+	if o == nil || IsNil(o.GaugeCount.Get()) {
 		var ret string
 		return ret
 	}
@@ -1093,7 +1093,7 @@ func (o *CurvePoolDTO) UnsetGaugeCount() {
 
 // GetVid returns the Vid field value if set, zero value otherwise.
 func (o *CurvePoolDTO) GetVid() int64 {
-	if o == nil || isNil(o.Vid) {
+	if o == nil || IsNil(o.Vid) {
 		var ret int64
 		return ret
 	}
@@ -1103,7 +1103,7 @@ func (o *CurvePoolDTO) GetVid() int64 {
 // GetVidOk returns a tuple with the Vid field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CurvePoolDTO) GetVidOk() (*int64, bool) {
-	if o == nil || isNil(o.Vid) {
+	if o == nil || IsNil(o.Vid) {
 		return nil, false
 	}
 	return o.Vid, true
@@ -1111,7 +1111,7 @@ func (o *CurvePoolDTO) GetVidOk() (*int64, bool) {
 
 // HasVid returns a boolean if a field has been set.
 func (o *CurvePoolDTO) HasVid() bool {
-	if o != nil && !isNil(o.Vid) {
+	if o != nil && !IsNil(o.Vid) {
 		return true
 	}
 
@@ -1125,7 +1125,7 @@ func (o *CurvePoolDTO) SetVid(v int64) {
 
 // GetEvaluatedAsk returns the EvaluatedAsk field value if set, zero value otherwise.
 func (o *CurvePoolDTO) GetEvaluatedAsk() float64 {
-	if o == nil || isNil(o.EvaluatedAsk) {
+	if o == nil || IsNil(o.EvaluatedAsk) {
 		var ret float64
 		return ret
 	}
@@ -1135,7 +1135,7 @@ func (o *CurvePoolDTO) GetEvaluatedAsk() float64 {
 // GetEvaluatedAskOk returns a tuple with the EvaluatedAsk field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CurvePoolDTO) GetEvaluatedAskOk() (*float64, bool) {
-	if o == nil || isNil(o.EvaluatedAsk) {
+	if o == nil || IsNil(o.EvaluatedAsk) {
 		return nil, false
 	}
 	return o.EvaluatedAsk, true
@@ -1143,7 +1143,7 @@ func (o *CurvePoolDTO) GetEvaluatedAskOk() (*float64, bool) {
 
 // HasEvaluatedAsk returns a boolean if a field has been set.
 func (o *CurvePoolDTO) HasEvaluatedAsk() bool {
-	if o != nil && !isNil(o.EvaluatedAsk) {
+	if o != nil && !IsNil(o.EvaluatedAsk) {
 		return true
 	}
 
@@ -1165,13 +1165,13 @@ func (o CurvePoolDTO) MarshalJSON() ([]byte, error) {
 
 func (o CurvePoolDTO) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if !isNil(o.EntryTime) {
+	if !IsNil(o.EntryTime) {
 		toSerialize["entry_time"] = o.EntryTime
 	}
-	if !isNil(o.RecvTime) {
+	if !IsNil(o.RecvTime) {
 		toSerialize["recv_time"] = o.RecvTime
 	}
-	if !isNil(o.BlockNumber) {
+	if !IsNil(o.BlockNumber) {
 		toSerialize["block_number"] = o.BlockNumber
 	}
 	if o.Id.IsSet() {
@@ -1180,7 +1180,7 @@ func (o CurvePoolDTO) ToMap() (map[string]interface{}, error) {
 	if o.Name.IsSet() {
 		toSerialize["name"] = o.Name.Get()
 	}
-	if !isNil(o.IsMeta) {
+	if !IsNil(o.IsMeta) {
 		toSerialize["is_meta"] = o.IsMeta
 	}
 	if o.RegistryAddress.IsSet() {
@@ -1216,7 +1216,7 @@ func (o CurvePoolDTO) ToMap() (map[string]interface{}, error) {
 	if o.Locked.IsSet() {
 		toSerialize["locked"] = o.Locked.Get()
 	}
-	if !isNil(o.AddedAt) {
+	if !IsNil(o.AddedAt) {
 		toSerialize["added_at"] = o.AddedAt
 	}
 	if o.AddedAtBlock.IsSet() {
@@ -1240,7 +1240,7 @@ func (o CurvePoolDTO) ToMap() (map[string]interface{}, error) {
 	if o.GaugeCount.IsSet() {
 		toSerialize["gauge_count"] = o.GaugeCount.Get()
 	}
-	if !isNil(o.Vid) {
+	if !IsNil(o.Vid) {
 		toSerialize["vid"] = o.Vid
 	}
 	// skip: evaluated_ask is readOnly
