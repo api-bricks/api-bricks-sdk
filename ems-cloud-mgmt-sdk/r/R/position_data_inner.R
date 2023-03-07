@@ -169,9 +169,9 @@ PositionDataInner <- R6::R6Class(
         self$`quantity` <- this_object$`quantity`
       }
       if (!is.null(this_object$`side`)) {
-        side_object <- OrdSide$new()
-        side_object$fromJSON(jsonlite::toJSON(this_object$side, auto_unbox = TRUE, digits = NA))
-        self$`side` <- side_object
+        `side_object` <- OrdSide$new()
+        `side_object`$fromJSON(jsonlite::toJSON(this_object$`side`, auto_unbox = TRUE, digits = NA))
+        self$`side` <- `side_object`
       }
       if (!is.null(this_object$`unrealized_pnl`)) {
         self$`unrealized_pnl` <- this_object$`unrealized_pnl`
@@ -297,7 +297,7 @@ PositionDataInner <- R6::R6Class(
       self$`symbol_id_coinapi` <- this_object$`symbol_id_coinapi`
       self$`avg_entry_price` <- this_object$`avg_entry_price`
       self$`quantity` <- this_object$`quantity`
-      self$`side` <- OrdSide$new()$fromJSON(jsonlite::toJSON(this_object$side, auto_unbox = TRUE, digits = NA))
+      self$`side` <- OrdSide$new()$fromJSON(jsonlite::toJSON(this_object$`side`, auto_unbox = TRUE, digits = NA))
       self$`unrealized_pnl` <- this_object$`unrealized_pnl`
       self$`leverage` <- this_object$`leverage`
       self$`cross_margin` <- this_object$`cross_margin`

@@ -305,19 +305,19 @@ OrderExecutionReport <- R6::R6Class(
         self$`price` <- this_object$`price`
       }
       if (!is.null(this_object$`side`)) {
-        side_object <- OrdSide$new()
-        side_object$fromJSON(jsonlite::toJSON(this_object$side, auto_unbox = TRUE, digits = NA))
-        self$`side` <- side_object
+        `side_object` <- OrdSide$new()
+        `side_object`$fromJSON(jsonlite::toJSON(this_object$`side`, auto_unbox = TRUE, digits = NA))
+        self$`side` <- `side_object`
       }
       if (!is.null(this_object$`order_type`)) {
-        order_type_object <- OrdType$new()
-        order_type_object$fromJSON(jsonlite::toJSON(this_object$order_type, auto_unbox = TRUE, digits = NA))
-        self$`order_type` <- order_type_object
+        `order_type_object` <- OrdType$new()
+        `order_type_object`$fromJSON(jsonlite::toJSON(this_object$`order_type`, auto_unbox = TRUE, digits = NA))
+        self$`order_type` <- `order_type_object`
       }
       if (!is.null(this_object$`time_in_force`)) {
-        time_in_force_object <- TimeInForce$new()
-        time_in_force_object$fromJSON(jsonlite::toJSON(this_object$time_in_force, auto_unbox = TRUE, digits = NA))
-        self$`time_in_force` <- time_in_force_object
+        `time_in_force_object` <- TimeInForce$new()
+        `time_in_force_object`$fromJSON(jsonlite::toJSON(this_object$`time_in_force`, auto_unbox = TRUE, digits = NA))
+        self$`time_in_force` <- `time_in_force_object`
       }
       if (!is.null(this_object$`expire_time`)) {
         self$`expire_time` <- this_object$`expire_time`
@@ -341,9 +341,9 @@ OrderExecutionReport <- R6::R6Class(
         self$`avg_px` <- this_object$`avg_px`
       }
       if (!is.null(this_object$`status`)) {
-        status_object <- OrdStatus$new()
-        status_object$fromJSON(jsonlite::toJSON(this_object$status, auto_unbox = TRUE, digits = NA))
-        self$`status` <- status_object
+        `status_object` <- OrdStatus$new()
+        `status_object`$fromJSON(jsonlite::toJSON(this_object$`status`, auto_unbox = TRUE, digits = NA))
+        self$`status` <- `status_object`
       }
       if (!is.null(this_object$`status_history`)) {
         self$`status_history` <- ApiClient$new()$deserializeObj(this_object$`status_history`, "array[array[character]]", loadNamespace("openapi"))
@@ -545,9 +545,9 @@ OrderExecutionReport <- R6::R6Class(
       self$`symbol_id_coinapi` <- this_object$`symbol_id_coinapi`
       self$`amount_order` <- this_object$`amount_order`
       self$`price` <- this_object$`price`
-      self$`side` <- OrdSide$new()$fromJSON(jsonlite::toJSON(this_object$side, auto_unbox = TRUE, digits = NA))
-      self$`order_type` <- OrdType$new()$fromJSON(jsonlite::toJSON(this_object$order_type, auto_unbox = TRUE, digits = NA))
-      self$`time_in_force` <- TimeInForce$new()$fromJSON(jsonlite::toJSON(this_object$time_in_force, auto_unbox = TRUE, digits = NA))
+      self$`side` <- OrdSide$new()$fromJSON(jsonlite::toJSON(this_object$`side`, auto_unbox = TRUE, digits = NA))
+      self$`order_type` <- OrdType$new()$fromJSON(jsonlite::toJSON(this_object$`order_type`, auto_unbox = TRUE, digits = NA))
+      self$`time_in_force` <- TimeInForce$new()$fromJSON(jsonlite::toJSON(this_object$`time_in_force`, auto_unbox = TRUE, digits = NA))
       self$`expire_time` <- this_object$`expire_time`
       self$`exec_inst` <- ApiClient$new()$deserializeObj(this_object$`exec_inst`, "array[character]", loadNamespace("openapi"))
       self$`client_order_id_format_exchange` <- this_object$`client_order_id_format_exchange`
@@ -555,7 +555,7 @@ OrderExecutionReport <- R6::R6Class(
       self$`amount_open` <- this_object$`amount_open`
       self$`amount_filled` <- this_object$`amount_filled`
       self$`avg_px` <- this_object$`avg_px`
-      self$`status` <- OrdStatus$new()$fromJSON(jsonlite::toJSON(this_object$status, auto_unbox = TRUE, digits = NA))
+      self$`status` <- OrdStatus$new()$fromJSON(jsonlite::toJSON(this_object$`status`, auto_unbox = TRUE, digits = NA))
       self$`status_history` <- ApiClient$new()$deserializeObj(this_object$`status_history`, "array[array[character]]", loadNamespace("openapi"))
       self$`error_message` <- this_object$`error_message`
       self$`fills` <- ApiClient$new()$deserializeObj(this_object$`fills`, "array[Fills]", loadNamespace("openapi"))

@@ -14,7 +14,7 @@ package openapi
 import (
 	"bytes"
 	"context"
-	"io/ioutil"
+	"io"
 	"net/http"
 	"net/url"
 )
@@ -76,7 +76,7 @@ func (a *BalancesApiService) V1BalancesGetExecute(r ApiV1BalancesGetRequest) ([]
 	localVarFormParams := url.Values{}
 
 	if r.exchangeId != nil {
-		parameterAddToQuery(localVarQueryParams, "exchange_id", r.exchangeId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "exchange_id", r.exchangeId, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -105,9 +105,9 @@ func (a *BalancesApiService) V1BalancesGetExecute(r ApiV1BalancesGetRequest) ([]
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}

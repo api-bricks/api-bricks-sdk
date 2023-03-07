@@ -115,7 +115,7 @@ func (o *OrderNewSingleRequest) SetClientOrderId(v string) {
 
 // GetSymbolIdExchange returns the SymbolIdExchange field value if set, zero value otherwise.
 func (o *OrderNewSingleRequest) GetSymbolIdExchange() string {
-	if o == nil || isNil(o.SymbolIdExchange) {
+	if o == nil || IsNil(o.SymbolIdExchange) {
 		var ret string
 		return ret
 	}
@@ -125,7 +125,7 @@ func (o *OrderNewSingleRequest) GetSymbolIdExchange() string {
 // GetSymbolIdExchangeOk returns a tuple with the SymbolIdExchange field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *OrderNewSingleRequest) GetSymbolIdExchangeOk() (*string, bool) {
-	if o == nil || isNil(o.SymbolIdExchange) {
+	if o == nil || IsNil(o.SymbolIdExchange) {
 		return nil, false
 	}
 	return o.SymbolIdExchange, true
@@ -133,7 +133,7 @@ func (o *OrderNewSingleRequest) GetSymbolIdExchangeOk() (*string, bool) {
 
 // HasSymbolIdExchange returns a boolean if a field has been set.
 func (o *OrderNewSingleRequest) HasSymbolIdExchange() bool {
-	if o != nil && !isNil(o.SymbolIdExchange) {
+	if o != nil && !IsNil(o.SymbolIdExchange) {
 		return true
 	}
 
@@ -147,7 +147,7 @@ func (o *OrderNewSingleRequest) SetSymbolIdExchange(v string) {
 
 // GetSymbolIdCoinapi returns the SymbolIdCoinapi field value if set, zero value otherwise.
 func (o *OrderNewSingleRequest) GetSymbolIdCoinapi() string {
-	if o == nil || isNil(o.SymbolIdCoinapi) {
+	if o == nil || IsNil(o.SymbolIdCoinapi) {
 		var ret string
 		return ret
 	}
@@ -157,7 +157,7 @@ func (o *OrderNewSingleRequest) GetSymbolIdCoinapi() string {
 // GetSymbolIdCoinapiOk returns a tuple with the SymbolIdCoinapi field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *OrderNewSingleRequest) GetSymbolIdCoinapiOk() (*string, bool) {
-	if o == nil || isNil(o.SymbolIdCoinapi) {
+	if o == nil || IsNil(o.SymbolIdCoinapi) {
 		return nil, false
 	}
 	return o.SymbolIdCoinapi, true
@@ -165,7 +165,7 @@ func (o *OrderNewSingleRequest) GetSymbolIdCoinapiOk() (*string, bool) {
 
 // HasSymbolIdCoinapi returns a boolean if a field has been set.
 func (o *OrderNewSingleRequest) HasSymbolIdCoinapi() bool {
-	if o != nil && !isNil(o.SymbolIdCoinapi) {
+	if o != nil && !IsNil(o.SymbolIdCoinapi) {
 		return true
 	}
 
@@ -299,7 +299,7 @@ func (o *OrderNewSingleRequest) SetTimeInForce(v TimeInForce) {
 
 // GetExpireTime returns the ExpireTime field value if set, zero value otherwise.
 func (o *OrderNewSingleRequest) GetExpireTime() string {
-	if o == nil || isNil(o.ExpireTime) {
+	if o == nil || IsNil(o.ExpireTime) {
 		var ret string
 		return ret
 	}
@@ -309,7 +309,7 @@ func (o *OrderNewSingleRequest) GetExpireTime() string {
 // GetExpireTimeOk returns a tuple with the ExpireTime field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *OrderNewSingleRequest) GetExpireTimeOk() (*string, bool) {
-	if o == nil || isNil(o.ExpireTime) {
+	if o == nil || IsNil(o.ExpireTime) {
 		return nil, false
 	}
 	return o.ExpireTime, true
@@ -317,7 +317,7 @@ func (o *OrderNewSingleRequest) GetExpireTimeOk() (*string, bool) {
 
 // HasExpireTime returns a boolean if a field has been set.
 func (o *OrderNewSingleRequest) HasExpireTime() bool {
-	if o != nil && !isNil(o.ExpireTime) {
+	if o != nil && !IsNil(o.ExpireTime) {
 		return true
 	}
 
@@ -331,7 +331,7 @@ func (o *OrderNewSingleRequest) SetExpireTime(v string) {
 
 // GetExecInst returns the ExecInst field value if set, zero value otherwise.
 func (o *OrderNewSingleRequest) GetExecInst() []string {
-	if o == nil || isNil(o.ExecInst) {
+	if o == nil || IsNil(o.ExecInst) {
 		var ret []string
 		return ret
 	}
@@ -341,7 +341,7 @@ func (o *OrderNewSingleRequest) GetExecInst() []string {
 // GetExecInstOk returns a tuple with the ExecInst field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *OrderNewSingleRequest) GetExecInstOk() ([]string, bool) {
-	if o == nil || isNil(o.ExecInst) {
+	if o == nil || IsNil(o.ExecInst) {
 		return nil, false
 	}
 	return o.ExecInst, true
@@ -349,7 +349,7 @@ func (o *OrderNewSingleRequest) GetExecInstOk() ([]string, bool) {
 
 // HasExecInst returns a boolean if a field has been set.
 func (o *OrderNewSingleRequest) HasExecInst() bool {
-	if o != nil && !isNil(o.ExecInst) {
+	if o != nil && !IsNil(o.ExecInst) {
 		return true
 	}
 
@@ -373,10 +373,10 @@ func (o OrderNewSingleRequest) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
 	toSerialize["exchange_id"] = o.ExchangeId
 	toSerialize["client_order_id"] = o.ClientOrderId
-	if !isNil(o.SymbolIdExchange) {
+	if !IsNil(o.SymbolIdExchange) {
 		toSerialize["symbol_id_exchange"] = o.SymbolIdExchange
 	}
-	if !isNil(o.SymbolIdCoinapi) {
+	if !IsNil(o.SymbolIdCoinapi) {
 		toSerialize["symbol_id_coinapi"] = o.SymbolIdCoinapi
 	}
 	toSerialize["amount_order"] = o.AmountOrder
@@ -384,10 +384,10 @@ func (o OrderNewSingleRequest) ToMap() (map[string]interface{}, error) {
 	toSerialize["side"] = o.Side
 	toSerialize["order_type"] = o.OrderType
 	toSerialize["time_in_force"] = o.TimeInForce
-	if !isNil(o.ExpireTime) {
+	if !IsNil(o.ExpireTime) {
 		toSerialize["expire_time"] = o.ExpireTime
 	}
-	if !isNil(o.ExecInst) {
+	if !IsNil(o.ExecInst) {
 		toSerialize["exec_inst"] = o.ExecInst
 	}
 	return toSerialize, nil

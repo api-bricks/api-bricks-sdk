@@ -75,7 +75,7 @@ class Balance {
             }
             // validate the optional field `data` (array)
             for (const item of data['data']) {
-                BalanceDataInner.validateJsonObject(item);
+                BalanceDataInner.validateJSON(item);
             };
         }
 
