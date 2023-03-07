@@ -50,7 +50,7 @@ import org.openapitools.client.JSON;
 /**
  * Stores aggregated information for a specific token across all pairs that token is included in.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-07T11:26:43.643580Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-07T11:31:09.822924Z[Etc/UTC]")
 public class SushiswapTokenDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
