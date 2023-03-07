@@ -166,9 +166,9 @@ OrderExecutionReportAllOf <- R6::R6Class(
         self$`avg_px` <- this_object$`avg_px`
       }
       if (!is.null(this_object$`status`)) {
-        status_object <- OrdStatus$new()
-        status_object$fromJSON(jsonlite::toJSON(this_object$status, auto_unbox = TRUE, digits = NA))
-        self$`status` <- status_object
+        `status_object` <- OrdStatus$new()
+        `status_object`$fromJSON(jsonlite::toJSON(this_object$`status`, auto_unbox = TRUE, digits = NA))
+        self$`status` <- `status_object`
       }
       if (!is.null(this_object$`status_history`)) {
         self$`status_history` <- ApiClient$new()$deserializeObj(this_object$`status_history`, "array[array[character]]", loadNamespace("openapi"))
@@ -281,7 +281,7 @@ OrderExecutionReportAllOf <- R6::R6Class(
       self$`amount_open` <- this_object$`amount_open`
       self$`amount_filled` <- this_object$`amount_filled`
       self$`avg_px` <- this_object$`avg_px`
-      self$`status` <- OrdStatus$new()$fromJSON(jsonlite::toJSON(this_object$status, auto_unbox = TRUE, digits = NA))
+      self$`status` <- OrdStatus$new()$fromJSON(jsonlite::toJSON(this_object$`status`, auto_unbox = TRUE, digits = NA))
       self$`status_history` <- ApiClient$new()$deserializeObj(this_object$`status_history`, "array[array[character]]", loadNamespace("openapi"))
       self$`error_message` <- this_object$`error_message`
       self$`fills` <- ApiClient$new()$deserializeObj(this_object$`fills`, "array[Fills]", loadNamespace("openapi"))

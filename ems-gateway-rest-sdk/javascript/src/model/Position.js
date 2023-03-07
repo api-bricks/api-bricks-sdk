@@ -75,7 +75,7 @@ class Position {
             }
             // validate the optional field `data` (array)
             for (const item of data['data']) {
-                PositionDataInner.validateJsonObject(item);
+                PositionDataInner.validateJSON(item);
             };
         }
 

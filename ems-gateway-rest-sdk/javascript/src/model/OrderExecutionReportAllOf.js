@@ -124,7 +124,7 @@ class OrderExecutionReportAllOf {
             }
             // validate the optional field `fills` (array)
             for (const item of data['fills']) {
-                Fills.validateJsonObject(item);
+                Fills.validateJSON(item);
             };
         }
 

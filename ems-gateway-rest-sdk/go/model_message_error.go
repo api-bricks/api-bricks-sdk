@@ -43,7 +43,7 @@ func NewMessageErrorWithDefaults() *MessageError {
 
 // GetMessage returns the Message field value if set, zero value otherwise.
 func (o *MessageError) GetMessage() string {
-	if o == nil || isNil(o.Message) {
+	if o == nil || IsNil(o.Message) {
 		var ret string
 		return ret
 	}
@@ -53,7 +53,7 @@ func (o *MessageError) GetMessage() string {
 // GetMessageOk returns a tuple with the Message field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *MessageError) GetMessageOk() (*string, bool) {
-	if o == nil || isNil(o.Message) {
+	if o == nil || IsNil(o.Message) {
 		return nil, false
 	}
 	return o.Message, true
@@ -61,7 +61,7 @@ func (o *MessageError) GetMessageOk() (*string, bool) {
 
 // HasMessage returns a boolean if a field has been set.
 func (o *MessageError) HasMessage() bool {
-	if o != nil && !isNil(o.Message) {
+	if o != nil && !IsNil(o.Message) {
 		return true
 	}
 
@@ -83,7 +83,7 @@ func (o MessageError) MarshalJSON() ([]byte, error) {
 
 func (o MessageError) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if !isNil(o.Message) {
+	if !IsNil(o.Message) {
 		toSerialize["message"] = o.Message
 	}
 	return toSerialize, nil

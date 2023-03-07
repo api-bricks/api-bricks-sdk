@@ -57,7 +57,7 @@ func NewBalanceDataInnerWithDefaults() *BalanceDataInner {
 
 // GetAssetIdExchange returns the AssetIdExchange field value if set, zero value otherwise.
 func (o *BalanceDataInner) GetAssetIdExchange() string {
-	if o == nil || isNil(o.AssetIdExchange) {
+	if o == nil || IsNil(o.AssetIdExchange) {
 		var ret string
 		return ret
 	}
@@ -67,7 +67,7 @@ func (o *BalanceDataInner) GetAssetIdExchange() string {
 // GetAssetIdExchangeOk returns a tuple with the AssetIdExchange field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *BalanceDataInner) GetAssetIdExchangeOk() (*string, bool) {
-	if o == nil || isNil(o.AssetIdExchange) {
+	if o == nil || IsNil(o.AssetIdExchange) {
 		return nil, false
 	}
 	return o.AssetIdExchange, true
@@ -75,7 +75,7 @@ func (o *BalanceDataInner) GetAssetIdExchangeOk() (*string, bool) {
 
 // HasAssetIdExchange returns a boolean if a field has been set.
 func (o *BalanceDataInner) HasAssetIdExchange() bool {
-	if o != nil && !isNil(o.AssetIdExchange) {
+	if o != nil && !IsNil(o.AssetIdExchange) {
 		return true
 	}
 
@@ -89,7 +89,7 @@ func (o *BalanceDataInner) SetAssetIdExchange(v string) {
 
 // GetAssetIdCoinapi returns the AssetIdCoinapi field value if set, zero value otherwise.
 func (o *BalanceDataInner) GetAssetIdCoinapi() string {
-	if o == nil || isNil(o.AssetIdCoinapi) {
+	if o == nil || IsNil(o.AssetIdCoinapi) {
 		var ret string
 		return ret
 	}
@@ -99,7 +99,7 @@ func (o *BalanceDataInner) GetAssetIdCoinapi() string {
 // GetAssetIdCoinapiOk returns a tuple with the AssetIdCoinapi field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *BalanceDataInner) GetAssetIdCoinapiOk() (*string, bool) {
-	if o == nil || isNil(o.AssetIdCoinapi) {
+	if o == nil || IsNil(o.AssetIdCoinapi) {
 		return nil, false
 	}
 	return o.AssetIdCoinapi, true
@@ -107,7 +107,7 @@ func (o *BalanceDataInner) GetAssetIdCoinapiOk() (*string, bool) {
 
 // HasAssetIdCoinapi returns a boolean if a field has been set.
 func (o *BalanceDataInner) HasAssetIdCoinapi() bool {
-	if o != nil && !isNil(o.AssetIdCoinapi) {
+	if o != nil && !IsNil(o.AssetIdCoinapi) {
 		return true
 	}
 
@@ -121,7 +121,7 @@ func (o *BalanceDataInner) SetAssetIdCoinapi(v string) {
 
 // GetBalance returns the Balance field value if set, zero value otherwise.
 func (o *BalanceDataInner) GetBalance() float64 {
-	if o == nil || isNil(o.Balance) {
+	if o == nil || IsNil(o.Balance) {
 		var ret float64
 		return ret
 	}
@@ -131,7 +131,7 @@ func (o *BalanceDataInner) GetBalance() float64 {
 // GetBalanceOk returns a tuple with the Balance field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *BalanceDataInner) GetBalanceOk() (*float64, bool) {
-	if o == nil || isNil(o.Balance) {
+	if o == nil || IsNil(o.Balance) {
 		return nil, false
 	}
 	return o.Balance, true
@@ -139,7 +139,7 @@ func (o *BalanceDataInner) GetBalanceOk() (*float64, bool) {
 
 // HasBalance returns a boolean if a field has been set.
 func (o *BalanceDataInner) HasBalance() bool {
-	if o != nil && !isNil(o.Balance) {
+	if o != nil && !IsNil(o.Balance) {
 		return true
 	}
 
@@ -153,7 +153,7 @@ func (o *BalanceDataInner) SetBalance(v float64) {
 
 // GetAvailable returns the Available field value if set, zero value otherwise.
 func (o *BalanceDataInner) GetAvailable() float64 {
-	if o == nil || isNil(o.Available) {
+	if o == nil || IsNil(o.Available) {
 		var ret float64
 		return ret
 	}
@@ -163,7 +163,7 @@ func (o *BalanceDataInner) GetAvailable() float64 {
 // GetAvailableOk returns a tuple with the Available field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *BalanceDataInner) GetAvailableOk() (*float64, bool) {
-	if o == nil || isNil(o.Available) {
+	if o == nil || IsNil(o.Available) {
 		return nil, false
 	}
 	return o.Available, true
@@ -171,7 +171,7 @@ func (o *BalanceDataInner) GetAvailableOk() (*float64, bool) {
 
 // HasAvailable returns a boolean if a field has been set.
 func (o *BalanceDataInner) HasAvailable() bool {
-	if o != nil && !isNil(o.Available) {
+	if o != nil && !IsNil(o.Available) {
 		return true
 	}
 
@@ -185,7 +185,7 @@ func (o *BalanceDataInner) SetAvailable(v float64) {
 
 // GetLocked returns the Locked field value if set, zero value otherwise.
 func (o *BalanceDataInner) GetLocked() float64 {
-	if o == nil || isNil(o.Locked) {
+	if o == nil || IsNil(o.Locked) {
 		var ret float64
 		return ret
 	}
@@ -195,7 +195,7 @@ func (o *BalanceDataInner) GetLocked() float64 {
 // GetLockedOk returns a tuple with the Locked field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *BalanceDataInner) GetLockedOk() (*float64, bool) {
-	if o == nil || isNil(o.Locked) {
+	if o == nil || IsNil(o.Locked) {
 		return nil, false
 	}
 	return o.Locked, true
@@ -203,7 +203,7 @@ func (o *BalanceDataInner) GetLockedOk() (*float64, bool) {
 
 // HasLocked returns a boolean if a field has been set.
 func (o *BalanceDataInner) HasLocked() bool {
-	if o != nil && !isNil(o.Locked) {
+	if o != nil && !IsNil(o.Locked) {
 		return true
 	}
 
@@ -217,7 +217,7 @@ func (o *BalanceDataInner) SetLocked(v float64) {
 
 // GetLastUpdatedBy returns the LastUpdatedBy field value if set, zero value otherwise.
 func (o *BalanceDataInner) GetLastUpdatedBy() string {
-	if o == nil || isNil(o.LastUpdatedBy) {
+	if o == nil || IsNil(o.LastUpdatedBy) {
 		var ret string
 		return ret
 	}
@@ -227,7 +227,7 @@ func (o *BalanceDataInner) GetLastUpdatedBy() string {
 // GetLastUpdatedByOk returns a tuple with the LastUpdatedBy field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *BalanceDataInner) GetLastUpdatedByOk() (*string, bool) {
-	if o == nil || isNil(o.LastUpdatedBy) {
+	if o == nil || IsNil(o.LastUpdatedBy) {
 		return nil, false
 	}
 	return o.LastUpdatedBy, true
@@ -235,7 +235,7 @@ func (o *BalanceDataInner) GetLastUpdatedByOk() (*string, bool) {
 
 // HasLastUpdatedBy returns a boolean if a field has been set.
 func (o *BalanceDataInner) HasLastUpdatedBy() bool {
-	if o != nil && !isNil(o.LastUpdatedBy) {
+	if o != nil && !IsNil(o.LastUpdatedBy) {
 		return true
 	}
 
@@ -249,7 +249,7 @@ func (o *BalanceDataInner) SetLastUpdatedBy(v string) {
 
 // GetRateUsd returns the RateUsd field value if set, zero value otherwise.
 func (o *BalanceDataInner) GetRateUsd() float64 {
-	if o == nil || isNil(o.RateUsd) {
+	if o == nil || IsNil(o.RateUsd) {
 		var ret float64
 		return ret
 	}
@@ -259,7 +259,7 @@ func (o *BalanceDataInner) GetRateUsd() float64 {
 // GetRateUsdOk returns a tuple with the RateUsd field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *BalanceDataInner) GetRateUsdOk() (*float64, bool) {
-	if o == nil || isNil(o.RateUsd) {
+	if o == nil || IsNil(o.RateUsd) {
 		return nil, false
 	}
 	return o.RateUsd, true
@@ -267,7 +267,7 @@ func (o *BalanceDataInner) GetRateUsdOk() (*float64, bool) {
 
 // HasRateUsd returns a boolean if a field has been set.
 func (o *BalanceDataInner) HasRateUsd() bool {
-	if o != nil && !isNil(o.RateUsd) {
+	if o != nil && !IsNil(o.RateUsd) {
 		return true
 	}
 
@@ -281,7 +281,7 @@ func (o *BalanceDataInner) SetRateUsd(v float64) {
 
 // GetTraded returns the Traded field value if set, zero value otherwise.
 func (o *BalanceDataInner) GetTraded() float64 {
-	if o == nil || isNil(o.Traded) {
+	if o == nil || IsNil(o.Traded) {
 		var ret float64
 		return ret
 	}
@@ -291,7 +291,7 @@ func (o *BalanceDataInner) GetTraded() float64 {
 // GetTradedOk returns a tuple with the Traded field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *BalanceDataInner) GetTradedOk() (*float64, bool) {
-	if o == nil || isNil(o.Traded) {
+	if o == nil || IsNil(o.Traded) {
 		return nil, false
 	}
 	return o.Traded, true
@@ -299,7 +299,7 @@ func (o *BalanceDataInner) GetTradedOk() (*float64, bool) {
 
 // HasTraded returns a boolean if a field has been set.
 func (o *BalanceDataInner) HasTraded() bool {
-	if o != nil && !isNil(o.Traded) {
+	if o != nil && !IsNil(o.Traded) {
 		return true
 	}
 
@@ -321,28 +321,28 @@ func (o BalanceDataInner) MarshalJSON() ([]byte, error) {
 
 func (o BalanceDataInner) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if !isNil(o.AssetIdExchange) {
+	if !IsNil(o.AssetIdExchange) {
 		toSerialize["asset_id_exchange"] = o.AssetIdExchange
 	}
-	if !isNil(o.AssetIdCoinapi) {
+	if !IsNil(o.AssetIdCoinapi) {
 		toSerialize["asset_id_coinapi"] = o.AssetIdCoinapi
 	}
-	if !isNil(o.Balance) {
+	if !IsNil(o.Balance) {
 		toSerialize["balance"] = o.Balance
 	}
-	if !isNil(o.Available) {
+	if !IsNil(o.Available) {
 		toSerialize["available"] = o.Available
 	}
-	if !isNil(o.Locked) {
+	if !IsNil(o.Locked) {
 		toSerialize["locked"] = o.Locked
 	}
-	if !isNil(o.LastUpdatedBy) {
+	if !IsNil(o.LastUpdatedBy) {
 		toSerialize["last_updated_by"] = o.LastUpdatedBy
 	}
-	if !isNil(o.RateUsd) {
+	if !IsNil(o.RateUsd) {
 		toSerialize["rate_usd"] = o.RateUsd
 	}
-	if !isNil(o.Traded) {
+	if !IsNil(o.Traded) {
 		toSerialize["traded"] = o.Traded
 	}
 	return toSerialize, nil

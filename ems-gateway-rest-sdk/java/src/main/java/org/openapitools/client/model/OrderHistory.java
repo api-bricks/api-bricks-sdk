@@ -50,7 +50,7 @@ import org.openapitools.client.JSON;
 /**
  * OrderHistory
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-13T15:06:01.305412Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-07T11:26:20.774225Z[Etc/UTC]")
 public class OrderHistory {
   public static final String SERIALIZED_NAME_APIKEY = "apikey";
   @SerializedName(SERIALIZED_NAME_APIKEY)
@@ -98,7 +98,7 @@ public class OrderHistory {
 
   public static final String SERIALIZED_NAME_EXEC_INST = "execInst";
   @SerializedName(SERIALIZED_NAME_EXEC_INST)
-  private List<String> execInst = null;
+  private List<String> execInst = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_CLIENT_ORDER_ID_FORMAT_EXCHANGE = "clientOrderIdFormatExchange";
   @SerializedName(SERIALIZED_NAME_CLIENT_ORDER_ID_FORMAT_EXCHANGE)
@@ -126,11 +126,11 @@ public class OrderHistory {
 
   public static final String SERIALIZED_NAME_STATUS_HISTORY_STATUS = "statusHistoryStatus";
   @SerializedName(SERIALIZED_NAME_STATUS_HISTORY_STATUS)
-  private List<String> statusHistoryStatus = null;
+  private List<String> statusHistoryStatus = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_STATUS_HISTORY_TIME = "statusHistoryTime";
   @SerializedName(SERIALIZED_NAME_STATUS_HISTORY_TIME)
-  private List<LocalDate> statusHistoryTime = null;
+  private List<LocalDate> statusHistoryTime = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_ERROR_MESSAGE_RESULT = "errorMessageResult";
   @SerializedName(SERIALIZED_NAME_ERROR_MESSAGE_RESULT)
@@ -146,15 +146,15 @@ public class OrderHistory {
 
   public static final String SERIALIZED_NAME_FILLS_TIME = "fillsTime";
   @SerializedName(SERIALIZED_NAME_FILLS_TIME)
-  private List<LocalDate> fillsTime = null;
+  private List<LocalDate> fillsTime = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_FILLS_PRICE = "fillsPrice";
   @SerializedName(SERIALIZED_NAME_FILLS_PRICE)
-  private List<BigDecimal> fillsPrice = null;
+  private List<BigDecimal> fillsPrice = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_FILLS_AMOUNT = "fillsAmount";
   @SerializedName(SERIALIZED_NAME_FILLS_AMOUNT)
-  private List<BigDecimal> fillsAmount = null;
+  private List<BigDecimal> fillsAmount = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_CREATED_TIME = "createdTime";
   @SerializedName(SERIALIZED_NAME_CREATED_TIME)

@@ -68,8 +68,8 @@ For more information, please visit [https://www.coinapi.io](https://www.coinapi.
 
 ## Requirements
 
-* Dart 2.12.0 or later OR Flutter 1.26.0 or later
-* Dio 4.0.0+
+* Dart 2.15.0+ or Flutter 2.8.0+
+* Dio 5.0.0+ (https://pub.dev/packages/dio)
 
 ## Installation & Usage
 

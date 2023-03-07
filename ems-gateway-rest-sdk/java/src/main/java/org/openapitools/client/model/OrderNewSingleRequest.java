@@ -53,7 +53,7 @@ import org.openapitools.client.JSON;
 /**
  * The new order message.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-13T15:06:01.305412Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-07T11:26:20.774225Z[Etc/UTC]")
 public class OrderNewSingleRequest {
   public static final String SERIALIZED_NAME_EXCHANGE_ID = "exchange_id";
   @SerializedName(SERIALIZED_NAME_EXCHANGE_ID)
@@ -146,7 +146,7 @@ public class OrderNewSingleRequest {
 
   public static final String SERIALIZED_NAME_EXEC_INST = "exec_inst";
   @SerializedName(SERIALIZED_NAME_EXEC_INST)
-  private List<ExecInstEnum> execInst = null;
+  private List<ExecInstEnum> execInst = new ArrayList<>();
 
   public OrderNewSingleRequest() {
   }

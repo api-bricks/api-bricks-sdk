@@ -44,7 +44,7 @@ func NewPositionWithDefaults() *Position {
 
 // GetExchangeId returns the ExchangeId field value if set, zero value otherwise.
 func (o *Position) GetExchangeId() string {
-	if o == nil || isNil(o.ExchangeId) {
+	if o == nil || IsNil(o.ExchangeId) {
 		var ret string
 		return ret
 	}
@@ -54,7 +54,7 @@ func (o *Position) GetExchangeId() string {
 // GetExchangeIdOk returns a tuple with the ExchangeId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Position) GetExchangeIdOk() (*string, bool) {
-	if o == nil || isNil(o.ExchangeId) {
+	if o == nil || IsNil(o.ExchangeId) {
 		return nil, false
 	}
 	return o.ExchangeId, true
@@ -62,7 +62,7 @@ func (o *Position) GetExchangeIdOk() (*string, bool) {
 
 // HasExchangeId returns a boolean if a field has been set.
 func (o *Position) HasExchangeId() bool {
-	if o != nil && !isNil(o.ExchangeId) {
+	if o != nil && !IsNil(o.ExchangeId) {
 		return true
 	}
 
@@ -76,7 +76,7 @@ func (o *Position) SetExchangeId(v string) {
 
 // GetData returns the Data field value if set, zero value otherwise.
 func (o *Position) GetData() []PositionDataInner {
-	if o == nil || isNil(o.Data) {
+	if o == nil || IsNil(o.Data) {
 		var ret []PositionDataInner
 		return ret
 	}
@@ -86,7 +86,7 @@ func (o *Position) GetData() []PositionDataInner {
 // GetDataOk returns a tuple with the Data field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Position) GetDataOk() ([]PositionDataInner, bool) {
-	if o == nil || isNil(o.Data) {
+	if o == nil || IsNil(o.Data) {
 		return nil, false
 	}
 	return o.Data, true
@@ -94,7 +94,7 @@ func (o *Position) GetDataOk() ([]PositionDataInner, bool) {
 
 // HasData returns a boolean if a field has been set.
 func (o *Position) HasData() bool {
-	if o != nil && !isNil(o.Data) {
+	if o != nil && !IsNil(o.Data) {
 		return true
 	}
 
@@ -116,10 +116,10 @@ func (o Position) MarshalJSON() ([]byte, error) {
 
 func (o Position) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if !isNil(o.ExchangeId) {
+	if !IsNil(o.ExchangeId) {
 		toSerialize["exchange_id"] = o.ExchangeId
 	}
-	if !isNil(o.Data) {
+	if !IsNil(o.Data) {
 		toSerialize["data"] = o.Data
 	}
 	return toSerialize, nil
