@@ -1,4 +1,4 @@
-<a name="__pageTop"></a>
+<a id="__pageTop"></a>
 # openapi_client.apis.tags.metadata_api.MetadataApi
 
 All URIs are relative to *https://onchain.coinapi.io*
@@ -10,7 +10,7 @@ Method | HTTP request | Description
 [**metadata_dapps_get**](#metadata_dapps_get) | **get** /metadata/dapps | List all decentralized applications.
 
 # **metadata_chains_get**
-<a name="metadata_chains_get"></a>
+<a id="metadata_chains_get"></a>
 > metadata_chains_get()
 
 List all chains.
@@ -63,7 +63,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **metadata_dapps_dapp_name_get**
-<a name="metadata_dapps_dapp_name_get"></a>
+<a id="metadata_dapps_dapp_name_get"></a>
 > metadata_dapps_dapp_name_get(dapp_name)
 
 Gets dapp by name.
@@ -141,7 +141,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **metadata_dapps_get**
-<a name="metadata_dapps_get"></a>
+<a id="metadata_dapps_get"></a>
 > metadata_dapps_get()
 
 List all decentralized applications.

@@ -34,6 +34,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
@@ -48,7 +52,7 @@ import org.openapitools.client.JSON;
 /**
  * CRYPTOPUNKSDataSourcesDTO
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-07T11:31:09.822924Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-19T09:28:48.156871Z[Etc/UTC]")
 public class CRYPTOPUNKSDataSourcesDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -112,7 +116,6 @@ public class CRYPTOPUNKSDataSourcesDTO {
    * @return entryTime
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getEntryTime() {
     return entryTime;
   }
@@ -134,7 +137,6 @@ public class CRYPTOPUNKSDataSourcesDTO {
    * @return recvTime
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getRecvTime() {
     return recvTime;
   }
@@ -156,7 +158,6 @@ public class CRYPTOPUNKSDataSourcesDTO {
    * @return blockNumber
   **/
   @javax.annotation.Nullable
-
   public Long getBlockNumber() {
     return blockNumber;
   }
@@ -178,7 +179,6 @@ public class CRYPTOPUNKSDataSourcesDTO {
    * @return vid
   **/
   @javax.annotation.Nullable
-
   public Integer getVid() {
     return vid;
   }
@@ -200,7 +200,6 @@ public class CRYPTOPUNKSDataSourcesDTO {
    * @return blockRange
   **/
   @javax.annotation.Nullable
-
   public String getBlockRange() {
     return blockRange;
   }
@@ -222,7 +221,6 @@ public class CRYPTOPUNKSDataSourcesDTO {
    * @return causalityRegion
   **/
   @javax.annotation.Nullable
-
   public Integer getCausalityRegion() {
     return causalityRegion;
   }
@@ -244,7 +242,6 @@ public class CRYPTOPUNKSDataSourcesDTO {
    * @return manifestIdx
   **/
   @javax.annotation.Nullable
-
   public Integer getManifestIdx() {
     return manifestIdx;
   }
@@ -266,7 +263,6 @@ public class CRYPTOPUNKSDataSourcesDTO {
    * @return parent
   **/
   @javax.annotation.Nullable
-
   public Integer getParent() {
     return parent;
   }
@@ -288,7 +284,6 @@ public class CRYPTOPUNKSDataSourcesDTO {
    * @return id
   **/
   @javax.annotation.Nullable
-
   public String getId() {
     return id;
   }
@@ -310,7 +305,6 @@ public class CRYPTOPUNKSDataSourcesDTO {
    * @return param
   **/
   @javax.annotation.Nullable
-
   public String getParam() {
     return param;
   }
@@ -332,7 +326,6 @@ public class CRYPTOPUNKSDataSourcesDTO {
    * @return context
   **/
   @javax.annotation.Nullable
-
   public String getContext() {
     return context;
   }
@@ -354,7 +347,6 @@ public class CRYPTOPUNKSDataSourcesDTO {
    * @return doneAt
   **/
   @javax.annotation.Nullable
-
   public Integer getDoneAt() {
     return doneAt;
   }

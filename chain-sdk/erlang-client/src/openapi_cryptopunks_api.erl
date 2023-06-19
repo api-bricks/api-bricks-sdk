@@ -30,17 +30,17 @@ c_ryptopunks_bids_(current)(Ctx) ->
 -spec c_ryptopunks_bids_(current)(ctx:ctx(), maps:map()) -> {ok, [openapi_c_ryptopunks_bid_dto:openapi_c_ryptopunks_bid_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 c_ryptopunks_bids_(current)(Ctx, Optional) ->
     _OptionalParams = maps:get(params, Optional, #{}),
-    Cfg = maps:get(cfg, Optional, application:get_env(kuberl, config, #{})),
+    Cfg = maps:get(cfg, Optional, application:get_env(openapi_api, config, #{})),
 
     Method = get,
-    Path = [<<"/dapps/cryptopunks/bids/current">>],
+    Path = [?BASE_URL, "/dapps/cryptopunks/bids/current"],
     QS = [],
     Headers = [],
     Body1 = [],
     ContentTypeHeader = openapi_utils:select_header_content_type([]),
     Opts = maps:get(hackney_opts, Optional, []),
 
-    openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
+    openapi_utils:request(Ctx, Method, Path, QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
 %% @doc CollectionDailySnapshots (current)
 %% Gets collectionDailySnapshots.
@@ -51,17 +51,17 @@ c_ryptopunks_collection_daily_snapshots_(current)(Ctx) ->
 -spec c_ryptopunks_collection_daily_snapshots_(current)(ctx:ctx(), maps:map()) -> {ok, [openapi_c_ryptopunks_collection_daily_snapshot_dto:openapi_c_ryptopunks_collection_daily_snapshot_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 c_ryptopunks_collection_daily_snapshots_(current)(Ctx, Optional) ->
     _OptionalParams = maps:get(params, Optional, #{}),
-    Cfg = maps:get(cfg, Optional, application:get_env(kuberl, config, #{})),
+    Cfg = maps:get(cfg, Optional, application:get_env(openapi_api, config, #{})),
 
     Method = get,
-    Path = [<<"/dapps/cryptopunks/collectionDailySnapshots/current">>],
+    Path = [?BASE_URL, "/dapps/cryptopunks/collectionDailySnapshots/current"],
     QS = [],
     Headers = [],
     Body1 = [],
     ContentTypeHeader = openapi_utils:select_header_content_type([]),
     Opts = maps:get(hackney_opts, Optional, []),
 
-    openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
+    openapi_utils:request(Ctx, Method, Path, QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
 %% @doc Collections (current)
 %% Gets collections.
@@ -72,17 +72,17 @@ c_ryptopunks_collections_(current)(Ctx) ->
 -spec c_ryptopunks_collections_(current)(ctx:ctx(), maps:map()) -> {ok, [openapi_c_ryptopunks_collection_dto:openapi_c_ryptopunks_collection_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 c_ryptopunks_collections_(current)(Ctx, Optional) ->
     _OptionalParams = maps:get(params, Optional, #{}),
-    Cfg = maps:get(cfg, Optional, application:get_env(kuberl, config, #{})),
+    Cfg = maps:get(cfg, Optional, application:get_env(openapi_api, config, #{})),
 
     Method = get,
-    Path = [<<"/dapps/cryptopunks/collections/current">>],
+    Path = [?BASE_URL, "/dapps/cryptopunks/collections/current"],
     QS = [],
     Headers = [],
     Body1 = [],
     ContentTypeHeader = openapi_utils:select_header_content_type([]),
     Opts = maps:get(hackney_opts, Optional, []),
 
-    openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
+    openapi_utils:request(Ctx, Method, Path, QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
 %% @doc DataSources (current)
 %% Gets dataSources.
@@ -93,17 +93,17 @@ c_ryptopunks_data_sources_(current)(Ctx) ->
 -spec c_ryptopunks_data_sources_(current)(ctx:ctx(), maps:map()) -> {ok, [openapi_c_ryptopunks_data_sources_dto:openapi_c_ryptopunks_data_sources_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 c_ryptopunks_data_sources_(current)(Ctx, Optional) ->
     _OptionalParams = maps:get(params, Optional, #{}),
-    Cfg = maps:get(cfg, Optional, application:get_env(kuberl, config, #{})),
+    Cfg = maps:get(cfg, Optional, application:get_env(openapi_api, config, #{})),
 
     Method = get,
-    Path = [<<"/dapps/cryptopunks/dataSources/current">>],
+    Path = [?BASE_URL, "/dapps/cryptopunks/dataSources/current"],
     QS = [],
     Headers = [],
     Body1 = [],
     ContentTypeHeader = openapi_utils:select_header_content_type([]),
     Opts = maps:get(hackney_opts, Optional, []),
 
-    openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
+    openapi_utils:request(Ctx, Method, Path, QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
 %% @doc Bids (historical)
 %% Gets bids.
@@ -114,17 +114,17 @@ c_ryptopunks_get_bids_(historical)(Ctx) ->
 -spec c_ryptopunks_get_bids_(historical)(ctx:ctx(), maps:map()) -> {ok, [openapi_c_ryptopunks_bid_dto:openapi_c_ryptopunks_bid_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 c_ryptopunks_get_bids_(historical)(Ctx, Optional) ->
     _OptionalParams = maps:get(params, Optional, #{}),
-    Cfg = maps:get(cfg, Optional, application:get_env(kuberl, config, #{})),
+    Cfg = maps:get(cfg, Optional, application:get_env(openapi_api, config, #{})),
 
     Method = get,
-    Path = [<<"/dapps/cryptopunks/bids/historical">>],
+    Path = [?BASE_URL, "/dapps/cryptopunks/bids/historical"],
     QS = lists:flatten([])++openapi_utils:optional_params(['startBlock', 'endBlock', 'startDate', 'endDate', 'id'], _OptionalParams),
     Headers = [],
     Body1 = [],
     ContentTypeHeader = openapi_utils:select_header_content_type([]),
     Opts = maps:get(hackney_opts, Optional, []),
 
-    openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
+    openapi_utils:request(Ctx, Method, Path, QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
 %% @doc CollectionDailySnapshots (historical)
 %% Gets collectionDailySnapshots.
@@ -135,17 +135,17 @@ c_ryptopunks_get_collection_daily_snapshots_(historical)(Ctx) ->
 -spec c_ryptopunks_get_collection_daily_snapshots_(historical)(ctx:ctx(), maps:map()) -> {ok, [openapi_c_ryptopunks_collection_daily_snapshot_dto:openapi_c_ryptopunks_collection_daily_snapshot_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 c_ryptopunks_get_collection_daily_snapshots_(historical)(Ctx, Optional) ->
     _OptionalParams = maps:get(params, Optional, #{}),
-    Cfg = maps:get(cfg, Optional, application:get_env(kuberl, config, #{})),
+    Cfg = maps:get(cfg, Optional, application:get_env(openapi_api, config, #{})),
 
     Method = get,
-    Path = [<<"/dapps/cryptopunks/collectionDailySnapshots/historical">>],
+    Path = [?BASE_URL, "/dapps/cryptopunks/collectionDailySnapshots/historical"],
     QS = lists:flatten([])++openapi_utils:optional_params(['startBlock', 'endBlock', 'startDate', 'endDate'], _OptionalParams),
     Headers = [],
     Body1 = [],
     ContentTypeHeader = openapi_utils:select_header_content_type([]),
     Opts = maps:get(hackney_opts, Optional, []),
 
-    openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
+    openapi_utils:request(Ctx, Method, Path, QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
 %% @doc Collections (historical)
 %% Gets collections.
@@ -156,17 +156,17 @@ c_ryptopunks_get_collections_(historical)(Ctx) ->
 -spec c_ryptopunks_get_collections_(historical)(ctx:ctx(), maps:map()) -> {ok, [openapi_c_ryptopunks_collection_dto:openapi_c_ryptopunks_collection_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 c_ryptopunks_get_collections_(historical)(Ctx, Optional) ->
     _OptionalParams = maps:get(params, Optional, #{}),
-    Cfg = maps:get(cfg, Optional, application:get_env(kuberl, config, #{})),
+    Cfg = maps:get(cfg, Optional, application:get_env(openapi_api, config, #{})),
 
     Method = get,
-    Path = [<<"/dapps/cryptopunks/collections/historical">>],
+    Path = [?BASE_URL, "/dapps/cryptopunks/collections/historical"],
     QS = lists:flatten([])++openapi_utils:optional_params(['startBlock', 'endBlock', 'startDate', 'endDate', 'id'], _OptionalParams),
     Headers = [],
     Body1 = [],
     ContentTypeHeader = openapi_utils:select_header_content_type([]),
     Opts = maps:get(hackney_opts, Optional, []),
 
-    openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
+    openapi_utils:request(Ctx, Method, Path, QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
 %% @doc DataSources (historical)
 %% Gets dataSources.
@@ -177,17 +177,17 @@ c_ryptopunks_get_data_sources_(historical)(Ctx) ->
 -spec c_ryptopunks_get_data_sources_(historical)(ctx:ctx(), maps:map()) -> {ok, [openapi_c_ryptopunks_data_sources_dto:openapi_c_ryptopunks_data_sources_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 c_ryptopunks_get_data_sources_(historical)(Ctx, Optional) ->
     _OptionalParams = maps:get(params, Optional, #{}),
-    Cfg = maps:get(cfg, Optional, application:get_env(kuberl, config, #{})),
+    Cfg = maps:get(cfg, Optional, application:get_env(openapi_api, config, #{})),
 
     Method = get,
-    Path = [<<"/dapps/cryptopunks/dataSources/historical">>],
+    Path = [?BASE_URL, "/dapps/cryptopunks/dataSources/historical"],
     QS = lists:flatten([])++openapi_utils:optional_params(['startBlock', 'endBlock', 'startDate', 'endDate', 'id'], _OptionalParams),
     Headers = [],
     Body1 = [],
     ContentTypeHeader = openapi_utils:select_header_content_type([]),
     Opts = maps:get(hackney_opts, Optional, []),
 
-    openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
+    openapi_utils:request(Ctx, Method, Path, QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
 %% @doc Items (historical)
 %% Gets items.
@@ -198,17 +198,17 @@ c_ryptopunks_get_items_(historical)(Ctx) ->
 -spec c_ryptopunks_get_items_(historical)(ctx:ctx(), maps:map()) -> {ok, [openapi_c_ryptopunks_item_dto:openapi_c_ryptopunks_item_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 c_ryptopunks_get_items_(historical)(Ctx, Optional) ->
     _OptionalParams = maps:get(params, Optional, #{}),
-    Cfg = maps:get(cfg, Optional, application:get_env(kuberl, config, #{})),
+    Cfg = maps:get(cfg, Optional, application:get_env(openapi_api, config, #{})),
 
     Method = get,
-    Path = [<<"/dapps/cryptopunks/items/historical">>],
+    Path = [?BASE_URL, "/dapps/cryptopunks/items/historical"],
     QS = lists:flatten([])++openapi_utils:optional_params(['startBlock', 'endBlock', 'startDate', 'endDate'], _OptionalParams),
     Headers = [],
     Body1 = [],
     ContentTypeHeader = openapi_utils:select_header_content_type([]),
     Opts = maps:get(hackney_opts, Optional, []),
 
-    openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
+    openapi_utils:request(Ctx, Method, Path, QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
 %% @doc MarketPlaces (historical)
 %% Gets marketPlaces.
@@ -219,17 +219,17 @@ c_ryptopunks_get_market_places_(historical)(Ctx) ->
 -spec c_ryptopunks_get_market_places_(historical)(ctx:ctx(), maps:map()) -> {ok, [openapi_c_ryptopunks_market_place_dto:openapi_c_ryptopunks_market_place_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 c_ryptopunks_get_market_places_(historical)(Ctx, Optional) ->
     _OptionalParams = maps:get(params, Optional, #{}),
-    Cfg = maps:get(cfg, Optional, application:get_env(kuberl, config, #{})),
+    Cfg = maps:get(cfg, Optional, application:get_env(openapi_api, config, #{})),
 
     Method = get,
-    Path = [<<"/dapps/cryptopunks/marketPlaces/historical">>],
+    Path = [?BASE_URL, "/dapps/cryptopunks/marketPlaces/historical"],
     QS = lists:flatten([])++openapi_utils:optional_params(['startBlock', 'endBlock', 'startDate', 'endDate', 'id'], _OptionalParams),
     Headers = [],
     Body1 = [],
     ContentTypeHeader = openapi_utils:select_header_content_type([]),
     Opts = maps:get(hackney_opts, Optional, []),
 
-    openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
+    openapi_utils:request(Ctx, Method, Path, QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
 %% @doc MarketplaceDailySnapshots (historical)
 %% Gets marketplaceDailySnapshots.
@@ -240,17 +240,17 @@ c_ryptopunks_get_marketplace_daily_snapshots_(historical)(Ctx) ->
 -spec c_ryptopunks_get_marketplace_daily_snapshots_(historical)(ctx:ctx(), maps:map()) -> {ok, [openapi_c_ryptopunks_marketplace_daily_snapshot_dto:openapi_c_ryptopunks_marketplace_daily_snapshot_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 c_ryptopunks_get_marketplace_daily_snapshots_(historical)(Ctx, Optional) ->
     _OptionalParams = maps:get(params, Optional, #{}),
-    Cfg = maps:get(cfg, Optional, application:get_env(kuberl, config, #{})),
+    Cfg = maps:get(cfg, Optional, application:get_env(openapi_api, config, #{})),
 
     Method = get,
-    Path = [<<"/dapps/cryptopunks/marketplaceDailySnapshots/historical">>],
+    Path = [?BASE_URL, "/dapps/cryptopunks/marketplaceDailySnapshots/historical"],
     QS = lists:flatten([])++openapi_utils:optional_params(['startBlock', 'endBlock', 'startDate', 'endDate', 'id'], _OptionalParams),
     Headers = [],
     Body1 = [],
     ContentTypeHeader = openapi_utils:select_header_content_type([]),
     Opts = maps:get(hackney_opts, Optional, []),
 
-    openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
+    openapi_utils:request(Ctx, Method, Path, QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
 %% @doc Trades (historical)
 %% Gets trades.
@@ -261,17 +261,17 @@ c_ryptopunks_get_trades_(historical)(Ctx) ->
 -spec c_ryptopunks_get_trades_(historical)(ctx:ctx(), maps:map()) -> {ok, [openapi_c_ryptopunks_trade_dto:openapi_c_ryptopunks_trade_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 c_ryptopunks_get_trades_(historical)(Ctx, Optional) ->
     _OptionalParams = maps:get(params, Optional, #{}),
-    Cfg = maps:get(cfg, Optional, application:get_env(kuberl, config, #{})),
+    Cfg = maps:get(cfg, Optional, application:get_env(openapi_api, config, #{})),
 
     Method = get,
-    Path = [<<"/dapps/cryptopunks/trades/historical">>],
+    Path = [?BASE_URL, "/dapps/cryptopunks/trades/historical"],
     QS = lists:flatten([])++openapi_utils:optional_params(['startBlock', 'endBlock', 'startDate', 'endDate', 'id'], _OptionalParams),
     Headers = [],
     Body1 = [],
     ContentTypeHeader = openapi_utils:select_header_content_type([]),
     Opts = maps:get(hackney_opts, Optional, []),
 
-    openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
+    openapi_utils:request(Ctx, Method, Path, QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
 %% @doc Users (historical)
 %% Gets users.
@@ -282,17 +282,17 @@ c_ryptopunks_get_users_(historical)(Ctx) ->
 -spec c_ryptopunks_get_users_(historical)(ctx:ctx(), maps:map()) -> {ok, [openapi_c_ryptopunks_user_dto:openapi_c_ryptopunks_user_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 c_ryptopunks_get_users_(historical)(Ctx, Optional) ->
     _OptionalParams = maps:get(params, Optional, #{}),
-    Cfg = maps:get(cfg, Optional, application:get_env(kuberl, config, #{})),
+    Cfg = maps:get(cfg, Optional, application:get_env(openapi_api, config, #{})),
 
     Method = get,
-    Path = [<<"/dapps/cryptopunks/users/historical">>],
+    Path = [?BASE_URL, "/dapps/cryptopunks/users/historical"],
     QS = lists:flatten([])++openapi_utils:optional_params(['startBlock', 'endBlock', 'startDate', 'endDate', 'id'], _OptionalParams),
     Headers = [],
     Body1 = [],
     ContentTypeHeader = openapi_utils:select_header_content_type([]),
     Opts = maps:get(hackney_opts, Optional, []),
 
-    openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
+    openapi_utils:request(Ctx, Method, Path, QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
 %% @doc Items (current)
 %% Gets items.
@@ -303,17 +303,17 @@ c_ryptopunks_items_(current)(Ctx) ->
 -spec c_ryptopunks_items_(current)(ctx:ctx(), maps:map()) -> {ok, [openapi_c_ryptopunks_item_dto:openapi_c_ryptopunks_item_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 c_ryptopunks_items_(current)(Ctx, Optional) ->
     _OptionalParams = maps:get(params, Optional, #{}),
-    Cfg = maps:get(cfg, Optional, application:get_env(kuberl, config, #{})),
+    Cfg = maps:get(cfg, Optional, application:get_env(openapi_api, config, #{})),
 
     Method = get,
-    Path = [<<"/dapps/cryptopunks/items/current">>],
+    Path = [?BASE_URL, "/dapps/cryptopunks/items/current"],
     QS = [],
     Headers = [],
     Body1 = [],
     ContentTypeHeader = openapi_utils:select_header_content_type([]),
     Opts = maps:get(hackney_opts, Optional, []),
 
-    openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
+    openapi_utils:request(Ctx, Method, Path, QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
 %% @doc MarketPlaces (current)
 %% Gets marketPlaces.
@@ -324,17 +324,17 @@ c_ryptopunks_market_places_(current)(Ctx) ->
 -spec c_ryptopunks_market_places_(current)(ctx:ctx(), maps:map()) -> {ok, [openapi_c_ryptopunks_market_place_dto:openapi_c_ryptopunks_market_place_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 c_ryptopunks_market_places_(current)(Ctx, Optional) ->
     _OptionalParams = maps:get(params, Optional, #{}),
-    Cfg = maps:get(cfg, Optional, application:get_env(kuberl, config, #{})),
+    Cfg = maps:get(cfg, Optional, application:get_env(openapi_api, config, #{})),
 
     Method = get,
-    Path = [<<"/dapps/cryptopunks/marketPlaces/current">>],
+    Path = [?BASE_URL, "/dapps/cryptopunks/marketPlaces/current"],
     QS = [],
     Headers = [],
     Body1 = [],
     ContentTypeHeader = openapi_utils:select_header_content_type([]),
     Opts = maps:get(hackney_opts, Optional, []),
 
-    openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
+    openapi_utils:request(Ctx, Method, Path, QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
 %% @doc MarketplaceDailySnapshots (current)
 %% Gets marketplaceDailySnapshots.
@@ -345,17 +345,17 @@ c_ryptopunks_marketplace_daily_snapshots_(current)(Ctx) ->
 -spec c_ryptopunks_marketplace_daily_snapshots_(current)(ctx:ctx(), maps:map()) -> {ok, [openapi_c_ryptopunks_marketplace_daily_snapshot_dto:openapi_c_ryptopunks_marketplace_daily_snapshot_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 c_ryptopunks_marketplace_daily_snapshots_(current)(Ctx, Optional) ->
     _OptionalParams = maps:get(params, Optional, #{}),
-    Cfg = maps:get(cfg, Optional, application:get_env(kuberl, config, #{})),
+    Cfg = maps:get(cfg, Optional, application:get_env(openapi_api, config, #{})),
 
     Method = get,
-    Path = [<<"/dapps/cryptopunks/marketplaceDailySnapshots/current">>],
+    Path = [?BASE_URL, "/dapps/cryptopunks/marketplaceDailySnapshots/current"],
     QS = [],
     Headers = [],
     Body1 = [],
     ContentTypeHeader = openapi_utils:select_header_content_type([]),
     Opts = maps:get(hackney_opts, Optional, []),
 
-    openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
+    openapi_utils:request(Ctx, Method, Path, QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
 %% @doc Trades (current)
 %% Gets trades.
@@ -366,17 +366,17 @@ c_ryptopunks_trades_(current)(Ctx) ->
 -spec c_ryptopunks_trades_(current)(ctx:ctx(), maps:map()) -> {ok, [openapi_c_ryptopunks_trade_dto:openapi_c_ryptopunks_trade_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 c_ryptopunks_trades_(current)(Ctx, Optional) ->
     _OptionalParams = maps:get(params, Optional, #{}),
-    Cfg = maps:get(cfg, Optional, application:get_env(kuberl, config, #{})),
+    Cfg = maps:get(cfg, Optional, application:get_env(openapi_api, config, #{})),
 
     Method = get,
-    Path = [<<"/dapps/cryptopunks/trades/current">>],
+    Path = [?BASE_URL, "/dapps/cryptopunks/trades/current"],
     QS = [],
     Headers = [],
     Body1 = [],
     ContentTypeHeader = openapi_utils:select_header_content_type([]),
     Opts = maps:get(hackney_opts, Optional, []),
 
-    openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
+    openapi_utils:request(Ctx, Method, Path, QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
 %% @doc Users (current)
 %% Gets users.
@@ -387,16 +387,16 @@ c_ryptopunks_users_(current)(Ctx) ->
 -spec c_ryptopunks_users_(current)(ctx:ctx(), maps:map()) -> {ok, [openapi_c_ryptopunks_user_dto:openapi_c_ryptopunks_user_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 c_ryptopunks_users_(current)(Ctx, Optional) ->
     _OptionalParams = maps:get(params, Optional, #{}),
-    Cfg = maps:get(cfg, Optional, application:get_env(kuberl, config, #{})),
+    Cfg = maps:get(cfg, Optional, application:get_env(openapi_api, config, #{})),
 
     Method = get,
-    Path = [<<"/dapps/cryptopunks/users/current">>],
+    Path = [?BASE_URL, "/dapps/cryptopunks/users/current"],
     QS = [],
     Headers = [],
     Body1 = [],
     ContentTypeHeader = openapi_utils:select_header_content_type([]),
     Opts = maps:get(hackney_opts, Optional, []),
 
-    openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
+    openapi_utils:request(Ctx, Method, Path, QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
 

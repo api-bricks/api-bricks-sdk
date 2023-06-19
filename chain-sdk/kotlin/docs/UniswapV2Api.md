@@ -36,7 +36,7 @@ Method | HTTP request | Description
 [**uniswapV2UsersCurrent**](UniswapV2Api.md#uniswapV2UsersCurrent) | **GET** /dapps/uniswapv2/users/current | Users (current)
 
 
-<a name="uniswapV2BundlesCurrent"></a>
+<a id="uniswapV2BundlesCurrent"></a>
 # **uniswapV2BundlesCurrent**
 > kotlin.collections.List&lt;UniswapV2BundleDTO&gt; uniswapV2BundlesCurrent()
 
@@ -79,7 +79,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="uniswapV2BurnsCurrent"></a>
+<a id="uniswapV2BurnsCurrent"></a>
 # **uniswapV2BurnsCurrent**
 > kotlin.collections.List&lt;UniswapV2BurnDTO&gt; uniswapV2BurnsCurrent()
 
@@ -122,7 +122,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="uniswapV2GetBundlesHistorical"></a>
+<a id="uniswapV2GetBundlesHistorical"></a>
 # **uniswapV2GetBundlesHistorical**
 > kotlin.collections.List&lt;UniswapV2BundleDTO&gt; uniswapV2GetBundlesHistorical(startBlock, endBlock, startDate, endDate, id)
 
@@ -177,7 +177,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="uniswapV2GetBurnsHistorical"></a>
+<a id="uniswapV2GetBurnsHistorical"></a>
 # **uniswapV2GetBurnsHistorical**
 > kotlin.collections.List&lt;UniswapV2BurnDTO&gt; uniswapV2GetBurnsHistorical(startBlock, endBlock, startDate, endDate, id, pair)
 
@@ -234,7 +234,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="uniswapV2GetLiquidityPositionSnapshotsHistorical"></a>
+<a id="uniswapV2GetLiquidityPositionSnapshotsHistorical"></a>
 # **uniswapV2GetLiquidityPositionSnapshotsHistorical**
 > kotlin.collections.List&lt;UniswapV2LiquidityPositionSnapshotDTO&gt; uniswapV2GetLiquidityPositionSnapshotsHistorical(startBlock, endBlock, startDate, endDate, id, user, pair)
 
@@ -293,7 +293,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="uniswapV2GetLiquidityPositionsHistorical"></a>
+<a id="uniswapV2GetLiquidityPositionsHistorical"></a>
 # **uniswapV2GetLiquidityPositionsHistorical**
 > kotlin.collections.List&lt;UniswapV2LiquidityPositionDTO&gt; uniswapV2GetLiquidityPositionsHistorical(startBlock, endBlock, startDate, endDate, id, user, pair)
 
@@ -352,7 +352,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="uniswapV2GetMintsHistorical"></a>
+<a id="uniswapV2GetMintsHistorical"></a>
 # **uniswapV2GetMintsHistorical**
 > kotlin.collections.List&lt;UniswapV2MintDTO&gt; uniswapV2GetMintsHistorical(startBlock, endBlock, startDate, endDate, id, pair)
 
@@ -409,7 +409,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="uniswapV2GetPairDayDataHistorical"></a>
+<a id="uniswapV2GetPairDayDataHistorical"></a>
 # **uniswapV2GetPairDayDataHistorical**
 > kotlin.collections.List&lt;UniswapV2PairDayDataDTO&gt; uniswapV2GetPairDayDataHistorical(startBlock, endBlock, startDate, endDate, id, token0, token1)
 
@@ -468,7 +468,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="uniswapV2GetPairHourDataHistorical"></a>
+<a id="uniswapV2GetPairHourDataHistorical"></a>
 # **uniswapV2GetPairHourDataHistorical**
 > kotlin.collections.List&lt;UniswapV2PairHourDataDTO&gt; uniswapV2GetPairHourDataHistorical(startBlock, endBlock, startDate, endDate, id, pair)
 
@@ -525,7 +525,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="uniswapV2GetPairsHistorical"></a>
+<a id="uniswapV2GetPairsHistorical"></a>
 # **uniswapV2GetPairsHistorical**
 > kotlin.collections.List&lt;UniswapV2PairDTO&gt; uniswapV2GetPairsHistorical(startBlock, endBlock, startDate, endDate, id, token0, token1)
 
@@ -584,7 +584,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="uniswapV2GetSwapsHistorical"></a>
+<a id="uniswapV2GetSwapsHistorical"></a>
 # **uniswapV2GetSwapsHistorical**
 > kotlin.collections.List&lt;UniswapV2SwapDTO&gt; uniswapV2GetSwapsHistorical(startBlock, endBlock, startDate, endDate, id, pair)
 
@@ -641,7 +641,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="uniswapV2GetTokenDayDataHistorical"></a>
+<a id="uniswapV2GetTokenDayDataHistorical"></a>
 # **uniswapV2GetTokenDayDataHistorical**
 > kotlin.collections.List&lt;UniswapV2TokenDayDataDTO&gt; uniswapV2GetTokenDayDataHistorical(startBlock, endBlock, startDate, endDate, id)
 
@@ -696,7 +696,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="uniswapV2GetTokensHistorical"></a>
+<a id="uniswapV2GetTokensHistorical"></a>
 # **uniswapV2GetTokensHistorical**
 > kotlin.collections.List&lt;UniswapV2TokenDTO&gt; uniswapV2GetTokensHistorical(startBlock, endBlock, startDate, endDate, id, symbol, name)
 
@@ -755,7 +755,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="uniswapV2GetTransactionsHistorical"></a>
+<a id="uniswapV2GetTransactionsHistorical"></a>
 # **uniswapV2GetTransactionsHistorical**
 > kotlin.collections.List&lt;UniswapV2TransactionDTO&gt; uniswapV2GetTransactionsHistorical(startBlock, endBlock, startDate, endDate, id)
 
@@ -810,7 +810,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="uniswapV2GetUniswapDayDataHistorical"></a>
+<a id="uniswapV2GetUniswapDayDataHistorical"></a>
 # **uniswapV2GetUniswapDayDataHistorical**
 > kotlin.collections.List&lt;UniswapV2UniswapDayDataDTO&gt; uniswapV2GetUniswapDayDataHistorical(startBlock, endBlock, startDate, endDate, id)
 
@@ -865,7 +865,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="uniswapV2GetUniswapFactoriesHistorical"></a>
+<a id="uniswapV2GetUniswapFactoriesHistorical"></a>
 # **uniswapV2GetUniswapFactoriesHistorical**
 > kotlin.collections.List&lt;UniswapV2UniswapFactoryDTO&gt; uniswapV2GetUniswapFactoriesHistorical(startBlock, endBlock, startDate, endDate, id)
 
@@ -920,7 +920,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="uniswapV2GetUsersHistorical"></a>
+<a id="uniswapV2GetUsersHistorical"></a>
 # **uniswapV2GetUsersHistorical**
 > kotlin.collections.List&lt;UniswapV2UserDTO&gt; uniswapV2GetUsersHistorical(startBlock, endBlock, startDate, endDate, id)
 
@@ -975,7 +975,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="uniswapV2LiquidityPositionSnapshotsCurrent"></a>
+<a id="uniswapV2LiquidityPositionSnapshotsCurrent"></a>
 # **uniswapV2LiquidityPositionSnapshotsCurrent**
 > kotlin.collections.List&lt;UniswapV2LiquidityPositionSnapshotDTO&gt; uniswapV2LiquidityPositionSnapshotsCurrent()
 
@@ -1018,7 +1018,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="uniswapV2LiquidityPositionsCurrent"></a>
+<a id="uniswapV2LiquidityPositionsCurrent"></a>
 # **uniswapV2LiquidityPositionsCurrent**
 > kotlin.collections.List&lt;UniswapV2LiquidityPositionDTO&gt; uniswapV2LiquidityPositionsCurrent()
 
@@ -1061,7 +1061,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="uniswapV2MintsCurrent"></a>
+<a id="uniswapV2MintsCurrent"></a>
 # **uniswapV2MintsCurrent**
 > kotlin.collections.List&lt;UniswapV2MintDTO&gt; uniswapV2MintsCurrent()
 
@@ -1104,7 +1104,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="uniswapV2PairDayDataCurrent"></a>
+<a id="uniswapV2PairDayDataCurrent"></a>
 # **uniswapV2PairDayDataCurrent**
 > kotlin.collections.List&lt;UniswapV2PairDayDataDTO&gt; uniswapV2PairDayDataCurrent()
 
@@ -1147,7 +1147,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="uniswapV2PairHourDataCurrent"></a>
+<a id="uniswapV2PairHourDataCurrent"></a>
 # **uniswapV2PairHourDataCurrent**
 > kotlin.collections.List&lt;UniswapV2PairHourDataDTO&gt; uniswapV2PairHourDataCurrent()
 
@@ -1190,7 +1190,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="uniswapV2PairsCurrent"></a>
+<a id="uniswapV2PairsCurrent"></a>
 # **uniswapV2PairsCurrent**
 > kotlin.collections.List&lt;UniswapV2PairDTO&gt; uniswapV2PairsCurrent(id)
 
@@ -1237,7 +1237,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="uniswapV2SwapsCurrent"></a>
+<a id="uniswapV2SwapsCurrent"></a>
 # **uniswapV2SwapsCurrent**
 > kotlin.collections.List&lt;UniswapV2SwapDTO&gt; uniswapV2SwapsCurrent(pair)
 
@@ -1284,7 +1284,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="uniswapV2TokenDayDataCurrent"></a>
+<a id="uniswapV2TokenDayDataCurrent"></a>
 # **uniswapV2TokenDayDataCurrent**
 > kotlin.collections.List&lt;UniswapV2TokenDayDataDTO&gt; uniswapV2TokenDayDataCurrent()
 
@@ -1327,7 +1327,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="uniswapV2TokensCurrent"></a>
+<a id="uniswapV2TokensCurrent"></a>
 # **uniswapV2TokensCurrent**
 > kotlin.collections.List&lt;UniswapV2TokenDTO&gt; uniswapV2TokensCurrent()
 
@@ -1370,7 +1370,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="uniswapV2TransactionsCurrent"></a>
+<a id="uniswapV2TransactionsCurrent"></a>
 # **uniswapV2TransactionsCurrent**
 > kotlin.collections.List&lt;UniswapV2TransactionDTO&gt; uniswapV2TransactionsCurrent()
 
@@ -1413,7 +1413,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="uniswapV2UniswapDayDataCurrent"></a>
+<a id="uniswapV2UniswapDayDataCurrent"></a>
 # **uniswapV2UniswapDayDataCurrent**
 > kotlin.collections.List&lt;UniswapV2UniswapDayDataDTO&gt; uniswapV2UniswapDayDataCurrent()
 
@@ -1456,7 +1456,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="uniswapV2UniswapFactoriesCurrent"></a>
+<a id="uniswapV2UniswapFactoriesCurrent"></a>
 # **uniswapV2UniswapFactoriesCurrent**
 > kotlin.collections.List&lt;UniswapV2UniswapFactoryDTO&gt; uniswapV2UniswapFactoriesCurrent()
 
@@ -1499,7 +1499,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="uniswapV2UsersCurrent"></a>
+<a id="uniswapV2UsersCurrent"></a>
 # **uniswapV2UsersCurrent**
 > kotlin.collections.List&lt;UniswapV2UserDTO&gt; uniswapV2UsersCurrent()
 

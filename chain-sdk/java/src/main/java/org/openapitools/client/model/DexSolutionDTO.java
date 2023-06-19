@@ -36,6 +36,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
@@ -50,7 +54,7 @@ import org.openapitools.client.JSON;
 /**
  * DexSolutionDTO
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-07T11:31:09.822924Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-19T09:28:48.156871Z[Etc/UTC]")
 public class DexSolutionDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -126,7 +130,6 @@ public class DexSolutionDTO {
    * @return entryTime
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getEntryTime() {
     return entryTime;
   }
@@ -148,7 +151,6 @@ public class DexSolutionDTO {
    * @return recvTime
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getRecvTime() {
     return recvTime;
   }
@@ -170,7 +172,6 @@ public class DexSolutionDTO {
    * @return blockNumber
   **/
   @javax.annotation.Nullable
-
   public Long getBlockNumber() {
     return blockNumber;
   }
@@ -192,7 +193,6 @@ public class DexSolutionDTO {
    * @return id
   **/
   @javax.annotation.Nullable
-
   public String getId() {
     return id;
   }
@@ -214,7 +214,6 @@ public class DexSolutionDTO {
    * @return batch
   **/
   @javax.annotation.Nullable
-
   public String getBatch() {
     return batch;
   }
@@ -236,7 +235,6 @@ public class DexSolutionDTO {
    * @return solver
   **/
   @javax.annotation.Nullable
-
   public String getSolver() {
     return solver;
   }
@@ -258,7 +256,6 @@ public class DexSolutionDTO {
    * @return feeReward
   **/
   @javax.annotation.Nullable
-
   public String getFeeReward() {
     return feeReward;
   }
@@ -280,7 +277,6 @@ public class DexSolutionDTO {
    * @return objectiveValue
   **/
   @javax.annotation.Nullable
-
   public String getObjectiveValue() {
     return objectiveValue;
   }
@@ -302,7 +298,6 @@ public class DexSolutionDTO {
    * @return utility
   **/
   @javax.annotation.Nullable
-
   public String getUtility() {
     return utility;
   }
@@ -320,6 +315,9 @@ public class DexSolutionDTO {
   }
 
   public DexSolutionDTO addTradesItem(String tradesItem) {
+    if (this.trades == null) {
+      this.trades = new ArrayList<>();
+    }
     this.trades.add(tradesItem);
     return this;
   }
@@ -329,7 +327,6 @@ public class DexSolutionDTO {
    * @return trades
   **/
   @javax.annotation.Nullable
-
   public List<String> getTrades() {
     return trades;
   }
@@ -351,7 +348,6 @@ public class DexSolutionDTO {
    * @return createEpoch
   **/
   @javax.annotation.Nullable
-
   public String getCreateEpoch() {
     return createEpoch;
   }
@@ -373,7 +369,6 @@ public class DexSolutionDTO {
    * @return revertEpoch
   **/
   @javax.annotation.Nullable
-
   public String getRevertEpoch() {
     return revertEpoch;
   }
@@ -395,7 +390,6 @@ public class DexSolutionDTO {
    * @return txHash
   **/
   @javax.annotation.Nullable
-
   public String getTxHash() {
     return txHash;
   }
@@ -417,7 +411,6 @@ public class DexSolutionDTO {
    * @return txLogIndex
   **/
   @javax.annotation.Nullable
-
   public String getTxLogIndex() {
     return txLogIndex;
   }
@@ -439,7 +432,6 @@ public class DexSolutionDTO {
    * @return vid
   **/
   @javax.annotation.Nullable
-
   public Long getVid() {
     return vid;
   }

@@ -36,6 +36,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
@@ -50,7 +54,7 @@ import org.openapitools.client.JSON;
 /**
  * Swap are created for each token swap within a pair.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-07T11:31:09.822924Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-19T09:28:48.156871Z[Etc/UTC]")
 public class UniswapV2SwapDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -168,7 +172,6 @@ public class UniswapV2SwapDTO {
    * @return entryTime
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getEntryTime() {
     return entryTime;
   }
@@ -190,7 +193,6 @@ public class UniswapV2SwapDTO {
    * @return recvTime
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getRecvTime() {
     return recvTime;
   }
@@ -212,7 +214,6 @@ public class UniswapV2SwapDTO {
    * @return blockNumber
   **/
   @javax.annotation.Nullable
-
   public Long getBlockNumber() {
     return blockNumber;
   }
@@ -234,7 +235,6 @@ public class UniswapV2SwapDTO {
    * @return vid
   **/
   @javax.annotation.Nullable
-
   public Long getVid() {
     return vid;
   }
@@ -256,7 +256,6 @@ public class UniswapV2SwapDTO {
    * @return id
   **/
   @javax.annotation.Nullable
-
   public String getId() {
     return id;
   }
@@ -278,7 +277,6 @@ public class UniswapV2SwapDTO {
    * @return transaction
   **/
   @javax.annotation.Nullable
-
   public String getTransaction() {
     return transaction;
   }
@@ -300,7 +298,6 @@ public class UniswapV2SwapDTO {
    * @return timestamp
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getTimestamp() {
     return timestamp;
   }
@@ -322,7 +319,6 @@ public class UniswapV2SwapDTO {
    * @return pair
   **/
   @javax.annotation.Nullable
-
   public String getPair() {
     return pair;
   }
@@ -344,7 +340,6 @@ public class UniswapV2SwapDTO {
    * @return sender
   **/
   @javax.annotation.Nullable
-
   public String getSender() {
     return sender;
   }
@@ -366,7 +361,6 @@ public class UniswapV2SwapDTO {
    * @return from
   **/
   @javax.annotation.Nullable
-
   public String getFrom() {
     return from;
   }
@@ -388,7 +382,6 @@ public class UniswapV2SwapDTO {
    * @return amount0In
   **/
   @javax.annotation.Nullable
-
   public String getAmount0In() {
     return amount0In;
   }
@@ -410,7 +403,6 @@ public class UniswapV2SwapDTO {
    * @return amount1In
   **/
   @javax.annotation.Nullable
-
   public String getAmount1In() {
     return amount1In;
   }
@@ -432,7 +424,6 @@ public class UniswapV2SwapDTO {
    * @return amount0Out
   **/
   @javax.annotation.Nullable
-
   public String getAmount0Out() {
     return amount0Out;
   }
@@ -454,7 +445,6 @@ public class UniswapV2SwapDTO {
    * @return amount1Out
   **/
   @javax.annotation.Nullable
-
   public String getAmount1Out() {
     return amount1Out;
   }
@@ -476,7 +466,6 @@ public class UniswapV2SwapDTO {
    * @return to
   **/
   @javax.annotation.Nullable
-
   public String getTo() {
     return to;
   }
@@ -498,7 +487,6 @@ public class UniswapV2SwapDTO {
    * @return logIndex
   **/
   @javax.annotation.Nullable
-
   public NumericsBigInteger getLogIndex() {
     return logIndex;
   }
@@ -520,7 +508,6 @@ public class UniswapV2SwapDTO {
    * @return amountUsd
   **/
   @javax.annotation.Nullable
-
   public String getAmountUsd() {
     return amountUsd;
   }
@@ -536,7 +523,6 @@ public class UniswapV2SwapDTO {
    * @return evaluatedPrice
   **/
   @javax.annotation.Nullable
-
   public Double getEvaluatedPrice() {
     return evaluatedPrice;
   }
@@ -549,7 +535,6 @@ public class UniswapV2SwapDTO {
    * @return evaluatedAmount
   **/
   @javax.annotation.Nullable
-
   public Double getEvaluatedAmount() {
     return evaluatedAmount;
   }
@@ -568,7 +553,6 @@ public class UniswapV2SwapDTO {
    * @return evaluatedAggressor
   **/
   @javax.annotation.Nullable
-
   public TransactionsETradeAggressiveSide getEvaluatedAggressor() {
     return evaluatedAggressor;
   }
@@ -584,7 +568,6 @@ public class UniswapV2SwapDTO {
    * @return poolId
   **/
   @javax.annotation.Nullable
-
   public String getPoolId() {
     return poolId;
   }
@@ -597,7 +580,6 @@ public class UniswapV2SwapDTO {
    * @return transactionId
   **/
   @javax.annotation.Nullable
-
   public String getTransactionId() {
     return transactionId;
   }

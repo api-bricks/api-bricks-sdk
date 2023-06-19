@@ -35,6 +35,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
@@ -49,7 +53,7 @@ import org.openapitools.client.JSON;
 /**
  * CurveExchangeDTO
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-07T11:31:09.822924Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-19T09:28:48.156871Z[Etc/UTC]")
 public class CurveExchangeDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -159,7 +163,6 @@ public class CurveExchangeDTO {
    * @return entryTime
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getEntryTime() {
     return entryTime;
   }
@@ -181,7 +184,6 @@ public class CurveExchangeDTO {
    * @return recvTime
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getRecvTime() {
     return recvTime;
   }
@@ -203,7 +205,6 @@ public class CurveExchangeDTO {
    * @return blockNumber
   **/
   @javax.annotation.Nullable
-
   public Long getBlockNumber() {
     return blockNumber;
   }
@@ -225,7 +226,6 @@ public class CurveExchangeDTO {
    * @return id
   **/
   @javax.annotation.Nullable
-
   public String getId() {
     return id;
   }
@@ -247,7 +247,6 @@ public class CurveExchangeDTO {
    * @return pool
   **/
   @javax.annotation.Nullable
-
   public String getPool() {
     return pool;
   }
@@ -269,7 +268,6 @@ public class CurveExchangeDTO {
    * @return buyer
   **/
   @javax.annotation.Nullable
-
   public String getBuyer() {
     return buyer;
   }
@@ -291,7 +289,6 @@ public class CurveExchangeDTO {
    * @return receiver
   **/
   @javax.annotation.Nullable
-
   public String getReceiver() {
     return receiver;
   }
@@ -313,7 +310,6 @@ public class CurveExchangeDTO {
    * @return tokenSold
   **/
   @javax.annotation.Nullable
-
   public String getTokenSold() {
     return tokenSold;
   }
@@ -335,7 +331,6 @@ public class CurveExchangeDTO {
    * @return tokenBought
   **/
   @javax.annotation.Nullable
-
   public String getTokenBought() {
     return tokenBought;
   }
@@ -357,7 +352,6 @@ public class CurveExchangeDTO {
    * @return amountSold
   **/
   @javax.annotation.Nullable
-
   public String getAmountSold() {
     return amountSold;
   }
@@ -379,7 +373,6 @@ public class CurveExchangeDTO {
    * @return amountBought
   **/
   @javax.annotation.Nullable
-
   public String getAmountBought() {
     return amountBought;
   }
@@ -401,7 +394,6 @@ public class CurveExchangeDTO {
    * @return block
   **/
   @javax.annotation.Nullable
-
   public String getBlock() {
     return block;
   }
@@ -423,7 +415,6 @@ public class CurveExchangeDTO {
    * @return timestamp
   **/
   @javax.annotation.Nullable
-
   public String getTimestamp() {
     return timestamp;
   }
@@ -445,7 +436,6 @@ public class CurveExchangeDTO {
    * @return transaction
   **/
   @javax.annotation.Nullable
-
   public String getTransaction() {
     return transaction;
   }
@@ -467,7 +457,6 @@ public class CurveExchangeDTO {
    * @return vid
   **/
   @javax.annotation.Nullable
-
   public Long getVid() {
     return vid;
   }
@@ -483,7 +472,6 @@ public class CurveExchangeDTO {
    * @return evaluatedPrice
   **/
   @javax.annotation.Nullable
-
   public Double getEvaluatedPrice() {
     return evaluatedPrice;
   }
@@ -496,7 +484,6 @@ public class CurveExchangeDTO {
    * @return evaluatedAmount
   **/
   @javax.annotation.Nullable
-
   public Double getEvaluatedAmount() {
     return evaluatedAmount;
   }
@@ -515,7 +502,6 @@ public class CurveExchangeDTO {
    * @return evaluatedAggressor
   **/
   @javax.annotation.Nullable
-
   public TransactionsETradeAggressiveSide getEvaluatedAggressor() {
     return evaluatedAggressor;
   }
@@ -531,7 +517,6 @@ public class CurveExchangeDTO {
    * @return poolId
   **/
   @javax.annotation.Nullable
-
   public String getPoolId() {
     return poolId;
   }
@@ -544,7 +529,6 @@ public class CurveExchangeDTO {
    * @return transactionId
   **/
   @javax.annotation.Nullable
-
   public String getTransactionId() {
     return transactionId;
   }

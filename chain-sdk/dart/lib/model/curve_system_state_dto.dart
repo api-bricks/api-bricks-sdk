@@ -256,7 +256,7 @@ class CurveSystemStateDTO {
     return null;
   }
 
-  static List<CurveSystemStateDTO>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<CurveSystemStateDTO> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <CurveSystemStateDTO>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -287,12 +287,10 @@ class CurveSystemStateDTO {
   static Map<String, List<CurveSystemStateDTO>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<CurveSystemStateDTO>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = CurveSystemStateDTO.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = CurveSystemStateDTO.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

@@ -24,7 +24,7 @@ Method | HTTP request | Description
 [**Invoke-CRYPTOPUNKSUsersCurrent**](CRYPTOPUNKSApi.md#Invoke-CRYPTOPUNKSUsersCurrent) | **GET** /dapps/cryptopunks/users/current | Users (current)
 
 
-<a name="Invoke-CRYPTOPUNKSBidsCurrent"></a>
+<a id="Invoke-CRYPTOPUNKSBidsCurrent"></a>
 # **Invoke-CRYPTOPUNKSBidsCurrent**
 > CRYPTOPUNKSBidDTO[] Invoke-CRYPTOPUNKSBidsCurrent<br>
 
@@ -62,7 +62,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-CRYPTOPUNKSCollectionDailySnapshotsCurrent"></a>
+<a id="Invoke-CRYPTOPUNKSCollectionDailySnapshotsCurrent"></a>
 # **Invoke-CRYPTOPUNKSCollectionDailySnapshotsCurrent**
 > CRYPTOPUNKSCollectionDailySnapshotDTO[] Invoke-CRYPTOPUNKSCollectionDailySnapshotsCurrent<br>
 
@@ -100,7 +100,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-CRYPTOPUNKSCollectionsCurrent"></a>
+<a id="Invoke-CRYPTOPUNKSCollectionsCurrent"></a>
 # **Invoke-CRYPTOPUNKSCollectionsCurrent**
 > CRYPTOPUNKSCollectionDTO[] Invoke-CRYPTOPUNKSCollectionsCurrent<br>
 
@@ -138,7 +138,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-CRYPTOPUNKSDataSourcesCurrent"></a>
+<a id="Invoke-CRYPTOPUNKSDataSourcesCurrent"></a>
 # **Invoke-CRYPTOPUNKSDataSourcesCurrent**
 > CRYPTOPUNKSDataSourcesDTO[] Invoke-CRYPTOPUNKSDataSourcesCurrent<br>
 
@@ -176,7 +176,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-CRYPTOPUNKSGetBidsHistorical"></a>
+<a id="Invoke-CRYPTOPUNKSGetBidsHistorical"></a>
 # **Invoke-CRYPTOPUNKSGetBidsHistorical**
 > CRYPTOPUNKSBidDTO[] Invoke-CRYPTOPUNKSGetBidsHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
@@ -231,7 +231,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-CRYPTOPUNKSGetCollectionDailySnapshotsHistorical"></a>
+<a id="Invoke-CRYPTOPUNKSGetCollectionDailySnapshotsHistorical"></a>
 # **Invoke-CRYPTOPUNKSGetCollectionDailySnapshotsHistorical**
 > CRYPTOPUNKSCollectionDailySnapshotDTO[] Invoke-CRYPTOPUNKSGetCollectionDailySnapshotsHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
@@ -283,7 +283,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-CRYPTOPUNKSGetCollectionsHistorical"></a>
+<a id="Invoke-CRYPTOPUNKSGetCollectionsHistorical"></a>
 # **Invoke-CRYPTOPUNKSGetCollectionsHistorical**
 > CRYPTOPUNKSCollectionDTO[] Invoke-CRYPTOPUNKSGetCollectionsHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
@@ -338,7 +338,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-CRYPTOPUNKSGetDataSourcesHistorical"></a>
+<a id="Invoke-CRYPTOPUNKSGetDataSourcesHistorical"></a>
 # **Invoke-CRYPTOPUNKSGetDataSourcesHistorical**
 > CRYPTOPUNKSDataSourcesDTO[] Invoke-CRYPTOPUNKSGetDataSourcesHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
@@ -393,7 +393,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-CRYPTOPUNKSGetItemsHistorical"></a>
+<a id="Invoke-CRYPTOPUNKSGetItemsHistorical"></a>
 # **Invoke-CRYPTOPUNKSGetItemsHistorical**
 > CRYPTOPUNKSItemDTO[] Invoke-CRYPTOPUNKSGetItemsHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
@@ -445,7 +445,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-CRYPTOPUNKSGetMarketPlacesHistorical"></a>
+<a id="Invoke-CRYPTOPUNKSGetMarketPlacesHistorical"></a>
 # **Invoke-CRYPTOPUNKSGetMarketPlacesHistorical**
 > CRYPTOPUNKSMarketPlaceDTO[] Invoke-CRYPTOPUNKSGetMarketPlacesHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
@@ -500,7 +500,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-CRYPTOPUNKSGetMarketplaceDailySnapshotsHistorical"></a>
+<a id="Invoke-CRYPTOPUNKSGetMarketplaceDailySnapshotsHistorical"></a>
 # **Invoke-CRYPTOPUNKSGetMarketplaceDailySnapshotsHistorical**
 > CRYPTOPUNKSMarketplaceDailySnapshotDTO[] Invoke-CRYPTOPUNKSGetMarketplaceDailySnapshotsHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
@@ -555,7 +555,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-CRYPTOPUNKSGetTradesHistorical"></a>
+<a id="Invoke-CRYPTOPUNKSGetTradesHistorical"></a>
 # **Invoke-CRYPTOPUNKSGetTradesHistorical**
 > CRYPTOPUNKSTradeDTO[] Invoke-CRYPTOPUNKSGetTradesHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
@@ -610,7 +610,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-CRYPTOPUNKSGetUsersHistorical"></a>
+<a id="Invoke-CRYPTOPUNKSGetUsersHistorical"></a>
 # **Invoke-CRYPTOPUNKSGetUsersHistorical**
 > CRYPTOPUNKSUserDTO[] Invoke-CRYPTOPUNKSGetUsersHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
@@ -665,7 +665,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-CRYPTOPUNKSItemsCurrent"></a>
+<a id="Invoke-CRYPTOPUNKSItemsCurrent"></a>
 # **Invoke-CRYPTOPUNKSItemsCurrent**
 > CRYPTOPUNKSItemDTO[] Invoke-CRYPTOPUNKSItemsCurrent<br>
 
@@ -703,7 +703,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-CRYPTOPUNKSMarketPlacesCurrent"></a>
+<a id="Invoke-CRYPTOPUNKSMarketPlacesCurrent"></a>
 # **Invoke-CRYPTOPUNKSMarketPlacesCurrent**
 > CRYPTOPUNKSMarketPlaceDTO[] Invoke-CRYPTOPUNKSMarketPlacesCurrent<br>
 
@@ -741,7 +741,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-CRYPTOPUNKSMarketplaceDailySnapshotsCurrent"></a>
+<a id="Invoke-CRYPTOPUNKSMarketplaceDailySnapshotsCurrent"></a>
 # **Invoke-CRYPTOPUNKSMarketplaceDailySnapshotsCurrent**
 > CRYPTOPUNKSMarketplaceDailySnapshotDTO[] Invoke-CRYPTOPUNKSMarketplaceDailySnapshotsCurrent<br>
 
@@ -779,7 +779,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-CRYPTOPUNKSTradesCurrent"></a>
+<a id="Invoke-CRYPTOPUNKSTradesCurrent"></a>
 # **Invoke-CRYPTOPUNKSTradesCurrent**
 > CRYPTOPUNKSTradeDTO[] Invoke-CRYPTOPUNKSTradesCurrent<br>
 
@@ -817,7 +817,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-CRYPTOPUNKSUsersCurrent"></a>
+<a id="Invoke-CRYPTOPUNKSUsersCurrent"></a>
 # **Invoke-CRYPTOPUNKSUsersCurrent**
 > CRYPTOPUNKSUserDTO[] Invoke-CRYPTOPUNKSUsersCurrent<br>
 

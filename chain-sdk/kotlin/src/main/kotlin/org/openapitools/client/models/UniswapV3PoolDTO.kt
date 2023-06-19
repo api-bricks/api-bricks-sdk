@@ -18,6 +18,7 @@ package org.openapitools.client.models
 import org.openapitools.client.models.NumericsBigInteger
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * Information about a pool. Includes references to each token within the pool, volume information, liquidity information, and more. The pool entity mirrors the pool smart contract, and also contains aggregated information about use.

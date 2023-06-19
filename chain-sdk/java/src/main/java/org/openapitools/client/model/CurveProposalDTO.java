@@ -34,6 +34,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
@@ -48,7 +52,7 @@ import org.openapitools.client.JSON;
 /**
  * CurveProposalDTO
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-07T11:31:09.822924Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-19T09:28:48.156871Z[Etc/UTC]")
 public class CurveProposalDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -192,7 +196,6 @@ public class CurveProposalDTO {
    * @return entryTime
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getEntryTime() {
     return entryTime;
   }
@@ -214,7 +217,6 @@ public class CurveProposalDTO {
    * @return recvTime
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getRecvTime() {
     return recvTime;
   }
@@ -236,7 +238,6 @@ public class CurveProposalDTO {
    * @return blockNumber
   **/
   @javax.annotation.Nullable
-
   public Long getBlockNumber() {
     return blockNumber;
   }
@@ -258,7 +259,6 @@ public class CurveProposalDTO {
    * @return id
   **/
   @javax.annotation.Nullable
-
   public String getId() {
     return id;
   }
@@ -280,7 +280,6 @@ public class CurveProposalDTO {
    * @return number
   **/
   @javax.annotation.Nullable
-
   public String getNumber() {
     return number;
   }
@@ -302,7 +301,6 @@ public class CurveProposalDTO {
    * @return app
   **/
   @javax.annotation.Nullable
-
   public String getApp() {
     return app;
   }
@@ -324,7 +322,6 @@ public class CurveProposalDTO {
    * @return creator
   **/
   @javax.annotation.Nullable
-
   public String getCreator() {
     return creator;
   }
@@ -346,7 +343,6 @@ public class CurveProposalDTO {
    * @return executionScript
   **/
   @javax.annotation.Nullable
-
   public String getExecutionScript() {
     return executionScript;
   }
@@ -368,7 +364,6 @@ public class CurveProposalDTO {
    * @return expireDate
   **/
   @javax.annotation.Nullable
-
   public String getExpireDate() {
     return expireDate;
   }
@@ -390,7 +385,6 @@ public class CurveProposalDTO {
    * @return minimumQuorum
   **/
   @javax.annotation.Nullable
-
   public String getMinimumQuorum() {
     return minimumQuorum;
   }
@@ -412,7 +406,6 @@ public class CurveProposalDTO {
    * @return requiredSupport
   **/
   @javax.annotation.Nullable
-
   public String getRequiredSupport() {
     return requiredSupport;
   }
@@ -434,7 +427,6 @@ public class CurveProposalDTO {
    * @return snapshotBlock
   **/
   @javax.annotation.Nullable
-
   public String getSnapshotBlock() {
     return snapshotBlock;
   }
@@ -456,7 +448,6 @@ public class CurveProposalDTO {
    * @return votingPower
   **/
   @javax.annotation.Nullable
-
   public String getVotingPower() {
     return votingPower;
   }
@@ -478,7 +469,6 @@ public class CurveProposalDTO {
    * @return metadata
   **/
   @javax.annotation.Nullable
-
   public String getMetadata() {
     return metadata;
   }
@@ -500,7 +490,6 @@ public class CurveProposalDTO {
    * @return text
   **/
   @javax.annotation.Nullable
-
   public String getText() {
     return text;
   }
@@ -522,7 +511,6 @@ public class CurveProposalDTO {
    * @return voteCount
   **/
   @javax.annotation.Nullable
-
   public String getVoteCount() {
     return voteCount;
   }
@@ -544,7 +532,6 @@ public class CurveProposalDTO {
    * @return positiveVoteCount
   **/
   @javax.annotation.Nullable
-
   public String getPositiveVoteCount() {
     return positiveVoteCount;
   }
@@ -566,7 +553,6 @@ public class CurveProposalDTO {
    * @return negativeVoteCount
   **/
   @javax.annotation.Nullable
-
   public String getNegativeVoteCount() {
     return negativeVoteCount;
   }
@@ -588,7 +574,6 @@ public class CurveProposalDTO {
    * @return currentQuorum
   **/
   @javax.annotation.Nullable
-
   public String getCurrentQuorum() {
     return currentQuorum;
   }
@@ -610,7 +595,6 @@ public class CurveProposalDTO {
    * @return currentSupport
   **/
   @javax.annotation.Nullable
-
   public String getCurrentSupport() {
     return currentSupport;
   }
@@ -632,7 +616,6 @@ public class CurveProposalDTO {
    * @return stakedSupport
   **/
   @javax.annotation.Nullable
-
   public String getStakedSupport() {
     return stakedSupport;
   }
@@ -654,7 +637,6 @@ public class CurveProposalDTO {
    * @return totalStaked
   **/
   @javax.annotation.Nullable
-
   public String getTotalStaked() {
     return totalStaked;
   }
@@ -676,7 +658,6 @@ public class CurveProposalDTO {
    * @return created
   **/
   @javax.annotation.Nullable
-
   public String getCreated() {
     return created;
   }
@@ -698,7 +679,6 @@ public class CurveProposalDTO {
    * @return createdAtBlock
   **/
   @javax.annotation.Nullable
-
   public String getCreatedAtBlock() {
     return createdAtBlock;
   }
@@ -720,7 +700,6 @@ public class CurveProposalDTO {
    * @return createdAtTransaction
   **/
   @javax.annotation.Nullable
-
   public String getCreatedAtTransaction() {
     return createdAtTransaction;
   }
@@ -742,7 +721,6 @@ public class CurveProposalDTO {
    * @return updated
   **/
   @javax.annotation.Nullable
-
   public String getUpdated() {
     return updated;
   }
@@ -764,7 +742,6 @@ public class CurveProposalDTO {
    * @return updatedAtBlock
   **/
   @javax.annotation.Nullable
-
   public String getUpdatedAtBlock() {
     return updatedAtBlock;
   }
@@ -786,7 +763,6 @@ public class CurveProposalDTO {
    * @return updatedAtTransaction
   **/
   @javax.annotation.Nullable
-
   public String getUpdatedAtTransaction() {
     return updatedAtTransaction;
   }
@@ -808,7 +784,6 @@ public class CurveProposalDTO {
    * @return executed
   **/
   @javax.annotation.Nullable
-
   public String getExecuted() {
     return executed;
   }
@@ -830,7 +805,6 @@ public class CurveProposalDTO {
    * @return executedAtBlock
   **/
   @javax.annotation.Nullable
-
   public String getExecutedAtBlock() {
     return executedAtBlock;
   }
@@ -852,7 +826,6 @@ public class CurveProposalDTO {
    * @return executedAtTransaction
   **/
   @javax.annotation.Nullable
-
   public String getExecutedAtTransaction() {
     return executedAtTransaction;
   }
@@ -874,7 +847,6 @@ public class CurveProposalDTO {
    * @return vid
   **/
   @javax.annotation.Nullable
-
   public Long getVid() {
     return vid;
   }

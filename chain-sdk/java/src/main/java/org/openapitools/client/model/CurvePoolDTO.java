@@ -34,6 +34,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
@@ -48,7 +52,7 @@ import org.openapitools.client.JSON;
 /**
  * CurvePoolDTO
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-07T11:31:09.822924Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-19T09:28:48.156871Z[Etc/UTC]")
 public class CurvePoolDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -180,7 +184,6 @@ public class CurvePoolDTO {
    * @return entryTime
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getEntryTime() {
     return entryTime;
   }
@@ -202,7 +205,6 @@ public class CurvePoolDTO {
    * @return recvTime
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getRecvTime() {
     return recvTime;
   }
@@ -224,7 +226,6 @@ public class CurvePoolDTO {
    * @return blockNumber
   **/
   @javax.annotation.Nullable
-
   public Long getBlockNumber() {
     return blockNumber;
   }
@@ -246,7 +247,6 @@ public class CurvePoolDTO {
    * @return id
   **/
   @javax.annotation.Nullable
-
   public String getId() {
     return id;
   }
@@ -268,7 +268,6 @@ public class CurvePoolDTO {
    * @return name
   **/
   @javax.annotation.Nullable
-
   public String getName() {
     return name;
   }
@@ -290,7 +289,6 @@ public class CurvePoolDTO {
    * @return isMeta
   **/
   @javax.annotation.Nullable
-
   public Boolean getIsMeta() {
     return isMeta;
   }
@@ -312,7 +310,6 @@ public class CurvePoolDTO {
    * @return registryAddress
   **/
   @javax.annotation.Nullable
-
   public String getRegistryAddress() {
     return registryAddress;
   }
@@ -334,7 +331,6 @@ public class CurvePoolDTO {
    * @return swapAddress
   **/
   @javax.annotation.Nullable
-
   public String getSwapAddress() {
     return swapAddress;
   }
@@ -356,7 +352,6 @@ public class CurvePoolDTO {
    * @return lpToken
   **/
   @javax.annotation.Nullable
-
   public String getLpToken() {
     return lpToken;
   }
@@ -378,7 +373,6 @@ public class CurvePoolDTO {
    * @return coinCount
   **/
   @javax.annotation.Nullable
-
   public String getCoinCount() {
     return coinCount;
   }
@@ -400,7 +394,6 @@ public class CurvePoolDTO {
    * @return underlyingCount
   **/
   @javax.annotation.Nullable
-
   public String getUnderlyingCount() {
     return underlyingCount;
   }
@@ -422,7 +415,6 @@ public class CurvePoolDTO {
    * @return a
   **/
   @javax.annotation.Nullable
-
   public String getA() {
     return a;
   }
@@ -444,7 +436,6 @@ public class CurvePoolDTO {
    * @return fee
   **/
   @javax.annotation.Nullable
-
   public String getFee() {
     return fee;
   }
@@ -466,7 +457,6 @@ public class CurvePoolDTO {
    * @return adminFee
   **/
   @javax.annotation.Nullable
-
   public String getAdminFee() {
     return adminFee;
   }
@@ -488,7 +478,6 @@ public class CurvePoolDTO {
    * @return owner
   **/
   @javax.annotation.Nullable
-
   public String getOwner() {
     return owner;
   }
@@ -510,7 +499,6 @@ public class CurvePoolDTO {
    * @return virtualPrice
   **/
   @javax.annotation.Nullable
-
   public String getVirtualPrice() {
     return virtualPrice;
   }
@@ -532,7 +520,6 @@ public class CurvePoolDTO {
    * @return locked
   **/
   @javax.annotation.Nullable
-
   public String getLocked() {
     return locked;
   }
@@ -554,7 +541,6 @@ public class CurvePoolDTO {
    * @return addedAt
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getAddedAt() {
     return addedAt;
   }
@@ -576,7 +562,6 @@ public class CurvePoolDTO {
    * @return addedAtBlock
   **/
   @javax.annotation.Nullable
-
   public String getAddedAtBlock() {
     return addedAtBlock;
   }
@@ -598,7 +583,6 @@ public class CurvePoolDTO {
    * @return addedAtTransaction
   **/
   @javax.annotation.Nullable
-
   public String getAddedAtTransaction() {
     return addedAtTransaction;
   }
@@ -620,7 +604,6 @@ public class CurvePoolDTO {
    * @return removedAt
   **/
   @javax.annotation.Nullable
-
   public String getRemovedAt() {
     return removedAt;
   }
@@ -642,7 +625,6 @@ public class CurvePoolDTO {
    * @return removedAtBlock
   **/
   @javax.annotation.Nullable
-
   public String getRemovedAtBlock() {
     return removedAtBlock;
   }
@@ -664,7 +646,6 @@ public class CurvePoolDTO {
    * @return removedAtTransaction
   **/
   @javax.annotation.Nullable
-
   public String getRemovedAtTransaction() {
     return removedAtTransaction;
   }
@@ -686,7 +667,6 @@ public class CurvePoolDTO {
    * @return exchangeCount
   **/
   @javax.annotation.Nullable
-
   public String getExchangeCount() {
     return exchangeCount;
   }
@@ -708,7 +688,6 @@ public class CurvePoolDTO {
    * @return gaugeCount
   **/
   @javax.annotation.Nullable
-
   public String getGaugeCount() {
     return gaugeCount;
   }
@@ -730,7 +709,6 @@ public class CurvePoolDTO {
    * @return vid
   **/
   @javax.annotation.Nullable
-
   public Long getVid() {
     return vid;
   }
@@ -746,7 +724,6 @@ public class CurvePoolDTO {
    * @return evaluatedAsk
   **/
   @javax.annotation.Nullable
-
   public Double getEvaluatedAsk() {
     return evaluatedAsk;
   }

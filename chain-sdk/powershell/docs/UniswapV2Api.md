@@ -36,7 +36,7 @@ Method | HTTP request | Description
 [**Invoke-UniswapV2UsersCurrent**](UniswapV2Api.md#Invoke-UniswapV2UsersCurrent) | **GET** /dapps/uniswapv2/users/current | Users (current)
 
 
-<a name="Invoke-UniswapV2BundlesCurrent"></a>
+<a id="Invoke-UniswapV2BundlesCurrent"></a>
 # **Invoke-UniswapV2BundlesCurrent**
 > UniswapV2BundleDTO[] Invoke-UniswapV2BundlesCurrent<br>
 
@@ -74,7 +74,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-UniswapV2BurnsCurrent"></a>
+<a id="Invoke-UniswapV2BurnsCurrent"></a>
 # **Invoke-UniswapV2BurnsCurrent**
 > UniswapV2BurnDTO[] Invoke-UniswapV2BurnsCurrent<br>
 
@@ -112,7 +112,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-UniswapV2GetBundlesHistorical"></a>
+<a id="Invoke-UniswapV2GetBundlesHistorical"></a>
 # **Invoke-UniswapV2GetBundlesHistorical**
 > UniswapV2BundleDTO[] Invoke-UniswapV2GetBundlesHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
@@ -167,7 +167,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-UniswapV2GetBurnsHistorical"></a>
+<a id="Invoke-UniswapV2GetBurnsHistorical"></a>
 # **Invoke-UniswapV2GetBurnsHistorical**
 > UniswapV2BurnDTO[] Invoke-UniswapV2GetBurnsHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
@@ -225,7 +225,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-UniswapV2GetLiquidityPositionSnapshotsHistorical"></a>
+<a id="Invoke-UniswapV2GetLiquidityPositionSnapshotsHistorical"></a>
 # **Invoke-UniswapV2GetLiquidityPositionSnapshotsHistorical**
 > UniswapV2LiquidityPositionSnapshotDTO[] Invoke-UniswapV2GetLiquidityPositionSnapshotsHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
@@ -286,7 +286,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-UniswapV2GetLiquidityPositionsHistorical"></a>
+<a id="Invoke-UniswapV2GetLiquidityPositionsHistorical"></a>
 # **Invoke-UniswapV2GetLiquidityPositionsHistorical**
 > UniswapV2LiquidityPositionDTO[] Invoke-UniswapV2GetLiquidityPositionsHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
@@ -347,7 +347,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-UniswapV2GetMintsHistorical"></a>
+<a id="Invoke-UniswapV2GetMintsHistorical"></a>
 # **Invoke-UniswapV2GetMintsHistorical**
 > UniswapV2MintDTO[] Invoke-UniswapV2GetMintsHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
@@ -405,7 +405,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-UniswapV2GetPairDayDataHistorical"></a>
+<a id="Invoke-UniswapV2GetPairDayDataHistorical"></a>
 # **Invoke-UniswapV2GetPairDayDataHistorical**
 > UniswapV2PairDayDataDTO[] Invoke-UniswapV2GetPairDayDataHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
@@ -466,7 +466,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-UniswapV2GetPairHourDataHistorical"></a>
+<a id="Invoke-UniswapV2GetPairHourDataHistorical"></a>
 # **Invoke-UniswapV2GetPairHourDataHistorical**
 > UniswapV2PairHourDataDTO[] Invoke-UniswapV2GetPairHourDataHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
@@ -524,7 +524,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-UniswapV2GetPairsHistorical"></a>
+<a id="Invoke-UniswapV2GetPairsHistorical"></a>
 # **Invoke-UniswapV2GetPairsHistorical**
 > UniswapV2PairDTO[] Invoke-UniswapV2GetPairsHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
@@ -585,7 +585,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-UniswapV2GetSwapsHistorical"></a>
+<a id="Invoke-UniswapV2GetSwapsHistorical"></a>
 # **Invoke-UniswapV2GetSwapsHistorical**
 > UniswapV2SwapDTO[] Invoke-UniswapV2GetSwapsHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
@@ -643,7 +643,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-UniswapV2GetTokenDayDataHistorical"></a>
+<a id="Invoke-UniswapV2GetTokenDayDataHistorical"></a>
 # **Invoke-UniswapV2GetTokenDayDataHistorical**
 > UniswapV2TokenDayDataDTO[] Invoke-UniswapV2GetTokenDayDataHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
@@ -698,7 +698,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-UniswapV2GetTokensHistorical"></a>
+<a id="Invoke-UniswapV2GetTokensHistorical"></a>
 # **Invoke-UniswapV2GetTokensHistorical**
 > UniswapV2TokenDTO[] Invoke-UniswapV2GetTokensHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
@@ -759,7 +759,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-UniswapV2GetTransactionsHistorical"></a>
+<a id="Invoke-UniswapV2GetTransactionsHistorical"></a>
 # **Invoke-UniswapV2GetTransactionsHistorical**
 > UniswapV2TransactionDTO[] Invoke-UniswapV2GetTransactionsHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
@@ -814,7 +814,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-UniswapV2GetUniswapDayDataHistorical"></a>
+<a id="Invoke-UniswapV2GetUniswapDayDataHistorical"></a>
 # **Invoke-UniswapV2GetUniswapDayDataHistorical**
 > UniswapV2UniswapDayDataDTO[] Invoke-UniswapV2GetUniswapDayDataHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
@@ -869,7 +869,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-UniswapV2GetUniswapFactoriesHistorical"></a>
+<a id="Invoke-UniswapV2GetUniswapFactoriesHistorical"></a>
 # **Invoke-UniswapV2GetUniswapFactoriesHistorical**
 > UniswapV2UniswapFactoryDTO[] Invoke-UniswapV2GetUniswapFactoriesHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
@@ -924,7 +924,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-UniswapV2GetUsersHistorical"></a>
+<a id="Invoke-UniswapV2GetUsersHistorical"></a>
 # **Invoke-UniswapV2GetUsersHistorical**
 > UniswapV2UserDTO[] Invoke-UniswapV2GetUsersHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
@@ -979,7 +979,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-UniswapV2LiquidityPositionSnapshotsCurrent"></a>
+<a id="Invoke-UniswapV2LiquidityPositionSnapshotsCurrent"></a>
 # **Invoke-UniswapV2LiquidityPositionSnapshotsCurrent**
 > UniswapV2LiquidityPositionSnapshotDTO[] Invoke-UniswapV2LiquidityPositionSnapshotsCurrent<br>
 
@@ -1017,7 +1017,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-UniswapV2LiquidityPositionsCurrent"></a>
+<a id="Invoke-UniswapV2LiquidityPositionsCurrent"></a>
 # **Invoke-UniswapV2LiquidityPositionsCurrent**
 > UniswapV2LiquidityPositionDTO[] Invoke-UniswapV2LiquidityPositionsCurrent<br>
 
@@ -1055,7 +1055,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-UniswapV2MintsCurrent"></a>
+<a id="Invoke-UniswapV2MintsCurrent"></a>
 # **Invoke-UniswapV2MintsCurrent**
 > UniswapV2MintDTO[] Invoke-UniswapV2MintsCurrent<br>
 
@@ -1093,7 +1093,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-UniswapV2PairDayDataCurrent"></a>
+<a id="Invoke-UniswapV2PairDayDataCurrent"></a>
 # **Invoke-UniswapV2PairDayDataCurrent**
 > UniswapV2PairDayDataDTO[] Invoke-UniswapV2PairDayDataCurrent<br>
 
@@ -1131,7 +1131,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-UniswapV2PairHourDataCurrent"></a>
+<a id="Invoke-UniswapV2PairHourDataCurrent"></a>
 # **Invoke-UniswapV2PairHourDataCurrent**
 > UniswapV2PairHourDataDTO[] Invoke-UniswapV2PairHourDataCurrent<br>
 
@@ -1169,7 +1169,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-UniswapV2PairsCurrent"></a>
+<a id="Invoke-UniswapV2PairsCurrent"></a>
 # **Invoke-UniswapV2PairsCurrent**
 > UniswapV2PairDTO[] Invoke-UniswapV2PairsCurrent<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
@@ -1212,7 +1212,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-UniswapV2SwapsCurrent"></a>
+<a id="Invoke-UniswapV2SwapsCurrent"></a>
 # **Invoke-UniswapV2SwapsCurrent**
 > UniswapV2SwapDTO[] Invoke-UniswapV2SwapsCurrent<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Pair] <String><br>
@@ -1255,7 +1255,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-UniswapV2TokenDayDataCurrent"></a>
+<a id="Invoke-UniswapV2TokenDayDataCurrent"></a>
 # **Invoke-UniswapV2TokenDayDataCurrent**
 > UniswapV2TokenDayDataDTO[] Invoke-UniswapV2TokenDayDataCurrent<br>
 
@@ -1293,7 +1293,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-UniswapV2TokensCurrent"></a>
+<a id="Invoke-UniswapV2TokensCurrent"></a>
 # **Invoke-UniswapV2TokensCurrent**
 > UniswapV2TokenDTO[] Invoke-UniswapV2TokensCurrent<br>
 
@@ -1331,7 +1331,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-UniswapV2TransactionsCurrent"></a>
+<a id="Invoke-UniswapV2TransactionsCurrent"></a>
 # **Invoke-UniswapV2TransactionsCurrent**
 > UniswapV2TransactionDTO[] Invoke-UniswapV2TransactionsCurrent<br>
 
@@ -1369,7 +1369,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-UniswapV2UniswapDayDataCurrent"></a>
+<a id="Invoke-UniswapV2UniswapDayDataCurrent"></a>
 # **Invoke-UniswapV2UniswapDayDataCurrent**
 > UniswapV2UniswapDayDataDTO[] Invoke-UniswapV2UniswapDayDataCurrent<br>
 
@@ -1407,7 +1407,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-UniswapV2UniswapFactoriesCurrent"></a>
+<a id="Invoke-UniswapV2UniswapFactoriesCurrent"></a>
 # **Invoke-UniswapV2UniswapFactoriesCurrent**
 > UniswapV2UniswapFactoryDTO[] Invoke-UniswapV2UniswapFactoriesCurrent<br>
 
@@ -1445,7 +1445,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-UniswapV2UsersCurrent"></a>
+<a id="Invoke-UniswapV2UsersCurrent"></a>
 # **Invoke-UniswapV2UsersCurrent**
 > UniswapV2UserDTO[] Invoke-UniswapV2UsersCurrent<br>
 

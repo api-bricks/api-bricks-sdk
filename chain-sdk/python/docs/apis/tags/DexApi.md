@@ -1,4 +1,4 @@
-<a name="__pageTop"></a>
+<a id="__pageTop"></a>
 # openapi_client.apis.tags.dex_api.DexApi
 
 All URIs are relative to *https://onchain.coinapi.io*
@@ -29,7 +29,7 @@ Method | HTTP request | Description
 [**dex_withdraws__current**](#dex_withdraws__current) | **get** /dapps/dex/withdraws/current | Withdraws (current)
 
 # **dex_batches__current**
-<a name="dex_batches__current"></a>
+<a id="dex_batches__current"></a>
 > [DexBatchDTO] dex_batches__current()
 
 Batches (current)
@@ -122,7 +122,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **dex_deposits__current**
-<a name="dex_deposits__current"></a>
+<a id="dex_deposits__current"></a>
 > [DexDepositDTO] dex_deposits__current()
 
 Deposits (current)
@@ -215,7 +215,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **dex_get_batches__historical**
-<a name="dex_get_batches__historical"></a>
+<a id="dex_get_batches__historical"></a>
 > [DexBatchDTO] dex_get_batches__historical()
 
 Batches (historical)
@@ -371,7 +371,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **dex_get_deposits__historical**
-<a name="dex_get_deposits__historical"></a>
+<a id="dex_get_deposits__historical"></a>
 > [DexDepositDTO] dex_get_deposits__historical()
 
 Deposits (historical)
@@ -536,7 +536,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **dex_get_orders__historical**
-<a name="dex_get_orders__historical"></a>
+<a id="dex_get_orders__historical"></a>
 > [DexOrderDTO] dex_get_orders__historical()
 
 Orders (historical)
@@ -710,7 +710,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **dex_get_prices__historical**
-<a name="dex_get_prices__historical"></a>
+<a id="dex_get_prices__historical"></a>
 > [DexPriceDTO] dex_get_prices__historical()
 
 Prices (historical)
@@ -866,7 +866,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **dex_get_solutions__historical**
-<a name="dex_get_solutions__historical"></a>
+<a id="dex_get_solutions__historical"></a>
 > [DexSolutionDTO] dex_get_solutions__historical()
 
 Solutions (historical)
@@ -1022,7 +1022,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **dex_get_stats__historical**
-<a name="dex_get_stats__historical"></a>
+<a id="dex_get_stats__historical"></a>
 > [DexStatsDTO] dex_get_stats__historical()
 
 Stats (historical)
@@ -1178,7 +1178,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **dex_get_tokens__historical**
-<a name="dex_get_tokens__historical"></a>
+<a id="dex_get_tokens__historical"></a>
 > [DexTokenDTO] dex_get_tokens__historical()
 
 Tokens (historical)
@@ -1361,7 +1361,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **dex_get_trades__historical**
-<a name="dex_get_trades__historical"></a>
+<a id="dex_get_trades__historical"></a>
 > [DexTradeDTO] dex_get_trades__historical()
 
 Trades (historical)
@@ -1535,7 +1535,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **dex_get_users__historical**
-<a name="dex_get_users__historical"></a>
+<a id="dex_get_users__historical"></a>
 > [DexUserDTO] dex_get_users__historical()
 
 Users (historical)
@@ -1691,7 +1691,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **dex_get_withdraw_requests__historical**
-<a name="dex_get_withdraw_requests__historical"></a>
+<a id="dex_get_withdraw_requests__historical"></a>
 > [DexWithdrawRequestDTO] dex_get_withdraw_requests__historical()
 
 WithdrawRequests (historical)
@@ -1856,7 +1856,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **dex_get_withdraws__historical**
-<a name="dex_get_withdraws__historical"></a>
+<a id="dex_get_withdraws__historical"></a>
 > [DexWithdrawDTO] dex_get_withdraws__historical()
 
 Withdraws (historical)
@@ -2021,7 +2021,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **dex_orders__current**
-<a name="dex_orders__current"></a>
+<a id="dex_orders__current"></a>
 > [DexOrderDTO] dex_orders__current()
 
 Orders (current)
@@ -2114,7 +2114,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **dex_prices__current**
-<a name="dex_prices__current"></a>
+<a id="dex_prices__current"></a>
 > [DexPriceDTO] dex_prices__current()
 
 Prices (current)
@@ -2207,7 +2207,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **dex_solutions__current**
-<a name="dex_solutions__current"></a>
+<a id="dex_solutions__current"></a>
 > [DexSolutionDTO] dex_solutions__current()
 
 Solutions (current)
@@ -2300,7 +2300,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **dex_stats__current**
-<a name="dex_stats__current"></a>
+<a id="dex_stats__current"></a>
 > [DexStatsDTO] dex_stats__current()
 
 Stats (current)
@@ -2393,7 +2393,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **dex_tokens__current**
-<a name="dex_tokens__current"></a>
+<a id="dex_tokens__current"></a>
 > [DexTokenDTO] dex_tokens__current()
 
 Tokens (current)
@@ -2486,7 +2486,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **dex_trades__current**
-<a name="dex_trades__current"></a>
+<a id="dex_trades__current"></a>
 > [DexTradeDTO] dex_trades__current()
 
 Trades (current)
@@ -2579,7 +2579,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **dex_users__current**
-<a name="dex_users__current"></a>
+<a id="dex_users__current"></a>
 > [DexUserDTO] dex_users__current()
 
 Users (current)
@@ -2672,7 +2672,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **dex_withdraw_requests__current**
-<a name="dex_withdraw_requests__current"></a>
+<a id="dex_withdraw_requests__current"></a>
 > [DexWithdrawRequestDTO] dex_withdraw_requests__current()
 
 WithdrawRequests (current)
@@ -2765,7 +2765,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **dex_withdraws__current**
-<a name="dex_withdraws__current"></a>
+<a id="dex_withdraws__current"></a>
 > [DexWithdrawDTO] dex_withdraws__current()
 
 Withdraws (current)

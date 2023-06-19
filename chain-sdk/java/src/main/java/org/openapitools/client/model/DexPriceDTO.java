@@ -34,6 +34,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
@@ -48,7 +52,7 @@ import org.openapitools.client.JSON;
 /**
  * Token price in conjuction with batch id.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-07T11:31:09.822924Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-19T09:28:48.156871Z[Etc/UTC]")
 public class DexPriceDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -112,7 +116,6 @@ public class DexPriceDTO {
    * @return entryTime
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getEntryTime() {
     return entryTime;
   }
@@ -134,7 +137,6 @@ public class DexPriceDTO {
    * @return recvTime
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getRecvTime() {
     return recvTime;
   }
@@ -156,7 +158,6 @@ public class DexPriceDTO {
    * @return blockNumber
   **/
   @javax.annotation.Nullable
-
   public Long getBlockNumber() {
     return blockNumber;
   }
@@ -178,7 +179,6 @@ public class DexPriceDTO {
    * @return id
   **/
   @javax.annotation.Nullable
-
   public String getId() {
     return id;
   }
@@ -200,7 +200,6 @@ public class DexPriceDTO {
    * @return token
   **/
   @javax.annotation.Nullable
-
   public String getToken() {
     return token;
   }
@@ -222,7 +221,6 @@ public class DexPriceDTO {
    * @return batchId
   **/
   @javax.annotation.Nullable
-
   public String getBatchId() {
     return batchId;
   }
@@ -244,7 +242,6 @@ public class DexPriceDTO {
    * @return priceInOwlNumerator
   **/
   @javax.annotation.Nullable
-
   public String getPriceInOwlNumerator() {
     return priceInOwlNumerator;
   }
@@ -266,7 +263,6 @@ public class DexPriceDTO {
    * @return priceInOwlDenominator
   **/
   @javax.annotation.Nullable
-
   public String getPriceInOwlDenominator() {
     return priceInOwlDenominator;
   }
@@ -288,7 +284,6 @@ public class DexPriceDTO {
    * @return volume
   **/
   @javax.annotation.Nullable
-
   public String getVolume() {
     return volume;
   }
@@ -310,7 +305,6 @@ public class DexPriceDTO {
    * @return createEpoch
   **/
   @javax.annotation.Nullable
-
   public String getCreateEpoch() {
     return createEpoch;
   }
@@ -332,7 +326,6 @@ public class DexPriceDTO {
    * @return txHash
   **/
   @javax.annotation.Nullable
-
   public String getTxHash() {
     return txHash;
   }
@@ -354,7 +347,6 @@ public class DexPriceDTO {
    * @return vid
   **/
   @javax.annotation.Nullable
-
   public Long getVid() {
     return vid;
   }

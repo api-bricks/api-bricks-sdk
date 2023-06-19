@@ -1,4 +1,4 @@
-<a name="__pageTop"></a>
+<a id="__pageTop"></a>
 # openapi_client.apis.tags.cryptopunks_api.CRYPTOPUNKSApi
 
 All URIs are relative to *https://onchain.coinapi.io*
@@ -25,7 +25,7 @@ Method | HTTP request | Description
 [**c_ryptopunks_users__current**](#c_ryptopunks_users__current) | **get** /dapps/cryptopunks/users/current | Users (current)
 
 # **c_ryptopunks_bids__current**
-<a name="c_ryptopunks_bids__current"></a>
+<a id="c_ryptopunks_bids__current"></a>
 > [CRYPTOPUNKSBidDTO] c_ryptopunks_bids__current()
 
 Bids (current)
@@ -118,7 +118,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **c_ryptopunks_collection_daily_snapshots__current**
-<a name="c_ryptopunks_collection_daily_snapshots__current"></a>
+<a id="c_ryptopunks_collection_daily_snapshots__current"></a>
 > [CRYPTOPUNKSCollectionDailySnapshotDTO] c_ryptopunks_collection_daily_snapshots__current()
 
 CollectionDailySnapshots (current)
@@ -211,7 +211,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **c_ryptopunks_collections__current**
-<a name="c_ryptopunks_collections__current"></a>
+<a id="c_ryptopunks_collections__current"></a>
 > [CRYPTOPUNKSCollectionDTO] c_ryptopunks_collections__current()
 
 Collections (current)
@@ -304,7 +304,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **c_ryptopunks_data_sources__current**
-<a name="c_ryptopunks_data_sources__current"></a>
+<a id="c_ryptopunks_data_sources__current"></a>
 > [CRYPTOPUNKSDataSourcesDTO] c_ryptopunks_data_sources__current()
 
 DataSources (current)
@@ -397,7 +397,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **c_ryptopunks_get_bids__historical**
-<a name="c_ryptopunks_get_bids__historical"></a>
+<a id="c_ryptopunks_get_bids__historical"></a>
 > [CRYPTOPUNKSBidDTO] c_ryptopunks_get_bids__historical()
 
 Bids (historical)
@@ -553,7 +553,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **c_ryptopunks_get_collection_daily_snapshots__historical**
-<a name="c_ryptopunks_get_collection_daily_snapshots__historical"></a>
+<a id="c_ryptopunks_get_collection_daily_snapshots__historical"></a>
 > [CRYPTOPUNKSCollectionDailySnapshotDTO] c_ryptopunks_get_collection_daily_snapshots__historical()
 
 CollectionDailySnapshots (historical)
@@ -700,7 +700,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **c_ryptopunks_get_collections__historical**
-<a name="c_ryptopunks_get_collections__historical"></a>
+<a id="c_ryptopunks_get_collections__historical"></a>
 > [CRYPTOPUNKSCollectionDTO] c_ryptopunks_get_collections__historical()
 
 Collections (historical)
@@ -856,7 +856,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **c_ryptopunks_get_data_sources__historical**
-<a name="c_ryptopunks_get_data_sources__historical"></a>
+<a id="c_ryptopunks_get_data_sources__historical"></a>
 > [CRYPTOPUNKSDataSourcesDTO] c_ryptopunks_get_data_sources__historical()
 
 DataSources (historical)
@@ -1012,7 +1012,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **c_ryptopunks_get_items__historical**
-<a name="c_ryptopunks_get_items__historical"></a>
+<a id="c_ryptopunks_get_items__historical"></a>
 > [CRYPTOPUNKSItemDTO] c_ryptopunks_get_items__historical()
 
 Items (historical)
@@ -1159,7 +1159,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **c_ryptopunks_get_market_places__historical**
-<a name="c_ryptopunks_get_market_places__historical"></a>
+<a id="c_ryptopunks_get_market_places__historical"></a>
 > [CRYPTOPUNKSMarketPlaceDTO] c_ryptopunks_get_market_places__historical()
 
 MarketPlaces (historical)
@@ -1315,7 +1315,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **c_ryptopunks_get_marketplace_daily_snapshots__historical**
-<a name="c_ryptopunks_get_marketplace_daily_snapshots__historical"></a>
+<a id="c_ryptopunks_get_marketplace_daily_snapshots__historical"></a>
 > [CRYPTOPUNKSMarketplaceDailySnapshotDTO] c_ryptopunks_get_marketplace_daily_snapshots__historical()
 
 MarketplaceDailySnapshots (historical)
@@ -1471,7 +1471,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **c_ryptopunks_get_trades__historical**
-<a name="c_ryptopunks_get_trades__historical"></a>
+<a id="c_ryptopunks_get_trades__historical"></a>
 > [CRYPTOPUNKSTradeDTO] c_ryptopunks_get_trades__historical()
 
 Trades (historical)
@@ -1627,7 +1627,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **c_ryptopunks_get_users__historical**
-<a name="c_ryptopunks_get_users__historical"></a>
+<a id="c_ryptopunks_get_users__historical"></a>
 > [CRYPTOPUNKSUserDTO] c_ryptopunks_get_users__historical()
 
 Users (historical)
@@ -1783,7 +1783,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **c_ryptopunks_items__current**
-<a name="c_ryptopunks_items__current"></a>
+<a id="c_ryptopunks_items__current"></a>
 > [CRYPTOPUNKSItemDTO] c_ryptopunks_items__current()
 
 Items (current)
@@ -1876,7 +1876,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **c_ryptopunks_market_places__current**
-<a name="c_ryptopunks_market_places__current"></a>
+<a id="c_ryptopunks_market_places__current"></a>
 > [CRYPTOPUNKSMarketPlaceDTO] c_ryptopunks_market_places__current()
 
 MarketPlaces (current)
@@ -1969,7 +1969,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **c_ryptopunks_marketplace_daily_snapshots__current**
-<a name="c_ryptopunks_marketplace_daily_snapshots__current"></a>
+<a id="c_ryptopunks_marketplace_daily_snapshots__current"></a>
 > [CRYPTOPUNKSMarketplaceDailySnapshotDTO] c_ryptopunks_marketplace_daily_snapshots__current()
 
 MarketplaceDailySnapshots (current)
@@ -2062,7 +2062,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **c_ryptopunks_trades__current**
-<a name="c_ryptopunks_trades__current"></a>
+<a id="c_ryptopunks_trades__current"></a>
 > [CRYPTOPUNKSTradeDTO] c_ryptopunks_trades__current()
 
 Trades (current)
@@ -2155,7 +2155,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **c_ryptopunks_users__current**
-<a name="c_ryptopunks_users__current"></a>
+<a id="c_ryptopunks_users__current"></a>
 > [CRYPTOPUNKSUserDTO] c_ryptopunks_users__current()
 
 Users (current)

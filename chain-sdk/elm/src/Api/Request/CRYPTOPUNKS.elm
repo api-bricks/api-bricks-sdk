@@ -36,14 +36,12 @@ module Api.Request.CRYPTOPUNKS exposing
     )
 
 import Api
-import Api.Data
+import Api.Data exposing (..)
 import Api.Time exposing (Posix)
 import Dict
 import Http
 import Json.Decode
 import Json.Encode
-
-
 
 {-| Gets bids.
 -}
@@ -57,7 +55,6 @@ cRYPTOPUNKSBidsCurrent =
         []
         Nothing
         (Json.Decode.list Api.Data.cRYPTOPUNKSBidDTODecoder)
-
 
 
 {-| Gets collectionDailySnapshots.
@@ -74,7 +71,6 @@ cRYPTOPUNKSCollectionDailySnapshotsCurrent =
         (Json.Decode.list Api.Data.cRYPTOPUNKSCollectionDailySnapshotDTODecoder)
 
 
-
 {-| Gets collections.
 -}
 cRYPTOPUNKSCollectionsCurrent : Api.Request (List Api.Data.CRYPTOPUNKSCollectionDTO)
@@ -87,7 +83,6 @@ cRYPTOPUNKSCollectionsCurrent =
         []
         Nothing
         (Json.Decode.list Api.Data.cRYPTOPUNKSCollectionDTODecoder)
-
 
 
 {-| Gets dataSources.
@@ -104,7 +99,6 @@ cRYPTOPUNKSDataSourcesCurrent =
         (Json.Decode.list Api.Data.cRYPTOPUNKSDataSourcesDTODecoder)
 
 
-
 {-| Gets bids.
 -}
 cRYPTOPUNKSGetBidsHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.CRYPTOPUNKSBidDTO)
@@ -117,7 +111,6 @@ cRYPTOPUNKSGetBidsHistorical startBlock_query endBlock_query startDate_query end
         []
         Nothing
         (Json.Decode.list Api.Data.cRYPTOPUNKSBidDTODecoder)
-
 
 
 {-| Gets collectionDailySnapshots.
@@ -134,7 +127,6 @@ cRYPTOPUNKSGetCollectionDailySnapshotsHistorical startBlock_query endBlock_query
         (Json.Decode.list Api.Data.cRYPTOPUNKSCollectionDailySnapshotDTODecoder)
 
 
-
 {-| Gets collections.
 -}
 cRYPTOPUNKSGetCollectionsHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.CRYPTOPUNKSCollectionDTO)
@@ -147,7 +139,6 @@ cRYPTOPUNKSGetCollectionsHistorical startBlock_query endBlock_query startDate_qu
         []
         Nothing
         (Json.Decode.list Api.Data.cRYPTOPUNKSCollectionDTODecoder)
-
 
 
 {-| Gets dataSources.
@@ -164,7 +155,6 @@ cRYPTOPUNKSGetDataSourcesHistorical startBlock_query endBlock_query startDate_qu
         (Json.Decode.list Api.Data.cRYPTOPUNKSDataSourcesDTODecoder)
 
 
-
 {-| Gets items.
 -}
 cRYPTOPUNKSGetItemsHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Api.Request (List Api.Data.CRYPTOPUNKSItemDTO)
@@ -177,7 +167,6 @@ cRYPTOPUNKSGetItemsHistorical startBlock_query endBlock_query startDate_query en
         []
         Nothing
         (Json.Decode.list Api.Data.cRYPTOPUNKSItemDTODecoder)
-
 
 
 {-| Gets marketPlaces.
@@ -194,7 +183,6 @@ cRYPTOPUNKSGetMarketPlacesHistorical startBlock_query endBlock_query startDate_q
         (Json.Decode.list Api.Data.cRYPTOPUNKSMarketPlaceDTODecoder)
 
 
-
 {-| Gets marketplaceDailySnapshots.
 -}
 cRYPTOPUNKSGetMarketplaceDailySnapshotsHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.CRYPTOPUNKSMarketplaceDailySnapshotDTO)
@@ -207,7 +195,6 @@ cRYPTOPUNKSGetMarketplaceDailySnapshotsHistorical startBlock_query endBlock_quer
         []
         Nothing
         (Json.Decode.list Api.Data.cRYPTOPUNKSMarketplaceDailySnapshotDTODecoder)
-
 
 
 {-| Gets trades.
@@ -224,7 +211,6 @@ cRYPTOPUNKSGetTradesHistorical startBlock_query endBlock_query startDate_query e
         (Json.Decode.list Api.Data.cRYPTOPUNKSTradeDTODecoder)
 
 
-
 {-| Gets users.
 -}
 cRYPTOPUNKSGetUsersHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.CRYPTOPUNKSUserDTO)
@@ -237,7 +223,6 @@ cRYPTOPUNKSGetUsersHistorical startBlock_query endBlock_query startDate_query en
         []
         Nothing
         (Json.Decode.list Api.Data.cRYPTOPUNKSUserDTODecoder)
-
 
 
 {-| Gets items.
@@ -254,7 +239,6 @@ cRYPTOPUNKSItemsCurrent =
         (Json.Decode.list Api.Data.cRYPTOPUNKSItemDTODecoder)
 
 
-
 {-| Gets marketPlaces.
 -}
 cRYPTOPUNKSMarketPlacesCurrent : Api.Request (List Api.Data.CRYPTOPUNKSMarketPlaceDTO)
@@ -267,7 +251,6 @@ cRYPTOPUNKSMarketPlacesCurrent =
         []
         Nothing
         (Json.Decode.list Api.Data.cRYPTOPUNKSMarketPlaceDTODecoder)
-
 
 
 {-| Gets marketplaceDailySnapshots.
@@ -284,7 +267,6 @@ cRYPTOPUNKSMarketplaceDailySnapshotsCurrent =
         (Json.Decode.list Api.Data.cRYPTOPUNKSMarketplaceDailySnapshotDTODecoder)
 
 
-
 {-| Gets trades.
 -}
 cRYPTOPUNKSTradesCurrent : Api.Request (List Api.Data.CRYPTOPUNKSTradeDTO)
@@ -299,7 +281,6 @@ cRYPTOPUNKSTradesCurrent =
         (Json.Decode.list Api.Data.cRYPTOPUNKSTradeDTODecoder)
 
 
-
 {-| Gets users.
 -}
 cRYPTOPUNKSUsersCurrent : Api.Request (List Api.Data.CRYPTOPUNKSUserDTO)
@@ -312,3 +293,4 @@ cRYPTOPUNKSUsersCurrent =
         []
         Nothing
         (Json.Decode.list Api.Data.cRYPTOPUNKSUserDTODecoder)
+

@@ -9,7 +9,7 @@ All URIs are relative to *https://onchain.coinapi.io*
 | [**metadataDappsGet**](MetadataApi.md#metadataDappsGet) | **GET** /metadata/dapps | List all decentralized applications. |
 
 
-<a name="metadataChainsGet"></a>
+<a id="metadataChainsGet"></a>
 # **metadataChainsGet**
 > metadataChainsGet()
 
@@ -64,7 +64,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
 
-<a name="metadataDappsDappNameGet"></a>
+<a id="metadataDappsDappNameGet"></a>
 # **metadataDappsDappNameGet**
 > metadataDappsDappNameGet(dappName)
 
@@ -123,7 +123,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
 
-<a name="metadataDappsGet"></a>
+<a id="metadataDappsGet"></a>
 # **metadataDappsGet**
 > metadataDappsGet()
 

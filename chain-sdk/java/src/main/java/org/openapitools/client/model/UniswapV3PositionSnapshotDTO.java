@@ -34,6 +34,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
@@ -48,7 +52,7 @@ import org.openapitools.client.JSON;
 /**
  * UniswapV3PositionSnapshotDTO
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-07T11:31:09.822924Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-19T09:28:48.156871Z[Etc/UTC]")
 public class UniswapV3PositionSnapshotDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -140,7 +144,6 @@ public class UniswapV3PositionSnapshotDTO {
    * @return entryTime
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getEntryTime() {
     return entryTime;
   }
@@ -162,7 +165,6 @@ public class UniswapV3PositionSnapshotDTO {
    * @return recvTime
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getRecvTime() {
     return recvTime;
   }
@@ -184,7 +186,6 @@ public class UniswapV3PositionSnapshotDTO {
    * @return blockNumber
   **/
   @javax.annotation.Nullable
-
   public Long getBlockNumber() {
     return blockNumber;
   }
@@ -206,7 +207,6 @@ public class UniswapV3PositionSnapshotDTO {
    * @return id
   **/
   @javax.annotation.Nullable
-
   public String getId() {
     return id;
   }
@@ -228,7 +228,6 @@ public class UniswapV3PositionSnapshotDTO {
    * @return owner
   **/
   @javax.annotation.Nullable
-
   public String getOwner() {
     return owner;
   }
@@ -250,7 +249,6 @@ public class UniswapV3PositionSnapshotDTO {
    * @return pool
   **/
   @javax.annotation.Nullable
-
   public String getPool() {
     return pool;
   }
@@ -272,7 +270,6 @@ public class UniswapV3PositionSnapshotDTO {
    * @return position
   **/
   @javax.annotation.Nullable
-
   public String getPosition() {
     return position;
   }
@@ -294,7 +291,6 @@ public class UniswapV3PositionSnapshotDTO {
    * @return timestamp
   **/
   @javax.annotation.Nullable
-
   public String getTimestamp() {
     return timestamp;
   }
@@ -316,7 +312,6 @@ public class UniswapV3PositionSnapshotDTO {
    * @return liquidity
   **/
   @javax.annotation.Nullable
-
   public String getLiquidity() {
     return liquidity;
   }
@@ -338,7 +333,6 @@ public class UniswapV3PositionSnapshotDTO {
    * @return depositedToken0
   **/
   @javax.annotation.Nullable
-
   public String getDepositedToken0() {
     return depositedToken0;
   }
@@ -360,7 +354,6 @@ public class UniswapV3PositionSnapshotDTO {
    * @return depositedToken1
   **/
   @javax.annotation.Nullable
-
   public String getDepositedToken1() {
     return depositedToken1;
   }
@@ -382,7 +375,6 @@ public class UniswapV3PositionSnapshotDTO {
    * @return withdrawnToken0
   **/
   @javax.annotation.Nullable
-
   public String getWithdrawnToken0() {
     return withdrawnToken0;
   }
@@ -404,7 +396,6 @@ public class UniswapV3PositionSnapshotDTO {
    * @return withdrawnToken1
   **/
   @javax.annotation.Nullable
-
   public String getWithdrawnToken1() {
     return withdrawnToken1;
   }
@@ -426,7 +417,6 @@ public class UniswapV3PositionSnapshotDTO {
    * @return collectedFeesToken0
   **/
   @javax.annotation.Nullable
-
   public String getCollectedFeesToken0() {
     return collectedFeesToken0;
   }
@@ -448,7 +438,6 @@ public class UniswapV3PositionSnapshotDTO {
    * @return collectedFeesToken1
   **/
   @javax.annotation.Nullable
-
   public String getCollectedFeesToken1() {
     return collectedFeesToken1;
   }
@@ -470,7 +459,6 @@ public class UniswapV3PositionSnapshotDTO {
    * @return transaction
   **/
   @javax.annotation.Nullable
-
   public String getTransaction() {
     return transaction;
   }
@@ -492,7 +480,6 @@ public class UniswapV3PositionSnapshotDTO {
    * @return feeGrowthInside0LastX128
   **/
   @javax.annotation.Nullable
-
   public String getFeeGrowthInside0LastX128() {
     return feeGrowthInside0LastX128;
   }
@@ -514,7 +501,6 @@ public class UniswapV3PositionSnapshotDTO {
    * @return feeGrowthInside1LastX128
   **/
   @javax.annotation.Nullable
-
   public String getFeeGrowthInside1LastX128() {
     return feeGrowthInside1LastX128;
   }
@@ -536,7 +522,6 @@ public class UniswapV3PositionSnapshotDTO {
    * @return vid
   **/
   @javax.annotation.Nullable
-
   public Long getVid() {
     return vid;
   }

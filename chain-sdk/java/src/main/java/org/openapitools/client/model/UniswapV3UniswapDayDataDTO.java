@@ -35,6 +35,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
@@ -49,7 +53,7 @@ import org.openapitools.client.JSON;
 /**
  * Data accumulated and condensed into day stats for all of Uniswap.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-07T11:31:09.822924Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-19T09:28:48.156871Z[Etc/UTC]")
 public class UniswapV3UniswapDayDataDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -113,7 +117,6 @@ public class UniswapV3UniswapDayDataDTO {
    * @return entryTime
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getEntryTime() {
     return entryTime;
   }
@@ -135,7 +138,6 @@ public class UniswapV3UniswapDayDataDTO {
    * @return recvTime
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getRecvTime() {
     return recvTime;
   }
@@ -157,7 +159,6 @@ public class UniswapV3UniswapDayDataDTO {
    * @return blockNumber
   **/
   @javax.annotation.Nullable
-
   public Long getBlockNumber() {
     return blockNumber;
   }
@@ -179,7 +180,6 @@ public class UniswapV3UniswapDayDataDTO {
    * @return vid
   **/
   @javax.annotation.Nullable
-
   public Long getVid() {
     return vid;
   }
@@ -201,7 +201,6 @@ public class UniswapV3UniswapDayDataDTO {
    * @return id
   **/
   @javax.annotation.Nullable
-
   public String getId() {
     return id;
   }
@@ -223,7 +222,6 @@ public class UniswapV3UniswapDayDataDTO {
    * @return date
   **/
   @javax.annotation.Nullable
-
   public Integer getDate() {
     return date;
   }
@@ -245,7 +243,6 @@ public class UniswapV3UniswapDayDataDTO {
    * @return volumeEth
   **/
   @javax.annotation.Nullable
-
   public String getVolumeEth() {
     return volumeEth;
   }
@@ -267,7 +264,6 @@ public class UniswapV3UniswapDayDataDTO {
    * @return volumeUsd
   **/
   @javax.annotation.Nullable
-
   public String getVolumeUsd() {
     return volumeUsd;
   }
@@ -289,7 +285,6 @@ public class UniswapV3UniswapDayDataDTO {
    * @return volumeUsdUntracked
   **/
   @javax.annotation.Nullable
-
   public String getVolumeUsdUntracked() {
     return volumeUsdUntracked;
   }
@@ -311,7 +306,6 @@ public class UniswapV3UniswapDayDataDTO {
    * @return feesUsd
   **/
   @javax.annotation.Nullable
-
   public String getFeesUsd() {
     return feesUsd;
   }
@@ -333,7 +327,6 @@ public class UniswapV3UniswapDayDataDTO {
    * @return txCount
   **/
   @javax.annotation.Nullable
-
   public NumericsBigInteger getTxCount() {
     return txCount;
   }
@@ -355,7 +348,6 @@ public class UniswapV3UniswapDayDataDTO {
    * @return tvlUsd
   **/
   @javax.annotation.Nullable
-
   public String getTvlUsd() {
     return tvlUsd;
   }

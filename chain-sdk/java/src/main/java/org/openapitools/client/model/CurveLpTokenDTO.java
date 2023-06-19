@@ -34,6 +34,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
@@ -48,7 +52,7 @@ import org.openapitools.client.JSON;
 /**
  * CurveLpTokenDTO
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-07T11:31:09.822924Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-19T09:28:48.156871Z[Etc/UTC]")
 public class CurveLpTokenDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -108,7 +112,6 @@ public class CurveLpTokenDTO {
    * @return entryTime
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getEntryTime() {
     return entryTime;
   }
@@ -130,7 +133,6 @@ public class CurveLpTokenDTO {
    * @return recvTime
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getRecvTime() {
     return recvTime;
   }
@@ -152,7 +154,6 @@ public class CurveLpTokenDTO {
    * @return blockNumber
   **/
   @javax.annotation.Nullable
-
   public Long getBlockNumber() {
     return blockNumber;
   }
@@ -174,7 +175,6 @@ public class CurveLpTokenDTO {
    * @return id
   **/
   @javax.annotation.Nullable
-
   public String getId() {
     return id;
   }
@@ -196,7 +196,6 @@ public class CurveLpTokenDTO {
    * @return address
   **/
   @javax.annotation.Nullable
-
   public String getAddress() {
     return address;
   }
@@ -218,7 +217,6 @@ public class CurveLpTokenDTO {
    * @return decimals
   **/
   @javax.annotation.Nullable
-
   public String getDecimals() {
     return decimals;
   }
@@ -240,7 +238,6 @@ public class CurveLpTokenDTO {
    * @return name
   **/
   @javax.annotation.Nullable
-
   public String getName() {
     return name;
   }
@@ -262,7 +259,6 @@ public class CurveLpTokenDTO {
    * @return symbol
   **/
   @javax.annotation.Nullable
-
   public String getSymbol() {
     return symbol;
   }
@@ -284,7 +280,6 @@ public class CurveLpTokenDTO {
    * @return gauge
   **/
   @javax.annotation.Nullable
-
   public String getGauge() {
     return gauge;
   }
@@ -306,7 +301,6 @@ public class CurveLpTokenDTO {
    * @return pool
   **/
   @javax.annotation.Nullable
-
   public String getPool() {
     return pool;
   }
@@ -328,7 +322,6 @@ public class CurveLpTokenDTO {
    * @return vid
   **/
   @javax.annotation.Nullable
-
   public Long getVid() {
     return vid;
   }

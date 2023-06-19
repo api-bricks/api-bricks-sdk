@@ -34,6 +34,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
@@ -48,7 +52,7 @@ import org.openapitools.client.JSON;
 /**
  * Registered token.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-07T11:31:09.822924Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-19T09:28:48.156871Z[Etc/UTC]")
 public class DexTokenDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -128,7 +132,6 @@ public class DexTokenDTO {
    * @return entryTime
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getEntryTime() {
     return entryTime;
   }
@@ -150,7 +153,6 @@ public class DexTokenDTO {
    * @return recvTime
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getRecvTime() {
     return recvTime;
   }
@@ -172,7 +174,6 @@ public class DexTokenDTO {
    * @return blockNumber
   **/
   @javax.annotation.Nullable
-
   public Long getBlockNumber() {
     return blockNumber;
   }
@@ -194,7 +195,6 @@ public class DexTokenDTO {
    * @return id
   **/
   @javax.annotation.Nullable
-
   public String getId() {
     return id;
   }
@@ -216,7 +216,6 @@ public class DexTokenDTO {
    * @return address
   **/
   @javax.annotation.Nullable
-
   public String getAddress() {
     return address;
   }
@@ -238,7 +237,6 @@ public class DexTokenDTO {
    * @return fromBatchId
   **/
   @javax.annotation.Nullable
-
   public String getFromBatchId() {
     return fromBatchId;
   }
@@ -260,7 +258,6 @@ public class DexTokenDTO {
    * @return symbol
   **/
   @javax.annotation.Nullable
-
   public String getSymbol() {
     return symbol;
   }
@@ -282,7 +279,6 @@ public class DexTokenDTO {
    * @return decimals
   **/
   @javax.annotation.Nullable
-
   public String getDecimals() {
     return decimals;
   }
@@ -304,7 +300,6 @@ public class DexTokenDTO {
    * @return name
   **/
   @javax.annotation.Nullable
-
   public String getName() {
     return name;
   }
@@ -326,7 +321,6 @@ public class DexTokenDTO {
    * @return sellVolume
   **/
   @javax.annotation.Nullable
-
   public String getSellVolume() {
     return sellVolume;
   }
@@ -348,7 +342,6 @@ public class DexTokenDTO {
    * @return createEpoch
   **/
   @javax.annotation.Nullable
-
   public String getCreateEpoch() {
     return createEpoch;
   }
@@ -370,7 +363,6 @@ public class DexTokenDTO {
    * @return txHash
   **/
   @javax.annotation.Nullable
-
   public String getTxHash() {
     return txHash;
   }
@@ -392,7 +384,6 @@ public class DexTokenDTO {
    * @return vid
   **/
   @javax.annotation.Nullable
-
   public Long getVid() {
     return vid;
   }
@@ -408,7 +399,6 @@ public class DexTokenDTO {
    * @return tokenSymbol
   **/
   @javax.annotation.Nullable
-
   public String getTokenSymbol() {
     return tokenSymbol;
   }

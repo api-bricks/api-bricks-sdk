@@ -34,6 +34,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
@@ -48,7 +52,7 @@ import org.openapitools.client.JSON;
 /**
  * Mint entities are created for every emitted Mint event on the Uniswap core contracts. The Mint entity stores key data about the event like token amounts, who sent the transaction, and more.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-07T11:31:09.822924Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-19T09:28:48.156871Z[Etc/UTC]")
 public class UniswapV3MintDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -144,7 +148,6 @@ public class UniswapV3MintDTO {
    * @return entryTime
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getEntryTime() {
     return entryTime;
   }
@@ -166,7 +169,6 @@ public class UniswapV3MintDTO {
    * @return recvTime
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getRecvTime() {
     return recvTime;
   }
@@ -188,7 +190,6 @@ public class UniswapV3MintDTO {
    * @return blockNumber
   **/
   @javax.annotation.Nullable
-
   public Long getBlockNumber() {
     return blockNumber;
   }
@@ -210,7 +211,6 @@ public class UniswapV3MintDTO {
    * @return id
   **/
   @javax.annotation.Nullable
-
   public String getId() {
     return id;
   }
@@ -232,7 +232,6 @@ public class UniswapV3MintDTO {
    * @return transaction
   **/
   @javax.annotation.Nullable
-
   public String getTransaction() {
     return transaction;
   }
@@ -254,7 +253,6 @@ public class UniswapV3MintDTO {
    * @return timestamp
   **/
   @javax.annotation.Nullable
-
   public String getTimestamp() {
     return timestamp;
   }
@@ -276,7 +274,6 @@ public class UniswapV3MintDTO {
    * @return pool
   **/
   @javax.annotation.Nullable
-
   public String getPool() {
     return pool;
   }
@@ -298,7 +295,6 @@ public class UniswapV3MintDTO {
    * @return token0
   **/
   @javax.annotation.Nullable
-
   public String getToken0() {
     return token0;
   }
@@ -320,7 +316,6 @@ public class UniswapV3MintDTO {
    * @return token1
   **/
   @javax.annotation.Nullable
-
   public String getToken1() {
     return token1;
   }
@@ -342,7 +337,6 @@ public class UniswapV3MintDTO {
    * @return owner
   **/
   @javax.annotation.Nullable
-
   public String getOwner() {
     return owner;
   }
@@ -364,7 +358,6 @@ public class UniswapV3MintDTO {
    * @return sender
   **/
   @javax.annotation.Nullable
-
   public String getSender() {
     return sender;
   }
@@ -386,7 +379,6 @@ public class UniswapV3MintDTO {
    * @return origin
   **/
   @javax.annotation.Nullable
-
   public String getOrigin() {
     return origin;
   }
@@ -408,7 +400,6 @@ public class UniswapV3MintDTO {
    * @return amount
   **/
   @javax.annotation.Nullable
-
   public String getAmount() {
     return amount;
   }
@@ -430,7 +421,6 @@ public class UniswapV3MintDTO {
    * @return amount0
   **/
   @javax.annotation.Nullable
-
   public String getAmount0() {
     return amount0;
   }
@@ -452,7 +442,6 @@ public class UniswapV3MintDTO {
    * @return amount1
   **/
   @javax.annotation.Nullable
-
   public String getAmount1() {
     return amount1;
   }
@@ -474,7 +463,6 @@ public class UniswapV3MintDTO {
    * @return amountUsd
   **/
   @javax.annotation.Nullable
-
   public String getAmountUsd() {
     return amountUsd;
   }
@@ -496,7 +484,6 @@ public class UniswapV3MintDTO {
    * @return tickLower
   **/
   @javax.annotation.Nullable
-
   public String getTickLower() {
     return tickLower;
   }
@@ -518,7 +505,6 @@ public class UniswapV3MintDTO {
    * @return tickUpper
   **/
   @javax.annotation.Nullable
-
   public String getTickUpper() {
     return tickUpper;
   }
@@ -540,7 +526,6 @@ public class UniswapV3MintDTO {
    * @return logIndex
   **/
   @javax.annotation.Nullable
-
   public String getLogIndex() {
     return logIndex;
   }
@@ -562,7 +547,6 @@ public class UniswapV3MintDTO {
    * @return vid
   **/
   @javax.annotation.Nullable
-
   public Long getVid() {
     return vid;
   }

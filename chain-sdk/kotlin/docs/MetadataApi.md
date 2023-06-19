@@ -9,7 +9,7 @@ Method | HTTP request | Description
 [**metadataDappsGet**](MetadataApi.md#metadataDappsGet) | **GET** /metadata/dapps | List all decentralized applications.
 
 
-<a name="metadataChainsGet"></a>
+<a id="metadataChainsGet"></a>
 # **metadataChainsGet**
 > metadataChainsGet()
 
@@ -49,7 +49,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
-<a name="metadataDappsDappNameGet"></a>
+<a id="metadataDappsDappNameGet"></a>
 # **metadataDappsDappNameGet**
 > metadataDappsDappNameGet(dappName)
 
@@ -93,7 +93,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
-<a name="metadataDappsGet"></a>
+<a id="metadataDappsGet"></a>
 # **metadataDappsGet**
 > metadataDappsGet()
 

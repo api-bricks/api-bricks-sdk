@@ -28,7 +28,7 @@ Method | HTTP request | Description
 [**Invoke-DexWithdrawsCurrent**](DexApi.md#Invoke-DexWithdrawsCurrent) | **GET** /dapps/dex/withdraws/current | Withdraws (current)
 
 
-<a name="Invoke-DexBatchesCurrent"></a>
+<a id="Invoke-DexBatchesCurrent"></a>
 # **Invoke-DexBatchesCurrent**
 > DexBatchDTO[] Invoke-DexBatchesCurrent<br>
 
@@ -66,7 +66,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-DexDepositsCurrent"></a>
+<a id="Invoke-DexDepositsCurrent"></a>
 # **Invoke-DexDepositsCurrent**
 > DexDepositDTO[] Invoke-DexDepositsCurrent<br>
 
@@ -104,7 +104,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-DexGetBatchesHistorical"></a>
+<a id="Invoke-DexGetBatchesHistorical"></a>
 # **Invoke-DexGetBatchesHistorical**
 > DexBatchDTO[] Invoke-DexGetBatchesHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
@@ -159,7 +159,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-DexGetDepositsHistorical"></a>
+<a id="Invoke-DexGetDepositsHistorical"></a>
 # **Invoke-DexGetDepositsHistorical**
 > DexDepositDTO[] Invoke-DexGetDepositsHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
@@ -217,7 +217,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-DexGetOrdersHistorical"></a>
+<a id="Invoke-DexGetOrdersHistorical"></a>
 # **Invoke-DexGetOrdersHistorical**
 > DexOrderDTO[] Invoke-DexGetOrdersHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
@@ -278,7 +278,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-DexGetPricesHistorical"></a>
+<a id="Invoke-DexGetPricesHistorical"></a>
 # **Invoke-DexGetPricesHistorical**
 > DexPriceDTO[] Invoke-DexGetPricesHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
@@ -333,7 +333,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-DexGetSolutionsHistorical"></a>
+<a id="Invoke-DexGetSolutionsHistorical"></a>
 # **Invoke-DexGetSolutionsHistorical**
 > DexSolutionDTO[] Invoke-DexGetSolutionsHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
@@ -388,7 +388,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-DexGetStatsHistorical"></a>
+<a id="Invoke-DexGetStatsHistorical"></a>
 # **Invoke-DexGetStatsHistorical**
 > DexStatsDTO[] Invoke-DexGetStatsHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
@@ -443,7 +443,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-DexGetTokensHistorical"></a>
+<a id="Invoke-DexGetTokensHistorical"></a>
 # **Invoke-DexGetTokensHistorical**
 > DexTokenDTO[] Invoke-DexGetTokensHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
@@ -507,7 +507,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-DexGetTradesHistorical"></a>
+<a id="Invoke-DexGetTradesHistorical"></a>
 # **Invoke-DexGetTradesHistorical**
 > DexTradeDTO[] Invoke-DexGetTradesHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
@@ -568,7 +568,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-DexGetUsersHistorical"></a>
+<a id="Invoke-DexGetUsersHistorical"></a>
 # **Invoke-DexGetUsersHistorical**
 > DexUserDTO[] Invoke-DexGetUsersHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
@@ -623,7 +623,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-DexGetWithdrawRequestsHistorical"></a>
+<a id="Invoke-DexGetWithdrawRequestsHistorical"></a>
 # **Invoke-DexGetWithdrawRequestsHistorical**
 > DexWithdrawRequestDTO[] Invoke-DexGetWithdrawRequestsHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
@@ -681,7 +681,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-DexGetWithdrawsHistorical"></a>
+<a id="Invoke-DexGetWithdrawsHistorical"></a>
 # **Invoke-DexGetWithdrawsHistorical**
 > DexWithdrawDTO[] Invoke-DexGetWithdrawsHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
@@ -739,7 +739,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-DexOrdersCurrent"></a>
+<a id="Invoke-DexOrdersCurrent"></a>
 # **Invoke-DexOrdersCurrent**
 > DexOrderDTO[] Invoke-DexOrdersCurrent<br>
 
@@ -777,7 +777,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-DexPricesCurrent"></a>
+<a id="Invoke-DexPricesCurrent"></a>
 # **Invoke-DexPricesCurrent**
 > DexPriceDTO[] Invoke-DexPricesCurrent<br>
 
@@ -815,7 +815,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-DexSolutionsCurrent"></a>
+<a id="Invoke-DexSolutionsCurrent"></a>
 # **Invoke-DexSolutionsCurrent**
 > DexSolutionDTO[] Invoke-DexSolutionsCurrent<br>
 
@@ -853,7 +853,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-DexStatsCurrent"></a>
+<a id="Invoke-DexStatsCurrent"></a>
 # **Invoke-DexStatsCurrent**
 > DexStatsDTO[] Invoke-DexStatsCurrent<br>
 
@@ -891,7 +891,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-DexTokensCurrent"></a>
+<a id="Invoke-DexTokensCurrent"></a>
 # **Invoke-DexTokensCurrent**
 > DexTokenDTO[] Invoke-DexTokensCurrent<br>
 
@@ -929,7 +929,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-DexTradesCurrent"></a>
+<a id="Invoke-DexTradesCurrent"></a>
 # **Invoke-DexTradesCurrent**
 > DexTradeDTO[] Invoke-DexTradesCurrent<br>
 
@@ -967,7 +967,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-DexUsersCurrent"></a>
+<a id="Invoke-DexUsersCurrent"></a>
 # **Invoke-DexUsersCurrent**
 > DexUserDTO[] Invoke-DexUsersCurrent<br>
 
@@ -1005,7 +1005,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-DexWithdrawRequestsCurrent"></a>
+<a id="Invoke-DexWithdrawRequestsCurrent"></a>
 # **Invoke-DexWithdrawRequestsCurrent**
 > DexWithdrawRequestDTO[] Invoke-DexWithdrawRequestsCurrent<br>
 
@@ -1043,7 +1043,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-DexWithdrawsCurrent"></a>
+<a id="Invoke-DexWithdrawsCurrent"></a>
 # **Invoke-DexWithdrawsCurrent**
 > DexWithdrawDTO[] Invoke-DexWithdrawsCurrent<br>
 

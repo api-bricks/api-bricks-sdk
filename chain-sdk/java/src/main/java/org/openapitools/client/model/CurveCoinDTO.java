@@ -34,6 +34,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
@@ -48,7 +52,7 @@ import org.openapitools.client.JSON;
 /**
  * CurveCoinDTO
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-07T11:31:09.822924Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-19T09:28:48.156871Z[Etc/UTC]")
 public class CurveCoinDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -124,7 +128,6 @@ public class CurveCoinDTO {
    * @return entryTime
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getEntryTime() {
     return entryTime;
   }
@@ -146,7 +149,6 @@ public class CurveCoinDTO {
    * @return recvTime
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getRecvTime() {
     return recvTime;
   }
@@ -168,7 +170,6 @@ public class CurveCoinDTO {
    * @return blockNumber
   **/
   @javax.annotation.Nullable
-
   public Long getBlockNumber() {
     return blockNumber;
   }
@@ -190,7 +191,6 @@ public class CurveCoinDTO {
    * @return id
   **/
   @javax.annotation.Nullable
-
   public String getId() {
     return id;
   }
@@ -212,7 +212,6 @@ public class CurveCoinDTO {
    * @return index
   **/
   @javax.annotation.Nullable
-
   public Integer getIndex() {
     return index;
   }
@@ -234,7 +233,6 @@ public class CurveCoinDTO {
    * @return pool
   **/
   @javax.annotation.Nullable
-
   public String getPool() {
     return pool;
   }
@@ -256,7 +254,6 @@ public class CurveCoinDTO {
    * @return token
   **/
   @javax.annotation.Nullable
-
   public String getToken() {
     return token;
   }
@@ -278,7 +275,6 @@ public class CurveCoinDTO {
    * @return underlying
   **/
   @javax.annotation.Nullable
-
   public String getUnderlying() {
     return underlying;
   }
@@ -300,7 +296,6 @@ public class CurveCoinDTO {
    * @return balance
   **/
   @javax.annotation.Nullable
-
   public String getBalance() {
     return balance;
   }
@@ -322,7 +317,6 @@ public class CurveCoinDTO {
    * @return rate
   **/
   @javax.annotation.Nullable
-
   public String getRate() {
     return rate;
   }
@@ -344,7 +338,6 @@ public class CurveCoinDTO {
    * @return updated
   **/
   @javax.annotation.Nullable
-
   public String getUpdated() {
     return updated;
   }
@@ -366,7 +359,6 @@ public class CurveCoinDTO {
    * @return updatedAtBlock
   **/
   @javax.annotation.Nullable
-
   public String getUpdatedAtBlock() {
     return updatedAtBlock;
   }
@@ -388,7 +380,6 @@ public class CurveCoinDTO {
    * @return updatedAtTransaction
   **/
   @javax.annotation.Nullable
-
   public String getUpdatedAtTransaction() {
     return updatedAtTransaction;
   }
@@ -410,7 +401,6 @@ public class CurveCoinDTO {
    * @return vid
   **/
   @javax.annotation.Nullable
-
   public Long getVid() {
     return vid;
   }
@@ -432,7 +422,6 @@ public class CurveCoinDTO {
    * @return blockRange
   **/
   @javax.annotation.Nullable
-
   public String getBlockRange() {
     return blockRange;
   }

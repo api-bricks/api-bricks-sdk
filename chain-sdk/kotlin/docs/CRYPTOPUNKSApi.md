@@ -24,7 +24,7 @@ Method | HTTP request | Description
 [**cRYPTOPUNKSUsersCurrent**](CRYPTOPUNKSApi.md#cRYPTOPUNKSUsersCurrent) | **GET** /dapps/cryptopunks/users/current | Users (current)
 
 
-<a name="cRYPTOPUNKSBidsCurrent"></a>
+<a id="cRYPTOPUNKSBidsCurrent"></a>
 # **cRYPTOPUNKSBidsCurrent**
 > kotlin.collections.List&lt;CRYPTOPUNKSBidDTO&gt; cRYPTOPUNKSBidsCurrent()
 
@@ -67,7 +67,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="cRYPTOPUNKSCollectionDailySnapshotsCurrent"></a>
+<a id="cRYPTOPUNKSCollectionDailySnapshotsCurrent"></a>
 # **cRYPTOPUNKSCollectionDailySnapshotsCurrent**
 > kotlin.collections.List&lt;CRYPTOPUNKSCollectionDailySnapshotDTO&gt; cRYPTOPUNKSCollectionDailySnapshotsCurrent()
 
@@ -110,7 +110,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="cRYPTOPUNKSCollectionsCurrent"></a>
+<a id="cRYPTOPUNKSCollectionsCurrent"></a>
 # **cRYPTOPUNKSCollectionsCurrent**
 > kotlin.collections.List&lt;CRYPTOPUNKSCollectionDTO&gt; cRYPTOPUNKSCollectionsCurrent()
 
@@ -153,7 +153,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="cRYPTOPUNKSDataSourcesCurrent"></a>
+<a id="cRYPTOPUNKSDataSourcesCurrent"></a>
 # **cRYPTOPUNKSDataSourcesCurrent**
 > kotlin.collections.List&lt;CRYPTOPUNKSDataSourcesDTO&gt; cRYPTOPUNKSDataSourcesCurrent()
 
@@ -196,7 +196,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="cRYPTOPUNKSGetBidsHistorical"></a>
+<a id="cRYPTOPUNKSGetBidsHistorical"></a>
 # **cRYPTOPUNKSGetBidsHistorical**
 > kotlin.collections.List&lt;CRYPTOPUNKSBidDTO&gt; cRYPTOPUNKSGetBidsHistorical(startBlock, endBlock, startDate, endDate, id)
 
@@ -251,7 +251,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="cRYPTOPUNKSGetCollectionDailySnapshotsHistorical"></a>
+<a id="cRYPTOPUNKSGetCollectionDailySnapshotsHistorical"></a>
 # **cRYPTOPUNKSGetCollectionDailySnapshotsHistorical**
 > kotlin.collections.List&lt;CRYPTOPUNKSCollectionDailySnapshotDTO&gt; cRYPTOPUNKSGetCollectionDailySnapshotsHistorical(startBlock, endBlock, startDate, endDate)
 
@@ -304,7 +304,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="cRYPTOPUNKSGetCollectionsHistorical"></a>
+<a id="cRYPTOPUNKSGetCollectionsHistorical"></a>
 # **cRYPTOPUNKSGetCollectionsHistorical**
 > kotlin.collections.List&lt;CRYPTOPUNKSCollectionDTO&gt; cRYPTOPUNKSGetCollectionsHistorical(startBlock, endBlock, startDate, endDate, id)
 
@@ -359,7 +359,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="cRYPTOPUNKSGetDataSourcesHistorical"></a>
+<a id="cRYPTOPUNKSGetDataSourcesHistorical"></a>
 # **cRYPTOPUNKSGetDataSourcesHistorical**
 > kotlin.collections.List&lt;CRYPTOPUNKSDataSourcesDTO&gt; cRYPTOPUNKSGetDataSourcesHistorical(startBlock, endBlock, startDate, endDate, id)
 
@@ -414,7 +414,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="cRYPTOPUNKSGetItemsHistorical"></a>
+<a id="cRYPTOPUNKSGetItemsHistorical"></a>
 # **cRYPTOPUNKSGetItemsHistorical**
 > kotlin.collections.List&lt;CRYPTOPUNKSItemDTO&gt; cRYPTOPUNKSGetItemsHistorical(startBlock, endBlock, startDate, endDate)
 
@@ -467,7 +467,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="cRYPTOPUNKSGetMarketPlacesHistorical"></a>
+<a id="cRYPTOPUNKSGetMarketPlacesHistorical"></a>
 # **cRYPTOPUNKSGetMarketPlacesHistorical**
 > kotlin.collections.List&lt;CRYPTOPUNKSMarketPlaceDTO&gt; cRYPTOPUNKSGetMarketPlacesHistorical(startBlock, endBlock, startDate, endDate, id)
 
@@ -522,7 +522,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="cRYPTOPUNKSGetMarketplaceDailySnapshotsHistorical"></a>
+<a id="cRYPTOPUNKSGetMarketplaceDailySnapshotsHistorical"></a>
 # **cRYPTOPUNKSGetMarketplaceDailySnapshotsHistorical**
 > kotlin.collections.List&lt;CRYPTOPUNKSMarketplaceDailySnapshotDTO&gt; cRYPTOPUNKSGetMarketplaceDailySnapshotsHistorical(startBlock, endBlock, startDate, endDate, id)
 
@@ -577,7 +577,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="cRYPTOPUNKSGetTradesHistorical"></a>
+<a id="cRYPTOPUNKSGetTradesHistorical"></a>
 # **cRYPTOPUNKSGetTradesHistorical**
 > kotlin.collections.List&lt;CRYPTOPUNKSTradeDTO&gt; cRYPTOPUNKSGetTradesHistorical(startBlock, endBlock, startDate, endDate, id)
 
@@ -632,7 +632,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="cRYPTOPUNKSGetUsersHistorical"></a>
+<a id="cRYPTOPUNKSGetUsersHistorical"></a>
 # **cRYPTOPUNKSGetUsersHistorical**
 > kotlin.collections.List&lt;CRYPTOPUNKSUserDTO&gt; cRYPTOPUNKSGetUsersHistorical(startBlock, endBlock, startDate, endDate, id)
 
@@ -687,7 +687,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="cRYPTOPUNKSItemsCurrent"></a>
+<a id="cRYPTOPUNKSItemsCurrent"></a>
 # **cRYPTOPUNKSItemsCurrent**
 > kotlin.collections.List&lt;CRYPTOPUNKSItemDTO&gt; cRYPTOPUNKSItemsCurrent()
 
@@ -730,7 +730,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="cRYPTOPUNKSMarketPlacesCurrent"></a>
+<a id="cRYPTOPUNKSMarketPlacesCurrent"></a>
 # **cRYPTOPUNKSMarketPlacesCurrent**
 > kotlin.collections.List&lt;CRYPTOPUNKSMarketPlaceDTO&gt; cRYPTOPUNKSMarketPlacesCurrent()
 
@@ -773,7 +773,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="cRYPTOPUNKSMarketplaceDailySnapshotsCurrent"></a>
+<a id="cRYPTOPUNKSMarketplaceDailySnapshotsCurrent"></a>
 # **cRYPTOPUNKSMarketplaceDailySnapshotsCurrent**
 > kotlin.collections.List&lt;CRYPTOPUNKSMarketplaceDailySnapshotDTO&gt; cRYPTOPUNKSMarketplaceDailySnapshotsCurrent()
 
@@ -816,7 +816,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="cRYPTOPUNKSTradesCurrent"></a>
+<a id="cRYPTOPUNKSTradesCurrent"></a>
 # **cRYPTOPUNKSTradesCurrent**
 > kotlin.collections.List&lt;CRYPTOPUNKSTradeDTO&gt; cRYPTOPUNKSTradesCurrent()
 
@@ -859,7 +859,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="cRYPTOPUNKSUsersCurrent"></a>
+<a id="cRYPTOPUNKSUsersCurrent"></a>
 # **cRYPTOPUNKSUsersCurrent**
 > kotlin.collections.List&lt;CRYPTOPUNKSUserDTO&gt; cRYPTOPUNKSUsersCurrent()
 

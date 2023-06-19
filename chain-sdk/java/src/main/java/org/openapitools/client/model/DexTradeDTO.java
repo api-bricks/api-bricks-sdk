@@ -35,6 +35,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
@@ -49,7 +53,7 @@ import org.openapitools.client.JSON;
 /**
  * Trade for a single user, as part of a ring trade. It&#39;s part of the solution submitted by a solver for a given batch.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-07T11:31:09.822924Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-19T09:28:48.156871Z[Etc/UTC]")
 public class DexTradeDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -167,7 +171,6 @@ public class DexTradeDTO {
    * @return entryTime
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getEntryTime() {
     return entryTime;
   }
@@ -189,7 +192,6 @@ public class DexTradeDTO {
    * @return recvTime
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getRecvTime() {
     return recvTime;
   }
@@ -211,7 +213,6 @@ public class DexTradeDTO {
    * @return blockNumber
   **/
   @javax.annotation.Nullable
-
   public Long getBlockNumber() {
     return blockNumber;
   }
@@ -233,7 +234,6 @@ public class DexTradeDTO {
    * @return id
   **/
   @javax.annotation.Nullable
-
   public String getId() {
     return id;
   }
@@ -255,7 +255,6 @@ public class DexTradeDTO {
    * @return order
   **/
   @javax.annotation.Nullable
-
   public String getOrder() {
     return order;
   }
@@ -277,7 +276,6 @@ public class DexTradeDTO {
    * @return owner
   **/
   @javax.annotation.Nullable
-
   public String getOwner() {
     return owner;
   }
@@ -299,7 +297,6 @@ public class DexTradeDTO {
    * @return sellVolume
   **/
   @javax.annotation.Nullable
-
   public String getSellVolume() {
     return sellVolume;
   }
@@ -321,7 +318,6 @@ public class DexTradeDTO {
    * @return buyVolume
   **/
   @javax.annotation.Nullable
-
   public String getBuyVolume() {
     return buyVolume;
   }
@@ -343,7 +339,6 @@ public class DexTradeDTO {
    * @return tradeBatchId
   **/
   @javax.annotation.Nullable
-
   public String getTradeBatchId() {
     return tradeBatchId;
   }
@@ -365,7 +360,6 @@ public class DexTradeDTO {
    * @return tradeEpoch
   **/
   @javax.annotation.Nullable
-
   public String getTradeEpoch() {
     return tradeEpoch;
   }
@@ -387,7 +381,6 @@ public class DexTradeDTO {
    * @return buyToken
   **/
   @javax.annotation.Nullable
-
   public String getBuyToken() {
     return buyToken;
   }
@@ -409,7 +402,6 @@ public class DexTradeDTO {
    * @return sellToken
   **/
   @javax.annotation.Nullable
-
   public String getSellToken() {
     return sellToken;
   }
@@ -431,7 +423,6 @@ public class DexTradeDTO {
    * @return createEpoch
   **/
   @javax.annotation.Nullable
-
   public String getCreateEpoch() {
     return createEpoch;
   }
@@ -453,7 +444,6 @@ public class DexTradeDTO {
    * @return revertEpoch
   **/
   @javax.annotation.Nullable
-
   public String getRevertEpoch() {
     return revertEpoch;
   }
@@ -475,7 +465,6 @@ public class DexTradeDTO {
    * @return txHash
   **/
   @javax.annotation.Nullable
-
   public String getTxHash() {
     return txHash;
   }
@@ -497,7 +486,6 @@ public class DexTradeDTO {
    * @return txLogIndex
   **/
   @javax.annotation.Nullable
-
   public String getTxLogIndex() {
     return txLogIndex;
   }
@@ -519,7 +507,6 @@ public class DexTradeDTO {
    * @return vid
   **/
   @javax.annotation.Nullable
-
   public Long getVid() {
     return vid;
   }
@@ -535,7 +522,6 @@ public class DexTradeDTO {
    * @return poolId
   **/
   @javax.annotation.Nullable
-
   public String getPoolId() {
     return poolId;
   }
@@ -548,7 +534,6 @@ public class DexTradeDTO {
    * @return transactionId
   **/
   @javax.annotation.Nullable
-
   public String getTransactionId() {
     return transactionId;
   }
@@ -561,7 +546,6 @@ public class DexTradeDTO {
    * @return evaluatedPrice
   **/
   @javax.annotation.Nullable
-
   public Double getEvaluatedPrice() {
     return evaluatedPrice;
   }
@@ -574,7 +558,6 @@ public class DexTradeDTO {
    * @return evaluatedAmount
   **/
   @javax.annotation.Nullable
-
   public Double getEvaluatedAmount() {
     return evaluatedAmount;
   }
@@ -593,7 +576,6 @@ public class DexTradeDTO {
    * @return evaluatedAggressor
   **/
   @javax.annotation.Nullable
-
   public TransactionsETradeAggressiveSide getEvaluatedAggressor() {
     return evaluatedAggressor;
   }

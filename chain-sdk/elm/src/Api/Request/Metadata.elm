@@ -21,13 +21,11 @@ module Api.Request.Metadata exposing
     )
 
 import Api
-import Api.Data
+import Api.Data exposing (..)
 import Dict
 import Http
 import Json.Decode
 import Json.Encode
-
-
 
 metadataChainsGet : Api.Request ()
 metadataChainsGet =
@@ -39,7 +37,6 @@ metadataChainsGet =
         []
         Nothing
         (Json.Decode.succeed ())
-
 
 
 metadataDappsDappNameGet : String -> Api.Request ()
@@ -54,7 +51,6 @@ metadataDappsDappNameGet dappName_path =
         (Json.Decode.succeed ())
 
 
-
 metadataDappsGet : Api.Request ()
 metadataDappsGet =
     Api.request
@@ -65,3 +61,4 @@ metadataDappsGet =
         []
         Nothing
         (Json.Decode.succeed ())
+

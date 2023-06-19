@@ -202,11 +202,11 @@ export default class CRYPTOPUNKSApi {
      * Bids (historical)
      * Gets bids.
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
-     * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
-     * @param {Date} opts.startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
-     * @param {Date} opts.endDate The end date of timeframe.
-     * @param {String} opts.id 
+     * @param {Number} [startBlock] The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param {Number} [endBlock] The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param {Date} [startDate] The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param {Date} [endDate] The end date of timeframe.
+     * @param {String} [id] 
      * @param {module:api/CRYPTOPUNKSApi~cRYPTOPUNKSGetBidsHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/CRYPTOPUNKSBidDTO>}
      */
@@ -251,10 +251,10 @@ export default class CRYPTOPUNKSApi {
      * CollectionDailySnapshots (historical)
      * Gets collectionDailySnapshots.
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
-     * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
-     * @param {Date} opts.startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
-     * @param {Date} opts.endDate The end date of timeframe.
+     * @param {Number} [startBlock] The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param {Number} [endBlock] The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param {Date} [startDate] The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param {Date} [endDate] The end date of timeframe.
      * @param {module:api/CRYPTOPUNKSApi~cRYPTOPUNKSGetCollectionDailySnapshotsHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/CRYPTOPUNKSCollectionDailySnapshotDTO>}
      */
@@ -298,11 +298,11 @@ export default class CRYPTOPUNKSApi {
      * Collections (historical)
      * Gets collections.
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
-     * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
-     * @param {Date} opts.startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
-     * @param {Date} opts.endDate The end date of timeframe.
-     * @param {String} opts.id 
+     * @param {Number} [startBlock] The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param {Number} [endBlock] The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param {Date} [startDate] The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param {Date} [endDate] The end date of timeframe.
+     * @param {String} [id] 
      * @param {module:api/CRYPTOPUNKSApi~cRYPTOPUNKSGetCollectionsHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/CRYPTOPUNKSCollectionDTO>}
      */
@@ -347,11 +347,11 @@ export default class CRYPTOPUNKSApi {
      * DataSources (historical)
      * Gets dataSources.
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
-     * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
-     * @param {Date} opts.startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
-     * @param {Date} opts.endDate The end date of timeframe.
-     * @param {String} opts.id 
+     * @param {Number} [startBlock] The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param {Number} [endBlock] The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param {Date} [startDate] The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param {Date} [endDate] The end date of timeframe.
+     * @param {String} [id] 
      * @param {module:api/CRYPTOPUNKSApi~cRYPTOPUNKSGetDataSourcesHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/CRYPTOPUNKSDataSourcesDTO>}
      */
@@ -396,10 +396,10 @@ export default class CRYPTOPUNKSApi {
      * Items (historical)
      * Gets items.
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
-     * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
-     * @param {Date} opts.startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
-     * @param {Date} opts.endDate The end date of timeframe.
+     * @param {Number} [startBlock] The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param {Number} [endBlock] The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param {Date} [startDate] The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param {Date} [endDate] The end date of timeframe.
      * @param {module:api/CRYPTOPUNKSApi~cRYPTOPUNKSGetItemsHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/CRYPTOPUNKSItemDTO>}
      */
@@ -443,11 +443,11 @@ export default class CRYPTOPUNKSApi {
      * MarketPlaces (historical)
      * Gets marketPlaces.
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
-     * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
-     * @param {Date} opts.startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
-     * @param {Date} opts.endDate The end date of timeframe.
-     * @param {String} opts.id 
+     * @param {Number} [startBlock] The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param {Number} [endBlock] The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param {Date} [startDate] The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param {Date} [endDate] The end date of timeframe.
+     * @param {String} [id] 
      * @param {module:api/CRYPTOPUNKSApi~cRYPTOPUNKSGetMarketPlacesHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/CRYPTOPUNKSMarketPlaceDTO>}
      */
@@ -492,11 +492,11 @@ export default class CRYPTOPUNKSApi {
      * MarketplaceDailySnapshots (historical)
      * Gets marketplaceDailySnapshots.
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
-     * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
-     * @param {Date} opts.startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
-     * @param {Date} opts.endDate The end date of timeframe.
-     * @param {String} opts.id 
+     * @param {Number} [startBlock] The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param {Number} [endBlock] The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param {Date} [startDate] The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param {Date} [endDate] The end date of timeframe.
+     * @param {String} [id] 
      * @param {module:api/CRYPTOPUNKSApi~cRYPTOPUNKSGetMarketplaceDailySnapshotsHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/CRYPTOPUNKSMarketplaceDailySnapshotDTO>}
      */
@@ -541,11 +541,11 @@ export default class CRYPTOPUNKSApi {
      * Trades (historical)
      * Gets trades.
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
-     * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
-     * @param {Date} opts.startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
-     * @param {Date} opts.endDate The end date of timeframe.
-     * @param {String} opts.id 
+     * @param {Number} [startBlock] The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param {Number} [endBlock] The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param {Date} [startDate] The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param {Date} [endDate] The end date of timeframe.
+     * @param {String} [id] 
      * @param {module:api/CRYPTOPUNKSApi~cRYPTOPUNKSGetTradesHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/CRYPTOPUNKSTradeDTO>}
      */
@@ -590,11 +590,11 @@ export default class CRYPTOPUNKSApi {
      * Users (historical)
      * Gets users.
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
-     * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
-     * @param {Date} opts.startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
-     * @param {Date} opts.endDate The end date of timeframe.
-     * @param {String} opts.id 
+     * @param {Number} [startBlock] The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param {Number} [endBlock] The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param {Date} [startDate] The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param {Date} [endDate] The end date of timeframe.
+     * @param {String} [id] 
      * @param {module:api/CRYPTOPUNKSApi~cRYPTOPUNKSGetUsersHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/CRYPTOPUNKSUserDTO>}
      */

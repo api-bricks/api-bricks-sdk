@@ -82,14 +82,12 @@ module Api.Request.Curve exposing
     )
 
 import Api
-import Api.Data
+import Api.Data exposing (..)
 import Api.Time exposing (Posix)
 import Dict
 import Http
 import Json.Decode
 import Json.Encode
-
-
 
 {-| Gets accounts.
 -}
@@ -103,7 +101,6 @@ curveAccountsCurrent =
         []
         Nothing
         (Json.Decode.list Api.Data.curveAccountDTODecoder)
-
 
 
 {-| Gets addLiquidityEvents.
@@ -120,7 +117,6 @@ curveAddLiquidityEventsCurrent =
         (Json.Decode.list Api.Data.curveAddLiquidityEventDTODecoder)
 
 
-
 {-| Gets adminFeeChangeLogs.
 -}
 curveAdminFeeChangeLogsCurrent : Api.Request (List Api.Data.CurveAdminFeeChangeLogDTO)
@@ -133,7 +129,6 @@ curveAdminFeeChangeLogsCurrent =
         []
         Nothing
         (Json.Decode.list Api.Data.curveAdminFeeChangeLogDTODecoder)
-
 
 
 {-| Gets amplificationCoeffChangeLogs.
@@ -150,7 +145,6 @@ curveAmplificationCoeffChangeLogsCurrent =
         (Json.Decode.list Api.Data.curveAmplificationCoeffChangeLogDTODecoder)
 
 
-
 {-| Gets coins.
 -}
 curveCoinsCurrent : Api.Request (List Api.Data.CurveCoinDTO)
@@ -163,7 +157,6 @@ curveCoinsCurrent =
         []
         Nothing
         (Json.Decode.list Api.Data.curveCoinDTODecoder)
-
 
 
 {-| Gets contractVersions.
@@ -180,7 +173,6 @@ curveContractVersionsCurrent =
         (Json.Decode.list Api.Data.curveContractVersionDTODecoder)
 
 
-
 {-| Gets contracts.
 -}
 curveContractsCurrent : Api.Request (List Api.Data.CurveContractDTO)
@@ -193,7 +185,6 @@ curveContractsCurrent =
         []
         Nothing
         (Json.Decode.list Api.Data.curveContractDTODecoder)
-
 
 
 {-| Gets dailyVolumes.
@@ -210,7 +201,6 @@ curveDailyVolumesCurrent =
         (Json.Decode.list Api.Data.curveDailyVolumeDTODecoder)
 
 
-
 {-| Gets exchanges.
 -}
 curveExchangesCurrent : Maybe String -> Api.Request (List Api.Data.CurveExchangeDTO)
@@ -223,7 +213,6 @@ curveExchangesCurrent pool_query =
         []
         Nothing
         (Json.Decode.list Api.Data.curveExchangeDTODecoder)
-
 
 
 {-| Gets feeChangeLogs.
@@ -240,7 +229,6 @@ curveFeeChangeLogsCurrent =
         (Json.Decode.list Api.Data.curveFeeChangeLogDTODecoder)
 
 
-
 {-| Gets gaugeDeposits.
 -}
 curveGaugeDepositsCurrent : Api.Request (List Api.Data.CurveGaugeDepositDTO)
@@ -253,7 +241,6 @@ curveGaugeDepositsCurrent =
         []
         Nothing
         (Json.Decode.list Api.Data.curveGaugeDepositDTODecoder)
-
 
 
 {-| Gets gaugeLiquidities.
@@ -270,7 +257,6 @@ curveGaugeLiquiditiesCurrent =
         (Json.Decode.list Api.Data.curveGaugeLiquidityDTODecoder)
 
 
-
 {-| Gets gaugeTotalWeights.
 -}
 curveGaugeTotalWeightsCurrent : Api.Request (List Api.Data.CurveGaugeTotalWeightDTO)
@@ -283,7 +269,6 @@ curveGaugeTotalWeightsCurrent =
         []
         Nothing
         (Json.Decode.list Api.Data.curveGaugeTotalWeightDTODecoder)
-
 
 
 {-| Gets gaugeTypeWeights.
@@ -300,7 +285,6 @@ curveGaugeTypeWeightsCurrent =
         (Json.Decode.list Api.Data.curveGaugeTypeWeightDTODecoder)
 
 
-
 {-| Gets gaugeTypes.
 -}
 curveGaugeTypesCurrent : Api.Request (List Api.Data.CurveGaugeTypeDTO)
@@ -313,7 +297,6 @@ curveGaugeTypesCurrent =
         []
         Nothing
         (Json.Decode.list Api.Data.curveGaugeTypeDTODecoder)
-
 
 
 {-| Gets gaugeWeightVotes.
@@ -330,7 +313,6 @@ curveGaugeWeightVotesCurrent =
         (Json.Decode.list Api.Data.curveGaugeWeightVoteDTODecoder)
 
 
-
 {-| Gets gaugeWeights.
 -}
 curveGaugeWeightsCurrent : Api.Request (List Api.Data.CurveGaugeWeightDTO)
@@ -343,7 +325,6 @@ curveGaugeWeightsCurrent =
         []
         Nothing
         (Json.Decode.list Api.Data.curveGaugeWeightDTODecoder)
-
 
 
 {-| Gets gaugeWithdraws.
@@ -360,7 +341,6 @@ curveGaugeWithdrawsCurrent =
         (Json.Decode.list Api.Data.curveGaugeWithdrawDTODecoder)
 
 
-
 {-| Gets gauges.
 -}
 curveGaugesCurrent : Api.Request (List Api.Data.CurveGaugeDTO)
@@ -373,7 +353,6 @@ curveGaugesCurrent =
         []
         Nothing
         (Json.Decode.list Api.Data.curveGaugeDTODecoder)
-
 
 
 {-| Gets accounts.
@@ -390,7 +369,6 @@ curveGetAccountsHistorical startBlock_query endBlock_query startDate_query endDa
         (Json.Decode.list Api.Data.curveAccountDTODecoder)
 
 
-
 {-| Gets addLiquidityEvents.
 -}
 curveGetAddLiquidityEventsHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Maybe String -> Api.Request (List Api.Data.CurveAddLiquidityEventDTO)
@@ -403,7 +381,6 @@ curveGetAddLiquidityEventsHistorical startBlock_query endBlock_query startDate_q
         []
         Nothing
         (Json.Decode.list Api.Data.curveAddLiquidityEventDTODecoder)
-
 
 
 {-| Gets adminFeeChangeLogs.
@@ -420,7 +397,6 @@ curveGetAdminFeeChangeLogsHistorical startBlock_query endBlock_query startDate_q
         (Json.Decode.list Api.Data.curveAdminFeeChangeLogDTODecoder)
 
 
-
 {-| Gets amplificationCoeffChangeLogs.
 -}
 curveGetAmplificationCoeffChangeLogsHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Maybe String -> Api.Request (List Api.Data.CurveAmplificationCoeffChangeLogDTO)
@@ -433,7 +409,6 @@ curveGetAmplificationCoeffChangeLogsHistorical startBlock_query endBlock_query s
         []
         Nothing
         (Json.Decode.list Api.Data.curveAmplificationCoeffChangeLogDTODecoder)
-
 
 
 {-| Gets coins.
@@ -450,7 +425,6 @@ curveGetCoinsHistorical startBlock_query endBlock_query startDate_query endDate_
         (Json.Decode.list Api.Data.curveCoinDTODecoder)
 
 
-
 {-| Gets contractVersions.
 -}
 curveGetContractVersionsHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Maybe String -> Api.Request (List Api.Data.CurveContractVersionDTO)
@@ -463,7 +437,6 @@ curveGetContractVersionsHistorical startBlock_query endBlock_query startDate_que
         []
         Nothing
         (Json.Decode.list Api.Data.curveContractVersionDTODecoder)
-
 
 
 {-| Gets contracts.
@@ -480,7 +453,6 @@ curveGetContractsHistorical startBlock_query endBlock_query startDate_query endD
         (Json.Decode.list Api.Data.curveContractDTODecoder)
 
 
-
 {-| Gets dailyVolumes.
 -}
 curveGetDailyVolumesHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Maybe String -> Api.Request (List Api.Data.CurveDailyVolumeDTO)
@@ -493,7 +465,6 @@ curveGetDailyVolumesHistorical startBlock_query endBlock_query startDate_query e
         []
         Nothing
         (Json.Decode.list Api.Data.curveDailyVolumeDTODecoder)
-
 
 
 {-| Gets exchanges.
@@ -510,7 +481,6 @@ curveGetExchangesHistorical startBlock_query endBlock_query startDate_query endD
         (Json.Decode.list Api.Data.curveExchangeDTODecoder)
 
 
-
 {-| Gets feeChangeLogs.
 -}
 curveGetFeeChangeLogsHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Maybe String -> Api.Request (List Api.Data.CurveFeeChangeLogDTO)
@@ -523,7 +493,6 @@ curveGetFeeChangeLogsHistorical startBlock_query endBlock_query startDate_query 
         []
         Nothing
         (Json.Decode.list Api.Data.curveFeeChangeLogDTODecoder)
-
 
 
 {-| Gets gaugeDeposits.
@@ -540,7 +509,6 @@ curveGetGaugeDepositsHistorical startBlock_query endBlock_query startDate_query 
         (Json.Decode.list Api.Data.curveGaugeDepositDTODecoder)
 
 
-
 {-| Gets gaugeLiquidities.
 -}
 curveGetGaugeLiquiditiesHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Maybe String -> Api.Request (List Api.Data.CurveGaugeLiquidityDTO)
@@ -553,7 +521,6 @@ curveGetGaugeLiquiditiesHistorical startBlock_query endBlock_query startDate_que
         []
         Nothing
         (Json.Decode.list Api.Data.curveGaugeLiquidityDTODecoder)
-
 
 
 {-| Gets gaugeTotalWeights.
@@ -570,7 +537,6 @@ curveGetGaugeTotalWeightsHistorical startBlock_query endBlock_query startDate_qu
         (Json.Decode.list Api.Data.curveGaugeTotalWeightDTODecoder)
 
 
-
 {-| Gets gaugeTypeWeights.
 -}
 curveGetGaugeTypeWeightsHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.CurveGaugeTypeWeightDTO)
@@ -583,7 +549,6 @@ curveGetGaugeTypeWeightsHistorical startBlock_query endBlock_query startDate_que
         []
         Nothing
         (Json.Decode.list Api.Data.curveGaugeTypeWeightDTODecoder)
-
 
 
 {-| Gets gaugeTypes.
@@ -600,7 +565,6 @@ curveGetGaugeTypesHistorical startBlock_query endBlock_query startDate_query end
         (Json.Decode.list Api.Data.curveGaugeTypeDTODecoder)
 
 
-
 {-| Gets gaugeWeightVotes.
 -}
 curveGetGaugeWeightVotesHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Maybe String -> Api.Request (List Api.Data.CurveGaugeWeightVoteDTO)
@@ -613,7 +577,6 @@ curveGetGaugeWeightVotesHistorical startBlock_query endBlock_query startDate_que
         []
         Nothing
         (Json.Decode.list Api.Data.curveGaugeWeightVoteDTODecoder)
-
 
 
 {-| Gets gaugeWeights.
@@ -630,7 +593,6 @@ curveGetGaugeWeightsHistorical startBlock_query endBlock_query startDate_query e
         (Json.Decode.list Api.Data.curveGaugeWeightDTODecoder)
 
 
-
 {-| Gets gaugeWithdraws.
 -}
 curveGetGaugeWithdrawsHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.CurveGaugeWithdrawDTO)
@@ -643,7 +605,6 @@ curveGetGaugeWithdrawsHistorical startBlock_query endBlock_query startDate_query
         []
         Nothing
         (Json.Decode.list Api.Data.curveGaugeWithdrawDTODecoder)
-
 
 
 {-| Gets gauges.
@@ -660,7 +621,6 @@ curveGetGaugesHistorical startBlock_query endBlock_query startDate_query endDate
         (Json.Decode.list Api.Data.curveGaugeDTODecoder)
 
 
-
 {-| Gets hourlyVolumes.
 -}
 curveGetHourlyVolumesHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Maybe String -> Api.Request (List Api.Data.CurveHourlyVolumeDTO)
@@ -673,7 +633,6 @@ curveGetHourlyVolumesHistorical startBlock_query endBlock_query startDate_query 
         []
         Nothing
         (Json.Decode.list Api.Data.curveHourlyVolumeDTODecoder)
-
 
 
 {-| Gets lpTokens.
@@ -690,7 +649,6 @@ curveGetLpTokensHistorical startBlock_query endBlock_query startDate_query endDa
         (Json.Decode.list Api.Data.curveLpTokenDTODecoder)
 
 
-
 {-| Gets pools.
 -}
 curveGetPoolsHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Maybe String -> Api.Request (List Api.Data.CurvePoolDTO)
@@ -703,7 +661,6 @@ curveGetPoolsHistorical startBlock_query endBlock_query startDate_query endDate_
         []
         Nothing
         (Json.Decode.list Api.Data.curvePoolDTODecoder)
-
 
 
 {-| Gets proposalVotes.
@@ -720,7 +677,6 @@ curveGetProposalVotesHistorical startBlock_query endBlock_query startDate_query 
         (Json.Decode.list Api.Data.curveProposalVoteDTODecoder)
 
 
-
 {-| Gets proposals.
 -}
 curveGetProposalsHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.CurveProposalDTO)
@@ -733,7 +689,6 @@ curveGetProposalsHistorical startBlock_query endBlock_query startDate_query endD
         []
         Nothing
         (Json.Decode.list Api.Data.curveProposalDTODecoder)
-
 
 
 {-| Gets removeLiquidityEvents.
@@ -750,7 +705,6 @@ curveGetRemoveLiquidityEventsHistorical startBlock_query endBlock_query startDat
         (Json.Decode.list Api.Data.curveRemoveLiquidityEventDTODecoder)
 
 
-
 {-| Gets removeLiquidityOneEvents.
 -}
 curveGetRemoveLiquidityOneEventsHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Maybe String -> Api.Request (List Api.Data.CurveRemoveLiquidityOneEventDTO)
@@ -763,7 +717,6 @@ curveGetRemoveLiquidityOneEventsHistorical startBlock_query endBlock_query start
         []
         Nothing
         (Json.Decode.list Api.Data.curveRemoveLiquidityOneEventDTODecoder)
-
 
 
 {-| Gets systemStates.
@@ -780,7 +733,6 @@ curveGetSystemStatesHistorical startBlock_query endBlock_query startDate_query e
         (Json.Decode.list Api.Data.curveSystemStateDTODecoder)
 
 
-
 {-| Gets tokens.
 -}
 curveGetTokensHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Maybe String -> Maybe String -> Maybe String -> Api.Request (List Api.Data.CurveTokenDTO)
@@ -793,7 +745,6 @@ curveGetTokensHistorical startBlock_query endBlock_query startDate_query endDate
         []
         Nothing
         (Json.Decode.list Api.Data.curveTokenDTODecoder)
-
 
 
 {-| Gets transferOwnershipEvents.
@@ -810,7 +761,6 @@ curveGetTransferOwnershipEventsHistorical startBlock_query endBlock_query startD
         (Json.Decode.list Api.Data.curveTransferOwnershipEventDTODecoder)
 
 
-
 {-| Gets underlyingCoins.
 -}
 curveGetUnderlyingCoinsHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Maybe String -> Api.Request (List Api.Data.CurveUnderlyingCoinDTO)
@@ -823,7 +773,6 @@ curveGetUnderlyingCoinsHistorical startBlock_query endBlock_query startDate_quer
         []
         Nothing
         (Json.Decode.list Api.Data.curveUnderlyingCoinDTODecoder)
-
 
 
 {-| Gets votingApps.
@@ -840,7 +789,6 @@ curveGetVotingAppsHistorical startBlock_query endBlock_query startDate_query end
         (Json.Decode.list Api.Data.curveVotingAppDTODecoder)
 
 
-
 {-| Gets weeklyVolumes.
 -}
 curveGetWeeklyVolumesHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Maybe String -> Api.Request (List Api.Data.CurveWeeklyVolumeDTO)
@@ -853,7 +801,6 @@ curveGetWeeklyVolumesHistorical startBlock_query endBlock_query startDate_query 
         []
         Nothing
         (Json.Decode.list Api.Data.curveWeeklyVolumeDTODecoder)
-
 
 
 {-| Gets hourlyVolumes.
@@ -870,7 +817,6 @@ curveHourlyVolumesCurrent =
         (Json.Decode.list Api.Data.curveHourlyVolumeDTODecoder)
 
 
-
 {-| Gets lpTokens.
 -}
 curveLpTokensCurrent : Api.Request (List Api.Data.CurveLpTokenDTO)
@@ -883,7 +829,6 @@ curveLpTokensCurrent =
         []
         Nothing
         (Json.Decode.list Api.Data.curveLpTokenDTODecoder)
-
 
 
 {-| Gets pools.
@@ -900,7 +845,6 @@ curvePoolsCurrent id_query =
         (Json.Decode.list Api.Data.curvePoolDTODecoder)
 
 
-
 {-| Gets proposalVotes.
 -}
 curveProposalVotesCurrent : Api.Request (List Api.Data.CurveProposalVoteDTO)
@@ -913,7 +857,6 @@ curveProposalVotesCurrent =
         []
         Nothing
         (Json.Decode.list Api.Data.curveProposalVoteDTODecoder)
-
 
 
 {-| Gets proposals.
@@ -930,7 +873,6 @@ curveProposalsCurrent =
         (Json.Decode.list Api.Data.curveProposalDTODecoder)
 
 
-
 {-| Gets removeLiquidityEvents.
 -}
 curveRemoveLiquidityEventsCurrent : Api.Request (List Api.Data.CurveRemoveLiquidityEventDTO)
@@ -943,7 +885,6 @@ curveRemoveLiquidityEventsCurrent =
         []
         Nothing
         (Json.Decode.list Api.Data.curveRemoveLiquidityEventDTODecoder)
-
 
 
 {-| Gets removeLiquidityOneEvents.
@@ -960,7 +901,6 @@ curveRemoveLiquidityOneEventsCurrent =
         (Json.Decode.list Api.Data.curveRemoveLiquidityOneEventDTODecoder)
 
 
-
 {-| Gets systemStates.
 -}
 curveSystemStatesCurrent : Api.Request (List Api.Data.CurveSystemStateDTO)
@@ -973,7 +913,6 @@ curveSystemStatesCurrent =
         []
         Nothing
         (Json.Decode.list Api.Data.curveSystemStateDTODecoder)
-
 
 
 {-| Gets tokens.
@@ -990,7 +929,6 @@ curveTokensCurrent =
         (Json.Decode.list Api.Data.curveTokenDTODecoder)
 
 
-
 {-| Gets transferOwnershipEvents.
 -}
 curveTransferOwnershipEventsCurrent : Api.Request (List Api.Data.CurveTransferOwnershipEventDTO)
@@ -1003,7 +941,6 @@ curveTransferOwnershipEventsCurrent =
         []
         Nothing
         (Json.Decode.list Api.Data.curveTransferOwnershipEventDTODecoder)
-
 
 
 {-| Gets underlyingCoins.
@@ -1020,7 +957,6 @@ curveUnderlyingCoinsCurrent =
         (Json.Decode.list Api.Data.curveUnderlyingCoinDTODecoder)
 
 
-
 {-| Gets votingApps.
 -}
 curveVotingAppsCurrent : Api.Request (List Api.Data.CurveVotingAppDTO)
@@ -1035,7 +971,6 @@ curveVotingAppsCurrent =
         (Json.Decode.list Api.Data.curveVotingAppDTODecoder)
 
 
-
 {-| Gets weeklyVolumes.
 -}
 curveWeeklyVolumesCurrent : Api.Request (List Api.Data.CurveWeeklyVolumeDTO)
@@ -1048,3 +983,4 @@ curveWeeklyVolumesCurrent =
         []
         Nothing
         (Json.Decode.list Api.Data.curveWeeklyVolumeDTODecoder)
+

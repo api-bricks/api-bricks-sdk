@@ -69,13 +69,13 @@ class CRYPTOPUNKSApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<CRYPTOPUNKSBidDTO> _responseData;
+    BuiltList<CRYPTOPUNKSBidDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(CRYPTOPUNKSBidDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(CRYPTOPUNKSBidDTO)]),
       ) as BuiltList<CRYPTOPUNKSBidDTO>;
 
     } catch (error, stackTrace) {
@@ -142,13 +142,13 @@ class CRYPTOPUNKSApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<CRYPTOPUNKSCollectionDailySnapshotDTO> _responseData;
+    BuiltList<CRYPTOPUNKSCollectionDailySnapshotDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(CRYPTOPUNKSCollectionDailySnapshotDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(CRYPTOPUNKSCollectionDailySnapshotDTO)]),
       ) as BuiltList<CRYPTOPUNKSCollectionDailySnapshotDTO>;
 
     } catch (error, stackTrace) {
@@ -215,13 +215,13 @@ class CRYPTOPUNKSApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<CRYPTOPUNKSCollectionDTO> _responseData;
+    BuiltList<CRYPTOPUNKSCollectionDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(CRYPTOPUNKSCollectionDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(CRYPTOPUNKSCollectionDTO)]),
       ) as BuiltList<CRYPTOPUNKSCollectionDTO>;
 
     } catch (error, stackTrace) {
@@ -288,13 +288,13 @@ class CRYPTOPUNKSApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<CRYPTOPUNKSDataSourcesDTO> _responseData;
+    BuiltList<CRYPTOPUNKSDataSourcesDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(CRYPTOPUNKSDataSourcesDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(CRYPTOPUNKSDataSourcesDTO)]),
       ) as BuiltList<CRYPTOPUNKSDataSourcesDTO>;
 
     } catch (error, stackTrace) {
@@ -380,13 +380,13 @@ class CRYPTOPUNKSApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<CRYPTOPUNKSBidDTO> _responseData;
+    BuiltList<CRYPTOPUNKSBidDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(CRYPTOPUNKSBidDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(CRYPTOPUNKSBidDTO)]),
       ) as BuiltList<CRYPTOPUNKSBidDTO>;
 
     } catch (error, stackTrace) {
@@ -469,13 +469,13 @@ class CRYPTOPUNKSApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<CRYPTOPUNKSCollectionDailySnapshotDTO> _responseData;
+    BuiltList<CRYPTOPUNKSCollectionDailySnapshotDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(CRYPTOPUNKSCollectionDailySnapshotDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(CRYPTOPUNKSCollectionDailySnapshotDTO)]),
       ) as BuiltList<CRYPTOPUNKSCollectionDailySnapshotDTO>;
 
     } catch (error, stackTrace) {
@@ -561,13 +561,13 @@ class CRYPTOPUNKSApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<CRYPTOPUNKSCollectionDTO> _responseData;
+    BuiltList<CRYPTOPUNKSCollectionDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(CRYPTOPUNKSCollectionDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(CRYPTOPUNKSCollectionDTO)]),
       ) as BuiltList<CRYPTOPUNKSCollectionDTO>;
 
     } catch (error, stackTrace) {
@@ -653,13 +653,13 @@ class CRYPTOPUNKSApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<CRYPTOPUNKSDataSourcesDTO> _responseData;
+    BuiltList<CRYPTOPUNKSDataSourcesDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(CRYPTOPUNKSDataSourcesDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(CRYPTOPUNKSDataSourcesDTO)]),
       ) as BuiltList<CRYPTOPUNKSDataSourcesDTO>;
 
     } catch (error, stackTrace) {
@@ -742,13 +742,13 @@ class CRYPTOPUNKSApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<CRYPTOPUNKSItemDTO> _responseData;
+    BuiltList<CRYPTOPUNKSItemDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(CRYPTOPUNKSItemDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(CRYPTOPUNKSItemDTO)]),
       ) as BuiltList<CRYPTOPUNKSItemDTO>;
 
     } catch (error, stackTrace) {
@@ -834,13 +834,13 @@ class CRYPTOPUNKSApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<CRYPTOPUNKSMarketPlaceDTO> _responseData;
+    BuiltList<CRYPTOPUNKSMarketPlaceDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(CRYPTOPUNKSMarketPlaceDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(CRYPTOPUNKSMarketPlaceDTO)]),
       ) as BuiltList<CRYPTOPUNKSMarketPlaceDTO>;
 
     } catch (error, stackTrace) {
@@ -926,13 +926,13 @@ class CRYPTOPUNKSApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<CRYPTOPUNKSMarketplaceDailySnapshotDTO> _responseData;
+    BuiltList<CRYPTOPUNKSMarketplaceDailySnapshotDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(CRYPTOPUNKSMarketplaceDailySnapshotDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(CRYPTOPUNKSMarketplaceDailySnapshotDTO)]),
       ) as BuiltList<CRYPTOPUNKSMarketplaceDailySnapshotDTO>;
 
     } catch (error, stackTrace) {
@@ -1018,13 +1018,13 @@ class CRYPTOPUNKSApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<CRYPTOPUNKSTradeDTO> _responseData;
+    BuiltList<CRYPTOPUNKSTradeDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(CRYPTOPUNKSTradeDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(CRYPTOPUNKSTradeDTO)]),
       ) as BuiltList<CRYPTOPUNKSTradeDTO>;
 
     } catch (error, stackTrace) {
@@ -1110,13 +1110,13 @@ class CRYPTOPUNKSApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<CRYPTOPUNKSUserDTO> _responseData;
+    BuiltList<CRYPTOPUNKSUserDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(CRYPTOPUNKSUserDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(CRYPTOPUNKSUserDTO)]),
       ) as BuiltList<CRYPTOPUNKSUserDTO>;
 
     } catch (error, stackTrace) {
@@ -1183,13 +1183,13 @@ class CRYPTOPUNKSApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<CRYPTOPUNKSItemDTO> _responseData;
+    BuiltList<CRYPTOPUNKSItemDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(CRYPTOPUNKSItemDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(CRYPTOPUNKSItemDTO)]),
       ) as BuiltList<CRYPTOPUNKSItemDTO>;
 
     } catch (error, stackTrace) {
@@ -1256,13 +1256,13 @@ class CRYPTOPUNKSApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<CRYPTOPUNKSMarketPlaceDTO> _responseData;
+    BuiltList<CRYPTOPUNKSMarketPlaceDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(CRYPTOPUNKSMarketPlaceDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(CRYPTOPUNKSMarketPlaceDTO)]),
       ) as BuiltList<CRYPTOPUNKSMarketPlaceDTO>;
 
     } catch (error, stackTrace) {
@@ -1329,13 +1329,13 @@ class CRYPTOPUNKSApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<CRYPTOPUNKSMarketplaceDailySnapshotDTO> _responseData;
+    BuiltList<CRYPTOPUNKSMarketplaceDailySnapshotDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(CRYPTOPUNKSMarketplaceDailySnapshotDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(CRYPTOPUNKSMarketplaceDailySnapshotDTO)]),
       ) as BuiltList<CRYPTOPUNKSMarketplaceDailySnapshotDTO>;
 
     } catch (error, stackTrace) {
@@ -1402,13 +1402,13 @@ class CRYPTOPUNKSApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<CRYPTOPUNKSTradeDTO> _responseData;
+    BuiltList<CRYPTOPUNKSTradeDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(CRYPTOPUNKSTradeDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(CRYPTOPUNKSTradeDTO)]),
       ) as BuiltList<CRYPTOPUNKSTradeDTO>;
 
     } catch (error, stackTrace) {
@@ -1475,13 +1475,13 @@ class CRYPTOPUNKSApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<CRYPTOPUNKSUserDTO> _responseData;
+    BuiltList<CRYPTOPUNKSUserDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(CRYPTOPUNKSUserDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(CRYPTOPUNKSUserDTO)]),
       ) as BuiltList<CRYPTOPUNKSUserDTO>;
 
     } catch (error, stackTrace) {

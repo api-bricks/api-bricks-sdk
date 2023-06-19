@@ -34,6 +34,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
@@ -48,7 +52,7 @@ import org.openapitools.client.JSON;
 /**
  * The Uniswap Factory entity is responsible for storing aggregate information across all Uniswap pairs. It can be used to view stats about total liquidity, volume, amount of pairs and more.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-07T11:31:09.822924Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-19T09:28:48.156871Z[Etc/UTC]")
 public class UniswapV2UniswapFactoryDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -112,7 +116,6 @@ public class UniswapV2UniswapFactoryDTO {
    * @return entryTime
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getEntryTime() {
     return entryTime;
   }
@@ -134,7 +137,6 @@ public class UniswapV2UniswapFactoryDTO {
    * @return recvTime
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getRecvTime() {
     return recvTime;
   }
@@ -156,7 +158,6 @@ public class UniswapV2UniswapFactoryDTO {
    * @return blockNumber
   **/
   @javax.annotation.Nullable
-
   public Long getBlockNumber() {
     return blockNumber;
   }
@@ -178,7 +179,6 @@ public class UniswapV2UniswapFactoryDTO {
    * @return id
   **/
   @javax.annotation.Nullable
-
   public String getId() {
     return id;
   }
@@ -200,7 +200,6 @@ public class UniswapV2UniswapFactoryDTO {
    * @return pairCount
   **/
   @javax.annotation.Nullable
-
   public Integer getPairCount() {
     return pairCount;
   }
@@ -222,7 +221,6 @@ public class UniswapV2UniswapFactoryDTO {
    * @return totalVolumeUsd
   **/
   @javax.annotation.Nullable
-
   public String getTotalVolumeUsd() {
     return totalVolumeUsd;
   }
@@ -244,7 +242,6 @@ public class UniswapV2UniswapFactoryDTO {
    * @return totalVolumeEth
   **/
   @javax.annotation.Nullable
-
   public String getTotalVolumeEth() {
     return totalVolumeEth;
   }
@@ -266,7 +263,6 @@ public class UniswapV2UniswapFactoryDTO {
    * @return untrackedVolumeUsd
   **/
   @javax.annotation.Nullable
-
   public String getUntrackedVolumeUsd() {
     return untrackedVolumeUsd;
   }
@@ -288,7 +284,6 @@ public class UniswapV2UniswapFactoryDTO {
    * @return totalLiquidityUsd
   **/
   @javax.annotation.Nullable
-
   public String getTotalLiquidityUsd() {
     return totalLiquidityUsd;
   }
@@ -310,7 +305,6 @@ public class UniswapV2UniswapFactoryDTO {
    * @return totalLiquidityEth
   **/
   @javax.annotation.Nullable
-
   public String getTotalLiquidityEth() {
     return totalLiquidityEth;
   }
@@ -332,7 +326,6 @@ public class UniswapV2UniswapFactoryDTO {
    * @return txCount
   **/
   @javax.annotation.Nullable
-
   public String getTxCount() {
     return txCount;
   }
@@ -354,7 +347,6 @@ public class UniswapV2UniswapFactoryDTO {
    * @return vid
   **/
   @javax.annotation.Nullable
-
   public Long getVid() {
     return vid;
   }

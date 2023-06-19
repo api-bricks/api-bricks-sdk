@@ -40,7 +40,7 @@ class TransactionsETradeAggressiveSide {
 
   static TransactionsETradeAggressiveSide? fromJson(dynamic value) => TransactionsETradeAggressiveSideTypeTransformer().decode(value);
 
-  static List<TransactionsETradeAggressiveSide>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<TransactionsETradeAggressiveSide> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <TransactionsETradeAggressiveSide>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {

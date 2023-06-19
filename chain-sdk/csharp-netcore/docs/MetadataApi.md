@@ -8,7 +8,7 @@ All URIs are relative to *https://onchain.coinapi.io*
 | [**MetadataDappsDappNameGet**](MetadataApi.md#metadatadappsdappnameget) | **GET** /metadata/dapps/{dappName} | Gets dapp by name. |
 | [**MetadataDappsGet**](MetadataApi.md#metadatadappsget) | **GET** /metadata/dapps | List all decentralized applications. |
 
-<a name="metadatachainsget"></a>
+<a id="metadatachainsget"></a>
 # **MetadataChainsGet**
 > void MetadataChainsGet ()
 
@@ -88,7 +88,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="metadatadappsdappnameget"></a>
+<a id="metadatadappsdappnameget"></a>
 # **MetadataDappsDappNameGet**
 > void MetadataDappsDappNameGet (string dappName)
 
@@ -173,7 +173,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="metadatadappsget"></a>
+<a id="metadatadappsget"></a>
 # **MetadataDappsGet**
 > void MetadataDappsGet ()
 

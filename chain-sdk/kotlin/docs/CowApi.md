@@ -16,7 +16,7 @@ Method | HTTP request | Description
 [**cowUsersCurrent**](CowApi.md#cowUsersCurrent) | **GET** /dapps/cow/users/current | Users (current)
 
 
-<a name="cowGetOrdersHistorical"></a>
+<a id="cowGetOrdersHistorical"></a>
 # **cowGetOrdersHistorical**
 > kotlin.collections.List&lt;CowOrderDTO&gt; cowGetOrdersHistorical(startBlock, endBlock, startDate, endDate, id)
 
@@ -71,7 +71,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="cowGetSettlementsHistorical"></a>
+<a id="cowGetSettlementsHistorical"></a>
 # **cowGetSettlementsHistorical**
 > kotlin.collections.List&lt;CowSettlementDTO&gt; cowGetSettlementsHistorical(startBlock, endBlock, startDate, endDate, id)
 
@@ -126,7 +126,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="cowGetTokensHistorical"></a>
+<a id="cowGetTokensHistorical"></a>
 # **cowGetTokensHistorical**
 > kotlin.collections.List&lt;CowTokenDTO&gt; cowGetTokensHistorical(startBlock, endBlock, startDate, endDate, id, address, name, symbol)
 
@@ -187,7 +187,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="cowGetTradesHistorical"></a>
+<a id="cowGetTradesHistorical"></a>
 # **cowGetTradesHistorical**
 > kotlin.collections.List&lt;CowTradeDTO&gt; cowGetTradesHistorical(startBlock, endBlock, startDate, endDate, id, sellToken, buyToken)
 
@@ -246,7 +246,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="cowGetUsersHistorical"></a>
+<a id="cowGetUsersHistorical"></a>
 # **cowGetUsersHistorical**
 > kotlin.collections.List&lt;CowUserDTO&gt; cowGetUsersHistorical(startBlock, endBlock, startDate, endDate, id, address)
 
@@ -303,7 +303,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="cowOrdersCurrent"></a>
+<a id="cowOrdersCurrent"></a>
 # **cowOrdersCurrent**
 > kotlin.collections.List&lt;CowOrderDTO&gt; cowOrdersCurrent()
 
@@ -346,7 +346,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="cowSettlementsCurrent"></a>
+<a id="cowSettlementsCurrent"></a>
 # **cowSettlementsCurrent**
 > kotlin.collections.List&lt;CowSettlementDTO&gt; cowSettlementsCurrent()
 
@@ -389,7 +389,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="cowTokensCurrent"></a>
+<a id="cowTokensCurrent"></a>
 # **cowTokensCurrent**
 > kotlin.collections.List&lt;CowTokenDTO&gt; cowTokensCurrent()
 
@@ -432,7 +432,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="cowTradesCurrent"></a>
+<a id="cowTradesCurrent"></a>
 # **cowTradesCurrent**
 > kotlin.collections.List&lt;CowTradeDTO&gt; cowTradesCurrent()
 
@@ -475,7 +475,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="cowUsersCurrent"></a>
+<a id="cowUsersCurrent"></a>
 # **cowUsersCurrent**
 > kotlin.collections.List&lt;CowUserDTO&gt; cowUsersCurrent()
 

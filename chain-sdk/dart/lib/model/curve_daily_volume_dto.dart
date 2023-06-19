@@ -184,7 +184,7 @@ class CurveDailyVolumeDTO {
     return null;
   }
 
-  static List<CurveDailyVolumeDTO>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<CurveDailyVolumeDTO> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <CurveDailyVolumeDTO>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -215,12 +215,10 @@ class CurveDailyVolumeDTO {
   static Map<String, List<CurveDailyVolumeDTO>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<CurveDailyVolumeDTO>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = CurveDailyVolumeDTO.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = CurveDailyVolumeDTO.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

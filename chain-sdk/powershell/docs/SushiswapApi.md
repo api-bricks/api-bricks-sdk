@@ -38,7 +38,7 @@ Method | HTTP request | Description
 [**Invoke-SushiswapUsersCurrent**](SushiswapApi.md#Invoke-SushiswapUsersCurrent) | **GET** /dapps/sushiswap/users/current | Users (current)
 
 
-<a name="Invoke-SushiswapBundlesCurrent"></a>
+<a id="Invoke-SushiswapBundlesCurrent"></a>
 # **Invoke-SushiswapBundlesCurrent**
 > SushiswapBundleDTO[] Invoke-SushiswapBundlesCurrent<br>
 
@@ -76,7 +76,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-SushiswapBurnsCurrent"></a>
+<a id="Invoke-SushiswapBurnsCurrent"></a>
 # **Invoke-SushiswapBurnsCurrent**
 > SushiswapBurnDTO[] Invoke-SushiswapBurnsCurrent<br>
 
@@ -114,7 +114,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-SushiswapDayDataCurrent"></a>
+<a id="Invoke-SushiswapDayDataCurrent"></a>
 # **Invoke-SushiswapDayDataCurrent**
 > SushiswapDayDataDTO[] Invoke-SushiswapDayDataCurrent<br>
 
@@ -152,7 +152,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-SushiswapFactoriesCurrent"></a>
+<a id="Invoke-SushiswapFactoriesCurrent"></a>
 # **Invoke-SushiswapFactoriesCurrent**
 > SushiswapFactoryDTO[] Invoke-SushiswapFactoriesCurrent<br>
 
@@ -190,7 +190,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-SushiswapGetBundlesHistorical"></a>
+<a id="Invoke-SushiswapGetBundlesHistorical"></a>
 # **Invoke-SushiswapGetBundlesHistorical**
 > SushiswapBundleDTO[] Invoke-SushiswapGetBundlesHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
@@ -245,7 +245,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-SushiswapGetBurnsHistorical"></a>
+<a id="Invoke-SushiswapGetBurnsHistorical"></a>
 # **Invoke-SushiswapGetBurnsHistorical**
 > SushiswapBurnDTO[] Invoke-SushiswapGetBurnsHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
@@ -303,7 +303,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-SushiswapGetDayDataHistorical"></a>
+<a id="Invoke-SushiswapGetDayDataHistorical"></a>
 # **Invoke-SushiswapGetDayDataHistorical**
 > SushiswapDayDataDTO[] Invoke-SushiswapGetDayDataHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
@@ -358,7 +358,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-SushiswapGetFactoriesHistorical"></a>
+<a id="Invoke-SushiswapGetFactoriesHistorical"></a>
 # **Invoke-SushiswapGetFactoriesHistorical**
 > SushiswapFactoryDTO[] Invoke-SushiswapGetFactoriesHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
@@ -413,7 +413,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-SushiswapGetHourDataHistorical"></a>
+<a id="Invoke-SushiswapGetHourDataHistorical"></a>
 # **Invoke-SushiswapGetHourDataHistorical**
 > SushiswapHourDataDTO[] Invoke-SushiswapGetHourDataHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
@@ -468,7 +468,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-SushiswapGetLiquidityPositionSnapshotsHistorical"></a>
+<a id="Invoke-SushiswapGetLiquidityPositionSnapshotsHistorical"></a>
 # **Invoke-SushiswapGetLiquidityPositionSnapshotsHistorical**
 > SushiswapLiquidityPositionSnapshotDTO[] Invoke-SushiswapGetLiquidityPositionSnapshotsHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
@@ -529,7 +529,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-SushiswapGetLiquidityPositionsHistorical"></a>
+<a id="Invoke-SushiswapGetLiquidityPositionsHistorical"></a>
 # **Invoke-SushiswapGetLiquidityPositionsHistorical**
 > SushiswapLiquidityPositionDTO[] Invoke-SushiswapGetLiquidityPositionsHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
@@ -590,7 +590,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-SushiswapGetMintsHistorical"></a>
+<a id="Invoke-SushiswapGetMintsHistorical"></a>
 # **Invoke-SushiswapGetMintsHistorical**
 > SushiswapMintDTO[] Invoke-SushiswapGetMintsHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
@@ -648,7 +648,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-SushiswapGetPairDayDataHistorical"></a>
+<a id="Invoke-SushiswapGetPairDayDataHistorical"></a>
 # **Invoke-SushiswapGetPairDayDataHistorical**
 > SushiswapPairDayDataDTO[] Invoke-SushiswapGetPairDayDataHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
@@ -712,7 +712,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-SushiswapGetPairHourDataHistorical"></a>
+<a id="Invoke-SushiswapGetPairHourDataHistorical"></a>
 # **Invoke-SushiswapGetPairHourDataHistorical**
 > SushiswapPairHourDataDTO[] Invoke-SushiswapGetPairHourDataHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
@@ -770,7 +770,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-SushiswapGetPairsHistorical"></a>
+<a id="Invoke-SushiswapGetPairsHistorical"></a>
 # **Invoke-SushiswapGetPairsHistorical**
 > SushiswapPairDTO[] Invoke-SushiswapGetPairsHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
@@ -834,7 +834,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-SushiswapGetSwapsHistorical"></a>
+<a id="Invoke-SushiswapGetSwapsHistorical"></a>
 # **Invoke-SushiswapGetSwapsHistorical**
 > SushiswapSwapDTO[] Invoke-SushiswapGetSwapsHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
@@ -892,7 +892,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-SushiswapGetTokenDayDataHistorical"></a>
+<a id="Invoke-SushiswapGetTokenDayDataHistorical"></a>
 # **Invoke-SushiswapGetTokenDayDataHistorical**
 > SushiswapTokenDayDataDTO[] Invoke-SushiswapGetTokenDayDataHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
@@ -947,7 +947,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-SushiswapGetTokensHistorical"></a>
+<a id="Invoke-SushiswapGetTokensHistorical"></a>
 # **Invoke-SushiswapGetTokensHistorical**
 > SushiswapTokenDTO[] Invoke-SushiswapGetTokensHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
@@ -1008,7 +1008,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-SushiswapGetTransactionsHistorical"></a>
+<a id="Invoke-SushiswapGetTransactionsHistorical"></a>
 # **Invoke-SushiswapGetTransactionsHistorical**
 > SushiswapTransactionDTO[] Invoke-SushiswapGetTransactionsHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
@@ -1063,7 +1063,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-SushiswapGetUsersHistorical"></a>
+<a id="Invoke-SushiswapGetUsersHistorical"></a>
 # **Invoke-SushiswapGetUsersHistorical**
 > SushiswapUserDTO[] Invoke-SushiswapGetUsersHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
@@ -1118,7 +1118,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-SushiswapHourDataCurrent"></a>
+<a id="Invoke-SushiswapHourDataCurrent"></a>
 # **Invoke-SushiswapHourDataCurrent**
 > SushiswapHourDataDTO[] Invoke-SushiswapHourDataCurrent<br>
 
@@ -1156,7 +1156,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-SushiswapLiquidityPositionSnapshotsCurrent"></a>
+<a id="Invoke-SushiswapLiquidityPositionSnapshotsCurrent"></a>
 # **Invoke-SushiswapLiquidityPositionSnapshotsCurrent**
 > SushiswapLiquidityPositionSnapshotDTO[] Invoke-SushiswapLiquidityPositionSnapshotsCurrent<br>
 
@@ -1194,7 +1194,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-SushiswapLiquidityPositionsCurrent"></a>
+<a id="Invoke-SushiswapLiquidityPositionsCurrent"></a>
 # **Invoke-SushiswapLiquidityPositionsCurrent**
 > SushiswapLiquidityPositionDTO[] Invoke-SushiswapLiquidityPositionsCurrent<br>
 
@@ -1232,7 +1232,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-SushiswapMintsCurrent"></a>
+<a id="Invoke-SushiswapMintsCurrent"></a>
 # **Invoke-SushiswapMintsCurrent**
 > SushiswapMintDTO[] Invoke-SushiswapMintsCurrent<br>
 
@@ -1270,7 +1270,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-SushiswapPairDayDataCurrent"></a>
+<a id="Invoke-SushiswapPairDayDataCurrent"></a>
 # **Invoke-SushiswapPairDayDataCurrent**
 > SushiswapPairDayDataDTO[] Invoke-SushiswapPairDayDataCurrent<br>
 
@@ -1308,7 +1308,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-SushiswapPairHourDataCurrent"></a>
+<a id="Invoke-SushiswapPairHourDataCurrent"></a>
 # **Invoke-SushiswapPairHourDataCurrent**
 > SushiswapPairHourDataDTO[] Invoke-SushiswapPairHourDataCurrent<br>
 
@@ -1346,7 +1346,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-SushiswapPairsCurrent"></a>
+<a id="Invoke-SushiswapPairsCurrent"></a>
 # **Invoke-SushiswapPairsCurrent**
 > SushiswapPairDTO[] Invoke-SushiswapPairsCurrent<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
@@ -1389,7 +1389,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-SushiswapSwapsCurrent"></a>
+<a id="Invoke-SushiswapSwapsCurrent"></a>
 # **Invoke-SushiswapSwapsCurrent**
 > SushiswapSwapDTO[] Invoke-SushiswapSwapsCurrent<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Pair] <String><br>
@@ -1432,7 +1432,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-SushiswapTokenDayDataCurrent"></a>
+<a id="Invoke-SushiswapTokenDayDataCurrent"></a>
 # **Invoke-SushiswapTokenDayDataCurrent**
 > SushiswapTokenDayDataDTO[] Invoke-SushiswapTokenDayDataCurrent<br>
 
@@ -1470,7 +1470,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-SushiswapTokensCurrent"></a>
+<a id="Invoke-SushiswapTokensCurrent"></a>
 # **Invoke-SushiswapTokensCurrent**
 > SushiswapTokenDTO[] Invoke-SushiswapTokensCurrent<br>
 
@@ -1508,7 +1508,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-SushiswapTransactionsCurrent"></a>
+<a id="Invoke-SushiswapTransactionsCurrent"></a>
 # **Invoke-SushiswapTransactionsCurrent**
 > SushiswapTransactionDTO[] Invoke-SushiswapTransactionsCurrent<br>
 
@@ -1546,7 +1546,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-SushiswapUsersCurrent"></a>
+<a id="Invoke-SushiswapUsersCurrent"></a>
 # **Invoke-SushiswapUsersCurrent**
 > SushiswapUserDTO[] Invoke-SushiswapUsersCurrent<br>
 

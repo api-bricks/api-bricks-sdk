@@ -48,14 +48,12 @@ module Api.Request.UniswapV2 exposing
     )
 
 import Api
-import Api.Data
+import Api.Data exposing (..)
 import Api.Time exposing (Posix)
 import Dict
 import Http
 import Json.Decode
 import Json.Encode
-
-
 
 {-| Gets bundles.
 -}
@@ -69,7 +67,6 @@ uniswapV2BundlesCurrent =
         []
         Nothing
         (Json.Decode.list Api.Data.uniswapV2BundleDTODecoder)
-
 
 
 {-| Gets burns.
@@ -86,7 +83,6 @@ uniswapV2BurnsCurrent =
         (Json.Decode.list Api.Data.uniswapV2BurnDTODecoder)
 
 
-
 {-| Gets bundles.
 -}
 uniswapV2GetBundlesHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.UniswapV2BundleDTO)
@@ -99,7 +95,6 @@ uniswapV2GetBundlesHistorical startBlock_query endBlock_query startDate_query en
         []
         Nothing
         (Json.Decode.list Api.Data.uniswapV2BundleDTODecoder)
-
 
 
 {-| Gets burns.
@@ -116,7 +111,6 @@ uniswapV2GetBurnsHistorical startBlock_query endBlock_query startDate_query endD
         (Json.Decode.list Api.Data.uniswapV2BurnDTODecoder)
 
 
-
 {-| Gets liquidityPositionSnapshots.
 -}
 uniswapV2GetLiquidityPositionSnapshotsHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Maybe String -> Maybe String -> Api.Request (List Api.Data.UniswapV2LiquidityPositionSnapshotDTO)
@@ -129,7 +123,6 @@ uniswapV2GetLiquidityPositionSnapshotsHistorical startBlock_query endBlock_query
         []
         Nothing
         (Json.Decode.list Api.Data.uniswapV2LiquidityPositionSnapshotDTODecoder)
-
 
 
 {-| Gets liquidityPositions.
@@ -146,7 +139,6 @@ uniswapV2GetLiquidityPositionsHistorical startBlock_query endBlock_query startDa
         (Json.Decode.list Api.Data.uniswapV2LiquidityPositionDTODecoder)
 
 
-
 {-| Gets mints.
 -}
 uniswapV2GetMintsHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Maybe String -> Api.Request (List Api.Data.UniswapV2MintDTO)
@@ -159,7 +151,6 @@ uniswapV2GetMintsHistorical startBlock_query endBlock_query startDate_query endD
         []
         Nothing
         (Json.Decode.list Api.Data.uniswapV2MintDTODecoder)
-
 
 
 {-| Gets pairDayData.
@@ -176,7 +167,6 @@ uniswapV2GetPairDayDataHistorical startBlock_query endBlock_query startDate_quer
         (Json.Decode.list Api.Data.uniswapV2PairDayDataDTODecoder)
 
 
-
 {-| Gets pairHourData.
 -}
 uniswapV2GetPairHourDataHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Maybe String -> Api.Request (List Api.Data.UniswapV2PairHourDataDTO)
@@ -189,7 +179,6 @@ uniswapV2GetPairHourDataHistorical startBlock_query endBlock_query startDate_que
         []
         Nothing
         (Json.Decode.list Api.Data.uniswapV2PairHourDataDTODecoder)
-
 
 
 {-| Gets pairs.
@@ -206,7 +195,6 @@ uniswapV2GetPairsHistorical startBlock_query endBlock_query startDate_query endD
         (Json.Decode.list Api.Data.uniswapV2PairDTODecoder)
 
 
-
 {-| Gets swaps.
 -}
 uniswapV2GetSwapsHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Maybe String -> Api.Request (List Api.Data.UniswapV2SwapDTO)
@@ -219,7 +207,6 @@ uniswapV2GetSwapsHistorical startBlock_query endBlock_query startDate_query endD
         []
         Nothing
         (Json.Decode.list Api.Data.uniswapV2SwapDTODecoder)
-
 
 
 {-| Gets tokenDayData.
@@ -236,7 +223,6 @@ uniswapV2GetTokenDayDataHistorical startBlock_query endBlock_query startDate_que
         (Json.Decode.list Api.Data.uniswapV2TokenDayDataDTODecoder)
 
 
-
 {-| Gets tokens.
 -}
 uniswapV2GetTokensHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Maybe String -> Maybe String -> Api.Request (List Api.Data.UniswapV2TokenDTO)
@@ -249,7 +235,6 @@ uniswapV2GetTokensHistorical startBlock_query endBlock_query startDate_query end
         []
         Nothing
         (Json.Decode.list Api.Data.uniswapV2TokenDTODecoder)
-
 
 
 {-| Gets transactions.
@@ -266,7 +251,6 @@ uniswapV2GetTransactionsHistorical startBlock_query endBlock_query startDate_que
         (Json.Decode.list Api.Data.uniswapV2TransactionDTODecoder)
 
 
-
 {-| Gets uniswapDayData.
 -}
 uniswapV2GetUniswapDayDataHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.UniswapV2UniswapDayDataDTO)
@@ -279,7 +263,6 @@ uniswapV2GetUniswapDayDataHistorical startBlock_query endBlock_query startDate_q
         []
         Nothing
         (Json.Decode.list Api.Data.uniswapV2UniswapDayDataDTODecoder)
-
 
 
 {-| Gets uniswapFactories.
@@ -296,7 +279,6 @@ uniswapV2GetUniswapFactoriesHistorical startBlock_query endBlock_query startDate
         (Json.Decode.list Api.Data.uniswapV2UniswapFactoryDTODecoder)
 
 
-
 {-| Gets users.
 -}
 uniswapV2GetUsersHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.UniswapV2UserDTO)
@@ -309,7 +291,6 @@ uniswapV2GetUsersHistorical startBlock_query endBlock_query startDate_query endD
         []
         Nothing
         (Json.Decode.list Api.Data.uniswapV2UserDTODecoder)
-
 
 
 {-| Gets liquidityPositionSnapshots.
@@ -326,7 +307,6 @@ uniswapV2LiquidityPositionSnapshotsCurrent =
         (Json.Decode.list Api.Data.uniswapV2LiquidityPositionSnapshotDTODecoder)
 
 
-
 {-| Gets liquidityPositions.
 -}
 uniswapV2LiquidityPositionsCurrent : Api.Request (List Api.Data.UniswapV2LiquidityPositionDTO)
@@ -339,7 +319,6 @@ uniswapV2LiquidityPositionsCurrent =
         []
         Nothing
         (Json.Decode.list Api.Data.uniswapV2LiquidityPositionDTODecoder)
-
 
 
 {-| Gets mints.
@@ -356,7 +335,6 @@ uniswapV2MintsCurrent =
         (Json.Decode.list Api.Data.uniswapV2MintDTODecoder)
 
 
-
 {-| Gets pairDayData.
 -}
 uniswapV2PairDayDataCurrent : Api.Request (List Api.Data.UniswapV2PairDayDataDTO)
@@ -369,7 +347,6 @@ uniswapV2PairDayDataCurrent =
         []
         Nothing
         (Json.Decode.list Api.Data.uniswapV2PairDayDataDTODecoder)
-
 
 
 {-| Gets pairHourData.
@@ -386,7 +363,6 @@ uniswapV2PairHourDataCurrent =
         (Json.Decode.list Api.Data.uniswapV2PairHourDataDTODecoder)
 
 
-
 {-| Gets pairs.
 -}
 uniswapV2PairsCurrent : Maybe String -> Api.Request (List Api.Data.UniswapV2PairDTO)
@@ -399,7 +375,6 @@ uniswapV2PairsCurrent id_query =
         []
         Nothing
         (Json.Decode.list Api.Data.uniswapV2PairDTODecoder)
-
 
 
 {-| Gets swaps.
@@ -416,7 +391,6 @@ uniswapV2SwapsCurrent pair_query =
         (Json.Decode.list Api.Data.uniswapV2SwapDTODecoder)
 
 
-
 {-| Gets tokenDayData.
 -}
 uniswapV2TokenDayDataCurrent : Api.Request (List Api.Data.UniswapV2TokenDayDataDTO)
@@ -429,7 +403,6 @@ uniswapV2TokenDayDataCurrent =
         []
         Nothing
         (Json.Decode.list Api.Data.uniswapV2TokenDayDataDTODecoder)
-
 
 
 {-| Gets tokens.
@@ -446,7 +419,6 @@ uniswapV2TokensCurrent =
         (Json.Decode.list Api.Data.uniswapV2TokenDTODecoder)
 
 
-
 {-| Gets transactions.
 -}
 uniswapV2TransactionsCurrent : Api.Request (List Api.Data.UniswapV2TransactionDTO)
@@ -459,7 +431,6 @@ uniswapV2TransactionsCurrent =
         []
         Nothing
         (Json.Decode.list Api.Data.uniswapV2TransactionDTODecoder)
-
 
 
 {-| Gets uniswapDayData.
@@ -476,7 +447,6 @@ uniswapV2UniswapDayDataCurrent =
         (Json.Decode.list Api.Data.uniswapV2UniswapDayDataDTODecoder)
 
 
-
 {-| Gets uniswapFactories.
 -}
 uniswapV2UniswapFactoriesCurrent : Api.Request (List Api.Data.UniswapV2UniswapFactoryDTO)
@@ -491,7 +461,6 @@ uniswapV2UniswapFactoriesCurrent =
         (Json.Decode.list Api.Data.uniswapV2UniswapFactoryDTODecoder)
 
 
-
 {-| Gets users.
 -}
 uniswapV2UsersCurrent : Api.Request (List Api.Data.UniswapV2UserDTO)
@@ -504,3 +473,4 @@ uniswapV2UsersCurrent =
         []
         Nothing
         (Json.Decode.list Api.Data.uniswapV2UserDTODecoder)
+

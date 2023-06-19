@@ -34,6 +34,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
@@ -48,7 +52,7 @@ import org.openapitools.client.JSON;
 /**
  * CowOrderDTO
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-07T11:31:09.822924Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-19T09:28:48.156871Z[Etc/UTC]")
 public class CowOrderDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -108,7 +112,6 @@ public class CowOrderDTO {
    * @return entryTime
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getEntryTime() {
     return entryTime;
   }
@@ -130,7 +133,6 @@ public class CowOrderDTO {
    * @return recvTime
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getRecvTime() {
     return recvTime;
   }
@@ -152,7 +154,6 @@ public class CowOrderDTO {
    * @return blockNumber
   **/
   @javax.annotation.Nullable
-
   public Long getBlockNumber() {
     return blockNumber;
   }
@@ -174,7 +175,6 @@ public class CowOrderDTO {
    * @return id
   **/
   @javax.annotation.Nullable
-
   public String getId() {
     return id;
   }
@@ -196,7 +196,6 @@ public class CowOrderDTO {
    * @return owner
   **/
   @javax.annotation.Nullable
-
   public String getOwner() {
     return owner;
   }
@@ -218,7 +217,6 @@ public class CowOrderDTO {
    * @return tradesTimestamp
   **/
   @javax.annotation.Nullable
-
   public String getTradesTimestamp() {
     return tradesTimestamp;
   }
@@ -240,7 +238,6 @@ public class CowOrderDTO {
    * @return invalidateTimestamp
   **/
   @javax.annotation.Nullable
-
   public String getInvalidateTimestamp() {
     return invalidateTimestamp;
   }
@@ -262,7 +259,6 @@ public class CowOrderDTO {
    * @return presignTimestamp
   **/
   @javax.annotation.Nullable
-
   public String getPresignTimestamp() {
     return presignTimestamp;
   }
@@ -284,7 +280,6 @@ public class CowOrderDTO {
    * @return isSigned
   **/
   @javax.annotation.Nullable
-
   public Boolean getIsSigned() {
     return isSigned;
   }
@@ -306,7 +301,6 @@ public class CowOrderDTO {
    * @return isValid
   **/
   @javax.annotation.Nullable
-
   public Boolean getIsValid() {
     return isValid;
   }
@@ -328,7 +322,6 @@ public class CowOrderDTO {
    * @return vid
   **/
   @javax.annotation.Nullable
-
   public Long getVid() {
     return vid;
   }

@@ -34,6 +34,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
@@ -48,7 +52,7 @@ import org.openapitools.client.JSON;
 /**
  * Hourly stats tracker for pool.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-07T11:31:09.822924Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-19T09:28:48.156871Z[Etc/UTC]")
 public class UniswapV3PoolHourDataDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -160,7 +164,6 @@ public class UniswapV3PoolHourDataDTO {
    * @return entryTime
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getEntryTime() {
     return entryTime;
   }
@@ -182,7 +185,6 @@ public class UniswapV3PoolHourDataDTO {
    * @return recvTime
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getRecvTime() {
     return recvTime;
   }
@@ -204,7 +206,6 @@ public class UniswapV3PoolHourDataDTO {
    * @return blockNumber
   **/
   @javax.annotation.Nullable
-
   public Long getBlockNumber() {
     return blockNumber;
   }
@@ -226,7 +227,6 @@ public class UniswapV3PoolHourDataDTO {
    * @return id
   **/
   @javax.annotation.Nullable
-
   public String getId() {
     return id;
   }
@@ -248,7 +248,6 @@ public class UniswapV3PoolHourDataDTO {
    * @return periodStartUnix
   **/
   @javax.annotation.Nullable
-
   public Integer getPeriodStartUnix() {
     return periodStartUnix;
   }
@@ -270,7 +269,6 @@ public class UniswapV3PoolHourDataDTO {
    * @return pool
   **/
   @javax.annotation.Nullable
-
   public String getPool() {
     return pool;
   }
@@ -292,7 +290,6 @@ public class UniswapV3PoolHourDataDTO {
    * @return liquidity
   **/
   @javax.annotation.Nullable
-
   public String getLiquidity() {
     return liquidity;
   }
@@ -314,7 +311,6 @@ public class UniswapV3PoolHourDataDTO {
    * @return sqrtPrice
   **/
   @javax.annotation.Nullable
-
   public String getSqrtPrice() {
     return sqrtPrice;
   }
@@ -336,7 +332,6 @@ public class UniswapV3PoolHourDataDTO {
    * @return token0Price
   **/
   @javax.annotation.Nullable
-
   public String getToken0Price() {
     return token0Price;
   }
@@ -358,7 +353,6 @@ public class UniswapV3PoolHourDataDTO {
    * @return token1Price
   **/
   @javax.annotation.Nullable
-
   public String getToken1Price() {
     return token1Price;
   }
@@ -380,7 +374,6 @@ public class UniswapV3PoolHourDataDTO {
    * @return tick
   **/
   @javax.annotation.Nullable
-
   public String getTick() {
     return tick;
   }
@@ -402,7 +395,6 @@ public class UniswapV3PoolHourDataDTO {
    * @return feeGrowthGlobal0x128
   **/
   @javax.annotation.Nullable
-
   public String getFeeGrowthGlobal0x128() {
     return feeGrowthGlobal0x128;
   }
@@ -424,7 +416,6 @@ public class UniswapV3PoolHourDataDTO {
    * @return feeGrowthGlobal1x128
   **/
   @javax.annotation.Nullable
-
   public String getFeeGrowthGlobal1x128() {
     return feeGrowthGlobal1x128;
   }
@@ -446,7 +437,6 @@ public class UniswapV3PoolHourDataDTO {
    * @return tvlUsd
   **/
   @javax.annotation.Nullable
-
   public String getTvlUsd() {
     return tvlUsd;
   }
@@ -468,7 +458,6 @@ public class UniswapV3PoolHourDataDTO {
    * @return volumeToken0
   **/
   @javax.annotation.Nullable
-
   public String getVolumeToken0() {
     return volumeToken0;
   }
@@ -490,7 +479,6 @@ public class UniswapV3PoolHourDataDTO {
    * @return volumeToken1
   **/
   @javax.annotation.Nullable
-
   public String getVolumeToken1() {
     return volumeToken1;
   }
@@ -512,7 +500,6 @@ public class UniswapV3PoolHourDataDTO {
    * @return volumeUsd
   **/
   @javax.annotation.Nullable
-
   public String getVolumeUsd() {
     return volumeUsd;
   }
@@ -534,7 +521,6 @@ public class UniswapV3PoolHourDataDTO {
    * @return feesUsd
   **/
   @javax.annotation.Nullable
-
   public String getFeesUsd() {
     return feesUsd;
   }
@@ -556,7 +542,6 @@ public class UniswapV3PoolHourDataDTO {
    * @return txCount
   **/
   @javax.annotation.Nullable
-
   public String getTxCount() {
     return txCount;
   }
@@ -578,7 +563,6 @@ public class UniswapV3PoolHourDataDTO {
    * @return open
   **/
   @javax.annotation.Nullable
-
   public String getOpen() {
     return open;
   }
@@ -600,7 +584,6 @@ public class UniswapV3PoolHourDataDTO {
    * @return high
   **/
   @javax.annotation.Nullable
-
   public String getHigh() {
     return high;
   }
@@ -622,7 +605,6 @@ public class UniswapV3PoolHourDataDTO {
    * @return low
   **/
   @javax.annotation.Nullable
-
   public String getLow() {
     return low;
   }
@@ -644,7 +626,6 @@ public class UniswapV3PoolHourDataDTO {
    * @return close
   **/
   @javax.annotation.Nullable
-
   public String getClose() {
     return close;
   }
@@ -666,7 +647,6 @@ public class UniswapV3PoolHourDataDTO {
    * @return vid
   **/
   @javax.annotation.Nullable
-
   public Long getVid() {
     return vid;
   }

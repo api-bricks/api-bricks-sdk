@@ -70,7 +70,7 @@ All URIs are relative to *https://onchain.coinapi.io*
 | [**curveWeeklyVolumesCurrent**](CurveApi.md#curveWeeklyVolumesCurrent) | **GET** /dapps/curve/weeklyVolumes/current | WeeklyVolumes (current) |
 
 
-<a name="curveAccountsCurrent"></a>
+<a id="curveAccountsCurrent"></a>
 # **curveAccountsCurrent**
 > List&lt;CurveAccountDTO&gt; curveAccountsCurrent()
 
@@ -128,7 +128,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="curveAddLiquidityEventsCurrent"></a>
+<a id="curveAddLiquidityEventsCurrent"></a>
 # **curveAddLiquidityEventsCurrent**
 > List&lt;CurveAddLiquidityEventDTO&gt; curveAddLiquidityEventsCurrent()
 
@@ -186,7 +186,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="curveAdminFeeChangeLogsCurrent"></a>
+<a id="curveAdminFeeChangeLogsCurrent"></a>
 # **curveAdminFeeChangeLogsCurrent**
 > List&lt;CurveAdminFeeChangeLogDTO&gt; curveAdminFeeChangeLogsCurrent()
 
@@ -244,7 +244,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="curveAmplificationCoeffChangeLogsCurrent"></a>
+<a id="curveAmplificationCoeffChangeLogsCurrent"></a>
 # **curveAmplificationCoeffChangeLogsCurrent**
 > List&lt;CurveAmplificationCoeffChangeLogDTO&gt; curveAmplificationCoeffChangeLogsCurrent()
 
@@ -302,7 +302,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="curveCoinsCurrent"></a>
+<a id="curveCoinsCurrent"></a>
 # **curveCoinsCurrent**
 > List&lt;CurveCoinDTO&gt; curveCoinsCurrent()
 
@@ -360,7 +360,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="curveContractVersionsCurrent"></a>
+<a id="curveContractVersionsCurrent"></a>
 # **curveContractVersionsCurrent**
 > List&lt;CurveContractVersionDTO&gt; curveContractVersionsCurrent()
 
@@ -418,7 +418,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="curveContractsCurrent"></a>
+<a id="curveContractsCurrent"></a>
 # **curveContractsCurrent**
 > List&lt;CurveContractDTO&gt; curveContractsCurrent()
 
@@ -476,7 +476,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="curveDailyVolumesCurrent"></a>
+<a id="curveDailyVolumesCurrent"></a>
 # **curveDailyVolumesCurrent**
 > List&lt;CurveDailyVolumeDTO&gt; curveDailyVolumesCurrent()
 
@@ -534,7 +534,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="curveExchangesCurrent"></a>
+<a id="curveExchangesCurrent"></a>
 # **curveExchangesCurrent**
 > List&lt;CurveExchangeDTO&gt; curveExchangesCurrent(pool)
 
@@ -596,7 +596,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="curveFeeChangeLogsCurrent"></a>
+<a id="curveFeeChangeLogsCurrent"></a>
 # **curveFeeChangeLogsCurrent**
 > List&lt;CurveFeeChangeLogDTO&gt; curveFeeChangeLogsCurrent()
 
@@ -654,7 +654,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="curveGaugeDepositsCurrent"></a>
+<a id="curveGaugeDepositsCurrent"></a>
 # **curveGaugeDepositsCurrent**
 > List&lt;CurveGaugeDepositDTO&gt; curveGaugeDepositsCurrent()
 
@@ -712,7 +712,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="curveGaugeLiquiditiesCurrent"></a>
+<a id="curveGaugeLiquiditiesCurrent"></a>
 # **curveGaugeLiquiditiesCurrent**
 > List&lt;CurveGaugeLiquidityDTO&gt; curveGaugeLiquiditiesCurrent()
 
@@ -770,7 +770,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="curveGaugeTotalWeightsCurrent"></a>
+<a id="curveGaugeTotalWeightsCurrent"></a>
 # **curveGaugeTotalWeightsCurrent**
 > List&lt;CurveGaugeTotalWeightDTO&gt; curveGaugeTotalWeightsCurrent()
 
@@ -828,7 +828,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="curveGaugeTypeWeightsCurrent"></a>
+<a id="curveGaugeTypeWeightsCurrent"></a>
 # **curveGaugeTypeWeightsCurrent**
 > List&lt;CurveGaugeTypeWeightDTO&gt; curveGaugeTypeWeightsCurrent()
 
@@ -886,7 +886,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="curveGaugeTypesCurrent"></a>
+<a id="curveGaugeTypesCurrent"></a>
 # **curveGaugeTypesCurrent**
 > List&lt;CurveGaugeTypeDTO&gt; curveGaugeTypesCurrent()
 
@@ -944,7 +944,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="curveGaugeWeightVotesCurrent"></a>
+<a id="curveGaugeWeightVotesCurrent"></a>
 # **curveGaugeWeightVotesCurrent**
 > List&lt;CurveGaugeWeightVoteDTO&gt; curveGaugeWeightVotesCurrent()
 
@@ -1002,7 +1002,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="curveGaugeWeightsCurrent"></a>
+<a id="curveGaugeWeightsCurrent"></a>
 # **curveGaugeWeightsCurrent**
 > List&lt;CurveGaugeWeightDTO&gt; curveGaugeWeightsCurrent()
 
@@ -1060,7 +1060,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="curveGaugeWithdrawsCurrent"></a>
+<a id="curveGaugeWithdrawsCurrent"></a>
 # **curveGaugeWithdrawsCurrent**
 > List&lt;CurveGaugeWithdrawDTO&gt; curveGaugeWithdrawsCurrent()
 
@@ -1118,7 +1118,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="curveGaugesCurrent"></a>
+<a id="curveGaugesCurrent"></a>
 # **curveGaugesCurrent**
 > List&lt;CurveGaugeDTO&gt; curveGaugesCurrent()
 
@@ -1176,7 +1176,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="curveGetAccountsHistorical"></a>
+<a id="curveGetAccountsHistorical"></a>
 # **curveGetAccountsHistorical**
 > List&lt;CurveAccountDTO&gt; curveGetAccountsHistorical(startBlock, endBlock, startDate, endDate, id, address)
 
@@ -1248,7 +1248,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="curveGetAddLiquidityEventsHistorical"></a>
+<a id="curveGetAddLiquidityEventsHistorical"></a>
 # **curveGetAddLiquidityEventsHistorical**
 > List&lt;CurveAddLiquidityEventDTO&gt; curveGetAddLiquidityEventsHistorical(startBlock, endBlock, startDate, endDate, id, pool)
 
@@ -1320,7 +1320,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="curveGetAdminFeeChangeLogsHistorical"></a>
+<a id="curveGetAdminFeeChangeLogsHistorical"></a>
 # **curveGetAdminFeeChangeLogsHistorical**
 > List&lt;CurveAdminFeeChangeLogDTO&gt; curveGetAdminFeeChangeLogsHistorical(startBlock, endBlock, startDate, endDate, id, pool)
 
@@ -1392,7 +1392,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="curveGetAmplificationCoeffChangeLogsHistorical"></a>
+<a id="curveGetAmplificationCoeffChangeLogsHistorical"></a>
 # **curveGetAmplificationCoeffChangeLogsHistorical**
 > List&lt;CurveAmplificationCoeffChangeLogDTO&gt; curveGetAmplificationCoeffChangeLogsHistorical(startBlock, endBlock, startDate, endDate, id, pool)
 
@@ -1464,7 +1464,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="curveGetCoinsHistorical"></a>
+<a id="curveGetCoinsHistorical"></a>
 # **curveGetCoinsHistorical**
 > List&lt;CurveCoinDTO&gt; curveGetCoinsHistorical(startBlock, endBlock, startDate, endDate, id, pool)
 
@@ -1536,7 +1536,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="curveGetContractVersionsHistorical"></a>
+<a id="curveGetContractVersionsHistorical"></a>
 # **curveGetContractVersionsHistorical**
 > List&lt;CurveContractVersionDTO&gt; curveGetContractVersionsHistorical(startBlock, endBlock, startDate, endDate, id, address)
 
@@ -1608,7 +1608,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="curveGetContractsHistorical"></a>
+<a id="curveGetContractsHistorical"></a>
 # **curveGetContractsHistorical**
 > List&lt;CurveContractDTO&gt; curveGetContractsHistorical(startBlock, endBlock, startDate, endDate, id)
 
@@ -1678,7 +1678,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="curveGetDailyVolumesHistorical"></a>
+<a id="curveGetDailyVolumesHistorical"></a>
 # **curveGetDailyVolumesHistorical**
 > List&lt;CurveDailyVolumeDTO&gt; curveGetDailyVolumesHistorical(startBlock, endBlock, startDate, endDate, id, pool)
 
@@ -1750,7 +1750,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="curveGetExchangesHistorical"></a>
+<a id="curveGetExchangesHistorical"></a>
 # **curveGetExchangesHistorical**
 > List&lt;CurveExchangeDTO&gt; curveGetExchangesHistorical(startBlock, endBlock, startDate, endDate, id, pool)
 
@@ -1822,7 +1822,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="curveGetFeeChangeLogsHistorical"></a>
+<a id="curveGetFeeChangeLogsHistorical"></a>
 # **curveGetFeeChangeLogsHistorical**
 > List&lt;CurveFeeChangeLogDTO&gt; curveGetFeeChangeLogsHistorical(startBlock, endBlock, startDate, endDate, id, pool)
 
@@ -1894,7 +1894,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="curveGetGaugeDepositsHistorical"></a>
+<a id="curveGetGaugeDepositsHistorical"></a>
 # **curveGetGaugeDepositsHistorical**
 > List&lt;CurveGaugeDepositDTO&gt; curveGetGaugeDepositsHistorical(startBlock, endBlock, startDate, endDate, id)
 
@@ -1964,7 +1964,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="curveGetGaugeLiquiditiesHistorical"></a>
+<a id="curveGetGaugeLiquiditiesHistorical"></a>
 # **curveGetGaugeLiquiditiesHistorical**
 > List&lt;CurveGaugeLiquidityDTO&gt; curveGetGaugeLiquiditiesHistorical(startBlock, endBlock, startDate, endDate, id, user)
 
@@ -2036,7 +2036,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="curveGetGaugeTotalWeightsHistorical"></a>
+<a id="curveGetGaugeTotalWeightsHistorical"></a>
 # **curveGetGaugeTotalWeightsHistorical**
 > List&lt;CurveGaugeTotalWeightDTO&gt; curveGetGaugeTotalWeightsHistorical(startBlock, endBlock, startDate, endDate, id)
 
@@ -2106,7 +2106,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="curveGetGaugeTypeWeightsHistorical"></a>
+<a id="curveGetGaugeTypeWeightsHistorical"></a>
 # **curveGetGaugeTypeWeightsHistorical**
 > List&lt;CurveGaugeTypeWeightDTO&gt; curveGetGaugeTypeWeightsHistorical(startBlock, endBlock, startDate, endDate, id)
 
@@ -2176,7 +2176,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="curveGetGaugeTypesHistorical"></a>
+<a id="curveGetGaugeTypesHistorical"></a>
 # **curveGetGaugeTypesHistorical**
 > List&lt;CurveGaugeTypeDTO&gt; curveGetGaugeTypesHistorical(startBlock, endBlock, startDate, endDate, id, name)
 
@@ -2248,7 +2248,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="curveGetGaugeWeightVotesHistorical"></a>
+<a id="curveGetGaugeWeightVotesHistorical"></a>
 # **curveGetGaugeWeightVotesHistorical**
 > List&lt;CurveGaugeWeightVoteDTO&gt; curveGetGaugeWeightVotesHistorical(startBlock, endBlock, startDate, endDate, id, user)
 
@@ -2320,7 +2320,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="curveGetGaugeWeightsHistorical"></a>
+<a id="curveGetGaugeWeightsHistorical"></a>
 # **curveGetGaugeWeightsHistorical**
 > List&lt;CurveGaugeWeightDTO&gt; curveGetGaugeWeightsHistorical(startBlock, endBlock, startDate, endDate, id)
 
@@ -2390,7 +2390,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="curveGetGaugeWithdrawsHistorical"></a>
+<a id="curveGetGaugeWithdrawsHistorical"></a>
 # **curveGetGaugeWithdrawsHistorical**
 > List&lt;CurveGaugeWithdrawDTO&gt; curveGetGaugeWithdrawsHistorical(startBlock, endBlock, startDate, endDate, id)
 
@@ -2460,7 +2460,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="curveGetGaugesHistorical"></a>
+<a id="curveGetGaugesHistorical"></a>
 # **curveGetGaugesHistorical**
 > List&lt;CurveGaugeDTO&gt; curveGetGaugesHistorical(startBlock, endBlock, startDate, endDate, id, address, pool)
 
@@ -2534,7 +2534,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="curveGetHourlyVolumesHistorical"></a>
+<a id="curveGetHourlyVolumesHistorical"></a>
 # **curveGetHourlyVolumesHistorical**
 > List&lt;CurveHourlyVolumeDTO&gt; curveGetHourlyVolumesHistorical(startBlock, endBlock, startDate, endDate, id, pool)
 
@@ -2606,7 +2606,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="curveGetLpTokensHistorical"></a>
+<a id="curveGetLpTokensHistorical"></a>
 # **curveGetLpTokensHistorical**
 > List&lt;CurveLpTokenDTO&gt; curveGetLpTokensHistorical(startBlock, endBlock, startDate, endDate, id, address, name, symbol, pool)
 
@@ -2684,7 +2684,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="curveGetPoolsHistorical"></a>
+<a id="curveGetPoolsHistorical"></a>
 # **curveGetPoolsHistorical**
 > List&lt;CurvePoolDTO&gt; curveGetPoolsHistorical(startBlock, endBlock, startDate, endDate, id, name)
 
@@ -2756,7 +2756,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="curveGetProposalVotesHistorical"></a>
+<a id="curveGetProposalVotesHistorical"></a>
 # **curveGetProposalVotesHistorical**
 > List&lt;CurveProposalVoteDTO&gt; curveGetProposalVotesHistorical(startBlock, endBlock, startDate, endDate, id)
 
@@ -2826,7 +2826,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="curveGetProposalsHistorical"></a>
+<a id="curveGetProposalsHistorical"></a>
 # **curveGetProposalsHistorical**
 > List&lt;CurveProposalDTO&gt; curveGetProposalsHistorical(startBlock, endBlock, startDate, endDate, id)
 
@@ -2896,7 +2896,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="curveGetRemoveLiquidityEventsHistorical"></a>
+<a id="curveGetRemoveLiquidityEventsHistorical"></a>
 # **curveGetRemoveLiquidityEventsHistorical**
 > List&lt;CurveRemoveLiquidityEventDTO&gt; curveGetRemoveLiquidityEventsHistorical(startBlock, endBlock, startDate, endDate, id, pool)
 
@@ -2968,7 +2968,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="curveGetRemoveLiquidityOneEventsHistorical"></a>
+<a id="curveGetRemoveLiquidityOneEventsHistorical"></a>
 # **curveGetRemoveLiquidityOneEventsHistorical**
 > List&lt;CurveRemoveLiquidityOneEventDTO&gt; curveGetRemoveLiquidityOneEventsHistorical(startBlock, endBlock, startDate, endDate, id, pool)
 
@@ -3040,7 +3040,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="curveGetSystemStatesHistorical"></a>
+<a id="curveGetSystemStatesHistorical"></a>
 # **curveGetSystemStatesHistorical**
 > List&lt;CurveSystemStateDTO&gt; curveGetSystemStatesHistorical(startBlock, endBlock, startDate, endDate, id)
 
@@ -3110,7 +3110,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="curveGetTokensHistorical"></a>
+<a id="curveGetTokensHistorical"></a>
 # **curveGetTokensHistorical**
 > List&lt;CurveTokenDTO&gt; curveGetTokensHistorical(startBlock, endBlock, startDate, endDate, id, address, name, symbol)
 
@@ -3186,7 +3186,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="curveGetTransferOwnershipEventsHistorical"></a>
+<a id="curveGetTransferOwnershipEventsHistorical"></a>
 # **curveGetTransferOwnershipEventsHistorical**
 > List&lt;CurveTransferOwnershipEventDTO&gt; curveGetTransferOwnershipEventsHistorical(startBlock, endBlock, startDate, endDate, id, pool)
 
@@ -3258,7 +3258,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="curveGetUnderlyingCoinsHistorical"></a>
+<a id="curveGetUnderlyingCoinsHistorical"></a>
 # **curveGetUnderlyingCoinsHistorical**
 > List&lt;CurveUnderlyingCoinDTO&gt; curveGetUnderlyingCoinsHistorical(startBlock, endBlock, startDate, endDate, id, pool)
 
@@ -3330,7 +3330,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="curveGetVotingAppsHistorical"></a>
+<a id="curveGetVotingAppsHistorical"></a>
 # **curveGetVotingAppsHistorical**
 > List&lt;CurveVotingAppDTO&gt; curveGetVotingAppsHistorical(startBlock, endBlock, startDate, endDate, id, address)
 
@@ -3402,7 +3402,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="curveGetWeeklyVolumesHistorical"></a>
+<a id="curveGetWeeklyVolumesHistorical"></a>
 # **curveGetWeeklyVolumesHistorical**
 > List&lt;CurveWeeklyVolumeDTO&gt; curveGetWeeklyVolumesHistorical(startBlock, endBlock, startDate, endDate, id, pool)
 
@@ -3474,7 +3474,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="curveHourlyVolumesCurrent"></a>
+<a id="curveHourlyVolumesCurrent"></a>
 # **curveHourlyVolumesCurrent**
 > List&lt;CurveHourlyVolumeDTO&gt; curveHourlyVolumesCurrent()
 
@@ -3532,7 +3532,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="curveLpTokensCurrent"></a>
+<a id="curveLpTokensCurrent"></a>
 # **curveLpTokensCurrent**
 > List&lt;CurveLpTokenDTO&gt; curveLpTokensCurrent()
 
@@ -3590,7 +3590,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="curvePoolsCurrent"></a>
+<a id="curvePoolsCurrent"></a>
 # **curvePoolsCurrent**
 > List&lt;CurvePoolDTO&gt; curvePoolsCurrent(id)
 
@@ -3652,7 +3652,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="curveProposalVotesCurrent"></a>
+<a id="curveProposalVotesCurrent"></a>
 # **curveProposalVotesCurrent**
 > List&lt;CurveProposalVoteDTO&gt; curveProposalVotesCurrent()
 
@@ -3710,7 +3710,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="curveProposalsCurrent"></a>
+<a id="curveProposalsCurrent"></a>
 # **curveProposalsCurrent**
 > List&lt;CurveProposalDTO&gt; curveProposalsCurrent()
 
@@ -3768,7 +3768,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="curveRemoveLiquidityEventsCurrent"></a>
+<a id="curveRemoveLiquidityEventsCurrent"></a>
 # **curveRemoveLiquidityEventsCurrent**
 > List&lt;CurveRemoveLiquidityEventDTO&gt; curveRemoveLiquidityEventsCurrent()
 
@@ -3826,7 +3826,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="curveRemoveLiquidityOneEventsCurrent"></a>
+<a id="curveRemoveLiquidityOneEventsCurrent"></a>
 # **curveRemoveLiquidityOneEventsCurrent**
 > List&lt;CurveRemoveLiquidityOneEventDTO&gt; curveRemoveLiquidityOneEventsCurrent()
 
@@ -3884,7 +3884,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="curveSystemStatesCurrent"></a>
+<a id="curveSystemStatesCurrent"></a>
 # **curveSystemStatesCurrent**
 > List&lt;CurveSystemStateDTO&gt; curveSystemStatesCurrent()
 
@@ -3942,7 +3942,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="curveTokensCurrent"></a>
+<a id="curveTokensCurrent"></a>
 # **curveTokensCurrent**
 > List&lt;CurveTokenDTO&gt; curveTokensCurrent()
 
@@ -4000,7 +4000,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="curveTransferOwnershipEventsCurrent"></a>
+<a id="curveTransferOwnershipEventsCurrent"></a>
 # **curveTransferOwnershipEventsCurrent**
 > List&lt;CurveTransferOwnershipEventDTO&gt; curveTransferOwnershipEventsCurrent()
 
@@ -4058,7 +4058,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="curveUnderlyingCoinsCurrent"></a>
+<a id="curveUnderlyingCoinsCurrent"></a>
 # **curveUnderlyingCoinsCurrent**
 > List&lt;CurveUnderlyingCoinDTO&gt; curveUnderlyingCoinsCurrent()
 
@@ -4116,7 +4116,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="curveVotingAppsCurrent"></a>
+<a id="curveVotingAppsCurrent"></a>
 # **curveVotingAppsCurrent**
 > List&lt;CurveVotingAppDTO&gt; curveVotingAppsCurrent()
 
@@ -4174,7 +4174,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="curveWeeklyVolumesCurrent"></a>
+<a id="curveWeeklyVolumesCurrent"></a>
 # **curveWeeklyVolumesCurrent**
 > List&lt;CurveWeeklyVolumeDTO&gt; curveWeeklyVolumesCurrent()
 

@@ -34,6 +34,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
@@ -48,7 +52,7 @@ import org.openapitools.client.JSON;
 /**
  * The Uniswap Factory entity is responsible for storing aggregate information across all Uniswap pairs. It can be used to view stats about total liquidity, volume, amount of pairs and more.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-07T11:31:09.822924Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-19T09:28:48.156871Z[Etc/UTC]")
 public class UniswapV3FactoryDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -132,7 +136,6 @@ public class UniswapV3FactoryDTO {
    * @return entryTime
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getEntryTime() {
     return entryTime;
   }
@@ -154,7 +157,6 @@ public class UniswapV3FactoryDTO {
    * @return recvTime
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getRecvTime() {
     return recvTime;
   }
@@ -176,7 +178,6 @@ public class UniswapV3FactoryDTO {
    * @return blockNumber
   **/
   @javax.annotation.Nullable
-
   public Long getBlockNumber() {
     return blockNumber;
   }
@@ -198,7 +199,6 @@ public class UniswapV3FactoryDTO {
    * @return id
   **/
   @javax.annotation.Nullable
-
   public String getId() {
     return id;
   }
@@ -220,7 +220,6 @@ public class UniswapV3FactoryDTO {
    * @return poolCount
   **/
   @javax.annotation.Nullable
-
   public String getPoolCount() {
     return poolCount;
   }
@@ -242,7 +241,6 @@ public class UniswapV3FactoryDTO {
    * @return txCount
   **/
   @javax.annotation.Nullable
-
   public String getTxCount() {
     return txCount;
   }
@@ -264,7 +262,6 @@ public class UniswapV3FactoryDTO {
    * @return totalVolumeUsd
   **/
   @javax.annotation.Nullable
-
   public String getTotalVolumeUsd() {
     return totalVolumeUsd;
   }
@@ -286,7 +283,6 @@ public class UniswapV3FactoryDTO {
    * @return totalVolumeEth
   **/
   @javax.annotation.Nullable
-
   public String getTotalVolumeEth() {
     return totalVolumeEth;
   }
@@ -308,7 +304,6 @@ public class UniswapV3FactoryDTO {
    * @return totalFeesUsd
   **/
   @javax.annotation.Nullable
-
   public String getTotalFeesUsd() {
     return totalFeesUsd;
   }
@@ -330,7 +325,6 @@ public class UniswapV3FactoryDTO {
    * @return totalFeesEth
   **/
   @javax.annotation.Nullable
-
   public String getTotalFeesEth() {
     return totalFeesEth;
   }
@@ -352,7 +346,6 @@ public class UniswapV3FactoryDTO {
    * @return untrackedVolumeUsd
   **/
   @javax.annotation.Nullable
-
   public String getUntrackedVolumeUsd() {
     return untrackedVolumeUsd;
   }
@@ -374,7 +367,6 @@ public class UniswapV3FactoryDTO {
    * @return totalValueLockedUsd
   **/
   @javax.annotation.Nullable
-
   public String getTotalValueLockedUsd() {
     return totalValueLockedUsd;
   }
@@ -396,7 +388,6 @@ public class UniswapV3FactoryDTO {
    * @return totalValueLockedEth
   **/
   @javax.annotation.Nullable
-
   public String getTotalValueLockedEth() {
     return totalValueLockedEth;
   }
@@ -418,7 +409,6 @@ public class UniswapV3FactoryDTO {
    * @return totalValueLockedUsdUntracked
   **/
   @javax.annotation.Nullable
-
   public String getTotalValueLockedUsdUntracked() {
     return totalValueLockedUsdUntracked;
   }
@@ -440,7 +430,6 @@ public class UniswapV3FactoryDTO {
    * @return totalValueLockedEthUntracked
   **/
   @javax.annotation.Nullable
-
   public String getTotalValueLockedEthUntracked() {
     return totalValueLockedEthUntracked;
   }
@@ -462,7 +451,6 @@ public class UniswapV3FactoryDTO {
    * @return owner
   **/
   @javax.annotation.Nullable
-
   public String getOwner() {
     return owner;
   }
@@ -484,7 +472,6 @@ public class UniswapV3FactoryDTO {
    * @return vid
   **/
   @javax.annotation.Nullable
-
   public Long getVid() {
     return vid;
   }

@@ -19,6 +19,7 @@ import org.openapitools.client.models.NumericsBigInteger
 import org.openapitools.client.models.TransactionsETradeAggressiveSide
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * Swap are created for each token swap within a pair.

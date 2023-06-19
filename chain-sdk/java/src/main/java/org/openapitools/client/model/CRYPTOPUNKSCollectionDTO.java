@@ -34,6 +34,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
@@ -48,7 +52,7 @@ import org.openapitools.client.JSON;
 /**
  * CRYPTOPUNKSCollectionDTO
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-07T11:31:09.822924Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-19T09:28:48.156871Z[Etc/UTC]")
 public class CRYPTOPUNKSCollectionDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -132,7 +136,6 @@ public class CRYPTOPUNKSCollectionDTO {
    * @return entryTime
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getEntryTime() {
     return entryTime;
   }
@@ -154,7 +157,6 @@ public class CRYPTOPUNKSCollectionDTO {
    * @return recvTime
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getRecvTime() {
     return recvTime;
   }
@@ -176,7 +178,6 @@ public class CRYPTOPUNKSCollectionDTO {
    * @return blockNumber
   **/
   @javax.annotation.Nullable
-
   public Long getBlockNumber() {
     return blockNumber;
   }
@@ -198,7 +199,6 @@ public class CRYPTOPUNKSCollectionDTO {
    * @return vid
   **/
   @javax.annotation.Nullable
-
   public Long getVid() {
     return vid;
   }
@@ -220,7 +220,6 @@ public class CRYPTOPUNKSCollectionDTO {
    * @return blockRange
   **/
   @javax.annotation.Nullable
-
   public String getBlockRange() {
     return blockRange;
   }
@@ -242,7 +241,6 @@ public class CRYPTOPUNKSCollectionDTO {
    * @return id
   **/
   @javax.annotation.Nullable
-
   public String getId() {
     return id;
   }
@@ -264,7 +262,6 @@ public class CRYPTOPUNKSCollectionDTO {
    * @return name
   **/
   @javax.annotation.Nullable
-
   public String getName() {
     return name;
   }
@@ -286,7 +283,6 @@ public class CRYPTOPUNKSCollectionDTO {
    * @return symbol
   **/
   @javax.annotation.Nullable
-
   public String getSymbol() {
     return symbol;
   }
@@ -308,7 +304,6 @@ public class CRYPTOPUNKSCollectionDTO {
    * @return totalSupply
   **/
   @javax.annotation.Nullable
-
   public String getTotalSupply() {
     return totalSupply;
   }
@@ -330,7 +325,6 @@ public class CRYPTOPUNKSCollectionDTO {
    * @return royaltyFee
   **/
   @javax.annotation.Nullable
-
   public String getRoyaltyFee() {
     return royaltyFee;
   }
@@ -352,7 +346,6 @@ public class CRYPTOPUNKSCollectionDTO {
    * @return cumulativeTradeVolumeEth
   **/
   @javax.annotation.Nullable
-
   public String getCumulativeTradeVolumeEth() {
     return cumulativeTradeVolumeEth;
   }
@@ -374,7 +367,6 @@ public class CRYPTOPUNKSCollectionDTO {
    * @return marketplaceRevenueEth
   **/
   @javax.annotation.Nullable
-
   public String getMarketplaceRevenueEth() {
     return marketplaceRevenueEth;
   }
@@ -396,7 +388,6 @@ public class CRYPTOPUNKSCollectionDTO {
    * @return creatorRevenueEth
   **/
   @javax.annotation.Nullable
-
   public String getCreatorRevenueEth() {
     return creatorRevenueEth;
   }
@@ -418,7 +409,6 @@ public class CRYPTOPUNKSCollectionDTO {
    * @return totalRevenueEth
   **/
   @javax.annotation.Nullable
-
   public String getTotalRevenueEth() {
     return totalRevenueEth;
   }
@@ -440,7 +430,6 @@ public class CRYPTOPUNKSCollectionDTO {
    * @return tradeCount
   **/
   @javax.annotation.Nullable
-
   public Integer getTradeCount() {
     return tradeCount;
   }
@@ -462,7 +451,6 @@ public class CRYPTOPUNKSCollectionDTO {
    * @return buyerCount
   **/
   @javax.annotation.Nullable
-
   public Integer getBuyerCount() {
     return buyerCount;
   }
@@ -484,7 +472,6 @@ public class CRYPTOPUNKSCollectionDTO {
    * @return sellerCount
   **/
   @javax.annotation.Nullable
-
   public Integer getSellerCount() {
     return sellerCount;
   }

@@ -373,7 +373,7 @@ export default class CurveApi {
      * Exchanges (current)
      * Gets exchanges.
      * @param {Object} opts Optional parameters
-     * @param {String} opts.pool 
+     * @param {String} [pool] 
      * @param {module:api/CurveApi~curveExchangesCurrentCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/CurveExchangeDTO>}
      */
@@ -784,12 +784,12 @@ export default class CurveApi {
      * Accounts (historical)
      * Gets accounts.
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
-     * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
-     * @param {Date} opts.startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
-     * @param {Date} opts.endDate The end date of timeframe.
-     * @param {String} opts.id 
-     * @param {String} opts.address 
+     * @param {Number} [startBlock] The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param {Number} [endBlock] The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param {Date} [startDate] The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param {Date} [endDate] The end date of timeframe.
+     * @param {String} [id] 
+     * @param {String} [address] 
      * @param {module:api/CurveApi~curveGetAccountsHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/CurveAccountDTO>}
      */
@@ -835,12 +835,12 @@ export default class CurveApi {
      * AddLiquidityEvents (historical)
      * Gets addLiquidityEvents.
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
-     * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
-     * @param {Date} opts.startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
-     * @param {Date} opts.endDate The end date of timeframe.
-     * @param {String} opts.id 
-     * @param {String} opts.pool 
+     * @param {Number} [startBlock] The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param {Number} [endBlock] The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param {Date} [startDate] The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param {Date} [endDate] The end date of timeframe.
+     * @param {String} [id] 
+     * @param {String} [pool] 
      * @param {module:api/CurveApi~curveGetAddLiquidityEventsHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/CurveAddLiquidityEventDTO>}
      */
@@ -886,12 +886,12 @@ export default class CurveApi {
      * AdminFeeChangeLogs (historical)
      * Gets adminFeeChangeLogs.
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
-     * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
-     * @param {Date} opts.startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
-     * @param {Date} opts.endDate The end date of timeframe.
-     * @param {String} opts.id 
-     * @param {String} opts.pool 
+     * @param {Number} [startBlock] The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param {Number} [endBlock] The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param {Date} [startDate] The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param {Date} [endDate] The end date of timeframe.
+     * @param {String} [id] 
+     * @param {String} [pool] 
      * @param {module:api/CurveApi~curveGetAdminFeeChangeLogsHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/CurveAdminFeeChangeLogDTO>}
      */
@@ -937,12 +937,12 @@ export default class CurveApi {
      * AmplificationCoeffChangeLogs (historical)
      * Gets amplificationCoeffChangeLogs.
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
-     * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
-     * @param {Date} opts.startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
-     * @param {Date} opts.endDate The end date of timeframe.
-     * @param {String} opts.id 
-     * @param {String} opts.pool 
+     * @param {Number} [startBlock] The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param {Number} [endBlock] The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param {Date} [startDate] The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param {Date} [endDate] The end date of timeframe.
+     * @param {String} [id] 
+     * @param {String} [pool] 
      * @param {module:api/CurveApi~curveGetAmplificationCoeffChangeLogsHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/CurveAmplificationCoeffChangeLogDTO>}
      */
@@ -988,12 +988,12 @@ export default class CurveApi {
      * Coins (historical)
      * Gets coins.
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
-     * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
-     * @param {Date} opts.startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
-     * @param {Date} opts.endDate The end date of timeframe.
-     * @param {String} opts.id Identifier, format: (pool_id)-(coin_index).
-     * @param {String} opts.pool 
+     * @param {Number} [startBlock] The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param {Number} [endBlock] The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param {Date} [startDate] The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param {Date} [endDate] The end date of timeframe.
+     * @param {String} [id] Identifier, format: (pool_id)-(coin_index).
+     * @param {String} [pool] 
      * @param {module:api/CurveApi~curveGetCoinsHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/CurveCoinDTO>}
      */
@@ -1039,12 +1039,12 @@ export default class CurveApi {
      * ContractVersions (historical)
      * Gets contractVersions.
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
-     * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
-     * @param {Date} opts.startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
-     * @param {Date} opts.endDate The end date of timeframe.
-     * @param {String} opts.id 
-     * @param {String} opts.address 
+     * @param {Number} [startBlock] The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param {Number} [endBlock] The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param {Date} [startDate] The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param {Date} [endDate] The end date of timeframe.
+     * @param {String} [id] 
+     * @param {String} [address] 
      * @param {module:api/CurveApi~curveGetContractVersionsHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/CurveContractVersionDTO>}
      */
@@ -1090,11 +1090,11 @@ export default class CurveApi {
      * Contracts (historical)
      * Gets contracts.
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
-     * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
-     * @param {Date} opts.startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
-     * @param {Date} opts.endDate The end date of timeframe.
-     * @param {String} opts.id 
+     * @param {Number} [startBlock] The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param {Number} [endBlock] The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param {Date} [startDate] The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param {Date} [endDate] The end date of timeframe.
+     * @param {String} [id] 
      * @param {module:api/CurveApi~curveGetContractsHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/CurveContractDTO>}
      */
@@ -1139,12 +1139,12 @@ export default class CurveApi {
      * DailyVolumes (historical)
      * Gets dailyVolumes.
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
-     * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
-     * @param {Date} opts.startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
-     * @param {Date} opts.endDate The end date of timeframe.
-     * @param {String} opts.id 
-     * @param {String} opts.pool 
+     * @param {Number} [startBlock] The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param {Number} [endBlock] The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param {Date} [startDate] The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param {Date} [endDate] The end date of timeframe.
+     * @param {String} [id] 
+     * @param {String} [pool] 
      * @param {module:api/CurveApi~curveGetDailyVolumesHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/CurveDailyVolumeDTO>}
      */
@@ -1190,12 +1190,12 @@ export default class CurveApi {
      * Exchanges (historical)
      * Gets exchanges.
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
-     * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
-     * @param {Date} opts.startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
-     * @param {Date} opts.endDate The end date of timeframe.
-     * @param {String} opts.id 
-     * @param {String} opts.pool 
+     * @param {Number} [startBlock] The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param {Number} [endBlock] The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param {Date} [startDate] The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param {Date} [endDate] The end date of timeframe.
+     * @param {String} [id] 
+     * @param {String} [pool] 
      * @param {module:api/CurveApi~curveGetExchangesHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/CurveExchangeDTO>}
      */
@@ -1241,12 +1241,12 @@ export default class CurveApi {
      * FeeChangeLogs (historical)
      * Gets feeChangeLogs.
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
-     * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
-     * @param {Date} opts.startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
-     * @param {Date} opts.endDate The end date of timeframe.
-     * @param {String} opts.id 
-     * @param {String} opts.pool 
+     * @param {Number} [startBlock] The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param {Number} [endBlock] The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param {Date} [startDate] The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param {Date} [endDate] The end date of timeframe.
+     * @param {String} [id] 
+     * @param {String} [pool] 
      * @param {module:api/CurveApi~curveGetFeeChangeLogsHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/CurveFeeChangeLogDTO>}
      */
@@ -1292,11 +1292,11 @@ export default class CurveApi {
      * GaugeDeposits (historical)
      * Gets gaugeDeposits.
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
-     * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
-     * @param {Date} opts.startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
-     * @param {Date} opts.endDate The end date of timeframe.
-     * @param {String} opts.id 
+     * @param {Number} [startBlock] The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param {Number} [endBlock] The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param {Date} [startDate] The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param {Date} [endDate] The end date of timeframe.
+     * @param {String} [id] 
      * @param {module:api/CurveApi~curveGetGaugeDepositsHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/CurveGaugeDepositDTO>}
      */
@@ -1341,12 +1341,12 @@ export default class CurveApi {
      * GaugeLiquidities (historical)
      * Gets gaugeLiquidities.
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
-     * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
-     * @param {Date} opts.startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
-     * @param {Date} opts.endDate The end date of timeframe.
-     * @param {String} opts.id 
-     * @param {String} opts.user 
+     * @param {Number} [startBlock] The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param {Number} [endBlock] The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param {Date} [startDate] The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param {Date} [endDate] The end date of timeframe.
+     * @param {String} [id] 
+     * @param {String} [user] 
      * @param {module:api/CurveApi~curveGetGaugeLiquiditiesHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/CurveGaugeLiquidityDTO>}
      */
@@ -1392,11 +1392,11 @@ export default class CurveApi {
      * GaugeTotalWeights (historical)
      * Gets gaugeTotalWeights.
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
-     * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
-     * @param {Date} opts.startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
-     * @param {Date} opts.endDate The end date of timeframe.
-     * @param {String} opts.id 
+     * @param {Number} [startBlock] The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param {Number} [endBlock] The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param {Date} [startDate] The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param {Date} [endDate] The end date of timeframe.
+     * @param {String} [id] 
      * @param {module:api/CurveApi~curveGetGaugeTotalWeightsHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/CurveGaugeTotalWeightDTO>}
      */
@@ -1441,11 +1441,11 @@ export default class CurveApi {
      * GaugeTypeWeights (historical)
      * Gets gaugeTypeWeights.
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
-     * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
-     * @param {Date} opts.startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
-     * @param {Date} opts.endDate The end date of timeframe.
-     * @param {String} opts.id 
+     * @param {Number} [startBlock] The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param {Number} [endBlock] The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param {Date} [startDate] The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param {Date} [endDate] The end date of timeframe.
+     * @param {String} [id] 
      * @param {module:api/CurveApi~curveGetGaugeTypeWeightsHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/CurveGaugeTypeWeightDTO>}
      */
@@ -1490,12 +1490,12 @@ export default class CurveApi {
      * GaugeTypes (historical)
      * Gets gaugeTypes.
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
-     * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
-     * @param {Date} opts.startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
-     * @param {Date} opts.endDate The end date of timeframe.
-     * @param {String} opts.id 
-     * @param {String} opts.name 
+     * @param {Number} [startBlock] The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param {Number} [endBlock] The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param {Date} [startDate] The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param {Date} [endDate] The end date of timeframe.
+     * @param {String} [id] 
+     * @param {String} [name] 
      * @param {module:api/CurveApi~curveGetGaugeTypesHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/CurveGaugeTypeDTO>}
      */
@@ -1541,12 +1541,12 @@ export default class CurveApi {
      * GaugeWeightVotes (historical)
      * Gets gaugeWeightVotes.
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
-     * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
-     * @param {Date} opts.startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
-     * @param {Date} opts.endDate The end date of timeframe.
-     * @param {String} opts.id 
-     * @param {String} opts.user 
+     * @param {Number} [startBlock] The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param {Number} [endBlock] The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param {Date} [startDate] The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param {Date} [endDate] The end date of timeframe.
+     * @param {String} [id] 
+     * @param {String} [user] 
      * @param {module:api/CurveApi~curveGetGaugeWeightVotesHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/CurveGaugeWeightVoteDTO>}
      */
@@ -1592,11 +1592,11 @@ export default class CurveApi {
      * GaugeWeights (historical)
      * Gets gaugeWeights.
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
-     * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
-     * @param {Date} opts.startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
-     * @param {Date} opts.endDate The end date of timeframe.
-     * @param {String} opts.id 
+     * @param {Number} [startBlock] The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param {Number} [endBlock] The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param {Date} [startDate] The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param {Date} [endDate] The end date of timeframe.
+     * @param {String} [id] 
      * @param {module:api/CurveApi~curveGetGaugeWeightsHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/CurveGaugeWeightDTO>}
      */
@@ -1641,11 +1641,11 @@ export default class CurveApi {
      * GaugeWithdraws (historical)
      * Gets gaugeWithdraws.
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
-     * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
-     * @param {Date} opts.startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
-     * @param {Date} opts.endDate The end date of timeframe.
-     * @param {String} opts.id 
+     * @param {Number} [startBlock] The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param {Number} [endBlock] The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param {Date} [startDate] The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param {Date} [endDate] The end date of timeframe.
+     * @param {String} [id] 
      * @param {module:api/CurveApi~curveGetGaugeWithdrawsHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/CurveGaugeWithdrawDTO>}
      */
@@ -1690,13 +1690,13 @@ export default class CurveApi {
      * Gauges (historical)
      * Gets gauges.
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
-     * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
-     * @param {Date} opts.startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
-     * @param {Date} opts.endDate The end date of timeframe.
-     * @param {String} opts.id 
-     * @param {String} opts.address 
-     * @param {String} opts.pool 
+     * @param {Number} [startBlock] The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param {Number} [endBlock] The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param {Date} [startDate] The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param {Date} [endDate] The end date of timeframe.
+     * @param {String} [id] 
+     * @param {String} [address] 
+     * @param {String} [pool] 
      * @param {module:api/CurveApi~curveGetGaugesHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/CurveGaugeDTO>}
      */
@@ -1743,12 +1743,12 @@ export default class CurveApi {
      * HourlyVolumes (historical)
      * Gets hourlyVolumes.
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
-     * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
-     * @param {Date} opts.startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
-     * @param {Date} opts.endDate The end date of timeframe.
-     * @param {String} opts.id 
-     * @param {String} opts.pool 
+     * @param {Number} [startBlock] The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param {Number} [endBlock] The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param {Date} [startDate] The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param {Date} [endDate] The end date of timeframe.
+     * @param {String} [id] 
+     * @param {String} [pool] 
      * @param {module:api/CurveApi~curveGetHourlyVolumesHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/CurveHourlyVolumeDTO>}
      */
@@ -1794,15 +1794,15 @@ export default class CurveApi {
      * LpTokens (historical)
      * Gets lpTokens.
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
-     * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
-     * @param {Date} opts.startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
-     * @param {Date} opts.endDate The end date of timeframe.
-     * @param {String} opts.id 
-     * @param {String} opts.address 
-     * @param {String} opts.name 
-     * @param {String} opts.symbol 
-     * @param {String} opts.pool 
+     * @param {Number} [startBlock] The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param {Number} [endBlock] The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param {Date} [startDate] The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param {Date} [endDate] The end date of timeframe.
+     * @param {String} [id] 
+     * @param {String} [address] 
+     * @param {String} [name] 
+     * @param {String} [symbol] 
+     * @param {String} [pool] 
      * @param {module:api/CurveApi~curveGetLpTokensHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/CurveLpTokenDTO>}
      */
@@ -1851,12 +1851,12 @@ export default class CurveApi {
      * Pools (historical)
      * Gets pools.
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
-     * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
-     * @param {Date} opts.startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
-     * @param {Date} opts.endDate The end date of timeframe.
-     * @param {String} opts.id Pool address.
-     * @param {String} opts.name Pool's human-readable name.
+     * @param {Number} [startBlock] The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param {Number} [endBlock] The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param {Date} [startDate] The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param {Date} [endDate] The end date of timeframe.
+     * @param {String} [id] Pool address.
+     * @param {String} [name] Pool's human-readable name.
      * @param {module:api/CurveApi~curveGetPoolsHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/CurvePoolDTO>}
      */
@@ -1902,11 +1902,11 @@ export default class CurveApi {
      * ProposalVotes (historical)
      * Gets proposalVotes.
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
-     * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
-     * @param {Date} opts.startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
-     * @param {Date} opts.endDate The end date of timeframe.
-     * @param {String} opts.id 
+     * @param {Number} [startBlock] The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param {Number} [endBlock] The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param {Date} [startDate] The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param {Date} [endDate] The end date of timeframe.
+     * @param {String} [id] 
      * @param {module:api/CurveApi~curveGetProposalVotesHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/CurveProposalVoteDTO>}
      */
@@ -1951,11 +1951,11 @@ export default class CurveApi {
      * Proposals (historical)
      * Gets proposals.
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
-     * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
-     * @param {Date} opts.startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
-     * @param {Date} opts.endDate The end date of timeframe.
-     * @param {String} opts.id 
+     * @param {Number} [startBlock] The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param {Number} [endBlock] The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param {Date} [startDate] The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param {Date} [endDate] The end date of timeframe.
+     * @param {String} [id] 
      * @param {module:api/CurveApi~curveGetProposalsHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/CurveProposalDTO>}
      */
@@ -2000,12 +2000,12 @@ export default class CurveApi {
      * RemoveLiquidityEvents (historical)
      * Gets removeLiquidityEvents.
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
-     * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
-     * @param {Date} opts.startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
-     * @param {Date} opts.endDate The end date of timeframe.
-     * @param {String} opts.id 
-     * @param {String} opts.pool 
+     * @param {Number} [startBlock] The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param {Number} [endBlock] The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param {Date} [startDate] The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param {Date} [endDate] The end date of timeframe.
+     * @param {String} [id] 
+     * @param {String} [pool] 
      * @param {module:api/CurveApi~curveGetRemoveLiquidityEventsHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/CurveRemoveLiquidityEventDTO>}
      */
@@ -2051,12 +2051,12 @@ export default class CurveApi {
      * RemoveLiquidityOneEvents (historical)
      * Gets removeLiquidityOneEvents.
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
-     * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
-     * @param {Date} opts.startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
-     * @param {Date} opts.endDate The end date of timeframe.
-     * @param {String} opts.id 
-     * @param {String} opts.pool 
+     * @param {Number} [startBlock] The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param {Number} [endBlock] The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param {Date} [startDate] The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param {Date} [endDate] The end date of timeframe.
+     * @param {String} [id] 
+     * @param {String} [pool] 
      * @param {module:api/CurveApi~curveGetRemoveLiquidityOneEventsHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/CurveRemoveLiquidityOneEventDTO>}
      */
@@ -2102,11 +2102,11 @@ export default class CurveApi {
      * SystemStates (historical)
      * Gets systemStates.
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
-     * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
-     * @param {Date} opts.startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
-     * @param {Date} opts.endDate The end date of timeframe.
-     * @param {String} opts.id Singleton ID, equals to 'current'.
+     * @param {Number} [startBlock] The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param {Number} [endBlock] The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param {Date} [startDate] The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param {Date} [endDate] The end date of timeframe.
+     * @param {String} [id] Singleton ID, equals to 'current'.
      * @param {module:api/CurveApi~curveGetSystemStatesHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/CurveSystemStateDTO>}
      */
@@ -2151,14 +2151,14 @@ export default class CurveApi {
      * Tokens (historical)
      * Gets tokens.
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
-     * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
-     * @param {Date} opts.startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
-     * @param {Date} opts.endDate The end date of timeframe.
-     * @param {String} opts.id 
-     * @param {String} opts.address 
-     * @param {String} opts.name 
-     * @param {String} opts.symbol 
+     * @param {Number} [startBlock] The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param {Number} [endBlock] The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param {Date} [startDate] The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param {Date} [endDate] The end date of timeframe.
+     * @param {String} [id] 
+     * @param {String} [address] 
+     * @param {String} [name] 
+     * @param {String} [symbol] 
      * @param {module:api/CurveApi~curveGetTokensHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/CurveTokenDTO>}
      */
@@ -2206,12 +2206,12 @@ export default class CurveApi {
      * TransferOwnershipEvents (historical)
      * Gets transferOwnershipEvents.
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
-     * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
-     * @param {Date} opts.startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
-     * @param {Date} opts.endDate The end date of timeframe.
-     * @param {String} opts.id 
-     * @param {String} opts.pool 
+     * @param {Number} [startBlock] The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param {Number} [endBlock] The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param {Date} [startDate] The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param {Date} [endDate] The end date of timeframe.
+     * @param {String} [id] 
+     * @param {String} [pool] 
      * @param {module:api/CurveApi~curveGetTransferOwnershipEventsHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/CurveTransferOwnershipEventDTO>}
      */
@@ -2257,12 +2257,12 @@ export default class CurveApi {
      * UnderlyingCoins (historical)
      * Gets underlyingCoins.
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
-     * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
-     * @param {Date} opts.startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
-     * @param {Date} opts.endDate The end date of timeframe.
-     * @param {String} opts.id Equals to: (pool_id)-(coin_index).
-     * @param {String} opts.pool 
+     * @param {Number} [startBlock] The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param {Number} [endBlock] The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param {Date} [startDate] The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param {Date} [endDate] The end date of timeframe.
+     * @param {String} [id] Equals to: (pool_id)-(coin_index).
+     * @param {String} [pool] 
      * @param {module:api/CurveApi~curveGetUnderlyingCoinsHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/CurveUnderlyingCoinDTO>}
      */
@@ -2308,12 +2308,12 @@ export default class CurveApi {
      * VotingApps (historical)
      * Gets votingApps.
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
-     * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
-     * @param {Date} opts.startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
-     * @param {Date} opts.endDate The end date of timeframe.
-     * @param {String} opts.id App address.
-     * @param {String} opts.address 
+     * @param {Number} [startBlock] The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param {Number} [endBlock] The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param {Date} [startDate] The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param {Date} [endDate] The end date of timeframe.
+     * @param {String} [id] App address.
+     * @param {String} [address] 
      * @param {module:api/CurveApi~curveGetVotingAppsHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/CurveVotingAppDTO>}
      */
@@ -2359,12 +2359,12 @@ export default class CurveApi {
      * WeeklyVolumes (historical)
      * Gets weeklyVolumes.
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
-     * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
-     * @param {Date} opts.startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
-     * @param {Date} opts.endDate The end date of timeframe.
-     * @param {String} opts.id 
-     * @param {String} opts.pool 
+     * @param {Number} [startBlock] The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param {Number} [endBlock] The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param {Date} [startDate] The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param {Date} [endDate] The end date of timeframe.
+     * @param {String} [id] 
+     * @param {String} [pool] 
      * @param {module:api/CurveApi~curveGetWeeklyVolumesHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/CurveWeeklyVolumeDTO>}
      */
@@ -2484,7 +2484,7 @@ export default class CurveApi {
      * Pools (current)
      * Gets pools.
      * @param {Object} opts Optional parameters
-     * @param {String} opts.id Pool address.
+     * @param {String} [id] Pool address.
      * @param {module:api/CurveApi~curvePoolsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/CurvePoolDTO>}
      */

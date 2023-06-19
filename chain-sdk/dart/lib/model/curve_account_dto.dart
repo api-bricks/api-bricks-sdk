@@ -148,7 +148,7 @@ class CurveAccountDTO {
     return null;
   }
 
-  static List<CurveAccountDTO>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<CurveAccountDTO> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <CurveAccountDTO>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -179,12 +179,10 @@ class CurveAccountDTO {
   static Map<String, List<CurveAccountDTO>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<CurveAccountDTO>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = CurveAccountDTO.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = CurveAccountDTO.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

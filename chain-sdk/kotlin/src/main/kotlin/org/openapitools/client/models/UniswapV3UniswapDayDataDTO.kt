@@ -18,6 +18,7 @@ package org.openapitools.client.models
 import org.openapitools.client.models.NumericsBigInteger
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * Data accumulated and condensed into day stats for all of Uniswap.

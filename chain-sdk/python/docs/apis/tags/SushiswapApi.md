@@ -1,4 +1,4 @@
-<a name="__pageTop"></a>
+<a id="__pageTop"></a>
 # openapi_client.apis.tags.sushiswap_api.SushiswapApi
 
 All URIs are relative to *https://onchain.coinapi.io*
@@ -39,7 +39,7 @@ Method | HTTP request | Description
 [**sushiswap_users__current**](#sushiswap_users__current) | **get** /dapps/sushiswap/users/current | Users (current)
 
 # **sushiswap_bundles__current**
-<a name="sushiswap_bundles__current"></a>
+<a id="sushiswap_bundles__current"></a>
 > [SushiswapBundleDTO] sushiswap_bundles__current()
 
 Bundles (current)
@@ -132,7 +132,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **sushiswap_burns__current**
-<a name="sushiswap_burns__current"></a>
+<a id="sushiswap_burns__current"></a>
 > [SushiswapBurnDTO] sushiswap_burns__current()
 
 Burns (current)
@@ -225,7 +225,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **sushiswap_day_data__current**
-<a name="sushiswap_day_data__current"></a>
+<a id="sushiswap_day_data__current"></a>
 > [SushiswapDayDataDTO] sushiswap_day_data__current()
 
 DayData (current)
@@ -318,7 +318,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **sushiswap_factories__current**
-<a name="sushiswap_factories__current"></a>
+<a id="sushiswap_factories__current"></a>
 > [SushiswapFactoryDTO] sushiswap_factories__current()
 
 Factories (current)
@@ -411,7 +411,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **sushiswap_get_bundles__historical**
-<a name="sushiswap_get_bundles__historical"></a>
+<a id="sushiswap_get_bundles__historical"></a>
 > [SushiswapBundleDTO] sushiswap_get_bundles__historical()
 
 Bundles (historical)
@@ -567,7 +567,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **sushiswap_get_burns__historical**
-<a name="sushiswap_get_burns__historical"></a>
+<a id="sushiswap_get_burns__historical"></a>
 > [SushiswapBurnDTO] sushiswap_get_burns__historical()
 
 Burns (historical)
@@ -732,7 +732,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **sushiswap_get_day_data__historical**
-<a name="sushiswap_get_day_data__historical"></a>
+<a id="sushiswap_get_day_data__historical"></a>
 > [SushiswapDayDataDTO] sushiswap_get_day_data__historical()
 
 DayData (historical)
@@ -888,7 +888,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **sushiswap_get_factories__historical**
-<a name="sushiswap_get_factories__historical"></a>
+<a id="sushiswap_get_factories__historical"></a>
 > [SushiswapFactoryDTO] sushiswap_get_factories__historical()
 
 Factories (historical)
@@ -1044,7 +1044,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **sushiswap_get_hour_data__historical**
-<a name="sushiswap_get_hour_data__historical"></a>
+<a id="sushiswap_get_hour_data__historical"></a>
 > [SushiswapHourDataDTO] sushiswap_get_hour_data__historical()
 
 HourData (historical)
@@ -1200,7 +1200,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **sushiswap_get_liquidity_position_snapshots__historical**
-<a name="sushiswap_get_liquidity_position_snapshots__historical"></a>
+<a id="sushiswap_get_liquidity_position_snapshots__historical"></a>
 > [SushiswapLiquidityPositionSnapshotDTO] sushiswap_get_liquidity_position_snapshots__historical()
 
 LiquidityPositionSnapshots (historical)
@@ -1374,7 +1374,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **sushiswap_get_liquidity_positions__historical**
-<a name="sushiswap_get_liquidity_positions__historical"></a>
+<a id="sushiswap_get_liquidity_positions__historical"></a>
 > [SushiswapLiquidityPositionDTO] sushiswap_get_liquidity_positions__historical()
 
 LiquidityPositions (historical)
@@ -1548,7 +1548,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **sushiswap_get_mints__historical**
-<a name="sushiswap_get_mints__historical"></a>
+<a id="sushiswap_get_mints__historical"></a>
 > [SushiswapMintDTO] sushiswap_get_mints__historical()
 
 Mints (historical)
@@ -1713,7 +1713,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **sushiswap_get_pair_day_data__historical**
-<a name="sushiswap_get_pair_day_data__historical"></a>
+<a id="sushiswap_get_pair_day_data__historical"></a>
 > [SushiswapPairDayDataDTO] sushiswap_get_pair_day_data__historical()
 
 PairDayData (historical)
@@ -1896,7 +1896,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **sushiswap_get_pair_hour_data__historical**
-<a name="sushiswap_get_pair_hour_data__historical"></a>
+<a id="sushiswap_get_pair_hour_data__historical"></a>
 > [SushiswapPairHourDataDTO] sushiswap_get_pair_hour_data__historical()
 
 PairHourData (historical)
@@ -2061,7 +2061,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **sushiswap_get_pairs__historical**
-<a name="sushiswap_get_pairs__historical"></a>
+<a id="sushiswap_get_pairs__historical"></a>
 > [SushiswapPairDTO] sushiswap_get_pairs__historical()
 
 Pairs (historical)
@@ -2244,7 +2244,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **sushiswap_get_swaps__historical**
-<a name="sushiswap_get_swaps__historical"></a>
+<a id="sushiswap_get_swaps__historical"></a>
 > [SushiswapSwapDTO] sushiswap_get_swaps__historical()
 
 Swaps (historical)
@@ -2409,7 +2409,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **sushiswap_get_token_day_data__historical**
-<a name="sushiswap_get_token_day_data__historical"></a>
+<a id="sushiswap_get_token_day_data__historical"></a>
 > [SushiswapTokenDayDataDTO] sushiswap_get_token_day_data__historical()
 
 TokenDayData (historical)
@@ -2565,7 +2565,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **sushiswap_get_tokens__historical**
-<a name="sushiswap_get_tokens__historical"></a>
+<a id="sushiswap_get_tokens__historical"></a>
 > [SushiswapTokenDTO] sushiswap_get_tokens__historical()
 
 Tokens (historical)
@@ -2739,7 +2739,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **sushiswap_get_transactions__historical**
-<a name="sushiswap_get_transactions__historical"></a>
+<a id="sushiswap_get_transactions__historical"></a>
 > [SushiswapTransactionDTO] sushiswap_get_transactions__historical()
 
 Transactions (historical)
@@ -2895,7 +2895,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **sushiswap_get_users__historical**
-<a name="sushiswap_get_users__historical"></a>
+<a id="sushiswap_get_users__historical"></a>
 > [SushiswapUserDTO] sushiswap_get_users__historical()
 
 Users (historical)
@@ -3051,7 +3051,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **sushiswap_hour_data__current**
-<a name="sushiswap_hour_data__current"></a>
+<a id="sushiswap_hour_data__current"></a>
 > [SushiswapHourDataDTO] sushiswap_hour_data__current()
 
 HourData (current)
@@ -3144,7 +3144,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **sushiswap_liquidity_position_snapshots__current**
-<a name="sushiswap_liquidity_position_snapshots__current"></a>
+<a id="sushiswap_liquidity_position_snapshots__current"></a>
 > [SushiswapLiquidityPositionSnapshotDTO] sushiswap_liquidity_position_snapshots__current()
 
 LiquidityPositionSnapshots (current)
@@ -3237,7 +3237,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **sushiswap_liquidity_positions__current**
-<a name="sushiswap_liquidity_positions__current"></a>
+<a id="sushiswap_liquidity_positions__current"></a>
 > [SushiswapLiquidityPositionDTO] sushiswap_liquidity_positions__current()
 
 LiquidityPositions (current)
@@ -3330,7 +3330,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **sushiswap_mints__current**
-<a name="sushiswap_mints__current"></a>
+<a id="sushiswap_mints__current"></a>
 > [SushiswapMintDTO] sushiswap_mints__current()
 
 Mints (current)
@@ -3423,7 +3423,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **sushiswap_pair_day_data__current**
-<a name="sushiswap_pair_day_data__current"></a>
+<a id="sushiswap_pair_day_data__current"></a>
 > [SushiswapPairDayDataDTO] sushiswap_pair_day_data__current()
 
 PairDayData (current)
@@ -3516,7 +3516,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **sushiswap_pair_hour_data__current**
-<a name="sushiswap_pair_hour_data__current"></a>
+<a id="sushiswap_pair_hour_data__current"></a>
 > [SushiswapPairHourDataDTO] sushiswap_pair_hour_data__current()
 
 PairHourData (current)
@@ -3609,7 +3609,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **sushiswap_pairs__current**
-<a name="sushiswap_pairs__current"></a>
+<a id="sushiswap_pairs__current"></a>
 > [SushiswapPairDTO] sushiswap_pairs__current()
 
 Pairs (current)
@@ -3729,7 +3729,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **sushiswap_swaps__current**
-<a name="sushiswap_swaps__current"></a>
+<a id="sushiswap_swaps__current"></a>
 > [SushiswapSwapDTO] sushiswap_swaps__current()
 
 Swaps (current)
@@ -3849,7 +3849,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **sushiswap_token_day_data__current**
-<a name="sushiswap_token_day_data__current"></a>
+<a id="sushiswap_token_day_data__current"></a>
 > [SushiswapTokenDayDataDTO] sushiswap_token_day_data__current()
 
 TokenDayData (current)
@@ -3942,7 +3942,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **sushiswap_tokens__current**
-<a name="sushiswap_tokens__current"></a>
+<a id="sushiswap_tokens__current"></a>
 > [SushiswapTokenDTO] sushiswap_tokens__current()
 
 Tokens (current)
@@ -4035,7 +4035,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **sushiswap_transactions__current**
-<a name="sushiswap_transactions__current"></a>
+<a id="sushiswap_transactions__current"></a>
 > [SushiswapTransactionDTO] sushiswap_transactions__current()
 
 Transactions (current)
@@ -4128,7 +4128,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **sushiswap_users__current**
-<a name="sushiswap_users__current"></a>
+<a id="sushiswap_users__current"></a>
 > [SushiswapUserDTO] sushiswap_users__current()
 
 Users (current)

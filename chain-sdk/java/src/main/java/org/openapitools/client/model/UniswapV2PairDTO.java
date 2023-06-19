@@ -35,6 +35,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
@@ -49,7 +53,7 @@ import org.openapitools.client.JSON;
 /**
  * Information about a pair. Includes references to each token within the pair, volume information, liquidity information, and more. The pair entity mirrors the pair smart contract, and also contains aggregated information about use.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-07T11:31:09.822924Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-19T09:28:48.156871Z[Etc/UTC]")
 public class UniswapV2PairDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -165,7 +169,6 @@ public class UniswapV2PairDTO {
    * @return entryTime
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getEntryTime() {
     return entryTime;
   }
@@ -187,7 +190,6 @@ public class UniswapV2PairDTO {
    * @return recvTime
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getRecvTime() {
     return recvTime;
   }
@@ -209,7 +211,6 @@ public class UniswapV2PairDTO {
    * @return blockNumber
   **/
   @javax.annotation.Nullable
-
   public Long getBlockNumber() {
     return blockNumber;
   }
@@ -231,7 +232,6 @@ public class UniswapV2PairDTO {
    * @return vid
   **/
   @javax.annotation.Nullable
-
   public Long getVid() {
     return vid;
   }
@@ -253,7 +253,6 @@ public class UniswapV2PairDTO {
    * @return id
   **/
   @javax.annotation.Nullable
-
   public String getId() {
     return id;
   }
@@ -275,7 +274,6 @@ public class UniswapV2PairDTO {
    * @return token0
   **/
   @javax.annotation.Nullable
-
   public String getToken0() {
     return token0;
   }
@@ -297,7 +295,6 @@ public class UniswapV2PairDTO {
    * @return token1
   **/
   @javax.annotation.Nullable
-
   public String getToken1() {
     return token1;
   }
@@ -319,7 +316,6 @@ public class UniswapV2PairDTO {
    * @return reserve0
   **/
   @javax.annotation.Nullable
-
   public String getReserve0() {
     return reserve0;
   }
@@ -341,7 +337,6 @@ public class UniswapV2PairDTO {
    * @return reserve1
   **/
   @javax.annotation.Nullable
-
   public String getReserve1() {
     return reserve1;
   }
@@ -363,7 +358,6 @@ public class UniswapV2PairDTO {
    * @return totalSupply
   **/
   @javax.annotation.Nullable
-
   public String getTotalSupply() {
     return totalSupply;
   }
@@ -385,7 +379,6 @@ public class UniswapV2PairDTO {
    * @return reserveEth
   **/
   @javax.annotation.Nullable
-
   public String getReserveEth() {
     return reserveEth;
   }
@@ -407,7 +400,6 @@ public class UniswapV2PairDTO {
    * @return reserveUsd
   **/
   @javax.annotation.Nullable
-
   public String getReserveUsd() {
     return reserveUsd;
   }
@@ -429,7 +421,6 @@ public class UniswapV2PairDTO {
    * @return trackedReserveEth
   **/
   @javax.annotation.Nullable
-
   public String getTrackedReserveEth() {
     return trackedReserveEth;
   }
@@ -451,7 +442,6 @@ public class UniswapV2PairDTO {
    * @return token0Price
   **/
   @javax.annotation.Nullable
-
   public String getToken0Price() {
     return token0Price;
   }
@@ -473,7 +463,6 @@ public class UniswapV2PairDTO {
    * @return token1Price
   **/
   @javax.annotation.Nullable
-
   public String getToken1Price() {
     return token1Price;
   }
@@ -495,7 +484,6 @@ public class UniswapV2PairDTO {
    * @return volumeToken0
   **/
   @javax.annotation.Nullable
-
   public String getVolumeToken0() {
     return volumeToken0;
   }
@@ -517,7 +505,6 @@ public class UniswapV2PairDTO {
    * @return volumeToken1
   **/
   @javax.annotation.Nullable
-
   public String getVolumeToken1() {
     return volumeToken1;
   }
@@ -539,7 +526,6 @@ public class UniswapV2PairDTO {
    * @return volumeUsd
   **/
   @javax.annotation.Nullable
-
   public String getVolumeUsd() {
     return volumeUsd;
   }
@@ -561,7 +547,6 @@ public class UniswapV2PairDTO {
    * @return untrackedVolumeUsd
   **/
   @javax.annotation.Nullable
-
   public String getUntrackedVolumeUsd() {
     return untrackedVolumeUsd;
   }
@@ -583,7 +568,6 @@ public class UniswapV2PairDTO {
    * @return txCount
   **/
   @javax.annotation.Nullable
-
   public NumericsBigInteger getTxCount() {
     return txCount;
   }
@@ -605,7 +589,6 @@ public class UniswapV2PairDTO {
    * @return createdAtTimestamp
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getCreatedAtTimestamp() {
     return createdAtTimestamp;
   }
@@ -627,7 +610,6 @@ public class UniswapV2PairDTO {
    * @return liquidityProviderCount
   **/
   @javax.annotation.Nullable
-
   public String getLiquidityProviderCount() {
     return liquidityProviderCount;
   }
@@ -643,7 +625,6 @@ public class UniswapV2PairDTO {
    * @return evaluatedAsk
   **/
   @javax.annotation.Nullable
-
   public Double getEvaluatedAsk() {
     return evaluatedAsk;
   }

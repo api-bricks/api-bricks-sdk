@@ -274,7 +274,7 @@ class CRYPTOPUNKSTradeDTO {
     return null;
   }
 
-  static List<CRYPTOPUNKSTradeDTO>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<CRYPTOPUNKSTradeDTO> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <CRYPTOPUNKSTradeDTO>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -305,12 +305,10 @@ class CRYPTOPUNKSTradeDTO {
   static Map<String, List<CRYPTOPUNKSTradeDTO>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<CRYPTOPUNKSTradeDTO>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = CRYPTOPUNKSTradeDTO.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = CRYPTOPUNKSTradeDTO.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

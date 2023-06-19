@@ -34,6 +34,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
@@ -48,7 +52,7 @@ import org.openapitools.client.JSON;
 /**
  * Mint entities are created for every emitted Mint event on the Sushiswap core contracts. The Mint entity stores key data about the event like token amounts, who sent the transaction, who received the liquidity, and more. This entity can be used to track liquidity provisions on pairs.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-07T11:31:09.822924Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-19T09:28:48.156871Z[Etc/UTC]")
 public class SushiswapMintDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -132,7 +136,6 @@ public class SushiswapMintDTO {
    * @return entryTime
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getEntryTime() {
     return entryTime;
   }
@@ -154,7 +157,6 @@ public class SushiswapMintDTO {
    * @return recvTime
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getRecvTime() {
     return recvTime;
   }
@@ -176,7 +178,6 @@ public class SushiswapMintDTO {
    * @return blockNumber
   **/
   @javax.annotation.Nullable
-
   public Long getBlockNumber() {
     return blockNumber;
   }
@@ -198,7 +199,6 @@ public class SushiswapMintDTO {
    * @return id
   **/
   @javax.annotation.Nullable
-
   public String getId() {
     return id;
   }
@@ -220,7 +220,6 @@ public class SushiswapMintDTO {
    * @return transaction
   **/
   @javax.annotation.Nullable
-
   public String getTransaction() {
     return transaction;
   }
@@ -242,7 +241,6 @@ public class SushiswapMintDTO {
    * @return timestamp
   **/
   @javax.annotation.Nullable
-
   public String getTimestamp() {
     return timestamp;
   }
@@ -264,7 +262,6 @@ public class SushiswapMintDTO {
    * @return pair
   **/
   @javax.annotation.Nullable
-
   public String getPair() {
     return pair;
   }
@@ -286,7 +283,6 @@ public class SushiswapMintDTO {
    * @return to
   **/
   @javax.annotation.Nullable
-
   public String getTo() {
     return to;
   }
@@ -308,7 +304,6 @@ public class SushiswapMintDTO {
    * @return liquidity
   **/
   @javax.annotation.Nullable
-
   public String getLiquidity() {
     return liquidity;
   }
@@ -330,7 +325,6 @@ public class SushiswapMintDTO {
    * @return sender
   **/
   @javax.annotation.Nullable
-
   public String getSender() {
     return sender;
   }
@@ -352,7 +346,6 @@ public class SushiswapMintDTO {
    * @return amount0
   **/
   @javax.annotation.Nullable
-
   public String getAmount0() {
     return amount0;
   }
@@ -374,7 +367,6 @@ public class SushiswapMintDTO {
    * @return amount1
   **/
   @javax.annotation.Nullable
-
   public String getAmount1() {
     return amount1;
   }
@@ -396,7 +388,6 @@ public class SushiswapMintDTO {
    * @return logIndex
   **/
   @javax.annotation.Nullable
-
   public String getLogIndex() {
     return logIndex;
   }
@@ -418,7 +409,6 @@ public class SushiswapMintDTO {
    * @return amountUsd
   **/
   @javax.annotation.Nullable
-
   public String getAmountUsd() {
     return amountUsd;
   }
@@ -440,7 +430,6 @@ public class SushiswapMintDTO {
    * @return feeTo
   **/
   @javax.annotation.Nullable
-
   public String getFeeTo() {
     return feeTo;
   }
@@ -462,7 +451,6 @@ public class SushiswapMintDTO {
    * @return feeLiquidity
   **/
   @javax.annotation.Nullable
-
   public String getFeeLiquidity() {
     return feeLiquidity;
   }
@@ -484,7 +472,6 @@ public class SushiswapMintDTO {
    * @return vid
   **/
   @javax.annotation.Nullable
-
   public Long getVid() {
     return vid;
   }

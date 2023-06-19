@@ -50,11 +50,11 @@ export default class CowApi {
      * Orders (historical)
      * Gets orders.
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
-     * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
-     * @param {Date} opts.startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
-     * @param {Date} opts.endDate The end date of timeframe.
-     * @param {String} opts.id User's address.
+     * @param {Number} [startBlock] The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param {Number} [endBlock] The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param {Date} [startDate] The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param {Date} [endDate] The end date of timeframe.
+     * @param {String} [id] User's address.
      * @param {module:api/CowApi~cowGetOrdersHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/CowOrderDTO>}
      */
@@ -99,11 +99,11 @@ export default class CowApi {
      * Settlements (historical)
      * Gets settlements.
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
-     * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
-     * @param {Date} opts.startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
-     * @param {Date} opts.endDate The end date of timeframe.
-     * @param {String} opts.id Transaction hash.
+     * @param {Number} [startBlock] The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param {Number} [endBlock] The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param {Date} [startDate] The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param {Date} [endDate] The end date of timeframe.
+     * @param {String} [id] Transaction hash.
      * @param {module:api/CowApi~cowGetSettlementsHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/CowSettlementDTO>}
      */
@@ -148,14 +148,14 @@ export default class CowApi {
      * Tokens (historical)
      * Gets tokens.
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
-     * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
-     * @param {Date} opts.startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
-     * @param {Date} opts.endDate The end date of timeframe.
-     * @param {String} opts.id Token's address.
-     * @param {String} opts.address Token's address.
-     * @param {String} opts.name Token name fetched by ERC20 contract call.
-     * @param {String} opts.symbol Token symbol fetched by contract call.
+     * @param {Number} [startBlock] The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param {Number} [endBlock] The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param {Date} [startDate] The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param {Date} [endDate] The end date of timeframe.
+     * @param {String} [id] Token's address.
+     * @param {String} [address] Token's address.
+     * @param {String} [name] Token name fetched by ERC20 contract call.
+     * @param {String} [symbol] Token symbol fetched by contract call.
      * @param {module:api/CowApi~cowGetTokensHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/CowTokenDTO>}
      */
@@ -203,13 +203,13 @@ export default class CowApi {
      * Trades (historical)
      * Gets trades.
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
-     * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
-     * @param {Date} opts.startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
-     * @param {Date} opts.endDate The end date of timeframe.
-     * @param {String} opts.id Identifier, format: (order id)|(transaction hash)|(event index).
-     * @param {String} opts.sellToken Address of token that is sold.
-     * @param {String} opts.buyToken Address of token that is bought.
+     * @param {Number} [startBlock] The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param {Number} [endBlock] The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param {Date} [startDate] The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param {Date} [endDate] The end date of timeframe.
+     * @param {String} [id] Identifier, format: (order id)|(transaction hash)|(event index).
+     * @param {String} [sellToken] Address of token that is sold.
+     * @param {String} [buyToken] Address of token that is bought.
      * @param {module:api/CowApi~cowGetTradesHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/CowTradeDTO>}
      */
@@ -256,12 +256,12 @@ export default class CowApi {
      * Users (historical)
      * Gets users.
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
-     * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
-     * @param {Date} opts.startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
-     * @param {Date} opts.endDate The end date of timeframe.
-     * @param {String} opts.id User's address.
-     * @param {String} opts.address User's address.
+     * @param {Number} [startBlock] The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param {Number} [endBlock] The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param {Date} [startDate] The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param {Date} [endDate] The end date of timeframe.
+     * @param {String} [id] User's address.
+     * @param {String} [address] User's address.
      * @param {module:api/CowApi~cowGetUsersHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/CowUserDTO>}
      */

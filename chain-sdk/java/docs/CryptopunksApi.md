@@ -24,7 +24,7 @@ All URIs are relative to *https://onchain.coinapi.io*
 | [**cRYPTOPUNKSUsersCurrent**](CryptopunksApi.md#cRYPTOPUNKSUsersCurrent) | **GET** /dapps/cryptopunks/users/current | Users (current) |
 
 
-<a name="cRYPTOPUNKSBidsCurrent"></a>
+<a id="cRYPTOPUNKSBidsCurrent"></a>
 # **cRYPTOPUNKSBidsCurrent**
 > List&lt;CRYPTOPUNKSBidDTO&gt; cRYPTOPUNKSBidsCurrent()
 
@@ -82,7 +82,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="cRYPTOPUNKSCollectionDailySnapshotsCurrent"></a>
+<a id="cRYPTOPUNKSCollectionDailySnapshotsCurrent"></a>
 # **cRYPTOPUNKSCollectionDailySnapshotsCurrent**
 > List&lt;CRYPTOPUNKSCollectionDailySnapshotDTO&gt; cRYPTOPUNKSCollectionDailySnapshotsCurrent()
 
@@ -140,7 +140,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="cRYPTOPUNKSCollectionsCurrent"></a>
+<a id="cRYPTOPUNKSCollectionsCurrent"></a>
 # **cRYPTOPUNKSCollectionsCurrent**
 > List&lt;CRYPTOPUNKSCollectionDTO&gt; cRYPTOPUNKSCollectionsCurrent()
 
@@ -198,7 +198,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="cRYPTOPUNKSDataSourcesCurrent"></a>
+<a id="cRYPTOPUNKSDataSourcesCurrent"></a>
 # **cRYPTOPUNKSDataSourcesCurrent**
 > List&lt;CRYPTOPUNKSDataSourcesDTO&gt; cRYPTOPUNKSDataSourcesCurrent()
 
@@ -256,7 +256,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="cRYPTOPUNKSGetBidsHistorical"></a>
+<a id="cRYPTOPUNKSGetBidsHistorical"></a>
 # **cRYPTOPUNKSGetBidsHistorical**
 > List&lt;CRYPTOPUNKSBidDTO&gt; cRYPTOPUNKSGetBidsHistorical(startBlock, endBlock, startDate, endDate, id)
 
@@ -326,7 +326,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="cRYPTOPUNKSGetCollectionDailySnapshotsHistorical"></a>
+<a id="cRYPTOPUNKSGetCollectionDailySnapshotsHistorical"></a>
 # **cRYPTOPUNKSGetCollectionDailySnapshotsHistorical**
 > List&lt;CRYPTOPUNKSCollectionDailySnapshotDTO&gt; cRYPTOPUNKSGetCollectionDailySnapshotsHistorical(startBlock, endBlock, startDate, endDate)
 
@@ -394,7 +394,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="cRYPTOPUNKSGetCollectionsHistorical"></a>
+<a id="cRYPTOPUNKSGetCollectionsHistorical"></a>
 # **cRYPTOPUNKSGetCollectionsHistorical**
 > List&lt;CRYPTOPUNKSCollectionDTO&gt; cRYPTOPUNKSGetCollectionsHistorical(startBlock, endBlock, startDate, endDate, id)
 
@@ -464,7 +464,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="cRYPTOPUNKSGetDataSourcesHistorical"></a>
+<a id="cRYPTOPUNKSGetDataSourcesHistorical"></a>
 # **cRYPTOPUNKSGetDataSourcesHistorical**
 > List&lt;CRYPTOPUNKSDataSourcesDTO&gt; cRYPTOPUNKSGetDataSourcesHistorical(startBlock, endBlock, startDate, endDate, id)
 
@@ -534,7 +534,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="cRYPTOPUNKSGetItemsHistorical"></a>
+<a id="cRYPTOPUNKSGetItemsHistorical"></a>
 # **cRYPTOPUNKSGetItemsHistorical**
 > List&lt;CRYPTOPUNKSItemDTO&gt; cRYPTOPUNKSGetItemsHistorical(startBlock, endBlock, startDate, endDate)
 
@@ -602,7 +602,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="cRYPTOPUNKSGetMarketPlacesHistorical"></a>
+<a id="cRYPTOPUNKSGetMarketPlacesHistorical"></a>
 # **cRYPTOPUNKSGetMarketPlacesHistorical**
 > List&lt;CRYPTOPUNKSMarketPlaceDTO&gt; cRYPTOPUNKSGetMarketPlacesHistorical(startBlock, endBlock, startDate, endDate, id)
 
@@ -672,7 +672,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="cRYPTOPUNKSGetMarketplaceDailySnapshotsHistorical"></a>
+<a id="cRYPTOPUNKSGetMarketplaceDailySnapshotsHistorical"></a>
 # **cRYPTOPUNKSGetMarketplaceDailySnapshotsHistorical**
 > List&lt;CRYPTOPUNKSMarketplaceDailySnapshotDTO&gt; cRYPTOPUNKSGetMarketplaceDailySnapshotsHistorical(startBlock, endBlock, startDate, endDate, id)
 
@@ -742,7 +742,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="cRYPTOPUNKSGetTradesHistorical"></a>
+<a id="cRYPTOPUNKSGetTradesHistorical"></a>
 # **cRYPTOPUNKSGetTradesHistorical**
 > List&lt;CRYPTOPUNKSTradeDTO&gt; cRYPTOPUNKSGetTradesHistorical(startBlock, endBlock, startDate, endDate, id)
 
@@ -812,7 +812,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="cRYPTOPUNKSGetUsersHistorical"></a>
+<a id="cRYPTOPUNKSGetUsersHistorical"></a>
 # **cRYPTOPUNKSGetUsersHistorical**
 > List&lt;CRYPTOPUNKSUserDTO&gt; cRYPTOPUNKSGetUsersHistorical(startBlock, endBlock, startDate, endDate, id)
 
@@ -882,7 +882,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="cRYPTOPUNKSItemsCurrent"></a>
+<a id="cRYPTOPUNKSItemsCurrent"></a>
 # **cRYPTOPUNKSItemsCurrent**
 > List&lt;CRYPTOPUNKSItemDTO&gt; cRYPTOPUNKSItemsCurrent()
 
@@ -940,7 +940,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="cRYPTOPUNKSMarketPlacesCurrent"></a>
+<a id="cRYPTOPUNKSMarketPlacesCurrent"></a>
 # **cRYPTOPUNKSMarketPlacesCurrent**
 > List&lt;CRYPTOPUNKSMarketPlaceDTO&gt; cRYPTOPUNKSMarketPlacesCurrent()
 
@@ -998,7 +998,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="cRYPTOPUNKSMarketplaceDailySnapshotsCurrent"></a>
+<a id="cRYPTOPUNKSMarketplaceDailySnapshotsCurrent"></a>
 # **cRYPTOPUNKSMarketplaceDailySnapshotsCurrent**
 > List&lt;CRYPTOPUNKSMarketplaceDailySnapshotDTO&gt; cRYPTOPUNKSMarketplaceDailySnapshotsCurrent()
 
@@ -1056,7 +1056,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="cRYPTOPUNKSTradesCurrent"></a>
+<a id="cRYPTOPUNKSTradesCurrent"></a>
 # **cRYPTOPUNKSTradesCurrent**
 > List&lt;CRYPTOPUNKSTradeDTO&gt; cRYPTOPUNKSTradesCurrent()
 
@@ -1114,7 +1114,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="cRYPTOPUNKSUsersCurrent"></a>
+<a id="cRYPTOPUNKSUsersCurrent"></a>
 # **cRYPTOPUNKSUsersCurrent**
 > List&lt;CRYPTOPUNKSUserDTO&gt; cRYPTOPUNKSUsersCurrent()
 

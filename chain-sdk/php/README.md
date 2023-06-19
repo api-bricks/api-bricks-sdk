@@ -401,7 +401,8 @@ Class | Method | HTTP request | Description
 - [UniswapV3UniswapDayDataDTO](docs/Model/UniswapV3UniswapDayDataDTO.md)
 
 ## Authorization
-All endpoints do not require authorization.
+Endpoints do not require authorization.
+
 ## Tests
 
 To run the tests, use:

@@ -9,7 +9,7 @@ Method | HTTP request | Description
 [**Invoke-MetadataDappsGet**](MetadataApi.md#Invoke-MetadataDappsGet) | **GET** /metadata/dapps | List all decentralized applications.
 
 
-<a name="Invoke-MetadataChainsGet"></a>
+<a id="Invoke-MetadataChainsGet"></a>
 # **Invoke-MetadataChainsGet**
 > void Invoke-MetadataChainsGet<br>
 
@@ -45,7 +45,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-MetadataDappsDappNameGet"></a>
+<a id="Invoke-MetadataDappsDappNameGet"></a>
 # **Invoke-MetadataDappsDappNameGet**
 > void Invoke-MetadataDappsDappNameGet<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-DappName] <String><br>
@@ -86,7 +86,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-MetadataDappsGet"></a>
+<a id="Invoke-MetadataDappsGet"></a>
 # **Invoke-MetadataDappsGet**
 > void Invoke-MetadataDappsGet<br>
 

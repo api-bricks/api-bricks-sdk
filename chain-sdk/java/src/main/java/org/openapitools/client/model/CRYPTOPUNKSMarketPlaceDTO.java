@@ -34,6 +34,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
@@ -48,7 +52,7 @@ import org.openapitools.client.JSON;
 /**
  * CRYPTOPUNKSMarketPlaceDTO
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-07T11:31:09.822924Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-19T09:28:48.156871Z[Etc/UTC]")
 public class CRYPTOPUNKSMarketPlaceDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -136,7 +140,6 @@ public class CRYPTOPUNKSMarketPlaceDTO {
    * @return entryTime
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getEntryTime() {
     return entryTime;
   }
@@ -158,7 +161,6 @@ public class CRYPTOPUNKSMarketPlaceDTO {
    * @return recvTime
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getRecvTime() {
     return recvTime;
   }
@@ -180,7 +182,6 @@ public class CRYPTOPUNKSMarketPlaceDTO {
    * @return blockNumber
   **/
   @javax.annotation.Nullable
-
   public Long getBlockNumber() {
     return blockNumber;
   }
@@ -202,7 +203,6 @@ public class CRYPTOPUNKSMarketPlaceDTO {
    * @return vid
   **/
   @javax.annotation.Nullable
-
   public Long getVid() {
     return vid;
   }
@@ -224,7 +224,6 @@ public class CRYPTOPUNKSMarketPlaceDTO {
    * @return blockRange
   **/
   @javax.annotation.Nullable
-
   public String getBlockRange() {
     return blockRange;
   }
@@ -246,7 +245,6 @@ public class CRYPTOPUNKSMarketPlaceDTO {
    * @return id
   **/
   @javax.annotation.Nullable
-
   public String getId() {
     return id;
   }
@@ -268,7 +266,6 @@ public class CRYPTOPUNKSMarketPlaceDTO {
    * @return name
   **/
   @javax.annotation.Nullable
-
   public String getName() {
     return name;
   }
@@ -290,7 +287,6 @@ public class CRYPTOPUNKSMarketPlaceDTO {
    * @return slug
   **/
   @javax.annotation.Nullable
-
   public String getSlug() {
     return slug;
   }
@@ -312,7 +308,6 @@ public class CRYPTOPUNKSMarketPlaceDTO {
    * @return schemaVersion
   **/
   @javax.annotation.Nullable
-
   public String getSchemaVersion() {
     return schemaVersion;
   }
@@ -334,7 +329,6 @@ public class CRYPTOPUNKSMarketPlaceDTO {
    * @return subgraphVersion
   **/
   @javax.annotation.Nullable
-
   public String getSubgraphVersion() {
     return subgraphVersion;
   }
@@ -356,7 +350,6 @@ public class CRYPTOPUNKSMarketPlaceDTO {
    * @return methodologyVersion
   **/
   @javax.annotation.Nullable
-
   public String getMethodologyVersion() {
     return methodologyVersion;
   }
@@ -378,7 +371,6 @@ public class CRYPTOPUNKSMarketPlaceDTO {
    * @return collectionCount
   **/
   @javax.annotation.Nullable
-
   public Integer getCollectionCount() {
     return collectionCount;
   }
@@ -400,7 +392,6 @@ public class CRYPTOPUNKSMarketPlaceDTO {
    * @return tradeCount
   **/
   @javax.annotation.Nullable
-
   public Integer getTradeCount() {
     return tradeCount;
   }
@@ -422,7 +413,6 @@ public class CRYPTOPUNKSMarketPlaceDTO {
    * @return cumulativeTradeVolumeEth
   **/
   @javax.annotation.Nullable
-
   public String getCumulativeTradeVolumeEth() {
     return cumulativeTradeVolumeEth;
   }
@@ -444,7 +434,6 @@ public class CRYPTOPUNKSMarketPlaceDTO {
    * @return marketplaceRevenueEth
   **/
   @javax.annotation.Nullable
-
   public String getMarketplaceRevenueEth() {
     return marketplaceRevenueEth;
   }
@@ -466,7 +455,6 @@ public class CRYPTOPUNKSMarketPlaceDTO {
    * @return creatorRevenueEth
   **/
   @javax.annotation.Nullable
-
   public String getCreatorRevenueEth() {
     return creatorRevenueEth;
   }
@@ -488,7 +476,6 @@ public class CRYPTOPUNKSMarketPlaceDTO {
    * @return totalRevenueEth
   **/
   @javax.annotation.Nullable
-
   public String getTotalRevenueEth() {
     return totalRevenueEth;
   }
@@ -510,7 +497,6 @@ public class CRYPTOPUNKSMarketPlaceDTO {
    * @return cumulativeUniqueTraders
   **/
   @javax.annotation.Nullable
-
   public Integer getCumulativeUniqueTraders() {
     return cumulativeUniqueTraders;
   }

@@ -34,6 +34,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
@@ -48,7 +52,7 @@ import org.openapitools.client.JSON;
 /**
  * Token data aggregated across all pairs that include token.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-07T11:31:09.822924Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-19T09:28:48.156871Z[Etc/UTC]")
 public class UniswapV2TokenDayDataDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -124,7 +128,6 @@ public class UniswapV2TokenDayDataDTO {
    * @return entryTime
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getEntryTime() {
     return entryTime;
   }
@@ -146,7 +149,6 @@ public class UniswapV2TokenDayDataDTO {
    * @return recvTime
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getRecvTime() {
     return recvTime;
   }
@@ -168,7 +170,6 @@ public class UniswapV2TokenDayDataDTO {
    * @return blockNumber
   **/
   @javax.annotation.Nullable
-
   public Long getBlockNumber() {
     return blockNumber;
   }
@@ -190,7 +191,6 @@ public class UniswapV2TokenDayDataDTO {
    * @return id
   **/
   @javax.annotation.Nullable
-
   public String getId() {
     return id;
   }
@@ -212,7 +212,6 @@ public class UniswapV2TokenDayDataDTO {
    * @return date
   **/
   @javax.annotation.Nullable
-
   public Integer getDate() {
     return date;
   }
@@ -234,7 +233,6 @@ public class UniswapV2TokenDayDataDTO {
    * @return token
   **/
   @javax.annotation.Nullable
-
   public String getToken() {
     return token;
   }
@@ -256,7 +254,6 @@ public class UniswapV2TokenDayDataDTO {
    * @return dailyVolumeToken
   **/
   @javax.annotation.Nullable
-
   public String getDailyVolumeToken() {
     return dailyVolumeToken;
   }
@@ -278,7 +275,6 @@ public class UniswapV2TokenDayDataDTO {
    * @return dailyVolumeEth
   **/
   @javax.annotation.Nullable
-
   public String getDailyVolumeEth() {
     return dailyVolumeEth;
   }
@@ -300,7 +296,6 @@ public class UniswapV2TokenDayDataDTO {
    * @return dailyVolumeUsd
   **/
   @javax.annotation.Nullable
-
   public String getDailyVolumeUsd() {
     return dailyVolumeUsd;
   }
@@ -322,7 +317,6 @@ public class UniswapV2TokenDayDataDTO {
    * @return dailyTxns
   **/
   @javax.annotation.Nullable
-
   public String getDailyTxns() {
     return dailyTxns;
   }
@@ -344,7 +338,6 @@ public class UniswapV2TokenDayDataDTO {
    * @return totalLiquidityToken
   **/
   @javax.annotation.Nullable
-
   public String getTotalLiquidityToken() {
     return totalLiquidityToken;
   }
@@ -366,7 +359,6 @@ public class UniswapV2TokenDayDataDTO {
    * @return totalLiquidityEth
   **/
   @javax.annotation.Nullable
-
   public String getTotalLiquidityEth() {
     return totalLiquidityEth;
   }
@@ -388,7 +380,6 @@ public class UniswapV2TokenDayDataDTO {
    * @return totalLiquidityUsd
   **/
   @javax.annotation.Nullable
-
   public String getTotalLiquidityUsd() {
     return totalLiquidityUsd;
   }
@@ -410,7 +401,6 @@ public class UniswapV2TokenDayDataDTO {
    * @return priceUsd
   **/
   @javax.annotation.Nullable
-
   public String getPriceUsd() {
     return priceUsd;
   }
@@ -432,7 +422,6 @@ public class UniswapV2TokenDayDataDTO {
    * @return vid
   **/
   @javax.annotation.Nullable
-
   public Long getVid() {
     return vid;
   }

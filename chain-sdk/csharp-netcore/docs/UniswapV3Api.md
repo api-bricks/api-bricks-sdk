@@ -39,7 +39,7 @@ All URIs are relative to *https://onchain.coinapi.io*
 | [**UniswapV3TransactionsCurrent**](UniswapV3Api.md#uniswapv3transactionscurrent) | **GET** /dapps/uniswapv3/transactions/current | Transactions (current) |
 | [**UniswapV3UniswapDayDataCurrent**](UniswapV3Api.md#uniswapv3uniswapdaydatacurrent) | **GET** /dapps/uniswapv3/uniswapDayData/current | UniswapDayData (current) |
 
-<a name="uniswapv3bundlescurrent"></a>
+<a id="uniswapv3bundlescurrent"></a>
 # **UniswapV3BundlesCurrent**
 > List&lt;UniswapV3BundleDTO&gt; UniswapV3BundlesCurrent ()
 
@@ -125,7 +125,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="uniswapv3burnscurrent"></a>
+<a id="uniswapv3burnscurrent"></a>
 # **UniswapV3BurnsCurrent**
 > List&lt;UniswapV3BurnDTO&gt; UniswapV3BurnsCurrent ()
 
@@ -211,7 +211,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="uniswapv3factoriescurrent"></a>
+<a id="uniswapv3factoriescurrent"></a>
 # **UniswapV3FactoriesCurrent**
 > List&lt;UniswapV3FactoryDTO&gt; UniswapV3FactoriesCurrent ()
 
@@ -297,7 +297,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="uniswapv3getbundleshistorical"></a>
+<a id="uniswapv3getbundleshistorical"></a>
 # **UniswapV3GetBundlesHistorical**
 > List&lt;UniswapV3BundleDTO&gt; UniswapV3GetBundlesHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null)
 
@@ -396,7 +396,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="uniswapv3getburnshistorical"></a>
+<a id="uniswapv3getburnshistorical"></a>
 # **UniswapV3GetBurnsHistorical**
 > List&lt;UniswapV3BurnDTO&gt; UniswapV3GetBurnsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string pool = null, string token0 = null, string token1 = null)
 
@@ -501,7 +501,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="uniswapv3getfactorieshistorical"></a>
+<a id="uniswapv3getfactorieshistorical"></a>
 # **UniswapV3GetFactoriesHistorical**
 > List&lt;UniswapV3FactoryDTO&gt; UniswapV3GetFactoriesHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null)
 
@@ -600,7 +600,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="uniswapv3getmintshistorical"></a>
+<a id="uniswapv3getmintshistorical"></a>
 # **UniswapV3GetMintsHistorical**
 > List&lt;UniswapV3MintDTO&gt; UniswapV3GetMintsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string pool = null, string token0 = null, string token1 = null)
 
@@ -705,7 +705,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="uniswapv3getpooldaydatahistorical"></a>
+<a id="uniswapv3getpooldaydatahistorical"></a>
 # **UniswapV3GetPoolDayDataHistorical**
 > List&lt;UniswapV3PoolDayDataDTO&gt; UniswapV3GetPoolDayDataHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string pool = null)
 
@@ -806,7 +806,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="uniswapv3getpoolhourdatahistorical"></a>
+<a id="uniswapv3getpoolhourdatahistorical"></a>
 # **UniswapV3GetPoolHourDataHistorical**
 > List&lt;UniswapV3PoolHourDataDTO&gt; UniswapV3GetPoolHourDataHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string pool = null)
 
@@ -907,7 +907,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="uniswapv3getpoolshistorical"></a>
+<a id="uniswapv3getpoolshistorical"></a>
 # **UniswapV3GetPoolsHistorical**
 > List&lt;UniswapV3PoolDTO&gt; UniswapV3GetPoolsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string token0 = null, string token1 = null)
 
@@ -1010,7 +1010,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="uniswapv3getpositionsnapshotshistorical"></a>
+<a id="uniswapv3getpositionsnapshotshistorical"></a>
 # **UniswapV3GetPositionSnapshotsHistorical**
 > List&lt;UniswapV3PositionSnapshotDTO&gt; UniswapV3GetPositionSnapshotsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string pool = null)
 
@@ -1111,7 +1111,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="uniswapv3getpositionshistorical"></a>
+<a id="uniswapv3getpositionshistorical"></a>
 # **UniswapV3GetPositionsHistorical**
 > List&lt;UniswapV3PositionDTO&gt; UniswapV3GetPositionsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string pool = null, string token0 = null, string token1 = null)
 
@@ -1216,7 +1216,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="uniswapv3getswapshistorical"></a>
+<a id="uniswapv3getswapshistorical"></a>
 # **UniswapV3GetSwapsHistorical**
 > List&lt;UniswapV3SwapDTO&gt; UniswapV3GetSwapsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string pool = null, string token0 = null, string token1 = null)
 
@@ -1321,7 +1321,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="uniswapv3gettickdaydatahistorical"></a>
+<a id="uniswapv3gettickdaydatahistorical"></a>
 # **UniswapV3GetTickDayDataHistorical**
 > List&lt;UniswapV3TickDayDataDTO&gt; UniswapV3GetTickDayDataHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string pool = null)
 
@@ -1422,7 +1422,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="uniswapv3gettickshistorical"></a>
+<a id="uniswapv3gettickshistorical"></a>
 # **UniswapV3GetTicksHistorical**
 > List&lt;UniswapV3TickDTO&gt; UniswapV3GetTicksHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string pool = null)
 
@@ -1523,7 +1523,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="uniswapv3gettokenhourdatahistorical"></a>
+<a id="uniswapv3gettokenhourdatahistorical"></a>
 # **UniswapV3GetTokenHourDataHistorical**
 > List&lt;UniswapV3TokenHourDataDTO&gt; UniswapV3GetTokenHourDataHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null)
 
@@ -1622,7 +1622,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="uniswapv3gettokenv3daydatahistorical"></a>
+<a id="uniswapv3gettokenv3daydatahistorical"></a>
 # **UniswapV3GetTokenV3DayDataHistorical**
 > List&lt;UniswapV3TokenV3DayDataDTO&gt; UniswapV3GetTokenV3DayDataHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null)
 
@@ -1721,7 +1721,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="uniswapv3gettokenshistorical"></a>
+<a id="uniswapv3gettokenshistorical"></a>
 # **UniswapV3GetTokensHistorical**
 > List&lt;UniswapV3TokenDTO&gt; UniswapV3GetTokensHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string symbol = null, string name = null)
 
@@ -1824,7 +1824,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="uniswapv3gettransactionshistorical"></a>
+<a id="uniswapv3gettransactionshistorical"></a>
 # **UniswapV3GetTransactionsHistorical**
 > List&lt;UniswapV3TransactionDTO&gt; UniswapV3GetTransactionsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null)
 
@@ -1923,7 +1923,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="uniswapv3getuniswapdaydatahistorical"></a>
+<a id="uniswapv3getuniswapdaydatahistorical"></a>
 # **UniswapV3GetUniswapDayDataHistorical**
 > List&lt;UniswapV3UniswapDayDataDTO&gt; UniswapV3GetUniswapDayDataHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null)
 
@@ -2022,7 +2022,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="uniswapv3mintscurrent"></a>
+<a id="uniswapv3mintscurrent"></a>
 # **UniswapV3MintsCurrent**
 > List&lt;UniswapV3MintDTO&gt; UniswapV3MintsCurrent ()
 
@@ -2108,7 +2108,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="uniswapv3pooldaydatacurrent"></a>
+<a id="uniswapv3pooldaydatacurrent"></a>
 # **UniswapV3PoolDayDataCurrent**
 > List&lt;UniswapV3PoolDayDataDTO&gt; UniswapV3PoolDayDataCurrent ()
 
@@ -2194,7 +2194,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="uniswapv3poolhourdatacurrent"></a>
+<a id="uniswapv3poolhourdatacurrent"></a>
 # **UniswapV3PoolHourDataCurrent**
 > List&lt;UniswapV3PoolHourDataDTO&gt; UniswapV3PoolHourDataCurrent ()
 
@@ -2280,7 +2280,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="uniswapv3poolscurrent"></a>
+<a id="uniswapv3poolscurrent"></a>
 # **UniswapV3PoolsCurrent**
 > List&lt;UniswapV3PoolDTO&gt; UniswapV3PoolsCurrent (string id = null)
 
@@ -2371,7 +2371,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="uniswapv3positionsnapshotscurrent"></a>
+<a id="uniswapv3positionsnapshotscurrent"></a>
 # **UniswapV3PositionSnapshotsCurrent**
 > List&lt;UniswapV3PositionSnapshotDTO&gt; UniswapV3PositionSnapshotsCurrent ()
 
@@ -2457,7 +2457,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="uniswapv3positionscurrent"></a>
+<a id="uniswapv3positionscurrent"></a>
 # **UniswapV3PositionsCurrent**
 > List&lt;UniswapV3PositionDTO&gt; UniswapV3PositionsCurrent ()
 
@@ -2543,7 +2543,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="uniswapv3swapscurrent"></a>
+<a id="uniswapv3swapscurrent"></a>
 # **UniswapV3SwapsCurrent**
 > List&lt;UniswapV3SwapDTO&gt; UniswapV3SwapsCurrent (string pool = null)
 
@@ -2634,7 +2634,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="uniswapv3tickdaydatacurrent"></a>
+<a id="uniswapv3tickdaydatacurrent"></a>
 # **UniswapV3TickDayDataCurrent**
 > List&lt;UniswapV3TickDayDataDTO&gt; UniswapV3TickDayDataCurrent ()
 
@@ -2720,7 +2720,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="uniswapv3tickscurrent"></a>
+<a id="uniswapv3tickscurrent"></a>
 # **UniswapV3TicksCurrent**
 > List&lt;UniswapV3TickDTO&gt; UniswapV3TicksCurrent ()
 
@@ -2806,7 +2806,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="uniswapv3tokenhourdatacurrent"></a>
+<a id="uniswapv3tokenhourdatacurrent"></a>
 # **UniswapV3TokenHourDataCurrent**
 > List&lt;UniswapV3TokenHourDataDTO&gt; UniswapV3TokenHourDataCurrent ()
 
@@ -2892,7 +2892,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="uniswapv3tokenv3daydatacurrent"></a>
+<a id="uniswapv3tokenv3daydatacurrent"></a>
 # **UniswapV3TokenV3DayDataCurrent**
 > List&lt;UniswapV3TokenV3DayDataDTO&gt; UniswapV3TokenV3DayDataCurrent ()
 
@@ -2978,7 +2978,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="uniswapv3tokenscurrent"></a>
+<a id="uniswapv3tokenscurrent"></a>
 # **UniswapV3TokensCurrent**
 > List&lt;UniswapV3TokenDTO&gt; UniswapV3TokensCurrent ()
 
@@ -3064,7 +3064,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="uniswapv3transactionscurrent"></a>
+<a id="uniswapv3transactionscurrent"></a>
 # **UniswapV3TransactionsCurrent**
 > List&lt;UniswapV3TransactionDTO&gt; UniswapV3TransactionsCurrent ()
 
@@ -3150,7 +3150,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="uniswapv3uniswapdaydatacurrent"></a>
+<a id="uniswapv3uniswapdaydatacurrent"></a>
 # **UniswapV3UniswapDayDataCurrent**
 > List&lt;UniswapV3UniswapDayDataDTO&gt; UniswapV3UniswapDayDataCurrent ()
 

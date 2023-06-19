@@ -35,6 +35,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
@@ -49,7 +53,7 @@ import org.openapitools.client.JSON;
 /**
  * Trade entity.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-07T11:31:09.822924Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-19T09:28:48.156871Z[Etc/UTC]")
 public class CowTradeDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -163,7 +167,6 @@ public class CowTradeDTO {
    * @return entryTime
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getEntryTime() {
     return entryTime;
   }
@@ -185,7 +188,6 @@ public class CowTradeDTO {
    * @return recvTime
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getRecvTime() {
     return recvTime;
   }
@@ -207,7 +209,6 @@ public class CowTradeDTO {
    * @return blockNumber
   **/
   @javax.annotation.Nullable
-
   public Long getBlockNumber() {
     return blockNumber;
   }
@@ -229,7 +230,6 @@ public class CowTradeDTO {
    * @return id
   **/
   @javax.annotation.Nullable
-
   public String getId() {
     return id;
   }
@@ -251,7 +251,6 @@ public class CowTradeDTO {
    * @return timestamp
   **/
   @javax.annotation.Nullable
-
   public String getTimestamp() {
     return timestamp;
   }
@@ -273,7 +272,6 @@ public class CowTradeDTO {
    * @return gasPrice
   **/
   @javax.annotation.Nullable
-
   public String getGasPrice() {
     return gasPrice;
   }
@@ -295,7 +293,6 @@ public class CowTradeDTO {
    * @return gasLimit
   **/
   @javax.annotation.Nullable
-
   public String getGasLimit() {
     return gasLimit;
   }
@@ -317,7 +314,6 @@ public class CowTradeDTO {
    * @return feeAmount
   **/
   @javax.annotation.Nullable
-
   public String getFeeAmount() {
     return feeAmount;
   }
@@ -339,7 +335,6 @@ public class CowTradeDTO {
    * @return txHash
   **/
   @javax.annotation.Nullable
-
   public String getTxHash() {
     return txHash;
   }
@@ -361,7 +356,6 @@ public class CowTradeDTO {
    * @return settlement
   **/
   @javax.annotation.Nullable
-
   public String getSettlement() {
     return settlement;
   }
@@ -383,7 +377,6 @@ public class CowTradeDTO {
    * @return buyAmount
   **/
   @javax.annotation.Nullable
-
   public String getBuyAmount() {
     return buyAmount;
   }
@@ -405,7 +398,6 @@ public class CowTradeDTO {
    * @return sellAmount
   **/
   @javax.annotation.Nullable
-
   public String getSellAmount() {
     return sellAmount;
   }
@@ -427,7 +419,6 @@ public class CowTradeDTO {
    * @return sellToken
   **/
   @javax.annotation.Nullable
-
   public String getSellToken() {
     return sellToken;
   }
@@ -449,7 +440,6 @@ public class CowTradeDTO {
    * @return buyToken
   **/
   @javax.annotation.Nullable
-
   public String getBuyToken() {
     return buyToken;
   }
@@ -471,7 +461,6 @@ public class CowTradeDTO {
    * @return order
   **/
   @javax.annotation.Nullable
-
   public String getOrder() {
     return order;
   }
@@ -493,7 +482,6 @@ public class CowTradeDTO {
    * @return vid
   **/
   @javax.annotation.Nullable
-
   public Long getVid() {
     return vid;
   }
@@ -509,7 +497,6 @@ public class CowTradeDTO {
    * @return poolId
   **/
   @javax.annotation.Nullable
-
   public String getPoolId() {
     return poolId;
   }
@@ -522,7 +509,6 @@ public class CowTradeDTO {
    * @return transactionId
   **/
   @javax.annotation.Nullable
-
   public String getTransactionId() {
     return transactionId;
   }
@@ -535,7 +521,6 @@ public class CowTradeDTO {
    * @return evaluatedPrice
   **/
   @javax.annotation.Nullable
-
   public Double getEvaluatedPrice() {
     return evaluatedPrice;
   }
@@ -548,7 +533,6 @@ public class CowTradeDTO {
    * @return evaluatedAmount
   **/
   @javax.annotation.Nullable
-
   public Double getEvaluatedAmount() {
     return evaluatedAmount;
   }
@@ -567,7 +551,6 @@ public class CowTradeDTO {
    * @return evaluatedAggressor
   **/
   @javax.annotation.Nullable
-
   public TransactionsETradeAggressiveSide getEvaluatedAggressor() {
     return evaluatedAggressor;
   }

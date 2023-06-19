@@ -50,14 +50,12 @@ module Api.Request.Sushiswap exposing
     )
 
 import Api
-import Api.Data
+import Api.Data exposing (..)
 import Api.Time exposing (Posix)
 import Dict
 import Http
 import Json.Decode
 import Json.Encode
-
-
 
 {-| Gets bundles.
 -}
@@ -71,7 +69,6 @@ sushiswapBundlesCurrent =
         []
         Nothing
         (Json.Decode.list Api.Data.sushiswapBundleDTODecoder)
-
 
 
 {-| Gets burns.
@@ -88,7 +85,6 @@ sushiswapBurnsCurrent =
         (Json.Decode.list Api.Data.sushiswapBurnDTODecoder)
 
 
-
 {-| Gets dayData.
 -}
 sushiswapDayDataCurrent : Api.Request (List Api.Data.SushiswapDayDataDTO)
@@ -101,7 +97,6 @@ sushiswapDayDataCurrent =
         []
         Nothing
         (Json.Decode.list Api.Data.sushiswapDayDataDTODecoder)
-
 
 
 {-| Gets factories.
@@ -118,7 +113,6 @@ sushiswapFactoriesCurrent =
         (Json.Decode.list Api.Data.sushiswapFactoryDTODecoder)
 
 
-
 {-| Gets bundles.
 -}
 sushiswapGetBundlesHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.SushiswapBundleDTO)
@@ -131,7 +125,6 @@ sushiswapGetBundlesHistorical startBlock_query endBlock_query startDate_query en
         []
         Nothing
         (Json.Decode.list Api.Data.sushiswapBundleDTODecoder)
-
 
 
 {-| Gets burns.
@@ -148,7 +141,6 @@ sushiswapGetBurnsHistorical startBlock_query endBlock_query startDate_query endD
         (Json.Decode.list Api.Data.sushiswapBurnDTODecoder)
 
 
-
 {-| Gets dayData.
 -}
 sushiswapGetDayDataHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.SushiswapDayDataDTO)
@@ -161,7 +153,6 @@ sushiswapGetDayDataHistorical startBlock_query endBlock_query startDate_query en
         []
         Nothing
         (Json.Decode.list Api.Data.sushiswapDayDataDTODecoder)
-
 
 
 {-| Gets factories.
@@ -178,7 +169,6 @@ sushiswapGetFactoriesHistorical startBlock_query endBlock_query startDate_query 
         (Json.Decode.list Api.Data.sushiswapFactoryDTODecoder)
 
 
-
 {-| Gets hourData.
 -}
 sushiswapGetHourDataHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.SushiswapHourDataDTO)
@@ -191,7 +181,6 @@ sushiswapGetHourDataHistorical startBlock_query endBlock_query startDate_query e
         []
         Nothing
         (Json.Decode.list Api.Data.sushiswapHourDataDTODecoder)
-
 
 
 {-| Gets liquidityPositionSnapshots.
@@ -208,7 +197,6 @@ sushiswapGetLiquidityPositionSnapshotsHistorical startBlock_query endBlock_query
         (Json.Decode.list Api.Data.sushiswapLiquidityPositionSnapshotDTODecoder)
 
 
-
 {-| Gets liquidityPositions.
 -}
 sushiswapGetLiquidityPositionsHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Maybe String -> Maybe String -> Api.Request (List Api.Data.SushiswapLiquidityPositionDTO)
@@ -221,7 +209,6 @@ sushiswapGetLiquidityPositionsHistorical startBlock_query endBlock_query startDa
         []
         Nothing
         (Json.Decode.list Api.Data.sushiswapLiquidityPositionDTODecoder)
-
 
 
 {-| Gets mints.
@@ -238,7 +225,6 @@ sushiswapGetMintsHistorical startBlock_query endBlock_query startDate_query endD
         (Json.Decode.list Api.Data.sushiswapMintDTODecoder)
 
 
-
 {-| Gets pairDayData.
 -}
 sushiswapGetPairDayDataHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Maybe String -> Maybe String -> Maybe String -> Api.Request (List Api.Data.SushiswapPairDayDataDTO)
@@ -251,7 +237,6 @@ sushiswapGetPairDayDataHistorical startBlock_query endBlock_query startDate_quer
         []
         Nothing
         (Json.Decode.list Api.Data.sushiswapPairDayDataDTODecoder)
-
 
 
 {-| Gets pairHourData.
@@ -268,7 +253,6 @@ sushiswapGetPairHourDataHistorical startBlock_query endBlock_query startDate_que
         (Json.Decode.list Api.Data.sushiswapPairHourDataDTODecoder)
 
 
-
 {-| Gets pairs.
 -}
 sushiswapGetPairsHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Maybe String -> Maybe String -> Maybe String -> Api.Request (List Api.Data.SushiswapPairDTO)
@@ -281,7 +265,6 @@ sushiswapGetPairsHistorical startBlock_query endBlock_query startDate_query endD
         []
         Nothing
         (Json.Decode.list Api.Data.sushiswapPairDTODecoder)
-
 
 
 {-| Gets swaps.
@@ -298,7 +281,6 @@ sushiswapGetSwapsHistorical startBlock_query endBlock_query startDate_query endD
         (Json.Decode.list Api.Data.sushiswapSwapDTODecoder)
 
 
-
 {-| Gets tokenDayData.
 -}
 sushiswapGetTokenDayDataHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.SushiswapTokenDayDataDTO)
@@ -311,7 +293,6 @@ sushiswapGetTokenDayDataHistorical startBlock_query endBlock_query startDate_que
         []
         Nothing
         (Json.Decode.list Api.Data.sushiswapTokenDayDataDTODecoder)
-
 
 
 {-| Gets tokens.
@@ -328,7 +309,6 @@ sushiswapGetTokensHistorical startBlock_query endBlock_query startDate_query end
         (Json.Decode.list Api.Data.sushiswapTokenDTODecoder)
 
 
-
 {-| Gets transactions.
 -}
 sushiswapGetTransactionsHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.SushiswapTransactionDTO)
@@ -341,7 +321,6 @@ sushiswapGetTransactionsHistorical startBlock_query endBlock_query startDate_que
         []
         Nothing
         (Json.Decode.list Api.Data.sushiswapTransactionDTODecoder)
-
 
 
 {-| Gets users.
@@ -358,7 +337,6 @@ sushiswapGetUsersHistorical startBlock_query endBlock_query startDate_query endD
         (Json.Decode.list Api.Data.sushiswapUserDTODecoder)
 
 
-
 {-| Gets hourData.
 -}
 sushiswapHourDataCurrent : Api.Request (List Api.Data.SushiswapHourDataDTO)
@@ -371,7 +349,6 @@ sushiswapHourDataCurrent =
         []
         Nothing
         (Json.Decode.list Api.Data.sushiswapHourDataDTODecoder)
-
 
 
 {-| Gets liquidityPositionSnapshots.
@@ -388,7 +365,6 @@ sushiswapLiquidityPositionSnapshotsCurrent =
         (Json.Decode.list Api.Data.sushiswapLiquidityPositionSnapshotDTODecoder)
 
 
-
 {-| Gets liquidityPositions.
 -}
 sushiswapLiquidityPositionsCurrent : Api.Request (List Api.Data.SushiswapLiquidityPositionDTO)
@@ -401,7 +377,6 @@ sushiswapLiquidityPositionsCurrent =
         []
         Nothing
         (Json.Decode.list Api.Data.sushiswapLiquidityPositionDTODecoder)
-
 
 
 {-| Gets mints.
@@ -418,7 +393,6 @@ sushiswapMintsCurrent =
         (Json.Decode.list Api.Data.sushiswapMintDTODecoder)
 
 
-
 {-| Gets pairDayData.
 -}
 sushiswapPairDayDataCurrent : Api.Request (List Api.Data.SushiswapPairDayDataDTO)
@@ -431,7 +405,6 @@ sushiswapPairDayDataCurrent =
         []
         Nothing
         (Json.Decode.list Api.Data.sushiswapPairDayDataDTODecoder)
-
 
 
 {-| Gets pairHourData.
@@ -448,7 +421,6 @@ sushiswapPairHourDataCurrent =
         (Json.Decode.list Api.Data.sushiswapPairHourDataDTODecoder)
 
 
-
 {-| Gets pairs.
 -}
 sushiswapPairsCurrent : Maybe String -> Api.Request (List Api.Data.SushiswapPairDTO)
@@ -461,7 +433,6 @@ sushiswapPairsCurrent id_query =
         []
         Nothing
         (Json.Decode.list Api.Data.sushiswapPairDTODecoder)
-
 
 
 {-| Gets swaps.
@@ -478,7 +449,6 @@ sushiswapSwapsCurrent pair_query =
         (Json.Decode.list Api.Data.sushiswapSwapDTODecoder)
 
 
-
 {-| Gets tokenDayData.
 -}
 sushiswapTokenDayDataCurrent : Api.Request (List Api.Data.SushiswapTokenDayDataDTO)
@@ -491,7 +461,6 @@ sushiswapTokenDayDataCurrent =
         []
         Nothing
         (Json.Decode.list Api.Data.sushiswapTokenDayDataDTODecoder)
-
 
 
 {-| Gets tokens.
@@ -508,7 +477,6 @@ sushiswapTokensCurrent =
         (Json.Decode.list Api.Data.sushiswapTokenDTODecoder)
 
 
-
 {-| Gets transactions.
 -}
 sushiswapTransactionsCurrent : Api.Request (List Api.Data.SushiswapTransactionDTO)
@@ -523,7 +491,6 @@ sushiswapTransactionsCurrent =
         (Json.Decode.list Api.Data.sushiswapTransactionDTODecoder)
 
 
-
 {-| Gets users.
 -}
 sushiswapUsersCurrent : Api.Request (List Api.Data.SushiswapUserDTO)
@@ -536,3 +503,4 @@ sushiswapUsersCurrent =
         []
         Nothing
         (Json.Decode.list Api.Data.sushiswapUserDTODecoder)
+

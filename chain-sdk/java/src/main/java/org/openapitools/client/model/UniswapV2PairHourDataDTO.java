@@ -34,6 +34,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
@@ -48,7 +52,7 @@ import org.openapitools.client.JSON;
 /**
  * Tracks pair data across each hour.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-07T11:31:09.822924Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-19T09:28:48.156871Z[Etc/UTC]")
 public class UniswapV2PairHourDataDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -124,7 +128,6 @@ public class UniswapV2PairHourDataDTO {
    * @return entryTime
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getEntryTime() {
     return entryTime;
   }
@@ -146,7 +149,6 @@ public class UniswapV2PairHourDataDTO {
    * @return recvTime
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getRecvTime() {
     return recvTime;
   }
@@ -168,7 +170,6 @@ public class UniswapV2PairHourDataDTO {
    * @return blockNumber
   **/
   @javax.annotation.Nullable
-
   public Long getBlockNumber() {
     return blockNumber;
   }
@@ -190,7 +191,6 @@ public class UniswapV2PairHourDataDTO {
    * @return id
   **/
   @javax.annotation.Nullable
-
   public String getId() {
     return id;
   }
@@ -212,7 +212,6 @@ public class UniswapV2PairHourDataDTO {
    * @return hourStartUnix
   **/
   @javax.annotation.Nullable
-
   public Integer getHourStartUnix() {
     return hourStartUnix;
   }
@@ -234,7 +233,6 @@ public class UniswapV2PairHourDataDTO {
    * @return pair
   **/
   @javax.annotation.Nullable
-
   public String getPair() {
     return pair;
   }
@@ -256,7 +254,6 @@ public class UniswapV2PairHourDataDTO {
    * @return reserve0
   **/
   @javax.annotation.Nullable
-
   public String getReserve0() {
     return reserve0;
   }
@@ -278,7 +275,6 @@ public class UniswapV2PairHourDataDTO {
    * @return reserve1
   **/
   @javax.annotation.Nullable
-
   public String getReserve1() {
     return reserve1;
   }
@@ -300,7 +296,6 @@ public class UniswapV2PairHourDataDTO {
    * @return totalSupply
   **/
   @javax.annotation.Nullable
-
   public String getTotalSupply() {
     return totalSupply;
   }
@@ -322,7 +317,6 @@ public class UniswapV2PairHourDataDTO {
    * @return reserveUsd
   **/
   @javax.annotation.Nullable
-
   public String getReserveUsd() {
     return reserveUsd;
   }
@@ -344,7 +338,6 @@ public class UniswapV2PairHourDataDTO {
    * @return hourlyVolumeToken0
   **/
   @javax.annotation.Nullable
-
   public String getHourlyVolumeToken0() {
     return hourlyVolumeToken0;
   }
@@ -366,7 +359,6 @@ public class UniswapV2PairHourDataDTO {
    * @return hourlyVolumeToken1
   **/
   @javax.annotation.Nullable
-
   public String getHourlyVolumeToken1() {
     return hourlyVolumeToken1;
   }
@@ -388,7 +380,6 @@ public class UniswapV2PairHourDataDTO {
    * @return hourlyVolumeUsd
   **/
   @javax.annotation.Nullable
-
   public String getHourlyVolumeUsd() {
     return hourlyVolumeUsd;
   }
@@ -410,7 +401,6 @@ public class UniswapV2PairHourDataDTO {
    * @return hourlyTxns
   **/
   @javax.annotation.Nullable
-
   public String getHourlyTxns() {
     return hourlyTxns;
   }
@@ -432,7 +422,6 @@ public class UniswapV2PairHourDataDTO {
    * @return vid
   **/
   @javax.annotation.Nullable
-
   public Long getVid() {
     return vid;
   }

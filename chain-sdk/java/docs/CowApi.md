@@ -16,7 +16,7 @@ All URIs are relative to *https://onchain.coinapi.io*
 | [**cowUsersCurrent**](CowApi.md#cowUsersCurrent) | **GET** /dapps/cow/users/current | Users (current) |
 
 
-<a name="cowGetOrdersHistorical"></a>
+<a id="cowGetOrdersHistorical"></a>
 # **cowGetOrdersHistorical**
 > List&lt;CowOrderDTO&gt; cowGetOrdersHistorical(startBlock, endBlock, startDate, endDate, id)
 
@@ -86,7 +86,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="cowGetSettlementsHistorical"></a>
+<a id="cowGetSettlementsHistorical"></a>
 # **cowGetSettlementsHistorical**
 > List&lt;CowSettlementDTO&gt; cowGetSettlementsHistorical(startBlock, endBlock, startDate, endDate, id)
 
@@ -156,7 +156,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="cowGetTokensHistorical"></a>
+<a id="cowGetTokensHistorical"></a>
 # **cowGetTokensHistorical**
 > List&lt;CowTokenDTO&gt; cowGetTokensHistorical(startBlock, endBlock, startDate, endDate, id, address, name, symbol)
 
@@ -232,7 +232,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="cowGetTradesHistorical"></a>
+<a id="cowGetTradesHistorical"></a>
 # **cowGetTradesHistorical**
 > List&lt;CowTradeDTO&gt; cowGetTradesHistorical(startBlock, endBlock, startDate, endDate, id, sellToken, buyToken)
 
@@ -306,7 +306,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="cowGetUsersHistorical"></a>
+<a id="cowGetUsersHistorical"></a>
 # **cowGetUsersHistorical**
 > List&lt;CowUserDTO&gt; cowGetUsersHistorical(startBlock, endBlock, startDate, endDate, id, address)
 
@@ -378,7 +378,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="cowOrdersCurrent"></a>
+<a id="cowOrdersCurrent"></a>
 # **cowOrdersCurrent**
 > List&lt;CowOrderDTO&gt; cowOrdersCurrent()
 
@@ -436,7 +436,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="cowSettlementsCurrent"></a>
+<a id="cowSettlementsCurrent"></a>
 # **cowSettlementsCurrent**
 > List&lt;CowSettlementDTO&gt; cowSettlementsCurrent()
 
@@ -494,7 +494,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="cowTokensCurrent"></a>
+<a id="cowTokensCurrent"></a>
 # **cowTokensCurrent**
 > List&lt;CowTokenDTO&gt; cowTokensCurrent()
 
@@ -552,7 +552,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="cowTradesCurrent"></a>
+<a id="cowTradesCurrent"></a>
 # **cowTradesCurrent**
 > List&lt;CowTradeDTO&gt; cowTradesCurrent()
 
@@ -610,7 +610,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="cowUsersCurrent"></a>
+<a id="cowUsersCurrent"></a>
 # **cowUsersCurrent**
 > List&lt;CowUserDTO&gt; cowUsersCurrent()
 

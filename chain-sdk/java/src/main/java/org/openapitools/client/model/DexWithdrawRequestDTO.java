@@ -34,6 +34,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
@@ -48,7 +52,7 @@ import org.openapitools.client.JSON;
 /**
  * Withdraw request of an user
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-07T11:31:09.822924Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-19T09:28:48.156871Z[Etc/UTC]")
 public class DexWithdrawRequestDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -112,7 +116,6 @@ public class DexWithdrawRequestDTO {
    * @return entryTime
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getEntryTime() {
     return entryTime;
   }
@@ -134,7 +137,6 @@ public class DexWithdrawRequestDTO {
    * @return recvTime
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getRecvTime() {
     return recvTime;
   }
@@ -156,7 +158,6 @@ public class DexWithdrawRequestDTO {
    * @return blockNumber
   **/
   @javax.annotation.Nullable
-
   public Long getBlockNumber() {
     return blockNumber;
   }
@@ -178,7 +179,6 @@ public class DexWithdrawRequestDTO {
    * @return id
   **/
   @javax.annotation.Nullable
-
   public String getId() {
     return id;
   }
@@ -200,7 +200,6 @@ public class DexWithdrawRequestDTO {
    * @return user
   **/
   @javax.annotation.Nullable
-
   public String getUser() {
     return user;
   }
@@ -222,7 +221,6 @@ public class DexWithdrawRequestDTO {
    * @return tokenAddress
   **/
   @javax.annotation.Nullable
-
   public String getTokenAddress() {
     return tokenAddress;
   }
@@ -244,7 +242,6 @@ public class DexWithdrawRequestDTO {
    * @return amount
   **/
   @javax.annotation.Nullable
-
   public String getAmount() {
     return amount;
   }
@@ -266,7 +263,6 @@ public class DexWithdrawRequestDTO {
    * @return withdrawableFromBatchId
   **/
   @javax.annotation.Nullable
-
   public String getWithdrawableFromBatchId() {
     return withdrawableFromBatchId;
   }
@@ -288,7 +284,6 @@ public class DexWithdrawRequestDTO {
    * @return createEpoch
   **/
   @javax.annotation.Nullable
-
   public String getCreateEpoch() {
     return createEpoch;
   }
@@ -310,7 +305,6 @@ public class DexWithdrawRequestDTO {
    * @return createBatchId
   **/
   @javax.annotation.Nullable
-
   public String getCreateBatchId() {
     return createBatchId;
   }
@@ -332,7 +326,6 @@ public class DexWithdrawRequestDTO {
    * @return txHash
   **/
   @javax.annotation.Nullable
-
   public String getTxHash() {
     return txHash;
   }
@@ -354,7 +347,6 @@ public class DexWithdrawRequestDTO {
    * @return vid
   **/
   @javax.annotation.Nullable
-
   public Long getVid() {
     return vid;
   }

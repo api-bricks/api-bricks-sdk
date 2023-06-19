@@ -92,13 +92,13 @@ class CurveApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<CurveAccountDTO> _responseData;
+    BuiltList<CurveAccountDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(CurveAccountDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(CurveAccountDTO)]),
       ) as BuiltList<CurveAccountDTO>;
 
     } catch (error, stackTrace) {
@@ -165,13 +165,13 @@ class CurveApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<CurveAddLiquidityEventDTO> _responseData;
+    BuiltList<CurveAddLiquidityEventDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(CurveAddLiquidityEventDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(CurveAddLiquidityEventDTO)]),
       ) as BuiltList<CurveAddLiquidityEventDTO>;
 
     } catch (error, stackTrace) {
@@ -238,13 +238,13 @@ class CurveApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<CurveAdminFeeChangeLogDTO> _responseData;
+    BuiltList<CurveAdminFeeChangeLogDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(CurveAdminFeeChangeLogDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(CurveAdminFeeChangeLogDTO)]),
       ) as BuiltList<CurveAdminFeeChangeLogDTO>;
 
     } catch (error, stackTrace) {
@@ -311,13 +311,13 @@ class CurveApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<CurveAmplificationCoeffChangeLogDTO> _responseData;
+    BuiltList<CurveAmplificationCoeffChangeLogDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(CurveAmplificationCoeffChangeLogDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(CurveAmplificationCoeffChangeLogDTO)]),
       ) as BuiltList<CurveAmplificationCoeffChangeLogDTO>;
 
     } catch (error, stackTrace) {
@@ -384,13 +384,13 @@ class CurveApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<CurveCoinDTO> _responseData;
+    BuiltList<CurveCoinDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(CurveCoinDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(CurveCoinDTO)]),
       ) as BuiltList<CurveCoinDTO>;
 
     } catch (error, stackTrace) {
@@ -457,13 +457,13 @@ class CurveApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<CurveContractVersionDTO> _responseData;
+    BuiltList<CurveContractVersionDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(CurveContractVersionDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(CurveContractVersionDTO)]),
       ) as BuiltList<CurveContractVersionDTO>;
 
     } catch (error, stackTrace) {
@@ -530,13 +530,13 @@ class CurveApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<CurveContractDTO> _responseData;
+    BuiltList<CurveContractDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(CurveContractDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(CurveContractDTO)]),
       ) as BuiltList<CurveContractDTO>;
 
     } catch (error, stackTrace) {
@@ -603,13 +603,13 @@ class CurveApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<CurveDailyVolumeDTO> _responseData;
+    BuiltList<CurveDailyVolumeDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(CurveDailyVolumeDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(CurveDailyVolumeDTO)]),
       ) as BuiltList<CurveDailyVolumeDTO>;
 
     } catch (error, stackTrace) {
@@ -683,13 +683,13 @@ class CurveApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<CurveExchangeDTO> _responseData;
+    BuiltList<CurveExchangeDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(CurveExchangeDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(CurveExchangeDTO)]),
       ) as BuiltList<CurveExchangeDTO>;
 
     } catch (error, stackTrace) {
@@ -756,13 +756,13 @@ class CurveApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<CurveFeeChangeLogDTO> _responseData;
+    BuiltList<CurveFeeChangeLogDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(CurveFeeChangeLogDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(CurveFeeChangeLogDTO)]),
       ) as BuiltList<CurveFeeChangeLogDTO>;
 
     } catch (error, stackTrace) {
@@ -829,13 +829,13 @@ class CurveApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<CurveGaugeDepositDTO> _responseData;
+    BuiltList<CurveGaugeDepositDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(CurveGaugeDepositDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(CurveGaugeDepositDTO)]),
       ) as BuiltList<CurveGaugeDepositDTO>;
 
     } catch (error, stackTrace) {
@@ -902,13 +902,13 @@ class CurveApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<CurveGaugeLiquidityDTO> _responseData;
+    BuiltList<CurveGaugeLiquidityDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(CurveGaugeLiquidityDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(CurveGaugeLiquidityDTO)]),
       ) as BuiltList<CurveGaugeLiquidityDTO>;
 
     } catch (error, stackTrace) {
@@ -975,13 +975,13 @@ class CurveApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<CurveGaugeTotalWeightDTO> _responseData;
+    BuiltList<CurveGaugeTotalWeightDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(CurveGaugeTotalWeightDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(CurveGaugeTotalWeightDTO)]),
       ) as BuiltList<CurveGaugeTotalWeightDTO>;
 
     } catch (error, stackTrace) {
@@ -1048,13 +1048,13 @@ class CurveApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<CurveGaugeTypeWeightDTO> _responseData;
+    BuiltList<CurveGaugeTypeWeightDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(CurveGaugeTypeWeightDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(CurveGaugeTypeWeightDTO)]),
       ) as BuiltList<CurveGaugeTypeWeightDTO>;
 
     } catch (error, stackTrace) {
@@ -1121,13 +1121,13 @@ class CurveApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<CurveGaugeTypeDTO> _responseData;
+    BuiltList<CurveGaugeTypeDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(CurveGaugeTypeDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(CurveGaugeTypeDTO)]),
       ) as BuiltList<CurveGaugeTypeDTO>;
 
     } catch (error, stackTrace) {
@@ -1194,13 +1194,13 @@ class CurveApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<CurveGaugeWeightVoteDTO> _responseData;
+    BuiltList<CurveGaugeWeightVoteDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(CurveGaugeWeightVoteDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(CurveGaugeWeightVoteDTO)]),
       ) as BuiltList<CurveGaugeWeightVoteDTO>;
 
     } catch (error, stackTrace) {
@@ -1267,13 +1267,13 @@ class CurveApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<CurveGaugeWeightDTO> _responseData;
+    BuiltList<CurveGaugeWeightDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(CurveGaugeWeightDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(CurveGaugeWeightDTO)]),
       ) as BuiltList<CurveGaugeWeightDTO>;
 
     } catch (error, stackTrace) {
@@ -1340,13 +1340,13 @@ class CurveApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<CurveGaugeWithdrawDTO> _responseData;
+    BuiltList<CurveGaugeWithdrawDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(CurveGaugeWithdrawDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(CurveGaugeWithdrawDTO)]),
       ) as BuiltList<CurveGaugeWithdrawDTO>;
 
     } catch (error, stackTrace) {
@@ -1413,13 +1413,13 @@ class CurveApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<CurveGaugeDTO> _responseData;
+    BuiltList<CurveGaugeDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(CurveGaugeDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(CurveGaugeDTO)]),
       ) as BuiltList<CurveGaugeDTO>;
 
     } catch (error, stackTrace) {
@@ -1508,13 +1508,13 @@ class CurveApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<CurveAccountDTO> _responseData;
+    BuiltList<CurveAccountDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(CurveAccountDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(CurveAccountDTO)]),
       ) as BuiltList<CurveAccountDTO>;
 
     } catch (error, stackTrace) {
@@ -1603,13 +1603,13 @@ class CurveApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<CurveAddLiquidityEventDTO> _responseData;
+    BuiltList<CurveAddLiquidityEventDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(CurveAddLiquidityEventDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(CurveAddLiquidityEventDTO)]),
       ) as BuiltList<CurveAddLiquidityEventDTO>;
 
     } catch (error, stackTrace) {
@@ -1698,13 +1698,13 @@ class CurveApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<CurveAdminFeeChangeLogDTO> _responseData;
+    BuiltList<CurveAdminFeeChangeLogDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(CurveAdminFeeChangeLogDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(CurveAdminFeeChangeLogDTO)]),
       ) as BuiltList<CurveAdminFeeChangeLogDTO>;
 
     } catch (error, stackTrace) {
@@ -1793,13 +1793,13 @@ class CurveApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<CurveAmplificationCoeffChangeLogDTO> _responseData;
+    BuiltList<CurveAmplificationCoeffChangeLogDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(CurveAmplificationCoeffChangeLogDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(CurveAmplificationCoeffChangeLogDTO)]),
       ) as BuiltList<CurveAmplificationCoeffChangeLogDTO>;
 
     } catch (error, stackTrace) {
@@ -1888,13 +1888,13 @@ class CurveApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<CurveCoinDTO> _responseData;
+    BuiltList<CurveCoinDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(CurveCoinDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(CurveCoinDTO)]),
       ) as BuiltList<CurveCoinDTO>;
 
     } catch (error, stackTrace) {
@@ -1983,13 +1983,13 @@ class CurveApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<CurveContractVersionDTO> _responseData;
+    BuiltList<CurveContractVersionDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(CurveContractVersionDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(CurveContractVersionDTO)]),
       ) as BuiltList<CurveContractVersionDTO>;
 
     } catch (error, stackTrace) {
@@ -2075,13 +2075,13 @@ class CurveApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<CurveContractDTO> _responseData;
+    BuiltList<CurveContractDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(CurveContractDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(CurveContractDTO)]),
       ) as BuiltList<CurveContractDTO>;
 
     } catch (error, stackTrace) {
@@ -2170,13 +2170,13 @@ class CurveApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<CurveDailyVolumeDTO> _responseData;
+    BuiltList<CurveDailyVolumeDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(CurveDailyVolumeDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(CurveDailyVolumeDTO)]),
       ) as BuiltList<CurveDailyVolumeDTO>;
 
     } catch (error, stackTrace) {
@@ -2265,13 +2265,13 @@ class CurveApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<CurveExchangeDTO> _responseData;
+    BuiltList<CurveExchangeDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(CurveExchangeDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(CurveExchangeDTO)]),
       ) as BuiltList<CurveExchangeDTO>;
 
     } catch (error, stackTrace) {
@@ -2360,13 +2360,13 @@ class CurveApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<CurveFeeChangeLogDTO> _responseData;
+    BuiltList<CurveFeeChangeLogDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(CurveFeeChangeLogDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(CurveFeeChangeLogDTO)]),
       ) as BuiltList<CurveFeeChangeLogDTO>;
 
     } catch (error, stackTrace) {
@@ -2452,13 +2452,13 @@ class CurveApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<CurveGaugeDepositDTO> _responseData;
+    BuiltList<CurveGaugeDepositDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(CurveGaugeDepositDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(CurveGaugeDepositDTO)]),
       ) as BuiltList<CurveGaugeDepositDTO>;
 
     } catch (error, stackTrace) {
@@ -2547,13 +2547,13 @@ class CurveApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<CurveGaugeLiquidityDTO> _responseData;
+    BuiltList<CurveGaugeLiquidityDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(CurveGaugeLiquidityDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(CurveGaugeLiquidityDTO)]),
       ) as BuiltList<CurveGaugeLiquidityDTO>;
 
     } catch (error, stackTrace) {
@@ -2639,13 +2639,13 @@ class CurveApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<CurveGaugeTotalWeightDTO> _responseData;
+    BuiltList<CurveGaugeTotalWeightDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(CurveGaugeTotalWeightDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(CurveGaugeTotalWeightDTO)]),
       ) as BuiltList<CurveGaugeTotalWeightDTO>;
 
     } catch (error, stackTrace) {
@@ -2731,13 +2731,13 @@ class CurveApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<CurveGaugeTypeWeightDTO> _responseData;
+    BuiltList<CurveGaugeTypeWeightDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(CurveGaugeTypeWeightDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(CurveGaugeTypeWeightDTO)]),
       ) as BuiltList<CurveGaugeTypeWeightDTO>;
 
     } catch (error, stackTrace) {
@@ -2826,13 +2826,13 @@ class CurveApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<CurveGaugeTypeDTO> _responseData;
+    BuiltList<CurveGaugeTypeDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(CurveGaugeTypeDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(CurveGaugeTypeDTO)]),
       ) as BuiltList<CurveGaugeTypeDTO>;
 
     } catch (error, stackTrace) {
@@ -2921,13 +2921,13 @@ class CurveApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<CurveGaugeWeightVoteDTO> _responseData;
+    BuiltList<CurveGaugeWeightVoteDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(CurveGaugeWeightVoteDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(CurveGaugeWeightVoteDTO)]),
       ) as BuiltList<CurveGaugeWeightVoteDTO>;
 
     } catch (error, stackTrace) {
@@ -3013,13 +3013,13 @@ class CurveApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<CurveGaugeWeightDTO> _responseData;
+    BuiltList<CurveGaugeWeightDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(CurveGaugeWeightDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(CurveGaugeWeightDTO)]),
       ) as BuiltList<CurveGaugeWeightDTO>;
 
     } catch (error, stackTrace) {
@@ -3105,13 +3105,13 @@ class CurveApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<CurveGaugeWithdrawDTO> _responseData;
+    BuiltList<CurveGaugeWithdrawDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(CurveGaugeWithdrawDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(CurveGaugeWithdrawDTO)]),
       ) as BuiltList<CurveGaugeWithdrawDTO>;
 
     } catch (error, stackTrace) {
@@ -3203,13 +3203,13 @@ class CurveApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<CurveGaugeDTO> _responseData;
+    BuiltList<CurveGaugeDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(CurveGaugeDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(CurveGaugeDTO)]),
       ) as BuiltList<CurveGaugeDTO>;
 
     } catch (error, stackTrace) {
@@ -3298,13 +3298,13 @@ class CurveApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<CurveHourlyVolumeDTO> _responseData;
+    BuiltList<CurveHourlyVolumeDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(CurveHourlyVolumeDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(CurveHourlyVolumeDTO)]),
       ) as BuiltList<CurveHourlyVolumeDTO>;
 
     } catch (error, stackTrace) {
@@ -3402,13 +3402,13 @@ class CurveApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<CurveLpTokenDTO> _responseData;
+    BuiltList<CurveLpTokenDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(CurveLpTokenDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(CurveLpTokenDTO)]),
       ) as BuiltList<CurveLpTokenDTO>;
 
     } catch (error, stackTrace) {
@@ -3497,13 +3497,13 @@ class CurveApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<CurvePoolDTO> _responseData;
+    BuiltList<CurvePoolDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(CurvePoolDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(CurvePoolDTO)]),
       ) as BuiltList<CurvePoolDTO>;
 
     } catch (error, stackTrace) {
@@ -3589,13 +3589,13 @@ class CurveApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<CurveProposalVoteDTO> _responseData;
+    BuiltList<CurveProposalVoteDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(CurveProposalVoteDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(CurveProposalVoteDTO)]),
       ) as BuiltList<CurveProposalVoteDTO>;
 
     } catch (error, stackTrace) {
@@ -3681,13 +3681,13 @@ class CurveApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<CurveProposalDTO> _responseData;
+    BuiltList<CurveProposalDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(CurveProposalDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(CurveProposalDTO)]),
       ) as BuiltList<CurveProposalDTO>;
 
     } catch (error, stackTrace) {
@@ -3776,13 +3776,13 @@ class CurveApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<CurveRemoveLiquidityEventDTO> _responseData;
+    BuiltList<CurveRemoveLiquidityEventDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(CurveRemoveLiquidityEventDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(CurveRemoveLiquidityEventDTO)]),
       ) as BuiltList<CurveRemoveLiquidityEventDTO>;
 
     } catch (error, stackTrace) {
@@ -3871,13 +3871,13 @@ class CurveApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<CurveRemoveLiquidityOneEventDTO> _responseData;
+    BuiltList<CurveRemoveLiquidityOneEventDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(CurveRemoveLiquidityOneEventDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(CurveRemoveLiquidityOneEventDTO)]),
       ) as BuiltList<CurveRemoveLiquidityOneEventDTO>;
 
     } catch (error, stackTrace) {
@@ -3963,13 +3963,13 @@ class CurveApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<CurveSystemStateDTO> _responseData;
+    BuiltList<CurveSystemStateDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(CurveSystemStateDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(CurveSystemStateDTO)]),
       ) as BuiltList<CurveSystemStateDTO>;
 
     } catch (error, stackTrace) {
@@ -4064,13 +4064,13 @@ class CurveApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<CurveTokenDTO> _responseData;
+    BuiltList<CurveTokenDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(CurveTokenDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(CurveTokenDTO)]),
       ) as BuiltList<CurveTokenDTO>;
 
     } catch (error, stackTrace) {
@@ -4159,13 +4159,13 @@ class CurveApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<CurveTransferOwnershipEventDTO> _responseData;
+    BuiltList<CurveTransferOwnershipEventDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(CurveTransferOwnershipEventDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(CurveTransferOwnershipEventDTO)]),
       ) as BuiltList<CurveTransferOwnershipEventDTO>;
 
     } catch (error, stackTrace) {
@@ -4254,13 +4254,13 @@ class CurveApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<CurveUnderlyingCoinDTO> _responseData;
+    BuiltList<CurveUnderlyingCoinDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(CurveUnderlyingCoinDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(CurveUnderlyingCoinDTO)]),
       ) as BuiltList<CurveUnderlyingCoinDTO>;
 
     } catch (error, stackTrace) {
@@ -4349,13 +4349,13 @@ class CurveApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<CurveVotingAppDTO> _responseData;
+    BuiltList<CurveVotingAppDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(CurveVotingAppDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(CurveVotingAppDTO)]),
       ) as BuiltList<CurveVotingAppDTO>;
 
     } catch (error, stackTrace) {
@@ -4444,13 +4444,13 @@ class CurveApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<CurveWeeklyVolumeDTO> _responseData;
+    BuiltList<CurveWeeklyVolumeDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(CurveWeeklyVolumeDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(CurveWeeklyVolumeDTO)]),
       ) as BuiltList<CurveWeeklyVolumeDTO>;
 
     } catch (error, stackTrace) {
@@ -4517,13 +4517,13 @@ class CurveApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<CurveHourlyVolumeDTO> _responseData;
+    BuiltList<CurveHourlyVolumeDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(CurveHourlyVolumeDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(CurveHourlyVolumeDTO)]),
       ) as BuiltList<CurveHourlyVolumeDTO>;
 
     } catch (error, stackTrace) {
@@ -4590,13 +4590,13 @@ class CurveApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<CurveLpTokenDTO> _responseData;
+    BuiltList<CurveLpTokenDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(CurveLpTokenDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(CurveLpTokenDTO)]),
       ) as BuiltList<CurveLpTokenDTO>;
 
     } catch (error, stackTrace) {
@@ -4670,13 +4670,13 @@ class CurveApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<CurvePoolDTO> _responseData;
+    BuiltList<CurvePoolDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(CurvePoolDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(CurvePoolDTO)]),
       ) as BuiltList<CurvePoolDTO>;
 
     } catch (error, stackTrace) {
@@ -4743,13 +4743,13 @@ class CurveApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<CurveProposalVoteDTO> _responseData;
+    BuiltList<CurveProposalVoteDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(CurveProposalVoteDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(CurveProposalVoteDTO)]),
       ) as BuiltList<CurveProposalVoteDTO>;
 
     } catch (error, stackTrace) {
@@ -4816,13 +4816,13 @@ class CurveApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<CurveProposalDTO> _responseData;
+    BuiltList<CurveProposalDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(CurveProposalDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(CurveProposalDTO)]),
       ) as BuiltList<CurveProposalDTO>;
 
     } catch (error, stackTrace) {
@@ -4889,13 +4889,13 @@ class CurveApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<CurveRemoveLiquidityEventDTO> _responseData;
+    BuiltList<CurveRemoveLiquidityEventDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(CurveRemoveLiquidityEventDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(CurveRemoveLiquidityEventDTO)]),
       ) as BuiltList<CurveRemoveLiquidityEventDTO>;
 
     } catch (error, stackTrace) {
@@ -4962,13 +4962,13 @@ class CurveApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<CurveRemoveLiquidityOneEventDTO> _responseData;
+    BuiltList<CurveRemoveLiquidityOneEventDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(CurveRemoveLiquidityOneEventDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(CurveRemoveLiquidityOneEventDTO)]),
       ) as BuiltList<CurveRemoveLiquidityOneEventDTO>;
 
     } catch (error, stackTrace) {
@@ -5035,13 +5035,13 @@ class CurveApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<CurveSystemStateDTO> _responseData;
+    BuiltList<CurveSystemStateDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(CurveSystemStateDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(CurveSystemStateDTO)]),
       ) as BuiltList<CurveSystemStateDTO>;
 
     } catch (error, stackTrace) {
@@ -5108,13 +5108,13 @@ class CurveApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<CurveTokenDTO> _responseData;
+    BuiltList<CurveTokenDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(CurveTokenDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(CurveTokenDTO)]),
       ) as BuiltList<CurveTokenDTO>;
 
     } catch (error, stackTrace) {
@@ -5181,13 +5181,13 @@ class CurveApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<CurveTransferOwnershipEventDTO> _responseData;
+    BuiltList<CurveTransferOwnershipEventDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(CurveTransferOwnershipEventDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(CurveTransferOwnershipEventDTO)]),
       ) as BuiltList<CurveTransferOwnershipEventDTO>;
 
     } catch (error, stackTrace) {
@@ -5254,13 +5254,13 @@ class CurveApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<CurveUnderlyingCoinDTO> _responseData;
+    BuiltList<CurveUnderlyingCoinDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(CurveUnderlyingCoinDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(CurveUnderlyingCoinDTO)]),
       ) as BuiltList<CurveUnderlyingCoinDTO>;
 
     } catch (error, stackTrace) {
@@ -5327,13 +5327,13 @@ class CurveApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<CurveVotingAppDTO> _responseData;
+    BuiltList<CurveVotingAppDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(CurveVotingAppDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(CurveVotingAppDTO)]),
       ) as BuiltList<CurveVotingAppDTO>;
 
     } catch (error, stackTrace) {
@@ -5400,13 +5400,13 @@ class CurveApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<CurveWeeklyVolumeDTO> _responseData;
+    BuiltList<CurveWeeklyVolumeDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(CurveWeeklyVolumeDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(CurveWeeklyVolumeDTO)]),
       ) as BuiltList<CurveWeeklyVolumeDTO>;
 
     } catch (error, stackTrace) {

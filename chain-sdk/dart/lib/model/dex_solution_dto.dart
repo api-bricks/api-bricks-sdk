@@ -258,7 +258,7 @@ class DexSolutionDTO {
     return null;
   }
 
-  static List<DexSolutionDTO>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<DexSolutionDTO> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <DexSolutionDTO>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -289,12 +289,10 @@ class DexSolutionDTO {
   static Map<String, List<DexSolutionDTO>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<DexSolutionDTO>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = DexSolutionDTO.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = DexSolutionDTO.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

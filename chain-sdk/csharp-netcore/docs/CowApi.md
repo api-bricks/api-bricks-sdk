@@ -15,7 +15,7 @@ All URIs are relative to *https://onchain.coinapi.io*
 | [**CowTradesCurrent**](CowApi.md#cowtradescurrent) | **GET** /dapps/cow/trades/current | Trades (current) |
 | [**CowUsersCurrent**](CowApi.md#cowuserscurrent) | **GET** /dapps/cow/users/current | Users (current) |
 
-<a name="cowgetordershistorical"></a>
+<a id="cowgetordershistorical"></a>
 # **CowGetOrdersHistorical**
 > List&lt;CowOrderDTO&gt; CowGetOrdersHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null)
 
@@ -114,7 +114,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="cowgetsettlementshistorical"></a>
+<a id="cowgetsettlementshistorical"></a>
 # **CowGetSettlementsHistorical**
 > List&lt;CowSettlementDTO&gt; CowGetSettlementsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null)
 
@@ -213,7 +213,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="cowgettokenshistorical"></a>
+<a id="cowgettokenshistorical"></a>
 # **CowGetTokensHistorical**
 > List&lt;CowTokenDTO&gt; CowGetTokensHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string address = null, string name = null, string symbol = null)
 
@@ -318,7 +318,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="cowgettradeshistorical"></a>
+<a id="cowgettradeshistorical"></a>
 # **CowGetTradesHistorical**
 > List&lt;CowTradeDTO&gt; CowGetTradesHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string sellToken = null, string buyToken = null)
 
@@ -421,7 +421,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="cowgetusershistorical"></a>
+<a id="cowgetusershistorical"></a>
 # **CowGetUsersHistorical**
 > List&lt;CowUserDTO&gt; CowGetUsersHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string address = null)
 
@@ -522,7 +522,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="coworderscurrent"></a>
+<a id="coworderscurrent"></a>
 # **CowOrdersCurrent**
 > List&lt;CowOrderDTO&gt; CowOrdersCurrent ()
 
@@ -608,7 +608,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="cowsettlementscurrent"></a>
+<a id="cowsettlementscurrent"></a>
 # **CowSettlementsCurrent**
 > List&lt;CowSettlementDTO&gt; CowSettlementsCurrent ()
 
@@ -694,7 +694,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="cowtokenscurrent"></a>
+<a id="cowtokenscurrent"></a>
 # **CowTokensCurrent**
 > List&lt;CowTokenDTO&gt; CowTokensCurrent ()
 
@@ -780,7 +780,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="cowtradescurrent"></a>
+<a id="cowtradescurrent"></a>
 # **CowTradesCurrent**
 > List&lt;CowTradeDTO&gt; CowTradesCurrent ()
 
@@ -866,7 +866,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="cowuserscurrent"></a>
+<a id="cowuserscurrent"></a>
 # **CowUsersCurrent**
 > List&lt;CowUserDTO&gt; CowUsersCurrent ()
 

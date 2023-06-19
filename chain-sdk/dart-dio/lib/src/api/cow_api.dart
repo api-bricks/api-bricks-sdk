@@ -84,13 +84,13 @@ class CowApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<CowOrderDTO> _responseData;
+    BuiltList<CowOrderDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(CowOrderDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(CowOrderDTO)]),
       ) as BuiltList<CowOrderDTO>;
 
     } catch (error, stackTrace) {
@@ -176,13 +176,13 @@ class CowApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<CowSettlementDTO> _responseData;
+    BuiltList<CowSettlementDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(CowSettlementDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(CowSettlementDTO)]),
       ) as BuiltList<CowSettlementDTO>;
 
     } catch (error, stackTrace) {
@@ -277,13 +277,13 @@ class CowApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<CowTokenDTO> _responseData;
+    BuiltList<CowTokenDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(CowTokenDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(CowTokenDTO)]),
       ) as BuiltList<CowTokenDTO>;
 
     } catch (error, stackTrace) {
@@ -375,13 +375,13 @@ class CowApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<CowTradeDTO> _responseData;
+    BuiltList<CowTradeDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(CowTradeDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(CowTradeDTO)]),
       ) as BuiltList<CowTradeDTO>;
 
     } catch (error, stackTrace) {
@@ -470,13 +470,13 @@ class CowApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<CowUserDTO> _responseData;
+    BuiltList<CowUserDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(CowUserDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(CowUserDTO)]),
       ) as BuiltList<CowUserDTO>;
 
     } catch (error, stackTrace) {
@@ -543,13 +543,13 @@ class CowApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<CowOrderDTO> _responseData;
+    BuiltList<CowOrderDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(CowOrderDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(CowOrderDTO)]),
       ) as BuiltList<CowOrderDTO>;
 
     } catch (error, stackTrace) {
@@ -616,13 +616,13 @@ class CowApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<CowSettlementDTO> _responseData;
+    BuiltList<CowSettlementDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(CowSettlementDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(CowSettlementDTO)]),
       ) as BuiltList<CowSettlementDTO>;
 
     } catch (error, stackTrace) {
@@ -689,13 +689,13 @@ class CowApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<CowTokenDTO> _responseData;
+    BuiltList<CowTokenDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(CowTokenDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(CowTokenDTO)]),
       ) as BuiltList<CowTokenDTO>;
 
     } catch (error, stackTrace) {
@@ -762,13 +762,13 @@ class CowApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<CowTradeDTO> _responseData;
+    BuiltList<CowTradeDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(CowTradeDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(CowTradeDTO)]),
       ) as BuiltList<CowTradeDTO>;
 
     } catch (error, stackTrace) {
@@ -835,13 +835,13 @@ class CowApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<CowUserDTO> _responseData;
+    BuiltList<CowUserDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(CowUserDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(CowUserDTO)]),
       ) as BuiltList<CowUserDTO>;
 
     } catch (error, stackTrace) {

@@ -71,13 +71,13 @@ class DexApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<DexBatchDTO> _responseData;
+    BuiltList<DexBatchDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(DexBatchDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(DexBatchDTO)]),
       ) as BuiltList<DexBatchDTO>;
 
     } catch (error, stackTrace) {
@@ -144,13 +144,13 @@ class DexApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<DexDepositDTO> _responseData;
+    BuiltList<DexDepositDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(DexDepositDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(DexDepositDTO)]),
       ) as BuiltList<DexDepositDTO>;
 
     } catch (error, stackTrace) {
@@ -236,13 +236,13 @@ class DexApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<DexBatchDTO> _responseData;
+    BuiltList<DexBatchDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(DexBatchDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(DexBatchDTO)]),
       ) as BuiltList<DexBatchDTO>;
 
     } catch (error, stackTrace) {
@@ -331,13 +331,13 @@ class DexApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<DexDepositDTO> _responseData;
+    BuiltList<DexDepositDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(DexDepositDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(DexDepositDTO)]),
       ) as BuiltList<DexDepositDTO>;
 
     } catch (error, stackTrace) {
@@ -429,13 +429,13 @@ class DexApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<DexOrderDTO> _responseData;
+    BuiltList<DexOrderDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(DexOrderDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(DexOrderDTO)]),
       ) as BuiltList<DexOrderDTO>;
 
     } catch (error, stackTrace) {
@@ -521,13 +521,13 @@ class DexApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<DexPriceDTO> _responseData;
+    BuiltList<DexPriceDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(DexPriceDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(DexPriceDTO)]),
       ) as BuiltList<DexPriceDTO>;
 
     } catch (error, stackTrace) {
@@ -613,13 +613,13 @@ class DexApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<DexSolutionDTO> _responseData;
+    BuiltList<DexSolutionDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(DexSolutionDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(DexSolutionDTO)]),
       ) as BuiltList<DexSolutionDTO>;
 
     } catch (error, stackTrace) {
@@ -705,13 +705,13 @@ class DexApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<DexStatsDTO> _responseData;
+    BuiltList<DexStatsDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(DexStatsDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(DexStatsDTO)]),
       ) as BuiltList<DexStatsDTO>;
 
     } catch (error, stackTrace) {
@@ -806,13 +806,13 @@ class DexApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<DexTokenDTO> _responseData;
+    BuiltList<DexTokenDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(DexTokenDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(DexTokenDTO)]),
       ) as BuiltList<DexTokenDTO>;
 
     } catch (error, stackTrace) {
@@ -904,13 +904,13 @@ class DexApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<DexTradeDTO> _responseData;
+    BuiltList<DexTradeDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(DexTradeDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(DexTradeDTO)]),
       ) as BuiltList<DexTradeDTO>;
 
     } catch (error, stackTrace) {
@@ -996,13 +996,13 @@ class DexApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<DexUserDTO> _responseData;
+    BuiltList<DexUserDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(DexUserDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(DexUserDTO)]),
       ) as BuiltList<DexUserDTO>;
 
     } catch (error, stackTrace) {
@@ -1091,13 +1091,13 @@ class DexApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<DexWithdrawRequestDTO> _responseData;
+    BuiltList<DexWithdrawRequestDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(DexWithdrawRequestDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(DexWithdrawRequestDTO)]),
       ) as BuiltList<DexWithdrawRequestDTO>;
 
     } catch (error, stackTrace) {
@@ -1186,13 +1186,13 @@ class DexApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<DexWithdrawDTO> _responseData;
+    BuiltList<DexWithdrawDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(DexWithdrawDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(DexWithdrawDTO)]),
       ) as BuiltList<DexWithdrawDTO>;
 
     } catch (error, stackTrace) {
@@ -1259,13 +1259,13 @@ class DexApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<DexOrderDTO> _responseData;
+    BuiltList<DexOrderDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(DexOrderDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(DexOrderDTO)]),
       ) as BuiltList<DexOrderDTO>;
 
     } catch (error, stackTrace) {
@@ -1332,13 +1332,13 @@ class DexApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<DexPriceDTO> _responseData;
+    BuiltList<DexPriceDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(DexPriceDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(DexPriceDTO)]),
       ) as BuiltList<DexPriceDTO>;
 
     } catch (error, stackTrace) {
@@ -1405,13 +1405,13 @@ class DexApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<DexSolutionDTO> _responseData;
+    BuiltList<DexSolutionDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(DexSolutionDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(DexSolutionDTO)]),
       ) as BuiltList<DexSolutionDTO>;
 
     } catch (error, stackTrace) {
@@ -1478,13 +1478,13 @@ class DexApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<DexStatsDTO> _responseData;
+    BuiltList<DexStatsDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(DexStatsDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(DexStatsDTO)]),
       ) as BuiltList<DexStatsDTO>;
 
     } catch (error, stackTrace) {
@@ -1551,13 +1551,13 @@ class DexApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<DexTokenDTO> _responseData;
+    BuiltList<DexTokenDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(DexTokenDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(DexTokenDTO)]),
       ) as BuiltList<DexTokenDTO>;
 
     } catch (error, stackTrace) {
@@ -1624,13 +1624,13 @@ class DexApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<DexTradeDTO> _responseData;
+    BuiltList<DexTradeDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(DexTradeDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(DexTradeDTO)]),
       ) as BuiltList<DexTradeDTO>;
 
     } catch (error, stackTrace) {
@@ -1697,13 +1697,13 @@ class DexApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<DexUserDTO> _responseData;
+    BuiltList<DexUserDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(DexUserDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(DexUserDTO)]),
       ) as BuiltList<DexUserDTO>;
 
     } catch (error, stackTrace) {
@@ -1770,13 +1770,13 @@ class DexApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<DexWithdrawRequestDTO> _responseData;
+    BuiltList<DexWithdrawRequestDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(DexWithdrawRequestDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(DexWithdrawRequestDTO)]),
       ) as BuiltList<DexWithdrawRequestDTO>;
 
     } catch (error, stackTrace) {
@@ -1843,13 +1843,13 @@ class DexApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<DexWithdrawDTO> _responseData;
+    BuiltList<DexWithdrawDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(DexWithdrawDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(DexWithdrawDTO)]),
       ) as BuiltList<DexWithdrawDTO>;
 
     } catch (error, stackTrace) {

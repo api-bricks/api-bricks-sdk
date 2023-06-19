@@ -34,6 +34,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
@@ -48,7 +52,7 @@ import org.openapitools.client.JSON;
 /**
  * SushiswapLiquidityPositionDTO
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-07T11:31:09.822924Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-19T09:28:48.156871Z[Etc/UTC]")
 public class SushiswapLiquidityPositionDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -104,7 +108,6 @@ public class SushiswapLiquidityPositionDTO {
    * @return entryTime
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getEntryTime() {
     return entryTime;
   }
@@ -126,7 +129,6 @@ public class SushiswapLiquidityPositionDTO {
    * @return recvTime
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getRecvTime() {
     return recvTime;
   }
@@ -148,7 +150,6 @@ public class SushiswapLiquidityPositionDTO {
    * @return blockNumber
   **/
   @javax.annotation.Nullable
-
   public Long getBlockNumber() {
     return blockNumber;
   }
@@ -170,7 +171,6 @@ public class SushiswapLiquidityPositionDTO {
    * @return id
   **/
   @javax.annotation.Nullable
-
   public String getId() {
     return id;
   }
@@ -192,7 +192,6 @@ public class SushiswapLiquidityPositionDTO {
    * @return user
   **/
   @javax.annotation.Nullable
-
   public String getUser() {
     return user;
   }
@@ -214,7 +213,6 @@ public class SushiswapLiquidityPositionDTO {
    * @return pair
   **/
   @javax.annotation.Nullable
-
   public String getPair() {
     return pair;
   }
@@ -236,7 +234,6 @@ public class SushiswapLiquidityPositionDTO {
    * @return liquidityTokenBalance
   **/
   @javax.annotation.Nullable
-
   public String getLiquidityTokenBalance() {
     return liquidityTokenBalance;
   }
@@ -258,7 +255,6 @@ public class SushiswapLiquidityPositionDTO {
    * @return block
   **/
   @javax.annotation.Nullable
-
   public Integer getBlock() {
     return block;
   }
@@ -280,7 +276,6 @@ public class SushiswapLiquidityPositionDTO {
    * @return timestamp
   **/
   @javax.annotation.Nullable
-
   public Integer getTimestamp() {
     return timestamp;
   }
@@ -302,7 +297,6 @@ public class SushiswapLiquidityPositionDTO {
    * @return vid
   **/
   @javax.annotation.Nullable
-
   public Long getVid() {
     return vid;
   }

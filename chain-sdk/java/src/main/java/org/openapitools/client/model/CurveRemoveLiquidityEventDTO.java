@@ -36,6 +36,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
@@ -50,7 +54,7 @@ import org.openapitools.client.JSON;
 /**
  * CurveRemoveLiquidityEventDTO
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-07T11:31:09.822924Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-19T09:28:48.156871Z[Etc/UTC]")
 public class CurveRemoveLiquidityEventDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -122,7 +126,6 @@ public class CurveRemoveLiquidityEventDTO {
    * @return entryTime
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getEntryTime() {
     return entryTime;
   }
@@ -144,7 +147,6 @@ public class CurveRemoveLiquidityEventDTO {
    * @return recvTime
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getRecvTime() {
     return recvTime;
   }
@@ -166,7 +168,6 @@ public class CurveRemoveLiquidityEventDTO {
    * @return blockNumber
   **/
   @javax.annotation.Nullable
-
   public Long getBlockNumber() {
     return blockNumber;
   }
@@ -188,7 +189,6 @@ public class CurveRemoveLiquidityEventDTO {
    * @return id
   **/
   @javax.annotation.Nullable
-
   public String getId() {
     return id;
   }
@@ -210,7 +210,6 @@ public class CurveRemoveLiquidityEventDTO {
    * @return pool
   **/
   @javax.annotation.Nullable
-
   public String getPool() {
     return pool;
   }
@@ -232,7 +231,6 @@ public class CurveRemoveLiquidityEventDTO {
    * @return provider
   **/
   @javax.annotation.Nullable
-
   public String getProvider() {
     return provider;
   }
@@ -250,6 +248,9 @@ public class CurveRemoveLiquidityEventDTO {
   }
 
   public CurveRemoveLiquidityEventDTO addTokenAmountsItem(String tokenAmountsItem) {
+    if (this.tokenAmounts == null) {
+      this.tokenAmounts = new ArrayList<>();
+    }
     this.tokenAmounts.add(tokenAmountsItem);
     return this;
   }
@@ -259,7 +260,6 @@ public class CurveRemoveLiquidityEventDTO {
    * @return tokenAmounts
   **/
   @javax.annotation.Nullable
-
   public List<String> getTokenAmounts() {
     return tokenAmounts;
   }
@@ -277,6 +277,9 @@ public class CurveRemoveLiquidityEventDTO {
   }
 
   public CurveRemoveLiquidityEventDTO addFeesItem(String feesItem) {
+    if (this.fees == null) {
+      this.fees = new ArrayList<>();
+    }
     this.fees.add(feesItem);
     return this;
   }
@@ -286,7 +289,6 @@ public class CurveRemoveLiquidityEventDTO {
    * @return fees
   **/
   @javax.annotation.Nullable
-
   public List<String> getFees() {
     return fees;
   }
@@ -308,7 +310,6 @@ public class CurveRemoveLiquidityEventDTO {
    * @return tokenSupply
   **/
   @javax.annotation.Nullable
-
   public String getTokenSupply() {
     return tokenSupply;
   }
@@ -330,7 +331,6 @@ public class CurveRemoveLiquidityEventDTO {
    * @return invariant
   **/
   @javax.annotation.Nullable
-
   public String getInvariant() {
     return invariant;
   }
@@ -352,7 +352,6 @@ public class CurveRemoveLiquidityEventDTO {
    * @return block
   **/
   @javax.annotation.Nullable
-
   public String getBlock() {
     return block;
   }
@@ -374,7 +373,6 @@ public class CurveRemoveLiquidityEventDTO {
    * @return timestamp
   **/
   @javax.annotation.Nullable
-
   public String getTimestamp() {
     return timestamp;
   }
@@ -396,7 +394,6 @@ public class CurveRemoveLiquidityEventDTO {
    * @return transaction
   **/
   @javax.annotation.Nullable
-
   public String getTransaction() {
     return transaction;
   }
@@ -418,7 +415,6 @@ public class CurveRemoveLiquidityEventDTO {
    * @return vid
   **/
   @javax.annotation.Nullable
-
   public Long getVid() {
     return vid;
   }

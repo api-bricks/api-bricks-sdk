@@ -148,7 +148,7 @@ class SushiswapBundleDTO {
     return null;
   }
 
-  static List<SushiswapBundleDTO>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<SushiswapBundleDTO> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <SushiswapBundleDTO>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -179,12 +179,10 @@ class SushiswapBundleDTO {
   static Map<String, List<SushiswapBundleDTO>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<SushiswapBundleDTO>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = SushiswapBundleDTO.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = SushiswapBundleDTO.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

@@ -36,6 +36,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
@@ -50,7 +54,7 @@ import org.openapitools.client.JSON;
 /**
  * Stores aggregated information for a specific token across all pairs that token is included in.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-07T11:31:09.822924Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-19T09:28:48.156871Z[Etc/UTC]")
 public class SushiswapTokenDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -146,7 +150,6 @@ public class SushiswapTokenDTO {
    * @return entryTime
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getEntryTime() {
     return entryTime;
   }
@@ -168,7 +171,6 @@ public class SushiswapTokenDTO {
    * @return recvTime
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getRecvTime() {
     return recvTime;
   }
@@ -190,7 +192,6 @@ public class SushiswapTokenDTO {
    * @return blockNumber
   **/
   @javax.annotation.Nullable
-
   public Long getBlockNumber() {
     return blockNumber;
   }
@@ -212,7 +213,6 @@ public class SushiswapTokenDTO {
    * @return id
   **/
   @javax.annotation.Nullable
-
   public String getId() {
     return id;
   }
@@ -234,7 +234,6 @@ public class SushiswapTokenDTO {
    * @return factory
   **/
   @javax.annotation.Nullable
-
   public String getFactory() {
     return factory;
   }
@@ -256,7 +255,6 @@ public class SushiswapTokenDTO {
    * @return symbol
   **/
   @javax.annotation.Nullable
-
   public String getSymbol() {
     return symbol;
   }
@@ -278,7 +276,6 @@ public class SushiswapTokenDTO {
    * @return name
   **/
   @javax.annotation.Nullable
-
   public String getName() {
     return name;
   }
@@ -300,7 +297,6 @@ public class SushiswapTokenDTO {
    * @return decimals
   **/
   @javax.annotation.Nullable
-
   public String getDecimals() {
     return decimals;
   }
@@ -322,7 +318,6 @@ public class SushiswapTokenDTO {
    * @return totalSupply
   **/
   @javax.annotation.Nullable
-
   public String getTotalSupply() {
     return totalSupply;
   }
@@ -344,7 +339,6 @@ public class SushiswapTokenDTO {
    * @return volume
   **/
   @javax.annotation.Nullable
-
   public String getVolume() {
     return volume;
   }
@@ -366,7 +360,6 @@ public class SushiswapTokenDTO {
    * @return volumeUsd
   **/
   @javax.annotation.Nullable
-
   public String getVolumeUsd() {
     return volumeUsd;
   }
@@ -388,7 +381,6 @@ public class SushiswapTokenDTO {
    * @return untrackedVolumeUsd
   **/
   @javax.annotation.Nullable
-
   public String getUntrackedVolumeUsd() {
     return untrackedVolumeUsd;
   }
@@ -410,7 +402,6 @@ public class SushiswapTokenDTO {
    * @return txCount
   **/
   @javax.annotation.Nullable
-
   public String getTxCount() {
     return txCount;
   }
@@ -432,7 +423,6 @@ public class SushiswapTokenDTO {
    * @return liquidity
   **/
   @javax.annotation.Nullable
-
   public String getLiquidity() {
     return liquidity;
   }
@@ -454,7 +444,6 @@ public class SushiswapTokenDTO {
    * @return derivedEth
   **/
   @javax.annotation.Nullable
-
   public String getDerivedEth() {
     return derivedEth;
   }
@@ -472,6 +461,9 @@ public class SushiswapTokenDTO {
   }
 
   public SushiswapTokenDTO addWhitelistPairsItem(String whitelistPairsItem) {
+    if (this.whitelistPairs == null) {
+      this.whitelistPairs = new ArrayList<>();
+    }
     this.whitelistPairs.add(whitelistPairsItem);
     return this;
   }
@@ -481,7 +473,6 @@ public class SushiswapTokenDTO {
    * @return whitelistPairs
   **/
   @javax.annotation.Nullable
-
   public List<String> getWhitelistPairs() {
     return whitelistPairs;
   }
@@ -503,7 +494,6 @@ public class SushiswapTokenDTO {
    * @return vid
   **/
   @javax.annotation.Nullable
-
   public Long getVid() {
     return vid;
   }
@@ -519,7 +509,6 @@ public class SushiswapTokenDTO {
    * @return tokenSymbol
   **/
   @javax.annotation.Nullable
-
   public String getTokenSymbol() {
     return tokenSymbol;
   }

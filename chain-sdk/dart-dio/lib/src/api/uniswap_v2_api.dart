@@ -75,13 +75,13 @@ class UniswapV2Api {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<UniswapV2BundleDTO> _responseData;
+    BuiltList<UniswapV2BundleDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(UniswapV2BundleDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(UniswapV2BundleDTO)]),
       ) as BuiltList<UniswapV2BundleDTO>;
 
     } catch (error, stackTrace) {
@@ -148,13 +148,13 @@ class UniswapV2Api {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<UniswapV2BurnDTO> _responseData;
+    BuiltList<UniswapV2BurnDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(UniswapV2BurnDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(UniswapV2BurnDTO)]),
       ) as BuiltList<UniswapV2BurnDTO>;
 
     } catch (error, stackTrace) {
@@ -240,13 +240,13 @@ class UniswapV2Api {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<UniswapV2BundleDTO> _responseData;
+    BuiltList<UniswapV2BundleDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(UniswapV2BundleDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(UniswapV2BundleDTO)]),
       ) as BuiltList<UniswapV2BundleDTO>;
 
     } catch (error, stackTrace) {
@@ -335,13 +335,13 @@ class UniswapV2Api {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<UniswapV2BurnDTO> _responseData;
+    BuiltList<UniswapV2BurnDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(UniswapV2BurnDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(UniswapV2BurnDTO)]),
       ) as BuiltList<UniswapV2BurnDTO>;
 
     } catch (error, stackTrace) {
@@ -433,13 +433,13 @@ class UniswapV2Api {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<UniswapV2LiquidityPositionSnapshotDTO> _responseData;
+    BuiltList<UniswapV2LiquidityPositionSnapshotDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(UniswapV2LiquidityPositionSnapshotDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(UniswapV2LiquidityPositionSnapshotDTO)]),
       ) as BuiltList<UniswapV2LiquidityPositionSnapshotDTO>;
 
     } catch (error, stackTrace) {
@@ -531,13 +531,13 @@ class UniswapV2Api {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<UniswapV2LiquidityPositionDTO> _responseData;
+    BuiltList<UniswapV2LiquidityPositionDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(UniswapV2LiquidityPositionDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(UniswapV2LiquidityPositionDTO)]),
       ) as BuiltList<UniswapV2LiquidityPositionDTO>;
 
     } catch (error, stackTrace) {
@@ -626,13 +626,13 @@ class UniswapV2Api {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<UniswapV2MintDTO> _responseData;
+    BuiltList<UniswapV2MintDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(UniswapV2MintDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(UniswapV2MintDTO)]),
       ) as BuiltList<UniswapV2MintDTO>;
 
     } catch (error, stackTrace) {
@@ -724,13 +724,13 @@ class UniswapV2Api {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<UniswapV2PairDayDataDTO> _responseData;
+    BuiltList<UniswapV2PairDayDataDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(UniswapV2PairDayDataDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(UniswapV2PairDayDataDTO)]),
       ) as BuiltList<UniswapV2PairDayDataDTO>;
 
     } catch (error, stackTrace) {
@@ -819,13 +819,13 @@ class UniswapV2Api {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<UniswapV2PairHourDataDTO> _responseData;
+    BuiltList<UniswapV2PairHourDataDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(UniswapV2PairHourDataDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(UniswapV2PairHourDataDTO)]),
       ) as BuiltList<UniswapV2PairHourDataDTO>;
 
     } catch (error, stackTrace) {
@@ -917,13 +917,13 @@ class UniswapV2Api {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<UniswapV2PairDTO> _responseData;
+    BuiltList<UniswapV2PairDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(UniswapV2PairDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(UniswapV2PairDTO)]),
       ) as BuiltList<UniswapV2PairDTO>;
 
     } catch (error, stackTrace) {
@@ -1012,13 +1012,13 @@ class UniswapV2Api {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<UniswapV2SwapDTO> _responseData;
+    BuiltList<UniswapV2SwapDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(UniswapV2SwapDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(UniswapV2SwapDTO)]),
       ) as BuiltList<UniswapV2SwapDTO>;
 
     } catch (error, stackTrace) {
@@ -1104,13 +1104,13 @@ class UniswapV2Api {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<UniswapV2TokenDayDataDTO> _responseData;
+    BuiltList<UniswapV2TokenDayDataDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(UniswapV2TokenDayDataDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(UniswapV2TokenDayDataDTO)]),
       ) as BuiltList<UniswapV2TokenDayDataDTO>;
 
     } catch (error, stackTrace) {
@@ -1202,13 +1202,13 @@ class UniswapV2Api {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<UniswapV2TokenDTO> _responseData;
+    BuiltList<UniswapV2TokenDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(UniswapV2TokenDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(UniswapV2TokenDTO)]),
       ) as BuiltList<UniswapV2TokenDTO>;
 
     } catch (error, stackTrace) {
@@ -1294,13 +1294,13 @@ class UniswapV2Api {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<UniswapV2TransactionDTO> _responseData;
+    BuiltList<UniswapV2TransactionDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(UniswapV2TransactionDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(UniswapV2TransactionDTO)]),
       ) as BuiltList<UniswapV2TransactionDTO>;
 
     } catch (error, stackTrace) {
@@ -1386,13 +1386,13 @@ class UniswapV2Api {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<UniswapV2UniswapDayDataDTO> _responseData;
+    BuiltList<UniswapV2UniswapDayDataDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(UniswapV2UniswapDayDataDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(UniswapV2UniswapDayDataDTO)]),
       ) as BuiltList<UniswapV2UniswapDayDataDTO>;
 
     } catch (error, stackTrace) {
@@ -1478,13 +1478,13 @@ class UniswapV2Api {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<UniswapV2UniswapFactoryDTO> _responseData;
+    BuiltList<UniswapV2UniswapFactoryDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(UniswapV2UniswapFactoryDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(UniswapV2UniswapFactoryDTO)]),
       ) as BuiltList<UniswapV2UniswapFactoryDTO>;
 
     } catch (error, stackTrace) {
@@ -1570,13 +1570,13 @@ class UniswapV2Api {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<UniswapV2UserDTO> _responseData;
+    BuiltList<UniswapV2UserDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(UniswapV2UserDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(UniswapV2UserDTO)]),
       ) as BuiltList<UniswapV2UserDTO>;
 
     } catch (error, stackTrace) {
@@ -1643,13 +1643,13 @@ class UniswapV2Api {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<UniswapV2LiquidityPositionSnapshotDTO> _responseData;
+    BuiltList<UniswapV2LiquidityPositionSnapshotDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(UniswapV2LiquidityPositionSnapshotDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(UniswapV2LiquidityPositionSnapshotDTO)]),
       ) as BuiltList<UniswapV2LiquidityPositionSnapshotDTO>;
 
     } catch (error, stackTrace) {
@@ -1716,13 +1716,13 @@ class UniswapV2Api {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<UniswapV2LiquidityPositionDTO> _responseData;
+    BuiltList<UniswapV2LiquidityPositionDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(UniswapV2LiquidityPositionDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(UniswapV2LiquidityPositionDTO)]),
       ) as BuiltList<UniswapV2LiquidityPositionDTO>;
 
     } catch (error, stackTrace) {
@@ -1789,13 +1789,13 @@ class UniswapV2Api {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<UniswapV2MintDTO> _responseData;
+    BuiltList<UniswapV2MintDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(UniswapV2MintDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(UniswapV2MintDTO)]),
       ) as BuiltList<UniswapV2MintDTO>;
 
     } catch (error, stackTrace) {
@@ -1862,13 +1862,13 @@ class UniswapV2Api {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<UniswapV2PairDayDataDTO> _responseData;
+    BuiltList<UniswapV2PairDayDataDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(UniswapV2PairDayDataDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(UniswapV2PairDayDataDTO)]),
       ) as BuiltList<UniswapV2PairDayDataDTO>;
 
     } catch (error, stackTrace) {
@@ -1935,13 +1935,13 @@ class UniswapV2Api {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<UniswapV2PairHourDataDTO> _responseData;
+    BuiltList<UniswapV2PairHourDataDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(UniswapV2PairHourDataDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(UniswapV2PairHourDataDTO)]),
       ) as BuiltList<UniswapV2PairHourDataDTO>;
 
     } catch (error, stackTrace) {
@@ -2015,13 +2015,13 @@ class UniswapV2Api {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<UniswapV2PairDTO> _responseData;
+    BuiltList<UniswapV2PairDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(UniswapV2PairDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(UniswapV2PairDTO)]),
       ) as BuiltList<UniswapV2PairDTO>;
 
     } catch (error, stackTrace) {
@@ -2095,13 +2095,13 @@ class UniswapV2Api {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<UniswapV2SwapDTO> _responseData;
+    BuiltList<UniswapV2SwapDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(UniswapV2SwapDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(UniswapV2SwapDTO)]),
       ) as BuiltList<UniswapV2SwapDTO>;
 
     } catch (error, stackTrace) {
@@ -2168,13 +2168,13 @@ class UniswapV2Api {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<UniswapV2TokenDayDataDTO> _responseData;
+    BuiltList<UniswapV2TokenDayDataDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(UniswapV2TokenDayDataDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(UniswapV2TokenDayDataDTO)]),
       ) as BuiltList<UniswapV2TokenDayDataDTO>;
 
     } catch (error, stackTrace) {
@@ -2241,13 +2241,13 @@ class UniswapV2Api {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<UniswapV2TokenDTO> _responseData;
+    BuiltList<UniswapV2TokenDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(UniswapV2TokenDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(UniswapV2TokenDTO)]),
       ) as BuiltList<UniswapV2TokenDTO>;
 
     } catch (error, stackTrace) {
@@ -2314,13 +2314,13 @@ class UniswapV2Api {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<UniswapV2TransactionDTO> _responseData;
+    BuiltList<UniswapV2TransactionDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(UniswapV2TransactionDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(UniswapV2TransactionDTO)]),
       ) as BuiltList<UniswapV2TransactionDTO>;
 
     } catch (error, stackTrace) {
@@ -2387,13 +2387,13 @@ class UniswapV2Api {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<UniswapV2UniswapDayDataDTO> _responseData;
+    BuiltList<UniswapV2UniswapDayDataDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(UniswapV2UniswapDayDataDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(UniswapV2UniswapDayDataDTO)]),
       ) as BuiltList<UniswapV2UniswapDayDataDTO>;
 
     } catch (error, stackTrace) {
@@ -2460,13 +2460,13 @@ class UniswapV2Api {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<UniswapV2UniswapFactoryDTO> _responseData;
+    BuiltList<UniswapV2UniswapFactoryDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(UniswapV2UniswapFactoryDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(UniswapV2UniswapFactoryDTO)]),
       ) as BuiltList<UniswapV2UniswapFactoryDTO>;
 
     } catch (error, stackTrace) {
@@ -2533,13 +2533,13 @@ class UniswapV2Api {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<UniswapV2UserDTO> _responseData;
+    BuiltList<UniswapV2UserDTO>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(UniswapV2UserDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(UniswapV2UserDTO)]),
       ) as BuiltList<UniswapV2UserDTO>;
 
     } catch (error, stackTrace) {

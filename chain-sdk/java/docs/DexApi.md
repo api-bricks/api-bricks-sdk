@@ -28,7 +28,7 @@ All URIs are relative to *https://onchain.coinapi.io*
 | [**dexWithdrawsCurrent**](DexApi.md#dexWithdrawsCurrent) | **GET** /dapps/dex/withdraws/current | Withdraws (current) |
 
 
-<a name="dexBatchesCurrent"></a>
+<a id="dexBatchesCurrent"></a>
 # **dexBatchesCurrent**
 > List&lt;DexBatchDTO&gt; dexBatchesCurrent()
 
@@ -86,7 +86,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="dexDepositsCurrent"></a>
+<a id="dexDepositsCurrent"></a>
 # **dexDepositsCurrent**
 > List&lt;DexDepositDTO&gt; dexDepositsCurrent()
 
@@ -144,7 +144,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="dexGetBatchesHistorical"></a>
+<a id="dexGetBatchesHistorical"></a>
 # **dexGetBatchesHistorical**
 > List&lt;DexBatchDTO&gt; dexGetBatchesHistorical(startBlock, endBlock, startDate, endDate, id)
 
@@ -214,7 +214,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="dexGetDepositsHistorical"></a>
+<a id="dexGetDepositsHistorical"></a>
 # **dexGetDepositsHistorical**
 > List&lt;DexDepositDTO&gt; dexGetDepositsHistorical(startBlock, endBlock, startDate, endDate, id, user)
 
@@ -286,7 +286,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="dexGetOrdersHistorical"></a>
+<a id="dexGetOrdersHistorical"></a>
 # **dexGetOrdersHistorical**
 > List&lt;DexOrderDTO&gt; dexGetOrdersHistorical(startBlock, endBlock, startDate, endDate, id, buyToken, sellToken)
 
@@ -360,7 +360,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="dexGetPricesHistorical"></a>
+<a id="dexGetPricesHistorical"></a>
 # **dexGetPricesHistorical**
 > List&lt;DexPriceDTO&gt; dexGetPricesHistorical(startBlock, endBlock, startDate, endDate, id)
 
@@ -430,7 +430,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="dexGetSolutionsHistorical"></a>
+<a id="dexGetSolutionsHistorical"></a>
 # **dexGetSolutionsHistorical**
 > List&lt;DexSolutionDTO&gt; dexGetSolutionsHistorical(startBlock, endBlock, startDate, endDate, id)
 
@@ -500,7 +500,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="dexGetStatsHistorical"></a>
+<a id="dexGetStatsHistorical"></a>
 # **dexGetStatsHistorical**
 > List&lt;DexStatsDTO&gt; dexGetStatsHistorical(startBlock, endBlock, startDate, endDate, id)
 
@@ -570,7 +570,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="dexGetTokensHistorical"></a>
+<a id="dexGetTokensHistorical"></a>
 # **dexGetTokensHistorical**
 > List&lt;DexTokenDTO&gt; dexGetTokensHistorical(startBlock, endBlock, startDate, endDate, id, address, symbol, name)
 
@@ -646,7 +646,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="dexGetTradesHistorical"></a>
+<a id="dexGetTradesHistorical"></a>
 # **dexGetTradesHistorical**
 > List&lt;DexTradeDTO&gt; dexGetTradesHistorical(startBlock, endBlock, startDate, endDate, id, buyToken, sellToken)
 
@@ -720,7 +720,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="dexGetUsersHistorical"></a>
+<a id="dexGetUsersHistorical"></a>
 # **dexGetUsersHistorical**
 > List&lt;DexUserDTO&gt; dexGetUsersHistorical(startBlock, endBlock, startDate, endDate, id)
 
@@ -790,7 +790,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="dexGetWithdrawRequestsHistorical"></a>
+<a id="dexGetWithdrawRequestsHistorical"></a>
 # **dexGetWithdrawRequestsHistorical**
 > List&lt;DexWithdrawRequestDTO&gt; dexGetWithdrawRequestsHistorical(startBlock, endBlock, startDate, endDate, id, user)
 
@@ -862,7 +862,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="dexGetWithdrawsHistorical"></a>
+<a id="dexGetWithdrawsHistorical"></a>
 # **dexGetWithdrawsHistorical**
 > List&lt;DexWithdrawDTO&gt; dexGetWithdrawsHistorical(startBlock, endBlock, startDate, endDate, id, user)
 
@@ -934,7 +934,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="dexOrdersCurrent"></a>
+<a id="dexOrdersCurrent"></a>
 # **dexOrdersCurrent**
 > List&lt;DexOrderDTO&gt; dexOrdersCurrent()
 
@@ -992,7 +992,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="dexPricesCurrent"></a>
+<a id="dexPricesCurrent"></a>
 # **dexPricesCurrent**
 > List&lt;DexPriceDTO&gt; dexPricesCurrent()
 
@@ -1050,7 +1050,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="dexSolutionsCurrent"></a>
+<a id="dexSolutionsCurrent"></a>
 # **dexSolutionsCurrent**
 > List&lt;DexSolutionDTO&gt; dexSolutionsCurrent()
 
@@ -1108,7 +1108,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="dexStatsCurrent"></a>
+<a id="dexStatsCurrent"></a>
 # **dexStatsCurrent**
 > List&lt;DexStatsDTO&gt; dexStatsCurrent()
 
@@ -1166,7 +1166,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="dexTokensCurrent"></a>
+<a id="dexTokensCurrent"></a>
 # **dexTokensCurrent**
 > List&lt;DexTokenDTO&gt; dexTokensCurrent()
 
@@ -1224,7 +1224,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="dexTradesCurrent"></a>
+<a id="dexTradesCurrent"></a>
 # **dexTradesCurrent**
 > List&lt;DexTradeDTO&gt; dexTradesCurrent()
 
@@ -1282,7 +1282,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="dexUsersCurrent"></a>
+<a id="dexUsersCurrent"></a>
 # **dexUsersCurrent**
 > List&lt;DexUserDTO&gt; dexUsersCurrent()
 
@@ -1340,7 +1340,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="dexWithdrawRequestsCurrent"></a>
+<a id="dexWithdrawRequestsCurrent"></a>
 # **dexWithdrawRequestsCurrent**
 > List&lt;DexWithdrawRequestDTO&gt; dexWithdrawRequestsCurrent()
 
@@ -1398,7 +1398,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="dexWithdrawsCurrent"></a>
+<a id="dexWithdrawsCurrent"></a>
 # **dexWithdrawsCurrent**
 > List&lt;DexWithdrawDTO&gt; dexWithdrawsCurrent()
 

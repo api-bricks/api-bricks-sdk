@@ -1,4 +1,4 @@
-<a name="__pageTop"></a>
+<a id="__pageTop"></a>
 # openapi_client.apis.tags.uniswap_v3_api.UniswapV3Api
 
 All URIs are relative to *https://onchain.coinapi.io*
@@ -41,7 +41,7 @@ Method | HTTP request | Description
 [**uniswap_v3_uniswap_day_data__current**](#uniswap_v3_uniswap_day_data__current) | **get** /dapps/uniswapv3/uniswapDayData/current | UniswapDayData (current)
 
 # **uniswap_v3_bundles__current**
-<a name="uniswap_v3_bundles__current"></a>
+<a id="uniswap_v3_bundles__current"></a>
 > [UniswapV3BundleDTO] uniswap_v3_bundles__current()
 
 Bundles (current)
@@ -134,7 +134,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **uniswap_v3_burns__current**
-<a name="uniswap_v3_burns__current"></a>
+<a id="uniswap_v3_burns__current"></a>
 > [UniswapV3BurnDTO] uniswap_v3_burns__current()
 
 Burns (current)
@@ -227,7 +227,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **uniswap_v3_factories__current**
-<a name="uniswap_v3_factories__current"></a>
+<a id="uniswap_v3_factories__current"></a>
 > [UniswapV3FactoryDTO] uniswap_v3_factories__current()
 
 Factories (current)
@@ -320,7 +320,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **uniswap_v3_get_bundles__historical**
-<a name="uniswap_v3_get_bundles__historical"></a>
+<a id="uniswap_v3_get_bundles__historical"></a>
 > [UniswapV3BundleDTO] uniswap_v3_get_bundles__historical()
 
 Bundles (historical)
@@ -476,7 +476,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **uniswap_v3_get_burns__historical**
-<a name="uniswap_v3_get_burns__historical"></a>
+<a id="uniswap_v3_get_burns__historical"></a>
 > [UniswapV3BurnDTO] uniswap_v3_get_burns__historical()
 
 Burns (historical)
@@ -659,7 +659,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **uniswap_v3_get_factories__historical**
-<a name="uniswap_v3_get_factories__historical"></a>
+<a id="uniswap_v3_get_factories__historical"></a>
 > [UniswapV3FactoryDTO] uniswap_v3_get_factories__historical()
 
 Factories (historical)
@@ -815,7 +815,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **uniswap_v3_get_mints__historical**
-<a name="uniswap_v3_get_mints__historical"></a>
+<a id="uniswap_v3_get_mints__historical"></a>
 > [UniswapV3MintDTO] uniswap_v3_get_mints__historical()
 
 Mints (historical)
@@ -998,7 +998,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **uniswap_v3_get_pool_day_data__historical**
-<a name="uniswap_v3_get_pool_day_data__historical"></a>
+<a id="uniswap_v3_get_pool_day_data__historical"></a>
 > [UniswapV3PoolDayDataDTO] uniswap_v3_get_pool_day_data__historical()
 
 PoolDayData (historical)
@@ -1163,7 +1163,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **uniswap_v3_get_pool_hour_data__historical**
-<a name="uniswap_v3_get_pool_hour_data__historical"></a>
+<a id="uniswap_v3_get_pool_hour_data__historical"></a>
 > [UniswapV3PoolHourDataDTO] uniswap_v3_get_pool_hour_data__historical()
 
 PoolHourData (historical)
@@ -1328,7 +1328,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **uniswap_v3_get_pools__historical**
-<a name="uniswap_v3_get_pools__historical"></a>
+<a id="uniswap_v3_get_pools__historical"></a>
 > [UniswapV3PoolDTO] uniswap_v3_get_pools__historical()
 
 Pools (historical)
@@ -1502,7 +1502,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **uniswap_v3_get_position_snapshots__historical**
-<a name="uniswap_v3_get_position_snapshots__historical"></a>
+<a id="uniswap_v3_get_position_snapshots__historical"></a>
 > [UniswapV3PositionSnapshotDTO] uniswap_v3_get_position_snapshots__historical()
 
 PositionSnapshots (historical)
@@ -1667,7 +1667,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **uniswap_v3_get_positions__historical**
-<a name="uniswap_v3_get_positions__historical"></a>
+<a id="uniswap_v3_get_positions__historical"></a>
 > [UniswapV3PositionDTO] uniswap_v3_get_positions__historical()
 
 Positions (historical)
@@ -1850,7 +1850,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **uniswap_v3_get_swaps__historical**
-<a name="uniswap_v3_get_swaps__historical"></a>
+<a id="uniswap_v3_get_swaps__historical"></a>
 > [UniswapV3SwapDTO] uniswap_v3_get_swaps__historical()
 
 Swaps (historical)
@@ -2033,7 +2033,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **uniswap_v3_get_tick_day_data__historical**
-<a name="uniswap_v3_get_tick_day_data__historical"></a>
+<a id="uniswap_v3_get_tick_day_data__historical"></a>
 > [UniswapV3TickDayDataDTO] uniswap_v3_get_tick_day_data__historical()
 
 TickDayData (historical)
@@ -2198,7 +2198,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **uniswap_v3_get_ticks__historical**
-<a name="uniswap_v3_get_ticks__historical"></a>
+<a id="uniswap_v3_get_ticks__historical"></a>
 > [UniswapV3TickDTO] uniswap_v3_get_ticks__historical()
 
 Ticks (historical)
@@ -2363,7 +2363,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **uniswap_v3_get_token_hour_data__historical**
-<a name="uniswap_v3_get_token_hour_data__historical"></a>
+<a id="uniswap_v3_get_token_hour_data__historical"></a>
 > [UniswapV3TokenHourDataDTO] uniswap_v3_get_token_hour_data__historical()
 
 TokenHourData (historical)
@@ -2519,7 +2519,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **uniswap_v3_get_token_v3_day_data__historical**
-<a name="uniswap_v3_get_token_v3_day_data__historical"></a>
+<a id="uniswap_v3_get_token_v3_day_data__historical"></a>
 > [UniswapV3TokenV3DayDataDTO] uniswap_v3_get_token_v3_day_data__historical()
 
 TokenV3DayData (historical)
@@ -2675,7 +2675,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **uniswap_v3_get_tokens__historical**
-<a name="uniswap_v3_get_tokens__historical"></a>
+<a id="uniswap_v3_get_tokens__historical"></a>
 > [UniswapV3TokenDTO] uniswap_v3_get_tokens__historical()
 
 Tokens (historical)
@@ -2849,7 +2849,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **uniswap_v3_get_transactions__historical**
-<a name="uniswap_v3_get_transactions__historical"></a>
+<a id="uniswap_v3_get_transactions__historical"></a>
 > [UniswapV3TransactionDTO] uniswap_v3_get_transactions__historical()
 
 Transactions (historical)
@@ -3005,7 +3005,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **uniswap_v3_get_uniswap_day_data__historical**
-<a name="uniswap_v3_get_uniswap_day_data__historical"></a>
+<a id="uniswap_v3_get_uniswap_day_data__historical"></a>
 > [UniswapV3UniswapDayDataDTO] uniswap_v3_get_uniswap_day_data__historical()
 
 UniswapDayData (historical)
@@ -3161,7 +3161,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **uniswap_v3_mints__current**
-<a name="uniswap_v3_mints__current"></a>
+<a id="uniswap_v3_mints__current"></a>
 > [UniswapV3MintDTO] uniswap_v3_mints__current()
 
 Mints (current)
@@ -3254,7 +3254,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **uniswap_v3_pool_day_data__current**
-<a name="uniswap_v3_pool_day_data__current"></a>
+<a id="uniswap_v3_pool_day_data__current"></a>
 > [UniswapV3PoolDayDataDTO] uniswap_v3_pool_day_data__current()
 
 PoolDayData (current)
@@ -3347,7 +3347,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **uniswap_v3_pool_hour_data__current**
-<a name="uniswap_v3_pool_hour_data__current"></a>
+<a id="uniswap_v3_pool_hour_data__current"></a>
 > [UniswapV3PoolHourDataDTO] uniswap_v3_pool_hour_data__current()
 
 PoolHourData (current)
@@ -3440,7 +3440,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **uniswap_v3_pools__current**
-<a name="uniswap_v3_pools__current"></a>
+<a id="uniswap_v3_pools__current"></a>
 > [UniswapV3PoolDTO] uniswap_v3_pools__current()
 
 Pools (current)
@@ -3560,7 +3560,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **uniswap_v3_position_snapshots__current**
-<a name="uniswap_v3_position_snapshots__current"></a>
+<a id="uniswap_v3_position_snapshots__current"></a>
 > [UniswapV3PositionSnapshotDTO] uniswap_v3_position_snapshots__current()
 
 PositionSnapshots (current)
@@ -3653,7 +3653,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **uniswap_v3_positions__current**
-<a name="uniswap_v3_positions__current"></a>
+<a id="uniswap_v3_positions__current"></a>
 > [UniswapV3PositionDTO] uniswap_v3_positions__current()
 
 Positions (current)
@@ -3746,7 +3746,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **uniswap_v3_swaps__current**
-<a name="uniswap_v3_swaps__current"></a>
+<a id="uniswap_v3_swaps__current"></a>
 > [UniswapV3SwapDTO] uniswap_v3_swaps__current()
 
 Swaps (current)
@@ -3866,7 +3866,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **uniswap_v3_tick_day_data__current**
-<a name="uniswap_v3_tick_day_data__current"></a>
+<a id="uniswap_v3_tick_day_data__current"></a>
 > [UniswapV3TickDayDataDTO] uniswap_v3_tick_day_data__current()
 
 TickDayData (current)
@@ -3959,7 +3959,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **uniswap_v3_ticks__current**
-<a name="uniswap_v3_ticks__current"></a>
+<a id="uniswap_v3_ticks__current"></a>
 > [UniswapV3TickDTO] uniswap_v3_ticks__current()
 
 Ticks (current)
@@ -4052,7 +4052,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **uniswap_v3_token_hour_data__current**
-<a name="uniswap_v3_token_hour_data__current"></a>
+<a id="uniswap_v3_token_hour_data__current"></a>
 > [UniswapV3TokenHourDataDTO] uniswap_v3_token_hour_data__current()
 
 TokenHourData (current)
@@ -4145,7 +4145,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **uniswap_v3_token_v3_day_data__current**
-<a name="uniswap_v3_token_v3_day_data__current"></a>
+<a id="uniswap_v3_token_v3_day_data__current"></a>
 > [UniswapV3TokenV3DayDataDTO] uniswap_v3_token_v3_day_data__current()
 
 TokenV3DayData (current)
@@ -4238,7 +4238,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **uniswap_v3_tokens__current**
-<a name="uniswap_v3_tokens__current"></a>
+<a id="uniswap_v3_tokens__current"></a>
 > [UniswapV3TokenDTO] uniswap_v3_tokens__current()
 
 Tokens (current)
@@ -4331,7 +4331,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **uniswap_v3_transactions__current**
-<a name="uniswap_v3_transactions__current"></a>
+<a id="uniswap_v3_transactions__current"></a>
 > [UniswapV3TransactionDTO] uniswap_v3_transactions__current()
 
 Transactions (current)
@@ -4424,7 +4424,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **uniswap_v3_uniswap_day_data__current**
-<a name="uniswap_v3_uniswap_day_data__current"></a>
+<a id="uniswap_v3_uniswap_day_data__current"></a>
 > [UniswapV3UniswapDayDataDTO] uniswap_v3_uniswap_day_data__current()
 
 UniswapDayData (current)

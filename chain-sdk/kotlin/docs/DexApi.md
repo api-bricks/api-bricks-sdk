@@ -28,7 +28,7 @@ Method | HTTP request | Description
 [**dexWithdrawsCurrent**](DexApi.md#dexWithdrawsCurrent) | **GET** /dapps/dex/withdraws/current | Withdraws (current)
 
 
-<a name="dexBatchesCurrent"></a>
+<a id="dexBatchesCurrent"></a>
 # **dexBatchesCurrent**
 > kotlin.collections.List&lt;DexBatchDTO&gt; dexBatchesCurrent()
 
@@ -71,7 +71,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="dexDepositsCurrent"></a>
+<a id="dexDepositsCurrent"></a>
 # **dexDepositsCurrent**
 > kotlin.collections.List&lt;DexDepositDTO&gt; dexDepositsCurrent()
 
@@ -114,7 +114,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="dexGetBatchesHistorical"></a>
+<a id="dexGetBatchesHistorical"></a>
 # **dexGetBatchesHistorical**
 > kotlin.collections.List&lt;DexBatchDTO&gt; dexGetBatchesHistorical(startBlock, endBlock, startDate, endDate, id)
 
@@ -169,7 +169,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="dexGetDepositsHistorical"></a>
+<a id="dexGetDepositsHistorical"></a>
 # **dexGetDepositsHistorical**
 > kotlin.collections.List&lt;DexDepositDTO&gt; dexGetDepositsHistorical(startBlock, endBlock, startDate, endDate, id, user)
 
@@ -226,7 +226,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="dexGetOrdersHistorical"></a>
+<a id="dexGetOrdersHistorical"></a>
 # **dexGetOrdersHistorical**
 > kotlin.collections.List&lt;DexOrderDTO&gt; dexGetOrdersHistorical(startBlock, endBlock, startDate, endDate, id, buyToken, sellToken)
 
@@ -285,7 +285,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="dexGetPricesHistorical"></a>
+<a id="dexGetPricesHistorical"></a>
 # **dexGetPricesHistorical**
 > kotlin.collections.List&lt;DexPriceDTO&gt; dexGetPricesHistorical(startBlock, endBlock, startDate, endDate, id)
 
@@ -340,7 +340,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="dexGetSolutionsHistorical"></a>
+<a id="dexGetSolutionsHistorical"></a>
 # **dexGetSolutionsHistorical**
 > kotlin.collections.List&lt;DexSolutionDTO&gt; dexGetSolutionsHistorical(startBlock, endBlock, startDate, endDate, id)
 
@@ -395,7 +395,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="dexGetStatsHistorical"></a>
+<a id="dexGetStatsHistorical"></a>
 # **dexGetStatsHistorical**
 > kotlin.collections.List&lt;DexStatsDTO&gt; dexGetStatsHistorical(startBlock, endBlock, startDate, endDate, id)
 
@@ -450,7 +450,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="dexGetTokensHistorical"></a>
+<a id="dexGetTokensHistorical"></a>
 # **dexGetTokensHistorical**
 > kotlin.collections.List&lt;DexTokenDTO&gt; dexGetTokensHistorical(startBlock, endBlock, startDate, endDate, id, address, symbol, name)
 
@@ -511,7 +511,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="dexGetTradesHistorical"></a>
+<a id="dexGetTradesHistorical"></a>
 # **dexGetTradesHistorical**
 > kotlin.collections.List&lt;DexTradeDTO&gt; dexGetTradesHistorical(startBlock, endBlock, startDate, endDate, id, buyToken, sellToken)
 
@@ -570,7 +570,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="dexGetUsersHistorical"></a>
+<a id="dexGetUsersHistorical"></a>
 # **dexGetUsersHistorical**
 > kotlin.collections.List&lt;DexUserDTO&gt; dexGetUsersHistorical(startBlock, endBlock, startDate, endDate, id)
 
@@ -625,7 +625,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="dexGetWithdrawRequestsHistorical"></a>
+<a id="dexGetWithdrawRequestsHistorical"></a>
 # **dexGetWithdrawRequestsHistorical**
 > kotlin.collections.List&lt;DexWithdrawRequestDTO&gt; dexGetWithdrawRequestsHistorical(startBlock, endBlock, startDate, endDate, id, user)
 
@@ -682,7 +682,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="dexGetWithdrawsHistorical"></a>
+<a id="dexGetWithdrawsHistorical"></a>
 # **dexGetWithdrawsHistorical**
 > kotlin.collections.List&lt;DexWithdrawDTO&gt; dexGetWithdrawsHistorical(startBlock, endBlock, startDate, endDate, id, user)
 
@@ -739,7 +739,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="dexOrdersCurrent"></a>
+<a id="dexOrdersCurrent"></a>
 # **dexOrdersCurrent**
 > kotlin.collections.List&lt;DexOrderDTO&gt; dexOrdersCurrent()
 
@@ -782,7 +782,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="dexPricesCurrent"></a>
+<a id="dexPricesCurrent"></a>
 # **dexPricesCurrent**
 > kotlin.collections.List&lt;DexPriceDTO&gt; dexPricesCurrent()
 
@@ -825,7 +825,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="dexSolutionsCurrent"></a>
+<a id="dexSolutionsCurrent"></a>
 # **dexSolutionsCurrent**
 > kotlin.collections.List&lt;DexSolutionDTO&gt; dexSolutionsCurrent()
 
@@ -868,7 +868,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="dexStatsCurrent"></a>
+<a id="dexStatsCurrent"></a>
 # **dexStatsCurrent**
 > kotlin.collections.List&lt;DexStatsDTO&gt; dexStatsCurrent()
 
@@ -911,7 +911,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="dexTokensCurrent"></a>
+<a id="dexTokensCurrent"></a>
 # **dexTokensCurrent**
 > kotlin.collections.List&lt;DexTokenDTO&gt; dexTokensCurrent()
 
@@ -954,7 +954,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="dexTradesCurrent"></a>
+<a id="dexTradesCurrent"></a>
 # **dexTradesCurrent**
 > kotlin.collections.List&lt;DexTradeDTO&gt; dexTradesCurrent()
 
@@ -997,7 +997,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="dexUsersCurrent"></a>
+<a id="dexUsersCurrent"></a>
 # **dexUsersCurrent**
 > kotlin.collections.List&lt;DexUserDTO&gt; dexUsersCurrent()
 
@@ -1040,7 +1040,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="dexWithdrawRequestsCurrent"></a>
+<a id="dexWithdrawRequestsCurrent"></a>
 # **dexWithdrawRequestsCurrent**
 > kotlin.collections.List&lt;DexWithdrawRequestDTO&gt; dexWithdrawRequestsCurrent()
 
@@ -1083,7 +1083,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="dexWithdrawsCurrent"></a>
+<a id="dexWithdrawsCurrent"></a>
 # **dexWithdrawsCurrent**
 > kotlin.collections.List&lt;DexWithdrawDTO&gt; dexWithdrawsCurrent()
 

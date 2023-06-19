@@ -34,6 +34,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
@@ -48,7 +52,7 @@ import org.openapitools.client.JSON;
 /**
  * This entity is used to store data about a user&#39;s liquidity position over time. This information, along with information from the pair itself can be used to provide position sizes, token deposits, and more. It gets created and never updated.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-07T11:31:09.822924Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-19T09:28:48.156871Z[Etc/UTC]")
 public class UniswapV2LiquidityPositionSnapshotDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -136,7 +140,6 @@ public class UniswapV2LiquidityPositionSnapshotDTO {
    * @return entryTime
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getEntryTime() {
     return entryTime;
   }
@@ -158,7 +161,6 @@ public class UniswapV2LiquidityPositionSnapshotDTO {
    * @return recvTime
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getRecvTime() {
     return recvTime;
   }
@@ -180,7 +182,6 @@ public class UniswapV2LiquidityPositionSnapshotDTO {
    * @return blockNumber
   **/
   @javax.annotation.Nullable
-
   public Long getBlockNumber() {
     return blockNumber;
   }
@@ -202,7 +203,6 @@ public class UniswapV2LiquidityPositionSnapshotDTO {
    * @return id
   **/
   @javax.annotation.Nullable
-
   public String getId() {
     return id;
   }
@@ -224,7 +224,6 @@ public class UniswapV2LiquidityPositionSnapshotDTO {
    * @return liquidityPosition
   **/
   @javax.annotation.Nullable
-
   public String getLiquidityPosition() {
     return liquidityPosition;
   }
@@ -246,7 +245,6 @@ public class UniswapV2LiquidityPositionSnapshotDTO {
    * @return timestamp
   **/
   @javax.annotation.Nullable
-
   public Integer getTimestamp() {
     return timestamp;
   }
@@ -268,7 +266,6 @@ public class UniswapV2LiquidityPositionSnapshotDTO {
    * @return block
   **/
   @javax.annotation.Nullable
-
   public Integer getBlock() {
     return block;
   }
@@ -290,7 +287,6 @@ public class UniswapV2LiquidityPositionSnapshotDTO {
    * @return user
   **/
   @javax.annotation.Nullable
-
   public String getUser() {
     return user;
   }
@@ -312,7 +308,6 @@ public class UniswapV2LiquidityPositionSnapshotDTO {
    * @return pair
   **/
   @javax.annotation.Nullable
-
   public String getPair() {
     return pair;
   }
@@ -334,7 +329,6 @@ public class UniswapV2LiquidityPositionSnapshotDTO {
    * @return token0PriceUsd
   **/
   @javax.annotation.Nullable
-
   public String getToken0PriceUsd() {
     return token0PriceUsd;
   }
@@ -356,7 +350,6 @@ public class UniswapV2LiquidityPositionSnapshotDTO {
    * @return token1PriceUsd
   **/
   @javax.annotation.Nullable
-
   public String getToken1PriceUsd() {
     return token1PriceUsd;
   }
@@ -378,7 +371,6 @@ public class UniswapV2LiquidityPositionSnapshotDTO {
    * @return reserve0
   **/
   @javax.annotation.Nullable
-
   public String getReserve0() {
     return reserve0;
   }
@@ -400,7 +392,6 @@ public class UniswapV2LiquidityPositionSnapshotDTO {
    * @return reserve1
   **/
   @javax.annotation.Nullable
-
   public String getReserve1() {
     return reserve1;
   }
@@ -422,7 +413,6 @@ public class UniswapV2LiquidityPositionSnapshotDTO {
    * @return reserveUsd
   **/
   @javax.annotation.Nullable
-
   public String getReserveUsd() {
     return reserveUsd;
   }
@@ -444,7 +434,6 @@ public class UniswapV2LiquidityPositionSnapshotDTO {
    * @return liquidityTokenTotalSupply
   **/
   @javax.annotation.Nullable
-
   public String getLiquidityTokenTotalSupply() {
     return liquidityTokenTotalSupply;
   }
@@ -466,7 +455,6 @@ public class UniswapV2LiquidityPositionSnapshotDTO {
    * @return liquidityTokenBalance
   **/
   @javax.annotation.Nullable
-
   public String getLiquidityTokenBalance() {
     return liquidityTokenBalance;
   }
@@ -488,7 +476,6 @@ public class UniswapV2LiquidityPositionSnapshotDTO {
    * @return vid
   **/
   @javax.annotation.Nullable
-
   public Long getVid() {
     return vid;
   }
@@ -510,7 +497,6 @@ public class UniswapV2LiquidityPositionSnapshotDTO {
    * @return blockRange
   **/
   @javax.annotation.Nullable
-
   public String getBlockRange() {
     return blockRange;
   }

@@ -34,6 +34,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
@@ -48,7 +52,7 @@ import org.openapitools.client.JSON;
 /**
  * Tracks pair data across each hour.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-07T11:31:09.822924Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-19T09:28:48.156871Z[Etc/UTC]")
 public class SushiswapPairHourDataDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -120,7 +124,6 @@ public class SushiswapPairHourDataDTO {
    * @return entryTime
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getEntryTime() {
     return entryTime;
   }
@@ -142,7 +145,6 @@ public class SushiswapPairHourDataDTO {
    * @return recvTime
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getRecvTime() {
     return recvTime;
   }
@@ -164,7 +166,6 @@ public class SushiswapPairHourDataDTO {
    * @return blockNumber
   **/
   @javax.annotation.Nullable
-
   public Long getBlockNumber() {
     return blockNumber;
   }
@@ -186,7 +187,6 @@ public class SushiswapPairHourDataDTO {
    * @return id
   **/
   @javax.annotation.Nullable
-
   public String getId() {
     return id;
   }
@@ -208,7 +208,6 @@ public class SushiswapPairHourDataDTO {
    * @return date
   **/
   @javax.annotation.Nullable
-
   public Integer getDate() {
     return date;
   }
@@ -230,7 +229,6 @@ public class SushiswapPairHourDataDTO {
    * @return pair
   **/
   @javax.annotation.Nullable
-
   public String getPair() {
     return pair;
   }
@@ -252,7 +250,6 @@ public class SushiswapPairHourDataDTO {
    * @return reserve0
   **/
   @javax.annotation.Nullable
-
   public String getReserve0() {
     return reserve0;
   }
@@ -274,7 +271,6 @@ public class SushiswapPairHourDataDTO {
    * @return reserve1
   **/
   @javax.annotation.Nullable
-
   public String getReserve1() {
     return reserve1;
   }
@@ -296,7 +292,6 @@ public class SushiswapPairHourDataDTO {
    * @return reserveUsd
   **/
   @javax.annotation.Nullable
-
   public String getReserveUsd() {
     return reserveUsd;
   }
@@ -318,7 +313,6 @@ public class SushiswapPairHourDataDTO {
    * @return volumeToken0
   **/
   @javax.annotation.Nullable
-
   public String getVolumeToken0() {
     return volumeToken0;
   }
@@ -340,7 +334,6 @@ public class SushiswapPairHourDataDTO {
    * @return volumeToken1
   **/
   @javax.annotation.Nullable
-
   public String getVolumeToken1() {
     return volumeToken1;
   }
@@ -362,7 +355,6 @@ public class SushiswapPairHourDataDTO {
    * @return volumeUsd
   **/
   @javax.annotation.Nullable
-
   public String getVolumeUsd() {
     return volumeUsd;
   }
@@ -384,7 +376,6 @@ public class SushiswapPairHourDataDTO {
    * @return txCount
   **/
   @javax.annotation.Nullable
-
   public String getTxCount() {
     return txCount;
   }
@@ -406,7 +397,6 @@ public class SushiswapPairHourDataDTO {
    * @return vid
   **/
   @javax.annotation.Nullable
-
   public Long getVid() {
     return vid;
   }

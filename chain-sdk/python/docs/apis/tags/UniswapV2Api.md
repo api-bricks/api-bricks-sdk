@@ -1,4 +1,4 @@
-<a name="__pageTop"></a>
+<a id="__pageTop"></a>
 # openapi_client.apis.tags.uniswap_v2_api.UniswapV2Api
 
 All URIs are relative to *https://onchain.coinapi.io*
@@ -37,7 +37,7 @@ Method | HTTP request | Description
 [**uniswap_v2_users__current**](#uniswap_v2_users__current) | **get** /dapps/uniswapv2/users/current | Users (current)
 
 # **uniswap_v2_bundles__current**
-<a name="uniswap_v2_bundles__current"></a>
+<a id="uniswap_v2_bundles__current"></a>
 > [UniswapV2BundleDTO] uniswap_v2_bundles__current()
 
 Bundles (current)
@@ -130,7 +130,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **uniswap_v2_burns__current**
-<a name="uniswap_v2_burns__current"></a>
+<a id="uniswap_v2_burns__current"></a>
 > [UniswapV2BurnDTO] uniswap_v2_burns__current()
 
 Burns (current)
@@ -223,7 +223,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **uniswap_v2_get_bundles__historical**
-<a name="uniswap_v2_get_bundles__historical"></a>
+<a id="uniswap_v2_get_bundles__historical"></a>
 > [UniswapV2BundleDTO] uniswap_v2_get_bundles__historical()
 
 Bundles (historical)
@@ -379,7 +379,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **uniswap_v2_get_burns__historical**
-<a name="uniswap_v2_get_burns__historical"></a>
+<a id="uniswap_v2_get_burns__historical"></a>
 > [UniswapV2BurnDTO] uniswap_v2_get_burns__historical()
 
 Burns (historical)
@@ -544,7 +544,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **uniswap_v2_get_liquidity_position_snapshots__historical**
-<a name="uniswap_v2_get_liquidity_position_snapshots__historical"></a>
+<a id="uniswap_v2_get_liquidity_position_snapshots__historical"></a>
 > [UniswapV2LiquidityPositionSnapshotDTO] uniswap_v2_get_liquidity_position_snapshots__historical()
 
 LiquidityPositionSnapshots (historical)
@@ -718,7 +718,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **uniswap_v2_get_liquidity_positions__historical**
-<a name="uniswap_v2_get_liquidity_positions__historical"></a>
+<a id="uniswap_v2_get_liquidity_positions__historical"></a>
 > [UniswapV2LiquidityPositionDTO] uniswap_v2_get_liquidity_positions__historical()
 
 LiquidityPositions (historical)
@@ -892,7 +892,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **uniswap_v2_get_mints__historical**
-<a name="uniswap_v2_get_mints__historical"></a>
+<a id="uniswap_v2_get_mints__historical"></a>
 > [UniswapV2MintDTO] uniswap_v2_get_mints__historical()
 
 Mints (historical)
@@ -1057,7 +1057,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **uniswap_v2_get_pair_day_data__historical**
-<a name="uniswap_v2_get_pair_day_data__historical"></a>
+<a id="uniswap_v2_get_pair_day_data__historical"></a>
 > [UniswapV2PairDayDataDTO] uniswap_v2_get_pair_day_data__historical()
 
 PairDayData (historical)
@@ -1231,7 +1231,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **uniswap_v2_get_pair_hour_data__historical**
-<a name="uniswap_v2_get_pair_hour_data__historical"></a>
+<a id="uniswap_v2_get_pair_hour_data__historical"></a>
 > [UniswapV2PairHourDataDTO] uniswap_v2_get_pair_hour_data__historical()
 
 PairHourData (historical)
@@ -1396,7 +1396,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **uniswap_v2_get_pairs__historical**
-<a name="uniswap_v2_get_pairs__historical"></a>
+<a id="uniswap_v2_get_pairs__historical"></a>
 > [UniswapV2PairDTO] uniswap_v2_get_pairs__historical()
 
 Pairs (historical)
@@ -1570,7 +1570,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **uniswap_v2_get_swaps__historical**
-<a name="uniswap_v2_get_swaps__historical"></a>
+<a id="uniswap_v2_get_swaps__historical"></a>
 > [UniswapV2SwapDTO] uniswap_v2_get_swaps__historical()
 
 Swaps (historical)
@@ -1735,7 +1735,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **uniswap_v2_get_token_day_data__historical**
-<a name="uniswap_v2_get_token_day_data__historical"></a>
+<a id="uniswap_v2_get_token_day_data__historical"></a>
 > [UniswapV2TokenDayDataDTO] uniswap_v2_get_token_day_data__historical()
 
 TokenDayData (historical)
@@ -1891,7 +1891,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **uniswap_v2_get_tokens__historical**
-<a name="uniswap_v2_get_tokens__historical"></a>
+<a id="uniswap_v2_get_tokens__historical"></a>
 > [UniswapV2TokenDTO] uniswap_v2_get_tokens__historical()
 
 Tokens (historical)
@@ -2065,7 +2065,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **uniswap_v2_get_transactions__historical**
-<a name="uniswap_v2_get_transactions__historical"></a>
+<a id="uniswap_v2_get_transactions__historical"></a>
 > [UniswapV2TransactionDTO] uniswap_v2_get_transactions__historical()
 
 Transactions (historical)
@@ -2221,7 +2221,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **uniswap_v2_get_uniswap_day_data__historical**
-<a name="uniswap_v2_get_uniswap_day_data__historical"></a>
+<a id="uniswap_v2_get_uniswap_day_data__historical"></a>
 > [UniswapV2UniswapDayDataDTO] uniswap_v2_get_uniswap_day_data__historical()
 
 UniswapDayData (historical)
@@ -2377,7 +2377,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **uniswap_v2_get_uniswap_factories__historical**
-<a name="uniswap_v2_get_uniswap_factories__historical"></a>
+<a id="uniswap_v2_get_uniswap_factories__historical"></a>
 > [UniswapV2UniswapFactoryDTO] uniswap_v2_get_uniswap_factories__historical()
 
 UniswapFactories (historical)
@@ -2533,7 +2533,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **uniswap_v2_get_users__historical**
-<a name="uniswap_v2_get_users__historical"></a>
+<a id="uniswap_v2_get_users__historical"></a>
 > [UniswapV2UserDTO] uniswap_v2_get_users__historical()
 
 Users (historical)
@@ -2689,7 +2689,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **uniswap_v2_liquidity_position_snapshots__current**
-<a name="uniswap_v2_liquidity_position_snapshots__current"></a>
+<a id="uniswap_v2_liquidity_position_snapshots__current"></a>
 > [UniswapV2LiquidityPositionSnapshotDTO] uniswap_v2_liquidity_position_snapshots__current()
 
 LiquidityPositionSnapshots (current)
@@ -2782,7 +2782,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **uniswap_v2_liquidity_positions__current**
-<a name="uniswap_v2_liquidity_positions__current"></a>
+<a id="uniswap_v2_liquidity_positions__current"></a>
 > [UniswapV2LiquidityPositionDTO] uniswap_v2_liquidity_positions__current()
 
 LiquidityPositions (current)
@@ -2875,7 +2875,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **uniswap_v2_mints__current**
-<a name="uniswap_v2_mints__current"></a>
+<a id="uniswap_v2_mints__current"></a>
 > [UniswapV2MintDTO] uniswap_v2_mints__current()
 
 Mints (current)
@@ -2968,7 +2968,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **uniswap_v2_pair_day_data__current**
-<a name="uniswap_v2_pair_day_data__current"></a>
+<a id="uniswap_v2_pair_day_data__current"></a>
 > [UniswapV2PairDayDataDTO] uniswap_v2_pair_day_data__current()
 
 PairDayData (current)
@@ -3061,7 +3061,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **uniswap_v2_pair_hour_data__current**
-<a name="uniswap_v2_pair_hour_data__current"></a>
+<a id="uniswap_v2_pair_hour_data__current"></a>
 > [UniswapV2PairHourDataDTO] uniswap_v2_pair_hour_data__current()
 
 PairHourData (current)
@@ -3154,7 +3154,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **uniswap_v2_pairs__current**
-<a name="uniswap_v2_pairs__current"></a>
+<a id="uniswap_v2_pairs__current"></a>
 > [UniswapV2PairDTO] uniswap_v2_pairs__current()
 
 Pairs (current)
@@ -3274,7 +3274,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **uniswap_v2_swaps__current**
-<a name="uniswap_v2_swaps__current"></a>
+<a id="uniswap_v2_swaps__current"></a>
 > [UniswapV2SwapDTO] uniswap_v2_swaps__current()
 
 Swaps (current)
@@ -3394,7 +3394,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **uniswap_v2_token_day_data__current**
-<a name="uniswap_v2_token_day_data__current"></a>
+<a id="uniswap_v2_token_day_data__current"></a>
 > [UniswapV2TokenDayDataDTO] uniswap_v2_token_day_data__current()
 
 TokenDayData (current)
@@ -3487,7 +3487,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **uniswap_v2_tokens__current**
-<a name="uniswap_v2_tokens__current"></a>
+<a id="uniswap_v2_tokens__current"></a>
 > [UniswapV2TokenDTO] uniswap_v2_tokens__current()
 
 Tokens (current)
@@ -3580,7 +3580,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **uniswap_v2_transactions__current**
-<a name="uniswap_v2_transactions__current"></a>
+<a id="uniswap_v2_transactions__current"></a>
 > [UniswapV2TransactionDTO] uniswap_v2_transactions__current()
 
 Transactions (current)
@@ -3673,7 +3673,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **uniswap_v2_uniswap_day_data__current**
-<a name="uniswap_v2_uniswap_day_data__current"></a>
+<a id="uniswap_v2_uniswap_day_data__current"></a>
 > [UniswapV2UniswapDayDataDTO] uniswap_v2_uniswap_day_data__current()
 
 UniswapDayData (current)
@@ -3766,7 +3766,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **uniswap_v2_uniswap_factories__current**
-<a name="uniswap_v2_uniswap_factories__current"></a>
+<a id="uniswap_v2_uniswap_factories__current"></a>
 > [UniswapV2UniswapFactoryDTO] uniswap_v2_uniswap_factories__current()
 
 UniswapFactories (current)
@@ -3859,7 +3859,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **uniswap_v2_users__current**
-<a name="uniswap_v2_users__current"></a>
+<a id="uniswap_v2_users__current"></a>
 > [UniswapV2UserDTO] uniswap_v2_users__current()
 
 Users (current)

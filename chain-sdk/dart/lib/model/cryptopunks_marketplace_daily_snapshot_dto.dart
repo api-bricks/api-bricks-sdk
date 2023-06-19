@@ -322,7 +322,7 @@ class CRYPTOPUNKSMarketplaceDailySnapshotDTO {
     return null;
   }
 
-  static List<CRYPTOPUNKSMarketplaceDailySnapshotDTO>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<CRYPTOPUNKSMarketplaceDailySnapshotDTO> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <CRYPTOPUNKSMarketplaceDailySnapshotDTO>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -353,12 +353,10 @@ class CRYPTOPUNKSMarketplaceDailySnapshotDTO {
   static Map<String, List<CRYPTOPUNKSMarketplaceDailySnapshotDTO>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<CRYPTOPUNKSMarketplaceDailySnapshotDTO>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = CRYPTOPUNKSMarketplaceDailySnapshotDTO.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = CRYPTOPUNKSMarketplaceDailySnapshotDTO.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

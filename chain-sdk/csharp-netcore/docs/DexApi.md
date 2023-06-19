@@ -27,7 +27,7 @@ All URIs are relative to *https://onchain.coinapi.io*
 | [**DexWithdrawRequestsCurrent**](DexApi.md#dexwithdrawrequestscurrent) | **GET** /dapps/dex/withdrawRequests/current | WithdrawRequests (current) |
 | [**DexWithdrawsCurrent**](DexApi.md#dexwithdrawscurrent) | **GET** /dapps/dex/withdraws/current | Withdraws (current) |
 
-<a name="dexbatchescurrent"></a>
+<a id="dexbatchescurrent"></a>
 # **DexBatchesCurrent**
 > List&lt;DexBatchDTO&gt; DexBatchesCurrent ()
 
@@ -113,7 +113,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="dexdepositscurrent"></a>
+<a id="dexdepositscurrent"></a>
 # **DexDepositsCurrent**
 > List&lt;DexDepositDTO&gt; DexDepositsCurrent ()
 
@@ -199,7 +199,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="dexgetbatcheshistorical"></a>
+<a id="dexgetbatcheshistorical"></a>
 # **DexGetBatchesHistorical**
 > List&lt;DexBatchDTO&gt; DexGetBatchesHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null)
 
@@ -298,7 +298,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="dexgetdepositshistorical"></a>
+<a id="dexgetdepositshistorical"></a>
 # **DexGetDepositsHistorical**
 > List&lt;DexDepositDTO&gt; DexGetDepositsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string user = null)
 
@@ -399,7 +399,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="dexgetordershistorical"></a>
+<a id="dexgetordershistorical"></a>
 # **DexGetOrdersHistorical**
 > List&lt;DexOrderDTO&gt; DexGetOrdersHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string buyToken = null, string sellToken = null)
 
@@ -502,7 +502,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="dexgetpriceshistorical"></a>
+<a id="dexgetpriceshistorical"></a>
 # **DexGetPricesHistorical**
 > List&lt;DexPriceDTO&gt; DexGetPricesHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null)
 
@@ -601,7 +601,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="dexgetsolutionshistorical"></a>
+<a id="dexgetsolutionshistorical"></a>
 # **DexGetSolutionsHistorical**
 > List&lt;DexSolutionDTO&gt; DexGetSolutionsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null)
 
@@ -700,7 +700,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="dexgetstatshistorical"></a>
+<a id="dexgetstatshistorical"></a>
 # **DexGetStatsHistorical**
 > List&lt;DexStatsDTO&gt; DexGetStatsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null)
 
@@ -799,7 +799,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="dexgettokenshistorical"></a>
+<a id="dexgettokenshistorical"></a>
 # **DexGetTokensHistorical**
 > List&lt;DexTokenDTO&gt; DexGetTokensHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string address = null, string symbol = null, string name = null)
 
@@ -904,7 +904,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="dexgettradeshistorical"></a>
+<a id="dexgettradeshistorical"></a>
 # **DexGetTradesHistorical**
 > List&lt;DexTradeDTO&gt; DexGetTradesHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string buyToken = null, string sellToken = null)
 
@@ -1007,7 +1007,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="dexgetusershistorical"></a>
+<a id="dexgetusershistorical"></a>
 # **DexGetUsersHistorical**
 > List&lt;DexUserDTO&gt; DexGetUsersHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null)
 
@@ -1106,7 +1106,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="dexgetwithdrawrequestshistorical"></a>
+<a id="dexgetwithdrawrequestshistorical"></a>
 # **DexGetWithdrawRequestsHistorical**
 > List&lt;DexWithdrawRequestDTO&gt; DexGetWithdrawRequestsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string user = null)
 
@@ -1207,7 +1207,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="dexgetwithdrawshistorical"></a>
+<a id="dexgetwithdrawshistorical"></a>
 # **DexGetWithdrawsHistorical**
 > List&lt;DexWithdrawDTO&gt; DexGetWithdrawsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string user = null)
 
@@ -1308,7 +1308,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="dexorderscurrent"></a>
+<a id="dexorderscurrent"></a>
 # **DexOrdersCurrent**
 > List&lt;DexOrderDTO&gt; DexOrdersCurrent ()
 
@@ -1394,7 +1394,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="dexpricescurrent"></a>
+<a id="dexpricescurrent"></a>
 # **DexPricesCurrent**
 > List&lt;DexPriceDTO&gt; DexPricesCurrent ()
 
@@ -1480,7 +1480,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="dexsolutionscurrent"></a>
+<a id="dexsolutionscurrent"></a>
 # **DexSolutionsCurrent**
 > List&lt;DexSolutionDTO&gt; DexSolutionsCurrent ()
 
@@ -1566,7 +1566,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="dexstatscurrent"></a>
+<a id="dexstatscurrent"></a>
 # **DexStatsCurrent**
 > List&lt;DexStatsDTO&gt; DexStatsCurrent ()
 
@@ -1652,7 +1652,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="dextokenscurrent"></a>
+<a id="dextokenscurrent"></a>
 # **DexTokensCurrent**
 > List&lt;DexTokenDTO&gt; DexTokensCurrent ()
 
@@ -1738,7 +1738,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="dextradescurrent"></a>
+<a id="dextradescurrent"></a>
 # **DexTradesCurrent**
 > List&lt;DexTradeDTO&gt; DexTradesCurrent ()
 
@@ -1824,7 +1824,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="dexuserscurrent"></a>
+<a id="dexuserscurrent"></a>
 # **DexUsersCurrent**
 > List&lt;DexUserDTO&gt; DexUsersCurrent ()
 
@@ -1910,7 +1910,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="dexwithdrawrequestscurrent"></a>
+<a id="dexwithdrawrequestscurrent"></a>
 # **DexWithdrawRequestsCurrent**
 > List&lt;DexWithdrawRequestDTO&gt; DexWithdrawRequestsCurrent ()
 
@@ -1996,7 +1996,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="dexwithdrawscurrent"></a>
+<a id="dexwithdrawscurrent"></a>
 # **DexWithdrawsCurrent**
 > List&lt;DexWithdrawDTO&gt; DexWithdrawsCurrent ()
 

@@ -34,6 +34,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
@@ -48,7 +52,7 @@ import org.openapitools.client.JSON;
 /**
  * CRYPTOPUNKSCollectionDailySnapshotDTO
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-07T11:31:09.822924Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-19T09:28:48.156871Z[Etc/UTC]")
 public class CRYPTOPUNKSCollectionDailySnapshotDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -136,7 +140,6 @@ public class CRYPTOPUNKSCollectionDailySnapshotDTO {
    * @return entryTime
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getEntryTime() {
     return entryTime;
   }
@@ -158,7 +161,6 @@ public class CRYPTOPUNKSCollectionDailySnapshotDTO {
    * @return recvTime
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getRecvTime() {
     return recvTime;
   }
@@ -180,7 +182,6 @@ public class CRYPTOPUNKSCollectionDailySnapshotDTO {
    * @return blockNumber
   **/
   @javax.annotation.Nullable
-
   public String getBlockNumber() {
     return blockNumber;
   }
@@ -202,7 +203,6 @@ public class CRYPTOPUNKSCollectionDailySnapshotDTO {
    * @return vid
   **/
   @javax.annotation.Nullable
-
   public Long getVid() {
     return vid;
   }
@@ -224,7 +224,6 @@ public class CRYPTOPUNKSCollectionDailySnapshotDTO {
    * @return blockRange
   **/
   @javax.annotation.Nullable
-
   public String getBlockRange() {
     return blockRange;
   }
@@ -246,7 +245,6 @@ public class CRYPTOPUNKSCollectionDailySnapshotDTO {
    * @return id
   **/
   @javax.annotation.Nullable
-
   public String getId() {
     return id;
   }
@@ -268,7 +266,6 @@ public class CRYPTOPUNKSCollectionDailySnapshotDTO {
    * @return collection
   **/
   @javax.annotation.Nullable
-
   public String getCollection() {
     return collection;
   }
@@ -290,7 +287,6 @@ public class CRYPTOPUNKSCollectionDailySnapshotDTO {
    * @return timestamp
   **/
   @javax.annotation.Nullable
-
   public String getTimestamp() {
     return timestamp;
   }
@@ -312,7 +308,6 @@ public class CRYPTOPUNKSCollectionDailySnapshotDTO {
    * @return royaltyFee
   **/
   @javax.annotation.Nullable
-
   public String getRoyaltyFee() {
     return royaltyFee;
   }
@@ -334,7 +329,6 @@ public class CRYPTOPUNKSCollectionDailySnapshotDTO {
    * @return dailyMinSalePrice
   **/
   @javax.annotation.Nullable
-
   public String getDailyMinSalePrice() {
     return dailyMinSalePrice;
   }
@@ -356,7 +350,6 @@ public class CRYPTOPUNKSCollectionDailySnapshotDTO {
    * @return dailyMaxSalePrice
   **/
   @javax.annotation.Nullable
-
   public String getDailyMaxSalePrice() {
     return dailyMaxSalePrice;
   }
@@ -378,7 +371,6 @@ public class CRYPTOPUNKSCollectionDailySnapshotDTO {
    * @return cumulativeTradeVolumeEth
   **/
   @javax.annotation.Nullable
-
   public String getCumulativeTradeVolumeEth() {
     return cumulativeTradeVolumeEth;
   }
@@ -400,7 +392,6 @@ public class CRYPTOPUNKSCollectionDailySnapshotDTO {
    * @return dailyTradeVolumeEth
   **/
   @javax.annotation.Nullable
-
   public String getDailyTradeVolumeEth() {
     return dailyTradeVolumeEth;
   }
@@ -422,7 +413,6 @@ public class CRYPTOPUNKSCollectionDailySnapshotDTO {
    * @return marketplaceRevenueEth
   **/
   @javax.annotation.Nullable
-
   public String getMarketplaceRevenueEth() {
     return marketplaceRevenueEth;
   }
@@ -444,7 +434,6 @@ public class CRYPTOPUNKSCollectionDailySnapshotDTO {
    * @return creatorRevenueEth
   **/
   @javax.annotation.Nullable
-
   public String getCreatorRevenueEth() {
     return creatorRevenueEth;
   }
@@ -466,7 +455,6 @@ public class CRYPTOPUNKSCollectionDailySnapshotDTO {
    * @return totalRevenueEth
   **/
   @javax.annotation.Nullable
-
   public String getTotalRevenueEth() {
     return totalRevenueEth;
   }
@@ -488,7 +476,6 @@ public class CRYPTOPUNKSCollectionDailySnapshotDTO {
    * @return tradeCount
   **/
   @javax.annotation.Nullable
-
   public Integer getTradeCount() {
     return tradeCount;
   }
@@ -510,7 +497,6 @@ public class CRYPTOPUNKSCollectionDailySnapshotDTO {
    * @return dailyTradedItemCount
   **/
   @javax.annotation.Nullable
-
   public Integer getDailyTradedItemCount() {
     return dailyTradedItemCount;
   }

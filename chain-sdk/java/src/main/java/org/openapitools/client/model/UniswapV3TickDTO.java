@@ -35,6 +35,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
@@ -49,7 +53,7 @@ import org.openapitools.client.JSON;
 /**
  * Ticks are the boundaries between discrete areas in price space.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-07T11:31:09.822924Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-19T09:28:48.156871Z[Etc/UTC]")
 public class UniswapV3TickDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -161,7 +165,6 @@ public class UniswapV3TickDTO {
    * @return entryTime
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getEntryTime() {
     return entryTime;
   }
@@ -183,7 +186,6 @@ public class UniswapV3TickDTO {
    * @return recvTime
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getRecvTime() {
     return recvTime;
   }
@@ -205,7 +207,6 @@ public class UniswapV3TickDTO {
    * @return blockNumber
   **/
   @javax.annotation.Nullable
-
   public Long getBlockNumber() {
     return blockNumber;
   }
@@ -227,7 +228,6 @@ public class UniswapV3TickDTO {
    * @return vid
   **/
   @javax.annotation.Nullable
-
   public Long getVid() {
     return vid;
   }
@@ -249,7 +249,6 @@ public class UniswapV3TickDTO {
    * @return id
   **/
   @javax.annotation.Nullable
-
   public String getId() {
     return id;
   }
@@ -271,7 +270,6 @@ public class UniswapV3TickDTO {
    * @return poolAddress
   **/
   @javax.annotation.Nullable
-
   public String getPoolAddress() {
     return poolAddress;
   }
@@ -293,7 +291,6 @@ public class UniswapV3TickDTO {
    * @return tickIdx
   **/
   @javax.annotation.Nullable
-
   public NumericsBigInteger getTickIdx() {
     return tickIdx;
   }
@@ -315,7 +312,6 @@ public class UniswapV3TickDTO {
    * @return pool
   **/
   @javax.annotation.Nullable
-
   public String getPool() {
     return pool;
   }
@@ -337,7 +333,6 @@ public class UniswapV3TickDTO {
    * @return liquidityGross
   **/
   @javax.annotation.Nullable
-
   public NumericsBigInteger getLiquidityGross() {
     return liquidityGross;
   }
@@ -359,7 +354,6 @@ public class UniswapV3TickDTO {
    * @return liquidityNet
   **/
   @javax.annotation.Nullable
-
   public NumericsBigInteger getLiquidityNet() {
     return liquidityNet;
   }
@@ -381,7 +375,6 @@ public class UniswapV3TickDTO {
    * @return price0
   **/
   @javax.annotation.Nullable
-
   public String getPrice0() {
     return price0;
   }
@@ -403,7 +396,6 @@ public class UniswapV3TickDTO {
    * @return price1
   **/
   @javax.annotation.Nullable
-
   public String getPrice1() {
     return price1;
   }
@@ -425,7 +417,6 @@ public class UniswapV3TickDTO {
    * @return volumeToken0
   **/
   @javax.annotation.Nullable
-
   public String getVolumeToken0() {
     return volumeToken0;
   }
@@ -447,7 +438,6 @@ public class UniswapV3TickDTO {
    * @return volumeToken1
   **/
   @javax.annotation.Nullable
-
   public String getVolumeToken1() {
     return volumeToken1;
   }
@@ -469,7 +459,6 @@ public class UniswapV3TickDTO {
    * @return volumeUsd
   **/
   @javax.annotation.Nullable
-
   public String getVolumeUsd() {
     return volumeUsd;
   }
@@ -491,7 +480,6 @@ public class UniswapV3TickDTO {
    * @return untrackedVolumeUsd
   **/
   @javax.annotation.Nullable
-
   public String getUntrackedVolumeUsd() {
     return untrackedVolumeUsd;
   }
@@ -513,7 +501,6 @@ public class UniswapV3TickDTO {
    * @return feesUsd
   **/
   @javax.annotation.Nullable
-
   public String getFeesUsd() {
     return feesUsd;
   }
@@ -535,7 +522,6 @@ public class UniswapV3TickDTO {
    * @return collectedFeesToken0
   **/
   @javax.annotation.Nullable
-
   public String getCollectedFeesToken0() {
     return collectedFeesToken0;
   }
@@ -557,7 +543,6 @@ public class UniswapV3TickDTO {
    * @return collectedFeesToken1
   **/
   @javax.annotation.Nullable
-
   public String getCollectedFeesToken1() {
     return collectedFeesToken1;
   }
@@ -579,7 +564,6 @@ public class UniswapV3TickDTO {
    * @return collectedFeesUsd
   **/
   @javax.annotation.Nullable
-
   public String getCollectedFeesUsd() {
     return collectedFeesUsd;
   }
@@ -601,7 +585,6 @@ public class UniswapV3TickDTO {
    * @return createdAtTimestamp
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getCreatedAtTimestamp() {
     return createdAtTimestamp;
   }
@@ -623,7 +606,6 @@ public class UniswapV3TickDTO {
    * @return liquidityProviderCount
   **/
   @javax.annotation.Nullable
-
   public NumericsBigInteger getLiquidityProviderCount() {
     return liquidityProviderCount;
   }
@@ -645,7 +627,6 @@ public class UniswapV3TickDTO {
    * @return feeGrowthOutside0x128
   **/
   @javax.annotation.Nullable
-
   public NumericsBigInteger getFeeGrowthOutside0x128() {
     return feeGrowthOutside0x128;
   }
@@ -667,7 +648,6 @@ public class UniswapV3TickDTO {
    * @return feeGrowthOutside1x128
   **/
   @javax.annotation.Nullable
-
   public NumericsBigInteger getFeeGrowthOutside1x128() {
     return feeGrowthOutside1x128;
   }

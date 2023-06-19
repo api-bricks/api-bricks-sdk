@@ -70,7 +70,7 @@ Method | HTTP request | Description
 [**Invoke-CurveWeeklyVolumesCurrent**](CurveApi.md#Invoke-CurveWeeklyVolumesCurrent) | **GET** /dapps/curve/weeklyVolumes/current | WeeklyVolumes (current)
 
 
-<a name="Invoke-CurveAccountsCurrent"></a>
+<a id="Invoke-CurveAccountsCurrent"></a>
 # **Invoke-CurveAccountsCurrent**
 > CurveAccountDTO[] Invoke-CurveAccountsCurrent<br>
 
@@ -108,7 +108,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-CurveAddLiquidityEventsCurrent"></a>
+<a id="Invoke-CurveAddLiquidityEventsCurrent"></a>
 # **Invoke-CurveAddLiquidityEventsCurrent**
 > CurveAddLiquidityEventDTO[] Invoke-CurveAddLiquidityEventsCurrent<br>
 
@@ -146,7 +146,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-CurveAdminFeeChangeLogsCurrent"></a>
+<a id="Invoke-CurveAdminFeeChangeLogsCurrent"></a>
 # **Invoke-CurveAdminFeeChangeLogsCurrent**
 > CurveAdminFeeChangeLogDTO[] Invoke-CurveAdminFeeChangeLogsCurrent<br>
 
@@ -184,7 +184,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-CurveAmplificationCoeffChangeLogsCurrent"></a>
+<a id="Invoke-CurveAmplificationCoeffChangeLogsCurrent"></a>
 # **Invoke-CurveAmplificationCoeffChangeLogsCurrent**
 > CurveAmplificationCoeffChangeLogDTO[] Invoke-CurveAmplificationCoeffChangeLogsCurrent<br>
 
@@ -222,7 +222,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-CurveCoinsCurrent"></a>
+<a id="Invoke-CurveCoinsCurrent"></a>
 # **Invoke-CurveCoinsCurrent**
 > CurveCoinDTO[] Invoke-CurveCoinsCurrent<br>
 
@@ -260,7 +260,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-CurveContractVersionsCurrent"></a>
+<a id="Invoke-CurveContractVersionsCurrent"></a>
 # **Invoke-CurveContractVersionsCurrent**
 > CurveContractVersionDTO[] Invoke-CurveContractVersionsCurrent<br>
 
@@ -298,7 +298,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-CurveContractsCurrent"></a>
+<a id="Invoke-CurveContractsCurrent"></a>
 # **Invoke-CurveContractsCurrent**
 > CurveContractDTO[] Invoke-CurveContractsCurrent<br>
 
@@ -336,7 +336,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-CurveDailyVolumesCurrent"></a>
+<a id="Invoke-CurveDailyVolumesCurrent"></a>
 # **Invoke-CurveDailyVolumesCurrent**
 > CurveDailyVolumeDTO[] Invoke-CurveDailyVolumesCurrent<br>
 
@@ -374,7 +374,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-CurveExchangesCurrent"></a>
+<a id="Invoke-CurveExchangesCurrent"></a>
 # **Invoke-CurveExchangesCurrent**
 > CurveExchangeDTO[] Invoke-CurveExchangesCurrent<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Pool] <String><br>
@@ -417,7 +417,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-CurveFeeChangeLogsCurrent"></a>
+<a id="Invoke-CurveFeeChangeLogsCurrent"></a>
 # **Invoke-CurveFeeChangeLogsCurrent**
 > CurveFeeChangeLogDTO[] Invoke-CurveFeeChangeLogsCurrent<br>
 
@@ -455,7 +455,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-CurveGaugeDepositsCurrent"></a>
+<a id="Invoke-CurveGaugeDepositsCurrent"></a>
 # **Invoke-CurveGaugeDepositsCurrent**
 > CurveGaugeDepositDTO[] Invoke-CurveGaugeDepositsCurrent<br>
 
@@ -493,7 +493,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-CurveGaugeLiquiditiesCurrent"></a>
+<a id="Invoke-CurveGaugeLiquiditiesCurrent"></a>
 # **Invoke-CurveGaugeLiquiditiesCurrent**
 > CurveGaugeLiquidityDTO[] Invoke-CurveGaugeLiquiditiesCurrent<br>
 
@@ -531,7 +531,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-CurveGaugeTotalWeightsCurrent"></a>
+<a id="Invoke-CurveGaugeTotalWeightsCurrent"></a>
 # **Invoke-CurveGaugeTotalWeightsCurrent**
 > CurveGaugeTotalWeightDTO[] Invoke-CurveGaugeTotalWeightsCurrent<br>
 
@@ -569,7 +569,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-CurveGaugeTypeWeightsCurrent"></a>
+<a id="Invoke-CurveGaugeTypeWeightsCurrent"></a>
 # **Invoke-CurveGaugeTypeWeightsCurrent**
 > CurveGaugeTypeWeightDTO[] Invoke-CurveGaugeTypeWeightsCurrent<br>
 
@@ -607,7 +607,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-CurveGaugeTypesCurrent"></a>
+<a id="Invoke-CurveGaugeTypesCurrent"></a>
 # **Invoke-CurveGaugeTypesCurrent**
 > CurveGaugeTypeDTO[] Invoke-CurveGaugeTypesCurrent<br>
 
@@ -645,7 +645,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-CurveGaugeWeightVotesCurrent"></a>
+<a id="Invoke-CurveGaugeWeightVotesCurrent"></a>
 # **Invoke-CurveGaugeWeightVotesCurrent**
 > CurveGaugeWeightVoteDTO[] Invoke-CurveGaugeWeightVotesCurrent<br>
 
@@ -683,7 +683,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-CurveGaugeWeightsCurrent"></a>
+<a id="Invoke-CurveGaugeWeightsCurrent"></a>
 # **Invoke-CurveGaugeWeightsCurrent**
 > CurveGaugeWeightDTO[] Invoke-CurveGaugeWeightsCurrent<br>
 
@@ -721,7 +721,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-CurveGaugeWithdrawsCurrent"></a>
+<a id="Invoke-CurveGaugeWithdrawsCurrent"></a>
 # **Invoke-CurveGaugeWithdrawsCurrent**
 > CurveGaugeWithdrawDTO[] Invoke-CurveGaugeWithdrawsCurrent<br>
 
@@ -759,7 +759,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-CurveGaugesCurrent"></a>
+<a id="Invoke-CurveGaugesCurrent"></a>
 # **Invoke-CurveGaugesCurrent**
 > CurveGaugeDTO[] Invoke-CurveGaugesCurrent<br>
 
@@ -797,7 +797,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-CurveGetAccountsHistorical"></a>
+<a id="Invoke-CurveGetAccountsHistorical"></a>
 # **Invoke-CurveGetAccountsHistorical**
 > CurveAccountDTO[] Invoke-CurveGetAccountsHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
@@ -855,7 +855,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-CurveGetAddLiquidityEventsHistorical"></a>
+<a id="Invoke-CurveGetAddLiquidityEventsHistorical"></a>
 # **Invoke-CurveGetAddLiquidityEventsHistorical**
 > CurveAddLiquidityEventDTO[] Invoke-CurveGetAddLiquidityEventsHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
@@ -913,7 +913,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-CurveGetAdminFeeChangeLogsHistorical"></a>
+<a id="Invoke-CurveGetAdminFeeChangeLogsHistorical"></a>
 # **Invoke-CurveGetAdminFeeChangeLogsHistorical**
 > CurveAdminFeeChangeLogDTO[] Invoke-CurveGetAdminFeeChangeLogsHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
@@ -971,7 +971,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-CurveGetAmplificationCoeffChangeLogsHistorical"></a>
+<a id="Invoke-CurveGetAmplificationCoeffChangeLogsHistorical"></a>
 # **Invoke-CurveGetAmplificationCoeffChangeLogsHistorical**
 > CurveAmplificationCoeffChangeLogDTO[] Invoke-CurveGetAmplificationCoeffChangeLogsHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
@@ -1029,7 +1029,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-CurveGetCoinsHistorical"></a>
+<a id="Invoke-CurveGetCoinsHistorical"></a>
 # **Invoke-CurveGetCoinsHistorical**
 > CurveCoinDTO[] Invoke-CurveGetCoinsHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
@@ -1087,7 +1087,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-CurveGetContractVersionsHistorical"></a>
+<a id="Invoke-CurveGetContractVersionsHistorical"></a>
 # **Invoke-CurveGetContractVersionsHistorical**
 > CurveContractVersionDTO[] Invoke-CurveGetContractVersionsHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
@@ -1145,7 +1145,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-CurveGetContractsHistorical"></a>
+<a id="Invoke-CurveGetContractsHistorical"></a>
 # **Invoke-CurveGetContractsHistorical**
 > CurveContractDTO[] Invoke-CurveGetContractsHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
@@ -1200,7 +1200,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-CurveGetDailyVolumesHistorical"></a>
+<a id="Invoke-CurveGetDailyVolumesHistorical"></a>
 # **Invoke-CurveGetDailyVolumesHistorical**
 > CurveDailyVolumeDTO[] Invoke-CurveGetDailyVolumesHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
@@ -1258,7 +1258,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-CurveGetExchangesHistorical"></a>
+<a id="Invoke-CurveGetExchangesHistorical"></a>
 # **Invoke-CurveGetExchangesHistorical**
 > CurveExchangeDTO[] Invoke-CurveGetExchangesHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
@@ -1316,7 +1316,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-CurveGetFeeChangeLogsHistorical"></a>
+<a id="Invoke-CurveGetFeeChangeLogsHistorical"></a>
 # **Invoke-CurveGetFeeChangeLogsHistorical**
 > CurveFeeChangeLogDTO[] Invoke-CurveGetFeeChangeLogsHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
@@ -1374,7 +1374,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-CurveGetGaugeDepositsHistorical"></a>
+<a id="Invoke-CurveGetGaugeDepositsHistorical"></a>
 # **Invoke-CurveGetGaugeDepositsHistorical**
 > CurveGaugeDepositDTO[] Invoke-CurveGetGaugeDepositsHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
@@ -1429,7 +1429,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-CurveGetGaugeLiquiditiesHistorical"></a>
+<a id="Invoke-CurveGetGaugeLiquiditiesHistorical"></a>
 # **Invoke-CurveGetGaugeLiquiditiesHistorical**
 > CurveGaugeLiquidityDTO[] Invoke-CurveGetGaugeLiquiditiesHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
@@ -1487,7 +1487,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-CurveGetGaugeTotalWeightsHistorical"></a>
+<a id="Invoke-CurveGetGaugeTotalWeightsHistorical"></a>
 # **Invoke-CurveGetGaugeTotalWeightsHistorical**
 > CurveGaugeTotalWeightDTO[] Invoke-CurveGetGaugeTotalWeightsHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
@@ -1542,7 +1542,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-CurveGetGaugeTypeWeightsHistorical"></a>
+<a id="Invoke-CurveGetGaugeTypeWeightsHistorical"></a>
 # **Invoke-CurveGetGaugeTypeWeightsHistorical**
 > CurveGaugeTypeWeightDTO[] Invoke-CurveGetGaugeTypeWeightsHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
@@ -1597,7 +1597,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-CurveGetGaugeTypesHistorical"></a>
+<a id="Invoke-CurveGetGaugeTypesHistorical"></a>
 # **Invoke-CurveGetGaugeTypesHistorical**
 > CurveGaugeTypeDTO[] Invoke-CurveGetGaugeTypesHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
@@ -1655,7 +1655,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-CurveGetGaugeWeightVotesHistorical"></a>
+<a id="Invoke-CurveGetGaugeWeightVotesHistorical"></a>
 # **Invoke-CurveGetGaugeWeightVotesHistorical**
 > CurveGaugeWeightVoteDTO[] Invoke-CurveGetGaugeWeightVotesHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
@@ -1713,7 +1713,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-CurveGetGaugeWeightsHistorical"></a>
+<a id="Invoke-CurveGetGaugeWeightsHistorical"></a>
 # **Invoke-CurveGetGaugeWeightsHistorical**
 > CurveGaugeWeightDTO[] Invoke-CurveGetGaugeWeightsHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
@@ -1768,7 +1768,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-CurveGetGaugeWithdrawsHistorical"></a>
+<a id="Invoke-CurveGetGaugeWithdrawsHistorical"></a>
 # **Invoke-CurveGetGaugeWithdrawsHistorical**
 > CurveGaugeWithdrawDTO[] Invoke-CurveGetGaugeWithdrawsHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
@@ -1823,7 +1823,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-CurveGetGaugesHistorical"></a>
+<a id="Invoke-CurveGetGaugesHistorical"></a>
 # **Invoke-CurveGetGaugesHistorical**
 > CurveGaugeDTO[] Invoke-CurveGetGaugesHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
@@ -1884,7 +1884,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-CurveGetHourlyVolumesHistorical"></a>
+<a id="Invoke-CurveGetHourlyVolumesHistorical"></a>
 # **Invoke-CurveGetHourlyVolumesHistorical**
 > CurveHourlyVolumeDTO[] Invoke-CurveGetHourlyVolumesHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
@@ -1942,7 +1942,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-CurveGetLpTokensHistorical"></a>
+<a id="Invoke-CurveGetLpTokensHistorical"></a>
 # **Invoke-CurveGetLpTokensHistorical**
 > CurveLpTokenDTO[] Invoke-CurveGetLpTokensHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
@@ -2009,7 +2009,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-CurveGetPoolsHistorical"></a>
+<a id="Invoke-CurveGetPoolsHistorical"></a>
 # **Invoke-CurveGetPoolsHistorical**
 > CurvePoolDTO[] Invoke-CurveGetPoolsHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
@@ -2067,7 +2067,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-CurveGetProposalVotesHistorical"></a>
+<a id="Invoke-CurveGetProposalVotesHistorical"></a>
 # **Invoke-CurveGetProposalVotesHistorical**
 > CurveProposalVoteDTO[] Invoke-CurveGetProposalVotesHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
@@ -2122,7 +2122,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-CurveGetProposalsHistorical"></a>
+<a id="Invoke-CurveGetProposalsHistorical"></a>
 # **Invoke-CurveGetProposalsHistorical**
 > CurveProposalDTO[] Invoke-CurveGetProposalsHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
@@ -2177,7 +2177,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-CurveGetRemoveLiquidityEventsHistorical"></a>
+<a id="Invoke-CurveGetRemoveLiquidityEventsHistorical"></a>
 # **Invoke-CurveGetRemoveLiquidityEventsHistorical**
 > CurveRemoveLiquidityEventDTO[] Invoke-CurveGetRemoveLiquidityEventsHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
@@ -2235,7 +2235,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-CurveGetRemoveLiquidityOneEventsHistorical"></a>
+<a id="Invoke-CurveGetRemoveLiquidityOneEventsHistorical"></a>
 # **Invoke-CurveGetRemoveLiquidityOneEventsHistorical**
 > CurveRemoveLiquidityOneEventDTO[] Invoke-CurveGetRemoveLiquidityOneEventsHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
@@ -2293,7 +2293,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-CurveGetSystemStatesHistorical"></a>
+<a id="Invoke-CurveGetSystemStatesHistorical"></a>
 # **Invoke-CurveGetSystemStatesHistorical**
 > CurveSystemStateDTO[] Invoke-CurveGetSystemStatesHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
@@ -2348,7 +2348,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-CurveGetTokensHistorical"></a>
+<a id="Invoke-CurveGetTokensHistorical"></a>
 # **Invoke-CurveGetTokensHistorical**
 > CurveTokenDTO[] Invoke-CurveGetTokensHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
@@ -2412,7 +2412,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-CurveGetTransferOwnershipEventsHistorical"></a>
+<a id="Invoke-CurveGetTransferOwnershipEventsHistorical"></a>
 # **Invoke-CurveGetTransferOwnershipEventsHistorical**
 > CurveTransferOwnershipEventDTO[] Invoke-CurveGetTransferOwnershipEventsHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
@@ -2470,7 +2470,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-CurveGetUnderlyingCoinsHistorical"></a>
+<a id="Invoke-CurveGetUnderlyingCoinsHistorical"></a>
 # **Invoke-CurveGetUnderlyingCoinsHistorical**
 > CurveUnderlyingCoinDTO[] Invoke-CurveGetUnderlyingCoinsHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
@@ -2528,7 +2528,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-CurveGetVotingAppsHistorical"></a>
+<a id="Invoke-CurveGetVotingAppsHistorical"></a>
 # **Invoke-CurveGetVotingAppsHistorical**
 > CurveVotingAppDTO[] Invoke-CurveGetVotingAppsHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
@@ -2586,7 +2586,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-CurveGetWeeklyVolumesHistorical"></a>
+<a id="Invoke-CurveGetWeeklyVolumesHistorical"></a>
 # **Invoke-CurveGetWeeklyVolumesHistorical**
 > CurveWeeklyVolumeDTO[] Invoke-CurveGetWeeklyVolumesHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
@@ -2644,7 +2644,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-CurveHourlyVolumesCurrent"></a>
+<a id="Invoke-CurveHourlyVolumesCurrent"></a>
 # **Invoke-CurveHourlyVolumesCurrent**
 > CurveHourlyVolumeDTO[] Invoke-CurveHourlyVolumesCurrent<br>
 
@@ -2682,7 +2682,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-CurveLpTokensCurrent"></a>
+<a id="Invoke-CurveLpTokensCurrent"></a>
 # **Invoke-CurveLpTokensCurrent**
 > CurveLpTokenDTO[] Invoke-CurveLpTokensCurrent<br>
 
@@ -2720,7 +2720,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-CurvePoolsCurrent"></a>
+<a id="Invoke-CurvePoolsCurrent"></a>
 # **Invoke-CurvePoolsCurrent**
 > CurvePoolDTO[] Invoke-CurvePoolsCurrent<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
@@ -2763,7 +2763,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-CurveProposalVotesCurrent"></a>
+<a id="Invoke-CurveProposalVotesCurrent"></a>
 # **Invoke-CurveProposalVotesCurrent**
 > CurveProposalVoteDTO[] Invoke-CurveProposalVotesCurrent<br>
 
@@ -2801,7 +2801,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-CurveProposalsCurrent"></a>
+<a id="Invoke-CurveProposalsCurrent"></a>
 # **Invoke-CurveProposalsCurrent**
 > CurveProposalDTO[] Invoke-CurveProposalsCurrent<br>
 
@@ -2839,7 +2839,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-CurveRemoveLiquidityEventsCurrent"></a>
+<a id="Invoke-CurveRemoveLiquidityEventsCurrent"></a>
 # **Invoke-CurveRemoveLiquidityEventsCurrent**
 > CurveRemoveLiquidityEventDTO[] Invoke-CurveRemoveLiquidityEventsCurrent<br>
 
@@ -2877,7 +2877,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-CurveRemoveLiquidityOneEventsCurrent"></a>
+<a id="Invoke-CurveRemoveLiquidityOneEventsCurrent"></a>
 # **Invoke-CurveRemoveLiquidityOneEventsCurrent**
 > CurveRemoveLiquidityOneEventDTO[] Invoke-CurveRemoveLiquidityOneEventsCurrent<br>
 
@@ -2915,7 +2915,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-CurveSystemStatesCurrent"></a>
+<a id="Invoke-CurveSystemStatesCurrent"></a>
 # **Invoke-CurveSystemStatesCurrent**
 > CurveSystemStateDTO[] Invoke-CurveSystemStatesCurrent<br>
 
@@ -2953,7 +2953,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-CurveTokensCurrent"></a>
+<a id="Invoke-CurveTokensCurrent"></a>
 # **Invoke-CurveTokensCurrent**
 > CurveTokenDTO[] Invoke-CurveTokensCurrent<br>
 
@@ -2991,7 +2991,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-CurveTransferOwnershipEventsCurrent"></a>
+<a id="Invoke-CurveTransferOwnershipEventsCurrent"></a>
 # **Invoke-CurveTransferOwnershipEventsCurrent**
 > CurveTransferOwnershipEventDTO[] Invoke-CurveTransferOwnershipEventsCurrent<br>
 
@@ -3029,7 +3029,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-CurveUnderlyingCoinsCurrent"></a>
+<a id="Invoke-CurveUnderlyingCoinsCurrent"></a>
 # **Invoke-CurveUnderlyingCoinsCurrent**
 > CurveUnderlyingCoinDTO[] Invoke-CurveUnderlyingCoinsCurrent<br>
 
@@ -3067,7 +3067,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-CurveVotingAppsCurrent"></a>
+<a id="Invoke-CurveVotingAppsCurrent"></a>
 # **Invoke-CurveVotingAppsCurrent**
 > CurveVotingAppDTO[] Invoke-CurveVotingAppsCurrent<br>
 
@@ -3105,7 +3105,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-CurveWeeklyVolumesCurrent"></a>
+<a id="Invoke-CurveWeeklyVolumesCurrent"></a>
 # **Invoke-CurveWeeklyVolumesCurrent**
 > CurveWeeklyVolumeDTO[] Invoke-CurveWeeklyVolumesCurrent<br>
 

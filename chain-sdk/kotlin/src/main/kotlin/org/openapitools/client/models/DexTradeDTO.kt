@@ -18,6 +18,7 @@ package org.openapitools.client.models
 import org.openapitools.client.models.TransactionsETradeAggressiveSide
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * Trade for a single user, as part of a ring trade. It's part of the solution submitted by a solver for a given batch.

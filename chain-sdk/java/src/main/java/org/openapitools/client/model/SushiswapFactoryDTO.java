@@ -34,6 +34,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
@@ -48,7 +52,7 @@ import org.openapitools.client.JSON;
 /**
  * The Sushiswap Factory entity is responsible for storing aggregate information across all Sushiswap pairs. It can be used to view stats about total liquidity, volume, amount of pairs and more.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-07T11:31:09.822924Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-19T09:28:48.156871Z[Etc/UTC]")
 public class SushiswapFactoryDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -120,7 +124,6 @@ public class SushiswapFactoryDTO {
    * @return entryTime
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getEntryTime() {
     return entryTime;
   }
@@ -142,7 +145,6 @@ public class SushiswapFactoryDTO {
    * @return recvTime
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getRecvTime() {
     return recvTime;
   }
@@ -164,7 +166,6 @@ public class SushiswapFactoryDTO {
    * @return blockNumber
   **/
   @javax.annotation.Nullable
-
   public Long getBlockNumber() {
     return blockNumber;
   }
@@ -186,7 +187,6 @@ public class SushiswapFactoryDTO {
    * @return id
   **/
   @javax.annotation.Nullable
-
   public String getId() {
     return id;
   }
@@ -208,7 +208,6 @@ public class SushiswapFactoryDTO {
    * @return pairCount
   **/
   @javax.annotation.Nullable
-
   public String getPairCount() {
     return pairCount;
   }
@@ -230,7 +229,6 @@ public class SushiswapFactoryDTO {
    * @return volumeUsd
   **/
   @javax.annotation.Nullable
-
   public String getVolumeUsd() {
     return volumeUsd;
   }
@@ -252,7 +250,6 @@ public class SushiswapFactoryDTO {
    * @return volumeEth
   **/
   @javax.annotation.Nullable
-
   public String getVolumeEth() {
     return volumeEth;
   }
@@ -274,7 +271,6 @@ public class SushiswapFactoryDTO {
    * @return untrackedVolumeUsd
   **/
   @javax.annotation.Nullable
-
   public String getUntrackedVolumeUsd() {
     return untrackedVolumeUsd;
   }
@@ -296,7 +292,6 @@ public class SushiswapFactoryDTO {
    * @return liquidityUsd
   **/
   @javax.annotation.Nullable
-
   public String getLiquidityUsd() {
     return liquidityUsd;
   }
@@ -318,7 +313,6 @@ public class SushiswapFactoryDTO {
    * @return liquidityEth
   **/
   @javax.annotation.Nullable
-
   public String getLiquidityEth() {
     return liquidityEth;
   }
@@ -340,7 +334,6 @@ public class SushiswapFactoryDTO {
    * @return txCount
   **/
   @javax.annotation.Nullable
-
   public String getTxCount() {
     return txCount;
   }
@@ -362,7 +355,6 @@ public class SushiswapFactoryDTO {
    * @return tokenCount
   **/
   @javax.annotation.Nullable
-
   public String getTokenCount() {
     return tokenCount;
   }
@@ -384,7 +376,6 @@ public class SushiswapFactoryDTO {
    * @return userCount
   **/
   @javax.annotation.Nullable
-
   public String getUserCount() {
     return userCount;
   }
@@ -406,7 +397,6 @@ public class SushiswapFactoryDTO {
    * @return vid
   **/
   @javax.annotation.Nullable
-
   public Long getVid() {
     return vid;
   }

@@ -38,7 +38,7 @@ Method | HTTP request | Description
 [**sushiswapUsersCurrent**](SushiswapApi.md#sushiswapUsersCurrent) | **GET** /dapps/sushiswap/users/current | Users (current)
 
 
-<a name="sushiswapBundlesCurrent"></a>
+<a id="sushiswapBundlesCurrent"></a>
 # **sushiswapBundlesCurrent**
 > kotlin.collections.List&lt;SushiswapBundleDTO&gt; sushiswapBundlesCurrent()
 
@@ -81,7 +81,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="sushiswapBurnsCurrent"></a>
+<a id="sushiswapBurnsCurrent"></a>
 # **sushiswapBurnsCurrent**
 > kotlin.collections.List&lt;SushiswapBurnDTO&gt; sushiswapBurnsCurrent()
 
@@ -124,7 +124,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="sushiswapDayDataCurrent"></a>
+<a id="sushiswapDayDataCurrent"></a>
 # **sushiswapDayDataCurrent**
 > kotlin.collections.List&lt;SushiswapDayDataDTO&gt; sushiswapDayDataCurrent()
 
@@ -167,7 +167,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="sushiswapFactoriesCurrent"></a>
+<a id="sushiswapFactoriesCurrent"></a>
 # **sushiswapFactoriesCurrent**
 > kotlin.collections.List&lt;SushiswapFactoryDTO&gt; sushiswapFactoriesCurrent()
 
@@ -210,7 +210,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="sushiswapGetBundlesHistorical"></a>
+<a id="sushiswapGetBundlesHistorical"></a>
 # **sushiswapGetBundlesHistorical**
 > kotlin.collections.List&lt;SushiswapBundleDTO&gt; sushiswapGetBundlesHistorical(startBlock, endBlock, startDate, endDate, id)
 
@@ -265,7 +265,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="sushiswapGetBurnsHistorical"></a>
+<a id="sushiswapGetBurnsHistorical"></a>
 # **sushiswapGetBurnsHistorical**
 > kotlin.collections.List&lt;SushiswapBurnDTO&gt; sushiswapGetBurnsHistorical(startBlock, endBlock, startDate, endDate, id, pair)
 
@@ -322,7 +322,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="sushiswapGetDayDataHistorical"></a>
+<a id="sushiswapGetDayDataHistorical"></a>
 # **sushiswapGetDayDataHistorical**
 > kotlin.collections.List&lt;SushiswapDayDataDTO&gt; sushiswapGetDayDataHistorical(startBlock, endBlock, startDate, endDate, id)
 
@@ -377,7 +377,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="sushiswapGetFactoriesHistorical"></a>
+<a id="sushiswapGetFactoriesHistorical"></a>
 # **sushiswapGetFactoriesHistorical**
 > kotlin.collections.List&lt;SushiswapFactoryDTO&gt; sushiswapGetFactoriesHistorical(startBlock, endBlock, startDate, endDate, id)
 
@@ -432,7 +432,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="sushiswapGetHourDataHistorical"></a>
+<a id="sushiswapGetHourDataHistorical"></a>
 # **sushiswapGetHourDataHistorical**
 > kotlin.collections.List&lt;SushiswapHourDataDTO&gt; sushiswapGetHourDataHistorical(startBlock, endBlock, startDate, endDate, id)
 
@@ -487,7 +487,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="sushiswapGetLiquidityPositionSnapshotsHistorical"></a>
+<a id="sushiswapGetLiquidityPositionSnapshotsHistorical"></a>
 # **sushiswapGetLiquidityPositionSnapshotsHistorical**
 > kotlin.collections.List&lt;SushiswapLiquidityPositionSnapshotDTO&gt; sushiswapGetLiquidityPositionSnapshotsHistorical(startBlock, endBlock, startDate, endDate, id, user, pair)
 
@@ -546,7 +546,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="sushiswapGetLiquidityPositionsHistorical"></a>
+<a id="sushiswapGetLiquidityPositionsHistorical"></a>
 # **sushiswapGetLiquidityPositionsHistorical**
 > kotlin.collections.List&lt;SushiswapLiquidityPositionDTO&gt; sushiswapGetLiquidityPositionsHistorical(startBlock, endBlock, startDate, endDate, id, user, pair)
 
@@ -605,7 +605,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="sushiswapGetMintsHistorical"></a>
+<a id="sushiswapGetMintsHistorical"></a>
 # **sushiswapGetMintsHistorical**
 > kotlin.collections.List&lt;SushiswapMintDTO&gt; sushiswapGetMintsHistorical(startBlock, endBlock, startDate, endDate, id, pair)
 
@@ -662,7 +662,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="sushiswapGetPairDayDataHistorical"></a>
+<a id="sushiswapGetPairDayDataHistorical"></a>
 # **sushiswapGetPairDayDataHistorical**
 > kotlin.collections.List&lt;SushiswapPairDayDataDTO&gt; sushiswapGetPairDayDataHistorical(startBlock, endBlock, startDate, endDate, id, pair, token0, token1)
 
@@ -723,7 +723,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="sushiswapGetPairHourDataHistorical"></a>
+<a id="sushiswapGetPairHourDataHistorical"></a>
 # **sushiswapGetPairHourDataHistorical**
 > kotlin.collections.List&lt;SushiswapPairHourDataDTO&gt; sushiswapGetPairHourDataHistorical(startBlock, endBlock, startDate, endDate, id, pair)
 
@@ -780,7 +780,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="sushiswapGetPairsHistorical"></a>
+<a id="sushiswapGetPairsHistorical"></a>
 # **sushiswapGetPairsHistorical**
 > kotlin.collections.List&lt;SushiswapPairDTO&gt; sushiswapGetPairsHistorical(startBlock, endBlock, startDate, endDate, id, name, token0, token1)
 
@@ -841,7 +841,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="sushiswapGetSwapsHistorical"></a>
+<a id="sushiswapGetSwapsHistorical"></a>
 # **sushiswapGetSwapsHistorical**
 > kotlin.collections.List&lt;SushiswapSwapDTO&gt; sushiswapGetSwapsHistorical(startBlock, endBlock, startDate, endDate, id, pair)
 
@@ -898,7 +898,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="sushiswapGetTokenDayDataHistorical"></a>
+<a id="sushiswapGetTokenDayDataHistorical"></a>
 # **sushiswapGetTokenDayDataHistorical**
 > kotlin.collections.List&lt;SushiswapTokenDayDataDTO&gt; sushiswapGetTokenDayDataHistorical(startBlock, endBlock, startDate, endDate, id)
 
@@ -953,7 +953,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="sushiswapGetTokensHistorical"></a>
+<a id="sushiswapGetTokensHistorical"></a>
 # **sushiswapGetTokensHistorical**
 > kotlin.collections.List&lt;SushiswapTokenDTO&gt; sushiswapGetTokensHistorical(startBlock, endBlock, startDate, endDate, id, symbol, name)
 
@@ -1012,7 +1012,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="sushiswapGetTransactionsHistorical"></a>
+<a id="sushiswapGetTransactionsHistorical"></a>
 # **sushiswapGetTransactionsHistorical**
 > kotlin.collections.List&lt;SushiswapTransactionDTO&gt; sushiswapGetTransactionsHistorical(startBlock, endBlock, startDate, endDate, id)
 
@@ -1067,7 +1067,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="sushiswapGetUsersHistorical"></a>
+<a id="sushiswapGetUsersHistorical"></a>
 # **sushiswapGetUsersHistorical**
 > kotlin.collections.List&lt;SushiswapUserDTO&gt; sushiswapGetUsersHistorical(startBlock, endBlock, startDate, endDate, id)
 
@@ -1122,7 +1122,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="sushiswapHourDataCurrent"></a>
+<a id="sushiswapHourDataCurrent"></a>
 # **sushiswapHourDataCurrent**
 > kotlin.collections.List&lt;SushiswapHourDataDTO&gt; sushiswapHourDataCurrent()
 
@@ -1165,7 +1165,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="sushiswapLiquidityPositionSnapshotsCurrent"></a>
+<a id="sushiswapLiquidityPositionSnapshotsCurrent"></a>
 # **sushiswapLiquidityPositionSnapshotsCurrent**
 > kotlin.collections.List&lt;SushiswapLiquidityPositionSnapshotDTO&gt; sushiswapLiquidityPositionSnapshotsCurrent()
 
@@ -1208,7 +1208,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="sushiswapLiquidityPositionsCurrent"></a>
+<a id="sushiswapLiquidityPositionsCurrent"></a>
 # **sushiswapLiquidityPositionsCurrent**
 > kotlin.collections.List&lt;SushiswapLiquidityPositionDTO&gt; sushiswapLiquidityPositionsCurrent()
 
@@ -1251,7 +1251,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="sushiswapMintsCurrent"></a>
+<a id="sushiswapMintsCurrent"></a>
 # **sushiswapMintsCurrent**
 > kotlin.collections.List&lt;SushiswapMintDTO&gt; sushiswapMintsCurrent()
 
@@ -1294,7 +1294,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="sushiswapPairDayDataCurrent"></a>
+<a id="sushiswapPairDayDataCurrent"></a>
 # **sushiswapPairDayDataCurrent**
 > kotlin.collections.List&lt;SushiswapPairDayDataDTO&gt; sushiswapPairDayDataCurrent()
 
@@ -1337,7 +1337,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="sushiswapPairHourDataCurrent"></a>
+<a id="sushiswapPairHourDataCurrent"></a>
 # **sushiswapPairHourDataCurrent**
 > kotlin.collections.List&lt;SushiswapPairHourDataDTO&gt; sushiswapPairHourDataCurrent()
 
@@ -1380,7 +1380,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="sushiswapPairsCurrent"></a>
+<a id="sushiswapPairsCurrent"></a>
 # **sushiswapPairsCurrent**
 > kotlin.collections.List&lt;SushiswapPairDTO&gt; sushiswapPairsCurrent(id)
 
@@ -1427,7 +1427,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="sushiswapSwapsCurrent"></a>
+<a id="sushiswapSwapsCurrent"></a>
 # **sushiswapSwapsCurrent**
 > kotlin.collections.List&lt;SushiswapSwapDTO&gt; sushiswapSwapsCurrent(pair)
 
@@ -1474,7 +1474,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="sushiswapTokenDayDataCurrent"></a>
+<a id="sushiswapTokenDayDataCurrent"></a>
 # **sushiswapTokenDayDataCurrent**
 > kotlin.collections.List&lt;SushiswapTokenDayDataDTO&gt; sushiswapTokenDayDataCurrent()
 
@@ -1517,7 +1517,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="sushiswapTokensCurrent"></a>
+<a id="sushiswapTokensCurrent"></a>
 # **sushiswapTokensCurrent**
 > kotlin.collections.List&lt;SushiswapTokenDTO&gt; sushiswapTokensCurrent()
 
@@ -1560,7 +1560,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="sushiswapTransactionsCurrent"></a>
+<a id="sushiswapTransactionsCurrent"></a>
 # **sushiswapTransactionsCurrent**
 > kotlin.collections.List&lt;SushiswapTransactionDTO&gt; sushiswapTransactionsCurrent()
 
@@ -1603,7 +1603,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="sushiswapUsersCurrent"></a>
+<a id="sushiswapUsersCurrent"></a>
 # **sushiswapUsersCurrent**
 > kotlin.collections.List&lt;SushiswapUserDTO&gt; sushiswapUsersCurrent()
 

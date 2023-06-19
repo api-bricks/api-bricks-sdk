@@ -248,7 +248,7 @@ class CurveRemoveLiquidityEventDTO {
     return null;
   }
 
-  static List<CurveRemoveLiquidityEventDTO>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<CurveRemoveLiquidityEventDTO> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <CurveRemoveLiquidityEventDTO>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -279,12 +279,10 @@ class CurveRemoveLiquidityEventDTO {
   static Map<String, List<CurveRemoveLiquidityEventDTO>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<CurveRemoveLiquidityEventDTO>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = CurveRemoveLiquidityEventDTO.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = CurveRemoveLiquidityEventDTO.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

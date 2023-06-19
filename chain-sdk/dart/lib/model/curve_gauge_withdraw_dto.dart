@@ -172,7 +172,7 @@ class CurveGaugeWithdrawDTO {
     return null;
   }
 
-  static List<CurveGaugeWithdrawDTO>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<CurveGaugeWithdrawDTO> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <CurveGaugeWithdrawDTO>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -203,12 +203,10 @@ class CurveGaugeWithdrawDTO {
   static Map<String, List<CurveGaugeWithdrawDTO>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<CurveGaugeWithdrawDTO>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = CurveGaugeWithdrawDTO.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = CurveGaugeWithdrawDTO.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

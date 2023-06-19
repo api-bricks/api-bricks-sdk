@@ -1,4 +1,4 @@
-<a name="__pageTop"></a>
+<a id="__pageTop"></a>
 # openapi_client.apis.tags.curve_api.CurveApi
 
 All URIs are relative to *https://onchain.coinapi.io*
@@ -71,7 +71,7 @@ Method | HTTP request | Description
 [**curve_weekly_volumes__current**](#curve_weekly_volumes__current) | **get** /dapps/curve/weeklyVolumes/current | WeeklyVolumes (current)
 
 # **curve_accounts__current**
-<a name="curve_accounts__current"></a>
+<a id="curve_accounts__current"></a>
 > [CurveAccountDTO] curve_accounts__current()
 
 Accounts (current)
@@ -164,7 +164,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **curve_add_liquidity_events__current**
-<a name="curve_add_liquidity_events__current"></a>
+<a id="curve_add_liquidity_events__current"></a>
 > [CurveAddLiquidityEventDTO] curve_add_liquidity_events__current()
 
 AddLiquidityEvents (current)
@@ -257,7 +257,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **curve_admin_fee_change_logs__current**
-<a name="curve_admin_fee_change_logs__current"></a>
+<a id="curve_admin_fee_change_logs__current"></a>
 > [CurveAdminFeeChangeLogDTO] curve_admin_fee_change_logs__current()
 
 AdminFeeChangeLogs (current)
@@ -350,7 +350,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **curve_amplification_coeff_change_logs__current**
-<a name="curve_amplification_coeff_change_logs__current"></a>
+<a id="curve_amplification_coeff_change_logs__current"></a>
 > [CurveAmplificationCoeffChangeLogDTO] curve_amplification_coeff_change_logs__current()
 
 AmplificationCoeffChangeLogs (current)
@@ -443,7 +443,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **curve_coins__current**
-<a name="curve_coins__current"></a>
+<a id="curve_coins__current"></a>
 > [CurveCoinDTO] curve_coins__current()
 
 Coins (current)
@@ -536,7 +536,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **curve_contract_versions__current**
-<a name="curve_contract_versions__current"></a>
+<a id="curve_contract_versions__current"></a>
 > [CurveContractVersionDTO] curve_contract_versions__current()
 
 ContractVersions (current)
@@ -629,7 +629,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **curve_contracts__current**
-<a name="curve_contracts__current"></a>
+<a id="curve_contracts__current"></a>
 > [CurveContractDTO] curve_contracts__current()
 
 Contracts (current)
@@ -722,7 +722,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **curve_daily_volumes__current**
-<a name="curve_daily_volumes__current"></a>
+<a id="curve_daily_volumes__current"></a>
 > [CurveDailyVolumeDTO] curve_daily_volumes__current()
 
 DailyVolumes (current)
@@ -815,7 +815,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **curve_exchanges__current**
-<a name="curve_exchanges__current"></a>
+<a id="curve_exchanges__current"></a>
 > [CurveExchangeDTO] curve_exchanges__current()
 
 Exchanges (current)
@@ -935,7 +935,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **curve_fee_change_logs__current**
-<a name="curve_fee_change_logs__current"></a>
+<a id="curve_fee_change_logs__current"></a>
 > [CurveFeeChangeLogDTO] curve_fee_change_logs__current()
 
 FeeChangeLogs (current)
@@ -1028,7 +1028,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **curve_gauge_deposits__current**
-<a name="curve_gauge_deposits__current"></a>
+<a id="curve_gauge_deposits__current"></a>
 > [CurveGaugeDepositDTO] curve_gauge_deposits__current()
 
 GaugeDeposits (current)
@@ -1121,7 +1121,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **curve_gauge_liquidities__current**
-<a name="curve_gauge_liquidities__current"></a>
+<a id="curve_gauge_liquidities__current"></a>
 > [CurveGaugeLiquidityDTO] curve_gauge_liquidities__current()
 
 GaugeLiquidities (current)
@@ -1214,7 +1214,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **curve_gauge_total_weights__current**
-<a name="curve_gauge_total_weights__current"></a>
+<a id="curve_gauge_total_weights__current"></a>
 > [CurveGaugeTotalWeightDTO] curve_gauge_total_weights__current()
 
 GaugeTotalWeights (current)
@@ -1307,7 +1307,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **curve_gauge_type_weights__current**
-<a name="curve_gauge_type_weights__current"></a>
+<a id="curve_gauge_type_weights__current"></a>
 > [CurveGaugeTypeWeightDTO] curve_gauge_type_weights__current()
 
 GaugeTypeWeights (current)
@@ -1400,7 +1400,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **curve_gauge_types__current**
-<a name="curve_gauge_types__current"></a>
+<a id="curve_gauge_types__current"></a>
 > [CurveGaugeTypeDTO] curve_gauge_types__current()
 
 GaugeTypes (current)
@@ -1493,7 +1493,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **curve_gauge_weight_votes__current**
-<a name="curve_gauge_weight_votes__current"></a>
+<a id="curve_gauge_weight_votes__current"></a>
 > [CurveGaugeWeightVoteDTO] curve_gauge_weight_votes__current()
 
 GaugeWeightVotes (current)
@@ -1586,7 +1586,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **curve_gauge_weights__current**
-<a name="curve_gauge_weights__current"></a>
+<a id="curve_gauge_weights__current"></a>
 > [CurveGaugeWeightDTO] curve_gauge_weights__current()
 
 GaugeWeights (current)
@@ -1679,7 +1679,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **curve_gauge_withdraws__current**
-<a name="curve_gauge_withdraws__current"></a>
+<a id="curve_gauge_withdraws__current"></a>
 > [CurveGaugeWithdrawDTO] curve_gauge_withdraws__current()
 
 GaugeWithdraws (current)
@@ -1772,7 +1772,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **curve_gauges__current**
-<a name="curve_gauges__current"></a>
+<a id="curve_gauges__current"></a>
 > [CurveGaugeDTO] curve_gauges__current()
 
 Gauges (current)
@@ -1865,7 +1865,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **curve_get_accounts__historical**
-<a name="curve_get_accounts__historical"></a>
+<a id="curve_get_accounts__historical"></a>
 > [CurveAccountDTO] curve_get_accounts__historical()
 
 Accounts (historical)
@@ -2030,7 +2030,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **curve_get_add_liquidity_events__historical**
-<a name="curve_get_add_liquidity_events__historical"></a>
+<a id="curve_get_add_liquidity_events__historical"></a>
 > [CurveAddLiquidityEventDTO] curve_get_add_liquidity_events__historical()
 
 AddLiquidityEvents (historical)
@@ -2195,7 +2195,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **curve_get_admin_fee_change_logs__historical**
-<a name="curve_get_admin_fee_change_logs__historical"></a>
+<a id="curve_get_admin_fee_change_logs__historical"></a>
 > [CurveAdminFeeChangeLogDTO] curve_get_admin_fee_change_logs__historical()
 
 AdminFeeChangeLogs (historical)
@@ -2360,7 +2360,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **curve_get_amplification_coeff_change_logs__historical**
-<a name="curve_get_amplification_coeff_change_logs__historical"></a>
+<a id="curve_get_amplification_coeff_change_logs__historical"></a>
 > [CurveAmplificationCoeffChangeLogDTO] curve_get_amplification_coeff_change_logs__historical()
 
 AmplificationCoeffChangeLogs (historical)
@@ -2525,7 +2525,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **curve_get_coins__historical**
-<a name="curve_get_coins__historical"></a>
+<a id="curve_get_coins__historical"></a>
 > [CurveCoinDTO] curve_get_coins__historical()
 
 Coins (historical)
@@ -2690,7 +2690,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **curve_get_contract_versions__historical**
-<a name="curve_get_contract_versions__historical"></a>
+<a id="curve_get_contract_versions__historical"></a>
 > [CurveContractVersionDTO] curve_get_contract_versions__historical()
 
 ContractVersions (historical)
@@ -2855,7 +2855,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **curve_get_contracts__historical**
-<a name="curve_get_contracts__historical"></a>
+<a id="curve_get_contracts__historical"></a>
 > [CurveContractDTO] curve_get_contracts__historical()
 
 Contracts (historical)
@@ -3011,7 +3011,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **curve_get_daily_volumes__historical**
-<a name="curve_get_daily_volumes__historical"></a>
+<a id="curve_get_daily_volumes__historical"></a>
 > [CurveDailyVolumeDTO] curve_get_daily_volumes__historical()
 
 DailyVolumes (historical)
@@ -3176,7 +3176,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **curve_get_exchanges__historical**
-<a name="curve_get_exchanges__historical"></a>
+<a id="curve_get_exchanges__historical"></a>
 > [CurveExchangeDTO] curve_get_exchanges__historical()
 
 Exchanges (historical)
@@ -3341,7 +3341,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **curve_get_fee_change_logs__historical**
-<a name="curve_get_fee_change_logs__historical"></a>
+<a id="curve_get_fee_change_logs__historical"></a>
 > [CurveFeeChangeLogDTO] curve_get_fee_change_logs__historical()
 
 FeeChangeLogs (historical)
@@ -3506,7 +3506,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **curve_get_gauge_deposits__historical**
-<a name="curve_get_gauge_deposits__historical"></a>
+<a id="curve_get_gauge_deposits__historical"></a>
 > [CurveGaugeDepositDTO] curve_get_gauge_deposits__historical()
 
 GaugeDeposits (historical)
@@ -3662,7 +3662,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **curve_get_gauge_liquidities__historical**
-<a name="curve_get_gauge_liquidities__historical"></a>
+<a id="curve_get_gauge_liquidities__historical"></a>
 > [CurveGaugeLiquidityDTO] curve_get_gauge_liquidities__historical()
 
 GaugeLiquidities (historical)
@@ -3827,7 +3827,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **curve_get_gauge_total_weights__historical**
-<a name="curve_get_gauge_total_weights__historical"></a>
+<a id="curve_get_gauge_total_weights__historical"></a>
 > [CurveGaugeTotalWeightDTO] curve_get_gauge_total_weights__historical()
 
 GaugeTotalWeights (historical)
@@ -3983,7 +3983,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **curve_get_gauge_type_weights__historical**
-<a name="curve_get_gauge_type_weights__historical"></a>
+<a id="curve_get_gauge_type_weights__historical"></a>
 > [CurveGaugeTypeWeightDTO] curve_get_gauge_type_weights__historical()
 
 GaugeTypeWeights (historical)
@@ -4139,7 +4139,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **curve_get_gauge_types__historical**
-<a name="curve_get_gauge_types__historical"></a>
+<a id="curve_get_gauge_types__historical"></a>
 > [CurveGaugeTypeDTO] curve_get_gauge_types__historical()
 
 GaugeTypes (historical)
@@ -4304,7 +4304,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **curve_get_gauge_weight_votes__historical**
-<a name="curve_get_gauge_weight_votes__historical"></a>
+<a id="curve_get_gauge_weight_votes__historical"></a>
 > [CurveGaugeWeightVoteDTO] curve_get_gauge_weight_votes__historical()
 
 GaugeWeightVotes (historical)
@@ -4469,7 +4469,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **curve_get_gauge_weights__historical**
-<a name="curve_get_gauge_weights__historical"></a>
+<a id="curve_get_gauge_weights__historical"></a>
 > [CurveGaugeWeightDTO] curve_get_gauge_weights__historical()
 
 GaugeWeights (historical)
@@ -4625,7 +4625,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **curve_get_gauge_withdraws__historical**
-<a name="curve_get_gauge_withdraws__historical"></a>
+<a id="curve_get_gauge_withdraws__historical"></a>
 > [CurveGaugeWithdrawDTO] curve_get_gauge_withdraws__historical()
 
 GaugeWithdraws (historical)
@@ -4781,7 +4781,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **curve_get_gauges__historical**
-<a name="curve_get_gauges__historical"></a>
+<a id="curve_get_gauges__historical"></a>
 > [CurveGaugeDTO] curve_get_gauges__historical()
 
 Gauges (historical)
@@ -4955,7 +4955,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **curve_get_hourly_volumes__historical**
-<a name="curve_get_hourly_volumes__historical"></a>
+<a id="curve_get_hourly_volumes__historical"></a>
 > [CurveHourlyVolumeDTO] curve_get_hourly_volumes__historical()
 
 HourlyVolumes (historical)
@@ -5120,7 +5120,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **curve_get_lp_tokens__historical**
-<a name="curve_get_lp_tokens__historical"></a>
+<a id="curve_get_lp_tokens__historical"></a>
 > [CurveLpTokenDTO] curve_get_lp_tokens__historical()
 
 LpTokens (historical)
@@ -5312,7 +5312,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **curve_get_pools__historical**
-<a name="curve_get_pools__historical"></a>
+<a id="curve_get_pools__historical"></a>
 > [CurvePoolDTO] curve_get_pools__historical()
 
 Pools (historical)
@@ -5477,7 +5477,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **curve_get_proposal_votes__historical**
-<a name="curve_get_proposal_votes__historical"></a>
+<a id="curve_get_proposal_votes__historical"></a>
 > [CurveProposalVoteDTO] curve_get_proposal_votes__historical()
 
 ProposalVotes (historical)
@@ -5633,7 +5633,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **curve_get_proposals__historical**
-<a name="curve_get_proposals__historical"></a>
+<a id="curve_get_proposals__historical"></a>
 > [CurveProposalDTO] curve_get_proposals__historical()
 
 Proposals (historical)
@@ -5789,7 +5789,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **curve_get_remove_liquidity_events__historical**
-<a name="curve_get_remove_liquidity_events__historical"></a>
+<a id="curve_get_remove_liquidity_events__historical"></a>
 > [CurveRemoveLiquidityEventDTO] curve_get_remove_liquidity_events__historical()
 
 RemoveLiquidityEvents (historical)
@@ -5954,7 +5954,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **curve_get_remove_liquidity_one_events__historical**
-<a name="curve_get_remove_liquidity_one_events__historical"></a>
+<a id="curve_get_remove_liquidity_one_events__historical"></a>
 > [CurveRemoveLiquidityOneEventDTO] curve_get_remove_liquidity_one_events__historical()
 
 RemoveLiquidityOneEvents (historical)
@@ -6119,7 +6119,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **curve_get_system_states__historical**
-<a name="curve_get_system_states__historical"></a>
+<a id="curve_get_system_states__historical"></a>
 > [CurveSystemStateDTO] curve_get_system_states__historical()
 
 SystemStates (historical)
@@ -6275,7 +6275,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **curve_get_tokens__historical**
-<a name="curve_get_tokens__historical"></a>
+<a id="curve_get_tokens__historical"></a>
 > [CurveTokenDTO] curve_get_tokens__historical()
 
 Tokens (historical)
@@ -6458,7 +6458,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **curve_get_transfer_ownership_events__historical**
-<a name="curve_get_transfer_ownership_events__historical"></a>
+<a id="curve_get_transfer_ownership_events__historical"></a>
 > [CurveTransferOwnershipEventDTO] curve_get_transfer_ownership_events__historical()
 
 TransferOwnershipEvents (historical)
@@ -6623,7 +6623,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **curve_get_underlying_coins__historical**
-<a name="curve_get_underlying_coins__historical"></a>
+<a id="curve_get_underlying_coins__historical"></a>
 > [CurveUnderlyingCoinDTO] curve_get_underlying_coins__historical()
 
 UnderlyingCoins (historical)
@@ -6788,7 +6788,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **curve_get_voting_apps__historical**
-<a name="curve_get_voting_apps__historical"></a>
+<a id="curve_get_voting_apps__historical"></a>
 > [CurveVotingAppDTO] curve_get_voting_apps__historical()
 
 VotingApps (historical)
@@ -6953,7 +6953,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **curve_get_weekly_volumes__historical**
-<a name="curve_get_weekly_volumes__historical"></a>
+<a id="curve_get_weekly_volumes__historical"></a>
 > [CurveWeeklyVolumeDTO] curve_get_weekly_volumes__historical()
 
 WeeklyVolumes (historical)
@@ -7118,7 +7118,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **curve_hourly_volumes__current**
-<a name="curve_hourly_volumes__current"></a>
+<a id="curve_hourly_volumes__current"></a>
 > [CurveHourlyVolumeDTO] curve_hourly_volumes__current()
 
 HourlyVolumes (current)
@@ -7211,7 +7211,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **curve_lp_tokens__current**
-<a name="curve_lp_tokens__current"></a>
+<a id="curve_lp_tokens__current"></a>
 > [CurveLpTokenDTO] curve_lp_tokens__current()
 
 LpTokens (current)
@@ -7304,7 +7304,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **curve_pools__current**
-<a name="curve_pools__current"></a>
+<a id="curve_pools__current"></a>
 > [CurvePoolDTO] curve_pools__current()
 
 Pools (current)
@@ -7424,7 +7424,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **curve_proposal_votes__current**
-<a name="curve_proposal_votes__current"></a>
+<a id="curve_proposal_votes__current"></a>
 > [CurveProposalVoteDTO] curve_proposal_votes__current()
 
 ProposalVotes (current)
@@ -7517,7 +7517,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **curve_proposals__current**
-<a name="curve_proposals__current"></a>
+<a id="curve_proposals__current"></a>
 > [CurveProposalDTO] curve_proposals__current()
 
 Proposals (current)
@@ -7610,7 +7610,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **curve_remove_liquidity_events__current**
-<a name="curve_remove_liquidity_events__current"></a>
+<a id="curve_remove_liquidity_events__current"></a>
 > [CurveRemoveLiquidityEventDTO] curve_remove_liquidity_events__current()
 
 RemoveLiquidityEvents (current)
@@ -7703,7 +7703,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **curve_remove_liquidity_one_events__current**
-<a name="curve_remove_liquidity_one_events__current"></a>
+<a id="curve_remove_liquidity_one_events__current"></a>
 > [CurveRemoveLiquidityOneEventDTO] curve_remove_liquidity_one_events__current()
 
 RemoveLiquidityOneEvents (current)
@@ -7796,7 +7796,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **curve_system_states__current**
-<a name="curve_system_states__current"></a>
+<a id="curve_system_states__current"></a>
 > [CurveSystemStateDTO] curve_system_states__current()
 
 SystemStates (current)
@@ -7889,7 +7889,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **curve_tokens__current**
-<a name="curve_tokens__current"></a>
+<a id="curve_tokens__current"></a>
 > [CurveTokenDTO] curve_tokens__current()
 
 Tokens (current)
@@ -7982,7 +7982,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **curve_transfer_ownership_events__current**
-<a name="curve_transfer_ownership_events__current"></a>
+<a id="curve_transfer_ownership_events__current"></a>
 > [CurveTransferOwnershipEventDTO] curve_transfer_ownership_events__current()
 
 TransferOwnershipEvents (current)
@@ -8075,7 +8075,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **curve_underlying_coins__current**
-<a name="curve_underlying_coins__current"></a>
+<a id="curve_underlying_coins__current"></a>
 > [CurveUnderlyingCoinDTO] curve_underlying_coins__current()
 
 UnderlyingCoins (current)
@@ -8168,7 +8168,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **curve_voting_apps__current**
-<a name="curve_voting_apps__current"></a>
+<a id="curve_voting_apps__current"></a>
 > [CurveVotingAppDTO] curve_voting_apps__current()
 
 VotingApps (current)
@@ -8261,7 +8261,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **curve_weekly_volumes__current**
-<a name="curve_weekly_volumes__current"></a>
+<a id="curve_weekly_volumes__current"></a>
 > [CurveWeeklyVolumeDTO] curve_weekly_volumes__current()
 
 WeeklyVolumes (current)

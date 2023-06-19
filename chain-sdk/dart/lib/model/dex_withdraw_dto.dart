@@ -208,7 +208,7 @@ class DexWithdrawDTO {
     return null;
   }
 
-  static List<DexWithdrawDTO>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<DexWithdrawDTO> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <DexWithdrawDTO>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -239,12 +239,10 @@ class DexWithdrawDTO {
   static Map<String, List<DexWithdrawDTO>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<DexWithdrawDTO>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = DexWithdrawDTO.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = DexWithdrawDTO.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

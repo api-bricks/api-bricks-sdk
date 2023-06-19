@@ -40,14 +40,12 @@ module Api.Request.Dex exposing
     )
 
 import Api
-import Api.Data
+import Api.Data exposing (..)
 import Api.Time exposing (Posix)
 import Dict
 import Http
 import Json.Decode
 import Json.Encode
-
-
 
 {-| Gets batches.
 -}
@@ -61,7 +59,6 @@ dexBatchesCurrent =
         []
         Nothing
         (Json.Decode.list Api.Data.dexBatchDTODecoder)
-
 
 
 {-| Gets deposits.
@@ -78,7 +75,6 @@ dexDepositsCurrent =
         (Json.Decode.list Api.Data.dexDepositDTODecoder)
 
 
-
 {-| Gets batches.
 -}
 dexGetBatchesHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.DexBatchDTO)
@@ -91,7 +87,6 @@ dexGetBatchesHistorical startBlock_query endBlock_query startDate_query endDate_
         []
         Nothing
         (Json.Decode.list Api.Data.dexBatchDTODecoder)
-
 
 
 {-| Gets deposits.
@@ -108,7 +103,6 @@ dexGetDepositsHistorical startBlock_query endBlock_query startDate_query endDate
         (Json.Decode.list Api.Data.dexDepositDTODecoder)
 
 
-
 {-| Gets orders.
 -}
 dexGetOrdersHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Maybe String -> Maybe String -> Api.Request (List Api.Data.DexOrderDTO)
@@ -121,7 +115,6 @@ dexGetOrdersHistorical startBlock_query endBlock_query startDate_query endDate_q
         []
         Nothing
         (Json.Decode.list Api.Data.dexOrderDTODecoder)
-
 
 
 {-| Gets prices.
@@ -138,7 +131,6 @@ dexGetPricesHistorical startBlock_query endBlock_query startDate_query endDate_q
         (Json.Decode.list Api.Data.dexPriceDTODecoder)
 
 
-
 {-| Gets solutions.
 -}
 dexGetSolutionsHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.DexSolutionDTO)
@@ -151,7 +143,6 @@ dexGetSolutionsHistorical startBlock_query endBlock_query startDate_query endDat
         []
         Nothing
         (Json.Decode.list Api.Data.dexSolutionDTODecoder)
-
 
 
 {-| Gets stats.
@@ -168,7 +159,6 @@ dexGetStatsHistorical startBlock_query endBlock_query startDate_query endDate_qu
         (Json.Decode.list Api.Data.dexStatsDTODecoder)
 
 
-
 {-| Gets tokens.
 -}
 dexGetTokensHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Maybe String -> Maybe String -> Maybe String -> Api.Request (List Api.Data.DexTokenDTO)
@@ -181,7 +171,6 @@ dexGetTokensHistorical startBlock_query endBlock_query startDate_query endDate_q
         []
         Nothing
         (Json.Decode.list Api.Data.dexTokenDTODecoder)
-
 
 
 {-| Gets trades.
@@ -198,7 +187,6 @@ dexGetTradesHistorical startBlock_query endBlock_query startDate_query endDate_q
         (Json.Decode.list Api.Data.dexTradeDTODecoder)
 
 
-
 {-| Gets users.
 -}
 dexGetUsersHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.DexUserDTO)
@@ -211,7 +199,6 @@ dexGetUsersHistorical startBlock_query endBlock_query startDate_query endDate_qu
         []
         Nothing
         (Json.Decode.list Api.Data.dexUserDTODecoder)
-
 
 
 {-| Gets withdrawRequests.
@@ -228,7 +215,6 @@ dexGetWithdrawRequestsHistorical startBlock_query endBlock_query startDate_query
         (Json.Decode.list Api.Data.dexWithdrawRequestDTODecoder)
 
 
-
 {-| Gets withdraws.
 -}
 dexGetWithdrawsHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Maybe String -> Api.Request (List Api.Data.DexWithdrawDTO)
@@ -241,7 +227,6 @@ dexGetWithdrawsHistorical startBlock_query endBlock_query startDate_query endDat
         []
         Nothing
         (Json.Decode.list Api.Data.dexWithdrawDTODecoder)
-
 
 
 {-| Gets orders.
@@ -258,7 +243,6 @@ dexOrdersCurrent =
         (Json.Decode.list Api.Data.dexOrderDTODecoder)
 
 
-
 {-| Gets prices.
 -}
 dexPricesCurrent : Api.Request (List Api.Data.DexPriceDTO)
@@ -271,7 +255,6 @@ dexPricesCurrent =
         []
         Nothing
         (Json.Decode.list Api.Data.dexPriceDTODecoder)
-
 
 
 {-| Gets solutions.
@@ -288,7 +271,6 @@ dexSolutionsCurrent =
         (Json.Decode.list Api.Data.dexSolutionDTODecoder)
 
 
-
 {-| Gets stats.
 -}
 dexStatsCurrent : Api.Request (List Api.Data.DexStatsDTO)
@@ -301,7 +283,6 @@ dexStatsCurrent =
         []
         Nothing
         (Json.Decode.list Api.Data.dexStatsDTODecoder)
-
 
 
 {-| Gets tokens.
@@ -318,7 +299,6 @@ dexTokensCurrent =
         (Json.Decode.list Api.Data.dexTokenDTODecoder)
 
 
-
 {-| Gets trades.
 -}
 dexTradesCurrent : Api.Request (List Api.Data.DexTradeDTO)
@@ -331,7 +311,6 @@ dexTradesCurrent =
         []
         Nothing
         (Json.Decode.list Api.Data.dexTradeDTODecoder)
-
 
 
 {-| Gets users.
@@ -348,7 +327,6 @@ dexUsersCurrent =
         (Json.Decode.list Api.Data.dexUserDTODecoder)
 
 
-
 {-| Gets withdrawRequests.
 -}
 dexWithdrawRequestsCurrent : Api.Request (List Api.Data.DexWithdrawRequestDTO)
@@ -363,7 +341,6 @@ dexWithdrawRequestsCurrent =
         (Json.Decode.list Api.Data.dexWithdrawRequestDTODecoder)
 
 
-
 {-| Gets withdraws.
 -}
 dexWithdrawsCurrent : Api.Request (List Api.Data.DexWithdrawDTO)
@@ -376,3 +353,4 @@ dexWithdrawsCurrent =
         []
         Nothing
         (Json.Decode.list Api.Data.dexWithdrawDTODecoder)
+

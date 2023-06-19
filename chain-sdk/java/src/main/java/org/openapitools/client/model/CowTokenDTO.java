@@ -34,6 +34,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
@@ -48,7 +52,7 @@ import org.openapitools.client.JSON;
 /**
  * Stores information for a specific token across all pairs that token is included in.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-07T11:31:09.822924Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-19T09:28:48.156871Z[Etc/UTC]")
 public class CowTokenDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -120,7 +124,6 @@ public class CowTokenDTO {
    * @return entryTime
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getEntryTime() {
     return entryTime;
   }
@@ -142,7 +145,6 @@ public class CowTokenDTO {
    * @return recvTime
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getRecvTime() {
     return recvTime;
   }
@@ -164,7 +166,6 @@ public class CowTokenDTO {
    * @return blockNumber
   **/
   @javax.annotation.Nullable
-
   public Long getBlockNumber() {
     return blockNumber;
   }
@@ -186,7 +187,6 @@ public class CowTokenDTO {
    * @return id
   **/
   @javax.annotation.Nullable
-
   public String getId() {
     return id;
   }
@@ -208,7 +208,6 @@ public class CowTokenDTO {
    * @return address
   **/
   @javax.annotation.Nullable
-
   public String getAddress() {
     return address;
   }
@@ -230,7 +229,6 @@ public class CowTokenDTO {
    * @return firstTradeTimestamp
   **/
   @javax.annotation.Nullable
-
   public String getFirstTradeTimestamp() {
     return firstTradeTimestamp;
   }
@@ -252,7 +250,6 @@ public class CowTokenDTO {
    * @return name
   **/
   @javax.annotation.Nullable
-
   public String getName() {
     return name;
   }
@@ -274,7 +271,6 @@ public class CowTokenDTO {
    * @return symbol
   **/
   @javax.annotation.Nullable
-
   public String getSymbol() {
     return symbol;
   }
@@ -296,7 +292,6 @@ public class CowTokenDTO {
    * @return decimals
   **/
   @javax.annotation.Nullable
-
   public Integer getDecimals() {
     return decimals;
   }
@@ -318,7 +313,6 @@ public class CowTokenDTO {
    * @return totalVolume
   **/
   @javax.annotation.Nullable
-
   public String getTotalVolume() {
     return totalVolume;
   }
@@ -340,7 +334,6 @@ public class CowTokenDTO {
    * @return vid
   **/
   @javax.annotation.Nullable
-
   public Long getVid() {
     return vid;
   }
@@ -356,7 +349,6 @@ public class CowTokenDTO {
    * @return tokenSymbol
   **/
   @javax.annotation.Nullable
-
   public String getTokenSymbol() {
     return tokenSymbol;
   }

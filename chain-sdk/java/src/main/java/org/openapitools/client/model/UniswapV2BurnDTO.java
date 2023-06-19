@@ -34,6 +34,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
@@ -48,7 +52,7 @@ import org.openapitools.client.JSON;
 /**
  * Burn entities are created for every emitted Burn event on the Uniswap core contracts. The Burn entity stores key data about the event like token amounts, who burned LP tokens, who received tokens, and more. This entity can be used to track liquidity removals on pairs.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-07T11:31:09.822924Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-19T09:28:48.156871Z[Etc/UTC]")
 public class UniswapV2BurnDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -136,7 +140,6 @@ public class UniswapV2BurnDTO {
    * @return entryTime
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getEntryTime() {
     return entryTime;
   }
@@ -158,7 +161,6 @@ public class UniswapV2BurnDTO {
    * @return recvTime
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getRecvTime() {
     return recvTime;
   }
@@ -180,7 +182,6 @@ public class UniswapV2BurnDTO {
    * @return blockNumber
   **/
   @javax.annotation.Nullable
-
   public Long getBlockNumber() {
     return blockNumber;
   }
@@ -202,7 +203,6 @@ public class UniswapV2BurnDTO {
    * @return id
   **/
   @javax.annotation.Nullable
-
   public String getId() {
     return id;
   }
@@ -224,7 +224,6 @@ public class UniswapV2BurnDTO {
    * @return transaction
   **/
   @javax.annotation.Nullable
-
   public String getTransaction() {
     return transaction;
   }
@@ -246,7 +245,6 @@ public class UniswapV2BurnDTO {
    * @return timestamp
   **/
   @javax.annotation.Nullable
-
   public String getTimestamp() {
     return timestamp;
   }
@@ -268,7 +266,6 @@ public class UniswapV2BurnDTO {
    * @return pair
   **/
   @javax.annotation.Nullable
-
   public String getPair() {
     return pair;
   }
@@ -290,7 +287,6 @@ public class UniswapV2BurnDTO {
    * @return liquidity
   **/
   @javax.annotation.Nullable
-
   public String getLiquidity() {
     return liquidity;
   }
@@ -312,7 +308,6 @@ public class UniswapV2BurnDTO {
    * @return sender
   **/
   @javax.annotation.Nullable
-
   public String getSender() {
     return sender;
   }
@@ -334,7 +329,6 @@ public class UniswapV2BurnDTO {
    * @return amount0
   **/
   @javax.annotation.Nullable
-
   public String getAmount0() {
     return amount0;
   }
@@ -356,7 +350,6 @@ public class UniswapV2BurnDTO {
    * @return amount1
   **/
   @javax.annotation.Nullable
-
   public String getAmount1() {
     return amount1;
   }
@@ -378,7 +371,6 @@ public class UniswapV2BurnDTO {
    * @return to
   **/
   @javax.annotation.Nullable
-
   public String getTo() {
     return to;
   }
@@ -400,7 +392,6 @@ public class UniswapV2BurnDTO {
    * @return logIndex
   **/
   @javax.annotation.Nullable
-
   public String getLogIndex() {
     return logIndex;
   }
@@ -422,7 +413,6 @@ public class UniswapV2BurnDTO {
    * @return amountUsd
   **/
   @javax.annotation.Nullable
-
   public String getAmountUsd() {
     return amountUsd;
   }
@@ -444,7 +434,6 @@ public class UniswapV2BurnDTO {
    * @return needsComplete
   **/
   @javax.annotation.Nullable
-
   public Boolean getNeedsComplete() {
     return needsComplete;
   }
@@ -466,7 +455,6 @@ public class UniswapV2BurnDTO {
    * @return feeTo
   **/
   @javax.annotation.Nullable
-
   public String getFeeTo() {
     return feeTo;
   }
@@ -488,7 +476,6 @@ public class UniswapV2BurnDTO {
    * @return feeLiquidity
   **/
   @javax.annotation.Nullable
-
   public String getFeeLiquidity() {
     return feeLiquidity;
   }
@@ -510,7 +497,6 @@ public class UniswapV2BurnDTO {
    * @return vid
   **/
   @javax.annotation.Nullable
-
   public Long getVid() {
     return vid;
   }

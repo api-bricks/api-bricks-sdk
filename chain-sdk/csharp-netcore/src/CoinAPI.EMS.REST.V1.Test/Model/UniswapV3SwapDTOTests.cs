@@ -15,7 +15,6 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Collections.Generic;
-using CoinAPI.EMS.REST.V1.Api;
 using CoinAPI.EMS.REST.V1.Model;
 using CoinAPI.EMS.REST.V1.Client;
 using System.Reflection;

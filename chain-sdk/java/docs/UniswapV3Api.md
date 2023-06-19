@@ -40,7 +40,7 @@ All URIs are relative to *https://onchain.coinapi.io*
 | [**uniswapV3UniswapDayDataCurrent**](UniswapV3Api.md#uniswapV3UniswapDayDataCurrent) | **GET** /dapps/uniswapv3/uniswapDayData/current | UniswapDayData (current) |
 
 
-<a name="uniswapV3BundlesCurrent"></a>
+<a id="uniswapV3BundlesCurrent"></a>
 # **uniswapV3BundlesCurrent**
 > List&lt;UniswapV3BundleDTO&gt; uniswapV3BundlesCurrent()
 
@@ -98,7 +98,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="uniswapV3BurnsCurrent"></a>
+<a id="uniswapV3BurnsCurrent"></a>
 # **uniswapV3BurnsCurrent**
 > List&lt;UniswapV3BurnDTO&gt; uniswapV3BurnsCurrent()
 
@@ -156,7 +156,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="uniswapV3FactoriesCurrent"></a>
+<a id="uniswapV3FactoriesCurrent"></a>
 # **uniswapV3FactoriesCurrent**
 > List&lt;UniswapV3FactoryDTO&gt; uniswapV3FactoriesCurrent()
 
@@ -214,7 +214,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="uniswapV3GetBundlesHistorical"></a>
+<a id="uniswapV3GetBundlesHistorical"></a>
 # **uniswapV3GetBundlesHistorical**
 > List&lt;UniswapV3BundleDTO&gt; uniswapV3GetBundlesHistorical(startBlock, endBlock, startDate, endDate, id)
 
@@ -284,7 +284,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="uniswapV3GetBurnsHistorical"></a>
+<a id="uniswapV3GetBurnsHistorical"></a>
 # **uniswapV3GetBurnsHistorical**
 > List&lt;UniswapV3BurnDTO&gt; uniswapV3GetBurnsHistorical(startBlock, endBlock, startDate, endDate, id, pool, token0, token1)
 
@@ -360,7 +360,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="uniswapV3GetFactoriesHistorical"></a>
+<a id="uniswapV3GetFactoriesHistorical"></a>
 # **uniswapV3GetFactoriesHistorical**
 > List&lt;UniswapV3FactoryDTO&gt; uniswapV3GetFactoriesHistorical(startBlock, endBlock, startDate, endDate, id)
 
@@ -430,7 +430,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="uniswapV3GetMintsHistorical"></a>
+<a id="uniswapV3GetMintsHistorical"></a>
 # **uniswapV3GetMintsHistorical**
 > List&lt;UniswapV3MintDTO&gt; uniswapV3GetMintsHistorical(startBlock, endBlock, startDate, endDate, id, pool, token0, token1)
 
@@ -506,7 +506,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="uniswapV3GetPoolDayDataHistorical"></a>
+<a id="uniswapV3GetPoolDayDataHistorical"></a>
 # **uniswapV3GetPoolDayDataHistorical**
 > List&lt;UniswapV3PoolDayDataDTO&gt; uniswapV3GetPoolDayDataHistorical(startBlock, endBlock, startDate, endDate, id, pool)
 
@@ -578,7 +578,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="uniswapV3GetPoolHourDataHistorical"></a>
+<a id="uniswapV3GetPoolHourDataHistorical"></a>
 # **uniswapV3GetPoolHourDataHistorical**
 > List&lt;UniswapV3PoolHourDataDTO&gt; uniswapV3GetPoolHourDataHistorical(startBlock, endBlock, startDate, endDate, id, pool)
 
@@ -650,7 +650,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="uniswapV3GetPoolsHistorical"></a>
+<a id="uniswapV3GetPoolsHistorical"></a>
 # **uniswapV3GetPoolsHistorical**
 > List&lt;UniswapV3PoolDTO&gt; uniswapV3GetPoolsHistorical(startBlock, endBlock, startDate, endDate, id, token0, token1)
 
@@ -724,7 +724,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="uniswapV3GetPositionSnapshotsHistorical"></a>
+<a id="uniswapV3GetPositionSnapshotsHistorical"></a>
 # **uniswapV3GetPositionSnapshotsHistorical**
 > List&lt;UniswapV3PositionSnapshotDTO&gt; uniswapV3GetPositionSnapshotsHistorical(startBlock, endBlock, startDate, endDate, id, pool)
 
@@ -796,7 +796,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="uniswapV3GetPositionsHistorical"></a>
+<a id="uniswapV3GetPositionsHistorical"></a>
 # **uniswapV3GetPositionsHistorical**
 > List&lt;UniswapV3PositionDTO&gt; uniswapV3GetPositionsHistorical(startBlock, endBlock, startDate, endDate, id, pool, token0, token1)
 
@@ -872,7 +872,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="uniswapV3GetSwapsHistorical"></a>
+<a id="uniswapV3GetSwapsHistorical"></a>
 # **uniswapV3GetSwapsHistorical**
 > List&lt;UniswapV3SwapDTO&gt; uniswapV3GetSwapsHistorical(startBlock, endBlock, startDate, endDate, id, pool, token0, token1)
 
@@ -948,7 +948,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="uniswapV3GetTickDayDataHistorical"></a>
+<a id="uniswapV3GetTickDayDataHistorical"></a>
 # **uniswapV3GetTickDayDataHistorical**
 > List&lt;UniswapV3TickDayDataDTO&gt; uniswapV3GetTickDayDataHistorical(startBlock, endBlock, startDate, endDate, id, pool)
 
@@ -1020,7 +1020,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="uniswapV3GetTicksHistorical"></a>
+<a id="uniswapV3GetTicksHistorical"></a>
 # **uniswapV3GetTicksHistorical**
 > List&lt;UniswapV3TickDTO&gt; uniswapV3GetTicksHistorical(startBlock, endBlock, startDate, endDate, id, pool)
 
@@ -1092,7 +1092,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="uniswapV3GetTokenHourDataHistorical"></a>
+<a id="uniswapV3GetTokenHourDataHistorical"></a>
 # **uniswapV3GetTokenHourDataHistorical**
 > List&lt;UniswapV3TokenHourDataDTO&gt; uniswapV3GetTokenHourDataHistorical(startBlock, endBlock, startDate, endDate, id)
 
@@ -1162,7 +1162,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="uniswapV3GetTokenV3DayDataHistorical"></a>
+<a id="uniswapV3GetTokenV3DayDataHistorical"></a>
 # **uniswapV3GetTokenV3DayDataHistorical**
 > List&lt;UniswapV3TokenV3DayDataDTO&gt; uniswapV3GetTokenV3DayDataHistorical(startBlock, endBlock, startDate, endDate, id)
 
@@ -1232,7 +1232,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="uniswapV3GetTokensHistorical"></a>
+<a id="uniswapV3GetTokensHistorical"></a>
 # **uniswapV3GetTokensHistorical**
 > List&lt;UniswapV3TokenDTO&gt; uniswapV3GetTokensHistorical(startBlock, endBlock, startDate, endDate, id, symbol, name)
 
@@ -1306,7 +1306,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="uniswapV3GetTransactionsHistorical"></a>
+<a id="uniswapV3GetTransactionsHistorical"></a>
 # **uniswapV3GetTransactionsHistorical**
 > List&lt;UniswapV3TransactionDTO&gt; uniswapV3GetTransactionsHistorical(startBlock, endBlock, startDate, endDate, id)
 
@@ -1376,7 +1376,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="uniswapV3GetUniswapDayDataHistorical"></a>
+<a id="uniswapV3GetUniswapDayDataHistorical"></a>
 # **uniswapV3GetUniswapDayDataHistorical**
 > List&lt;UniswapV3UniswapDayDataDTO&gt; uniswapV3GetUniswapDayDataHistorical(startBlock, endBlock, startDate, endDate, id)
 
@@ -1446,7 +1446,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="uniswapV3MintsCurrent"></a>
+<a id="uniswapV3MintsCurrent"></a>
 # **uniswapV3MintsCurrent**
 > List&lt;UniswapV3MintDTO&gt; uniswapV3MintsCurrent()
 
@@ -1504,7 +1504,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="uniswapV3PoolDayDataCurrent"></a>
+<a id="uniswapV3PoolDayDataCurrent"></a>
 # **uniswapV3PoolDayDataCurrent**
 > List&lt;UniswapV3PoolDayDataDTO&gt; uniswapV3PoolDayDataCurrent()
 
@@ -1562,7 +1562,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="uniswapV3PoolHourDataCurrent"></a>
+<a id="uniswapV3PoolHourDataCurrent"></a>
 # **uniswapV3PoolHourDataCurrent**
 > List&lt;UniswapV3PoolHourDataDTO&gt; uniswapV3PoolHourDataCurrent()
 
@@ -1620,7 +1620,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="uniswapV3PoolsCurrent"></a>
+<a id="uniswapV3PoolsCurrent"></a>
 # **uniswapV3PoolsCurrent**
 > List&lt;UniswapV3PoolDTO&gt; uniswapV3PoolsCurrent(id)
 
@@ -1682,7 +1682,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="uniswapV3PositionSnapshotsCurrent"></a>
+<a id="uniswapV3PositionSnapshotsCurrent"></a>
 # **uniswapV3PositionSnapshotsCurrent**
 > List&lt;UniswapV3PositionSnapshotDTO&gt; uniswapV3PositionSnapshotsCurrent()
 
@@ -1740,7 +1740,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="uniswapV3PositionsCurrent"></a>
+<a id="uniswapV3PositionsCurrent"></a>
 # **uniswapV3PositionsCurrent**
 > List&lt;UniswapV3PositionDTO&gt; uniswapV3PositionsCurrent()
 
@@ -1798,7 +1798,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="uniswapV3SwapsCurrent"></a>
+<a id="uniswapV3SwapsCurrent"></a>
 # **uniswapV3SwapsCurrent**
 > List&lt;UniswapV3SwapDTO&gt; uniswapV3SwapsCurrent(pool)
 
@@ -1860,7 +1860,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="uniswapV3TickDayDataCurrent"></a>
+<a id="uniswapV3TickDayDataCurrent"></a>
 # **uniswapV3TickDayDataCurrent**
 > List&lt;UniswapV3TickDayDataDTO&gt; uniswapV3TickDayDataCurrent()
 
@@ -1918,7 +1918,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="uniswapV3TicksCurrent"></a>
+<a id="uniswapV3TicksCurrent"></a>
 # **uniswapV3TicksCurrent**
 > List&lt;UniswapV3TickDTO&gt; uniswapV3TicksCurrent()
 
@@ -1976,7 +1976,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="uniswapV3TokenHourDataCurrent"></a>
+<a id="uniswapV3TokenHourDataCurrent"></a>
 # **uniswapV3TokenHourDataCurrent**
 > List&lt;UniswapV3TokenHourDataDTO&gt; uniswapV3TokenHourDataCurrent()
 
@@ -2034,7 +2034,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="uniswapV3TokenV3DayDataCurrent"></a>
+<a id="uniswapV3TokenV3DayDataCurrent"></a>
 # **uniswapV3TokenV3DayDataCurrent**
 > List&lt;UniswapV3TokenV3DayDataDTO&gt; uniswapV3TokenV3DayDataCurrent()
 
@@ -2092,7 +2092,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="uniswapV3TokensCurrent"></a>
+<a id="uniswapV3TokensCurrent"></a>
 # **uniswapV3TokensCurrent**
 > List&lt;UniswapV3TokenDTO&gt; uniswapV3TokensCurrent()
 
@@ -2150,7 +2150,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="uniswapV3TransactionsCurrent"></a>
+<a id="uniswapV3TransactionsCurrent"></a>
 # **uniswapV3TransactionsCurrent**
 > List&lt;UniswapV3TransactionDTO&gt; uniswapV3TransactionsCurrent()
 
@@ -2208,7 +2208,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="uniswapV3UniswapDayDataCurrent"></a>
+<a id="uniswapV3UniswapDayDataCurrent"></a>
 # **uniswapV3UniswapDayDataCurrent**
 > List&lt;UniswapV3UniswapDayDataDTO&gt; uniswapV3UniswapDayDataCurrent()
 

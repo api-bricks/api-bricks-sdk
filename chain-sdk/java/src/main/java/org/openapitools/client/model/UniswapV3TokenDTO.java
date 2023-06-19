@@ -37,6 +37,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
@@ -51,7 +55,7 @@ import org.openapitools.client.JSON;
 /**
  * Stores aggregated information for a specific token across all pairs that token is included in.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-07T11:31:09.822924Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-19T09:28:48.156871Z[Etc/UTC]")
 public class UniswapV3TokenDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -159,7 +163,6 @@ public class UniswapV3TokenDTO {
    * @return entryTime
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getEntryTime() {
     return entryTime;
   }
@@ -181,7 +184,6 @@ public class UniswapV3TokenDTO {
    * @return recvTime
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getRecvTime() {
     return recvTime;
   }
@@ -203,7 +205,6 @@ public class UniswapV3TokenDTO {
    * @return blockNumber
   **/
   @javax.annotation.Nullable
-
   public Long getBlockNumber() {
     return blockNumber;
   }
@@ -225,7 +226,6 @@ public class UniswapV3TokenDTO {
    * @return vid
   **/
   @javax.annotation.Nullable
-
   public Long getVid() {
     return vid;
   }
@@ -247,7 +247,6 @@ public class UniswapV3TokenDTO {
    * @return id
   **/
   @javax.annotation.Nullable
-
   public String getId() {
     return id;
   }
@@ -269,7 +268,6 @@ public class UniswapV3TokenDTO {
    * @return symbol
   **/
   @javax.annotation.Nullable
-
   public String getSymbol() {
     return symbol;
   }
@@ -291,7 +289,6 @@ public class UniswapV3TokenDTO {
    * @return name
   **/
   @javax.annotation.Nullable
-
   public String getName() {
     return name;
   }
@@ -313,7 +310,6 @@ public class UniswapV3TokenDTO {
    * @return decimals
   **/
   @javax.annotation.Nullable
-
   public Integer getDecimals() {
     return decimals;
   }
@@ -335,7 +331,6 @@ public class UniswapV3TokenDTO {
    * @return totalSupply
   **/
   @javax.annotation.Nullable
-
   public NumericsBigInteger getTotalSupply() {
     return totalSupply;
   }
@@ -357,7 +352,6 @@ public class UniswapV3TokenDTO {
    * @return volume
   **/
   @javax.annotation.Nullable
-
   public String getVolume() {
     return volume;
   }
@@ -379,7 +373,6 @@ public class UniswapV3TokenDTO {
    * @return volumeUsd
   **/
   @javax.annotation.Nullable
-
   public String getVolumeUsd() {
     return volumeUsd;
   }
@@ -401,7 +394,6 @@ public class UniswapV3TokenDTO {
    * @return untrackedVolumeUsd
   **/
   @javax.annotation.Nullable
-
   public String getUntrackedVolumeUsd() {
     return untrackedVolumeUsd;
   }
@@ -423,7 +415,6 @@ public class UniswapV3TokenDTO {
    * @return feesUsd
   **/
   @javax.annotation.Nullable
-
   public String getFeesUsd() {
     return feesUsd;
   }
@@ -445,7 +436,6 @@ public class UniswapV3TokenDTO {
    * @return txCount
   **/
   @javax.annotation.Nullable
-
   public NumericsBigInteger getTxCount() {
     return txCount;
   }
@@ -467,7 +457,6 @@ public class UniswapV3TokenDTO {
    * @return poolCount
   **/
   @javax.annotation.Nullable
-
   public NumericsBigInteger getPoolCount() {
     return poolCount;
   }
@@ -489,7 +478,6 @@ public class UniswapV3TokenDTO {
    * @return totalValueLocked
   **/
   @javax.annotation.Nullable
-
   public String getTotalValueLocked() {
     return totalValueLocked;
   }
@@ -511,7 +499,6 @@ public class UniswapV3TokenDTO {
    * @return totalValueLockedUsd
   **/
   @javax.annotation.Nullable
-
   public String getTotalValueLockedUsd() {
     return totalValueLockedUsd;
   }
@@ -533,7 +520,6 @@ public class UniswapV3TokenDTO {
    * @return totalValueLockedUsdUntracked
   **/
   @javax.annotation.Nullable
-
   public String getTotalValueLockedUsdUntracked() {
     return totalValueLockedUsdUntracked;
   }
@@ -555,7 +541,6 @@ public class UniswapV3TokenDTO {
    * @return derivedEth
   **/
   @javax.annotation.Nullable
-
   public String getDerivedEth() {
     return derivedEth;
   }
@@ -573,6 +558,9 @@ public class UniswapV3TokenDTO {
   }
 
   public UniswapV3TokenDTO addWhitelistPoolsItem(String whitelistPoolsItem) {
+    if (this.whitelistPools == null) {
+      this.whitelistPools = new ArrayList<>();
+    }
     this.whitelistPools.add(whitelistPoolsItem);
     return this;
   }
@@ -582,7 +570,6 @@ public class UniswapV3TokenDTO {
    * @return whitelistPools
   **/
   @javax.annotation.Nullable
-
   public List<String> getWhitelistPools() {
     return whitelistPools;
   }
@@ -598,7 +585,6 @@ public class UniswapV3TokenDTO {
    * @return tokenSymbol
   **/
   @javax.annotation.Nullable
-
   public String getTokenSymbol() {
     return tokenSymbol;
   }

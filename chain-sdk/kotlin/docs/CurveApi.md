@@ -70,7 +70,7 @@ Method | HTTP request | Description
 [**curveWeeklyVolumesCurrent**](CurveApi.md#curveWeeklyVolumesCurrent) | **GET** /dapps/curve/weeklyVolumes/current | WeeklyVolumes (current)
 
 
-<a name="curveAccountsCurrent"></a>
+<a id="curveAccountsCurrent"></a>
 # **curveAccountsCurrent**
 > kotlin.collections.List&lt;CurveAccountDTO&gt; curveAccountsCurrent()
 
@@ -113,7 +113,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="curveAddLiquidityEventsCurrent"></a>
+<a id="curveAddLiquidityEventsCurrent"></a>
 # **curveAddLiquidityEventsCurrent**
 > kotlin.collections.List&lt;CurveAddLiquidityEventDTO&gt; curveAddLiquidityEventsCurrent()
 
@@ -156,7 +156,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="curveAdminFeeChangeLogsCurrent"></a>
+<a id="curveAdminFeeChangeLogsCurrent"></a>
 # **curveAdminFeeChangeLogsCurrent**
 > kotlin.collections.List&lt;CurveAdminFeeChangeLogDTO&gt; curveAdminFeeChangeLogsCurrent()
 
@@ -199,7 +199,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="curveAmplificationCoeffChangeLogsCurrent"></a>
+<a id="curveAmplificationCoeffChangeLogsCurrent"></a>
 # **curveAmplificationCoeffChangeLogsCurrent**
 > kotlin.collections.List&lt;CurveAmplificationCoeffChangeLogDTO&gt; curveAmplificationCoeffChangeLogsCurrent()
 
@@ -242,7 +242,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="curveCoinsCurrent"></a>
+<a id="curveCoinsCurrent"></a>
 # **curveCoinsCurrent**
 > kotlin.collections.List&lt;CurveCoinDTO&gt; curveCoinsCurrent()
 
@@ -285,7 +285,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="curveContractVersionsCurrent"></a>
+<a id="curveContractVersionsCurrent"></a>
 # **curveContractVersionsCurrent**
 > kotlin.collections.List&lt;CurveContractVersionDTO&gt; curveContractVersionsCurrent()
 
@@ -328,7 +328,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="curveContractsCurrent"></a>
+<a id="curveContractsCurrent"></a>
 # **curveContractsCurrent**
 > kotlin.collections.List&lt;CurveContractDTO&gt; curveContractsCurrent()
 
@@ -371,7 +371,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="curveDailyVolumesCurrent"></a>
+<a id="curveDailyVolumesCurrent"></a>
 # **curveDailyVolumesCurrent**
 > kotlin.collections.List&lt;CurveDailyVolumeDTO&gt; curveDailyVolumesCurrent()
 
@@ -414,7 +414,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="curveExchangesCurrent"></a>
+<a id="curveExchangesCurrent"></a>
 # **curveExchangesCurrent**
 > kotlin.collections.List&lt;CurveExchangeDTO&gt; curveExchangesCurrent(pool)
 
@@ -461,7 +461,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="curveFeeChangeLogsCurrent"></a>
+<a id="curveFeeChangeLogsCurrent"></a>
 # **curveFeeChangeLogsCurrent**
 > kotlin.collections.List&lt;CurveFeeChangeLogDTO&gt; curveFeeChangeLogsCurrent()
 
@@ -504,7 +504,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="curveGaugeDepositsCurrent"></a>
+<a id="curveGaugeDepositsCurrent"></a>
 # **curveGaugeDepositsCurrent**
 > kotlin.collections.List&lt;CurveGaugeDepositDTO&gt; curveGaugeDepositsCurrent()
 
@@ -547,7 +547,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="curveGaugeLiquiditiesCurrent"></a>
+<a id="curveGaugeLiquiditiesCurrent"></a>
 # **curveGaugeLiquiditiesCurrent**
 > kotlin.collections.List&lt;CurveGaugeLiquidityDTO&gt; curveGaugeLiquiditiesCurrent()
 
@@ -590,7 +590,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="curveGaugeTotalWeightsCurrent"></a>
+<a id="curveGaugeTotalWeightsCurrent"></a>
 # **curveGaugeTotalWeightsCurrent**
 > kotlin.collections.List&lt;CurveGaugeTotalWeightDTO&gt; curveGaugeTotalWeightsCurrent()
 
@@ -633,7 +633,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="curveGaugeTypeWeightsCurrent"></a>
+<a id="curveGaugeTypeWeightsCurrent"></a>
 # **curveGaugeTypeWeightsCurrent**
 > kotlin.collections.List&lt;CurveGaugeTypeWeightDTO&gt; curveGaugeTypeWeightsCurrent()
 
@@ -676,7 +676,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="curveGaugeTypesCurrent"></a>
+<a id="curveGaugeTypesCurrent"></a>
 # **curveGaugeTypesCurrent**
 > kotlin.collections.List&lt;CurveGaugeTypeDTO&gt; curveGaugeTypesCurrent()
 
@@ -719,7 +719,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="curveGaugeWeightVotesCurrent"></a>
+<a id="curveGaugeWeightVotesCurrent"></a>
 # **curveGaugeWeightVotesCurrent**
 > kotlin.collections.List&lt;CurveGaugeWeightVoteDTO&gt; curveGaugeWeightVotesCurrent()
 
@@ -762,7 +762,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="curveGaugeWeightsCurrent"></a>
+<a id="curveGaugeWeightsCurrent"></a>
 # **curveGaugeWeightsCurrent**
 > kotlin.collections.List&lt;CurveGaugeWeightDTO&gt; curveGaugeWeightsCurrent()
 
@@ -805,7 +805,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="curveGaugeWithdrawsCurrent"></a>
+<a id="curveGaugeWithdrawsCurrent"></a>
 # **curveGaugeWithdrawsCurrent**
 > kotlin.collections.List&lt;CurveGaugeWithdrawDTO&gt; curveGaugeWithdrawsCurrent()
 
@@ -848,7 +848,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="curveGaugesCurrent"></a>
+<a id="curveGaugesCurrent"></a>
 # **curveGaugesCurrent**
 > kotlin.collections.List&lt;CurveGaugeDTO&gt; curveGaugesCurrent()
 
@@ -891,7 +891,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="curveGetAccountsHistorical"></a>
+<a id="curveGetAccountsHistorical"></a>
 # **curveGetAccountsHistorical**
 > kotlin.collections.List&lt;CurveAccountDTO&gt; curveGetAccountsHistorical(startBlock, endBlock, startDate, endDate, id, address)
 
@@ -948,7 +948,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="curveGetAddLiquidityEventsHistorical"></a>
+<a id="curveGetAddLiquidityEventsHistorical"></a>
 # **curveGetAddLiquidityEventsHistorical**
 > kotlin.collections.List&lt;CurveAddLiquidityEventDTO&gt; curveGetAddLiquidityEventsHistorical(startBlock, endBlock, startDate, endDate, id, pool)
 
@@ -1005,7 +1005,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="curveGetAdminFeeChangeLogsHistorical"></a>
+<a id="curveGetAdminFeeChangeLogsHistorical"></a>
 # **curveGetAdminFeeChangeLogsHistorical**
 > kotlin.collections.List&lt;CurveAdminFeeChangeLogDTO&gt; curveGetAdminFeeChangeLogsHistorical(startBlock, endBlock, startDate, endDate, id, pool)
 
@@ -1062,7 +1062,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="curveGetAmplificationCoeffChangeLogsHistorical"></a>
+<a id="curveGetAmplificationCoeffChangeLogsHistorical"></a>
 # **curveGetAmplificationCoeffChangeLogsHistorical**
 > kotlin.collections.List&lt;CurveAmplificationCoeffChangeLogDTO&gt; curveGetAmplificationCoeffChangeLogsHistorical(startBlock, endBlock, startDate, endDate, id, pool)
 
@@ -1119,7 +1119,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="curveGetCoinsHistorical"></a>
+<a id="curveGetCoinsHistorical"></a>
 # **curveGetCoinsHistorical**
 > kotlin.collections.List&lt;CurveCoinDTO&gt; curveGetCoinsHistorical(startBlock, endBlock, startDate, endDate, id, pool)
 
@@ -1176,7 +1176,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="curveGetContractVersionsHistorical"></a>
+<a id="curveGetContractVersionsHistorical"></a>
 # **curveGetContractVersionsHistorical**
 > kotlin.collections.List&lt;CurveContractVersionDTO&gt; curveGetContractVersionsHistorical(startBlock, endBlock, startDate, endDate, id, address)
 
@@ -1233,7 +1233,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="curveGetContractsHistorical"></a>
+<a id="curveGetContractsHistorical"></a>
 # **curveGetContractsHistorical**
 > kotlin.collections.List&lt;CurveContractDTO&gt; curveGetContractsHistorical(startBlock, endBlock, startDate, endDate, id)
 
@@ -1288,7 +1288,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="curveGetDailyVolumesHistorical"></a>
+<a id="curveGetDailyVolumesHistorical"></a>
 # **curveGetDailyVolumesHistorical**
 > kotlin.collections.List&lt;CurveDailyVolumeDTO&gt; curveGetDailyVolumesHistorical(startBlock, endBlock, startDate, endDate, id, pool)
 
@@ -1345,7 +1345,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="curveGetExchangesHistorical"></a>
+<a id="curveGetExchangesHistorical"></a>
 # **curveGetExchangesHistorical**
 > kotlin.collections.List&lt;CurveExchangeDTO&gt; curveGetExchangesHistorical(startBlock, endBlock, startDate, endDate, id, pool)
 
@@ -1402,7 +1402,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="curveGetFeeChangeLogsHistorical"></a>
+<a id="curveGetFeeChangeLogsHistorical"></a>
 # **curveGetFeeChangeLogsHistorical**
 > kotlin.collections.List&lt;CurveFeeChangeLogDTO&gt; curveGetFeeChangeLogsHistorical(startBlock, endBlock, startDate, endDate, id, pool)
 
@@ -1459,7 +1459,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="curveGetGaugeDepositsHistorical"></a>
+<a id="curveGetGaugeDepositsHistorical"></a>
 # **curveGetGaugeDepositsHistorical**
 > kotlin.collections.List&lt;CurveGaugeDepositDTO&gt; curveGetGaugeDepositsHistorical(startBlock, endBlock, startDate, endDate, id)
 
@@ -1514,7 +1514,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="curveGetGaugeLiquiditiesHistorical"></a>
+<a id="curveGetGaugeLiquiditiesHistorical"></a>
 # **curveGetGaugeLiquiditiesHistorical**
 > kotlin.collections.List&lt;CurveGaugeLiquidityDTO&gt; curveGetGaugeLiquiditiesHistorical(startBlock, endBlock, startDate, endDate, id, user)
 
@@ -1571,7 +1571,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="curveGetGaugeTotalWeightsHistorical"></a>
+<a id="curveGetGaugeTotalWeightsHistorical"></a>
 # **curveGetGaugeTotalWeightsHistorical**
 > kotlin.collections.List&lt;CurveGaugeTotalWeightDTO&gt; curveGetGaugeTotalWeightsHistorical(startBlock, endBlock, startDate, endDate, id)
 
@@ -1626,7 +1626,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="curveGetGaugeTypeWeightsHistorical"></a>
+<a id="curveGetGaugeTypeWeightsHistorical"></a>
 # **curveGetGaugeTypeWeightsHistorical**
 > kotlin.collections.List&lt;CurveGaugeTypeWeightDTO&gt; curveGetGaugeTypeWeightsHistorical(startBlock, endBlock, startDate, endDate, id)
 
@@ -1681,7 +1681,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="curveGetGaugeTypesHistorical"></a>
+<a id="curveGetGaugeTypesHistorical"></a>
 # **curveGetGaugeTypesHistorical**
 > kotlin.collections.List&lt;CurveGaugeTypeDTO&gt; curveGetGaugeTypesHistorical(startBlock, endBlock, startDate, endDate, id, name)
 
@@ -1738,7 +1738,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="curveGetGaugeWeightVotesHistorical"></a>
+<a id="curveGetGaugeWeightVotesHistorical"></a>
 # **curveGetGaugeWeightVotesHistorical**
 > kotlin.collections.List&lt;CurveGaugeWeightVoteDTO&gt; curveGetGaugeWeightVotesHistorical(startBlock, endBlock, startDate, endDate, id, user)
 
@@ -1795,7 +1795,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="curveGetGaugeWeightsHistorical"></a>
+<a id="curveGetGaugeWeightsHistorical"></a>
 # **curveGetGaugeWeightsHistorical**
 > kotlin.collections.List&lt;CurveGaugeWeightDTO&gt; curveGetGaugeWeightsHistorical(startBlock, endBlock, startDate, endDate, id)
 
@@ -1850,7 +1850,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="curveGetGaugeWithdrawsHistorical"></a>
+<a id="curveGetGaugeWithdrawsHistorical"></a>
 # **curveGetGaugeWithdrawsHistorical**
 > kotlin.collections.List&lt;CurveGaugeWithdrawDTO&gt; curveGetGaugeWithdrawsHistorical(startBlock, endBlock, startDate, endDate, id)
 
@@ -1905,7 +1905,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="curveGetGaugesHistorical"></a>
+<a id="curveGetGaugesHistorical"></a>
 # **curveGetGaugesHistorical**
 > kotlin.collections.List&lt;CurveGaugeDTO&gt; curveGetGaugesHistorical(startBlock, endBlock, startDate, endDate, id, address, pool)
 
@@ -1964,7 +1964,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="curveGetHourlyVolumesHistorical"></a>
+<a id="curveGetHourlyVolumesHistorical"></a>
 # **curveGetHourlyVolumesHistorical**
 > kotlin.collections.List&lt;CurveHourlyVolumeDTO&gt; curveGetHourlyVolumesHistorical(startBlock, endBlock, startDate, endDate, id, pool)
 
@@ -2021,7 +2021,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="curveGetLpTokensHistorical"></a>
+<a id="curveGetLpTokensHistorical"></a>
 # **curveGetLpTokensHistorical**
 > kotlin.collections.List&lt;CurveLpTokenDTO&gt; curveGetLpTokensHistorical(startBlock, endBlock, startDate, endDate, id, address, name, symbol, pool)
 
@@ -2084,7 +2084,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="curveGetPoolsHistorical"></a>
+<a id="curveGetPoolsHistorical"></a>
 # **curveGetPoolsHistorical**
 > kotlin.collections.List&lt;CurvePoolDTO&gt; curveGetPoolsHistorical(startBlock, endBlock, startDate, endDate, id, name)
 
@@ -2141,7 +2141,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="curveGetProposalVotesHistorical"></a>
+<a id="curveGetProposalVotesHistorical"></a>
 # **curveGetProposalVotesHistorical**
 > kotlin.collections.List&lt;CurveProposalVoteDTO&gt; curveGetProposalVotesHistorical(startBlock, endBlock, startDate, endDate, id)
 
@@ -2196,7 +2196,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="curveGetProposalsHistorical"></a>
+<a id="curveGetProposalsHistorical"></a>
 # **curveGetProposalsHistorical**
 > kotlin.collections.List&lt;CurveProposalDTO&gt; curveGetProposalsHistorical(startBlock, endBlock, startDate, endDate, id)
 
@@ -2251,7 +2251,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="curveGetRemoveLiquidityEventsHistorical"></a>
+<a id="curveGetRemoveLiquidityEventsHistorical"></a>
 # **curveGetRemoveLiquidityEventsHistorical**
 > kotlin.collections.List&lt;CurveRemoveLiquidityEventDTO&gt; curveGetRemoveLiquidityEventsHistorical(startBlock, endBlock, startDate, endDate, id, pool)
 
@@ -2308,7 +2308,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="curveGetRemoveLiquidityOneEventsHistorical"></a>
+<a id="curveGetRemoveLiquidityOneEventsHistorical"></a>
 # **curveGetRemoveLiquidityOneEventsHistorical**
 > kotlin.collections.List&lt;CurveRemoveLiquidityOneEventDTO&gt; curveGetRemoveLiquidityOneEventsHistorical(startBlock, endBlock, startDate, endDate, id, pool)
 
@@ -2365,7 +2365,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="curveGetSystemStatesHistorical"></a>
+<a id="curveGetSystemStatesHistorical"></a>
 # **curveGetSystemStatesHistorical**
 > kotlin.collections.List&lt;CurveSystemStateDTO&gt; curveGetSystemStatesHistorical(startBlock, endBlock, startDate, endDate, id)
 
@@ -2420,7 +2420,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="curveGetTokensHistorical"></a>
+<a id="curveGetTokensHistorical"></a>
 # **curveGetTokensHistorical**
 > kotlin.collections.List&lt;CurveTokenDTO&gt; curveGetTokensHistorical(startBlock, endBlock, startDate, endDate, id, address, name, symbol)
 
@@ -2481,7 +2481,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="curveGetTransferOwnershipEventsHistorical"></a>
+<a id="curveGetTransferOwnershipEventsHistorical"></a>
 # **curveGetTransferOwnershipEventsHistorical**
 > kotlin.collections.List&lt;CurveTransferOwnershipEventDTO&gt; curveGetTransferOwnershipEventsHistorical(startBlock, endBlock, startDate, endDate, id, pool)
 
@@ -2538,7 +2538,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="curveGetUnderlyingCoinsHistorical"></a>
+<a id="curveGetUnderlyingCoinsHistorical"></a>
 # **curveGetUnderlyingCoinsHistorical**
 > kotlin.collections.List&lt;CurveUnderlyingCoinDTO&gt; curveGetUnderlyingCoinsHistorical(startBlock, endBlock, startDate, endDate, id, pool)
 
@@ -2595,7 +2595,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="curveGetVotingAppsHistorical"></a>
+<a id="curveGetVotingAppsHistorical"></a>
 # **curveGetVotingAppsHistorical**
 > kotlin.collections.List&lt;CurveVotingAppDTO&gt; curveGetVotingAppsHistorical(startBlock, endBlock, startDate, endDate, id, address)
 
@@ -2652,7 +2652,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="curveGetWeeklyVolumesHistorical"></a>
+<a id="curveGetWeeklyVolumesHistorical"></a>
 # **curveGetWeeklyVolumesHistorical**
 > kotlin.collections.List&lt;CurveWeeklyVolumeDTO&gt; curveGetWeeklyVolumesHistorical(startBlock, endBlock, startDate, endDate, id, pool)
 
@@ -2709,7 +2709,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="curveHourlyVolumesCurrent"></a>
+<a id="curveHourlyVolumesCurrent"></a>
 # **curveHourlyVolumesCurrent**
 > kotlin.collections.List&lt;CurveHourlyVolumeDTO&gt; curveHourlyVolumesCurrent()
 
@@ -2752,7 +2752,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="curveLpTokensCurrent"></a>
+<a id="curveLpTokensCurrent"></a>
 # **curveLpTokensCurrent**
 > kotlin.collections.List&lt;CurveLpTokenDTO&gt; curveLpTokensCurrent()
 
@@ -2795,7 +2795,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="curvePoolsCurrent"></a>
+<a id="curvePoolsCurrent"></a>
 # **curvePoolsCurrent**
 > kotlin.collections.List&lt;CurvePoolDTO&gt; curvePoolsCurrent(id)
 
@@ -2842,7 +2842,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="curveProposalVotesCurrent"></a>
+<a id="curveProposalVotesCurrent"></a>
 # **curveProposalVotesCurrent**
 > kotlin.collections.List&lt;CurveProposalVoteDTO&gt; curveProposalVotesCurrent()
 
@@ -2885,7 +2885,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="curveProposalsCurrent"></a>
+<a id="curveProposalsCurrent"></a>
 # **curveProposalsCurrent**
 > kotlin.collections.List&lt;CurveProposalDTO&gt; curveProposalsCurrent()
 
@@ -2928,7 +2928,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="curveRemoveLiquidityEventsCurrent"></a>
+<a id="curveRemoveLiquidityEventsCurrent"></a>
 # **curveRemoveLiquidityEventsCurrent**
 > kotlin.collections.List&lt;CurveRemoveLiquidityEventDTO&gt; curveRemoveLiquidityEventsCurrent()
 
@@ -2971,7 +2971,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="curveRemoveLiquidityOneEventsCurrent"></a>
+<a id="curveRemoveLiquidityOneEventsCurrent"></a>
 # **curveRemoveLiquidityOneEventsCurrent**
 > kotlin.collections.List&lt;CurveRemoveLiquidityOneEventDTO&gt; curveRemoveLiquidityOneEventsCurrent()
 
@@ -3014,7 +3014,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="curveSystemStatesCurrent"></a>
+<a id="curveSystemStatesCurrent"></a>
 # **curveSystemStatesCurrent**
 > kotlin.collections.List&lt;CurveSystemStateDTO&gt; curveSystemStatesCurrent()
 
@@ -3057,7 +3057,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="curveTokensCurrent"></a>
+<a id="curveTokensCurrent"></a>
 # **curveTokensCurrent**
 > kotlin.collections.List&lt;CurveTokenDTO&gt; curveTokensCurrent()
 
@@ -3100,7 +3100,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="curveTransferOwnershipEventsCurrent"></a>
+<a id="curveTransferOwnershipEventsCurrent"></a>
 # **curveTransferOwnershipEventsCurrent**
 > kotlin.collections.List&lt;CurveTransferOwnershipEventDTO&gt; curveTransferOwnershipEventsCurrent()
 
@@ -3143,7 +3143,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="curveUnderlyingCoinsCurrent"></a>
+<a id="curveUnderlyingCoinsCurrent"></a>
 # **curveUnderlyingCoinsCurrent**
 > kotlin.collections.List&lt;CurveUnderlyingCoinDTO&gt; curveUnderlyingCoinsCurrent()
 
@@ -3186,7 +3186,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="curveVotingAppsCurrent"></a>
+<a id="curveVotingAppsCurrent"></a>
 # **curveVotingAppsCurrent**
 > kotlin.collections.List&lt;CurveVotingAppDTO&gt; curveVotingAppsCurrent()
 
@@ -3229,7 +3229,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="curveWeeklyVolumesCurrent"></a>
+<a id="curveWeeklyVolumesCurrent"></a>
 # **curveWeeklyVolumesCurrent**
 > kotlin.collections.List&lt;CurveWeeklyVolumeDTO&gt; curveWeeklyVolumesCurrent()
 

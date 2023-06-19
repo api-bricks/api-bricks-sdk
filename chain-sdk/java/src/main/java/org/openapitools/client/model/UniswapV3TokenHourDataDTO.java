@@ -34,6 +34,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
@@ -48,7 +52,7 @@ import org.openapitools.client.JSON;
 /**
  * Token data aggregated across all pairs that include token.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-07T11:31:09.822924Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-19T09:28:48.156871Z[Etc/UTC]")
 public class UniswapV3TokenHourDataDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -136,7 +140,6 @@ public class UniswapV3TokenHourDataDTO {
    * @return entryTime
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getEntryTime() {
     return entryTime;
   }
@@ -158,7 +161,6 @@ public class UniswapV3TokenHourDataDTO {
    * @return recvTime
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getRecvTime() {
     return recvTime;
   }
@@ -180,7 +182,6 @@ public class UniswapV3TokenHourDataDTO {
    * @return blockNumber
   **/
   @javax.annotation.Nullable
-
   public Long getBlockNumber() {
     return blockNumber;
   }
@@ -202,7 +203,6 @@ public class UniswapV3TokenHourDataDTO {
    * @return id
   **/
   @javax.annotation.Nullable
-
   public String getId() {
     return id;
   }
@@ -224,7 +224,6 @@ public class UniswapV3TokenHourDataDTO {
    * @return periodStartUnix
   **/
   @javax.annotation.Nullable
-
   public Integer getPeriodStartUnix() {
     return periodStartUnix;
   }
@@ -246,7 +245,6 @@ public class UniswapV3TokenHourDataDTO {
    * @return token
   **/
   @javax.annotation.Nullable
-
   public String getToken() {
     return token;
   }
@@ -268,7 +266,6 @@ public class UniswapV3TokenHourDataDTO {
    * @return volume
   **/
   @javax.annotation.Nullable
-
   public String getVolume() {
     return volume;
   }
@@ -290,7 +287,6 @@ public class UniswapV3TokenHourDataDTO {
    * @return volumeUsd
   **/
   @javax.annotation.Nullable
-
   public String getVolumeUsd() {
     return volumeUsd;
   }
@@ -312,7 +308,6 @@ public class UniswapV3TokenHourDataDTO {
    * @return untrackedVolumeUsd
   **/
   @javax.annotation.Nullable
-
   public String getUntrackedVolumeUsd() {
     return untrackedVolumeUsd;
   }
@@ -334,7 +329,6 @@ public class UniswapV3TokenHourDataDTO {
    * @return totalValueLocked
   **/
   @javax.annotation.Nullable
-
   public String getTotalValueLocked() {
     return totalValueLocked;
   }
@@ -356,7 +350,6 @@ public class UniswapV3TokenHourDataDTO {
    * @return totalValueLockedUsd
   **/
   @javax.annotation.Nullable
-
   public String getTotalValueLockedUsd() {
     return totalValueLockedUsd;
   }
@@ -378,7 +371,6 @@ public class UniswapV3TokenHourDataDTO {
    * @return priceUsd
   **/
   @javax.annotation.Nullable
-
   public String getPriceUsd() {
     return priceUsd;
   }
@@ -400,7 +392,6 @@ public class UniswapV3TokenHourDataDTO {
    * @return feesUsd
   **/
   @javax.annotation.Nullable
-
   public String getFeesUsd() {
     return feesUsd;
   }
@@ -422,7 +413,6 @@ public class UniswapV3TokenHourDataDTO {
    * @return open
   **/
   @javax.annotation.Nullable
-
   public String getOpen() {
     return open;
   }
@@ -444,7 +434,6 @@ public class UniswapV3TokenHourDataDTO {
    * @return high
   **/
   @javax.annotation.Nullable
-
   public String getHigh() {
     return high;
   }
@@ -466,7 +455,6 @@ public class UniswapV3TokenHourDataDTO {
    * @return low
   **/
   @javax.annotation.Nullable
-
   public String getLow() {
     return low;
   }
@@ -488,7 +476,6 @@ public class UniswapV3TokenHourDataDTO {
    * @return close
   **/
   @javax.annotation.Nullable
-
   public String getClose() {
     return close;
   }
@@ -510,7 +497,6 @@ public class UniswapV3TokenHourDataDTO {
    * @return vid
   **/
   @javax.annotation.Nullable
-
   public Long getVid() {
     return vid;
   }

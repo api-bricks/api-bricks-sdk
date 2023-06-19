@@ -229,6 +229,7 @@ module Api.Data exposing
     , encodeUniswapV3TokenV3DayDataDTO
     , encodeUniswapV3TransactionDTO
     , encodeUniswapV3UniswapDayDataDTO
+    , stringFromTransactionsETradeAggressiveSide
     , cRYPTOPUNKSBidDTODecoder
     , cRYPTOPUNKSCollectionDTODecoder
     , cRYPTOPUNKSCollectionDailySnapshotDTODecoder
@@ -608,8 +609,8 @@ type alias CurveAddLiquidityEventDTO =
     , id : Maybe String
     , pool : Maybe String
     , provider : Maybe String
-    , tokenAmounts : Maybe (List (String))
-    , fees : Maybe (List (String))
+    , tokenAmounts : Maybe ( List String )
+    , fees : Maybe ( List String )
     , invariant : Maybe String
     , tokenSupply : Maybe String
     , block : Maybe String
@@ -982,8 +983,8 @@ type alias CurveRemoveLiquidityEventDTO =
     , id : Maybe String
     , pool : Maybe String
     , provider : Maybe String
-    , tokenAmounts : Maybe (List (String))
-    , fees : Maybe (List (String))
+    , tokenAmounts : Maybe ( List String )
+    , fees : Maybe ( List String )
     , tokenSupply : Maybe String
     , invariant : Maybe String
     , block : Maybe String
@@ -1037,7 +1038,7 @@ type alias CurveTokenDTO =
     , decimals : Maybe String
     , name : Maybe String
     , symbol : Maybe String
-    , pools : Maybe (List (String))
+    , pools : Maybe ( List String )
     , vid : Maybe Int
     , tokenSymbol : Maybe String
     }
@@ -1197,7 +1198,7 @@ type alias DexSolutionDTO =
     , feeReward : Maybe String
     , objectiveValue : Maybe String
     , utility : Maybe String
-    , trades : Maybe (List (String))
+    , trades : Maybe ( List String )
     , createEpoch : Maybe String
     , revertEpoch : Maybe String
     , txHash : Maybe String
@@ -1601,7 +1602,7 @@ type alias SushiswapTokenDTO =
     , txCount : Maybe String
     , liquidity : Maybe String
     , derivedEth : Maybe String
-    , whitelistPairs : Maybe (List (String))
+    , whitelistPairs : Maybe ( List String )
     , vid : Maybe Int
     , tokenSymbol : Maybe String
     }
@@ -1636,9 +1637,9 @@ type alias SushiswapTransactionDTO =
     , blockNumber : Maybe Int
     , id : Maybe String
     , timestamp : Maybe String
-    , mints : Maybe (List (String))
-    , burns : Maybe (List (String))
-    , swaps : Maybe (List (String))
+    , mints : Maybe ( List String )
+    , burns : Maybe ( List String )
+    , swaps : Maybe ( List String )
     , vid : Maybe Int
     }
 
@@ -1921,9 +1922,9 @@ type alias UniswapV2TransactionDTO =
     , blockNumber : Maybe Int
     , id : Maybe String
     , timestamp : Maybe String
-    , mints : Maybe (List (String))
-    , burns : Maybe (List (String))
-    , swaps : Maybe (List (String))
+    , mints : Maybe ( List String )
+    , burns : Maybe ( List String )
+    , swaps : Maybe ( List String )
     , vid : Maybe Int
     }
 
@@ -2317,7 +2318,7 @@ type alias UniswapV3TokenDTO =
     , totalValueLockedUsd : Maybe String
     , totalValueLockedUsdUntracked : Maybe String
     , derivedEth : Maybe String
-    , whitelistPools : Maybe (List (String))
+    , whitelistPools : Maybe ( List String )
     , tokenSymbol : Maybe String
     }
 

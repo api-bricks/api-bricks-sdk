@@ -368,7 +368,7 @@ class UniswapV2PairDTO {
     return null;
   }
 
-  static List<UniswapV2PairDTO>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<UniswapV2PairDTO> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <UniswapV2PairDTO>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -399,12 +399,10 @@ class UniswapV2PairDTO {
   static Map<String, List<UniswapV2PairDTO>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<UniswapV2PairDTO>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = UniswapV2PairDTO.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = UniswapV2PairDTO.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

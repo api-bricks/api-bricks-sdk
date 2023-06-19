@@ -17,6 +17,7 @@ package org.openapitools.client.models
 
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * Data accumulated and condensed into day stats for each exchange. Entity gets saved only if there is a change during the day

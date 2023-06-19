@@ -28,14 +28,12 @@ module Api.Request.Cow exposing
     )
 
 import Api
-import Api.Data
+import Api.Data exposing (..)
 import Api.Time exposing (Posix)
 import Dict
 import Http
 import Json.Decode
 import Json.Encode
-
-
 
 {-| Gets orders.
 -}
@@ -49,7 +47,6 @@ cowGetOrdersHistorical startBlock_query endBlock_query startDate_query endDate_q
         []
         Nothing
         (Json.Decode.list Api.Data.cowOrderDTODecoder)
-
 
 
 {-| Gets settlements.
@@ -66,7 +63,6 @@ cowGetSettlementsHistorical startBlock_query endBlock_query startDate_query endD
         (Json.Decode.list Api.Data.cowSettlementDTODecoder)
 
 
-
 {-| Gets tokens.
 -}
 cowGetTokensHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Maybe String -> Maybe String -> Maybe String -> Api.Request (List Api.Data.CowTokenDTO)
@@ -79,7 +75,6 @@ cowGetTokensHistorical startBlock_query endBlock_query startDate_query endDate_q
         []
         Nothing
         (Json.Decode.list Api.Data.cowTokenDTODecoder)
-
 
 
 {-| Gets trades.
@@ -96,7 +91,6 @@ cowGetTradesHistorical startBlock_query endBlock_query startDate_query endDate_q
         (Json.Decode.list Api.Data.cowTradeDTODecoder)
 
 
-
 {-| Gets users.
 -}
 cowGetUsersHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Maybe String -> Api.Request (List Api.Data.CowUserDTO)
@@ -109,7 +103,6 @@ cowGetUsersHistorical startBlock_query endBlock_query startDate_query endDate_qu
         []
         Nothing
         (Json.Decode.list Api.Data.cowUserDTODecoder)
-
 
 
 {-| Gets orders.
@@ -126,7 +119,6 @@ cowOrdersCurrent =
         (Json.Decode.list Api.Data.cowOrderDTODecoder)
 
 
-
 {-| Gets settlements.
 -}
 cowSettlementsCurrent : Api.Request (List Api.Data.CowSettlementDTO)
@@ -139,7 +131,6 @@ cowSettlementsCurrent =
         []
         Nothing
         (Json.Decode.list Api.Data.cowSettlementDTODecoder)
-
 
 
 {-| Gets tokens.
@@ -156,7 +147,6 @@ cowTokensCurrent =
         (Json.Decode.list Api.Data.cowTokenDTODecoder)
 
 
-
 {-| Gets trades.
 -}
 cowTradesCurrent : Api.Request (List Api.Data.CowTradeDTO)
@@ -171,7 +161,6 @@ cowTradesCurrent =
         (Json.Decode.list Api.Data.cowTradeDTODecoder)
 
 
-
 {-| Gets users.
 -}
 cowUsersCurrent : Api.Request (List Api.Data.CowUserDTO)
@@ -184,3 +173,4 @@ cowUsersCurrent =
         []
         Nothing
         (Json.Decode.list Api.Data.cowUserDTODecoder)
+

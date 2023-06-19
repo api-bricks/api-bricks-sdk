@@ -16,7 +16,7 @@ Method | HTTP request | Description
 [**Invoke-CowUsersCurrent**](CowApi.md#Invoke-CowUsersCurrent) | **GET** /dapps/cow/users/current | Users (current)
 
 
-<a name="Invoke-CowGetOrdersHistorical"></a>
+<a id="Invoke-CowGetOrdersHistorical"></a>
 # **Invoke-CowGetOrdersHistorical**
 > CowOrderDTO[] Invoke-CowGetOrdersHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
@@ -71,7 +71,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-CowGetSettlementsHistorical"></a>
+<a id="Invoke-CowGetSettlementsHistorical"></a>
 # **Invoke-CowGetSettlementsHistorical**
 > CowSettlementDTO[] Invoke-CowGetSettlementsHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
@@ -126,7 +126,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-CowGetTokensHistorical"></a>
+<a id="Invoke-CowGetTokensHistorical"></a>
 # **Invoke-CowGetTokensHistorical**
 > CowTokenDTO[] Invoke-CowGetTokensHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
@@ -190,7 +190,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-CowGetTradesHistorical"></a>
+<a id="Invoke-CowGetTradesHistorical"></a>
 # **Invoke-CowGetTradesHistorical**
 > CowTradeDTO[] Invoke-CowGetTradesHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
@@ -251,7 +251,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-CowGetUsersHistorical"></a>
+<a id="Invoke-CowGetUsersHistorical"></a>
 # **Invoke-CowGetUsersHistorical**
 > CowUserDTO[] Invoke-CowGetUsersHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
@@ -309,7 +309,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-CowOrdersCurrent"></a>
+<a id="Invoke-CowOrdersCurrent"></a>
 # **Invoke-CowOrdersCurrent**
 > CowOrderDTO[] Invoke-CowOrdersCurrent<br>
 
@@ -347,7 +347,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-CowSettlementsCurrent"></a>
+<a id="Invoke-CowSettlementsCurrent"></a>
 # **Invoke-CowSettlementsCurrent**
 > CowSettlementDTO[] Invoke-CowSettlementsCurrent<br>
 
@@ -385,7 +385,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-CowTokensCurrent"></a>
+<a id="Invoke-CowTokensCurrent"></a>
 # **Invoke-CowTokensCurrent**
 > CowTokenDTO[] Invoke-CowTokensCurrent<br>
 
@@ -423,7 +423,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-CowTradesCurrent"></a>
+<a id="Invoke-CowTradesCurrent"></a>
 # **Invoke-CowTradesCurrent**
 > CowTradeDTO[] Invoke-CowTradesCurrent<br>
 
@@ -461,7 +461,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-CowUsersCurrent"></a>
+<a id="Invoke-CowUsersCurrent"></a>
 # **Invoke-CowUsersCurrent**
 > CowUserDTO[] Invoke-CowUsersCurrent<br>
 

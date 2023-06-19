@@ -1,4 +1,4 @@
-<a name="__pageTop"></a>
+<a id="__pageTop"></a>
 # openapi_client.apis.tags.cow_api.CowApi
 
 All URIs are relative to *https://onchain.coinapi.io*
@@ -17,7 +17,7 @@ Method | HTTP request | Description
 [**cow_users__current**](#cow_users__current) | **get** /dapps/cow/users/current | Users (current)
 
 # **cow_get_orders__historical**
-<a name="cow_get_orders__historical"></a>
+<a id="cow_get_orders__historical"></a>
 > [CowOrderDTO] cow_get_orders__historical()
 
 Orders (historical)
@@ -173,7 +173,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **cow_get_settlements__historical**
-<a name="cow_get_settlements__historical"></a>
+<a id="cow_get_settlements__historical"></a>
 > [CowSettlementDTO] cow_get_settlements__historical()
 
 Settlements (historical)
@@ -329,7 +329,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **cow_get_tokens__historical**
-<a name="cow_get_tokens__historical"></a>
+<a id="cow_get_tokens__historical"></a>
 > [CowTokenDTO] cow_get_tokens__historical()
 
 Tokens (historical)
@@ -512,7 +512,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **cow_get_trades__historical**
-<a name="cow_get_trades__historical"></a>
+<a id="cow_get_trades__historical"></a>
 > [CowTradeDTO] cow_get_trades__historical()
 
 Trades (historical)
@@ -686,7 +686,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **cow_get_users__historical**
-<a name="cow_get_users__historical"></a>
+<a id="cow_get_users__historical"></a>
 > [CowUserDTO] cow_get_users__historical()
 
 Users (historical)
@@ -851,7 +851,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **cow_orders__current**
-<a name="cow_orders__current"></a>
+<a id="cow_orders__current"></a>
 > [CowOrderDTO] cow_orders__current()
 
 Orders (current)
@@ -944,7 +944,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **cow_settlements__current**
-<a name="cow_settlements__current"></a>
+<a id="cow_settlements__current"></a>
 > [CowSettlementDTO] cow_settlements__current()
 
 Settlements (current)
@@ -1037,7 +1037,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **cow_tokens__current**
-<a name="cow_tokens__current"></a>
+<a id="cow_tokens__current"></a>
 > [CowTokenDTO] cow_tokens__current()
 
 Tokens (current)
@@ -1130,7 +1130,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **cow_trades__current**
-<a name="cow_trades__current"></a>
+<a id="cow_trades__current"></a>
 > [CowTradeDTO] cow_trades__current()
 
 Trades (current)
@@ -1223,7 +1223,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **cow_users__current**
-<a name="cow_users__current"></a>
+<a id="cow_users__current"></a>
 > [CowUserDTO] cow_users__current()
 
 Users (current)

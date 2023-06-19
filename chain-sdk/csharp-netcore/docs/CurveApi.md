@@ -69,7 +69,7 @@ All URIs are relative to *https://onchain.coinapi.io*
 | [**CurveVotingAppsCurrent**](CurveApi.md#curvevotingappscurrent) | **GET** /dapps/curve/votingApps/current | VotingApps (current) |
 | [**CurveWeeklyVolumesCurrent**](CurveApi.md#curveweeklyvolumescurrent) | **GET** /dapps/curve/weeklyVolumes/current | WeeklyVolumes (current) |
 
-<a name="curveaccountscurrent"></a>
+<a id="curveaccountscurrent"></a>
 # **CurveAccountsCurrent**
 > List&lt;CurveAccountDTO&gt; CurveAccountsCurrent ()
 
@@ -155,7 +155,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="curveaddliquidityeventscurrent"></a>
+<a id="curveaddliquidityeventscurrent"></a>
 # **CurveAddLiquidityEventsCurrent**
 > List&lt;CurveAddLiquidityEventDTO&gt; CurveAddLiquidityEventsCurrent ()
 
@@ -241,7 +241,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="curveadminfeechangelogscurrent"></a>
+<a id="curveadminfeechangelogscurrent"></a>
 # **CurveAdminFeeChangeLogsCurrent**
 > List&lt;CurveAdminFeeChangeLogDTO&gt; CurveAdminFeeChangeLogsCurrent ()
 
@@ -327,7 +327,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="curveamplificationcoeffchangelogscurrent"></a>
+<a id="curveamplificationcoeffchangelogscurrent"></a>
 # **CurveAmplificationCoeffChangeLogsCurrent**
 > List&lt;CurveAmplificationCoeffChangeLogDTO&gt; CurveAmplificationCoeffChangeLogsCurrent ()
 
@@ -413,7 +413,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="curvecoinscurrent"></a>
+<a id="curvecoinscurrent"></a>
 # **CurveCoinsCurrent**
 > List&lt;CurveCoinDTO&gt; CurveCoinsCurrent ()
 
@@ -499,7 +499,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="curvecontractversionscurrent"></a>
+<a id="curvecontractversionscurrent"></a>
 # **CurveContractVersionsCurrent**
 > List&lt;CurveContractVersionDTO&gt; CurveContractVersionsCurrent ()
 
@@ -585,7 +585,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="curvecontractscurrent"></a>
+<a id="curvecontractscurrent"></a>
 # **CurveContractsCurrent**
 > List&lt;CurveContractDTO&gt; CurveContractsCurrent ()
 
@@ -671,7 +671,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="curvedailyvolumescurrent"></a>
+<a id="curvedailyvolumescurrent"></a>
 # **CurveDailyVolumesCurrent**
 > List&lt;CurveDailyVolumeDTO&gt; CurveDailyVolumesCurrent ()
 
@@ -757,7 +757,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="curveexchangescurrent"></a>
+<a id="curveexchangescurrent"></a>
 # **CurveExchangesCurrent**
 > List&lt;CurveExchangeDTO&gt; CurveExchangesCurrent (string pool = null)
 
@@ -848,7 +848,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="curvefeechangelogscurrent"></a>
+<a id="curvefeechangelogscurrent"></a>
 # **CurveFeeChangeLogsCurrent**
 > List&lt;CurveFeeChangeLogDTO&gt; CurveFeeChangeLogsCurrent ()
 
@@ -934,7 +934,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="curvegaugedepositscurrent"></a>
+<a id="curvegaugedepositscurrent"></a>
 # **CurveGaugeDepositsCurrent**
 > List&lt;CurveGaugeDepositDTO&gt; CurveGaugeDepositsCurrent ()
 
@@ -1020,7 +1020,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="curvegaugeliquiditiescurrent"></a>
+<a id="curvegaugeliquiditiescurrent"></a>
 # **CurveGaugeLiquiditiesCurrent**
 > List&lt;CurveGaugeLiquidityDTO&gt; CurveGaugeLiquiditiesCurrent ()
 
@@ -1106,7 +1106,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="curvegaugetotalweightscurrent"></a>
+<a id="curvegaugetotalweightscurrent"></a>
 # **CurveGaugeTotalWeightsCurrent**
 > List&lt;CurveGaugeTotalWeightDTO&gt; CurveGaugeTotalWeightsCurrent ()
 
@@ -1192,7 +1192,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="curvegaugetypeweightscurrent"></a>
+<a id="curvegaugetypeweightscurrent"></a>
 # **CurveGaugeTypeWeightsCurrent**
 > List&lt;CurveGaugeTypeWeightDTO&gt; CurveGaugeTypeWeightsCurrent ()
 
@@ -1278,7 +1278,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="curvegaugetypescurrent"></a>
+<a id="curvegaugetypescurrent"></a>
 # **CurveGaugeTypesCurrent**
 > List&lt;CurveGaugeTypeDTO&gt; CurveGaugeTypesCurrent ()
 
@@ -1364,7 +1364,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="curvegaugeweightvotescurrent"></a>
+<a id="curvegaugeweightvotescurrent"></a>
 # **CurveGaugeWeightVotesCurrent**
 > List&lt;CurveGaugeWeightVoteDTO&gt; CurveGaugeWeightVotesCurrent ()
 
@@ -1450,7 +1450,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="curvegaugeweightscurrent"></a>
+<a id="curvegaugeweightscurrent"></a>
 # **CurveGaugeWeightsCurrent**
 > List&lt;CurveGaugeWeightDTO&gt; CurveGaugeWeightsCurrent ()
 
@@ -1536,7 +1536,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="curvegaugewithdrawscurrent"></a>
+<a id="curvegaugewithdrawscurrent"></a>
 # **CurveGaugeWithdrawsCurrent**
 > List&lt;CurveGaugeWithdrawDTO&gt; CurveGaugeWithdrawsCurrent ()
 
@@ -1622,7 +1622,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="curvegaugescurrent"></a>
+<a id="curvegaugescurrent"></a>
 # **CurveGaugesCurrent**
 > List&lt;CurveGaugeDTO&gt; CurveGaugesCurrent ()
 
@@ -1708,7 +1708,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="curvegetaccountshistorical"></a>
+<a id="curvegetaccountshistorical"></a>
 # **CurveGetAccountsHistorical**
 > List&lt;CurveAccountDTO&gt; CurveGetAccountsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string address = null)
 
@@ -1809,7 +1809,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="curvegetaddliquidityeventshistorical"></a>
+<a id="curvegetaddliquidityeventshistorical"></a>
 # **CurveGetAddLiquidityEventsHistorical**
 > List&lt;CurveAddLiquidityEventDTO&gt; CurveGetAddLiquidityEventsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string pool = null)
 
@@ -1910,7 +1910,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="curvegetadminfeechangelogshistorical"></a>
+<a id="curvegetadminfeechangelogshistorical"></a>
 # **CurveGetAdminFeeChangeLogsHistorical**
 > List&lt;CurveAdminFeeChangeLogDTO&gt; CurveGetAdminFeeChangeLogsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string pool = null)
 
@@ -2011,7 +2011,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="curvegetamplificationcoeffchangelogshistorical"></a>
+<a id="curvegetamplificationcoeffchangelogshistorical"></a>
 # **CurveGetAmplificationCoeffChangeLogsHistorical**
 > List&lt;CurveAmplificationCoeffChangeLogDTO&gt; CurveGetAmplificationCoeffChangeLogsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string pool = null)
 
@@ -2112,7 +2112,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="curvegetcoinshistorical"></a>
+<a id="curvegetcoinshistorical"></a>
 # **CurveGetCoinsHistorical**
 > List&lt;CurveCoinDTO&gt; CurveGetCoinsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string pool = null)
 
@@ -2213,7 +2213,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="curvegetcontractversionshistorical"></a>
+<a id="curvegetcontractversionshistorical"></a>
 # **CurveGetContractVersionsHistorical**
 > List&lt;CurveContractVersionDTO&gt; CurveGetContractVersionsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string address = null)
 
@@ -2314,7 +2314,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="curvegetcontractshistorical"></a>
+<a id="curvegetcontractshistorical"></a>
 # **CurveGetContractsHistorical**
 > List&lt;CurveContractDTO&gt; CurveGetContractsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null)
 
@@ -2413,7 +2413,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="curvegetdailyvolumeshistorical"></a>
+<a id="curvegetdailyvolumeshistorical"></a>
 # **CurveGetDailyVolumesHistorical**
 > List&lt;CurveDailyVolumeDTO&gt; CurveGetDailyVolumesHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string pool = null)
 
@@ -2514,7 +2514,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="curvegetexchangeshistorical"></a>
+<a id="curvegetexchangeshistorical"></a>
 # **CurveGetExchangesHistorical**
 > List&lt;CurveExchangeDTO&gt; CurveGetExchangesHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string pool = null)
 
@@ -2615,7 +2615,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="curvegetfeechangelogshistorical"></a>
+<a id="curvegetfeechangelogshistorical"></a>
 # **CurveGetFeeChangeLogsHistorical**
 > List&lt;CurveFeeChangeLogDTO&gt; CurveGetFeeChangeLogsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string pool = null)
 
@@ -2716,7 +2716,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="curvegetgaugedepositshistorical"></a>
+<a id="curvegetgaugedepositshistorical"></a>
 # **CurveGetGaugeDepositsHistorical**
 > List&lt;CurveGaugeDepositDTO&gt; CurveGetGaugeDepositsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null)
 
@@ -2815,7 +2815,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="curvegetgaugeliquiditieshistorical"></a>
+<a id="curvegetgaugeliquiditieshistorical"></a>
 # **CurveGetGaugeLiquiditiesHistorical**
 > List&lt;CurveGaugeLiquidityDTO&gt; CurveGetGaugeLiquiditiesHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string user = null)
 
@@ -2916,7 +2916,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="curvegetgaugetotalweightshistorical"></a>
+<a id="curvegetgaugetotalweightshistorical"></a>
 # **CurveGetGaugeTotalWeightsHistorical**
 > List&lt;CurveGaugeTotalWeightDTO&gt; CurveGetGaugeTotalWeightsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null)
 
@@ -3015,7 +3015,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="curvegetgaugetypeweightshistorical"></a>
+<a id="curvegetgaugetypeweightshistorical"></a>
 # **CurveGetGaugeTypeWeightsHistorical**
 > List&lt;CurveGaugeTypeWeightDTO&gt; CurveGetGaugeTypeWeightsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null)
 
@@ -3114,7 +3114,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="curvegetgaugetypeshistorical"></a>
+<a id="curvegetgaugetypeshistorical"></a>
 # **CurveGetGaugeTypesHistorical**
 > List&lt;CurveGaugeTypeDTO&gt; CurveGetGaugeTypesHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string name = null)
 
@@ -3215,7 +3215,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="curvegetgaugeweightvoteshistorical"></a>
+<a id="curvegetgaugeweightvoteshistorical"></a>
 # **CurveGetGaugeWeightVotesHistorical**
 > List&lt;CurveGaugeWeightVoteDTO&gt; CurveGetGaugeWeightVotesHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string user = null)
 
@@ -3316,7 +3316,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="curvegetgaugeweightshistorical"></a>
+<a id="curvegetgaugeweightshistorical"></a>
 # **CurveGetGaugeWeightsHistorical**
 > List&lt;CurveGaugeWeightDTO&gt; CurveGetGaugeWeightsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null)
 
@@ -3415,7 +3415,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="curvegetgaugewithdrawshistorical"></a>
+<a id="curvegetgaugewithdrawshistorical"></a>
 # **CurveGetGaugeWithdrawsHistorical**
 > List&lt;CurveGaugeWithdrawDTO&gt; CurveGetGaugeWithdrawsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null)
 
@@ -3514,7 +3514,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="curvegetgaugeshistorical"></a>
+<a id="curvegetgaugeshistorical"></a>
 # **CurveGetGaugesHistorical**
 > List&lt;CurveGaugeDTO&gt; CurveGetGaugesHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string address = null, string pool = null)
 
@@ -3617,7 +3617,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="curvegethourlyvolumeshistorical"></a>
+<a id="curvegethourlyvolumeshistorical"></a>
 # **CurveGetHourlyVolumesHistorical**
 > List&lt;CurveHourlyVolumeDTO&gt; CurveGetHourlyVolumesHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string pool = null)
 
@@ -3718,7 +3718,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="curvegetlptokenshistorical"></a>
+<a id="curvegetlptokenshistorical"></a>
 # **CurveGetLpTokensHistorical**
 > List&lt;CurveLpTokenDTO&gt; CurveGetLpTokensHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string address = null, string name = null, string symbol = null, string pool = null)
 
@@ -3825,7 +3825,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="curvegetpoolshistorical"></a>
+<a id="curvegetpoolshistorical"></a>
 # **CurveGetPoolsHistorical**
 > List&lt;CurvePoolDTO&gt; CurveGetPoolsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string name = null)
 
@@ -3926,7 +3926,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="curvegetproposalvoteshistorical"></a>
+<a id="curvegetproposalvoteshistorical"></a>
 # **CurveGetProposalVotesHistorical**
 > List&lt;CurveProposalVoteDTO&gt; CurveGetProposalVotesHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null)
 
@@ -4025,7 +4025,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="curvegetproposalshistorical"></a>
+<a id="curvegetproposalshistorical"></a>
 # **CurveGetProposalsHistorical**
 > List&lt;CurveProposalDTO&gt; CurveGetProposalsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null)
 
@@ -4124,7 +4124,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="curvegetremoveliquidityeventshistorical"></a>
+<a id="curvegetremoveliquidityeventshistorical"></a>
 # **CurveGetRemoveLiquidityEventsHistorical**
 > List&lt;CurveRemoveLiquidityEventDTO&gt; CurveGetRemoveLiquidityEventsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string pool = null)
 
@@ -4225,7 +4225,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="curvegetremoveliquidityoneeventshistorical"></a>
+<a id="curvegetremoveliquidityoneeventshistorical"></a>
 # **CurveGetRemoveLiquidityOneEventsHistorical**
 > List&lt;CurveRemoveLiquidityOneEventDTO&gt; CurveGetRemoveLiquidityOneEventsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string pool = null)
 
@@ -4326,7 +4326,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="curvegetsystemstateshistorical"></a>
+<a id="curvegetsystemstateshistorical"></a>
 # **CurveGetSystemStatesHistorical**
 > List&lt;CurveSystemStateDTO&gt; CurveGetSystemStatesHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null)
 
@@ -4425,7 +4425,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="curvegettokenshistorical"></a>
+<a id="curvegettokenshistorical"></a>
 # **CurveGetTokensHistorical**
 > List&lt;CurveTokenDTO&gt; CurveGetTokensHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string address = null, string name = null, string symbol = null)
 
@@ -4530,7 +4530,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="curvegettransferownershipeventshistorical"></a>
+<a id="curvegettransferownershipeventshistorical"></a>
 # **CurveGetTransferOwnershipEventsHistorical**
 > List&lt;CurveTransferOwnershipEventDTO&gt; CurveGetTransferOwnershipEventsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string pool = null)
 
@@ -4631,7 +4631,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="curvegetunderlyingcoinshistorical"></a>
+<a id="curvegetunderlyingcoinshistorical"></a>
 # **CurveGetUnderlyingCoinsHistorical**
 > List&lt;CurveUnderlyingCoinDTO&gt; CurveGetUnderlyingCoinsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string pool = null)
 
@@ -4732,7 +4732,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="curvegetvotingappshistorical"></a>
+<a id="curvegetvotingappshistorical"></a>
 # **CurveGetVotingAppsHistorical**
 > List&lt;CurveVotingAppDTO&gt; CurveGetVotingAppsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string address = null)
 
@@ -4833,7 +4833,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="curvegetweeklyvolumeshistorical"></a>
+<a id="curvegetweeklyvolumeshistorical"></a>
 # **CurveGetWeeklyVolumesHistorical**
 > List&lt;CurveWeeklyVolumeDTO&gt; CurveGetWeeklyVolumesHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string pool = null)
 
@@ -4934,7 +4934,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="curvehourlyvolumescurrent"></a>
+<a id="curvehourlyvolumescurrent"></a>
 # **CurveHourlyVolumesCurrent**
 > List&lt;CurveHourlyVolumeDTO&gt; CurveHourlyVolumesCurrent ()
 
@@ -5020,7 +5020,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="curvelptokenscurrent"></a>
+<a id="curvelptokenscurrent"></a>
 # **CurveLpTokensCurrent**
 > List&lt;CurveLpTokenDTO&gt; CurveLpTokensCurrent ()
 
@@ -5106,7 +5106,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="curvepoolscurrent"></a>
+<a id="curvepoolscurrent"></a>
 # **CurvePoolsCurrent**
 > List&lt;CurvePoolDTO&gt; CurvePoolsCurrent (string id = null)
 
@@ -5197,7 +5197,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="curveproposalvotescurrent"></a>
+<a id="curveproposalvotescurrent"></a>
 # **CurveProposalVotesCurrent**
 > List&lt;CurveProposalVoteDTO&gt; CurveProposalVotesCurrent ()
 
@@ -5283,7 +5283,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="curveproposalscurrent"></a>
+<a id="curveproposalscurrent"></a>
 # **CurveProposalsCurrent**
 > List&lt;CurveProposalDTO&gt; CurveProposalsCurrent ()
 
@@ -5369,7 +5369,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="curveremoveliquidityeventscurrent"></a>
+<a id="curveremoveliquidityeventscurrent"></a>
 # **CurveRemoveLiquidityEventsCurrent**
 > List&lt;CurveRemoveLiquidityEventDTO&gt; CurveRemoveLiquidityEventsCurrent ()
 
@@ -5455,7 +5455,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="curveremoveliquidityoneeventscurrent"></a>
+<a id="curveremoveliquidityoneeventscurrent"></a>
 # **CurveRemoveLiquidityOneEventsCurrent**
 > List&lt;CurveRemoveLiquidityOneEventDTO&gt; CurveRemoveLiquidityOneEventsCurrent ()
 
@@ -5541,7 +5541,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="curvesystemstatescurrent"></a>
+<a id="curvesystemstatescurrent"></a>
 # **CurveSystemStatesCurrent**
 > List&lt;CurveSystemStateDTO&gt; CurveSystemStatesCurrent ()
 
@@ -5627,7 +5627,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="curvetokenscurrent"></a>
+<a id="curvetokenscurrent"></a>
 # **CurveTokensCurrent**
 > List&lt;CurveTokenDTO&gt; CurveTokensCurrent ()
 
@@ -5713,7 +5713,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="curvetransferownershipeventscurrent"></a>
+<a id="curvetransferownershipeventscurrent"></a>
 # **CurveTransferOwnershipEventsCurrent**
 > List&lt;CurveTransferOwnershipEventDTO&gt; CurveTransferOwnershipEventsCurrent ()
 
@@ -5799,7 +5799,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="curveunderlyingcoinscurrent"></a>
+<a id="curveunderlyingcoinscurrent"></a>
 # **CurveUnderlyingCoinsCurrent**
 > List&lt;CurveUnderlyingCoinDTO&gt; CurveUnderlyingCoinsCurrent ()
 
@@ -5885,7 +5885,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="curvevotingappscurrent"></a>
+<a id="curvevotingappscurrent"></a>
 # **CurveVotingAppsCurrent**
 > List&lt;CurveVotingAppDTO&gt; CurveVotingAppsCurrent ()
 
@@ -5971,7 +5971,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="curveweeklyvolumescurrent"></a>
+<a id="curveweeklyvolumescurrent"></a>
 # **CurveWeeklyVolumesCurrent**
 > List&lt;CurveWeeklyVolumeDTO&gt; CurveWeeklyVolumesCurrent ()
 

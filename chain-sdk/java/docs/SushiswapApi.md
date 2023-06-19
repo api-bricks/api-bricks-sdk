@@ -38,7 +38,7 @@ All URIs are relative to *https://onchain.coinapi.io*
 | [**sushiswapUsersCurrent**](SushiswapApi.md#sushiswapUsersCurrent) | **GET** /dapps/sushiswap/users/current | Users (current) |
 
 
-<a name="sushiswapBundlesCurrent"></a>
+<a id="sushiswapBundlesCurrent"></a>
 # **sushiswapBundlesCurrent**
 > List&lt;SushiswapBundleDTO&gt; sushiswapBundlesCurrent()
 
@@ -96,7 +96,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="sushiswapBurnsCurrent"></a>
+<a id="sushiswapBurnsCurrent"></a>
 # **sushiswapBurnsCurrent**
 > List&lt;SushiswapBurnDTO&gt; sushiswapBurnsCurrent()
 
@@ -154,7 +154,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="sushiswapDayDataCurrent"></a>
+<a id="sushiswapDayDataCurrent"></a>
 # **sushiswapDayDataCurrent**
 > List&lt;SushiswapDayDataDTO&gt; sushiswapDayDataCurrent()
 
@@ -212,7 +212,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="sushiswapFactoriesCurrent"></a>
+<a id="sushiswapFactoriesCurrent"></a>
 # **sushiswapFactoriesCurrent**
 > List&lt;SushiswapFactoryDTO&gt; sushiswapFactoriesCurrent()
 
@@ -270,7 +270,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="sushiswapGetBundlesHistorical"></a>
+<a id="sushiswapGetBundlesHistorical"></a>
 # **sushiswapGetBundlesHistorical**
 > List&lt;SushiswapBundleDTO&gt; sushiswapGetBundlesHistorical(startBlock, endBlock, startDate, endDate, id)
 
@@ -340,7 +340,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="sushiswapGetBurnsHistorical"></a>
+<a id="sushiswapGetBurnsHistorical"></a>
 # **sushiswapGetBurnsHistorical**
 > List&lt;SushiswapBurnDTO&gt; sushiswapGetBurnsHistorical(startBlock, endBlock, startDate, endDate, id, pair)
 
@@ -412,7 +412,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="sushiswapGetDayDataHistorical"></a>
+<a id="sushiswapGetDayDataHistorical"></a>
 # **sushiswapGetDayDataHistorical**
 > List&lt;SushiswapDayDataDTO&gt; sushiswapGetDayDataHistorical(startBlock, endBlock, startDate, endDate, id)
 
@@ -482,7 +482,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="sushiswapGetFactoriesHistorical"></a>
+<a id="sushiswapGetFactoriesHistorical"></a>
 # **sushiswapGetFactoriesHistorical**
 > List&lt;SushiswapFactoryDTO&gt; sushiswapGetFactoriesHistorical(startBlock, endBlock, startDate, endDate, id)
 
@@ -552,7 +552,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="sushiswapGetHourDataHistorical"></a>
+<a id="sushiswapGetHourDataHistorical"></a>
 # **sushiswapGetHourDataHistorical**
 > List&lt;SushiswapHourDataDTO&gt; sushiswapGetHourDataHistorical(startBlock, endBlock, startDate, endDate, id)
 
@@ -622,7 +622,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="sushiswapGetLiquidityPositionSnapshotsHistorical"></a>
+<a id="sushiswapGetLiquidityPositionSnapshotsHistorical"></a>
 # **sushiswapGetLiquidityPositionSnapshotsHistorical**
 > List&lt;SushiswapLiquidityPositionSnapshotDTO&gt; sushiswapGetLiquidityPositionSnapshotsHistorical(startBlock, endBlock, startDate, endDate, id, user, pair)
 
@@ -696,7 +696,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="sushiswapGetLiquidityPositionsHistorical"></a>
+<a id="sushiswapGetLiquidityPositionsHistorical"></a>
 # **sushiswapGetLiquidityPositionsHistorical**
 > List&lt;SushiswapLiquidityPositionDTO&gt; sushiswapGetLiquidityPositionsHistorical(startBlock, endBlock, startDate, endDate, id, user, pair)
 
@@ -770,7 +770,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="sushiswapGetMintsHistorical"></a>
+<a id="sushiswapGetMintsHistorical"></a>
 # **sushiswapGetMintsHistorical**
 > List&lt;SushiswapMintDTO&gt; sushiswapGetMintsHistorical(startBlock, endBlock, startDate, endDate, id, pair)
 
@@ -842,7 +842,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="sushiswapGetPairDayDataHistorical"></a>
+<a id="sushiswapGetPairDayDataHistorical"></a>
 # **sushiswapGetPairDayDataHistorical**
 > List&lt;SushiswapPairDayDataDTO&gt; sushiswapGetPairDayDataHistorical(startBlock, endBlock, startDate, endDate, id, pair, token0, token1)
 
@@ -918,7 +918,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="sushiswapGetPairHourDataHistorical"></a>
+<a id="sushiswapGetPairHourDataHistorical"></a>
 # **sushiswapGetPairHourDataHistorical**
 > List&lt;SushiswapPairHourDataDTO&gt; sushiswapGetPairHourDataHistorical(startBlock, endBlock, startDate, endDate, id, pair)
 
@@ -990,7 +990,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="sushiswapGetPairsHistorical"></a>
+<a id="sushiswapGetPairsHistorical"></a>
 # **sushiswapGetPairsHistorical**
 > List&lt;SushiswapPairDTO&gt; sushiswapGetPairsHistorical(startBlock, endBlock, startDate, endDate, id, name, token0, token1)
 
@@ -1066,7 +1066,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="sushiswapGetSwapsHistorical"></a>
+<a id="sushiswapGetSwapsHistorical"></a>
 # **sushiswapGetSwapsHistorical**
 > List&lt;SushiswapSwapDTO&gt; sushiswapGetSwapsHistorical(startBlock, endBlock, startDate, endDate, id, pair)
 
@@ -1138,7 +1138,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="sushiswapGetTokenDayDataHistorical"></a>
+<a id="sushiswapGetTokenDayDataHistorical"></a>
 # **sushiswapGetTokenDayDataHistorical**
 > List&lt;SushiswapTokenDayDataDTO&gt; sushiswapGetTokenDayDataHistorical(startBlock, endBlock, startDate, endDate, id)
 
@@ -1208,7 +1208,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="sushiswapGetTokensHistorical"></a>
+<a id="sushiswapGetTokensHistorical"></a>
 # **sushiswapGetTokensHistorical**
 > List&lt;SushiswapTokenDTO&gt; sushiswapGetTokensHistorical(startBlock, endBlock, startDate, endDate, id, symbol, name)
 
@@ -1282,7 +1282,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="sushiswapGetTransactionsHistorical"></a>
+<a id="sushiswapGetTransactionsHistorical"></a>
 # **sushiswapGetTransactionsHistorical**
 > List&lt;SushiswapTransactionDTO&gt; sushiswapGetTransactionsHistorical(startBlock, endBlock, startDate, endDate, id)
 
@@ -1352,7 +1352,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="sushiswapGetUsersHistorical"></a>
+<a id="sushiswapGetUsersHistorical"></a>
 # **sushiswapGetUsersHistorical**
 > List&lt;SushiswapUserDTO&gt; sushiswapGetUsersHistorical(startBlock, endBlock, startDate, endDate, id)
 
@@ -1422,7 +1422,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="sushiswapHourDataCurrent"></a>
+<a id="sushiswapHourDataCurrent"></a>
 # **sushiswapHourDataCurrent**
 > List&lt;SushiswapHourDataDTO&gt; sushiswapHourDataCurrent()
 
@@ -1480,7 +1480,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="sushiswapLiquidityPositionSnapshotsCurrent"></a>
+<a id="sushiswapLiquidityPositionSnapshotsCurrent"></a>
 # **sushiswapLiquidityPositionSnapshotsCurrent**
 > List&lt;SushiswapLiquidityPositionSnapshotDTO&gt; sushiswapLiquidityPositionSnapshotsCurrent()
 
@@ -1538,7 +1538,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="sushiswapLiquidityPositionsCurrent"></a>
+<a id="sushiswapLiquidityPositionsCurrent"></a>
 # **sushiswapLiquidityPositionsCurrent**
 > List&lt;SushiswapLiquidityPositionDTO&gt; sushiswapLiquidityPositionsCurrent()
 
@@ -1596,7 +1596,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="sushiswapMintsCurrent"></a>
+<a id="sushiswapMintsCurrent"></a>
 # **sushiswapMintsCurrent**
 > List&lt;SushiswapMintDTO&gt; sushiswapMintsCurrent()
 
@@ -1654,7 +1654,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="sushiswapPairDayDataCurrent"></a>
+<a id="sushiswapPairDayDataCurrent"></a>
 # **sushiswapPairDayDataCurrent**
 > List&lt;SushiswapPairDayDataDTO&gt; sushiswapPairDayDataCurrent()
 
@@ -1712,7 +1712,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="sushiswapPairHourDataCurrent"></a>
+<a id="sushiswapPairHourDataCurrent"></a>
 # **sushiswapPairHourDataCurrent**
 > List&lt;SushiswapPairHourDataDTO&gt; sushiswapPairHourDataCurrent()
 
@@ -1770,7 +1770,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="sushiswapPairsCurrent"></a>
+<a id="sushiswapPairsCurrent"></a>
 # **sushiswapPairsCurrent**
 > List&lt;SushiswapPairDTO&gt; sushiswapPairsCurrent(id)
 
@@ -1832,7 +1832,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="sushiswapSwapsCurrent"></a>
+<a id="sushiswapSwapsCurrent"></a>
 # **sushiswapSwapsCurrent**
 > List&lt;SushiswapSwapDTO&gt; sushiswapSwapsCurrent(pair)
 
@@ -1894,7 +1894,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="sushiswapTokenDayDataCurrent"></a>
+<a id="sushiswapTokenDayDataCurrent"></a>
 # **sushiswapTokenDayDataCurrent**
 > List&lt;SushiswapTokenDayDataDTO&gt; sushiswapTokenDayDataCurrent()
 
@@ -1952,7 +1952,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="sushiswapTokensCurrent"></a>
+<a id="sushiswapTokensCurrent"></a>
 # **sushiswapTokensCurrent**
 > List&lt;SushiswapTokenDTO&gt; sushiswapTokensCurrent()
 
@@ -2010,7 +2010,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="sushiswapTransactionsCurrent"></a>
+<a id="sushiswapTransactionsCurrent"></a>
 # **sushiswapTransactionsCurrent**
 > List&lt;SushiswapTransactionDTO&gt; sushiswapTransactionsCurrent()
 
@@ -2068,7 +2068,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="sushiswapUsersCurrent"></a>
+<a id="sushiswapUsersCurrent"></a>
 # **sushiswapUsersCurrent**
 > List&lt;SushiswapUserDTO&gt; sushiswapUsersCurrent()
 

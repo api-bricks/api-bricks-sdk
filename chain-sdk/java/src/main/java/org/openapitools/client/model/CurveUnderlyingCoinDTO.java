@@ -34,6 +34,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
@@ -48,7 +52,7 @@ import org.openapitools.client.JSON;
 /**
  * CurveUnderlyingCoinDTO
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-07T11:31:09.822924Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-19T09:28:48.156871Z[Etc/UTC]")
 public class CurveUnderlyingCoinDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -116,7 +120,6 @@ public class CurveUnderlyingCoinDTO {
    * @return entryTime
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getEntryTime() {
     return entryTime;
   }
@@ -138,7 +141,6 @@ public class CurveUnderlyingCoinDTO {
    * @return recvTime
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getRecvTime() {
     return recvTime;
   }
@@ -160,7 +162,6 @@ public class CurveUnderlyingCoinDTO {
    * @return blockNumber
   **/
   @javax.annotation.Nullable
-
   public Long getBlockNumber() {
     return blockNumber;
   }
@@ -182,7 +183,6 @@ public class CurveUnderlyingCoinDTO {
    * @return id
   **/
   @javax.annotation.Nullable
-
   public String getId() {
     return id;
   }
@@ -204,7 +204,6 @@ public class CurveUnderlyingCoinDTO {
    * @return index
   **/
   @javax.annotation.Nullable
-
   public Integer getIndex() {
     return index;
   }
@@ -226,7 +225,6 @@ public class CurveUnderlyingCoinDTO {
    * @return pool
   **/
   @javax.annotation.Nullable
-
   public String getPool() {
     return pool;
   }
@@ -248,7 +246,6 @@ public class CurveUnderlyingCoinDTO {
    * @return token
   **/
   @javax.annotation.Nullable
-
   public String getToken() {
     return token;
   }
@@ -270,7 +267,6 @@ public class CurveUnderlyingCoinDTO {
    * @return coin
   **/
   @javax.annotation.Nullable
-
   public String getCoin() {
     return coin;
   }
@@ -292,7 +288,6 @@ public class CurveUnderlyingCoinDTO {
    * @return balance
   **/
   @javax.annotation.Nullable
-
   public String getBalance() {
     return balance;
   }
@@ -314,7 +309,6 @@ public class CurveUnderlyingCoinDTO {
    * @return updated
   **/
   @javax.annotation.Nullable
-
   public String getUpdated() {
     return updated;
   }
@@ -336,7 +330,6 @@ public class CurveUnderlyingCoinDTO {
    * @return updatedAtBlock
   **/
   @javax.annotation.Nullable
-
   public String getUpdatedAtBlock() {
     return updatedAtBlock;
   }
@@ -358,7 +351,6 @@ public class CurveUnderlyingCoinDTO {
    * @return updatedAtTransaction
   **/
   @javax.annotation.Nullable
-
   public String getUpdatedAtTransaction() {
     return updatedAtTransaction;
   }
@@ -380,7 +372,6 @@ public class CurveUnderlyingCoinDTO {
    * @return vid
   **/
   @javax.annotation.Nullable
-
   public Long getVid() {
     return vid;
   }

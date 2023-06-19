@@ -18,6 +18,7 @@ package org.openapitools.client.models
 import org.openapitools.client.models.NumericsBigInteger
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * Ticks are the boundaries between discrete areas in price space.

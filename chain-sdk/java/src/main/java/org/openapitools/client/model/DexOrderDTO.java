@@ -34,6 +34,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
@@ -48,7 +52,7 @@ import org.openapitools.client.JSON;
 /**
  * Order submitted by an user. It has a validity (dates) so they can only be executed from/until some given batches. Partial executions of this trades must respect the limit price.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-07T11:31:09.822924Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-19T09:28:48.156871Z[Etc/UTC]")
 public class DexOrderDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -160,7 +164,6 @@ public class DexOrderDTO {
    * @return entryTime
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getEntryTime() {
     return entryTime;
   }
@@ -182,7 +185,6 @@ public class DexOrderDTO {
    * @return recvTime
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getRecvTime() {
     return recvTime;
   }
@@ -204,7 +206,6 @@ public class DexOrderDTO {
    * @return blockNumber
   **/
   @javax.annotation.Nullable
-
   public Long getBlockNumber() {
     return blockNumber;
   }
@@ -226,7 +227,6 @@ public class DexOrderDTO {
    * @return id
   **/
   @javax.annotation.Nullable
-
   public String getId() {
     return id;
   }
@@ -248,7 +248,6 @@ public class DexOrderDTO {
    * @return owner
   **/
   @javax.annotation.Nullable
-
   public String getOwner() {
     return owner;
   }
@@ -270,7 +269,6 @@ public class DexOrderDTO {
    * @return orderId
   **/
   @javax.annotation.Nullable
-
   public Integer getOrderId() {
     return orderId;
   }
@@ -292,7 +290,6 @@ public class DexOrderDTO {
    * @return fromBatchId
   **/
   @javax.annotation.Nullable
-
   public String getFromBatchId() {
     return fromBatchId;
   }
@@ -314,7 +311,6 @@ public class DexOrderDTO {
    * @return fromEpoch
   **/
   @javax.annotation.Nullable
-
   public String getFromEpoch() {
     return fromEpoch;
   }
@@ -336,7 +332,6 @@ public class DexOrderDTO {
    * @return untilBatchId
   **/
   @javax.annotation.Nullable
-
   public String getUntilBatchId() {
     return untilBatchId;
   }
@@ -358,7 +353,6 @@ public class DexOrderDTO {
    * @return untilEpoch
   **/
   @javax.annotation.Nullable
-
   public String getUntilEpoch() {
     return untilEpoch;
   }
@@ -380,7 +374,6 @@ public class DexOrderDTO {
    * @return buyToken
   **/
   @javax.annotation.Nullable
-
   public String getBuyToken() {
     return buyToken;
   }
@@ -402,7 +395,6 @@ public class DexOrderDTO {
    * @return sellToken
   **/
   @javax.annotation.Nullable
-
   public String getSellToken() {
     return sellToken;
   }
@@ -424,7 +416,6 @@ public class DexOrderDTO {
    * @return priceNumerator
   **/
   @javax.annotation.Nullable
-
   public String getPriceNumerator() {
     return priceNumerator;
   }
@@ -446,7 +437,6 @@ public class DexOrderDTO {
    * @return priceDenominator
   **/
   @javax.annotation.Nullable
-
   public String getPriceDenominator() {
     return priceDenominator;
   }
@@ -468,7 +458,6 @@ public class DexOrderDTO {
    * @return maxSellAmount
   **/
   @javax.annotation.Nullable
-
   public String getMaxSellAmount() {
     return maxSellAmount;
   }
@@ -490,7 +479,6 @@ public class DexOrderDTO {
    * @return minReceiveAmount
   **/
   @javax.annotation.Nullable
-
   public String getMinReceiveAmount() {
     return minReceiveAmount;
   }
@@ -512,7 +500,6 @@ public class DexOrderDTO {
    * @return soldVolume
   **/
   @javax.annotation.Nullable
-
   public String getSoldVolume() {
     return soldVolume;
   }
@@ -534,7 +521,6 @@ public class DexOrderDTO {
    * @return boughtVolume
   **/
   @javax.annotation.Nullable
-
   public String getBoughtVolume() {
     return boughtVolume;
   }
@@ -556,7 +542,6 @@ public class DexOrderDTO {
    * @return createEpoch
   **/
   @javax.annotation.Nullable
-
   public String getCreateEpoch() {
     return createEpoch;
   }
@@ -578,7 +563,6 @@ public class DexOrderDTO {
    * @return cancelEpoch
   **/
   @javax.annotation.Nullable
-
   public String getCancelEpoch() {
     return cancelEpoch;
   }
@@ -600,7 +584,6 @@ public class DexOrderDTO {
    * @return deleteEpoch
   **/
   @javax.annotation.Nullable
-
   public String getDeleteEpoch() {
     return deleteEpoch;
   }
@@ -622,7 +605,6 @@ public class DexOrderDTO {
    * @return txHash
   **/
   @javax.annotation.Nullable
-
   public String getTxHash() {
     return txHash;
   }
@@ -644,7 +626,6 @@ public class DexOrderDTO {
    * @return txLogIndex
   **/
   @javax.annotation.Nullable
-
   public String getTxLogIndex() {
     return txLogIndex;
   }
@@ -666,7 +647,6 @@ public class DexOrderDTO {
    * @return vid
   **/
   @javax.annotation.Nullable
-
   public Long getVid() {
     return vid;
   }

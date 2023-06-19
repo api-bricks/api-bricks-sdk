@@ -34,6 +34,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
@@ -48,7 +52,7 @@ import org.openapitools.client.JSON;
 /**
  * Information about a pair. Includes references to each token within the pair, volume information, liquidity information, and more. The pair entity mirrors the pair smart contract, and also contains aggregated information about use.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-07T11:31:09.822924Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-19T09:28:48.156871Z[Etc/UTC]")
 public class SushiswapPairDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
@@ -176,7 +180,6 @@ public class SushiswapPairDTO {
    * @return entryTime
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getEntryTime() {
     return entryTime;
   }
@@ -198,7 +201,6 @@ public class SushiswapPairDTO {
    * @return recvTime
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getRecvTime() {
     return recvTime;
   }
@@ -220,7 +222,6 @@ public class SushiswapPairDTO {
    * @return blockNumber
   **/
   @javax.annotation.Nullable
-
   public Long getBlockNumber() {
     return blockNumber;
   }
@@ -242,7 +243,6 @@ public class SushiswapPairDTO {
    * @return id
   **/
   @javax.annotation.Nullable
-
   public String getId() {
     return id;
   }
@@ -264,7 +264,6 @@ public class SushiswapPairDTO {
    * @return factory
   **/
   @javax.annotation.Nullable
-
   public String getFactory() {
     return factory;
   }
@@ -286,7 +285,6 @@ public class SushiswapPairDTO {
    * @return name
   **/
   @javax.annotation.Nullable
-
   public String getName() {
     return name;
   }
@@ -308,7 +306,6 @@ public class SushiswapPairDTO {
    * @return token0
   **/
   @javax.annotation.Nullable
-
   public String getToken0() {
     return token0;
   }
@@ -330,7 +327,6 @@ public class SushiswapPairDTO {
    * @return token1
   **/
   @javax.annotation.Nullable
-
   public String getToken1() {
     return token1;
   }
@@ -352,7 +348,6 @@ public class SushiswapPairDTO {
    * @return reserve0
   **/
   @javax.annotation.Nullable
-
   public String getReserve0() {
     return reserve0;
   }
@@ -374,7 +369,6 @@ public class SushiswapPairDTO {
    * @return reserve1
   **/
   @javax.annotation.Nullable
-
   public String getReserve1() {
     return reserve1;
   }
@@ -396,7 +390,6 @@ public class SushiswapPairDTO {
    * @return totalSupply
   **/
   @javax.annotation.Nullable
-
   public String getTotalSupply() {
     return totalSupply;
   }
@@ -418,7 +411,6 @@ public class SushiswapPairDTO {
    * @return reserveEth
   **/
   @javax.annotation.Nullable
-
   public String getReserveEth() {
     return reserveEth;
   }
@@ -440,7 +432,6 @@ public class SushiswapPairDTO {
    * @return reserveUsd
   **/
   @javax.annotation.Nullable
-
   public String getReserveUsd() {
     return reserveUsd;
   }
@@ -462,7 +453,6 @@ public class SushiswapPairDTO {
    * @return trackedReserveEth
   **/
   @javax.annotation.Nullable
-
   public String getTrackedReserveEth() {
     return trackedReserveEth;
   }
@@ -484,7 +474,6 @@ public class SushiswapPairDTO {
    * @return token0Price
   **/
   @javax.annotation.Nullable
-
   public String getToken0Price() {
     return token0Price;
   }
@@ -506,7 +495,6 @@ public class SushiswapPairDTO {
    * @return token1Price
   **/
   @javax.annotation.Nullable
-
   public String getToken1Price() {
     return token1Price;
   }
@@ -528,7 +516,6 @@ public class SushiswapPairDTO {
    * @return volumeToken0
   **/
   @javax.annotation.Nullable
-
   public String getVolumeToken0() {
     return volumeToken0;
   }
@@ -550,7 +537,6 @@ public class SushiswapPairDTO {
    * @return volumeToken1
   **/
   @javax.annotation.Nullable
-
   public String getVolumeToken1() {
     return volumeToken1;
   }
@@ -572,7 +558,6 @@ public class SushiswapPairDTO {
    * @return volumeUsd
   **/
   @javax.annotation.Nullable
-
   public String getVolumeUsd() {
     return volumeUsd;
   }
@@ -594,7 +579,6 @@ public class SushiswapPairDTO {
    * @return untrackedVolumeUsd
   **/
   @javax.annotation.Nullable
-
   public String getUntrackedVolumeUsd() {
     return untrackedVolumeUsd;
   }
@@ -616,7 +600,6 @@ public class SushiswapPairDTO {
    * @return txCount
   **/
   @javax.annotation.Nullable
-
   public String getTxCount() {
     return txCount;
   }
@@ -638,7 +621,6 @@ public class SushiswapPairDTO {
    * @return liquidityProviderCount
   **/
   @javax.annotation.Nullable
-
   public String getLiquidityProviderCount() {
     return liquidityProviderCount;
   }
@@ -660,7 +642,6 @@ public class SushiswapPairDTO {
    * @return timestamp
   **/
   @javax.annotation.Nullable
-
   public String getTimestamp() {
     return timestamp;
   }
@@ -682,7 +663,6 @@ public class SushiswapPairDTO {
    * @return block
   **/
   @javax.annotation.Nullable
-
   public String getBlock() {
     return block;
   }
@@ -704,7 +684,6 @@ public class SushiswapPairDTO {
    * @return vid
   **/
   @javax.annotation.Nullable
-
   public Long getVid() {
     return vid;
   }
@@ -720,7 +699,6 @@ public class SushiswapPairDTO {
    * @return evaluatedAsk
   **/
   @javax.annotation.Nullable
-
   public Double getEvaluatedAsk() {
     return evaluatedAsk;
   }
