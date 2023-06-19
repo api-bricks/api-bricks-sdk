@@ -22,6 +22,7 @@ import org.openapitools.client.models.OrdType
 import org.openapitools.client.models.TimeInForce
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * The order execution report object.
@@ -134,6 +135,7 @@ data class OrderExecutionReport (
      *
      * Values: mAKERORCANCEL,aUCTIONONLY,iNDICATIONOFINTEREST
      */
+    @JsonClass(generateAdapter = false)
     enum class ExecInst(val value: kotlin.String) {
         @Json(name = "MAKER_OR_CANCEL") mAKERORCANCEL("MAKER_OR_CANCEL"),
         @Json(name = "AUCTION_ONLY") aUCTIONONLY("AUCTION_ONLY"),

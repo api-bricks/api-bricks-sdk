@@ -259,7 +259,7 @@ class OrderExecutionReport {
         orderType: OrdType.fromJson(json[r'order_type'])!,
         timeInForce: TimeInForce.fromJson(json[r'time_in_force'])!,
         expireTime: DateTime.fromJson(json[r'expire_time']),
-        execInst: OrderExecutionReportExecInstEnum.listFromJson(json[r'exec_inst']) ?? const [],
+        execInst: OrderExecutionReportExecInstEnum.listFromJson(json[r'exec_inst']),
         clientOrderIdFormatExchange: mapValueOfType<String>(json, r'client_order_id_format_exchange')!,
         exchangeOrderId: mapValueOfType<String>(json, r'exchange_order_id'),
         amountOpen: json[r'amount_open'] == null
@@ -278,13 +278,13 @@ class OrderExecutionReport {
             ).toList()
           :  const [],
         errorMessage: mapValueOfType<String>(json, r'error_message'),
-        fills: Fills.listFromJson(json[r'fills']) ?? const [],
+        fills: Fills.listFromJson(json[r'fills']),
       );
     }
     return null;
   }
 
-  static List<OrderExecutionReport>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<OrderExecutionReport> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <OrderExecutionReport>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -315,12 +315,10 @@ class OrderExecutionReport {
   static Map<String, List<OrderExecutionReport>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<OrderExecutionReport>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = OrderExecutionReport.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = OrderExecutionReport.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;
@@ -368,7 +366,7 @@ class OrderExecutionReportExecInstEnum {
 
   static OrderExecutionReportExecInstEnum? fromJson(dynamic value) => OrderExecutionReportExecInstEnumTypeTransformer().decode(value);
 
-  static List<OrderExecutionReportExecInstEnum>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<OrderExecutionReportExecInstEnum> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <OrderExecutionReportExecInstEnum>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {

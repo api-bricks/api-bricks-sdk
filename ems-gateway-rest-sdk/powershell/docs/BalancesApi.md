@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**Invoke-V1BalancesGet**](BalancesApi.md#Invoke-V1BalancesGet) | **GET** /v1/balances | Get balances
 
 
-<a name="Invoke-V1BalancesGet"></a>
+<a id="Invoke-V1BalancesGet"></a>
 # **Invoke-V1BalancesGet**
 > Balance[] Invoke-V1BalancesGet<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-ExchangeId] <String><br>

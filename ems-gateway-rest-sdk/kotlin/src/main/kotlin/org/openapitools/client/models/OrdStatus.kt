@@ -17,6 +17,7 @@ package org.openapitools.client.models
 
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * Order statuses and the lifecycle are documented in the separate section: <a href=\"#ems-order-lifecycle\">EMS / Starter Guide / Order Lifecycle</a> 
@@ -24,6 +25,7 @@ import com.squareup.moshi.Json
  * Values: rECEIVED,rOUTING,rOUTED,nEW,pENDINGCANCEL,pARTIALLYFILLED,fILLED,cANCELED,rEJECTED
  */
 
+@JsonClass(generateAdapter = false)
 enum class OrdStatus(val value: kotlin.String) {
 
     @Json(name = "RECEIVED")
@@ -54,7 +56,7 @@ enum class OrdStatus(val value: kotlin.String) {
     rEJECTED("REJECTED");
 
     /**
-     * Override toString() to avoid using the enum variable name as the value, and instead use
+     * Override [toString()] to avoid using the enum variable name as the value, and instead use
      * the actual value defined in the API spec file.
      *
      * This solves a problem when the variable name and its value are different, and ensures that

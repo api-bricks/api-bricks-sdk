@@ -40,7 +40,7 @@ class TimeInForce {
 
   static TimeInForce? fromJson(dynamic value) => TimeInForceTypeTransformer().decode(value);
 
-  static List<TimeInForce>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<TimeInForce> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <TimeInForce>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {

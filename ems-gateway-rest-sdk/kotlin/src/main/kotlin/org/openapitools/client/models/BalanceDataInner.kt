@@ -17,6 +17,7 @@ package org.openapitools.client.models
 
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * 
@@ -73,6 +74,7 @@ data class BalanceDataInner (
      *
      * Values: iNITIALIZATION,bALANCEMANAGER,eXCHANGE
      */
+    @JsonClass(generateAdapter = false)
     enum class LastUpdatedBy(val value: kotlin.String) {
         @Json(name = "INITIALIZATION") iNITIALIZATION("INITIALIZATION"),
         @Json(name = "BALANCE_MANAGER") bALANCEMANAGER("BALANCE_MANAGER"),

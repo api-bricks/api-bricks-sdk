@@ -167,13 +167,13 @@ class OrderNewSingleRequest {
         orderType: OrdType.fromJson(json[r'order_type'])!,
         timeInForce: TimeInForce.fromJson(json[r'time_in_force'])!,
         expireTime: DateTime.fromJson(json[r'expire_time']),
-        execInst: OrderExecutionReportExecInstEnum.listFromJson(json[r'exec_inst']) ?? const [],
+        execInst: OrderExecutionReportExecInstEnum.listFromJson(json[r'exec_inst']),
       );
     }
     return null;
   }
 
-  static List<OrderNewSingleRequest>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<OrderNewSingleRequest> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <OrderNewSingleRequest>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -204,12 +204,10 @@ class OrderNewSingleRequest {
   static Map<String, List<OrderNewSingleRequest>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<OrderNewSingleRequest>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = OrderNewSingleRequest.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = OrderNewSingleRequest.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;
@@ -253,7 +251,7 @@ class OrderExecutionReportExecInstEnum {
 
   static OrderExecutionReportExecInstEnum? fromJson(dynamic value) => OrderExecutionReportExecInstEnumTypeTransformer().decode(value);
 
-  static List<OrderExecutionReportExecInstEnum>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<OrderExecutionReportExecInstEnum> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <OrderExecutionReportExecInstEnum>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {

@@ -483,11 +483,11 @@ class OrderHistory {
         statusHistoryStatus: json[r'statusHistoryStatus'] is List
             ? (json[r'statusHistoryStatus'] as List).cast<String>()
             : const [],
-        statusHistoryTime: DateTime.listFromJson(json[r'statusHistoryTime']) ?? const [],
+        statusHistoryTime: DateTime.listFromJson(json[r'statusHistoryTime']),
         errorMessageResult: mapValueOfType<String>(json, r'errorMessageResult'),
         errorMessageReason: mapValueOfType<String>(json, r'errorMessageReason'),
         errorMessageMessage: mapValueOfType<String>(json, r'errorMessageMessage'),
-        fillsTime: DateTime.listFromJson(json[r'fillsTime']) ?? const [],
+        fillsTime: DateTime.listFromJson(json[r'fillsTime']),
         fillsPrice: json[r'fillsPrice'] is List
             ? (json[r'fillsPrice'] as List).cast<num>()
             : const [],
@@ -500,7 +500,7 @@ class OrderHistory {
     return null;
   }
 
-  static List<OrderHistory>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<OrderHistory> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <OrderHistory>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -531,12 +531,10 @@ class OrderHistory {
   static Map<String, List<OrderHistory>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<OrderHistory>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = OrderHistory.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = OrderHistory.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

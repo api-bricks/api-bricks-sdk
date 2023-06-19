@@ -12,7 +12,7 @@ Method | HTTP request | Description
 [**v1OrdersStatusClientOrderIdGet**](OrdersApi.md#v1OrdersStatusClientOrderIdGet) | **GET** /v1/orders/status/{client_order_id} | Get order execution report
 
 
-<a name="v1OrdersCancelAllPost"></a>
+<a id="v1OrdersCancelAllPost"></a>
 # **v1OrdersCancelAllPost**
 > MessageReject v1OrdersCancelAllPost(orderCancelAllRequest)
 
@@ -59,7 +59,7 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="v1OrdersCancelPost"></a>
+<a id="v1OrdersCancelPost"></a>
 # **v1OrdersCancelPost**
 > OrderExecutionReport v1OrdersCancelPost(orderCancelSingleRequest)
 
@@ -106,7 +106,7 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="v1OrdersGet"></a>
+<a id="v1OrdersGet"></a>
 # **v1OrdersGet**
 > kotlin.collections.List&lt;OrderExecutionReport&gt; v1OrdersGet(exchangeId)
 
@@ -153,7 +153,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="v1OrdersHistoryGet"></a>
+<a id="v1OrdersHistoryGet"></a>
 # **v1OrdersHistoryGet**
 > kotlin.collections.List&lt;OrderHistory&gt; v1OrdersHistoryGet(timeStart, timeEnd)
 
@@ -202,7 +202,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="v1OrdersPost"></a>
+<a id="v1OrdersPost"></a>
 # **v1OrdersPost**
 > OrderExecutionReport v1OrdersPost(orderNewSingleRequest)
 
@@ -249,7 +249,7 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="v1OrdersStatusClientOrderIdGet"></a>
+<a id="v1OrdersStatusClientOrderIdGet"></a>
 # **v1OrdersStatusClientOrderIdGet**
 > OrderExecutionReport v1OrdersStatusClientOrderIdGet(clientOrderId)
 

@@ -73,13 +73,13 @@ class Balance {
 
       return Balance(
         exchangeId: mapValueOfType<String>(json, r'exchange_id'),
-        data: BalanceDataInner.listFromJson(json[r'data']) ?? const [],
+        data: BalanceDataInner.listFromJson(json[r'data']),
       );
     }
     return null;
   }
 
-  static List<Balance>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<Balance> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <Balance>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -110,12 +110,10 @@ class Balance {
   static Map<String, List<Balance>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<Balance>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = Balance.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = Balance.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

@@ -12,7 +12,7 @@ All URIs are relative to *https://ems-gateway-aws-eu-central-1-dev.coinapi.io*
 | [**v1OrdersStatusClientOrderIdGet**](OrdersApi.md#v1OrdersStatusClientOrderIdGet) | **GET** /v1/orders/status/{client_order_id} | Get order execution report |
 
 
-<a name="v1OrdersCancelAllPost"></a>
+<a id="v1OrdersCancelAllPost"></a>
 # **v1OrdersCancelAllPost**
 > MessageReject v1OrdersCancelAllPost(orderCancelAllRequest)
 
@@ -76,7 +76,7 @@ No authorization required
 | **400** | Input model validation errors. |  -  |
 | **490** | Exchange is unreachable. |  -  |
 
-<a name="v1OrdersCancelPost"></a>
+<a id="v1OrdersCancelPost"></a>
 # **v1OrdersCancelPost**
 > OrderExecutionReport v1OrdersCancelPost(orderCancelSingleRequest)
 
@@ -140,7 +140,7 @@ No authorization required
 | **400** | Input model validation errors. |  -  |
 | **490** | Exchange is unreachable. |  -  |
 
-<a name="v1OrdersGet"></a>
+<a id="v1OrdersGet"></a>
 # **v1OrdersGet**
 > List&lt;OrderExecutionReport&gt; v1OrdersGet(exchangeId)
 
@@ -203,7 +203,7 @@ No authorization required
 | **200** | Collection of order execution reports. |  -  |
 | **490** | Filtered exchange is unreachable. |  -  |
 
-<a name="v1OrdersHistoryGet"></a>
+<a id="v1OrdersHistoryGet"></a>
 # **v1OrdersHistoryGet**
 > List&lt;OrderHistory&gt; v1OrdersHistoryGet(timeStart, timeEnd)
 
@@ -268,7 +268,7 @@ No authorization required
 | **200** | The last execution report of the requested order. |  -  |
 | **400** | Orders log is not configured. |  -  |
 
-<a name="v1OrdersPost"></a>
+<a id="v1OrdersPost"></a>
 # **v1OrdersPost**
 > OrderExecutionReport v1OrdersPost(orderNewSingleRequest)
 
@@ -333,7 +333,7 @@ No authorization required
 | **490** | Exchange is unreachable. |  -  |
 | **504** | Exchange didn&#39;t responded in the defined timeout. |  -  |
 
-<a name="v1OrdersStatusClientOrderIdGet"></a>
+<a id="v1OrdersStatusClientOrderIdGet"></a>
 # **v1OrdersStatusClientOrderIdGet**
 > OrderExecutionReport v1OrdersStatusClientOrderIdGet(clientOrderId)
 

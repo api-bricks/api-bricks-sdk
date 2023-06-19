@@ -19,6 +19,7 @@ import org.openapitools.client.models.Fills
 import org.openapitools.client.models.OrdStatus
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * The order execution report message.

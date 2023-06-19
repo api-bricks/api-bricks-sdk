@@ -12,5 +12,5 @@ class Balance {
     /* Exchange identifier used to identify the routing destination. */
     String exchangeId
     
-    List<BalanceDataInner> data = new ArrayList<>()
+    List<BalanceDataInner> data
 }

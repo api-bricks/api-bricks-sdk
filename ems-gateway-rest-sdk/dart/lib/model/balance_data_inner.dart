@@ -192,7 +192,7 @@ class BalanceDataInner {
     return null;
   }
 
-  static List<BalanceDataInner>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<BalanceDataInner> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <BalanceDataInner>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -223,12 +223,10 @@ class BalanceDataInner {
   static Map<String, List<BalanceDataInner>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<BalanceDataInner>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = BalanceDataInner.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = BalanceDataInner.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;
@@ -265,7 +263,7 @@ class BalanceDataInnerLastUpdatedByEnum {
 
   static BalanceDataInnerLastUpdatedByEnum? fromJson(dynamic value) => BalanceDataInnerLastUpdatedByEnumTypeTransformer().decode(value);
 
-  static List<BalanceDataInnerLastUpdatedByEnum>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<BalanceDataInnerLastUpdatedByEnum> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <BalanceDataInnerLastUpdatedByEnum>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {

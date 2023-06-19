@@ -34,7 +34,7 @@ class OrdSide {
 
   static OrdSide? fromJson(dynamic value) => OrdSideTypeTransformer().decode(value);
 
-  static List<OrdSide>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<OrdSide> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <OrdSide>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {

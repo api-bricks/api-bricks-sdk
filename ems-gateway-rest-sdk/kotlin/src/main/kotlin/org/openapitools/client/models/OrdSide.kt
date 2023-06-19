@@ -17,6 +17,7 @@ package org.openapitools.client.models
 
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * Side of order. 
@@ -24,6 +25,7 @@ import com.squareup.moshi.Json
  * Values: bUY,sELL
  */
 
+@JsonClass(generateAdapter = false)
 enum class OrdSide(val value: kotlin.String) {
 
     @Json(name = "BUY")
@@ -33,7 +35,7 @@ enum class OrdSide(val value: kotlin.String) {
     sELL("SELL");
 
     /**
-     * Override toString() to avoid using the enum variable name as the value, and instead use
+     * Override [toString()] to avoid using the enum variable name as the value, and instead use
      * the actual value defined in the API spec file.
      *
      * This solves a problem when the variable name and its value are different, and ensures that

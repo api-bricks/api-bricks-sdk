@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**v1BalancesGet**](BalancesApi.md#v1BalancesGet) | **GET** /v1/balances | Get balances
 
 
-<a name="v1BalancesGet"></a>
+<a id="v1BalancesGet"></a>
 # **v1BalancesGet**
 > kotlin.collections.List&lt;Balance&gt; v1BalancesGet(exchangeId)
 

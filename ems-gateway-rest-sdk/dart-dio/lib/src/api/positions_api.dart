@@ -69,13 +69,13 @@ class PositionsApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<Position> _responseData;
+    BuiltList<Position>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(Position)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(Position)]),
       ) as BuiltList<Position>;
 
     } catch (error, stackTrace) {
