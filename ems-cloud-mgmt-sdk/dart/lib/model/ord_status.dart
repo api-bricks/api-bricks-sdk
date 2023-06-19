@@ -48,7 +48,7 @@ class OrdStatus {
 
   static OrdStatus? fromJson(dynamic value) => OrdStatusTypeTransformer().decode(value);
 
-  static List<OrdStatus>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<OrdStatus> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <OrdStatus>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {

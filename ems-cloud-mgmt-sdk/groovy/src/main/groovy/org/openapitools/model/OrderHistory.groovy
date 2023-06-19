@@ -32,7 +32,7 @@ class OrderHistory {
     /* Expire time */
     Date expireTime = null
     /* Exec inst */
-    List<String> execInst = new ArrayList<>()
+    List<String> execInst
     /* Client order id format */
     String clientOrderIdFormatExchange
     /* Exchange order id */
@@ -46,9 +46,9 @@ class OrderHistory {
     /* Status */
     String status
     /* History status */
-    List<String> statusHistoryStatus = new ArrayList<>()
+    List<String> statusHistoryStatus
     /* History status time */
-    List<Date> statusHistoryTime = new ArrayList<>()
+    List<Date> statusHistoryTime
     /* Error message */
     String errorMessageResult
     /* Error message reason */
@@ -56,11 +56,11 @@ class OrderHistory {
     /* Error message */
     String errorMessageMessage
     /* Fills time */
-    List<Date> fillsTime = new ArrayList<>()
+    List<Date> fillsTime
     /* Fills price */
-    List<BigDecimal> fillsPrice = new ArrayList<>()
+    List<BigDecimal> fillsPrice
     /* Fills amount */
-    List<BigDecimal> fillsAmount = new ArrayList<>()
+    List<BigDecimal> fillsAmount
     /* Created time */
     Date createdTime = null
 }

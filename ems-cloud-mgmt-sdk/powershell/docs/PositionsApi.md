@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**Invoke-V1PositionsGet**](PositionsApi.md#Invoke-V1PositionsGet) | **GET** /v1/positions | Get open positions
 
 
-<a name="Invoke-V1PositionsGet"></a>
+<a id="Invoke-V1PositionsGet"></a>
 # **Invoke-V1PositionsGet**
 > Position[] Invoke-V1PositionsGet<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-ExchangeId] <String><br>

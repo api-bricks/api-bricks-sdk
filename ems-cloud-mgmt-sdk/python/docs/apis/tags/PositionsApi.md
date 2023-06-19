@@ -1,4 +1,4 @@
-<a name="__pageTop"></a>
+<a id="__pageTop"></a>
 # openapi_client.apis.tags.positions_api.PositionsApi
 
 All URIs are relative to *https://ems-gateway-aws-eu-central-1-dev.coinapi.io*
@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**v1_positions_get**](#v1_positions_get) | **get** /v1/positions | Get open positions
 
 # **v1_positions_get**
-<a name="v1_positions_get"></a>
+<a id="v1_positions_get"></a>
 > Positions v1_positions_get()
 
 Get open positions

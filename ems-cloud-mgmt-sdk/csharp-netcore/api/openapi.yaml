@@ -1,0 +1,1001 @@
+openapi: 3.0.0
+info:
+  contact:
+    email: support@coinapi.io
+    name: COINAPI LTD
+    url: https://www.coinapi.io
+  description: "This section will provide necessary information about the `CoinAPI\
+    \ EMS REST API` protocol.\nThis API is also available in the Postman application:\
+    \ <a href=\"https://postman.coinapi.io/\" target=\"_blank\">https://postman.coinapi.io/</a>\
+    \      \n\nImplemented Standards:\n\n  * [HTTP1.0](https://datatracker.ietf.org/doc/html/rfc1945)\n\
+    \  * [HTTP1.1](https://datatracker.ietf.org/doc/html/rfc2616)\n  * [HTTP2.0](https://datatracker.ietf.org/doc/html/rfc7540)\n\
+    \   \n### Endpoints\n\n<table>\n  <thead>\n    <tr>\n      <th>Deployment method</th>\n\
+    \      <th>Environment</th>\n      <th>Url</th>\n    </tr>\n  </thead>\n  <tbody>\n\
+    \    <tr>\n      <td>Managed Cloud</td>\n      <td>Production</td>\n      <td>Use\
+    \ <a href=\"#ems-docs-sh\">Managed Cloud REST API /v1/locations</a> to get specific\
+    \ endpoints to each server site where your deployments span</td>\n    </tr>\n\
+    \    <tr>\n      <td>Self Hosted</td>\n      <td>Production</td>\n      <td>IP\
+    \ Address of the <code>ems-gateway</code> container/excecutable in the closest\
+    \ server site to the caller location</td>\n    </tr>\n  </tbody>\n</table>\n\n\
+    ### Authentication\nIf the software is deployed as `Self-Hosted` then API do not\
+    \ require authentication as inside your infrastructure, your company is responsible\
+    \ for the security and access controls. \nIf the software is deployed in our `Managed\
+    \ Cloud`, there are 2 methods for authenticating with us, you only need to use\
+    \ one:\n\n 1. Custom authorization header named `X-CoinAPI-Key` with the API Key\n\
+    \ 2. Query string parameter named `apikey` with the API Key\n 3. <a href=\"#certificate\"\
+    >TLS Client Certificate</a> from the `Managed Cloud REST API` (/v1/certificate/pem\
+    \ endpoint) while establishing a TLS session with us.\n\n#### Custom authorization\
+    \ header\nYou can authorize by providing additional custom header named `X-CoinAPI-Key`\
+    \ and API key as its value.\nAssuming that your API key is `73034021-THIS-IS-SAMPLE-KEY`,\
+    \ then the authorization header you should send to us will look like: `X-CoinAPI-Key:\
+    \ 73034021-THIS-IS-SAMPLE-KEY`\n<aside class=\"success\">This method is recommended\
+    \ by us and you should use it in production environments.</aside>\n#### Query\
+    \ string authorization parameter\nYou can authorize by providing an additional\
+    \ parameter named `apikey` with a value equal to your API key in the query string\
+    \ of your HTTP request.\nAssuming that your API key is `73034021-THIS-IS-SAMPLE-KEY`\
+    \ and that you want to request all balances, then your query string should look\
+    \ like this: `GET /v1/balances?apikey=73034021-THIS-IS-SAMPLE-KEY`\n<aside class=\"\
+    notice\">Query string method may be more practical for development activities.</aside>\n"
+  license:
+    name: "28961"
+    url: https://github.com/coinapi/coinapi-sdk/blob/master/LICENSE
+  termsOfService: https://www.coinapi.io/legal
+  title: EMS - REST API
+  version: v1
+  x-seodescription: "---\r\ntitleTemplate: REST API | EMS API\r\ndescription: This\
+    \ section will provide necessary information about the `CoinAPI EMS REST API`\
+    \ protocol. \r\n---\r\n                            "
+externalDocs:
+  description: Find out more about EMS API
+  url: https://docs.coinapi.io/
+servers:
+- url: https://ems-gateway-aws-eu-central-1-dev.coinapi.io
+tags:
+- description: |
+    Order statuses and the lifecycle are documented in the separate section: <a href="#ems-order-lifecycle">EMS / Starter Guide / Order Lifecycle</a>
+  name: Orders
+- name: Balances
+- name: Positions
+paths:
+  /v1/orders:
+    get:
+      description: Get last execution reports for open orders across all or single
+        exchange.
+      parameters:
+      - description: Filter the open orders to the specific exchange.
+        explode: true
+        in: query
+        name: exchange_id
+        required: false
+        schema:
+          example: KRAKEN
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/OrderExecutionReports'
+          description: Collection of order execution reports.
+        "490":
+          content:
+            appliction/json:
+              schema:
+                $ref: '#/components/schemas/MessageReject'
+          description: Filtered exchange is unreachable.
+      summary: Get open orders
+      tags:
+      - Orders
+    post:
+      description: This request creating new order for the specific exchange.
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/OrderNewSingleRequest'
+        description: OrderNewSingleRequest object.
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/OrderExecutionReport'
+          description: Created
+        "400":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationError'
+          description: Input model validation errors.
+        "490":
+          content:
+            appliction/json:
+              schema:
+                $ref: '#/components/schemas/MessageReject'
+          description: Exchange is unreachable.
+        "504":
+          content:
+            appliction/json:
+              schema:
+                $ref: '#/components/schemas/MessageReject'
+          description: Exchange didn't responded in the defined timeout.
+      summary: Send new order
+      tags:
+      - Orders
+  /v1/orders/status/{client_order_id}:
+    get:
+      description: Get the last order execution report for the specified order. The
+        requested order does not need to be active or opened.
+      parameters:
+      - description: The unique identifier of the order assigned by the client.
+        explode: false
+        in: path
+        name: client_order_id
+        required: true
+        schema:
+          example: 6ab36bc1-344d-432e-ac6d-0bf44ee64c2b
+          type: string
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/OrderExecutionReport'
+          description: The last execution report of the requested order.
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MessageReject'
+          description: The requested order was not found.
+      summary: Get order execution report
+      tags:
+      - Orders
+  /v1/orders/cancel:
+    post:
+      description: Request cancel for an existing order. The order can be canceled
+        using the `client_order_id` or `exchange_order_id`.
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/OrderCancelSingleRequest'
+        description: OrderCancelSingleRequest object.
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/OrderExecutionReport'
+          description: The last execution report for the order for which cancelation
+            was requested.
+        "400":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationError'
+          description: Input model validation errors.
+        "490":
+          content:
+            appliction/json:
+              schema:
+                $ref: '#/components/schemas/MessageReject'
+          description: Exchange is unreachable.
+      summary: Cancel order request
+      tags:
+      - Orders
+  /v1/orders/cancel/all:
+    post:
+      description: This request cancels all open orders on single specified exchange.
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/OrderCancelAllRequest'
+        description: OrderCancelAllRequest object.
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MessageReject'
+          description: Result
+        "400":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationError'
+          description: Input model validation errors.
+        "490":
+          content:
+            appliction/json:
+              schema:
+                $ref: '#/components/schemas/MessageReject'
+          description: Exchange is unreachable.
+      summary: Cancel all orders request
+      tags:
+      - Orders
+  /v1/orders/history:
+    get:
+      description: "Based on the date range, all changes registered in the orderbook."
+      parameters:
+      - description: Start date
+        explode: true
+        in: query
+        name: time_start
+        required: true
+        schema:
+          example: 2022-05-01T00:00:00
+          type: string
+        style: form
+      - description: End date
+        explode: true
+        in: query
+        name: time_end
+        required: true
+        schema:
+          example: 2022-05-01T12:00:00
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/OrderHistoryArray'
+          description: The last execution report of the requested order.
+        "400":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MessageError'
+          description: Orders log is not configured.
+      summary: History of order changes
+      tags:
+      - Orders
+  /v1/balances:
+    get:
+      description: Get current currency balance from all or single exchange.
+      parameters:
+      - description: Filter the balances to the specific exchange.
+        explode: true
+        in: query
+        name: exchange_id
+        required: false
+        schema:
+          example: KRAKEN
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Balances'
+          description: Collection of balances.
+        "490":
+          content:
+            appliction/json:
+              schema:
+                $ref: '#/components/schemas/MessageReject'
+          description: Exchange is unreachable.
+      summary: Get balances
+      tags:
+      - Balances
+  /v1/positions:
+    get:
+      description: Get current open positions across all or single exchange.
+      parameters:
+      - description: Filter the balances to the specific exchange.
+        explode: true
+        in: query
+        name: exchange_id
+        required: false
+        schema:
+          example: KRAKEN
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Positions'
+          description: Collection of positons.
+        "490":
+          content:
+            appliction/json:
+              schema:
+                $ref: '#/components/schemas/MessageReject'
+          description: Exchange is unreachable.
+      summary: Get open positions
+      tags:
+      - Positions
+components:
+  schemas:
+    OrderNewSingleRequest:
+      description: The new order message.
+      example:
+        symbol_id_coinapi: KRAKEN_SPOT_BTC_USDT
+        exchange_id: KRAKEN
+        client_order_id: 6ab36bc1-344d-432e-ac6d-0bf44ee64c2b
+        side: BUY
+        time_in_force: GOOD_TILL_CANCEL
+        symbol_id_exchange: XBT/USDT
+        price: 0.0783
+        amount_order: 0.045
+        expire_time: 2020-01-01T10:45:20.1677709Z
+        exec_inst:
+        - MAKER_OR_CANCEL
+        order_type: LIMIT
+      properties:
+        exchange_id:
+          description: Exchange identifier used to identify the routing destination.
+          example: KRAKEN
+          type: string
+        client_order_id:
+          description: The unique identifier of the order assigned by the client.
+          example: 6ab36bc1-344d-432e-ac6d-0bf44ee64c2b
+          type: string
+        symbol_id_exchange:
+          description: "Exchange symbol. One of the properties (`symbol_id_exchange`,\
+            \ `symbol_id_coinapi`) is required to identify the market for the new\
+            \ order."
+          example: XBT/USDT
+          type: string
+        symbol_id_coinapi:
+          description: "CoinAPI symbol. One of the properties (`symbol_id_exchange`,\
+            \ `symbol_id_coinapi`) is required to identify the market for the new\
+            \ order."
+          example: KRAKEN_SPOT_BTC_USDT
+          type: string
+        amount_order:
+          description: Order quantity.
+          example: 0.045
+          type: number
+        price:
+          description: Order price.
+          example: 0.0783
+          type: number
+        side:
+          $ref: '#/components/schemas/OrdSide'
+        order_type:
+          $ref: '#/components/schemas/OrdType'
+        time_in_force:
+          $ref: '#/components/schemas/TimeInForce'
+        expire_time:
+          description: Expiration time. Conditionaly required for orders with time_in_force
+            = `GOOD_TILL_TIME_EXCHANGE` or `GOOD_TILL_TIME_OEML`.
+          example: 2020-01-01T10:45:20.1677709Z
+          type: date
+        exec_inst:
+          description: |
+            Order execution instructions are documented in the separate section: <a href="#ems-order-params-exec">EMS / Starter Guide / Order parameters / Execution instructions</a>
+          example:
+          - MAKER_OR_CANCEL
+          items:
+            enum:
+            - MAKER_OR_CANCEL
+            - AUCTION_ONLY
+            - INDICATION_OF_INTEREST
+            type: string
+          type: array
+      required:
+      - amount_order
+      - client_order_id
+      - exchange_id
+      - order_type
+      - price
+      - side
+      - time_in_force
+      type: object
+    OrderCancelSingleRequest:
+      description: Cancel single order request object.
+      example:
+        exchange_id: KRAKEN
+        client_order_id: 6ab36bc1-344d-432e-ac6d-0bf44ee64c2b
+        exchange_order_id: "3456456754"
+      properties:
+        exchange_id:
+          description: Exchange identifier used to identify the routing destination.
+          example: KRAKEN
+          type: string
+        exchange_order_id:
+          description: "Unique identifier of the order assigned by the exchange or\
+            \ executing system. One of the properties (`exchange_order_id`, `client_order_id`)\
+            \ is required to identify the new order."
+          example: "3456456754"
+          type: string
+        client_order_id:
+          description: "The unique identifier of the order assigned by the client.\
+            \ One of the properties (`exchange_order_id`, `client_order_id`) is required\
+            \ to identify the new order."
+          example: 6ab36bc1-344d-432e-ac6d-0bf44ee64c2b
+          type: string
+      required:
+      - exchange_id
+      type: object
+    OrderCancelAllRequest:
+      description: Cancel all orders request object.
+      example:
+        exchange_id: KRAKEN
+      properties:
+        exchange_id:
+          description: Identifier of the exchange from which active orders should
+            be canceled.
+          example: KRAKEN
+          type: string
+      required:
+      - exchange_id
+      type: object
+    OrderExecutionReports:
+      description: Collection of order execution reports for currently opened orders.
+      items:
+        $ref: '#/components/schemas/OrderExecutionReport'
+      type: array
+    OrderExecutionReport:
+      allOf:
+      - $ref: '#/components/schemas/OrderNewSingleRequest'
+      - $ref: '#/components/schemas/OrderExecutionReport_allOf'
+      description: The order execution report object.
+    Balances:
+      description: Collection of the balances.
+      items:
+        $ref: '#/components/schemas/Balance'
+      type: array
+    Balance:
+      example:
+        exchange_id: KRAKEN
+        data:
+        - last_updated_by: EXCHANGE
+          asset_id_exchange: XBT
+          balance: 0.00134444
+          traded: 0.007
+          rate_usd: 1355.12
+          available: 0.00134444
+          asset_id_coinapi: BTC
+          locked: 0.0
+        - last_updated_by: EXCHANGE
+          asset_id_exchange: XBT
+          balance: 0.00134444
+          traded: 0.007
+          rate_usd: 1355.12
+          available: 0.00134444
+          asset_id_coinapi: BTC
+          locked: 0.0
+      properties:
+        exchange_id:
+          description: Exchange identifier used to identify the routing destination.
+          example: KRAKEN
+          type: string
+        data:
+          items:
+            $ref: '#/components/schemas/Balance_data_inner'
+          type: array
+      type: object
+    Positions:
+      description: Collection of the positions.
+      items:
+        $ref: '#/components/schemas/Position'
+      type: array
+    Position:
+      example:
+        exchange_id: KRAKEN
+        data:
+        - symbol_id_coinapi: BITMEX_PERP_BTC_USD
+          liquidation_price: 0.072323
+          leverage: 0.0
+          side: BUY
+          quantity: 7
+          symbol_id_exchange: XBTUSD
+          cross_margin: true
+          unrealized_pnl: 0.0
+          raw_data: Other information provided by the exchange on this position.
+          avg_entry_price: 0.00134444
+        - symbol_id_coinapi: BITMEX_PERP_BTC_USD
+          liquidation_price: 0.072323
+          leverage: 0.0
+          side: BUY
+          quantity: 7
+          symbol_id_exchange: XBTUSD
+          cross_margin: true
+          unrealized_pnl: 0.0
+          raw_data: Other information provided by the exchange on this position.
+          avg_entry_price: 0.00134444
+      properties:
+        exchange_id:
+          description: Exchange identifier used to identify the routing destination.
+          example: KRAKEN
+          type: string
+        data:
+          items:
+            $ref: '#/components/schemas/Position_data_inner'
+          type: array
+      type: object
+    OrdStatus:
+      description: |
+        Order statuses and the lifecycle are documented in the separate section: <a href="#ems-order-lifecycle">EMS / Starter Guide / Order Lifecycle</a>
+      enum:
+      - RECEIVED
+      - ROUTING
+      - ROUTED
+      - NEW
+      - PENDING_CANCEL
+      - PARTIALLY_FILLED
+      - FILLED
+      - CANCELED
+      - REJECTED
+      type: string
+    OrdSide:
+      description: |
+        Side of order.
+      enum:
+      - BUY
+      - SELL
+      example: BUY
+      type: string
+    OrdType:
+      description: |
+        Order types are documented in the separate section: <a href="#ems-order-params-type">EMS / Starter Guide / Order parameters / Order type</a>
+      enum:
+      - LIMIT
+      example: LIMIT
+      type: string
+    TimeInForce:
+      description: |
+        Order time in force options are documented in the separate section: <a href="#ems-order-params-tif">EMS / Starter Guide / Order parameters / Time in force</a>
+      enum:
+      - GOOD_TILL_CANCEL
+      - GOOD_TILL_TIME_EXCHANGE
+      - GOOD_TILL_TIME_OMS
+      - FILL_OR_KILL
+      - IMMEDIATE_OR_CANCEL
+      example: GOOD_TILL_CANCEL
+      type: string
+    ExecInst:
+      description: |
+        Order execution instructions are documented in the separate section: <a href="#ems-order-params-exec">EMS / Starter Guide / Order parameters / Execution instructions</a>
+      example:
+      - MAKER_OR_CANCEL
+      items:
+        enum:
+        - MAKER_OR_CANCEL
+        - AUCTION_ONLY
+        - INDICATION_OF_INTEREST
+        type: string
+      type: array
+    ValidationError:
+      properties:
+        type:
+          example: https://tools.ietf.org/html/rfc7231#section-6.5.1
+          type: string
+        title:
+          example: One or more validation errors occurred.
+          type: string
+        status:
+          example: 400
+          type: number
+        traceId:
+          example: d200e8b5-4271a5461ce5342f
+          type: string
+        errors:
+          type: string
+      title: JSON validation error.
+      type: object
+    MessageReject:
+      example:
+        exchange_id: BINANCE
+        rejected_message: "{\"client_order_id\":\"BINANCE-7d8a-4888\",\"exchange_id\"\
+          :\"BINANCE\",\"type\":\"ORDER_CANCEL_SINGLE_REQUEST\"}"
+        reject_reason: ORDER_ID_NOT_FOUND
+        type: MESSAGE_REJECT
+        message: "Order with ID: BINANCE-7d8a-4888 not found"
+      properties:
+        type:
+          description: "Message type, constant."
+          example: MESSAGE_REJECT
+          type: string
+        reject_reason:
+          $ref: '#/components/schemas/RejectReason'
+        exchange_id:
+          description: "If the message related to exchange, then the identifier of\
+            \ the exchange will be provided."
+          example: BINANCE
+          type: string
+        message:
+          description: Message text.
+          example: "Order with ID: BINANCE-7d8a-4888 not found"
+          type: string
+        rejected_message:
+          description: "Value of rejected request, if available."
+          example: "{\"client_order_id\":\"BINANCE-7d8a-4888\",\"exchange_id\":\"\
+            BINANCE\",\"type\":\"ORDER_CANCEL_SINGLE_REQUEST\"}"
+          type: string
+      title: MessageReject object.
+      type: object
+    RejectReason:
+      description: Cause of rejection.
+      enum:
+      - OTHER
+      - EXCHANGE_UNREACHABLE
+      - EXCHANGE_RESPONSE_TIMEOUT
+      - ORDER_ID_NOT_FOUND
+      - INVALID_TYPE
+      - METHOD_NOT_SUPPORTED
+      - JSON_ERROR
+      example: ORDER_ID_NOT_FOUND
+      type: string
+    Fills:
+      properties:
+        time:
+          description: Execution time.
+          example: 2020-01-01T10:45:20.1677709Z
+          type: date
+        price:
+          description: Execution price.
+          example: 10799.2
+          type: number
+        amount:
+          description: Executed quantity.
+          example: 0.002
+          type: number
+      title: Relay fill information on working orders.
+      type: object
+    OrderHistoryArray:
+      description: Collection of the order history.
+      items:
+        $ref: '#/components/schemas/OrderHistory'
+      type: array
+    OrderHistory:
+      example:
+        orderType: LIMIT
+        execInst:
+        - "[\"MAKER_OR_CANCEL\"]"
+        - "[\"MAKER_OR_CANCEL\"]"
+        amountFilled: 0
+        errorMessageResult: errorMessageResult
+        errorMessageReason: errorMessageReason
+        amountOpen: 0.00034
+        price: 31939.47
+        fillsPrice:
+        - 0.8008281904610115
+        - 0.8008281904610115
+        createdTime: 2022-06-27T07:02:33.1977903Z
+        timeInForce: GOOD_TILL_CANCEL
+        exchangeOrderId: 6ab36bc1-344d-432e-ac6d-0bf44ee64c2b
+        statusHistoryStatus:
+        - "[\"RECEIVED\",\"ROUTING\",\"REJECTED\"]"
+        - "[\"RECEIVED\",\"ROUTING\",\"REJECTED\"]"
+        fillsAmount:
+        - 6.027456183070403
+        - 6.027456183070403
+        side: 2
+        symbolIdExchange: BTCUSDT
+        symbolIdCoinapi: BINANCE_SPOT_BTC_USDT
+        apikey: 9a55567a-b5ff-4b78-b6aa-xxxx
+        amountOrder: 0.00034
+        clientOrderId: 6ab36bc1-344d-432e-ac6d-0bf44ee64c2b
+        exchangeId: BINANCE
+        statusHistoryTime:
+        - - 2022-05-27T13:06:34.5122626Z
+          - 2022-05-27T13:06:37.3410216Z
+          - 2022-05-27T13:06:40.1342877Z
+        - - 2022-05-27T13:06:34.5122626Z
+          - 2022-05-27T13:06:37.3410216Z
+          - 2022-05-27T13:06:40.1342877Z
+        expireTime: 2022-05-01T00:00:00
+        clientOrderIdFormatExchange: 6ab36bc1-344d-432e-ac6d-0bf44ee64c2b
+        avgPx: 0
+        fillsTime:
+        - - 2022-05-27T13:06:34.5122626Z
+          - 2022-05-27T13:06:37.3410216Z
+          - 2022-05-27T13:06:40.1342877Z
+        - - 2022-05-27T13:06:34.5122626Z
+          - 2022-05-27T13:06:37.3410216Z
+          - 2022-05-27T13:06:40.1342877Z
+        errorMessageMessage: "-2015 Invalid API-key, IP, or permissions for action.\
+          \ https://api.binance.com/api/v3/order?newOrderRespType"
+        status: REJECTED
+      properties:
+        apikey:
+          description: Apikey
+          example: 9a55567a-b5ff-4b78-b6aa-xxxx
+          type: string
+        exchangeId:
+          description: Exchange id
+          example: BINANCE
+          type: string
+        clientOrderId:
+          description: Client order id
+          example: 6ab36bc1-344d-432e-ac6d-0bf44ee64c2b
+          type: string
+        symbolIdExchange:
+          description: Symbol id exchange
+          example: BTCUSDT
+          type: string
+        symbolIdCoinapi:
+          description: Symbol id in coinapi
+          example: BINANCE_SPOT_BTC_USDT
+          type: string
+        amountOrder:
+          description: Amount
+          example: 0.00034
+          type: number
+        price:
+          description: Price
+          example: 31939.47
+          type: number
+        side:
+          description: "1-buy, 2-sell"
+          example: 2
+          type: number
+        orderType:
+          description: Order type
+          example: LIMIT
+          type: string
+        timeInForce:
+          description: Time in force
+          example: GOOD_TILL_CANCEL
+          type: string
+        expireTime:
+          description: Expire time
+          example: 2022-05-01T00:00:00
+          type: date
+        execInst:
+          description: Exec inst
+          items:
+            example: "[\"MAKER_OR_CANCEL\"]"
+            type: string
+          type: array
+        clientOrderIdFormatExchange:
+          description: Client order id format
+          example: 6ab36bc1-344d-432e-ac6d-0bf44ee64c2b
+          type: string
+        exchangeOrderId:
+          description: Exchange order id
+          example: 6ab36bc1-344d-432e-ac6d-0bf44ee64c2b
+          type: string
+        amountOpen:
+          description: Amount open
+          example: 0.00034
+          type: number
+        amountFilled:
+          description: Amount filled
+          example: 0
+          type: number
+        avgPx:
+          description: Average price
+          example: 0
+          type: number
+        status:
+          description: Status
+          example: REJECTED
+          type: string
+        statusHistoryStatus:
+          description: History status
+          items:
+            example: "[\"RECEIVED\",\"ROUTING\",\"REJECTED\"]"
+            type: string
+          type: array
+        statusHistoryTime:
+          description: History status time
+          items:
+            example:
+            - 2022-05-27T13:06:34.5122626Z
+            - 2022-05-27T13:06:37.3410216Z
+            - 2022-05-27T13:06:40.1342877Z
+            type: date
+          type: array
+        errorMessageResult:
+          description: Error message
+          type: string
+        errorMessageReason:
+          description: Error message reason
+          type: string
+        errorMessageMessage:
+          description: Error message
+          example: "-2015 Invalid API-key, IP, or permissions for action. https://api.binance.com/api/v3/order?newOrderRespType"
+          type: string
+        fillsTime:
+          description: Fills time
+          items:
+            example:
+            - 2022-05-27T13:06:34.5122626Z
+            - 2022-05-27T13:06:37.3410216Z
+            - 2022-05-27T13:06:40.1342877Z
+            type: date
+          type: array
+        fillsPrice:
+          description: Fills price
+          items:
+            type: number
+          type: array
+        fillsAmount:
+          description: Fills amount
+          items:
+            type: number
+          type: array
+        createdTime:
+          description: Created time
+          example: 2022-06-27T07:02:33.1977903Z
+          type: date
+      title: Order history
+      type: object
+    MessageError:
+      properties:
+        message:
+          description: Message text.
+          type: string
+      title: MessageError object.
+      type: object
+    OrderExecutionReport_allOf:
+      description: The order execution report message.
+      properties:
+        client_order_id_format_exchange:
+          description: The unique identifier of the order assigned by the client converted
+            to the exchange order tag format for the purpose of tracking it.
+          example: f81211e2-27c4-b86a-8143-01088ba9222c
+          type: string
+        exchange_order_id:
+          description: Unique identifier of the order assigned by the exchange or
+            executing system.
+          example: "3456456754"
+          type: string
+        amount_open:
+          description: Quantity open for further execution. `amount_open` = `amount_order`
+            - `amount_filled`
+          example: 0.22
+          type: number
+        amount_filled:
+          description: Total quantity filled.
+          example: 0.0
+          type: number
+        avg_px:
+          description: Calculated average price of all fills on this order.
+          example: 0.0783
+          type: number
+        status:
+          $ref: '#/components/schemas/OrdStatus'
+        status_history:
+          description: Timestamped history of order status changes.
+          items:
+            items:
+              example: "[[\"RECEIVED\",\"2020-05-27T11:16:20.1677709Z\"],[\"REJECTED\"\
+                ,\"2020-05-27T11:16:20.1677710Z\"]]"
+              type: string
+            type: array
+          type: array
+        error_message:
+          description: Error message.
+          example: "{\"result\":\"error\",\"reason\":\"InsufficientFunds\",\"message\"\
+            :\"Failed to place buy order on symbol 'BTCUSD' for price $7,000.00 and\
+            \ quantity 0.22 BTC due to insufficient funds\"}"
+          type: string
+        fills:
+          description: Relay fill information on working orders.
+          items:
+            $ref: '#/components/schemas/Fills'
+          type: array
+      required:
+      - amount_filled
+      - amount_open
+      - client_order_id_format_exchange
+      - status
+      - time_order
+      type: object
+      example: null
+    Balance_data_inner:
+      example:
+        last_updated_by: EXCHANGE
+        asset_id_exchange: XBT
+        balance: 0.00134444
+        traded: 0.007
+        rate_usd: 1355.12
+        available: 0.00134444
+        asset_id_coinapi: BTC
+        locked: 0.0
+      properties:
+        asset_id_exchange:
+          description: Exchange currency code.
+          example: XBT
+          type: string
+        asset_id_coinapi:
+          description: CoinAPI currency code.
+          example: BTC
+          type: string
+        balance:
+          description: Value of the current total currency balance on the exchange.
+          example: 0.00134444
+          format: double
+          type: number
+        available:
+          description: Value of the current available currency balance on the exchange
+            that can be used as collateral.
+          example: 0.00134444
+          format: double
+          type: number
+        locked:
+          description: Value of the current locked currency balance by the exchange.
+          example: 0.0
+          format: double
+          type: number
+        last_updated_by:
+          description: |
+            Source of the last modification.
+          enum:
+          - INITIALIZATION
+          - BALANCE_MANAGER
+          - EXCHANGE
+          example: EXCHANGE
+          type: string
+        rate_usd:
+          description: |
+            Current exchange rate to the USD for the single unit of the currency.
+          example: 1355.12
+          format: double
+          type: number
+        traded:
+          description: Value of the current total traded.
+          example: 0.007
+          format: double
+          type: number
+      type: object
+    Position_data_inner:
+      description: The Position object.
+      example:
+        symbol_id_coinapi: BITMEX_PERP_BTC_USD
+        liquidation_price: 0.072323
+        leverage: 0.0
+        side: BUY
+        quantity: 7
+        symbol_id_exchange: XBTUSD
+        cross_margin: true
+        unrealized_pnl: 0.0
+        raw_data: Other information provided by the exchange on this position.
+        avg_entry_price: 0.00134444
+      properties:
+        symbol_id_exchange:
+          description: Exchange symbol.
+          example: XBTUSD
+          type: string
+        symbol_id_coinapi:
+          description: CoinAPI symbol.
+          example: BITMEX_PERP_BTC_USD
+          type: string
+        avg_entry_price:
+          description: Calculated average price of all fills on this position.
+          example: 0.00134444
+          type: number
+        quantity:
+          description: The current position quantity.
+          example: 7
+          type: number
+        side:
+          $ref: '#/components/schemas/OrdSide'
+        unrealized_pnl:
+          description: Unrealised profit or loss (PNL) of this position.
+          example: 0.0
+          type: number
+        leverage:
+          description: Leverage for this position reported by the exchange.
+          example: 0.0
+          type: number
+        cross_margin:
+          description: Is cross margin mode enable for this position?
+          example: true
+          type: boolean
+        liquidation_price:
+          description: "Liquidation price. If mark price will reach this value, the\
+            \ position will be liquidated."
+          example: 0.072323
+          type: number
+        raw_data:
+          example: Other information provided by the exchange on this position.
+          type: object
+      type: object
+

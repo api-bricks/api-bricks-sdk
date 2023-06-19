@@ -90,13 +90,13 @@ class OrdersApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    MessageReject _responseData;
+    MessageReject? _responseData;
 
     try {
-      const _responseType = FullType(MessageReject);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(MessageReject),
       ) as MessageReject;
 
     } catch (error, stackTrace) {
@@ -185,13 +185,13 @@ class OrdersApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    OrderExecutionReport _responseData;
+    OrderExecutionReport? _responseData;
 
     try {
-      const _responseType = FullType(OrderExecutionReport);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(OrderExecutionReport),
       ) as OrderExecutionReport;
 
     } catch (error, stackTrace) {
@@ -265,13 +265,13 @@ class OrdersApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<OrderExecutionReport> _responseData;
+    BuiltList<OrderExecutionReport>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(OrderExecutionReport)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(OrderExecutionReport)]),
       ) as BuiltList<OrderExecutionReport>;
 
     } catch (error, stackTrace) {
@@ -348,13 +348,13 @@ class OrdersApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<OrderHistory> _responseData;
+    BuiltList<OrderHistory>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(OrderHistory)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(OrderHistory)]),
       ) as BuiltList<OrderHistory>;
 
     } catch (error, stackTrace) {
@@ -443,13 +443,13 @@ class OrdersApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    OrderExecutionReport _responseData;
+    OrderExecutionReport? _responseData;
 
     try {
-      const _responseType = FullType(OrderExecutionReport);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(OrderExecutionReport),
       ) as OrderExecutionReport;
 
     } catch (error, stackTrace) {
@@ -518,13 +518,13 @@ class OrdersApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    OrderExecutionReport _responseData;
+    OrderExecutionReport? _responseData;
 
     try {
-      const _responseType = FullType(OrderExecutionReport);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(OrderExecutionReport),
       ) as OrderExecutionReport;
 
     } catch (error, stackTrace) {

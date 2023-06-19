@@ -6,7 +6,7 @@ All URIs are relative to *https://ems-gateway-aws-eu-central-1-dev.coinapi.io*
 |--------|--------------|-------------|
 | [**V1BalancesGet**](BalancesApi.md#v1balancesget) | **GET** /v1/balances | Get balances |
 
-<a name="v1balancesget"></a>
+<a id="v1balancesget"></a>
 # **V1BalancesGet**
 > List&lt;Balance&gt; V1BalancesGet (string exchangeId = null)
 

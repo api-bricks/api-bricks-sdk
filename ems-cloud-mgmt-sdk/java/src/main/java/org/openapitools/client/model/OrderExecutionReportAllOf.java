@@ -1,6 +1,6 @@
 /*
  * EMS - REST API
- * This section will provide necessary information about the `CoinAPI EMS REST API` protocol. This API is also available in the Postman application: <a href=\"https://postman.coinapi.io/\" target=\"_blank\">https://postman.coinapi.io/</a>        Implemented Standards:    * [HTTP1.0](https://datatracker.ietf.org/doc/html/rfc1945)   * [HTTP1.1](https://datatracker.ietf.org/doc/html/rfc2616)   * [HTTP2.0](https://datatracker.ietf.org/doc/html/rfc7540)     ### Endpoints  <table>   <thead>     <tr>       <th>Deployment method</th>       <th>Environment</th>       <th>Url</th>     </tr>   </thead>   <tbody>     <tr>       <td>Managed Cloud</td>       <td>Production</td>       <td>Use <a href=\"#ems-docs-sh\">Managed Cloud REST API /v1/locations</a> to get specific endpoints to each server site where your deployments span</td>     </tr>     <tr>       <td>Managed Cloud</td>       <td>Sandbox</td>       <td><code>https://ems-gateway-aws-eu-central-1-dev.coinapi.io/</code></td>     </tr>     <tr>       <td>Self Hosted</td>       <td>Production</td>       <td>IP Address of the <code>ems-gateway</code> container/excecutable in the closest server site to the caller location</td>     </tr>     <tr>       <td>Self Hosted</td>       <td>Sandbox</td>       <td>IP Address of the <code>ems-gateway</code> container/excecutable in the closest server site to the caller location</td>     </tr>   </tbody> </table>  ### Authentication If the software is deployed as `Self-Hosted` then API do not require authentication as inside your infrastructure, your company is responsible for the security and access controls.  If the software is deployed in our `Managed Cloud`, there are 2 methods for authenticating with us, you only need to use one:   1. Custom authorization header named `X-CoinAPI-Key` with the API Key  2. Query string parameter named `apikey` with the API Key  3. <a href=\"#certificate\">TLS Client Certificate</a> from the `Managed Cloud REST API` (/v1/certificate/pem endpoint) while establishing a TLS session with us.  #### Custom authorization header You can authorize by providing additional custom header named `X-CoinAPI-Key` and API key as its value. Assuming that your API key is `73034021-THIS-IS-SAMPLE-KEY`, then the authorization header you should send to us will look like: `X-CoinAPI-Key: 73034021-THIS-IS-SAMPLE-KEY` <aside class=\"success\">This method is recommended by us and you should use it in production environments.</aside> #### Query string authorization parameter You can authorize by providing an additional parameter named `apikey` with a value equal to your API key in the query string of your HTTP request. Assuming that your API key is `73034021-THIS-IS-SAMPLE-KEY` and that you want to request all balances, then your query string should look like this: `GET /v1/balances?apikey=73034021-THIS-IS-SAMPLE-KEY` <aside class=\"notice\">Query string method may be more practical for development activities.</aside> 
+ * This section will provide necessary information about the `CoinAPI EMS REST API` protocol. This API is also available in the Postman application: <a href=\"https://postman.coinapi.io/\" target=\"_blank\">https://postman.coinapi.io/</a>        Implemented Standards:    * [HTTP1.0](https://datatracker.ietf.org/doc/html/rfc1945)   * [HTTP1.1](https://datatracker.ietf.org/doc/html/rfc2616)   * [HTTP2.0](https://datatracker.ietf.org/doc/html/rfc7540)     ### Endpoints  <table>   <thead>     <tr>       <th>Deployment method</th>       <th>Environment</th>       <th>Url</th>     </tr>   </thead>   <tbody>     <tr>       <td>Managed Cloud</td>       <td>Production</td>       <td>Use <a href=\"#ems-docs-sh\">Managed Cloud REST API /v1/locations</a> to get specific endpoints to each server site where your deployments span</td>     </tr>     <tr>       <td>Self Hosted</td>       <td>Production</td>       <td>IP Address of the <code>ems-gateway</code> container/excecutable in the closest server site to the caller location</td>     </tr>   </tbody> </table>  ### Authentication If the software is deployed as `Self-Hosted` then API do not require authentication as inside your infrastructure, your company is responsible for the security and access controls.  If the software is deployed in our `Managed Cloud`, there are 2 methods for authenticating with us, you only need to use one:   1. Custom authorization header named `X-CoinAPI-Key` with the API Key  2. Query string parameter named `apikey` with the API Key  3. <a href=\"#certificate\">TLS Client Certificate</a> from the `Managed Cloud REST API` (/v1/certificate/pem endpoint) while establishing a TLS session with us.  #### Custom authorization header You can authorize by providing additional custom header named `X-CoinAPI-Key` and API key as its value. Assuming that your API key is `73034021-THIS-IS-SAMPLE-KEY`, then the authorization header you should send to us will look like: `X-CoinAPI-Key: 73034021-THIS-IS-SAMPLE-KEY` <aside class=\"success\">This method is recommended by us and you should use it in production environments.</aside> #### Query string authorization parameter You can authorize by providing an additional parameter named `apikey` with a value equal to your API key in the query string of your HTTP request. Assuming that your API key is `73034021-THIS-IS-SAMPLE-KEY` and that you want to request all balances, then your query string should look like this: `GET /v1/balances?apikey=73034021-THIS-IS-SAMPLE-KEY` <aside class=\"notice\">Query string method may be more practical for development activities.</aside> 
  *
  * The version of the OpenAPI document: v1
  * Contact: support@coinapi.io
@@ -37,6 +37,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
@@ -51,7 +55,7 @@ import org.openapitools.client.JSON;
 /**
  * The order execution report message.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-07T11:30:54.433270Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-19T09:28:34.354050Z[Etc/UTC]")
 public class OrderExecutionReportAllOf {
   public static final String SERIALIZED_NAME_CLIENT_ORDER_ID_FORMAT_EXCHANGE = "client_order_id_format_exchange";
   @SerializedName(SERIALIZED_NAME_CLIENT_ORDER_ID_FORMAT_EXCHANGE)
@@ -79,7 +83,7 @@ public class OrderExecutionReportAllOf {
 
   public static final String SERIALIZED_NAME_STATUS_HISTORY = "status_history";
   @SerializedName(SERIALIZED_NAME_STATUS_HISTORY)
-  private List<List<String>> statusHistory = new ArrayList<>();
+  private List<List<String>> statusHistory;
 
   public static final String SERIALIZED_NAME_ERROR_MESSAGE = "error_message";
   @SerializedName(SERIALIZED_NAME_ERROR_MESSAGE)
@@ -87,7 +91,7 @@ public class OrderExecutionReportAllOf {
 
   public static final String SERIALIZED_NAME_FILLS = "fills";
   @SerializedName(SERIALIZED_NAME_FILLS)
-  private List<Fills> fills = new ArrayList<>();
+  private List<Fills> fills;
 
   public OrderExecutionReportAllOf() {
   }
@@ -103,7 +107,6 @@ public class OrderExecutionReportAllOf {
    * @return clientOrderIdFormatExchange
   **/
   @javax.annotation.Nonnull
-
   public String getClientOrderIdFormatExchange() {
     return clientOrderIdFormatExchange;
   }
@@ -125,7 +128,6 @@ public class OrderExecutionReportAllOf {
    * @return exchangeOrderId
   **/
   @javax.annotation.Nullable
-
   public String getExchangeOrderId() {
     return exchangeOrderId;
   }
@@ -147,7 +149,6 @@ public class OrderExecutionReportAllOf {
    * @return amountOpen
   **/
   @javax.annotation.Nonnull
-
   public BigDecimal getAmountOpen() {
     return amountOpen;
   }
@@ -169,7 +170,6 @@ public class OrderExecutionReportAllOf {
    * @return amountFilled
   **/
   @javax.annotation.Nonnull
-
   public BigDecimal getAmountFilled() {
     return amountFilled;
   }
@@ -191,7 +191,6 @@ public class OrderExecutionReportAllOf {
    * @return avgPx
   **/
   @javax.annotation.Nullable
-
   public BigDecimal getAvgPx() {
     return avgPx;
   }
@@ -213,7 +212,6 @@ public class OrderExecutionReportAllOf {
    * @return status
   **/
   @javax.annotation.Nonnull
-
   public OrdStatus getStatus() {
     return status;
   }
@@ -243,7 +241,6 @@ public class OrderExecutionReportAllOf {
    * @return statusHistory
   **/
   @javax.annotation.Nullable
-
   public List<List<String>> getStatusHistory() {
     return statusHistory;
   }
@@ -265,7 +262,6 @@ public class OrderExecutionReportAllOf {
    * @return errorMessage
   **/
   @javax.annotation.Nullable
-
   public String getErrorMessage() {
     return errorMessage;
   }
@@ -295,7 +291,6 @@ public class OrderExecutionReportAllOf {
    * @return fills
   **/
   @javax.annotation.Nullable
-
   public List<Fills> getFills() {
     return fills;
   }

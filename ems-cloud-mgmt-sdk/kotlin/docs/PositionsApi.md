@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**v1PositionsGet**](PositionsApi.md#v1PositionsGet) | **GET** /v1/positions | Get open positions
 
 
-<a name="v1PositionsGet"></a>
+<a id="v1PositionsGet"></a>
 # **v1PositionsGet**
 > kotlin.collections.List&lt;Position&gt; v1PositionsGet(exchangeId)
 

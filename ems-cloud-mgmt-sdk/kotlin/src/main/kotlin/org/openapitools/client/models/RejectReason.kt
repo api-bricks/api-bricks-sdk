@@ -17,6 +17,7 @@ package org.openapitools.client.models
 
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * Cause of rejection.
@@ -24,6 +25,7 @@ import com.squareup.moshi.Json
  * Values: oTHER,eXCHANGEUNREACHABLE,eXCHANGERESPONSETIMEOUT,oRDERIDNOTFOUND,iNVALIDTYPE,mETHODNOTSUPPORTED,jSONERROR
  */
 
+@JsonClass(generateAdapter = false)
 enum class RejectReason(val value: kotlin.String) {
 
     @Json(name = "OTHER")
@@ -48,7 +50,7 @@ enum class RejectReason(val value: kotlin.String) {
     jSONERROR("JSON_ERROR");
 
     /**
-     * Override toString() to avoid using the enum variable name as the value, and instead use
+     * Override [toString()] to avoid using the enum variable name as the value, and instead use
      * the actual value defined in the API spec file.
      *
      * This solves a problem when the variable name and its value are different, and ensures that

@@ -6,7 +6,7 @@ All URIs are relative to *https://ems-gateway-aws-eu-central-1-dev.coinapi.io*
 |--------|--------------|-------------|
 | [**V1PositionsGet**](PositionsApi.md#v1positionsget) | **GET** /v1/positions | Get open positions |
 
-<a name="v1positionsget"></a>
+<a id="v1positionsget"></a>
 # **V1PositionsGet**
 > List&lt;Position&gt; V1PositionsGet (string exchangeId = null)
 

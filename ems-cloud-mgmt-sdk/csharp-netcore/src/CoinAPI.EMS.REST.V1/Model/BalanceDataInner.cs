@@ -1,7 +1,7 @@
 /*
  * EMS - REST API
  *
- * This section will provide necessary information about the `CoinAPI EMS REST API` protocol. This API is also available in the Postman application: <a href=\"https://postman.coinapi.io/\" target=\"_blank\">https://postman.coinapi.io/</a>        Implemented Standards:    * [HTTP1.0](https://datatracker.ietf.org/doc/html/rfc1945)   * [HTTP1.1](https://datatracker.ietf.org/doc/html/rfc2616)   * [HTTP2.0](https://datatracker.ietf.org/doc/html/rfc7540)     ### Endpoints  <table>   <thead>     <tr>       <th>Deployment method</th>       <th>Environment</th>       <th>Url</th>     </tr>   </thead>   <tbody>     <tr>       <td>Managed Cloud</td>       <td>Production</td>       <td>Use <a href=\"#ems-docs-sh\">Managed Cloud REST API /v1/locations</a> to get specific endpoints to each server site where your deployments span</td>     </tr>     <tr>       <td>Managed Cloud</td>       <td>Sandbox</td>       <td><code>https://ems-gateway-aws-eu-central-1-dev.coinapi.io/</code></td>     </tr>     <tr>       <td>Self Hosted</td>       <td>Production</td>       <td>IP Address of the <code>ems-gateway</code> container/excecutable in the closest server site to the caller location</td>     </tr>     <tr>       <td>Self Hosted</td>       <td>Sandbox</td>       <td>IP Address of the <code>ems-gateway</code> container/excecutable in the closest server site to the caller location</td>     </tr>   </tbody> </table>  ### Authentication If the software is deployed as `Self-Hosted` then API do not require authentication as inside your infrastructure, your company is responsible for the security and access controls.  If the software is deployed in our `Managed Cloud`, there are 2 methods for authenticating with us, you only need to use one:   1. Custom authorization header named `X-CoinAPI-Key` with the API Key  2. Query string parameter named `apikey` with the API Key  3. <a href=\"#certificate\">TLS Client Certificate</a> from the `Managed Cloud REST API` (/v1/certificate/pem endpoint) while establishing a TLS session with us.  #### Custom authorization header You can authorize by providing additional custom header named `X-CoinAPI-Key` and API key as its value. Assuming that your API key is `73034021-THIS-IS-SAMPLE-KEY`, then the authorization header you should send to us will look like: `X-CoinAPI-Key: 73034021-THIS-IS-SAMPLE-KEY` <aside class=\"success\">This method is recommended by us and you should use it in production environments.</aside> #### Query string authorization parameter You can authorize by providing an additional parameter named `apikey` with a value equal to your API key in the query string of your HTTP request. Assuming that your API key is `73034021-THIS-IS-SAMPLE-KEY` and that you want to request all balances, then your query string should look like this: `GET /v1/balances?apikey=73034021-THIS-IS-SAMPLE-KEY` <aside class=\"notice\">Query string method may be more practical for development activities.</aside> 
+ * This section will provide necessary information about the `CoinAPI EMS REST API` protocol. This API is also available in the Postman application: <a href=\"https://postman.coinapi.io/\" target=\"_blank\">https://postman.coinapi.io/</a>        Implemented Standards:    * [HTTP1.0](https://datatracker.ietf.org/doc/html/rfc1945)   * [HTTP1.1](https://datatracker.ietf.org/doc/html/rfc2616)   * [HTTP2.0](https://datatracker.ietf.org/doc/html/rfc7540)     ### Endpoints  <table>   <thead>     <tr>       <th>Deployment method</th>       <th>Environment</th>       <th>Url</th>     </tr>   </thead>   <tbody>     <tr>       <td>Managed Cloud</td>       <td>Production</td>       <td>Use <a href=\"#ems-docs-sh\">Managed Cloud REST API /v1/locations</a> to get specific endpoints to each server site where your deployments span</td>     </tr>     <tr>       <td>Self Hosted</td>       <td>Production</td>       <td>IP Address of the <code>ems-gateway</code> container/excecutable in the closest server site to the caller location</td>     </tr>   </tbody> </table>  ### Authentication If the software is deployed as `Self-Hosted` then API do not require authentication as inside your infrastructure, your company is responsible for the security and access controls.  If the software is deployed in our `Managed Cloud`, there are 2 methods for authenticating with us, you only need to use one:   1. Custom authorization header named `X-CoinAPI-Key` with the API Key  2. Query string parameter named `apikey` with the API Key  3. <a href=\"#certificate\">TLS Client Certificate</a> from the `Managed Cloud REST API` (/v1/certificate/pem endpoint) while establishing a TLS session with us.  #### Custom authorization header You can authorize by providing additional custom header named `X-CoinAPI-Key` and API key as its value. Assuming that your API key is `73034021-THIS-IS-SAMPLE-KEY`, then the authorization header you should send to us will look like: `X-CoinAPI-Key: 73034021-THIS-IS-SAMPLE-KEY` <aside class=\"success\">This method is recommended by us and you should use it in production environments.</aside> #### Query string authorization parameter You can authorize by providing an additional parameter named `apikey` with a value equal to your API key in the query string of your HTTP request. Assuming that your API key is `73034021-THIS-IS-SAMPLE-KEY` and that you want to request all balances, then your query string should look like this: `GET /v1/balances?apikey=73034021-THIS-IS-SAMPLE-KEY` <aside class=\"notice\">Query string method may be more practical for development activities.</aside> 
  *
  * The version of the OpenAPI document: v1
  * Contact: support@coinapi.io
@@ -64,6 +64,7 @@ namespace CoinAPI.EMS.REST.V1.Model
         /// Source of the last modification. 
         /// </summary>
         /// <value>Source of the last modification. </value>
+        /// <example>&quot;EXCHANGE&quot;</example>
         [DataMember(Name = "last_updated_by", EmitDefaultValue = false)]
         public LastUpdatedByEnum? LastUpdatedBy { get; set; }
         /// <summary>
@@ -93,6 +94,7 @@ namespace CoinAPI.EMS.REST.V1.Model
         /// Exchange currency code.
         /// </summary>
         /// <value>Exchange currency code.</value>
+        /// <example>&quot;XBT&quot;</example>
         [DataMember(Name = "asset_id_exchange", EmitDefaultValue = false)]
         public string AssetIdExchange { get; set; }
 
@@ -100,6 +102,7 @@ namespace CoinAPI.EMS.REST.V1.Model
         /// CoinAPI currency code.
         /// </summary>
         /// <value>CoinAPI currency code.</value>
+        /// <example>&quot;BTC&quot;</example>
         [DataMember(Name = "asset_id_coinapi", EmitDefaultValue = false)]
         public string AssetIdCoinapi { get; set; }
 
@@ -107,6 +110,7 @@ namespace CoinAPI.EMS.REST.V1.Model
         /// Value of the current total currency balance on the exchange.
         /// </summary>
         /// <value>Value of the current total currency balance on the exchange.</value>
+        /// <example>0.00134444</example>
         [DataMember(Name = "balance", EmitDefaultValue = false)]
         public double Balance { get; set; }
 
@@ -114,6 +118,7 @@ namespace CoinAPI.EMS.REST.V1.Model
         /// Value of the current available currency balance on the exchange that can be used as collateral.
         /// </summary>
         /// <value>Value of the current available currency balance on the exchange that can be used as collateral.</value>
+        /// <example>0.00134444</example>
         [DataMember(Name = "available", EmitDefaultValue = false)]
         public double Available { get; set; }
 
@@ -121,6 +126,7 @@ namespace CoinAPI.EMS.REST.V1.Model
         /// Value of the current locked currency balance by the exchange.
         /// </summary>
         /// <value>Value of the current locked currency balance by the exchange.</value>
+        /// <example>0.0</example>
         [DataMember(Name = "locked", EmitDefaultValue = false)]
         public double Locked { get; set; }
 
@@ -128,6 +134,7 @@ namespace CoinAPI.EMS.REST.V1.Model
         /// Current exchange rate to the USD for the single unit of the currency. 
         /// </summary>
         /// <value>Current exchange rate to the USD for the single unit of the currency. </value>
+        /// <example>1355.12</example>
         [DataMember(Name = "rate_usd", EmitDefaultValue = false)]
         public double RateUsd { get; set; }
 
@@ -135,6 +142,7 @@ namespace CoinAPI.EMS.REST.V1.Model
         /// Value of the current total traded.
         /// </summary>
         /// <value>Value of the current total traded.</value>
+        /// <example>0.007</example>
         [DataMember(Name = "traded", EmitDefaultValue = false)]
         public double Traded { get; set; }
 
@@ -257,7 +265,7 @@ namespace CoinAPI.EMS.REST.V1.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

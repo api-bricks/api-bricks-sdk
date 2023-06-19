@@ -1,4 +1,4 @@
-<a name="__pageTop"></a>
+<a id="__pageTop"></a>
 # openapi_client.apis.tags.balances_api.BalancesApi
 
 All URIs are relative to *https://ems-gateway-aws-eu-central-1-dev.coinapi.io*
@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**v1_balances_get**](#v1_balances_get) | **get** /v1/balances | Get balances
 
 # **v1_balances_get**
-<a name="v1_balances_get"></a>
+<a id="v1_balances_get"></a>
 > Balances v1_balances_get()
 
 Get balances

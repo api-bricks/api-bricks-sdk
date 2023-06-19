@@ -1,4 +1,4 @@
-<a name="__pageTop"></a>
+<a id="__pageTop"></a>
 # openapi_client.apis.tags.orders_api.OrdersApi
 
 All URIs are relative to *https://ems-gateway-aws-eu-central-1-dev.coinapi.io*
@@ -13,7 +13,7 @@ Method | HTTP request | Description
 [**v1_orders_status_client_order_id_get**](#v1_orders_status_client_order_id_get) | **get** /v1/orders/status/{client_order_id} | Get order execution report
 
 # **v1_orders_cancel_all_post**
-<a name="v1_orders_cancel_all_post"></a>
+<a id="v1_orders_cancel_all_post"></a>
 > MessageReject v1_orders_cancel_all_post(order_cancel_all_request)
 
 Cancel all orders request
@@ -127,7 +127,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **v1_orders_cancel_post**
-<a name="v1_orders_cancel_post"></a>
+<a id="v1_orders_cancel_post"></a>
 > OrderExecutionReport v1_orders_cancel_post(order_cancel_single_request)
 
 Cancel order request
@@ -244,7 +244,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **v1_orders_get**
-<a name="v1_orders_get"></a>
+<a id="v1_orders_get"></a>
 > OrderExecutionReports v1_orders_get()
 
 Get open orders
@@ -349,7 +349,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **v1_orders_history_get**
-<a name="v1_orders_history_get"></a>
+<a id="v1_orders_history_get"></a>
 > OrderHistoryArray v1_orders_history_get(time_starttime_end)
 
 History of order changes
@@ -463,7 +463,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **v1_orders_post**
-<a name="v1_orders_post"></a>
+<a id="v1_orders_post"></a>
 > OrderExecutionReport v1_orders_post(order_new_single_request)
 
 Send new order
@@ -602,7 +602,7 @@ No authorization required
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **v1_orders_status_client_order_id_get**
-<a name="v1_orders_status_client_order_id_get"></a>
+<a id="v1_orders_status_client_order_id_get"></a>
 > OrderExecutionReport v1_orders_status_client_order_id_get(client_order_id)
 
 Get order execution report

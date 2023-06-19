@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 **traded** | **kotlin.Double** | Value of the current total traded. |  [optional]
 
 
-<a name="LastUpdatedBy"></a>
+<a id="LastUpdatedBy"></a>
 ## Enum: last_updated_by
 Name | Value
 ---- | -----

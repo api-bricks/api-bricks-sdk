@@ -17,6 +17,7 @@ package org.openapitools.client.models
 
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * Order types are documented in the separate section: <a href=\"#ems-order-params-type\">EMS / Starter Guide / Order parameters / Order type</a> 
@@ -24,13 +25,14 @@ import com.squareup.moshi.Json
  * Values: lIMIT
  */
 
+@JsonClass(generateAdapter = false)
 enum class OrdType(val value: kotlin.String) {
 
     @Json(name = "LIMIT")
     lIMIT("LIMIT");
 
     /**
-     * Override toString() to avoid using the enum variable name as the value, and instead use
+     * Override [toString()] to avoid using the enum variable name as the value, and instead use
      * the actual value defined in the API spec file.
      *
      * This solves a problem when the variable name and its value are different, and ensures that

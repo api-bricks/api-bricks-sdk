@@ -44,7 +44,7 @@ class RejectReason {
 
   static RejectReason? fromJson(dynamic value) => RejectReasonTypeTransformer().decode(value);
 
-  static List<RejectReason>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<RejectReason> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <RejectReason>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {

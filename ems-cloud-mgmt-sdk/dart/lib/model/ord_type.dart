@@ -32,7 +32,7 @@ class OrdType {
 
   static OrdType? fromJson(dynamic value) => OrdTypeTypeTransformer().decode(value);
 
-  static List<OrdType>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<OrdType> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <OrdType>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {

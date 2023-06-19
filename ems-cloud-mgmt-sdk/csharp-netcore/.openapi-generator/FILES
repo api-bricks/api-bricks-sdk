@@ -2,6 +2,7 @@
 .openapi-generator-ignore
 CoinAPI.EMS.REST.V1.sln
 README.md
+api/openapi.yaml
 appveyor.yml
 docs/Balance.md
 docs/BalanceDataInner.md

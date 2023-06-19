@@ -12,5 +12,5 @@ class Position {
     /* Exchange identifier used to identify the routing destination. */
     String exchangeId
     
-    List<PositionDataInner> data = new ArrayList<>()
+    List<PositionDataInner> data
 }
