@@ -34,7 +34,7 @@ export default class COIN_API_SDK {
   private headers = {}
   private url = "https://rest.coinapi.io"
 
-  constructor(api_key: string = null) {
+  constructor(api_key: string | null = null) {
     if (api_key) {
       this.api_key = api_key
       this.headers = {
@@ -68,7 +68,7 @@ export default class COIN_API_SDK {
       })
   }
 
-  exchange_rates_get_specific_rate(asset_id_base: string, asset_id_quote: string, time: Date = null) {
+  exchange_rates_get_specific_rate(asset_id_base: string, asset_id_quote: string, time: Date | null = null) {
     let path = this.url + `/v1/exchangerate/${asset_id_base}/${asset_id_quote}`
     let params: any = {}
     if (time) { params.time = time.toISOString() }
@@ -98,7 +98,7 @@ export default class COIN_API_SDK {
       })
   }
 
-  ohlcv_latest_data(symbol_id: string, period_id: string, limit: number = null) {
+  ohlcv_latest_data(symbol_id: string, period_id: string, limit: number | null = null) {
     let path = this.url + `/v1/ohlcv/${symbol_id}/latest?period_id=${period_id}`
     let params: any = {}
     if (limit) { params.limit = limit }
@@ -109,7 +109,7 @@ export default class COIN_API_SDK {
       })
   }
 
-  ohlcv_historic_data(symbol_id: string, period_id: string, time_start: Date, time_end: Date = null, limit: number = null) {
+  ohlcv_historic_data(symbol_id: string, period_id: string, time_start: Date, time_end: Date | null = null, limit: number | null = null) {
     let path = this.url + `/v1/ohlcv/${symbol_id}/history?period_id=${period_id}&time_start=${time_start.toISOString()}`
     let params: any = {}
     if (time_end) { params.time = time_end.toISOString() }
@@ -121,7 +121,7 @@ export default class COIN_API_SDK {
       })
   }
 
-  trades_latest_data_all(limit: number = null) {
+  trades_latest_data_all(limit: number | null = null) {
     let path = this.url + `/v1/trades/latest`
     let params: any = {}
     if (limit) { params.limit = limit }
@@ -132,7 +132,7 @@ export default class COIN_API_SDK {
       })
   }
 
-  trades_latest_data_symbol(symbol_id: string, limit: number = null) {
+  trades_latest_data_symbol(symbol_id: string, limit: number | null = null) {
     let path = this.url + `/v1/trades/${symbol_id}/latest`
     let params: any = {}
     if (limit) { params.limit = limit }
@@ -143,7 +143,7 @@ export default class COIN_API_SDK {
       })
   }
 
-  trades_historical_data(symbol_id: string, time_start: Date, time_end: Date = null, limit: number = null) {
+  trades_historical_data(symbol_id: string, time_start: Date, time_end: Date | null = null, limit: number | null = null) {
     let path = this.url + `/v1/trades/${symbol_id}/history?time_start=${time_start.toISOString()}`
     let params: any = {}
     if (time_end) { params.time = time_end.toISOString() }
@@ -171,7 +171,7 @@ export default class COIN_API_SDK {
       })
   }
 
-  quotes_latest_data_all(limit: number = null) {
+  quotes_latest_data_all(limit: number | null = null) {
     let path = this.url + `/v1/quotes/latest`
     let params: any = {}
     if (limit) { params.limit = limit }
@@ -182,7 +182,7 @@ export default class COIN_API_SDK {
       })
   }
 
-  quotes_latest_data_symbol(symbol_id: string, limit: number = null) {
+  quotes_latest_data_symbol(symbol_id: string, limit: number | null = null) {
     let path = this.url + `/v1/quotes/${symbol_id}/latest`
     let params: any = {}
     if (limit) { params.limit = limit }
@@ -193,7 +193,7 @@ export default class COIN_API_SDK {
       })
   }
 
-  quotes_historical_data(symbol_id: string, time_start: Date, time_end: Date = null, limit: number = null) {
+  quotes_historical_data(symbol_id: string, time_start: Date, time_end: Date | null = null, limit: number | null = null) {
     let path = this.url + `/v1/quotes/${symbol_id}/history?time_start=${time_start.toISOString()}`
     let params: any = {}
     if (time_end) { params.time = time_end.toISOString() }
@@ -223,7 +223,7 @@ export default class COIN_API_SDK {
       })
   }
 
-  orderbooks_latest_data(symbol_id: string, limit: number = null) {
+  orderbooks_latest_data(symbol_id: string, limit: number | null = null) {
     let path = this.url + `/v1/orderbooks/${symbol_id}/latest`
     let params: any = {}
     if (limit) { params.limit = limit }
@@ -234,7 +234,7 @@ export default class COIN_API_SDK {
       })
   }
 
-  orderbooks_historical_data(symbol_id: string, time_start: Date, time_end: Date = null, limit: number = null) {
+  orderbooks_historical_data(symbol_id: string, time_start: Date, time_end: Date | null = null, limit: number | null = null) {
     let path = this.url + `/v1/orderbooks/${symbol_id}/history?time_start=${time_start.toISOString()}`
     let params: any = {}
     if (time_end) { params.time = time_end.toISOString() }
