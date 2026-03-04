@@ -2,7 +2,7 @@
 
 ![GitHub language count](https://img.shields.io/github/languages/count/api-bricks/api-bricks-sdk)
 
-Welcome to the API BRICKS SDK. This repository contain SDK for our API's.
+Welcome to the API BRICKS SDK. This repository contains SDKs for our APIs.
 
 ## Our Products
 
@@ -115,5 +115,5 @@ In this repository you can find libraries that will help you use our API with mi
  * Objective-C
  * Swift
 
-Feel free to make Pull Request with proposed changes or create an Issue on which we respond as soon as possible.
+Feel free to make a Pull Request with proposed changes or create an Issue to which we will respond as soon as possible.
 
