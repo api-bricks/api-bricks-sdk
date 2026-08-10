@@ -80,12 +80,12 @@ paths:
                     exchange_id: IEXG
                     security_category: Common Stock
                     name: TESLA INC
-                    date: 2026-08-05
+                    date: 2026-08-10
                   - symbol_id: NVDA
                     exchange_id: IEXG
                     security_category: Common Stock
                     name: NVIDIA CORP
-                    date: 2026-08-05
+                    date: 2026-08-10
               schema:
                 items:
                   $ref: "#/components/schemas/FinFeedAPI.SymbolModel"
@@ -98,12 +98,12 @@ paths:
                     exchange_id: IEXG
                     security_category: Common Stock
                     name: TESLA INC
-                    date: 2026-08-05
+                    date: 2026-08-10
                   - symbol_id: NVDA
                     exchange_id: IEXG
                     security_category: Common Stock
                     name: NVIDIA CORP
-                    date: 2026-08-05
+                    date: 2026-08-10
               schema:
                 items:
                   $ref: "#/components/schemas/FinFeedAPI.SymbolModel"
@@ -116,12 +116,12 @@ paths:
                     exchange_id: IEXG
                     security_category: Common Stock
                     name: TESLA INC
-                    date: 2026-08-05
+                    date: 2026-08-10
                   - symbol_id: NVDA
                     exchange_id: IEXG
                     security_category: Common Stock
                     name: NVIDIA CORP
-                    date: 2026-08-05
+                    date: 2026-08-10
               schema:
                 items:
                   $ref: "#/components/schemas/FinFeedAPI.SymbolModel"
@@ -451,29 +451,29 @@ paths:
               example:
               - add_order:
                   symbol: AAPL
-                  timestamp_nanos: 1785909989149000000
-                  timestamp: 2026-08-05T06:06:29.1490000Z
+                  timestamp_nanos: 1786342012037000000
+                  timestamp: 2026-08-10T06:06:52.0370000Z
                   is_side_buy: true
                   size: 100
                   price: 176.42
                   order_id: 123456789
               - delete_order:
                   symbol: TSLA
-                  timestamp_nanos: 1785909989149000000
-                  timestamp: 2026-08-05T06:06:29.1490000Z
+                  timestamp_nanos: 1786342012037000000
+                  timestamp: 2026-08-10T06:06:52.0370000Z
                   order_id_reference: 987654321
               - modify_order:
                   symbol: NFLX
-                  timestamp_nanos: 1785909989149000000
-                  timestamp: 2026-08-05T06:06:29.1490000Z
+                  timestamp_nanos: 1786342012037000000
+                  timestamp: 2026-08-10T06:06:52.0370000Z
                   order_id_reference: 789456123
                   is_priority_reset: false
                   size: 150
                   price: 625.85
               - executed_order:
                   symbol: META
-                  timestamp_nanos: 1785909989149000000
-                  timestamp: 2026-08-05T06:06:29.1490000Z
+                  timestamp_nanos: 1786342012037000000
+                  timestamp: 2026-08-10T06:06:52.0370000Z
                   order_id_reference: 555123456
                   sale_condition_flags: 0
                   is_intermarket_sweep: false
@@ -486,8 +486,8 @@ paths:
                   trade_id: 123987456
               - clear_book:
                   symbol: MSFT
-                  timestamp_nanos: 1785909989149000000
-                  timestamp: 2026-08-05T06:06:29.1490000Z
+                  timestamp_nanos: 1786342012037000000
+                  timestamp: 2026-08-10T06:06:52.0370000Z
               schema:
                 items:
                   $ref: "#/components/schemas/Models.OrderBookModel"
@@ -535,8 +535,8 @@ paths:
               example:
               - trading_status:
                   symbol: PYPL
-                  timestamp_nanos: 1785909989154000000
-                  timestamp: 2026-08-05T06:06:29.1540000Z
+                  timestamp_nanos: 1786342012041000000
+                  timestamp: 2026-08-10T06:06:52.0410000Z
                   is_trading_live: true
                   is_trading_halted: false
                   is_trading_in_order_acceptance_period: false
@@ -554,8 +554,8 @@ paths:
                   is_reason_not_available: false
               - official_price:
                   symbol: AAPL
-                  timestamp_nanos: 1785909989155000000
-                  timestamp: 2026-08-05T06:06:29.1550000Z
+                  timestamp_nanos: 1786342012042000000
+                  timestamp: 2026-08-10T06:06:52.0420000Z
                   price_type: 81
                   price_type_code: Q
                   price_type_text: IEX Official Opening Price
@@ -564,8 +564,8 @@ paths:
                   official_price: 12.3456
               - security_event:
                   symbol: CRM
-                  timestamp_nanos: 1785909989155000000
-                  timestamp: 2026-08-05T06:06:29.1550000Z
+                  timestamp_nanos: 1786342012042000000
+                  timestamp: 2026-08-10T06:06:52.0420000Z
                   security_event: 79
                   security_event_code: O
                   security_event_text: Opening Process Complete
@@ -573,8 +573,8 @@ paths:
                   is_closing_process_complete: false
               - auction_information:
                   symbol: AAPL
-                  timestamp_nanos: 1785909989155000000
-                  timestamp: 2026-08-05T06:06:29.1550000Z
+                  timestamp_nanos: 1786342012042000000
+                  timestamp: 2026-08-10T06:06:52.0420000Z
                   auction_type: 79
                   auction_type_code: O
                   auction_type_text: Opening Auction
@@ -594,16 +594,16 @@ paths:
                   is_imbalance_side_sell: false
                   is_imbalance_side_none: false
                   extension_number: 0
-                  scheduled_auction_time_seconds: 1785910289
-                  scheduled_auction_time: 2026-08-05T06:11:29.0000000Z
+                  scheduled_auction_time_seconds: 1786342312
+                  scheduled_auction_time: 2026-08-10T06:11:52.0000000Z
                   auction_book_clearing_price: 156.45
                   collar_reference_price: 157
                   lower_auction_collar: 152.5
                   upper_auction_collar: 161.5
               - short_sale_price_test:
                   symbol: MSFT
-                  timestamp_nanos: 1785909989155000000
-                  timestamp: 2026-08-05T06:06:29.1550000Z
+                  timestamp_nanos: 1786342012042000000
+                  timestamp: 2026-08-10T06:06:52.0420000Z
                   short_sale_price_test_status: 1
                   short_sale_price_test_status_code: "1"
                   short_sale_price_test_status_text: Short Sale Price Test in Effect
@@ -620,8 +620,8 @@ paths:
                   is_detail_not_available: false
               - operational_halt_status:
                   symbol: AAPL
-                  timestamp_nanos: 1785909989155000000
-                  timestamp: 2026-08-05T06:06:29.1550000Z
+                  timestamp_nanos: 1786342012042000000
+                  timestamp: 2026-08-10T06:06:52.0420000Z
                   operational_halt_status: 79
                   operational_halt_status_code: O
                   operational_halt_status_text: IEX specific operational trading halt
@@ -629,8 +629,8 @@ paths:
                   is_not_operationally_halted: false
               - retail_liquidity_indicator:
                   symbol: GOOG
-                  timestamp_nanos: 1785909989155000000
-                  timestamp: 2026-08-05T06:06:29.1550000Z
+                  timestamp_nanos: 1786342012042000000
+                  timestamp: 2026-08-10T06:06:52.0420000Z
                   retail_liquidity_indicator: 65
                   retail_liquidity_indicator_code: A
                   retail_liquidity_indicator_text: Buy interest for Retail
@@ -639,8 +639,8 @@ paths:
                   is_retail_indicator_sell_interest: false
                   is_retail_indicator_buy_and_sell_interest: false
               - system_event:
-                  timestamp_nanos: 1785909989155000000
-                  timestamp: 2026-08-05T06:06:29.1550000Z
+                  timestamp_nanos: 1786342012042000000
+                  timestamp: 2026-08-10T06:06:52.0420000Z
                   system_event: 79
                   system_event_code: O
                   system_event_text: "Start of Messages – Outside of heartbeat messages\
@@ -654,8 +654,8 @@ paths:
                   is_system_event_end_of_messages: false
               - security_directory:
                   symbol: INTC
-                  timestamp_nanos: 1785909989155000000
-                  timestamp: 2026-08-05T06:06:29.1550000Z
+                  timestamp_nanos: 1786342012042000000
+                  timestamp: 2026-08-10T06:06:52.0420000Z
                   flags: 0
                   round_lot_size: 100
                   adjusted_poc_price: 35.36
