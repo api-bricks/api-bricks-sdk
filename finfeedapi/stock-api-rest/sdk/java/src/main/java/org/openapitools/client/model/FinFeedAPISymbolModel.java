@@ -49,7 +49,7 @@ import org.openapitools.client.JSON;
 /**
  * FinFeedAPISymbolModel
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-08-11T06:06:48.657396858Z[Etc/UTC]", comments = "Generator version: 7.24.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-08-13T06:05:53.179234113Z[Etc/UTC]", comments = "Generator version: 7.24.0")
 public class FinFeedAPISymbolModel {
   public static final String SERIALIZED_NAME_SYMBOL_ID = "symbol_id";
   @SerializedName(SERIALIZED_NAME_SYMBOL_ID)
