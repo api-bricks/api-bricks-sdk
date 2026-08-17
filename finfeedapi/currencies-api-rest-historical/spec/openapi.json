@@ -66,7 +66,7 @@
                 "examples": {
                   "Example response": {
                     "value": {
-  "time": "2026-08-13T06:06:49.0370045Z",
+  "time": "2026-08-17T06:05:04.4071507Z",
   "asset_id_base": "BTC",
   "asset_id_quote": "USD",
   "rate": 10000.0
@@ -81,7 +81,7 @@
                 "examples": {
                   "Example response": {
                     "value": {
-  "time": "2026-08-13T06:06:49.0370045Z",
+  "time": "2026-08-17T06:05:04.4071507Z",
   "asset_id_base": "BTC",
   "asset_id_quote": "USD",
   "rate": 10000.0
@@ -96,7 +96,7 @@
                 "examples": {
                   "Example response": {
                     "value": {
-  "time": "2026-08-13T06:06:49.0370045Z",
+  "time": "2026-08-17T06:05:04.4071507Z",
   "asset_id_base": "BTC",
   "asset_id_quote": "USD",
   "rate": 10000.0
