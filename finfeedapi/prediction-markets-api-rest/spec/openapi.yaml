@@ -44,6 +44,12 @@ paths:
                     - exchange_id: HYPERLIQUIDOUTCOME
                       market_name_institution_description: Hyperliquid HIP-4 outcome markets — fully collateralized binary and multi-outcome contracts.
                       website: https://hyperliquid.xyz
+                    - exchange_id: PASCAL
+                      market_name_institution_description: A noncustodial prediction market exchange on Solana.
+                      website: https://www.pascal.trade
+                    - exchange_id: GEMINIPM
+                      market_name_institution_description: Gemini's prediction markets product.
+                      website: https://www.gemini.com/prediction-markets
             application/json:
               schema:
                 type: array
@@ -67,6 +73,12 @@ paths:
                     - exchange_id: HYPERLIQUIDOUTCOME
                       market_name_institution_description: Hyperliquid HIP-4 outcome markets — fully collateralized binary and multi-outcome contracts.
                       website: https://hyperliquid.xyz
+                    - exchange_id: PASCAL
+                      market_name_institution_description: A noncustodial prediction market exchange on Solana.
+                      website: https://www.pascal.trade
+                    - exchange_id: GEMINIPM
+                      market_name_institution_description: Gemini's prediction markets product.
+                      website: https://www.gemini.com/prediction-markets
             text/json:
               schema:
                 type: array
@@ -90,6 +102,12 @@ paths:
                     - exchange_id: HYPERLIQUIDOUTCOME
                       market_name_institution_description: Hyperliquid HIP-4 outcome markets — fully collateralized binary and multi-outcome contracts.
                       website: https://hyperliquid.xyz
+                    - exchange_id: PASCAL
+                      market_name_institution_description: A noncustodial prediction market exchange on Solana.
+                      website: https://www.pascal.trade
+                    - exchange_id: GEMINIPM
+                      market_name_institution_description: Gemini's prediction markets product.
+                      website: https://www.gemini.com/prediction-markets
             application/x-msgpack:
               schema:
                 type: array
@@ -113,6 +131,12 @@ paths:
                     - exchange_id: HYPERLIQUIDOUTCOME
                       market_name_institution_description: Hyperliquid HIP-4 outcome markets — fully collateralized binary and multi-outcome contracts.
                       website: https://hyperliquid.xyz
+                    - exchange_id: PASCAL
+                      market_name_institution_description: A noncustodial prediction market exchange on Solana.
+                      website: https://www.pascal.trade
+                    - exchange_id: GEMINIPM
+                      market_name_institution_description: Gemini's prediction markets product.
+                      website: https://www.gemini.com/prediction-markets
   '/v1/exchanges/{exchange_id}':
     get:
       tags:
