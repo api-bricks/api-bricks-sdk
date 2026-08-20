@@ -96,27 +96,19 @@ paths:
                 additionalProperties: { }
               examples:
                 Example Filing Extract:
-                  value: {
-  "accession_number": "0001140361-21-012345",
-  "form_type": "10-K",
-  "items": [
-    {
-      "item_number": "Item 1",
-      "item_title": "Business",
-      "content": "Description of business operations..."
-    },
-    {
-      "item_number": "Item 1A",
-      "item_title": "Risk Factors",
-      "content": "Discussion of potential risks and uncertainties..."
-    },
-    {
-      "item_number": "Item 2",
-      "item_title": "Properties",
-      "content": "Description of company properties and facilities..."
-    }
-  ]
-}
+                  value:
+                    accession_number: 0001140361-21-012345
+                    form_type: 10-K
+                    items:
+                      - item_number: Item 1
+                        item_title: Business
+                        content: Description of business operations...
+                      - item_number: Item 1A
+                        item_title: Risk Factors
+                        content: Discussion of potential risks and uncertainties...
+                      - item_number: Item 2
+                        item_title: Properties
+                        content: Description of company properties and facilities...
         '400':
           description: Invalid request
           content:
@@ -267,25 +259,24 @@ paths:
                   $ref: '#/components/schemas/DTO.FilingMetadataDto'
               examples:
                 Example Filing Metadata:
-                  value: {
-  "cik": 1234567890,
-  "accession_number": "0001140361-21-012345",
-  "filing_date": "2021-03-15",
-  "report_date": "2020-12-31",
-  "acceptance_date_time": "2021-03-15T16:30:00.0000000Z",
-  "act": "34",
-  "form": "10-K",
-  "file_number": "001-12345",
-  "film_number": "21654321",
-  "items": "1,1A,2",
-  "core_type": "10-K",
-  "size": 15000000,
-  "is_xbrl": true,
-  "is_inline_xbrl": true,
-  "primary_document": "form10k.htm",
-  "primary_doc_description": "Form 10-K Annual Report",
-  "source_file": "edgar/data/1234567890/0001140361-21-012345.txt"
-}
+                  value:
+                    cik: 1234567890
+                    accession_number: 0001140361-21-012345
+                    filing_date: '2021-03-15'
+                    report_date: '2020-12-31'
+                    acceptance_date_time: '2021-03-15T16:30:00.0000000Z'
+                    act: '34'
+                    form: 10-K
+                    file_number: 001-12345
+                    film_number: '21654321'
+                    items: '1,1A,2'
+                    core_type: 10-K
+                    size: 15000000
+                    is_xbrl: true
+                    is_inline_xbrl: true
+                    primary_document: form10k.htm
+                    primary_doc_description: Form 10-K Annual Report
+                    source_file: edgar/data/1234567890/0001140361-21-012345.txt
         '400':
           description: Invalid request
           content:
@@ -373,16 +364,15 @@ paths:
                   $ref: '#/components/schemas/DTO.SecFilingResultDto'
               examples:
                 Example SEC Filing Result:
-                  value: {
-  "accession_number": "0001140361-21-012345",
-  "form_type": "10-K",
-  "filing_date": "2021-03-15",
-  "company_name": "Example Corporation",
-  "cik": 1234567890,
-  "document_filename": "form10k.htm",
-  "document_description": "Form 10-K Annual Report",
-  "source_file": "edgar/data/1234567890/0001140361-21-012345.txt"
-}
+                  value:
+                    accession_number: 0001140361-21-012345
+                    form_type: 10-K
+                    filing_date: '2021-03-15'
+                    company_name: Example Corporation
+                    cik: 1234567890
+                    document_filename: form10k.htm
+                    document_description: Form 10-K Annual Report
+                    source_file: edgar/data/1234567890/0001140361-21-012345.txt
         '400':
           description: Invalid request
           content:
@@ -427,165 +417,132 @@ paths:
                 additionalProperties: { }
               examples:
                 Example XBRL Filing Extract:
-                  value: {
-  "CoverPage": {
-    "DocumentType": "10-K",
-    "DocumentAnnualReport": "true",
-    "DocumentPeriodEndDate": "2020-09-26",
-    "DocumentTransitionReport": "false",
-    "EntityFileNumber": "001-36743",
-    "EntityRegistrantName": "Apple Inc.",
-    "EntityIncorporationStateCountryCode": "CA",
-    "EntityTaxIdentificationNumber": "94-2404110",
-    "EntityAddressAddressLine1": "One Apple Park Way",
-    "EntityAddressCityOrTown": "Cupertino",
-    "EntityAddressStateOrProvince": "CA",
-    "EntityAddressPostalZipCode": "95014",
-    "CityAreaCode": "408",
-    "LocalPhoneNumber": "996-1010",
-    "Security12bTitle": [
-      {
-        "period": {
-          "startDate": "2019-09-29",
-          "endDate": "2020-09-26"
-        },
-        "segment": {
-          "dimension": "us-gaap:StatementClassOfStockAxis",
-          "value": "us-gaap:CommonStockMember"
-        },
-        "value": "Common Stock, $0.00001 par value per share"
-      }
-    ],
-    "TradingSymbol": {
-      "period": {
-        "startDate": "2019-09-29",
-        "endDate": "2020-09-26"
-      },
-      "segment": {
-        "dimension": "us-gaap:StatementClassOfStockAxis",
-        "value": "us-gaap:CommonStockMember"
-      },
-      "value": "AAPL"
-    },
-    "NoTradingSymbolFlag": [
-      {
-        "period": {
-          "startDate": "2019-09-29",
-          "endDate": "2020-09-26"
-        },
-        "segment": {
-          "dimension": "us-gaap:StatementClassOfStockAxis",
-          "value": "aapl:A1.000NotesDue2022Member"
-        },
-        "value": "true"
-      }
-    ],
-    "SecurityExchangeName": [
-      {
-        "period": {
-          "startDate": "2019-09-29",
-          "endDate": "2020-09-26"
-        },
-        "segment": {
-          "dimension": "us-gaap:StatementClassOfStockAxis",
-          "value": "us-gaap:CommonStockMember"
-        },
-        "value": "NASDAQ"
-      }
-    ],
-    "EntityWellKnownSeasonedIssuer": "Yes",
-    "EntityVoluntaryFilers": "No",
-    "EntityCurrentReportingStatus": "Yes",
-    "EntityInteractiveDataCurrent": "Yes",
-    "EntityFilerCategory": "Large Accelerated Filer",
-    "EntitySmallBusiness": "false",
-    "EntityEmergingGrowthCompany": "false",
-    "IcfrAuditorAttestationFlag": "true",
-    "EntityShellCompany": "false",
-    "EntityPublicFloat": {
-      "decimals": "-6",
-      "unitRef": "usd",
-      "period": {
-        "instant": "2020-03-27"
-      },
-      "value": "1070633000000"
-    },
-    "EntityCommonStockSharesOutstanding": {
-      "decimals": "-3",
-      "unitRef": "shares",
-      "period": {
-        "instant": "2020-10-16"
-      },
-      "value": "17001802000"
-    },
-    "AmendmentFlag": "false",
-    "DocumentFiscalYearFocus": "2020",
-    "DocumentFiscalPeriodFocus": "FY",
-    "EntityCentralIndexKey": "0000320193",
-    "CurrentFiscalYearEndDate": "--09-26"
-  },
-  "StatementsOfIncome": {
-    "RevenueFromContractWithCustomerExcludingAssessedTax": [
-      {
-        "decimals": "-6",
-        "unitRef": "usd",
-        "period": {
-          "startDate": "2019-09-29",
-          "endDate": "2020-09-26"
-        },
-        "segment": {
-          "dimension": "srt:ProductOrServiceAxis",
-          "value": "us-gaap:ProductMember"
-        },
-        "value": "220747000000"
-      }
-    ],
-    "CostOfGoodsAndServicesSold": [],
-    "GrossProfit": [],
-    "ResearchAndDevelopmentExpense": [],
-    "SellingGeneralAndAdministrativeExpense": [],
-    "OperatingExpenses": [],
-    "OperatingIncomeLoss": [],
-    "NonoperatingIncomeExpense": [],
-    "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest": [],
-    "IncomeTaxExpenseBenefit": [],
-    "NetIncomeLoss": [],
-    "EarningsPerShareBasic": [],
-    "EarningsPerShareDiluted": [],
-    "WeightedAverageNumberOfSharesOutstandingBasic": [],
-    "WeightedAverageNumberOfDilutedSharesOutstanding": []
-  },
-  "StatementsOfComprehensiveIncome": {
-    "NetIncomeLoss": [],
-    "OtherComprehensiveIncomeLossForeignCurrencyTransactionAndTranslationAdjustmentNetOfTax": [],
-    "OtherComprehensiveIncomeLossDerivativeInstrumentGainLossbeforeReclassificationafterTax": {
-      "decimals": "-6",
-      "unitRef": "usd",
-      "period": {
-        "startDate": "2019-09-29",
-        "endDate": "2020-09-26"
-      },
-      "value": "79000000"
-    }
-  },
-  "BalanceSheets": {},
-  "BalanceSheetsParenthetical": {},
-  "StatementsOfShareholdersEquity": {},
-  "StatementsOfCashFlows": {},
-  "SummaryofSignificantAccountingPolicies": {},
-  "SummaryofSignificantAccountingPoliciesPolicies": {},
-  "SummaryofSignificantAccountingPoliciesTables": {},
-  "SummaryofSignificantAccountingPoliciesAdditionalInformationDetails": {},
-  "SummaryofSignificantAccountingPoliciesComputationofBasicandDilutedEarningsPerShareDetails": {},
-  "RevenueRecognition": {},
-  "RevenueRecognitionTables": {},
-  "RevenueRecognitionAdditionalInformationDetails": {},
-  "RevenueRecognitionDeferredRevenueExpectedTimingofRealizationDetails": {},
-  "RevenueRecognitionNetSalesDisaggregatedbySignificantProductsandServicesDetails": {},
-  "FinancialInstruments": {},
-  "FinancialInstrumentsTables": {},
-  "FinancialInstrumentsCashCashEquivalentsandMarketableSecuritiesDetails": {}
-}
+                  value:
+                    CoverPage:
+                      DocumentType: 10-K
+                      DocumentAnnualReport: 'true'
+                      DocumentPeriodEndDate: '2020-09-26'
+                      DocumentTransitionReport: 'false'
+                      EntityFileNumber: 001-36743
+                      EntityRegistrantName: Apple Inc.
+                      EntityIncorporationStateCountryCode: CA
+                      EntityTaxIdentificationNumber: 94-2404110
+                      EntityAddressAddressLine1: One Apple Park Way
+                      EntityAddressCityOrTown: Cupertino
+                      EntityAddressStateOrProvince: CA
+                      EntityAddressPostalZipCode: '95014'
+                      CityAreaCode: '408'
+                      LocalPhoneNumber: 996-1010
+                      Security12bTitle:
+                        - period:
+                            startDate: '2019-09-29'
+                            endDate: '2020-09-26'
+                          segment:
+                            dimension: us-gaap:StatementClassOfStockAxis
+                            value: us-gaap:CommonStockMember
+                          value: 'Common Stock, $0.00001 par value per share'
+                      TradingSymbol:
+                        period:
+                          startDate: '2019-09-29'
+                          endDate: '2020-09-26'
+                        segment:
+                          dimension: us-gaap:StatementClassOfStockAxis
+                          value: us-gaap:CommonStockMember
+                        value: AAPL
+                      NoTradingSymbolFlag:
+                        - period:
+                            startDate: '2019-09-29'
+                            endDate: '2020-09-26'
+                          segment:
+                            dimension: us-gaap:StatementClassOfStockAxis
+                            value: aapl:A1.000NotesDue2022Member
+                          value: 'true'
+                      SecurityExchangeName:
+                        - period:
+                            startDate: '2019-09-29'
+                            endDate: '2020-09-26'
+                          segment:
+                            dimension: us-gaap:StatementClassOfStockAxis
+                            value: us-gaap:CommonStockMember
+                          value: NASDAQ
+                      EntityWellKnownSeasonedIssuer: Yes
+                      EntityVoluntaryFilers: No
+                      EntityCurrentReportingStatus: Yes
+                      EntityInteractiveDataCurrent: Yes
+                      EntityFilerCategory: Large Accelerated Filer
+                      EntitySmallBusiness: 'false'
+                      EntityEmergingGrowthCompany: 'false'
+                      IcfrAuditorAttestationFlag: 'true'
+                      EntityShellCompany: 'false'
+                      EntityPublicFloat:
+                        decimals: '-6'
+                        unitRef: usd
+                        period:
+                          instant: '2020-03-27'
+                        value: '1070633000000'
+                      EntityCommonStockSharesOutstanding:
+                        decimals: '-3'
+                        unitRef: shares
+                        period:
+                          instant: '2020-10-16'
+                        value: '17001802000'
+                      AmendmentFlag: 'false'
+                      DocumentFiscalYearFocus: '2020'
+                      DocumentFiscalPeriodFocus: FY
+                      EntityCentralIndexKey: '0000320193'
+                      CurrentFiscalYearEndDate: '--09-26'
+                    StatementsOfIncome:
+                      RevenueFromContractWithCustomerExcludingAssessedTax:
+                        - decimals: '-6'
+                          unitRef: usd
+                          period:
+                            startDate: '2019-09-29'
+                            endDate: '2020-09-26'
+                          segment:
+                            dimension: srt:ProductOrServiceAxis
+                            value: us-gaap:ProductMember
+                          value: '220747000000'
+                      CostOfGoodsAndServicesSold: [ ]
+                      GrossProfit: [ ]
+                      ResearchAndDevelopmentExpense: [ ]
+                      SellingGeneralAndAdministrativeExpense: [ ]
+                      OperatingExpenses: [ ]
+                      OperatingIncomeLoss: [ ]
+                      NonoperatingIncomeExpense: [ ]
+                      IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest: [ ]
+                      IncomeTaxExpenseBenefit: [ ]
+                      NetIncomeLoss: [ ]
+                      EarningsPerShareBasic: [ ]
+                      EarningsPerShareDiluted: [ ]
+                      WeightedAverageNumberOfSharesOutstandingBasic: [ ]
+                      WeightedAverageNumberOfDilutedSharesOutstanding: [ ]
+                    StatementsOfComprehensiveIncome:
+                      NetIncomeLoss: [ ]
+                      OtherComprehensiveIncomeLossForeignCurrencyTransactionAndTranslationAdjustmentNetOfTax: [ ]
+                      OtherComprehensiveIncomeLossDerivativeInstrumentGainLossbeforeReclassificationafterTax:
+                        decimals: '-6'
+                        unitRef: usd
+                        period:
+                          startDate: '2019-09-29'
+                          endDate: '2020-09-26'
+                        value: '79000000'
+                    BalanceSheets: { }
+                    BalanceSheetsParenthetical: { }
+                    StatementsOfShareholdersEquity: { }
+                    StatementsOfCashFlows: { }
+                    SummaryofSignificantAccountingPolicies: { }
+                    SummaryofSignificantAccountingPoliciesPolicies: { }
+                    SummaryofSignificantAccountingPoliciesTables: { }
+                    SummaryofSignificantAccountingPoliciesAdditionalInformationDetails: { }
+                    SummaryofSignificantAccountingPoliciesComputationofBasicandDilutedEarningsPerShareDetails: { }
+                    RevenueRecognition: { }
+                    RevenueRecognitionTables: { }
+                    RevenueRecognitionAdditionalInformationDetails: { }
+                    RevenueRecognitionDeferredRevenueExpectedTimingofRealizationDetails: { }
+                    RevenueRecognitionNetSalesDisaggregatedbySignificantProductsandServicesDetails: { }
+                    FinancialInstruments: { }
+                    FinancialInstrumentsTables: { }
+                    FinancialInstrumentsCashCashEquivalentsandMarketableSecuritiesDetails: { }
         '400':
           description: Invalid request - check parameter format
           content:
