@@ -73,6 +73,11 @@
                         "exchange_id": "GEMINIPM",
                         "market_name_institution_description": "Gemini's prediction markets product.",
                         "website": "https://www.gemini.com/prediction-markets"
+                      },
+                      {
+                        "exchange_id": "CRYPTOCOMPM",
+                        "market_name_institution_description": "Crypto.com's OG prediction markets product, powered by CDNA.",
+                        "website": "https://crypto.com/us/prediction"
                       }
                     ]
                   }
@@ -122,6 +127,11 @@
                         "exchange_id": "GEMINIPM",
                         "market_name_institution_description": "Gemini's prediction markets product.",
                         "website": "https://www.gemini.com/prediction-markets"
+                      },
+                      {
+                        "exchange_id": "CRYPTOCOMPM",
+                        "market_name_institution_description": "Crypto.com's OG prediction markets product, powered by CDNA.",
+                        "website": "https://crypto.com/us/prediction"
                       }
                     ]
                   }
@@ -171,6 +181,11 @@
                         "exchange_id": "GEMINIPM",
                         "market_name_institution_description": "Gemini's prediction markets product.",
                         "website": "https://www.gemini.com/prediction-markets"
+                      },
+                      {
+                        "exchange_id": "CRYPTOCOMPM",
+                        "market_name_institution_description": "Crypto.com's OG prediction markets product, powered by CDNA.",
+                        "website": "https://crypto.com/us/prediction"
                       }
                     ]
                   }
@@ -220,6 +235,11 @@
                         "exchange_id": "GEMINIPM",
                         "market_name_institution_description": "Gemini's prediction markets product.",
                         "website": "https://www.gemini.com/prediction-markets"
+                      },
+                      {
+                        "exchange_id": "CRYPTOCOMPM",
+                        "market_name_institution_description": "Crypto.com's OG prediction markets product, powered by CDNA.",
+                        "website": "https://crypto.com/us/prediction"
                       }
                     ]
                   }
