@@ -49,7 +49,7 @@ import org.openapitools.client.JSON;
 /**
  * Represents a metric information.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-08-20T06:04:26.905360494Z[Etc/UTC]", comments = "Generator version: 7.24.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-08-21T06:04:36.383057630Z[Etc/UTC]", comments = "Generator version: 7.24.0")
 public class V1MetricInfo {
   public static final String SERIALIZED_NAME_METRIC_ID = "metric_id";
   @SerializedName(SERIALIZED_NAME_METRIC_ID)
