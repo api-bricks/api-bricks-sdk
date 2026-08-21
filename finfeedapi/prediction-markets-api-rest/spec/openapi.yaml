@@ -53,6 +53,9 @@ paths:
                     - exchange_id: CRYPTOCOMPM
                       market_name_institution_description: 'Crypto.com''s OG prediction markets product, powered by CDNA.'
                       website: https://crypto.com/us/prediction
+                    - exchange_id: FORECASTEX
+                      market_name_institution_description: IBKR's CFTC-licensed event contract exchange — one of Robinhood's prediction-market data providers alongside KalshiEX.
+                      website: https://www.forecastex.com
             application/json:
               schema:
                 type: array
@@ -85,6 +88,9 @@ paths:
                     - exchange_id: CRYPTOCOMPM
                       market_name_institution_description: 'Crypto.com''s OG prediction markets product, powered by CDNA.'
                       website: https://crypto.com/us/prediction
+                    - exchange_id: FORECASTEX
+                      market_name_institution_description: IBKR's CFTC-licensed event contract exchange — one of Robinhood's prediction-market data providers alongside KalshiEX.
+                      website: https://www.forecastex.com
             text/json:
               schema:
                 type: array
@@ -117,6 +123,9 @@ paths:
                     - exchange_id: CRYPTOCOMPM
                       market_name_institution_description: 'Crypto.com''s OG prediction markets product, powered by CDNA.'
                       website: https://crypto.com/us/prediction
+                    - exchange_id: FORECASTEX
+                      market_name_institution_description: IBKR's CFTC-licensed event contract exchange — one of Robinhood's prediction-market data providers alongside KalshiEX.
+                      website: https://www.forecastex.com
             application/x-msgpack:
               schema:
                 type: array
@@ -149,6 +158,9 @@ paths:
                     - exchange_id: CRYPTOCOMPM
                       market_name_institution_description: 'Crypto.com''s OG prediction markets product, powered by CDNA.'
                       website: https://crypto.com/us/prediction
+                    - exchange_id: FORECASTEX
+                      market_name_institution_description: IBKR's CFTC-licensed event contract exchange — one of Robinhood's prediction-market data providers alongside KalshiEX.
+                      website: https://www.forecastex.com
   '/v1/exchanges/{exchange_id}':
     get:
       tags:
