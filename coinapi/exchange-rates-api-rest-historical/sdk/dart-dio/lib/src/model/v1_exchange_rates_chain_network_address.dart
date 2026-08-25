@@ -148,3 +148,4 @@ class _$V1ExchangeRatesChainNetworkAddressSerializer implements PrimitiveSeriali
   }
 }
 
+

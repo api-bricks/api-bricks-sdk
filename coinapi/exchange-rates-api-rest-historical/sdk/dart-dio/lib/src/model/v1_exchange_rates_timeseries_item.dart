@@ -248,3 +248,4 @@ class _$V1ExchangeRatesTimeseriesItemSerializer implements PrimitiveSerializer<V
   }
 }
 
+

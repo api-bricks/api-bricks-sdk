@@ -148,3 +148,4 @@ class _$V1IconSerializer implements PrimitiveSerializer<V1Icon> {
   }
 }
 
+

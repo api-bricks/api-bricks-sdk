@@ -41,10 +41,10 @@ try {
 ```
 
 ### Parameters
-| **assetIdBase** | **kotlin.String**| Requested exchange rate base asset identifier (from the Metadata -&gt; Assets) | |
-| **assetIdQuote** | **kotlin.String**| Requested exchange rate quote asset identifier (from the Metadata -&gt; Assets) | |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **assetIdBase** | **kotlin.String**| Requested exchange rate base asset identifier (from the Metadata -&gt; Assets) | |
+| **assetIdQuote** | **kotlin.String**| Requested exchange rate quote asset identifier (from the Metadata -&gt; Assets) | |
 | **time** | **kotlin.String**| Time at which exchange rate is calculated (optional, if not supplied then current rate is returned) | [optional] |
 
 ### Return type
@@ -98,14 +98,14 @@ try {
 ```
 
 ### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
 | **assetIdBase** | **kotlin.String**| Requested exchange rates base asset identifier (from the Metadata -&gt; Assets) | |
 | **assetIdQuote** | **kotlin.String**| Requested exchange rates base asset identifier (from the Metadata -&gt; Assets) | |
 | **periodId** | **kotlin.String**| Identifier of requested timeseries period (required, e.g. &#x60;5SEC&#x60; or &#x60;1HRS&#x60;) | [optional] |
 | **timeStart** | **kotlin.String**| Timeseries starting time in ISO 8601 (required) | [optional] |
 | **timeEnd** | **kotlin.String**| Timeseries ending time in ISO 8601 (required) | [optional] |
 | **limit** | **kotlin.Int**| Amount of items to return (optional, mininum is 1, maximum is 100000, default value is 100, if the parameter is used then every 100 output items are counted as one request) | [optional] [default to 100] |
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
 | **extendedGapFilling** | **kotlin.Boolean**| If true, enables extended gap filling that considers rates before time_start and after time_end for proper gap filling at boundaries (optional, default is false) | [optional] [default to false] |
 
 ### Return type
@@ -156,11 +156,11 @@ try {
 ```
 
 ### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
 | **assetIdBase** | **kotlin.String**| Requested exchange rates base asset identifier (from the Metadata -&gt; Assets) | |
 | **filterAssetId** | **kotlin.String**| Comma or semicolon delimited asset identifiers used to filter response (optional) | [optional] |
 | **invert** | **kotlin.Boolean**| True will invert all the rates (optional, if true then rates will be calculated as &#x60;rate &#x3D; 1 / actual_rate&#x60; eg. &#x60;USD/BTC&#x60; as &#x60;BTC/USD&#x60;) | [optional] [default to false] |
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
 | **time** | **kotlin.String**| Time for historical rates (optional) | [optional] |
 
 ### Return type

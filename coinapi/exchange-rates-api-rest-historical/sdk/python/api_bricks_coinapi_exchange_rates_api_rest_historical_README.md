@@ -5,7 +5,7 @@ The `api_bricks_coinapi_exchange_rates_api_rest_historical` package is automatic
 
 - API version: v1
 - Package version: 1.0.0
-- Generator version: 7.24.0
+- Generator version: 7.25.0
 - Build package: org.openapitools.codegen.languages.PythonClientCodegen
 For more information, please visit [https://www.coinapi.io](https://www.coinapi.io)
 

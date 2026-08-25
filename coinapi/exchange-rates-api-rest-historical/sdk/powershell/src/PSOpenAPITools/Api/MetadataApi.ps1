@@ -69,7 +69,7 @@ function Invoke-V1AssetsAssetIdGet {
         if (!$AssetId) {
             throw "Error! The required parameter `AssetId` missing when calling v1AssetsAssetIdGet."
         }
-        $LocalVarUri = $LocalVarUri.replace('{asset_id}', [System.Web.HTTPUtility]::UrlEncode($AssetId))
+        $LocalVarUri = $LocalVarUri.replace('{asset_id}', [System.Uri]::EscapeDataString([string]$AssetId))
 
         if ($Configuration["ApiKeyPrefix"] -and $Configuration["ApiKeyPrefix"]["X-CoinAPI-Key"]) {
             $apiKeyPrefix = $Configuration["ApiKeyPrefix"]["X-CoinAPI-Key"]
@@ -259,7 +259,7 @@ function Invoke-V1AssetsIconsSizeGet {
         if (!$Size) {
             throw "Error! The required parameter `Size` missing when calling v1AssetsIconsSizeGet."
         }
-        $LocalVarUri = $LocalVarUri.replace('{size}', [System.Web.HTTPUtility]::UrlEncode($Size))
+        $LocalVarUri = $LocalVarUri.replace('{size}', [System.Uri]::EscapeDataString([string]$Size))
 
         if ($Configuration["ApiKeyPrefix"] -and $Configuration["ApiKeyPrefix"]["X-CoinAPI-Key"]) {
             $apiKeyPrefix = $Configuration["ApiKeyPrefix"]["X-CoinAPI-Key"]

@@ -81,11 +81,11 @@ function Get-SpecificRate {
         if (!$AssetIdBase) {
             throw "Error! The required parameter `AssetIdBase` missing when calling get_specific_rate."
         }
-        $LocalVarUri = $LocalVarUri.replace('{asset_id_base}', [System.Web.HTTPUtility]::UrlEncode($AssetIdBase))
+        $LocalVarUri = $LocalVarUri.replace('{asset_id_base}', [System.Uri]::EscapeDataString([string]$AssetIdBase))
         if (!$AssetIdQuote) {
             throw "Error! The required parameter `AssetIdQuote` missing when calling get_specific_rate."
         }
-        $LocalVarUri = $LocalVarUri.replace('{asset_id_quote}', [System.Web.HTTPUtility]::UrlEncode($AssetIdQuote))
+        $LocalVarUri = $LocalVarUri.replace('{asset_id_quote}', [System.Uri]::EscapeDataString([string]$AssetIdQuote))
 
         if ($Time) {
             $LocalVarQueryParameters['time'] = $Time
@@ -220,11 +220,11 @@ function Invoke-V1ExchangerateAssetIdBaseAssetIdQuoteHistoryGet {
         if (!$AssetIdBase) {
             throw "Error! The required parameter `AssetIdBase` missing when calling v1ExchangerateAssetIdBaseAssetIdQuoteHistoryGet."
         }
-        $LocalVarUri = $LocalVarUri.replace('{asset_id_base}', [System.Web.HTTPUtility]::UrlEncode($AssetIdBase))
+        $LocalVarUri = $LocalVarUri.replace('{asset_id_base}', [System.Uri]::EscapeDataString([string]$AssetIdBase))
         if (!$AssetIdQuote) {
             throw "Error! The required parameter `AssetIdQuote` missing when calling v1ExchangerateAssetIdBaseAssetIdQuoteHistoryGet."
         }
-        $LocalVarUri = $LocalVarUri.replace('{asset_id_quote}', [System.Web.HTTPUtility]::UrlEncode($AssetIdQuote))
+        $LocalVarUri = $LocalVarUri.replace('{asset_id_quote}', [System.Uri]::EscapeDataString([string]$AssetIdQuote))
 
         if ($PeriodId) {
             $LocalVarQueryParameters['period_id'] = $PeriodId
@@ -357,7 +357,7 @@ function Invoke-V1ExchangerateAssetIdBaseGet {
         if (!$AssetIdBase) {
             throw "Error! The required parameter `AssetIdBase` missing when calling v1ExchangerateAssetIdBaseGet."
         }
-        $LocalVarUri = $LocalVarUri.replace('{asset_id_base}', [System.Web.HTTPUtility]::UrlEncode($AssetIdBase))
+        $LocalVarUri = $LocalVarUri.replace('{asset_id_base}', [System.Uri]::EscapeDataString([string]$AssetIdBase))
 
         if ($FilterAssetId) {
             $LocalVarQueryParameters['filter_asset_id'] = $FilterAssetId

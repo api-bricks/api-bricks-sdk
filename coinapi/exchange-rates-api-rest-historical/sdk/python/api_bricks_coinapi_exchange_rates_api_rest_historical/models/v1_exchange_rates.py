@@ -76,8 +76,7 @@ class V1ExchangeRates(BaseModel):
         _items = []
         if self.rates:
             for _item_rates in self.rates:
-                if _item_rates:
-                    _items.append(_item_rates.to_dict())
+                _items.append(_item_rates.to_dict() if _item_rates is not None else None)
             _dict['rates'] = _items
         # set to None if asset_id_base (nullable) is None
         # and model_fields_set contains the field
