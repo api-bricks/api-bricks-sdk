@@ -61,7 +61,7 @@ namespace APIBricks.CoinAPI.MarketDataAPI.REST.V1.Test.Api
             Client.Option<int> limitLevels = default!;
             var response = await _instance.V1OrderbooksSymbolIdCurrentGetAsync(symbolId, limitLevels);
             var model = response.Ok();
-            Assert.IsType<V1OrderBookBase>(model);
+            Assert.IsType<APIBricks.CoinAPI.MarketDataAPI.REST.V1.Model.V1OrderBookBase>(model);
         }
 
         /// <summary>
@@ -74,7 +74,7 @@ namespace APIBricks.CoinAPI.MarketDataAPI.REST.V1.Test.Api
             Client.Option<int> limitLevels = default!;
             var response = await _instance.V1OrderbooksSymbolIdDepthCurrentGetAsync(symbolId, limitLevels);
             var model = response.Ok();
-            Assert.IsType<V1OrderBookDepth>(model);
+            Assert.IsType<APIBricks.CoinAPI.MarketDataAPI.REST.V1.Model.V1OrderBookDepth>(model);
         }
 
         /// <summary>

@@ -148,3 +148,4 @@ class _$V1ChainNetworkAddressSerializer implements PrimitiveSerializer<V1ChainNe
   }
 }
 
+

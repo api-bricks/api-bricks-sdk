@@ -626,11 +626,23 @@ namespace APIBricks.CoinAPI.MarketDataAPI.REST.V1.Api
             /// <returns></returns>
             public List<V1QuoteTrade>? Ok()
             {
-                // This logic may be modified with the AsModel.mustache template
+                bool suppressDefault = false;
+                List<V1QuoteTrade>? result = null;
+                OnOk(ref suppressDefault, ref result);
+                if (!suppressDefault)
+                    result = DefaultOk();
+                return result;
+            }
+
+            private List<V1QuoteTrade>? DefaultOk()
+            {
+                // NOTICE: Consider this AsModel template deprecated. Implement the appropriate partial method instead
                 return IsOk
                     ? System.Text.Json.JsonSerializer.Deserialize<List<V1QuoteTrade>>(RawContent, _jsonSerializerOptions)
                     : null;
             }
+
+            partial void OnOk(ref bool suppressDefault, ref List<V1QuoteTrade>? result);
 
             /// <summary>
             /// Returns true if the response is 200 Ok and the deserialized response is not null
@@ -913,11 +925,23 @@ namespace APIBricks.CoinAPI.MarketDataAPI.REST.V1.Api
             /// <returns></returns>
             public List<V1Quote>? Ok()
             {
-                // This logic may be modified with the AsModel.mustache template
+                bool suppressDefault = false;
+                List<V1Quote>? result = null;
+                OnOk(ref suppressDefault, ref result);
+                if (!suppressDefault)
+                    result = DefaultOk();
+                return result;
+            }
+
+            private List<V1Quote>? DefaultOk()
+            {
+                // NOTICE: Consider this AsModel template deprecated. Implement the appropriate partial method instead
                 return IsOk
                     ? System.Text.Json.JsonSerializer.Deserialize<List<V1Quote>>(RawContent, _jsonSerializerOptions)
                     : null;
             }
+
+            partial void OnOk(ref bool suppressDefault, ref List<V1Quote>? result);
 
             /// <summary>
             /// Returns true if the response is 200 Ok and the deserialized response is not null
@@ -1172,11 +1196,23 @@ namespace APIBricks.CoinAPI.MarketDataAPI.REST.V1.Api
             /// <returns></returns>
             public APIBricks.CoinAPI.MarketDataAPI.REST.V1.Model.V1QuoteTrade? Ok()
             {
-                // This logic may be modified with the AsModel.mustache template
+                bool suppressDefault = false;
+                APIBricks.CoinAPI.MarketDataAPI.REST.V1.Model.V1QuoteTrade? result = null;
+                OnOk(ref suppressDefault, ref result);
+                if (!suppressDefault)
+                    result = DefaultOk();
+                return result;
+            }
+
+            private APIBricks.CoinAPI.MarketDataAPI.REST.V1.Model.V1QuoteTrade? DefaultOk()
+            {
+                // NOTICE: Consider this AsModel template deprecated. Implement the appropriate partial method instead
                 return IsOk
                     ? System.Text.Json.JsonSerializer.Deserialize<APIBricks.CoinAPI.MarketDataAPI.REST.V1.Model.V1QuoteTrade>(RawContent, _jsonSerializerOptions)
                     : null;
             }
+
+            partial void OnOk(ref bool suppressDefault, ref APIBricks.CoinAPI.MarketDataAPI.REST.V1.Model.V1QuoteTrade? result);
 
             /// <summary>
             /// Returns true if the response is 200 Ok and the deserialized response is not null
@@ -1483,11 +1519,23 @@ namespace APIBricks.CoinAPI.MarketDataAPI.REST.V1.Api
             /// <returns></returns>
             public List<V1Quote>? Ok()
             {
-                // This logic may be modified with the AsModel.mustache template
+                bool suppressDefault = false;
+                List<V1Quote>? result = null;
+                OnOk(ref suppressDefault, ref result);
+                if (!suppressDefault)
+                    result = DefaultOk();
+                return result;
+            }
+
+            private List<V1Quote>? DefaultOk()
+            {
+                // NOTICE: Consider this AsModel template deprecated. Implement the appropriate partial method instead
                 return IsOk
                     ? System.Text.Json.JsonSerializer.Deserialize<List<V1Quote>>(RawContent, _jsonSerializerOptions)
                     : null;
             }
+
+            partial void OnOk(ref bool suppressDefault, ref List<V1Quote>? result);
 
             /// <summary>
             /// Returns true if the response is 200 Ok and the deserialized response is not null
@@ -1755,11 +1803,23 @@ namespace APIBricks.CoinAPI.MarketDataAPI.REST.V1.Api
             /// <returns></returns>
             public List<V1Quote>? Ok()
             {
-                // This logic may be modified with the AsModel.mustache template
+                bool suppressDefault = false;
+                List<V1Quote>? result = null;
+                OnOk(ref suppressDefault, ref result);
+                if (!suppressDefault)
+                    result = DefaultOk();
+                return result;
+            }
+
+            private List<V1Quote>? DefaultOk()
+            {
+                // NOTICE: Consider this AsModel template deprecated. Implement the appropriate partial method instead
                 return IsOk
                     ? System.Text.Json.JsonSerializer.Deserialize<List<V1Quote>>(RawContent, _jsonSerializerOptions)
                     : null;
             }
+
+            partial void OnOk(ref bool suppressDefault, ref List<V1Quote>? result);
 
             /// <summary>
             /// Returns true if the response is 200 Ok and the deserialized response is not null

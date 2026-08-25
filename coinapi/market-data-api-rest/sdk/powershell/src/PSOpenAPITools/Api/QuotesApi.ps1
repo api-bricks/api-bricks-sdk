@@ -299,7 +299,7 @@ function Invoke-V1QuotesSymbolIdCurrentGet {
         if (!$SymbolId) {
             throw "Error! The required parameter `SymbolId` missing when calling v1QuotesSymbolIdCurrentGet."
         }
-        $LocalVarUri = $LocalVarUri.replace('{symbol_id}', [System.Web.HTTPUtility]::UrlEncode($SymbolId))
+        $LocalVarUri = $LocalVarUri.replace('{symbol_id}', [System.Uri]::EscapeDataString([string]$SymbolId))
 
         if ($Configuration["ApiKeyPrefix"] -and $Configuration["ApiKeyPrefix"]["Authorization"]) {
             $apiKeyPrefix = $Configuration["ApiKeyPrefix"]["Authorization"]
@@ -423,7 +423,7 @@ function Invoke-V1QuotesSymbolIdHistoryGet {
         if (!$SymbolId) {
             throw "Error! The required parameter `SymbolId` missing when calling v1QuotesSymbolIdHistoryGet."
         }
-        $LocalVarUri = $LocalVarUri.replace('{symbol_id}', [System.Web.HTTPUtility]::UrlEncode($SymbolId))
+        $LocalVarUri = $LocalVarUri.replace('{symbol_id}', [System.Uri]::EscapeDataString([string]$SymbolId))
 
         if ($Date) {
             $LocalVarQueryParameters['date'] = $Date
@@ -545,7 +545,7 @@ function Invoke-V1QuotesSymbolIdLatestGet {
         if (!$SymbolId) {
             throw "Error! The required parameter `SymbolId` missing when calling v1QuotesSymbolIdLatestGet."
         }
-        $LocalVarUri = $LocalVarUri.replace('{symbol_id}', [System.Web.HTTPUtility]::UrlEncode($SymbolId))
+        $LocalVarUri = $LocalVarUri.replace('{symbol_id}', [System.Uri]::EscapeDataString([string]$SymbolId))
 
         if ($Limit) {
             $LocalVarQueryParameters['limit'] = $Limit

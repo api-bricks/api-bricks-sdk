@@ -128,3 +128,4 @@ class _$MarketDataMetadataChainSerializer implements PrimitiveSerializer<MarketD
   }
 }
 
+

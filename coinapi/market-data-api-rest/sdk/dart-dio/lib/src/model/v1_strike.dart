@@ -147,3 +147,4 @@ class _$V1StrikeSerializer implements PrimitiveSerializer<V1Strike> {
   }
 }
 
+

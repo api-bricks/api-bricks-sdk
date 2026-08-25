@@ -326,3 +326,4 @@ class _$OhlcvExchangeTimeseriesItemSerializer implements PrimitiveSerializer<Ohl
   }
 }
 
+

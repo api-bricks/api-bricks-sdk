@@ -69,7 +69,7 @@ function Invoke-V1OptionsExchangeIdCurrentGet {
         if (!$ExchangeId) {
             throw "Error! The required parameter `ExchangeId` missing when calling v1OptionsExchangeIdCurrentGet."
         }
-        $LocalVarUri = $LocalVarUri.replace('{exchange_id}', [System.Web.HTTPUtility]::UrlEncode($ExchangeId))
+        $LocalVarUri = $LocalVarUri.replace('{exchange_id}', [System.Uri]::EscapeDataString([string]$ExchangeId))
 
         if ($Configuration["ApiKeyPrefix"] -and $Configuration["ApiKeyPrefix"]["Authorization"]) {
             $apiKeyPrefix = $Configuration["ApiKeyPrefix"]["Authorization"]

@@ -168,3 +168,4 @@ class _$V1ExchangeRateSerializer implements PrimitiveSerializer<V1ExchangeRate> 
   }
 }
 
+

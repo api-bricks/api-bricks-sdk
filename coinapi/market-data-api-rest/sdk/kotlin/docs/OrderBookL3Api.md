@@ -36,9 +36,9 @@ try {
 ```
 
 ### Parameters
-| **filterSymbolId** | **kotlin.String**| Comma or semicolon delimited parts of symbol identifier used to filter the response. | [optional] |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **filterSymbolId** | **kotlin.String**| Comma or semicolon delimited parts of symbol identifier used to filter the response. | [optional] |
 | **limitLevels** | **kotlin.Int**| The maximum number of levels to include in the response. | [optional] |
 
 ### Return type
@@ -95,9 +95,9 @@ try {
 ```
 
 ### Parameters
-| **symbolId** | **kotlin.String**| The symbol ID (from the Metadata -&gt; Symbols) | |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **symbolId** | **kotlin.String**| The symbol ID (from the Metadata -&gt; Symbols) | |
 | **limitLevels** | **kotlin.Int**| The maximum number of levels to include in the response. | [optional] |
 
 ### Return type

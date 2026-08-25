@@ -102,8 +102,7 @@ class MarketDataMetadataAsset(BaseModel):
         _items = []
         if self.chain_addresses:
             for _item_chain_addresses in self.chain_addresses:
-                if _item_chain_addresses:
-                    _items.append(_item_chain_addresses.to_dict())
+                _items.append(_item_chain_addresses.to_dict() if _item_chain_addresses is not None else None)
             _dict['chain_addresses'] = _items
         # set to None if asset_id (nullable) is None
         # and model_fields_set contains the field

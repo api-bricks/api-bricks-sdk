@@ -268,3 +268,4 @@ class _$V1GeneralDataSerializer implements PrimitiveSerializer<V1GeneralData> {
   }
 }
 
+

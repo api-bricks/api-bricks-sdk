@@ -185,7 +185,7 @@ function Invoke-V1Orderbooks3SymbolIdCurrentGet {
         if (!$SymbolId) {
             throw "Error! The required parameter `SymbolId` missing when calling v1Orderbooks3SymbolIdCurrentGet."
         }
-        $LocalVarUri = $LocalVarUri.replace('{symbol_id}', [System.Web.HTTPUtility]::UrlEncode($SymbolId))
+        $LocalVarUri = $LocalVarUri.replace('{symbol_id}', [System.Uri]::EscapeDataString([string]$SymbolId))
 
         if ($LimitLevels) {
             $LocalVarQueryParameters['limit_levels'] = $LimitLevels

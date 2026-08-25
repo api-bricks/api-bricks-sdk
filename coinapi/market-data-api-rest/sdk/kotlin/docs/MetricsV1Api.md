@@ -48,11 +48,11 @@ try {
 ```
 
 ### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
 | **metricId** | **kotlin.String**| Metric identifier (from the Metrics -&gt; Listing) | [optional] |
 | **assetId** | **kotlin.String**| Asset identifier (from the Metadata -&gt; Assets) | [optional] |
 | **assetIdExternal** | **kotlin.String**| Exchange asset identifier | [optional] |
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
 | **exchangeId** | **kotlin.String**| Exchange identifier (from the Metadata -&gt; Exchanges) | [optional] |
 
 ### Return type
@@ -116,6 +116,8 @@ try {
 ```
 
 ### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
 | **metricId** | **kotlin.String**| Metric identifier (from the Metrics -&gt; Listing) | |
 | **exchangeId** | **kotlin.String**| Exchange identifier (from the Metadata -&gt; Exchanges) | |
 | **assetId** | **kotlin.String**| Asset identifier (from the Metadata -&gt; Assets) | [optional] |
@@ -124,8 +126,6 @@ try {
 | **timeEnd** | **java.time.OffsetDateTime**| Ending time in ISO 8601 | [optional] |
 | **timeFormat** | **kotlin.String**| If set, returned values will be in unix timestamp format (valid values: unix_sec, unix_millisec, unix_microsec, unix_nanosec) | [optional] |
 | **periodId** | **kotlin.String**| Identifier of requested timeseries period (e.g. &#x60;5SEC&#x60; or &#x60;2MTH&#x60;), default value is &#x60;1SEC&#x60; | [optional] |
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
 | **limit** | **kotlin.Int**| Amount of items to return (optional, mininum is 1, maximum is 100000, default value is 100, if the parameter is used then every 100 output items are counted as one request) | [optional] [default to 100] |
 
 ### Return type
@@ -186,13 +186,13 @@ try {
 ```
 
 ### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
 | **metricId** | **kotlin.String**| Metric identifier (from the Metrics -&gt; Listing) | [optional] |
 | **exchangeId** | **kotlin.String**| Exchange identifier (from the Metadata -&gt; Exchanges) | [optional] |
 | **chainId** | **kotlin.String**| Chain identifier | [optional] |
 | **networkId** | **kotlin.String**| Network identifier | [optional] |
 | **assetId** | **kotlin.String**| Asset identifier (from the Metadata -&gt; Assets) | [optional] |
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
 | **assetIdExternal** | **kotlin.String**| The asset external identifier | [optional] |
 
 ### Return type
@@ -249,9 +249,9 @@ try {
 ```
 
 ### Parameters
-| **exchangeId** | **kotlin.String**| The exchange identifier (from the Metadata -&gt; Exchanges) | |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **exchangeId** | **kotlin.String**| The exchange identifier (from the Metadata -&gt; Exchanges) | |
 | **metricId** | **kotlin.String**| The metric identifier (from the Metrics -&gt; Listing) | [optional] |
 
 ### Return type
@@ -313,14 +313,14 @@ try {
 ```
 
 ### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
 | **metricId** | **kotlin.String**| Metric identifier (from the Metrics -&gt; Listing) | |
 | **exchangeId** | **kotlin.String**| Exchange identifier (from the Metadata -&gt; Exchanges) | |
 | **timeStart** | **java.time.OffsetDateTime**| Starting time in ISO 8601 | [optional] |
 | **timeEnd** | **java.time.OffsetDateTime**| Ending time in ISO 8601 | [optional] |
 | **timeFormat** | **kotlin.String**| If set, returned values will be in unix timestamp format (valid values: unix_sec, unix_millisec, unix_microsec, unix_nanosec) | [optional] |
 | **periodId** | **kotlin.String**| Identifier of requested timeseries period (e.g. &#x60;5SEC&#x60; or &#x60;2MTH&#x60;), default value is &#x60;1SEC&#x60; | [optional] |
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
 | **limit** | **kotlin.Int**| Amount of items to return (optional, mininum is 1, maximum is 100000, default value is 100, if the parameter is used then every 100 output items are counted as one request) | [optional] [default to 100] |
 
 ### Return type
@@ -377,9 +377,9 @@ try {
 ```
 
 ### Parameters
-| **exchangeId** | **kotlin.String**| The exchange identifier (from the Metadata -&gt; Exchanges) | |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **exchangeId** | **kotlin.String**| The exchange identifier (from the Metadata -&gt; Exchanges) | |
 | **metricId** | **kotlin.String**| The metric identifier (from the Metrics -&gt; Listing) | [optional] |
 
 ### Return type
@@ -491,10 +491,10 @@ try {
 ```
 
 ### Parameters
-| **metricId** | **kotlin.String**| Metric identifier (from the Metrics -&gt; Listing) | [optional] |
-| **symbolId** | **kotlin.String**| Symbol identifier (from the Metadata -&gt; Symbols) | [optional] |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **metricId** | **kotlin.String**| Metric identifier (from the Metrics -&gt; Listing) | [optional] |
+| **symbolId** | **kotlin.String**| Symbol identifier (from the Metadata -&gt; Symbols) | [optional] |
 | **exchangeId** | **kotlin.String**| Exchange id (from the Metadata -&gt; Exchanges) | [optional] |
 
 ### Return type
@@ -556,14 +556,14 @@ try {
 ```
 
 ### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
 | **metricId** | **kotlin.String**| Metric identifier (from the Metrics -&gt; Listing) | |
 | **symbolId** | **kotlin.String**| Symbol identifier (from the Metadata -&gt; Symbols) | |
 | **timeStart** | **java.time.OffsetDateTime**| Starting time in ISO 8601 | [optional] |
 | **timeEnd** | **java.time.OffsetDateTime**| Ending time in ISO 8601 | [optional] |
 | **timeFormat** | **kotlin.String**| If set, returned values will be in unix timestamp format (valid values: unix_sec, unix_millisec, unix_microsec, unix_nanosec) | [optional] |
 | **periodId** | **kotlin.String**| Identifier of requested timeseries period (e.g. &#x60;5SEC&#x60; or &#x60;2MTH&#x60;), default value is &#x60;1SEC&#x60; | [optional] |
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
 | **limit** | **kotlin.Int**| Amount of items to return (optional, mininum is 1, maximum is 100000, default value is 100, if the parameter is used then every 100 output items are counted as one request) | [optional] [default to 100] |
 
 ### Return type
@@ -621,10 +621,10 @@ try {
 ```
 
 ### Parameters
-| **metricId** | **kotlin.String**| Metric identifier (from the Metrics -&gt; Listing) | [optional] |
-| **exchangeId** | **kotlin.String**| Exchange identifier (from the Metadata -&gt; Exchanges) | [optional] |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **metricId** | **kotlin.String**| Metric identifier (from the Metrics -&gt; Listing) | [optional] |
+| **exchangeId** | **kotlin.String**| Exchange identifier (from the Metadata -&gt; Exchanges) | [optional] |
 | **symbolId** | **kotlin.String**| Symbol identifier (from the Metadata -&gt; Symbols) | [optional] |
 
 ### Return type

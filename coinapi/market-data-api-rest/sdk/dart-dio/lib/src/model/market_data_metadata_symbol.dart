@@ -1127,3 +1127,4 @@ class _$MarketDataMetadataSymbolSerializer implements PrimitiveSerializer<Market
   }
 }
 
+

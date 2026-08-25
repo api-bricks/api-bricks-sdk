@@ -528,3 +528,4 @@ class _$MarketDataMetadataAssetSerializer implements PrimitiveSerializer<MarketD
   }
 }
 
+

@@ -80,8 +80,7 @@ class V1OptionExchangeGroup(BaseModel):
         _items = []
         if self.strikes:
             for _item_strikes in self.strikes:
-                if _item_strikes:
-                    _items.append(_item_strikes.to_dict())
+                _items.append(_item_strikes.to_dict() if _item_strikes is not None else None)
             _dict['strikes'] = _items
         # set to None if asset_id_base (nullable) is None
         # and model_fields_set contains the field

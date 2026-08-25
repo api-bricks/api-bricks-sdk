@@ -2,8 +2,8 @@
 
 CoinAPI Market Data REST API
 - API version: v1
-  - Build date: 2026-08-21T06:04:36.383057630Z[Etc/UTC]
-  - Generator version: 7.24.0
+  - Build date: 2026-08-25T06:04:05.282506922Z[Etc/UTC]
+  - Generator version: 7.25.0
 
 Cryptocurrency market data: metadata, quotes, books, trades, OHLCV, rates, metrics, options.
 

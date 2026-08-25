@@ -69,7 +69,7 @@ function Invoke-V1AssetsAssetIdGet {
         if (!$AssetId) {
             throw "Error! The required parameter `AssetId` missing when calling v1AssetsAssetIdGet."
         }
-        $LocalVarUri = $LocalVarUri.replace('{asset_id}', [System.Web.HTTPUtility]::UrlEncode($AssetId))
+        $LocalVarUri = $LocalVarUri.replace('{asset_id}', [System.Uri]::EscapeDataString([string]$AssetId))
 
         if ($Configuration["ApiKeyPrefix"] -and $Configuration["ApiKeyPrefix"]["Authorization"]) {
             $apiKeyPrefix = $Configuration["ApiKeyPrefix"]["Authorization"]
@@ -279,7 +279,7 @@ function Invoke-V1AssetsIconsSizeGet {
         if (!$Size) {
             throw "Error! The required parameter `Size` missing when calling v1AssetsIconsSizeGet."
         }
-        $LocalVarUri = $LocalVarUri.replace('{size}', [System.Web.HTTPUtility]::UrlEncode($Size))
+        $LocalVarUri = $LocalVarUri.replace('{size}', [System.Uri]::EscapeDataString([string]$Size))
 
         if ($Configuration["ApiKeyPrefix"] -and $Configuration["ApiKeyPrefix"]["Authorization"]) {
             $apiKeyPrefix = $Configuration["ApiKeyPrefix"]["Authorization"]
@@ -379,7 +379,7 @@ function Invoke-V1ChainsChainIdGet {
         if (!$ChainId) {
             throw "Error! The required parameter `ChainId` missing when calling v1ChainsChainIdGet."
         }
-        $LocalVarUri = $LocalVarUri.replace('{chain_id}', [System.Web.HTTPUtility]::UrlEncode($ChainId))
+        $LocalVarUri = $LocalVarUri.replace('{chain_id}', [System.Uri]::EscapeDataString([string]$ChainId))
 
         if ($Configuration["ApiKeyPrefix"] -and $Configuration["ApiKeyPrefix"]["Authorization"]) {
             $apiKeyPrefix = $Configuration["ApiKeyPrefix"]["Authorization"]
@@ -579,7 +579,7 @@ function Invoke-V1ExchangesExchangeIdGet {
         if (!$ExchangeId) {
             throw "Error! The required parameter `ExchangeId` missing when calling v1ExchangesExchangeIdGet."
         }
-        $LocalVarUri = $LocalVarUri.replace('{exchange_id}', [System.Web.HTTPUtility]::UrlEncode($ExchangeId))
+        $LocalVarUri = $LocalVarUri.replace('{exchange_id}', [System.Uri]::EscapeDataString([string]$ExchangeId))
 
         if ($Configuration["ApiKeyPrefix"] -and $Configuration["ApiKeyPrefix"]["Authorization"]) {
             $apiKeyPrefix = $Configuration["ApiKeyPrefix"]["Authorization"]
@@ -779,7 +779,7 @@ function Invoke-V1ExchangesIconsSizeGet {
         if (!$Size) {
             throw "Error! The required parameter `Size` missing when calling v1ExchangesIconsSizeGet."
         }
-        $LocalVarUri = $LocalVarUri.replace('{size}', [System.Web.HTTPUtility]::UrlEncode($Size))
+        $LocalVarUri = $LocalVarUri.replace('{size}', [System.Uri]::EscapeDataString([string]$Size))
 
         if ($Configuration["ApiKeyPrefix"] -and $Configuration["ApiKeyPrefix"]["Authorization"]) {
             $apiKeyPrefix = $Configuration["ApiKeyPrefix"]["Authorization"]
@@ -891,7 +891,7 @@ function Invoke-V1SymbolsExchangeIdActiveGet {
         if (!$ExchangeId) {
             throw "Error! The required parameter `ExchangeId` missing when calling v1SymbolsExchangeIdActiveGet."
         }
-        $LocalVarUri = $LocalVarUri.replace('{exchange_id}', [System.Web.HTTPUtility]::UrlEncode($ExchangeId))
+        $LocalVarUri = $LocalVarUri.replace('{exchange_id}', [System.Uri]::EscapeDataString([string]$ExchangeId))
 
         if ($FilterSymbolId) {
             $LocalVarQueryParameters['filter_symbol_id'] = $FilterSymbolId
@@ -1011,7 +1011,7 @@ function Invoke-V1SymbolsExchangeIdHistoryGet {
         if (!$ExchangeId) {
             throw "Error! The required parameter `ExchangeId` missing when calling v1SymbolsExchangeIdHistoryGet."
         }
-        $LocalVarUri = $LocalVarUri.replace('{exchange_id}', [System.Web.HTTPUtility]::UrlEncode($ExchangeId))
+        $LocalVarUri = $LocalVarUri.replace('{exchange_id}', [System.Uri]::EscapeDataString([string]$ExchangeId))
 
         if ($Page) {
             $LocalVarQueryParameters['page'] = $Page
@@ -1119,7 +1119,7 @@ function Invoke-V1SymbolsMapExchangeIdGet {
         if (!$ExchangeId) {
             throw "Error! The required parameter `ExchangeId` missing when calling v1SymbolsMapExchangeIdGet."
         }
-        $LocalVarUri = $LocalVarUri.replace('{exchange_id}', [System.Web.HTTPUtility]::UrlEncode($ExchangeId))
+        $LocalVarUri = $LocalVarUri.replace('{exchange_id}', [System.Uri]::EscapeDataString([string]$ExchangeId))
 
         if ($Configuration["ApiKeyPrefix"] -and $Configuration["ApiKeyPrefix"]["Authorization"]) {
             $apiKeyPrefix = $Configuration["ApiKeyPrefix"]["Authorization"]

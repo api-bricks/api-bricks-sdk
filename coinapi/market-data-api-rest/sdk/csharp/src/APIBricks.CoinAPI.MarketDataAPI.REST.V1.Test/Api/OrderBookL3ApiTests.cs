@@ -74,7 +74,7 @@ namespace APIBricks.CoinAPI.MarketDataAPI.REST.V1.Test.Api
             Client.Option<int> limitLevels = default!;
             var response = await _instance.V1Orderbooks3SymbolIdCurrentGetAsync(symbolId, limitLevels);
             var model = response.Ok();
-            Assert.IsType<V1OrderBookBase>(model);
+            Assert.IsType<APIBricks.CoinAPI.MarketDataAPI.REST.V1.Model.V1OrderBookBase>(model);
         }
     }
 }

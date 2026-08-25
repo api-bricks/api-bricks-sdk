@@ -75,7 +75,7 @@ function Invoke-V1OrderbooksSymbolIdCurrentGet {
         if (!$SymbolId) {
             throw "Error! The required parameter `SymbolId` missing when calling v1OrderbooksSymbolIdCurrentGet."
         }
-        $LocalVarUri = $LocalVarUri.replace('{symbol_id}', [System.Web.HTTPUtility]::UrlEncode($SymbolId))
+        $LocalVarUri = $LocalVarUri.replace('{symbol_id}', [System.Uri]::EscapeDataString([string]$SymbolId))
 
         if ($LimitLevels) {
             $LocalVarQueryParameters['limit_levels'] = $LimitLevels
@@ -185,7 +185,7 @@ function Invoke-V1OrderbooksSymbolIdDepthCurrentGet {
         if (!$SymbolId) {
             throw "Error! The required parameter `SymbolId` missing when calling v1OrderbooksSymbolIdDepthCurrentGet."
         }
-        $LocalVarUri = $LocalVarUri.replace('{symbol_id}', [System.Web.HTTPUtility]::UrlEncode($SymbolId))
+        $LocalVarUri = $LocalVarUri.replace('{symbol_id}', [System.Uri]::EscapeDataString([string]$SymbolId))
 
         if ($LimitLevels) {
             $LocalVarQueryParameters['limit_levels'] = $LimitLevels
@@ -319,7 +319,7 @@ function Invoke-V1OrderbooksSymbolIdHistoryGet {
         if (!$SymbolId) {
             throw "Error! The required parameter `SymbolId` missing when calling v1OrderbooksSymbolIdHistoryGet."
         }
-        $LocalVarUri = $LocalVarUri.replace('{symbol_id}', [System.Web.HTTPUtility]::UrlEncode($SymbolId))
+        $LocalVarUri = $LocalVarUri.replace('{symbol_id}', [System.Uri]::EscapeDataString([string]$SymbolId))
 
         if ($Date) {
             $LocalVarQueryParameters['date'] = $Date

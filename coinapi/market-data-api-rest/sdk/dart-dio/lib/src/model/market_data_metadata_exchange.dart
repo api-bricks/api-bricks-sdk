@@ -488,3 +488,4 @@ class _$MarketDataMetadataExchangeSerializer implements PrimitiveSerializer<Mark
   }
 }
 
+

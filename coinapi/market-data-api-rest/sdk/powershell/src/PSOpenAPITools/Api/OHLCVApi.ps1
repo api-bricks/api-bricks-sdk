@@ -87,7 +87,7 @@ function Invoke-V1OhlcvExchangesExchangeIdHistoryGet {
         if (!$ExchangeId) {
             throw "Error! The required parameter `ExchangeId` missing when calling v1OhlcvExchangesExchangeIdHistoryGet."
         }
-        $LocalVarUri = $LocalVarUri.replace('{exchange_id}', [System.Web.HTTPUtility]::UrlEncode($ExchangeId))
+        $LocalVarUri = $LocalVarUri.replace('{exchange_id}', [System.Uri]::EscapeDataString([string]$ExchangeId))
 
         if (!$PeriodId) {
             throw "Error! The required parameter `PeriodId` missing when calling v1OhlcvExchangesExchangeIdHistoryGet."
@@ -316,7 +316,7 @@ function Invoke-V1OhlcvSymbolIdHistoryGet {
         if (!$SymbolId) {
             throw "Error! The required parameter `SymbolId` missing when calling v1OhlcvSymbolIdHistoryGet."
         }
-        $LocalVarUri = $LocalVarUri.replace('{symbol_id}', [System.Web.HTTPUtility]::UrlEncode($SymbolId))
+        $LocalVarUri = $LocalVarUri.replace('{symbol_id}', [System.Uri]::EscapeDataString([string]$SymbolId))
 
         if (!$PeriodId) {
             throw "Error! The required parameter `PeriodId` missing when calling v1OhlcvSymbolIdHistoryGet."
@@ -445,7 +445,7 @@ function Invoke-V1OhlcvSymbolIdLatestGet {
         if (!$SymbolId) {
             throw "Error! The required parameter `SymbolId` missing when calling v1OhlcvSymbolIdLatestGet."
         }
-        $LocalVarUri = $LocalVarUri.replace('{symbol_id}', [System.Web.HTTPUtility]::UrlEncode($SymbolId))
+        $LocalVarUri = $LocalVarUri.replace('{symbol_id}', [System.Uri]::EscapeDataString([string]$SymbolId))
 
         if (!$PeriodId) {
             throw "Error! The required parameter `PeriodId` missing when calling v1OhlcvSymbolIdLatestGet."

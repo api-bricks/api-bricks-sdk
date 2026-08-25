@@ -248,3 +248,4 @@ class _$V1QuoteTradeSerializer implements PrimitiveSerializer<V1QuoteTrade> {
   }
 }
 
+

@@ -582,11 +582,23 @@ namespace APIBricks.CoinAPI.MarketDataAPI.REST.V1.Api
             /// <returns></returns>
             public APIBricks.CoinAPI.MarketDataAPI.REST.V1.Model.V1ExchangeRate? Ok()
             {
-                // This logic may be modified with the AsModel.mustache template
+                bool suppressDefault = false;
+                APIBricks.CoinAPI.MarketDataAPI.REST.V1.Model.V1ExchangeRate? result = null;
+                OnOk(ref suppressDefault, ref result);
+                if (!suppressDefault)
+                    result = DefaultOk();
+                return result;
+            }
+
+            private APIBricks.CoinAPI.MarketDataAPI.REST.V1.Model.V1ExchangeRate? DefaultOk()
+            {
+                // NOTICE: Consider this AsModel template deprecated. Implement the appropriate partial method instead
                 return IsOk
                     ? System.Text.Json.JsonSerializer.Deserialize<APIBricks.CoinAPI.MarketDataAPI.REST.V1.Model.V1ExchangeRate>(RawContent, _jsonSerializerOptions)
                     : null;
             }
+
+            partial void OnOk(ref bool suppressDefault, ref APIBricks.CoinAPI.MarketDataAPI.REST.V1.Model.V1ExchangeRate? result);
 
             /// <summary>
             /// Returns true if the response is 200 Ok and the deserialized response is not null
@@ -904,11 +916,23 @@ namespace APIBricks.CoinAPI.MarketDataAPI.REST.V1.Api
             /// <returns></returns>
             public List<V1ExchangeRatesTimeseriesItem>? Ok()
             {
-                // This logic may be modified with the AsModel.mustache template
+                bool suppressDefault = false;
+                List<V1ExchangeRatesTimeseriesItem>? result = null;
+                OnOk(ref suppressDefault, ref result);
+                if (!suppressDefault)
+                    result = DefaultOk();
+                return result;
+            }
+
+            private List<V1ExchangeRatesTimeseriesItem>? DefaultOk()
+            {
+                // NOTICE: Consider this AsModel template deprecated. Implement the appropriate partial method instead
                 return IsOk
                     ? System.Text.Json.JsonSerializer.Deserialize<List<V1ExchangeRatesTimeseriesItem>>(RawContent, _jsonSerializerOptions)
                     : null;
             }
+
+            partial void OnOk(ref bool suppressDefault, ref List<V1ExchangeRatesTimeseriesItem>? result);
 
             /// <summary>
             /// Returns true if the response is 200 Ok and the deserialized response is not null
@@ -1202,11 +1226,23 @@ namespace APIBricks.CoinAPI.MarketDataAPI.REST.V1.Api
             /// <returns></returns>
             public APIBricks.CoinAPI.MarketDataAPI.REST.V1.Model.V1ExchangeRates? Ok()
             {
-                // This logic may be modified with the AsModel.mustache template
+                bool suppressDefault = false;
+                APIBricks.CoinAPI.MarketDataAPI.REST.V1.Model.V1ExchangeRates? result = null;
+                OnOk(ref suppressDefault, ref result);
+                if (!suppressDefault)
+                    result = DefaultOk();
+                return result;
+            }
+
+            private APIBricks.CoinAPI.MarketDataAPI.REST.V1.Model.V1ExchangeRates? DefaultOk()
+            {
+                // NOTICE: Consider this AsModel template deprecated. Implement the appropriate partial method instead
                 return IsOk
                     ? System.Text.Json.JsonSerializer.Deserialize<APIBricks.CoinAPI.MarketDataAPI.REST.V1.Model.V1ExchangeRates>(RawContent, _jsonSerializerOptions)
                     : null;
             }
+
+            partial void OnOk(ref bool suppressDefault, ref APIBricks.CoinAPI.MarketDataAPI.REST.V1.Model.V1ExchangeRates? result);
 
             /// <summary>
             /// Returns true if the response is 200 Ok and the deserialized response is not null
@@ -1437,11 +1473,23 @@ namespace APIBricks.CoinAPI.MarketDataAPI.REST.V1.Api
             /// <returns></returns>
             public List<V1TimeseriesPeriod>? Ok()
             {
-                // This logic may be modified with the AsModel.mustache template
+                bool suppressDefault = false;
+                List<V1TimeseriesPeriod>? result = null;
+                OnOk(ref suppressDefault, ref result);
+                if (!suppressDefault)
+                    result = DefaultOk();
+                return result;
+            }
+
+            private List<V1TimeseriesPeriod>? DefaultOk()
+            {
+                // NOTICE: Consider this AsModel template deprecated. Implement the appropriate partial method instead
                 return IsOk
                     ? System.Text.Json.JsonSerializer.Deserialize<List<V1TimeseriesPeriod>>(RawContent, _jsonSerializerOptions)
                     : null;
             }
+
+            partial void OnOk(ref bool suppressDefault, ref List<V1TimeseriesPeriod>? result);
 
             /// <summary>
             /// Returns true if the response is 200 Ok and the deserialized response is not null

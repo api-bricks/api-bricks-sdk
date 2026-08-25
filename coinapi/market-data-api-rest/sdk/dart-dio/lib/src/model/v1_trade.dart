@@ -328,3 +328,4 @@ class _$V1TradeSerializer implements PrimitiveSerializer<V1Trade> {
   }
 }
 
+

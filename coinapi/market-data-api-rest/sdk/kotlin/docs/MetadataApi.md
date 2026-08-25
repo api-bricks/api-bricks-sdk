@@ -102,9 +102,9 @@ try {
 ```
 
 ### Parameters
-| **filterAssetId** | **kotlin.String**| Comma or semicolon delimited asset identifiers used to filter response. (optional, eg. &#x60;BTC;ETH&#x60;). | [optional] |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **filterAssetId** | **kotlin.String**| Comma or semicolon delimited asset identifiers used to filter response. (optional, eg. &#x60;BTC;ETH&#x60;). | [optional] |
 | **filterAssetType** | **kotlin.String**| Optional asset type filter. Allowed values: FIAT, STABLECOIN, CRYPTO, COMMODITY, STOCK. | [optional] |
 
 ### Return type
@@ -498,10 +498,10 @@ try {
 ```
 
 ### Parameters
-| **exchangeId** | **kotlin.String**| The ID of the exchange. | |
-| **filterSymbolId** | **kotlin.String**| Comma or semicolon delimited parts of symbol identifier used to filter response. (optional, eg. &#x60;BITSTAMP&#x60;_ or &#x60;BINANCE_SPOT_&#x60;) | [optional] |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **exchangeId** | **kotlin.String**| The ID of the exchange. | |
+| **filterSymbolId** | **kotlin.String**| Comma or semicolon delimited parts of symbol identifier used to filter response. (optional, eg. &#x60;BITSTAMP&#x60;_ or &#x60;BINANCE_SPOT_&#x60;) | [optional] |
 | **filterAssetId** | **kotlin.String**| The filter for asset ID. | [optional] |
 
 ### Return type
@@ -559,10 +559,10 @@ try {
 ```
 
 ### Parameters
-| **exchangeId** | **kotlin.String**| The ID of the exchange. | |
-| **page** | **kotlin.Int**| The page number for pagination (starts from 1). | [optional] [default to 1] |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **exchangeId** | **kotlin.String**| The ID of the exchange. | |
+| **page** | **kotlin.Int**| The page number for pagination (starts from 1). | [optional] [default to 1] |
 | **limit** | **kotlin.Int**| Number of records to return per page. | [optional] [default to 100] |
 
 ### Return type

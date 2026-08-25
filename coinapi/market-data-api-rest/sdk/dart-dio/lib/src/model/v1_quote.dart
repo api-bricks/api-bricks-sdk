@@ -228,3 +228,4 @@ class _$V1QuoteSerializer implements PrimitiveSerializer<V1Quote> {
   }
 }
 
+

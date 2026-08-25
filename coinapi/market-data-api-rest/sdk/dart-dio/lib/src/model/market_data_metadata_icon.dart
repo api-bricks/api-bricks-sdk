@@ -148,3 +148,4 @@ class _$MarketDataMetadataIconSerializer implements PrimitiveSerializer<MarketDa
   }
 }
 
+

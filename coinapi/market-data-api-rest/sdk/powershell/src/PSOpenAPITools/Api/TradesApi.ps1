@@ -219,7 +219,7 @@ function Invoke-V1TradesSymbolIdHistoryGet {
         if (!$SymbolId) {
             throw "Error! The required parameter `SymbolId` missing when calling v1TradesSymbolIdHistoryGet."
         }
-        $LocalVarUri = $LocalVarUri.replace('{symbol_id}', [System.Web.HTTPUtility]::UrlEncode($SymbolId))
+        $LocalVarUri = $LocalVarUri.replace('{symbol_id}', [System.Uri]::EscapeDataString([string]$SymbolId))
 
         if ($Date) {
             $LocalVarQueryParameters['date'] = $Date
@@ -351,7 +351,7 @@ function Invoke-V1TradesSymbolIdLatestGet {
         if (!$SymbolId) {
             throw "Error! The required parameter `SymbolId` missing when calling v1TradesSymbolIdLatestGet."
         }
-        $LocalVarUri = $LocalVarUri.replace('{symbol_id}', [System.Web.HTTPUtility]::UrlEncode($SymbolId))
+        $LocalVarUri = $LocalVarUri.replace('{symbol_id}', [System.Uri]::EscapeDataString([string]$SymbolId))
 
         if ($Limit) {
             $LocalVarQueryParameters['limit'] = $Limit

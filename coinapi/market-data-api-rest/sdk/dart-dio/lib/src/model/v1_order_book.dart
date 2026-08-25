@@ -189,3 +189,4 @@ class _$V1OrderBookSerializer implements PrimitiveSerializer<V1OrderBook> {
   }
 }
 
+

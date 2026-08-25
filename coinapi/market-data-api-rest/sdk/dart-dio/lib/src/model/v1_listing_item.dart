@@ -248,3 +248,4 @@ class _$V1ListingItemSerializer implements PrimitiveSerializer<V1ListingItem> {
   }
 }
 
+

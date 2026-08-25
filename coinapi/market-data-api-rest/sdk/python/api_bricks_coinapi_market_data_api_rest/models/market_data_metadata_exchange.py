@@ -101,8 +101,7 @@ class MarketDataMetadataExchange(BaseModel):
         _items = []
         if self.icons:
             for _item_icons in self.icons:
-                if _item_icons:
-                    _items.append(_item_icons.to_dict())
+                _items.append(_item_icons.to_dict() if _item_icons is not None else None)
             _dict['icons'] = _items
         # set to None if exchange_id (nullable) is None
         # and model_fields_set contains the field

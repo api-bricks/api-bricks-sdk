@@ -87,7 +87,7 @@ namespace APIBricks.CoinAPI.MarketDataAPI.REST.V1.Test.Api
             string symbolId = default!;
             var response = await _instance.V1QuotesSymbolIdCurrentGetAsync(symbolId);
             var model = response.Ok();
-            Assert.IsType<V1QuoteTrade>(model);
+            Assert.IsType<APIBricks.CoinAPI.MarketDataAPI.REST.V1.Model.V1QuoteTrade>(model);
         }
 
         /// <summary>

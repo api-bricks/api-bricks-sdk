@@ -148,3 +148,4 @@ class _$V1MetricInfoSerializer implements PrimitiveSerializer<V1MetricInfo> {
   }
 }
 
+

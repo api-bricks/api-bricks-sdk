@@ -208,3 +208,4 @@ class _$V1LastTradeSerializer implements PrimitiveSerializer<V1LastTrade> {
   }
 }
 
+
