@@ -109,6 +109,7 @@ open class RateLimitApi(basePath: kotlin.String = defaultBasePath, client: Call.
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
         
+
         return RequestConfig(
             method = RequestMethod.GET,
             path = "/internal/ratelimit/wsconcon/apikey",
@@ -176,6 +177,7 @@ open class RateLimitApi(basePath: kotlin.String = defaultBasePath, client: Call.
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
         
+
         return RequestConfig(
             method = RequestMethod.GET,
             path = "/internal/ratelimit/wshello/ip",
@@ -243,6 +245,7 @@ open class RateLimitApi(basePath: kotlin.String = defaultBasePath, client: Call.
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
         
+
         return RequestConfig(
             method = RequestMethod.GET,
             path = "/internal/ratelimit/wsreq/ip",

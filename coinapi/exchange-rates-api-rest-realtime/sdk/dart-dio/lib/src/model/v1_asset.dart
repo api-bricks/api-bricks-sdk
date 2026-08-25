@@ -508,3 +508,4 @@ class _$V1AssetSerializer implements PrimitiveSerializer<V1Asset> {
   }
 }
 
+

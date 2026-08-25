@@ -61,7 +61,7 @@ namespace APIBricks.CoinAPI.ExchangeRatesAPI.Realtime.REST.V1.Test.Api
             string assetIdQuote = default!;
             var response = await _instance.GetSpecificRateAsync(assetIdBase, assetIdQuote);
             var model = response.Ok();
-            Assert.IsType<V1ExchangeRate>(model);
+            Assert.IsType<APIBricks.CoinAPI.ExchangeRatesAPI.Realtime.REST.V1.Model.V1ExchangeRate>(model);
         }
 
         /// <summary>
@@ -75,7 +75,7 @@ namespace APIBricks.CoinAPI.ExchangeRatesAPI.Realtime.REST.V1.Test.Api
             Client.Option<bool> invert = default!;
             var response = await _instance.V1ExchangerateAssetIdBaseGetAsync(assetIdBase, filterAssetId, invert);
             var model = response.Ok();
-            Assert.IsType<V1ExchangeRates>(model);
+            Assert.IsType<APIBricks.CoinAPI.ExchangeRatesAPI.Realtime.REST.V1.Model.V1ExchangeRates>(model);
         }
     }
 }

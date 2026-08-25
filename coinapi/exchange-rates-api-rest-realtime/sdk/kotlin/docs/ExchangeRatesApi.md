@@ -38,9 +38,9 @@ try {
 ```
 
 ### Parameters
-| **assetIdBase** | **kotlin.String**| Requested exchange rate base asset identifier (from the Metadata -&gt; Assets) | |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **assetIdBase** | **kotlin.String**| Requested exchange rate base asset identifier (from the Metadata -&gt; Assets) | |
 | **assetIdQuote** | **kotlin.String**| Requested exchange rate quote asset identifier (from the Metadata -&gt; Assets) | |
 
 ### Return type
@@ -98,10 +98,10 @@ try {
 ```
 
 ### Parameters
-| **assetIdBase** | **kotlin.String**| Requested exchange rates base asset identifier (from the Metadata -&gt; Assets) | |
-| **filterAssetId** | **kotlin.String**| Comma or semicolon delimited asset identifiers used to filter response (optional) | [optional] |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **assetIdBase** | **kotlin.String**| Requested exchange rates base asset identifier (from the Metadata -&gt; Assets) | |
+| **filterAssetId** | **kotlin.String**| Comma or semicolon delimited asset identifiers used to filter response (optional) | [optional] |
 | **invert** | **kotlin.Boolean**| True will invert all the rates (optional, if true then rates will be calculated as &#x60;rate &#x3D; 1 / actual_rate&#x60; eg. &#x60;USD/BTC&#x60; as &#x60;BTC/USD&#x60;) | [optional] [default to false] |
 
 ### Return type
