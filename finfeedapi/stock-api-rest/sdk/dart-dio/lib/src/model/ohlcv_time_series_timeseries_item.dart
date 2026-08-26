@@ -288,3 +288,4 @@ class _$OHLCVTimeSeriesTimeseriesItemSerializer implements PrimitiveSerializer<O
   }
 }
 
+

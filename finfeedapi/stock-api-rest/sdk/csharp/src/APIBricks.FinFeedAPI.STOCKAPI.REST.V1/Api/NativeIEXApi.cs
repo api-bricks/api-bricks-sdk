@@ -686,11 +686,23 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Api
             /// <returns></returns>
             public List<ModelsAdminMessageModel>? Ok()
             {
-                // This logic may be modified with the AsModel.mustache template
+                bool suppressDefault = false;
+                List<ModelsAdminMessageModel>? result = null;
+                OnOk(ref suppressDefault, ref result);
+                if (!suppressDefault)
+                    result = DefaultOk();
+                return result;
+            }
+
+            private List<ModelsAdminMessageModel>? DefaultOk()
+            {
+                // NOTICE: Consider this AsModel template deprecated. Implement the appropriate partial method instead
                 return IsOk
                     ? System.Text.Json.JsonSerializer.Deserialize<List<ModelsAdminMessageModel>>(RawContent, _jsonSerializerOptions)
                     : null;
             }
+
+            partial void OnOk(ref bool suppressDefault, ref List<ModelsAdminMessageModel>? result);
 
             /// <summary>
             /// Returns true if the response is 200 Ok and the deserialized response is not null
@@ -943,11 +955,23 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Api
             /// <returns></returns>
             public List<IEXSystemEventSystemEventModel>? Ok()
             {
-                // This logic may be modified with the AsModel.mustache template
+                bool suppressDefault = false;
+                List<IEXSystemEventSystemEventModel>? result = null;
+                OnOk(ref suppressDefault, ref result);
+                if (!suppressDefault)
+                    result = DefaultOk();
+                return result;
+            }
+
+            private List<IEXSystemEventSystemEventModel>? DefaultOk()
+            {
+                // NOTICE: Consider this AsModel template deprecated. Implement the appropriate partial method instead
                 return IsOk
                     ? System.Text.Json.JsonSerializer.Deserialize<List<IEXSystemEventSystemEventModel>>(RawContent, _jsonSerializerOptions)
                     : null;
             }
+
+            partial void OnOk(ref bool suppressDefault, ref List<IEXSystemEventSystemEventModel>? result);
 
             /// <summary>
             /// Returns true if the response is 200 Ok and the deserialized response is not null
@@ -1220,11 +1244,23 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Api
             /// <returns></returns>
             public List<IEXQuoteUpdateQuoteUpdateModel>? Ok()
             {
-                // This logic may be modified with the AsModel.mustache template
+                bool suppressDefault = false;
+                List<IEXQuoteUpdateQuoteUpdateModel>? result = null;
+                OnOk(ref suppressDefault, ref result);
+                if (!suppressDefault)
+                    result = DefaultOk();
+                return result;
+            }
+
+            private List<IEXQuoteUpdateQuoteUpdateModel>? DefaultOk()
+            {
+                // NOTICE: Consider this AsModel template deprecated. Implement the appropriate partial method instead
                 return IsOk
                     ? System.Text.Json.JsonSerializer.Deserialize<List<IEXQuoteUpdateQuoteUpdateModel>>(RawContent, _jsonSerializerOptions)
                     : null;
             }
+
+            partial void OnOk(ref bool suppressDefault, ref List<IEXQuoteUpdateQuoteUpdateModel>? result);
 
             /// <summary>
             /// Returns true if the response is 200 Ok and the deserialized response is not null
@@ -1497,11 +1533,23 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Api
             /// <returns></returns>
             public List<IEXPriceLevelUpdatePriceLevelUpdateModel>? Ok()
             {
-                // This logic may be modified with the AsModel.mustache template
+                bool suppressDefault = false;
+                List<IEXPriceLevelUpdatePriceLevelUpdateModel>? result = null;
+                OnOk(ref suppressDefault, ref result);
+                if (!suppressDefault)
+                    result = DefaultOk();
+                return result;
+            }
+
+            private List<IEXPriceLevelUpdatePriceLevelUpdateModel>? DefaultOk()
+            {
+                // NOTICE: Consider this AsModel template deprecated. Implement the appropriate partial method instead
                 return IsOk
                     ? System.Text.Json.JsonSerializer.Deserialize<List<IEXPriceLevelUpdatePriceLevelUpdateModel>>(RawContent, _jsonSerializerOptions)
                     : null;
             }
+
+            partial void OnOk(ref bool suppressDefault, ref List<IEXPriceLevelUpdatePriceLevelUpdateModel>? result);
 
             /// <summary>
             /// Returns true if the response is 200 Ok and the deserialized response is not null
@@ -1774,11 +1822,23 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Api
             /// <returns></returns>
             public List<ModelsOrderBookModel>? Ok()
             {
-                // This logic may be modified with the AsModel.mustache template
+                bool suppressDefault = false;
+                List<ModelsOrderBookModel>? result = null;
+                OnOk(ref suppressDefault, ref result);
+                if (!suppressDefault)
+                    result = DefaultOk();
+                return result;
+            }
+
+            private List<ModelsOrderBookModel>? DefaultOk()
+            {
+                // NOTICE: Consider this AsModel template deprecated. Implement the appropriate partial method instead
                 return IsOk
                     ? System.Text.Json.JsonSerializer.Deserialize<List<ModelsOrderBookModel>>(RawContent, _jsonSerializerOptions)
                     : null;
             }
+
+            partial void OnOk(ref bool suppressDefault, ref List<ModelsOrderBookModel>? result);
 
             /// <summary>
             /// Returns true if the response is 200 Ok and the deserialized response is not null
@@ -2051,11 +2111,23 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Api
             /// <returns></returns>
             public List<IEXTradeTradeModel>? Ok()
             {
-                // This logic may be modified with the AsModel.mustache template
+                bool suppressDefault = false;
+                List<IEXTradeTradeModel>? result = null;
+                OnOk(ref suppressDefault, ref result);
+                if (!suppressDefault)
+                    result = DefaultOk();
+                return result;
+            }
+
+            private List<IEXTradeTradeModel>? DefaultOk()
+            {
+                // NOTICE: Consider this AsModel template deprecated. Implement the appropriate partial method instead
                 return IsOk
                     ? System.Text.Json.JsonSerializer.Deserialize<List<IEXTradeTradeModel>>(RawContent, _jsonSerializerOptions)
                     : null;
             }
+
+            partial void OnOk(ref bool suppressDefault, ref List<IEXTradeTradeModel>? result);
 
             /// <summary>
             /// Returns true if the response is 200 Ok and the deserialized response is not null

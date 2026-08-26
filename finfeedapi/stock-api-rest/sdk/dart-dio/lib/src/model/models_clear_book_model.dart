@@ -148,3 +148,4 @@ class _$ModelsClearBookModelSerializer implements PrimitiveSerializer<ModelsClea
   }
 }
 
+

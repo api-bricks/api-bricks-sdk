@@ -69,7 +69,7 @@ function Invoke-V1NativeIexAdminMessagesSymbolGet {
         if (!$Symbol) {
             throw "Error! The required parameter `Symbol` missing when calling v1NativeIexAdminMessagesSymbolGet."
         }
-        $LocalVarUri = $LocalVarUri.replace('{symbol}', [System.Web.HTTPUtility]::UrlEncode($Symbol))
+        $LocalVarUri = $LocalVarUri.replace('{symbol}', [System.Uri]::EscapeDataString([string]$Symbol))
 
         if (!$Date) {
             throw "Error! The required parameter `Date` missing when calling v1NativeIexAdminMessagesSymbolGet."
@@ -277,7 +277,7 @@ function Invoke-V1NativeIexLevel1QuoteSymbolGet {
         if (!$Symbol) {
             throw "Error! The required parameter `Symbol` missing when calling v1NativeIexLevel1QuoteSymbolGet."
         }
-        $LocalVarUri = $LocalVarUri.replace('{symbol}', [System.Web.HTTPUtility]::UrlEncode($Symbol))
+        $LocalVarUri = $LocalVarUri.replace('{symbol}', [System.Uri]::EscapeDataString([string]$Symbol))
 
         if (!$Date) {
             throw "Error! The required parameter `Date` missing when calling v1NativeIexLevel1QuoteSymbolGet."
@@ -386,7 +386,7 @@ function Invoke-V1NativeIexLevel2PriceLevelUpdateSymbolGet {
         if (!$Symbol) {
             throw "Error! The required parameter `Symbol` missing when calling v1NativeIexLevel2PriceLevelUpdateSymbolGet."
         }
-        $LocalVarUri = $LocalVarUri.replace('{symbol}', [System.Web.HTTPUtility]::UrlEncode($Symbol))
+        $LocalVarUri = $LocalVarUri.replace('{symbol}', [System.Uri]::EscapeDataString([string]$Symbol))
 
         if (!$Date) {
             throw "Error! The required parameter `Date` missing when calling v1NativeIexLevel2PriceLevelUpdateSymbolGet."
@@ -495,7 +495,7 @@ function Invoke-V1NativeIexLevel3OrderBookSymbolGet {
         if (!$Symbol) {
             throw "Error! The required parameter `Symbol` missing when calling v1NativeIexLevel3OrderBookSymbolGet."
         }
-        $LocalVarUri = $LocalVarUri.replace('{symbol}', [System.Web.HTTPUtility]::UrlEncode($Symbol))
+        $LocalVarUri = $LocalVarUri.replace('{symbol}', [System.Uri]::EscapeDataString([string]$Symbol))
 
         if (!$Date) {
             throw "Error! The required parameter `Date` missing when calling v1NativeIexLevel3OrderBookSymbolGet."
@@ -604,7 +604,7 @@ function Invoke-V1NativeIexTradeSymbolGet {
         if (!$Symbol) {
             throw "Error! The required parameter `Symbol` missing when calling v1NativeIexTradeSymbolGet."
         }
-        $LocalVarUri = $LocalVarUri.replace('{symbol}', [System.Web.HTTPUtility]::UrlEncode($Symbol))
+        $LocalVarUri = $LocalVarUri.replace('{symbol}', [System.Uri]::EscapeDataString([string]$Symbol))
 
         if (!$Date) {
             throw "Error! The required parameter `Date` missing when calling v1NativeIexTradeSymbolGet."

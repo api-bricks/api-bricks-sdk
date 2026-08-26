@@ -405,11 +405,23 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Api
             /// <returns></returns>
             public List<FinFeedAPIExchangeModel>? Ok()
             {
-                // This logic may be modified with the AsModel.mustache template
+                bool suppressDefault = false;
+                List<FinFeedAPIExchangeModel>? result = null;
+                OnOk(ref suppressDefault, ref result);
+                if (!suppressDefault)
+                    result = DefaultOk();
+                return result;
+            }
+
+            private List<FinFeedAPIExchangeModel>? DefaultOk()
+            {
+                // NOTICE: Consider this AsModel template deprecated. Implement the appropriate partial method instead
                 return IsOk
                     ? System.Text.Json.JsonSerializer.Deserialize<List<FinFeedAPIExchangeModel>>(RawContent, _jsonSerializerOptions)
                     : null;
             }
+
+            partial void OnOk(ref bool suppressDefault, ref List<FinFeedAPIExchangeModel>? result);
 
             /// <summary>
             /// Returns true if the response is 200 Ok and the deserialized response is not null
@@ -698,11 +710,23 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Api
             /// <returns></returns>
             public List<FinFeedAPISymbolModel>? Ok()
             {
-                // This logic may be modified with the AsModel.mustache template
+                bool suppressDefault = false;
+                List<FinFeedAPISymbolModel>? result = null;
+                OnOk(ref suppressDefault, ref result);
+                if (!suppressDefault)
+                    result = DefaultOk();
+                return result;
+            }
+
+            private List<FinFeedAPISymbolModel>? DefaultOk()
+            {
+                // NOTICE: Consider this AsModel template deprecated. Implement the appropriate partial method instead
                 return IsOk
                     ? System.Text.Json.JsonSerializer.Deserialize<List<FinFeedAPISymbolModel>>(RawContent, _jsonSerializerOptions)
                     : null;
             }
+
+            partial void OnOk(ref bool suppressDefault, ref List<FinFeedAPISymbolModel>? result);
 
             /// <summary>
             /// Returns true if the response is 200 Ok and the deserialized response is not null

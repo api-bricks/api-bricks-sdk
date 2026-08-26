@@ -248,3 +248,4 @@ class _$ModelsOperationalHaltStatusModelSerializer implements PrimitiveSerialize
   }
 }
 
+

@@ -43,10 +43,10 @@ try {
 ```
 
 ### Parameters
-| **symbol** | **kotlin.String**| The symbol identifier | |
-| **date** | **java.time.OffsetDateTime**| Date in format YYYY-MM-DD | |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **symbol** | **kotlin.String**| The symbol identifier | |
+| **date** | **java.time.OffsetDateTime**| Date in format YYYY-MM-DD | |
 | **limit** | **kotlin.Int**| Maximum number of records to return (1-10000, default 100) | [optional] [default to 100] |
 
 ### Return type
@@ -103,9 +103,9 @@ try {
 ```
 
 ### Parameters
-| **date** | **java.time.OffsetDateTime**| Date in format YYYY-MM-DD | |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **date** | **java.time.OffsetDateTime**| Date in format YYYY-MM-DD | |
 | **limit** | **kotlin.Int**| Maximum number of records to return (1-10000, default 100) | [optional] [default to 100] |
 
 ### Return type
@@ -163,10 +163,10 @@ try {
 ```
 
 ### Parameters
-| **symbol** | **kotlin.String**| The symbol identifier | |
-| **date** | **java.time.OffsetDateTime**| Date in format YYYY-MM-DD | |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **symbol** | **kotlin.String**| The symbol identifier | |
+| **date** | **java.time.OffsetDateTime**| Date in format YYYY-MM-DD | |
 | **limit** | **kotlin.Int**| Maximum number of records to return (1-10000, default 100) | [optional] [default to 100] |
 
 ### Return type
@@ -224,10 +224,10 @@ try {
 ```
 
 ### Parameters
-| **symbol** | **kotlin.String**| The symbol identifier | |
-| **date** | **java.time.OffsetDateTime**| Date in format YYYY-MM-DD | |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **symbol** | **kotlin.String**| The symbol identifier | |
+| **date** | **java.time.OffsetDateTime**| Date in format YYYY-MM-DD | |
 | **limit** | **kotlin.Int**| Maximum number of records to return (1-10000, default 100) | [optional] [default to 100] |
 
 ### Return type
@@ -285,10 +285,10 @@ try {
 ```
 
 ### Parameters
-| **symbol** | **kotlin.String**| The symbol identifier | |
-| **date** | **java.time.OffsetDateTime**| Date in format YYYY-MM-DD | |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **symbol** | **kotlin.String**| The symbol identifier | |
+| **date** | **java.time.OffsetDateTime**| Date in format YYYY-MM-DD | |
 | **limit** | **kotlin.Int**| Maximum number of records to return (1-10000, default 100) | [optional] [default to 100] |
 
 ### Return type
@@ -346,10 +346,10 @@ try {
 ```
 
 ### Parameters
-| **symbol** | **kotlin.String**| The symbol identifier | |
-| **date** | **java.time.OffsetDateTime**| Date in format YYYY-MM-DD | |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **symbol** | **kotlin.String**| The symbol identifier | |
+| **date** | **java.time.OffsetDateTime**| Date in format YYYY-MM-DD | |
 | **limit** | **kotlin.Int**| Maximum number of records to return (1-10000, default 100) | [optional] [default to 100] |
 
 ### Return type

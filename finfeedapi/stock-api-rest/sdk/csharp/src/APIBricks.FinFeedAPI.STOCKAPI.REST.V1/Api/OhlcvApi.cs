@@ -604,11 +604,23 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Api
             /// <returns></returns>
             public List<OHLCVTimeSeriesExchangeTimeseriesItem>? Ok()
             {
-                // This logic may be modified with the AsModel.mustache template
+                bool suppressDefault = false;
+                List<OHLCVTimeSeriesExchangeTimeseriesItem>? result = null;
+                OnOk(ref suppressDefault, ref result);
+                if (!suppressDefault)
+                    result = DefaultOk();
+                return result;
+            }
+
+            private List<OHLCVTimeSeriesExchangeTimeseriesItem>? DefaultOk()
+            {
+                // NOTICE: Consider this AsModel template deprecated. Implement the appropriate partial method instead
                 return IsOk
                     ? System.Text.Json.JsonSerializer.Deserialize<List<OHLCVTimeSeriesExchangeTimeseriesItem>>(RawContent, _jsonSerializerOptions)
                     : null;
             }
+
+            partial void OnOk(ref bool suppressDefault, ref List<OHLCVTimeSeriesExchangeTimeseriesItem>? result);
 
             /// <summary>
             /// Returns true if the response is 200 Ok and the deserialized response is not null
@@ -924,11 +936,23 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Api
             /// <returns></returns>
             public List<OHLCVTimeSeriesTimeseriesItem>? Ok()
             {
-                // This logic may be modified with the AsModel.mustache template
+                bool suppressDefault = false;
+                List<OHLCVTimeSeriesTimeseriesItem>? result = null;
+                OnOk(ref suppressDefault, ref result);
+                if (!suppressDefault)
+                    result = DefaultOk();
+                return result;
+            }
+
+            private List<OHLCVTimeSeriesTimeseriesItem>? DefaultOk()
+            {
+                // NOTICE: Consider this AsModel template deprecated. Implement the appropriate partial method instead
                 return IsOk
                     ? System.Text.Json.JsonSerializer.Deserialize<List<OHLCVTimeSeriesTimeseriesItem>>(RawContent, _jsonSerializerOptions)
                     : null;
             }
+
+            partial void OnOk(ref bool suppressDefault, ref List<OHLCVTimeSeriesTimeseriesItem>? result);
 
             /// <summary>
             /// Returns true if the response is 200 Ok and the deserialized response is not null
@@ -1218,11 +1242,23 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Api
             /// <returns></returns>
             public List<OHLCVTimeSeriesTimeseriesItem>? Ok()
             {
-                // This logic may be modified with the AsModel.mustache template
+                bool suppressDefault = false;
+                List<OHLCVTimeSeriesTimeseriesItem>? result = null;
+                OnOk(ref suppressDefault, ref result);
+                if (!suppressDefault)
+                    result = DefaultOk();
+                return result;
+            }
+
+            private List<OHLCVTimeSeriesTimeseriesItem>? DefaultOk()
+            {
+                // NOTICE: Consider this AsModel template deprecated. Implement the appropriate partial method instead
                 return IsOk
                     ? System.Text.Json.JsonSerializer.Deserialize<List<OHLCVTimeSeriesTimeseriesItem>>(RawContent, _jsonSerializerOptions)
                     : null;
             }
+
+            partial void OnOk(ref bool suppressDefault, ref List<OHLCVTimeSeriesTimeseriesItem>? result);
 
             /// <summary>
             /// Returns true if the response is 200 Ok and the deserialized response is not null
@@ -1452,11 +1488,23 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Api
             /// <returns></returns>
             public List<OHLCVTimeSeriesTimeseriesPeriod>? Ok()
             {
-                // This logic may be modified with the AsModel.mustache template
+                bool suppressDefault = false;
+                List<OHLCVTimeSeriesTimeseriesPeriod>? result = null;
+                OnOk(ref suppressDefault, ref result);
+                if (!suppressDefault)
+                    result = DefaultOk();
+                return result;
+            }
+
+            private List<OHLCVTimeSeriesTimeseriesPeriod>? DefaultOk()
+            {
+                // NOTICE: Consider this AsModel template deprecated. Implement the appropriate partial method instead
                 return IsOk
                     ? System.Text.Json.JsonSerializer.Deserialize<List<OHLCVTimeSeriesTimeseriesPeriod>>(RawContent, _jsonSerializerOptions)
                     : null;
             }
+
+            partial void OnOk(ref bool suppressDefault, ref List<OHLCVTimeSeriesTimeseriesPeriod>? result);
 
             /// <summary>
             /// Returns true if the response is 200 Ok and the deserialized response is not null

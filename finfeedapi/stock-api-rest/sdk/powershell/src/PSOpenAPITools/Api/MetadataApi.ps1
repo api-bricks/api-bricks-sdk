@@ -177,7 +177,7 @@ function Invoke-V1SymbolsExchangeIdGet {
         if (!$ExchangeId) {
             throw "Error! The required parameter `ExchangeId` missing when calling v1SymbolsExchangeIdGet."
         }
-        $LocalVarUri = $LocalVarUri.replace('{exchange_id}', [System.Web.HTTPUtility]::UrlEncode($ExchangeId))
+        $LocalVarUri = $LocalVarUri.replace('{exchange_id}', [System.Uri]::EscapeDataString([string]$ExchangeId))
 
         if ($FilterSymbolId) {
             $LocalVarQueryParameters['filter_symbol_id'] = $FilterSymbolId

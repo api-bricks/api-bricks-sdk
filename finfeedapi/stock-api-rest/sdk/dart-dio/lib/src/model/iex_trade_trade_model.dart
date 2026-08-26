@@ -328,3 +328,4 @@ class _$IEXTradeTradeModelSerializer implements PrimitiveSerializer<IEXTradeTrad
   }
 }
 
+

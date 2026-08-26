@@ -288,3 +288,4 @@ class _$ModelsRetailLiquidityIndicatorModelSerializer implements PrimitiveSerial
   }
 }
 
+

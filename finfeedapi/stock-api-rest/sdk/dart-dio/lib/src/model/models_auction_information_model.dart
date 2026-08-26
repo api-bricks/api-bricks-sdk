@@ -648,3 +648,4 @@ class _$ModelsAuctionInformationModelSerializer implements PrimitiveSerializer<M
   }
 }
 
+

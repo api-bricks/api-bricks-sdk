@@ -208,3 +208,4 @@ class _$OHLCVTimeSeriesTimeseriesPeriodSerializer implements PrimitiveSerializer
   }
 }
 
+

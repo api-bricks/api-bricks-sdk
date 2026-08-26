@@ -451,3 +451,4 @@ class _$FinFeedAPIExchangeModelSerializer implements PrimitiveSerializer<FinFeed
   }
 }
 
+

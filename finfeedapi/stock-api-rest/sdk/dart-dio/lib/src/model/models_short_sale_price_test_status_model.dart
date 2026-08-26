@@ -408,3 +408,4 @@ class _$ModelsShortSalePriceTestStatusModelSerializer implements PrimitiveSerial
   }
 }
 
+

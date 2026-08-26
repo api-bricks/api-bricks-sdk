@@ -92,11 +92,11 @@ try {
 ```
 
 ### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
 | **exchangeId** | **kotlin.String**| The ID of the exchange (from the Metadata -&gt; Exchanges) | |
 | **filterSymbolId** | **kotlin.String**| Comma or semicolon delimited symbol identifiers used to filter response (optional, eg. &#x60;TSLA&#x60; or &#x60;TSLA,NVDA&#x60;) | [optional] |
 | **limit** | **kotlin.Int**| Maximum number of symbols to return (1-10000, default 100) | [optional] [default to 100] |
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
 | **page** | **kotlin.Int**| Page number (1-based, default 1) | [optional] [default to 1] |
 
 ### Return type

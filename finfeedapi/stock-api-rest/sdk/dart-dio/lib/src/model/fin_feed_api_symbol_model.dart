@@ -451,3 +451,4 @@ class _$FinFeedAPISymbolModelSerializer implements PrimitiveSerializer<FinFeedAP
   }
 }
 
+
