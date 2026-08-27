@@ -51,7 +51,7 @@ import org.openapitools.client.JSON;
 /**
  * Represents the response DTO for short sale price test status information
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-08-26T06:06:43.048215796Z[Etc/UTC]", comments = "Generator version: 7.25.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-08-27T06:07:08.353880934Z[Etc/UTC]", comments = "Generator version: 7.25.0")
 public class ModelsShortSalePriceTestStatusModel {
   public static final String SERIALIZED_NAME_SYMBOL = "symbol";
   @SerializedName(SERIALIZED_NAME_SYMBOL)
