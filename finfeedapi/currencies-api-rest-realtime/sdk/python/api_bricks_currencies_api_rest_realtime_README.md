@@ -5,7 +5,7 @@ The `api_bricks_currencies_api_rest_realtime` package is automatically generated
 
 - API version: v1
 - Package version: 1.0.0
-- Generator version: 7.24.0
+- Generator version: 7.25.0
 - Build package: org.openapitools.codegen.languages.PythonClientCodegen
 For more information, please visit [https://www.finfeedapi.com](https://www.finfeedapi.com)
 

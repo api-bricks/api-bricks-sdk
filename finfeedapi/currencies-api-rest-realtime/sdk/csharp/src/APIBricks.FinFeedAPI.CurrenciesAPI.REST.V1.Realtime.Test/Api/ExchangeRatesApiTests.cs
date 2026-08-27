@@ -61,7 +61,7 @@ namespace APIBricks.FinFeedAPI.CurrenciesAPI.REST.V1.Realtime.Test.Api
             string assetIdQuote = default!;
             var response = await _instance.GetSpecificRateAsync(assetIdBase, assetIdQuote);
             var model = response.Ok();
-            Assert.IsType<V1ExchangeRate>(model);
+            Assert.IsType<APIBricks.FinFeedAPI.CurrenciesAPI.REST.V1.Realtime.Model.V1ExchangeRate>(model);
         }
 
         /// <summary>
@@ -75,7 +75,7 @@ namespace APIBricks.FinFeedAPI.CurrenciesAPI.REST.V1.Realtime.Test.Api
             Client.Option<bool> invert = default!;
             var response = await _instance.V1ExchangerateAssetIdBaseGetAsync(assetIdBase, filterAssetId, invert);
             var model = response.Ok();
-            Assert.IsType<V1ExchangeRates>(model);
+            Assert.IsType<APIBricks.FinFeedAPI.CurrenciesAPI.REST.V1.Realtime.Model.V1ExchangeRates>(model);
         }
     }
 }

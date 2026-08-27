@@ -443,11 +443,23 @@ namespace APIBricks.FinFeedAPI.CurrenciesAPI.REST.V1.Realtime.Api
             /// <returns></returns>
             public APIBricks.FinFeedAPI.CurrenciesAPI.REST.V1.Realtime.Model.V1ExchangeRate? Ok()
             {
-                // This logic may be modified with the AsModel.mustache template
+                bool suppressDefault = false;
+                APIBricks.FinFeedAPI.CurrenciesAPI.REST.V1.Realtime.Model.V1ExchangeRate? result = null;
+                OnOk(ref suppressDefault, ref result);
+                if (!suppressDefault)
+                    result = DefaultOk();
+                return result;
+            }
+
+            private APIBricks.FinFeedAPI.CurrenciesAPI.REST.V1.Realtime.Model.V1ExchangeRate? DefaultOk()
+            {
+                // NOTICE: Consider this AsModel template deprecated. Implement the appropriate partial method instead
                 return IsOk
                     ? System.Text.Json.JsonSerializer.Deserialize<APIBricks.FinFeedAPI.CurrenciesAPI.REST.V1.Realtime.Model.V1ExchangeRate>(RawContent, _jsonSerializerOptions)
                     : null;
             }
+
+            partial void OnOk(ref bool suppressDefault, ref APIBricks.FinFeedAPI.CurrenciesAPI.REST.V1.Realtime.Model.V1ExchangeRate? result);
 
             /// <summary>
             /// Returns true if the response is 200 Ok and the deserialized response is not null
@@ -728,11 +740,23 @@ namespace APIBricks.FinFeedAPI.CurrenciesAPI.REST.V1.Realtime.Api
             /// <returns></returns>
             public APIBricks.FinFeedAPI.CurrenciesAPI.REST.V1.Realtime.Model.V1ExchangeRates? Ok()
             {
-                // This logic may be modified with the AsModel.mustache template
+                bool suppressDefault = false;
+                APIBricks.FinFeedAPI.CurrenciesAPI.REST.V1.Realtime.Model.V1ExchangeRates? result = null;
+                OnOk(ref suppressDefault, ref result);
+                if (!suppressDefault)
+                    result = DefaultOk();
+                return result;
+            }
+
+            private APIBricks.FinFeedAPI.CurrenciesAPI.REST.V1.Realtime.Model.V1ExchangeRates? DefaultOk()
+            {
+                // NOTICE: Consider this AsModel template deprecated. Implement the appropriate partial method instead
                 return IsOk
                     ? System.Text.Json.JsonSerializer.Deserialize<APIBricks.FinFeedAPI.CurrenciesAPI.REST.V1.Realtime.Model.V1ExchangeRates>(RawContent, _jsonSerializerOptions)
                     : null;
             }
+
+            partial void OnOk(ref bool suppressDefault, ref APIBricks.FinFeedAPI.CurrenciesAPI.REST.V1.Realtime.Model.V1ExchangeRates? result);
 
             /// <summary>
             /// Returns true if the response is 200 Ok and the deserialized response is not null
