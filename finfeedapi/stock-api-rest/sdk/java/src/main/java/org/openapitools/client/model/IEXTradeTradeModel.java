@@ -51,7 +51,7 @@ import org.openapitools.client.JSON;
 /**
  * Represents the response DTO for a single trade event (report or break).
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-08-27T06:07:08.353880934Z[Etc/UTC]", comments = "Generator version: 7.25.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-08-28T06:06:56.214306774Z[Etc/UTC]", comments = "Generator version: 7.25.0")
 public class IEXTradeTradeModel {
   public static final String SERIALIZED_NAME_IS_TRADE_BREAK = "is_trade_break";
   @SerializedName(SERIALIZED_NAME_IS_TRADE_BREAK)
