@@ -2,7 +2,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 VisualStudioVersion = 12.0.0.0
 MinimumVisualStudioVersion = 10.0.0.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APIBricks.FinFeedAPI.CurrenciesAPI.REST.V1.Historical", "src\APIBricks.FinFeedAPI.CurrenciesAPI.REST.V1.Historical\APIBricks.FinFeedAPI.CurrenciesAPI.REST.V1.Historical.csproj", "{B8CBE562-DEF5-402C-ACD4-3F6E08E0C8D5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APIBricks.FinFeedAPI.CurrenciesAPI.REST.V1.Historical", "src\APIBricks.FinFeedAPI.CurrenciesAPI.REST.V1.Historical\APIBricks.FinFeedAPI.CurrenciesAPI.REST.V1.Historical.csproj", "{AA2C33B1-72E1-4C31-83C5-2B3F8404B458}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APIBricks.FinFeedAPI.CurrenciesAPI.REST.V1.Historical.Test", "src\APIBricks.FinFeedAPI.CurrenciesAPI.REST.V1.Historical.Test\APIBricks.FinFeedAPI.CurrenciesAPI.REST.V1.Historical.Test.csproj", "{19F1DEBC-DE5E-4517-8062-F000CD499087}"
 EndProject
@@ -12,10 +12,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{B8CBE562-DEF5-402C-ACD4-3F6E08E0C8D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B8CBE562-DEF5-402C-ACD4-3F6E08E0C8D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B8CBE562-DEF5-402C-ACD4-3F6E08E0C8D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B8CBE562-DEF5-402C-ACD4-3F6E08E0C8D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA2C33B1-72E1-4C31-83C5-2B3F8404B458}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA2C33B1-72E1-4C31-83C5-2B3F8404B458}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA2C33B1-72E1-4C31-83C5-2B3F8404B458}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA2C33B1-72E1-4C31-83C5-2B3F8404B458}.Release|Any CPU.Build.0 = Release|Any CPU
 		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Release|Any CPU.ActiveCfg = Release|Any CPU
