@@ -9,7 +9,9 @@
          v1_exchanges_get/1, v1_exchanges_get/2,
          v1_exchanges_icons_size_get/2, v1_exchanges_icons_size_get/3,
          v1_symbols_exchange_id_active_get/2, v1_symbols_exchange_id_active_get/3,
+         v1_symbols_exchange_id_by_exchange_symbol_exchange_symbol_id_get/3, v1_symbols_exchange_id_by_exchange_symbol_exchange_symbol_id_get/4,
          v1_symbols_exchange_id_history_get/2, v1_symbols_exchange_id_history_get/3,
+         v1_symbols_exchange_id_unmapped_get/2, v1_symbols_exchange_id_unmapped_get/3,
          v1_symbols_map_exchange_id_get/2, v1_symbols_map_exchange_id_get/3]).
 
 -define(BASE_URL, <<"">>).
@@ -203,6 +205,27 @@ v1_symbols_exchange_id_active_get(Ctx, ExchangeId, Optional) ->
 
     openapi_utils:request(Ctx, Method, Path, QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
+%% @doc Get a single symbol by its exchange-native symbol identifier.
+%% Looks up a symbol by `symbol_id_exchange` regardless of mapping status - this also returns symbols that have not been mapped to a CoinAPI `symbol_id` yet (see `{exchange_id}/unmapped`).
+-spec v1_symbols_exchange_id_by_exchange_symbol_exchange_symbol_id_get(ctx:ctx(), binary(), binary()) -> {ok, openapi_market_data_metadata_symbol:openapi_market_data_metadata_symbol(), openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+v1_symbols_exchange_id_by_exchange_symbol_exchange_symbol_id_get(Ctx, ExchangeId, ExchangeSymbolId) ->
+    v1_symbols_exchange_id_by_exchange_symbol_exchange_symbol_id_get(Ctx, ExchangeId, ExchangeSymbolId, #{}).
+
+-spec v1_symbols_exchange_id_by_exchange_symbol_exchange_symbol_id_get(ctx:ctx(), binary(), binary(), maps:map()) -> {ok, openapi_market_data_metadata_symbol:openapi_market_data_metadata_symbol(), openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+v1_symbols_exchange_id_by_exchange_symbol_exchange_symbol_id_get(Ctx, ExchangeId, ExchangeSymbolId, Optional) ->
+    _OptionalParams = maps:get(params, Optional, #{}),
+    Cfg = maps:get(cfg, Optional, application:get_env(openapi_api, config, #{})),
+
+    Method = get,
+    Path = [?BASE_URL, "/v1/symbols/", ExchangeId, "/by-exchange-symbol/", ExchangeSymbolId, ""],
+    QS = [],
+    Headers = [],
+    Body1 = [],
+    ContentTypeHeader = openapi_utils:select_header_content_type([]),
+    Opts = maps:get(hackney_opts, Optional, []),
+
+    openapi_utils:request(Ctx, Method, Path, QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
+
 %% @doc List all historical symbols for an exchange.
 %% This endpoint provides access to symbols that are no longer actively traded or listed on a given exchange. The data is provided with pagination support.
 -spec v1_symbols_exchange_id_history_get(ctx:ctx(), binary()) -> {ok, [openapi_market_data_metadata_symbol:openapi_market_data_metadata_symbol()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
@@ -216,6 +239,27 @@ v1_symbols_exchange_id_history_get(Ctx, ExchangeId, Optional) ->
 
     Method = get,
     Path = [?BASE_URL, "/v1/symbols/", ExchangeId, "/history"],
+    QS = lists:flatten([])++openapi_utils:optional_params(['page', 'limit'], _OptionalParams),
+    Headers = [],
+    Body1 = [],
+    ContentTypeHeader = openapi_utils:select_header_content_type([]),
+    Opts = maps:get(hackney_opts, Optional, []),
+
+    openapi_utils:request(Ctx, Method, Path, QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
+
+%% @doc List symbols not yet mapped to a CoinAPI symbol_id for an exchange.
+%% Returns raw exchange symbols that MarketAccess has received (KVP data available) but that have not been mapped to a CoinAPI `symbol_id` yet. Since `symbol_id` is null for these rows, use `symbol_id_exchange` (and `GET {exchange_id}/by-exchange-symbol/{exchange_symbol_id}`) to reference them. The `raw_kvp` field contains the raw exchange payload as received.
+-spec v1_symbols_exchange_id_unmapped_get(ctx:ctx(), binary()) -> {ok, [openapi_market_data_metadata_symbol:openapi_market_data_metadata_symbol()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+v1_symbols_exchange_id_unmapped_get(Ctx, ExchangeId) ->
+    v1_symbols_exchange_id_unmapped_get(Ctx, ExchangeId, #{}).
+
+-spec v1_symbols_exchange_id_unmapped_get(ctx:ctx(), binary(), maps:map()) -> {ok, [openapi_market_data_metadata_symbol:openapi_market_data_metadata_symbol()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+v1_symbols_exchange_id_unmapped_get(Ctx, ExchangeId, Optional) ->
+    _OptionalParams = maps:get(params, Optional, #{}),
+    Cfg = maps:get(cfg, Optional, application:get_env(openapi_api, config, #{})),
+
+    Method = get,
+    Path = [?BASE_URL, "/v1/symbols/", ExchangeId, "/unmapped"],
     QS = lists:flatten([])++openapi_utils:optional_params(['page', 'limit'], _OptionalParams),
     Headers = [],
     Body1 = [],

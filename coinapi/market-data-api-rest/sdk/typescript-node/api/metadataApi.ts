@@ -784,6 +784,88 @@ export class MetadataApi {
         });
     }
     /**
+     * Looks up a symbol by `symbol_id_exchange` regardless of mapping status - this also returns symbols that have not been mapped to a CoinAPI `symbol_id` yet (see `{exchange_id}/unmapped`).
+     * @summary Get a single symbol by its exchange-native symbol identifier.
+     * @param exchangeId The ID of the exchange.
+     * @param exchangeSymbolId The exchange-native symbol identifier (&#x60;symbol_id_exchange&#x60;).
+     */
+    public async v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet (exchangeId: string, exchangeSymbolId: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: MarketDataMetadataSymbol;  }> {
+        const localVarPath = this.basePath + '/v1/symbols/{exchange_id}/by-exchange-symbol/{exchange_symbol_id}'
+            .replace('{exchange_id}', encodeURIComponent(String(exchangeId)))
+            .replace('{exchange_symbol_id}', encodeURIComponent(String(exchangeSymbolId)));
+        let localVarQueryParameters: any = {};
+        let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
+        const produces = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
+        // give precedence to 'application/json'
+        if (produces.indexOf('application/json') >= 0) {
+            localVarHeaderParams.Accept = 'application/json';
+        } else {
+            localVarHeaderParams.Accept = produces.join(',');
+        }
+        let localVarFormParams: any = {};
+
+        // verify required parameter 'exchangeId' is not null or undefined
+        if (exchangeId === null || exchangeId === undefined) {
+            throw new Error('Required parameter exchangeId was null or undefined when calling v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet.');
+        }
+
+        // verify required parameter 'exchangeSymbolId' is not null or undefined
+        if (exchangeSymbolId === null || exchangeSymbolId === undefined) {
+            throw new Error('Required parameter exchangeSymbolId was null or undefined when calling v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet.');
+        }
+
+        (<any>Object).assign(localVarHeaderParams, options.headers);
+
+        let localVarUseFormData = false;
+
+        let localVarRequestOptions: localVarRequest.Options = {
+            method: 'GET',
+            qs: localVarQueryParameters,
+            headers: localVarHeaderParams,
+            uri: localVarPath,
+            useQuerystring: this._useQuerystring,
+            json: true,
+        };
+
+        let authenticationPromise = Promise.resolve();
+        if (this.authentications.APIKey.apiKey) {
+            authenticationPromise = authenticationPromise.then(() => this.authentications.APIKey.applyToRequest(localVarRequestOptions));
+        }
+        if (this.authentications.JWT.accessToken) {
+            authenticationPromise = authenticationPromise.then(() => this.authentications.JWT.applyToRequest(localVarRequestOptions));
+        }
+        authenticationPromise = authenticationPromise.then(() => this.authentications.default.applyToRequest(localVarRequestOptions));
+
+        let interceptorPromise = authenticationPromise;
+        for (const interceptor of this.interceptors) {
+            interceptorPromise = interceptorPromise.then(() => interceptor(localVarRequestOptions));
+        }
+
+        return interceptorPromise.then(() => {
+            if (Object.keys(localVarFormParams).length) {
+                if (localVarUseFormData) {
+                    (<any>localVarRequestOptions).formData = localVarFormParams;
+                } else {
+                    localVarRequestOptions.form = localVarFormParams;
+                }
+            }
+            return new Promise<{ response: http.IncomingMessage; body: MarketDataMetadataSymbol;  }>((resolve, reject) => {
+                localVarRequest(localVarRequestOptions, (error, response, body) => {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
+                            body = ObjectSerializer.deserialize(body, "MarketDataMetadataSymbol");
+                            resolve({ response: response, body: body });
+                        } else {
+                            reject(new HttpError(response, body, response.statusCode));
+                        }
+                    }
+                });
+            });
+        });
+    }
+    /**
      * This endpoint provides access to symbols that are no longer actively traded or listed on a given exchange. The data is provided with pagination support.
      * @summary List all historical symbols for an exchange.
      * @param exchangeId The ID of the exchange.
@@ -807,6 +889,91 @@ export class MetadataApi {
         // verify required parameter 'exchangeId' is not null or undefined
         if (exchangeId === null || exchangeId === undefined) {
             throw new Error('Required parameter exchangeId was null or undefined when calling v1SymbolsExchangeIdHistoryGet.');
+        }
+
+        if (page !== undefined) {
+            localVarQueryParameters['page'] = ObjectSerializer.serialize(page, "number");
+        }
+
+        if (limit !== undefined) {
+            localVarQueryParameters['limit'] = ObjectSerializer.serialize(limit, "number");
+        }
+
+        (<any>Object).assign(localVarHeaderParams, options.headers);
+
+        let localVarUseFormData = false;
+
+        let localVarRequestOptions: localVarRequest.Options = {
+            method: 'GET',
+            qs: localVarQueryParameters,
+            headers: localVarHeaderParams,
+            uri: localVarPath,
+            useQuerystring: this._useQuerystring,
+            json: true,
+        };
+
+        let authenticationPromise = Promise.resolve();
+        if (this.authentications.APIKey.apiKey) {
+            authenticationPromise = authenticationPromise.then(() => this.authentications.APIKey.applyToRequest(localVarRequestOptions));
+        }
+        if (this.authentications.JWT.accessToken) {
+            authenticationPromise = authenticationPromise.then(() => this.authentications.JWT.applyToRequest(localVarRequestOptions));
+        }
+        authenticationPromise = authenticationPromise.then(() => this.authentications.default.applyToRequest(localVarRequestOptions));
+
+        let interceptorPromise = authenticationPromise;
+        for (const interceptor of this.interceptors) {
+            interceptorPromise = interceptorPromise.then(() => interceptor(localVarRequestOptions));
+        }
+
+        return interceptorPromise.then(() => {
+            if (Object.keys(localVarFormParams).length) {
+                if (localVarUseFormData) {
+                    (<any>localVarRequestOptions).formData = localVarFormParams;
+                } else {
+                    localVarRequestOptions.form = localVarFormParams;
+                }
+            }
+            return new Promise<{ response: http.IncomingMessage; body: Array<MarketDataMetadataSymbol>;  }>((resolve, reject) => {
+                localVarRequest(localVarRequestOptions, (error, response, body) => {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
+                            body = ObjectSerializer.deserialize(body, "Array<MarketDataMetadataSymbol>");
+                            resolve({ response: response, body: body });
+                        } else {
+                            reject(new HttpError(response, body, response.statusCode));
+                        }
+                    }
+                });
+            });
+        });
+    }
+    /**
+     * Returns raw exchange symbols that MarketAccess has received (KVP data available) but that have not been mapped to a CoinAPI `symbol_id` yet. Since `symbol_id` is null for these rows, use `symbol_id_exchange` (and `GET {exchange_id}/by-exchange-symbol/{exchange_symbol_id}`) to reference them. The `raw_kvp` field contains the raw exchange payload as received.
+     * @summary List symbols not yet mapped to a CoinAPI symbol_id for an exchange.
+     * @param exchangeId The ID of the exchange.
+     * @param page The page number for pagination (starts from 1).
+     * @param limit Number of records to return per page.
+     */
+    public async v1SymbolsExchangeIdUnmappedGet (exchangeId: string, page?: number, limit?: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<MarketDataMetadataSymbol>;  }> {
+        const localVarPath = this.basePath + '/v1/symbols/{exchange_id}/unmapped'
+            .replace('{exchange_id}', encodeURIComponent(String(exchangeId)));
+        let localVarQueryParameters: any = {};
+        let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
+        const produces = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
+        // give precedence to 'application/json'
+        if (produces.indexOf('application/json') >= 0) {
+            localVarHeaderParams.Accept = 'application/json';
+        } else {
+            localVarHeaderParams.Accept = produces.join(',');
+        }
+        let localVarFormParams: any = {};
+
+        // verify required parameter 'exchangeId' is not null or undefined
+        if (exchangeId === null || exchangeId === undefined) {
+            throw new Error('Required parameter exchangeId was null or undefined when calling v1SymbolsExchangeIdUnmappedGet.');
         }
 
         if (page !== undefined) {

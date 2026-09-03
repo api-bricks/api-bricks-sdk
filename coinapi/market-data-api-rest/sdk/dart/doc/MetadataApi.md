@@ -18,7 +18,9 @@ Method | HTTP request | Description
 [**v1ExchangesGet**](MetadataApi.md#v1exchangesget) | **GET** /v1/exchanges | List all exchanges
 [**v1ExchangesIconsSizeGet**](MetadataApi.md#v1exchangesiconssizeget) | **GET** /v1/exchanges/icons/{size} | List of icons for the exchanges
 [**v1SymbolsExchangeIdActiveGet**](MetadataApi.md#v1symbolsexchangeidactiveget) | **GET** /v1/symbols/{exchange_id}/active | List all active symbols
+[**v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet**](MetadataApi.md#v1symbolsexchangeidbyexchangesymbolexchangesymbolidget) | **GET** /v1/symbols/{exchange_id}/by-exchange-symbol/{exchange_symbol_id} | Get a single symbol by its exchange-native symbol identifier.
 [**v1SymbolsExchangeIdHistoryGet**](MetadataApi.md#v1symbolsexchangeidhistoryget) | **GET** /v1/symbols/{exchange_id}/history | List all historical symbols for an exchange.
+[**v1SymbolsExchangeIdUnmappedGet**](MetadataApi.md#v1symbolsexchangeidunmappedget) | **GET** /v1/symbols/{exchange_id}/unmapped | List symbols not yet mapped to a CoinAPI symbol_id for an exchange.
 [**v1SymbolsMapExchangeIdGet**](MetadataApi.md#v1symbolsmapexchangeidget) | **GET** /v1/symbols/map/{exchange_id} | List active symbol mapping for the exchange
 
 
@@ -497,6 +499,61 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet**
+> MarketDataMetadataSymbol v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet(exchangeId, exchangeSymbolId)
+
+Get a single symbol by its exchange-native symbol identifier.
+
+Looks up a symbol by `symbol_id_exchange` regardless of mapping status - this also returns symbols that have not been mapped to a CoinAPI `symbol_id` yet (see `{exchange_id}/unmapped`).
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: APIKey
+//defaultApiClient.getAuthentication<ApiKeyAuth>('APIKey').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('APIKey').apiKeyPrefix = 'Bearer';
+// TODO Configure HTTP Bearer authorization: JWT
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('JWT').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('JWT').setAccessToken(yourTokenGeneratorFunction);
+
+final api_instance = MetadataApi();
+final exchangeId = exchangeId_example; // String | The ID of the exchange.
+final exchangeSymbolId = exchangeSymbolId_example; // String | The exchange-native symbol identifier (`symbol_id_exchange`).
+
+try {
+    final result = api_instance.v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet(exchangeId, exchangeSymbolId);
+    print(result);
+} catch (e) {
+    print('Exception when calling MetadataApi->v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **exchangeId** | **String**| The ID of the exchange. | 
+ **exchangeSymbolId** | **String**| The exchange-native symbol identifier (`symbol_id_exchange`). | 
+
+### Return type
+
+[**MarketDataMetadataSymbol**](MarketDataMetadataSymbol.md)
+
+### Authorization
+
+[APIKey](../README.md#APIKey), [JWT](../README.md#JWT)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json, application/x-msgpack
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **v1SymbolsExchangeIdHistoryGet**
 > List<MarketDataMetadataSymbol> v1SymbolsExchangeIdHistoryGet(exchangeId, page, limit)
 
@@ -528,6 +585,63 @@ try {
     print(result);
 } catch (e) {
     print('Exception when calling MetadataApi->v1SymbolsExchangeIdHistoryGet: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **exchangeId** | **String**| The ID of the exchange. | 
+ **page** | **int**| The page number for pagination (starts from 1). | [optional] [default to 1]
+ **limit** | **int**| Number of records to return per page. | [optional] [default to 100]
+
+### Return type
+
+[**List<MarketDataMetadataSymbol>**](MarketDataMetadataSymbol.md)
+
+### Authorization
+
+[APIKey](../README.md#APIKey), [JWT](../README.md#JWT)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json, application/x-msgpack
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **v1SymbolsExchangeIdUnmappedGet**
+> List<MarketDataMetadataSymbol> v1SymbolsExchangeIdUnmappedGet(exchangeId, page, limit)
+
+List symbols not yet mapped to a CoinAPI symbol_id for an exchange.
+
+Returns raw exchange symbols that MarketAccess has received (KVP data available) but that have not been mapped to a CoinAPI `symbol_id` yet. Since `symbol_id` is null for these rows, use `symbol_id_exchange` (and `GET {exchange_id}/by-exchange-symbol/{exchange_symbol_id}`) to reference them. The `raw_kvp` field contains the raw exchange payload as received.
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: APIKey
+//defaultApiClient.getAuthentication<ApiKeyAuth>('APIKey').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('APIKey').apiKeyPrefix = 'Bearer';
+// TODO Configure HTTP Bearer authorization: JWT
+// Case 1. Use String Token
+//defaultApiClient.getAuthentication<HttpBearerAuth>('JWT').setAccessToken('YOUR_ACCESS_TOKEN');
+// Case 2. Use Function which generate token.
+// String yourTokenGeneratorFunction() { ... }
+//defaultApiClient.getAuthentication<HttpBearerAuth>('JWT').setAccessToken(yourTokenGeneratorFunction);
+
+final api_instance = MetadataApi();
+final exchangeId = exchangeId_example; // String | The ID of the exchange.
+final page = 56; // int | The page number for pagination (starts from 1).
+final limit = 56; // int | Number of records to return per page.
+
+try {
+    final result = api_instance.v1SymbolsExchangeIdUnmappedGet(exchangeId, page, limit);
+    print(result);
+} catch (e) {
+    print('Exception when calling MetadataApi->v1SymbolsExchangeIdUnmappedGet: $e\n');
 }
 ```
 

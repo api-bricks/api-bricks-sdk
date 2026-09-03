@@ -163,6 +163,19 @@ namespace APIBricks.CoinAPI.MarketDataAPI.REST.V1.Test.Api
         }
 
         /// <summary>
+        /// Test V1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet
+        /// </summary>
+        [Fact (Skip = "not implemented")]
+        public async Task V1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGetAsyncTest()
+        {
+            string exchangeId = default!;
+            string exchangeSymbolId = default!;
+            var response = await _instance.V1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGetAsync(exchangeId, exchangeSymbolId);
+            var model = response.Ok();
+            Assert.IsType<APIBricks.CoinAPI.MarketDataAPI.REST.V1.Model.MarketDataMetadataSymbol>(model);
+        }
+
+        /// <summary>
         /// Test V1SymbolsExchangeIdHistoryGet
         /// </summary>
         [Fact (Skip = "not implemented")]
@@ -172,6 +185,20 @@ namespace APIBricks.CoinAPI.MarketDataAPI.REST.V1.Test.Api
             Client.Option<int> page = default!;
             Client.Option<int> limit = default!;
             var response = await _instance.V1SymbolsExchangeIdHistoryGetAsync(exchangeId, page, limit);
+            var model = response.Ok();
+            Assert.IsType<List<MarketDataMetadataSymbol>>(model);
+        }
+
+        /// <summary>
+        /// Test V1SymbolsExchangeIdUnmappedGet
+        /// </summary>
+        [Fact (Skip = "not implemented")]
+        public async Task V1SymbolsExchangeIdUnmappedGetAsyncTest()
+        {
+            string exchangeId = default!;
+            Client.Option<int> page = default!;
+            Client.Option<int> limit = default!;
+            var response = await _instance.V1SymbolsExchangeIdUnmappedGetAsync(exchangeId, page, limit);
             var model = response.Ok();
             Assert.IsType<List<MarketDataMetadataSymbol>>(model);
         }

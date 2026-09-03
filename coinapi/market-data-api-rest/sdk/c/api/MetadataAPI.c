@@ -974,6 +974,105 @@ end:
 
 }
 
+// Get a single symbol by its exchange-native symbol identifier.
+//
+// Looks up a symbol by `symbol_id_exchange` regardless of mapping status - this also returns symbols that have not been mapped to a CoinAPI `symbol_id` yet (see `{exchange_id}/unmapped`).
+//
+market_data_metadata_symbol_t*
+MetadataAPI_v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet(apiClient_t *apiClient, char *exchange_id, char *exchange_symbol_id)
+{
+    list_t    *localVarQueryParameters = NULL;
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = list_createList();
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+    size_t     localVarBodyLength = 0;
+
+    // clear the error code from the previous api call
+    apiClient->response_code = 0;
+
+    // create the path
+    char *localVarPath = strdup("/v1/symbols/{exchange_id}/by-exchange-symbol/{exchange_symbol_id}");
+
+    if(!exchange_id)
+        goto end;
+    if(!exchange_symbol_id)
+        goto end;
+
+
+    // Path Params
+    long sizeOfPathParams_exchange_id = strlen(exchange_id)+3 + strlen(exchange_symbol_id)+3 + sizeof("{ exchange_id }") - 1;
+    if(exchange_id == NULL) {
+        goto end;
+    }
+    char* localVarToReplace_exchange_id = malloc(sizeOfPathParams_exchange_id);
+    sprintf(localVarToReplace_exchange_id, "{%s}", "exchange_id");
+
+    localVarPath = strReplace(localVarPath, localVarToReplace_exchange_id, exchange_id);
+
+    // Path Params
+    long sizeOfPathParams_exchange_symbol_id = strlen(exchange_id)+3 + strlen(exchange_symbol_id)+3 + sizeof("{ exchange_symbol_id }") - 1;
+    if(exchange_symbol_id == NULL) {
+        goto end;
+    }
+    char* localVarToReplace_exchange_symbol_id = malloc(sizeOfPathParams_exchange_symbol_id);
+    sprintf(localVarToReplace_exchange_symbol_id, "{%s}", "exchange_symbol_id");
+
+    localVarPath = strReplace(localVarPath, localVarToReplace_exchange_symbol_id, exchange_symbol_id);
+
+
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
+    list_addElement(localVarHeaderType,"application/x-msgpack"); //produces
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    localVarBodyLength,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","successful operation");
+    //}
+    //nonprimitive not container
+    market_data_metadata_symbol_t *elementToReturn = NULL;
+    if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
+        cJSON *MetadataAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+        elementToReturn = market_data_metadata_symbol_parseFromJSON(MetadataAPIlocalVarJSON);
+        cJSON_Delete(MetadataAPIlocalVarJSON);
+        if(elementToReturn == NULL) {
+            // return 0;
+        }
+    }
+
+    //return type
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    
+    
+    
+    list_freeList(localVarHeaderType);
+    
+    free(localVarPath);
+    free(localVarToReplace_exchange_id);
+    free(localVarToReplace_exchange_symbol_id);
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
+
+}
+
 // List all historical symbols for an exchange.
 //
 // This endpoint provides access to symbols that are no longer actively traded or listed on a given exchange. The data is provided with pagination support.
@@ -994,6 +1093,152 @@ MetadataAPI_v1SymbolsExchangeIdHistoryGet(apiClient_t *apiClient, char *exchange
 
     // create the path
     char *localVarPath = strdup("/v1/symbols/{exchange_id}/history");
+
+    if(!exchange_id)
+        goto end;
+
+
+    // Path Params
+    long sizeOfPathParams_exchange_id = strlen(exchange_id)+3 + sizeof("{ exchange_id }") - 1;
+    if(exchange_id == NULL) {
+        goto end;
+    }
+    char* localVarToReplace_exchange_id = malloc(sizeOfPathParams_exchange_id);
+    sprintf(localVarToReplace_exchange_id, "{%s}", "exchange_id");
+
+    localVarPath = strReplace(localVarPath, localVarToReplace_exchange_id, exchange_id);
+
+
+
+    // query parameters
+    char *keyQuery_page = NULL;
+    char * valueQuery_page = NULL;
+    keyValuePair_t *keyPairQuery_page = 0;
+    if (page)
+    {
+        keyQuery_page = strdup("page");
+        valueQuery_page = calloc(1,MAX_NUMBER_LENGTH);
+        snprintf(valueQuery_page, MAX_NUMBER_LENGTH, "%d", *page);
+        keyPairQuery_page = keyValuePair_create(keyQuery_page, valueQuery_page);
+        list_addElement(localVarQueryParameters,keyPairQuery_page);
+    }
+
+    // query parameters
+    char *keyQuery_limit = NULL;
+    char * valueQuery_limit = NULL;
+    keyValuePair_t *keyPairQuery_limit = 0;
+    if (limit)
+    {
+        keyQuery_limit = strdup("limit");
+        valueQuery_limit = calloc(1,MAX_NUMBER_LENGTH);
+        snprintf(valueQuery_limit, MAX_NUMBER_LENGTH, "%d", *limit);
+        keyPairQuery_limit = keyValuePair_create(keyQuery_limit, valueQuery_limit);
+        list_addElement(localVarQueryParameters,keyPairQuery_limit);
+    }
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
+    list_addElement(localVarHeaderType,"application/x-msgpack"); //produces
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    localVarBodyLength,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","successful operation");
+    //}
+    list_t *elementToReturn = NULL;
+    if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
+        cJSON *MetadataAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+        if(!cJSON_IsArray(MetadataAPIlocalVarJSON)) {
+            return 0;//nonprimitive container
+        }
+        elementToReturn = list_createList();
+        cJSON *VarJSON;
+        cJSON_ArrayForEach(VarJSON, MetadataAPIlocalVarJSON)
+        {
+            if(!cJSON_IsObject(VarJSON))
+            {
+               // return 0;
+            }
+            char *localVarJSONToChar = cJSON_Print(VarJSON);
+            list_addElement(elementToReturn , localVarJSONToChar);
+        }
+
+        cJSON_Delete( MetadataAPIlocalVarJSON);
+        cJSON_Delete( VarJSON);
+    }
+    //return type
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    list_freeList(localVarQueryParameters);
+    
+    
+    list_freeList(localVarHeaderType);
+    
+    free(localVarPath);
+    free(localVarToReplace_exchange_id);
+    if(keyQuery_page){
+        free(keyQuery_page);
+        keyQuery_page = NULL;
+    }
+    if(valueQuery_page){
+        free(valueQuery_page);
+        valueQuery_page = NULL;
+    }
+    if(keyPairQuery_page){
+        keyValuePair_free(keyPairQuery_page);
+        keyPairQuery_page = NULL;
+    }
+    if(keyQuery_limit){
+        free(keyQuery_limit);
+        keyQuery_limit = NULL;
+    }
+    if(valueQuery_limit){
+        free(valueQuery_limit);
+        valueQuery_limit = NULL;
+    }
+    if(keyPairQuery_limit){
+        keyValuePair_free(keyPairQuery_limit);
+        keyPairQuery_limit = NULL;
+    }
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
+
+}
+
+// List symbols not yet mapped to a CoinAPI symbol_id for an exchange.
+//
+// Returns raw exchange symbols that MarketAccess has received (KVP data available) but that have not been mapped to a CoinAPI `symbol_id` yet. Since `symbol_id` is null for these rows, use `symbol_id_exchange` (and `GET {exchange_id}/by-exchange-symbol/{exchange_symbol_id}`) to reference them. The `raw_kvp` field contains the raw exchange payload as received.
+//
+list_t*
+MetadataAPI_v1SymbolsExchangeIdUnmappedGet(apiClient_t *apiClient, char *exchange_id, int *page, int *limit)
+{
+    list_t    *localVarQueryParameters = list_createList();
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = list_createList();
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+    size_t     localVarBodyLength = 0;
+
+    // clear the error code from the previous api call
+    apiClient->response_code = 0;
+
+    // create the path
+    char *localVarPath = strdup("/v1/symbols/{exchange_id}/unmapped");
 
     if(!exchange_id)
         goto end;

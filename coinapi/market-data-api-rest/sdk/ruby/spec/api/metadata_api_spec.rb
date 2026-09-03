@@ -139,6 +139,19 @@ describe 'MetadataApi' do
     end
   end
 
+  # unit tests for v1_symbols_exchange_id_by_exchange_symbol_exchange_symbol_id_get
+  # Get a single symbol by its exchange-native symbol identifier.
+  # Looks up a symbol by &#x60;symbol_id_exchange&#x60; regardless of mapping status - this also returns symbols that have not been mapped to a CoinAPI &#x60;symbol_id&#x60; yet (see &#x60;{exchange_id}/unmapped&#x60;).
+  # @param exchange_id The ID of the exchange.
+  # @param exchange_symbol_id The exchange-native symbol identifier (&#x60;symbol_id_exchange&#x60;).
+  # @param [Hash] opts the optional parameters
+  # @return [MarketDataMetadataSymbol]
+  describe 'v1_symbols_exchange_id_by_exchange_symbol_exchange_symbol_id_get test' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
   # unit tests for v1_symbols_exchange_id_history_get
   # List all historical symbols for an exchange.
   # This endpoint provides access to symbols that are no longer actively traded or listed on a given exchange. The data is provided with pagination support.
@@ -148,6 +161,20 @@ describe 'MetadataApi' do
   # @option opts [Integer] :limit Number of records to return per page.
   # @return [Array<MarketDataMetadataSymbol>]
   describe 'v1_symbols_exchange_id_history_get test' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
+  # unit tests for v1_symbols_exchange_id_unmapped_get
+  # List symbols not yet mapped to a CoinAPI symbol_id for an exchange.
+  # Returns raw exchange symbols that MarketAccess has received (KVP data available) but that have not been mapped to a CoinAPI &#x60;symbol_id&#x60; yet. Since &#x60;symbol_id&#x60; is null for these rows, use &#x60;symbol_id_exchange&#x60; (and &#x60;GET {exchange_id}/by-exchange-symbol/{exchange_symbol_id}&#x60;) to reference them. The &#x60;raw_kvp&#x60; field contains the raw exchange payload as received.
+  # @param exchange_id The ID of the exchange.
+  # @param [Hash] opts the optional parameters
+  # @option opts [Integer] :page The page number for pagination (starts from 1).
+  # @option opts [Integer] :limit Number of records to return per page.
+  # @return [Array<MarketDataMetadataSymbol>]
+  describe 'v1_symbols_exchange_id_unmapped_get test' do
     it 'should work' do
       # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
     end

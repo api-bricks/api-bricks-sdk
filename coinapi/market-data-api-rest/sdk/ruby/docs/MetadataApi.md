@@ -13,7 +13,9 @@ All URIs are relative to *https://rest.coinapi.io*
 | [**v1_exchanges_get**](MetadataApi.md#v1_exchanges_get) | **GET** /v1/exchanges | List all exchanges |
 | [**v1_exchanges_icons_size_get**](MetadataApi.md#v1_exchanges_icons_size_get) | **GET** /v1/exchanges/icons/{size} | List of icons for the exchanges |
 | [**v1_symbols_exchange_id_active_get**](MetadataApi.md#v1_symbols_exchange_id_active_get) | **GET** /v1/symbols/{exchange_id}/active | List all active symbols |
+| [**v1_symbols_exchange_id_by_exchange_symbol_exchange_symbol_id_get**](MetadataApi.md#v1_symbols_exchange_id_by_exchange_symbol_exchange_symbol_id_get) | **GET** /v1/symbols/{exchange_id}/by-exchange-symbol/{exchange_symbol_id} | Get a single symbol by its exchange-native symbol identifier. |
 | [**v1_symbols_exchange_id_history_get**](MetadataApi.md#v1_symbols_exchange_id_history_get) | **GET** /v1/symbols/{exchange_id}/history | List all historical symbols for an exchange. |
+| [**v1_symbols_exchange_id_unmapped_get**](MetadataApi.md#v1_symbols_exchange_id_unmapped_get) | **GET** /v1/symbols/{exchange_id}/unmapped | List symbols not yet mapped to a CoinAPI symbol_id for an exchange. |
 | [**v1_symbols_map_exchange_id_get**](MetadataApi.md#v1_symbols_map_exchange_id_get) | **GET** /v1/symbols/map/{exchange_id} | List active symbol mapping for the exchange |
 
 
@@ -689,6 +691,82 @@ end
 - **Accept**: text/plain, application/json, text/json, application/x-msgpack
 
 
+## v1_symbols_exchange_id_by_exchange_symbol_exchange_symbol_id_get
+
+> <MarketDataMetadataSymbol> v1_symbols_exchange_id_by_exchange_symbol_exchange_symbol_id_get(exchange_id, exchange_symbol_id)
+
+Get a single symbol by its exchange-native symbol identifier.
+
+Looks up a symbol by `symbol_id_exchange` regardless of mapping status - this also returns symbols that have not been mapped to a CoinAPI `symbol_id` yet (see `{exchange_id}/unmapped`).
+
+### Examples
+
+```ruby
+require 'time'
+require 'openapi_client'
+# setup authorization
+OpenapiClient.configure do |config|
+  # Configure API key authorization: APIKey
+  config.api_key['Authorization'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['Authorization'] = 'Bearer'
+
+  # Configure Bearer authorization (JWT): JWT
+  config.access_token = 'YOUR_BEARER_TOKEN'
+end
+
+api_instance = OpenapiClient::MetadataApi.new
+exchange_id = 'exchange_id_example' # String | The ID of the exchange.
+exchange_symbol_id = 'exchange_symbol_id_example' # String | The exchange-native symbol identifier (`symbol_id_exchange`).
+
+begin
+  # Get a single symbol by its exchange-native symbol identifier.
+  result = api_instance.v1_symbols_exchange_id_by_exchange_symbol_exchange_symbol_id_get(exchange_id, exchange_symbol_id)
+  p result
+rescue OpenapiClient::ApiError => e
+  puts "Error when calling MetadataApi->v1_symbols_exchange_id_by_exchange_symbol_exchange_symbol_id_get: #{e}"
+end
+```
+
+#### Using the v1_symbols_exchange_id_by_exchange_symbol_exchange_symbol_id_get_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(<MarketDataMetadataSymbol>, Integer, Hash)> v1_symbols_exchange_id_by_exchange_symbol_exchange_symbol_id_get_with_http_info(exchange_id, exchange_symbol_id)
+
+```ruby
+begin
+  # Get a single symbol by its exchange-native symbol identifier.
+  data, status_code, headers = api_instance.v1_symbols_exchange_id_by_exchange_symbol_exchange_symbol_id_get_with_http_info(exchange_id, exchange_symbol_id)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => <MarketDataMetadataSymbol>
+rescue OpenapiClient::ApiError => e
+  puts "Error when calling MetadataApi->v1_symbols_exchange_id_by_exchange_symbol_exchange_symbol_id_get_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **exchange_id** | **String** | The ID of the exchange. |  |
+| **exchange_symbol_id** | **String** | The exchange-native symbol identifier (&#x60;symbol_id_exchange&#x60;). |  |
+
+### Return type
+
+[**MarketDataMetadataSymbol**](MarketDataMetadataSymbol.md)
+
+### Authorization
+
+[APIKey](../README.md#APIKey), [JWT](../README.md#JWT)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json, application/x-msgpack
+
+
 ## v1_symbols_exchange_id_history_get
 
 > <Array<MarketDataMetadataSymbol>> v1_symbols_exchange_id_history_get(exchange_id, opts)
@@ -744,6 +822,86 @@ begin
   p data # => <Array<MarketDataMetadataSymbol>>
 rescue OpenapiClient::ApiError => e
   puts "Error when calling MetadataApi->v1_symbols_exchange_id_history_get_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **exchange_id** | **String** | The ID of the exchange. |  |
+| **page** | **Integer** | The page number for pagination (starts from 1). | [optional][default to 1] |
+| **limit** | **Integer** | Number of records to return per page. | [optional][default to 100] |
+
+### Return type
+
+[**Array&lt;MarketDataMetadataSymbol&gt;**](MarketDataMetadataSymbol.md)
+
+### Authorization
+
+[APIKey](../README.md#APIKey), [JWT](../README.md#JWT)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json, application/x-msgpack
+
+
+## v1_symbols_exchange_id_unmapped_get
+
+> <Array<MarketDataMetadataSymbol>> v1_symbols_exchange_id_unmapped_get(exchange_id, opts)
+
+List symbols not yet mapped to a CoinAPI symbol_id for an exchange.
+
+Returns raw exchange symbols that MarketAccess has received (KVP data available) but that have not been mapped to a CoinAPI `symbol_id` yet. Since `symbol_id` is null for these rows, use `symbol_id_exchange` (and `GET {exchange_id}/by-exchange-symbol/{exchange_symbol_id}`) to reference them. The `raw_kvp` field contains the raw exchange payload as received.
+
+### Examples
+
+```ruby
+require 'time'
+require 'openapi_client'
+# setup authorization
+OpenapiClient.configure do |config|
+  # Configure API key authorization: APIKey
+  config.api_key['Authorization'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['Authorization'] = 'Bearer'
+
+  # Configure Bearer authorization (JWT): JWT
+  config.access_token = 'YOUR_BEARER_TOKEN'
+end
+
+api_instance = OpenapiClient::MetadataApi.new
+exchange_id = 'exchange_id_example' # String | The ID of the exchange.
+opts = {
+  page: 56, # Integer | The page number for pagination (starts from 1).
+  limit: 56 # Integer | Number of records to return per page.
+}
+
+begin
+  # List symbols not yet mapped to a CoinAPI symbol_id for an exchange.
+  result = api_instance.v1_symbols_exchange_id_unmapped_get(exchange_id, opts)
+  p result
+rescue OpenapiClient::ApiError => e
+  puts "Error when calling MetadataApi->v1_symbols_exchange_id_unmapped_get: #{e}"
+end
+```
+
+#### Using the v1_symbols_exchange_id_unmapped_get_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(<Array<MarketDataMetadataSymbol>>, Integer, Hash)> v1_symbols_exchange_id_unmapped_get_with_http_info(exchange_id, opts)
+
+```ruby
+begin
+  # List symbols not yet mapped to a CoinAPI symbol_id for an exchange.
+  data, status_code, headers = api_instance.v1_symbols_exchange_id_unmapped_get_with_http_info(exchange_id, opts)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => <Array<MarketDataMetadataSymbol>>
+rescue OpenapiClient::ApiError => e
+  puts "Error when calling MetadataApi->v1_symbols_exchange_id_unmapped_get_with_http_info: #{e}"
 end
 ```
 

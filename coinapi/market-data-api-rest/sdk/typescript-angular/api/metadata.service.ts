@@ -696,6 +696,76 @@ export class MetadataService extends BaseService {
     }
 
     /**
+     * Get a single symbol by its exchange-native symbol identifier.
+     * Looks up a symbol by &#x60;symbol_id_exchange&#x60; regardless of mapping status - this also returns symbols that have not been mapped to a CoinAPI &#x60;symbol_id&#x60; yet (see &#x60;{exchange_id}/unmapped&#x60;).
+     * @endpoint get /v1/symbols/{exchange_id}/by-exchange-symbol/{exchange_symbol_id}
+     * @param exchangeId The ID of the exchange.
+     * @param exchangeSymbolId The exchange-native symbol identifier (&#x60;symbol_id_exchange&#x60;).
+     * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
+     * @param reportProgress flag to report request and response progress.
+     * @param options additional options
+     */
+    public v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet(exchangeId: string, exchangeSymbolId: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext, transferCache?: boolean}): Observable<MarketDataMetadataSymbol>;
+    public v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet(exchangeId: string, exchangeSymbolId: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext, transferCache?: boolean}): Observable<HttpResponse<MarketDataMetadataSymbol>>;
+    public v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet(exchangeId: string, exchangeSymbolId: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext, transferCache?: boolean}): Observable<HttpEvent<MarketDataMetadataSymbol>>;
+    public v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet(exchangeId: string, exchangeSymbolId: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext, transferCache?: boolean}): Observable<any> {
+        if (exchangeId === null || exchangeId === undefined) {
+            throw new Error('Required parameter exchangeId was null or undefined when calling v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet.');
+        }
+        if (exchangeSymbolId === null || exchangeSymbolId === undefined) {
+            throw new Error('Required parameter exchangeSymbolId was null or undefined when calling v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet.');
+        }
+
+        let localVarHeaders = this.defaultHeaders;
+
+        // authentication (APIKey) required
+        localVarHeaders = this.configuration.addCredentialToHeaders('APIKey', 'Authorization', localVarHeaders);
+
+        // authentication (JWT) required
+        localVarHeaders = this.configuration.addCredentialToHeaders('JWT', 'Authorization', localVarHeaders, 'Bearer ');
+
+        const localVarHttpHeaderAcceptSelected: string | undefined = options?.httpHeaderAccept ?? this.configuration.selectHeaderAccept([
+            'text/plain',
+            'application/json',
+            'text/json',
+            'application/x-msgpack'
+        ]);
+        if (localVarHttpHeaderAcceptSelected !== undefined) {
+            localVarHeaders = localVarHeaders.set('Accept', localVarHttpHeaderAcceptSelected);
+        }
+
+        const localVarHttpContext: HttpContext = options?.context ?? new HttpContext();
+
+        const localVarTransferCache: boolean = options?.transferCache ?? true;
+
+
+        let responseType_: 'text' | 'json' | 'blob' = 'json';
+        if (localVarHttpHeaderAcceptSelected) {
+            if (localVarHttpHeaderAcceptSelected.startsWith('text')) {
+                responseType_ = 'text';
+            } else if (this.configuration.isJsonMime(localVarHttpHeaderAcceptSelected)) {
+                responseType_ = 'json';
+            } else {
+                responseType_ = 'blob';
+            }
+        }
+
+        let localVarPath = `/v1/symbols/${this.configuration.encodeParam({name: "exchangeId", value: exchangeId, in: "path", style: "simple", explode: false, dataType: "string", dataFormat: undefined})}/by-exchange-symbol/${this.configuration.encodeParam({name: "exchangeSymbolId", value: exchangeSymbolId, in: "path", style: "simple", explode: false, dataType: "string", dataFormat: undefined})}`;
+        const { basePath, withCredentials } = this.configuration;
+        return this.httpClient.request<MarketDataMetadataSymbol>('get', `${basePath}${localVarPath}`,
+            {
+                context: localVarHttpContext,
+                responseType: <any>responseType_,
+                ...(withCredentials ? { withCredentials } : {}),
+                headers: localVarHeaders,
+                observe: observe,
+                ...(localVarTransferCache !== undefined ? { transferCache: localVarTransferCache } : {}),
+                reportProgress: reportProgress
+            }
+        );
+    }
+
+    /**
      * List all historical symbols for an exchange.
      * This endpoint provides access to symbols that are no longer actively traded or listed on a given exchange. The data is provided with pagination support.
      * @endpoint get /v1/symbols/{exchange_id}/history
@@ -769,6 +839,95 @@ export class MetadataService extends BaseService {
         }
 
         let localVarPath = `/v1/symbols/${this.configuration.encodeParam({name: "exchangeId", value: exchangeId, in: "path", style: "simple", explode: false, dataType: "string", dataFormat: undefined})}/history`;
+        const { basePath, withCredentials } = this.configuration;
+        return this.httpClient.request<Array<MarketDataMetadataSymbol>>('get', `${basePath}${localVarPath}`,
+            {
+                context: localVarHttpContext,
+                params: localVarQueryParameters.toHttpParams(),
+                responseType: <any>responseType_,
+                ...(withCredentials ? { withCredentials } : {}),
+                headers: localVarHeaders,
+                observe: observe,
+                ...(localVarTransferCache !== undefined ? { transferCache: localVarTransferCache } : {}),
+                reportProgress: reportProgress
+            }
+        );
+    }
+
+    /**
+     * List symbols not yet mapped to a CoinAPI symbol_id for an exchange.
+     * Returns raw exchange symbols that MarketAccess has received (KVP data available) but that have not been mapped to a CoinAPI &#x60;symbol_id&#x60; yet. Since &#x60;symbol_id&#x60; is null for these rows, use &#x60;symbol_id_exchange&#x60; (and &#x60;GET {exchange_id}/by-exchange-symbol/{exchange_symbol_id}&#x60;) to reference them. The &#x60;raw_kvp&#x60; field contains the raw exchange payload as received.
+     * @endpoint get /v1/symbols/{exchange_id}/unmapped
+     * @param exchangeId The ID of the exchange.
+     * @param page The page number for pagination (starts from 1).
+     * @param limit Number of records to return per page.
+     * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
+     * @param reportProgress flag to report request and response progress.
+     * @param options additional options
+     */
+    public v1SymbolsExchangeIdUnmappedGet(exchangeId: string, page?: number, limit?: number, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext, transferCache?: boolean}): Observable<Array<MarketDataMetadataSymbol>>;
+    public v1SymbolsExchangeIdUnmappedGet(exchangeId: string, page?: number, limit?: number, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext, transferCache?: boolean}): Observable<HttpResponse<Array<MarketDataMetadataSymbol>>>;
+    public v1SymbolsExchangeIdUnmappedGet(exchangeId: string, page?: number, limit?: number, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext, transferCache?: boolean}): Observable<HttpEvent<Array<MarketDataMetadataSymbol>>>;
+    public v1SymbolsExchangeIdUnmappedGet(exchangeId: string, page?: number, limit?: number, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'text/json' | 'application/x-msgpack', context?: HttpContext, transferCache?: boolean}): Observable<any> {
+        if (exchangeId === null || exchangeId === undefined) {
+            throw new Error('Required parameter exchangeId was null or undefined when calling v1SymbolsExchangeIdUnmappedGet.');
+        }
+
+        let localVarQueryParameters = new OpenApiHttpParams(this.encoder);
+
+        localVarQueryParameters = this.addToHttpParams(
+            localVarQueryParameters,
+            'page',
+            <any>page,
+            QueryParamStyle.Form,
+            true,
+        );
+
+
+        localVarQueryParameters = this.addToHttpParams(
+            localVarQueryParameters,
+            'limit',
+            <any>limit,
+            QueryParamStyle.Form,
+            true,
+        );
+
+
+        let localVarHeaders = this.defaultHeaders;
+
+        // authentication (APIKey) required
+        localVarHeaders = this.configuration.addCredentialToHeaders('APIKey', 'Authorization', localVarHeaders);
+
+        // authentication (JWT) required
+        localVarHeaders = this.configuration.addCredentialToHeaders('JWT', 'Authorization', localVarHeaders, 'Bearer ');
+
+        const localVarHttpHeaderAcceptSelected: string | undefined = options?.httpHeaderAccept ?? this.configuration.selectHeaderAccept([
+            'text/plain',
+            'application/json',
+            'text/json',
+            'application/x-msgpack'
+        ]);
+        if (localVarHttpHeaderAcceptSelected !== undefined) {
+            localVarHeaders = localVarHeaders.set('Accept', localVarHttpHeaderAcceptSelected);
+        }
+
+        const localVarHttpContext: HttpContext = options?.context ?? new HttpContext();
+
+        const localVarTransferCache: boolean = options?.transferCache ?? true;
+
+
+        let responseType_: 'text' | 'json' | 'blob' = 'json';
+        if (localVarHttpHeaderAcceptSelected) {
+            if (localVarHttpHeaderAcceptSelected.startsWith('text')) {
+                responseType_ = 'text';
+            } else if (this.configuration.isJsonMime(localVarHttpHeaderAcceptSelected)) {
+                responseType_ = 'json';
+            } else {
+                responseType_ = 'blob';
+            }
+        }
+
+        let localVarPath = `/v1/symbols/${this.configuration.encodeParam({name: "exchangeId", value: exchangeId, in: "path", style: "simple", explode: false, dataType: "string", dataFormat: undefined})}/unmapped`;
         const { basePath, withCredentials } = this.configuration;
         return this.httpClient.request<Array<MarketDataMetadataSymbol>>('get', `${basePath}${localVarPath}`,
             {

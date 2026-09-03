@@ -13,7 +13,9 @@ Method | HTTP request | Description
 [**V1ExchangesGet**](MetadataApi.md#V1ExchangesGet) | **GET** /v1/exchanges | List all exchanges
 [**V1ExchangesIconsSizeGet**](MetadataApi.md#V1ExchangesIconsSizeGet) | **GET** /v1/exchanges/icons/{size} | List of icons for the exchanges
 [**V1SymbolsExchangeIdActiveGet**](MetadataApi.md#V1SymbolsExchangeIdActiveGet) | **GET** /v1/symbols/{exchange_id}/active | List all active symbols
+[**V1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet**](MetadataApi.md#V1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet) | **GET** /v1/symbols/{exchange_id}/by-exchange-symbol/{exchange_symbol_id} | Get a single symbol by its exchange-native symbol identifier.
 [**V1SymbolsExchangeIdHistoryGet**](MetadataApi.md#V1SymbolsExchangeIdHistoryGet) | **GET** /v1/symbols/{exchange_id}/history | List all historical symbols for an exchange.
+[**V1SymbolsExchangeIdUnmappedGet**](MetadataApi.md#V1SymbolsExchangeIdUnmappedGet) | **GET** /v1/symbols/{exchange_id}/unmapped | List symbols not yet mapped to a CoinAPI symbol_id for an exchange.
 [**V1SymbolsMapExchangeIdGet**](MetadataApi.md#V1SymbolsMapExchangeIdGet) | **GET** /v1/symbols/map/{exchange_id} | List active symbol mapping for the exchange
 
 
@@ -474,6 +476,59 @@ Name | Type | Description  | Notes
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
+# **V1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet**
+> MarketDataMetadataSymbol V1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet(exchange_id, exchange_symbol_id)
+
+Get a single symbol by its exchange-native symbol identifier.
+
+Looks up a symbol by `symbol_id_exchange` regardless of mapping status - this also returns symbols that have not been mapped to a CoinAPI `symbol_id` yet (see `{exchange_id}/unmapped`).
+
+### Example
+```R
+library(openapi)
+
+# Get a single symbol by its exchange-native symbol identifier.
+#
+# prepare function argument(s)
+var_exchange_id <- "exchange_id_example" # character | The ID of the exchange.
+var_exchange_symbol_id <- "exchange_symbol_id_example" # character | The exchange-native symbol identifier (`symbol_id_exchange`).
+
+api_instance <- MetadataApi$new()
+# Configure API key authorization: APIKey
+api_instance$api_client$api_keys["Authorization"] <- Sys.getenv("API_KEY")
+# Configure HTTP bearer authorization: JWT
+# api_instance$api_client$bearer_token <- Sys.getenv("BEARER_TOKEN")
+# to save the result into a file, simply add the optional `data_file` parameter, e.g.
+# result <- api_instance$V1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet(var_exchange_id, var_exchange_symbol_iddata_file = "result.txt")
+result <- api_instance$V1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet(var_exchange_id, var_exchange_symbol_id)
+dput(result)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **exchange_id** | **character**| The ID of the exchange. | 
+ **exchange_symbol_id** | **character**| The exchange-native symbol identifier (&#x60;symbol_id_exchange&#x60;). | 
+
+### Return type
+
+[**MarketDataMetadataSymbol**](MarketDataMetadata.Symbol.md)
+
+### Authorization
+
+[APIKey](../README.md#APIKey), [JWT](../README.md#JWT)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json, application/x-msgpack
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
 # **V1SymbolsExchangeIdHistoryGet**
 > array[MarketDataMetadataSymbol] V1SymbolsExchangeIdHistoryGet(exchange_id, page = 1, limit = 100)
 
@@ -500,6 +555,61 @@ api_instance$api_client$api_keys["Authorization"] <- Sys.getenv("API_KEY")
 # to save the result into a file, simply add the optional `data_file` parameter, e.g.
 # result <- api_instance$V1SymbolsExchangeIdHistoryGet(var_exchange_id, page = var_page, limit = var_limitdata_file = "result.txt")
 result <- api_instance$V1SymbolsExchangeIdHistoryGet(var_exchange_id, page = var_page, limit = var_limit)
+dput(result)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **exchange_id** | **character**| The ID of the exchange. | 
+ **page** | **integer**| The page number for pagination (starts from 1). | [optional] [default to 1]
+ **limit** | **integer**| Number of records to return per page. | [optional] [default to 100]
+
+### Return type
+
+[**array[MarketDataMetadataSymbol]**](MarketDataMetadata.Symbol.md)
+
+### Authorization
+
+[APIKey](../README.md#APIKey), [JWT](../README.md#JWT)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json, application/x-msgpack
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+# **V1SymbolsExchangeIdUnmappedGet**
+> array[MarketDataMetadataSymbol] V1SymbolsExchangeIdUnmappedGet(exchange_id, page = 1, limit = 100)
+
+List symbols not yet mapped to a CoinAPI symbol_id for an exchange.
+
+Returns raw exchange symbols that MarketAccess has received (KVP data available) but that have not been mapped to a CoinAPI `symbol_id` yet. Since `symbol_id` is null for these rows, use `symbol_id_exchange` (and `GET {exchange_id}/by-exchange-symbol/{exchange_symbol_id}`) to reference them. The `raw_kvp` field contains the raw exchange payload as received.
+
+### Example
+```R
+library(openapi)
+
+# List symbols not yet mapped to a CoinAPI symbol_id for an exchange.
+#
+# prepare function argument(s)
+var_exchange_id <- "exchange_id_example" # character | The ID of the exchange.
+var_page <- 1 # integer | The page number for pagination (starts from 1). (Optional)
+var_limit <- 100 # integer | Number of records to return per page. (Optional)
+
+api_instance <- MetadataApi$new()
+# Configure API key authorization: APIKey
+api_instance$api_client$api_keys["Authorization"] <- Sys.getenv("API_KEY")
+# Configure HTTP bearer authorization: JWT
+# api_instance$api_client$bearer_token <- Sys.getenv("BEARER_TOKEN")
+# to save the result into a file, simply add the optional `data_file` parameter, e.g.
+# result <- api_instance$V1SymbolsExchangeIdUnmappedGet(var_exchange_id, page = var_page, limit = var_limitdata_file = "result.txt")
+result <- api_instance$V1SymbolsExchangeIdUnmappedGet(var_exchange_id, page = var_page, limit = var_limit)
 dput(result)
 ```
 

@@ -90,10 +90,24 @@ class TestMetadataApi(unittest.TestCase):
         """
         pass
 
+    def test_v1_symbols_exchange_id_by_exchange_symbol_exchange_symbol_id_get(self) -> None:
+        """Test case for v1_symbols_exchange_id_by_exchange_symbol_exchange_symbol_id_get
+
+        Get a single symbol by its exchange-native symbol identifier.
+        """
+        pass
+
     def test_v1_symbols_exchange_id_history_get(self) -> None:
         """Test case for v1_symbols_exchange_id_history_get
 
         List all historical symbols for an exchange.
+        """
+        pass
+
+    def test_v1_symbols_exchange_id_unmapped_get(self) -> None:
+        """Test case for v1_symbols_exchange_id_unmapped_get
+
+        List symbols not yet mapped to a CoinAPI symbol_id for an exchange.
         """
         pass
 

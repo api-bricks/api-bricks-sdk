@@ -13,7 +13,9 @@ Method | HTTP request | Description
 [**v1ExchangesGet**](MetadataApi.md#v1ExchangesGet) | **GET** /v1/exchanges | List all exchanges
 [**v1ExchangesIconsSizeGet**](MetadataApi.md#v1ExchangesIconsSizeGet) | **GET** /v1/exchanges/icons/{size} | List of icons for the exchanges
 [**v1SymbolsExchangeIdActiveGet**](MetadataApi.md#v1SymbolsExchangeIdActiveGet) | **GET** /v1/symbols/{exchange_id}/active | List all active symbols
+[**v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet**](MetadataApi.md#v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet) | **GET** /v1/symbols/{exchange_id}/by-exchange-symbol/{exchange_symbol_id} | Get a single symbol by its exchange-native symbol identifier.
 [**v1SymbolsExchangeIdHistoryGet**](MetadataApi.md#v1SymbolsExchangeIdHistoryGet) | **GET** /v1/symbols/{exchange_id}/history | List all historical symbols for an exchange.
+[**v1SymbolsExchangeIdUnmappedGet**](MetadataApi.md#v1SymbolsExchangeIdUnmappedGet) | **GET** /v1/symbols/{exchange_id}/unmapped | List symbols not yet mapped to a CoinAPI symbol_id for an exchange.
 [**v1SymbolsMapExchangeIdGet**](MetadataApi.md#v1SymbolsMapExchangeIdGet) | **GET** /v1/symbols/map/{exchange_id} | List active symbol mapping for the exchange
 
 
@@ -430,6 +432,54 @@ Name | Type | Description  | Notes
 - **Accept**: text/plain, application/json, text/json, application/x-msgpack
 
 
+## v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet
+
+> MarketDataMetadataSymbol v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet(exchangeId, exchangeSymbolId)
+
+Get a single symbol by its exchange-native symbol identifier.
+
+Looks up a symbol by &#x60;symbol_id_exchange&#x60; regardless of mapping status - this also returns symbols that have not been mapped to a CoinAPI &#x60;symbol_id&#x60; yet (see &#x60;{exchange_id}/unmapped&#x60;).
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.MetadataApi;
+
+MetadataApi apiInstance = new MetadataApi();
+String exchangeId = null; // String | The ID of the exchange.
+String exchangeSymbolId = null; // String | The exchange-native symbol identifier (`symbol_id_exchange`).
+try {
+    MarketDataMetadataSymbol result = apiInstance.v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet(exchangeId, exchangeSymbolId);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling MetadataApi#v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **exchangeId** | **String**| The ID of the exchange. | [default to null]
+ **exchangeSymbolId** | **String**| The exchange-native symbol identifier (&#x60;symbol_id_exchange&#x60;). | [default to null]
+
+### Return type
+
+[**MarketDataMetadataSymbol**](MarketDataMetadataSymbol.md)
+
+### Authorization
+
+[APIKey](../README.md#APIKey), [JWT](../README.md#JWT)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json, application/x-msgpack
+
+
 ## v1SymbolsExchangeIdHistoryGet
 
 > List&lt;MarketDataMetadataSymbol&gt; v1SymbolsExchangeIdHistoryGet(exchangeId, page, limit)
@@ -453,6 +503,56 @@ try {
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling MetadataApi#v1SymbolsExchangeIdHistoryGet");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **exchangeId** | **String**| The ID of the exchange. | [default to null]
+ **page** | **Integer**| The page number for pagination (starts from 1). | [optional] [default to 1]
+ **limit** | **Integer**| Number of records to return per page. | [optional] [default to 100]
+
+### Return type
+
+[**List&lt;MarketDataMetadataSymbol&gt;**](MarketDataMetadataSymbol.md)
+
+### Authorization
+
+[APIKey](../README.md#APIKey), [JWT](../README.md#JWT)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json, application/x-msgpack
+
+
+## v1SymbolsExchangeIdUnmappedGet
+
+> List&lt;MarketDataMetadataSymbol&gt; v1SymbolsExchangeIdUnmappedGet(exchangeId, page, limit)
+
+List symbols not yet mapped to a CoinAPI symbol_id for an exchange.
+
+Returns raw exchange symbols that MarketAccess has received (KVP data available) but that have not been mapped to a CoinAPI &#x60;symbol_id&#x60; yet. Since &#x60;symbol_id&#x60; is null for these rows, use &#x60;symbol_id_exchange&#x60; (and &#x60;GET {exchange_id}/by-exchange-symbol/{exchange_symbol_id}&#x60;) to reference them. The &#x60;raw_kvp&#x60; field contains the raw exchange payload as received.
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.MetadataApi;
+
+MetadataApi apiInstance = new MetadataApi();
+String exchangeId = null; // String | The ID of the exchange.
+Integer page = 1; // Integer | The page number for pagination (starts from 1).
+Integer limit = 100; // Integer | Number of records to return per page.
+try {
+    List<MarketDataMetadataSymbol> result = apiInstance.v1SymbolsExchangeIdUnmappedGet(exchangeId, page, limit);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling MetadataApi#v1SymbolsExchangeIdUnmappedGet");
     e.printStackTrace();
 }
 ```

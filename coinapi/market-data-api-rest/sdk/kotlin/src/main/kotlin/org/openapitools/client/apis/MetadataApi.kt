@@ -751,6 +751,82 @@ open class MetadataApi(basePath: kotlin.String = defaultBasePath, client: Call.F
     }
 
     /**
+     * GET /v1/symbols/{exchange_id}/by-exchange-symbol/{exchange_symbol_id}
+     * Get a single symbol by its exchange-native symbol identifier.
+     * Looks up a symbol by &#x60;symbol_id_exchange&#x60; regardless of mapping status - this also returns symbols that have not been mapped to a CoinAPI &#x60;symbol_id&#x60; yet (see &#x60;{exchange_id}/unmapped&#x60;).
+     * @param exchangeId The ID of the exchange.
+     * @param exchangeSymbolId The exchange-native symbol identifier (&#x60;symbol_id_exchange&#x60;).
+     * @return MarketDataMetadataSymbol
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet(exchangeId: kotlin.String, exchangeSymbolId: kotlin.String) : MarketDataMetadataSymbol {
+        val localVarResponse = v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGetWithHttpInfo(exchangeId = exchangeId, exchangeSymbolId = exchangeSymbolId)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as MarketDataMetadataSymbol
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GET /v1/symbols/{exchange_id}/by-exchange-symbol/{exchange_symbol_id}
+     * Get a single symbol by its exchange-native symbol identifier.
+     * Looks up a symbol by &#x60;symbol_id_exchange&#x60; regardless of mapping status - this also returns symbols that have not been mapped to a CoinAPI &#x60;symbol_id&#x60; yet (see &#x60;{exchange_id}/unmapped&#x60;).
+     * @param exchangeId The ID of the exchange.
+     * @param exchangeSymbolId The exchange-native symbol identifier (&#x60;symbol_id_exchange&#x60;).
+     * @return ApiResponse<MarketDataMetadataSymbol?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGetWithHttpInfo(exchangeId: kotlin.String, exchangeSymbolId: kotlin.String) : ApiResponse<MarketDataMetadataSymbol?> {
+        val localVariableConfig = v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGetRequestConfig(exchangeId = exchangeId, exchangeSymbolId = exchangeSymbolId)
+
+        return request<Unit, MarketDataMetadataSymbol>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet
+     *
+     * @param exchangeId The ID of the exchange.
+     * @param exchangeSymbolId The exchange-native symbol identifier (&#x60;symbol_id_exchange&#x60;).
+     * @return RequestConfig
+     */
+    fun v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGetRequestConfig(exchangeId: kotlin.String, exchangeSymbolId: kotlin.String) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "text/plain, application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/v1/symbols/{exchange_id}/by-exchange-symbol/{exchange_symbol_id}".replace("{"+"exchange_id"+"}", encodeURIComponent(exchangeId.toString())).replace("{"+"exchange_symbol_id"+"}", encodeURIComponent(exchangeSymbolId.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
      * GET /v1/symbols/{exchange_id}/history
      * List all historical symbols for an exchange.
      * This endpoint provides access to symbols that are no longer actively traded or listed on a given exchange. The data is provided with pagination support.
@@ -830,6 +906,93 @@ open class MetadataApi(basePath: kotlin.String = defaultBasePath, client: Call.F
         return RequestConfig(
             method = RequestMethod.GET,
             path = "/v1/symbols/{exchange_id}/history".replace("{"+"exchange_id"+"}", encodeURIComponent(exchangeId.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * GET /v1/symbols/{exchange_id}/unmapped
+     * List symbols not yet mapped to a CoinAPI symbol_id for an exchange.
+     * Returns raw exchange symbols that MarketAccess has received (KVP data available) but that have not been mapped to a CoinAPI &#x60;symbol_id&#x60; yet. Since &#x60;symbol_id&#x60; is null for these rows, use &#x60;symbol_id_exchange&#x60; (and &#x60;GET {exchange_id}/by-exchange-symbol/{exchange_symbol_id}&#x60;) to reference them. The &#x60;raw_kvp&#x60; field contains the raw exchange payload as received.
+     * @param exchangeId The ID of the exchange.
+     * @param page The page number for pagination (starts from 1). (optional, default to 1)
+     * @param limit Number of records to return per page. (optional, default to 100)
+     * @return kotlin.collections.List<MarketDataMetadataSymbol>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun v1SymbolsExchangeIdUnmappedGet(exchangeId: kotlin.String, page: kotlin.Int? = 1, limit: kotlin.Int? = 100) : kotlin.collections.List<MarketDataMetadataSymbol> {
+        val localVarResponse = v1SymbolsExchangeIdUnmappedGetWithHttpInfo(exchangeId = exchangeId, page = page, limit = limit)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<MarketDataMetadataSymbol>
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GET /v1/symbols/{exchange_id}/unmapped
+     * List symbols not yet mapped to a CoinAPI symbol_id for an exchange.
+     * Returns raw exchange symbols that MarketAccess has received (KVP data available) but that have not been mapped to a CoinAPI &#x60;symbol_id&#x60; yet. Since &#x60;symbol_id&#x60; is null for these rows, use &#x60;symbol_id_exchange&#x60; (and &#x60;GET {exchange_id}/by-exchange-symbol/{exchange_symbol_id}&#x60;) to reference them. The &#x60;raw_kvp&#x60; field contains the raw exchange payload as received.
+     * @param exchangeId The ID of the exchange.
+     * @param page The page number for pagination (starts from 1). (optional, default to 1)
+     * @param limit Number of records to return per page. (optional, default to 100)
+     * @return ApiResponse<kotlin.collections.List<MarketDataMetadataSymbol>?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun v1SymbolsExchangeIdUnmappedGetWithHttpInfo(exchangeId: kotlin.String, page: kotlin.Int?, limit: kotlin.Int?) : ApiResponse<kotlin.collections.List<MarketDataMetadataSymbol>?> {
+        val localVariableConfig = v1SymbolsExchangeIdUnmappedGetRequestConfig(exchangeId = exchangeId, page = page, limit = limit)
+
+        return request<Unit, kotlin.collections.List<MarketDataMetadataSymbol>>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation v1SymbolsExchangeIdUnmappedGet
+     *
+     * @param exchangeId The ID of the exchange.
+     * @param page The page number for pagination (starts from 1). (optional, default to 1)
+     * @param limit Number of records to return per page. (optional, default to 100)
+     * @return RequestConfig
+     */
+    fun v1SymbolsExchangeIdUnmappedGetRequestConfig(exchangeId: kotlin.String, page: kotlin.Int?, limit: kotlin.Int?) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
+            .apply {
+                if (page != null) {
+                    put("page", listOf(page.toString()))
+                }
+                if (limit != null) {
+                    put("limit", listOf(limit.toString()))
+                }
+            }
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "text/plain, application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/v1/symbols/{exchange_id}/unmapped".replace("{"+"exchange_id"+"}", encodeURIComponent(exchangeId.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,

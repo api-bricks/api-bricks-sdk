@@ -63,7 +63,18 @@ export interface V1SymbolsExchangeIdActiveGetRequest {
     filterAssetId?: string;
 }
 
+export interface V1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGetRequest {
+    exchangeId: string;
+    exchangeSymbolId: string;
+}
+
 export interface V1SymbolsExchangeIdHistoryGetRequest {
+    exchangeId: string;
+    page?: number;
+    limit?: number;
+}
+
+export interface V1SymbolsExchangeIdUnmappedGetRequest {
     exchangeId: string;
     page?: number;
     limit?: number;
@@ -274,6 +285,27 @@ export class MetadataApi extends BaseAPI {
     };
 
     /**
+     * Looks up a symbol by `symbol_id_exchange` regardless of mapping status - this also returns symbols that have not been mapped to a CoinAPI `symbol_id` yet (see `{exchange_id}/unmapped`).
+     * Get a single symbol by its exchange-native symbol identifier.
+     */
+    v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet({ exchangeId, exchangeSymbolId }: V1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGetRequest): Observable<MarketDataMetadataSymbol>
+    v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet({ exchangeId, exchangeSymbolId }: V1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGetRequest, opts?: OperationOpts): Observable<AjaxResponse<MarketDataMetadataSymbol>>
+    v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet({ exchangeId, exchangeSymbolId }: V1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGetRequest, opts?: OperationOpts): Observable<MarketDataMetadataSymbol | AjaxResponse<MarketDataMetadataSymbol>> {
+        throwIfNullOrUndefined(exchangeId, 'exchangeId', 'v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet');
+        throwIfNullOrUndefined(exchangeSymbolId, 'exchangeSymbolId', 'v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet');
+
+        const headers: HttpHeaders = {
+            ...(this.configuration.apiKey && { 'Authorization': this.configuration.apiKey('Authorization') }), // APIKey authentication
+        };
+
+        return this.request<MarketDataMetadataSymbol>({
+            url: '/v1/symbols/{exchange_id}/by-exchange-symbol/{exchange_symbol_id}'.replace('{exchange_id}', encodeURI(exchangeId)).replace('{exchange_symbol_id}', encodeURI(exchangeSymbolId)),
+            method: 'GET',
+            headers,
+        }, opts?.responseOpts);
+    };
+
+    /**
      * This endpoint provides access to symbols that are no longer actively traded or listed on a given exchange. The data is provided with pagination support.
      * List all historical symbols for an exchange.
      */
@@ -293,6 +325,32 @@ export class MetadataApi extends BaseAPI {
 
         return this.request<Array<MarketDataMetadataSymbol>>({
             url: '/v1/symbols/{exchange_id}/history'.replace('{exchange_id}', encodeURI(exchangeId)),
+            method: 'GET',
+            headers,
+            query,
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Returns raw exchange symbols that MarketAccess has received (KVP data available) but that have not been mapped to a CoinAPI `symbol_id` yet. Since `symbol_id` is null for these rows, use `symbol_id_exchange` (and `GET {exchange_id}/by-exchange-symbol/{exchange_symbol_id}`) to reference them. The `raw_kvp` field contains the raw exchange payload as received.
+     * List symbols not yet mapped to a CoinAPI symbol_id for an exchange.
+     */
+    v1SymbolsExchangeIdUnmappedGet({ exchangeId, page, limit }: V1SymbolsExchangeIdUnmappedGetRequest): Observable<Array<MarketDataMetadataSymbol>>
+    v1SymbolsExchangeIdUnmappedGet({ exchangeId, page, limit }: V1SymbolsExchangeIdUnmappedGetRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<MarketDataMetadataSymbol>>>
+    v1SymbolsExchangeIdUnmappedGet({ exchangeId, page, limit }: V1SymbolsExchangeIdUnmappedGetRequest, opts?: OperationOpts): Observable<Array<MarketDataMetadataSymbol> | AjaxResponse<Array<MarketDataMetadataSymbol>>> {
+        throwIfNullOrUndefined(exchangeId, 'exchangeId', 'v1SymbolsExchangeIdUnmappedGet');
+
+        const headers: HttpHeaders = {
+            ...(this.configuration.apiKey && { 'Authorization': this.configuration.apiKey('Authorization') }), // APIKey authentication
+        };
+
+        const query: HttpQuery = {};
+
+        if (page != null) { query['page'] = page; }
+        if (limit != null) { query['limit'] = limit; }
+
+        return this.request<Array<MarketDataMetadataSymbol>>({
+            url: '/v1/symbols/{exchange_id}/unmapped'.replace('{exchange_id}', encodeURI(exchangeId)),
             method: 'GET',
             headers,
             query,

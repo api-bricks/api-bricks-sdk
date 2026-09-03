@@ -1226,6 +1226,128 @@ func (a *MetadataAPIService) V1SymbolsExchangeIdActiveGetExecute(r ApiV1SymbolsE
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
+type ApiV1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGetRequest struct {
+	ctx context.Context
+	ApiService *MetadataAPIService
+	exchangeId string
+	exchangeSymbolId string
+}
+
+func (r ApiV1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGetRequest) Execute() (*MarketDataMetadataSymbol, *http.Response, error) {
+	return r.ApiService.V1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGetExecute(r)
+}
+
+/*
+V1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet Get a single symbol by its exchange-native symbol identifier.
+
+Looks up a symbol by `symbol_id_exchange` regardless of mapping status - this also returns
+symbols that have not been mapped to a CoinAPI `symbol_id` yet (see `{exchange_id}/unmapped`).
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @param exchangeId The ID of the exchange.
+ @param exchangeSymbolId The exchange-native symbol identifier (`symbol_id_exchange`).
+ @return ApiV1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGetRequest
+*/
+func (a *MetadataAPIService) V1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet(ctx context.Context, exchangeId string, exchangeSymbolId string) ApiV1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGetRequest {
+	return ApiV1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGetRequest{
+		ApiService: a,
+		ctx: ctx,
+		exchangeId: exchangeId,
+		exchangeSymbolId: exchangeSymbolId,
+	}
+}
+
+// Execute executes the request
+//  @return MarketDataMetadataSymbol
+func (a *MetadataAPIService) V1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGetExecute(r ApiV1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGetRequest) (*MarketDataMetadataSymbol, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *MarketDataMetadataSymbol
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "MetadataAPIService.V1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/v1/symbols/{exchange_id}/by-exchange-symbol/{exchange_symbol_id}"
+	localVarPath = strings.Replace(localVarPath, "{"+"exchange_id"+"}", url.PathEscape(parameterValueToString(r.exchangeId, "exchangeId")), -1)
+	localVarPath = strings.Replace(localVarPath, "{"+"exchange_symbol_id"+"}", url.PathEscape(parameterValueToString(r.exchangeSymbolId, "exchangeSymbolId")), -1)
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json", "application/x-msgpack"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
+			if apiKey, ok := auth["APIKey"]; ok {
+				var key string
+				if apiKey.Prefix != "" {
+					key = apiKey.Prefix + " " + apiKey.Key
+				} else {
+					key = apiKey.Key
+				}
+				localVarHeaderParams["Authorization"] = key
+			}
+		}
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
 type ApiV1SymbolsExchangeIdHistoryGetRequest struct {
 	ctx context.Context
 	ApiService *MetadataAPIService
@@ -1284,6 +1406,154 @@ func (a *MetadataAPIService) V1SymbolsExchangeIdHistoryGetExecute(r ApiV1Symbols
 	}
 
 	localVarPath := localBasePath + "/v1/symbols/{exchange_id}/history"
+	localVarPath = strings.Replace(localVarPath, "{"+"exchange_id"+"}", url.PathEscape(parameterValueToString(r.exchangeId, "exchangeId")), -1)
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	if r.page != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "page", r.page, "form", "")
+	} else {
+		var defaultValue int32 = 1
+		parameterAddToHeaderOrQuery(localVarQueryParams, "page", defaultValue, "form", "")
+		r.page = &defaultValue
+	}
+	if r.limit != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "limit", r.limit, "form", "")
+	} else {
+		var defaultValue int32 = 100
+		parameterAddToHeaderOrQuery(localVarQueryParams, "limit", defaultValue, "form", "")
+		r.limit = &defaultValue
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json", "application/x-msgpack"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
+			if apiKey, ok := auth["APIKey"]; ok {
+				var key string
+				if apiKey.Prefix != "" {
+					key = apiKey.Prefix + " " + apiKey.Key
+				} else {
+					key = apiKey.Key
+				}
+				localVarHeaderParams["Authorization"] = key
+			}
+		}
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiV1SymbolsExchangeIdUnmappedGetRequest struct {
+	ctx context.Context
+	ApiService *MetadataAPIService
+	exchangeId string
+	page *int32
+	limit *int32
+}
+
+// The page number for pagination (starts from 1).
+func (r ApiV1SymbolsExchangeIdUnmappedGetRequest) Page(page int32) ApiV1SymbolsExchangeIdUnmappedGetRequest {
+	r.page = &page
+	return r
+}
+
+// Number of records to return per page.
+func (r ApiV1SymbolsExchangeIdUnmappedGetRequest) Limit(limit int32) ApiV1SymbolsExchangeIdUnmappedGetRequest {
+	r.limit = &limit
+	return r
+}
+
+func (r ApiV1SymbolsExchangeIdUnmappedGetRequest) Execute() ([]MarketDataMetadataSymbol, *http.Response, error) {
+	return r.ApiService.V1SymbolsExchangeIdUnmappedGetExecute(r)
+}
+
+/*
+V1SymbolsExchangeIdUnmappedGet List symbols not yet mapped to a CoinAPI symbol_id for an exchange.
+
+Returns raw exchange symbols that MarketAccess has received (KVP data available) but that
+have not been mapped to a CoinAPI `symbol_id` yet. Since `symbol_id` is null for these rows,
+use `symbol_id_exchange` (and `GET {exchange_id}/by-exchange-symbol/{exchange_symbol_id}`) to
+reference them. The `raw_kvp` field contains the raw exchange payload as received.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @param exchangeId The ID of the exchange.
+ @return ApiV1SymbolsExchangeIdUnmappedGetRequest
+*/
+func (a *MetadataAPIService) V1SymbolsExchangeIdUnmappedGet(ctx context.Context, exchangeId string) ApiV1SymbolsExchangeIdUnmappedGetRequest {
+	return ApiV1SymbolsExchangeIdUnmappedGetRequest{
+		ApiService: a,
+		ctx: ctx,
+		exchangeId: exchangeId,
+	}
+}
+
+// Execute executes the request
+//  @return []MarketDataMetadataSymbol
+func (a *MetadataAPIService) V1SymbolsExchangeIdUnmappedGetExecute(r ApiV1SymbolsExchangeIdUnmappedGetRequest) ([]MarketDataMetadataSymbol, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []MarketDataMetadataSymbol
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "MetadataAPIService.V1SymbolsExchangeIdUnmappedGet")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/v1/symbols/{exchange_id}/unmapped"
 	localVarPath = strings.Replace(localVarPath, "{"+"exchange_id"+"}", url.PathEscape(parameterValueToString(r.exchangeId, "exchangeId")), -1)
 
 	localVarHeaderParams := make(map[string]string)

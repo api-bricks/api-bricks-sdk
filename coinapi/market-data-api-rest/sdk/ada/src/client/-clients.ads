@@ -244,10 +244,31 @@ package .Clients is
        Filter_Asset_Id : in Swagger.Nullable_UString;
        Result : out .Models.MarketDataMetadataSymbol_Type_Vectors.Vector);
 
+   --  Get a single symbol by its exchange_native symbol identifier.
+   --  Looks up a symbol by `symbol_id_exchange` regardless of mapping status - this also returns
+   --  symbols that have not been mapped to a CoinAPI `symbol_id` yet (see `{exchange_id}/unmapped`).
+   procedure V_1Symbols_Exchange_Id_By_Exchange_Symbol_Exchange_Symbol_Id_Get
+      (Client : in out Client_Type;
+       Exchange_Id : in Swagger.UString;
+       Exchange_Symbol_Id : in Swagger.UString;
+       Result : out .Models.MarketDataMetadataSymbol_Type);
+
    --  List all historical symbols for an exchange.
    --  This endpoint provides access to symbols that are no longer actively traded or listed on a given exchange.
    --  The data is provided with pagination support.
    procedure V_1Symbols_Exchange_Id_History_Get
+      (Client : in out Client_Type;
+       Exchange_Id : in Swagger.UString;
+       Page : in Swagger.Nullable_Integer;
+       Limit : in Swagger.Nullable_Integer;
+       Result : out .Models.MarketDataMetadataSymbol_Type_Vectors.Vector);
+
+   --  List symbols not yet mapped to a CoinAPI symbol_id for an exchange.
+   --  Returns raw exchange symbols that MarketAccess has received (KVP data available) but that
+   --  have not been mapped to a CoinAPI `symbol_id` yet. Since `symbol_id` is null for these rows,
+   --  use `symbol_id_exchange` (and `GET {exchange_id}/by-exchange-symbol/{exchange_symbol_id}`) to
+   --  reference them. The `raw_kvp` field contains the raw exchange payload as received.
+   procedure V_1Symbols_Exchange_Id_Unmapped_Get
       (Client : in out Client_Type;
        Exchange_Id : in Swagger.UString;
        Page : in Swagger.Nullable_Integer;
