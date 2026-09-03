@@ -51,7 +51,7 @@ import org.openapitools.client.JSON;
 /**
  * Represents the response DTO for trading status information
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-09-02T06:06:11.019672959Z[Etc/UTC]", comments = "Generator version: 7.25.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-09-03T06:09:36.170919774Z[Etc/UTC]", comments = "Generator version: 7.25.0")
 public class ModelsTradingStatusModel {
   public static final String SERIALIZED_NAME_SYMBOL = "symbol";
   @SerializedName(SERIALIZED_NAME_SYMBOL)
