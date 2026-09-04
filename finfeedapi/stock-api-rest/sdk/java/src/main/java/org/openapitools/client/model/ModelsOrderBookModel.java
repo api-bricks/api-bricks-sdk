@@ -54,7 +54,7 @@ import org.openapitools.client.JSON;
 /**
  * Represents the response DTO for Level-3 order book information
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-09-03T06:09:36.170919774Z[Etc/UTC]", comments = "Generator version: 7.25.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-09-04T06:06:32.242355684Z[Etc/UTC]", comments = "Generator version: 7.25.0")
 public class ModelsOrderBookModel {
   public static final String SERIALIZED_NAME_ADD_ORDER = "add_order";
   @SerializedName(SERIALIZED_NAME_ADD_ORDER)
