@@ -13,9 +13,7 @@ Method | HTTP request | Description
 [**MetadataAPI_v1ExchangesGet**](MetadataAPI.md#MetadataAPI_v1ExchangesGet) | **GET** /v1/exchanges | List all exchanges
 [**MetadataAPI_v1ExchangesIconsSizeGet**](MetadataAPI.md#MetadataAPI_v1ExchangesIconsSizeGet) | **GET** /v1/exchanges/icons/{size} | List of icons for the exchanges
 [**MetadataAPI_v1SymbolsExchangeIdActiveGet**](MetadataAPI.md#MetadataAPI_v1SymbolsExchangeIdActiveGet) | **GET** /v1/symbols/{exchange_id}/active | List all active symbols
-[**MetadataAPI_v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet**](MetadataAPI.md#MetadataAPI_v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet) | **GET** /v1/symbols/{exchange_id}/by-exchange-symbol/{exchange_symbol_id} | Get a single symbol by its exchange-native symbol identifier.
 [**MetadataAPI_v1SymbolsExchangeIdHistoryGet**](MetadataAPI.md#MetadataAPI_v1SymbolsExchangeIdHistoryGet) | **GET** /v1/symbols/{exchange_id}/history | List all historical symbols for an exchange.
-[**MetadataAPI_v1SymbolsExchangeIdUnmappedGet**](MetadataAPI.md#MetadataAPI_v1SymbolsExchangeIdUnmappedGet) | **GET** /v1/symbols/{exchange_id}/unmapped | List symbols not yet mapped to a CoinAPI symbol_id for an exchange.
 [**MetadataAPI_v1SymbolsMapExchangeIdGet**](MetadataAPI.md#MetadataAPI_v1SymbolsMapExchangeIdGet) | **GET** /v1/symbols/map/{exchange_id} | List active symbol mapping for the exchange
 
 
@@ -293,38 +291,6 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **MetadataAPI_v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet**
-```c
-// Get a single symbol by its exchange-native symbol identifier.
-//
-// Looks up a symbol by `symbol_id_exchange` regardless of mapping status - this also returns symbols that have not been mapped to a CoinAPI `symbol_id` yet (see `{exchange_id}/unmapped`).
-//
-market_data_metadata_symbol_t* MetadataAPI_v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet(apiClient_t *apiClient, char *exchange_id, char *exchange_symbol_id);
-```
-
-### Parameters
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**apiClient** | **apiClient_t \*** | context containing the client configuration |
-**exchange_id** | **char \*** | The ID of the exchange. | 
-**exchange_symbol_id** | **char \*** | The exchange-native symbol identifier (&#x60;symbol_id_exchange&#x60;). | 
-
-### Return type
-
-[market_data_metadata_symbol_t](market_data_metadata_symbol.md) *
-
-
-### Authorization
-
-[APIKey](../README.md#APIKey), [JWT](../README.md#JWT)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json, application/x-msgpack
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **MetadataAPI_v1SymbolsExchangeIdHistoryGet**
 ```c
 // List all historical symbols for an exchange.
@@ -332,39 +298,6 @@ Name | Type | Description  | Notes
 // This endpoint provides access to symbols that are no longer actively traded or listed on a given exchange. The data is provided with pagination support.
 //
 list_t* MetadataAPI_v1SymbolsExchangeIdHistoryGet(apiClient_t *apiClient, char *exchange_id, int *page, int *limit);
-```
-
-### Parameters
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**apiClient** | **apiClient_t \*** | context containing the client configuration |
-**exchange_id** | **char \*** | The ID of the exchange. | 
-**page** | **int \*** | The page number for pagination (starts from 1). | [optional] [default to 1]
-**limit** | **int \*** | Number of records to return per page. | [optional] [default to 100]
-
-### Return type
-
-[list_t](market_data_metadata_symbol.md) *
-
-
-### Authorization
-
-[APIKey](../README.md#APIKey), [JWT](../README.md#JWT)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json, application/x-msgpack
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **MetadataAPI_v1SymbolsExchangeIdUnmappedGet**
-```c
-// List symbols not yet mapped to a CoinAPI symbol_id for an exchange.
-//
-// Returns raw exchange symbols that MarketAccess has received (KVP data available) but that have not been mapped to a CoinAPI `symbol_id` yet. Since `symbol_id` is null for these rows, use `symbol_id_exchange` (and `GET {exchange_id}/by-exchange-symbol/{exchange_symbol_id}`) to reference them. The `raw_kvp` field contains the raw exchange payload as received.
-//
-list_t* MetadataAPI_v1SymbolsExchangeIdUnmappedGet(apiClient_t *apiClient, char *exchange_id, int *page, int *limit);
 ```
 
 ### Parameters

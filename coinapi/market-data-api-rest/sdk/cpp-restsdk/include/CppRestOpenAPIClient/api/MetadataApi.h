@@ -147,18 +147,6 @@ public:
         boost::optional<utility::string_t> filterAssetId
     ) const;
     /// <summary>
-    /// Get a single symbol by its exchange-native symbol identifier.
-    /// </summary>
-    /// <remarks>
-    /// Looks up a symbol by &#x60;symbol_id_exchange&#x60; regardless of mapping status - this also returns symbols that have not been mapped to a CoinAPI &#x60;symbol_id&#x60; yet (see &#x60;{exchange_id}/unmapped&#x60;).
-    /// </remarks>
-    /// <param name="exchangeId">The ID of the exchange.</param>
-    /// <param name="exchangeSymbolId">The exchange-native symbol identifier (&#x60;symbol_id_exchange&#x60;).</param>
-    pplx::task<std::shared_ptr<MarketDataMetadata_Symbol>> v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet(
-        utility::string_t exchangeId,
-        utility::string_t exchangeSymbolId
-    ) const;
-    /// <summary>
     /// List all historical symbols for an exchange.
     /// </summary>
     /// <remarks>
@@ -168,20 +156,6 @@ public:
     /// <param name="page">The page number for pagination (starts from 1). (optional, default to 0)</param>
     /// <param name="limit">Number of records to return per page. (optional, default to 0)</param>
     pplx::task<std::vector<std::shared_ptr<MarketDataMetadata_Symbol>>> v1SymbolsExchangeIdHistoryGet(
-        utility::string_t exchangeId,
-        boost::optional<int32_t> page,
-        boost::optional<int32_t> limit
-    ) const;
-    /// <summary>
-    /// List symbols not yet mapped to a CoinAPI symbol_id for an exchange.
-    /// </summary>
-    /// <remarks>
-    /// Returns raw exchange symbols that MarketAccess has received (KVP data available) but that have not been mapped to a CoinAPI &#x60;symbol_id&#x60; yet. Since &#x60;symbol_id&#x60; is null for these rows, use &#x60;symbol_id_exchange&#x60; (and &#x60;GET {exchange_id}/by-exchange-symbol/{exchange_symbol_id}&#x60;) to reference them. The &#x60;raw_kvp&#x60; field contains the raw exchange payload as received.
-    /// </remarks>
-    /// <param name="exchangeId">The ID of the exchange.</param>
-    /// <param name="page">The page number for pagination (starts from 1). (optional, default to 0)</param>
-    /// <param name="limit">Number of records to return per page. (optional, default to 0)</param>
-    pplx::task<std::vector<std::shared_ptr<MarketDataMetadata_Symbol>>> v1SymbolsExchangeIdUnmappedGet(
         utility::string_t exchangeId,
         boost::optional<int32_t> page,
         boost::optional<int32_t> limit

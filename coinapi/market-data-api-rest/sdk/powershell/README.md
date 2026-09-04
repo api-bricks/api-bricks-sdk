@@ -66,9 +66,7 @@ Class | Method | HTTP request | Description
 *MetadataApi* | [**Invoke-V1ExchangesGet**](docs/MetadataApi.md#Invoke-V1ExchangesGet) | **GET** /v1/exchanges | List all exchanges
 *MetadataApi* | [**Invoke-V1ExchangesIconsSizeGet**](docs/MetadataApi.md#Invoke-V1ExchangesIconsSizeGet) | **GET** /v1/exchanges/icons/{size} | List of icons for the exchanges
 *MetadataApi* | [**Invoke-V1SymbolsExchangeIdActiveGet**](docs/MetadataApi.md#Invoke-V1SymbolsExchangeIdActiveGet) | **GET** /v1/symbols/{exchange_id}/active | List all active symbols
-*MetadataApi* | [**Invoke-V1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet**](docs/MetadataApi.md#Invoke-V1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet) | **GET** /v1/symbols/{exchange_id}/by-exchange-symbol/{exchange_symbol_id} | Get a single symbol by its exchange-native symbol identifier.
 *MetadataApi* | [**Invoke-V1SymbolsExchangeIdHistoryGet**](docs/MetadataApi.md#Invoke-V1SymbolsExchangeIdHistoryGet) | **GET** /v1/symbols/{exchange_id}/history | List all historical symbols for an exchange.
-*MetadataApi* | [**Invoke-V1SymbolsExchangeIdUnmappedGet**](docs/MetadataApi.md#Invoke-V1SymbolsExchangeIdUnmappedGet) | **GET** /v1/symbols/{exchange_id}/unmapped | List symbols not yet mapped to a CoinAPI symbol_id for an exchange.
 *MetadataApi* | [**Invoke-V1SymbolsMapExchangeIdGet**](docs/MetadataApi.md#Invoke-V1SymbolsMapExchangeIdGet) | **GET** /v1/symbols/map/{exchange_id} | List active symbol mapping for the exchange
 *MetricsV1Api* | [**Invoke-V1MetricsAssetCurrentGet**](docs/MetricsV1Api.md#Invoke-V1MetricsAssetCurrentGet) | **GET** /v1/metrics/asset/current | Current metrics for given asset
 *MetricsV1Api* | [**Invoke-V1MetricsAssetHistoryGet**](docs/MetricsV1Api.md#Invoke-V1MetricsAssetHistoryGet) | **GET** /v1/metrics/asset/history | Historical metrics for asset

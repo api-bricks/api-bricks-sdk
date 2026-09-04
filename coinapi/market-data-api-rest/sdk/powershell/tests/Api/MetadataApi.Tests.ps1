@@ -79,25 +79,9 @@ Describe -tag 'PSOpenAPITools' -name 'MetadataApi' {
         }
     }
 
-    Context 'Invoke-V1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet' {
-        It 'Test Invoke-V1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet' {
-            #$TestResult = Invoke-V1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet -ExchangeId "TEST_VALUE" -ExchangeSymbolId "TEST_VALUE"
-            #$TestResult | Should -BeOfType TODO
-            #$TestResult.property | Should -Be 0
-        }
-    }
-
     Context 'Invoke-V1SymbolsExchangeIdHistoryGet' {
         It 'Test Invoke-V1SymbolsExchangeIdHistoryGet' {
             #$TestResult = Invoke-V1SymbolsExchangeIdHistoryGet -ExchangeId "TEST_VALUE" -Page "TEST_VALUE" -Limit "TEST_VALUE"
-            #$TestResult | Should -BeOfType TODO
-            #$TestResult.property | Should -Be 0
-        }
-    }
-
-    Context 'Invoke-V1SymbolsExchangeIdUnmappedGet' {
-        It 'Test Invoke-V1SymbolsExchangeIdUnmappedGet' {
-            #$TestResult = Invoke-V1SymbolsExchangeIdUnmappedGet -ExchangeId "TEST_VALUE" -Page "TEST_VALUE" -Limit "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }

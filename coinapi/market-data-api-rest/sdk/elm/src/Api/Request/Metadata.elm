@@ -24,9 +24,7 @@ module Api.Request.Metadata exposing
     , v1ExchangesGet
     , v1ExchangesIconsSizeGet
     , v1SymbolsExchangeIdActiveGet
-    , v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet
     , v1SymbolsExchangeIdHistoryGet
-    , v1SymbolsExchangeIdUnmappedGet
     , v1SymbolsMapExchangeIdGet
     )
 
@@ -179,23 +177,6 @@ v1SymbolsExchangeIdActiveGet exchangeId_path filterSymbolId_query filterAssetId_
         (Json.Decode.list Api.Data.marketDataMetadataSymbolDecoder)
         |> Api.withBearerToken auth_token
 
-{-| Get a single symbol by its exchange-native symbol identifier.
-
-Looks up a symbol by `symbol_id_exchange` regardless of mapping status - this also returns symbols that have not been mapped to a CoinAPI `symbol_id` yet (see `{exchange_id}/unmapped`).
-
--}
-v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet : String -> String -> String -> Api.Request Api.Data.MarketDataMetadataSymbol
-v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet exchangeId_path exchangeSymbolId_path auth_token =
-    Api.request
-        "GET"
-        "/v1/symbols/{exchange_id}/by-exchange-symbol/{exchange_symbol_id}"
-        [ ( "exchange_id", identity exchangeId_path ), ( "exchange_symbol_id", identity exchangeSymbolId_path ) ]
-        []
-        []
-        Nothing
-        Api.Data.marketDataMetadataSymbolDecoder
-        |> Api.withBearerToken auth_token
-
 {-| List all historical symbols for an exchange.
 
 This endpoint provides access to symbols that are no longer actively traded or listed on a given exchange. The data is provided with pagination support.
@@ -206,23 +187,6 @@ v1SymbolsExchangeIdHistoryGet exchangeId_path page_query limit_query auth_token 
     Api.request
         "GET"
         "/v1/symbols/{exchange_id}/history"
-        [ ( "exchange_id", identity exchangeId_path ) ]
-        [ ( "page", Maybe.map String.fromInt page_query ), ( "limit", Maybe.map String.fromInt limit_query ) ]
-        []
-        Nothing
-        (Json.Decode.list Api.Data.marketDataMetadataSymbolDecoder)
-        |> Api.withBearerToken auth_token
-
-{-| List symbols not yet mapped to a CoinAPI symbol_id for an exchange.
-
-Returns raw exchange symbols that MarketAccess has received (KVP data available) but that have not been mapped to a CoinAPI `symbol_id` yet. Since `symbol_id` is null for these rows, use `symbol_id_exchange` (and `GET {exchange_id}/by-exchange-symbol/{exchange_symbol_id}`) to reference them. The `raw_kvp` field contains the raw exchange payload as received.
-
--}
-v1SymbolsExchangeIdUnmappedGet : String -> Maybe Int -> Maybe Int -> String -> Api.Request (List Api.Data.MarketDataMetadataSymbol)
-v1SymbolsExchangeIdUnmappedGet exchangeId_path page_query limit_query auth_token =
-    Api.request
-        "GET"
-        "/v1/symbols/{exchange_id}/unmapped"
         [ ( "exchange_id", identity exchangeId_path ) ]
         [ ( "page", Maybe.map String.fromInt page_query ), ( "limit", Maybe.map String.fromInt limit_query ) ]
         []

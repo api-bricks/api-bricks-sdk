@@ -138,30 +138,10 @@
         done();
       });
     });
-    describe('v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet', function() {
-      it('should call v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet successfully', function(done) {
-        //uncomment below and update the code to test v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet
-        //instance.v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
     describe('v1SymbolsExchangeIdHistoryGet', function() {
       it('should call v1SymbolsExchangeIdHistoryGet successfully', function(done) {
         //uncomment below and update the code to test v1SymbolsExchangeIdHistoryGet
         //instance.v1SymbolsExchangeIdHistoryGet(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('v1SymbolsExchangeIdUnmappedGet', function() {
-      it('should call v1SymbolsExchangeIdUnmappedGet successfully', function(done) {
-        //uncomment below and update the code to test v1SymbolsExchangeIdUnmappedGet
-        //instance.v1SymbolsExchangeIdUnmappedGet(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

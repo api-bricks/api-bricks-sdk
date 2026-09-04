@@ -85,9 +85,7 @@ Class | Method | HTTP request | Description
 *MetadataAPI* | [**V1ExchangesGet**](docs/MetadataAPI.md#v1exchangesget) | **Get** /v1/exchanges | List all exchanges
 *MetadataAPI* | [**V1ExchangesIconsSizeGet**](docs/MetadataAPI.md#v1exchangesiconssizeget) | **Get** /v1/exchanges/icons/{size} | List of icons for the exchanges
 *MetadataAPI* | [**V1SymbolsExchangeIdActiveGet**](docs/MetadataAPI.md#v1symbolsexchangeidactiveget) | **Get** /v1/symbols/{exchange_id}/active | List all active symbols
-*MetadataAPI* | [**V1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet**](docs/MetadataAPI.md#v1symbolsexchangeidbyexchangesymbolexchangesymbolidget) | **Get** /v1/symbols/{exchange_id}/by-exchange-symbol/{exchange_symbol_id} | Get a single symbol by its exchange-native symbol identifier.
 *MetadataAPI* | [**V1SymbolsExchangeIdHistoryGet**](docs/MetadataAPI.md#v1symbolsexchangeidhistoryget) | **Get** /v1/symbols/{exchange_id}/history | List all historical symbols for an exchange.
-*MetadataAPI* | [**V1SymbolsExchangeIdUnmappedGet**](docs/MetadataAPI.md#v1symbolsexchangeidunmappedget) | **Get** /v1/symbols/{exchange_id}/unmapped | List symbols not yet mapped to a CoinAPI symbol_id for an exchange.
 *MetadataAPI* | [**V1SymbolsMapExchangeIdGet**](docs/MetadataAPI.md#v1symbolsmapexchangeidget) | **Get** /v1/symbols/map/{exchange_id} | List active symbol mapping for the exchange
 *MetricsV1API* | [**V1MetricsAssetCurrentGet**](docs/MetricsV1API.md#v1metricsassetcurrentget) | **Get** /v1/metrics/asset/current | Current metrics for given asset
 *MetricsV1API* | [**V1MetricsAssetHistoryGet**](docs/MetricsV1API.md#v1metricsassethistoryget) | **Get** /v1/metrics/asset/history | Historical metrics for asset

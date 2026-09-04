@@ -309,9 +309,7 @@ case $state in
             "v1ExchangesGet[List all exchanges]" \
             "v1ExchangesIconsSizeGet[List of icons for the exchanges]" \
             "v1SymbolsExchangeIdActiveGet[List all active symbols]" \
-            "v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet[Get a single symbol by its exchange-native symbol identifier.]" \
             "v1SymbolsExchangeIdHistoryGet[List all historical symbols for an exchange.]" \
-            "v1SymbolsExchangeIdUnmappedGet[List symbols not yet mapped to a CoinAPI symbol_id for an exchange.]" \
             "v1SymbolsMapExchangeIdGet[List active symbol mapping for the exchange]"             "v1MetricsAssetCurrentGet[Current metrics for given asset]" \
             "v1MetricsAssetHistoryGet[Historical metrics for asset]" \
             "v1MetricsAssetListingGet[Listing of all supported metrics for asset]" \
@@ -451,24 +449,7 @@ case $state in
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet)
-        local -a _op_arguments
-        _op_arguments=(
-          "exchange_id=:[PATH] The ID of the exchange."
-"exchange_symbol_id=:[PATH] The exchange-native symbol identifier (&#39;symbol_id_exchange&#39;)."
-                    )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
       v1SymbolsExchangeIdHistoryGet)
-        local -a _op_arguments
-        _op_arguments=(
-          "exchange_id=:[PATH] The ID of the exchange."
-          "page=:[QUERY] The page number for pagination (starts from 1)."
-"limit=:[QUERY] Number of records to return per page."
-          )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      v1SymbolsExchangeIdUnmappedGet)
         local -a _op_arguments
         _op_arguments=(
           "exchange_id=:[PATH] The ID of the exchange."

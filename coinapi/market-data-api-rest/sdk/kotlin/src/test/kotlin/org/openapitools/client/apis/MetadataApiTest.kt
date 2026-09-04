@@ -114,15 +114,6 @@ class MetadataApiTest : ShouldSpec() {
             //result shouldBe ("TODO")
         }
 
-        // to test v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet
-        should("test v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet") {
-            // uncomment below to test v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet
-            //val exchangeId : kotlin.String = exchangeId_example // kotlin.String | The ID of the exchange.
-            //val exchangeSymbolId : kotlin.String = exchangeSymbolId_example // kotlin.String | The exchange-native symbol identifier (`symbol_id_exchange`).
-            //val result : MarketDataMetadataSymbol = apiInstance.v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet(exchangeId, exchangeSymbolId)
-            //result shouldBe ("TODO")
-        }
-
         // to test v1SymbolsExchangeIdHistoryGet
         should("test v1SymbolsExchangeIdHistoryGet") {
             // uncomment below to test v1SymbolsExchangeIdHistoryGet
@@ -130,16 +121,6 @@ class MetadataApiTest : ShouldSpec() {
             //val page : kotlin.Int = 56 // kotlin.Int | The page number for pagination (starts from 1).
             //val limit : kotlin.Int = 56 // kotlin.Int | Number of records to return per page.
             //val result : kotlin.collections.List<MarketDataMetadataSymbol> = apiInstance.v1SymbolsExchangeIdHistoryGet(exchangeId, page, limit)
-            //result shouldBe ("TODO")
-        }
-
-        // to test v1SymbolsExchangeIdUnmappedGet
-        should("test v1SymbolsExchangeIdUnmappedGet") {
-            // uncomment below to test v1SymbolsExchangeIdUnmappedGet
-            //val exchangeId : kotlin.String = exchangeId_example // kotlin.String | The ID of the exchange.
-            //val page : kotlin.Int = 56 // kotlin.Int | The page number for pagination (starts from 1).
-            //val limit : kotlin.Int = 56 // kotlin.Int | Number of records to return per page.
-            //val result : kotlin.collections.List<MarketDataMetadataSymbol> = apiInstance.v1SymbolsExchangeIdUnmappedGet(exchangeId, page, limit)
             //result shouldBe ("TODO")
         }
 

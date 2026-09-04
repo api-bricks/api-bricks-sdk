@@ -13,9 +13,7 @@ Method | HTTP request | Description
 [**Invoke-V1ExchangesGet**](MetadataApi.md#Invoke-V1ExchangesGet) | **GET** /v1/exchanges | List all exchanges
 [**Invoke-V1ExchangesIconsSizeGet**](MetadataApi.md#Invoke-V1ExchangesIconsSizeGet) | **GET** /v1/exchanges/icons/{size} | List of icons for the exchanges
 [**Invoke-V1SymbolsExchangeIdActiveGet**](MetadataApi.md#Invoke-V1SymbolsExchangeIdActiveGet) | **GET** /v1/symbols/{exchange_id}/active | List all active symbols
-[**Invoke-V1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet**](MetadataApi.md#Invoke-V1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet) | **GET** /v1/symbols/{exchange_id}/by-exchange-symbol/{exchange_symbol_id} | Get a single symbol by its exchange-native symbol identifier.
 [**Invoke-V1SymbolsExchangeIdHistoryGet**](MetadataApi.md#Invoke-V1SymbolsExchangeIdHistoryGet) | **GET** /v1/symbols/{exchange_id}/history | List all historical symbols for an exchange.
-[**Invoke-V1SymbolsExchangeIdUnmappedGet**](MetadataApi.md#Invoke-V1SymbolsExchangeIdUnmappedGet) | **GET** /v1/symbols/{exchange_id}/unmapped | List symbols not yet mapped to a CoinAPI symbol_id for an exchange.
 [**Invoke-V1SymbolsMapExchangeIdGet**](MetadataApi.md#Invoke-V1SymbolsMapExchangeIdGet) | **GET** /v1/symbols/map/{exchange_id} | List active symbol mapping for the exchange
 
 
@@ -479,60 +477,6 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="Invoke-V1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet"></a>
-# **Invoke-V1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet**
-> MarketDataMetadataSymbol Invoke-V1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-ExchangeId] <String><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-ExchangeSymbolId] <String><br>
-
-Get a single symbol by its exchange-native symbol identifier.
-
-Looks up a symbol by `symbol_id_exchange` regardless of mapping status - this also returns symbols that have not been mapped to a CoinAPI `symbol_id` yet (see `{exchange_id}/unmapped`).
-
-### Example
-```powershell
-# general setting of the PowerShell module, e.g. base URL, authentication, etc
-$Configuration = Get-Configuration
-# Configure API key authorization: APIKey
-$Configuration.ApiKey.Authorization = "YOUR_API_KEY"
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-#$Configuration.ApiKeyPrefix.Authorization = "Bearer"
-
-
-$ExchangeId = "MyExchangeId" # String | The ID of the exchange.
-$ExchangeSymbolId = "MyExchangeSymbolId" # String | The exchange-native symbol identifier (`symbol_id_exchange`).
-
-# Get a single symbol by its exchange-native symbol identifier.
-try {
-    $Result = Invoke-V1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet -ExchangeId $ExchangeId -ExchangeSymbolId $ExchangeSymbolId
-} catch {
-    Write-Host ("Exception occurred when calling Invoke-V1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
-    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **ExchangeId** | **String**| The ID of the exchange. | 
- **ExchangeSymbolId** | **String**| The exchange-native symbol identifier (&#x60;symbol_id_exchange&#x60;). | 
-
-### Return type
-
-[**MarketDataMetadataSymbol**](MarketDataMetadataSymbol.md) (PSCustomObject)
-
-### Authorization
-
-[APIKey](../README.md#APIKey), [JWT](../README.md#JWT)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json, application/x-msgpack
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a id="Invoke-V1SymbolsExchangeIdHistoryGet"></a>
 # **Invoke-V1SymbolsExchangeIdHistoryGet**
 > MarketDataMetadataSymbol[] Invoke-V1SymbolsExchangeIdHistoryGet<br>
@@ -563,63 +507,6 @@ try {
     $Result = Invoke-V1SymbolsExchangeIdHistoryGet -ExchangeId $ExchangeId -Page $Page -Limit $Limit
 } catch {
     Write-Host ("Exception occurred when calling Invoke-V1SymbolsExchangeIdHistoryGet: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
-    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **ExchangeId** | **String**| The ID of the exchange. | 
- **Page** | **Int32**| The page number for pagination (starts from 1). | [optional] [default to 1]
- **Limit** | **Int32**| Number of records to return per page. | [optional] [default to 100]
-
-### Return type
-
-[**MarketDataMetadataSymbol[]**](MarketDataMetadataSymbol.md) (PSCustomObject)
-
-### Authorization
-
-[APIKey](../README.md#APIKey), [JWT](../README.md#JWT)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json, application/x-msgpack
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a id="Invoke-V1SymbolsExchangeIdUnmappedGet"></a>
-# **Invoke-V1SymbolsExchangeIdUnmappedGet**
-> MarketDataMetadataSymbol[] Invoke-V1SymbolsExchangeIdUnmappedGet<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-ExchangeId] <String><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Page] <System.Nullable[Int32]><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Limit] <System.Nullable[Int32]><br>
-
-List symbols not yet mapped to a CoinAPI symbol_id for an exchange.
-
-Returns raw exchange symbols that MarketAccess has received (KVP data available) but that have not been mapped to a CoinAPI `symbol_id` yet. Since `symbol_id` is null for these rows, use `symbol_id_exchange` (and `GET {exchange_id}/by-exchange-symbol/{exchange_symbol_id}`) to reference them. The `raw_kvp` field contains the raw exchange payload as received.
-
-### Example
-```powershell
-# general setting of the PowerShell module, e.g. base URL, authentication, etc
-$Configuration = Get-Configuration
-# Configure API key authorization: APIKey
-$Configuration.ApiKey.Authorization = "YOUR_API_KEY"
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-#$Configuration.ApiKeyPrefix.Authorization = "Bearer"
-
-
-$ExchangeId = "MyExchangeId" # String | The ID of the exchange.
-$Page = 56 # Int32 | The page number for pagination (starts from 1). (optional) (default to 1)
-$Limit = 56 # Int32 | Number of records to return per page. (optional) (default to 100)
-
-# List symbols not yet mapped to a CoinAPI symbol_id for an exchange.
-try {
-    $Result = Invoke-V1SymbolsExchangeIdUnmappedGet -ExchangeId $ExchangeId -Page $Page -Limit $Limit
-} catch {
-    Write-Host ("Exception occurred when calling Invoke-V1SymbolsExchangeIdUnmappedGet: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```

@@ -59,9 +59,7 @@ All URIs are relative to *https://rest.coinapi.io*
 | *MetadataApi* | [**v1ExchangesGet**](docs/MetadataApi.md#v1exchangesget) | **GET** /v1/exchanges | List all exchanges |
 | *MetadataApi* | [**v1ExchangesIconsSizeGet**](docs/MetadataApi.md#v1exchangesiconssizeget) | **GET** /v1/exchanges/icons/{size} | List of icons for the exchanges |
 | *MetadataApi* | [**v1SymbolsExchangeIdActiveGet**](docs/MetadataApi.md#v1symbolsexchangeidactiveget) | **GET** /v1/symbols/{exchange_id}/active | List all active symbols |
-| *MetadataApi* | [**v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet**](docs/MetadataApi.md#v1symbolsexchangeidbyexchangesymbolexchangesymbolidget) | **GET** /v1/symbols/{exchange_id}/by-exchange-symbol/{exchange_symbol_id} | Get a single symbol by its exchange-native symbol identifier. |
 | *MetadataApi* | [**v1SymbolsExchangeIdHistoryGet**](docs/MetadataApi.md#v1symbolsexchangeidhistoryget) | **GET** /v1/symbols/{exchange_id}/history | List all historical symbols for an exchange. |
-| *MetadataApi* | [**v1SymbolsExchangeIdUnmappedGet**](docs/MetadataApi.md#v1symbolsexchangeidunmappedget) | **GET** /v1/symbols/{exchange_id}/unmapped | List symbols not yet mapped to a CoinAPI symbol_id for an exchange. |
 | *MetadataApi* | [**v1SymbolsMapExchangeIdGet**](docs/MetadataApi.md#v1symbolsmapexchangeidget) | **GET** /v1/symbols/map/{exchange_id} | List active symbol mapping for the exchange |
 | *MetricsV1Api* | [**v1MetricsAssetCurrentGet**](docs/MetricsV1Api.md#v1metricsassetcurrentget) | **GET** /v1/metrics/asset/current | Current metrics for given asset |
 | *MetricsV1Api* | [**v1MetricsAssetHistoryGet**](docs/MetricsV1Api.md#v1metricsassethistoryget) | **GET** /v1/metrics/asset/history | Historical metrics for asset |

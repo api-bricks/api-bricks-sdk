@@ -100,7 +100,7 @@ paths:
               examples:
                 Example response:
                   value:
-                    time: 2026-09-03T06:04:04.7303723Z
+                    time: 2026-09-04T06:12:08.5346809Z
                     asset_id_base: BTC
                     asset_id_quote: USD
                     rate: 10000.0
@@ -110,7 +110,7 @@ paths:
               examples:
                 Example response:
                   value:
-                    time: 2026-09-03T06:04:04.7303723Z
+                    time: 2026-09-04T06:12:08.5346809Z
                     asset_id_base: BTC
                     asset_id_quote: USD
                     rate: 10000.0
@@ -120,7 +120,7 @@ paths:
               examples:
                 Example response:
                   value:
-                    time: 2026-09-03T06:04:04.7303723Z
+                    time: 2026-09-04T06:12:08.5346809Z
                     asset_id_base: BTC
                     asset_id_quote: USD
                     rate: 10000.0
@@ -130,7 +130,7 @@ paths:
               examples:
                 Example response:
                   value:
-                    time: 2026-09-03T06:04:04.7303723Z
+                    time: 2026-09-04T06:12:08.5346809Z
                     asset_id_base: BTC
                     asset_id_quote: USD
                     rate: 10000.0
@@ -1271,338 +1271,6 @@ paths:
                 type: array
           description: successful operation
       summary: List all historical symbols for an exchange.
-      tags:
-      - Metadata
-  /v1/symbols/{exchange_id}/unmapped:
-    get:
-      description: |-
-        Returns raw exchange symbols that MarketAccess has received (KVP data available) but that
-        have not been mapped to a CoinAPI `symbol_id` yet. Since `symbol_id` is null for these rows,
-        use `symbol_id_exchange` (and `GET {exchange_id}/by-exchange-symbol/{exchange_symbol_id}`) to
-        reference them. The `raw_kvp` field contains the raw exchange payload as received.
-      parameters:
-      - description: The ID of the exchange.
-        explode: false
-        in: path
-        name: exchange_id
-        required: true
-        schema:
-          type: string
-        style: simple
-      - description: The page number for pagination (starts from 1).
-        explode: true
-        in: query
-        name: page
-        required: false
-        schema:
-          default: 1
-          format: int32
-          type: integer
-        style: form
-      - description: Number of records to return per page.
-        explode: true
-        in: query
-        name: limit
-        required: false
-        schema:
-          default: 100
-          format: int32
-          type: integer
-        style: form
-      responses:
-        "200":
-          content:
-            text/plain:
-              examples:
-                Example response:
-                  value:
-                  - symbol_id: KRAKENFTS_PERP_BTC_USD
-                    exchange_id: KRAKENFTS
-                    symbol_type: PERPETUAL
-                    asset_id_base: BTC
-                    asset_id_quote: USD
-                    asset_id_unit: USD
-                    future_contract_unit: 1.0
-                    future_contract_unit_asset: USD
-                    data_start: 2019-10-30
-                    data_end: 2021-03-03
-                    data_quote_start: 2019-10-30T16:53:10.3262317Z
-                    data_quote_end: 2021-03-03T13:51:45.6970000Z
-                    data_orderbook_start: 2019-10-30T16:53:10.3262317Z
-                    data_orderbook_end: 2020-08-05T14:37:32.0080000Z
-                    data_trade_start: 2019-10-30T16:38:52.1620000Z
-                    data_trade_end: 2021-03-03T13:46:25.7810000Z
-                    volume_1hrs: 22897091
-                    volume_1hrs_usd: 2.2897091E7
-                    volume_1day: 459390289
-                    volume_1day_usd: 4.59390289E8
-                    volume_1mth: 12875674995
-                    volume_1mth_usd: 1.2875674995E10
-                    price: 51266
-                    symbol_id_exchange: pi_xbtusd
-                    asset_id_base_exchange: XBT
-                    asset_id_quote_exchange: USD
-                    price_precision: 0.1
-                    size_precision: 1.0
-                    symbol_id_int: 0
-                  - symbol_id: POLONIEX_SPOT_LTC_USDC
-                    exchange_id: POLONIEX
-                    symbol_type: SPOT
-                    asset_id_base: LTC
-                    asset_id_quote: USDC
-                    data_start: 2018-11-20
-                    data_end: 2021-03-01
-                    data_quote_start: 2018-11-20T15:24:58.4128803Z
-                    data_quote_end: 2021-03-01T16:07:09.3475456Z
-                    data_orderbook_start: 2018-11-20T15:24:58.4128803Z
-                    data_orderbook_end: 2020-08-05T14:37:20.2695780Z
-                    data_trade_start: 2018-11-20T15:25:38.0000000Z
-                    data_trade_end: 2021-03-01T16:03:18.0000000Z
-                    volume_1hrs: 51.68645899
-                    volume_1hrs_usd: 9036.44
-                    volume_1day: 465.568863
-                    volume_1day_usd: 81396.28
-                    volume_1mth: 22528.27638495
-                    volume_1mth_usd: 3938661.0
-                    symbol_id_exchange: USDC_LTC
-                    asset_id_base_exchange: LTC
-                    asset_id_quote_exchange: USDC
-                    price_precision: 1.0E-8
-                    size_precision: 1.0E-8
-                    symbol_id_int: 0
-              schema:
-                items:
-                  $ref: "#/components/schemas/MarketDataMetadata.Symbol"
-                type: array
-            application/json:
-              examples:
-                Example response:
-                  value:
-                  - symbol_id: KRAKENFTS_PERP_BTC_USD
-                    exchange_id: KRAKENFTS
-                    symbol_type: PERPETUAL
-                    asset_id_base: BTC
-                    asset_id_quote: USD
-                    asset_id_unit: USD
-                    future_contract_unit: 1.0
-                    future_contract_unit_asset: USD
-                    data_start: 2019-10-30
-                    data_end: 2021-03-03
-                    data_quote_start: 2019-10-30T16:53:10.3262317Z
-                    data_quote_end: 2021-03-03T13:51:45.6970000Z
-                    data_orderbook_start: 2019-10-30T16:53:10.3262317Z
-                    data_orderbook_end: 2020-08-05T14:37:32.0080000Z
-                    data_trade_start: 2019-10-30T16:38:52.1620000Z
-                    data_trade_end: 2021-03-03T13:46:25.7810000Z
-                    volume_1hrs: 22897091
-                    volume_1hrs_usd: 2.2897091E7
-                    volume_1day: 459390289
-                    volume_1day_usd: 4.59390289E8
-                    volume_1mth: 12875674995
-                    volume_1mth_usd: 1.2875674995E10
-                    price: 51266
-                    symbol_id_exchange: pi_xbtusd
-                    asset_id_base_exchange: XBT
-                    asset_id_quote_exchange: USD
-                    price_precision: 0.1
-                    size_precision: 1.0
-                    symbol_id_int: 0
-                  - symbol_id: POLONIEX_SPOT_LTC_USDC
-                    exchange_id: POLONIEX
-                    symbol_type: SPOT
-                    asset_id_base: LTC
-                    asset_id_quote: USDC
-                    data_start: 2018-11-20
-                    data_end: 2021-03-01
-                    data_quote_start: 2018-11-20T15:24:58.4128803Z
-                    data_quote_end: 2021-03-01T16:07:09.3475456Z
-                    data_orderbook_start: 2018-11-20T15:24:58.4128803Z
-                    data_orderbook_end: 2020-08-05T14:37:20.2695780Z
-                    data_trade_start: 2018-11-20T15:25:38.0000000Z
-                    data_trade_end: 2021-03-01T16:03:18.0000000Z
-                    volume_1hrs: 51.68645899
-                    volume_1hrs_usd: 9036.44
-                    volume_1day: 465.568863
-                    volume_1day_usd: 81396.28
-                    volume_1mth: 22528.27638495
-                    volume_1mth_usd: 3938661.0
-                    symbol_id_exchange: USDC_LTC
-                    asset_id_base_exchange: LTC
-                    asset_id_quote_exchange: USDC
-                    price_precision: 1.0E-8
-                    size_precision: 1.0E-8
-                    symbol_id_int: 0
-              schema:
-                items:
-                  $ref: "#/components/schemas/MarketDataMetadata.Symbol"
-                type: array
-            text/json:
-              examples:
-                Example response:
-                  value:
-                  - symbol_id: KRAKENFTS_PERP_BTC_USD
-                    exchange_id: KRAKENFTS
-                    symbol_type: PERPETUAL
-                    asset_id_base: BTC
-                    asset_id_quote: USD
-                    asset_id_unit: USD
-                    future_contract_unit: 1.0
-                    future_contract_unit_asset: USD
-                    data_start: 2019-10-30
-                    data_end: 2021-03-03
-                    data_quote_start: 2019-10-30T16:53:10.3262317Z
-                    data_quote_end: 2021-03-03T13:51:45.6970000Z
-                    data_orderbook_start: 2019-10-30T16:53:10.3262317Z
-                    data_orderbook_end: 2020-08-05T14:37:32.0080000Z
-                    data_trade_start: 2019-10-30T16:38:52.1620000Z
-                    data_trade_end: 2021-03-03T13:46:25.7810000Z
-                    volume_1hrs: 22897091
-                    volume_1hrs_usd: 2.2897091E7
-                    volume_1day: 459390289
-                    volume_1day_usd: 4.59390289E8
-                    volume_1mth: 12875674995
-                    volume_1mth_usd: 1.2875674995E10
-                    price: 51266
-                    symbol_id_exchange: pi_xbtusd
-                    asset_id_base_exchange: XBT
-                    asset_id_quote_exchange: USD
-                    price_precision: 0.1
-                    size_precision: 1.0
-                    symbol_id_int: 0
-                  - symbol_id: POLONIEX_SPOT_LTC_USDC
-                    exchange_id: POLONIEX
-                    symbol_type: SPOT
-                    asset_id_base: LTC
-                    asset_id_quote: USDC
-                    data_start: 2018-11-20
-                    data_end: 2021-03-01
-                    data_quote_start: 2018-11-20T15:24:58.4128803Z
-                    data_quote_end: 2021-03-01T16:07:09.3475456Z
-                    data_orderbook_start: 2018-11-20T15:24:58.4128803Z
-                    data_orderbook_end: 2020-08-05T14:37:20.2695780Z
-                    data_trade_start: 2018-11-20T15:25:38.0000000Z
-                    data_trade_end: 2021-03-01T16:03:18.0000000Z
-                    volume_1hrs: 51.68645899
-                    volume_1hrs_usd: 9036.44
-                    volume_1day: 465.568863
-                    volume_1day_usd: 81396.28
-                    volume_1mth: 22528.27638495
-                    volume_1mth_usd: 3938661.0
-                    symbol_id_exchange: USDC_LTC
-                    asset_id_base_exchange: LTC
-                    asset_id_quote_exchange: USDC
-                    price_precision: 1.0E-8
-                    size_precision: 1.0E-8
-                    symbol_id_int: 0
-              schema:
-                items:
-                  $ref: "#/components/schemas/MarketDataMetadata.Symbol"
-                type: array
-            application/x-msgpack:
-              examples:
-                Example response:
-                  value:
-                  - symbol_id: KRAKENFTS_PERP_BTC_USD
-                    exchange_id: KRAKENFTS
-                    symbol_type: PERPETUAL
-                    asset_id_base: BTC
-                    asset_id_quote: USD
-                    asset_id_unit: USD
-                    future_contract_unit: 1.0
-                    future_contract_unit_asset: USD
-                    data_start: 2019-10-30
-                    data_end: 2021-03-03
-                    data_quote_start: 2019-10-30T16:53:10.3262317Z
-                    data_quote_end: 2021-03-03T13:51:45.6970000Z
-                    data_orderbook_start: 2019-10-30T16:53:10.3262317Z
-                    data_orderbook_end: 2020-08-05T14:37:32.0080000Z
-                    data_trade_start: 2019-10-30T16:38:52.1620000Z
-                    data_trade_end: 2021-03-03T13:46:25.7810000Z
-                    volume_1hrs: 22897091
-                    volume_1hrs_usd: 2.2897091E7
-                    volume_1day: 459390289
-                    volume_1day_usd: 4.59390289E8
-                    volume_1mth: 12875674995
-                    volume_1mth_usd: 1.2875674995E10
-                    price: 51266
-                    symbol_id_exchange: pi_xbtusd
-                    asset_id_base_exchange: XBT
-                    asset_id_quote_exchange: USD
-                    price_precision: 0.1
-                    size_precision: 1.0
-                    symbol_id_int: 0
-                  - symbol_id: POLONIEX_SPOT_LTC_USDC
-                    exchange_id: POLONIEX
-                    symbol_type: SPOT
-                    asset_id_base: LTC
-                    asset_id_quote: USDC
-                    data_start: 2018-11-20
-                    data_end: 2021-03-01
-                    data_quote_start: 2018-11-20T15:24:58.4128803Z
-                    data_quote_end: 2021-03-01T16:07:09.3475456Z
-                    data_orderbook_start: 2018-11-20T15:24:58.4128803Z
-                    data_orderbook_end: 2020-08-05T14:37:20.2695780Z
-                    data_trade_start: 2018-11-20T15:25:38.0000000Z
-                    data_trade_end: 2021-03-01T16:03:18.0000000Z
-                    volume_1hrs: 51.68645899
-                    volume_1hrs_usd: 9036.44
-                    volume_1day: 465.568863
-                    volume_1day_usd: 81396.28
-                    volume_1mth: 22528.27638495
-                    volume_1mth_usd: 3938661.0
-                    symbol_id_exchange: USDC_LTC
-                    asset_id_base_exchange: LTC
-                    asset_id_quote_exchange: USDC
-                    price_precision: 1.0E-8
-                    size_precision: 1.0E-8
-                    symbol_id_int: 0
-              schema:
-                items:
-                  $ref: "#/components/schemas/MarketDataMetadata.Symbol"
-                type: array
-          description: successful operation
-      summary: List symbols not yet mapped to a CoinAPI symbol_id for an exchange.
-      tags:
-      - Metadata
-  /v1/symbols/{exchange_id}/by-exchange-symbol/{exchange_symbol_id}:
-    get:
-      description: |-
-        Looks up a symbol by `symbol_id_exchange` regardless of mapping status - this also returns
-        symbols that have not been mapped to a CoinAPI `symbol_id` yet (see `{exchange_id}/unmapped`).
-      parameters:
-      - description: The ID of the exchange.
-        explode: false
-        in: path
-        name: exchange_id
-        required: true
-        schema:
-          type: string
-        style: simple
-      - description: The exchange-native symbol identifier (`symbol_id_exchange`).
-        explode: false
-        in: path
-        name: exchange_symbol_id
-        required: true
-        schema:
-          type: string
-        style: simple
-      responses:
-        "200":
-          content:
-            text/plain:
-              schema:
-                $ref: "#/components/schemas/MarketDataMetadata.Symbol"
-            application/json:
-              schema:
-                $ref: "#/components/schemas/MarketDataMetadata.Symbol"
-            text/json:
-              schema:
-                $ref: "#/components/schemas/MarketDataMetadata.Symbol"
-            application/x-msgpack:
-              schema:
-                $ref: "#/components/schemas/MarketDataMetadata.Symbol"
-          description: successful operation
-      summary: Get a single symbol by its exchange-native symbol identifier.
       tags:
       - Metadata
   /v1/exchanges:

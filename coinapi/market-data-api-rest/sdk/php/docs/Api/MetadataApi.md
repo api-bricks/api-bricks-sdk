@@ -15,9 +15,7 @@ All URIs are relative to https://rest.coinapi.io, except if the operation define
 | [**v1ExchangesGet()**](MetadataApi.md#v1ExchangesGet) | **GET** /v1/exchanges | List all exchanges |
 | [**v1ExchangesIconsSizeGet()**](MetadataApi.md#v1ExchangesIconsSizeGet) | **GET** /v1/exchanges/icons/{size} | List of icons for the exchanges |
 | [**v1SymbolsExchangeIdActiveGet()**](MetadataApi.md#v1SymbolsExchangeIdActiveGet) | **GET** /v1/symbols/{exchange_id}/active | List all active symbols |
-| [**v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet()**](MetadataApi.md#v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet) | **GET** /v1/symbols/{exchange_id}/by-exchange-symbol/{exchange_symbol_id} | Get a single symbol by its exchange-native symbol identifier. |
 | [**v1SymbolsExchangeIdHistoryGet()**](MetadataApi.md#v1SymbolsExchangeIdHistoryGet) | **GET** /v1/symbols/{exchange_id}/history | List all historical symbols for an exchange. |
-| [**v1SymbolsExchangeIdUnmappedGet()**](MetadataApi.md#v1SymbolsExchangeIdUnmappedGet) | **GET** /v1/symbols/{exchange_id}/unmapped | List symbols not yet mapped to a CoinAPI symbol_id for an exchange. |
 | [**v1SymbolsMapExchangeIdGet()**](MetadataApi.md#v1SymbolsMapExchangeIdGet) | **GET** /v1/symbols/map/{exchange_id} | List active symbol mapping for the exchange |
 
 
@@ -604,73 +602,6 @@ try {
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet()`
-
-```php
-v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet($exchange_id, $exchange_symbol_id): \OpenAPI\Client\Model\MarketDataMetadataSymbol
-```
-
-Get a single symbol by its exchange-native symbol identifier.
-
-Looks up a symbol by `symbol_id_exchange` regardless of mapping status - this also returns symbols that have not been mapped to a CoinAPI `symbol_id` yet (see `{exchange_id}/unmapped`).
-
-### Example
-
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-
-// Configure API key authorization: APIKey
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
-
-// Configure Bearer (JWT) authorization: JWT
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-
-
-$apiInstance = new OpenAPI\Client\Api\MetadataApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-$exchange_id = 'exchange_id_example'; // string | The ID of the exchange.
-$exchange_symbol_id = 'exchange_symbol_id_example'; // string | The exchange-native symbol identifier (`symbol_id_exchange`).
-
-try {
-    $result = $apiInstance->v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet($exchange_id, $exchange_symbol_id);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling MetadataApi->v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet: ', $e->getMessage(), PHP_EOL;
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **exchange_id** | **string**| The ID of the exchange. | |
-| **exchange_symbol_id** | **string**| The exchange-native symbol identifier (&#x60;symbol_id_exchange&#x60;). | |
-
-### Return type
-
-[**\OpenAPI\Client\Model\MarketDataMetadataSymbol**](../Model/MarketDataMetadataSymbol.md)
-
-### Authorization
-
-[APIKey](../../README.md#APIKey), [JWT](../../README.md#JWT)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: `text/plain`, `application/json`, `text/json`, `application/x-msgpack`
-
-[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
-[[Back to Model list]](../../README.md#models)
-[[Back to README]](../../README.md)
-
 ## `v1SymbolsExchangeIdHistoryGet()`
 
 ```php
@@ -712,75 +643,6 @@ try {
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MetadataApi->v1SymbolsExchangeIdHistoryGet: ', $e->getMessage(), PHP_EOL;
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **exchange_id** | **string**| The ID of the exchange. | |
-| **page** | **int**| The page number for pagination (starts from 1). | [optional] [default to 1] |
-| **limit** | **int**| Number of records to return per page. | [optional] [default to 100] |
-
-### Return type
-
-[**\OpenAPI\Client\Model\MarketDataMetadataSymbol[]**](../Model/MarketDataMetadataSymbol.md)
-
-### Authorization
-
-[APIKey](../../README.md#APIKey), [JWT](../../README.md#JWT)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: `text/plain`, `application/json`, `text/json`, `application/x-msgpack`
-
-[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
-[[Back to Model list]](../../README.md#models)
-[[Back to README]](../../README.md)
-
-## `v1SymbolsExchangeIdUnmappedGet()`
-
-```php
-v1SymbolsExchangeIdUnmappedGet($exchange_id, $page, $limit): \OpenAPI\Client\Model\MarketDataMetadataSymbol[]
-```
-
-List symbols not yet mapped to a CoinAPI symbol_id for an exchange.
-
-Returns raw exchange symbols that MarketAccess has received (KVP data available) but that have not been mapped to a CoinAPI `symbol_id` yet. Since `symbol_id` is null for these rows, use `symbol_id_exchange` (and `GET {exchange_id}/by-exchange-symbol/{exchange_symbol_id}`) to reference them. The `raw_kvp` field contains the raw exchange payload as received.
-
-### Example
-
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-
-// Configure API key authorization: APIKey
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
-
-// Configure Bearer (JWT) authorization: JWT
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-
-
-$apiInstance = new OpenAPI\Client\Api\MetadataApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-$exchange_id = 'exchange_id_example'; // string | The ID of the exchange.
-$page = 1; // int | The page number for pagination (starts from 1).
-$limit = 100; // int | Number of records to return per page.
-
-try {
-    $result = $apiInstance->v1SymbolsExchangeIdUnmappedGet($exchange_id, $page, $limit);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling MetadataApi->v1SymbolsExchangeIdUnmappedGet: ', $e->getMessage(), PHP_EOL;
 }
 ```
 

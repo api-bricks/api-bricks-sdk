@@ -181,36 +181,12 @@ class MetadataApiTest extends TestCase
     }
 
     /**
-     * Test case for v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet
-     *
-     * Get a single symbol by its exchange-native symbol identifier..
-     *
-     */
-    public function testV1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test case for v1SymbolsExchangeIdHistoryGet
      *
      * List all historical symbols for an exchange..
      *
      */
     public function testV1SymbolsExchangeIdHistoryGet()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for v1SymbolsExchangeIdUnmappedGet
-     *
-     * List symbols not yet mapped to a CoinAPI symbol_id for an exchange..
-     *
-     */
-    public function testV1SymbolsExchangeIdUnmappedGet()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

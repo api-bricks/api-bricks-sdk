@@ -425,55 +425,6 @@ export default class MetadataApi {
     }
 
     /**
-     * Callback function to receive the result of the v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet operation.
-     * @callback module:api/MetadataApi~v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGetCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/MarketDataMetadataSymbol} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Get a single symbol by its exchange-native symbol identifier.
-     * Looks up a symbol by `symbol_id_exchange` regardless of mapping status - this also returns symbols that have not been mapped to a CoinAPI `symbol_id` yet (see `{exchange_id}/unmapped`).
-     * @param {String} exchangeId The ID of the exchange.
-     * @param {String} exchangeSymbolId The exchange-native symbol identifier (`symbol_id_exchange`).
-     * @param {module:api/MetadataApi~v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/MarketDataMetadataSymbol}
-     */
-    v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet(exchangeId, exchangeSymbolId, callback) {
-      let postBody = null;
-      // verify the required parameter 'exchangeId' is set
-      if (exchangeId === undefined || exchangeId === null) {
-        throw new Error("Missing the required parameter 'exchangeId' when calling v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet");
-      }
-      // verify the required parameter 'exchangeSymbolId' is set
-      if (exchangeSymbolId === undefined || exchangeSymbolId === null) {
-        throw new Error("Missing the required parameter 'exchangeSymbolId' when calling v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet");
-      }
-
-      let pathParams = {
-        'exchange_id': exchangeId,
-        'exchange_symbol_id': exchangeSymbolId
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['APIKey', 'JWT'];
-      let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
-      let returnType = MarketDataMetadataSymbol;
-      return this.apiClient.callApi(
-        '/v1/symbols/{exchange_id}/by-exchange-symbol/{exchange_symbol_id}', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
-      );
-    }
-
-    /**
      * Callback function to receive the result of the v1SymbolsExchangeIdHistoryGet operation.
      * @callback module:api/MetadataApi~v1SymbolsExchangeIdHistoryGetCallback
      * @param {String} error Error message, if any.
@@ -517,55 +468,6 @@ export default class MetadataApi {
       let returnType = [MarketDataMetadataSymbol];
       return this.apiClient.callApi(
         '/v1/symbols/{exchange_id}/history', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the v1SymbolsExchangeIdUnmappedGet operation.
-     * @callback module:api/MetadataApi~v1SymbolsExchangeIdUnmappedGetCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/MarketDataMetadataSymbol>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * List symbols not yet mapped to a CoinAPI symbol_id for an exchange.
-     * Returns raw exchange symbols that MarketAccess has received (KVP data available) but that have not been mapped to a CoinAPI `symbol_id` yet. Since `symbol_id` is null for these rows, use `symbol_id_exchange` (and `GET {exchange_id}/by-exchange-symbol/{exchange_symbol_id}`) to reference them. The `raw_kvp` field contains the raw exchange payload as received.
-     * @param {String} exchangeId The ID of the exchange.
-     * @param {Object} opts Optional parameters
-     * @param {Number} [page = 1)] The page number for pagination (starts from 1).
-     * @param {Number} [limit = 100)] Number of records to return per page.
-     * @param {module:api/MetadataApi~v1SymbolsExchangeIdUnmappedGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/MarketDataMetadataSymbol>}
-     */
-    v1SymbolsExchangeIdUnmappedGet(exchangeId, opts, callback) {
-      opts = opts || {};
-      let postBody = null;
-      // verify the required parameter 'exchangeId' is set
-      if (exchangeId === undefined || exchangeId === null) {
-        throw new Error("Missing the required parameter 'exchangeId' when calling v1SymbolsExchangeIdUnmappedGet");
-      }
-
-      let pathParams = {
-        'exchange_id': exchangeId
-      };
-      let queryParams = {
-        'page': opts['page'],
-        'limit': opts['limit']
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['APIKey', 'JWT'];
-      let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json', 'application/x-msgpack'];
-      let returnType = [MarketDataMetadataSymbol];
-      return this.apiClient.callApi(
-        '/v1/symbols/{exchange_id}/unmapped', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

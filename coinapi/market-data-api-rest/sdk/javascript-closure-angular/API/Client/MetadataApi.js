@@ -395,49 +395,6 @@ API.Client.MetadataApi.prototype.v1SymbolsExchangeIdActiveGet = function(exchang
 }
 
 /**
- * Get a single symbol by its exchange-native symbol identifier.
- * Looks up a symbol by &#x60;symbol_id_exchange&#x60; regardless of mapping status - this also returns symbols that have not been mapped to a CoinAPI &#x60;symbol_id&#x60; yet (see &#x60;{exchange_id}/unmapped&#x60;).
- * @param {!string} exchangeId The ID of the exchange.
- * @param {!string} exchangeSymbolId The exchange-native symbol identifier (&#x60;symbol_id_exchange&#x60;).
- * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
- * @return {!angular.$q.Promise<!API.Client.MarketDataMetadata.Symbol>}
- */
-API.Client.MetadataApi.prototype.v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet = function(exchangeId, exchangeSymbolId, opt_extraHttpRequestParams) {
-  /** @const {string} */
-  var path = this.basePath_ + '/v1/symbols/{exchange_id}/by-exchange-symbol/{exchange_symbol_id}'
-      .replace('{exchange_id}', String(exchangeId))
-      .replace('{exchange_symbol_id}', String(exchangeSymbolId));
-
-  /** @type {!Object} */
-  var queryParameters = {};
-
-  /** @type {!Object} */
-  var headerParams = angular.extend({}, this.defaultHeaders_);
-  // verify required parameter 'exchangeId' is set
-  if (!exchangeId) {
-    throw new Error('Missing required parameter exchangeId when calling v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet');
-  }
-  // verify required parameter 'exchangeSymbolId' is set
-  if (!exchangeSymbolId) {
-    throw new Error('Missing required parameter exchangeSymbolId when calling v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet');
-  }
-  /** @type {!Object} */
-  var httpRequestParams = {
-    method: 'GET',
-    url: path,
-    json: true,
-            params: queryParameters,
-    headers: headerParams
-  };
-
-  if (opt_extraHttpRequestParams) {
-    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
-  }
-
-  return (/** @type {?} */ (this.http_))(httpRequestParams);
-}
-
-/**
  * List all historical symbols for an exchange.
  * This endpoint provides access to symbols that are no longer actively traded or listed on a given exchange. The data is provided with pagination support.
  * @param {!string} exchangeId The ID of the exchange.
@@ -459,53 +416,6 @@ API.Client.MetadataApi.prototype.v1SymbolsExchangeIdHistoryGet = function(exchan
   // verify required parameter 'exchangeId' is set
   if (!exchangeId) {
     throw new Error('Missing required parameter exchangeId when calling v1SymbolsExchangeIdHistoryGet');
-  }
-  if (opt_page !== undefined) {
-    queryParameters['page'] = opt_page;
-  }
-
-  if (opt_limit !== undefined) {
-    queryParameters['limit'] = opt_limit;
-  }
-
-  /** @type {!Object} */
-  var httpRequestParams = {
-    method: 'GET',
-    url: path,
-    json: true,
-            params: queryParameters,
-    headers: headerParams
-  };
-
-  if (opt_extraHttpRequestParams) {
-    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
-  }
-
-  return (/** @type {?} */ (this.http_))(httpRequestParams);
-}
-
-/**
- * List symbols not yet mapped to a CoinAPI symbol_id for an exchange.
- * Returns raw exchange symbols that MarketAccess has received (KVP data available) but that have not been mapped to a CoinAPI &#x60;symbol_id&#x60; yet. Since &#x60;symbol_id&#x60; is null for these rows, use &#x60;symbol_id_exchange&#x60; (and &#x60;GET {exchange_id}/by-exchange-symbol/{exchange_symbol_id}&#x60;) to reference them. The &#x60;raw_kvp&#x60; field contains the raw exchange payload as received.
- * @param {!string} exchangeId The ID of the exchange.
- * @param {!number=} opt_page The page number for pagination (starts from 1).
- * @param {!number=} opt_limit Number of records to return per page.
- * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
- * @return {!angular.$q.Promise<!Array<!API.Client.MarketDataMetadata.Symbol>>}
- */
-API.Client.MetadataApi.prototype.v1SymbolsExchangeIdUnmappedGet = function(exchangeId, opt_page, opt_limit, opt_extraHttpRequestParams) {
-  /** @const {string} */
-  var path = this.basePath_ + '/v1/symbols/{exchange_id}/unmapped'
-      .replace('{exchange_id}', String(exchangeId));
-
-  /** @type {!Object} */
-  var queryParameters = {};
-
-  /** @type {!Object} */
-  var headerParams = angular.extend({}, this.defaultHeaders_);
-  // verify required parameter 'exchangeId' is set
-  if (!exchangeId) {
-    throw new Error('Missing required parameter exchangeId when calling v1SymbolsExchangeIdUnmappedGet');
   }
   if (opt_page !== undefined) {
     queryParameters['page'] = opt_page;

@@ -87,9 +87,7 @@ Class | Method | HTTP request | Description
 *MetadataApi* | [**V1ExchangesGet**](docs/MetadataApi.md#V1ExchangesGet) | **GET** /v1/exchanges | List all exchanges
 *MetadataApi* | [**V1ExchangesIconsSizeGet**](docs/MetadataApi.md#V1ExchangesIconsSizeGet) | **GET** /v1/exchanges/icons/{size} | List of icons for the exchanges
 *MetadataApi* | [**V1SymbolsExchangeIdActiveGet**](docs/MetadataApi.md#V1SymbolsExchangeIdActiveGet) | **GET** /v1/symbols/{exchange_id}/active | List all active symbols
-*MetadataApi* | [**V1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet**](docs/MetadataApi.md#V1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet) | **GET** /v1/symbols/{exchange_id}/by-exchange-symbol/{exchange_symbol_id} | Get a single symbol by its exchange-native symbol identifier.
 *MetadataApi* | [**V1SymbolsExchangeIdHistoryGet**](docs/MetadataApi.md#V1SymbolsExchangeIdHistoryGet) | **GET** /v1/symbols/{exchange_id}/history | List all historical symbols for an exchange.
-*MetadataApi* | [**V1SymbolsExchangeIdUnmappedGet**](docs/MetadataApi.md#V1SymbolsExchangeIdUnmappedGet) | **GET** /v1/symbols/{exchange_id}/unmapped | List symbols not yet mapped to a CoinAPI symbol_id for an exchange.
 *MetadataApi* | [**V1SymbolsMapExchangeIdGet**](docs/MetadataApi.md#V1SymbolsMapExchangeIdGet) | **GET** /v1/symbols/map/{exchange_id} | List active symbol mapping for the exchange
 *MetricsV1Api* | [**V1MetricsAssetCurrentGet**](docs/MetricsV1Api.md#V1MetricsAssetCurrentGet) | **GET** /v1/metrics/asset/current | Current metrics for given asset
 *MetricsV1Api* | [**V1MetricsAssetHistoryGet**](docs/MetricsV1Api.md#V1MetricsAssetHistoryGet) | **GET** /v1/metrics/asset/history | Historical metrics for asset

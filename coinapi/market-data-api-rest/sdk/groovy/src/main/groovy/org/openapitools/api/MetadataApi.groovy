@@ -262,72 +262,8 @@ class MetadataApi {
 
     }
 
-    def v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet ( String exchangeId, String exchangeSymbolId, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/v1/symbols/${exchange_id}/by-exchange-symbol/${exchange_symbol_id}"
-
-        // params
-        def queryParams = [:]
-        def headerParams = [:]
-        def bodyParams
-        def accept
-        def contentType
-
-        // verify required params are set
-        if (exchangeId == null) {
-            throw new RuntimeException("missing required params exchangeId")
-        }
-        // verify required params are set
-        if (exchangeSymbolId == null) {
-            throw new RuntimeException("missing required params exchangeSymbolId")
-        }
-
-
-
-
-
-        accept = apiUtils.selectHeaderAccept(["text/plain", "application/json", "text/json", "application/x-msgpack"])
-
-        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, accept, contentType,
-                    "GET", "",
-                    MarketDataMetadataSymbol.class )
-
-    }
-
     def v1SymbolsExchangeIdHistoryGet ( String exchangeId, Integer page, Integer limit, Closure onSuccess, Closure onFailure)  {
         String resourcePath = "/v1/symbols/${exchange_id}/history"
-
-        // params
-        def queryParams = [:]
-        def headerParams = [:]
-        def bodyParams
-        def accept
-        def contentType
-
-        // verify required params are set
-        if (exchangeId == null) {
-            throw new RuntimeException("missing required params exchangeId")
-        }
-
-        if (page != null) {
-            queryParams.put("page", page)
-        }
-        if (limit != null) {
-            queryParams.put("limit", limit)
-        }
-
-
-
-
-        accept = apiUtils.selectHeaderAccept(["text/plain", "application/json", "text/json", "application/x-msgpack"])
-
-        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, accept, contentType,
-                    "GET", "array",
-                    MarketDataMetadataSymbol.class )
-
-    }
-
-    def v1SymbolsExchangeIdUnmappedGet ( String exchangeId, Integer page, Integer limit, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/v1/symbols/${exchange_id}/unmapped"
 
         // params
         def queryParams = [:]

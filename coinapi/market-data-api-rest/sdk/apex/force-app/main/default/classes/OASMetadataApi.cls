@@ -263,34 +263,6 @@ public class OASMetadataApi {
         );
     }
     /**
-     * Get a single symbol by its exchange-native symbol identifier.
-     * Looks up a symbol by &#x60;symbol_id_exchange&#x60; regardless of mapping status - this also returns\nsymbols that have not been mapped to a CoinAPI &#x60;symbol_id&#x60; yet (see &#x60;{exchange_id}/unmapped&#x60;).
-     * @param exchangeId The ID of the exchange. (required)
-     * @param exchangeSymbolId The exchange-native symbol identifier (&#x60;symbol_id_exchange&#x60;). (required)
-     * @return OASMarketDataMetadataSymbol
-     * @throws OAS.ApiException if fails to make API call
-     */
-    public OASMarketDataMetadataSymbol v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet(Map<String, Object> params) {
-        client.assertNotNull(params.get('exchangeId'), 'exchangeId');
-        client.assertNotNull(params.get('exchangeSymbolId'), 'exchangeSymbolId');
-        List<OAS.Param> query = new List<OAS.Param>();
-        List<OAS.Param> form = new List<OAS.Param>();
-
-        return (OASMarketDataMetadataSymbol) client.invoke(
-            'GET', '/v1/symbols/{exchange_id}/by-exchange-symbol/{exchange_symbol_id}', '',
-            query, form,
-            new Map<String, Object>{
-                'exchange_id' => (String) params.get('exchangeId'),
-                'exchange_symbol_id' => (String) params.get('exchangeSymbolId')
-            },
-            new Map<String, Object>(),
-            new List<String>{ 'text/plain', 'application/json', 'text/json', 'application/x-msgpack' },
-            new List<String>(),
-            new List<String> { 'APIKey', 'JWT' },
-            OASMarketDataMetadataSymbol.class
-        );
-    }
-    /**
      * List all historical symbols for an exchange.
      * This endpoint provides access to symbols that are no longer actively traded or listed on a given exchange.\nThe data is provided with pagination support.
      * @param exchangeId The ID of the exchange. (required)
@@ -311,38 +283,6 @@ public class OASMetadataApi {
 
         return (List<OASMarketDataMetadataSymbol>) client.invoke(
             'GET', '/v1/symbols/{exchange_id}/history', '',
-            query, form,
-            new Map<String, Object>{
-                'exchange_id' => (String) params.get('exchangeId')
-            },
-            new Map<String, Object>(),
-            new List<String>{ 'text/plain', 'application/json', 'text/json', 'application/x-msgpack' },
-            new List<String>(),
-            new List<String> { 'APIKey', 'JWT' },
-            List<OASMarketDataMetadataSymbol>.class
-        );
-    }
-    /**
-     * List symbols not yet mapped to a CoinAPI symbol_id for an exchange.
-     * Returns raw exchange symbols that MarketAccess has received (KVP data available) but that\nhave not been mapped to a CoinAPI &#x60;symbol_id&#x60; yet. Since &#x60;symbol_id&#x60; is null for these rows,\nuse &#x60;symbol_id_exchange&#x60; (and &#x60;GET {exchange_id}/by-exchange-symbol/{exchange_symbol_id}&#x60;) to\nreference them. The &#x60;raw_kvp&#x60; field contains the raw exchange payload as received.
-     * @param exchangeId The ID of the exchange. (required)
-     * @param page The page number for pagination (starts from 1). (optional, default to 1)
-     * @param r_limit Number of records to return per page. (optional, default to 100)
-     * @return List<OASMarketDataMetadataSymbol>
-     * @throws OAS.ApiException if fails to make API call
-     */
-    public List<OASMarketDataMetadataSymbol> v1SymbolsExchangeIdUnmappedGet(Map<String, Object> params) {
-        client.assertNotNull(params.get('exchangeId'), 'exchangeId');
-        List<OAS.Param> query = new List<OAS.Param>();
-
-        // cast query params to verify their expected type
-        query.addAll(client.makeParam('page', (Integer) params.get('page')));
-        query.addAll(client.makeParam('limit', (Integer) params.get('r_limit')));
-
-        List<OAS.Param> form = new List<OAS.Param>();
-
-        return (List<OASMarketDataMetadataSymbol>) client.invoke(
-            'GET', '/v1/symbols/{exchange_id}/unmapped', '',
             query, form,
             new Map<String, Object>{
                 'exchange_id' => (String) params.get('exchangeId')

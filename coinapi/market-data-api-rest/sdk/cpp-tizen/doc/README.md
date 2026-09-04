@@ -73,12 +73,8 @@ Method | HTTP request | Description
 *v1ExchangesIconsSizeGetASync* | *GET* /v1/exchanges/icons/{size} | List of icons for the exchanges.
 *v1SymbolsExchangeIdActiveGetSync* | *GET* /v1/symbols/{exchange_id}/active | List all active symbols.
 *v1SymbolsExchangeIdActiveGetASync* | *GET* /v1/symbols/{exchange_id}/active | List all active symbols.
-*v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGetSync* | *GET* /v1/symbols/{exchange_id}/by-exchange-symbol/{exchange_symbol_id} | Get a single symbol by its exchange-native symbol identifier..
-*v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGetASync* | *GET* /v1/symbols/{exchange_id}/by-exchange-symbol/{exchange_symbol_id} | Get a single symbol by its exchange-native symbol identifier..
 *v1SymbolsExchangeIdHistoryGetSync* | *GET* /v1/symbols/{exchange_id}/history | List all historical symbols for an exchange..
 *v1SymbolsExchangeIdHistoryGetASync* | *GET* /v1/symbols/{exchange_id}/history | List all historical symbols for an exchange..
-*v1SymbolsExchangeIdUnmappedGetSync* | *GET* /v1/symbols/{exchange_id}/unmapped | List symbols not yet mapped to a CoinAPI symbol_id for an exchange..
-*v1SymbolsExchangeIdUnmappedGetASync* | *GET* /v1/symbols/{exchange_id}/unmapped | List symbols not yet mapped to a CoinAPI symbol_id for an exchange..
 *v1SymbolsMapExchangeIdGetSync* | *GET* /v1/symbols/map/{exchange_id} | List active symbol mapping for the exchange.
 *v1SymbolsMapExchangeIdGetASync* | *GET* /v1/symbols/map/{exchange_id} | List active symbol mapping for the exchange.
 

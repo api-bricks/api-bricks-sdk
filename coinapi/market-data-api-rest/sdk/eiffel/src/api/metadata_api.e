@@ -357,45 +357,6 @@ feature -- API Access
 			end
 		end
 
-	v1_symbols_exchange_id_by_exchange_symbol_exchange_symbol_id_get (exchange_id: STRING_32; exchange_symbol_id: STRING_32): detachable MARKET_DATA_METADATA_SYMBOL
-			-- Get a single symbol by its exchange-native symbol identifier.
-			-- Looks up a symbol by &#x60;symbol_id_exchange&#x60; regardless of mapping status - this also returns symbols that have not been mapped to a CoinAPI &#x60;symbol_id&#x60; yet (see &#x60;{exchange_id}/unmapped&#x60;).
-			-- 
-			-- argument: exchange_id The ID of the exchange. (required)
-			-- 
-			-- argument: exchange_symbol_id The exchange-native symbol identifier (&#x60;symbol_id_exchange&#x60;). (required)
-			-- 
-			-- 
-			-- Result MARKET_DATA_METADATA_SYMBOL
-		require
-		local
-  			l_path: STRING
-  			l_request: API_CLIENT_REQUEST
-  			l_response: API_CLIENT_RESPONSE
-		do
-			reset_error
-			create l_request
-			
-			l_path := "/v1/symbols/{exchange_id}/by-exchange-symbol/{exchange_symbol_id}"
-			l_path.replace_substring_all ("{"+"exchange_id"+"}", api_client.url_encode (exchange_id.out))
-			l_path.replace_substring_all ("{"+"exchange_symbol_id"+"}", api_client.url_encode (exchange_symbol_id.out))
-
-
-			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json", "application/x-msgpack">>)  as l_accept then
-				l_request.add_header(l_accept,"Accept");
-			end
-			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
-			l_request.set_auth_names ({ARRAY [STRING]}<<"APIKey", "JWT">>)
-			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
-			if l_response.has_error then
-				last_error := l_response.error
-			elseif attached { MARKET_DATA_METADATA_SYMBOL } l_response.data ({ MARKET_DATA_METADATA_SYMBOL }) as l_data then
-				Result := l_data
-			else
-				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
-			end
-		end
-
 	v1_symbols_exchange_id_history_get (exchange_id: STRING_32; page: INTEGER_32; limit: INTEGER_32): detachable LIST [MARKET_DATA_METADATA_SYMBOL]
 			-- List all historical symbols for an exchange.
 			-- This endpoint provides access to symbols that are no longer actively traded or listed on a given exchange. The data is provided with pagination support.
@@ -418,48 +379,6 @@ feature -- API Access
 			create l_request
 			
 			l_path := "/v1/symbols/{exchange_id}/history"
-			l_path.replace_substring_all ("{"+"exchange_id"+"}", api_client.url_encode (exchange_id.out))
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "page", page));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "limit", limit));
-
-
-			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json", "application/x-msgpack">>)  as l_accept then
-				l_request.add_header(l_accept,"Accept");
-			end
-			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
-			l_request.set_auth_names ({ARRAY [STRING]}<<"APIKey", "JWT">>)
-			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
-			if l_response.has_error then
-				last_error := l_response.error
-			elseif attached { LIST [MARKET_DATA_METADATA_SYMBOL] } l_response.data ({ LIST [MARKET_DATA_METADATA_SYMBOL] }) as l_data then
-				Result := l_data
-			else
-				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
-			end
-		end
-
-	v1_symbols_exchange_id_unmapped_get (exchange_id: STRING_32; page: INTEGER_32; limit: INTEGER_32): detachable LIST [MARKET_DATA_METADATA_SYMBOL]
-			-- List symbols not yet mapped to a CoinAPI symbol_id for an exchange.
-			-- Returns raw exchange symbols that MarketAccess has received (KVP data available) but that have not been mapped to a CoinAPI &#x60;symbol_id&#x60; yet. Since &#x60;symbol_id&#x60; is null for these rows, use &#x60;symbol_id_exchange&#x60; (and &#x60;GET {exchange_id}/by-exchange-symbol/{exchange_symbol_id}&#x60;) to reference them. The &#x60;raw_kvp&#x60; field contains the raw exchange payload as received.
-			-- 
-			-- argument: exchange_id The ID of the exchange. (required)
-			-- 
-			-- argument: page The page number for pagination (starts from 1). (optional, default to 1)
-			-- 
-			-- argument: limit Number of records to return per page. (optional, default to 100)
-			-- 
-			-- 
-			-- Result LIST [MARKET_DATA_METADATA_SYMBOL]
-		require
-		local
-  			l_path: STRING
-  			l_request: API_CLIENT_REQUEST
-  			l_response: API_CLIENT_RESPONSE
-		do
-			reset_error
-			create l_request
-			
-			l_path := "/v1/symbols/{exchange_id}/unmapped"
 			l_path.replace_substring_all ("{"+"exchange_id"+"}", api_client.url_encode (exchange_id.out))
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "page", page));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "limit", limit));

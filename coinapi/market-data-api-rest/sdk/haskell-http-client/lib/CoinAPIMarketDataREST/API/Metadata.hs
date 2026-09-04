@@ -347,37 +347,6 @@ instance Produces V1SymbolsExchangeIdActiveGet MimeTextJson
 instance Produces V1SymbolsExchangeIdActiveGet MimePlainText
 
 
--- *** v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet
-
--- | @GET \/v1\/symbols\/{exchange_id}\/by-exchange-symbol\/{exchange_symbol_id}@
--- 
--- Get a single symbol by its exchange-native symbol identifier.
--- 
--- Looks up a symbol by `symbol_id_exchange` regardless of mapping status - this also returns symbols that have not been mapped to a CoinAPI `symbol_id` yet (see `{exchange_id}/unmapped`).
--- 
--- AuthMethod: 'AuthApiKeyAPIKey', 'AuthBasicJWT'
--- 
-v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet
-  :: Accept accept -- ^ request accept ('MimeType')
-  -> ExchangeId -- ^ "exchangeId" -  The ID of the exchange.
-  -> ExchangeSymbolId -- ^ "exchangeSymbolId" -  The exchange-native symbol identifier (`symbol_id_exchange`).
-  -> CoinAPIMarketDataRESTRequest V1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet MimeNoContent MarketDataMetadataSymbol accept
-v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet  _ (ExchangeId exchangeId) (ExchangeSymbolId exchangeSymbolId) =
-  _mkRequest "GET" ["/v1/symbols/",toPath exchangeId,"/by-exchange-symbol/",toPath exchangeSymbolId]
-    `_hasAuthType` (P.Proxy :: P.Proxy AuthApiKeyAPIKey)
-    `_hasAuthType` (P.Proxy :: P.Proxy AuthBasicJWT)
-
-data V1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet  
--- | @application/json@
-instance Produces V1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet MimeJSON
--- | @application/x-msgpack@
-instance Produces V1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet MimeXMsgpack
--- | @text/json@
-instance Produces V1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet MimeTextJson
--- | @text/plain@
-instance Produces V1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet MimePlainText
-
-
 -- *** v1SymbolsExchangeIdHistoryGet
 
 -- | @GET \/v1\/symbols\/{exchange_id}\/history@
@@ -416,46 +385,6 @@ instance Produces V1SymbolsExchangeIdHistoryGet MimeXMsgpack
 instance Produces V1SymbolsExchangeIdHistoryGet MimeTextJson
 -- | @text/plain@
 instance Produces V1SymbolsExchangeIdHistoryGet MimePlainText
-
-
--- *** v1SymbolsExchangeIdUnmappedGet
-
--- | @GET \/v1\/symbols\/{exchange_id}\/unmapped@
--- 
--- List symbols not yet mapped to a CoinAPI symbol_id for an exchange.
--- 
--- Returns raw exchange symbols that MarketAccess has received (KVP data available) but that have not been mapped to a CoinAPI `symbol_id` yet. Since `symbol_id` is null for these rows, use `symbol_id_exchange` (and `GET {exchange_id}/by-exchange-symbol/{exchange_symbol_id}`) to reference them. The `raw_kvp` field contains the raw exchange payload as received.
--- 
--- AuthMethod: 'AuthApiKeyAPIKey', 'AuthBasicJWT'
--- 
-v1SymbolsExchangeIdUnmappedGet
-  :: Accept accept -- ^ request accept ('MimeType')
-  -> ExchangeId -- ^ "exchangeId" -  The ID of the exchange.
-  -> CoinAPIMarketDataRESTRequest V1SymbolsExchangeIdUnmappedGet MimeNoContent [MarketDataMetadataSymbol] accept
-v1SymbolsExchangeIdUnmappedGet  _ (ExchangeId exchangeId) =
-  _mkRequest "GET" ["/v1/symbols/",toPath exchangeId,"/unmapped"]
-    `_hasAuthType` (P.Proxy :: P.Proxy AuthApiKeyAPIKey)
-    `_hasAuthType` (P.Proxy :: P.Proxy AuthBasicJWT)
-
-data V1SymbolsExchangeIdUnmappedGet  
-
--- | /Optional Param/ "page" - The page number for pagination (starts from 1).
-instance HasOptionalParam V1SymbolsExchangeIdUnmappedGet Page where
-  applyOptionalParam req (Page xs) =
-    req `addQuery` toQuery ("page", Just xs)
-
--- | /Optional Param/ "limit" - Number of records to return per page.
-instance HasOptionalParam V1SymbolsExchangeIdUnmappedGet Limit where
-  applyOptionalParam req (Limit xs) =
-    req `addQuery` toQuery ("limit", Just xs)
--- | @application/json@
-instance Produces V1SymbolsExchangeIdUnmappedGet MimeJSON
--- | @application/x-msgpack@
-instance Produces V1SymbolsExchangeIdUnmappedGet MimeXMsgpack
--- | @text/json@
-instance Produces V1SymbolsExchangeIdUnmappedGet MimeTextJson
--- | @text/plain@
-instance Produces V1SymbolsExchangeIdUnmappedGet MimePlainText
 
 
 -- *** v1SymbolsMapExchangeIdGet

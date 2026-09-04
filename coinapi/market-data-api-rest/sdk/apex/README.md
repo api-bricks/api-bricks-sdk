@@ -80,9 +80,7 @@ Class | Method | HTTP request | Description
 *OASMetadataApi* | [**v1ExchangesGet**](OASMetadataApi.md#v1ExchangesGet) | **GET** /v1/exchanges | List all exchanges
 *OASMetadataApi* | [**v1ExchangesIconsSizeGet**](OASMetadataApi.md#v1ExchangesIconsSizeGet) | **GET** /v1/exchanges/icons/{size} | List of icons for the exchanges
 *OASMetadataApi* | [**v1SymbolsExchangeIdActiveGet**](OASMetadataApi.md#v1SymbolsExchangeIdActiveGet) | **GET** /v1/symbols/{exchange_id}/active | List all active symbols
-*OASMetadataApi* | [**v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet**](OASMetadataApi.md#v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet) | **GET** /v1/symbols/{exchange_id}/by-exchange-symbol/{exchange_symbol_id} | Get a single symbol by its exchange-native symbol identifier.
 *OASMetadataApi* | [**v1SymbolsExchangeIdHistoryGet**](OASMetadataApi.md#v1SymbolsExchangeIdHistoryGet) | **GET** /v1/symbols/{exchange_id}/history | List all historical symbols for an exchange.
-*OASMetadataApi* | [**v1SymbolsExchangeIdUnmappedGet**](OASMetadataApi.md#v1SymbolsExchangeIdUnmappedGet) | **GET** /v1/symbols/{exchange_id}/unmapped | List symbols not yet mapped to a CoinAPI symbol_id for an exchange.
 *OASMetadataApi* | [**v1SymbolsMapExchangeIdGet**](OASMetadataApi.md#v1SymbolsMapExchangeIdGet) | **GET** /v1/symbols/map/{exchange_id} | List active symbol mapping for the exchange
 *OASMetricsV1Api* | [**v1MetricsAssetCurrentGet**](OASMetricsV1Api.md#v1MetricsAssetCurrentGet) | **GET** /v1/metrics/asset/current | Current metrics for given asset
 *OASMetricsV1Api* | [**v1MetricsAssetHistoryGet**](OASMetricsV1Api.md#v1MetricsAssetHistoryGet) | **GET** /v1/metrics/asset/history | Historical metrics for asset

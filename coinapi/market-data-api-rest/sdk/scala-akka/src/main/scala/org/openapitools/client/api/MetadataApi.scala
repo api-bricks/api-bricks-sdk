@@ -198,27 +198,6 @@ class MetadataApi(baseUrl: String) {
       
 
   /**
-   * Looks up a symbol by `symbol_id_exchange` regardless of mapping status - this also returns symbols that have not been mapped to a CoinAPI `symbol_id` yet (see `{exchange_id}/unmapped`).
-   * 
-   * Expected answers:
-   *   code 200 : Symbol (successful operation)
-   * 
-   * Available security schemes:
-   *   APIKey (apiKey)
-   *   JWT (http)
-   * 
-   * @param exchangeId The ID of the exchange.
-   * @param exchangeSymbolId The exchange-native symbol identifier (`symbol_id_exchange`).
-   */
-  def v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet(exchangeId: String, exchangeSymbolId: String)(implicit apiKey: ApiKeyValue, bearerToken: BearerToken): ApiRequest[Symbol] =
-    ApiRequest[Symbol](ApiMethods.GET, baseUrl, "/v1/symbols/{exchange_id}/by-exchange-symbol/{exchange_symbol_id}", "application/json")
-      .withApiKey(apiKey, "Authorization", HEADER)
-      .withCredentials(bearerToken).withPathParam("exchange_id", exchangeId)
-      .withPathParam("exchange_symbol_id", exchangeSymbolId)
-      .withSuccessResponse[Symbol](200)
-      
-
-  /**
    * This endpoint provides access to symbols that are no longer actively traded or listed on a given exchange. The data is provided with pagination support.
    * 
    * Expected answers:
@@ -234,29 +213,6 @@ class MetadataApi(baseUrl: String) {
    */
   def v1SymbolsExchangeIdHistoryGet(exchangeId: String, page: Option[Int] = None, limit: Option[Int] = None)(implicit apiKey: ApiKeyValue, bearerToken: BearerToken): ApiRequest[Seq[Symbol]] =
     ApiRequest[Seq[Symbol]](ApiMethods.GET, baseUrl, "/v1/symbols/{exchange_id}/history", "application/json")
-      .withApiKey(apiKey, "Authorization", HEADER)
-      .withCredentials(bearerToken).withQueryParam("page", page)
-      .withQueryParam("limit", limit)
-      .withPathParam("exchange_id", exchangeId)
-      .withSuccessResponse[Seq[Symbol]](200)
-      
-
-  /**
-   * Returns raw exchange symbols that MarketAccess has received (KVP data available) but that have not been mapped to a CoinAPI `symbol_id` yet. Since `symbol_id` is null for these rows, use `symbol_id_exchange` (and `GET {exchange_id}/by-exchange-symbol/{exchange_symbol_id}`) to reference them. The `raw_kvp` field contains the raw exchange payload as received.
-   * 
-   * Expected answers:
-   *   code 200 : Seq[Symbol] (successful operation)
-   * 
-   * Available security schemes:
-   *   APIKey (apiKey)
-   *   JWT (http)
-   * 
-   * @param exchangeId The ID of the exchange.
-   * @param page The page number for pagination (starts from 1).
-   * @param limit Number of records to return per page.
-   */
-  def v1SymbolsExchangeIdUnmappedGet(exchangeId: String, page: Option[Int] = None, limit: Option[Int] = None)(implicit apiKey: ApiKeyValue, bearerToken: BearerToken): ApiRequest[Seq[Symbol]] =
-    ApiRequest[Seq[Symbol]](ApiMethods.GET, baseUrl, "/v1/symbols/{exchange_id}/unmapped", "application/json")
       .withApiKey(apiKey, "Authorization", HEADER)
       .withCredentials(bearerToken).withQueryParam("page", page)
       .withQueryParam("limit", limit)

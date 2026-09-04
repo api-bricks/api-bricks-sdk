@@ -301,37 +301,6 @@ defmodule CoinAPIMarketDataRESTAPI.Api.Metadata do
   end
 
   @doc """
-  Get a single symbol by its exchange-native symbol identifier.
-  Looks up a symbol by `symbol_id_exchange` regardless of mapping status - this also returns symbols that have not been mapped to a CoinAPI `symbol_id` yet (see `{exchange_id}/unmapped`).
-
-  ### Parameters
-
-  - `connection` (CoinAPIMarketDataRESTAPI.Connection): Connection to server
-  - `exchange_id` (String.t): The ID of the exchange.
-  - `exchange_symbol_id` (String.t): The exchange-native symbol identifier (`symbol_id_exchange`).
-  - `opts` (keyword): Optional parameters
-
-  ### Returns
-
-  - `{:ok, CoinAPIMarketDataRESTAPI.Model.MarketDataMetadataSymbol.t}` on success
-  - `{:error, Tesla.Env.t}` on failure
-  """
-  @spec v1_symbols_exchange_id_by_exchange_symbol_exchange_symbol_id_get(Tesla.Env.client, String.t, String.t, keyword()) :: {:ok, CoinAPIMarketDataRESTAPI.Model.MarketDataMetadataSymbol.t} | {:error, Tesla.Env.t}
-  def v1_symbols_exchange_id_by_exchange_symbol_exchange_symbol_id_get(connection, exchange_id, exchange_symbol_id, _opts \\ []) do
-    request =
-      %{}
-      |> method(:get)
-      |> url("/v1/symbols/#{exchange_id}/by-exchange-symbol/#{exchange_symbol_id}")
-      |> Enum.into([])
-
-    connection
-    |> Connection.request(request)
-    |> evaluate_response([
-      {200, CoinAPIMarketDataRESTAPI.Model.MarketDataMetadataSymbol}
-    ])
-  end
-
-  @doc """
   List all historical symbols for an exchange.
   This endpoint provides access to symbols that are no longer actively traded or listed on a given exchange. The data is provided with pagination support.
 
@@ -359,44 +328,6 @@ defmodule CoinAPIMarketDataRESTAPI.Api.Metadata do
       %{}
       |> method(:get)
       |> url("/v1/symbols/#{exchange_id}/history")
-      |> add_optional_params(optional_params, opts)
-      |> Enum.into([])
-
-    connection
-    |> Connection.request(request)
-    |> evaluate_response([
-      {200, CoinAPIMarketDataRESTAPI.Model.MarketDataMetadataSymbol}
-    ])
-  end
-
-  @doc """
-  List symbols not yet mapped to a CoinAPI symbol_id for an exchange.
-  Returns raw exchange symbols that MarketAccess has received (KVP data available) but that have not been mapped to a CoinAPI `symbol_id` yet. Since `symbol_id` is null for these rows, use `symbol_id_exchange` (and `GET {exchange_id}/by-exchange-symbol/{exchange_symbol_id}`) to reference them. The `raw_kvp` field contains the raw exchange payload as received.
-
-  ### Parameters
-
-  - `connection` (CoinAPIMarketDataRESTAPI.Connection): Connection to server
-  - `exchange_id` (String.t): The ID of the exchange.
-  - `opts` (keyword): Optional parameters
-    - `:page` (integer()): The page number for pagination (starts from 1).
-    - `:limit` (integer()): Number of records to return per page.
-
-  ### Returns
-
-  - `{:ok, [%MarketDataMetadataSymbol{}, ...]}` on success
-  - `{:error, Tesla.Env.t}` on failure
-  """
-  @spec v1_symbols_exchange_id_unmapped_get(Tesla.Env.client, String.t, keyword()) :: {:ok, [CoinAPIMarketDataRESTAPI.Model.MarketDataMetadataSymbol.t]} | {:error, Tesla.Env.t}
-  def v1_symbols_exchange_id_unmapped_get(connection, exchange_id, opts \\ []) do
-    optional_params = %{
-      :page => :query,
-      :limit => :query
-    }
-
-    request =
-      %{}
-      |> method(:get)
-      |> url("/v1/symbols/#{exchange_id}/unmapped")
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 

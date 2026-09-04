@@ -112,38 +112,11 @@ test_that("V1SymbolsExchangeIdActiveGet", {
   #expect_equal(result, "EXPECTED_RESULT")
 })
 
-test_that("V1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet", {
-  # tests for V1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet
-  # base path: https://rest.coinapi.io
-  # Get a single symbol by its exchange-native symbol identifier.
-  # Looks up a symbol by &#x60;symbol_id_exchange&#x60; regardless of mapping status - this also returns symbols that have not been mapped to a CoinAPI &#x60;symbol_id&#x60; yet (see &#x60;{exchange_id}/unmapped&#x60;).
-  # @param exchange_id character The ID of the exchange.
-  # @param exchange_symbol_id character The exchange-native symbol identifier (`symbol_id_exchange`).
-  # @return [MarketDataMetadataSymbol]
-
-  # uncomment below to test the operation
-  #expect_equal(result, "EXPECTED_RESULT")
-})
-
 test_that("V1SymbolsExchangeIdHistoryGet", {
   # tests for V1SymbolsExchangeIdHistoryGet
   # base path: https://rest.coinapi.io
   # List all historical symbols for an exchange.
   # This endpoint provides access to symbols that are no longer actively traded or listed on a given exchange. The data is provided with pagination support.
-  # @param exchange_id character The ID of the exchange.
-  # @param page integer The page number for pagination (starts from 1). (optional)
-  # @param limit integer Number of records to return per page. (optional)
-  # @return [array[MarketDataMetadataSymbol]]
-
-  # uncomment below to test the operation
-  #expect_equal(result, "EXPECTED_RESULT")
-})
-
-test_that("V1SymbolsExchangeIdUnmappedGet", {
-  # tests for V1SymbolsExchangeIdUnmappedGet
-  # base path: https://rest.coinapi.io
-  # List symbols not yet mapped to a CoinAPI symbol_id for an exchange.
-  # Returns raw exchange symbols that MarketAccess has received (KVP data available) but that have not been mapped to a CoinAPI &#x60;symbol_id&#x60; yet. Since &#x60;symbol_id&#x60; is null for these rows, use &#x60;symbol_id_exchange&#x60; (and &#x60;GET {exchange_id}/by-exchange-symbol/{exchange_symbol_id}&#x60;) to reference them. The &#x60;raw_kvp&#x60; field contains the raw exchange payload as received.
   # @param exchange_id character The ID of the exchange.
   # @param page integer The page number for pagination (starts from 1). (optional)
   # @param limit integer Number of records to return per page. (optional)
