@@ -77,12 +77,28 @@ list_t*
 MetadataAPI_v1SymbolsExchangeIdActiveGet(apiClient_t *apiClient, char *exchange_id, char *filter_symbol_id, char *filter_asset_id);
 
 
+// Get a single symbol by its exchange-native symbol identifier.
+//
+// Looks up a symbol by `symbol_id_exchange` regardless of mapping status - this also returns symbols that have not been mapped to a CoinAPI `symbol_id` yet (see `{exchange_id}/unmapped`).
+//
+market_data_metadata_symbol_t*
+MetadataAPI_v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet(apiClient_t *apiClient, char *exchange_id, char *exchange_symbol_id);
+
+
 // List all historical symbols for an exchange.
 //
 // This endpoint provides access to symbols that are no longer actively traded or listed on a given exchange. The data is provided with pagination support.
 //
 list_t*
 MetadataAPI_v1SymbolsExchangeIdHistoryGet(apiClient_t *apiClient, char *exchange_id, int *page, int *limit);
+
+
+// List symbols not yet mapped to a CoinAPI symbol_id for an exchange.
+//
+// Returns raw exchange symbols that MarketAccess has received (KVP data available) but that have not been mapped to a CoinAPI `symbol_id` yet. Since `symbol_id` is null for these rows, use `symbol_id_exchange` (and `GET {exchange_id}/by-exchange-symbol/{exchange_symbol_id}`) to reference them. The `raw_kvp` field contains the raw exchange payload as received.
+//
+list_t*
+MetadataAPI_v1SymbolsExchangeIdUnmappedGet(apiClient_t *apiClient, char *exchange_id, int *page, int *limit);
 
 
 // List active symbol mapping for the exchange

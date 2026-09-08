@@ -13,7 +13,9 @@ Method | HTTP request | Description
 [**v1ExchangesGet**](MetadataApi.md#v1ExchangesGet) | **GET** /v1/exchanges | List all exchanges
 [**v1ExchangesIconsSizeGet**](MetadataApi.md#v1ExchangesIconsSizeGet) | **GET** /v1/exchanges/icons/{size} | List of icons for the exchanges
 [**v1SymbolsExchangeIdActiveGet**](MetadataApi.md#v1SymbolsExchangeIdActiveGet) | **GET** /v1/symbols/{exchange_id}/active | List all active symbols
+[**v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet**](MetadataApi.md#v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet) | **GET** /v1/symbols/{exchange_id}/by-exchange-symbol/{exchange_symbol_id} | Get a single symbol by its exchange-native symbol identifier.
 [**v1SymbolsExchangeIdHistoryGet**](MetadataApi.md#v1SymbolsExchangeIdHistoryGet) | **GET** /v1/symbols/{exchange_id}/history | List all historical symbols for an exchange.
+[**v1SymbolsExchangeIdUnmappedGet**](MetadataApi.md#v1SymbolsExchangeIdUnmappedGet) | **GET** /v1/symbols/{exchange_id}/unmapped | List symbols not yet mapped to a CoinAPI symbol_id for an exchange.
 [**v1SymbolsMapExchangeIdGet**](MetadataApi.md#v1SymbolsMapExchangeIdGet) | **GET** /v1/symbols/map/{exchange_id} | List active symbol mapping for the exchange
 
 
@@ -510,6 +512,62 @@ Name | Type | Description  | Notes
 - **Accept**: text/plain, application/json, text/json, application/x-msgpack
 
 
+## v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet
+
+> MarketDataMetadataSymbol v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet(exchangeId, exchangeSymbolId)
+
+Get a single symbol by its exchange-native symbol identifier.
+
+Looks up a symbol by &#x60;symbol_id_exchange&#x60; regardless of mapping status - this also returns symbols that have not been mapped to a CoinAPI &#x60;symbol_id&#x60; yet (see &#x60;{exchange_id}/unmapped&#x60;).
+
+### Example
+
+```javascript
+import CoinApiMarketDataRestApi from 'coin_api_market_data_rest_api';
+let defaultClient = CoinApiMarketDataRestApi.ApiClient.instance;
+// Configure API key authorization: APIKey
+let APIKey = defaultClient.authentications['APIKey'];
+APIKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//APIKey.apiKeyPrefix = 'Token';
+// Configure Bearer (JWT) access token for authorization: JWT
+let JWT = defaultClient.authentications['JWT'];
+JWT.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new CoinApiMarketDataRestApi.MetadataApi();
+let exchangeId = "exchangeId_example"; // String | The ID of the exchange.
+let exchangeSymbolId = "exchangeSymbolId_example"; // String | The exchange-native symbol identifier (`symbol_id_exchange`).
+apiInstance.v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet(exchangeId, exchangeSymbolId, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **exchangeId** | **String**| The ID of the exchange. | 
+ **exchangeSymbolId** | **String**| The exchange-native symbol identifier (&#x60;symbol_id_exchange&#x60;). | 
+
+### Return type
+
+[**MarketDataMetadataSymbol**](MarketDataMetadataSymbol.md)
+
+### Authorization
+
+[APIKey](../README.md#APIKey), [JWT](../README.md#JWT)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json, application/x-msgpack
+
+
 ## v1SymbolsExchangeIdHistoryGet
 
 > [MarketDataMetadataSymbol] v1SymbolsExchangeIdHistoryGet(exchangeId, opts)
@@ -539,6 +597,66 @@ let opts = {
   'limit': 100 // Number | Number of records to return per page.
 };
 apiInstance.v1SymbolsExchangeIdHistoryGet(exchangeId, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **exchangeId** | **String**| The ID of the exchange. | 
+ **page** | **Number**| The page number for pagination (starts from 1). | [optional] [default to 1]
+ **limit** | **Number**| Number of records to return per page. | [optional] [default to 100]
+
+### Return type
+
+[**[MarketDataMetadataSymbol]**](MarketDataMetadataSymbol.md)
+
+### Authorization
+
+[APIKey](../README.md#APIKey), [JWT](../README.md#JWT)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json, application/x-msgpack
+
+
+## v1SymbolsExchangeIdUnmappedGet
+
+> [MarketDataMetadataSymbol] v1SymbolsExchangeIdUnmappedGet(exchangeId, opts)
+
+List symbols not yet mapped to a CoinAPI symbol_id for an exchange.
+
+Returns raw exchange symbols that MarketAccess has received (KVP data available) but that have not been mapped to a CoinAPI &#x60;symbol_id&#x60; yet. Since &#x60;symbol_id&#x60; is null for these rows, use &#x60;symbol_id_exchange&#x60; (and &#x60;GET {exchange_id}/by-exchange-symbol/{exchange_symbol_id}&#x60;) to reference them. The &#x60;raw_kvp&#x60; field contains the raw exchange payload as received.
+
+### Example
+
+```javascript
+import CoinApiMarketDataRestApi from 'coin_api_market_data_rest_api';
+let defaultClient = CoinApiMarketDataRestApi.ApiClient.instance;
+// Configure API key authorization: APIKey
+let APIKey = defaultClient.authentications['APIKey'];
+APIKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//APIKey.apiKeyPrefix = 'Token';
+// Configure Bearer (JWT) access token for authorization: JWT
+let JWT = defaultClient.authentications['JWT'];
+JWT.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new CoinApiMarketDataRestApi.MetadataApi();
+let exchangeId = "exchangeId_example"; // String | The ID of the exchange.
+let opts = {
+  'page': 1, // Number | The page number for pagination (starts from 1).
+  'limit': 100 // Number | Number of records to return per page.
+};
+apiInstance.v1SymbolsExchangeIdUnmappedGet(exchangeId, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {

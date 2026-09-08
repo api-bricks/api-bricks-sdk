@@ -1266,6 +1266,146 @@ public class MetadataApi {
         return localVarCall;
     }
     /**
+     * Build call for v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet
+     * @param exchangeId The ID of the exchange. (required)
+     * @param exchangeSymbolId The exchange-native symbol identifier (&#x60;symbol_id_exchange&#x60;). (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGetCall(@javax.annotation.Nonnull String exchangeId, @javax.annotation.Nonnull String exchangeSymbolId, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/v1/symbols/{exchange_id}/by-exchange-symbol/{exchange_symbol_id}"
+            .replace("{" + "exchange_id" + "}", localVarApiClient.escapeString(exchangeId.toString()))
+            .replace("{" + "exchange_symbol_id" + "}", localVarApiClient.escapeString(exchangeSymbolId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "text/plain",
+            "application/json",
+            "text/json",
+            "application/x-msgpack"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "APIKey", "JWT" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGetValidateBeforeCall(@javax.annotation.Nonnull String exchangeId, @javax.annotation.Nonnull String exchangeSymbolId, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'exchangeId' is set
+        if (exchangeId == null) {
+            throw new ApiException("Missing the required parameter 'exchangeId' when calling v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet(Async)");
+        }
+
+        // verify the required parameter 'exchangeSymbolId' is set
+        if (exchangeSymbolId == null) {
+            throw new ApiException("Missing the required parameter 'exchangeSymbolId' when calling v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet(Async)");
+        }
+
+        return v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGetCall(exchangeId, exchangeSymbolId, _callback);
+
+    }
+
+    /**
+     * Get a single symbol by its exchange-native symbol identifier.
+     * Looks up a symbol by &#x60;symbol_id_exchange&#x60; regardless of mapping status - this also returns symbols that have not been mapped to a CoinAPI &#x60;symbol_id&#x60; yet (see &#x60;{exchange_id}/unmapped&#x60;).
+     * @param exchangeId The ID of the exchange. (required)
+     * @param exchangeSymbolId The exchange-native symbol identifier (&#x60;symbol_id_exchange&#x60;). (required)
+     * @return MarketDataMetadataSymbol
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public MarketDataMetadataSymbol v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet(@javax.annotation.Nonnull String exchangeId, @javax.annotation.Nonnull String exchangeSymbolId) throws ApiException {
+        ApiResponse<MarketDataMetadataSymbol> localVarResp = v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGetWithHttpInfo(exchangeId, exchangeSymbolId);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Get a single symbol by its exchange-native symbol identifier.
+     * Looks up a symbol by &#x60;symbol_id_exchange&#x60; regardless of mapping status - this also returns symbols that have not been mapped to a CoinAPI &#x60;symbol_id&#x60; yet (see &#x60;{exchange_id}/unmapped&#x60;).
+     * @param exchangeId The ID of the exchange. (required)
+     * @param exchangeSymbolId The exchange-native symbol identifier (&#x60;symbol_id_exchange&#x60;). (required)
+     * @return ApiResponse&lt;MarketDataMetadataSymbol&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<MarketDataMetadataSymbol> v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGetWithHttpInfo(@javax.annotation.Nonnull String exchangeId, @javax.annotation.Nonnull String exchangeSymbolId) throws ApiException {
+        okhttp3.Call localVarCall = v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGetValidateBeforeCall(exchangeId, exchangeSymbolId, null);
+        Type localVarReturnType = new TypeToken<MarketDataMetadataSymbol>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Get a single symbol by its exchange-native symbol identifier. (asynchronously)
+     * Looks up a symbol by &#x60;symbol_id_exchange&#x60; regardless of mapping status - this also returns symbols that have not been mapped to a CoinAPI &#x60;symbol_id&#x60; yet (see &#x60;{exchange_id}/unmapped&#x60;).
+     * @param exchangeId The ID of the exchange. (required)
+     * @param exchangeSymbolId The exchange-native symbol identifier (&#x60;symbol_id_exchange&#x60;). (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGetAsync(@javax.annotation.Nonnull String exchangeId, @javax.annotation.Nonnull String exchangeSymbolId, final ApiCallback<MarketDataMetadataSymbol> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGetValidateBeforeCall(exchangeId, exchangeSymbolId, _callback);
+        Type localVarReturnType = new TypeToken<MarketDataMetadataSymbol>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
      * Build call for v1SymbolsExchangeIdHistoryGet
      * @param exchangeId The ID of the exchange. (required)
      * @param page The page number for pagination (starts from 1). (optional, default to 1)
@@ -1407,6 +1547,152 @@ public class MetadataApi {
     public okhttp3.Call v1SymbolsExchangeIdHistoryGetAsync(@javax.annotation.Nonnull String exchangeId, @javax.annotation.Nullable Integer page, @javax.annotation.Nullable Integer limit, final ApiCallback<List<MarketDataMetadataSymbol>> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = v1SymbolsExchangeIdHistoryGetValidateBeforeCall(exchangeId, page, limit, _callback);
+        Type localVarReturnType = new TypeToken<List<MarketDataMetadataSymbol>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for v1SymbolsExchangeIdUnmappedGet
+     * @param exchangeId The ID of the exchange. (required)
+     * @param page The page number for pagination (starts from 1). (optional, default to 1)
+     * @param limit Number of records to return per page. (optional, default to 100)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call v1SymbolsExchangeIdUnmappedGetCall(@javax.annotation.Nonnull String exchangeId, @javax.annotation.Nullable Integer page, @javax.annotation.Nullable Integer limit, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/v1/symbols/{exchange_id}/unmapped"
+            .replace("{" + "exchange_id" + "}", localVarApiClient.escapeString(exchangeId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        if (page != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("page", page));
+        }
+
+        if (limit != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("limit", limit));
+        }
+
+        final String[] localVarAccepts = {
+            "text/plain",
+            "application/json",
+            "text/json",
+            "application/x-msgpack"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "APIKey", "JWT" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call v1SymbolsExchangeIdUnmappedGetValidateBeforeCall(@javax.annotation.Nonnull String exchangeId, @javax.annotation.Nullable Integer page, @javax.annotation.Nullable Integer limit, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'exchangeId' is set
+        if (exchangeId == null) {
+            throw new ApiException("Missing the required parameter 'exchangeId' when calling v1SymbolsExchangeIdUnmappedGet(Async)");
+        }
+
+        return v1SymbolsExchangeIdUnmappedGetCall(exchangeId, page, limit, _callback);
+
+    }
+
+    /**
+     * List symbols not yet mapped to a CoinAPI symbol_id for an exchange.
+     * Returns raw exchange symbols that MarketAccess has received (KVP data available) but that have not been mapped to a CoinAPI &#x60;symbol_id&#x60; yet. Since &#x60;symbol_id&#x60; is null for these rows, use &#x60;symbol_id_exchange&#x60; (and &#x60;GET {exchange_id}/by-exchange-symbol/{exchange_symbol_id}&#x60;) to reference them. The &#x60;raw_kvp&#x60; field contains the raw exchange payload as received.
+     * @param exchangeId The ID of the exchange. (required)
+     * @param page The page number for pagination (starts from 1). (optional, default to 1)
+     * @param limit Number of records to return per page. (optional, default to 100)
+     * @return List&lt;MarketDataMetadataSymbol&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<MarketDataMetadataSymbol> v1SymbolsExchangeIdUnmappedGet(@javax.annotation.Nonnull String exchangeId, @javax.annotation.Nullable Integer page, @javax.annotation.Nullable Integer limit) throws ApiException {
+        ApiResponse<List<MarketDataMetadataSymbol>> localVarResp = v1SymbolsExchangeIdUnmappedGetWithHttpInfo(exchangeId, page, limit);
+        return localVarResp.getData();
+    }
+
+    /**
+     * List symbols not yet mapped to a CoinAPI symbol_id for an exchange.
+     * Returns raw exchange symbols that MarketAccess has received (KVP data available) but that have not been mapped to a CoinAPI &#x60;symbol_id&#x60; yet. Since &#x60;symbol_id&#x60; is null for these rows, use &#x60;symbol_id_exchange&#x60; (and &#x60;GET {exchange_id}/by-exchange-symbol/{exchange_symbol_id}&#x60;) to reference them. The &#x60;raw_kvp&#x60; field contains the raw exchange payload as received.
+     * @param exchangeId The ID of the exchange. (required)
+     * @param page The page number for pagination (starts from 1). (optional, default to 1)
+     * @param limit Number of records to return per page. (optional, default to 100)
+     * @return ApiResponse&lt;List&lt;MarketDataMetadataSymbol&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<MarketDataMetadataSymbol>> v1SymbolsExchangeIdUnmappedGetWithHttpInfo(@javax.annotation.Nonnull String exchangeId, @javax.annotation.Nullable Integer page, @javax.annotation.Nullable Integer limit) throws ApiException {
+        okhttp3.Call localVarCall = v1SymbolsExchangeIdUnmappedGetValidateBeforeCall(exchangeId, page, limit, null);
+        Type localVarReturnType = new TypeToken<List<MarketDataMetadataSymbol>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * List symbols not yet mapped to a CoinAPI symbol_id for an exchange. (asynchronously)
+     * Returns raw exchange symbols that MarketAccess has received (KVP data available) but that have not been mapped to a CoinAPI &#x60;symbol_id&#x60; yet. Since &#x60;symbol_id&#x60; is null for these rows, use &#x60;symbol_id_exchange&#x60; (and &#x60;GET {exchange_id}/by-exchange-symbol/{exchange_symbol_id}&#x60;) to reference them. The &#x60;raw_kvp&#x60; field contains the raw exchange payload as received.
+     * @param exchangeId The ID of the exchange. (required)
+     * @param page The page number for pagination (starts from 1). (optional, default to 1)
+     * @param limit Number of records to return per page. (optional, default to 100)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call v1SymbolsExchangeIdUnmappedGetAsync(@javax.annotation.Nonnull String exchangeId, @javax.annotation.Nullable Integer page, @javax.annotation.Nullable Integer limit, final ApiCallback<List<MarketDataMetadataSymbol>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = v1SymbolsExchangeIdUnmappedGetValidateBeforeCall(exchangeId, page, limit, _callback);
         Type localVarReturnType = new TypeToken<List<MarketDataMetadataSymbol>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

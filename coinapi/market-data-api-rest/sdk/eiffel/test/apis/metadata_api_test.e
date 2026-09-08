@@ -148,6 +148,23 @@ feature -- Test routines
             assert ("not_implemented", False)
         end
 
+    test_v1_symbols_exchange_id_by_exchange_symbol_exchange_symbol_id_get
+            -- Get a single symbol by its exchange-native symbol identifier.
+            --
+            -- Looks up a symbol by &#x60;symbol_id_exchange&#x60; regardless of mapping status - this also returns symbols that have not been mapped to a CoinAPI &#x60;symbol_id&#x60; yet (see &#x60;{exchange_id}/unmapped&#x60;).
+        local
+            l_response: MARKET_DATA_METADATA_SYMBOL
+            l_exchange_id: STRING_32
+            l_exchange_symbol_id: STRING_32
+        do
+            -- TODO: Initialize required params.
+            -- l_exchange_id
+            -- l_exchange_symbol_id
+
+            -- l_response := api.v1_symbols_exchange_id_by_exchange_symbol_exchange_symbol_id_get(l_exchange_id, l_exchange_symbol_id)
+            assert ("not_implemented", False)
+        end
+
     test_v1_symbols_exchange_id_history_get
             -- List all historical symbols for an exchange.
             --
@@ -162,6 +179,23 @@ feature -- Test routines
             -- l_exchange_id
 
             -- l_response := api.v1_symbols_exchange_id_history_get(l_exchange_id, l_page, l_limit)
+            assert ("not_implemented", False)
+        end
+
+    test_v1_symbols_exchange_id_unmapped_get
+            -- List symbols not yet mapped to a CoinAPI symbol_id for an exchange.
+            --
+            -- Returns raw exchange symbols that MarketAccess has received (KVP data available) but that have not been mapped to a CoinAPI &#x60;symbol_id&#x60; yet. Since &#x60;symbol_id&#x60; is null for these rows, use &#x60;symbol_id_exchange&#x60; (and &#x60;GET {exchange_id}/by-exchange-symbol/{exchange_symbol_id}&#x60;) to reference them. The &#x60;raw_kvp&#x60; field contains the raw exchange payload as received.
+        local
+            l_response: LIST [MARKET_DATA_METADATA_SYMBOL]
+            l_exchange_id: STRING_32
+            l_page: INTEGER_32
+            l_limit: INTEGER_32
+        do
+            -- TODO: Initialize required params.
+            -- l_exchange_id
+
+            -- l_response := api.v1_symbols_exchange_id_unmapped_get(l_exchange_id, l_page, l_limit)
             assert ("not_implemented", False)
         end
 

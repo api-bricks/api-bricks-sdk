@@ -692,6 +692,83 @@ export class MetadataApi {
     }
 
     /**
+     * Looks up a symbol by `symbol_id_exchange` regardless of mapping status - this also returns symbols that have not been mapped to a CoinAPI `symbol_id` yet (see `{exchange_id}/unmapped`).
+     * @summary Get a single symbol by its exchange-native symbol identifier.
+     * @param exchangeId The ID of the exchange.
+     * @param exchangeSymbolId The exchange-native symbol identifier (&#x60;symbol_id_exchange&#x60;).
+     */
+    public v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet(exchangeId: string, exchangeSymbolId: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    { response: JQueryXHR; body: models.MarketDataMetadataSymbol;  },
+    { response: JQueryXHR; errorThrown: string }
+    > {
+        let localVarPath = this.basePath + '/v1/symbols/{exchange_id}/by-exchange-symbol/{exchange_symbol_id}'.replace('{exchange_id}', encodeURIComponent(String(exchangeId))).replace('{exchange_symbol_id}', encodeURIComponent(String(exchangeSymbolId)));
+
+        let queryParameters: any = {};
+        let headerParams: any = {};
+        // verify required parameter 'exchangeId' is not null or undefined
+        if (exchangeId === null || exchangeId === undefined) {
+            throw new Error('Required parameter exchangeId was null or undefined when calling v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet.');
+        }
+
+        // verify required parameter 'exchangeSymbolId' is not null or undefined
+        if (exchangeSymbolId === null || exchangeSymbolId === undefined) {
+            throw new Error('Required parameter exchangeSymbolId was null or undefined when calling v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet.');
+        }
+
+
+        localVarPath = localVarPath + "?" + $.param(queryParameters);
+        // to determine the Content-Type header
+        let consumes: string[] = [
+        ];
+
+        // to determine the Accept header
+        let produces: string[] = [
+            'text/plain', 
+            'application/json', 
+            'text/json', 
+            'application/x-msgpack'
+        ];
+
+        // authentication (APIKey) required
+        if (this.configuration.apiKey) {
+            headerParams['Authorization'] = this.configuration.apiKey;
+        }
+
+        // authentication (JWT) required
+
+        let requestOptions: JQueryAjaxSettings = {
+            url: localVarPath,
+            type: 'GET',
+            headers: headerParams,
+            processData: false
+        };
+
+        if (headerParams['Content-Type']) {
+            requestOptions.contentType = headerParams['Content-Type'];
+        }
+
+        if (extraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, extraJQueryAjaxSettings);
+        }
+
+        if (this.defaultExtraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, this.defaultExtraJQueryAjaxSettings);
+        }
+
+        let dfd = $.Deferred<
+            { response: JQueryXHR; body: models.MarketDataMetadataSymbol;  },
+            { response: JQueryXHR; errorThrown: string }
+        >();
+        $.ajax(requestOptions).then(
+            (data: models.MarketDataMetadataSymbol, textStatus: string, jqXHR: JQueryXHR) =>
+                dfd.resolve({response: jqXHR, body: data}),
+            (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
+                dfd.reject({response: xhr, errorThrown: errorThrown})
+        );
+        return dfd.promise();
+    }
+
+    /**
      * This endpoint provides access to symbols that are no longer actively traded or listed on a given exchange. The data is provided with pagination support.
      * @summary List all historical symbols for an exchange.
      * @param exchangeId The ID of the exchange.
@@ -709,6 +786,85 @@ export class MetadataApi {
         // verify required parameter 'exchangeId' is not null or undefined
         if (exchangeId === null || exchangeId === undefined) {
             throw new Error('Required parameter exchangeId was null or undefined when calling v1SymbolsExchangeIdHistoryGet.');
+        }
+
+        if (page !== null && page !== undefined) {
+            queryParameters['page'] = <string><any>page;
+        }
+        if (limit !== null && limit !== undefined) {
+            queryParameters['limit'] = <string><any>limit;
+        }
+
+        localVarPath = localVarPath + "?" + $.param(queryParameters);
+        // to determine the Content-Type header
+        let consumes: string[] = [
+        ];
+
+        // to determine the Accept header
+        let produces: string[] = [
+            'text/plain', 
+            'application/json', 
+            'text/json', 
+            'application/x-msgpack'
+        ];
+
+        // authentication (APIKey) required
+        if (this.configuration.apiKey) {
+            headerParams['Authorization'] = this.configuration.apiKey;
+        }
+
+        // authentication (JWT) required
+
+        let requestOptions: JQueryAjaxSettings = {
+            url: localVarPath,
+            type: 'GET',
+            headers: headerParams,
+            processData: false
+        };
+
+        if (headerParams['Content-Type']) {
+            requestOptions.contentType = headerParams['Content-Type'];
+        }
+
+        if (extraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, extraJQueryAjaxSettings);
+        }
+
+        if (this.defaultExtraJQueryAjaxSettings) {
+            requestOptions = (<any>Object).assign(requestOptions, this.defaultExtraJQueryAjaxSettings);
+        }
+
+        let dfd = $.Deferred<
+            { response: JQueryXHR; body: Array<models.MarketDataMetadataSymbol>;  },
+            { response: JQueryXHR; errorThrown: string }
+        >();
+        $.ajax(requestOptions).then(
+            (data: Array<models.MarketDataMetadataSymbol>, textStatus: string, jqXHR: JQueryXHR) =>
+                dfd.resolve({response: jqXHR, body: data}),
+            (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
+                dfd.reject({response: xhr, errorThrown: errorThrown})
+        );
+        return dfd.promise();
+    }
+
+    /**
+     * Returns raw exchange symbols that MarketAccess has received (KVP data available) but that have not been mapped to a CoinAPI `symbol_id` yet. Since `symbol_id` is null for these rows, use `symbol_id_exchange` (and `GET {exchange_id}/by-exchange-symbol/{exchange_symbol_id}`) to reference them. The `raw_kvp` field contains the raw exchange payload as received.
+     * @summary List symbols not yet mapped to a CoinAPI symbol_id for an exchange.
+     * @param exchangeId The ID of the exchange.
+     * @param page The page number for pagination (starts from 1).
+     * @param limit Number of records to return per page.
+     */
+    public v1SymbolsExchangeIdUnmappedGet(exchangeId: string, page?: number, limit?: number, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    { response: JQueryXHR; body: Array<models.MarketDataMetadataSymbol>;  },
+    { response: JQueryXHR; errorThrown: string }
+    > {
+        let localVarPath = this.basePath + '/v1/symbols/{exchange_id}/unmapped'.replace('{exchange_id}', encodeURIComponent(String(exchangeId)));
+
+        let queryParameters: any = {};
+        let headerParams: any = {};
+        // verify required parameter 'exchangeId' is not null or undefined
+        if (exchangeId === null || exchangeId === undefined) {
+            throw new Error('Required parameter exchangeId was null or undefined when calling v1SymbolsExchangeIdUnmappedGet.');
         }
 
         if (page !== null && page !== undefined) {

@@ -279,6 +279,35 @@ bool v1SymbolsExchangeIdActiveGetAsync(char * accessToken,
 	, void* userData);
 
 
+/*! \brief Get a single symbol by its exchange-native symbol identifier.. *Synchronous*
+ *
+ * Looks up a symbol by `symbol_id_exchange` regardless of mapping status - this also returns symbols that have not been mapped to a CoinAPI `symbol_id` yet (see `{exchange_id}/unmapped`).
+ * \param exchangeId The ID of the exchange. *Required*
+ * \param exchangeSymbolId The exchange-native symbol identifier (`symbol_id_exchange`). *Required*
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGetSync(char * accessToken,
+	std::string exchangeId, std::string exchangeSymbolId, 
+	void(* handler)(MarketDataMetadata.Symbol, Error, void* )
+	, void* userData);
+
+/*! \brief Get a single symbol by its exchange-native symbol identifier.. *Asynchronous*
+ *
+ * Looks up a symbol by `symbol_id_exchange` regardless of mapping status - this also returns symbols that have not been mapped to a CoinAPI `symbol_id` yet (see `{exchange_id}/unmapped`).
+ * \param exchangeId The ID of the exchange. *Required*
+ * \param exchangeSymbolId The exchange-native symbol identifier (`symbol_id_exchange`). *Required*
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGetAsync(char * accessToken,
+	std::string exchangeId, std::string exchangeSymbolId, 
+	void(* handler)(MarketDataMetadata.Symbol, Error, void* )
+	, void* userData);
+
+
 /*! \brief List all historical symbols for an exchange.. *Synchronous*
  *
  * This endpoint provides access to symbols that are no longer actively traded or listed on a given exchange. The data is provided with pagination support.
@@ -305,6 +334,37 @@ bool v1SymbolsExchangeIdHistoryGetSync(char * accessToken,
  * \param userData The user data to be passed to the callback function.
  */
 bool v1SymbolsExchangeIdHistoryGetAsync(char * accessToken,
+	std::string exchangeId, int page, int limit, 
+	void(* handler)(std::list<MarketDataMetadata.Symbol>, Error, void* )
+	, void* userData);
+
+
+/*! \brief List symbols not yet mapped to a CoinAPI symbol_id for an exchange.. *Synchronous*
+ *
+ * Returns raw exchange symbols that MarketAccess has received (KVP data available) but that have not been mapped to a CoinAPI `symbol_id` yet. Since `symbol_id` is null for these rows, use `symbol_id_exchange` (and `GET {exchange_id}/by-exchange-symbol/{exchange_symbol_id}`) to reference them. The `raw_kvp` field contains the raw exchange payload as received.
+ * \param exchangeId The ID of the exchange. *Required*
+ * \param page The page number for pagination (starts from 1).
+ * \param limit Number of records to return per page.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool v1SymbolsExchangeIdUnmappedGetSync(char * accessToken,
+	std::string exchangeId, int page, int limit, 
+	void(* handler)(std::list<MarketDataMetadata.Symbol>, Error, void* )
+	, void* userData);
+
+/*! \brief List symbols not yet mapped to a CoinAPI symbol_id for an exchange.. *Asynchronous*
+ *
+ * Returns raw exchange symbols that MarketAccess has received (KVP data available) but that have not been mapped to a CoinAPI `symbol_id` yet. Since `symbol_id` is null for these rows, use `symbol_id_exchange` (and `GET {exchange_id}/by-exchange-symbol/{exchange_symbol_id}`) to reference them. The `raw_kvp` field contains the raw exchange payload as received.
+ * \param exchangeId The ID of the exchange. *Required*
+ * \param page The page number for pagination (starts from 1).
+ * \param limit Number of records to return per page.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool v1SymbolsExchangeIdUnmappedGetAsync(char * accessToken,
 	std::string exchangeId, int page, int limit, 
 	void(* handler)(std::list<MarketDataMetadata.Symbol>, Error, void* )
 	, void* userData);

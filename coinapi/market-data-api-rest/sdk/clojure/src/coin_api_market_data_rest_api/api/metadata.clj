@@ -466,6 +466,32 @@ contract_id | Identifier of contract by the exchange"
         res))))
 
 
+(defn-spec v1-symbols-exchange-id-by-exchange-symbol-exchange-symbol-id-get-with-http-info any?
+  "Get a single symbol by its exchange-native symbol identifier.
+  Looks up a symbol by `symbol_id_exchange` regardless of mapping status - this also returns
+symbols that have not been mapped to a CoinAPI `symbol_id` yet (see `{exchange_id}/unmapped`)."
+  [exchange_id string?, exchange_symbol_id string?]
+  (check-required-params exchange_id exchange_symbol_id)
+  (call-api "/v1/symbols/{exchange_id}/by-exchange-symbol/{exchange_symbol_id}" :get
+            {:path-params   {"exchange_id" exchange_id "exchange_symbol_id" exchange_symbol_id }
+             :header-params {}
+             :query-params  {}
+             :form-params   {}
+             :content-types []
+             :accepts       ["text/plain" "application/json" "text/json" "application/x-msgpack"]
+             :auth-names    ["APIKey" "JWT"]}))
+
+(defn-spec v1-symbols-exchange-id-by-exchange-symbol-exchange-symbol-id-get market-data-metadata/symbol-spec
+  "Get a single symbol by its exchange-native symbol identifier.
+  Looks up a symbol by `symbol_id_exchange` regardless of mapping status - this also returns
+symbols that have not been mapped to a CoinAPI `symbol_id` yet (see `{exchange_id}/unmapped`)."
+  [exchange_id string?, exchange_symbol_id string?]
+  (let [res (:data (v1-symbols-exchange-id-by-exchange-symbol-exchange-symbol-id-get-with-http-info exchange_id exchange_symbol_id))]
+    (if (:decode-models *api-context*)
+       (st/decode market-data-metadata/symbol-spec res st/string-transformer)
+       res)))
+
+
 (defn-spec v1-symbols-exchange-id-history-get-with-http-info any?
   "List all historical symbols for an exchange.
   This endpoint provides access to symbols that are no longer actively traded or listed on a given exchange.
@@ -489,6 +515,38 @@ The data is provided with pagination support."
   ([exchange_id string?, ] (v1-symbols-exchange-id-history-get exchange_id nil))
   ([exchange_id string?, optional-params any?]
    (let [res (:data (v1-symbols-exchange-id-history-get-with-http-info exchange_id optional-params))]
+     (if (:decode-models *api-context*)
+        (st/decode (s/coll-of market-data-metadata/symbol-spec) res st/string-transformer)
+        res))))
+
+
+(defn-spec v1-symbols-exchange-id-unmapped-get-with-http-info any?
+  "List symbols not yet mapped to a CoinAPI symbol_id for an exchange.
+  Returns raw exchange symbols that MarketAccess has received (KVP data available) but that
+have not been mapped to a CoinAPI `symbol_id` yet. Since `symbol_id` is null for these rows,
+use `symbol_id_exchange` (and `GET {exchange_id}/by-exchange-symbol/{exchange_symbol_id}`) to
+reference them. The `raw_kvp` field contains the raw exchange payload as received."
+  ([exchange_id string?, ] (v1-symbols-exchange-id-unmapped-get-with-http-info exchange_id nil))
+  ([exchange_id string?, {:keys [page limit]} (s/map-of keyword? any?)]
+   (check-required-params exchange_id)
+   (call-api "/v1/symbols/{exchange_id}/unmapped" :get
+             {:path-params   {"exchange_id" exchange_id }
+              :header-params {}
+              :query-params  {"page" page "limit" limit }
+              :form-params   {}
+              :content-types []
+              :accepts       ["text/plain" "application/json" "text/json" "application/x-msgpack"]
+              :auth-names    ["APIKey" "JWT"]})))
+
+(defn-spec v1-symbols-exchange-id-unmapped-get (s/coll-of market-data-metadata/symbol-spec)
+  "List symbols not yet mapped to a CoinAPI symbol_id for an exchange.
+  Returns raw exchange symbols that MarketAccess has received (KVP data available) but that
+have not been mapped to a CoinAPI `symbol_id` yet. Since `symbol_id` is null for these rows,
+use `symbol_id_exchange` (and `GET {exchange_id}/by-exchange-symbol/{exchange_symbol_id}`) to
+reference them. The `raw_kvp` field contains the raw exchange payload as received."
+  ([exchange_id string?, ] (v1-symbols-exchange-id-unmapped-get exchange_id nil))
+  ([exchange_id string?, optional-params any?]
+   (let [res (:data (v1-symbols-exchange-id-unmapped-get-with-http-info exchange_id optional-params))]
      (if (:decode-models *api-context*)
         (st/decode (s/coll-of market-data-metadata/symbol-spec) res st/string-transformer)
         res))))

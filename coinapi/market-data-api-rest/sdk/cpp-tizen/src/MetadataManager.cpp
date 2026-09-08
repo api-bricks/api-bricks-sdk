@@ -1368,6 +1368,164 @@ bool MetadataManager::v1SymbolsExchangeIdActiveGetSync(char * accessToken,
 	handler, userData, false);
 }
 
+static bool v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGetProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+	void(* voidHandler)())
+{
+	void(* handler)(MarketDataMetadata.Symbol, Error, void* )
+	= reinterpret_cast<void(*)(MarketDataMetadata.Symbol, Error, void* )> (voidHandler);
+	
+	JsonNode* pJson;
+	char * data = p_chunk.memory;
+
+	
+	MarketDataMetadata.Symbol out;
+
+	if (code >= 200 && code < 300) {
+		Error error(code, string("No Error"));
+
+
+
+
+		if (isprimitive("MarketDataMetadata.Symbol")) {
+			pJson = json_from_string(data, NULL);
+			jsonToValue(&out, pJson, "MarketDataMetadata.Symbol", "MarketDataMetadata.Symbol");
+			json_node_free(pJson);
+
+			if ("MarketDataMetadata.Symbol" == "std::string") {
+				string* val = (std::string*)(&out);
+				if (val->empty() && p_chunk.size>4) {
+					*val = string(p_chunk.memory, p_chunk.size);
+				}
+			}
+		} else {
+			
+			out.fromJson(data);
+			char *jsonStr =  out.toJson();
+			printf("\n%s\n", jsonStr);
+			g_free(static_cast<gpointer>(jsonStr));
+			
+		}
+		handler(out, error, userData);
+		return true;
+		//TODO: handle case where json parsing has an error
+
+	} else {
+		Error error;
+		if (errormsg != NULL) {
+			error = Error(code, string(errormsg));
+		} else if (p_chunk.memory != NULL) {
+			error = Error(code, string(p_chunk.memory));
+		} else {
+			error = Error(code, string("Unknown Error"));
+		}
+		 handler(out, error, userData);
+		return false;
+			}
+}
+
+static bool v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGetHelper(char * accessToken,
+	std::string exchangeId, std::string exchangeSymbolId, 
+	void(* handler)(MarketDataMetadata.Symbol, Error, void* )
+	, void* userData, bool isAsync)
+{
+
+	//TODO: maybe delete headerList after its used to free up space?
+	struct curl_slist *headerList = NULL;
+
+	
+	string accessHeader = "Authorization: Bearer ";
+	accessHeader.append(accessToken);
+	headerList = curl_slist_append(headerList, accessHeader.c_str());
+	headerList = curl_slist_append(headerList, "Content-Type: application/json");
+
+	map <string, string> queryParams;
+	string itemAtq;
+	
+	string mBody = "";
+	JsonNode* node;
+	JsonArray* json_array;
+
+	string url("/v1/symbols/{exchange_id}/by-exchange-symbol/{exchange_symbol_id}");
+	int pos;
+
+	string s_exchangeId("{");
+	s_exchangeId.append("exchange_id");
+	s_exchangeId.append("}");
+	pos = url.find(s_exchangeId);
+	url.erase(pos, s_exchangeId.length());
+	url.insert(pos, stringify(&exchangeId, "std::string"));
+	string s_exchangeSymbolId("{");
+	s_exchangeSymbolId.append("exchange_symbol_id");
+	s_exchangeSymbolId.append("}");
+	pos = url.find(s_exchangeSymbolId);
+	url.erase(pos, s_exchangeSymbolId.length());
+	url.insert(pos, stringify(&exchangeSymbolId, "std::string"));
+
+	//TODO: free memory of errormsg, memorystruct
+	MemoryStruct_s* p_chunk = new MemoryStruct_s();
+	long code;
+	char* errormsg = NULL;
+	string myhttpmethod("GET");
+
+	if(strcmp("PUT", "GET") == 0){
+		if(strcmp("", mBody.c_str()) == 0){
+			mBody.append("{}");
+		}
+	}
+
+	if(!isAsync){
+		NetClient::easycurl(MetadataManager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg);
+		bool retval = v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGetProcessor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+
+		curl_slist_free_all(headerList);
+		if (p_chunk) {
+			if(p_chunk->memory) {
+				free(p_chunk->memory);
+			}
+			delete (p_chunk);
+		}
+		if (errormsg) {
+			free(errormsg);
+		}
+		return retval;
+	} else{
+		GThread *thread = NULL;
+		RequestInfo *requestInfo = NULL;
+
+		requestInfo = new(nothrow) RequestInfo (MetadataManager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGetProcessor);;
+		if(requestInfo == NULL)
+			return false;
+
+		thread = g_thread_new(NULL, __MetadataManagerthreadFunc, static_cast<gpointer>(requestInfo));
+		return true;
+	}
+}
+
+
+
+
+bool MetadataManager::v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGetAsync(char * accessToken,
+	std::string exchangeId, std::string exchangeSymbolId, 
+	void(* handler)(MarketDataMetadata.Symbol, Error, void* )
+	, void* userData)
+{
+	return v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGetHelper(accessToken,
+	exchangeId, exchangeSymbolId, 
+	handler, userData, true);
+}
+
+bool MetadataManager::v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGetSync(char * accessToken,
+	std::string exchangeId, std::string exchangeSymbolId, 
+	void(* handler)(MarketDataMetadata.Symbol, Error, void* )
+	, void* userData)
+{
+	return v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGetHelper(accessToken,
+	exchangeId, exchangeSymbolId, 
+	handler, userData, false);
+}
+
 static bool v1SymbolsExchangeIdHistoryGetProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
 	void(* voidHandler)())
 {
@@ -1522,6 +1680,164 @@ bool MetadataManager::v1SymbolsExchangeIdHistoryGetSync(char * accessToken,
 	, void* userData)
 {
 	return v1SymbolsExchangeIdHistoryGetHelper(accessToken,
+	exchangeId, page, limit, 
+	handler, userData, false);
+}
+
+static bool v1SymbolsExchangeIdUnmappedGetProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+	void(* voidHandler)())
+{
+	void(* handler)(std::list<MarketDataMetadata.Symbol>, Error, void* )
+	= reinterpret_cast<void(*)(std::list<MarketDataMetadata.Symbol>, Error, void* )> (voidHandler);
+	
+	JsonNode* pJson;
+	char * data = p_chunk.memory;
+
+	std::list<MarketDataMetadata.Symbol> out;
+	
+
+	if (code >= 200 && code < 300) {
+		Error error(code, string("No Error"));
+
+
+
+		pJson = json_from_string(data, NULL);
+		JsonArray * jsonarray = json_node_get_array (pJson);
+		guint length = json_array_get_length (jsonarray);
+		for(guint i = 0; i < length; i++){
+			JsonNode* myJson = json_array_get_element (jsonarray, i);
+			char * singlenodestr = json_to_string(myJson, false);
+			MarketDataMetadata.Symbol singlemodel;
+			singlemodel.fromJson(singlenodestr);
+			out.push_front(singlemodel);
+			g_free(static_cast<gpointer>(singlenodestr));
+			json_node_free(myJson);
+		}
+		json_array_unref (jsonarray);
+		json_node_free(pJson);
+
+
+	} else {
+		Error error;
+		if (errormsg != NULL) {
+			error = Error(code, string(errormsg));
+		} else if (p_chunk.memory != NULL) {
+			error = Error(code, string(p_chunk.memory));
+		} else {
+			error = Error(code, string("Unknown Error"));
+		}
+		 handler(out, error, userData);
+		return false;
+			}
+}
+
+static bool v1SymbolsExchangeIdUnmappedGetHelper(char * accessToken,
+	std::string exchangeId, int page, int limit, 
+	void(* handler)(std::list<MarketDataMetadata.Symbol>, Error, void* )
+	, void* userData, bool isAsync)
+{
+
+	//TODO: maybe delete headerList after its used to free up space?
+	struct curl_slist *headerList = NULL;
+
+	
+	string accessHeader = "Authorization: Bearer ";
+	accessHeader.append(accessToken);
+	headerList = curl_slist_append(headerList, accessHeader.c_str());
+	headerList = curl_slist_append(headerList, "Content-Type: application/json");
+
+	map <string, string> queryParams;
+	string itemAtq;
+	
+
+	itemAtq = stringify(&page, "int");
+	queryParams.insert(pair<string, string>("page", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("page");
+	}
+
+
+	itemAtq = stringify(&limit, "int");
+	queryParams.insert(pair<string, string>("limit", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("limit");
+	}
+
+	string mBody = "";
+	JsonNode* node;
+	JsonArray* json_array;
+
+	string url("/v1/symbols/{exchange_id}/unmapped");
+	int pos;
+
+	string s_exchangeId("{");
+	s_exchangeId.append("exchange_id");
+	s_exchangeId.append("}");
+	pos = url.find(s_exchangeId);
+	url.erase(pos, s_exchangeId.length());
+	url.insert(pos, stringify(&exchangeId, "std::string"));
+
+	//TODO: free memory of errormsg, memorystruct
+	MemoryStruct_s* p_chunk = new MemoryStruct_s();
+	long code;
+	char* errormsg = NULL;
+	string myhttpmethod("GET");
+
+	if(strcmp("PUT", "GET") == 0){
+		if(strcmp("", mBody.c_str()) == 0){
+			mBody.append("{}");
+		}
+	}
+
+	if(!isAsync){
+		NetClient::easycurl(MetadataManager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg);
+		bool retval = v1SymbolsExchangeIdUnmappedGetProcessor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+
+		curl_slist_free_all(headerList);
+		if (p_chunk) {
+			if(p_chunk->memory) {
+				free(p_chunk->memory);
+			}
+			delete (p_chunk);
+		}
+		if (errormsg) {
+			free(errormsg);
+		}
+		return retval;
+	} else{
+		GThread *thread = NULL;
+		RequestInfo *requestInfo = NULL;
+
+		requestInfo = new(nothrow) RequestInfo (MetadataManager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), v1SymbolsExchangeIdUnmappedGetProcessor);;
+		if(requestInfo == NULL)
+			return false;
+
+		thread = g_thread_new(NULL, __MetadataManagerthreadFunc, static_cast<gpointer>(requestInfo));
+		return true;
+	}
+}
+
+
+
+
+bool MetadataManager::v1SymbolsExchangeIdUnmappedGetAsync(char * accessToken,
+	std::string exchangeId, int page, int limit, 
+	void(* handler)(std::list<MarketDataMetadata.Symbol>, Error, void* )
+	, void* userData)
+{
+	return v1SymbolsExchangeIdUnmappedGetHelper(accessToken,
+	exchangeId, page, limit, 
+	handler, userData, true);
+}
+
+bool MetadataManager::v1SymbolsExchangeIdUnmappedGetSync(char * accessToken,
+	std::string exchangeId, int page, int limit, 
+	void(* handler)(std::list<MarketDataMetadata.Symbol>, Error, void* )
+	, void* userData)
+{
+	return v1SymbolsExchangeIdUnmappedGetHelper(accessToken,
 	exchangeId, page, limit, 
 	handler, userData, false);
 }

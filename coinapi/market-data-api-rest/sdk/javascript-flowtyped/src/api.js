@@ -2325,6 +2325,48 @@ export const MetadataApiFetchParamCreator = function (configuration?: Configurat
             };
         },
         /**
+         * Looks up a symbol by `symbol_id_exchange` regardless of mapping status - this also returns symbols that have not been mapped to a CoinAPI `symbol_id` yet (see `{exchange_id}/unmapped`).
+         * @summary Get a single symbol by its exchange-native symbol identifier.
+         * @throws {RequiredError}
+         */
+        v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet(exchangeId: string, exchangeSymbolId: string, options: RequestOptions): FetchArgs {
+            // verify required parameter 'exchangeId' is not null or undefined
+            if (exchangeId === null || exchangeId === undefined) {
+                throw new RequiredError('exchangeId','Required parameter exchangeId was null or undefined when calling v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet.');
+            }
+            // verify required parameter 'exchangeSymbolId' is not null or undefined
+            if (exchangeSymbolId === null || exchangeSymbolId === undefined) {
+                throw new RequiredError('exchangeSymbolId','Required parameter exchangeSymbolId was null or undefined when calling v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet.');
+            }
+            const localVarPath = `/v1/symbols/{exchange_id}/by-exchange-symbol/{exchange_symbol_id}`
+                .replace('{exchange_id}', encodeURIComponent(String(exchangeId)))
+                .replace('{exchange_symbol_id}', encodeURIComponent(String(exchangeSymbolId)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            // authentication APIKey required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? configuration.apiKey("Authorization")
+                    : configuration.apiKey;
+                localVarHeaderParameter["Authorization"] = localVarApiKeyValue;
+            }
+
+            // authentication JWT required
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
          * This endpoint provides access to symbols that are no longer actively traded or listed on a given exchange. The data is provided with pagination support.
          * @summary List all historical symbols for an exchange.
          * @throws {RequiredError}
@@ -2335,6 +2377,51 @@ export const MetadataApiFetchParamCreator = function (configuration?: Configurat
                 throw new RequiredError('exchangeId','Required parameter exchangeId was null or undefined when calling v1SymbolsExchangeIdHistoryGet.');
             }
             const localVarPath = `/v1/symbols/{exchange_id}/history`
+                .replace('{exchange_id}', encodeURIComponent(String(exchangeId)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            // authentication APIKey required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? configuration.apiKey("Authorization")
+                    : configuration.apiKey;
+                localVarHeaderParameter["Authorization"] = localVarApiKeyValue;
+            }
+
+            // authentication JWT required
+
+            if (page !== undefined) {
+                localVarQueryParameter['page'] = ((page:any):string);
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = ((limit:any):string);
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Returns raw exchange symbols that MarketAccess has received (KVP data available) but that have not been mapped to a CoinAPI `symbol_id` yet. Since `symbol_id` is null for these rows, use `symbol_id_exchange` (and `GET {exchange_id}/by-exchange-symbol/{exchange_symbol_id}`) to reference them. The `raw_kvp` field contains the raw exchange payload as received.
+         * @summary List symbols not yet mapped to a CoinAPI symbol_id for an exchange.
+         * @throws {RequiredError}
+         */
+        v1SymbolsExchangeIdUnmappedGet(exchangeId: string, page?: number, limit?: number, options: RequestOptions): FetchArgs {
+            // verify required parameter 'exchangeId' is not null or undefined
+            if (exchangeId === null || exchangeId === undefined) {
+                throw new RequiredError('exchangeId','Required parameter exchangeId was null or undefined when calling v1SymbolsExchangeIdUnmappedGet.');
+            }
+            const localVarPath = `/v1/symbols/{exchange_id}/unmapped`
                 .replace('{exchange_id}', encodeURIComponent(String(exchangeId)));
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
@@ -2428,7 +2515,11 @@ export type MetadataApiType = {
 
     v1SymbolsExchangeIdActiveGet(exchangeId: string, filterSymbolId?: string, filterAssetId?: string, options?: RequestOptions): Promise<Array<MarketDataMetadataSymbol>>,
 
+    v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet(exchangeId: string, exchangeSymbolId: string, options?: RequestOptions): Promise<MarketDataMetadataSymbol>,
+
     v1SymbolsExchangeIdHistoryGet(exchangeId: string, page?: number, limit?: number, options?: RequestOptions): Promise<Array<MarketDataMetadataSymbol>>,
+
+    v1SymbolsExchangeIdUnmappedGet(exchangeId: string, page?: number, limit?: number, options?: RequestOptions): Promise<Array<MarketDataMetadataSymbol>>,
 
     v1SymbolsMapExchangeIdGet(exchangeId: string, options?: RequestOptions): Promise<Array<V1SymbolMapping>>,
 }
@@ -2576,12 +2667,42 @@ export const MetadataApi = function(configuration?: Configuration, fetch: FetchA
             });
         },
         /**
+         * Looks up a symbol by `symbol_id_exchange` regardless of mapping status - this also returns symbols that have not been mapped to a CoinAPI `symbol_id` yet (see `{exchange_id}/unmapped`).
+         * @summary Get a single symbol by its exchange-native symbol identifier.
+         * @throws {RequiredError}
+         */
+        v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet(exchangeId: string, exchangeSymbolId: string, options?: RequestOptions = {}): Promise<MarketDataMetadataSymbol> {
+            const localVarFetchArgs = MetadataApiFetchParamCreator(configuration).v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet(exchangeId, exchangeSymbolId, options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
          * This endpoint provides access to symbols that are no longer actively traded or listed on a given exchange. The data is provided with pagination support.
          * @summary List all historical symbols for an exchange.
          * @throws {RequiredError}
          */
         v1SymbolsExchangeIdHistoryGet(exchangeId: string, page?: number, limit?: number, options?: RequestOptions = {}): Promise<Array<MarketDataMetadataSymbol>> {
             const localVarFetchArgs = MetadataApiFetchParamCreator(configuration).v1SymbolsExchangeIdHistoryGet(exchangeId, page, limit, options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Returns raw exchange symbols that MarketAccess has received (KVP data available) but that have not been mapped to a CoinAPI `symbol_id` yet. Since `symbol_id` is null for these rows, use `symbol_id_exchange` (and `GET {exchange_id}/by-exchange-symbol/{exchange_symbol_id}`) to reference them. The `raw_kvp` field contains the raw exchange payload as received.
+         * @summary List symbols not yet mapped to a CoinAPI symbol_id for an exchange.
+         * @throws {RequiredError}
+         */
+        v1SymbolsExchangeIdUnmappedGet(exchangeId: string, page?: number, limit?: number, options?: RequestOptions = {}): Promise<Array<MarketDataMetadataSymbol>> {
+            const localVarFetchArgs = MetadataApiFetchParamCreator(configuration).v1SymbolsExchangeIdUnmappedGet(exchangeId, page, limit, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
