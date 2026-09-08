@@ -907,7 +907,8 @@ print_v1OhlcvExchangeSymbolExchangeIdSymbolIdHistoryGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}v1OhlcvExchangeSymbolExchangeIdSymbolIdHistoryGet - Historical data${OFF}${BLUE}(AUTH - HEADER)${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' - | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "Get OHLCV timeseries data returned in time ascending order." | paste -sd' ' - | fold -sw 80
+    echo -e "Get OHLCV timeseries data returned in time ascending order.
+If the requested window has no trades, the nearest available bars on the same UTC date are returned when they exist." | paste -sd' ' - | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}exchange_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Exchange identifier of requested timeseries (from the Metadata -> Exchanges) ${YELLOW}Specify as: exchange_id=value${OFF}" | paste -sd' ' - | fold -sw 80 | sed '2,$s/^/    /'

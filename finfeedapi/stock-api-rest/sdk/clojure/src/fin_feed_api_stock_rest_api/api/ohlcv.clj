@@ -61,7 +61,8 @@ Time range is limited to 24 hours. Use `limit` to cap the number of symbol rows 
 
 (defn-spec v1-ohlcv-exchange-symbol-exchange-id-symbol-id-history-get-with-http-info any?
   "Historical data
-  Get OHLCV timeseries data returned in time ascending order."
+  Get OHLCV timeseries data returned in time ascending order.
+If the requested window has no trades, the nearest available bars on the same UTC date are returned when they exist."
   ([exchange_id string?, symbol_id string?, period_id string?, ] (v1-ohlcv-exchange-symbol-exchange-id-symbol-id-history-get-with-http-info exchange_id symbol_id period_id nil))
   ([exchange_id string?, symbol_id string?, period_id string?, {:keys [time_start time_end limit]} (s/map-of keyword? any?)]
    (check-required-params exchange_id symbol_id period_id)
@@ -76,7 +77,8 @@ Time range is limited to 24 hours. Use `limit` to cap the number of symbol rows 
 
 (defn-spec v1-ohlcv-exchange-symbol-exchange-id-symbol-id-history-get (s/coll-of ohlcv-time-series/timeseries-item-spec)
   "Historical data
-  Get OHLCV timeseries data returned in time ascending order."
+  Get OHLCV timeseries data returned in time ascending order.
+If the requested window has no trades, the nearest available bars on the same UTC date are returned when they exist."
   ([exchange_id string?, symbol_id string?, period_id string?, ] (v1-ohlcv-exchange-symbol-exchange-id-symbol-id-history-get exchange_id symbol_id period_id nil))
   ([exchange_id string?, symbol_id string?, period_id string?, optional-params any?]
    (let [res (:data (v1-ohlcv-exchange-symbol-exchange-id-symbol-id-history-get-with-http-info exchange_id symbol_id period_id optional-params))]

@@ -107,7 +107,7 @@ module OpenapiClient
     end
 
     # Historical data
-    # Get OHLCV timeseries data returned in time ascending order.
+    # Get OHLCV timeseries data returned in time ascending order. If the requested window has no trades, the nearest available bars on the same UTC date are returned when they exist.
     # @param exchange_id [String] Exchange identifier of requested timeseries (from the Metadata -&gt; Exchanges)
     # @param symbol_id [String] Symbol identifier of requested timeseries (from the Metadata -&gt; Symbols)
     # @param period_id [String] Identifier of requested timeseries period (e.g. &#x60;5SEC&#x60; or &#x60;2MTH&#x60;)
@@ -122,7 +122,7 @@ module OpenapiClient
     end
 
     # Historical data
-    # Get OHLCV timeseries data returned in time ascending order.
+    # Get OHLCV timeseries data returned in time ascending order. If the requested window has no trades, the nearest available bars on the same UTC date are returned when they exist.
     # @param exchange_id [String] Exchange identifier of requested timeseries (from the Metadata -&gt; Exchanges)
     # @param symbol_id [String] Symbol identifier of requested timeseries (from the Metadata -&gt; Symbols)
     # @param period_id [String] Identifier of requested timeseries period (e.g. &#x60;5SEC&#x60; or &#x60;2MTH&#x60;)

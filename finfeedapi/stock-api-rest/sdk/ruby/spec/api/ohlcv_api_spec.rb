@@ -50,7 +50,7 @@ describe 'OhlcvApi' do
 
   # unit tests for v1_ohlcv_exchange_symbol_exchange_id_symbol_id_history_get
   # Historical data
-  # Get OHLCV timeseries data returned in time ascending order.
+  # Get OHLCV timeseries data returned in time ascending order. If the requested window has no trades, the nearest available bars on the same UTC date are returned when they exist.
   # @param exchange_id Exchange identifier of requested timeseries (from the Metadata -&gt; Exchanges)
   # @param symbol_id Symbol identifier of requested timeseries (from the Metadata -&gt; Symbols)
   # @param period_id Identifier of requested timeseries period (e.g. &#x60;5SEC&#x60; or &#x60;2MTH&#x60;)

@@ -83,7 +83,7 @@ export class OhlcvApi extends BaseAPI {
     };
 
     /**
-     * Get OHLCV timeseries data returned in time ascending order.
+     * Get OHLCV timeseries data returned in time ascending order. If the requested window has no trades, the nearest available bars on the same UTC date are returned when they exist.
      * Historical data
      */
     v1OhlcvExchangeSymbolExchangeIdSymbolIdHistoryGet({ exchangeId, symbolId, periodId, timeStart, timeEnd, limit }: V1OhlcvExchangeSymbolExchangeIdSymbolIdHistoryGetRequest): Observable<Array<OHLCVTimeSeriesTimeseriesItem>>

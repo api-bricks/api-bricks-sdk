@@ -38,7 +38,7 @@ feature -- Test routines
     test_v1_ohlcv_exchange_symbol_exchange_id_symbol_id_history_get
             -- Historical data
             --
-            -- Get OHLCV timeseries data returned in time ascending order.
+            -- Get OHLCV timeseries data returned in time ascending order. If the requested window has no trades, the nearest available bars on the same UTC date are returned when they exist.
         local
             l_response: LIST [OHLCV_TIME_SERIES_TIMESERIES_ITEM]
             l_exchange_id: STRING_32

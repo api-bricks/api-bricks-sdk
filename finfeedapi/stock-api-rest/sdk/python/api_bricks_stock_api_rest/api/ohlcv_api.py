@@ -397,7 +397,7 @@ class OhlcvApi:
     ) -> List[OHLCVTimeSeriesTimeseriesItem]:
         """Historical data
 
-        Get OHLCV timeseries data returned in time ascending order.
+        Get OHLCV timeseries data returned in time ascending order. If the requested window has no trades, the nearest available bars on the same UTC date are returned when they exist.
 
         :param exchange_id: Exchange identifier of requested timeseries (from the Metadata -> Exchanges) (required)
         :type exchange_id: str
@@ -484,7 +484,7 @@ class OhlcvApi:
     ) -> ApiResponse[List[OHLCVTimeSeriesTimeseriesItem]]:
         """Historical data
 
-        Get OHLCV timeseries data returned in time ascending order.
+        Get OHLCV timeseries data returned in time ascending order. If the requested window has no trades, the nearest available bars on the same UTC date are returned when they exist.
 
         :param exchange_id: Exchange identifier of requested timeseries (from the Metadata -> Exchanges) (required)
         :type exchange_id: str
@@ -571,7 +571,7 @@ class OhlcvApi:
     ) -> RESTResponseType:
         """Historical data
 
-        Get OHLCV timeseries data returned in time ascending order.
+        Get OHLCV timeseries data returned in time ascending order. If the requested window has no trades, the nearest available bars on the same UTC date are returned when they exist.
 
         :param exchange_id: Exchange identifier of requested timeseries (from the Metadata -> Exchanges) (required)
         :type exchange_id: str

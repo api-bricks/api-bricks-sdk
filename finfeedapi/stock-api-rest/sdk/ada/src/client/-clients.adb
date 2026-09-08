@@ -229,6 +229,7 @@ package body .Clients is
 
    --  Historical data
    --  Get OHLCV timeseries data returned in time ascending order.
+   --  If the requested window has no trades, the nearest available bars on the same UTC date are returned when they exist.
    procedure V_1Ohlcv_Exchange_Symbol_Exchange_Id_Symbol_Id_History_Get
       (Client : in out Client_Type;
        Exchange_Id : in Swagger.UString;

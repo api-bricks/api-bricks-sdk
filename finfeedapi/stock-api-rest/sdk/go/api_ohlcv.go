@@ -232,6 +232,7 @@ func (r ApiV1OhlcvExchangeSymbolExchangeIdSymbolIdHistoryGetRequest) Execute() (
 V1OhlcvExchangeSymbolExchangeIdSymbolIdHistoryGet Historical data
 
 Get OHLCV timeseries data returned in time ascending order.
+If the requested window has no trades, the nearest available bars on the same UTC date are returned when they exist.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param exchangeId Exchange identifier of requested timeseries (from the Metadata -> Exchanges)

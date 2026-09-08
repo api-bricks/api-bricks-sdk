@@ -69,7 +69,7 @@ public:
     /// Historical data
     /// </summary>
     /// <remarks>
-    /// Get OHLCV timeseries data returned in time ascending order.
+    /// Get OHLCV timeseries data returned in time ascending order. If the requested window has no trades, the nearest available bars on the same UTC date are returned when they exist.
     /// </remarks>
     /// <param name="exchangeId">Exchange identifier of requested timeseries (from the Metadata -&gt; Exchanges)</param>
     /// <param name="symbolId">Symbol identifier of requested timeseries (from the Metadata -&gt; Symbols)</param>

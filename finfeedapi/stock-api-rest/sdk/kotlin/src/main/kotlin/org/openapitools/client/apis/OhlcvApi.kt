@@ -151,7 +151,7 @@ open class OhlcvApi(basePath: kotlin.String = defaultBasePath, client: Call.Fact
     /**
      * GET /v1/ohlcv/exchange-symbol/{exchange_id}/{symbol_id}/history
      * Historical data
-     * Get OHLCV timeseries data returned in time ascending order.
+     * Get OHLCV timeseries data returned in time ascending order. If the requested window has no trades, the nearest available bars on the same UTC date are returned when they exist.
      * @param exchangeId Exchange identifier of requested timeseries (from the Metadata -&gt; Exchanges)
      * @param symbolId Symbol identifier of requested timeseries (from the Metadata -&gt; Symbols)
      * @param periodId Identifier of requested timeseries period (e.g. &#x60;5SEC&#x60; or &#x60;2MTH&#x60;)
@@ -188,7 +188,7 @@ open class OhlcvApi(basePath: kotlin.String = defaultBasePath, client: Call.Fact
     /**
      * GET /v1/ohlcv/exchange-symbol/{exchange_id}/{symbol_id}/history
      * Historical data
-     * Get OHLCV timeseries data returned in time ascending order.
+     * Get OHLCV timeseries data returned in time ascending order. If the requested window has no trades, the nearest available bars on the same UTC date are returned when they exist.
      * @param exchangeId Exchange identifier of requested timeseries (from the Metadata -&gt; Exchanges)
      * @param symbolId Symbol identifier of requested timeseries (from the Metadata -&gt; Symbols)
      * @param periodId Identifier of requested timeseries period (e.g. &#x60;5SEC&#x60; or &#x60;2MTH&#x60;)

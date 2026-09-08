@@ -55,7 +55,7 @@ Get OHLCV timeseries data returned in time ascending order. Data can be requeste
 
 Historical data
 
-Get OHLCV timeseries data returned in time ascending order.
+Get OHLCV timeseries data returned in time ascending order. If the requested window has no trades, the nearest available bars on the same UTC date are returned when they exist.
 
 
 ### Parameters
