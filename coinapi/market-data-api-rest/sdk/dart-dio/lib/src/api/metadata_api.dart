@@ -827,6 +827,94 @@ class MetadataApi {
     );
   }
 
+  /// Get a single symbol by its exchange-native symbol identifier.
+  /// Looks up a symbol by &#x60;symbol_id_exchange&#x60; regardless of mapping status - this also returns symbols that have not been mapped to a CoinAPI &#x60;symbol_id&#x60; yet (see &#x60;{exchange_id}/unmapped&#x60;).
+  ///
+  /// Parameters:
+  /// * [exchangeId] - The ID of the exchange.
+  /// * [exchangeSymbolId] - The exchange-native symbol identifier (`symbol_id_exchange`).
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [MarketDataMetadataSymbol] as data
+  /// Throws [DioException] if API call or serialization fails
+  Future<Response<MarketDataMetadataSymbol>> v1SymbolsExchangeIdByExchangeSymbolExchangeSymbolIdGet({ 
+    required String exchangeId,
+    required String exchangeSymbolId,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/v1/symbols/{exchange_id}/by-exchange-symbol/{exchange_symbol_id}'.replaceAll('{' r'exchange_id' '}', encodeQueryParameter(_serializers, exchangeId, const FullType(String)).toString()).replaceAll('{' r'exchange_symbol_id' '}', encodeQueryParameter(_serializers, exchangeSymbolId, const FullType(String)).toString());
+    final _options = Options(
+      method: r'GET',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[
+          {
+            'type': 'apiKey',
+            'name': 'APIKey',
+            'keyName': 'Authorization',
+            'where': 'header',
+          },{
+            'type': 'http',
+            'scheme': 'bearer',
+            'name': 'JWT',
+          },
+        ],
+        ...?extra,
+      },
+      validateStatus: validateStatus,
+    );
+
+    final _response = await _dio.request<Object>(
+      _path,
+      options: _options,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    MarketDataMetadataSymbol? _responseData;
+
+    try {
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(MarketDataMetadataSymbol),
+      ) as MarketDataMetadataSymbol;
+
+    } catch (error, stackTrace) {
+      throw DioException(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioExceptionType.unknown,
+        error: error,
+        stackTrace: stackTrace,
+      );
+    }
+
+    return Response<MarketDataMetadataSymbol>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
+
   /// List all historical symbols for an exchange.
   /// This endpoint provides access to symbols that are no longer actively traded or listed on a given exchange. The data is provided with pagination support.
   ///
@@ -855,6 +943,102 @@ class MetadataApi {
     ProgressCallback? onReceiveProgress,
   }) async {
     final _path = r'/v1/symbols/{exchange_id}/history'.replaceAll('{' r'exchange_id' '}', encodeQueryParameter(_serializers, exchangeId, const FullType(String)).toString());
+    final _options = Options(
+      method: r'GET',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[
+          {
+            'type': 'apiKey',
+            'name': 'APIKey',
+            'keyName': 'Authorization',
+            'where': 'header',
+          },{
+            'type': 'http',
+            'scheme': 'bearer',
+            'name': 'JWT',
+          },
+        ],
+        ...?extra,
+      },
+      validateStatus: validateStatus,
+    );
+
+    final _queryParameters = <String, dynamic>{
+      if (page != null) r'page': encodeQueryParameter(_serializers, page, const FullType(int)),
+      if (limit != null) r'limit': encodeQueryParameter(_serializers, limit, const FullType(int)),
+    };
+
+    final _response = await _dio.request<Object>(
+      _path,
+      options: _options,
+      queryParameters: _queryParameters,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    BuiltList<MarketDataMetadataSymbol>? _responseData;
+
+    try {
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(MarketDataMetadataSymbol)]),
+      ) as BuiltList<MarketDataMetadataSymbol>;
+
+    } catch (error, stackTrace) {
+      throw DioException(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioExceptionType.unknown,
+        error: error,
+        stackTrace: stackTrace,
+      );
+    }
+
+    return Response<BuiltList<MarketDataMetadataSymbol>>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
+
+  /// List symbols not yet mapped to a CoinAPI symbol_id for an exchange.
+  /// Returns raw exchange symbols that MarketAccess has received (KVP data available) but that have not been mapped to a CoinAPI &#x60;symbol_id&#x60; yet. Since &#x60;symbol_id&#x60; is null for these rows, use &#x60;symbol_id_exchange&#x60; (and &#x60;GET {exchange_id}/by-exchange-symbol/{exchange_symbol_id}&#x60;) to reference them. The &#x60;raw_kvp&#x60; field contains the raw exchange payload as received.
+  ///
+  /// Parameters:
+  /// * [exchangeId] - The ID of the exchange.
+  /// * [page] - The page number for pagination (starts from 1).
+  /// * [limit] - Number of records to return per page.
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [BuiltList<MarketDataMetadataSymbol>] as data
+  /// Throws [DioException] if API call or serialization fails
+  Future<Response<BuiltList<MarketDataMetadataSymbol>>> v1SymbolsExchangeIdUnmappedGet({ 
+    required String exchangeId,
+    int? page = 1,
+    int? limit = 100,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/v1/symbols/{exchange_id}/unmapped'.replaceAll('{' r'exchange_id' '}', encodeQueryParameter(_serializers, exchangeId, const FullType(String)).toString());
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{

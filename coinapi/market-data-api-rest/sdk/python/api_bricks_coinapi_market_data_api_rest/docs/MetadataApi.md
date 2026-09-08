@@ -13,7 +13,9 @@ Method | HTTP request | Description
 [**v1_exchanges_get**](MetadataApi.md#v1_exchanges_get) | **GET** /v1/exchanges | List all exchanges
 [**v1_exchanges_icons_size_get**](MetadataApi.md#v1_exchanges_icons_size_get) | **GET** /v1/exchanges/icons/{size} | List of icons for the exchanges
 [**v1_symbols_exchange_id_active_get**](MetadataApi.md#v1_symbols_exchange_id_active_get) | **GET** /v1/symbols/{exchange_id}/active | List all active symbols
+[**v1_symbols_exchange_id_by_exchange_symbol_exchange_symbol_id_get**](MetadataApi.md#v1_symbols_exchange_id_by_exchange_symbol_exchange_symbol_id_get) | **GET** /v1/symbols/{exchange_id}/by-exchange-symbol/{exchange_symbol_id} | Get a single symbol by its exchange-native symbol identifier.
 [**v1_symbols_exchange_id_history_get**](MetadataApi.md#v1_symbols_exchange_id_history_get) | **GET** /v1/symbols/{exchange_id}/history | List all historical symbols for an exchange.
+[**v1_symbols_exchange_id_unmapped_get**](MetadataApi.md#v1_symbols_exchange_id_unmapped_get) | **GET** /v1/symbols/{exchange_id}/unmapped | List symbols not yet mapped to a CoinAPI symbol_id for an exchange.
 [**v1_symbols_map_exchange_id_get**](MetadataApi.md#v1_symbols_map_exchange_id_get) | **GET** /v1/symbols/map/{exchange_id} | List active symbol mapping for the exchange
 
 
@@ -889,6 +891,94 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **v1_symbols_exchange_id_by_exchange_symbol_exchange_symbol_id_get**
+> MarketDataMetadataSymbol v1_symbols_exchange_id_by_exchange_symbol_exchange_symbol_id_get(exchange_id, exchange_symbol_id)
+
+Get a single symbol by its exchange-native symbol identifier.
+
+Looks up a symbol by `symbol_id_exchange` regardless of mapping status - this also returns
+symbols that have not been mapped to a CoinAPI `symbol_id` yet (see `{exchange_id}/unmapped`).
+
+### Example
+
+* Api Key Authentication (APIKey):
+* Bearer (JWT) Authentication (JWT):
+
+```python
+import api_bricks_coinapi_market_data_api_rest
+from api_bricks_coinapi_market_data_api_rest.models.market_data_metadata_symbol import MarketDataMetadataSymbol
+from api_bricks_coinapi_market_data_api_rest.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://rest.coinapi.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = api_bricks_coinapi_market_data_api_rest.Configuration(
+    host = "https://rest.coinapi.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: APIKey
+configuration.api_key['APIKey'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['APIKey'] = 'Bearer'
+
+# Configure Bearer authorization (JWT): JWT
+configuration = api_bricks_coinapi_market_data_api_rest.Configuration(
+    access_token = os.environ["BEARER_TOKEN"]
+)
+
+# Enter a context with an instance of the API client
+with api_bricks_coinapi_market_data_api_rest.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = api_bricks_coinapi_market_data_api_rest.MetadataApi(api_client)
+    exchange_id = 'exchange_id_example' # str | The ID of the exchange.
+    exchange_symbol_id = 'exchange_symbol_id_example' # str | The exchange-native symbol identifier (`symbol_id_exchange`).
+
+    try:
+        # Get a single symbol by its exchange-native symbol identifier.
+        api_response = api_instance.v1_symbols_exchange_id_by_exchange_symbol_exchange_symbol_id_get(exchange_id, exchange_symbol_id)
+        print("The response of MetadataApi->v1_symbols_exchange_id_by_exchange_symbol_exchange_symbol_id_get:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling MetadataApi->v1_symbols_exchange_id_by_exchange_symbol_exchange_symbol_id_get: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **exchange_id** | **str**| The ID of the exchange. | 
+ **exchange_symbol_id** | **str**| The exchange-native symbol identifier (&#x60;symbol_id_exchange&#x60;). | 
+
+### Return type
+
+[**MarketDataMetadataSymbol**](MarketDataMetadataSymbol.md)
+
+### Authorization
+
+[APIKey](../README.md#APIKey), [JWT](../README.md#JWT)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json, application/x-msgpack
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | successful operation |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **v1_symbols_exchange_id_history_get**
 > List[MarketDataMetadataSymbol] v1_symbols_exchange_id_history_get(exchange_id, page=page, limit=limit)
 
@@ -945,6 +1035,98 @@ with api_bricks_coinapi_market_data_api_rest.ApiClient(configuration) as api_cli
         pprint(api_response)
     except Exception as e:
         print("Exception when calling MetadataApi->v1_symbols_exchange_id_history_get: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **exchange_id** | **str**| The ID of the exchange. | 
+ **page** | **int**| The page number for pagination (starts from 1). | [optional] [default to 1]
+ **limit** | **int**| Number of records to return per page. | [optional] [default to 100]
+
+### Return type
+
+[**List[MarketDataMetadataSymbol]**](MarketDataMetadataSymbol.md)
+
+### Authorization
+
+[APIKey](../README.md#APIKey), [JWT](../README.md#JWT)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json, application/x-msgpack
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | successful operation |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **v1_symbols_exchange_id_unmapped_get**
+> List[MarketDataMetadataSymbol] v1_symbols_exchange_id_unmapped_get(exchange_id, page=page, limit=limit)
+
+List symbols not yet mapped to a CoinAPI symbol_id for an exchange.
+
+Returns raw exchange symbols that MarketAccess has received (KVP data available) but that
+have not been mapped to a CoinAPI `symbol_id` yet. Since `symbol_id` is null for these rows,
+use `symbol_id_exchange` (and `GET {exchange_id}/by-exchange-symbol/{exchange_symbol_id}`) to
+reference them. The `raw_kvp` field contains the raw exchange payload as received.
+
+### Example
+
+* Api Key Authentication (APIKey):
+* Bearer (JWT) Authentication (JWT):
+
+```python
+import api_bricks_coinapi_market_data_api_rest
+from api_bricks_coinapi_market_data_api_rest.models.market_data_metadata_symbol import MarketDataMetadataSymbol
+from api_bricks_coinapi_market_data_api_rest.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://rest.coinapi.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = api_bricks_coinapi_market_data_api_rest.Configuration(
+    host = "https://rest.coinapi.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: APIKey
+configuration.api_key['APIKey'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['APIKey'] = 'Bearer'
+
+# Configure Bearer authorization (JWT): JWT
+configuration = api_bricks_coinapi_market_data_api_rest.Configuration(
+    access_token = os.environ["BEARER_TOKEN"]
+)
+
+# Enter a context with an instance of the API client
+with api_bricks_coinapi_market_data_api_rest.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = api_bricks_coinapi_market_data_api_rest.MetadataApi(api_client)
+    exchange_id = 'exchange_id_example' # str | The ID of the exchange.
+    page = 1 # int | The page number for pagination (starts from 1). (optional) (default to 1)
+    limit = 100 # int | Number of records to return per page. (optional) (default to 100)
+
+    try:
+        # List symbols not yet mapped to a CoinAPI symbol_id for an exchange.
+        api_response = api_instance.v1_symbols_exchange_id_unmapped_get(exchange_id, page=page, limit=limit)
+        print("The response of MetadataApi->v1_symbols_exchange_id_unmapped_get:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling MetadataApi->v1_symbols_exchange_id_unmapped_get: %s\n" % e)
 ```
 
 

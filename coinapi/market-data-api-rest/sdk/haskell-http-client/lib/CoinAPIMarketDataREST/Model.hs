@@ -86,6 +86,9 @@ newtype ChainId = ChainId { unChainId :: Text } deriving (P.Eq, P.Show)
 -- ** ExchangeId
 newtype ExchangeId = ExchangeId { unExchangeId :: Text } deriving (P.Eq, P.Show)
 
+-- ** ExchangeSymbolId
+newtype ExchangeSymbolId = ExchangeSymbolId { unExchangeSymbolId :: Text } deriving (P.Eq, P.Show)
+
 -- ** FilterAssetId
 newtype FilterAssetId = FilterAssetId { unFilterAssetId :: Text } deriving (P.Eq, P.Show)
 

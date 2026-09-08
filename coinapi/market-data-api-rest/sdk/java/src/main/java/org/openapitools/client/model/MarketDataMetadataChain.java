@@ -50,7 +50,7 @@ import org.openapitools.client.JSON;
 /**
  * Represents a blockchain chain.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-09-04T06:12:43.029159466Z[Etc/UTC]", comments = "Generator version: 7.25.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-09-08T06:04:32.908808639Z[Etc/UTC]", comments = "Generator version: 7.25.0")
 public class MarketDataMetadataChain {
   public static final String SERIALIZED_NAME_CHAIN_ID = "chain_id";
   @SerializedName(SERIALIZED_NAME_CHAIN_ID)

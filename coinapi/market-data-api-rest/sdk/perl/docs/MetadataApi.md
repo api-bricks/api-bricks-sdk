@@ -18,7 +18,9 @@ Method | HTTP request | Description
 [**v1_exchanges_get**](MetadataApi.md#v1_exchanges_get) | **GET** /v1/exchanges | List all exchanges
 [**v1_exchanges_icons_size_get**](MetadataApi.md#v1_exchanges_icons_size_get) | **GET** /v1/exchanges/icons/{size} | List of icons for the exchanges
 [**v1_symbols_exchange_id_active_get**](MetadataApi.md#v1_symbols_exchange_id_active_get) | **GET** /v1/symbols/{exchange_id}/active | List all active symbols
+[**v1_symbols_exchange_id_by_exchange_symbol_exchange_symbol_id_get**](MetadataApi.md#v1_symbols_exchange_id_by_exchange_symbol_exchange_symbol_id_get) | **GET** /v1/symbols/{exchange_id}/by-exchange-symbol/{exchange_symbol_id} | Get a single symbol by its exchange-native symbol identifier.
 [**v1_symbols_exchange_id_history_get**](MetadataApi.md#v1_symbols_exchange_id_history_get) | **GET** /v1/symbols/{exchange_id}/history | List all historical symbols for an exchange.
+[**v1_symbols_exchange_id_unmapped_get**](MetadataApi.md#v1_symbols_exchange_id_unmapped_get) | **GET** /v1/symbols/{exchange_id}/unmapped | List symbols not yet mapped to a CoinAPI symbol_id for an exchange.
 [**v1_symbols_map_exchange_id_get**](MetadataApi.md#v1_symbols_map_exchange_id_get) | **GET** /v1/symbols/map/{exchange_id} | List active symbol mapping for the exchange
 
 
@@ -506,6 +508,62 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **v1_symbols_exchange_id_by_exchange_symbol_exchange_symbol_id_get**
+> MarketDataMetadataSymbol v1_symbols_exchange_id_by_exchange_symbol_exchange_symbol_id_get(exchange_id => $exchange_id, exchange_symbol_id => $exchange_symbol_id)
+
+Get a single symbol by its exchange-native symbol identifier.
+
+Looks up a symbol by `symbol_id_exchange` regardless of mapping status - this also returns symbols that have not been mapped to a CoinAPI `symbol_id` yet (see `{exchange_id}/unmapped`).
+
+### Example
+```perl
+use Data::Dumper;
+use WWW::OpenAPIClient::MetadataApi;
+my $api_instance = WWW::OpenAPIClient::MetadataApi->new(
+
+    # Configure API key authorization: APIKey
+    api_key => {'Authorization' => 'YOUR_API_KEY'},
+    # uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+    #api_key_prefix => {'Authorization' => 'Bearer'},
+    # Configure bearer access token for authorization: JWT
+    access_token => 'YOUR_BEARER_TOKEN',
+    
+);
+
+my $exchange_id = "exchange_id_example"; # string | The ID of the exchange.
+my $exchange_symbol_id = "exchange_symbol_id_example"; # string | The exchange-native symbol identifier (`symbol_id_exchange`).
+
+eval {
+    my $result = $api_instance->v1_symbols_exchange_id_by_exchange_symbol_exchange_symbol_id_get(exchange_id => $exchange_id, exchange_symbol_id => $exchange_symbol_id);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling MetadataApi->v1_symbols_exchange_id_by_exchange_symbol_exchange_symbol_id_get: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **exchange_id** | **string**| The ID of the exchange. | 
+ **exchange_symbol_id** | **string**| The exchange-native symbol identifier (&#x60;symbol_id_exchange&#x60;). | 
+
+### Return type
+
+[**MarketDataMetadataSymbol**](MarketDataMetadataSymbol.md)
+
+### Authorization
+
+[APIKey](../README.md#APIKey), [JWT](../README.md#JWT)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json, application/x-msgpack
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **v1_symbols_exchange_id_history_get**
 > ARRAY[MarketDataMetadataSymbol] v1_symbols_exchange_id_history_get(exchange_id => $exchange_id, page => $page, limit => $limit)
 
@@ -538,6 +596,64 @@ eval {
 };
 if ($@) {
     warn "Exception when calling MetadataApi->v1_symbols_exchange_id_history_get: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **exchange_id** | **string**| The ID of the exchange. | 
+ **page** | **int**| The page number for pagination (starts from 1). | [optional] [default to 1]
+ **limit** | **int**| Number of records to return per page. | [optional] [default to 100]
+
+### Return type
+
+[**ARRAY[MarketDataMetadataSymbol]**](MarketDataMetadataSymbol.md)
+
+### Authorization
+
+[APIKey](../README.md#APIKey), [JWT](../README.md#JWT)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json, application/x-msgpack
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **v1_symbols_exchange_id_unmapped_get**
+> ARRAY[MarketDataMetadataSymbol] v1_symbols_exchange_id_unmapped_get(exchange_id => $exchange_id, page => $page, limit => $limit)
+
+List symbols not yet mapped to a CoinAPI symbol_id for an exchange.
+
+Returns raw exchange symbols that MarketAccess has received (KVP data available) but that have not been mapped to a CoinAPI `symbol_id` yet. Since `symbol_id` is null for these rows, use `symbol_id_exchange` (and `GET {exchange_id}/by-exchange-symbol/{exchange_symbol_id}`) to reference them. The `raw_kvp` field contains the raw exchange payload as received.
+
+### Example
+```perl
+use Data::Dumper;
+use WWW::OpenAPIClient::MetadataApi;
+my $api_instance = WWW::OpenAPIClient::MetadataApi->new(
+
+    # Configure API key authorization: APIKey
+    api_key => {'Authorization' => 'YOUR_API_KEY'},
+    # uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+    #api_key_prefix => {'Authorization' => 'Bearer'},
+    # Configure bearer access token for authorization: JWT
+    access_token => 'YOUR_BEARER_TOKEN',
+    
+);
+
+my $exchange_id = "exchange_id_example"; # string | The ID of the exchange.
+my $page = 1; # int | The page number for pagination (starts from 1).
+my $limit = 100; # int | Number of records to return per page.
+
+eval {
+    my $result = $api_instance->v1_symbols_exchange_id_unmapped_get(exchange_id => $exchange_id, page => $page, limit => $limit);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling MetadataApi->v1_symbols_exchange_id_unmapped_get: $@\n";
 }
 ```
 
