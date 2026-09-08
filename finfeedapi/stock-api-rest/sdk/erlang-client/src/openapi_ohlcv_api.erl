@@ -29,7 +29,7 @@ v1_ohlcv_exchange_exchange_id_history_get(Ctx, ExchangeId, PeriodId, TimeStart, 
     openapi_utils:request(Ctx, Method, Path, QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
 %% @doc Historical data
-%% Get OHLCV timeseries data returned in time ascending order.
+%% Get OHLCV timeseries data returned in time ascending order. If the requested window has no trades, the nearest available bars on the same UTC date are returned when they exist.
 -spec v1_ohlcv_exchange_symbol_exchange_id_symbol_id_history_get(ctx:ctx(), binary(), binary(), binary()) -> {ok, [openapi_o_hlcv_time_series_timeseries_item:openapi_o_hlcv_time_series_timeseries_item()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 v1_ohlcv_exchange_symbol_exchange_id_symbol_id_history_get(Ctx, ExchangeId, SymbolId, PeriodId) ->
     v1_ohlcv_exchange_symbol_exchange_id_symbol_id_history_get(Ctx, ExchangeId, SymbolId, PeriodId, #{}).

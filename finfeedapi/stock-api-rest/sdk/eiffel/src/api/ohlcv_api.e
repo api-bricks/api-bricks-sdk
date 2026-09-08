@@ -74,7 +74,7 @@ feature -- API Access
 
 	v1_ohlcv_exchange_symbol_exchange_id_symbol_id_history_get (exchange_id: STRING_32; symbol_id: STRING_32; period_id: STRING_32; time_start: STRING_32; time_end: STRING_32; limit: INTEGER_32): detachable LIST [OHLCV_TIME_SERIES_TIMESERIES_ITEM]
 			-- Historical data
-			-- Get OHLCV timeseries data returned in time ascending order.
+			-- Get OHLCV timeseries data returned in time ascending order. If the requested window has no trades, the nearest available bars on the same UTC date are returned when they exist.
 			-- 
 			-- argument: exchange_id Exchange identifier of requested timeseries (from the Metadata -&gt; Exchanges) (required)
 			-- 

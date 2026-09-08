@@ -28,7 +28,7 @@ void main() {
 
     // Historical data
     //
-    // Get OHLCV timeseries data returned in time ascending order.
+    // Get OHLCV timeseries data returned in time ascending order. If the requested window has no trades, the nearest available bars on the same UTC date are returned when they exist.
     //
     //Future<List<OHLCVTimeSeriesTimeseriesItem>> v1OhlcvExchangeSymbolExchangeIdSymbolIdHistoryGet(String exchangeId, String symbolId, String periodId, { String timeStart, String timeEnd, int limit }) async
     test('test v1OhlcvExchangeSymbolExchangeIdSymbolIdHistoryGet', () async {

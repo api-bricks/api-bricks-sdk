@@ -74,7 +74,7 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Api
         /// Historical data
         /// </summary>
         /// <remarks>
-        /// Get OHLCV timeseries data returned in time ascending order.
+        /// Get OHLCV timeseries data returned in time ascending order. If the requested window has no trades, the nearest available bars on the same UTC date are returned when they exist.
         /// </remarks>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="exchangeId">Exchange identifier of requested timeseries (from the Metadata -&gt; Exchanges)</param>
@@ -91,7 +91,7 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Api
         /// Historical data
         /// </summary>
         /// <remarks>
-        /// Get OHLCV timeseries data returned in time ascending order.
+        /// Get OHLCV timeseries data returned in time ascending order. If the requested window has no trades, the nearest available bars on the same UTC date are returned when they exist.
         /// </remarks>
         /// <param name="exchangeId">Exchange identifier of requested timeseries (from the Metadata -&gt; Exchanges)</param>
         /// <param name="symbolId">Symbol identifier of requested timeseries (from the Metadata -&gt; Symbols)</param>
@@ -749,7 +749,7 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Api
         partial void OnErrorV1OhlcvExchangeSymbolExchangeIdSymbolIdHistoryGet(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, string exchangeId, string symbolId, string periodId, Option<string> timeStart, Option<string> timeEnd, Option<int> limit);
 
         /// <summary>
-        /// Historical data Get OHLCV timeseries data returned in time ascending order.
+        /// Historical data Get OHLCV timeseries data returned in time ascending order. If the requested window has no trades, the nearest available bars on the same UTC date are returned when they exist.
         /// </summary>
         /// <param name="exchangeId">Exchange identifier of requested timeseries (from the Metadata -&gt; Exchanges)</param>
         /// <param name="symbolId">Symbol identifier of requested timeseries (from the Metadata -&gt; Symbols)</param>
@@ -772,7 +772,7 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Api
         }
 
         /// <summary>
-        /// Historical data Get OHLCV timeseries data returned in time ascending order.
+        /// Historical data Get OHLCV timeseries data returned in time ascending order. If the requested window has no trades, the nearest available bars on the same UTC date are returned when they exist.
         /// </summary>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="exchangeId">Exchange identifier of requested timeseries (from the Metadata -&gt; Exchanges)</param>

@@ -117,7 +117,7 @@ API.Client.OhlcvApi.prototype.v1OhlcvExchangeExchangeIdHistoryGet = function(exc
 
 /**
  * Historical data
- * Get OHLCV timeseries data returned in time ascending order.
+ * Get OHLCV timeseries data returned in time ascending order. If the requested window has no trades, the nearest available bars on the same UTC date are returned when they exist.
  * @param {!string} exchangeId Exchange identifier of requested timeseries (from the Metadata -&gt; Exchanges)
  * @param {!string} symbolId Symbol identifier of requested timeseries (from the Metadata -&gt; Symbols)
  * @param {!string} periodId Identifier of requested timeseries period (e.g. &#x60;5SEC&#x60; or &#x60;2MTH&#x60;)

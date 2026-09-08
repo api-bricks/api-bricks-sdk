@@ -51,7 +51,7 @@ private class OASOhlcvApiTest {
     /**
      * Historical data
      *
-     * Get OHLCV timeseries data returned in time ascending order.
+     * Get OHLCV timeseries data returned in time ascending order.\nIf the requested window has no trades, the nearest available bars on the same UTC date are returned when they exist.
      */
     @isTest
     private static void v1OhlcvExchangeSymbolExchangeIdSymbolIdHistoryGetTest() {

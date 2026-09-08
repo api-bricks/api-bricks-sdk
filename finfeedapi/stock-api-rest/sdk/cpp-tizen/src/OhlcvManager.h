@@ -64,7 +64,7 @@ bool v1OhlcvExchangeExchangeIdHistoryGetAsync(char * accessToken,
 
 /*! \brief Historical data. *Synchronous*
  *
- * Get OHLCV timeseries data returned in time ascending order.
+ * Get OHLCV timeseries data returned in time ascending order. If the requested window has no trades, the nearest available bars on the same UTC date are returned when they exist.
  * \param exchangeId Exchange identifier of requested timeseries (from the Metadata -> Exchanges) *Required*
  * \param symbolId Symbol identifier of requested timeseries (from the Metadata -> Symbols) *Required*
  * \param periodId Identifier of requested timeseries period (e.g. `5SEC` or `2MTH`) *Required*
@@ -82,7 +82,7 @@ bool v1OhlcvExchangeSymbolExchangeIdSymbolIdHistoryGetSync(char * accessToken,
 
 /*! \brief Historical data. *Asynchronous*
  *
- * Get OHLCV timeseries data returned in time ascending order.
+ * Get OHLCV timeseries data returned in time ascending order. If the requested window has no trades, the nearest available bars on the same UTC date are returned when they exist.
  * \param exchangeId Exchange identifier of requested timeseries (from the Metadata -> Exchanges) *Required*
  * \param symbolId Symbol identifier of requested timeseries (from the Metadata -> Symbols) *Required*
  * \param periodId Identifier of requested timeseries period (e.g. `5SEC` or `2MTH`) *Required*

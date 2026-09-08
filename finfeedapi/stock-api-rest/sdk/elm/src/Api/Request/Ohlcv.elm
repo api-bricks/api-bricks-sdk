@@ -48,7 +48,7 @@ v1OhlcvExchangeExchangeIdHistoryGet exchangeId_path periodId_query timeStart_que
 
 {-| Historical data
 
-Get OHLCV timeseries data returned in time ascending order.
+Get OHLCV timeseries data returned in time ascending order. If the requested window has no trades, the nearest available bars on the same UTC date are returned when they exist.
 
 -}
 v1OhlcvExchangeSymbolExchangeIdSymbolIdHistoryGet : String -> String -> String -> Maybe String -> Maybe String -> Maybe Int -> String -> Api.Request (List Api.Data.OHLCVTimeSeriesTimeseriesItem)

@@ -21,7 +21,7 @@ v1_ohlcv_exchange_exchange_id_history_get(ExchangeId, PeriodId, TimeStart, TimeE
   openapi_utils:request(Method, [Host, ?BASE_URL, Path, <<"?">>, QueryString]).
 
 %% @doc Historical data
-%% Get OHLCV timeseries data returned in time ascending order.
+%% Get OHLCV timeseries data returned in time ascending order. If the requested window has no trades, the nearest available bars on the same UTC date are returned when they exist.
 -spec v1_ohlcv_exchange_symbol_exchange_id_symbol_id_history_get(binary(), binary(), binary()) ->
   openapi_utils:response().
 v1_ohlcv_exchange_symbol_exchange_id_symbol_id_history_get(ExchangeId, SymbolId, PeriodId) ->

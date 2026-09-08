@@ -355,7 +355,7 @@ public class OhlcvApi {
 
     /**
      * Historical data
-     * Get OHLCV timeseries data returned in time ascending order.
+     * Get OHLCV timeseries data returned in time ascending order. If the requested window has no trades, the nearest available bars on the same UTC date are returned when they exist.
      * @param exchangeId Exchange identifier of requested timeseries (from the Metadata -&gt; Exchanges) (required)
      * @param symbolId Symbol identifier of requested timeseries (from the Metadata -&gt; Symbols) (required)
      * @param periodId Identifier of requested timeseries period (e.g. &#x60;5SEC&#x60; or &#x60;2MTH&#x60;) (required)
@@ -378,7 +378,7 @@ public class OhlcvApi {
 
     /**
      * Historical data
-     * Get OHLCV timeseries data returned in time ascending order.
+     * Get OHLCV timeseries data returned in time ascending order. If the requested window has no trades, the nearest available bars on the same UTC date are returned when they exist.
      * @param exchangeId Exchange identifier of requested timeseries (from the Metadata -&gt; Exchanges) (required)
      * @param symbolId Symbol identifier of requested timeseries (from the Metadata -&gt; Symbols) (required)
      * @param periodId Identifier of requested timeseries period (e.g. &#x60;5SEC&#x60; or &#x60;2MTH&#x60;) (required)
@@ -402,7 +402,7 @@ public class OhlcvApi {
 
     /**
      * Historical data (asynchronously)
-     * Get OHLCV timeseries data returned in time ascending order.
+     * Get OHLCV timeseries data returned in time ascending order. If the requested window has no trades, the nearest available bars on the same UTC date are returned when they exist.
      * @param exchangeId Exchange identifier of requested timeseries (from the Metadata -&gt; Exchanges) (required)
      * @param symbolId Symbol identifier of requested timeseries (from the Metadata -&gt; Symbols) (required)
      * @param periodId Identifier of requested timeseries period (e.g. &#x60;5SEC&#x60; or &#x60;2MTH&#x60;) (required)

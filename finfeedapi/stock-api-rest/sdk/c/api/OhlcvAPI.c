@@ -203,7 +203,7 @@ end:
 
 // Historical data
 //
-// Get OHLCV timeseries data returned in time ascending order.
+// Get OHLCV timeseries data returned in time ascending order. If the requested window has no trades, the nearest available bars on the same UTC date are returned when they exist.
 //
 list_t*
 OhlcvAPI_v1OhlcvExchangeSymbolExchangeIdSymbolIdHistoryGet(apiClient_t *apiClient, char *exchange_id, char *symbol_id, char *period_id, char *time_start, char *time_end, int *limit)

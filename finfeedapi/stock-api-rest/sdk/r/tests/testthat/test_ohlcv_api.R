@@ -25,7 +25,7 @@ test_that("V1OhlcvExchangeSymbolExchangeIdSymbolIdHistoryGet", {
   # tests for V1OhlcvExchangeSymbolExchangeIdSymbolIdHistoryGet
   # base path: https://api-historical.stock.finfeedapi.com
   # Historical data
-  # Get OHLCV timeseries data returned in time ascending order.
+  # Get OHLCV timeseries data returned in time ascending order. If the requested window has no trades, the nearest available bars on the same UTC date are returned when they exist.
   # @param exchange_id character Exchange identifier of requested timeseries (from the Metadata -> Exchanges)
   # @param symbol_id character Symbol identifier of requested timeseries (from the Metadata -> Symbols)
   # @param period_id character Identifier of requested timeseries period (e.g. `5SEC` or `2MTH`)

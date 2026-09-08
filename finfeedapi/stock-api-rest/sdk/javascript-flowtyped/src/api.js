@@ -2431,7 +2431,7 @@ export const OhlcvApiFetchParamCreator = function (configuration?: Configuration
             };
         },
         /**
-         * Get OHLCV timeseries data returned in time ascending order.
+         * Get OHLCV timeseries data returned in time ascending order. If the requested window has no trades, the nearest available bars on the same UTC date are returned when they exist.
          * @summary Historical data
          * @throws {RequiredError}
          */
@@ -2614,7 +2614,7 @@ export const OhlcvApi = function(configuration?: Configuration, fetch: FetchAPI 
             });
         },
         /**
-         * Get OHLCV timeseries data returned in time ascending order.
+         * Get OHLCV timeseries data returned in time ascending order. If the requested window has no trades, the nearest available bars on the same UTC date are returned when they exist.
          * @summary Historical data
          * @throws {RequiredError}
          */
