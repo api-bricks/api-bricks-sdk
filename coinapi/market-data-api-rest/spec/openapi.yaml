@@ -48,7 +48,7 @@ paths:
               examples:
                 Example response:
                   value:
-                    time: '2026-09-08T06:03:46.9445934Z'
+                    time: '2026-09-09T06:03:43.2059900Z'
                     asset_id_base: BTC
                     asset_id_quote: USD
                     rate: 10000.0
@@ -58,7 +58,7 @@ paths:
               examples:
                 Example response:
                   value:
-                    time: '2026-09-08T06:03:46.9445934Z'
+                    time: '2026-09-09T06:03:43.2059900Z'
                     asset_id_base: BTC
                     asset_id_quote: USD
                     rate: 10000.0
@@ -68,7 +68,7 @@ paths:
               examples:
                 Example response:
                   value:
-                    time: '2026-09-08T06:03:46.9445934Z'
+                    time: '2026-09-09T06:03:43.2059900Z'
                     asset_id_base: BTC
                     asset_id_quote: USD
                     rate: 10000.0
@@ -78,7 +78,7 @@ paths:
               examples:
                 Example response:
                   value:
-                    time: '2026-09-08T06:03:46.9445934Z'
+                    time: '2026-09-09T06:03:43.2059900Z'
                     asset_id_base: BTC
                     asset_id_quote: USD
                     rate: 10000.0
@@ -4609,7 +4609,7 @@ paths:
       tags:
         - OHLCV
       summary: Historical data
-      description: "Get OHLCV timeseries data returned in time ascending order. Data can be requested by the period and for the specific symbol eg `BITSTAMP_SPOT_BTC_USD`, if you need to query timeseries by asset pairs eg. `BTC/USD`, then please reffer to the Exchange Rates Timeseries data\n            \n:::info\nThe OHLCV Historical endpoint data can be delayed a few seconds. Use OHLCV real-time data stream to get data without delay.\n:::"
+      description: "Get OHLCV timeseries data returned in time ascending order. Data can be requested by the period and for the specific symbol eg `BITSTAMP_SPOT_BTC_USD`, if you need to query timeseries by asset pairs eg. `BTC/USD`, then please reffer to the Exchange Rates Timeseries data\nIf the requested window has no trades, the nearest available bars on the same UTC date are returned when they exist.\n            \n:::info\nThe OHLCV Historical endpoint data can be delayed a few seconds. Use OHLCV real-time data stream to get data without delay.\n:::"
       parameters:
         - name: symbol_id
           in: path
