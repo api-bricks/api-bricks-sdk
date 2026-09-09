@@ -419,6 +419,75 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/QuoteTicks.QuoteTick'
+  '/v1/activity/{exchange_id}/{market_id}/history/ohlcv':
+    get:
+      tags:
+        - Market Activity
+      summary: Returns historical OHLCV bars for a market from flat files.
+      description: "Retrieves historical OHLCV (Open/High/Low/Close/Volume) bar data - generated from prediction-market\ntrades - from flat files stored in external storage (S3). Supports hourly granularity with automatic\nfallback to daily files. Use either 'date' for full day or 'time_start'/'time_end' for specific time ranges.\nThe `limit` parameter applies in both cases (default 100, max 10000), including when `date` selects a full day.\n            \n**Important:** `period` is required and must be one of `1SEC`, `1MIN`, `1HRS` - the only bar periods the\nprediction-market flat-file pipeline generates today. This differs from the DB-backed `v1/ohlcv` endpoints,\nwhich support the full set of periods (see `GET v1/ohlcv/periods`)."
+      parameters:
+        - name: exchange_id
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: market_id
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: date
+          in: query
+          description: Full day in ISO 8601 or YYYY-MM-DD (mutually exclusive with time_start/time_end)
+          schema:
+            type: string
+        - name: time_start
+          in: query
+          description: Range start in ISO 8601 (required if date is omitted)
+          schema:
+            type: string
+        - name: time_end
+          in: query
+          description: Range end in ISO 8601 (optional)
+          schema:
+            type: string
+        - name: period
+          in: query
+          description: 'Bar period. Required - one of: 1SEC, 1MIN, 1HRS.'
+          required: true
+          schema:
+            type: string
+        - name: limit
+          in: query
+          description: 'Maximum number of bars to return (1-10000, default 100). Applies even when date selects a full day.'
+          schema:
+            type: integer
+            format: int32
+            default: 100
+      responses:
+        '200':
+          description: Historical OHLCV bars in ascending time order
+          content:
+            text/plain:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Ohlcv.TimeseriesItem'
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Ohlcv.TimeseriesItem'
+            text/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Ohlcv.TimeseriesItem'
+            application/x-msgpack:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Ohlcv.TimeseriesItem'
   '/v1/markets/{exchange_id}/history':
     get:
       tags:
