@@ -100,7 +100,7 @@ paths:
               examples:
                 Example response:
                   value:
-                    time: 2026-09-08T06:03:46.4339453Z
+                    time: 2026-09-09T06:03:42.7573132Z
                     asset_id_base: BTC
                     asset_id_quote: USD
                     rate: 10000.0
@@ -110,7 +110,7 @@ paths:
               examples:
                 Example response:
                   value:
-                    time: 2026-09-08T06:03:46.4339453Z
+                    time: 2026-09-09T06:03:42.7573132Z
                     asset_id_base: BTC
                     asset_id_quote: USD
                     rate: 10000.0
@@ -120,7 +120,7 @@ paths:
               examples:
                 Example response:
                   value:
-                    time: 2026-09-08T06:03:46.4339453Z
+                    time: 2026-09-09T06:03:42.7573132Z
                     asset_id_base: BTC
                     asset_id_quote: USD
                     rate: 10000.0
@@ -130,7 +130,7 @@ paths:
               examples:
                 Example response:
                   value:
-                    time: 2026-09-08T06:03:46.4339453Z
+                    time: 2026-09-09T06:03:42.7573132Z
                     asset_id_base: BTC
                     asset_id_quote: USD
                     rate: 10000.0
@@ -5141,9 +5141,11 @@ paths:
       description: "Get OHLCV timeseries data returned in time ascending order. Data\
         \ can be requested by the period and for the specific symbol eg `BITSTAMP_SPOT_BTC_USD`,\
         \ if you need to query timeseries by asset pairs eg. `BTC/USD`, then please\
-        \ reffer to the Exchange Rates Timeseries data\n            \n:::info\nThe\
-        \ OHLCV Historical endpoint data can be delayed a few seconds. Use OHLCV real-time\
-        \ data stream to get data without delay.\n:::"
+        \ reffer to the Exchange Rates Timeseries data\nIf the requested window has\
+        \ no trades, the nearest available bars on the same UTC date are returned\
+        \ when they exist.\n            \n:::info\nThe OHLCV Historical endpoint data\
+        \ can be delayed a few seconds. Use OHLCV real-time data stream to get data\
+        \ without delay.\n:::"
       parameters:
       - description: Symbol identifier of requested timeseries (from the Metadata
           -> Symbols)
