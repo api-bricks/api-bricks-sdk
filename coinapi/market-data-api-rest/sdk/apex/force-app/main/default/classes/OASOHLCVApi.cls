@@ -85,7 +85,7 @@ public class OASOHLCVApi {
     }
     /**
      * Historical data
-     * Get OHLCV timeseries data returned in time ascending order. Data can be requested by the period and for the specific symbol eg &#x60;BITSTAMP_SPOT_BTC_USD&#x60;, if you need to query timeseries by asset pairs eg. &#x60;BTC/USD&#x60;, then please reffer to the Exchange Rates Timeseries data\n            \n:::info\nThe OHLCV Historical endpoint data can be delayed a few seconds. Use OHLCV real-time data stream to get data without delay.\n:::
+     * Get OHLCV timeseries data returned in time ascending order. Data can be requested by the period and for the specific symbol eg &#x60;BITSTAMP_SPOT_BTC_USD&#x60;, if you need to query timeseries by asset pairs eg. &#x60;BTC/USD&#x60;, then please reffer to the Exchange Rates Timeseries data\nIf the requested window has no trades, the nearest available bars on the same UTC date are returned when they exist.\n            \n:::info\nThe OHLCV Historical endpoint data can be delayed a few seconds. Use OHLCV real-time data stream to get data without delay.\n:::
      * @param symbolId Symbol identifier of requested timeseries (from the Metadata -&gt; Symbols) (required)
      * @param periodId Identifier of requested timeseries period (e.g. &#x60;5SEC&#x60; or &#x60;2MTH&#x60;) (required)
      * @param timeStart Timeseries starting time in ISO 8601 (optional)
