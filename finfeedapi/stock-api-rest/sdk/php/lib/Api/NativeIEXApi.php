@@ -147,17 +147,18 @@ class NativeIEXApi
      * Get Admin Messages
      *
      * @param  string $symbol The symbol identifier (required)
-     * @param  \DateTime $date Date in format YYYY-MM-DD (required)
-     * @param  int|null $limit Maximum number of records to return (1-10000, default 100) (optional, default to 100)
+     * @param  \DateTime|null $date UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. (optional)
+     * @param  string|null $time_start Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. (optional)
+     * @param  int|null $limit Optional cap on the number of records (1-10000). Omit to stream through the end of the day. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1NativeIexAdminMessagesSymbolGet'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\Model\ModelsAdminMessageModel[]
      */
-    public function v1NativeIexAdminMessagesSymbolGet($symbol, $date, $limit = 100, string $contentType = self::contentTypes['v1NativeIexAdminMessagesSymbolGet'][0])
+    public function v1NativeIexAdminMessagesSymbolGet($symbol, $date = null, $time_start = null, $limit = null, string $contentType = self::contentTypes['v1NativeIexAdminMessagesSymbolGet'][0])
     {
-        list($response) = $this->v1NativeIexAdminMessagesSymbolGetWithHttpInfo($symbol, $date, $limit, $contentType);
+        list($response) = $this->v1NativeIexAdminMessagesSymbolGetWithHttpInfo($symbol, $date, $time_start, $limit, $contentType);
         return $response;
     }
 
@@ -167,17 +168,18 @@ class NativeIEXApi
      * Get Admin Messages
      *
      * @param  string $symbol The symbol identifier (required)
-     * @param  \DateTime $date Date in format YYYY-MM-DD (required)
-     * @param  int|null $limit Maximum number of records to return (1-10000, default 100) (optional, default to 100)
+     * @param  \DateTime|null $date UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. (optional)
+     * @param  string|null $time_start Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. (optional)
+     * @param  int|null $limit Optional cap on the number of records (1-10000). Omit to stream through the end of the day. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1NativeIexAdminMessagesSymbolGet'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\Model\ModelsAdminMessageModel[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1NativeIexAdminMessagesSymbolGetWithHttpInfo($symbol, $date, $limit = 100, string $contentType = self::contentTypes['v1NativeIexAdminMessagesSymbolGet'][0])
+    public function v1NativeIexAdminMessagesSymbolGetWithHttpInfo($symbol, $date = null, $time_start = null, $limit = null, string $contentType = self::contentTypes['v1NativeIexAdminMessagesSymbolGet'][0])
     {
-        $request = $this->v1NativeIexAdminMessagesSymbolGetRequest($symbol, $date, $limit, $contentType);
+        $request = $this->v1NativeIexAdminMessagesSymbolGetRequest($symbol, $date, $time_start, $limit, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -254,16 +256,17 @@ class NativeIEXApi
      * Get Admin Messages
      *
      * @param  string $symbol The symbol identifier (required)
-     * @param  \DateTime $date Date in format YYYY-MM-DD (required)
-     * @param  int|null $limit Maximum number of records to return (1-10000, default 100) (optional, default to 100)
+     * @param  \DateTime|null $date UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. (optional)
+     * @param  string|null $time_start Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. (optional)
+     * @param  int|null $limit Optional cap on the number of records (1-10000). Omit to stream through the end of the day. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1NativeIexAdminMessagesSymbolGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1NativeIexAdminMessagesSymbolGetAsync($symbol, $date, $limit = 100, string $contentType = self::contentTypes['v1NativeIexAdminMessagesSymbolGet'][0])
+    public function v1NativeIexAdminMessagesSymbolGetAsync($symbol, $date = null, $time_start = null, $limit = null, string $contentType = self::contentTypes['v1NativeIexAdminMessagesSymbolGet'][0])
     {
-        return $this->v1NativeIexAdminMessagesSymbolGetAsyncWithHttpInfo($symbol, $date, $limit, $contentType)
+        return $this->v1NativeIexAdminMessagesSymbolGetAsyncWithHttpInfo($symbol, $date, $time_start, $limit, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -277,17 +280,18 @@ class NativeIEXApi
      * Get Admin Messages
      *
      * @param  string $symbol The symbol identifier (required)
-     * @param  \DateTime $date Date in format YYYY-MM-DD (required)
-     * @param  int|null $limit Maximum number of records to return (1-10000, default 100) (optional, default to 100)
+     * @param  \DateTime|null $date UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. (optional)
+     * @param  string|null $time_start Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. (optional)
+     * @param  int|null $limit Optional cap on the number of records (1-10000). Omit to stream through the end of the day. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1NativeIexAdminMessagesSymbolGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1NativeIexAdminMessagesSymbolGetAsyncWithHttpInfo($symbol, $date, $limit = 100, string $contentType = self::contentTypes['v1NativeIexAdminMessagesSymbolGet'][0])
+    public function v1NativeIexAdminMessagesSymbolGetAsyncWithHttpInfo($symbol, $date = null, $time_start = null, $limit = null, string $contentType = self::contentTypes['v1NativeIexAdminMessagesSymbolGet'][0])
     {
         $returnType = '\OpenAPI\Client\Model\ModelsAdminMessageModel[]';
-        $request = $this->v1NativeIexAdminMessagesSymbolGetRequest($symbol, $date, $limit, $contentType);
+        $request = $this->v1NativeIexAdminMessagesSymbolGetRequest($symbol, $date, $time_start, $limit, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -329,14 +333,15 @@ class NativeIEXApi
      * Create request for operation 'v1NativeIexAdminMessagesSymbolGet'
      *
      * @param  string $symbol The symbol identifier (required)
-     * @param  \DateTime $date Date in format YYYY-MM-DD (required)
-     * @param  int|null $limit Maximum number of records to return (1-10000, default 100) (optional, default to 100)
+     * @param  \DateTime|null $date UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. (optional)
+     * @param  string|null $time_start Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. (optional)
+     * @param  int|null $limit Optional cap on the number of records (1-10000). Omit to stream through the end of the day. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1NativeIexAdminMessagesSymbolGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1NativeIexAdminMessagesSymbolGetRequest($symbol, $date, $limit = 100, string $contentType = self::contentTypes['v1NativeIexAdminMessagesSymbolGet'][0])
+    public function v1NativeIexAdminMessagesSymbolGetRequest($symbol, $date = null, $time_start = null, $limit = null, string $contentType = self::contentTypes['v1NativeIexAdminMessagesSymbolGet'][0])
     {
 
         // verify the required parameter 'symbol' is set
@@ -346,12 +351,7 @@ class NativeIEXApi
             );
         }
 
-        // verify the required parameter 'date' is set
-        if ($date === null || (is_array($date) && count($date) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $date when calling v1NativeIexAdminMessagesSymbolGet'
-            );
-        }
+
 
 
 
@@ -369,7 +369,16 @@ class NativeIEXApi
             'string', // openApiType
             'form', // style
             true, // explode
-            true // required
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $time_start,
+            'time_start', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
@@ -463,17 +472,18 @@ class NativeIEXApi
      *
      * Get System Events
      *
-     * @param  \DateTime $date Date in format YYYY-MM-DD (required)
-     * @param  int|null $limit Maximum number of records to return (1-10000, default 100) (optional, default to 100)
+     * @param  \DateTime|null $date UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. (optional)
+     * @param  string|null $time_start Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. (optional)
+     * @param  int|null $limit Optional cap on the number of records (1-10000). Omit to stream through the end of the day. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1NativeIexAdminSystemEventGet'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\Model\IEXSystemEventSystemEventModel[]
      */
-    public function v1NativeIexAdminSystemEventGet($date, $limit = 100, string $contentType = self::contentTypes['v1NativeIexAdminSystemEventGet'][0])
+    public function v1NativeIexAdminSystemEventGet($date = null, $time_start = null, $limit = null, string $contentType = self::contentTypes['v1NativeIexAdminSystemEventGet'][0])
     {
-        list($response) = $this->v1NativeIexAdminSystemEventGetWithHttpInfo($date, $limit, $contentType);
+        list($response) = $this->v1NativeIexAdminSystemEventGetWithHttpInfo($date, $time_start, $limit, $contentType);
         return $response;
     }
 
@@ -482,17 +492,18 @@ class NativeIEXApi
      *
      * Get System Events
      *
-     * @param  \DateTime $date Date in format YYYY-MM-DD (required)
-     * @param  int|null $limit Maximum number of records to return (1-10000, default 100) (optional, default to 100)
+     * @param  \DateTime|null $date UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. (optional)
+     * @param  string|null $time_start Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. (optional)
+     * @param  int|null $limit Optional cap on the number of records (1-10000). Omit to stream through the end of the day. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1NativeIexAdminSystemEventGet'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\Model\IEXSystemEventSystemEventModel[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1NativeIexAdminSystemEventGetWithHttpInfo($date, $limit = 100, string $contentType = self::contentTypes['v1NativeIexAdminSystemEventGet'][0])
+    public function v1NativeIexAdminSystemEventGetWithHttpInfo($date = null, $time_start = null, $limit = null, string $contentType = self::contentTypes['v1NativeIexAdminSystemEventGet'][0])
     {
-        $request = $this->v1NativeIexAdminSystemEventGetRequest($date, $limit, $contentType);
+        $request = $this->v1NativeIexAdminSystemEventGetRequest($date, $time_start, $limit, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -568,16 +579,17 @@ class NativeIEXApi
      *
      * Get System Events
      *
-     * @param  \DateTime $date Date in format YYYY-MM-DD (required)
-     * @param  int|null $limit Maximum number of records to return (1-10000, default 100) (optional, default to 100)
+     * @param  \DateTime|null $date UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. (optional)
+     * @param  string|null $time_start Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. (optional)
+     * @param  int|null $limit Optional cap on the number of records (1-10000). Omit to stream through the end of the day. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1NativeIexAdminSystemEventGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1NativeIexAdminSystemEventGetAsync($date, $limit = 100, string $contentType = self::contentTypes['v1NativeIexAdminSystemEventGet'][0])
+    public function v1NativeIexAdminSystemEventGetAsync($date = null, $time_start = null, $limit = null, string $contentType = self::contentTypes['v1NativeIexAdminSystemEventGet'][0])
     {
-        return $this->v1NativeIexAdminSystemEventGetAsyncWithHttpInfo($date, $limit, $contentType)
+        return $this->v1NativeIexAdminSystemEventGetAsyncWithHttpInfo($date, $time_start, $limit, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -590,17 +602,18 @@ class NativeIEXApi
      *
      * Get System Events
      *
-     * @param  \DateTime $date Date in format YYYY-MM-DD (required)
-     * @param  int|null $limit Maximum number of records to return (1-10000, default 100) (optional, default to 100)
+     * @param  \DateTime|null $date UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. (optional)
+     * @param  string|null $time_start Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. (optional)
+     * @param  int|null $limit Optional cap on the number of records (1-10000). Omit to stream through the end of the day. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1NativeIexAdminSystemEventGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1NativeIexAdminSystemEventGetAsyncWithHttpInfo($date, $limit = 100, string $contentType = self::contentTypes['v1NativeIexAdminSystemEventGet'][0])
+    public function v1NativeIexAdminSystemEventGetAsyncWithHttpInfo($date = null, $time_start = null, $limit = null, string $contentType = self::contentTypes['v1NativeIexAdminSystemEventGet'][0])
     {
         $returnType = '\OpenAPI\Client\Model\IEXSystemEventSystemEventModel[]';
-        $request = $this->v1NativeIexAdminSystemEventGetRequest($date, $limit, $contentType);
+        $request = $this->v1NativeIexAdminSystemEventGetRequest($date, $time_start, $limit, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -641,22 +654,18 @@ class NativeIEXApi
     /**
      * Create request for operation 'v1NativeIexAdminSystemEventGet'
      *
-     * @param  \DateTime $date Date in format YYYY-MM-DD (required)
-     * @param  int|null $limit Maximum number of records to return (1-10000, default 100) (optional, default to 100)
+     * @param  \DateTime|null $date UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. (optional)
+     * @param  string|null $time_start Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. (optional)
+     * @param  int|null $limit Optional cap on the number of records (1-10000). Omit to stream through the end of the day. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1NativeIexAdminSystemEventGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1NativeIexAdminSystemEventGetRequest($date, $limit = 100, string $contentType = self::contentTypes['v1NativeIexAdminSystemEventGet'][0])
+    public function v1NativeIexAdminSystemEventGetRequest($date = null, $time_start = null, $limit = null, string $contentType = self::contentTypes['v1NativeIexAdminSystemEventGet'][0])
     {
 
-        // verify the required parameter 'date' is set
-        if ($date === null || (is_array($date) && count($date) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $date when calling v1NativeIexAdminSystemEventGet'
-            );
-        }
+
 
 
 
@@ -674,7 +683,16 @@ class NativeIEXApi
             'string', // openApiType
             'form', // style
             true, // explode
-            true // required
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $time_start,
+            'time_start', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
@@ -761,17 +779,18 @@ class NativeIEXApi
      * Get Level-1 Quotes
      *
      * @param  string $symbol The symbol identifier (required)
-     * @param  \DateTime $date Date in format YYYY-MM-DD (required)
-     * @param  int|null $limit Maximum number of records to return (1-10000, default 100) (optional, default to 100)
+     * @param  \DateTime|null $date UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. (optional)
+     * @param  string|null $time_start Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. (optional)
+     * @param  int|null $limit Optional cap on the number of records (1-10000). Omit to stream through the end of the day. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1NativeIexLevel1QuoteSymbolGet'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\Model\IEXQuoteUpdateQuoteUpdateModel[]
      */
-    public function v1NativeIexLevel1QuoteSymbolGet($symbol, $date, $limit = 100, string $contentType = self::contentTypes['v1NativeIexLevel1QuoteSymbolGet'][0])
+    public function v1NativeIexLevel1QuoteSymbolGet($symbol, $date = null, $time_start = null, $limit = null, string $contentType = self::contentTypes['v1NativeIexLevel1QuoteSymbolGet'][0])
     {
-        list($response) = $this->v1NativeIexLevel1QuoteSymbolGetWithHttpInfo($symbol, $date, $limit, $contentType);
+        list($response) = $this->v1NativeIexLevel1QuoteSymbolGetWithHttpInfo($symbol, $date, $time_start, $limit, $contentType);
         return $response;
     }
 
@@ -781,17 +800,18 @@ class NativeIEXApi
      * Get Level-1 Quotes
      *
      * @param  string $symbol The symbol identifier (required)
-     * @param  \DateTime $date Date in format YYYY-MM-DD (required)
-     * @param  int|null $limit Maximum number of records to return (1-10000, default 100) (optional, default to 100)
+     * @param  \DateTime|null $date UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. (optional)
+     * @param  string|null $time_start Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. (optional)
+     * @param  int|null $limit Optional cap on the number of records (1-10000). Omit to stream through the end of the day. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1NativeIexLevel1QuoteSymbolGet'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\Model\IEXQuoteUpdateQuoteUpdateModel[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1NativeIexLevel1QuoteSymbolGetWithHttpInfo($symbol, $date, $limit = 100, string $contentType = self::contentTypes['v1NativeIexLevel1QuoteSymbolGet'][0])
+    public function v1NativeIexLevel1QuoteSymbolGetWithHttpInfo($symbol, $date = null, $time_start = null, $limit = null, string $contentType = self::contentTypes['v1NativeIexLevel1QuoteSymbolGet'][0])
     {
-        $request = $this->v1NativeIexLevel1QuoteSymbolGetRequest($symbol, $date, $limit, $contentType);
+        $request = $this->v1NativeIexLevel1QuoteSymbolGetRequest($symbol, $date, $time_start, $limit, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -868,16 +888,17 @@ class NativeIEXApi
      * Get Level-1 Quotes
      *
      * @param  string $symbol The symbol identifier (required)
-     * @param  \DateTime $date Date in format YYYY-MM-DD (required)
-     * @param  int|null $limit Maximum number of records to return (1-10000, default 100) (optional, default to 100)
+     * @param  \DateTime|null $date UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. (optional)
+     * @param  string|null $time_start Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. (optional)
+     * @param  int|null $limit Optional cap on the number of records (1-10000). Omit to stream through the end of the day. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1NativeIexLevel1QuoteSymbolGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1NativeIexLevel1QuoteSymbolGetAsync($symbol, $date, $limit = 100, string $contentType = self::contentTypes['v1NativeIexLevel1QuoteSymbolGet'][0])
+    public function v1NativeIexLevel1QuoteSymbolGetAsync($symbol, $date = null, $time_start = null, $limit = null, string $contentType = self::contentTypes['v1NativeIexLevel1QuoteSymbolGet'][0])
     {
-        return $this->v1NativeIexLevel1QuoteSymbolGetAsyncWithHttpInfo($symbol, $date, $limit, $contentType)
+        return $this->v1NativeIexLevel1QuoteSymbolGetAsyncWithHttpInfo($symbol, $date, $time_start, $limit, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -891,17 +912,18 @@ class NativeIEXApi
      * Get Level-1 Quotes
      *
      * @param  string $symbol The symbol identifier (required)
-     * @param  \DateTime $date Date in format YYYY-MM-DD (required)
-     * @param  int|null $limit Maximum number of records to return (1-10000, default 100) (optional, default to 100)
+     * @param  \DateTime|null $date UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. (optional)
+     * @param  string|null $time_start Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. (optional)
+     * @param  int|null $limit Optional cap on the number of records (1-10000). Omit to stream through the end of the day. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1NativeIexLevel1QuoteSymbolGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1NativeIexLevel1QuoteSymbolGetAsyncWithHttpInfo($symbol, $date, $limit = 100, string $contentType = self::contentTypes['v1NativeIexLevel1QuoteSymbolGet'][0])
+    public function v1NativeIexLevel1QuoteSymbolGetAsyncWithHttpInfo($symbol, $date = null, $time_start = null, $limit = null, string $contentType = self::contentTypes['v1NativeIexLevel1QuoteSymbolGet'][0])
     {
         $returnType = '\OpenAPI\Client\Model\IEXQuoteUpdateQuoteUpdateModel[]';
-        $request = $this->v1NativeIexLevel1QuoteSymbolGetRequest($symbol, $date, $limit, $contentType);
+        $request = $this->v1NativeIexLevel1QuoteSymbolGetRequest($symbol, $date, $time_start, $limit, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -943,14 +965,15 @@ class NativeIEXApi
      * Create request for operation 'v1NativeIexLevel1QuoteSymbolGet'
      *
      * @param  string $symbol The symbol identifier (required)
-     * @param  \DateTime $date Date in format YYYY-MM-DD (required)
-     * @param  int|null $limit Maximum number of records to return (1-10000, default 100) (optional, default to 100)
+     * @param  \DateTime|null $date UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. (optional)
+     * @param  string|null $time_start Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. (optional)
+     * @param  int|null $limit Optional cap on the number of records (1-10000). Omit to stream through the end of the day. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1NativeIexLevel1QuoteSymbolGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1NativeIexLevel1QuoteSymbolGetRequest($symbol, $date, $limit = 100, string $contentType = self::contentTypes['v1NativeIexLevel1QuoteSymbolGet'][0])
+    public function v1NativeIexLevel1QuoteSymbolGetRequest($symbol, $date = null, $time_start = null, $limit = null, string $contentType = self::contentTypes['v1NativeIexLevel1QuoteSymbolGet'][0])
     {
 
         // verify the required parameter 'symbol' is set
@@ -960,12 +983,7 @@ class NativeIEXApi
             );
         }
 
-        // verify the required parameter 'date' is set
-        if ($date === null || (is_array($date) && count($date) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $date when calling v1NativeIexLevel1QuoteSymbolGet'
-            );
-        }
+
 
 
 
@@ -983,7 +1001,16 @@ class NativeIEXApi
             'string', // openApiType
             'form', // style
             true, // explode
-            true // required
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $time_start,
+            'time_start', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
@@ -1078,17 +1105,18 @@ class NativeIEXApi
      * Get Level-2 Price Level Book
      *
      * @param  string $symbol The symbol identifier (required)
-     * @param  \DateTime $date Date in format YYYY-MM-DD (required)
-     * @param  int|null $limit Maximum number of records to return (1-10000, default 100) (optional, default to 100)
+     * @param  \DateTime|null $date UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. (optional)
+     * @param  string|null $time_start Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. (optional)
+     * @param  int|null $limit Optional cap on the number of records (1-10000). Omit to stream through the end of the day. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1NativeIexLevel2PriceLevelUpdateSymbolGet'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\Model\IEXPriceLevelUpdatePriceLevelUpdateModel[]
      */
-    public function v1NativeIexLevel2PriceLevelUpdateSymbolGet($symbol, $date, $limit = 100, string $contentType = self::contentTypes['v1NativeIexLevel2PriceLevelUpdateSymbolGet'][0])
+    public function v1NativeIexLevel2PriceLevelUpdateSymbolGet($symbol, $date = null, $time_start = null, $limit = null, string $contentType = self::contentTypes['v1NativeIexLevel2PriceLevelUpdateSymbolGet'][0])
     {
-        list($response) = $this->v1NativeIexLevel2PriceLevelUpdateSymbolGetWithHttpInfo($symbol, $date, $limit, $contentType);
+        list($response) = $this->v1NativeIexLevel2PriceLevelUpdateSymbolGetWithHttpInfo($symbol, $date, $time_start, $limit, $contentType);
         return $response;
     }
 
@@ -1098,17 +1126,18 @@ class NativeIEXApi
      * Get Level-2 Price Level Book
      *
      * @param  string $symbol The symbol identifier (required)
-     * @param  \DateTime $date Date in format YYYY-MM-DD (required)
-     * @param  int|null $limit Maximum number of records to return (1-10000, default 100) (optional, default to 100)
+     * @param  \DateTime|null $date UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. (optional)
+     * @param  string|null $time_start Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. (optional)
+     * @param  int|null $limit Optional cap on the number of records (1-10000). Omit to stream through the end of the day. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1NativeIexLevel2PriceLevelUpdateSymbolGet'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\Model\IEXPriceLevelUpdatePriceLevelUpdateModel[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1NativeIexLevel2PriceLevelUpdateSymbolGetWithHttpInfo($symbol, $date, $limit = 100, string $contentType = self::contentTypes['v1NativeIexLevel2PriceLevelUpdateSymbolGet'][0])
+    public function v1NativeIexLevel2PriceLevelUpdateSymbolGetWithHttpInfo($symbol, $date = null, $time_start = null, $limit = null, string $contentType = self::contentTypes['v1NativeIexLevel2PriceLevelUpdateSymbolGet'][0])
     {
-        $request = $this->v1NativeIexLevel2PriceLevelUpdateSymbolGetRequest($symbol, $date, $limit, $contentType);
+        $request = $this->v1NativeIexLevel2PriceLevelUpdateSymbolGetRequest($symbol, $date, $time_start, $limit, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1185,16 +1214,17 @@ class NativeIEXApi
      * Get Level-2 Price Level Book
      *
      * @param  string $symbol The symbol identifier (required)
-     * @param  \DateTime $date Date in format YYYY-MM-DD (required)
-     * @param  int|null $limit Maximum number of records to return (1-10000, default 100) (optional, default to 100)
+     * @param  \DateTime|null $date UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. (optional)
+     * @param  string|null $time_start Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. (optional)
+     * @param  int|null $limit Optional cap on the number of records (1-10000). Omit to stream through the end of the day. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1NativeIexLevel2PriceLevelUpdateSymbolGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1NativeIexLevel2PriceLevelUpdateSymbolGetAsync($symbol, $date, $limit = 100, string $contentType = self::contentTypes['v1NativeIexLevel2PriceLevelUpdateSymbolGet'][0])
+    public function v1NativeIexLevel2PriceLevelUpdateSymbolGetAsync($symbol, $date = null, $time_start = null, $limit = null, string $contentType = self::contentTypes['v1NativeIexLevel2PriceLevelUpdateSymbolGet'][0])
     {
-        return $this->v1NativeIexLevel2PriceLevelUpdateSymbolGetAsyncWithHttpInfo($symbol, $date, $limit, $contentType)
+        return $this->v1NativeIexLevel2PriceLevelUpdateSymbolGetAsyncWithHttpInfo($symbol, $date, $time_start, $limit, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1208,17 +1238,18 @@ class NativeIEXApi
      * Get Level-2 Price Level Book
      *
      * @param  string $symbol The symbol identifier (required)
-     * @param  \DateTime $date Date in format YYYY-MM-DD (required)
-     * @param  int|null $limit Maximum number of records to return (1-10000, default 100) (optional, default to 100)
+     * @param  \DateTime|null $date UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. (optional)
+     * @param  string|null $time_start Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. (optional)
+     * @param  int|null $limit Optional cap on the number of records (1-10000). Omit to stream through the end of the day. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1NativeIexLevel2PriceLevelUpdateSymbolGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1NativeIexLevel2PriceLevelUpdateSymbolGetAsyncWithHttpInfo($symbol, $date, $limit = 100, string $contentType = self::contentTypes['v1NativeIexLevel2PriceLevelUpdateSymbolGet'][0])
+    public function v1NativeIexLevel2PriceLevelUpdateSymbolGetAsyncWithHttpInfo($symbol, $date = null, $time_start = null, $limit = null, string $contentType = self::contentTypes['v1NativeIexLevel2PriceLevelUpdateSymbolGet'][0])
     {
         $returnType = '\OpenAPI\Client\Model\IEXPriceLevelUpdatePriceLevelUpdateModel[]';
-        $request = $this->v1NativeIexLevel2PriceLevelUpdateSymbolGetRequest($symbol, $date, $limit, $contentType);
+        $request = $this->v1NativeIexLevel2PriceLevelUpdateSymbolGetRequest($symbol, $date, $time_start, $limit, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1260,14 +1291,15 @@ class NativeIEXApi
      * Create request for operation 'v1NativeIexLevel2PriceLevelUpdateSymbolGet'
      *
      * @param  string $symbol The symbol identifier (required)
-     * @param  \DateTime $date Date in format YYYY-MM-DD (required)
-     * @param  int|null $limit Maximum number of records to return (1-10000, default 100) (optional, default to 100)
+     * @param  \DateTime|null $date UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. (optional)
+     * @param  string|null $time_start Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. (optional)
+     * @param  int|null $limit Optional cap on the number of records (1-10000). Omit to stream through the end of the day. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1NativeIexLevel2PriceLevelUpdateSymbolGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1NativeIexLevel2PriceLevelUpdateSymbolGetRequest($symbol, $date, $limit = 100, string $contentType = self::contentTypes['v1NativeIexLevel2PriceLevelUpdateSymbolGet'][0])
+    public function v1NativeIexLevel2PriceLevelUpdateSymbolGetRequest($symbol, $date = null, $time_start = null, $limit = null, string $contentType = self::contentTypes['v1NativeIexLevel2PriceLevelUpdateSymbolGet'][0])
     {
 
         // verify the required parameter 'symbol' is set
@@ -1277,12 +1309,7 @@ class NativeIEXApi
             );
         }
 
-        // verify the required parameter 'date' is set
-        if ($date === null || (is_array($date) && count($date) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $date when calling v1NativeIexLevel2PriceLevelUpdateSymbolGet'
-            );
-        }
+
 
 
 
@@ -1300,7 +1327,16 @@ class NativeIEXApi
             'string', // openApiType
             'form', // style
             true, // explode
-            true // required
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $time_start,
+            'time_start', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
@@ -1395,17 +1431,18 @@ class NativeIEXApi
      * Get Level-3 Order Book
      *
      * @param  string $symbol The symbol identifier (required)
-     * @param  \DateTime $date Date in format YYYY-MM-DD (required)
-     * @param  int|null $limit Maximum number of records to return (1-10000, default 100) (optional, default to 100)
+     * @param  \DateTime|null $date UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. (optional)
+     * @param  string|null $time_start Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. (optional)
+     * @param  int|null $limit Optional cap on the number of records (1-10000). Omit to stream through the end of the day. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1NativeIexLevel3OrderBookSymbolGet'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\Model\ModelsOrderBookModel[]
      */
-    public function v1NativeIexLevel3OrderBookSymbolGet($symbol, $date, $limit = 100, string $contentType = self::contentTypes['v1NativeIexLevel3OrderBookSymbolGet'][0])
+    public function v1NativeIexLevel3OrderBookSymbolGet($symbol, $date = null, $time_start = null, $limit = null, string $contentType = self::contentTypes['v1NativeIexLevel3OrderBookSymbolGet'][0])
     {
-        list($response) = $this->v1NativeIexLevel3OrderBookSymbolGetWithHttpInfo($symbol, $date, $limit, $contentType);
+        list($response) = $this->v1NativeIexLevel3OrderBookSymbolGetWithHttpInfo($symbol, $date, $time_start, $limit, $contentType);
         return $response;
     }
 
@@ -1415,17 +1452,18 @@ class NativeIEXApi
      * Get Level-3 Order Book
      *
      * @param  string $symbol The symbol identifier (required)
-     * @param  \DateTime $date Date in format YYYY-MM-DD (required)
-     * @param  int|null $limit Maximum number of records to return (1-10000, default 100) (optional, default to 100)
+     * @param  \DateTime|null $date UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. (optional)
+     * @param  string|null $time_start Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. (optional)
+     * @param  int|null $limit Optional cap on the number of records (1-10000). Omit to stream through the end of the day. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1NativeIexLevel3OrderBookSymbolGet'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\Model\ModelsOrderBookModel[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1NativeIexLevel3OrderBookSymbolGetWithHttpInfo($symbol, $date, $limit = 100, string $contentType = self::contentTypes['v1NativeIexLevel3OrderBookSymbolGet'][0])
+    public function v1NativeIexLevel3OrderBookSymbolGetWithHttpInfo($symbol, $date = null, $time_start = null, $limit = null, string $contentType = self::contentTypes['v1NativeIexLevel3OrderBookSymbolGet'][0])
     {
-        $request = $this->v1NativeIexLevel3OrderBookSymbolGetRequest($symbol, $date, $limit, $contentType);
+        $request = $this->v1NativeIexLevel3OrderBookSymbolGetRequest($symbol, $date, $time_start, $limit, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1502,16 +1540,17 @@ class NativeIEXApi
      * Get Level-3 Order Book
      *
      * @param  string $symbol The symbol identifier (required)
-     * @param  \DateTime $date Date in format YYYY-MM-DD (required)
-     * @param  int|null $limit Maximum number of records to return (1-10000, default 100) (optional, default to 100)
+     * @param  \DateTime|null $date UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. (optional)
+     * @param  string|null $time_start Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. (optional)
+     * @param  int|null $limit Optional cap on the number of records (1-10000). Omit to stream through the end of the day. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1NativeIexLevel3OrderBookSymbolGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1NativeIexLevel3OrderBookSymbolGetAsync($symbol, $date, $limit = 100, string $contentType = self::contentTypes['v1NativeIexLevel3OrderBookSymbolGet'][0])
+    public function v1NativeIexLevel3OrderBookSymbolGetAsync($symbol, $date = null, $time_start = null, $limit = null, string $contentType = self::contentTypes['v1NativeIexLevel3OrderBookSymbolGet'][0])
     {
-        return $this->v1NativeIexLevel3OrderBookSymbolGetAsyncWithHttpInfo($symbol, $date, $limit, $contentType)
+        return $this->v1NativeIexLevel3OrderBookSymbolGetAsyncWithHttpInfo($symbol, $date, $time_start, $limit, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1525,17 +1564,18 @@ class NativeIEXApi
      * Get Level-3 Order Book
      *
      * @param  string $symbol The symbol identifier (required)
-     * @param  \DateTime $date Date in format YYYY-MM-DD (required)
-     * @param  int|null $limit Maximum number of records to return (1-10000, default 100) (optional, default to 100)
+     * @param  \DateTime|null $date UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. (optional)
+     * @param  string|null $time_start Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. (optional)
+     * @param  int|null $limit Optional cap on the number of records (1-10000). Omit to stream through the end of the day. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1NativeIexLevel3OrderBookSymbolGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1NativeIexLevel3OrderBookSymbolGetAsyncWithHttpInfo($symbol, $date, $limit = 100, string $contentType = self::contentTypes['v1NativeIexLevel3OrderBookSymbolGet'][0])
+    public function v1NativeIexLevel3OrderBookSymbolGetAsyncWithHttpInfo($symbol, $date = null, $time_start = null, $limit = null, string $contentType = self::contentTypes['v1NativeIexLevel3OrderBookSymbolGet'][0])
     {
         $returnType = '\OpenAPI\Client\Model\ModelsOrderBookModel[]';
-        $request = $this->v1NativeIexLevel3OrderBookSymbolGetRequest($symbol, $date, $limit, $contentType);
+        $request = $this->v1NativeIexLevel3OrderBookSymbolGetRequest($symbol, $date, $time_start, $limit, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1577,14 +1617,15 @@ class NativeIEXApi
      * Create request for operation 'v1NativeIexLevel3OrderBookSymbolGet'
      *
      * @param  string $symbol The symbol identifier (required)
-     * @param  \DateTime $date Date in format YYYY-MM-DD (required)
-     * @param  int|null $limit Maximum number of records to return (1-10000, default 100) (optional, default to 100)
+     * @param  \DateTime|null $date UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. (optional)
+     * @param  string|null $time_start Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. (optional)
+     * @param  int|null $limit Optional cap on the number of records (1-10000). Omit to stream through the end of the day. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1NativeIexLevel3OrderBookSymbolGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1NativeIexLevel3OrderBookSymbolGetRequest($symbol, $date, $limit = 100, string $contentType = self::contentTypes['v1NativeIexLevel3OrderBookSymbolGet'][0])
+    public function v1NativeIexLevel3OrderBookSymbolGetRequest($symbol, $date = null, $time_start = null, $limit = null, string $contentType = self::contentTypes['v1NativeIexLevel3OrderBookSymbolGet'][0])
     {
 
         // verify the required parameter 'symbol' is set
@@ -1594,12 +1635,7 @@ class NativeIEXApi
             );
         }
 
-        // verify the required parameter 'date' is set
-        if ($date === null || (is_array($date) && count($date) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $date when calling v1NativeIexLevel3OrderBookSymbolGet'
-            );
-        }
+
 
 
 
@@ -1617,7 +1653,16 @@ class NativeIEXApi
             'string', // openApiType
             'form', // style
             true, // explode
-            true // required
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $time_start,
+            'time_start', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
@@ -1712,17 +1757,18 @@ class NativeIEXApi
      * Get Trades
      *
      * @param  string $symbol The symbol identifier (required)
-     * @param  \DateTime $date Date in format YYYY-MM-DD (required)
-     * @param  int|null $limit Maximum number of records to return (1-10000, default 100) (optional, default to 100)
+     * @param  \DateTime|null $date UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. (optional)
+     * @param  string|null $time_start Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. (optional)
+     * @param  int|null $limit Optional cap on the number of records (1-10000). Omit to stream through the end of the day. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1NativeIexTradeSymbolGet'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\Model\IEXTradeTradeModel[]
      */
-    public function v1NativeIexTradeSymbolGet($symbol, $date, $limit = 100, string $contentType = self::contentTypes['v1NativeIexTradeSymbolGet'][0])
+    public function v1NativeIexTradeSymbolGet($symbol, $date = null, $time_start = null, $limit = null, string $contentType = self::contentTypes['v1NativeIexTradeSymbolGet'][0])
     {
-        list($response) = $this->v1NativeIexTradeSymbolGetWithHttpInfo($symbol, $date, $limit, $contentType);
+        list($response) = $this->v1NativeIexTradeSymbolGetWithHttpInfo($symbol, $date, $time_start, $limit, $contentType);
         return $response;
     }
 
@@ -1732,17 +1778,18 @@ class NativeIEXApi
      * Get Trades
      *
      * @param  string $symbol The symbol identifier (required)
-     * @param  \DateTime $date Date in format YYYY-MM-DD (required)
-     * @param  int|null $limit Maximum number of records to return (1-10000, default 100) (optional, default to 100)
+     * @param  \DateTime|null $date UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. (optional)
+     * @param  string|null $time_start Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. (optional)
+     * @param  int|null $limit Optional cap on the number of records (1-10000). Omit to stream through the end of the day. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1NativeIexTradeSymbolGet'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\Model\IEXTradeTradeModel[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1NativeIexTradeSymbolGetWithHttpInfo($symbol, $date, $limit = 100, string $contentType = self::contentTypes['v1NativeIexTradeSymbolGet'][0])
+    public function v1NativeIexTradeSymbolGetWithHttpInfo($symbol, $date = null, $time_start = null, $limit = null, string $contentType = self::contentTypes['v1NativeIexTradeSymbolGet'][0])
     {
-        $request = $this->v1NativeIexTradeSymbolGetRequest($symbol, $date, $limit, $contentType);
+        $request = $this->v1NativeIexTradeSymbolGetRequest($symbol, $date, $time_start, $limit, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1819,16 +1866,17 @@ class NativeIEXApi
      * Get Trades
      *
      * @param  string $symbol The symbol identifier (required)
-     * @param  \DateTime $date Date in format YYYY-MM-DD (required)
-     * @param  int|null $limit Maximum number of records to return (1-10000, default 100) (optional, default to 100)
+     * @param  \DateTime|null $date UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. (optional)
+     * @param  string|null $time_start Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. (optional)
+     * @param  int|null $limit Optional cap on the number of records (1-10000). Omit to stream through the end of the day. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1NativeIexTradeSymbolGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1NativeIexTradeSymbolGetAsync($symbol, $date, $limit = 100, string $contentType = self::contentTypes['v1NativeIexTradeSymbolGet'][0])
+    public function v1NativeIexTradeSymbolGetAsync($symbol, $date = null, $time_start = null, $limit = null, string $contentType = self::contentTypes['v1NativeIexTradeSymbolGet'][0])
     {
-        return $this->v1NativeIexTradeSymbolGetAsyncWithHttpInfo($symbol, $date, $limit, $contentType)
+        return $this->v1NativeIexTradeSymbolGetAsyncWithHttpInfo($symbol, $date, $time_start, $limit, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1842,17 +1890,18 @@ class NativeIEXApi
      * Get Trades
      *
      * @param  string $symbol The symbol identifier (required)
-     * @param  \DateTime $date Date in format YYYY-MM-DD (required)
-     * @param  int|null $limit Maximum number of records to return (1-10000, default 100) (optional, default to 100)
+     * @param  \DateTime|null $date UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. (optional)
+     * @param  string|null $time_start Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. (optional)
+     * @param  int|null $limit Optional cap on the number of records (1-10000). Omit to stream through the end of the day. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1NativeIexTradeSymbolGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1NativeIexTradeSymbolGetAsyncWithHttpInfo($symbol, $date, $limit = 100, string $contentType = self::contentTypes['v1NativeIexTradeSymbolGet'][0])
+    public function v1NativeIexTradeSymbolGetAsyncWithHttpInfo($symbol, $date = null, $time_start = null, $limit = null, string $contentType = self::contentTypes['v1NativeIexTradeSymbolGet'][0])
     {
         $returnType = '\OpenAPI\Client\Model\IEXTradeTradeModel[]';
-        $request = $this->v1NativeIexTradeSymbolGetRequest($symbol, $date, $limit, $contentType);
+        $request = $this->v1NativeIexTradeSymbolGetRequest($symbol, $date, $time_start, $limit, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1894,14 +1943,15 @@ class NativeIEXApi
      * Create request for operation 'v1NativeIexTradeSymbolGet'
      *
      * @param  string $symbol The symbol identifier (required)
-     * @param  \DateTime $date Date in format YYYY-MM-DD (required)
-     * @param  int|null $limit Maximum number of records to return (1-10000, default 100) (optional, default to 100)
+     * @param  \DateTime|null $date UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. (optional)
+     * @param  string|null $time_start Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. (optional)
+     * @param  int|null $limit Optional cap on the number of records (1-10000). Omit to stream through the end of the day. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1NativeIexTradeSymbolGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1NativeIexTradeSymbolGetRequest($symbol, $date, $limit = 100, string $contentType = self::contentTypes['v1NativeIexTradeSymbolGet'][0])
+    public function v1NativeIexTradeSymbolGetRequest($symbol, $date = null, $time_start = null, $limit = null, string $contentType = self::contentTypes['v1NativeIexTradeSymbolGet'][0])
     {
 
         // verify the required parameter 'symbol' is set
@@ -1911,12 +1961,7 @@ class NativeIEXApi
             );
         }
 
-        // verify the required parameter 'date' is set
-        if ($date === null || (is_array($date) && count($date) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $date when calling v1NativeIexTradeSymbolGet'
-            );
-        }
+
 
 
 
@@ -1934,7 +1979,16 @@ class NativeIEXApi
             'string', // openApiType
             'form', // style
             true, // explode
-            true // required
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $time_start,
+            'time_start', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(

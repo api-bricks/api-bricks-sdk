@@ -26,12 +26,13 @@ class NativeIEXApi {
   const NativeIEXApi(this._dio, this._serializers);
 
   /// Get Admin Messages
-  /// Streaming endpoint. Use &#x60;limit&#x60; to cap the number of records returned (default 100, max 10000).
+  /// Streams one UTC day. &#x60;time_start&#x60; may be a full timestamp (&#x60;2026-09-28T13:31:14.8560065Z&#x60;) or a time of day (&#x60;13:31:14.8560065Z&#x60;) when &#x60;date&#x60; is set. Events start at that instant, inclusive. Omit &#x60;limit&#x60; to stream through the end of the day.
   ///
   /// Parameters:
   /// * [symbol] - The symbol identifier
-  /// * [date] - Date in format YYYY-MM-DD
-  /// * [limit] - Maximum number of records to return (1-10000, default 100)
+  /// * [date] - UTC day (`YYYY-MM-DD`). Optional when `time_start` includes a calendar day.
+  /// * [timeStart] - Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when `date` is set.
+  /// * [limit] - Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -43,8 +44,9 @@ class NativeIEXApi {
   /// Throws [DioException] if API call or serialization fails
   Future<Response<BuiltList<ModelsAdminMessageModel>>> v1NativeIexAdminMessagesSymbolGet({ 
     required String symbol,
-    required DateTime date,
-    int? limit = 100,
+    DateTime? date,
+    String? timeStart,
+    int? limit,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -77,7 +79,8 @@ class NativeIEXApi {
     );
 
     final _queryParameters = <String, dynamic>{
-      r'date': encodeQueryParameter(_serializers, date, const FullType(DateTime)),
+      if (date != null) r'date': encodeQueryParameter(_serializers, date, const FullType(DateTime)),
+      if (timeStart != null) r'time_start': encodeQueryParameter(_serializers, timeStart, const FullType(String)),
       if (limit != null) r'limit': encodeQueryParameter(_serializers, limit, const FullType(int)),
     };
 
@@ -122,11 +125,12 @@ class NativeIEXApi {
   }
 
   /// Get System Events
-  /// Streaming endpoint. Use &#x60;limit&#x60; to cap the number of records returned (default 100, max 10000).
+  /// Streams one UTC day. &#x60;time_start&#x60; may be a full timestamp (&#x60;2026-09-28T13:31:14.8560065Z&#x60;) or a time of day (&#x60;13:31:14.8560065Z&#x60;) when &#x60;date&#x60; is set. Events start at that instant, inclusive. Omit &#x60;limit&#x60; to stream through the end of the day.
   ///
   /// Parameters:
-  /// * [date] - Date in format YYYY-MM-DD
-  /// * [limit] - Maximum number of records to return (1-10000, default 100)
+  /// * [date] - UTC day (`YYYY-MM-DD`). Optional when `time_start` includes a calendar day.
+  /// * [timeStart] - Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when `date` is set.
+  /// * [limit] - Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -137,8 +141,9 @@ class NativeIEXApi {
   /// Returns a [Future] containing a [Response] with a [BuiltList<IEXSystemEventSystemEventModel>] as data
   /// Throws [DioException] if API call or serialization fails
   Future<Response<BuiltList<IEXSystemEventSystemEventModel>>> v1NativeIexAdminSystemEventGet({ 
-    required DateTime date,
-    int? limit = 100,
+    DateTime? date,
+    String? timeStart,
+    int? limit,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -171,7 +176,8 @@ class NativeIEXApi {
     );
 
     final _queryParameters = <String, dynamic>{
-      r'date': encodeQueryParameter(_serializers, date, const FullType(DateTime)),
+      if (date != null) r'date': encodeQueryParameter(_serializers, date, const FullType(DateTime)),
+      if (timeStart != null) r'time_start': encodeQueryParameter(_serializers, timeStart, const FullType(String)),
       if (limit != null) r'limit': encodeQueryParameter(_serializers, limit, const FullType(int)),
     };
 
@@ -216,12 +222,13 @@ class NativeIEXApi {
   }
 
   /// Get Level-1 Quotes
-  /// Streaming endpoint. Use &#x60;limit&#x60; to cap the number of records returned (default 100, max 10000).
+  /// Streams one UTC day. &#x60;time_start&#x60; may be a full timestamp (&#x60;2026-09-28T13:31:14.8560065Z&#x60;) or a time of day (&#x60;13:31:14.8560065Z&#x60;) when &#x60;date&#x60; is set. Events start at that instant, inclusive. Omit &#x60;limit&#x60; to stream through the end of the day.
   ///
   /// Parameters:
   /// * [symbol] - The symbol identifier
-  /// * [date] - Date in format YYYY-MM-DD
-  /// * [limit] - Maximum number of records to return (1-10000, default 100)
+  /// * [date] - UTC day (`YYYY-MM-DD`). Optional when `time_start` includes a calendar day.
+  /// * [timeStart] - Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when `date` is set.
+  /// * [limit] - Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -233,8 +240,9 @@ class NativeIEXApi {
   /// Throws [DioException] if API call or serialization fails
   Future<Response<BuiltList<IEXQuoteUpdateQuoteUpdateModel>>> v1NativeIexLevel1QuoteSymbolGet({ 
     required String symbol,
-    required DateTime date,
-    int? limit = 100,
+    DateTime? date,
+    String? timeStart,
+    int? limit,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -267,7 +275,8 @@ class NativeIEXApi {
     );
 
     final _queryParameters = <String, dynamic>{
-      r'date': encodeQueryParameter(_serializers, date, const FullType(DateTime)),
+      if (date != null) r'date': encodeQueryParameter(_serializers, date, const FullType(DateTime)),
+      if (timeStart != null) r'time_start': encodeQueryParameter(_serializers, timeStart, const FullType(String)),
       if (limit != null) r'limit': encodeQueryParameter(_serializers, limit, const FullType(int)),
     };
 
@@ -312,12 +321,13 @@ class NativeIEXApi {
   }
 
   /// Get Level-2 Price Level Book
-  /// Streaming endpoint. Use &#x60;limit&#x60; to cap the number of records returned (default 100, max 10000).
+  /// Streams one UTC day. &#x60;time_start&#x60; may be a full timestamp (&#x60;2026-09-28T13:31:14.8560065Z&#x60;) or a time of day (&#x60;13:31:14.8560065Z&#x60;) when &#x60;date&#x60; is set. Events start at that instant, inclusive. Omit &#x60;limit&#x60; to stream through the end of the day.
   ///
   /// Parameters:
   /// * [symbol] - The symbol identifier
-  /// * [date] - Date in format YYYY-MM-DD
-  /// * [limit] - Maximum number of records to return (1-10000, default 100)
+  /// * [date] - UTC day (`YYYY-MM-DD`). Optional when `time_start` includes a calendar day.
+  /// * [timeStart] - Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when `date` is set.
+  /// * [limit] - Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -329,8 +339,9 @@ class NativeIEXApi {
   /// Throws [DioException] if API call or serialization fails
   Future<Response<BuiltList<IEXPriceLevelUpdatePriceLevelUpdateModel>>> v1NativeIexLevel2PriceLevelUpdateSymbolGet({ 
     required String symbol,
-    required DateTime date,
-    int? limit = 100,
+    DateTime? date,
+    String? timeStart,
+    int? limit,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -363,7 +374,8 @@ class NativeIEXApi {
     );
 
     final _queryParameters = <String, dynamic>{
-      r'date': encodeQueryParameter(_serializers, date, const FullType(DateTime)),
+      if (date != null) r'date': encodeQueryParameter(_serializers, date, const FullType(DateTime)),
+      if (timeStart != null) r'time_start': encodeQueryParameter(_serializers, timeStart, const FullType(String)),
       if (limit != null) r'limit': encodeQueryParameter(_serializers, limit, const FullType(int)),
     };
 
@@ -408,12 +420,13 @@ class NativeIEXApi {
   }
 
   /// Get Level-3 Order Book
-  /// Streaming endpoint. Use &#x60;limit&#x60; to cap the number of records returned (default 100, max 10000).
+  /// Streams one UTC day. &#x60;time_start&#x60; may be a full timestamp (&#x60;2026-09-28T13:31:14.8560065Z&#x60;) or a time of day (&#x60;13:31:14.8560065Z&#x60;) when &#x60;date&#x60; is set. Events start at that instant, inclusive. Omit &#x60;limit&#x60; to stream through the end of the day.
   ///
   /// Parameters:
   /// * [symbol] - The symbol identifier
-  /// * [date] - Date in format YYYY-MM-DD
-  /// * [limit] - Maximum number of records to return (1-10000, default 100)
+  /// * [date] - UTC day (`YYYY-MM-DD`). Optional when `time_start` includes a calendar day.
+  /// * [timeStart] - Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when `date` is set.
+  /// * [limit] - Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -425,8 +438,9 @@ class NativeIEXApi {
   /// Throws [DioException] if API call or serialization fails
   Future<Response<BuiltList<ModelsOrderBookModel>>> v1NativeIexLevel3OrderBookSymbolGet({ 
     required String symbol,
-    required DateTime date,
-    int? limit = 100,
+    DateTime? date,
+    String? timeStart,
+    int? limit,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -459,7 +473,8 @@ class NativeIEXApi {
     );
 
     final _queryParameters = <String, dynamic>{
-      r'date': encodeQueryParameter(_serializers, date, const FullType(DateTime)),
+      if (date != null) r'date': encodeQueryParameter(_serializers, date, const FullType(DateTime)),
+      if (timeStart != null) r'time_start': encodeQueryParameter(_serializers, timeStart, const FullType(String)),
       if (limit != null) r'limit': encodeQueryParameter(_serializers, limit, const FullType(int)),
     };
 
@@ -504,12 +519,13 @@ class NativeIEXApi {
   }
 
   /// Get Trades
-  /// Streaming endpoint. Use &#x60;limit&#x60; to cap the number of trade records returned (default 100, max 10000).
+  /// Streams one UTC day. &#x60;time_start&#x60; may be a full timestamp (&#x60;2026-09-28T13:31:14.8560065Z&#x60;) or a time of day (&#x60;13:31:14.8560065Z&#x60;) when &#x60;date&#x60; is set. Events start at that instant, inclusive. Omit &#x60;limit&#x60; to stream through the end of the day.
   ///
   /// Parameters:
   /// * [symbol] - The symbol identifier
-  /// * [date] - Date in format YYYY-MM-DD
-  /// * [limit] - Maximum number of records to return (1-10000, default 100)
+  /// * [date] - UTC day (`YYYY-MM-DD`). Optional when `time_start` includes a calendar day.
+  /// * [timeStart] - Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when `date` is set.
+  /// * [limit] - Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -521,8 +537,9 @@ class NativeIEXApi {
   /// Throws [DioException] if API call or serialization fails
   Future<Response<BuiltList<IEXTradeTradeModel>>> v1NativeIexTradeSymbolGet({ 
     required String symbol,
-    required DateTime date,
-    int? limit = 100,
+    DateTime? date,
+    String? timeStart,
+    int? limit,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -555,7 +572,8 @@ class NativeIEXApi {
     );
 
     final _queryParameters = <String, dynamic>{
-      r'date': encodeQueryParameter(_serializers, date, const FullType(DateTime)),
+      if (date != null) r'date': encodeQueryParameter(_serializers, date, const FullType(DateTime)),
+      if (timeStart != null) r'time_start': encodeQueryParameter(_serializers, timeStart, const FullType(String)),
       if (limit != null) r'limit': encodeQueryParameter(_serializers, limit, const FullType(int)),
     };
 

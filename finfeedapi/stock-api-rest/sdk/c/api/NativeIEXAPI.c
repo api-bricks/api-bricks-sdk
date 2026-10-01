@@ -11,10 +11,10 @@
 
 // Get Admin Messages
 //
-// Streaming endpoint. Use `limit` to cap the number of records returned (default 100, max 10000).
+// Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
 //
 list_t*
-NativeIEXAPI_v1NativeIexAdminMessagesSymbolGet(apiClient_t *apiClient, char *symbol, char date, int *limit)
+NativeIEXAPI_v1NativeIexAdminMessagesSymbolGet(apiClient_t *apiClient, char *symbol, char date, char *time_start, int *limit)
 {
     list_t    *localVarQueryParameters = list_createList();
     list_t    *localVarHeaderParameters = NULL;
@@ -59,6 +59,18 @@ NativeIEXAPI_v1NativeIexAdminMessagesSymbolGet(apiClient_t *apiClient, char *sym
     }
 
     // query parameters
+    char *keyQuery_time_start = NULL;
+    char * valueQuery_time_start = NULL;
+    keyValuePair_t *keyPairQuery_time_start = 0;
+    if (time_start)
+    {
+        keyQuery_time_start = strdup("time_start");
+        valueQuery_time_start = strdup((time_start));
+        keyPairQuery_time_start = keyValuePair_create(keyQuery_time_start, valueQuery_time_start);
+        list_addElement(localVarQueryParameters,keyPairQuery_time_start);
+    }
+
+    // query parameters
     char *keyQuery_limit = NULL;
     char * valueQuery_limit = NULL;
     keyValuePair_t *keyPairQuery_limit = 0;
@@ -128,6 +140,18 @@ NativeIEXAPI_v1NativeIexAdminMessagesSymbolGet(apiClient_t *apiClient, char *sym
         keyValuePair_free(keyPairQuery_date);
         keyPairQuery_date = NULL;
     }
+    if(keyQuery_time_start){
+        free(keyQuery_time_start);
+        keyQuery_time_start = NULL;
+    }
+    if(valueQuery_time_start){
+        free(valueQuery_time_start);
+        valueQuery_time_start = NULL;
+    }
+    if(keyPairQuery_time_start){
+        keyValuePair_free(keyPairQuery_time_start);
+        keyPairQuery_time_start = NULL;
+    }
     if(keyQuery_limit){
         free(keyQuery_limit);
         keyQuery_limit = NULL;
@@ -149,10 +173,10 @@ end:
 
 // Get System Events
 //
-// Streaming endpoint. Use `limit` to cap the number of records returned (default 100, max 10000).
+// Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
 //
 list_t*
-NativeIEXAPI_v1NativeIexAdminSystemEventGet(apiClient_t *apiClient, char date, int *limit)
+NativeIEXAPI_v1NativeIexAdminSystemEventGet(apiClient_t *apiClient, char date, char *time_start, int *limit)
 {
     list_t    *localVarQueryParameters = list_createList();
     list_t    *localVarHeaderParameters = NULL;
@@ -182,6 +206,18 @@ NativeIEXAPI_v1NativeIexAdminSystemEventGet(apiClient_t *apiClient, char date, i
         valueQuery_date = (date);
         keyPairQuery_date = keyValuePair_create(keyQuery_date, &valueQuery_date);
         list_addElement(localVarQueryParameters,keyPairQuery_date);
+    }
+
+    // query parameters
+    char *keyQuery_time_start = NULL;
+    char * valueQuery_time_start = NULL;
+    keyValuePair_t *keyPairQuery_time_start = 0;
+    if (time_start)
+    {
+        keyQuery_time_start = strdup("time_start");
+        valueQuery_time_start = strdup((time_start));
+        keyPairQuery_time_start = keyValuePair_create(keyQuery_time_start, valueQuery_time_start);
+        list_addElement(localVarQueryParameters,keyPairQuery_time_start);
     }
 
     // query parameters
@@ -253,6 +289,18 @@ NativeIEXAPI_v1NativeIexAdminSystemEventGet(apiClient_t *apiClient, char date, i
         keyValuePair_free(keyPairQuery_date);
         keyPairQuery_date = NULL;
     }
+    if(keyQuery_time_start){
+        free(keyQuery_time_start);
+        keyQuery_time_start = NULL;
+    }
+    if(valueQuery_time_start){
+        free(valueQuery_time_start);
+        valueQuery_time_start = NULL;
+    }
+    if(keyPairQuery_time_start){
+        keyValuePair_free(keyPairQuery_time_start);
+        keyPairQuery_time_start = NULL;
+    }
     if(keyQuery_limit){
         free(keyQuery_limit);
         keyQuery_limit = NULL;
@@ -274,10 +322,10 @@ end:
 
 // Get Level-1 Quotes
 //
-// Streaming endpoint. Use `limit` to cap the number of records returned (default 100, max 10000).
+// Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
 //
 list_t*
-NativeIEXAPI_v1NativeIexLevel1QuoteSymbolGet(apiClient_t *apiClient, char *symbol, char date, int *limit)
+NativeIEXAPI_v1NativeIexLevel1QuoteSymbolGet(apiClient_t *apiClient, char *symbol, char date, char *time_start, int *limit)
 {
     list_t    *localVarQueryParameters = list_createList();
     list_t    *localVarHeaderParameters = NULL;
@@ -322,6 +370,18 @@ NativeIEXAPI_v1NativeIexLevel1QuoteSymbolGet(apiClient_t *apiClient, char *symbo
     }
 
     // query parameters
+    char *keyQuery_time_start = NULL;
+    char * valueQuery_time_start = NULL;
+    keyValuePair_t *keyPairQuery_time_start = 0;
+    if (time_start)
+    {
+        keyQuery_time_start = strdup("time_start");
+        valueQuery_time_start = strdup((time_start));
+        keyPairQuery_time_start = keyValuePair_create(keyQuery_time_start, valueQuery_time_start);
+        list_addElement(localVarQueryParameters,keyPairQuery_time_start);
+    }
+
+    // query parameters
     char *keyQuery_limit = NULL;
     char * valueQuery_limit = NULL;
     keyValuePair_t *keyPairQuery_limit = 0;
@@ -391,6 +451,18 @@ NativeIEXAPI_v1NativeIexLevel1QuoteSymbolGet(apiClient_t *apiClient, char *symbo
         keyValuePair_free(keyPairQuery_date);
         keyPairQuery_date = NULL;
     }
+    if(keyQuery_time_start){
+        free(keyQuery_time_start);
+        keyQuery_time_start = NULL;
+    }
+    if(valueQuery_time_start){
+        free(valueQuery_time_start);
+        valueQuery_time_start = NULL;
+    }
+    if(keyPairQuery_time_start){
+        keyValuePair_free(keyPairQuery_time_start);
+        keyPairQuery_time_start = NULL;
+    }
     if(keyQuery_limit){
         free(keyQuery_limit);
         keyQuery_limit = NULL;
@@ -412,10 +484,10 @@ end:
 
 // Get Level-2 Price Level Book
 //
-// Streaming endpoint. Use `limit` to cap the number of records returned (default 100, max 10000).
+// Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
 //
 list_t*
-NativeIEXAPI_v1NativeIexLevel2PriceLevelUpdateSymbolGet(apiClient_t *apiClient, char *symbol, char date, int *limit)
+NativeIEXAPI_v1NativeIexLevel2PriceLevelUpdateSymbolGet(apiClient_t *apiClient, char *symbol, char date, char *time_start, int *limit)
 {
     list_t    *localVarQueryParameters = list_createList();
     list_t    *localVarHeaderParameters = NULL;
@@ -460,6 +532,18 @@ NativeIEXAPI_v1NativeIexLevel2PriceLevelUpdateSymbolGet(apiClient_t *apiClient, 
     }
 
     // query parameters
+    char *keyQuery_time_start = NULL;
+    char * valueQuery_time_start = NULL;
+    keyValuePair_t *keyPairQuery_time_start = 0;
+    if (time_start)
+    {
+        keyQuery_time_start = strdup("time_start");
+        valueQuery_time_start = strdup((time_start));
+        keyPairQuery_time_start = keyValuePair_create(keyQuery_time_start, valueQuery_time_start);
+        list_addElement(localVarQueryParameters,keyPairQuery_time_start);
+    }
+
+    // query parameters
     char *keyQuery_limit = NULL;
     char * valueQuery_limit = NULL;
     keyValuePair_t *keyPairQuery_limit = 0;
@@ -529,6 +613,18 @@ NativeIEXAPI_v1NativeIexLevel2PriceLevelUpdateSymbolGet(apiClient_t *apiClient, 
         keyValuePair_free(keyPairQuery_date);
         keyPairQuery_date = NULL;
     }
+    if(keyQuery_time_start){
+        free(keyQuery_time_start);
+        keyQuery_time_start = NULL;
+    }
+    if(valueQuery_time_start){
+        free(valueQuery_time_start);
+        valueQuery_time_start = NULL;
+    }
+    if(keyPairQuery_time_start){
+        keyValuePair_free(keyPairQuery_time_start);
+        keyPairQuery_time_start = NULL;
+    }
     if(keyQuery_limit){
         free(keyQuery_limit);
         keyQuery_limit = NULL;
@@ -550,10 +646,10 @@ end:
 
 // Get Level-3 Order Book
 //
-// Streaming endpoint. Use `limit` to cap the number of records returned (default 100, max 10000).
+// Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
 //
 list_t*
-NativeIEXAPI_v1NativeIexLevel3OrderBookSymbolGet(apiClient_t *apiClient, char *symbol, char date, int *limit)
+NativeIEXAPI_v1NativeIexLevel3OrderBookSymbolGet(apiClient_t *apiClient, char *symbol, char date, char *time_start, int *limit)
 {
     list_t    *localVarQueryParameters = list_createList();
     list_t    *localVarHeaderParameters = NULL;
@@ -598,6 +694,18 @@ NativeIEXAPI_v1NativeIexLevel3OrderBookSymbolGet(apiClient_t *apiClient, char *s
     }
 
     // query parameters
+    char *keyQuery_time_start = NULL;
+    char * valueQuery_time_start = NULL;
+    keyValuePair_t *keyPairQuery_time_start = 0;
+    if (time_start)
+    {
+        keyQuery_time_start = strdup("time_start");
+        valueQuery_time_start = strdup((time_start));
+        keyPairQuery_time_start = keyValuePair_create(keyQuery_time_start, valueQuery_time_start);
+        list_addElement(localVarQueryParameters,keyPairQuery_time_start);
+    }
+
+    // query parameters
     char *keyQuery_limit = NULL;
     char * valueQuery_limit = NULL;
     keyValuePair_t *keyPairQuery_limit = 0;
@@ -667,6 +775,18 @@ NativeIEXAPI_v1NativeIexLevel3OrderBookSymbolGet(apiClient_t *apiClient, char *s
         keyValuePair_free(keyPairQuery_date);
         keyPairQuery_date = NULL;
     }
+    if(keyQuery_time_start){
+        free(keyQuery_time_start);
+        keyQuery_time_start = NULL;
+    }
+    if(valueQuery_time_start){
+        free(valueQuery_time_start);
+        valueQuery_time_start = NULL;
+    }
+    if(keyPairQuery_time_start){
+        keyValuePair_free(keyPairQuery_time_start);
+        keyPairQuery_time_start = NULL;
+    }
     if(keyQuery_limit){
         free(keyQuery_limit);
         keyQuery_limit = NULL;
@@ -688,10 +808,10 @@ end:
 
 // Get Trades
 //
-// Streaming endpoint. Use `limit` to cap the number of trade records returned (default 100, max 10000).
+// Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
 //
 list_t*
-NativeIEXAPI_v1NativeIexTradeSymbolGet(apiClient_t *apiClient, char *symbol, char date, int *limit)
+NativeIEXAPI_v1NativeIexTradeSymbolGet(apiClient_t *apiClient, char *symbol, char date, char *time_start, int *limit)
 {
     list_t    *localVarQueryParameters = list_createList();
     list_t    *localVarHeaderParameters = NULL;
@@ -736,6 +856,18 @@ NativeIEXAPI_v1NativeIexTradeSymbolGet(apiClient_t *apiClient, char *symbol, cha
     }
 
     // query parameters
+    char *keyQuery_time_start = NULL;
+    char * valueQuery_time_start = NULL;
+    keyValuePair_t *keyPairQuery_time_start = 0;
+    if (time_start)
+    {
+        keyQuery_time_start = strdup("time_start");
+        valueQuery_time_start = strdup((time_start));
+        keyPairQuery_time_start = keyValuePair_create(keyQuery_time_start, valueQuery_time_start);
+        list_addElement(localVarQueryParameters,keyPairQuery_time_start);
+    }
+
+    // query parameters
     char *keyQuery_limit = NULL;
     char * valueQuery_limit = NULL;
     keyValuePair_t *keyPairQuery_limit = 0;
@@ -804,6 +936,18 @@ NativeIEXAPI_v1NativeIexTradeSymbolGet(apiClient_t *apiClient, char *symbol, cha
     if(keyPairQuery_date){
         keyValuePair_free(keyPairQuery_date);
         keyPairQuery_date = NULL;
+    }
+    if(keyQuery_time_start){
+        free(keyQuery_time_start);
+        keyQuery_time_start = NULL;
+    }
+    if(valueQuery_time_start){
+        free(valueQuery_time_start);
+        valueQuery_time_start = NULL;
+    }
+    if(keyPairQuery_time_start){
+        keyValuePair_free(keyPairQuery_time_start);
+        keyPairQuery_time_start = NULL;
     }
     if(keyQuery_limit){
         free(keyQuery_limit);

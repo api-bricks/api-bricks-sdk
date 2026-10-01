@@ -13,7 +13,7 @@ class NativeIexApi {
     String versionPath = ""
     ApiUtils apiUtils = new ApiUtils();
 
-    def v1NativeIexAdminMessagesSymbolGet ( String symbol, Date date, Integer limit, Closure onSuccess, Closure onFailure)  {
+    def v1NativeIexAdminMessagesSymbolGet ( String symbol, Date date, String timeStart, Integer limit, Closure onSuccess, Closure onFailure)  {
         String resourcePath = "/v1/native/iex/admin/messages/${symbol}"
 
         // params
@@ -27,13 +27,12 @@ class NativeIexApi {
         if (symbol == null) {
             throw new RuntimeException("missing required params symbol")
         }
-        // verify required params are set
-        if (date == null) {
-            throw new RuntimeException("missing required params date")
-        }
 
         if (date != null) {
             queryParams.put("date", date)
+        }
+        if (timeStart != null) {
+            queryParams.put("time_start", timeStart)
         }
         if (limit != null) {
             queryParams.put("limit", limit)
@@ -50,7 +49,7 @@ class NativeIexApi {
 
     }
 
-    def v1NativeIexAdminSystemEventGet ( Date date, Integer limit, Closure onSuccess, Closure onFailure)  {
+    def v1NativeIexAdminSystemEventGet ( Date date, String timeStart, Integer limit, Closure onSuccess, Closure onFailure)  {
         String resourcePath = "/v1/native/iex/admin/system-event"
 
         // params
@@ -60,13 +59,12 @@ class NativeIexApi {
         def accept
         def contentType
 
-        // verify required params are set
-        if (date == null) {
-            throw new RuntimeException("missing required params date")
-        }
 
         if (date != null) {
             queryParams.put("date", date)
+        }
+        if (timeStart != null) {
+            queryParams.put("time_start", timeStart)
         }
         if (limit != null) {
             queryParams.put("limit", limit)
@@ -83,7 +81,7 @@ class NativeIexApi {
 
     }
 
-    def v1NativeIexLevel1QuoteSymbolGet ( String symbol, Date date, Integer limit, Closure onSuccess, Closure onFailure)  {
+    def v1NativeIexLevel1QuoteSymbolGet ( String symbol, Date date, String timeStart, Integer limit, Closure onSuccess, Closure onFailure)  {
         String resourcePath = "/v1/native/iex/level1-quote/${symbol}"
 
         // params
@@ -97,13 +95,12 @@ class NativeIexApi {
         if (symbol == null) {
             throw new RuntimeException("missing required params symbol")
         }
-        // verify required params are set
-        if (date == null) {
-            throw new RuntimeException("missing required params date")
-        }
 
         if (date != null) {
             queryParams.put("date", date)
+        }
+        if (timeStart != null) {
+            queryParams.put("time_start", timeStart)
         }
         if (limit != null) {
             queryParams.put("limit", limit)
@@ -120,7 +117,7 @@ class NativeIexApi {
 
     }
 
-    def v1NativeIexLevel2PriceLevelUpdateSymbolGet ( String symbol, Date date, Integer limit, Closure onSuccess, Closure onFailure)  {
+    def v1NativeIexLevel2PriceLevelUpdateSymbolGet ( String symbol, Date date, String timeStart, Integer limit, Closure onSuccess, Closure onFailure)  {
         String resourcePath = "/v1/native/iex/level2-price-level-update/${symbol}"
 
         // params
@@ -134,13 +131,12 @@ class NativeIexApi {
         if (symbol == null) {
             throw new RuntimeException("missing required params symbol")
         }
-        // verify required params are set
-        if (date == null) {
-            throw new RuntimeException("missing required params date")
-        }
 
         if (date != null) {
             queryParams.put("date", date)
+        }
+        if (timeStart != null) {
+            queryParams.put("time_start", timeStart)
         }
         if (limit != null) {
             queryParams.put("limit", limit)
@@ -157,7 +153,7 @@ class NativeIexApi {
 
     }
 
-    def v1NativeIexLevel3OrderBookSymbolGet ( String symbol, Date date, Integer limit, Closure onSuccess, Closure onFailure)  {
+    def v1NativeIexLevel3OrderBookSymbolGet ( String symbol, Date date, String timeStart, Integer limit, Closure onSuccess, Closure onFailure)  {
         String resourcePath = "/v1/native/iex/level3-order-book/${symbol}"
 
         // params
@@ -171,13 +167,12 @@ class NativeIexApi {
         if (symbol == null) {
             throw new RuntimeException("missing required params symbol")
         }
-        // verify required params are set
-        if (date == null) {
-            throw new RuntimeException("missing required params date")
-        }
 
         if (date != null) {
             queryParams.put("date", date)
+        }
+        if (timeStart != null) {
+            queryParams.put("time_start", timeStart)
         }
         if (limit != null) {
             queryParams.put("limit", limit)
@@ -194,7 +189,7 @@ class NativeIexApi {
 
     }
 
-    def v1NativeIexTradeSymbolGet ( String symbol, Date date, Integer limit, Closure onSuccess, Closure onFailure)  {
+    def v1NativeIexTradeSymbolGet ( String symbol, Date date, String timeStart, Integer limit, Closure onSuccess, Closure onFailure)  {
         String resourcePath = "/v1/native/iex/trade/${symbol}"
 
         // params
@@ -208,13 +203,12 @@ class NativeIexApi {
         if (symbol == null) {
             throw new RuntimeException("missing required params symbol")
         }
-        // verify required params are set
-        if (date == null) {
-            throw new RuntimeException("missing required params date")
-        }
 
         if (date != null) {
             queryParams.put("date", date)
+        }
+        if (timeStart != null) {
+            queryParams.put("time_start", timeStart)
         }
         if (limit != null) {
             queryParams.put("limit", limit)

@@ -43,161 +43,173 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Api
         /// Get Admin Messages
         /// </summary>
         /// <remarks>
-        /// Streaming endpoint. Use &#x60;limit&#x60; to cap the number of records returned (default 100, max 10000).
+        /// Streams one UTC day. &#x60;time_start&#x60; may be a full timestamp (&#x60;2026-09-28T13:31:14.8560065Z&#x60;) or a time of day (&#x60;13:31:14.8560065Z&#x60;) when &#x60;date&#x60; is set. Events start at that instant, inclusive. Omit &#x60;limit&#x60; to stream through the end of the day.
         /// </remarks>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The symbol identifier</param>
-        /// <param name="date">Date in format YYYY-MM-DD</param>
-        /// <param name="limit">Maximum number of records to return (1-10000, default 100) (optional, default to 100)</param>
+        /// <param name="date">UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. (optional)</param>
+        /// <param name="timeStart">Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. (optional)</param>
+        /// <param name="limit">Optional cap on the number of records (1-10000). Omit to stream through the end of the day. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="IV1NativeIexAdminMessagesSymbolGetApiResponse"/>&gt;</returns>
-        Task<IV1NativeIexAdminMessagesSymbolGetApiResponse> V1NativeIexAdminMessagesSymbolGetAsync(string symbol, DateTime date, Option<int> limit = default, System.Threading.CancellationToken cancellationToken = default);
+        Task<IV1NativeIexAdminMessagesSymbolGetApiResponse> V1NativeIexAdminMessagesSymbolGetAsync(string symbol, Option<DateTime> date = default, Option<string> timeStart = default, Option<int> limit = default, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Get Admin Messages
         /// </summary>
         /// <remarks>
-        /// Streaming endpoint. Use &#x60;limit&#x60; to cap the number of records returned (default 100, max 10000).
+        /// Streams one UTC day. &#x60;time_start&#x60; may be a full timestamp (&#x60;2026-09-28T13:31:14.8560065Z&#x60;) or a time of day (&#x60;13:31:14.8560065Z&#x60;) when &#x60;date&#x60; is set. Events start at that instant, inclusive. Omit &#x60;limit&#x60; to stream through the end of the day.
         /// </remarks>
         /// <param name="symbol">The symbol identifier</param>
-        /// <param name="date">Date in format YYYY-MM-DD</param>
-        /// <param name="limit">Maximum number of records to return (1-10000, default 100) (optional, default to 100)</param>
+        /// <param name="date">UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. (optional)</param>
+        /// <param name="timeStart">Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. (optional)</param>
+        /// <param name="limit">Optional cap on the number of records (1-10000). Omit to stream through the end of the day. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="IV1NativeIexAdminMessagesSymbolGetApiResponse"/>?&gt;</returns>
-        Task<IV1NativeIexAdminMessagesSymbolGetApiResponse?> V1NativeIexAdminMessagesSymbolGetOrDefaultAsync(string symbol, DateTime date, Option<int> limit = default, System.Threading.CancellationToken cancellationToken = default);
+        Task<IV1NativeIexAdminMessagesSymbolGetApiResponse?> V1NativeIexAdminMessagesSymbolGetOrDefaultAsync(string symbol, Option<DateTime> date = default, Option<string> timeStart = default, Option<int> limit = default, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Get System Events
         /// </summary>
         /// <remarks>
-        /// Streaming endpoint. Use &#x60;limit&#x60; to cap the number of records returned (default 100, max 10000).
+        /// Streams one UTC day. &#x60;time_start&#x60; may be a full timestamp (&#x60;2026-09-28T13:31:14.8560065Z&#x60;) or a time of day (&#x60;13:31:14.8560065Z&#x60;) when &#x60;date&#x60; is set. Events start at that instant, inclusive. Omit &#x60;limit&#x60; to stream through the end of the day.
         /// </remarks>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="date">Date in format YYYY-MM-DD</param>
-        /// <param name="limit">Maximum number of records to return (1-10000, default 100) (optional, default to 100)</param>
+        /// <param name="date">UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. (optional)</param>
+        /// <param name="timeStart">Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. (optional)</param>
+        /// <param name="limit">Optional cap on the number of records (1-10000). Omit to stream through the end of the day. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="IV1NativeIexAdminSystemEventGetApiResponse"/>&gt;</returns>
-        Task<IV1NativeIexAdminSystemEventGetApiResponse> V1NativeIexAdminSystemEventGetAsync(DateTime date, Option<int> limit = default, System.Threading.CancellationToken cancellationToken = default);
+        Task<IV1NativeIexAdminSystemEventGetApiResponse> V1NativeIexAdminSystemEventGetAsync(Option<DateTime> date = default, Option<string> timeStart = default, Option<int> limit = default, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Get System Events
         /// </summary>
         /// <remarks>
-        /// Streaming endpoint. Use &#x60;limit&#x60; to cap the number of records returned (default 100, max 10000).
+        /// Streams one UTC day. &#x60;time_start&#x60; may be a full timestamp (&#x60;2026-09-28T13:31:14.8560065Z&#x60;) or a time of day (&#x60;13:31:14.8560065Z&#x60;) when &#x60;date&#x60; is set. Events start at that instant, inclusive. Omit &#x60;limit&#x60; to stream through the end of the day.
         /// </remarks>
-        /// <param name="date">Date in format YYYY-MM-DD</param>
-        /// <param name="limit">Maximum number of records to return (1-10000, default 100) (optional, default to 100)</param>
+        /// <param name="date">UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. (optional)</param>
+        /// <param name="timeStart">Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. (optional)</param>
+        /// <param name="limit">Optional cap on the number of records (1-10000). Omit to stream through the end of the day. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="IV1NativeIexAdminSystemEventGetApiResponse"/>?&gt;</returns>
-        Task<IV1NativeIexAdminSystemEventGetApiResponse?> V1NativeIexAdminSystemEventGetOrDefaultAsync(DateTime date, Option<int> limit = default, System.Threading.CancellationToken cancellationToken = default);
+        Task<IV1NativeIexAdminSystemEventGetApiResponse?> V1NativeIexAdminSystemEventGetOrDefaultAsync(Option<DateTime> date = default, Option<string> timeStart = default, Option<int> limit = default, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Get Level-1 Quotes
         /// </summary>
         /// <remarks>
-        /// Streaming endpoint. Use &#x60;limit&#x60; to cap the number of records returned (default 100, max 10000).
+        /// Streams one UTC day. &#x60;time_start&#x60; may be a full timestamp (&#x60;2026-09-28T13:31:14.8560065Z&#x60;) or a time of day (&#x60;13:31:14.8560065Z&#x60;) when &#x60;date&#x60; is set. Events start at that instant, inclusive. Omit &#x60;limit&#x60; to stream through the end of the day.
         /// </remarks>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The symbol identifier</param>
-        /// <param name="date">Date in format YYYY-MM-DD</param>
-        /// <param name="limit">Maximum number of records to return (1-10000, default 100) (optional, default to 100)</param>
+        /// <param name="date">UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. (optional)</param>
+        /// <param name="timeStart">Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. (optional)</param>
+        /// <param name="limit">Optional cap on the number of records (1-10000). Omit to stream through the end of the day. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="IV1NativeIexLevel1QuoteSymbolGetApiResponse"/>&gt;</returns>
-        Task<IV1NativeIexLevel1QuoteSymbolGetApiResponse> V1NativeIexLevel1QuoteSymbolGetAsync(string symbol, DateTime date, Option<int> limit = default, System.Threading.CancellationToken cancellationToken = default);
+        Task<IV1NativeIexLevel1QuoteSymbolGetApiResponse> V1NativeIexLevel1QuoteSymbolGetAsync(string symbol, Option<DateTime> date = default, Option<string> timeStart = default, Option<int> limit = default, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Get Level-1 Quotes
         /// </summary>
         /// <remarks>
-        /// Streaming endpoint. Use &#x60;limit&#x60; to cap the number of records returned (default 100, max 10000).
+        /// Streams one UTC day. &#x60;time_start&#x60; may be a full timestamp (&#x60;2026-09-28T13:31:14.8560065Z&#x60;) or a time of day (&#x60;13:31:14.8560065Z&#x60;) when &#x60;date&#x60; is set. Events start at that instant, inclusive. Omit &#x60;limit&#x60; to stream through the end of the day.
         /// </remarks>
         /// <param name="symbol">The symbol identifier</param>
-        /// <param name="date">Date in format YYYY-MM-DD</param>
-        /// <param name="limit">Maximum number of records to return (1-10000, default 100) (optional, default to 100)</param>
+        /// <param name="date">UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. (optional)</param>
+        /// <param name="timeStart">Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. (optional)</param>
+        /// <param name="limit">Optional cap on the number of records (1-10000). Omit to stream through the end of the day. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="IV1NativeIexLevel1QuoteSymbolGetApiResponse"/>?&gt;</returns>
-        Task<IV1NativeIexLevel1QuoteSymbolGetApiResponse?> V1NativeIexLevel1QuoteSymbolGetOrDefaultAsync(string symbol, DateTime date, Option<int> limit = default, System.Threading.CancellationToken cancellationToken = default);
+        Task<IV1NativeIexLevel1QuoteSymbolGetApiResponse?> V1NativeIexLevel1QuoteSymbolGetOrDefaultAsync(string symbol, Option<DateTime> date = default, Option<string> timeStart = default, Option<int> limit = default, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Get Level-2 Price Level Book
         /// </summary>
         /// <remarks>
-        /// Streaming endpoint. Use &#x60;limit&#x60; to cap the number of records returned (default 100, max 10000).
+        /// Streams one UTC day. &#x60;time_start&#x60; may be a full timestamp (&#x60;2026-09-28T13:31:14.8560065Z&#x60;) or a time of day (&#x60;13:31:14.8560065Z&#x60;) when &#x60;date&#x60; is set. Events start at that instant, inclusive. Omit &#x60;limit&#x60; to stream through the end of the day.
         /// </remarks>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The symbol identifier</param>
-        /// <param name="date">Date in format YYYY-MM-DD</param>
-        /// <param name="limit">Maximum number of records to return (1-10000, default 100) (optional, default to 100)</param>
+        /// <param name="date">UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. (optional)</param>
+        /// <param name="timeStart">Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. (optional)</param>
+        /// <param name="limit">Optional cap on the number of records (1-10000). Omit to stream through the end of the day. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="IV1NativeIexLevel2PriceLevelUpdateSymbolGetApiResponse"/>&gt;</returns>
-        Task<IV1NativeIexLevel2PriceLevelUpdateSymbolGetApiResponse> V1NativeIexLevel2PriceLevelUpdateSymbolGetAsync(string symbol, DateTime date, Option<int> limit = default, System.Threading.CancellationToken cancellationToken = default);
+        Task<IV1NativeIexLevel2PriceLevelUpdateSymbolGetApiResponse> V1NativeIexLevel2PriceLevelUpdateSymbolGetAsync(string symbol, Option<DateTime> date = default, Option<string> timeStart = default, Option<int> limit = default, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Get Level-2 Price Level Book
         /// </summary>
         /// <remarks>
-        /// Streaming endpoint. Use &#x60;limit&#x60; to cap the number of records returned (default 100, max 10000).
+        /// Streams one UTC day. &#x60;time_start&#x60; may be a full timestamp (&#x60;2026-09-28T13:31:14.8560065Z&#x60;) or a time of day (&#x60;13:31:14.8560065Z&#x60;) when &#x60;date&#x60; is set. Events start at that instant, inclusive. Omit &#x60;limit&#x60; to stream through the end of the day.
         /// </remarks>
         /// <param name="symbol">The symbol identifier</param>
-        /// <param name="date">Date in format YYYY-MM-DD</param>
-        /// <param name="limit">Maximum number of records to return (1-10000, default 100) (optional, default to 100)</param>
+        /// <param name="date">UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. (optional)</param>
+        /// <param name="timeStart">Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. (optional)</param>
+        /// <param name="limit">Optional cap on the number of records (1-10000). Omit to stream through the end of the day. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="IV1NativeIexLevel2PriceLevelUpdateSymbolGetApiResponse"/>?&gt;</returns>
-        Task<IV1NativeIexLevel2PriceLevelUpdateSymbolGetApiResponse?> V1NativeIexLevel2PriceLevelUpdateSymbolGetOrDefaultAsync(string symbol, DateTime date, Option<int> limit = default, System.Threading.CancellationToken cancellationToken = default);
+        Task<IV1NativeIexLevel2PriceLevelUpdateSymbolGetApiResponse?> V1NativeIexLevel2PriceLevelUpdateSymbolGetOrDefaultAsync(string symbol, Option<DateTime> date = default, Option<string> timeStart = default, Option<int> limit = default, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Get Level-3 Order Book
         /// </summary>
         /// <remarks>
-        /// Streaming endpoint. Use &#x60;limit&#x60; to cap the number of records returned (default 100, max 10000).
+        /// Streams one UTC day. &#x60;time_start&#x60; may be a full timestamp (&#x60;2026-09-28T13:31:14.8560065Z&#x60;) or a time of day (&#x60;13:31:14.8560065Z&#x60;) when &#x60;date&#x60; is set. Events start at that instant, inclusive. Omit &#x60;limit&#x60; to stream through the end of the day.
         /// </remarks>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The symbol identifier</param>
-        /// <param name="date">Date in format YYYY-MM-DD</param>
-        /// <param name="limit">Maximum number of records to return (1-10000, default 100) (optional, default to 100)</param>
+        /// <param name="date">UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. (optional)</param>
+        /// <param name="timeStart">Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. (optional)</param>
+        /// <param name="limit">Optional cap on the number of records (1-10000). Omit to stream through the end of the day. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="IV1NativeIexLevel3OrderBookSymbolGetApiResponse"/>&gt;</returns>
-        Task<IV1NativeIexLevel3OrderBookSymbolGetApiResponse> V1NativeIexLevel3OrderBookSymbolGetAsync(string symbol, DateTime date, Option<int> limit = default, System.Threading.CancellationToken cancellationToken = default);
+        Task<IV1NativeIexLevel3OrderBookSymbolGetApiResponse> V1NativeIexLevel3OrderBookSymbolGetAsync(string symbol, Option<DateTime> date = default, Option<string> timeStart = default, Option<int> limit = default, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Get Level-3 Order Book
         /// </summary>
         /// <remarks>
-        /// Streaming endpoint. Use &#x60;limit&#x60; to cap the number of records returned (default 100, max 10000).
+        /// Streams one UTC day. &#x60;time_start&#x60; may be a full timestamp (&#x60;2026-09-28T13:31:14.8560065Z&#x60;) or a time of day (&#x60;13:31:14.8560065Z&#x60;) when &#x60;date&#x60; is set. Events start at that instant, inclusive. Omit &#x60;limit&#x60; to stream through the end of the day.
         /// </remarks>
         /// <param name="symbol">The symbol identifier</param>
-        /// <param name="date">Date in format YYYY-MM-DD</param>
-        /// <param name="limit">Maximum number of records to return (1-10000, default 100) (optional, default to 100)</param>
+        /// <param name="date">UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. (optional)</param>
+        /// <param name="timeStart">Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. (optional)</param>
+        /// <param name="limit">Optional cap on the number of records (1-10000). Omit to stream through the end of the day. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="IV1NativeIexLevel3OrderBookSymbolGetApiResponse"/>?&gt;</returns>
-        Task<IV1NativeIexLevel3OrderBookSymbolGetApiResponse?> V1NativeIexLevel3OrderBookSymbolGetOrDefaultAsync(string symbol, DateTime date, Option<int> limit = default, System.Threading.CancellationToken cancellationToken = default);
+        Task<IV1NativeIexLevel3OrderBookSymbolGetApiResponse?> V1NativeIexLevel3OrderBookSymbolGetOrDefaultAsync(string symbol, Option<DateTime> date = default, Option<string> timeStart = default, Option<int> limit = default, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Get Trades
         /// </summary>
         /// <remarks>
-        /// Streaming endpoint. Use &#x60;limit&#x60; to cap the number of trade records returned (default 100, max 10000).
+        /// Streams one UTC day. &#x60;time_start&#x60; may be a full timestamp (&#x60;2026-09-28T13:31:14.8560065Z&#x60;) or a time of day (&#x60;13:31:14.8560065Z&#x60;) when &#x60;date&#x60; is set. Events start at that instant, inclusive. Omit &#x60;limit&#x60; to stream through the end of the day.
         /// </remarks>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The symbol identifier</param>
-        /// <param name="date">Date in format YYYY-MM-DD</param>
-        /// <param name="limit">Maximum number of records to return (1-10000, default 100) (optional, default to 100)</param>
+        /// <param name="date">UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. (optional)</param>
+        /// <param name="timeStart">Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. (optional)</param>
+        /// <param name="limit">Optional cap on the number of records (1-10000). Omit to stream through the end of the day. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="IV1NativeIexTradeSymbolGetApiResponse"/>&gt;</returns>
-        Task<IV1NativeIexTradeSymbolGetApiResponse> V1NativeIexTradeSymbolGetAsync(string symbol, DateTime date, Option<int> limit = default, System.Threading.CancellationToken cancellationToken = default);
+        Task<IV1NativeIexTradeSymbolGetApiResponse> V1NativeIexTradeSymbolGetAsync(string symbol, Option<DateTime> date = default, Option<string> timeStart = default, Option<int> limit = default, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Get Trades
         /// </summary>
         /// <remarks>
-        /// Streaming endpoint. Use &#x60;limit&#x60; to cap the number of trade records returned (default 100, max 10000).
+        /// Streams one UTC day. &#x60;time_start&#x60; may be a full timestamp (&#x60;2026-09-28T13:31:14.8560065Z&#x60;) or a time of day (&#x60;13:31:14.8560065Z&#x60;) when &#x60;date&#x60; is set. Events start at that instant, inclusive. Omit &#x60;limit&#x60; to stream through the end of the day.
         /// </remarks>
         /// <param name="symbol">The symbol identifier</param>
-        /// <param name="date">Date in format YYYY-MM-DD</param>
-        /// <param name="limit">Maximum number of records to return (1-10000, default 100) (optional, default to 100)</param>
+        /// <param name="date">UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. (optional)</param>
+        /// <param name="timeStart">Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. (optional)</param>
+        /// <param name="limit">Optional cap on the number of records (1-10000). Omit to stream through the end of the day. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="IV1NativeIexTradeSymbolGetApiResponse"/>?&gt;</returns>
-        Task<IV1NativeIexTradeSymbolGetApiResponse?> V1NativeIexTradeSymbolGetOrDefaultAsync(string symbol, DateTime date, Option<int> limit = default, System.Threading.CancellationToken cancellationToken = default);
+        Task<IV1NativeIexTradeSymbolGetApiResponse?> V1NativeIexTradeSymbolGetOrDefaultAsync(string symbol, Option<DateTime> date = default, Option<string> timeStart = default, Option<int> limit = default, System.Threading.CancellationToken cancellationToken = default);
     }
 
     /// <summary>
@@ -446,17 +458,21 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Api
             BearerTokenProvider = bearerTokenProvider;
         }
 
-        partial void FormatV1NativeIexAdminMessagesSymbolGet(ref string symbol, ref DateTime date, ref Option<int> limit);
+        partial void FormatV1NativeIexAdminMessagesSymbolGet(ref string symbol, ref Option<DateTime> date, ref Option<string> timeStart, ref Option<int> limit);
 
         /// <summary>
         /// Validates the request parameters
         /// </summary>
         /// <param name="symbol"></param>
+        /// <param name="timeStart"></param>
         /// <returns></returns>
-        private void ValidateV1NativeIexAdminMessagesSymbolGet(string symbol)
+        private void ValidateV1NativeIexAdminMessagesSymbolGet(string symbol, Option<string> timeStart)
         {
             if (symbol == null)
                 throw new ArgumentNullException(nameof(symbol));
+
+            if (timeStart.IsSet && timeStart.Value == null)
+                throw new ArgumentNullException(nameof(timeStart));
         }
 
         /// <summary>
@@ -465,11 +481,12 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Api
         /// <param name="apiResponseLocalVar"></param>
         /// <param name="symbol"></param>
         /// <param name="date"></param>
+        /// <param name="timeStart"></param>
         /// <param name="limit"></param>
-        private void AfterV1NativeIexAdminMessagesSymbolGetDefaultImplementation(IV1NativeIexAdminMessagesSymbolGetApiResponse apiResponseLocalVar, string symbol, DateTime date, Option<int> limit)
+        private void AfterV1NativeIexAdminMessagesSymbolGetDefaultImplementation(IV1NativeIexAdminMessagesSymbolGetApiResponse apiResponseLocalVar, string symbol, Option<DateTime> date, Option<string> timeStart, Option<int> limit)
         {
             bool suppressDefaultLog = false;
-            AfterV1NativeIexAdminMessagesSymbolGet(ref suppressDefaultLog, apiResponseLocalVar, symbol, date, limit);
+            AfterV1NativeIexAdminMessagesSymbolGet(ref suppressDefaultLog, apiResponseLocalVar, symbol, date, timeStart, limit);
             if (!suppressDefaultLog)
                 Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
         }
@@ -481,8 +498,9 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Api
         /// <param name="apiResponseLocalVar"></param>
         /// <param name="symbol"></param>
         /// <param name="date"></param>
+        /// <param name="timeStart"></param>
         /// <param name="limit"></param>
-        partial void AfterV1NativeIexAdminMessagesSymbolGet(ref bool suppressDefaultLog, IV1NativeIexAdminMessagesSymbolGetApiResponse apiResponseLocalVar, string symbol, DateTime date, Option<int> limit);
+        partial void AfterV1NativeIexAdminMessagesSymbolGet(ref bool suppressDefaultLog, IV1NativeIexAdminMessagesSymbolGetApiResponse apiResponseLocalVar, string symbol, Option<DateTime> date, Option<string> timeStart, Option<int> limit);
 
         /// <summary>
         /// Logs exceptions that occur while retrieving the server response
@@ -492,11 +510,12 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Api
         /// <param name="pathLocalVar"></param>
         /// <param name="symbol"></param>
         /// <param name="date"></param>
+        /// <param name="timeStart"></param>
         /// <param name="limit"></param>
-        private void OnErrorV1NativeIexAdminMessagesSymbolGetDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, string symbol, DateTime date, Option<int> limit)
+        private void OnErrorV1NativeIexAdminMessagesSymbolGetDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, string symbol, Option<DateTime> date, Option<string> timeStart, Option<int> limit)
         {
             bool suppressDefaultLogLocalVar = false;
-            OnErrorV1NativeIexAdminMessagesSymbolGet(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, symbol, date, limit);
+            OnErrorV1NativeIexAdminMessagesSymbolGet(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, symbol, date, timeStart, limit);
             if (!suppressDefaultLogLocalVar)
                 Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
         }
@@ -510,22 +529,24 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Api
         /// <param name="pathLocalVar"></param>
         /// <param name="symbol"></param>
         /// <param name="date"></param>
+        /// <param name="timeStart"></param>
         /// <param name="limit"></param>
-        partial void OnErrorV1NativeIexAdminMessagesSymbolGet(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, string symbol, DateTime date, Option<int> limit);
+        partial void OnErrorV1NativeIexAdminMessagesSymbolGet(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, string symbol, Option<DateTime> date, Option<string> timeStart, Option<int> limit);
 
         /// <summary>
-        /// Get Admin Messages Streaming endpoint. Use &#x60;limit&#x60; to cap the number of records returned (default 100, max 10000).
+        /// Get Admin Messages Streams one UTC day. &#x60;time_start&#x60; may be a full timestamp (&#x60;2026-09-28T13:31:14.8560065Z&#x60;) or a time of day (&#x60;13:31:14.8560065Z&#x60;) when &#x60;date&#x60; is set. Events start at that instant, inclusive. Omit &#x60;limit&#x60; to stream through the end of the day.
         /// </summary>
         /// <param name="symbol">The symbol identifier</param>
-        /// <param name="date">Date in format YYYY-MM-DD</param>
-        /// <param name="limit">Maximum number of records to return (1-10000, default 100) (optional, default to 100)</param>
+        /// <param name="date">UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. (optional)</param>
+        /// <param name="timeStart">Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. (optional)</param>
+        /// <param name="limit">Optional cap on the number of records (1-10000). Omit to stream through the end of the day. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="IV1NativeIexAdminMessagesSymbolGetApiResponse"/>&gt;</returns>
-        public async Task<IV1NativeIexAdminMessagesSymbolGetApiResponse?> V1NativeIexAdminMessagesSymbolGetOrDefaultAsync(string symbol, DateTime date, Option<int> limit = default, System.Threading.CancellationToken cancellationToken = default)
+        public async Task<IV1NativeIexAdminMessagesSymbolGetApiResponse?> V1NativeIexAdminMessagesSymbolGetOrDefaultAsync(string symbol, Option<DateTime> date = default, Option<string> timeStart = default, Option<int> limit = default, System.Threading.CancellationToken cancellationToken = default)
         {
             try
             {
-                return await V1NativeIexAdminMessagesSymbolGetAsync(symbol, date, limit, cancellationToken).ConfigureAwait(false);
+                return await V1NativeIexAdminMessagesSymbolGetAsync(symbol, date, timeStart, limit, cancellationToken).ConfigureAwait(false);
             }
             catch (Exception)
             {
@@ -534,23 +555,24 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Api
         }
 
         /// <summary>
-        /// Get Admin Messages Streaming endpoint. Use &#x60;limit&#x60; to cap the number of records returned (default 100, max 10000).
+        /// Get Admin Messages Streams one UTC day. &#x60;time_start&#x60; may be a full timestamp (&#x60;2026-09-28T13:31:14.8560065Z&#x60;) or a time of day (&#x60;13:31:14.8560065Z&#x60;) when &#x60;date&#x60; is set. Events start at that instant, inclusive. Omit &#x60;limit&#x60; to stream through the end of the day.
         /// </summary>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The symbol identifier</param>
-        /// <param name="date">Date in format YYYY-MM-DD</param>
-        /// <param name="limit">Maximum number of records to return (1-10000, default 100) (optional, default to 100)</param>
+        /// <param name="date">UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. (optional)</param>
+        /// <param name="timeStart">Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. (optional)</param>
+        /// <param name="limit">Optional cap on the number of records (1-10000). Omit to stream through the end of the day. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="IV1NativeIexAdminMessagesSymbolGetApiResponse"/>&gt;</returns>
-        public async Task<IV1NativeIexAdminMessagesSymbolGetApiResponse> V1NativeIexAdminMessagesSymbolGetAsync(string symbol, DateTime date, Option<int> limit = default, System.Threading.CancellationToken cancellationToken = default)
+        public async Task<IV1NativeIexAdminMessagesSymbolGetApiResponse> V1NativeIexAdminMessagesSymbolGetAsync(string symbol, Option<DateTime> date = default, Option<string> timeStart = default, Option<int> limit = default, System.Threading.CancellationToken cancellationToken = default)
         {
             UriBuilder uriBuilderLocalVar = new UriBuilder();
 
             try
             {
-                ValidateV1NativeIexAdminMessagesSymbolGet(symbol);
+                ValidateV1NativeIexAdminMessagesSymbolGet(symbol, timeStart);
 
-                FormatV1NativeIexAdminMessagesSymbolGet(ref symbol, ref date, ref limit);
+                FormatV1NativeIexAdminMessagesSymbolGet(ref symbol, ref date, ref timeStart, ref limit);
 
                 using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
                 {
@@ -564,7 +586,11 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Api
 
                     System.Collections.Specialized.NameValueCollection parseQueryStringLocalVar = System.Web.HttpUtility.ParseQueryString(string.Empty);
 
-                    parseQueryStringLocalVar["date"] = ClientUtils.ParameterToString(date);
+                    if (date.IsSet)
+                        parseQueryStringLocalVar["date"] = ClientUtils.ParameterToString(date.Value);
+
+                    if (timeStart.IsSet)
+                        parseQueryStringLocalVar["time_start"] = ClientUtils.ParameterToString(timeStart.Value);
 
                     if (limit.IsSet)
                         parseQueryStringLocalVar["limit"] = ClientUtils.ParameterToString(limit.Value);
@@ -610,7 +636,7 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Api
                             }
                         }
 
-                        AfterV1NativeIexAdminMessagesSymbolGetDefaultImplementation(apiResponseLocalVar, symbol, date, limit);
+                        AfterV1NativeIexAdminMessagesSymbolGetDefaultImplementation(apiResponseLocalVar, symbol, date, timeStart, limit);
 
                         Events.ExecuteOnV1NativeIexAdminMessagesSymbolGet(apiResponseLocalVar);
 
@@ -624,7 +650,7 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Api
             }
             catch(Exception e)
             {
-                OnErrorV1NativeIexAdminMessagesSymbolGetDefaultImplementation(e, "/v1/native/iex/admin/messages/{symbol}", uriBuilderLocalVar.Path, symbol, date, limit);
+                OnErrorV1NativeIexAdminMessagesSymbolGetDefaultImplementation(e, "/v1/native/iex/admin/messages/{symbol}", uriBuilderLocalVar.Path, symbol, date, timeStart, limit);
                 Events.ExecuteOnErrorV1NativeIexAdminMessagesSymbolGet(e);
                 throw;
             }
@@ -735,18 +761,30 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Api
             partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
         }
 
-        partial void FormatV1NativeIexAdminSystemEventGet(ref DateTime date, ref Option<int> limit);
+        partial void FormatV1NativeIexAdminSystemEventGet(ref Option<DateTime> date, ref Option<string> timeStart, ref Option<int> limit);
+
+        /// <summary>
+        /// Validates the request parameters
+        /// </summary>
+        /// <param name="timeStart"></param>
+        /// <returns></returns>
+        private void ValidateV1NativeIexAdminSystemEventGet(Option<string> timeStart)
+        {
+            if (timeStart.IsSet && timeStart.Value == null)
+                throw new ArgumentNullException(nameof(timeStart));
+        }
 
         /// <summary>
         /// Processes the server response
         /// </summary>
         /// <param name="apiResponseLocalVar"></param>
         /// <param name="date"></param>
+        /// <param name="timeStart"></param>
         /// <param name="limit"></param>
-        private void AfterV1NativeIexAdminSystemEventGetDefaultImplementation(IV1NativeIexAdminSystemEventGetApiResponse apiResponseLocalVar, DateTime date, Option<int> limit)
+        private void AfterV1NativeIexAdminSystemEventGetDefaultImplementation(IV1NativeIexAdminSystemEventGetApiResponse apiResponseLocalVar, Option<DateTime> date, Option<string> timeStart, Option<int> limit)
         {
             bool suppressDefaultLog = false;
-            AfterV1NativeIexAdminSystemEventGet(ref suppressDefaultLog, apiResponseLocalVar, date, limit);
+            AfterV1NativeIexAdminSystemEventGet(ref suppressDefaultLog, apiResponseLocalVar, date, timeStart, limit);
             if (!suppressDefaultLog)
                 Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
         }
@@ -757,8 +795,9 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Api
         /// <param name="suppressDefaultLog"></param>
         /// <param name="apiResponseLocalVar"></param>
         /// <param name="date"></param>
+        /// <param name="timeStart"></param>
         /// <param name="limit"></param>
-        partial void AfterV1NativeIexAdminSystemEventGet(ref bool suppressDefaultLog, IV1NativeIexAdminSystemEventGetApiResponse apiResponseLocalVar, DateTime date, Option<int> limit);
+        partial void AfterV1NativeIexAdminSystemEventGet(ref bool suppressDefaultLog, IV1NativeIexAdminSystemEventGetApiResponse apiResponseLocalVar, Option<DateTime> date, Option<string> timeStart, Option<int> limit);
 
         /// <summary>
         /// Logs exceptions that occur while retrieving the server response
@@ -767,11 +806,12 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Api
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
         /// <param name="date"></param>
+        /// <param name="timeStart"></param>
         /// <param name="limit"></param>
-        private void OnErrorV1NativeIexAdminSystemEventGetDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, DateTime date, Option<int> limit)
+        private void OnErrorV1NativeIexAdminSystemEventGetDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, Option<DateTime> date, Option<string> timeStart, Option<int> limit)
         {
             bool suppressDefaultLogLocalVar = false;
-            OnErrorV1NativeIexAdminSystemEventGet(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, date, limit);
+            OnErrorV1NativeIexAdminSystemEventGet(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, date, timeStart, limit);
             if (!suppressDefaultLogLocalVar)
                 Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
         }
@@ -784,21 +824,23 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Api
         /// <param name="pathFormatLocalVar"></param>
         /// <param name="pathLocalVar"></param>
         /// <param name="date"></param>
+        /// <param name="timeStart"></param>
         /// <param name="limit"></param>
-        partial void OnErrorV1NativeIexAdminSystemEventGet(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, DateTime date, Option<int> limit);
+        partial void OnErrorV1NativeIexAdminSystemEventGet(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, Option<DateTime> date, Option<string> timeStart, Option<int> limit);
 
         /// <summary>
-        /// Get System Events Streaming endpoint. Use &#x60;limit&#x60; to cap the number of records returned (default 100, max 10000).
+        /// Get System Events Streams one UTC day. &#x60;time_start&#x60; may be a full timestamp (&#x60;2026-09-28T13:31:14.8560065Z&#x60;) or a time of day (&#x60;13:31:14.8560065Z&#x60;) when &#x60;date&#x60; is set. Events start at that instant, inclusive. Omit &#x60;limit&#x60; to stream through the end of the day.
         /// </summary>
-        /// <param name="date">Date in format YYYY-MM-DD</param>
-        /// <param name="limit">Maximum number of records to return (1-10000, default 100) (optional, default to 100)</param>
+        /// <param name="date">UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. (optional)</param>
+        /// <param name="timeStart">Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. (optional)</param>
+        /// <param name="limit">Optional cap on the number of records (1-10000). Omit to stream through the end of the day. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="IV1NativeIexAdminSystemEventGetApiResponse"/>&gt;</returns>
-        public async Task<IV1NativeIexAdminSystemEventGetApiResponse?> V1NativeIexAdminSystemEventGetOrDefaultAsync(DateTime date, Option<int> limit = default, System.Threading.CancellationToken cancellationToken = default)
+        public async Task<IV1NativeIexAdminSystemEventGetApiResponse?> V1NativeIexAdminSystemEventGetOrDefaultAsync(Option<DateTime> date = default, Option<string> timeStart = default, Option<int> limit = default, System.Threading.CancellationToken cancellationToken = default)
         {
             try
             {
-                return await V1NativeIexAdminSystemEventGetAsync(date, limit, cancellationToken).ConfigureAwait(false);
+                return await V1NativeIexAdminSystemEventGetAsync(date, timeStart, limit, cancellationToken).ConfigureAwait(false);
             }
             catch (Exception)
             {
@@ -807,20 +849,23 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Api
         }
 
         /// <summary>
-        /// Get System Events Streaming endpoint. Use &#x60;limit&#x60; to cap the number of records returned (default 100, max 10000).
+        /// Get System Events Streams one UTC day. &#x60;time_start&#x60; may be a full timestamp (&#x60;2026-09-28T13:31:14.8560065Z&#x60;) or a time of day (&#x60;13:31:14.8560065Z&#x60;) when &#x60;date&#x60; is set. Events start at that instant, inclusive. Omit &#x60;limit&#x60; to stream through the end of the day.
         /// </summary>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        /// <param name="date">Date in format YYYY-MM-DD</param>
-        /// <param name="limit">Maximum number of records to return (1-10000, default 100) (optional, default to 100)</param>
+        /// <param name="date">UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. (optional)</param>
+        /// <param name="timeStart">Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. (optional)</param>
+        /// <param name="limit">Optional cap on the number of records (1-10000). Omit to stream through the end of the day. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="IV1NativeIexAdminSystemEventGetApiResponse"/>&gt;</returns>
-        public async Task<IV1NativeIexAdminSystemEventGetApiResponse> V1NativeIexAdminSystemEventGetAsync(DateTime date, Option<int> limit = default, System.Threading.CancellationToken cancellationToken = default)
+        public async Task<IV1NativeIexAdminSystemEventGetApiResponse> V1NativeIexAdminSystemEventGetAsync(Option<DateTime> date = default, Option<string> timeStart = default, Option<int> limit = default, System.Threading.CancellationToken cancellationToken = default)
         {
             UriBuilder uriBuilderLocalVar = new UriBuilder();
 
             try
             {
-                FormatV1NativeIexAdminSystemEventGet(ref date, ref limit);
+                ValidateV1NativeIexAdminSystemEventGet(timeStart);
+
+                FormatV1NativeIexAdminSystemEventGet(ref date, ref timeStart, ref limit);
 
                 using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
                 {
@@ -833,7 +878,11 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Api
 
                     System.Collections.Specialized.NameValueCollection parseQueryStringLocalVar = System.Web.HttpUtility.ParseQueryString(string.Empty);
 
-                    parseQueryStringLocalVar["date"] = ClientUtils.ParameterToString(date);
+                    if (date.IsSet)
+                        parseQueryStringLocalVar["date"] = ClientUtils.ParameterToString(date.Value);
+
+                    if (timeStart.IsSet)
+                        parseQueryStringLocalVar["time_start"] = ClientUtils.ParameterToString(timeStart.Value);
 
                     if (limit.IsSet)
                         parseQueryStringLocalVar["limit"] = ClientUtils.ParameterToString(limit.Value);
@@ -879,7 +928,7 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Api
                             }
                         }
 
-                        AfterV1NativeIexAdminSystemEventGetDefaultImplementation(apiResponseLocalVar, date, limit);
+                        AfterV1NativeIexAdminSystemEventGetDefaultImplementation(apiResponseLocalVar, date, timeStart, limit);
 
                         Events.ExecuteOnV1NativeIexAdminSystemEventGet(apiResponseLocalVar);
 
@@ -893,7 +942,7 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Api
             }
             catch(Exception e)
             {
-                OnErrorV1NativeIexAdminSystemEventGetDefaultImplementation(e, "/v1/native/iex/admin/system-event", uriBuilderLocalVar.Path, date, limit);
+                OnErrorV1NativeIexAdminSystemEventGetDefaultImplementation(e, "/v1/native/iex/admin/system-event", uriBuilderLocalVar.Path, date, timeStart, limit);
                 Events.ExecuteOnErrorV1NativeIexAdminSystemEventGet(e);
                 throw;
             }
@@ -1004,17 +1053,21 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Api
             partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
         }
 
-        partial void FormatV1NativeIexLevel1QuoteSymbolGet(ref string symbol, ref DateTime date, ref Option<int> limit);
+        partial void FormatV1NativeIexLevel1QuoteSymbolGet(ref string symbol, ref Option<DateTime> date, ref Option<string> timeStart, ref Option<int> limit);
 
         /// <summary>
         /// Validates the request parameters
         /// </summary>
         /// <param name="symbol"></param>
+        /// <param name="timeStart"></param>
         /// <returns></returns>
-        private void ValidateV1NativeIexLevel1QuoteSymbolGet(string symbol)
+        private void ValidateV1NativeIexLevel1QuoteSymbolGet(string symbol, Option<string> timeStart)
         {
             if (symbol == null)
                 throw new ArgumentNullException(nameof(symbol));
+
+            if (timeStart.IsSet && timeStart.Value == null)
+                throw new ArgumentNullException(nameof(timeStart));
         }
 
         /// <summary>
@@ -1023,11 +1076,12 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Api
         /// <param name="apiResponseLocalVar"></param>
         /// <param name="symbol"></param>
         /// <param name="date"></param>
+        /// <param name="timeStart"></param>
         /// <param name="limit"></param>
-        private void AfterV1NativeIexLevel1QuoteSymbolGetDefaultImplementation(IV1NativeIexLevel1QuoteSymbolGetApiResponse apiResponseLocalVar, string symbol, DateTime date, Option<int> limit)
+        private void AfterV1NativeIexLevel1QuoteSymbolGetDefaultImplementation(IV1NativeIexLevel1QuoteSymbolGetApiResponse apiResponseLocalVar, string symbol, Option<DateTime> date, Option<string> timeStart, Option<int> limit)
         {
             bool suppressDefaultLog = false;
-            AfterV1NativeIexLevel1QuoteSymbolGet(ref suppressDefaultLog, apiResponseLocalVar, symbol, date, limit);
+            AfterV1NativeIexLevel1QuoteSymbolGet(ref suppressDefaultLog, apiResponseLocalVar, symbol, date, timeStart, limit);
             if (!suppressDefaultLog)
                 Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
         }
@@ -1039,8 +1093,9 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Api
         /// <param name="apiResponseLocalVar"></param>
         /// <param name="symbol"></param>
         /// <param name="date"></param>
+        /// <param name="timeStart"></param>
         /// <param name="limit"></param>
-        partial void AfterV1NativeIexLevel1QuoteSymbolGet(ref bool suppressDefaultLog, IV1NativeIexLevel1QuoteSymbolGetApiResponse apiResponseLocalVar, string symbol, DateTime date, Option<int> limit);
+        partial void AfterV1NativeIexLevel1QuoteSymbolGet(ref bool suppressDefaultLog, IV1NativeIexLevel1QuoteSymbolGetApiResponse apiResponseLocalVar, string symbol, Option<DateTime> date, Option<string> timeStart, Option<int> limit);
 
         /// <summary>
         /// Logs exceptions that occur while retrieving the server response
@@ -1050,11 +1105,12 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Api
         /// <param name="pathLocalVar"></param>
         /// <param name="symbol"></param>
         /// <param name="date"></param>
+        /// <param name="timeStart"></param>
         /// <param name="limit"></param>
-        private void OnErrorV1NativeIexLevel1QuoteSymbolGetDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, string symbol, DateTime date, Option<int> limit)
+        private void OnErrorV1NativeIexLevel1QuoteSymbolGetDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, string symbol, Option<DateTime> date, Option<string> timeStart, Option<int> limit)
         {
             bool suppressDefaultLogLocalVar = false;
-            OnErrorV1NativeIexLevel1QuoteSymbolGet(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, symbol, date, limit);
+            OnErrorV1NativeIexLevel1QuoteSymbolGet(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, symbol, date, timeStart, limit);
             if (!suppressDefaultLogLocalVar)
                 Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
         }
@@ -1068,22 +1124,24 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Api
         /// <param name="pathLocalVar"></param>
         /// <param name="symbol"></param>
         /// <param name="date"></param>
+        /// <param name="timeStart"></param>
         /// <param name="limit"></param>
-        partial void OnErrorV1NativeIexLevel1QuoteSymbolGet(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, string symbol, DateTime date, Option<int> limit);
+        partial void OnErrorV1NativeIexLevel1QuoteSymbolGet(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, string symbol, Option<DateTime> date, Option<string> timeStart, Option<int> limit);
 
         /// <summary>
-        /// Get Level-1 Quotes Streaming endpoint. Use &#x60;limit&#x60; to cap the number of records returned (default 100, max 10000).
+        /// Get Level-1 Quotes Streams one UTC day. &#x60;time_start&#x60; may be a full timestamp (&#x60;2026-09-28T13:31:14.8560065Z&#x60;) or a time of day (&#x60;13:31:14.8560065Z&#x60;) when &#x60;date&#x60; is set. Events start at that instant, inclusive. Omit &#x60;limit&#x60; to stream through the end of the day.
         /// </summary>
         /// <param name="symbol">The symbol identifier</param>
-        /// <param name="date">Date in format YYYY-MM-DD</param>
-        /// <param name="limit">Maximum number of records to return (1-10000, default 100) (optional, default to 100)</param>
+        /// <param name="date">UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. (optional)</param>
+        /// <param name="timeStart">Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. (optional)</param>
+        /// <param name="limit">Optional cap on the number of records (1-10000). Omit to stream through the end of the day. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="IV1NativeIexLevel1QuoteSymbolGetApiResponse"/>&gt;</returns>
-        public async Task<IV1NativeIexLevel1QuoteSymbolGetApiResponse?> V1NativeIexLevel1QuoteSymbolGetOrDefaultAsync(string symbol, DateTime date, Option<int> limit = default, System.Threading.CancellationToken cancellationToken = default)
+        public async Task<IV1NativeIexLevel1QuoteSymbolGetApiResponse?> V1NativeIexLevel1QuoteSymbolGetOrDefaultAsync(string symbol, Option<DateTime> date = default, Option<string> timeStart = default, Option<int> limit = default, System.Threading.CancellationToken cancellationToken = default)
         {
             try
             {
-                return await V1NativeIexLevel1QuoteSymbolGetAsync(symbol, date, limit, cancellationToken).ConfigureAwait(false);
+                return await V1NativeIexLevel1QuoteSymbolGetAsync(symbol, date, timeStart, limit, cancellationToken).ConfigureAwait(false);
             }
             catch (Exception)
             {
@@ -1092,23 +1150,24 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Api
         }
 
         /// <summary>
-        /// Get Level-1 Quotes Streaming endpoint. Use &#x60;limit&#x60; to cap the number of records returned (default 100, max 10000).
+        /// Get Level-1 Quotes Streams one UTC day. &#x60;time_start&#x60; may be a full timestamp (&#x60;2026-09-28T13:31:14.8560065Z&#x60;) or a time of day (&#x60;13:31:14.8560065Z&#x60;) when &#x60;date&#x60; is set. Events start at that instant, inclusive. Omit &#x60;limit&#x60; to stream through the end of the day.
         /// </summary>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The symbol identifier</param>
-        /// <param name="date">Date in format YYYY-MM-DD</param>
-        /// <param name="limit">Maximum number of records to return (1-10000, default 100) (optional, default to 100)</param>
+        /// <param name="date">UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. (optional)</param>
+        /// <param name="timeStart">Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. (optional)</param>
+        /// <param name="limit">Optional cap on the number of records (1-10000). Omit to stream through the end of the day. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="IV1NativeIexLevel1QuoteSymbolGetApiResponse"/>&gt;</returns>
-        public async Task<IV1NativeIexLevel1QuoteSymbolGetApiResponse> V1NativeIexLevel1QuoteSymbolGetAsync(string symbol, DateTime date, Option<int> limit = default, System.Threading.CancellationToken cancellationToken = default)
+        public async Task<IV1NativeIexLevel1QuoteSymbolGetApiResponse> V1NativeIexLevel1QuoteSymbolGetAsync(string symbol, Option<DateTime> date = default, Option<string> timeStart = default, Option<int> limit = default, System.Threading.CancellationToken cancellationToken = default)
         {
             UriBuilder uriBuilderLocalVar = new UriBuilder();
 
             try
             {
-                ValidateV1NativeIexLevel1QuoteSymbolGet(symbol);
+                ValidateV1NativeIexLevel1QuoteSymbolGet(symbol, timeStart);
 
-                FormatV1NativeIexLevel1QuoteSymbolGet(ref symbol, ref date, ref limit);
+                FormatV1NativeIexLevel1QuoteSymbolGet(ref symbol, ref date, ref timeStart, ref limit);
 
                 using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
                 {
@@ -1122,7 +1181,11 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Api
 
                     System.Collections.Specialized.NameValueCollection parseQueryStringLocalVar = System.Web.HttpUtility.ParseQueryString(string.Empty);
 
-                    parseQueryStringLocalVar["date"] = ClientUtils.ParameterToString(date);
+                    if (date.IsSet)
+                        parseQueryStringLocalVar["date"] = ClientUtils.ParameterToString(date.Value);
+
+                    if (timeStart.IsSet)
+                        parseQueryStringLocalVar["time_start"] = ClientUtils.ParameterToString(timeStart.Value);
 
                     if (limit.IsSet)
                         parseQueryStringLocalVar["limit"] = ClientUtils.ParameterToString(limit.Value);
@@ -1168,7 +1231,7 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Api
                             }
                         }
 
-                        AfterV1NativeIexLevel1QuoteSymbolGetDefaultImplementation(apiResponseLocalVar, symbol, date, limit);
+                        AfterV1NativeIexLevel1QuoteSymbolGetDefaultImplementation(apiResponseLocalVar, symbol, date, timeStart, limit);
 
                         Events.ExecuteOnV1NativeIexLevel1QuoteSymbolGet(apiResponseLocalVar);
 
@@ -1182,7 +1245,7 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Api
             }
             catch(Exception e)
             {
-                OnErrorV1NativeIexLevel1QuoteSymbolGetDefaultImplementation(e, "/v1/native/iex/level1-quote/{symbol}", uriBuilderLocalVar.Path, symbol, date, limit);
+                OnErrorV1NativeIexLevel1QuoteSymbolGetDefaultImplementation(e, "/v1/native/iex/level1-quote/{symbol}", uriBuilderLocalVar.Path, symbol, date, timeStart, limit);
                 Events.ExecuteOnErrorV1NativeIexLevel1QuoteSymbolGet(e);
                 throw;
             }
@@ -1293,17 +1356,21 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Api
             partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
         }
 
-        partial void FormatV1NativeIexLevel2PriceLevelUpdateSymbolGet(ref string symbol, ref DateTime date, ref Option<int> limit);
+        partial void FormatV1NativeIexLevel2PriceLevelUpdateSymbolGet(ref string symbol, ref Option<DateTime> date, ref Option<string> timeStart, ref Option<int> limit);
 
         /// <summary>
         /// Validates the request parameters
         /// </summary>
         /// <param name="symbol"></param>
+        /// <param name="timeStart"></param>
         /// <returns></returns>
-        private void ValidateV1NativeIexLevel2PriceLevelUpdateSymbolGet(string symbol)
+        private void ValidateV1NativeIexLevel2PriceLevelUpdateSymbolGet(string symbol, Option<string> timeStart)
         {
             if (symbol == null)
                 throw new ArgumentNullException(nameof(symbol));
+
+            if (timeStart.IsSet && timeStart.Value == null)
+                throw new ArgumentNullException(nameof(timeStart));
         }
 
         /// <summary>
@@ -1312,11 +1379,12 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Api
         /// <param name="apiResponseLocalVar"></param>
         /// <param name="symbol"></param>
         /// <param name="date"></param>
+        /// <param name="timeStart"></param>
         /// <param name="limit"></param>
-        private void AfterV1NativeIexLevel2PriceLevelUpdateSymbolGetDefaultImplementation(IV1NativeIexLevel2PriceLevelUpdateSymbolGetApiResponse apiResponseLocalVar, string symbol, DateTime date, Option<int> limit)
+        private void AfterV1NativeIexLevel2PriceLevelUpdateSymbolGetDefaultImplementation(IV1NativeIexLevel2PriceLevelUpdateSymbolGetApiResponse apiResponseLocalVar, string symbol, Option<DateTime> date, Option<string> timeStart, Option<int> limit)
         {
             bool suppressDefaultLog = false;
-            AfterV1NativeIexLevel2PriceLevelUpdateSymbolGet(ref suppressDefaultLog, apiResponseLocalVar, symbol, date, limit);
+            AfterV1NativeIexLevel2PriceLevelUpdateSymbolGet(ref suppressDefaultLog, apiResponseLocalVar, symbol, date, timeStart, limit);
             if (!suppressDefaultLog)
                 Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
         }
@@ -1328,8 +1396,9 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Api
         /// <param name="apiResponseLocalVar"></param>
         /// <param name="symbol"></param>
         /// <param name="date"></param>
+        /// <param name="timeStart"></param>
         /// <param name="limit"></param>
-        partial void AfterV1NativeIexLevel2PriceLevelUpdateSymbolGet(ref bool suppressDefaultLog, IV1NativeIexLevel2PriceLevelUpdateSymbolGetApiResponse apiResponseLocalVar, string symbol, DateTime date, Option<int> limit);
+        partial void AfterV1NativeIexLevel2PriceLevelUpdateSymbolGet(ref bool suppressDefaultLog, IV1NativeIexLevel2PriceLevelUpdateSymbolGetApiResponse apiResponseLocalVar, string symbol, Option<DateTime> date, Option<string> timeStart, Option<int> limit);
 
         /// <summary>
         /// Logs exceptions that occur while retrieving the server response
@@ -1339,11 +1408,12 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Api
         /// <param name="pathLocalVar"></param>
         /// <param name="symbol"></param>
         /// <param name="date"></param>
+        /// <param name="timeStart"></param>
         /// <param name="limit"></param>
-        private void OnErrorV1NativeIexLevel2PriceLevelUpdateSymbolGetDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, string symbol, DateTime date, Option<int> limit)
+        private void OnErrorV1NativeIexLevel2PriceLevelUpdateSymbolGetDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, string symbol, Option<DateTime> date, Option<string> timeStart, Option<int> limit)
         {
             bool suppressDefaultLogLocalVar = false;
-            OnErrorV1NativeIexLevel2PriceLevelUpdateSymbolGet(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, symbol, date, limit);
+            OnErrorV1NativeIexLevel2PriceLevelUpdateSymbolGet(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, symbol, date, timeStart, limit);
             if (!suppressDefaultLogLocalVar)
                 Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
         }
@@ -1357,22 +1427,24 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Api
         /// <param name="pathLocalVar"></param>
         /// <param name="symbol"></param>
         /// <param name="date"></param>
+        /// <param name="timeStart"></param>
         /// <param name="limit"></param>
-        partial void OnErrorV1NativeIexLevel2PriceLevelUpdateSymbolGet(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, string symbol, DateTime date, Option<int> limit);
+        partial void OnErrorV1NativeIexLevel2PriceLevelUpdateSymbolGet(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, string symbol, Option<DateTime> date, Option<string> timeStart, Option<int> limit);
 
         /// <summary>
-        /// Get Level-2 Price Level Book Streaming endpoint. Use &#x60;limit&#x60; to cap the number of records returned (default 100, max 10000).
+        /// Get Level-2 Price Level Book Streams one UTC day. &#x60;time_start&#x60; may be a full timestamp (&#x60;2026-09-28T13:31:14.8560065Z&#x60;) or a time of day (&#x60;13:31:14.8560065Z&#x60;) when &#x60;date&#x60; is set. Events start at that instant, inclusive. Omit &#x60;limit&#x60; to stream through the end of the day.
         /// </summary>
         /// <param name="symbol">The symbol identifier</param>
-        /// <param name="date">Date in format YYYY-MM-DD</param>
-        /// <param name="limit">Maximum number of records to return (1-10000, default 100) (optional, default to 100)</param>
+        /// <param name="date">UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. (optional)</param>
+        /// <param name="timeStart">Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. (optional)</param>
+        /// <param name="limit">Optional cap on the number of records (1-10000). Omit to stream through the end of the day. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="IV1NativeIexLevel2PriceLevelUpdateSymbolGetApiResponse"/>&gt;</returns>
-        public async Task<IV1NativeIexLevel2PriceLevelUpdateSymbolGetApiResponse?> V1NativeIexLevel2PriceLevelUpdateSymbolGetOrDefaultAsync(string symbol, DateTime date, Option<int> limit = default, System.Threading.CancellationToken cancellationToken = default)
+        public async Task<IV1NativeIexLevel2PriceLevelUpdateSymbolGetApiResponse?> V1NativeIexLevel2PriceLevelUpdateSymbolGetOrDefaultAsync(string symbol, Option<DateTime> date = default, Option<string> timeStart = default, Option<int> limit = default, System.Threading.CancellationToken cancellationToken = default)
         {
             try
             {
-                return await V1NativeIexLevel2PriceLevelUpdateSymbolGetAsync(symbol, date, limit, cancellationToken).ConfigureAwait(false);
+                return await V1NativeIexLevel2PriceLevelUpdateSymbolGetAsync(symbol, date, timeStart, limit, cancellationToken).ConfigureAwait(false);
             }
             catch (Exception)
             {
@@ -1381,23 +1453,24 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Api
         }
 
         /// <summary>
-        /// Get Level-2 Price Level Book Streaming endpoint. Use &#x60;limit&#x60; to cap the number of records returned (default 100, max 10000).
+        /// Get Level-2 Price Level Book Streams one UTC day. &#x60;time_start&#x60; may be a full timestamp (&#x60;2026-09-28T13:31:14.8560065Z&#x60;) or a time of day (&#x60;13:31:14.8560065Z&#x60;) when &#x60;date&#x60; is set. Events start at that instant, inclusive. Omit &#x60;limit&#x60; to stream through the end of the day.
         /// </summary>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The symbol identifier</param>
-        /// <param name="date">Date in format YYYY-MM-DD</param>
-        /// <param name="limit">Maximum number of records to return (1-10000, default 100) (optional, default to 100)</param>
+        /// <param name="date">UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. (optional)</param>
+        /// <param name="timeStart">Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. (optional)</param>
+        /// <param name="limit">Optional cap on the number of records (1-10000). Omit to stream through the end of the day. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="IV1NativeIexLevel2PriceLevelUpdateSymbolGetApiResponse"/>&gt;</returns>
-        public async Task<IV1NativeIexLevel2PriceLevelUpdateSymbolGetApiResponse> V1NativeIexLevel2PriceLevelUpdateSymbolGetAsync(string symbol, DateTime date, Option<int> limit = default, System.Threading.CancellationToken cancellationToken = default)
+        public async Task<IV1NativeIexLevel2PriceLevelUpdateSymbolGetApiResponse> V1NativeIexLevel2PriceLevelUpdateSymbolGetAsync(string symbol, Option<DateTime> date = default, Option<string> timeStart = default, Option<int> limit = default, System.Threading.CancellationToken cancellationToken = default)
         {
             UriBuilder uriBuilderLocalVar = new UriBuilder();
 
             try
             {
-                ValidateV1NativeIexLevel2PriceLevelUpdateSymbolGet(symbol);
+                ValidateV1NativeIexLevel2PriceLevelUpdateSymbolGet(symbol, timeStart);
 
-                FormatV1NativeIexLevel2PriceLevelUpdateSymbolGet(ref symbol, ref date, ref limit);
+                FormatV1NativeIexLevel2PriceLevelUpdateSymbolGet(ref symbol, ref date, ref timeStart, ref limit);
 
                 using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
                 {
@@ -1411,7 +1484,11 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Api
 
                     System.Collections.Specialized.NameValueCollection parseQueryStringLocalVar = System.Web.HttpUtility.ParseQueryString(string.Empty);
 
-                    parseQueryStringLocalVar["date"] = ClientUtils.ParameterToString(date);
+                    if (date.IsSet)
+                        parseQueryStringLocalVar["date"] = ClientUtils.ParameterToString(date.Value);
+
+                    if (timeStart.IsSet)
+                        parseQueryStringLocalVar["time_start"] = ClientUtils.ParameterToString(timeStart.Value);
 
                     if (limit.IsSet)
                         parseQueryStringLocalVar["limit"] = ClientUtils.ParameterToString(limit.Value);
@@ -1457,7 +1534,7 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Api
                             }
                         }
 
-                        AfterV1NativeIexLevel2PriceLevelUpdateSymbolGetDefaultImplementation(apiResponseLocalVar, symbol, date, limit);
+                        AfterV1NativeIexLevel2PriceLevelUpdateSymbolGetDefaultImplementation(apiResponseLocalVar, symbol, date, timeStart, limit);
 
                         Events.ExecuteOnV1NativeIexLevel2PriceLevelUpdateSymbolGet(apiResponseLocalVar);
 
@@ -1471,7 +1548,7 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Api
             }
             catch(Exception e)
             {
-                OnErrorV1NativeIexLevel2PriceLevelUpdateSymbolGetDefaultImplementation(e, "/v1/native/iex/level2-price-level-update/{symbol}", uriBuilderLocalVar.Path, symbol, date, limit);
+                OnErrorV1NativeIexLevel2PriceLevelUpdateSymbolGetDefaultImplementation(e, "/v1/native/iex/level2-price-level-update/{symbol}", uriBuilderLocalVar.Path, symbol, date, timeStart, limit);
                 Events.ExecuteOnErrorV1NativeIexLevel2PriceLevelUpdateSymbolGet(e);
                 throw;
             }
@@ -1582,17 +1659,21 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Api
             partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
         }
 
-        partial void FormatV1NativeIexLevel3OrderBookSymbolGet(ref string symbol, ref DateTime date, ref Option<int> limit);
+        partial void FormatV1NativeIexLevel3OrderBookSymbolGet(ref string symbol, ref Option<DateTime> date, ref Option<string> timeStart, ref Option<int> limit);
 
         /// <summary>
         /// Validates the request parameters
         /// </summary>
         /// <param name="symbol"></param>
+        /// <param name="timeStart"></param>
         /// <returns></returns>
-        private void ValidateV1NativeIexLevel3OrderBookSymbolGet(string symbol)
+        private void ValidateV1NativeIexLevel3OrderBookSymbolGet(string symbol, Option<string> timeStart)
         {
             if (symbol == null)
                 throw new ArgumentNullException(nameof(symbol));
+
+            if (timeStart.IsSet && timeStart.Value == null)
+                throw new ArgumentNullException(nameof(timeStart));
         }
 
         /// <summary>
@@ -1601,11 +1682,12 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Api
         /// <param name="apiResponseLocalVar"></param>
         /// <param name="symbol"></param>
         /// <param name="date"></param>
+        /// <param name="timeStart"></param>
         /// <param name="limit"></param>
-        private void AfterV1NativeIexLevel3OrderBookSymbolGetDefaultImplementation(IV1NativeIexLevel3OrderBookSymbolGetApiResponse apiResponseLocalVar, string symbol, DateTime date, Option<int> limit)
+        private void AfterV1NativeIexLevel3OrderBookSymbolGetDefaultImplementation(IV1NativeIexLevel3OrderBookSymbolGetApiResponse apiResponseLocalVar, string symbol, Option<DateTime> date, Option<string> timeStart, Option<int> limit)
         {
             bool suppressDefaultLog = false;
-            AfterV1NativeIexLevel3OrderBookSymbolGet(ref suppressDefaultLog, apiResponseLocalVar, symbol, date, limit);
+            AfterV1NativeIexLevel3OrderBookSymbolGet(ref suppressDefaultLog, apiResponseLocalVar, symbol, date, timeStart, limit);
             if (!suppressDefaultLog)
                 Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
         }
@@ -1617,8 +1699,9 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Api
         /// <param name="apiResponseLocalVar"></param>
         /// <param name="symbol"></param>
         /// <param name="date"></param>
+        /// <param name="timeStart"></param>
         /// <param name="limit"></param>
-        partial void AfterV1NativeIexLevel3OrderBookSymbolGet(ref bool suppressDefaultLog, IV1NativeIexLevel3OrderBookSymbolGetApiResponse apiResponseLocalVar, string symbol, DateTime date, Option<int> limit);
+        partial void AfterV1NativeIexLevel3OrderBookSymbolGet(ref bool suppressDefaultLog, IV1NativeIexLevel3OrderBookSymbolGetApiResponse apiResponseLocalVar, string symbol, Option<DateTime> date, Option<string> timeStart, Option<int> limit);
 
         /// <summary>
         /// Logs exceptions that occur while retrieving the server response
@@ -1628,11 +1711,12 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Api
         /// <param name="pathLocalVar"></param>
         /// <param name="symbol"></param>
         /// <param name="date"></param>
+        /// <param name="timeStart"></param>
         /// <param name="limit"></param>
-        private void OnErrorV1NativeIexLevel3OrderBookSymbolGetDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, string symbol, DateTime date, Option<int> limit)
+        private void OnErrorV1NativeIexLevel3OrderBookSymbolGetDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, string symbol, Option<DateTime> date, Option<string> timeStart, Option<int> limit)
         {
             bool suppressDefaultLogLocalVar = false;
-            OnErrorV1NativeIexLevel3OrderBookSymbolGet(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, symbol, date, limit);
+            OnErrorV1NativeIexLevel3OrderBookSymbolGet(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, symbol, date, timeStart, limit);
             if (!suppressDefaultLogLocalVar)
                 Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
         }
@@ -1646,22 +1730,24 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Api
         /// <param name="pathLocalVar"></param>
         /// <param name="symbol"></param>
         /// <param name="date"></param>
+        /// <param name="timeStart"></param>
         /// <param name="limit"></param>
-        partial void OnErrorV1NativeIexLevel3OrderBookSymbolGet(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, string symbol, DateTime date, Option<int> limit);
+        partial void OnErrorV1NativeIexLevel3OrderBookSymbolGet(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, string symbol, Option<DateTime> date, Option<string> timeStart, Option<int> limit);
 
         /// <summary>
-        /// Get Level-3 Order Book Streaming endpoint. Use &#x60;limit&#x60; to cap the number of records returned (default 100, max 10000).
+        /// Get Level-3 Order Book Streams one UTC day. &#x60;time_start&#x60; may be a full timestamp (&#x60;2026-09-28T13:31:14.8560065Z&#x60;) or a time of day (&#x60;13:31:14.8560065Z&#x60;) when &#x60;date&#x60; is set. Events start at that instant, inclusive. Omit &#x60;limit&#x60; to stream through the end of the day.
         /// </summary>
         /// <param name="symbol">The symbol identifier</param>
-        /// <param name="date">Date in format YYYY-MM-DD</param>
-        /// <param name="limit">Maximum number of records to return (1-10000, default 100) (optional, default to 100)</param>
+        /// <param name="date">UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. (optional)</param>
+        /// <param name="timeStart">Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. (optional)</param>
+        /// <param name="limit">Optional cap on the number of records (1-10000). Omit to stream through the end of the day. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="IV1NativeIexLevel3OrderBookSymbolGetApiResponse"/>&gt;</returns>
-        public async Task<IV1NativeIexLevel3OrderBookSymbolGetApiResponse?> V1NativeIexLevel3OrderBookSymbolGetOrDefaultAsync(string symbol, DateTime date, Option<int> limit = default, System.Threading.CancellationToken cancellationToken = default)
+        public async Task<IV1NativeIexLevel3OrderBookSymbolGetApiResponse?> V1NativeIexLevel3OrderBookSymbolGetOrDefaultAsync(string symbol, Option<DateTime> date = default, Option<string> timeStart = default, Option<int> limit = default, System.Threading.CancellationToken cancellationToken = default)
         {
             try
             {
-                return await V1NativeIexLevel3OrderBookSymbolGetAsync(symbol, date, limit, cancellationToken).ConfigureAwait(false);
+                return await V1NativeIexLevel3OrderBookSymbolGetAsync(symbol, date, timeStart, limit, cancellationToken).ConfigureAwait(false);
             }
             catch (Exception)
             {
@@ -1670,23 +1756,24 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Api
         }
 
         /// <summary>
-        /// Get Level-3 Order Book Streaming endpoint. Use &#x60;limit&#x60; to cap the number of records returned (default 100, max 10000).
+        /// Get Level-3 Order Book Streams one UTC day. &#x60;time_start&#x60; may be a full timestamp (&#x60;2026-09-28T13:31:14.8560065Z&#x60;) or a time of day (&#x60;13:31:14.8560065Z&#x60;) when &#x60;date&#x60; is set. Events start at that instant, inclusive. Omit &#x60;limit&#x60; to stream through the end of the day.
         /// </summary>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The symbol identifier</param>
-        /// <param name="date">Date in format YYYY-MM-DD</param>
-        /// <param name="limit">Maximum number of records to return (1-10000, default 100) (optional, default to 100)</param>
+        /// <param name="date">UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. (optional)</param>
+        /// <param name="timeStart">Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. (optional)</param>
+        /// <param name="limit">Optional cap on the number of records (1-10000). Omit to stream through the end of the day. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="IV1NativeIexLevel3OrderBookSymbolGetApiResponse"/>&gt;</returns>
-        public async Task<IV1NativeIexLevel3OrderBookSymbolGetApiResponse> V1NativeIexLevel3OrderBookSymbolGetAsync(string symbol, DateTime date, Option<int> limit = default, System.Threading.CancellationToken cancellationToken = default)
+        public async Task<IV1NativeIexLevel3OrderBookSymbolGetApiResponse> V1NativeIexLevel3OrderBookSymbolGetAsync(string symbol, Option<DateTime> date = default, Option<string> timeStart = default, Option<int> limit = default, System.Threading.CancellationToken cancellationToken = default)
         {
             UriBuilder uriBuilderLocalVar = new UriBuilder();
 
             try
             {
-                ValidateV1NativeIexLevel3OrderBookSymbolGet(symbol);
+                ValidateV1NativeIexLevel3OrderBookSymbolGet(symbol, timeStart);
 
-                FormatV1NativeIexLevel3OrderBookSymbolGet(ref symbol, ref date, ref limit);
+                FormatV1NativeIexLevel3OrderBookSymbolGet(ref symbol, ref date, ref timeStart, ref limit);
 
                 using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
                 {
@@ -1700,7 +1787,11 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Api
 
                     System.Collections.Specialized.NameValueCollection parseQueryStringLocalVar = System.Web.HttpUtility.ParseQueryString(string.Empty);
 
-                    parseQueryStringLocalVar["date"] = ClientUtils.ParameterToString(date);
+                    if (date.IsSet)
+                        parseQueryStringLocalVar["date"] = ClientUtils.ParameterToString(date.Value);
+
+                    if (timeStart.IsSet)
+                        parseQueryStringLocalVar["time_start"] = ClientUtils.ParameterToString(timeStart.Value);
 
                     if (limit.IsSet)
                         parseQueryStringLocalVar["limit"] = ClientUtils.ParameterToString(limit.Value);
@@ -1746,7 +1837,7 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Api
                             }
                         }
 
-                        AfterV1NativeIexLevel3OrderBookSymbolGetDefaultImplementation(apiResponseLocalVar, symbol, date, limit);
+                        AfterV1NativeIexLevel3OrderBookSymbolGetDefaultImplementation(apiResponseLocalVar, symbol, date, timeStart, limit);
 
                         Events.ExecuteOnV1NativeIexLevel3OrderBookSymbolGet(apiResponseLocalVar);
 
@@ -1760,7 +1851,7 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Api
             }
             catch(Exception e)
             {
-                OnErrorV1NativeIexLevel3OrderBookSymbolGetDefaultImplementation(e, "/v1/native/iex/level3-order-book/{symbol}", uriBuilderLocalVar.Path, symbol, date, limit);
+                OnErrorV1NativeIexLevel3OrderBookSymbolGetDefaultImplementation(e, "/v1/native/iex/level3-order-book/{symbol}", uriBuilderLocalVar.Path, symbol, date, timeStart, limit);
                 Events.ExecuteOnErrorV1NativeIexLevel3OrderBookSymbolGet(e);
                 throw;
             }
@@ -1871,17 +1962,21 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Api
             partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
         }
 
-        partial void FormatV1NativeIexTradeSymbolGet(ref string symbol, ref DateTime date, ref Option<int> limit);
+        partial void FormatV1NativeIexTradeSymbolGet(ref string symbol, ref Option<DateTime> date, ref Option<string> timeStart, ref Option<int> limit);
 
         /// <summary>
         /// Validates the request parameters
         /// </summary>
         /// <param name="symbol"></param>
+        /// <param name="timeStart"></param>
         /// <returns></returns>
-        private void ValidateV1NativeIexTradeSymbolGet(string symbol)
+        private void ValidateV1NativeIexTradeSymbolGet(string symbol, Option<string> timeStart)
         {
             if (symbol == null)
                 throw new ArgumentNullException(nameof(symbol));
+
+            if (timeStart.IsSet && timeStart.Value == null)
+                throw new ArgumentNullException(nameof(timeStart));
         }
 
         /// <summary>
@@ -1890,11 +1985,12 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Api
         /// <param name="apiResponseLocalVar"></param>
         /// <param name="symbol"></param>
         /// <param name="date"></param>
+        /// <param name="timeStart"></param>
         /// <param name="limit"></param>
-        private void AfterV1NativeIexTradeSymbolGetDefaultImplementation(IV1NativeIexTradeSymbolGetApiResponse apiResponseLocalVar, string symbol, DateTime date, Option<int> limit)
+        private void AfterV1NativeIexTradeSymbolGetDefaultImplementation(IV1NativeIexTradeSymbolGetApiResponse apiResponseLocalVar, string symbol, Option<DateTime> date, Option<string> timeStart, Option<int> limit)
         {
             bool suppressDefaultLog = false;
-            AfterV1NativeIexTradeSymbolGet(ref suppressDefaultLog, apiResponseLocalVar, symbol, date, limit);
+            AfterV1NativeIexTradeSymbolGet(ref suppressDefaultLog, apiResponseLocalVar, symbol, date, timeStart, limit);
             if (!suppressDefaultLog)
                 Logger.LogInformation(RestLogEvents.ApiRequestCompleted, "{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
         }
@@ -1906,8 +2002,9 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Api
         /// <param name="apiResponseLocalVar"></param>
         /// <param name="symbol"></param>
         /// <param name="date"></param>
+        /// <param name="timeStart"></param>
         /// <param name="limit"></param>
-        partial void AfterV1NativeIexTradeSymbolGet(ref bool suppressDefaultLog, IV1NativeIexTradeSymbolGetApiResponse apiResponseLocalVar, string symbol, DateTime date, Option<int> limit);
+        partial void AfterV1NativeIexTradeSymbolGet(ref bool suppressDefaultLog, IV1NativeIexTradeSymbolGetApiResponse apiResponseLocalVar, string symbol, Option<DateTime> date, Option<string> timeStart, Option<int> limit);
 
         /// <summary>
         /// Logs exceptions that occur while retrieving the server response
@@ -1917,11 +2014,12 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Api
         /// <param name="pathLocalVar"></param>
         /// <param name="symbol"></param>
         /// <param name="date"></param>
+        /// <param name="timeStart"></param>
         /// <param name="limit"></param>
-        private void OnErrorV1NativeIexTradeSymbolGetDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, string symbol, DateTime date, Option<int> limit)
+        private void OnErrorV1NativeIexTradeSymbolGetDefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, string symbol, Option<DateTime> date, Option<string> timeStart, Option<int> limit)
         {
             bool suppressDefaultLogLocalVar = false;
-            OnErrorV1NativeIexTradeSymbolGet(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, symbol, date, limit);
+            OnErrorV1NativeIexTradeSymbolGet(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, symbol, date, timeStart, limit);
             if (!suppressDefaultLogLocalVar)
                 Logger.LogError(RestLogEvents.ApiRequestFailed, exceptionLocalVar, "An error occurred while sending the request to the server.");
         }
@@ -1935,22 +2033,24 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Api
         /// <param name="pathLocalVar"></param>
         /// <param name="symbol"></param>
         /// <param name="date"></param>
+        /// <param name="timeStart"></param>
         /// <param name="limit"></param>
-        partial void OnErrorV1NativeIexTradeSymbolGet(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, string symbol, DateTime date, Option<int> limit);
+        partial void OnErrorV1NativeIexTradeSymbolGet(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, string symbol, Option<DateTime> date, Option<string> timeStart, Option<int> limit);
 
         /// <summary>
-        /// Get Trades Streaming endpoint. Use &#x60;limit&#x60; to cap the number of trade records returned (default 100, max 10000).
+        /// Get Trades Streams one UTC day. &#x60;time_start&#x60; may be a full timestamp (&#x60;2026-09-28T13:31:14.8560065Z&#x60;) or a time of day (&#x60;13:31:14.8560065Z&#x60;) when &#x60;date&#x60; is set. Events start at that instant, inclusive. Omit &#x60;limit&#x60; to stream through the end of the day.
         /// </summary>
         /// <param name="symbol">The symbol identifier</param>
-        /// <param name="date">Date in format YYYY-MM-DD</param>
-        /// <param name="limit">Maximum number of records to return (1-10000, default 100) (optional, default to 100)</param>
+        /// <param name="date">UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. (optional)</param>
+        /// <param name="timeStart">Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. (optional)</param>
+        /// <param name="limit">Optional cap on the number of records (1-10000). Omit to stream through the end of the day. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="IV1NativeIexTradeSymbolGetApiResponse"/>&gt;</returns>
-        public async Task<IV1NativeIexTradeSymbolGetApiResponse?> V1NativeIexTradeSymbolGetOrDefaultAsync(string symbol, DateTime date, Option<int> limit = default, System.Threading.CancellationToken cancellationToken = default)
+        public async Task<IV1NativeIexTradeSymbolGetApiResponse?> V1NativeIexTradeSymbolGetOrDefaultAsync(string symbol, Option<DateTime> date = default, Option<string> timeStart = default, Option<int> limit = default, System.Threading.CancellationToken cancellationToken = default)
         {
             try
             {
-                return await V1NativeIexTradeSymbolGetAsync(symbol, date, limit, cancellationToken).ConfigureAwait(false);
+                return await V1NativeIexTradeSymbolGetAsync(symbol, date, timeStart, limit, cancellationToken).ConfigureAwait(false);
             }
             catch (Exception)
             {
@@ -1959,23 +2059,24 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Api
         }
 
         /// <summary>
-        /// Get Trades Streaming endpoint. Use &#x60;limit&#x60; to cap the number of trade records returned (default 100, max 10000).
+        /// Get Trades Streams one UTC day. &#x60;time_start&#x60; may be a full timestamp (&#x60;2026-09-28T13:31:14.8560065Z&#x60;) or a time of day (&#x60;13:31:14.8560065Z&#x60;) when &#x60;date&#x60; is set. Events start at that instant, inclusive. Omit &#x60;limit&#x60; to stream through the end of the day.
         /// </summary>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="symbol">The symbol identifier</param>
-        /// <param name="date">Date in format YYYY-MM-DD</param>
-        /// <param name="limit">Maximum number of records to return (1-10000, default 100) (optional, default to 100)</param>
+        /// <param name="date">UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. (optional)</param>
+        /// <param name="timeStart">Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. (optional)</param>
+        /// <param name="limit">Optional cap on the number of records (1-10000). Omit to stream through the end of the day. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="IV1NativeIexTradeSymbolGetApiResponse"/>&gt;</returns>
-        public async Task<IV1NativeIexTradeSymbolGetApiResponse> V1NativeIexTradeSymbolGetAsync(string symbol, DateTime date, Option<int> limit = default, System.Threading.CancellationToken cancellationToken = default)
+        public async Task<IV1NativeIexTradeSymbolGetApiResponse> V1NativeIexTradeSymbolGetAsync(string symbol, Option<DateTime> date = default, Option<string> timeStart = default, Option<int> limit = default, System.Threading.CancellationToken cancellationToken = default)
         {
             UriBuilder uriBuilderLocalVar = new UriBuilder();
 
             try
             {
-                ValidateV1NativeIexTradeSymbolGet(symbol);
+                ValidateV1NativeIexTradeSymbolGet(symbol, timeStart);
 
-                FormatV1NativeIexTradeSymbolGet(ref symbol, ref date, ref limit);
+                FormatV1NativeIexTradeSymbolGet(ref symbol, ref date, ref timeStart, ref limit);
 
                 using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
                 {
@@ -1989,7 +2090,11 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Api
 
                     System.Collections.Specialized.NameValueCollection parseQueryStringLocalVar = System.Web.HttpUtility.ParseQueryString(string.Empty);
 
-                    parseQueryStringLocalVar["date"] = ClientUtils.ParameterToString(date);
+                    if (date.IsSet)
+                        parseQueryStringLocalVar["date"] = ClientUtils.ParameterToString(date.Value);
+
+                    if (timeStart.IsSet)
+                        parseQueryStringLocalVar["time_start"] = ClientUtils.ParameterToString(timeStart.Value);
 
                     if (limit.IsSet)
                         parseQueryStringLocalVar["limit"] = ClientUtils.ParameterToString(limit.Value);
@@ -2035,7 +2140,7 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Api
                             }
                         }
 
-                        AfterV1NativeIexTradeSymbolGetDefaultImplementation(apiResponseLocalVar, symbol, date, limit);
+                        AfterV1NativeIexTradeSymbolGetDefaultImplementation(apiResponseLocalVar, symbol, date, timeStart, limit);
 
                         Events.ExecuteOnV1NativeIexTradeSymbolGet(apiResponseLocalVar);
 
@@ -2049,7 +2154,7 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Api
             }
             catch(Exception e)
             {
-                OnErrorV1NativeIexTradeSymbolGetDefaultImplementation(e, "/v1/native/iex/trade/{symbol}", uriBuilderLocalVar.Path, symbol, date, limit);
+                OnErrorV1NativeIexTradeSymbolGetDefaultImplementation(e, "/v1/native/iex/trade/{symbol}", uriBuilderLocalVar.Path, symbol, date, timeStart, limit);
                 Events.ExecuteOnErrorV1NativeIexTradeSymbolGet(e);
                 throw;
             }

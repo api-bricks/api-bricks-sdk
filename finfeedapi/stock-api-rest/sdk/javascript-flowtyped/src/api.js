@@ -1953,18 +1953,14 @@ export const MetadataApi = function(configuration?: Configuration, fetch: FetchA
 export const NativeIEXApiFetchParamCreator = function (configuration?: Configuration) {
     return {
         /**
-         * Streaming endpoint. Use `limit` to cap the number of records returned (default 100, max 10000).
+         * Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
          * @summary Get Admin Messages
          * @throws {RequiredError}
          */
-        v1NativeIexAdminMessagesSymbolGet(symbol: string, _date: Date, limit?: number, options: RequestOptions): FetchArgs {
+        v1NativeIexAdminMessagesSymbolGet(symbol: string, _date?: Date, timeStart?: string, limit?: number, options: RequestOptions): FetchArgs {
             // verify required parameter 'symbol' is not null or undefined
             if (symbol === null || symbol === undefined) {
                 throw new RequiredError('symbol','Required parameter symbol was null or undefined when calling v1NativeIexAdminMessagesSymbolGet.');
-            }
-            // verify required parameter '_date' is not null or undefined
-            if (_date === null || _date === undefined) {
-                throw new RequiredError('_date','Required parameter _date was null or undefined when calling v1NativeIexAdminMessagesSymbolGet.');
             }
             const localVarPath = `/v1/native/iex/admin/messages/{symbol}`
                 .replace('{symbol}', encodeURIComponent(String(symbol)));
@@ -1987,6 +1983,10 @@ export const NativeIEXApiFetchParamCreator = function (configuration?: Configura
                 localVarQueryParameter['date'] = ((_date:any):Date).toISOString();
             }
 
+            if (timeStart !== undefined) {
+                localVarQueryParameter['time_start'] = ((timeStart:any):string);
+            }
+
             if (limit !== undefined) {
                 localVarQueryParameter['limit'] = ((limit:any):string);
             }
@@ -2002,15 +2002,11 @@ export const NativeIEXApiFetchParamCreator = function (configuration?: Configura
             };
         },
         /**
-         * Streaming endpoint. Use `limit` to cap the number of records returned (default 100, max 10000).
+         * Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
          * @summary Get System Events
          * @throws {RequiredError}
          */
-        v1NativeIexAdminSystemEventGet(_date: Date, limit?: number, options: RequestOptions): FetchArgs {
-            // verify required parameter '_date' is not null or undefined
-            if (_date === null || _date === undefined) {
-                throw new RequiredError('_date','Required parameter _date was null or undefined when calling v1NativeIexAdminSystemEventGet.');
-            }
+        v1NativeIexAdminSystemEventGet(_date?: Date, timeStart?: string, limit?: number, options: RequestOptions): FetchArgs {
             const localVarPath = `/v1/native/iex/admin/system-event`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
@@ -2031,6 +2027,10 @@ export const NativeIEXApiFetchParamCreator = function (configuration?: Configura
                 localVarQueryParameter['date'] = ((_date:any):Date).toISOString();
             }
 
+            if (timeStart !== undefined) {
+                localVarQueryParameter['time_start'] = ((timeStart:any):string);
+            }
+
             if (limit !== undefined) {
                 localVarQueryParameter['limit'] = ((limit:any):string);
             }
@@ -2046,18 +2046,14 @@ export const NativeIEXApiFetchParamCreator = function (configuration?: Configura
             };
         },
         /**
-         * Streaming endpoint. Use `limit` to cap the number of records returned (default 100, max 10000).
+         * Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
          * @summary Get Level-1 Quotes
          * @throws {RequiredError}
          */
-        v1NativeIexLevel1QuoteSymbolGet(symbol: string, _date: Date, limit?: number, options: RequestOptions): FetchArgs {
+        v1NativeIexLevel1QuoteSymbolGet(symbol: string, _date?: Date, timeStart?: string, limit?: number, options: RequestOptions): FetchArgs {
             // verify required parameter 'symbol' is not null or undefined
             if (symbol === null || symbol === undefined) {
                 throw new RequiredError('symbol','Required parameter symbol was null or undefined when calling v1NativeIexLevel1QuoteSymbolGet.');
-            }
-            // verify required parameter '_date' is not null or undefined
-            if (_date === null || _date === undefined) {
-                throw new RequiredError('_date','Required parameter _date was null or undefined when calling v1NativeIexLevel1QuoteSymbolGet.');
             }
             const localVarPath = `/v1/native/iex/level1-quote/{symbol}`
                 .replace('{symbol}', encodeURIComponent(String(symbol)));
@@ -2080,6 +2076,10 @@ export const NativeIEXApiFetchParamCreator = function (configuration?: Configura
                 localVarQueryParameter['date'] = ((_date:any):Date).toISOString();
             }
 
+            if (timeStart !== undefined) {
+                localVarQueryParameter['time_start'] = ((timeStart:any):string);
+            }
+
             if (limit !== undefined) {
                 localVarQueryParameter['limit'] = ((limit:any):string);
             }
@@ -2095,18 +2095,14 @@ export const NativeIEXApiFetchParamCreator = function (configuration?: Configura
             };
         },
         /**
-         * Streaming endpoint. Use `limit` to cap the number of records returned (default 100, max 10000).
+         * Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
          * @summary Get Level-2 Price Level Book
          * @throws {RequiredError}
          */
-        v1NativeIexLevel2PriceLevelUpdateSymbolGet(symbol: string, _date: Date, limit?: number, options: RequestOptions): FetchArgs {
+        v1NativeIexLevel2PriceLevelUpdateSymbolGet(symbol: string, _date?: Date, timeStart?: string, limit?: number, options: RequestOptions): FetchArgs {
             // verify required parameter 'symbol' is not null or undefined
             if (symbol === null || symbol === undefined) {
                 throw new RequiredError('symbol','Required parameter symbol was null or undefined when calling v1NativeIexLevel2PriceLevelUpdateSymbolGet.');
-            }
-            // verify required parameter '_date' is not null or undefined
-            if (_date === null || _date === undefined) {
-                throw new RequiredError('_date','Required parameter _date was null or undefined when calling v1NativeIexLevel2PriceLevelUpdateSymbolGet.');
             }
             const localVarPath = `/v1/native/iex/level2-price-level-update/{symbol}`
                 .replace('{symbol}', encodeURIComponent(String(symbol)));
@@ -2129,6 +2125,10 @@ export const NativeIEXApiFetchParamCreator = function (configuration?: Configura
                 localVarQueryParameter['date'] = ((_date:any):Date).toISOString();
             }
 
+            if (timeStart !== undefined) {
+                localVarQueryParameter['time_start'] = ((timeStart:any):string);
+            }
+
             if (limit !== undefined) {
                 localVarQueryParameter['limit'] = ((limit:any):string);
             }
@@ -2144,18 +2144,14 @@ export const NativeIEXApiFetchParamCreator = function (configuration?: Configura
             };
         },
         /**
-         * Streaming endpoint. Use `limit` to cap the number of records returned (default 100, max 10000).
+         * Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
          * @summary Get Level-3 Order Book
          * @throws {RequiredError}
          */
-        v1NativeIexLevel3OrderBookSymbolGet(symbol: string, _date: Date, limit?: number, options: RequestOptions): FetchArgs {
+        v1NativeIexLevel3OrderBookSymbolGet(symbol: string, _date?: Date, timeStart?: string, limit?: number, options: RequestOptions): FetchArgs {
             // verify required parameter 'symbol' is not null or undefined
             if (symbol === null || symbol === undefined) {
                 throw new RequiredError('symbol','Required parameter symbol was null or undefined when calling v1NativeIexLevel3OrderBookSymbolGet.');
-            }
-            // verify required parameter '_date' is not null or undefined
-            if (_date === null || _date === undefined) {
-                throw new RequiredError('_date','Required parameter _date was null or undefined when calling v1NativeIexLevel3OrderBookSymbolGet.');
             }
             const localVarPath = `/v1/native/iex/level3-order-book/{symbol}`
                 .replace('{symbol}', encodeURIComponent(String(symbol)));
@@ -2178,6 +2174,10 @@ export const NativeIEXApiFetchParamCreator = function (configuration?: Configura
                 localVarQueryParameter['date'] = ((_date:any):Date).toISOString();
             }
 
+            if (timeStart !== undefined) {
+                localVarQueryParameter['time_start'] = ((timeStart:any):string);
+            }
+
             if (limit !== undefined) {
                 localVarQueryParameter['limit'] = ((limit:any):string);
             }
@@ -2193,18 +2193,14 @@ export const NativeIEXApiFetchParamCreator = function (configuration?: Configura
             };
         },
         /**
-         * Streaming endpoint. Use `limit` to cap the number of trade records returned (default 100, max 10000).
+         * Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
          * @summary Get Trades
          * @throws {RequiredError}
          */
-        v1NativeIexTradeSymbolGet(symbol: string, _date: Date, limit?: number, options: RequestOptions): FetchArgs {
+        v1NativeIexTradeSymbolGet(symbol: string, _date?: Date, timeStart?: string, limit?: number, options: RequestOptions): FetchArgs {
             // verify required parameter 'symbol' is not null or undefined
             if (symbol === null || symbol === undefined) {
                 throw new RequiredError('symbol','Required parameter symbol was null or undefined when calling v1NativeIexTradeSymbolGet.');
-            }
-            // verify required parameter '_date' is not null or undefined
-            if (_date === null || _date === undefined) {
-                throw new RequiredError('_date','Required parameter _date was null or undefined when calling v1NativeIexTradeSymbolGet.');
             }
             const localVarPath = `/v1/native/iex/trade/{symbol}`
                 .replace('{symbol}', encodeURIComponent(String(symbol)));
@@ -2227,6 +2223,10 @@ export const NativeIEXApiFetchParamCreator = function (configuration?: Configura
                 localVarQueryParameter['date'] = ((_date:any):Date).toISOString();
             }
 
+            if (timeStart !== undefined) {
+                localVarQueryParameter['time_start'] = ((timeStart:any):string);
+            }
+
             if (limit !== undefined) {
                 localVarQueryParameter['limit'] = ((limit:any):string);
             }
@@ -2245,17 +2245,17 @@ export const NativeIEXApiFetchParamCreator = function (configuration?: Configura
 };
 
 export type NativeIEXApiType = { 
-    v1NativeIexAdminMessagesSymbolGet(symbol: string, _date: Date, limit?: number, options?: RequestOptions): Promise<Array<ModelsAdminMessageModel>>,
+    v1NativeIexAdminMessagesSymbolGet(symbol: string, _date?: Date, timeStart?: string, limit?: number, options?: RequestOptions): Promise<Array<ModelsAdminMessageModel>>,
 
-    v1NativeIexAdminSystemEventGet(_date: Date, limit?: number, options?: RequestOptions): Promise<Array<IEXSystemEventSystemEventModel>>,
+    v1NativeIexAdminSystemEventGet(_date?: Date, timeStart?: string, limit?: number, options?: RequestOptions): Promise<Array<IEXSystemEventSystemEventModel>>,
 
-    v1NativeIexLevel1QuoteSymbolGet(symbol: string, _date: Date, limit?: number, options?: RequestOptions): Promise<Array<IEXQuoteUpdateQuoteUpdateModel>>,
+    v1NativeIexLevel1QuoteSymbolGet(symbol: string, _date?: Date, timeStart?: string, limit?: number, options?: RequestOptions): Promise<Array<IEXQuoteUpdateQuoteUpdateModel>>,
 
-    v1NativeIexLevel2PriceLevelUpdateSymbolGet(symbol: string, _date: Date, limit?: number, options?: RequestOptions): Promise<Array<IEXPriceLevelUpdatePriceLevelUpdateModel>>,
+    v1NativeIexLevel2PriceLevelUpdateSymbolGet(symbol: string, _date?: Date, timeStart?: string, limit?: number, options?: RequestOptions): Promise<Array<IEXPriceLevelUpdatePriceLevelUpdateModel>>,
 
-    v1NativeIexLevel3OrderBookSymbolGet(symbol: string, _date: Date, limit?: number, options?: RequestOptions): Promise<Array<ModelsOrderBookModel>>,
+    v1NativeIexLevel3OrderBookSymbolGet(symbol: string, _date?: Date, timeStart?: string, limit?: number, options?: RequestOptions): Promise<Array<ModelsOrderBookModel>>,
 
-    v1NativeIexTradeSymbolGet(symbol: string, _date: Date, limit?: number, options?: RequestOptions): Promise<Array<IEXTradeTradeModel>>,
+    v1NativeIexTradeSymbolGet(symbol: string, _date?: Date, timeStart?: string, limit?: number, options?: RequestOptions): Promise<Array<IEXTradeTradeModel>>,
 }
 
 /**
@@ -2266,12 +2266,12 @@ export const NativeIEXApi = function(configuration?: Configuration, fetch: Fetch
     const basePath: string = (configuration && configuration.basePath) || BASE_PATH;
     return {
         /**
-         * Streaming endpoint. Use `limit` to cap the number of records returned (default 100, max 10000).
+         * Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
          * @summary Get Admin Messages
          * @throws {RequiredError}
          */
-        v1NativeIexAdminMessagesSymbolGet(symbol: string, _date: Date, limit?: number, options?: RequestOptions = {}): Promise<Array<ModelsAdminMessageModel>> {
-            const localVarFetchArgs = NativeIEXApiFetchParamCreator(configuration).v1NativeIexAdminMessagesSymbolGet(symbol, _date, limit, options);
+        v1NativeIexAdminMessagesSymbolGet(symbol: string, _date?: Date, timeStart?: string, limit?: number, options?: RequestOptions = {}): Promise<Array<ModelsAdminMessageModel>> {
+            const localVarFetchArgs = NativeIEXApiFetchParamCreator(configuration).v1NativeIexAdminMessagesSymbolGet(symbol, _date, timeStart, limit, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -2281,12 +2281,12 @@ export const NativeIEXApi = function(configuration?: Configuration, fetch: Fetch
             });
         },
         /**
-         * Streaming endpoint. Use `limit` to cap the number of records returned (default 100, max 10000).
+         * Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
          * @summary Get System Events
          * @throws {RequiredError}
          */
-        v1NativeIexAdminSystemEventGet(_date: Date, limit?: number, options?: RequestOptions = {}): Promise<Array<IEXSystemEventSystemEventModel>> {
-            const localVarFetchArgs = NativeIEXApiFetchParamCreator(configuration).v1NativeIexAdminSystemEventGet(_date, limit, options);
+        v1NativeIexAdminSystemEventGet(_date?: Date, timeStart?: string, limit?: number, options?: RequestOptions = {}): Promise<Array<IEXSystemEventSystemEventModel>> {
+            const localVarFetchArgs = NativeIEXApiFetchParamCreator(configuration).v1NativeIexAdminSystemEventGet(_date, timeStart, limit, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -2296,12 +2296,12 @@ export const NativeIEXApi = function(configuration?: Configuration, fetch: Fetch
             });
         },
         /**
-         * Streaming endpoint. Use `limit` to cap the number of records returned (default 100, max 10000).
+         * Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
          * @summary Get Level-1 Quotes
          * @throws {RequiredError}
          */
-        v1NativeIexLevel1QuoteSymbolGet(symbol: string, _date: Date, limit?: number, options?: RequestOptions = {}): Promise<Array<IEXQuoteUpdateQuoteUpdateModel>> {
-            const localVarFetchArgs = NativeIEXApiFetchParamCreator(configuration).v1NativeIexLevel1QuoteSymbolGet(symbol, _date, limit, options);
+        v1NativeIexLevel1QuoteSymbolGet(symbol: string, _date?: Date, timeStart?: string, limit?: number, options?: RequestOptions = {}): Promise<Array<IEXQuoteUpdateQuoteUpdateModel>> {
+            const localVarFetchArgs = NativeIEXApiFetchParamCreator(configuration).v1NativeIexLevel1QuoteSymbolGet(symbol, _date, timeStart, limit, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -2311,12 +2311,12 @@ export const NativeIEXApi = function(configuration?: Configuration, fetch: Fetch
             });
         },
         /**
-         * Streaming endpoint. Use `limit` to cap the number of records returned (default 100, max 10000).
+         * Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
          * @summary Get Level-2 Price Level Book
          * @throws {RequiredError}
          */
-        v1NativeIexLevel2PriceLevelUpdateSymbolGet(symbol: string, _date: Date, limit?: number, options?: RequestOptions = {}): Promise<Array<IEXPriceLevelUpdatePriceLevelUpdateModel>> {
-            const localVarFetchArgs = NativeIEXApiFetchParamCreator(configuration).v1NativeIexLevel2PriceLevelUpdateSymbolGet(symbol, _date, limit, options);
+        v1NativeIexLevel2PriceLevelUpdateSymbolGet(symbol: string, _date?: Date, timeStart?: string, limit?: number, options?: RequestOptions = {}): Promise<Array<IEXPriceLevelUpdatePriceLevelUpdateModel>> {
+            const localVarFetchArgs = NativeIEXApiFetchParamCreator(configuration).v1NativeIexLevel2PriceLevelUpdateSymbolGet(symbol, _date, timeStart, limit, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -2326,12 +2326,12 @@ export const NativeIEXApi = function(configuration?: Configuration, fetch: Fetch
             });
         },
         /**
-         * Streaming endpoint. Use `limit` to cap the number of records returned (default 100, max 10000).
+         * Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
          * @summary Get Level-3 Order Book
          * @throws {RequiredError}
          */
-        v1NativeIexLevel3OrderBookSymbolGet(symbol: string, _date: Date, limit?: number, options?: RequestOptions = {}): Promise<Array<ModelsOrderBookModel>> {
-            const localVarFetchArgs = NativeIEXApiFetchParamCreator(configuration).v1NativeIexLevel3OrderBookSymbolGet(symbol, _date, limit, options);
+        v1NativeIexLevel3OrderBookSymbolGet(symbol: string, _date?: Date, timeStart?: string, limit?: number, options?: RequestOptions = {}): Promise<Array<ModelsOrderBookModel>> {
+            const localVarFetchArgs = NativeIEXApiFetchParamCreator(configuration).v1NativeIexLevel3OrderBookSymbolGet(symbol, _date, timeStart, limit, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -2341,12 +2341,12 @@ export const NativeIEXApi = function(configuration?: Configuration, fetch: Fetch
             });
         },
         /**
-         * Streaming endpoint. Use `limit` to cap the number of trade records returned (default 100, max 10000).
+         * Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
          * @summary Get Trades
          * @throws {RequiredError}
          */
-        v1NativeIexTradeSymbolGet(symbol: string, _date: Date, limit?: number, options?: RequestOptions = {}): Promise<Array<IEXTradeTradeModel>> {
-            const localVarFetchArgs = NativeIEXApiFetchParamCreator(configuration).v1NativeIexTradeSymbolGet(symbol, _date, limit, options);
+        v1NativeIexTradeSymbolGet(symbol: string, _date?: Date, timeStart?: string, limit?: number, options?: RequestOptions = {}): Promise<Array<IEXTradeTradeModel>> {
+            const localVarFetchArgs = NativeIEXApiFetchParamCreator(configuration).v1NativeIexTradeSymbolGet(symbol, _date, timeStart, limit, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();

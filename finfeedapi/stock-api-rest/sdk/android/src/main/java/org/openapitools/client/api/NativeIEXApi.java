@@ -64,23 +64,19 @@ public class NativeIEXApi {
 
   /**
   * Get Admin Messages
-  * Streaming endpoint. Use &#x60;limit&#x60; to cap the number of records returned (default 100, max 10000).
+  * Streams one UTC day. &#x60;time_start&#x60; may be a full timestamp (&#x60;2026-09-28T13:31:14.8560065Z&#x60;) or a time of day (&#x60;13:31:14.8560065Z&#x60;) when &#x60;date&#x60; is set. Events start at that instant, inclusive. Omit &#x60;limit&#x60; to stream through the end of the day.
    * @param symbol The symbol identifier
-   * @param date Date in format YYYY-MM-DD
-   * @param limit Maximum number of records to return (1-10000, default 100)
+   * @param date UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day.
+   * @param timeStart Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set.
+   * @param limit Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
    * @return List<ModelsAdminMessageModel>
   */
-  public List<ModelsAdminMessageModel> v1NativeIexAdminMessagesSymbolGet (String symbol, Date date, Integer limit) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<ModelsAdminMessageModel> v1NativeIexAdminMessagesSymbolGet (String symbol, Date date, String timeStart, Integer limit) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
     // verify the required parameter 'symbol' is set
     if (symbol == null) {
       VolleyError error = new VolleyError("Missing the required parameter 'symbol' when calling v1NativeIexAdminMessagesSymbolGet",
         new ApiException(400, "Missing the required parameter 'symbol' when calling v1NativeIexAdminMessagesSymbolGet"));
-    }
-    // verify the required parameter 'date' is set
-    if (date == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'date' when calling v1NativeIexAdminMessagesSymbolGet",
-        new ApiException(400, "Missing the required parameter 'date' when calling v1NativeIexAdminMessagesSymbolGet"));
     }
 
     // create path and map variables
@@ -93,6 +89,7 @@ public class NativeIEXApi {
     // form params
     Map<String, String> formParams = new HashMap<String, String>();
     queryParams.addAll(ApiInvoker.parameterToPairs("", "date", date));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "time_start", timeStart));
     queryParams.addAll(ApiInvoker.parameterToPairs("", "limit", limit));
     String[] contentTypes = {
     };
@@ -135,21 +132,16 @@ public class NativeIEXApi {
 
       /**
    * Get Admin Messages
-   * Streaming endpoint. Use &#x60;limit&#x60; to cap the number of records returned (default 100, max 10000).
-   * @param symbol The symbol identifier   * @param date Date in format YYYY-MM-DD   * @param limit Maximum number of records to return (1-10000, default 100)
+   * Streams one UTC day. &#x60;time_start&#x60; may be a full timestamp (&#x60;2026-09-28T13:31:14.8560065Z&#x60;) or a time of day (&#x60;13:31:14.8560065Z&#x60;) when &#x60;date&#x60; is set. Events start at that instant, inclusive. Omit &#x60;limit&#x60; to stream through the end of the day.
+   * @param symbol The symbol identifier   * @param date UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day.   * @param timeStart Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set.   * @param limit Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
   */
-  public void v1NativeIexAdminMessagesSymbolGet (String symbol, Date date, Integer limit, final Response.Listener<List<ModelsAdminMessageModel>> responseListener, final Response.ErrorListener errorListener) {
+  public void v1NativeIexAdminMessagesSymbolGet (String symbol, Date date, String timeStart, Integer limit, final Response.Listener<List<ModelsAdminMessageModel>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
     // verify the required parameter 'symbol' is set
     if (symbol == null) {
       VolleyError error = new VolleyError("Missing the required parameter 'symbol' when calling v1NativeIexAdminMessagesSymbolGet",
         new ApiException(400, "Missing the required parameter 'symbol' when calling v1NativeIexAdminMessagesSymbolGet"));
-    }
-    // verify the required parameter 'date' is set
-    if (date == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'date' when calling v1NativeIexAdminMessagesSymbolGet",
-        new ApiException(400, "Missing the required parameter 'date' when calling v1NativeIexAdminMessagesSymbolGet"));
     }
 
     // create path and map variables
@@ -163,6 +155,7 @@ public class NativeIEXApi {
     Map<String, String> formParams = new HashMap<String, String>();
 
     queryParams.addAll(ApiInvoker.parameterToPairs("", "date", date));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "time_start", timeStart));
     queryParams.addAll(ApiInvoker.parameterToPairs("", "limit", limit));
 
 
@@ -207,18 +200,14 @@ public class NativeIEXApi {
   }
   /**
   * Get System Events
-  * Streaming endpoint. Use &#x60;limit&#x60; to cap the number of records returned (default 100, max 10000).
-   * @param date Date in format YYYY-MM-DD
-   * @param limit Maximum number of records to return (1-10000, default 100)
+  * Streams one UTC day. &#x60;time_start&#x60; may be a full timestamp (&#x60;2026-09-28T13:31:14.8560065Z&#x60;) or a time of day (&#x60;13:31:14.8560065Z&#x60;) when &#x60;date&#x60; is set. Events start at that instant, inclusive. Omit &#x60;limit&#x60; to stream through the end of the day.
+   * @param date UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day.
+   * @param timeStart Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set.
+   * @param limit Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
    * @return List<IEXSystemEventSystemEventModel>
   */
-  public List<IEXSystemEventSystemEventModel> v1NativeIexAdminSystemEventGet (Date date, Integer limit) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<IEXSystemEventSystemEventModel> v1NativeIexAdminSystemEventGet (Date date, String timeStart, Integer limit) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
-    // verify the required parameter 'date' is set
-    if (date == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'date' when calling v1NativeIexAdminSystemEventGet",
-        new ApiException(400, "Missing the required parameter 'date' when calling v1NativeIexAdminSystemEventGet"));
-    }
 
     // create path and map variables
     String path = "/v1/native/iex/admin/system-event";
@@ -230,6 +219,7 @@ public class NativeIEXApi {
     // form params
     Map<String, String> formParams = new HashMap<String, String>();
     queryParams.addAll(ApiInvoker.parameterToPairs("", "date", date));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "time_start", timeStart));
     queryParams.addAll(ApiInvoker.parameterToPairs("", "limit", limit));
     String[] contentTypes = {
     };
@@ -272,17 +262,12 @@ public class NativeIEXApi {
 
       /**
    * Get System Events
-   * Streaming endpoint. Use &#x60;limit&#x60; to cap the number of records returned (default 100, max 10000).
-   * @param date Date in format YYYY-MM-DD   * @param limit Maximum number of records to return (1-10000, default 100)
+   * Streams one UTC day. &#x60;time_start&#x60; may be a full timestamp (&#x60;2026-09-28T13:31:14.8560065Z&#x60;) or a time of day (&#x60;13:31:14.8560065Z&#x60;) when &#x60;date&#x60; is set. Events start at that instant, inclusive. Omit &#x60;limit&#x60; to stream through the end of the day.
+   * @param date UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day.   * @param timeStart Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set.   * @param limit Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
   */
-  public void v1NativeIexAdminSystemEventGet (Date date, Integer limit, final Response.Listener<List<IEXSystemEventSystemEventModel>> responseListener, final Response.ErrorListener errorListener) {
+  public void v1NativeIexAdminSystemEventGet (Date date, String timeStart, Integer limit, final Response.Listener<List<IEXSystemEventSystemEventModel>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
-    // verify the required parameter 'date' is set
-    if (date == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'date' when calling v1NativeIexAdminSystemEventGet",
-        new ApiException(400, "Missing the required parameter 'date' when calling v1NativeIexAdminSystemEventGet"));
-    }
 
     // create path and map variables
     String path = "/v1/native/iex/admin/system-event".replaceAll("\\{format\\}","json");
@@ -295,6 +280,7 @@ public class NativeIEXApi {
     Map<String, String> formParams = new HashMap<String, String>();
 
     queryParams.addAll(ApiInvoker.parameterToPairs("", "date", date));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "time_start", timeStart));
     queryParams.addAll(ApiInvoker.parameterToPairs("", "limit", limit));
 
 
@@ -339,23 +325,19 @@ public class NativeIEXApi {
   }
   /**
   * Get Level-1 Quotes
-  * Streaming endpoint. Use &#x60;limit&#x60; to cap the number of records returned (default 100, max 10000).
+  * Streams one UTC day. &#x60;time_start&#x60; may be a full timestamp (&#x60;2026-09-28T13:31:14.8560065Z&#x60;) or a time of day (&#x60;13:31:14.8560065Z&#x60;) when &#x60;date&#x60; is set. Events start at that instant, inclusive. Omit &#x60;limit&#x60; to stream through the end of the day.
    * @param symbol The symbol identifier
-   * @param date Date in format YYYY-MM-DD
-   * @param limit Maximum number of records to return (1-10000, default 100)
+   * @param date UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day.
+   * @param timeStart Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set.
+   * @param limit Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
    * @return List<IEXQuoteUpdateQuoteUpdateModel>
   */
-  public List<IEXQuoteUpdateQuoteUpdateModel> v1NativeIexLevel1QuoteSymbolGet (String symbol, Date date, Integer limit) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<IEXQuoteUpdateQuoteUpdateModel> v1NativeIexLevel1QuoteSymbolGet (String symbol, Date date, String timeStart, Integer limit) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
     // verify the required parameter 'symbol' is set
     if (symbol == null) {
       VolleyError error = new VolleyError("Missing the required parameter 'symbol' when calling v1NativeIexLevel1QuoteSymbolGet",
         new ApiException(400, "Missing the required parameter 'symbol' when calling v1NativeIexLevel1QuoteSymbolGet"));
-    }
-    // verify the required parameter 'date' is set
-    if (date == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'date' when calling v1NativeIexLevel1QuoteSymbolGet",
-        new ApiException(400, "Missing the required parameter 'date' when calling v1NativeIexLevel1QuoteSymbolGet"));
     }
 
     // create path and map variables
@@ -368,6 +350,7 @@ public class NativeIEXApi {
     // form params
     Map<String, String> formParams = new HashMap<String, String>();
     queryParams.addAll(ApiInvoker.parameterToPairs("", "date", date));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "time_start", timeStart));
     queryParams.addAll(ApiInvoker.parameterToPairs("", "limit", limit));
     String[] contentTypes = {
     };
@@ -410,21 +393,16 @@ public class NativeIEXApi {
 
       /**
    * Get Level-1 Quotes
-   * Streaming endpoint. Use &#x60;limit&#x60; to cap the number of records returned (default 100, max 10000).
-   * @param symbol The symbol identifier   * @param date Date in format YYYY-MM-DD   * @param limit Maximum number of records to return (1-10000, default 100)
+   * Streams one UTC day. &#x60;time_start&#x60; may be a full timestamp (&#x60;2026-09-28T13:31:14.8560065Z&#x60;) or a time of day (&#x60;13:31:14.8560065Z&#x60;) when &#x60;date&#x60; is set. Events start at that instant, inclusive. Omit &#x60;limit&#x60; to stream through the end of the day.
+   * @param symbol The symbol identifier   * @param date UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day.   * @param timeStart Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set.   * @param limit Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
   */
-  public void v1NativeIexLevel1QuoteSymbolGet (String symbol, Date date, Integer limit, final Response.Listener<List<IEXQuoteUpdateQuoteUpdateModel>> responseListener, final Response.ErrorListener errorListener) {
+  public void v1NativeIexLevel1QuoteSymbolGet (String symbol, Date date, String timeStart, Integer limit, final Response.Listener<List<IEXQuoteUpdateQuoteUpdateModel>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
     // verify the required parameter 'symbol' is set
     if (symbol == null) {
       VolleyError error = new VolleyError("Missing the required parameter 'symbol' when calling v1NativeIexLevel1QuoteSymbolGet",
         new ApiException(400, "Missing the required parameter 'symbol' when calling v1NativeIexLevel1QuoteSymbolGet"));
-    }
-    // verify the required parameter 'date' is set
-    if (date == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'date' when calling v1NativeIexLevel1QuoteSymbolGet",
-        new ApiException(400, "Missing the required parameter 'date' when calling v1NativeIexLevel1QuoteSymbolGet"));
     }
 
     // create path and map variables
@@ -438,6 +416,7 @@ public class NativeIEXApi {
     Map<String, String> formParams = new HashMap<String, String>();
 
     queryParams.addAll(ApiInvoker.parameterToPairs("", "date", date));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "time_start", timeStart));
     queryParams.addAll(ApiInvoker.parameterToPairs("", "limit", limit));
 
 
@@ -482,23 +461,19 @@ public class NativeIEXApi {
   }
   /**
   * Get Level-2 Price Level Book
-  * Streaming endpoint. Use &#x60;limit&#x60; to cap the number of records returned (default 100, max 10000).
+  * Streams one UTC day. &#x60;time_start&#x60; may be a full timestamp (&#x60;2026-09-28T13:31:14.8560065Z&#x60;) or a time of day (&#x60;13:31:14.8560065Z&#x60;) when &#x60;date&#x60; is set. Events start at that instant, inclusive. Omit &#x60;limit&#x60; to stream through the end of the day.
    * @param symbol The symbol identifier
-   * @param date Date in format YYYY-MM-DD
-   * @param limit Maximum number of records to return (1-10000, default 100)
+   * @param date UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day.
+   * @param timeStart Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set.
+   * @param limit Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
    * @return List<IEXPriceLevelUpdatePriceLevelUpdateModel>
   */
-  public List<IEXPriceLevelUpdatePriceLevelUpdateModel> v1NativeIexLevel2PriceLevelUpdateSymbolGet (String symbol, Date date, Integer limit) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<IEXPriceLevelUpdatePriceLevelUpdateModel> v1NativeIexLevel2PriceLevelUpdateSymbolGet (String symbol, Date date, String timeStart, Integer limit) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
     // verify the required parameter 'symbol' is set
     if (symbol == null) {
       VolleyError error = new VolleyError("Missing the required parameter 'symbol' when calling v1NativeIexLevel2PriceLevelUpdateSymbolGet",
         new ApiException(400, "Missing the required parameter 'symbol' when calling v1NativeIexLevel2PriceLevelUpdateSymbolGet"));
-    }
-    // verify the required parameter 'date' is set
-    if (date == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'date' when calling v1NativeIexLevel2PriceLevelUpdateSymbolGet",
-        new ApiException(400, "Missing the required parameter 'date' when calling v1NativeIexLevel2PriceLevelUpdateSymbolGet"));
     }
 
     // create path and map variables
@@ -511,6 +486,7 @@ public class NativeIEXApi {
     // form params
     Map<String, String> formParams = new HashMap<String, String>();
     queryParams.addAll(ApiInvoker.parameterToPairs("", "date", date));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "time_start", timeStart));
     queryParams.addAll(ApiInvoker.parameterToPairs("", "limit", limit));
     String[] contentTypes = {
     };
@@ -553,21 +529,16 @@ public class NativeIEXApi {
 
       /**
    * Get Level-2 Price Level Book
-   * Streaming endpoint. Use &#x60;limit&#x60; to cap the number of records returned (default 100, max 10000).
-   * @param symbol The symbol identifier   * @param date Date in format YYYY-MM-DD   * @param limit Maximum number of records to return (1-10000, default 100)
+   * Streams one UTC day. &#x60;time_start&#x60; may be a full timestamp (&#x60;2026-09-28T13:31:14.8560065Z&#x60;) or a time of day (&#x60;13:31:14.8560065Z&#x60;) when &#x60;date&#x60; is set. Events start at that instant, inclusive. Omit &#x60;limit&#x60; to stream through the end of the day.
+   * @param symbol The symbol identifier   * @param date UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day.   * @param timeStart Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set.   * @param limit Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
   */
-  public void v1NativeIexLevel2PriceLevelUpdateSymbolGet (String symbol, Date date, Integer limit, final Response.Listener<List<IEXPriceLevelUpdatePriceLevelUpdateModel>> responseListener, final Response.ErrorListener errorListener) {
+  public void v1NativeIexLevel2PriceLevelUpdateSymbolGet (String symbol, Date date, String timeStart, Integer limit, final Response.Listener<List<IEXPriceLevelUpdatePriceLevelUpdateModel>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
     // verify the required parameter 'symbol' is set
     if (symbol == null) {
       VolleyError error = new VolleyError("Missing the required parameter 'symbol' when calling v1NativeIexLevel2PriceLevelUpdateSymbolGet",
         new ApiException(400, "Missing the required parameter 'symbol' when calling v1NativeIexLevel2PriceLevelUpdateSymbolGet"));
-    }
-    // verify the required parameter 'date' is set
-    if (date == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'date' when calling v1NativeIexLevel2PriceLevelUpdateSymbolGet",
-        new ApiException(400, "Missing the required parameter 'date' when calling v1NativeIexLevel2PriceLevelUpdateSymbolGet"));
     }
 
     // create path and map variables
@@ -581,6 +552,7 @@ public class NativeIEXApi {
     Map<String, String> formParams = new HashMap<String, String>();
 
     queryParams.addAll(ApiInvoker.parameterToPairs("", "date", date));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "time_start", timeStart));
     queryParams.addAll(ApiInvoker.parameterToPairs("", "limit", limit));
 
 
@@ -625,23 +597,19 @@ public class NativeIEXApi {
   }
   /**
   * Get Level-3 Order Book
-  * Streaming endpoint. Use &#x60;limit&#x60; to cap the number of records returned (default 100, max 10000).
+  * Streams one UTC day. &#x60;time_start&#x60; may be a full timestamp (&#x60;2026-09-28T13:31:14.8560065Z&#x60;) or a time of day (&#x60;13:31:14.8560065Z&#x60;) when &#x60;date&#x60; is set. Events start at that instant, inclusive. Omit &#x60;limit&#x60; to stream through the end of the day.
    * @param symbol The symbol identifier
-   * @param date Date in format YYYY-MM-DD
-   * @param limit Maximum number of records to return (1-10000, default 100)
+   * @param date UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day.
+   * @param timeStart Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set.
+   * @param limit Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
    * @return List<ModelsOrderBookModel>
   */
-  public List<ModelsOrderBookModel> v1NativeIexLevel3OrderBookSymbolGet (String symbol, Date date, Integer limit) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<ModelsOrderBookModel> v1NativeIexLevel3OrderBookSymbolGet (String symbol, Date date, String timeStart, Integer limit) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
     // verify the required parameter 'symbol' is set
     if (symbol == null) {
       VolleyError error = new VolleyError("Missing the required parameter 'symbol' when calling v1NativeIexLevel3OrderBookSymbolGet",
         new ApiException(400, "Missing the required parameter 'symbol' when calling v1NativeIexLevel3OrderBookSymbolGet"));
-    }
-    // verify the required parameter 'date' is set
-    if (date == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'date' when calling v1NativeIexLevel3OrderBookSymbolGet",
-        new ApiException(400, "Missing the required parameter 'date' when calling v1NativeIexLevel3OrderBookSymbolGet"));
     }
 
     // create path and map variables
@@ -654,6 +622,7 @@ public class NativeIEXApi {
     // form params
     Map<String, String> formParams = new HashMap<String, String>();
     queryParams.addAll(ApiInvoker.parameterToPairs("", "date", date));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "time_start", timeStart));
     queryParams.addAll(ApiInvoker.parameterToPairs("", "limit", limit));
     String[] contentTypes = {
     };
@@ -696,21 +665,16 @@ public class NativeIEXApi {
 
       /**
    * Get Level-3 Order Book
-   * Streaming endpoint. Use &#x60;limit&#x60; to cap the number of records returned (default 100, max 10000).
-   * @param symbol The symbol identifier   * @param date Date in format YYYY-MM-DD   * @param limit Maximum number of records to return (1-10000, default 100)
+   * Streams one UTC day. &#x60;time_start&#x60; may be a full timestamp (&#x60;2026-09-28T13:31:14.8560065Z&#x60;) or a time of day (&#x60;13:31:14.8560065Z&#x60;) when &#x60;date&#x60; is set. Events start at that instant, inclusive. Omit &#x60;limit&#x60; to stream through the end of the day.
+   * @param symbol The symbol identifier   * @param date UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day.   * @param timeStart Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set.   * @param limit Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
   */
-  public void v1NativeIexLevel3OrderBookSymbolGet (String symbol, Date date, Integer limit, final Response.Listener<List<ModelsOrderBookModel>> responseListener, final Response.ErrorListener errorListener) {
+  public void v1NativeIexLevel3OrderBookSymbolGet (String symbol, Date date, String timeStart, Integer limit, final Response.Listener<List<ModelsOrderBookModel>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
     // verify the required parameter 'symbol' is set
     if (symbol == null) {
       VolleyError error = new VolleyError("Missing the required parameter 'symbol' when calling v1NativeIexLevel3OrderBookSymbolGet",
         new ApiException(400, "Missing the required parameter 'symbol' when calling v1NativeIexLevel3OrderBookSymbolGet"));
-    }
-    // verify the required parameter 'date' is set
-    if (date == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'date' when calling v1NativeIexLevel3OrderBookSymbolGet",
-        new ApiException(400, "Missing the required parameter 'date' when calling v1NativeIexLevel3OrderBookSymbolGet"));
     }
 
     // create path and map variables
@@ -724,6 +688,7 @@ public class NativeIEXApi {
     Map<String, String> formParams = new HashMap<String, String>();
 
     queryParams.addAll(ApiInvoker.parameterToPairs("", "date", date));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "time_start", timeStart));
     queryParams.addAll(ApiInvoker.parameterToPairs("", "limit", limit));
 
 
@@ -768,23 +733,19 @@ public class NativeIEXApi {
   }
   /**
   * Get Trades
-  * Streaming endpoint. Use &#x60;limit&#x60; to cap the number of trade records returned (default 100, max 10000).
+  * Streams one UTC day. &#x60;time_start&#x60; may be a full timestamp (&#x60;2026-09-28T13:31:14.8560065Z&#x60;) or a time of day (&#x60;13:31:14.8560065Z&#x60;) when &#x60;date&#x60; is set. Events start at that instant, inclusive. Omit &#x60;limit&#x60; to stream through the end of the day.
    * @param symbol The symbol identifier
-   * @param date Date in format YYYY-MM-DD
-   * @param limit Maximum number of records to return (1-10000, default 100)
+   * @param date UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day.
+   * @param timeStart Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set.
+   * @param limit Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
    * @return List<IEXTradeTradeModel>
   */
-  public List<IEXTradeTradeModel> v1NativeIexTradeSymbolGet (String symbol, Date date, Integer limit) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<IEXTradeTradeModel> v1NativeIexTradeSymbolGet (String symbol, Date date, String timeStart, Integer limit) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
     // verify the required parameter 'symbol' is set
     if (symbol == null) {
       VolleyError error = new VolleyError("Missing the required parameter 'symbol' when calling v1NativeIexTradeSymbolGet",
         new ApiException(400, "Missing the required parameter 'symbol' when calling v1NativeIexTradeSymbolGet"));
-    }
-    // verify the required parameter 'date' is set
-    if (date == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'date' when calling v1NativeIexTradeSymbolGet",
-        new ApiException(400, "Missing the required parameter 'date' when calling v1NativeIexTradeSymbolGet"));
     }
 
     // create path and map variables
@@ -797,6 +758,7 @@ public class NativeIEXApi {
     // form params
     Map<String, String> formParams = new HashMap<String, String>();
     queryParams.addAll(ApiInvoker.parameterToPairs("", "date", date));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "time_start", timeStart));
     queryParams.addAll(ApiInvoker.parameterToPairs("", "limit", limit));
     String[] contentTypes = {
     };
@@ -839,21 +801,16 @@ public class NativeIEXApi {
 
       /**
    * Get Trades
-   * Streaming endpoint. Use &#x60;limit&#x60; to cap the number of trade records returned (default 100, max 10000).
-   * @param symbol The symbol identifier   * @param date Date in format YYYY-MM-DD   * @param limit Maximum number of records to return (1-10000, default 100)
+   * Streams one UTC day. &#x60;time_start&#x60; may be a full timestamp (&#x60;2026-09-28T13:31:14.8560065Z&#x60;) or a time of day (&#x60;13:31:14.8560065Z&#x60;) when &#x60;date&#x60; is set. Events start at that instant, inclusive. Omit &#x60;limit&#x60; to stream through the end of the day.
+   * @param symbol The symbol identifier   * @param date UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day.   * @param timeStart Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set.   * @param limit Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
   */
-  public void v1NativeIexTradeSymbolGet (String symbol, Date date, Integer limit, final Response.Listener<List<IEXTradeTradeModel>> responseListener, final Response.ErrorListener errorListener) {
+  public void v1NativeIexTradeSymbolGet (String symbol, Date date, String timeStart, Integer limit, final Response.Listener<List<IEXTradeTradeModel>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
     // verify the required parameter 'symbol' is set
     if (symbol == null) {
       VolleyError error = new VolleyError("Missing the required parameter 'symbol' when calling v1NativeIexTradeSymbolGet",
         new ApiException(400, "Missing the required parameter 'symbol' when calling v1NativeIexTradeSymbolGet"));
-    }
-    // verify the required parameter 'date' is set
-    if (date == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'date' when calling v1NativeIexTradeSymbolGet",
-        new ApiException(400, "Missing the required parameter 'date' when calling v1NativeIexTradeSymbolGet"));
     }
 
     // create path and map variables
@@ -867,6 +824,7 @@ public class NativeIEXApi {
     Map<String, String> formParams = new HashMap<String, String>();
 
     queryParams.addAll(ApiInvoker.parameterToPairs("", "date", date));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "time_start", timeStart));
     queryParams.addAll(ApiInvoker.parameterToPairs("", "limit", limit));
 
 

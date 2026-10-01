@@ -17,12 +17,12 @@ Method | HTTP request | Description
 
 Get Admin Messages
 
-Streaming endpoint. Use 'limit' to cap the number of records returned (default 100, max 10000).
+Streams one UTC day. 'time_start' may be a full timestamp ('2026-09-28T13:31:14.8560065Z') or a time of day ('13:31:14.8560065Z') when 'date' is set. Events start at that instant, inclusive. Omit 'limit' to stream through the end of the day.
 
 ### Example
 
 ```bash
- v1NativeIexAdminMessagesSymbolGet symbol=value  date=value  limit=value
+ v1NativeIexAdminMessagesSymbolGet symbol=value  date=value  time_start=value  limit=value
 ```
 
 ### Parameters
@@ -31,8 +31,9 @@ Streaming endpoint. Use 'limit' to cap the number of records returned (default 1
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **symbol** | **string** | The symbol identifier | [default to null]
- **date** | **string** | Date in format YYYY-MM-DD | [default to null]
- **limit** | **integer** | Maximum number of records to return (1-10000, default 100) | [optional] [default to 100]
+ **date** | **string** | UTC day ('YYYY-MM-DD'). Optional when 'time_start' includes a calendar day. | [optional] [default to null]
+ **timeStart** | **string** | Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when 'date' is set. | [optional] [default to null]
+ **limit** | **integer** | Optional cap on the number of records (1-10000). Omit to stream through the end of the day. | [optional] [default to null]
 
 ### Return type
 
@@ -54,12 +55,12 @@ Name | Type | Description  | Notes
 
 Get System Events
 
-Streaming endpoint. Use 'limit' to cap the number of records returned (default 100, max 10000).
+Streams one UTC day. 'time_start' may be a full timestamp ('2026-09-28T13:31:14.8560065Z') or a time of day ('13:31:14.8560065Z') when 'date' is set. Events start at that instant, inclusive. Omit 'limit' to stream through the end of the day.
 
 ### Example
 
 ```bash
- v1NativeIexAdminSystemEventGet  date=value  limit=value
+ v1NativeIexAdminSystemEventGet  date=value  time_start=value  limit=value
 ```
 
 ### Parameters
@@ -67,8 +68,9 @@ Streaming endpoint. Use 'limit' to cap the number of records returned (default 1
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **date** | **string** | Date in format YYYY-MM-DD | [default to null]
- **limit** | **integer** | Maximum number of records to return (1-10000, default 100) | [optional] [default to 100]
+ **date** | **string** | UTC day ('YYYY-MM-DD'). Optional when 'time_start' includes a calendar day. | [optional] [default to null]
+ **timeStart** | **string** | Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when 'date' is set. | [optional] [default to null]
+ **limit** | **integer** | Optional cap on the number of records (1-10000). Omit to stream through the end of the day. | [optional] [default to null]
 
 ### Return type
 
@@ -90,12 +92,12 @@ Name | Type | Description  | Notes
 
 Get Level-1 Quotes
 
-Streaming endpoint. Use 'limit' to cap the number of records returned (default 100, max 10000).
+Streams one UTC day. 'time_start' may be a full timestamp ('2026-09-28T13:31:14.8560065Z') or a time of day ('13:31:14.8560065Z') when 'date' is set. Events start at that instant, inclusive. Omit 'limit' to stream through the end of the day.
 
 ### Example
 
 ```bash
- v1NativeIexLevel1QuoteSymbolGet symbol=value  date=value  limit=value
+ v1NativeIexLevel1QuoteSymbolGet symbol=value  date=value  time_start=value  limit=value
 ```
 
 ### Parameters
@@ -104,8 +106,9 @@ Streaming endpoint. Use 'limit' to cap the number of records returned (default 1
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **symbol** | **string** | The symbol identifier | [default to null]
- **date** | **string** | Date in format YYYY-MM-DD | [default to null]
- **limit** | **integer** | Maximum number of records to return (1-10000, default 100) | [optional] [default to 100]
+ **date** | **string** | UTC day ('YYYY-MM-DD'). Optional when 'time_start' includes a calendar day. | [optional] [default to null]
+ **timeStart** | **string** | Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when 'date' is set. | [optional] [default to null]
+ **limit** | **integer** | Optional cap on the number of records (1-10000). Omit to stream through the end of the day. | [optional] [default to null]
 
 ### Return type
 
@@ -127,12 +130,12 @@ Name | Type | Description  | Notes
 
 Get Level-2 Price Level Book
 
-Streaming endpoint. Use 'limit' to cap the number of records returned (default 100, max 10000).
+Streams one UTC day. 'time_start' may be a full timestamp ('2026-09-28T13:31:14.8560065Z') or a time of day ('13:31:14.8560065Z') when 'date' is set. Events start at that instant, inclusive. Omit 'limit' to stream through the end of the day.
 
 ### Example
 
 ```bash
- v1NativeIexLevel2PriceLevelUpdateSymbolGet symbol=value  date=value  limit=value
+ v1NativeIexLevel2PriceLevelUpdateSymbolGet symbol=value  date=value  time_start=value  limit=value
 ```
 
 ### Parameters
@@ -141,8 +144,9 @@ Streaming endpoint. Use 'limit' to cap the number of records returned (default 1
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **symbol** | **string** | The symbol identifier | [default to null]
- **date** | **string** | Date in format YYYY-MM-DD | [default to null]
- **limit** | **integer** | Maximum number of records to return (1-10000, default 100) | [optional] [default to 100]
+ **date** | **string** | UTC day ('YYYY-MM-DD'). Optional when 'time_start' includes a calendar day. | [optional] [default to null]
+ **timeStart** | **string** | Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when 'date' is set. | [optional] [default to null]
+ **limit** | **integer** | Optional cap on the number of records (1-10000). Omit to stream through the end of the day. | [optional] [default to null]
 
 ### Return type
 
@@ -164,12 +168,12 @@ Name | Type | Description  | Notes
 
 Get Level-3 Order Book
 
-Streaming endpoint. Use 'limit' to cap the number of records returned (default 100, max 10000).
+Streams one UTC day. 'time_start' may be a full timestamp ('2026-09-28T13:31:14.8560065Z') or a time of day ('13:31:14.8560065Z') when 'date' is set. Events start at that instant, inclusive. Omit 'limit' to stream through the end of the day.
 
 ### Example
 
 ```bash
- v1NativeIexLevel3OrderBookSymbolGet symbol=value  date=value  limit=value
+ v1NativeIexLevel3OrderBookSymbolGet symbol=value  date=value  time_start=value  limit=value
 ```
 
 ### Parameters
@@ -178,8 +182,9 @@ Streaming endpoint. Use 'limit' to cap the number of records returned (default 1
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **symbol** | **string** | The symbol identifier | [default to null]
- **date** | **string** | Date in format YYYY-MM-DD | [default to null]
- **limit** | **integer** | Maximum number of records to return (1-10000, default 100) | [optional] [default to 100]
+ **date** | **string** | UTC day ('YYYY-MM-DD'). Optional when 'time_start' includes a calendar day. | [optional] [default to null]
+ **timeStart** | **string** | Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when 'date' is set. | [optional] [default to null]
+ **limit** | **integer** | Optional cap on the number of records (1-10000). Omit to stream through the end of the day. | [optional] [default to null]
 
 ### Return type
 
@@ -201,12 +206,12 @@ Name | Type | Description  | Notes
 
 Get Trades
 
-Streaming endpoint. Use 'limit' to cap the number of trade records returned (default 100, max 10000).
+Streams one UTC day. 'time_start' may be a full timestamp ('2026-09-28T13:31:14.8560065Z') or a time of day ('13:31:14.8560065Z') when 'date' is set. Events start at that instant, inclusive. Omit 'limit' to stream through the end of the day.
 
 ### Example
 
 ```bash
- v1NativeIexTradeSymbolGet symbol=value  date=value  limit=value
+ v1NativeIexTradeSymbolGet symbol=value  date=value  time_start=value  limit=value
 ```
 
 ### Parameters
@@ -215,8 +220,9 @@ Streaming endpoint. Use 'limit' to cap the number of trade records returned (def
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **symbol** | **string** | The symbol identifier | [default to null]
- **date** | **string** | Date in format YYYY-MM-DD | [default to null]
- **limit** | **integer** | Maximum number of records to return (1-10000, default 100) | [optional] [default to 100]
+ **date** | **string** | UTC day ('YYYY-MM-DD'). Optional when 'time_start' includes a calendar day. | [optional] [default to null]
+ **timeStart** | **string** | Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when 'date' is set. | [optional] [default to null]
+ **limit** | **integer** | Optional cap on the number of records (1-10000). Omit to stream through the end of the day. | [optional] [default to null]
 
 ### Return type
 

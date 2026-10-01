@@ -26,36 +26,42 @@ import type {
 
 export interface V1NativeIexAdminMessagesSymbolGetRequest {
     symbol: string;
-    date: string;
+    date?: string;
+    timeStart?: string;
     limit?: number;
 }
 
 export interface V1NativeIexAdminSystemEventGetRequest {
-    date: string;
+    date?: string;
+    timeStart?: string;
     limit?: number;
 }
 
 export interface V1NativeIexLevel1QuoteSymbolGetRequest {
     symbol: string;
-    date: string;
+    date?: string;
+    timeStart?: string;
     limit?: number;
 }
 
 export interface V1NativeIexLevel2PriceLevelUpdateSymbolGetRequest {
     symbol: string;
-    date: string;
+    date?: string;
+    timeStart?: string;
     limit?: number;
 }
 
 export interface V1NativeIexLevel3OrderBookSymbolGetRequest {
     symbol: string;
-    date: string;
+    date?: string;
+    timeStart?: string;
     limit?: number;
 }
 
 export interface V1NativeIexTradeSymbolGetRequest {
     symbol: string;
-    date: string;
+    date?: string;
+    timeStart?: string;
     limit?: number;
 }
 
@@ -65,23 +71,22 @@ export interface V1NativeIexTradeSymbolGetRequest {
 export class NativeIEXApi extends BaseAPI {
 
     /**
-     * Streaming endpoint. Use `limit` to cap the number of records returned (default 100, max 10000).
+     * Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
      * Get Admin Messages
      */
-    v1NativeIexAdminMessagesSymbolGet({ symbol, date, limit }: V1NativeIexAdminMessagesSymbolGetRequest): Observable<Array<ModelsAdminMessageModel>>
-    v1NativeIexAdminMessagesSymbolGet({ symbol, date, limit }: V1NativeIexAdminMessagesSymbolGetRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<ModelsAdminMessageModel>>>
-    v1NativeIexAdminMessagesSymbolGet({ symbol, date, limit }: V1NativeIexAdminMessagesSymbolGetRequest, opts?: OperationOpts): Observable<Array<ModelsAdminMessageModel> | AjaxResponse<Array<ModelsAdminMessageModel>>> {
+    v1NativeIexAdminMessagesSymbolGet({ symbol, date, timeStart, limit }: V1NativeIexAdminMessagesSymbolGetRequest): Observable<Array<ModelsAdminMessageModel>>
+    v1NativeIexAdminMessagesSymbolGet({ symbol, date, timeStart, limit }: V1NativeIexAdminMessagesSymbolGetRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<ModelsAdminMessageModel>>>
+    v1NativeIexAdminMessagesSymbolGet({ symbol, date, timeStart, limit }: V1NativeIexAdminMessagesSymbolGetRequest, opts?: OperationOpts): Observable<Array<ModelsAdminMessageModel> | AjaxResponse<Array<ModelsAdminMessageModel>>> {
         throwIfNullOrUndefined(symbol, 'symbol', 'v1NativeIexAdminMessagesSymbolGet');
-        throwIfNullOrUndefined(date, 'date', 'v1NativeIexAdminMessagesSymbolGet');
 
         const headers: HttpHeaders = {
             ...(this.configuration.apiKey && { 'Authorization': this.configuration.apiKey('Authorization') }), // APIKey authentication
         };
 
-        const query: HttpQuery = { // required parameters are used directly since they are already checked by throwIfNullOrUndefined
-            'date': (date as any).toISOString(),
-        };
+        const query: HttpQuery = {};
 
+        if (date != null) { query['date'] = (date as any).toISOString(); }
+        if (timeStart != null) { query['time_start'] = timeStart; }
         if (limit != null) { query['limit'] = limit; }
 
         return this.request<Array<ModelsAdminMessageModel>>({
@@ -93,22 +98,21 @@ export class NativeIEXApi extends BaseAPI {
     };
 
     /**
-     * Streaming endpoint. Use `limit` to cap the number of records returned (default 100, max 10000).
+     * Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
      * Get System Events
      */
-    v1NativeIexAdminSystemEventGet({ date, limit }: V1NativeIexAdminSystemEventGetRequest): Observable<Array<IEXSystemEventSystemEventModel>>
-    v1NativeIexAdminSystemEventGet({ date, limit }: V1NativeIexAdminSystemEventGetRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<IEXSystemEventSystemEventModel>>>
-    v1NativeIexAdminSystemEventGet({ date, limit }: V1NativeIexAdminSystemEventGetRequest, opts?: OperationOpts): Observable<Array<IEXSystemEventSystemEventModel> | AjaxResponse<Array<IEXSystemEventSystemEventModel>>> {
-        throwIfNullOrUndefined(date, 'date', 'v1NativeIexAdminSystemEventGet');
+    v1NativeIexAdminSystemEventGet({ date, timeStart, limit }: V1NativeIexAdminSystemEventGetRequest): Observable<Array<IEXSystemEventSystemEventModel>>
+    v1NativeIexAdminSystemEventGet({ date, timeStart, limit }: V1NativeIexAdminSystemEventGetRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<IEXSystemEventSystemEventModel>>>
+    v1NativeIexAdminSystemEventGet({ date, timeStart, limit }: V1NativeIexAdminSystemEventGetRequest, opts?: OperationOpts): Observable<Array<IEXSystemEventSystemEventModel> | AjaxResponse<Array<IEXSystemEventSystemEventModel>>> {
 
         const headers: HttpHeaders = {
             ...(this.configuration.apiKey && { 'Authorization': this.configuration.apiKey('Authorization') }), // APIKey authentication
         };
 
-        const query: HttpQuery = { // required parameters are used directly since they are already checked by throwIfNullOrUndefined
-            'date': (date as any).toISOString(),
-        };
+        const query: HttpQuery = {};
 
+        if (date != null) { query['date'] = (date as any).toISOString(); }
+        if (timeStart != null) { query['time_start'] = timeStart; }
         if (limit != null) { query['limit'] = limit; }
 
         return this.request<Array<IEXSystemEventSystemEventModel>>({
@@ -120,23 +124,22 @@ export class NativeIEXApi extends BaseAPI {
     };
 
     /**
-     * Streaming endpoint. Use `limit` to cap the number of records returned (default 100, max 10000).
+     * Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
      * Get Level-1 Quotes
      */
-    v1NativeIexLevel1QuoteSymbolGet({ symbol, date, limit }: V1NativeIexLevel1QuoteSymbolGetRequest): Observable<Array<IEXQuoteUpdateQuoteUpdateModel>>
-    v1NativeIexLevel1QuoteSymbolGet({ symbol, date, limit }: V1NativeIexLevel1QuoteSymbolGetRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<IEXQuoteUpdateQuoteUpdateModel>>>
-    v1NativeIexLevel1QuoteSymbolGet({ symbol, date, limit }: V1NativeIexLevel1QuoteSymbolGetRequest, opts?: OperationOpts): Observable<Array<IEXQuoteUpdateQuoteUpdateModel> | AjaxResponse<Array<IEXQuoteUpdateQuoteUpdateModel>>> {
+    v1NativeIexLevel1QuoteSymbolGet({ symbol, date, timeStart, limit }: V1NativeIexLevel1QuoteSymbolGetRequest): Observable<Array<IEXQuoteUpdateQuoteUpdateModel>>
+    v1NativeIexLevel1QuoteSymbolGet({ symbol, date, timeStart, limit }: V1NativeIexLevel1QuoteSymbolGetRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<IEXQuoteUpdateQuoteUpdateModel>>>
+    v1NativeIexLevel1QuoteSymbolGet({ symbol, date, timeStart, limit }: V1NativeIexLevel1QuoteSymbolGetRequest, opts?: OperationOpts): Observable<Array<IEXQuoteUpdateQuoteUpdateModel> | AjaxResponse<Array<IEXQuoteUpdateQuoteUpdateModel>>> {
         throwIfNullOrUndefined(symbol, 'symbol', 'v1NativeIexLevel1QuoteSymbolGet');
-        throwIfNullOrUndefined(date, 'date', 'v1NativeIexLevel1QuoteSymbolGet');
 
         const headers: HttpHeaders = {
             ...(this.configuration.apiKey && { 'Authorization': this.configuration.apiKey('Authorization') }), // APIKey authentication
         };
 
-        const query: HttpQuery = { // required parameters are used directly since they are already checked by throwIfNullOrUndefined
-            'date': (date as any).toISOString(),
-        };
+        const query: HttpQuery = {};
 
+        if (date != null) { query['date'] = (date as any).toISOString(); }
+        if (timeStart != null) { query['time_start'] = timeStart; }
         if (limit != null) { query['limit'] = limit; }
 
         return this.request<Array<IEXQuoteUpdateQuoteUpdateModel>>({
@@ -148,23 +151,22 @@ export class NativeIEXApi extends BaseAPI {
     };
 
     /**
-     * Streaming endpoint. Use `limit` to cap the number of records returned (default 100, max 10000).
+     * Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
      * Get Level-2 Price Level Book
      */
-    v1NativeIexLevel2PriceLevelUpdateSymbolGet({ symbol, date, limit }: V1NativeIexLevel2PriceLevelUpdateSymbolGetRequest): Observable<Array<IEXPriceLevelUpdatePriceLevelUpdateModel>>
-    v1NativeIexLevel2PriceLevelUpdateSymbolGet({ symbol, date, limit }: V1NativeIexLevel2PriceLevelUpdateSymbolGetRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<IEXPriceLevelUpdatePriceLevelUpdateModel>>>
-    v1NativeIexLevel2PriceLevelUpdateSymbolGet({ symbol, date, limit }: V1NativeIexLevel2PriceLevelUpdateSymbolGetRequest, opts?: OperationOpts): Observable<Array<IEXPriceLevelUpdatePriceLevelUpdateModel> | AjaxResponse<Array<IEXPriceLevelUpdatePriceLevelUpdateModel>>> {
+    v1NativeIexLevel2PriceLevelUpdateSymbolGet({ symbol, date, timeStart, limit }: V1NativeIexLevel2PriceLevelUpdateSymbolGetRequest): Observable<Array<IEXPriceLevelUpdatePriceLevelUpdateModel>>
+    v1NativeIexLevel2PriceLevelUpdateSymbolGet({ symbol, date, timeStart, limit }: V1NativeIexLevel2PriceLevelUpdateSymbolGetRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<IEXPriceLevelUpdatePriceLevelUpdateModel>>>
+    v1NativeIexLevel2PriceLevelUpdateSymbolGet({ symbol, date, timeStart, limit }: V1NativeIexLevel2PriceLevelUpdateSymbolGetRequest, opts?: OperationOpts): Observable<Array<IEXPriceLevelUpdatePriceLevelUpdateModel> | AjaxResponse<Array<IEXPriceLevelUpdatePriceLevelUpdateModel>>> {
         throwIfNullOrUndefined(symbol, 'symbol', 'v1NativeIexLevel2PriceLevelUpdateSymbolGet');
-        throwIfNullOrUndefined(date, 'date', 'v1NativeIexLevel2PriceLevelUpdateSymbolGet');
 
         const headers: HttpHeaders = {
             ...(this.configuration.apiKey && { 'Authorization': this.configuration.apiKey('Authorization') }), // APIKey authentication
         };
 
-        const query: HttpQuery = { // required parameters are used directly since they are already checked by throwIfNullOrUndefined
-            'date': (date as any).toISOString(),
-        };
+        const query: HttpQuery = {};
 
+        if (date != null) { query['date'] = (date as any).toISOString(); }
+        if (timeStart != null) { query['time_start'] = timeStart; }
         if (limit != null) { query['limit'] = limit; }
 
         return this.request<Array<IEXPriceLevelUpdatePriceLevelUpdateModel>>({
@@ -176,23 +178,22 @@ export class NativeIEXApi extends BaseAPI {
     };
 
     /**
-     * Streaming endpoint. Use `limit` to cap the number of records returned (default 100, max 10000).
+     * Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
      * Get Level-3 Order Book
      */
-    v1NativeIexLevel3OrderBookSymbolGet({ symbol, date, limit }: V1NativeIexLevel3OrderBookSymbolGetRequest): Observable<Array<ModelsOrderBookModel>>
-    v1NativeIexLevel3OrderBookSymbolGet({ symbol, date, limit }: V1NativeIexLevel3OrderBookSymbolGetRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<ModelsOrderBookModel>>>
-    v1NativeIexLevel3OrderBookSymbolGet({ symbol, date, limit }: V1NativeIexLevel3OrderBookSymbolGetRequest, opts?: OperationOpts): Observable<Array<ModelsOrderBookModel> | AjaxResponse<Array<ModelsOrderBookModel>>> {
+    v1NativeIexLevel3OrderBookSymbolGet({ symbol, date, timeStart, limit }: V1NativeIexLevel3OrderBookSymbolGetRequest): Observable<Array<ModelsOrderBookModel>>
+    v1NativeIexLevel3OrderBookSymbolGet({ symbol, date, timeStart, limit }: V1NativeIexLevel3OrderBookSymbolGetRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<ModelsOrderBookModel>>>
+    v1NativeIexLevel3OrderBookSymbolGet({ symbol, date, timeStart, limit }: V1NativeIexLevel3OrderBookSymbolGetRequest, opts?: OperationOpts): Observable<Array<ModelsOrderBookModel> | AjaxResponse<Array<ModelsOrderBookModel>>> {
         throwIfNullOrUndefined(symbol, 'symbol', 'v1NativeIexLevel3OrderBookSymbolGet');
-        throwIfNullOrUndefined(date, 'date', 'v1NativeIexLevel3OrderBookSymbolGet');
 
         const headers: HttpHeaders = {
             ...(this.configuration.apiKey && { 'Authorization': this.configuration.apiKey('Authorization') }), // APIKey authentication
         };
 
-        const query: HttpQuery = { // required parameters are used directly since they are already checked by throwIfNullOrUndefined
-            'date': (date as any).toISOString(),
-        };
+        const query: HttpQuery = {};
 
+        if (date != null) { query['date'] = (date as any).toISOString(); }
+        if (timeStart != null) { query['time_start'] = timeStart; }
         if (limit != null) { query['limit'] = limit; }
 
         return this.request<Array<ModelsOrderBookModel>>({
@@ -204,23 +205,22 @@ export class NativeIEXApi extends BaseAPI {
     };
 
     /**
-     * Streaming endpoint. Use `limit` to cap the number of trade records returned (default 100, max 10000).
+     * Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
      * Get Trades
      */
-    v1NativeIexTradeSymbolGet({ symbol, date, limit }: V1NativeIexTradeSymbolGetRequest): Observable<Array<IEXTradeTradeModel>>
-    v1NativeIexTradeSymbolGet({ symbol, date, limit }: V1NativeIexTradeSymbolGetRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<IEXTradeTradeModel>>>
-    v1NativeIexTradeSymbolGet({ symbol, date, limit }: V1NativeIexTradeSymbolGetRequest, opts?: OperationOpts): Observable<Array<IEXTradeTradeModel> | AjaxResponse<Array<IEXTradeTradeModel>>> {
+    v1NativeIexTradeSymbolGet({ symbol, date, timeStart, limit }: V1NativeIexTradeSymbolGetRequest): Observable<Array<IEXTradeTradeModel>>
+    v1NativeIexTradeSymbolGet({ symbol, date, timeStart, limit }: V1NativeIexTradeSymbolGetRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<IEXTradeTradeModel>>>
+    v1NativeIexTradeSymbolGet({ symbol, date, timeStart, limit }: V1NativeIexTradeSymbolGetRequest, opts?: OperationOpts): Observable<Array<IEXTradeTradeModel> | AjaxResponse<Array<IEXTradeTradeModel>>> {
         throwIfNullOrUndefined(symbol, 'symbol', 'v1NativeIexTradeSymbolGet');
-        throwIfNullOrUndefined(date, 'date', 'v1NativeIexTradeSymbolGet');
 
         const headers: HttpHeaders = {
             ...(this.configuration.apiKey && { 'Authorization': this.configuration.apiKey('Authorization') }), // APIKey authentication
         };
 
-        const query: HttpQuery = { // required parameters are used directly since they are already checked by throwIfNullOrUndefined
-            'date': (date as any).toISOString(),
-        };
+        const query: HttpQuery = {};
 
+        if (date != null) { query['date'] = (date as any).toISOString(); }
+        if (timeStart != null) { query['time_start'] = timeStart; }
         if (limit != null) { query['limit'] = limit; }
 
         return this.request<Array<IEXTradeTradeModel>>({

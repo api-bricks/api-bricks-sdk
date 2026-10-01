@@ -49,8 +49,9 @@ class NativeIEXApi:
     def v1_native_iex_admin_messages_symbol_get(
         self,
         symbol: Annotated[StrictStr, Field(description="The symbol identifier")],
-        var_date: Annotated[datetime, Field(description="Date in format YYYY-MM-DD")],
-        limit: Annotated[Optional[StrictInt], Field(description="Maximum number of records to return (1-10000, default 100)")] = None,
+        var_date: Annotated[Optional[datetime], Field(description="UTC day (`YYYY-MM-DD`). Optional when `time_start` includes a calendar day.")] = None,
+        time_start: Annotated[Optional[StrictStr], Field(description="Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when `date` is set.")] = None,
+        limit: Annotated[Optional[StrictInt], Field(description="Optional cap on the number of records (1-10000). Omit to stream through the end of the day.")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -66,13 +67,15 @@ class NativeIEXApi:
     ) -> List[ModelsAdminMessageModel]:
         """Get Admin Messages
 
-        Streaming endpoint. Use `limit` to cap the number of records returned (default 100, max 10000).
+        Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
 
         :param symbol: The symbol identifier (required)
         :type symbol: str
-        :param var_date: Date in format YYYY-MM-DD (required)
+        :param var_date: UTC day (`YYYY-MM-DD`). Optional when `time_start` includes a calendar day.
         :type var_date: datetime
-        :param limit: Maximum number of records to return (1-10000, default 100)
+        :param time_start: Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when `date` is set.
+        :type time_start: str
+        :param limit: Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
         :type limit: int
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -99,6 +102,7 @@ class NativeIEXApi:
         _param = self._v1_native_iex_admin_messages_symbol_get_serialize(
             symbol=symbol,
             var_date=var_date,
+            time_start=time_start,
             limit=limit,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -124,8 +128,9 @@ class NativeIEXApi:
     def v1_native_iex_admin_messages_symbol_get_with_http_info(
         self,
         symbol: Annotated[StrictStr, Field(description="The symbol identifier")],
-        var_date: Annotated[datetime, Field(description="Date in format YYYY-MM-DD")],
-        limit: Annotated[Optional[StrictInt], Field(description="Maximum number of records to return (1-10000, default 100)")] = None,
+        var_date: Annotated[Optional[datetime], Field(description="UTC day (`YYYY-MM-DD`). Optional when `time_start` includes a calendar day.")] = None,
+        time_start: Annotated[Optional[StrictStr], Field(description="Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when `date` is set.")] = None,
+        limit: Annotated[Optional[StrictInt], Field(description="Optional cap on the number of records (1-10000). Omit to stream through the end of the day.")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -141,13 +146,15 @@ class NativeIEXApi:
     ) -> ApiResponse[List[ModelsAdminMessageModel]]:
         """Get Admin Messages
 
-        Streaming endpoint. Use `limit` to cap the number of records returned (default 100, max 10000).
+        Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
 
         :param symbol: The symbol identifier (required)
         :type symbol: str
-        :param var_date: Date in format YYYY-MM-DD (required)
+        :param var_date: UTC day (`YYYY-MM-DD`). Optional when `time_start` includes a calendar day.
         :type var_date: datetime
-        :param limit: Maximum number of records to return (1-10000, default 100)
+        :param time_start: Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when `date` is set.
+        :type time_start: str
+        :param limit: Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
         :type limit: int
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -174,6 +181,7 @@ class NativeIEXApi:
         _param = self._v1_native_iex_admin_messages_symbol_get_serialize(
             symbol=symbol,
             var_date=var_date,
+            time_start=time_start,
             limit=limit,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -199,8 +207,9 @@ class NativeIEXApi:
     def v1_native_iex_admin_messages_symbol_get_without_preload_content(
         self,
         symbol: Annotated[StrictStr, Field(description="The symbol identifier")],
-        var_date: Annotated[datetime, Field(description="Date in format YYYY-MM-DD")],
-        limit: Annotated[Optional[StrictInt], Field(description="Maximum number of records to return (1-10000, default 100)")] = None,
+        var_date: Annotated[Optional[datetime], Field(description="UTC day (`YYYY-MM-DD`). Optional when `time_start` includes a calendar day.")] = None,
+        time_start: Annotated[Optional[StrictStr], Field(description="Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when `date` is set.")] = None,
+        limit: Annotated[Optional[StrictInt], Field(description="Optional cap on the number of records (1-10000). Omit to stream through the end of the day.")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -216,13 +225,15 @@ class NativeIEXApi:
     ) -> RESTResponseType:
         """Get Admin Messages
 
-        Streaming endpoint. Use `limit` to cap the number of records returned (default 100, max 10000).
+        Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
 
         :param symbol: The symbol identifier (required)
         :type symbol: str
-        :param var_date: Date in format YYYY-MM-DD (required)
+        :param var_date: UTC day (`YYYY-MM-DD`). Optional when `time_start` includes a calendar day.
         :type var_date: datetime
-        :param limit: Maximum number of records to return (1-10000, default 100)
+        :param time_start: Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when `date` is set.
+        :type time_start: str
+        :param limit: Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
         :type limit: int
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -249,6 +260,7 @@ class NativeIEXApi:
         _param = self._v1_native_iex_admin_messages_symbol_get_serialize(
             symbol=symbol,
             var_date=var_date,
+            time_start=time_start,
             limit=limit,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -270,6 +282,7 @@ class NativeIEXApi:
         self,
         symbol,
         var_date,
+        time_start,
         limit,
         _request_auth,
         _content_type,
@@ -307,6 +320,10 @@ class NativeIEXApi:
                 )
             else:
                 _query_params.append(('date', var_date))
+            
+        if time_start is not None:
+            
+            _query_params.append(('time_start', time_start))
             
         if limit is not None:
             
@@ -353,8 +370,9 @@ class NativeIEXApi:
     @validate_call
     def v1_native_iex_admin_system_event_get(
         self,
-        var_date: Annotated[datetime, Field(description="Date in format YYYY-MM-DD")],
-        limit: Annotated[Optional[StrictInt], Field(description="Maximum number of records to return (1-10000, default 100)")] = None,
+        var_date: Annotated[Optional[datetime], Field(description="UTC day (`YYYY-MM-DD`). Optional when `time_start` includes a calendar day.")] = None,
+        time_start: Annotated[Optional[StrictStr], Field(description="Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when `date` is set.")] = None,
+        limit: Annotated[Optional[StrictInt], Field(description="Optional cap on the number of records (1-10000). Omit to stream through the end of the day.")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -370,11 +388,13 @@ class NativeIEXApi:
     ) -> List[IEXSystemEventSystemEventModel]:
         """Get System Events
 
-        Streaming endpoint. Use `limit` to cap the number of records returned (default 100, max 10000).
+        Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
 
-        :param var_date: Date in format YYYY-MM-DD (required)
+        :param var_date: UTC day (`YYYY-MM-DD`). Optional when `time_start` includes a calendar day.
         :type var_date: datetime
-        :param limit: Maximum number of records to return (1-10000, default 100)
+        :param time_start: Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when `date` is set.
+        :type time_start: str
+        :param limit: Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
         :type limit: int
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -400,6 +420,7 @@ class NativeIEXApi:
 
         _param = self._v1_native_iex_admin_system_event_get_serialize(
             var_date=var_date,
+            time_start=time_start,
             limit=limit,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -424,8 +445,9 @@ class NativeIEXApi:
     @validate_call
     def v1_native_iex_admin_system_event_get_with_http_info(
         self,
-        var_date: Annotated[datetime, Field(description="Date in format YYYY-MM-DD")],
-        limit: Annotated[Optional[StrictInt], Field(description="Maximum number of records to return (1-10000, default 100)")] = None,
+        var_date: Annotated[Optional[datetime], Field(description="UTC day (`YYYY-MM-DD`). Optional when `time_start` includes a calendar day.")] = None,
+        time_start: Annotated[Optional[StrictStr], Field(description="Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when `date` is set.")] = None,
+        limit: Annotated[Optional[StrictInt], Field(description="Optional cap on the number of records (1-10000). Omit to stream through the end of the day.")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -441,11 +463,13 @@ class NativeIEXApi:
     ) -> ApiResponse[List[IEXSystemEventSystemEventModel]]:
         """Get System Events
 
-        Streaming endpoint. Use `limit` to cap the number of records returned (default 100, max 10000).
+        Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
 
-        :param var_date: Date in format YYYY-MM-DD (required)
+        :param var_date: UTC day (`YYYY-MM-DD`). Optional when `time_start` includes a calendar day.
         :type var_date: datetime
-        :param limit: Maximum number of records to return (1-10000, default 100)
+        :param time_start: Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when `date` is set.
+        :type time_start: str
+        :param limit: Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
         :type limit: int
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -471,6 +495,7 @@ class NativeIEXApi:
 
         _param = self._v1_native_iex_admin_system_event_get_serialize(
             var_date=var_date,
+            time_start=time_start,
             limit=limit,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -495,8 +520,9 @@ class NativeIEXApi:
     @validate_call
     def v1_native_iex_admin_system_event_get_without_preload_content(
         self,
-        var_date: Annotated[datetime, Field(description="Date in format YYYY-MM-DD")],
-        limit: Annotated[Optional[StrictInt], Field(description="Maximum number of records to return (1-10000, default 100)")] = None,
+        var_date: Annotated[Optional[datetime], Field(description="UTC day (`YYYY-MM-DD`). Optional when `time_start` includes a calendar day.")] = None,
+        time_start: Annotated[Optional[StrictStr], Field(description="Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when `date` is set.")] = None,
+        limit: Annotated[Optional[StrictInt], Field(description="Optional cap on the number of records (1-10000). Omit to stream through the end of the day.")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -512,11 +538,13 @@ class NativeIEXApi:
     ) -> RESTResponseType:
         """Get System Events
 
-        Streaming endpoint. Use `limit` to cap the number of records returned (default 100, max 10000).
+        Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
 
-        :param var_date: Date in format YYYY-MM-DD (required)
+        :param var_date: UTC day (`YYYY-MM-DD`). Optional when `time_start` includes a calendar day.
         :type var_date: datetime
-        :param limit: Maximum number of records to return (1-10000, default 100)
+        :param time_start: Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when `date` is set.
+        :type time_start: str
+        :param limit: Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
         :type limit: int
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -542,6 +570,7 @@ class NativeIEXApi:
 
         _param = self._v1_native_iex_admin_system_event_get_serialize(
             var_date=var_date,
+            time_start=time_start,
             limit=limit,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -562,6 +591,7 @@ class NativeIEXApi:
     def _v1_native_iex_admin_system_event_get_serialize(
         self,
         var_date,
+        time_start,
         limit,
         _request_auth,
         _content_type,
@@ -597,6 +627,10 @@ class NativeIEXApi:
                 )
             else:
                 _query_params.append(('date', var_date))
+            
+        if time_start is not None:
+            
+            _query_params.append(('time_start', time_start))
             
         if limit is not None:
             
@@ -644,8 +678,9 @@ class NativeIEXApi:
     def v1_native_iex_level1_quote_symbol_get(
         self,
         symbol: Annotated[StrictStr, Field(description="The symbol identifier")],
-        var_date: Annotated[datetime, Field(description="Date in format YYYY-MM-DD")],
-        limit: Annotated[Optional[StrictInt], Field(description="Maximum number of records to return (1-10000, default 100)")] = None,
+        var_date: Annotated[Optional[datetime], Field(description="UTC day (`YYYY-MM-DD`). Optional when `time_start` includes a calendar day.")] = None,
+        time_start: Annotated[Optional[StrictStr], Field(description="Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when `date` is set.")] = None,
+        limit: Annotated[Optional[StrictInt], Field(description="Optional cap on the number of records (1-10000). Omit to stream through the end of the day.")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -661,13 +696,15 @@ class NativeIEXApi:
     ) -> List[IEXQuoteUpdateQuoteUpdateModel]:
         """Get Level-1 Quotes
 
-        Streaming endpoint. Use `limit` to cap the number of records returned (default 100, max 10000).
+        Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
 
         :param symbol: The symbol identifier (required)
         :type symbol: str
-        :param var_date: Date in format YYYY-MM-DD (required)
+        :param var_date: UTC day (`YYYY-MM-DD`). Optional when `time_start` includes a calendar day.
         :type var_date: datetime
-        :param limit: Maximum number of records to return (1-10000, default 100)
+        :param time_start: Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when `date` is set.
+        :type time_start: str
+        :param limit: Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
         :type limit: int
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -694,6 +731,7 @@ class NativeIEXApi:
         _param = self._v1_native_iex_level1_quote_symbol_get_serialize(
             symbol=symbol,
             var_date=var_date,
+            time_start=time_start,
             limit=limit,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -719,8 +757,9 @@ class NativeIEXApi:
     def v1_native_iex_level1_quote_symbol_get_with_http_info(
         self,
         symbol: Annotated[StrictStr, Field(description="The symbol identifier")],
-        var_date: Annotated[datetime, Field(description="Date in format YYYY-MM-DD")],
-        limit: Annotated[Optional[StrictInt], Field(description="Maximum number of records to return (1-10000, default 100)")] = None,
+        var_date: Annotated[Optional[datetime], Field(description="UTC day (`YYYY-MM-DD`). Optional when `time_start` includes a calendar day.")] = None,
+        time_start: Annotated[Optional[StrictStr], Field(description="Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when `date` is set.")] = None,
+        limit: Annotated[Optional[StrictInt], Field(description="Optional cap on the number of records (1-10000). Omit to stream through the end of the day.")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -736,13 +775,15 @@ class NativeIEXApi:
     ) -> ApiResponse[List[IEXQuoteUpdateQuoteUpdateModel]]:
         """Get Level-1 Quotes
 
-        Streaming endpoint. Use `limit` to cap the number of records returned (default 100, max 10000).
+        Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
 
         :param symbol: The symbol identifier (required)
         :type symbol: str
-        :param var_date: Date in format YYYY-MM-DD (required)
+        :param var_date: UTC day (`YYYY-MM-DD`). Optional when `time_start` includes a calendar day.
         :type var_date: datetime
-        :param limit: Maximum number of records to return (1-10000, default 100)
+        :param time_start: Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when `date` is set.
+        :type time_start: str
+        :param limit: Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
         :type limit: int
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -769,6 +810,7 @@ class NativeIEXApi:
         _param = self._v1_native_iex_level1_quote_symbol_get_serialize(
             symbol=symbol,
             var_date=var_date,
+            time_start=time_start,
             limit=limit,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -794,8 +836,9 @@ class NativeIEXApi:
     def v1_native_iex_level1_quote_symbol_get_without_preload_content(
         self,
         symbol: Annotated[StrictStr, Field(description="The symbol identifier")],
-        var_date: Annotated[datetime, Field(description="Date in format YYYY-MM-DD")],
-        limit: Annotated[Optional[StrictInt], Field(description="Maximum number of records to return (1-10000, default 100)")] = None,
+        var_date: Annotated[Optional[datetime], Field(description="UTC day (`YYYY-MM-DD`). Optional when `time_start` includes a calendar day.")] = None,
+        time_start: Annotated[Optional[StrictStr], Field(description="Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when `date` is set.")] = None,
+        limit: Annotated[Optional[StrictInt], Field(description="Optional cap on the number of records (1-10000). Omit to stream through the end of the day.")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -811,13 +854,15 @@ class NativeIEXApi:
     ) -> RESTResponseType:
         """Get Level-1 Quotes
 
-        Streaming endpoint. Use `limit` to cap the number of records returned (default 100, max 10000).
+        Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
 
         :param symbol: The symbol identifier (required)
         :type symbol: str
-        :param var_date: Date in format YYYY-MM-DD (required)
+        :param var_date: UTC day (`YYYY-MM-DD`). Optional when `time_start` includes a calendar day.
         :type var_date: datetime
-        :param limit: Maximum number of records to return (1-10000, default 100)
+        :param time_start: Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when `date` is set.
+        :type time_start: str
+        :param limit: Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
         :type limit: int
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -844,6 +889,7 @@ class NativeIEXApi:
         _param = self._v1_native_iex_level1_quote_symbol_get_serialize(
             symbol=symbol,
             var_date=var_date,
+            time_start=time_start,
             limit=limit,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -865,6 +911,7 @@ class NativeIEXApi:
         self,
         symbol,
         var_date,
+        time_start,
         limit,
         _request_auth,
         _content_type,
@@ -902,6 +949,10 @@ class NativeIEXApi:
                 )
             else:
                 _query_params.append(('date', var_date))
+            
+        if time_start is not None:
+            
+            _query_params.append(('time_start', time_start))
             
         if limit is not None:
             
@@ -949,8 +1000,9 @@ class NativeIEXApi:
     def v1_native_iex_level2_price_level_update_symbol_get(
         self,
         symbol: Annotated[StrictStr, Field(description="The symbol identifier")],
-        var_date: Annotated[datetime, Field(description="Date in format YYYY-MM-DD")],
-        limit: Annotated[Optional[StrictInt], Field(description="Maximum number of records to return (1-10000, default 100)")] = None,
+        var_date: Annotated[Optional[datetime], Field(description="UTC day (`YYYY-MM-DD`). Optional when `time_start` includes a calendar day.")] = None,
+        time_start: Annotated[Optional[StrictStr], Field(description="Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when `date` is set.")] = None,
+        limit: Annotated[Optional[StrictInt], Field(description="Optional cap on the number of records (1-10000). Omit to stream through the end of the day.")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -966,13 +1018,15 @@ class NativeIEXApi:
     ) -> List[IEXPriceLevelUpdatePriceLevelUpdateModel]:
         """Get Level-2 Price Level Book
 
-        Streaming endpoint. Use `limit` to cap the number of records returned (default 100, max 10000).
+        Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
 
         :param symbol: The symbol identifier (required)
         :type symbol: str
-        :param var_date: Date in format YYYY-MM-DD (required)
+        :param var_date: UTC day (`YYYY-MM-DD`). Optional when `time_start` includes a calendar day.
         :type var_date: datetime
-        :param limit: Maximum number of records to return (1-10000, default 100)
+        :param time_start: Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when `date` is set.
+        :type time_start: str
+        :param limit: Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
         :type limit: int
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -999,6 +1053,7 @@ class NativeIEXApi:
         _param = self._v1_native_iex_level2_price_level_update_symbol_get_serialize(
             symbol=symbol,
             var_date=var_date,
+            time_start=time_start,
             limit=limit,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -1024,8 +1079,9 @@ class NativeIEXApi:
     def v1_native_iex_level2_price_level_update_symbol_get_with_http_info(
         self,
         symbol: Annotated[StrictStr, Field(description="The symbol identifier")],
-        var_date: Annotated[datetime, Field(description="Date in format YYYY-MM-DD")],
-        limit: Annotated[Optional[StrictInt], Field(description="Maximum number of records to return (1-10000, default 100)")] = None,
+        var_date: Annotated[Optional[datetime], Field(description="UTC day (`YYYY-MM-DD`). Optional when `time_start` includes a calendar day.")] = None,
+        time_start: Annotated[Optional[StrictStr], Field(description="Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when `date` is set.")] = None,
+        limit: Annotated[Optional[StrictInt], Field(description="Optional cap on the number of records (1-10000). Omit to stream through the end of the day.")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -1041,13 +1097,15 @@ class NativeIEXApi:
     ) -> ApiResponse[List[IEXPriceLevelUpdatePriceLevelUpdateModel]]:
         """Get Level-2 Price Level Book
 
-        Streaming endpoint. Use `limit` to cap the number of records returned (default 100, max 10000).
+        Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
 
         :param symbol: The symbol identifier (required)
         :type symbol: str
-        :param var_date: Date in format YYYY-MM-DD (required)
+        :param var_date: UTC day (`YYYY-MM-DD`). Optional when `time_start` includes a calendar day.
         :type var_date: datetime
-        :param limit: Maximum number of records to return (1-10000, default 100)
+        :param time_start: Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when `date` is set.
+        :type time_start: str
+        :param limit: Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
         :type limit: int
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -1074,6 +1132,7 @@ class NativeIEXApi:
         _param = self._v1_native_iex_level2_price_level_update_symbol_get_serialize(
             symbol=symbol,
             var_date=var_date,
+            time_start=time_start,
             limit=limit,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -1099,8 +1158,9 @@ class NativeIEXApi:
     def v1_native_iex_level2_price_level_update_symbol_get_without_preload_content(
         self,
         symbol: Annotated[StrictStr, Field(description="The symbol identifier")],
-        var_date: Annotated[datetime, Field(description="Date in format YYYY-MM-DD")],
-        limit: Annotated[Optional[StrictInt], Field(description="Maximum number of records to return (1-10000, default 100)")] = None,
+        var_date: Annotated[Optional[datetime], Field(description="UTC day (`YYYY-MM-DD`). Optional when `time_start` includes a calendar day.")] = None,
+        time_start: Annotated[Optional[StrictStr], Field(description="Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when `date` is set.")] = None,
+        limit: Annotated[Optional[StrictInt], Field(description="Optional cap on the number of records (1-10000). Omit to stream through the end of the day.")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -1116,13 +1176,15 @@ class NativeIEXApi:
     ) -> RESTResponseType:
         """Get Level-2 Price Level Book
 
-        Streaming endpoint. Use `limit` to cap the number of records returned (default 100, max 10000).
+        Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
 
         :param symbol: The symbol identifier (required)
         :type symbol: str
-        :param var_date: Date in format YYYY-MM-DD (required)
+        :param var_date: UTC day (`YYYY-MM-DD`). Optional when `time_start` includes a calendar day.
         :type var_date: datetime
-        :param limit: Maximum number of records to return (1-10000, default 100)
+        :param time_start: Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when `date` is set.
+        :type time_start: str
+        :param limit: Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
         :type limit: int
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -1149,6 +1211,7 @@ class NativeIEXApi:
         _param = self._v1_native_iex_level2_price_level_update_symbol_get_serialize(
             symbol=symbol,
             var_date=var_date,
+            time_start=time_start,
             limit=limit,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -1170,6 +1233,7 @@ class NativeIEXApi:
         self,
         symbol,
         var_date,
+        time_start,
         limit,
         _request_auth,
         _content_type,
@@ -1207,6 +1271,10 @@ class NativeIEXApi:
                 )
             else:
                 _query_params.append(('date', var_date))
+            
+        if time_start is not None:
+            
+            _query_params.append(('time_start', time_start))
             
         if limit is not None:
             
@@ -1254,8 +1322,9 @@ class NativeIEXApi:
     def v1_native_iex_level3_order_book_symbol_get(
         self,
         symbol: Annotated[StrictStr, Field(description="The symbol identifier")],
-        var_date: Annotated[datetime, Field(description="Date in format YYYY-MM-DD")],
-        limit: Annotated[Optional[StrictInt], Field(description="Maximum number of records to return (1-10000, default 100)")] = None,
+        var_date: Annotated[Optional[datetime], Field(description="UTC day (`YYYY-MM-DD`). Optional when `time_start` includes a calendar day.")] = None,
+        time_start: Annotated[Optional[StrictStr], Field(description="Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when `date` is set.")] = None,
+        limit: Annotated[Optional[StrictInt], Field(description="Optional cap on the number of records (1-10000). Omit to stream through the end of the day.")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -1271,13 +1340,15 @@ class NativeIEXApi:
     ) -> List[ModelsOrderBookModel]:
         """Get Level-3 Order Book
 
-        Streaming endpoint. Use `limit` to cap the number of records returned (default 100, max 10000).
+        Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
 
         :param symbol: The symbol identifier (required)
         :type symbol: str
-        :param var_date: Date in format YYYY-MM-DD (required)
+        :param var_date: UTC day (`YYYY-MM-DD`). Optional when `time_start` includes a calendar day.
         :type var_date: datetime
-        :param limit: Maximum number of records to return (1-10000, default 100)
+        :param time_start: Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when `date` is set.
+        :type time_start: str
+        :param limit: Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
         :type limit: int
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -1304,6 +1375,7 @@ class NativeIEXApi:
         _param = self._v1_native_iex_level3_order_book_symbol_get_serialize(
             symbol=symbol,
             var_date=var_date,
+            time_start=time_start,
             limit=limit,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -1329,8 +1401,9 @@ class NativeIEXApi:
     def v1_native_iex_level3_order_book_symbol_get_with_http_info(
         self,
         symbol: Annotated[StrictStr, Field(description="The symbol identifier")],
-        var_date: Annotated[datetime, Field(description="Date in format YYYY-MM-DD")],
-        limit: Annotated[Optional[StrictInt], Field(description="Maximum number of records to return (1-10000, default 100)")] = None,
+        var_date: Annotated[Optional[datetime], Field(description="UTC day (`YYYY-MM-DD`). Optional when `time_start` includes a calendar day.")] = None,
+        time_start: Annotated[Optional[StrictStr], Field(description="Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when `date` is set.")] = None,
+        limit: Annotated[Optional[StrictInt], Field(description="Optional cap on the number of records (1-10000). Omit to stream through the end of the day.")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -1346,13 +1419,15 @@ class NativeIEXApi:
     ) -> ApiResponse[List[ModelsOrderBookModel]]:
         """Get Level-3 Order Book
 
-        Streaming endpoint. Use `limit` to cap the number of records returned (default 100, max 10000).
+        Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
 
         :param symbol: The symbol identifier (required)
         :type symbol: str
-        :param var_date: Date in format YYYY-MM-DD (required)
+        :param var_date: UTC day (`YYYY-MM-DD`). Optional when `time_start` includes a calendar day.
         :type var_date: datetime
-        :param limit: Maximum number of records to return (1-10000, default 100)
+        :param time_start: Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when `date` is set.
+        :type time_start: str
+        :param limit: Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
         :type limit: int
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -1379,6 +1454,7 @@ class NativeIEXApi:
         _param = self._v1_native_iex_level3_order_book_symbol_get_serialize(
             symbol=symbol,
             var_date=var_date,
+            time_start=time_start,
             limit=limit,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -1404,8 +1480,9 @@ class NativeIEXApi:
     def v1_native_iex_level3_order_book_symbol_get_without_preload_content(
         self,
         symbol: Annotated[StrictStr, Field(description="The symbol identifier")],
-        var_date: Annotated[datetime, Field(description="Date in format YYYY-MM-DD")],
-        limit: Annotated[Optional[StrictInt], Field(description="Maximum number of records to return (1-10000, default 100)")] = None,
+        var_date: Annotated[Optional[datetime], Field(description="UTC day (`YYYY-MM-DD`). Optional when `time_start` includes a calendar day.")] = None,
+        time_start: Annotated[Optional[StrictStr], Field(description="Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when `date` is set.")] = None,
+        limit: Annotated[Optional[StrictInt], Field(description="Optional cap on the number of records (1-10000). Omit to stream through the end of the day.")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -1421,13 +1498,15 @@ class NativeIEXApi:
     ) -> RESTResponseType:
         """Get Level-3 Order Book
 
-        Streaming endpoint. Use `limit` to cap the number of records returned (default 100, max 10000).
+        Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
 
         :param symbol: The symbol identifier (required)
         :type symbol: str
-        :param var_date: Date in format YYYY-MM-DD (required)
+        :param var_date: UTC day (`YYYY-MM-DD`). Optional when `time_start` includes a calendar day.
         :type var_date: datetime
-        :param limit: Maximum number of records to return (1-10000, default 100)
+        :param time_start: Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when `date` is set.
+        :type time_start: str
+        :param limit: Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
         :type limit: int
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -1454,6 +1533,7 @@ class NativeIEXApi:
         _param = self._v1_native_iex_level3_order_book_symbol_get_serialize(
             symbol=symbol,
             var_date=var_date,
+            time_start=time_start,
             limit=limit,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -1475,6 +1555,7 @@ class NativeIEXApi:
         self,
         symbol,
         var_date,
+        time_start,
         limit,
         _request_auth,
         _content_type,
@@ -1512,6 +1593,10 @@ class NativeIEXApi:
                 )
             else:
                 _query_params.append(('date', var_date))
+            
+        if time_start is not None:
+            
+            _query_params.append(('time_start', time_start))
             
         if limit is not None:
             
@@ -1559,8 +1644,9 @@ class NativeIEXApi:
     def v1_native_iex_trade_symbol_get(
         self,
         symbol: Annotated[StrictStr, Field(description="The symbol identifier")],
-        var_date: Annotated[datetime, Field(description="Date in format YYYY-MM-DD")],
-        limit: Annotated[Optional[StrictInt], Field(description="Maximum number of records to return (1-10000, default 100)")] = None,
+        var_date: Annotated[Optional[datetime], Field(description="UTC day (`YYYY-MM-DD`). Optional when `time_start` includes a calendar day.")] = None,
+        time_start: Annotated[Optional[StrictStr], Field(description="Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when `date` is set.")] = None,
+        limit: Annotated[Optional[StrictInt], Field(description="Optional cap on the number of records (1-10000). Omit to stream through the end of the day.")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -1576,13 +1662,15 @@ class NativeIEXApi:
     ) -> List[IEXTradeTradeModel]:
         """Get Trades
 
-        Streaming endpoint. Use `limit` to cap the number of trade records returned (default 100, max 10000).
+        Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
 
         :param symbol: The symbol identifier (required)
         :type symbol: str
-        :param var_date: Date in format YYYY-MM-DD (required)
+        :param var_date: UTC day (`YYYY-MM-DD`). Optional when `time_start` includes a calendar day.
         :type var_date: datetime
-        :param limit: Maximum number of records to return (1-10000, default 100)
+        :param time_start: Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when `date` is set.
+        :type time_start: str
+        :param limit: Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
         :type limit: int
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -1609,6 +1697,7 @@ class NativeIEXApi:
         _param = self._v1_native_iex_trade_symbol_get_serialize(
             symbol=symbol,
             var_date=var_date,
+            time_start=time_start,
             limit=limit,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -1634,8 +1723,9 @@ class NativeIEXApi:
     def v1_native_iex_trade_symbol_get_with_http_info(
         self,
         symbol: Annotated[StrictStr, Field(description="The symbol identifier")],
-        var_date: Annotated[datetime, Field(description="Date in format YYYY-MM-DD")],
-        limit: Annotated[Optional[StrictInt], Field(description="Maximum number of records to return (1-10000, default 100)")] = None,
+        var_date: Annotated[Optional[datetime], Field(description="UTC day (`YYYY-MM-DD`). Optional when `time_start` includes a calendar day.")] = None,
+        time_start: Annotated[Optional[StrictStr], Field(description="Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when `date` is set.")] = None,
+        limit: Annotated[Optional[StrictInt], Field(description="Optional cap on the number of records (1-10000). Omit to stream through the end of the day.")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -1651,13 +1741,15 @@ class NativeIEXApi:
     ) -> ApiResponse[List[IEXTradeTradeModel]]:
         """Get Trades
 
-        Streaming endpoint. Use `limit` to cap the number of trade records returned (default 100, max 10000).
+        Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
 
         :param symbol: The symbol identifier (required)
         :type symbol: str
-        :param var_date: Date in format YYYY-MM-DD (required)
+        :param var_date: UTC day (`YYYY-MM-DD`). Optional when `time_start` includes a calendar day.
         :type var_date: datetime
-        :param limit: Maximum number of records to return (1-10000, default 100)
+        :param time_start: Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when `date` is set.
+        :type time_start: str
+        :param limit: Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
         :type limit: int
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -1684,6 +1776,7 @@ class NativeIEXApi:
         _param = self._v1_native_iex_trade_symbol_get_serialize(
             symbol=symbol,
             var_date=var_date,
+            time_start=time_start,
             limit=limit,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -1709,8 +1802,9 @@ class NativeIEXApi:
     def v1_native_iex_trade_symbol_get_without_preload_content(
         self,
         symbol: Annotated[StrictStr, Field(description="The symbol identifier")],
-        var_date: Annotated[datetime, Field(description="Date in format YYYY-MM-DD")],
-        limit: Annotated[Optional[StrictInt], Field(description="Maximum number of records to return (1-10000, default 100)")] = None,
+        var_date: Annotated[Optional[datetime], Field(description="UTC day (`YYYY-MM-DD`). Optional when `time_start` includes a calendar day.")] = None,
+        time_start: Annotated[Optional[StrictStr], Field(description="Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when `date` is set.")] = None,
+        limit: Annotated[Optional[StrictInt], Field(description="Optional cap on the number of records (1-10000). Omit to stream through the end of the day.")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -1726,13 +1820,15 @@ class NativeIEXApi:
     ) -> RESTResponseType:
         """Get Trades
 
-        Streaming endpoint. Use `limit` to cap the number of trade records returned (default 100, max 10000).
+        Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
 
         :param symbol: The symbol identifier (required)
         :type symbol: str
-        :param var_date: Date in format YYYY-MM-DD (required)
+        :param var_date: UTC day (`YYYY-MM-DD`). Optional when `time_start` includes a calendar day.
         :type var_date: datetime
-        :param limit: Maximum number of records to return (1-10000, default 100)
+        :param time_start: Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when `date` is set.
+        :type time_start: str
+        :param limit: Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
         :type limit: int
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -1759,6 +1855,7 @@ class NativeIEXApi:
         _param = self._v1_native_iex_trade_symbol_get_serialize(
             symbol=symbol,
             var_date=var_date,
+            time_start=time_start,
             limit=limit,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -1780,6 +1877,7 @@ class NativeIEXApi:
         self,
         symbol,
         var_date,
+        time_start,
         limit,
         _request_auth,
         _content_type,
@@ -1817,6 +1915,10 @@ class NativeIEXApi:
                 )
             else:
                 _query_params.append(('date', var_date))
+            
+        if time_start is not None:
+            
+            _query_params.append(('time_start', time_start))
             
         if limit is not None:
             

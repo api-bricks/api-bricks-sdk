@@ -32,55 +32,61 @@ package .Clients is
        Result : out .Models.FinFeedAPISymbolModel_Type_Vectors.Vector);
 
    --  Get Admin Messages
-   --  Streaming endpoint. Use `limit` to cap the number of records returned (default 100, max 10000).
+   --  Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
    procedure V_1Native_Iex_Admin_Messages_Symbol_Get
       (Client : in out Client_Type;
        Symbol : in Swagger.UString;
-       Date : in Swagger.Datetime;
+       Date : in Swagger.Nullable_Date;
+       Time_Start : in Swagger.Nullable_UString;
        Limit : in Swagger.Nullable_Integer;
        Result : out .Models.ModelsAdminMessageModel_Type_Vectors.Vector);
 
    --  Get System Events
-   --  Streaming endpoint. Use `limit` to cap the number of records returned (default 100, max 10000).
+   --  Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
    procedure V_1Native_Iex_Admin_System_Event_Get
       (Client : in out Client_Type;
-       Date : in Swagger.Datetime;
+       Date : in Swagger.Nullable_Date;
+       Time_Start : in Swagger.Nullable_UString;
        Limit : in Swagger.Nullable_Integer;
        Result : out .Models.IEXSystemEventSystemEventModel_Type_Vectors.Vector);
 
    --  Get Level_1 Quotes
-   --  Streaming endpoint. Use `limit` to cap the number of records returned (default 100, max 10000).
+   --  Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
    procedure V_1Native_Iex_Level_1Quote_Symbol_Get
       (Client : in out Client_Type;
        Symbol : in Swagger.UString;
-       Date : in Swagger.Datetime;
+       Date : in Swagger.Nullable_Date;
+       Time_Start : in Swagger.Nullable_UString;
        Limit : in Swagger.Nullable_Integer;
        Result : out .Models.IEXQuoteUpdateQuoteUpdateModel_Type_Vectors.Vector);
 
    --  Get Level_2 Price Level Book
-   --  Streaming endpoint. Use `limit` to cap the number of records returned (default 100, max 10000).
+   --  Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
    procedure V_1Native_Iex_Level_2Price_Level_Update_Symbol_Get
       (Client : in out Client_Type;
        Symbol : in Swagger.UString;
-       Date : in Swagger.Datetime;
+       Date : in Swagger.Nullable_Date;
+       Time_Start : in Swagger.Nullable_UString;
        Limit : in Swagger.Nullable_Integer;
        Result : out .Models.IEXPriceLevelUpdatePriceLevelUpdateModel_Type_Vectors.Vector);
 
    --  Get Level_3 Order Book
-   --  Streaming endpoint. Use `limit` to cap the number of records returned (default 100, max 10000).
+   --  Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
    procedure V_1Native_Iex_Level_3Order_Book_Symbol_Get
       (Client : in out Client_Type;
        Symbol : in Swagger.UString;
-       Date : in Swagger.Datetime;
+       Date : in Swagger.Nullable_Date;
+       Time_Start : in Swagger.Nullable_UString;
        Limit : in Swagger.Nullable_Integer;
        Result : out .Models.ModelsOrderBookModel_Type_Vectors.Vector);
 
    --  Get Trades
-   --  Streaming endpoint. Use `limit` to cap the number of trade records returned (default 100, max 10000).
+   --  Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
    procedure V_1Native_Iex_Trade_Symbol_Get
       (Client : in out Client_Type;
        Symbol : in Swagger.UString;
-       Date : in Swagger.Datetime;
+       Date : in Swagger.Nullable_Date;
+       Time_Start : in Swagger.Nullable_UString;
        Limit : in Swagger.Nullable_Integer;
        Result : out .Models.IEXTradeTradeModel_Type_Vectors.Vector);
 

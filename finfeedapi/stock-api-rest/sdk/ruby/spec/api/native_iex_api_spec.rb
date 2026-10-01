@@ -34,11 +34,12 @@ describe 'NativeIEXApi' do
 
   # unit tests for v1_native_iex_admin_messages_symbol_get
   # Get Admin Messages
-  # Streaming endpoint. Use &#x60;limit&#x60; to cap the number of records returned (default 100, max 10000).
+  # Streams one UTC day. &#x60;time_start&#x60; may be a full timestamp (&#x60;2026-09-28T13:31:14.8560065Z&#x60;) or a time of day (&#x60;13:31:14.8560065Z&#x60;) when &#x60;date&#x60; is set. Events start at that instant, inclusive. Omit &#x60;limit&#x60; to stream through the end of the day.
   # @param symbol The symbol identifier
-  # @param date Date in format YYYY-MM-DD
   # @param [Hash] opts the optional parameters
-  # @option opts [Integer] :limit Maximum number of records to return (1-10000, default 100)
+  # @option opts [Time] :date UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day.
+  # @option opts [String] :time_start Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set.
+  # @option opts [Integer] :limit Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
   # @return [Array<ModelsAdminMessageModel>]
   describe 'v1_native_iex_admin_messages_symbol_get test' do
     it 'should work' do
@@ -48,10 +49,11 @@ describe 'NativeIEXApi' do
 
   # unit tests for v1_native_iex_admin_system_event_get
   # Get System Events
-  # Streaming endpoint. Use &#x60;limit&#x60; to cap the number of records returned (default 100, max 10000).
-  # @param date Date in format YYYY-MM-DD
+  # Streams one UTC day. &#x60;time_start&#x60; may be a full timestamp (&#x60;2026-09-28T13:31:14.8560065Z&#x60;) or a time of day (&#x60;13:31:14.8560065Z&#x60;) when &#x60;date&#x60; is set. Events start at that instant, inclusive. Omit &#x60;limit&#x60; to stream through the end of the day.
   # @param [Hash] opts the optional parameters
-  # @option opts [Integer] :limit Maximum number of records to return (1-10000, default 100)
+  # @option opts [Time] :date UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day.
+  # @option opts [String] :time_start Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set.
+  # @option opts [Integer] :limit Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
   # @return [Array<IEXSystemEventSystemEventModel>]
   describe 'v1_native_iex_admin_system_event_get test' do
     it 'should work' do
@@ -61,11 +63,12 @@ describe 'NativeIEXApi' do
 
   # unit tests for v1_native_iex_level1_quote_symbol_get
   # Get Level-1 Quotes
-  # Streaming endpoint. Use &#x60;limit&#x60; to cap the number of records returned (default 100, max 10000).
+  # Streams one UTC day. &#x60;time_start&#x60; may be a full timestamp (&#x60;2026-09-28T13:31:14.8560065Z&#x60;) or a time of day (&#x60;13:31:14.8560065Z&#x60;) when &#x60;date&#x60; is set. Events start at that instant, inclusive. Omit &#x60;limit&#x60; to stream through the end of the day.
   # @param symbol The symbol identifier
-  # @param date Date in format YYYY-MM-DD
   # @param [Hash] opts the optional parameters
-  # @option opts [Integer] :limit Maximum number of records to return (1-10000, default 100)
+  # @option opts [Time] :date UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day.
+  # @option opts [String] :time_start Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set.
+  # @option opts [Integer] :limit Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
   # @return [Array<IEXQuoteUpdateQuoteUpdateModel>]
   describe 'v1_native_iex_level1_quote_symbol_get test' do
     it 'should work' do
@@ -75,11 +78,12 @@ describe 'NativeIEXApi' do
 
   # unit tests for v1_native_iex_level2_price_level_update_symbol_get
   # Get Level-2 Price Level Book
-  # Streaming endpoint. Use &#x60;limit&#x60; to cap the number of records returned (default 100, max 10000).
+  # Streams one UTC day. &#x60;time_start&#x60; may be a full timestamp (&#x60;2026-09-28T13:31:14.8560065Z&#x60;) or a time of day (&#x60;13:31:14.8560065Z&#x60;) when &#x60;date&#x60; is set. Events start at that instant, inclusive. Omit &#x60;limit&#x60; to stream through the end of the day.
   # @param symbol The symbol identifier
-  # @param date Date in format YYYY-MM-DD
   # @param [Hash] opts the optional parameters
-  # @option opts [Integer] :limit Maximum number of records to return (1-10000, default 100)
+  # @option opts [Time] :date UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day.
+  # @option opts [String] :time_start Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set.
+  # @option opts [Integer] :limit Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
   # @return [Array<IEXPriceLevelUpdatePriceLevelUpdateModel>]
   describe 'v1_native_iex_level2_price_level_update_symbol_get test' do
     it 'should work' do
@@ -89,11 +93,12 @@ describe 'NativeIEXApi' do
 
   # unit tests for v1_native_iex_level3_order_book_symbol_get
   # Get Level-3 Order Book
-  # Streaming endpoint. Use &#x60;limit&#x60; to cap the number of records returned (default 100, max 10000).
+  # Streams one UTC day. &#x60;time_start&#x60; may be a full timestamp (&#x60;2026-09-28T13:31:14.8560065Z&#x60;) or a time of day (&#x60;13:31:14.8560065Z&#x60;) when &#x60;date&#x60; is set. Events start at that instant, inclusive. Omit &#x60;limit&#x60; to stream through the end of the day.
   # @param symbol The symbol identifier
-  # @param date Date in format YYYY-MM-DD
   # @param [Hash] opts the optional parameters
-  # @option opts [Integer] :limit Maximum number of records to return (1-10000, default 100)
+  # @option opts [Time] :date UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day.
+  # @option opts [String] :time_start Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set.
+  # @option opts [Integer] :limit Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
   # @return [Array<ModelsOrderBookModel>]
   describe 'v1_native_iex_level3_order_book_symbol_get test' do
     it 'should work' do
@@ -103,11 +108,12 @@ describe 'NativeIEXApi' do
 
   # unit tests for v1_native_iex_trade_symbol_get
   # Get Trades
-  # Streaming endpoint. Use &#x60;limit&#x60; to cap the number of trade records returned (default 100, max 10000).
+  # Streams one UTC day. &#x60;time_start&#x60; may be a full timestamp (&#x60;2026-09-28T13:31:14.8560065Z&#x60;) or a time of day (&#x60;13:31:14.8560065Z&#x60;) when &#x60;date&#x60; is set. Events start at that instant, inclusive. Omit &#x60;limit&#x60; to stream through the end of the day.
   # @param symbol The symbol identifier
-  # @param date Date in format YYYY-MM-DD
   # @param [Hash] opts the optional parameters
-  # @option opts [Integer] :limit Maximum number of records to return (1-10000, default 100)
+  # @option opts [Time] :date UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day.
+  # @option opts [String] :time_start Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set.
+  # @option opts [Integer] :limit Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
   # @return [Array<IEXTradeTradeModel>]
   describe 'v1_native_iex_trade_symbol_get test' do
     it 'should work' do

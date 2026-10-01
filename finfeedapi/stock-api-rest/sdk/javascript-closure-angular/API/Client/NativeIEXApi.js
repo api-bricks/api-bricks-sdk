@@ -51,14 +51,15 @@ API.Client.NativeIEXApi.$inject = ['$http', '$httpParamSerializer', '$injector']
 
 /**
  * Get Admin Messages
- * Streaming endpoint. Use &#x60;limit&#x60; to cap the number of records returned (default 100, max 10000).
+ * Streams one UTC day. &#x60;time_start&#x60; may be a full timestamp (&#x60;2026-09-28T13:31:14.8560065Z&#x60;) or a time of day (&#x60;13:31:14.8560065Z&#x60;) when &#x60;date&#x60; is set. Events start at that instant, inclusive. Omit &#x60;limit&#x60; to stream through the end of the day.
  * @param {!string} symbol The symbol identifier
- * @param {!Date} date Date in format YYYY-MM-DD
- * @param {!number=} opt_limit Maximum number of records to return (1-10000, default 100)
+ * @param {!Date=} opt_date UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day.
+ * @param {!string=} opt_timeStart Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set.
+ * @param {!number=} opt_limit Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
  * @return {!angular.$q.Promise<!Array<!API.Client.Models.AdminMessageModel>>}
  */
-API.Client.NativeIEXApi.prototype.v1NativeIexAdminMessagesSymbolGet = function(symbol, date, opt_limit, opt_extraHttpRequestParams) {
+API.Client.NativeIEXApi.prototype.v1NativeIexAdminMessagesSymbolGet = function(symbol, opt_date, opt_timeStart, opt_limit, opt_extraHttpRequestParams) {
   /** @const {string} */
   var path = this.basePath_ + '/v1/native/iex/admin/messages/{symbol}'
       .replace('{symbol}', String(symbol));
@@ -72,12 +73,12 @@ API.Client.NativeIEXApi.prototype.v1NativeIexAdminMessagesSymbolGet = function(s
   if (!symbol) {
     throw new Error('Missing required parameter symbol when calling v1NativeIexAdminMessagesSymbolGet');
   }
-  // verify required parameter 'date' is set
-  if (!date) {
-    throw new Error('Missing required parameter date when calling v1NativeIexAdminMessagesSymbolGet');
+  if (opt_date !== undefined) {
+    queryParameters['date'] = opt_date;
   }
-  if (date !== undefined) {
-    queryParameters['date'] = date;
+
+  if (opt_timeStart !== undefined) {
+    queryParameters['time_start'] = opt_timeStart;
   }
 
   if (opt_limit !== undefined) {
@@ -102,13 +103,14 @@ API.Client.NativeIEXApi.prototype.v1NativeIexAdminMessagesSymbolGet = function(s
 
 /**
  * Get System Events
- * Streaming endpoint. Use &#x60;limit&#x60; to cap the number of records returned (default 100, max 10000).
- * @param {!Date} date Date in format YYYY-MM-DD
- * @param {!number=} opt_limit Maximum number of records to return (1-10000, default 100)
+ * Streams one UTC day. &#x60;time_start&#x60; may be a full timestamp (&#x60;2026-09-28T13:31:14.8560065Z&#x60;) or a time of day (&#x60;13:31:14.8560065Z&#x60;) when &#x60;date&#x60; is set. Events start at that instant, inclusive. Omit &#x60;limit&#x60; to stream through the end of the day.
+ * @param {!Date=} opt_date UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day.
+ * @param {!string=} opt_timeStart Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set.
+ * @param {!number=} opt_limit Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
  * @return {!angular.$q.Promise<!Array<!API.Client.IEXSystemEvent.SystemEventModel>>}
  */
-API.Client.NativeIEXApi.prototype.v1NativeIexAdminSystemEventGet = function(date, opt_limit, opt_extraHttpRequestParams) {
+API.Client.NativeIEXApi.prototype.v1NativeIexAdminSystemEventGet = function(opt_date, opt_timeStart, opt_limit, opt_extraHttpRequestParams) {
   /** @const {string} */
   var path = this.basePath_ + '/v1/native/iex/admin/system-event';
 
@@ -117,12 +119,12 @@ API.Client.NativeIEXApi.prototype.v1NativeIexAdminSystemEventGet = function(date
 
   /** @type {!Object} */
   var headerParams = angular.extend({}, this.defaultHeaders_);
-  // verify required parameter 'date' is set
-  if (!date) {
-    throw new Error('Missing required parameter date when calling v1NativeIexAdminSystemEventGet');
+  if (opt_date !== undefined) {
+    queryParameters['date'] = opt_date;
   }
-  if (date !== undefined) {
-    queryParameters['date'] = date;
+
+  if (opt_timeStart !== undefined) {
+    queryParameters['time_start'] = opt_timeStart;
   }
 
   if (opt_limit !== undefined) {
@@ -147,14 +149,15 @@ API.Client.NativeIEXApi.prototype.v1NativeIexAdminSystemEventGet = function(date
 
 /**
  * Get Level-1 Quotes
- * Streaming endpoint. Use &#x60;limit&#x60; to cap the number of records returned (default 100, max 10000).
+ * Streams one UTC day. &#x60;time_start&#x60; may be a full timestamp (&#x60;2026-09-28T13:31:14.8560065Z&#x60;) or a time of day (&#x60;13:31:14.8560065Z&#x60;) when &#x60;date&#x60; is set. Events start at that instant, inclusive. Omit &#x60;limit&#x60; to stream through the end of the day.
  * @param {!string} symbol The symbol identifier
- * @param {!Date} date Date in format YYYY-MM-DD
- * @param {!number=} opt_limit Maximum number of records to return (1-10000, default 100)
+ * @param {!Date=} opt_date UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day.
+ * @param {!string=} opt_timeStart Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set.
+ * @param {!number=} opt_limit Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
  * @return {!angular.$q.Promise<!Array<!API.Client.IEXQuoteUpdate.QuoteUpdateModel>>}
  */
-API.Client.NativeIEXApi.prototype.v1NativeIexLevel1QuoteSymbolGet = function(symbol, date, opt_limit, opt_extraHttpRequestParams) {
+API.Client.NativeIEXApi.prototype.v1NativeIexLevel1QuoteSymbolGet = function(symbol, opt_date, opt_timeStart, opt_limit, opt_extraHttpRequestParams) {
   /** @const {string} */
   var path = this.basePath_ + '/v1/native/iex/level1-quote/{symbol}'
       .replace('{symbol}', String(symbol));
@@ -168,12 +171,12 @@ API.Client.NativeIEXApi.prototype.v1NativeIexLevel1QuoteSymbolGet = function(sym
   if (!symbol) {
     throw new Error('Missing required parameter symbol when calling v1NativeIexLevel1QuoteSymbolGet');
   }
-  // verify required parameter 'date' is set
-  if (!date) {
-    throw new Error('Missing required parameter date when calling v1NativeIexLevel1QuoteSymbolGet');
+  if (opt_date !== undefined) {
+    queryParameters['date'] = opt_date;
   }
-  if (date !== undefined) {
-    queryParameters['date'] = date;
+
+  if (opt_timeStart !== undefined) {
+    queryParameters['time_start'] = opt_timeStart;
   }
 
   if (opt_limit !== undefined) {
@@ -198,14 +201,15 @@ API.Client.NativeIEXApi.prototype.v1NativeIexLevel1QuoteSymbolGet = function(sym
 
 /**
  * Get Level-2 Price Level Book
- * Streaming endpoint. Use &#x60;limit&#x60; to cap the number of records returned (default 100, max 10000).
+ * Streams one UTC day. &#x60;time_start&#x60; may be a full timestamp (&#x60;2026-09-28T13:31:14.8560065Z&#x60;) or a time of day (&#x60;13:31:14.8560065Z&#x60;) when &#x60;date&#x60; is set. Events start at that instant, inclusive. Omit &#x60;limit&#x60; to stream through the end of the day.
  * @param {!string} symbol The symbol identifier
- * @param {!Date} date Date in format YYYY-MM-DD
- * @param {!number=} opt_limit Maximum number of records to return (1-10000, default 100)
+ * @param {!Date=} opt_date UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day.
+ * @param {!string=} opt_timeStart Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set.
+ * @param {!number=} opt_limit Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
  * @return {!angular.$q.Promise<!Array<!API.Client.IEXPriceLevelUpdate.PriceLevelUpdateModel>>}
  */
-API.Client.NativeIEXApi.prototype.v1NativeIexLevel2PriceLevelUpdateSymbolGet = function(symbol, date, opt_limit, opt_extraHttpRequestParams) {
+API.Client.NativeIEXApi.prototype.v1NativeIexLevel2PriceLevelUpdateSymbolGet = function(symbol, opt_date, opt_timeStart, opt_limit, opt_extraHttpRequestParams) {
   /** @const {string} */
   var path = this.basePath_ + '/v1/native/iex/level2-price-level-update/{symbol}'
       .replace('{symbol}', String(symbol));
@@ -219,12 +223,12 @@ API.Client.NativeIEXApi.prototype.v1NativeIexLevel2PriceLevelUpdateSymbolGet = f
   if (!symbol) {
     throw new Error('Missing required parameter symbol when calling v1NativeIexLevel2PriceLevelUpdateSymbolGet');
   }
-  // verify required parameter 'date' is set
-  if (!date) {
-    throw new Error('Missing required parameter date when calling v1NativeIexLevel2PriceLevelUpdateSymbolGet');
+  if (opt_date !== undefined) {
+    queryParameters['date'] = opt_date;
   }
-  if (date !== undefined) {
-    queryParameters['date'] = date;
+
+  if (opt_timeStart !== undefined) {
+    queryParameters['time_start'] = opt_timeStart;
   }
 
   if (opt_limit !== undefined) {
@@ -249,14 +253,15 @@ API.Client.NativeIEXApi.prototype.v1NativeIexLevel2PriceLevelUpdateSymbolGet = f
 
 /**
  * Get Level-3 Order Book
- * Streaming endpoint. Use &#x60;limit&#x60; to cap the number of records returned (default 100, max 10000).
+ * Streams one UTC day. &#x60;time_start&#x60; may be a full timestamp (&#x60;2026-09-28T13:31:14.8560065Z&#x60;) or a time of day (&#x60;13:31:14.8560065Z&#x60;) when &#x60;date&#x60; is set. Events start at that instant, inclusive. Omit &#x60;limit&#x60; to stream through the end of the day.
  * @param {!string} symbol The symbol identifier
- * @param {!Date} date Date in format YYYY-MM-DD
- * @param {!number=} opt_limit Maximum number of records to return (1-10000, default 100)
+ * @param {!Date=} opt_date UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day.
+ * @param {!string=} opt_timeStart Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set.
+ * @param {!number=} opt_limit Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
  * @return {!angular.$q.Promise<!Array<!API.Client.Models.OrderBookModel>>}
  */
-API.Client.NativeIEXApi.prototype.v1NativeIexLevel3OrderBookSymbolGet = function(symbol, date, opt_limit, opt_extraHttpRequestParams) {
+API.Client.NativeIEXApi.prototype.v1NativeIexLevel3OrderBookSymbolGet = function(symbol, opt_date, opt_timeStart, opt_limit, opt_extraHttpRequestParams) {
   /** @const {string} */
   var path = this.basePath_ + '/v1/native/iex/level3-order-book/{symbol}'
       .replace('{symbol}', String(symbol));
@@ -270,12 +275,12 @@ API.Client.NativeIEXApi.prototype.v1NativeIexLevel3OrderBookSymbolGet = function
   if (!symbol) {
     throw new Error('Missing required parameter symbol when calling v1NativeIexLevel3OrderBookSymbolGet');
   }
-  // verify required parameter 'date' is set
-  if (!date) {
-    throw new Error('Missing required parameter date when calling v1NativeIexLevel3OrderBookSymbolGet');
+  if (opt_date !== undefined) {
+    queryParameters['date'] = opt_date;
   }
-  if (date !== undefined) {
-    queryParameters['date'] = date;
+
+  if (opt_timeStart !== undefined) {
+    queryParameters['time_start'] = opt_timeStart;
   }
 
   if (opt_limit !== undefined) {
@@ -300,14 +305,15 @@ API.Client.NativeIEXApi.prototype.v1NativeIexLevel3OrderBookSymbolGet = function
 
 /**
  * Get Trades
- * Streaming endpoint. Use &#x60;limit&#x60; to cap the number of trade records returned (default 100, max 10000).
+ * Streams one UTC day. &#x60;time_start&#x60; may be a full timestamp (&#x60;2026-09-28T13:31:14.8560065Z&#x60;) or a time of day (&#x60;13:31:14.8560065Z&#x60;) when &#x60;date&#x60; is set. Events start at that instant, inclusive. Omit &#x60;limit&#x60; to stream through the end of the day.
  * @param {!string} symbol The symbol identifier
- * @param {!Date} date Date in format YYYY-MM-DD
- * @param {!number=} opt_limit Maximum number of records to return (1-10000, default 100)
+ * @param {!Date=} opt_date UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day.
+ * @param {!string=} opt_timeStart Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set.
+ * @param {!number=} opt_limit Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
  * @return {!angular.$q.Promise<!Array<!API.Client.IEXTrade.TradeModel>>}
  */
-API.Client.NativeIEXApi.prototype.v1NativeIexTradeSymbolGet = function(symbol, date, opt_limit, opt_extraHttpRequestParams) {
+API.Client.NativeIEXApi.prototype.v1NativeIexTradeSymbolGet = function(symbol, opt_date, opt_timeStart, opt_limit, opt_extraHttpRequestParams) {
   /** @const {string} */
   var path = this.basePath_ + '/v1/native/iex/trade/{symbol}'
       .replace('{symbol}', String(symbol));
@@ -321,12 +327,12 @@ API.Client.NativeIEXApi.prototype.v1NativeIexTradeSymbolGet = function(symbol, d
   if (!symbol) {
     throw new Error('Missing required parameter symbol when calling v1NativeIexTradeSymbolGet');
   }
-  // verify required parameter 'date' is set
-  if (!date) {
-    throw new Error('Missing required parameter date when calling v1NativeIexTradeSymbolGet');
+  if (opt_date !== undefined) {
+    queryParameters['date'] = opt_date;
   }
-  if (date !== undefined) {
-    queryParameters['date'] = date;
+
+  if (opt_timeStart !== undefined) {
+    queryParameters['time_start'] = opt_timeStart;
   }
 
   if (opt_limit !== undefined) {

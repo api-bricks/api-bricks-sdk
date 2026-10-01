@@ -54,82 +54,94 @@ public:
     /// Get Admin Messages
     /// </summary>
     /// <remarks>
-    /// Streaming endpoint. Use &#x60;limit&#x60; to cap the number of records returned (default 100, max 10000).
+    /// Streams one UTC day. &#x60;time_start&#x60; may be a full timestamp (&#x60;2026-09-28T13:31:14.8560065Z&#x60;) or a time of day (&#x60;13:31:14.8560065Z&#x60;) when &#x60;date&#x60; is set. Events start at that instant, inclusive. Omit &#x60;limit&#x60; to stream through the end of the day.
     /// </remarks>
     /// <param name="symbol">The symbol identifier</param>
-    /// <param name="date">Date in format YYYY-MM-DD</param>
-    /// <param name="limit">Maximum number of records to return (1-10000, default 100) (optional, default to 0)</param>
+    /// <param name="date">UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. (optional, default to utility::datetime())</param>
+    /// <param name="timeStart">Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    /// <param name="limit">Optional cap on the number of records (1-10000). Omit to stream through the end of the day. (optional, default to 0)</param>
     pplx::task<std::vector<std::shared_ptr<Models_AdminMessageModel>>> v1NativeIexAdminMessagesSymbolGet(
         utility::string_t symbol,
-        utility::datetime date,
+        boost::optional<utility::datetime> date,
+        boost::optional<utility::string_t> timeStart,
         boost::optional<int32_t> limit
     ) const;
     /// <summary>
     /// Get System Events
     /// </summary>
     /// <remarks>
-    /// Streaming endpoint. Use &#x60;limit&#x60; to cap the number of records returned (default 100, max 10000).
+    /// Streams one UTC day. &#x60;time_start&#x60; may be a full timestamp (&#x60;2026-09-28T13:31:14.8560065Z&#x60;) or a time of day (&#x60;13:31:14.8560065Z&#x60;) when &#x60;date&#x60; is set. Events start at that instant, inclusive. Omit &#x60;limit&#x60; to stream through the end of the day.
     /// </remarks>
-    /// <param name="date">Date in format YYYY-MM-DD</param>
-    /// <param name="limit">Maximum number of records to return (1-10000, default 100) (optional, default to 0)</param>
+    /// <param name="date">UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. (optional, default to utility::datetime())</param>
+    /// <param name="timeStart">Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    /// <param name="limit">Optional cap on the number of records (1-10000). Omit to stream through the end of the day. (optional, default to 0)</param>
     pplx::task<std::vector<std::shared_ptr<IEXSystemEvent_SystemEventModel>>> v1NativeIexAdminSystemEventGet(
-        utility::datetime date,
+        boost::optional<utility::datetime> date,
+        boost::optional<utility::string_t> timeStart,
         boost::optional<int32_t> limit
     ) const;
     /// <summary>
     /// Get Level-1 Quotes
     /// </summary>
     /// <remarks>
-    /// Streaming endpoint. Use &#x60;limit&#x60; to cap the number of records returned (default 100, max 10000).
+    /// Streams one UTC day. &#x60;time_start&#x60; may be a full timestamp (&#x60;2026-09-28T13:31:14.8560065Z&#x60;) or a time of day (&#x60;13:31:14.8560065Z&#x60;) when &#x60;date&#x60; is set. Events start at that instant, inclusive. Omit &#x60;limit&#x60; to stream through the end of the day.
     /// </remarks>
     /// <param name="symbol">The symbol identifier</param>
-    /// <param name="date">Date in format YYYY-MM-DD</param>
-    /// <param name="limit">Maximum number of records to return (1-10000, default 100) (optional, default to 0)</param>
+    /// <param name="date">UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. (optional, default to utility::datetime())</param>
+    /// <param name="timeStart">Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    /// <param name="limit">Optional cap on the number of records (1-10000). Omit to stream through the end of the day. (optional, default to 0)</param>
     pplx::task<std::vector<std::shared_ptr<IEXQuoteUpdate_QuoteUpdateModel>>> v1NativeIexLevel1QuoteSymbolGet(
         utility::string_t symbol,
-        utility::datetime date,
+        boost::optional<utility::datetime> date,
+        boost::optional<utility::string_t> timeStart,
         boost::optional<int32_t> limit
     ) const;
     /// <summary>
     /// Get Level-2 Price Level Book
     /// </summary>
     /// <remarks>
-    /// Streaming endpoint. Use &#x60;limit&#x60; to cap the number of records returned (default 100, max 10000).
+    /// Streams one UTC day. &#x60;time_start&#x60; may be a full timestamp (&#x60;2026-09-28T13:31:14.8560065Z&#x60;) or a time of day (&#x60;13:31:14.8560065Z&#x60;) when &#x60;date&#x60; is set. Events start at that instant, inclusive. Omit &#x60;limit&#x60; to stream through the end of the day.
     /// </remarks>
     /// <param name="symbol">The symbol identifier</param>
-    /// <param name="date">Date in format YYYY-MM-DD</param>
-    /// <param name="limit">Maximum number of records to return (1-10000, default 100) (optional, default to 0)</param>
+    /// <param name="date">UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. (optional, default to utility::datetime())</param>
+    /// <param name="timeStart">Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    /// <param name="limit">Optional cap on the number of records (1-10000). Omit to stream through the end of the day. (optional, default to 0)</param>
     pplx::task<std::vector<std::shared_ptr<IEXPriceLevelUpdate_PriceLevelUpdateModel>>> v1NativeIexLevel2PriceLevelUpdateSymbolGet(
         utility::string_t symbol,
-        utility::datetime date,
+        boost::optional<utility::datetime> date,
+        boost::optional<utility::string_t> timeStart,
         boost::optional<int32_t> limit
     ) const;
     /// <summary>
     /// Get Level-3 Order Book
     /// </summary>
     /// <remarks>
-    /// Streaming endpoint. Use &#x60;limit&#x60; to cap the number of records returned (default 100, max 10000).
+    /// Streams one UTC day. &#x60;time_start&#x60; may be a full timestamp (&#x60;2026-09-28T13:31:14.8560065Z&#x60;) or a time of day (&#x60;13:31:14.8560065Z&#x60;) when &#x60;date&#x60; is set. Events start at that instant, inclusive. Omit &#x60;limit&#x60; to stream through the end of the day.
     /// </remarks>
     /// <param name="symbol">The symbol identifier</param>
-    /// <param name="date">Date in format YYYY-MM-DD</param>
-    /// <param name="limit">Maximum number of records to return (1-10000, default 100) (optional, default to 0)</param>
+    /// <param name="date">UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. (optional, default to utility::datetime())</param>
+    /// <param name="timeStart">Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    /// <param name="limit">Optional cap on the number of records (1-10000). Omit to stream through the end of the day. (optional, default to 0)</param>
     pplx::task<std::vector<std::shared_ptr<Models_OrderBookModel>>> v1NativeIexLevel3OrderBookSymbolGet(
         utility::string_t symbol,
-        utility::datetime date,
+        boost::optional<utility::datetime> date,
+        boost::optional<utility::string_t> timeStart,
         boost::optional<int32_t> limit
     ) const;
     /// <summary>
     /// Get Trades
     /// </summary>
     /// <remarks>
-    /// Streaming endpoint. Use &#x60;limit&#x60; to cap the number of trade records returned (default 100, max 10000).
+    /// Streams one UTC day. &#x60;time_start&#x60; may be a full timestamp (&#x60;2026-09-28T13:31:14.8560065Z&#x60;) or a time of day (&#x60;13:31:14.8560065Z&#x60;) when &#x60;date&#x60; is set. Events start at that instant, inclusive. Omit &#x60;limit&#x60; to stream through the end of the day.
     /// </remarks>
     /// <param name="symbol">The symbol identifier</param>
-    /// <param name="date">Date in format YYYY-MM-DD</param>
-    /// <param name="limit">Maximum number of records to return (1-10000, default 100) (optional, default to 0)</param>
+    /// <param name="date">UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. (optional, default to utility::datetime())</param>
+    /// <param name="timeStart">Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    /// <param name="limit">Optional cap on the number of records (1-10000). Omit to stream through the end of the day. (optional, default to 0)</param>
     pplx::task<std::vector<std::shared_ptr<IEXTrade_TradeModel>>> v1NativeIexTradeSymbolGet(
         utility::string_t symbol,
-        utility::datetime date,
+        boost::optional<utility::datetime> date,
+        boost::optional<utility::string_t> timeStart,
         boost::optional<int32_t> limit
     ) const;
 

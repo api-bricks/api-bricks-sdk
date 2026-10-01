@@ -24,15 +24,17 @@ inherit
 feature -- API Access
 
 
-	v1_native_iex_admin_messages_symbol_get (symbol: STRING_32; date: DATE_TIME; limit: INTEGER_32): detachable LIST [MODELS_ADMIN_MESSAGE_MODEL]
+	v1_native_iex_admin_messages_symbol_get (symbol: STRING_32; date: DATE_TIME; time_start: STRING_32; limit: INTEGER_32): detachable LIST [MODELS_ADMIN_MESSAGE_MODEL]
 			-- Get Admin Messages
-			-- Streaming endpoint. Use &#x60;limit&#x60; to cap the number of records returned (default 100, max 10000).
+			-- Streams one UTC day. &#x60;time_start&#x60; may be a full timestamp (&#x60;2026-09-28T13:31:14.8560065Z&#x60;) or a time of day (&#x60;13:31:14.8560065Z&#x60;) when &#x60;date&#x60; is set. Events start at that instant, inclusive. Omit &#x60;limit&#x60; to stream through the end of the day.
 			-- 
 			-- argument: symbol The symbol identifier (required)
 			-- 
-			-- argument: date Date in format YYYY-MM-DD (required)
+			-- argument: date UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. (optional, default to null)
 			-- 
-			-- argument: limit Maximum number of records to return (1-10000, default 100) (optional, default to 100)
+			-- argument: time_start Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. (optional, default to null)
+			-- 
+			-- argument: limit Optional cap on the number of records (1-10000). Omit to stream through the end of the day. (optional, default to null)
 			-- 
 			-- 
 			-- Result LIST [MODELS_ADMIN_MESSAGE_MODEL]
@@ -48,6 +50,7 @@ feature -- API Access
 			l_path := "/v1/native/iex/admin/messages/{symbol}"
 			l_path.replace_substring_all ("{"+"symbol"+"}", api_client.url_encode (symbol.out))
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "date", date));
+			l_request.fill_query_params(api_client.parameter_to_tuple("", "time_start", time_start));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "limit", limit));
 
 
@@ -66,13 +69,15 @@ feature -- API Access
 			end
 		end
 
-	v1_native_iex_admin_system_event_get (date: DATE_TIME; limit: INTEGER_32): detachable LIST [IEX_SYSTEM_EVENT_SYSTEM_EVENT_MODEL]
+	v1_native_iex_admin_system_event_get (date: DATE_TIME; time_start: STRING_32; limit: INTEGER_32): detachable LIST [IEX_SYSTEM_EVENT_SYSTEM_EVENT_MODEL]
 			-- Get System Events
-			-- Streaming endpoint. Use &#x60;limit&#x60; to cap the number of records returned (default 100, max 10000).
+			-- Streams one UTC day. &#x60;time_start&#x60; may be a full timestamp (&#x60;2026-09-28T13:31:14.8560065Z&#x60;) or a time of day (&#x60;13:31:14.8560065Z&#x60;) when &#x60;date&#x60; is set. Events start at that instant, inclusive. Omit &#x60;limit&#x60; to stream through the end of the day.
 			-- 
-			-- argument: date Date in format YYYY-MM-DD (required)
+			-- argument: date UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. (optional, default to null)
 			-- 
-			-- argument: limit Maximum number of records to return (1-10000, default 100) (optional, default to 100)
+			-- argument: time_start Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. (optional, default to null)
+			-- 
+			-- argument: limit Optional cap on the number of records (1-10000). Omit to stream through the end of the day. (optional, default to null)
 			-- 
 			-- 
 			-- Result LIST [IEX_SYSTEM_EVENT_SYSTEM_EVENT_MODEL]
@@ -87,6 +92,7 @@ feature -- API Access
 			
 			l_path := "/v1/native/iex/admin/system-event"
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "date", date));
+			l_request.fill_query_params(api_client.parameter_to_tuple("", "time_start", time_start));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "limit", limit));
 
 
@@ -105,15 +111,17 @@ feature -- API Access
 			end
 		end
 
-	v1_native_iex_level1_quote_symbol_get (symbol: STRING_32; date: DATE_TIME; limit: INTEGER_32): detachable LIST [IEX_QUOTE_UPDATE_QUOTE_UPDATE_MODEL]
+	v1_native_iex_level1_quote_symbol_get (symbol: STRING_32; date: DATE_TIME; time_start: STRING_32; limit: INTEGER_32): detachable LIST [IEX_QUOTE_UPDATE_QUOTE_UPDATE_MODEL]
 			-- Get Level-1 Quotes
-			-- Streaming endpoint. Use &#x60;limit&#x60; to cap the number of records returned (default 100, max 10000).
+			-- Streams one UTC day. &#x60;time_start&#x60; may be a full timestamp (&#x60;2026-09-28T13:31:14.8560065Z&#x60;) or a time of day (&#x60;13:31:14.8560065Z&#x60;) when &#x60;date&#x60; is set. Events start at that instant, inclusive. Omit &#x60;limit&#x60; to stream through the end of the day.
 			-- 
 			-- argument: symbol The symbol identifier (required)
 			-- 
-			-- argument: date Date in format YYYY-MM-DD (required)
+			-- argument: date UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. (optional, default to null)
 			-- 
-			-- argument: limit Maximum number of records to return (1-10000, default 100) (optional, default to 100)
+			-- argument: time_start Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. (optional, default to null)
+			-- 
+			-- argument: limit Optional cap on the number of records (1-10000). Omit to stream through the end of the day. (optional, default to null)
 			-- 
 			-- 
 			-- Result LIST [IEX_QUOTE_UPDATE_QUOTE_UPDATE_MODEL]
@@ -129,6 +137,7 @@ feature -- API Access
 			l_path := "/v1/native/iex/level1-quote/{symbol}"
 			l_path.replace_substring_all ("{"+"symbol"+"}", api_client.url_encode (symbol.out))
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "date", date));
+			l_request.fill_query_params(api_client.parameter_to_tuple("", "time_start", time_start));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "limit", limit));
 
 
@@ -147,15 +156,17 @@ feature -- API Access
 			end
 		end
 
-	v1_native_iex_level2_price_level_update_symbol_get (symbol: STRING_32; date: DATE_TIME; limit: INTEGER_32): detachable LIST [IEX_PRICE_LEVEL_UPDATE_PRICE_LEVEL_UPDATE_MODEL]
+	v1_native_iex_level2_price_level_update_symbol_get (symbol: STRING_32; date: DATE_TIME; time_start: STRING_32; limit: INTEGER_32): detachable LIST [IEX_PRICE_LEVEL_UPDATE_PRICE_LEVEL_UPDATE_MODEL]
 			-- Get Level-2 Price Level Book
-			-- Streaming endpoint. Use &#x60;limit&#x60; to cap the number of records returned (default 100, max 10000).
+			-- Streams one UTC day. &#x60;time_start&#x60; may be a full timestamp (&#x60;2026-09-28T13:31:14.8560065Z&#x60;) or a time of day (&#x60;13:31:14.8560065Z&#x60;) when &#x60;date&#x60; is set. Events start at that instant, inclusive. Omit &#x60;limit&#x60; to stream through the end of the day.
 			-- 
 			-- argument: symbol The symbol identifier (required)
 			-- 
-			-- argument: date Date in format YYYY-MM-DD (required)
+			-- argument: date UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. (optional, default to null)
 			-- 
-			-- argument: limit Maximum number of records to return (1-10000, default 100) (optional, default to 100)
+			-- argument: time_start Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. (optional, default to null)
+			-- 
+			-- argument: limit Optional cap on the number of records (1-10000). Omit to stream through the end of the day. (optional, default to null)
 			-- 
 			-- 
 			-- Result LIST [IEX_PRICE_LEVEL_UPDATE_PRICE_LEVEL_UPDATE_MODEL]
@@ -171,6 +182,7 @@ feature -- API Access
 			l_path := "/v1/native/iex/level2-price-level-update/{symbol}"
 			l_path.replace_substring_all ("{"+"symbol"+"}", api_client.url_encode (symbol.out))
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "date", date));
+			l_request.fill_query_params(api_client.parameter_to_tuple("", "time_start", time_start));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "limit", limit));
 
 
@@ -189,15 +201,17 @@ feature -- API Access
 			end
 		end
 
-	v1_native_iex_level3_order_book_symbol_get (symbol: STRING_32; date: DATE_TIME; limit: INTEGER_32): detachable LIST [MODELS_ORDER_BOOK_MODEL]
+	v1_native_iex_level3_order_book_symbol_get (symbol: STRING_32; date: DATE_TIME; time_start: STRING_32; limit: INTEGER_32): detachable LIST [MODELS_ORDER_BOOK_MODEL]
 			-- Get Level-3 Order Book
-			-- Streaming endpoint. Use &#x60;limit&#x60; to cap the number of records returned (default 100, max 10000).
+			-- Streams one UTC day. &#x60;time_start&#x60; may be a full timestamp (&#x60;2026-09-28T13:31:14.8560065Z&#x60;) or a time of day (&#x60;13:31:14.8560065Z&#x60;) when &#x60;date&#x60; is set. Events start at that instant, inclusive. Omit &#x60;limit&#x60; to stream through the end of the day.
 			-- 
 			-- argument: symbol The symbol identifier (required)
 			-- 
-			-- argument: date Date in format YYYY-MM-DD (required)
+			-- argument: date UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. (optional, default to null)
 			-- 
-			-- argument: limit Maximum number of records to return (1-10000, default 100) (optional, default to 100)
+			-- argument: time_start Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. (optional, default to null)
+			-- 
+			-- argument: limit Optional cap on the number of records (1-10000). Omit to stream through the end of the day. (optional, default to null)
 			-- 
 			-- 
 			-- Result LIST [MODELS_ORDER_BOOK_MODEL]
@@ -213,6 +227,7 @@ feature -- API Access
 			l_path := "/v1/native/iex/level3-order-book/{symbol}"
 			l_path.replace_substring_all ("{"+"symbol"+"}", api_client.url_encode (symbol.out))
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "date", date));
+			l_request.fill_query_params(api_client.parameter_to_tuple("", "time_start", time_start));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "limit", limit));
 
 
@@ -231,15 +246,17 @@ feature -- API Access
 			end
 		end
 
-	v1_native_iex_trade_symbol_get (symbol: STRING_32; date: DATE_TIME; limit: INTEGER_32): detachable LIST [IEX_TRADE_TRADE_MODEL]
+	v1_native_iex_trade_symbol_get (symbol: STRING_32; date: DATE_TIME; time_start: STRING_32; limit: INTEGER_32): detachable LIST [IEX_TRADE_TRADE_MODEL]
 			-- Get Trades
-			-- Streaming endpoint. Use &#x60;limit&#x60; to cap the number of trade records returned (default 100, max 10000).
+			-- Streams one UTC day. &#x60;time_start&#x60; may be a full timestamp (&#x60;2026-09-28T13:31:14.8560065Z&#x60;) or a time of day (&#x60;13:31:14.8560065Z&#x60;) when &#x60;date&#x60; is set. Events start at that instant, inclusive. Omit &#x60;limit&#x60; to stream through the end of the day.
 			-- 
 			-- argument: symbol The symbol identifier (required)
 			-- 
-			-- argument: date Date in format YYYY-MM-DD (required)
+			-- argument: date UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. (optional, default to null)
 			-- 
-			-- argument: limit Maximum number of records to return (1-10000, default 100) (optional, default to 100)
+			-- argument: time_start Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. (optional, default to null)
+			-- 
+			-- argument: limit Optional cap on the number of records (1-10000). Omit to stream through the end of the day. (optional, default to null)
 			-- 
 			-- 
 			-- Result LIST [IEX_TRADE_TRADE_MODEL]
@@ -255,6 +272,7 @@ feature -- API Access
 			l_path := "/v1/native/iex/trade/{symbol}"
 			l_path.replace_substring_all ("{"+"symbol"+"}", api_client.url_encode (symbol.out))
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "date", date));
+			l_request.fill_query_params(api_client.parameter_to_tuple("", "time_start", time_start));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "limit", limit));
 
 

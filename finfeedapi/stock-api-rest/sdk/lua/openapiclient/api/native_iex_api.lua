@@ -49,13 +49,13 @@ local function new_native_iex_api(authority, basePath, schemes)
 	}, native_iex_api_mt)
 end
 
-function native_iex_api:v1_native_iex_admin_messages_symbol_get(symbol, date, limit)
+function native_iex_api:v1_native_iex_admin_messages_symbol_get(symbol, date, time_start, limit)
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/v1/native/iex/admin/messages/%s?date=%s&limit=%s",
-			self.basePath, symbol, http_util.encodeURIComponent(date), http_util.encodeURIComponent(limit));
+		path = string.format("%s/v1/native/iex/admin/messages/%s?date=%s&time_start=%s&limit=%s",
+			self.basePath, symbol, http_util.encodeURIComponent(date), http_util.encodeURIComponent(time_start), http_util.encodeURIComponent(limit));
 	})
 
 	-- set HTTP verb
@@ -102,13 +102,13 @@ function native_iex_api:v1_native_iex_admin_messages_symbol_get(symbol, date, li
 	end
 end
 
-function native_iex_api:v1_native_iex_admin_system_event_get(date, limit)
+function native_iex_api:v1_native_iex_admin_system_event_get(date, time_start, limit)
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/v1/native/iex/admin/system-event?date=%s&limit=%s",
-			self.basePath, http_util.encodeURIComponent(date), http_util.encodeURIComponent(limit));
+		path = string.format("%s/v1/native/iex/admin/system-event?date=%s&time_start=%s&limit=%s",
+			self.basePath, http_util.encodeURIComponent(date), http_util.encodeURIComponent(time_start), http_util.encodeURIComponent(limit));
 	})
 
 	-- set HTTP verb
@@ -155,13 +155,13 @@ function native_iex_api:v1_native_iex_admin_system_event_get(date, limit)
 	end
 end
 
-function native_iex_api:v1_native_iex_level1_quote_symbol_get(symbol, date, limit)
+function native_iex_api:v1_native_iex_level1_quote_symbol_get(symbol, date, time_start, limit)
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/v1/native/iex/level1-quote/%s?date=%s&limit=%s",
-			self.basePath, symbol, http_util.encodeURIComponent(date), http_util.encodeURIComponent(limit));
+		path = string.format("%s/v1/native/iex/level1-quote/%s?date=%s&time_start=%s&limit=%s",
+			self.basePath, symbol, http_util.encodeURIComponent(date), http_util.encodeURIComponent(time_start), http_util.encodeURIComponent(limit));
 	})
 
 	-- set HTTP verb
@@ -208,13 +208,13 @@ function native_iex_api:v1_native_iex_level1_quote_symbol_get(symbol, date, limi
 	end
 end
 
-function native_iex_api:v1_native_iex_level2_price_level_update_symbol_get(symbol, date, limit)
+function native_iex_api:v1_native_iex_level2_price_level_update_symbol_get(symbol, date, time_start, limit)
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/v1/native/iex/level2-price-level-update/%s?date=%s&limit=%s",
-			self.basePath, symbol, http_util.encodeURIComponent(date), http_util.encodeURIComponent(limit));
+		path = string.format("%s/v1/native/iex/level2-price-level-update/%s?date=%s&time_start=%s&limit=%s",
+			self.basePath, symbol, http_util.encodeURIComponent(date), http_util.encodeURIComponent(time_start), http_util.encodeURIComponent(limit));
 	})
 
 	-- set HTTP verb
@@ -261,13 +261,13 @@ function native_iex_api:v1_native_iex_level2_price_level_update_symbol_get(symbo
 	end
 end
 
-function native_iex_api:v1_native_iex_level3_order_book_symbol_get(symbol, date, limit)
+function native_iex_api:v1_native_iex_level3_order_book_symbol_get(symbol, date, time_start, limit)
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/v1/native/iex/level3-order-book/%s?date=%s&limit=%s",
-			self.basePath, symbol, http_util.encodeURIComponent(date), http_util.encodeURIComponent(limit));
+		path = string.format("%s/v1/native/iex/level3-order-book/%s?date=%s&time_start=%s&limit=%s",
+			self.basePath, symbol, http_util.encodeURIComponent(date), http_util.encodeURIComponent(time_start), http_util.encodeURIComponent(limit));
 	})
 
 	-- set HTTP verb
@@ -314,13 +314,13 @@ function native_iex_api:v1_native_iex_level3_order_book_symbol_get(symbol, date,
 	end
 end
 
-function native_iex_api:v1_native_iex_trade_symbol_get(symbol, date, limit)
+function native_iex_api:v1_native_iex_trade_symbol_get(symbol, date, time_start, limit)
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/v1/native/iex/trade/%s?date=%s&limit=%s",
-			self.basePath, symbol, http_util.encodeURIComponent(date), http_util.encodeURIComponent(limit));
+		path = string.format("%s/v1/native/iex/trade/%s?date=%s&time_start=%s&limit=%s",
+			self.basePath, symbol, http_util.encodeURIComponent(date), http_util.encodeURIComponent(time_start), http_util.encodeURIComponent(limit));
 	})
 
 	-- set HTTP verb

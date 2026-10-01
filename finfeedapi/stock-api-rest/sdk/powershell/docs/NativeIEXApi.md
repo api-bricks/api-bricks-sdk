@@ -16,12 +16,13 @@ Method | HTTP request | Description
 # **Invoke-V1NativeIexAdminMessagesSymbolGet**
 > ModelsAdminMessageModel[] Invoke-V1NativeIexAdminMessagesSymbolGet<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Symbol] <String><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Date] <System.DateTime><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Date] <System.Nullable[System.DateTime]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-TimeStart] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Limit] <System.Nullable[Int32]><br>
 
 Get Admin Messages
 
-Streaming endpoint. Use `limit` to cap the number of records returned (default 100, max 10000).
+Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
 
 ### Example
 ```powershell
@@ -34,12 +35,13 @@ $Configuration.ApiKey.Authorization = "YOUR_API_KEY"
 
 
 $Symbol = "MySymbol" # String | The symbol identifier
-$Date = (Get-Date) # System.DateTime | Date in format YYYY-MM-DD
-$Limit = 56 # Int32 | Maximum number of records to return (1-10000, default 100) (optional) (default to 100)
+$Date = (Get-Date) # System.DateTime | UTC day (`YYYY-MM-DD`). Optional when `time_start` includes a calendar day. (optional)
+$TimeStart = "MyTimeStart" # String | Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when `date` is set. (optional)
+$Limit = 56 # Int32 | Optional cap on the number of records (1-10000). Omit to stream through the end of the day. (optional)
 
 # Get Admin Messages
 try {
-    $Result = Invoke-V1NativeIexAdminMessagesSymbolGet -Symbol $Symbol -Date $Date -Limit $Limit
+    $Result = Invoke-V1NativeIexAdminMessagesSymbolGet -Symbol $Symbol -Date $Date -TimeStart $TimeStart -Limit $Limit
 } catch {
     Write-Host ("Exception occurred when calling Invoke-V1NativeIexAdminMessagesSymbolGet: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -51,8 +53,9 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **Symbol** | **String**| The symbol identifier | 
- **Date** | **System.DateTime**| Date in format YYYY-MM-DD | 
- **Limit** | **Int32**| Maximum number of records to return (1-10000, default 100) | [optional] [default to 100]
+ **Date** | **System.DateTime**| UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. | [optional] 
+ **TimeStart** | **String**| Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. | [optional] 
+ **Limit** | **Int32**| Optional cap on the number of records (1-10000). Omit to stream through the end of the day. | [optional] 
 
 ### Return type
 
@@ -72,12 +75,13 @@ Name | Type | Description  | Notes
 <a id="Invoke-V1NativeIexAdminSystemEventGet"></a>
 # **Invoke-V1NativeIexAdminSystemEventGet**
 > IEXSystemEventSystemEventModel[] Invoke-V1NativeIexAdminSystemEventGet<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Date] <System.DateTime><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Date] <System.Nullable[System.DateTime]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-TimeStart] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Limit] <System.Nullable[Int32]><br>
 
 Get System Events
 
-Streaming endpoint. Use `limit` to cap the number of records returned (default 100, max 10000).
+Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
 
 ### Example
 ```powershell
@@ -89,12 +93,13 @@ $Configuration.ApiKey.Authorization = "YOUR_API_KEY"
 #$Configuration.ApiKeyPrefix.Authorization = "Bearer"
 
 
-$Date = (Get-Date) # System.DateTime | Date in format YYYY-MM-DD
-$Limit = 56 # Int32 | Maximum number of records to return (1-10000, default 100) (optional) (default to 100)
+$Date = (Get-Date) # System.DateTime | UTC day (`YYYY-MM-DD`). Optional when `time_start` includes a calendar day. (optional)
+$TimeStart = "MyTimeStart" # String | Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when `date` is set. (optional)
+$Limit = 56 # Int32 | Optional cap on the number of records (1-10000). Omit to stream through the end of the day. (optional)
 
 # Get System Events
 try {
-    $Result = Invoke-V1NativeIexAdminSystemEventGet -Date $Date -Limit $Limit
+    $Result = Invoke-V1NativeIexAdminSystemEventGet -Date $Date -TimeStart $TimeStart -Limit $Limit
 } catch {
     Write-Host ("Exception occurred when calling Invoke-V1NativeIexAdminSystemEventGet: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -105,8 +110,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Date** | **System.DateTime**| Date in format YYYY-MM-DD | 
- **Limit** | **Int32**| Maximum number of records to return (1-10000, default 100) | [optional] [default to 100]
+ **Date** | **System.DateTime**| UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. | [optional] 
+ **TimeStart** | **String**| Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. | [optional] 
+ **Limit** | **Int32**| Optional cap on the number of records (1-10000). Omit to stream through the end of the day. | [optional] 
 
 ### Return type
 
@@ -127,12 +133,13 @@ Name | Type | Description  | Notes
 # **Invoke-V1NativeIexLevel1QuoteSymbolGet**
 > IEXQuoteUpdateQuoteUpdateModel[] Invoke-V1NativeIexLevel1QuoteSymbolGet<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Symbol] <String><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Date] <System.DateTime><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Date] <System.Nullable[System.DateTime]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-TimeStart] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Limit] <System.Nullable[Int32]><br>
 
 Get Level-1 Quotes
 
-Streaming endpoint. Use `limit` to cap the number of records returned (default 100, max 10000).
+Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
 
 ### Example
 ```powershell
@@ -145,12 +152,13 @@ $Configuration.ApiKey.Authorization = "YOUR_API_KEY"
 
 
 $Symbol = "MySymbol" # String | The symbol identifier
-$Date = (Get-Date) # System.DateTime | Date in format YYYY-MM-DD
-$Limit = 56 # Int32 | Maximum number of records to return (1-10000, default 100) (optional) (default to 100)
+$Date = (Get-Date) # System.DateTime | UTC day (`YYYY-MM-DD`). Optional when `time_start` includes a calendar day. (optional)
+$TimeStart = "MyTimeStart" # String | Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when `date` is set. (optional)
+$Limit = 56 # Int32 | Optional cap on the number of records (1-10000). Omit to stream through the end of the day. (optional)
 
 # Get Level-1 Quotes
 try {
-    $Result = Invoke-V1NativeIexLevel1QuoteSymbolGet -Symbol $Symbol -Date $Date -Limit $Limit
+    $Result = Invoke-V1NativeIexLevel1QuoteSymbolGet -Symbol $Symbol -Date $Date -TimeStart $TimeStart -Limit $Limit
 } catch {
     Write-Host ("Exception occurred when calling Invoke-V1NativeIexLevel1QuoteSymbolGet: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -162,8 +170,9 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **Symbol** | **String**| The symbol identifier | 
- **Date** | **System.DateTime**| Date in format YYYY-MM-DD | 
- **Limit** | **Int32**| Maximum number of records to return (1-10000, default 100) | [optional] [default to 100]
+ **Date** | **System.DateTime**| UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. | [optional] 
+ **TimeStart** | **String**| Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. | [optional] 
+ **Limit** | **Int32**| Optional cap on the number of records (1-10000). Omit to stream through the end of the day. | [optional] 
 
 ### Return type
 
@@ -184,12 +193,13 @@ Name | Type | Description  | Notes
 # **Invoke-V1NativeIexLevel2PriceLevelUpdateSymbolGet**
 > IEXPriceLevelUpdatePriceLevelUpdateModel[] Invoke-V1NativeIexLevel2PriceLevelUpdateSymbolGet<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Symbol] <String><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Date] <System.DateTime><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Date] <System.Nullable[System.DateTime]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-TimeStart] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Limit] <System.Nullable[Int32]><br>
 
 Get Level-2 Price Level Book
 
-Streaming endpoint. Use `limit` to cap the number of records returned (default 100, max 10000).
+Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
 
 ### Example
 ```powershell
@@ -202,12 +212,13 @@ $Configuration.ApiKey.Authorization = "YOUR_API_KEY"
 
 
 $Symbol = "MySymbol" # String | The symbol identifier
-$Date = (Get-Date) # System.DateTime | Date in format YYYY-MM-DD
-$Limit = 56 # Int32 | Maximum number of records to return (1-10000, default 100) (optional) (default to 100)
+$Date = (Get-Date) # System.DateTime | UTC day (`YYYY-MM-DD`). Optional when `time_start` includes a calendar day. (optional)
+$TimeStart = "MyTimeStart" # String | Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when `date` is set. (optional)
+$Limit = 56 # Int32 | Optional cap on the number of records (1-10000). Omit to stream through the end of the day. (optional)
 
 # Get Level-2 Price Level Book
 try {
-    $Result = Invoke-V1NativeIexLevel2PriceLevelUpdateSymbolGet -Symbol $Symbol -Date $Date -Limit $Limit
+    $Result = Invoke-V1NativeIexLevel2PriceLevelUpdateSymbolGet -Symbol $Symbol -Date $Date -TimeStart $TimeStart -Limit $Limit
 } catch {
     Write-Host ("Exception occurred when calling Invoke-V1NativeIexLevel2PriceLevelUpdateSymbolGet: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -219,8 +230,9 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **Symbol** | **String**| The symbol identifier | 
- **Date** | **System.DateTime**| Date in format YYYY-MM-DD | 
- **Limit** | **Int32**| Maximum number of records to return (1-10000, default 100) | [optional] [default to 100]
+ **Date** | **System.DateTime**| UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. | [optional] 
+ **TimeStart** | **String**| Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. | [optional] 
+ **Limit** | **Int32**| Optional cap on the number of records (1-10000). Omit to stream through the end of the day. | [optional] 
 
 ### Return type
 
@@ -241,12 +253,13 @@ Name | Type | Description  | Notes
 # **Invoke-V1NativeIexLevel3OrderBookSymbolGet**
 > ModelsOrderBookModel[] Invoke-V1NativeIexLevel3OrderBookSymbolGet<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Symbol] <String><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Date] <System.DateTime><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Date] <System.Nullable[System.DateTime]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-TimeStart] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Limit] <System.Nullable[Int32]><br>
 
 Get Level-3 Order Book
 
-Streaming endpoint. Use `limit` to cap the number of records returned (default 100, max 10000).
+Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
 
 ### Example
 ```powershell
@@ -259,12 +272,13 @@ $Configuration.ApiKey.Authorization = "YOUR_API_KEY"
 
 
 $Symbol = "MySymbol" # String | The symbol identifier
-$Date = (Get-Date) # System.DateTime | Date in format YYYY-MM-DD
-$Limit = 56 # Int32 | Maximum number of records to return (1-10000, default 100) (optional) (default to 100)
+$Date = (Get-Date) # System.DateTime | UTC day (`YYYY-MM-DD`). Optional when `time_start` includes a calendar day. (optional)
+$TimeStart = "MyTimeStart" # String | Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when `date` is set. (optional)
+$Limit = 56 # Int32 | Optional cap on the number of records (1-10000). Omit to stream through the end of the day. (optional)
 
 # Get Level-3 Order Book
 try {
-    $Result = Invoke-V1NativeIexLevel3OrderBookSymbolGet -Symbol $Symbol -Date $Date -Limit $Limit
+    $Result = Invoke-V1NativeIexLevel3OrderBookSymbolGet -Symbol $Symbol -Date $Date -TimeStart $TimeStart -Limit $Limit
 } catch {
     Write-Host ("Exception occurred when calling Invoke-V1NativeIexLevel3OrderBookSymbolGet: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -276,8 +290,9 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **Symbol** | **String**| The symbol identifier | 
- **Date** | **System.DateTime**| Date in format YYYY-MM-DD | 
- **Limit** | **Int32**| Maximum number of records to return (1-10000, default 100) | [optional] [default to 100]
+ **Date** | **System.DateTime**| UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. | [optional] 
+ **TimeStart** | **String**| Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. | [optional] 
+ **Limit** | **Int32**| Optional cap on the number of records (1-10000). Omit to stream through the end of the day. | [optional] 
 
 ### Return type
 
@@ -298,12 +313,13 @@ Name | Type | Description  | Notes
 # **Invoke-V1NativeIexTradeSymbolGet**
 > IEXTradeTradeModel[] Invoke-V1NativeIexTradeSymbolGet<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Symbol] <String><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Date] <System.DateTime><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Date] <System.Nullable[System.DateTime]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-TimeStart] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Limit] <System.Nullable[Int32]><br>
 
 Get Trades
 
-Streaming endpoint. Use `limit` to cap the number of trade records returned (default 100, max 10000).
+Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
 
 ### Example
 ```powershell
@@ -316,12 +332,13 @@ $Configuration.ApiKey.Authorization = "YOUR_API_KEY"
 
 
 $Symbol = "MySymbol" # String | The symbol identifier
-$Date = (Get-Date) # System.DateTime | Date in format YYYY-MM-DD
-$Limit = 56 # Int32 | Maximum number of records to return (1-10000, default 100) (optional) (default to 100)
+$Date = (Get-Date) # System.DateTime | UTC day (`YYYY-MM-DD`). Optional when `time_start` includes a calendar day. (optional)
+$TimeStart = "MyTimeStart" # String | Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when `date` is set. (optional)
+$Limit = 56 # Int32 | Optional cap on the number of records (1-10000). Omit to stream through the end of the day. (optional)
 
 # Get Trades
 try {
-    $Result = Invoke-V1NativeIexTradeSymbolGet -Symbol $Symbol -Date $Date -Limit $Limit
+    $Result = Invoke-V1NativeIexTradeSymbolGet -Symbol $Symbol -Date $Date -TimeStart $TimeStart -Limit $Limit
 } catch {
     Write-Host ("Exception occurred when calling Invoke-V1NativeIexTradeSymbolGet: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -333,8 +350,9 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **Symbol** | **String**| The symbol identifier | 
- **Date** | **System.DateTime**| Date in format YYYY-MM-DD | 
- **Limit** | **Int32**| Maximum number of records to return (1-10000, default 100) | [optional] [default to 100]
+ **Date** | **System.DateTime**| UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. | [optional] 
+ **TimeStart** | **String**| Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. | [optional] 
+ **Limit** | **Int32**| Optional cap on the number of records (1-10000). Omit to stream through the end of the day. | [optional] 
 
 ### Return type
 

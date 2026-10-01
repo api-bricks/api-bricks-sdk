@@ -27,20 +27,21 @@ public class OASNativeIEXApi {
 
     /**
      * Get Admin Messages
-     * Streaming endpoint. Use &#x60;limit&#x60; to cap the number of records returned (default 100, max 10000).
+     * Streams one UTC day. &#x60;time_start&#x60; may be a full timestamp (&#x60;2026-09-28T13:31:14.8560065Z&#x60;) or a time of day (&#x60;13:31:14.8560065Z&#x60;) when &#x60;date&#x60; is set. Events start at that instant, inclusive. Omit &#x60;limit&#x60; to stream through the end of the day.
      * @param symbol The symbol identifier (required)
-     * @param r_date Date in format YYYY-MM-DD (required)
-     * @param r_limit Maximum number of records to return (1-10000, default 100) (optional, default to 100)
+     * @param r_date UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. (optional)
+     * @param timeStart Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. (optional)
+     * @param r_limit Optional cap on the number of records (1-10000). Omit to stream through the end of the day. (optional)
      * @return List<OASModelsAdminMessageModel>
      * @throws OAS.ApiException if fails to make API call
      */
     public List<OASModelsAdminMessageModel> v1NativeIexAdminMessagesSymbolGet(Map<String, Object> params) {
         client.assertNotNull(params.get('symbol'), 'symbol');
-        client.assertNotNull(params.get('r_date'), 'r_date');
         List<OAS.Param> query = new List<OAS.Param>();
 
         // cast query params to verify their expected type
         query.addAll(client.makeParam('date', (Datetime) params.get('r_date')));
+        query.addAll(client.makeParam('time_start', (String) params.get('timeStart')));
         query.addAll(client.makeParam('limit', (Integer) params.get('r_limit')));
 
         List<OAS.Param> form = new List<OAS.Param>();
@@ -60,18 +61,19 @@ public class OASNativeIEXApi {
     }
     /**
      * Get System Events
-     * Streaming endpoint. Use &#x60;limit&#x60; to cap the number of records returned (default 100, max 10000).
-     * @param r_date Date in format YYYY-MM-DD (required)
-     * @param r_limit Maximum number of records to return (1-10000, default 100) (optional, default to 100)
+     * Streams one UTC day. &#x60;time_start&#x60; may be a full timestamp (&#x60;2026-09-28T13:31:14.8560065Z&#x60;) or a time of day (&#x60;13:31:14.8560065Z&#x60;) when &#x60;date&#x60; is set. Events start at that instant, inclusive. Omit &#x60;limit&#x60; to stream through the end of the day.
+     * @param r_date UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. (optional)
+     * @param timeStart Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. (optional)
+     * @param r_limit Optional cap on the number of records (1-10000). Omit to stream through the end of the day. (optional)
      * @return List<OASIEXSystemEventSystemEventModel>
      * @throws OAS.ApiException if fails to make API call
      */
     public List<OASIEXSystemEventSystemEventModel> v1NativeIexAdminSystemEventGet(Map<String, Object> params) {
-        client.assertNotNull(params.get('r_date'), 'r_date');
         List<OAS.Param> query = new List<OAS.Param>();
 
         // cast query params to verify their expected type
         query.addAll(client.makeParam('date', (Datetime) params.get('r_date')));
+        query.addAll(client.makeParam('time_start', (String) params.get('timeStart')));
         query.addAll(client.makeParam('limit', (Integer) params.get('r_limit')));
 
         List<OAS.Param> form = new List<OAS.Param>();
@@ -89,20 +91,21 @@ public class OASNativeIEXApi {
     }
     /**
      * Get Level-1 Quotes
-     * Streaming endpoint. Use &#x60;limit&#x60; to cap the number of records returned (default 100, max 10000).
+     * Streams one UTC day. &#x60;time_start&#x60; may be a full timestamp (&#x60;2026-09-28T13:31:14.8560065Z&#x60;) or a time of day (&#x60;13:31:14.8560065Z&#x60;) when &#x60;date&#x60; is set. Events start at that instant, inclusive. Omit &#x60;limit&#x60; to stream through the end of the day.
      * @param symbol The symbol identifier (required)
-     * @param r_date Date in format YYYY-MM-DD (required)
-     * @param r_limit Maximum number of records to return (1-10000, default 100) (optional, default to 100)
+     * @param r_date UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. (optional)
+     * @param timeStart Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. (optional)
+     * @param r_limit Optional cap on the number of records (1-10000). Omit to stream through the end of the day. (optional)
      * @return List<OASIEXQuoteUpdateQuoteUpdateModel>
      * @throws OAS.ApiException if fails to make API call
      */
     public List<OASIEXQuoteUpdateQuoteUpdateModel> v1NativeIexLevel1QuoteSymbolGet(Map<String, Object> params) {
         client.assertNotNull(params.get('symbol'), 'symbol');
-        client.assertNotNull(params.get('r_date'), 'r_date');
         List<OAS.Param> query = new List<OAS.Param>();
 
         // cast query params to verify their expected type
         query.addAll(client.makeParam('date', (Datetime) params.get('r_date')));
+        query.addAll(client.makeParam('time_start', (String) params.get('timeStart')));
         query.addAll(client.makeParam('limit', (Integer) params.get('r_limit')));
 
         List<OAS.Param> form = new List<OAS.Param>();
@@ -122,20 +125,21 @@ public class OASNativeIEXApi {
     }
     /**
      * Get Level-2 Price Level Book
-     * Streaming endpoint. Use &#x60;limit&#x60; to cap the number of records returned (default 100, max 10000).
+     * Streams one UTC day. &#x60;time_start&#x60; may be a full timestamp (&#x60;2026-09-28T13:31:14.8560065Z&#x60;) or a time of day (&#x60;13:31:14.8560065Z&#x60;) when &#x60;date&#x60; is set. Events start at that instant, inclusive. Omit &#x60;limit&#x60; to stream through the end of the day.
      * @param symbol The symbol identifier (required)
-     * @param r_date Date in format YYYY-MM-DD (required)
-     * @param r_limit Maximum number of records to return (1-10000, default 100) (optional, default to 100)
+     * @param r_date UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. (optional)
+     * @param timeStart Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. (optional)
+     * @param r_limit Optional cap on the number of records (1-10000). Omit to stream through the end of the day. (optional)
      * @return List<OASIEXPriceLevelUpdatePriceLevelUpda>
      * @throws OAS.ApiException if fails to make API call
      */
     public List<OASIEXPriceLevelUpdatePriceLevelUpda> v1NativeIexLevel2PriceLevelUpdateSymbolGet(Map<String, Object> params) {
         client.assertNotNull(params.get('symbol'), 'symbol');
-        client.assertNotNull(params.get('r_date'), 'r_date');
         List<OAS.Param> query = new List<OAS.Param>();
 
         // cast query params to verify their expected type
         query.addAll(client.makeParam('date', (Datetime) params.get('r_date')));
+        query.addAll(client.makeParam('time_start', (String) params.get('timeStart')));
         query.addAll(client.makeParam('limit', (Integer) params.get('r_limit')));
 
         List<OAS.Param> form = new List<OAS.Param>();
@@ -155,20 +159,21 @@ public class OASNativeIEXApi {
     }
     /**
      * Get Level-3 Order Book
-     * Streaming endpoint. Use &#x60;limit&#x60; to cap the number of records returned (default 100, max 10000).
+     * Streams one UTC day. &#x60;time_start&#x60; may be a full timestamp (&#x60;2026-09-28T13:31:14.8560065Z&#x60;) or a time of day (&#x60;13:31:14.8560065Z&#x60;) when &#x60;date&#x60; is set. Events start at that instant, inclusive. Omit &#x60;limit&#x60; to stream through the end of the day.
      * @param symbol The symbol identifier (required)
-     * @param r_date Date in format YYYY-MM-DD (required)
-     * @param r_limit Maximum number of records to return (1-10000, default 100) (optional, default to 100)
+     * @param r_date UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. (optional)
+     * @param timeStart Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. (optional)
+     * @param r_limit Optional cap on the number of records (1-10000). Omit to stream through the end of the day. (optional)
      * @return List<OASModelsOrderBookModel>
      * @throws OAS.ApiException if fails to make API call
      */
     public List<OASModelsOrderBookModel> v1NativeIexLevel3OrderBookSymbolGet(Map<String, Object> params) {
         client.assertNotNull(params.get('symbol'), 'symbol');
-        client.assertNotNull(params.get('r_date'), 'r_date');
         List<OAS.Param> query = new List<OAS.Param>();
 
         // cast query params to verify their expected type
         query.addAll(client.makeParam('date', (Datetime) params.get('r_date')));
+        query.addAll(client.makeParam('time_start', (String) params.get('timeStart')));
         query.addAll(client.makeParam('limit', (Integer) params.get('r_limit')));
 
         List<OAS.Param> form = new List<OAS.Param>();
@@ -188,20 +193,21 @@ public class OASNativeIEXApi {
     }
     /**
      * Get Trades
-     * Streaming endpoint. Use &#x60;limit&#x60; to cap the number of trade records returned (default 100, max 10000).
+     * Streams one UTC day. &#x60;time_start&#x60; may be a full timestamp (&#x60;2026-09-28T13:31:14.8560065Z&#x60;) or a time of day (&#x60;13:31:14.8560065Z&#x60;) when &#x60;date&#x60; is set. Events start at that instant, inclusive. Omit &#x60;limit&#x60; to stream through the end of the day.
      * @param symbol The symbol identifier (required)
-     * @param r_date Date in format YYYY-MM-DD (required)
-     * @param r_limit Maximum number of records to return (1-10000, default 100) (optional, default to 100)
+     * @param r_date UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. (optional)
+     * @param timeStart Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. (optional)
+     * @param r_limit Optional cap on the number of records (1-10000). Omit to stream through the end of the day. (optional)
      * @return List<OASIEXTradeTradeModel>
      * @throws OAS.ApiException if fails to make API call
      */
     public List<OASIEXTradeTradeModel> v1NativeIexTradeSymbolGet(Map<String, Object> params) {
         client.assertNotNull(params.get('symbol'), 'symbol');
-        client.assertNotNull(params.get('r_date'), 'r_date');
         List<OAS.Param> query = new List<OAS.Param>();
 
         // cast query params to verify their expected type
         query.addAll(client.makeParam('date', (Datetime) params.get('r_date')));
+        query.addAll(client.makeParam('time_start', (String) params.get('timeStart')));
         query.addAll(client.makeParam('limit', (Integer) params.get('r_limit')));
 
         List<OAS.Param> form = new List<OAS.Param>();

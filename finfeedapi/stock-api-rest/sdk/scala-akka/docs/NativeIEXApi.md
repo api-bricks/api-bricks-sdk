@@ -25,7 +25,7 @@ Method | HTTP request | Description
 
 Get Admin Messages
 
-Streaming endpoint. Use &#x60;limit&#x60; to cap the number of records returned (default 100, max 10000).
+Streams one UTC day. &#x60;time_start&#x60; may be a full timestamp (&#x60;2026-09-28T13:31:14.8560065Z&#x60;) or a time of day (&#x60;13:31:14.8560065Z&#x60;) when &#x60;date&#x60; is set. Events start at that instant, inclusive. Omit &#x60;limit&#x60; to stream through the end of the day.
 
 ### Example
 
@@ -56,11 +56,13 @@ object Example extends App {
     val apiInstance = NativeIEXApi("https://api-historical.stock.finfeedapi.com")
     val symbol: String = symbol_example // String | The symbol identifier
 
-    val date: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | Date in format YYYY-MM-DD
+    val date: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | UTC day (`YYYY-MM-DD`). Optional when `time_start` includes a calendar day.
 
-    val limit: Int = 56 // Int | Maximum number of records to return (1-10000, default 100)
+    val timeStart: String = timeStart_example // String | Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when `date` is set.
+
+    val limit: Int = 56 // Int | Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
     
-    val request = apiInstance.v1NativeIexAdminMessagesSymbolGet(symbol, date, limit)
+    val request = apiInstance.v1NativeIexAdminMessagesSymbolGet(symbol, date, timeStart, limit)
     val response = apiInvoker.execute(request)
 
     response.onComplete {
@@ -89,8 +91,9 @@ object Example extends App {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **symbol** | **String**| The symbol identifier |
- **date** | **OffsetDateTime**| Date in format YYYY-MM-DD |
- **limit** | **Int**| Maximum number of records to return (1-10000, default 100) | [optional]
+ **date** | **OffsetDateTime**| UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. | [optional]
+ **timeStart** | **String**| Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. | [optional]
+ **limit** | **Int**| Optional cap on the number of records (1-10000). Omit to stream through the end of the day. | [optional]
 
 ### Return type
 
@@ -118,7 +121,7 @@ ApiRequest[[**Seq[AdminMessageModel]**](AdminMessageModel.md)]
 
 Get System Events
 
-Streaming endpoint. Use &#x60;limit&#x60; to cap the number of records returned (default 100, max 10000).
+Streams one UTC day. &#x60;time_start&#x60; may be a full timestamp (&#x60;2026-09-28T13:31:14.8560065Z&#x60;) or a time of day (&#x60;13:31:14.8560065Z&#x60;) when &#x60;date&#x60; is set. Events start at that instant, inclusive. Omit &#x60;limit&#x60; to stream through the end of the day.
 
 ### Example
 
@@ -147,11 +150,13 @@ object Example extends App {
 
     val apiInvoker = ApiInvoker()
     val apiInstance = NativeIEXApi("https://api-historical.stock.finfeedapi.com")
-    val date: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | Date in format YYYY-MM-DD
+    val date: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | UTC day (`YYYY-MM-DD`). Optional when `time_start` includes a calendar day.
 
-    val limit: Int = 56 // Int | Maximum number of records to return (1-10000, default 100)
+    val timeStart: String = timeStart_example // String | Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when `date` is set.
+
+    val limit: Int = 56 // Int | Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
     
-    val request = apiInstance.v1NativeIexAdminSystemEventGet(date, limit)
+    val request = apiInstance.v1NativeIexAdminSystemEventGet(date, timeStart, limit)
     val response = apiInvoker.execute(request)
 
     response.onComplete {
@@ -179,8 +184,9 @@ object Example extends App {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **date** | **OffsetDateTime**| Date in format YYYY-MM-DD |
- **limit** | **Int**| Maximum number of records to return (1-10000, default 100) | [optional]
+ **date** | **OffsetDateTime**| UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. | [optional]
+ **timeStart** | **String**| Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. | [optional]
+ **limit** | **Int**| Optional cap on the number of records (1-10000). Omit to stream through the end of the day. | [optional]
 
 ### Return type
 
@@ -208,7 +214,7 @@ ApiRequest[[**Seq[SystemEventModel]**](SystemEventModel.md)]
 
 Get Level-1 Quotes
 
-Streaming endpoint. Use &#x60;limit&#x60; to cap the number of records returned (default 100, max 10000).
+Streams one UTC day. &#x60;time_start&#x60; may be a full timestamp (&#x60;2026-09-28T13:31:14.8560065Z&#x60;) or a time of day (&#x60;13:31:14.8560065Z&#x60;) when &#x60;date&#x60; is set. Events start at that instant, inclusive. Omit &#x60;limit&#x60; to stream through the end of the day.
 
 ### Example
 
@@ -239,11 +245,13 @@ object Example extends App {
     val apiInstance = NativeIEXApi("https://api-historical.stock.finfeedapi.com")
     val symbol: String = symbol_example // String | The symbol identifier
 
-    val date: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | Date in format YYYY-MM-DD
+    val date: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | UTC day (`YYYY-MM-DD`). Optional when `time_start` includes a calendar day.
 
-    val limit: Int = 56 // Int | Maximum number of records to return (1-10000, default 100)
+    val timeStart: String = timeStart_example // String | Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when `date` is set.
+
+    val limit: Int = 56 // Int | Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
     
-    val request = apiInstance.v1NativeIexLevel1QuoteSymbolGet(symbol, date, limit)
+    val request = apiInstance.v1NativeIexLevel1QuoteSymbolGet(symbol, date, timeStart, limit)
     val response = apiInvoker.execute(request)
 
     response.onComplete {
@@ -272,8 +280,9 @@ object Example extends App {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **symbol** | **String**| The symbol identifier |
- **date** | **OffsetDateTime**| Date in format YYYY-MM-DD |
- **limit** | **Int**| Maximum number of records to return (1-10000, default 100) | [optional]
+ **date** | **OffsetDateTime**| UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. | [optional]
+ **timeStart** | **String**| Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. | [optional]
+ **limit** | **Int**| Optional cap on the number of records (1-10000). Omit to stream through the end of the day. | [optional]
 
 ### Return type
 
@@ -301,7 +310,7 @@ ApiRequest[[**Seq[QuoteUpdateModel]**](QuoteUpdateModel.md)]
 
 Get Level-2 Price Level Book
 
-Streaming endpoint. Use &#x60;limit&#x60; to cap the number of records returned (default 100, max 10000).
+Streams one UTC day. &#x60;time_start&#x60; may be a full timestamp (&#x60;2026-09-28T13:31:14.8560065Z&#x60;) or a time of day (&#x60;13:31:14.8560065Z&#x60;) when &#x60;date&#x60; is set. Events start at that instant, inclusive. Omit &#x60;limit&#x60; to stream through the end of the day.
 
 ### Example
 
@@ -332,11 +341,13 @@ object Example extends App {
     val apiInstance = NativeIEXApi("https://api-historical.stock.finfeedapi.com")
     val symbol: String = symbol_example // String | The symbol identifier
 
-    val date: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | Date in format YYYY-MM-DD
+    val date: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | UTC day (`YYYY-MM-DD`). Optional when `time_start` includes a calendar day.
 
-    val limit: Int = 56 // Int | Maximum number of records to return (1-10000, default 100)
+    val timeStart: String = timeStart_example // String | Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when `date` is set.
+
+    val limit: Int = 56 // Int | Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
     
-    val request = apiInstance.v1NativeIexLevel2PriceLevelUpdateSymbolGet(symbol, date, limit)
+    val request = apiInstance.v1NativeIexLevel2PriceLevelUpdateSymbolGet(symbol, date, timeStart, limit)
     val response = apiInvoker.execute(request)
 
     response.onComplete {
@@ -365,8 +376,9 @@ object Example extends App {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **symbol** | **String**| The symbol identifier |
- **date** | **OffsetDateTime**| Date in format YYYY-MM-DD |
- **limit** | **Int**| Maximum number of records to return (1-10000, default 100) | [optional]
+ **date** | **OffsetDateTime**| UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. | [optional]
+ **timeStart** | **String**| Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. | [optional]
+ **limit** | **Int**| Optional cap on the number of records (1-10000). Omit to stream through the end of the day. | [optional]
 
 ### Return type
 
@@ -394,7 +406,7 @@ ApiRequest[[**Seq[PriceLevelUpdateModel]**](PriceLevelUpdateModel.md)]
 
 Get Level-3 Order Book
 
-Streaming endpoint. Use &#x60;limit&#x60; to cap the number of records returned (default 100, max 10000).
+Streams one UTC day. &#x60;time_start&#x60; may be a full timestamp (&#x60;2026-09-28T13:31:14.8560065Z&#x60;) or a time of day (&#x60;13:31:14.8560065Z&#x60;) when &#x60;date&#x60; is set. Events start at that instant, inclusive. Omit &#x60;limit&#x60; to stream through the end of the day.
 
 ### Example
 
@@ -425,11 +437,13 @@ object Example extends App {
     val apiInstance = NativeIEXApi("https://api-historical.stock.finfeedapi.com")
     val symbol: String = symbol_example // String | The symbol identifier
 
-    val date: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | Date in format YYYY-MM-DD
+    val date: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | UTC day (`YYYY-MM-DD`). Optional when `time_start` includes a calendar day.
 
-    val limit: Int = 56 // Int | Maximum number of records to return (1-10000, default 100)
+    val timeStart: String = timeStart_example // String | Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when `date` is set.
+
+    val limit: Int = 56 // Int | Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
     
-    val request = apiInstance.v1NativeIexLevel3OrderBookSymbolGet(symbol, date, limit)
+    val request = apiInstance.v1NativeIexLevel3OrderBookSymbolGet(symbol, date, timeStart, limit)
     val response = apiInvoker.execute(request)
 
     response.onComplete {
@@ -458,8 +472,9 @@ object Example extends App {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **symbol** | **String**| The symbol identifier |
- **date** | **OffsetDateTime**| Date in format YYYY-MM-DD |
- **limit** | **Int**| Maximum number of records to return (1-10000, default 100) | [optional]
+ **date** | **OffsetDateTime**| UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. | [optional]
+ **timeStart** | **String**| Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. | [optional]
+ **limit** | **Int**| Optional cap on the number of records (1-10000). Omit to stream through the end of the day. | [optional]
 
 ### Return type
 
@@ -487,7 +502,7 @@ ApiRequest[[**Seq[OrderBookModel]**](OrderBookModel.md)]
 
 Get Trades
 
-Streaming endpoint. Use &#x60;limit&#x60; to cap the number of trade records returned (default 100, max 10000).
+Streams one UTC day. &#x60;time_start&#x60; may be a full timestamp (&#x60;2026-09-28T13:31:14.8560065Z&#x60;) or a time of day (&#x60;13:31:14.8560065Z&#x60;) when &#x60;date&#x60; is set. Events start at that instant, inclusive. Omit &#x60;limit&#x60; to stream through the end of the day.
 
 ### Example
 
@@ -518,11 +533,13 @@ object Example extends App {
     val apiInstance = NativeIEXApi("https://api-historical.stock.finfeedapi.com")
     val symbol: String = symbol_example // String | The symbol identifier
 
-    val date: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | Date in format YYYY-MM-DD
+    val date: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | UTC day (`YYYY-MM-DD`). Optional when `time_start` includes a calendar day.
 
-    val limit: Int = 56 // Int | Maximum number of records to return (1-10000, default 100)
+    val timeStart: String = timeStart_example // String | Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when `date` is set.
+
+    val limit: Int = 56 // Int | Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
     
-    val request = apiInstance.v1NativeIexTradeSymbolGet(symbol, date, limit)
+    val request = apiInstance.v1NativeIexTradeSymbolGet(symbol, date, timeStart, limit)
     val response = apiInvoker.execute(request)
 
     response.onComplete {
@@ -551,8 +568,9 @@ object Example extends App {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **symbol** | **String**| The symbol identifier |
- **date** | **OffsetDateTime**| Date in format YYYY-MM-DD |
- **limit** | **Int**| Maximum number of records to return (1-10000, default 100) | [optional]
+ **date** | **OffsetDateTime**| UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. | [optional]
+ **timeStart** | **String**| Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. | [optional]
+ **limit** | **Int**| Optional cap on the number of records (1-10000). Omit to stream through the end of the day. | [optional]
 
 ### Return type
 

@@ -17,12 +17,12 @@ All URIs are relative to https://api-historical.stock.finfeedapi.com, except if 
 ## `v1NativeIexAdminMessagesSymbolGet()`
 
 ```php
-v1NativeIexAdminMessagesSymbolGet($symbol, $date, $limit): \OpenAPI\Client\Model\ModelsAdminMessageModel[]
+v1NativeIexAdminMessagesSymbolGet($symbol, $date, $time_start, $limit): \OpenAPI\Client\Model\ModelsAdminMessageModel[]
 ```
 
 Get Admin Messages
 
-Streaming endpoint. Use `limit` to cap the number of records returned (default 100, max 10000).
+Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
 
 ### Example
 
@@ -47,11 +47,12 @@ $apiInstance = new OpenAPI\Client\Api\NativeIEXApi(
     $config
 );
 $symbol = 'symbol_example'; // string | The symbol identifier
-$date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | Date in format YYYY-MM-DD
-$limit = 100; // int | Maximum number of records to return (1-10000, default 100)
+$date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | UTC day (`YYYY-MM-DD`). Optional when `time_start` includes a calendar day.
+$time_start = 'time_start_example'; // string | Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when `date` is set.
+$limit = 56; // int | Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
 
 try {
-    $result = $apiInstance->v1NativeIexAdminMessagesSymbolGet($symbol, $date, $limit);
+    $result = $apiInstance->v1NativeIexAdminMessagesSymbolGet($symbol, $date, $time_start, $limit);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling NativeIEXApi->v1NativeIexAdminMessagesSymbolGet: ', $e->getMessage(), PHP_EOL;
@@ -63,8 +64,9 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **symbol** | **string**| The symbol identifier | |
-| **date** | **\DateTime**| Date in format YYYY-MM-DD | |
-| **limit** | **int**| Maximum number of records to return (1-10000, default 100) | [optional] [default to 100] |
+| **date** | **\DateTime**| UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. | [optional] |
+| **time_start** | **string**| Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. | [optional] |
+| **limit** | **int**| Optional cap on the number of records (1-10000). Omit to stream through the end of the day. | [optional] |
 
 ### Return type
 
@@ -86,12 +88,12 @@ try {
 ## `v1NativeIexAdminSystemEventGet()`
 
 ```php
-v1NativeIexAdminSystemEventGet($date, $limit): \OpenAPI\Client\Model\IEXSystemEventSystemEventModel[]
+v1NativeIexAdminSystemEventGet($date, $time_start, $limit): \OpenAPI\Client\Model\IEXSystemEventSystemEventModel[]
 ```
 
 Get System Events
 
-Streaming endpoint. Use `limit` to cap the number of records returned (default 100, max 10000).
+Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
 
 ### Example
 
@@ -115,11 +117,12 @@ $apiInstance = new OpenAPI\Client\Api\NativeIEXApi(
     new GuzzleHttp\Client(),
     $config
 );
-$date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | Date in format YYYY-MM-DD
-$limit = 100; // int | Maximum number of records to return (1-10000, default 100)
+$date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | UTC day (`YYYY-MM-DD`). Optional when `time_start` includes a calendar day.
+$time_start = 'time_start_example'; // string | Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when `date` is set.
+$limit = 56; // int | Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
 
 try {
-    $result = $apiInstance->v1NativeIexAdminSystemEventGet($date, $limit);
+    $result = $apiInstance->v1NativeIexAdminSystemEventGet($date, $time_start, $limit);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling NativeIEXApi->v1NativeIexAdminSystemEventGet: ', $e->getMessage(), PHP_EOL;
@@ -130,8 +133,9 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **date** | **\DateTime**| Date in format YYYY-MM-DD | |
-| **limit** | **int**| Maximum number of records to return (1-10000, default 100) | [optional] [default to 100] |
+| **date** | **\DateTime**| UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. | [optional] |
+| **time_start** | **string**| Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. | [optional] |
+| **limit** | **int**| Optional cap on the number of records (1-10000). Omit to stream through the end of the day. | [optional] |
 
 ### Return type
 
@@ -153,12 +157,12 @@ try {
 ## `v1NativeIexLevel1QuoteSymbolGet()`
 
 ```php
-v1NativeIexLevel1QuoteSymbolGet($symbol, $date, $limit): \OpenAPI\Client\Model\IEXQuoteUpdateQuoteUpdateModel[]
+v1NativeIexLevel1QuoteSymbolGet($symbol, $date, $time_start, $limit): \OpenAPI\Client\Model\IEXQuoteUpdateQuoteUpdateModel[]
 ```
 
 Get Level-1 Quotes
 
-Streaming endpoint. Use `limit` to cap the number of records returned (default 100, max 10000).
+Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
 
 ### Example
 
@@ -183,11 +187,12 @@ $apiInstance = new OpenAPI\Client\Api\NativeIEXApi(
     $config
 );
 $symbol = 'symbol_example'; // string | The symbol identifier
-$date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | Date in format YYYY-MM-DD
-$limit = 100; // int | Maximum number of records to return (1-10000, default 100)
+$date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | UTC day (`YYYY-MM-DD`). Optional when `time_start` includes a calendar day.
+$time_start = 'time_start_example'; // string | Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when `date` is set.
+$limit = 56; // int | Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
 
 try {
-    $result = $apiInstance->v1NativeIexLevel1QuoteSymbolGet($symbol, $date, $limit);
+    $result = $apiInstance->v1NativeIexLevel1QuoteSymbolGet($symbol, $date, $time_start, $limit);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling NativeIEXApi->v1NativeIexLevel1QuoteSymbolGet: ', $e->getMessage(), PHP_EOL;
@@ -199,8 +204,9 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **symbol** | **string**| The symbol identifier | |
-| **date** | **\DateTime**| Date in format YYYY-MM-DD | |
-| **limit** | **int**| Maximum number of records to return (1-10000, default 100) | [optional] [default to 100] |
+| **date** | **\DateTime**| UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. | [optional] |
+| **time_start** | **string**| Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. | [optional] |
+| **limit** | **int**| Optional cap on the number of records (1-10000). Omit to stream through the end of the day. | [optional] |
 
 ### Return type
 
@@ -222,12 +228,12 @@ try {
 ## `v1NativeIexLevel2PriceLevelUpdateSymbolGet()`
 
 ```php
-v1NativeIexLevel2PriceLevelUpdateSymbolGet($symbol, $date, $limit): \OpenAPI\Client\Model\IEXPriceLevelUpdatePriceLevelUpdateModel[]
+v1NativeIexLevel2PriceLevelUpdateSymbolGet($symbol, $date, $time_start, $limit): \OpenAPI\Client\Model\IEXPriceLevelUpdatePriceLevelUpdateModel[]
 ```
 
 Get Level-2 Price Level Book
 
-Streaming endpoint. Use `limit` to cap the number of records returned (default 100, max 10000).
+Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
 
 ### Example
 
@@ -252,11 +258,12 @@ $apiInstance = new OpenAPI\Client\Api\NativeIEXApi(
     $config
 );
 $symbol = 'symbol_example'; // string | The symbol identifier
-$date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | Date in format YYYY-MM-DD
-$limit = 100; // int | Maximum number of records to return (1-10000, default 100)
+$date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | UTC day (`YYYY-MM-DD`). Optional when `time_start` includes a calendar day.
+$time_start = 'time_start_example'; // string | Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when `date` is set.
+$limit = 56; // int | Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
 
 try {
-    $result = $apiInstance->v1NativeIexLevel2PriceLevelUpdateSymbolGet($symbol, $date, $limit);
+    $result = $apiInstance->v1NativeIexLevel2PriceLevelUpdateSymbolGet($symbol, $date, $time_start, $limit);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling NativeIEXApi->v1NativeIexLevel2PriceLevelUpdateSymbolGet: ', $e->getMessage(), PHP_EOL;
@@ -268,8 +275,9 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **symbol** | **string**| The symbol identifier | |
-| **date** | **\DateTime**| Date in format YYYY-MM-DD | |
-| **limit** | **int**| Maximum number of records to return (1-10000, default 100) | [optional] [default to 100] |
+| **date** | **\DateTime**| UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. | [optional] |
+| **time_start** | **string**| Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. | [optional] |
+| **limit** | **int**| Optional cap on the number of records (1-10000). Omit to stream through the end of the day. | [optional] |
 
 ### Return type
 
@@ -291,12 +299,12 @@ try {
 ## `v1NativeIexLevel3OrderBookSymbolGet()`
 
 ```php
-v1NativeIexLevel3OrderBookSymbolGet($symbol, $date, $limit): \OpenAPI\Client\Model\ModelsOrderBookModel[]
+v1NativeIexLevel3OrderBookSymbolGet($symbol, $date, $time_start, $limit): \OpenAPI\Client\Model\ModelsOrderBookModel[]
 ```
 
 Get Level-3 Order Book
 
-Streaming endpoint. Use `limit` to cap the number of records returned (default 100, max 10000).
+Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
 
 ### Example
 
@@ -321,11 +329,12 @@ $apiInstance = new OpenAPI\Client\Api\NativeIEXApi(
     $config
 );
 $symbol = 'symbol_example'; // string | The symbol identifier
-$date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | Date in format YYYY-MM-DD
-$limit = 100; // int | Maximum number of records to return (1-10000, default 100)
+$date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | UTC day (`YYYY-MM-DD`). Optional when `time_start` includes a calendar day.
+$time_start = 'time_start_example'; // string | Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when `date` is set.
+$limit = 56; // int | Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
 
 try {
-    $result = $apiInstance->v1NativeIexLevel3OrderBookSymbolGet($symbol, $date, $limit);
+    $result = $apiInstance->v1NativeIexLevel3OrderBookSymbolGet($symbol, $date, $time_start, $limit);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling NativeIEXApi->v1NativeIexLevel3OrderBookSymbolGet: ', $e->getMessage(), PHP_EOL;
@@ -337,8 +346,9 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **symbol** | **string**| The symbol identifier | |
-| **date** | **\DateTime**| Date in format YYYY-MM-DD | |
-| **limit** | **int**| Maximum number of records to return (1-10000, default 100) | [optional] [default to 100] |
+| **date** | **\DateTime**| UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. | [optional] |
+| **time_start** | **string**| Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. | [optional] |
+| **limit** | **int**| Optional cap on the number of records (1-10000). Omit to stream through the end of the day. | [optional] |
 
 ### Return type
 
@@ -360,12 +370,12 @@ try {
 ## `v1NativeIexTradeSymbolGet()`
 
 ```php
-v1NativeIexTradeSymbolGet($symbol, $date, $limit): \OpenAPI\Client\Model\IEXTradeTradeModel[]
+v1NativeIexTradeSymbolGet($symbol, $date, $time_start, $limit): \OpenAPI\Client\Model\IEXTradeTradeModel[]
 ```
 
 Get Trades
 
-Streaming endpoint. Use `limit` to cap the number of trade records returned (default 100, max 10000).
+Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
 
 ### Example
 
@@ -390,11 +400,12 @@ $apiInstance = new OpenAPI\Client\Api\NativeIEXApi(
     $config
 );
 $symbol = 'symbol_example'; // string | The symbol identifier
-$date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | Date in format YYYY-MM-DD
-$limit = 100; // int | Maximum number of records to return (1-10000, default 100)
+$date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | UTC day (`YYYY-MM-DD`). Optional when `time_start` includes a calendar day.
+$time_start = 'time_start_example'; // string | Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when `date` is set.
+$limit = 56; // int | Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
 
 try {
-    $result = $apiInstance->v1NativeIexTradeSymbolGet($symbol, $date, $limit);
+    $result = $apiInstance->v1NativeIexTradeSymbolGet($symbol, $date, $time_start, $limit);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling NativeIEXApi->v1NativeIexTradeSymbolGet: ', $e->getMessage(), PHP_EOL;
@@ -406,8 +417,9 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **symbol** | **string**| The symbol identifier | |
-| **date** | **\DateTime**| Date in format YYYY-MM-DD | |
-| **limit** | **int**| Maximum number of records to return (1-10000, default 100) | [optional] [default to 100] |
+| **date** | **\DateTime**| UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. | [optional] |
+| **time_start** | **string**| Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. | [optional] |
+| **limit** | **int**| Optional cap on the number of records (1-10000). Omit to stream through the end of the day. | [optional] |
 
 ### Return type
 

@@ -20,25 +20,27 @@ module OpenapiClient
       @api_client = api_client
     end
     # Get Admin Messages
-    # Streaming endpoint. Use `limit` to cap the number of records returned (default 100, max 10000).
+    # Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
     # @param symbol [String] The symbol identifier
-    # @param date [Time] Date in format YYYY-MM-DD
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :limit Maximum number of records to return (1-10000, default 100) (default to 100)
+    # @option opts [Time] :date UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day.
+    # @option opts [String] :time_start Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set.
+    # @option opts [Integer] :limit Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
     # @return [Array<ModelsAdminMessageModel>]
-    def v1_native_iex_admin_messages_symbol_get(symbol, date, opts = {})
-      data, _status_code, _headers = v1_native_iex_admin_messages_symbol_get_with_http_info(symbol, date, opts)
+    def v1_native_iex_admin_messages_symbol_get(symbol, opts = {})
+      data, _status_code, _headers = v1_native_iex_admin_messages_symbol_get_with_http_info(symbol, opts)
       data
     end
 
     # Get Admin Messages
-    # Streaming endpoint. Use &#x60;limit&#x60; to cap the number of records returned (default 100, max 10000).
+    # Streams one UTC day. &#x60;time_start&#x60; may be a full timestamp (&#x60;2026-09-28T13:31:14.8560065Z&#x60;) or a time of day (&#x60;13:31:14.8560065Z&#x60;) when &#x60;date&#x60; is set. Events start at that instant, inclusive. Omit &#x60;limit&#x60; to stream through the end of the day.
     # @param symbol [String] The symbol identifier
-    # @param date [Time] Date in format YYYY-MM-DD
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :limit Maximum number of records to return (1-10000, default 100) (default to 100)
+    # @option opts [Time] :date UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day.
+    # @option opts [String] :time_start Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set.
+    # @option opts [Integer] :limit Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
     # @return [Array<(Array<ModelsAdminMessageModel>, Integer, Hash)>] Array<ModelsAdminMessageModel> data, response status code and response headers
-    def v1_native_iex_admin_messages_symbol_get_with_http_info(symbol, date, opts = {})
+    def v1_native_iex_admin_messages_symbol_get_with_http_info(symbol, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: NativeIEXApi.v1_native_iex_admin_messages_symbol_get ...'
       end
@@ -46,16 +48,13 @@ module OpenapiClient
       if @api_client.config.client_side_validation && symbol.nil?
         fail ArgumentError, "Missing the required parameter 'symbol' when calling NativeIEXApi.v1_native_iex_admin_messages_symbol_get"
       end
-      # verify the required parameter 'date' is set
-      if @api_client.config.client_side_validation && date.nil?
-        fail ArgumentError, "Missing the required parameter 'date' when calling NativeIEXApi.v1_native_iex_admin_messages_symbol_get"
-      end
       # resource path
       local_var_path = '/v1/native/iex/admin/messages/{symbol}'.sub('{symbol}', CGI.escape(symbol.to_s))
 
       # query parameters
       query_params = opts[:query_params] || {}
-      query_params[:'date'] = date
+      query_params[:'date'] = opts[:'date'] if !opts[:'date'].nil?
+      query_params[:'time_start'] = opts[:'time_start'] if !opts[:'time_start'].nil?
       query_params[:'limit'] = opts[:'limit'] if !opts[:'limit'].nil?
 
       # header parameters
@@ -93,36 +92,35 @@ module OpenapiClient
     end
 
     # Get System Events
-    # Streaming endpoint. Use `limit` to cap the number of records returned (default 100, max 10000).
-    # @param date [Time] Date in format YYYY-MM-DD
+    # Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :limit Maximum number of records to return (1-10000, default 100) (default to 100)
+    # @option opts [Time] :date UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day.
+    # @option opts [String] :time_start Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set.
+    # @option opts [Integer] :limit Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
     # @return [Array<IEXSystemEventSystemEventModel>]
-    def v1_native_iex_admin_system_event_get(date, opts = {})
-      data, _status_code, _headers = v1_native_iex_admin_system_event_get_with_http_info(date, opts)
+    def v1_native_iex_admin_system_event_get(opts = {})
+      data, _status_code, _headers = v1_native_iex_admin_system_event_get_with_http_info(opts)
       data
     end
 
     # Get System Events
-    # Streaming endpoint. Use &#x60;limit&#x60; to cap the number of records returned (default 100, max 10000).
-    # @param date [Time] Date in format YYYY-MM-DD
+    # Streams one UTC day. &#x60;time_start&#x60; may be a full timestamp (&#x60;2026-09-28T13:31:14.8560065Z&#x60;) or a time of day (&#x60;13:31:14.8560065Z&#x60;) when &#x60;date&#x60; is set. Events start at that instant, inclusive. Omit &#x60;limit&#x60; to stream through the end of the day.
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :limit Maximum number of records to return (1-10000, default 100) (default to 100)
+    # @option opts [Time] :date UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day.
+    # @option opts [String] :time_start Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set.
+    # @option opts [Integer] :limit Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
     # @return [Array<(Array<IEXSystemEventSystemEventModel>, Integer, Hash)>] Array<IEXSystemEventSystemEventModel> data, response status code and response headers
-    def v1_native_iex_admin_system_event_get_with_http_info(date, opts = {})
+    def v1_native_iex_admin_system_event_get_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: NativeIEXApi.v1_native_iex_admin_system_event_get ...'
-      end
-      # verify the required parameter 'date' is set
-      if @api_client.config.client_side_validation && date.nil?
-        fail ArgumentError, "Missing the required parameter 'date' when calling NativeIEXApi.v1_native_iex_admin_system_event_get"
       end
       # resource path
       local_var_path = '/v1/native/iex/admin/system-event'
 
       # query parameters
       query_params = opts[:query_params] || {}
-      query_params[:'date'] = date
+      query_params[:'date'] = opts[:'date'] if !opts[:'date'].nil?
+      query_params[:'time_start'] = opts[:'time_start'] if !opts[:'time_start'].nil?
       query_params[:'limit'] = opts[:'limit'] if !opts[:'limit'].nil?
 
       # header parameters
@@ -160,25 +158,27 @@ module OpenapiClient
     end
 
     # Get Level-1 Quotes
-    # Streaming endpoint. Use `limit` to cap the number of records returned (default 100, max 10000).
+    # Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
     # @param symbol [String] The symbol identifier
-    # @param date [Time] Date in format YYYY-MM-DD
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :limit Maximum number of records to return (1-10000, default 100) (default to 100)
+    # @option opts [Time] :date UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day.
+    # @option opts [String] :time_start Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set.
+    # @option opts [Integer] :limit Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
     # @return [Array<IEXQuoteUpdateQuoteUpdateModel>]
-    def v1_native_iex_level1_quote_symbol_get(symbol, date, opts = {})
-      data, _status_code, _headers = v1_native_iex_level1_quote_symbol_get_with_http_info(symbol, date, opts)
+    def v1_native_iex_level1_quote_symbol_get(symbol, opts = {})
+      data, _status_code, _headers = v1_native_iex_level1_quote_symbol_get_with_http_info(symbol, opts)
       data
     end
 
     # Get Level-1 Quotes
-    # Streaming endpoint. Use &#x60;limit&#x60; to cap the number of records returned (default 100, max 10000).
+    # Streams one UTC day. &#x60;time_start&#x60; may be a full timestamp (&#x60;2026-09-28T13:31:14.8560065Z&#x60;) or a time of day (&#x60;13:31:14.8560065Z&#x60;) when &#x60;date&#x60; is set. Events start at that instant, inclusive. Omit &#x60;limit&#x60; to stream through the end of the day.
     # @param symbol [String] The symbol identifier
-    # @param date [Time] Date in format YYYY-MM-DD
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :limit Maximum number of records to return (1-10000, default 100) (default to 100)
+    # @option opts [Time] :date UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day.
+    # @option opts [String] :time_start Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set.
+    # @option opts [Integer] :limit Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
     # @return [Array<(Array<IEXQuoteUpdateQuoteUpdateModel>, Integer, Hash)>] Array<IEXQuoteUpdateQuoteUpdateModel> data, response status code and response headers
-    def v1_native_iex_level1_quote_symbol_get_with_http_info(symbol, date, opts = {})
+    def v1_native_iex_level1_quote_symbol_get_with_http_info(symbol, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: NativeIEXApi.v1_native_iex_level1_quote_symbol_get ...'
       end
@@ -186,16 +186,13 @@ module OpenapiClient
       if @api_client.config.client_side_validation && symbol.nil?
         fail ArgumentError, "Missing the required parameter 'symbol' when calling NativeIEXApi.v1_native_iex_level1_quote_symbol_get"
       end
-      # verify the required parameter 'date' is set
-      if @api_client.config.client_side_validation && date.nil?
-        fail ArgumentError, "Missing the required parameter 'date' when calling NativeIEXApi.v1_native_iex_level1_quote_symbol_get"
-      end
       # resource path
       local_var_path = '/v1/native/iex/level1-quote/{symbol}'.sub('{symbol}', CGI.escape(symbol.to_s))
 
       # query parameters
       query_params = opts[:query_params] || {}
-      query_params[:'date'] = date
+      query_params[:'date'] = opts[:'date'] if !opts[:'date'].nil?
+      query_params[:'time_start'] = opts[:'time_start'] if !opts[:'time_start'].nil?
       query_params[:'limit'] = opts[:'limit'] if !opts[:'limit'].nil?
 
       # header parameters
@@ -233,25 +230,27 @@ module OpenapiClient
     end
 
     # Get Level-2 Price Level Book
-    # Streaming endpoint. Use `limit` to cap the number of records returned (default 100, max 10000).
+    # Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
     # @param symbol [String] The symbol identifier
-    # @param date [Time] Date in format YYYY-MM-DD
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :limit Maximum number of records to return (1-10000, default 100) (default to 100)
+    # @option opts [Time] :date UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day.
+    # @option opts [String] :time_start Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set.
+    # @option opts [Integer] :limit Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
     # @return [Array<IEXPriceLevelUpdatePriceLevelUpdateModel>]
-    def v1_native_iex_level2_price_level_update_symbol_get(symbol, date, opts = {})
-      data, _status_code, _headers = v1_native_iex_level2_price_level_update_symbol_get_with_http_info(symbol, date, opts)
+    def v1_native_iex_level2_price_level_update_symbol_get(symbol, opts = {})
+      data, _status_code, _headers = v1_native_iex_level2_price_level_update_symbol_get_with_http_info(symbol, opts)
       data
     end
 
     # Get Level-2 Price Level Book
-    # Streaming endpoint. Use &#x60;limit&#x60; to cap the number of records returned (default 100, max 10000).
+    # Streams one UTC day. &#x60;time_start&#x60; may be a full timestamp (&#x60;2026-09-28T13:31:14.8560065Z&#x60;) or a time of day (&#x60;13:31:14.8560065Z&#x60;) when &#x60;date&#x60; is set. Events start at that instant, inclusive. Omit &#x60;limit&#x60; to stream through the end of the day.
     # @param symbol [String] The symbol identifier
-    # @param date [Time] Date in format YYYY-MM-DD
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :limit Maximum number of records to return (1-10000, default 100) (default to 100)
+    # @option opts [Time] :date UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day.
+    # @option opts [String] :time_start Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set.
+    # @option opts [Integer] :limit Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
     # @return [Array<(Array<IEXPriceLevelUpdatePriceLevelUpdateModel>, Integer, Hash)>] Array<IEXPriceLevelUpdatePriceLevelUpdateModel> data, response status code and response headers
-    def v1_native_iex_level2_price_level_update_symbol_get_with_http_info(symbol, date, opts = {})
+    def v1_native_iex_level2_price_level_update_symbol_get_with_http_info(symbol, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: NativeIEXApi.v1_native_iex_level2_price_level_update_symbol_get ...'
       end
@@ -259,16 +258,13 @@ module OpenapiClient
       if @api_client.config.client_side_validation && symbol.nil?
         fail ArgumentError, "Missing the required parameter 'symbol' when calling NativeIEXApi.v1_native_iex_level2_price_level_update_symbol_get"
       end
-      # verify the required parameter 'date' is set
-      if @api_client.config.client_side_validation && date.nil?
-        fail ArgumentError, "Missing the required parameter 'date' when calling NativeIEXApi.v1_native_iex_level2_price_level_update_symbol_get"
-      end
       # resource path
       local_var_path = '/v1/native/iex/level2-price-level-update/{symbol}'.sub('{symbol}', CGI.escape(symbol.to_s))
 
       # query parameters
       query_params = opts[:query_params] || {}
-      query_params[:'date'] = date
+      query_params[:'date'] = opts[:'date'] if !opts[:'date'].nil?
+      query_params[:'time_start'] = opts[:'time_start'] if !opts[:'time_start'].nil?
       query_params[:'limit'] = opts[:'limit'] if !opts[:'limit'].nil?
 
       # header parameters
@@ -306,25 +302,27 @@ module OpenapiClient
     end
 
     # Get Level-3 Order Book
-    # Streaming endpoint. Use `limit` to cap the number of records returned (default 100, max 10000).
+    # Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
     # @param symbol [String] The symbol identifier
-    # @param date [Time] Date in format YYYY-MM-DD
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :limit Maximum number of records to return (1-10000, default 100) (default to 100)
+    # @option opts [Time] :date UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day.
+    # @option opts [String] :time_start Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set.
+    # @option opts [Integer] :limit Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
     # @return [Array<ModelsOrderBookModel>]
-    def v1_native_iex_level3_order_book_symbol_get(symbol, date, opts = {})
-      data, _status_code, _headers = v1_native_iex_level3_order_book_symbol_get_with_http_info(symbol, date, opts)
+    def v1_native_iex_level3_order_book_symbol_get(symbol, opts = {})
+      data, _status_code, _headers = v1_native_iex_level3_order_book_symbol_get_with_http_info(symbol, opts)
       data
     end
 
     # Get Level-3 Order Book
-    # Streaming endpoint. Use &#x60;limit&#x60; to cap the number of records returned (default 100, max 10000).
+    # Streams one UTC day. &#x60;time_start&#x60; may be a full timestamp (&#x60;2026-09-28T13:31:14.8560065Z&#x60;) or a time of day (&#x60;13:31:14.8560065Z&#x60;) when &#x60;date&#x60; is set. Events start at that instant, inclusive. Omit &#x60;limit&#x60; to stream through the end of the day.
     # @param symbol [String] The symbol identifier
-    # @param date [Time] Date in format YYYY-MM-DD
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :limit Maximum number of records to return (1-10000, default 100) (default to 100)
+    # @option opts [Time] :date UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day.
+    # @option opts [String] :time_start Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set.
+    # @option opts [Integer] :limit Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
     # @return [Array<(Array<ModelsOrderBookModel>, Integer, Hash)>] Array<ModelsOrderBookModel> data, response status code and response headers
-    def v1_native_iex_level3_order_book_symbol_get_with_http_info(symbol, date, opts = {})
+    def v1_native_iex_level3_order_book_symbol_get_with_http_info(symbol, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: NativeIEXApi.v1_native_iex_level3_order_book_symbol_get ...'
       end
@@ -332,16 +330,13 @@ module OpenapiClient
       if @api_client.config.client_side_validation && symbol.nil?
         fail ArgumentError, "Missing the required parameter 'symbol' when calling NativeIEXApi.v1_native_iex_level3_order_book_symbol_get"
       end
-      # verify the required parameter 'date' is set
-      if @api_client.config.client_side_validation && date.nil?
-        fail ArgumentError, "Missing the required parameter 'date' when calling NativeIEXApi.v1_native_iex_level3_order_book_symbol_get"
-      end
       # resource path
       local_var_path = '/v1/native/iex/level3-order-book/{symbol}'.sub('{symbol}', CGI.escape(symbol.to_s))
 
       # query parameters
       query_params = opts[:query_params] || {}
-      query_params[:'date'] = date
+      query_params[:'date'] = opts[:'date'] if !opts[:'date'].nil?
+      query_params[:'time_start'] = opts[:'time_start'] if !opts[:'time_start'].nil?
       query_params[:'limit'] = opts[:'limit'] if !opts[:'limit'].nil?
 
       # header parameters
@@ -379,25 +374,27 @@ module OpenapiClient
     end
 
     # Get Trades
-    # Streaming endpoint. Use `limit` to cap the number of trade records returned (default 100, max 10000).
+    # Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
     # @param symbol [String] The symbol identifier
-    # @param date [Time] Date in format YYYY-MM-DD
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :limit Maximum number of records to return (1-10000, default 100) (default to 100)
+    # @option opts [Time] :date UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day.
+    # @option opts [String] :time_start Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set.
+    # @option opts [Integer] :limit Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
     # @return [Array<IEXTradeTradeModel>]
-    def v1_native_iex_trade_symbol_get(symbol, date, opts = {})
-      data, _status_code, _headers = v1_native_iex_trade_symbol_get_with_http_info(symbol, date, opts)
+    def v1_native_iex_trade_symbol_get(symbol, opts = {})
+      data, _status_code, _headers = v1_native_iex_trade_symbol_get_with_http_info(symbol, opts)
       data
     end
 
     # Get Trades
-    # Streaming endpoint. Use &#x60;limit&#x60; to cap the number of trade records returned (default 100, max 10000).
+    # Streams one UTC day. &#x60;time_start&#x60; may be a full timestamp (&#x60;2026-09-28T13:31:14.8560065Z&#x60;) or a time of day (&#x60;13:31:14.8560065Z&#x60;) when &#x60;date&#x60; is set. Events start at that instant, inclusive. Omit &#x60;limit&#x60; to stream through the end of the day.
     # @param symbol [String] The symbol identifier
-    # @param date [Time] Date in format YYYY-MM-DD
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :limit Maximum number of records to return (1-10000, default 100) (default to 100)
+    # @option opts [Time] :date UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day.
+    # @option opts [String] :time_start Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set.
+    # @option opts [Integer] :limit Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
     # @return [Array<(Array<IEXTradeTradeModel>, Integer, Hash)>] Array<IEXTradeTradeModel> data, response status code and response headers
-    def v1_native_iex_trade_symbol_get_with_http_info(symbol, date, opts = {})
+    def v1_native_iex_trade_symbol_get_with_http_info(symbol, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: NativeIEXApi.v1_native_iex_trade_symbol_get ...'
       end
@@ -405,16 +402,13 @@ module OpenapiClient
       if @api_client.config.client_side_validation && symbol.nil?
         fail ArgumentError, "Missing the required parameter 'symbol' when calling NativeIEXApi.v1_native_iex_trade_symbol_get"
       end
-      # verify the required parameter 'date' is set
-      if @api_client.config.client_side_validation && date.nil?
-        fail ArgumentError, "Missing the required parameter 'date' when calling NativeIEXApi.v1_native_iex_trade_symbol_get"
-      end
       # resource path
       local_var_path = '/v1/native/iex/trade/{symbol}'.sub('{symbol}', CGI.escape(symbol.to_s))
 
       # query parameters
       query_params = opts[:query_params] || {}
-      query_params[:'date'] = date
+      query_params[:'date'] = opts[:'date'] if !opts[:'date'].nil?
+      query_params[:'time_start'] = opts[:'time_start'] if !opts[:'time_start'].nil?
       query_params[:'limit'] = opts[:'limit'] if !opts[:'limit'].nil?
 
       # header parameters

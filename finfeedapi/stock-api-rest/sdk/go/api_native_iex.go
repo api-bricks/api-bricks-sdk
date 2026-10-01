@@ -30,16 +30,23 @@ type ApiV1NativeIexAdminMessagesSymbolGetRequest struct {
 	ApiService *NativeIEXAPIService
 	symbol string
 	date *time.Time
+	timeStart *string
 	limit *int32
 }
 
-// Date in format YYYY-MM-DD
+// UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day.
 func (r ApiV1NativeIexAdminMessagesSymbolGetRequest) Date(date time.Time) ApiV1NativeIexAdminMessagesSymbolGetRequest {
 	r.date = &date
 	return r
 }
 
-// Maximum number of records to return (1-10000, default 100)
+// Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set.
+func (r ApiV1NativeIexAdminMessagesSymbolGetRequest) TimeStart(timeStart string) ApiV1NativeIexAdminMessagesSymbolGetRequest {
+	r.timeStart = &timeStart
+	return r
+}
+
+// Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
 func (r ApiV1NativeIexAdminMessagesSymbolGetRequest) Limit(limit int32) ApiV1NativeIexAdminMessagesSymbolGetRequest {
 	r.limit = &limit
 	return r
@@ -52,7 +59,7 @@ func (r ApiV1NativeIexAdminMessagesSymbolGetRequest) Execute() ([]ModelsAdminMes
 /*
 V1NativeIexAdminMessagesSymbolGet Get Admin Messages
 
-Streaming endpoint. Use `limit` to cap the number of records returned (default 100, max 10000).
+Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param symbol The symbol identifier
@@ -87,17 +94,15 @@ func (a *NativeIEXAPIService) V1NativeIexAdminMessagesSymbolGetExecute(r ApiV1Na
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
-	if r.date == nil {
-		return localVarReturnValue, nil, reportError("date is required and must be specified")
-	}
 
-	parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "form", "")
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "form", "")
+	}
+	if r.timeStart != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "time_start", r.timeStart, "form", "")
+	}
 	if r.limit != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "limit", r.limit, "form", "")
-	} else {
-		var defaultValue int32 = 100
-		parameterAddToHeaderOrQuery(localVarQueryParams, "limit", defaultValue, "form", "")
-		r.limit = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -171,16 +176,23 @@ type ApiV1NativeIexAdminSystemEventGetRequest struct {
 	ctx context.Context
 	ApiService *NativeIEXAPIService
 	date *time.Time
+	timeStart *string
 	limit *int32
 }
 
-// Date in format YYYY-MM-DD
+// UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day.
 func (r ApiV1NativeIexAdminSystemEventGetRequest) Date(date time.Time) ApiV1NativeIexAdminSystemEventGetRequest {
 	r.date = &date
 	return r
 }
 
-// Maximum number of records to return (1-10000, default 100)
+// Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set.
+func (r ApiV1NativeIexAdminSystemEventGetRequest) TimeStart(timeStart string) ApiV1NativeIexAdminSystemEventGetRequest {
+	r.timeStart = &timeStart
+	return r
+}
+
+// Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
 func (r ApiV1NativeIexAdminSystemEventGetRequest) Limit(limit int32) ApiV1NativeIexAdminSystemEventGetRequest {
 	r.limit = &limit
 	return r
@@ -193,7 +205,7 @@ func (r ApiV1NativeIexAdminSystemEventGetRequest) Execute() ([]IEXSystemEventSys
 /*
 V1NativeIexAdminSystemEventGet Get System Events
 
-Streaming endpoint. Use `limit` to cap the number of records returned (default 100, max 10000).
+Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1NativeIexAdminSystemEventGetRequest
@@ -225,17 +237,15 @@ func (a *NativeIEXAPIService) V1NativeIexAdminSystemEventGetExecute(r ApiV1Nativ
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
-	if r.date == nil {
-		return localVarReturnValue, nil, reportError("date is required and must be specified")
-	}
 
-	parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "form", "")
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "form", "")
+	}
+	if r.timeStart != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "time_start", r.timeStart, "form", "")
+	}
 	if r.limit != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "limit", r.limit, "form", "")
-	} else {
-		var defaultValue int32 = 100
-		parameterAddToHeaderOrQuery(localVarQueryParams, "limit", defaultValue, "form", "")
-		r.limit = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -310,16 +320,23 @@ type ApiV1NativeIexLevel1QuoteSymbolGetRequest struct {
 	ApiService *NativeIEXAPIService
 	symbol string
 	date *time.Time
+	timeStart *string
 	limit *int32
 }
 
-// Date in format YYYY-MM-DD
+// UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day.
 func (r ApiV1NativeIexLevel1QuoteSymbolGetRequest) Date(date time.Time) ApiV1NativeIexLevel1QuoteSymbolGetRequest {
 	r.date = &date
 	return r
 }
 
-// Maximum number of records to return (1-10000, default 100)
+// Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set.
+func (r ApiV1NativeIexLevel1QuoteSymbolGetRequest) TimeStart(timeStart string) ApiV1NativeIexLevel1QuoteSymbolGetRequest {
+	r.timeStart = &timeStart
+	return r
+}
+
+// Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
 func (r ApiV1NativeIexLevel1QuoteSymbolGetRequest) Limit(limit int32) ApiV1NativeIexLevel1QuoteSymbolGetRequest {
 	r.limit = &limit
 	return r
@@ -332,7 +349,7 @@ func (r ApiV1NativeIexLevel1QuoteSymbolGetRequest) Execute() ([]IEXQuoteUpdateQu
 /*
 V1NativeIexLevel1QuoteSymbolGet Get Level-1 Quotes
 
-Streaming endpoint. Use `limit` to cap the number of records returned (default 100, max 10000).
+Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param symbol The symbol identifier
@@ -367,17 +384,15 @@ func (a *NativeIEXAPIService) V1NativeIexLevel1QuoteSymbolGetExecute(r ApiV1Nati
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
-	if r.date == nil {
-		return localVarReturnValue, nil, reportError("date is required and must be specified")
-	}
 
-	parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "form", "")
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "form", "")
+	}
+	if r.timeStart != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "time_start", r.timeStart, "form", "")
+	}
 	if r.limit != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "limit", r.limit, "form", "")
-	} else {
-		var defaultValue int32 = 100
-		parameterAddToHeaderOrQuery(localVarQueryParams, "limit", defaultValue, "form", "")
-		r.limit = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -452,16 +467,23 @@ type ApiV1NativeIexLevel2PriceLevelUpdateSymbolGetRequest struct {
 	ApiService *NativeIEXAPIService
 	symbol string
 	date *time.Time
+	timeStart *string
 	limit *int32
 }
 
-// Date in format YYYY-MM-DD
+// UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day.
 func (r ApiV1NativeIexLevel2PriceLevelUpdateSymbolGetRequest) Date(date time.Time) ApiV1NativeIexLevel2PriceLevelUpdateSymbolGetRequest {
 	r.date = &date
 	return r
 }
 
-// Maximum number of records to return (1-10000, default 100)
+// Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set.
+func (r ApiV1NativeIexLevel2PriceLevelUpdateSymbolGetRequest) TimeStart(timeStart string) ApiV1NativeIexLevel2PriceLevelUpdateSymbolGetRequest {
+	r.timeStart = &timeStart
+	return r
+}
+
+// Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
 func (r ApiV1NativeIexLevel2PriceLevelUpdateSymbolGetRequest) Limit(limit int32) ApiV1NativeIexLevel2PriceLevelUpdateSymbolGetRequest {
 	r.limit = &limit
 	return r
@@ -474,7 +496,7 @@ func (r ApiV1NativeIexLevel2PriceLevelUpdateSymbolGetRequest) Execute() ([]IEXPr
 /*
 V1NativeIexLevel2PriceLevelUpdateSymbolGet Get Level-2 Price Level Book
 
-Streaming endpoint. Use `limit` to cap the number of records returned (default 100, max 10000).
+Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param symbol The symbol identifier
@@ -509,17 +531,15 @@ func (a *NativeIEXAPIService) V1NativeIexLevel2PriceLevelUpdateSymbolGetExecute(
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
-	if r.date == nil {
-		return localVarReturnValue, nil, reportError("date is required and must be specified")
-	}
 
-	parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "form", "")
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "form", "")
+	}
+	if r.timeStart != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "time_start", r.timeStart, "form", "")
+	}
 	if r.limit != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "limit", r.limit, "form", "")
-	} else {
-		var defaultValue int32 = 100
-		parameterAddToHeaderOrQuery(localVarQueryParams, "limit", defaultValue, "form", "")
-		r.limit = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -594,16 +614,23 @@ type ApiV1NativeIexLevel3OrderBookSymbolGetRequest struct {
 	ApiService *NativeIEXAPIService
 	symbol string
 	date *time.Time
+	timeStart *string
 	limit *int32
 }
 
-// Date in format YYYY-MM-DD
+// UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day.
 func (r ApiV1NativeIexLevel3OrderBookSymbolGetRequest) Date(date time.Time) ApiV1NativeIexLevel3OrderBookSymbolGetRequest {
 	r.date = &date
 	return r
 }
 
-// Maximum number of records to return (1-10000, default 100)
+// Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set.
+func (r ApiV1NativeIexLevel3OrderBookSymbolGetRequest) TimeStart(timeStart string) ApiV1NativeIexLevel3OrderBookSymbolGetRequest {
+	r.timeStart = &timeStart
+	return r
+}
+
+// Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
 func (r ApiV1NativeIexLevel3OrderBookSymbolGetRequest) Limit(limit int32) ApiV1NativeIexLevel3OrderBookSymbolGetRequest {
 	r.limit = &limit
 	return r
@@ -616,7 +643,7 @@ func (r ApiV1NativeIexLevel3OrderBookSymbolGetRequest) Execute() ([]ModelsOrderB
 /*
 V1NativeIexLevel3OrderBookSymbolGet Get Level-3 Order Book
 
-Streaming endpoint. Use `limit` to cap the number of records returned (default 100, max 10000).
+Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param symbol The symbol identifier
@@ -651,17 +678,15 @@ func (a *NativeIEXAPIService) V1NativeIexLevel3OrderBookSymbolGetExecute(r ApiV1
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
-	if r.date == nil {
-		return localVarReturnValue, nil, reportError("date is required and must be specified")
-	}
 
-	parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "form", "")
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "form", "")
+	}
+	if r.timeStart != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "time_start", r.timeStart, "form", "")
+	}
 	if r.limit != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "limit", r.limit, "form", "")
-	} else {
-		var defaultValue int32 = 100
-		parameterAddToHeaderOrQuery(localVarQueryParams, "limit", defaultValue, "form", "")
-		r.limit = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -736,16 +761,23 @@ type ApiV1NativeIexTradeSymbolGetRequest struct {
 	ApiService *NativeIEXAPIService
 	symbol string
 	date *time.Time
+	timeStart *string
 	limit *int32
 }
 
-// Date in format YYYY-MM-DD
+// UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day.
 func (r ApiV1NativeIexTradeSymbolGetRequest) Date(date time.Time) ApiV1NativeIexTradeSymbolGetRequest {
 	r.date = &date
 	return r
 }
 
-// Maximum number of records to return (1-10000, default 100)
+// Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set.
+func (r ApiV1NativeIexTradeSymbolGetRequest) TimeStart(timeStart string) ApiV1NativeIexTradeSymbolGetRequest {
+	r.timeStart = &timeStart
+	return r
+}
+
+// Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
 func (r ApiV1NativeIexTradeSymbolGetRequest) Limit(limit int32) ApiV1NativeIexTradeSymbolGetRequest {
 	r.limit = &limit
 	return r
@@ -758,7 +790,7 @@ func (r ApiV1NativeIexTradeSymbolGetRequest) Execute() ([]IEXTradeTradeModel, *h
 /*
 V1NativeIexTradeSymbolGet Get Trades
 
-Streaming endpoint. Use `limit` to cap the number of trade records returned (default 100, max 10000).
+Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param symbol The symbol identifier
@@ -793,17 +825,15 @@ func (a *NativeIEXAPIService) V1NativeIexTradeSymbolGetExecute(r ApiV1NativeIexT
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
-	if r.date == nil {
-		return localVarReturnValue, nil, reportError("date is required and must be specified")
-	}
 
-	parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "form", "")
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "form", "")
+	}
+	if r.timeStart != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "time_start", r.timeStart, "form", "")
+	}
 	if r.limit != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "limit", r.limit, "form", "")
-	} else {
-		var defaultValue int32 = 100
-		parameterAddToHeaderOrQuery(localVarQueryParams, "limit", defaultValue, "form", "")
-		r.limit = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}

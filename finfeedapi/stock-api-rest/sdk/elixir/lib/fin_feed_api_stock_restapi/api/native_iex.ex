@@ -11,24 +11,27 @@ defmodule FinFeedAPIStockRESTAPI.Api.NativeIEX do
 
   @doc """
   Get Admin Messages
-  Streaming endpoint. Use `limit` to cap the number of records returned (default 100, max 10000).
+  Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
 
   ### Parameters
 
   - `connection` (FinFeedAPIStockRESTAPI.Connection): Connection to server
   - `symbol` (String.t): The symbol identifier
-  - `date` (DateTime.t): Date in format YYYY-MM-DD
   - `opts` (keyword): Optional parameters
-    - `:limit` (integer()): Maximum number of records to return (1-10000, default 100)
+    - `:date` (DateTime.t): UTC day (`YYYY-MM-DD`). Optional when `time_start` includes a calendar day.
+    - `:time_start` (String.t): Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when `date` is set.
+    - `:limit` (integer()): Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
 
   ### Returns
 
   - `{:ok, [%ModelsAdminMessageModel{}, ...]}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
-  @spec v1_native_iex_admin_messages_symbol_get(Tesla.Env.client, String.t, DateTime.t, keyword()) :: {:ok, [FinFeedAPIStockRESTAPI.Model.ModelsAdminMessageModel.t]} | {:error, Tesla.Env.t}
-  def v1_native_iex_admin_messages_symbol_get(connection, symbol, date, opts \\ []) do
+  @spec v1_native_iex_admin_messages_symbol_get(Tesla.Env.client, String.t, keyword()) :: {:ok, [FinFeedAPIStockRESTAPI.Model.ModelsAdminMessageModel.t]} | {:error, Tesla.Env.t}
+  def v1_native_iex_admin_messages_symbol_get(connection, symbol, opts \\ []) do
     optional_params = %{
+      :date => :query,
+      :time_start => :query,
       :limit => :query
     }
 
@@ -36,7 +39,6 @@ defmodule FinFeedAPIStockRESTAPI.Api.NativeIEX do
       %{}
       |> method(:get)
       |> url("/v1/native/iex/admin/messages/#{symbol}")
-      |> add_param(:query, :date, date)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -49,23 +51,26 @@ defmodule FinFeedAPIStockRESTAPI.Api.NativeIEX do
 
   @doc """
   Get System Events
-  Streaming endpoint. Use `limit` to cap the number of records returned (default 100, max 10000).
+  Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
 
   ### Parameters
 
   - `connection` (FinFeedAPIStockRESTAPI.Connection): Connection to server
-  - `date` (DateTime.t): Date in format YYYY-MM-DD
   - `opts` (keyword): Optional parameters
-    - `:limit` (integer()): Maximum number of records to return (1-10000, default 100)
+    - `:date` (DateTime.t): UTC day (`YYYY-MM-DD`). Optional when `time_start` includes a calendar day.
+    - `:time_start` (String.t): Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when `date` is set.
+    - `:limit` (integer()): Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
 
   ### Returns
 
   - `{:ok, [%IexSystemEventSystemEventModel{}, ...]}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
-  @spec v1_native_iex_admin_system_event_get(Tesla.Env.client, DateTime.t, keyword()) :: {:ok, [FinFeedAPIStockRESTAPI.Model.IexSystemEventSystemEventModel.t]} | {:error, Tesla.Env.t}
-  def v1_native_iex_admin_system_event_get(connection, date, opts \\ []) do
+  @spec v1_native_iex_admin_system_event_get(Tesla.Env.client, keyword()) :: {:ok, [FinFeedAPIStockRESTAPI.Model.IexSystemEventSystemEventModel.t]} | {:error, Tesla.Env.t}
+  def v1_native_iex_admin_system_event_get(connection, opts \\ []) do
     optional_params = %{
+      :date => :query,
+      :time_start => :query,
       :limit => :query
     }
 
@@ -73,7 +78,6 @@ defmodule FinFeedAPIStockRESTAPI.Api.NativeIEX do
       %{}
       |> method(:get)
       |> url("/v1/native/iex/admin/system-event")
-      |> add_param(:query, :date, date)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -86,24 +90,27 @@ defmodule FinFeedAPIStockRESTAPI.Api.NativeIEX do
 
   @doc """
   Get Level-1 Quotes
-  Streaming endpoint. Use `limit` to cap the number of records returned (default 100, max 10000).
+  Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
 
   ### Parameters
 
   - `connection` (FinFeedAPIStockRESTAPI.Connection): Connection to server
   - `symbol` (String.t): The symbol identifier
-  - `date` (DateTime.t): Date in format YYYY-MM-DD
   - `opts` (keyword): Optional parameters
-    - `:limit` (integer()): Maximum number of records to return (1-10000, default 100)
+    - `:date` (DateTime.t): UTC day (`YYYY-MM-DD`). Optional when `time_start` includes a calendar day.
+    - `:time_start` (String.t): Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when `date` is set.
+    - `:limit` (integer()): Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
 
   ### Returns
 
   - `{:ok, [%IexQuoteUpdateQuoteUpdateModel{}, ...]}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
-  @spec v1_native_iex_level1_quote_symbol_get(Tesla.Env.client, String.t, DateTime.t, keyword()) :: {:ok, [FinFeedAPIStockRESTAPI.Model.IexQuoteUpdateQuoteUpdateModel.t]} | {:error, Tesla.Env.t}
-  def v1_native_iex_level1_quote_symbol_get(connection, symbol, date, opts \\ []) do
+  @spec v1_native_iex_level1_quote_symbol_get(Tesla.Env.client, String.t, keyword()) :: {:ok, [FinFeedAPIStockRESTAPI.Model.IexQuoteUpdateQuoteUpdateModel.t]} | {:error, Tesla.Env.t}
+  def v1_native_iex_level1_quote_symbol_get(connection, symbol, opts \\ []) do
     optional_params = %{
+      :date => :query,
+      :time_start => :query,
       :limit => :query
     }
 
@@ -111,7 +118,6 @@ defmodule FinFeedAPIStockRESTAPI.Api.NativeIEX do
       %{}
       |> method(:get)
       |> url("/v1/native/iex/level1-quote/#{symbol}")
-      |> add_param(:query, :date, date)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -124,24 +130,27 @@ defmodule FinFeedAPIStockRESTAPI.Api.NativeIEX do
 
   @doc """
   Get Level-2 Price Level Book
-  Streaming endpoint. Use `limit` to cap the number of records returned (default 100, max 10000).
+  Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
 
   ### Parameters
 
   - `connection` (FinFeedAPIStockRESTAPI.Connection): Connection to server
   - `symbol` (String.t): The symbol identifier
-  - `date` (DateTime.t): Date in format YYYY-MM-DD
   - `opts` (keyword): Optional parameters
-    - `:limit` (integer()): Maximum number of records to return (1-10000, default 100)
+    - `:date` (DateTime.t): UTC day (`YYYY-MM-DD`). Optional when `time_start` includes a calendar day.
+    - `:time_start` (String.t): Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when `date` is set.
+    - `:limit` (integer()): Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
 
   ### Returns
 
   - `{:ok, [%IexPriceLevelUpdatePriceLevelUpdateModel{}, ...]}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
-  @spec v1_native_iex_level2_price_level_update_symbol_get(Tesla.Env.client, String.t, DateTime.t, keyword()) :: {:ok, [FinFeedAPIStockRESTAPI.Model.IexPriceLevelUpdatePriceLevelUpdateModel.t]} | {:error, Tesla.Env.t}
-  def v1_native_iex_level2_price_level_update_symbol_get(connection, symbol, date, opts \\ []) do
+  @spec v1_native_iex_level2_price_level_update_symbol_get(Tesla.Env.client, String.t, keyword()) :: {:ok, [FinFeedAPIStockRESTAPI.Model.IexPriceLevelUpdatePriceLevelUpdateModel.t]} | {:error, Tesla.Env.t}
+  def v1_native_iex_level2_price_level_update_symbol_get(connection, symbol, opts \\ []) do
     optional_params = %{
+      :date => :query,
+      :time_start => :query,
       :limit => :query
     }
 
@@ -149,7 +158,6 @@ defmodule FinFeedAPIStockRESTAPI.Api.NativeIEX do
       %{}
       |> method(:get)
       |> url("/v1/native/iex/level2-price-level-update/#{symbol}")
-      |> add_param(:query, :date, date)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -162,24 +170,27 @@ defmodule FinFeedAPIStockRESTAPI.Api.NativeIEX do
 
   @doc """
   Get Level-3 Order Book
-  Streaming endpoint. Use `limit` to cap the number of records returned (default 100, max 10000).
+  Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
 
   ### Parameters
 
   - `connection` (FinFeedAPIStockRESTAPI.Connection): Connection to server
   - `symbol` (String.t): The symbol identifier
-  - `date` (DateTime.t): Date in format YYYY-MM-DD
   - `opts` (keyword): Optional parameters
-    - `:limit` (integer()): Maximum number of records to return (1-10000, default 100)
+    - `:date` (DateTime.t): UTC day (`YYYY-MM-DD`). Optional when `time_start` includes a calendar day.
+    - `:time_start` (String.t): Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when `date` is set.
+    - `:limit` (integer()): Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
 
   ### Returns
 
   - `{:ok, [%ModelsOrderBookModel{}, ...]}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
-  @spec v1_native_iex_level3_order_book_symbol_get(Tesla.Env.client, String.t, DateTime.t, keyword()) :: {:ok, [FinFeedAPIStockRESTAPI.Model.ModelsOrderBookModel.t]} | {:error, Tesla.Env.t}
-  def v1_native_iex_level3_order_book_symbol_get(connection, symbol, date, opts \\ []) do
+  @spec v1_native_iex_level3_order_book_symbol_get(Tesla.Env.client, String.t, keyword()) :: {:ok, [FinFeedAPIStockRESTAPI.Model.ModelsOrderBookModel.t]} | {:error, Tesla.Env.t}
+  def v1_native_iex_level3_order_book_symbol_get(connection, symbol, opts \\ []) do
     optional_params = %{
+      :date => :query,
+      :time_start => :query,
       :limit => :query
     }
 
@@ -187,7 +198,6 @@ defmodule FinFeedAPIStockRESTAPI.Api.NativeIEX do
       %{}
       |> method(:get)
       |> url("/v1/native/iex/level3-order-book/#{symbol}")
-      |> add_param(:query, :date, date)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -200,24 +210,27 @@ defmodule FinFeedAPIStockRESTAPI.Api.NativeIEX do
 
   @doc """
   Get Trades
-  Streaming endpoint. Use `limit` to cap the number of trade records returned (default 100, max 10000).
+  Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
 
   ### Parameters
 
   - `connection` (FinFeedAPIStockRESTAPI.Connection): Connection to server
   - `symbol` (String.t): The symbol identifier
-  - `date` (DateTime.t): Date in format YYYY-MM-DD
   - `opts` (keyword): Optional parameters
-    - `:limit` (integer()): Maximum number of records to return (1-10000, default 100)
+    - `:date` (DateTime.t): UTC day (`YYYY-MM-DD`). Optional when `time_start` includes a calendar day.
+    - `:time_start` (String.t): Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when `date` is set.
+    - `:limit` (integer()): Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
 
   ### Returns
 
   - `{:ok, [%IexTradeTradeModel{}, ...]}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
-  @spec v1_native_iex_trade_symbol_get(Tesla.Env.client, String.t, DateTime.t, keyword()) :: {:ok, [FinFeedAPIStockRESTAPI.Model.IexTradeTradeModel.t]} | {:error, Tesla.Env.t}
-  def v1_native_iex_trade_symbol_get(connection, symbol, date, opts \\ []) do
+  @spec v1_native_iex_trade_symbol_get(Tesla.Env.client, String.t, keyword()) :: {:ok, [FinFeedAPIStockRESTAPI.Model.IexTradeTradeModel.t]} | {:error, Tesla.Env.t}
+  def v1_native_iex_trade_symbol_get(connection, symbol, opts \\ []) do
     optional_params = %{
+      :date => :query,
+      :time_start => :query,
       :limit => :query
     }
 
@@ -225,7 +238,6 @@ defmodule FinFeedAPIStockRESTAPI.Api.NativeIEX do
       %{}
       |> method(:get)
       |> url("/v1/native/iex/trade/#{symbol}")
-      |> add_param(:query, :date, date)
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 

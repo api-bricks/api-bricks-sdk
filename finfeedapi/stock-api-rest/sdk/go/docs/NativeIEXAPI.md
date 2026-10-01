@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 ## V1NativeIexAdminMessagesSymbolGet
 
-> []ModelsAdminMessageModel V1NativeIexAdminMessagesSymbolGet(ctx, symbol).Date(date).Limit(limit).Execute()
+> []ModelsAdminMessageModel V1NativeIexAdminMessagesSymbolGet(ctx, symbol).Date(date).TimeStart(timeStart).Limit(limit).Execute()
 
 Get Admin Messages
 
@@ -36,12 +36,13 @@ import (
 
 func main() {
 	symbol := "symbol_example" // string | The symbol identifier
-	date := time.Now() // time.Time | Date in format YYYY-MM-DD
-	limit := int32(56) // int32 | Maximum number of records to return (1-10000, default 100) (optional) (default to 100)
+	date := time.Now() // time.Time | UTC day (`YYYY-MM-DD`). Optional when `time_start` includes a calendar day. (optional)
+	timeStart := "timeStart_example" // string | Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when `date` is set. (optional)
+	limit := int32(56) // int32 | Optional cap on the number of records (1-10000). Omit to stream through the end of the day. (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.NativeIEXAPI.V1NativeIexAdminMessagesSymbolGet(context.Background(), symbol).Date(date).Limit(limit).Execute()
+	resp, r, err := apiClient.NativeIEXAPI.V1NativeIexAdminMessagesSymbolGet(context.Background(), symbol).Date(date).TimeStart(timeStart).Limit(limit).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `NativeIEXAPI.V1NativeIexAdminMessagesSymbolGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -67,8 +68,9 @@ Other parameters are passed through a pointer to a apiV1NativeIexAdminMessagesSy
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **date** | **time.Time** | Date in format YYYY-MM-DD | 
- **limit** | **int32** | Maximum number of records to return (1-10000, default 100) | [default to 100]
+ **date** | **time.Time** | UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. | 
+ **timeStart** | **string** | Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. | 
+ **limit** | **int32** | Optional cap on the number of records (1-10000). Omit to stream through the end of the day. | 
 
 ### Return type
 
@@ -90,7 +92,7 @@ Name | Type | Description  | Notes
 
 ## V1NativeIexAdminSystemEventGet
 
-> []IEXSystemEventSystemEventModel V1NativeIexAdminSystemEventGet(ctx).Date(date).Limit(limit).Execute()
+> []IEXSystemEventSystemEventModel V1NativeIexAdminSystemEventGet(ctx).Date(date).TimeStart(timeStart).Limit(limit).Execute()
 
 Get System Events
 
@@ -110,12 +112,13 @@ import (
 )
 
 func main() {
-	date := time.Now() // time.Time | Date in format YYYY-MM-DD
-	limit := int32(56) // int32 | Maximum number of records to return (1-10000, default 100) (optional) (default to 100)
+	date := time.Now() // time.Time | UTC day (`YYYY-MM-DD`). Optional when `time_start` includes a calendar day. (optional)
+	timeStart := "timeStart_example" // string | Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when `date` is set. (optional)
+	limit := int32(56) // int32 | Optional cap on the number of records (1-10000). Omit to stream through the end of the day. (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.NativeIEXAPI.V1NativeIexAdminSystemEventGet(context.Background()).Date(date).Limit(limit).Execute()
+	resp, r, err := apiClient.NativeIEXAPI.V1NativeIexAdminSystemEventGet(context.Background()).Date(date).TimeStart(timeStart).Limit(limit).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `NativeIEXAPI.V1NativeIexAdminSystemEventGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -136,8 +139,9 @@ Other parameters are passed through a pointer to a apiV1NativeIexAdminSystemEven
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **date** | **time.Time** | Date in format YYYY-MM-DD | 
- **limit** | **int32** | Maximum number of records to return (1-10000, default 100) | [default to 100]
+ **date** | **time.Time** | UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. | 
+ **timeStart** | **string** | Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. | 
+ **limit** | **int32** | Optional cap on the number of records (1-10000). Omit to stream through the end of the day. | 
 
 ### Return type
 
@@ -159,7 +163,7 @@ Name | Type | Description  | Notes
 
 ## V1NativeIexLevel1QuoteSymbolGet
 
-> []IEXQuoteUpdateQuoteUpdateModel V1NativeIexLevel1QuoteSymbolGet(ctx, symbol).Date(date).Limit(limit).Execute()
+> []IEXQuoteUpdateQuoteUpdateModel V1NativeIexLevel1QuoteSymbolGet(ctx, symbol).Date(date).TimeStart(timeStart).Limit(limit).Execute()
 
 Get Level-1 Quotes
 
@@ -180,12 +184,13 @@ import (
 
 func main() {
 	symbol := "symbol_example" // string | The symbol identifier
-	date := time.Now() // time.Time | Date in format YYYY-MM-DD
-	limit := int32(56) // int32 | Maximum number of records to return (1-10000, default 100) (optional) (default to 100)
+	date := time.Now() // time.Time | UTC day (`YYYY-MM-DD`). Optional when `time_start` includes a calendar day. (optional)
+	timeStart := "timeStart_example" // string | Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when `date` is set. (optional)
+	limit := int32(56) // int32 | Optional cap on the number of records (1-10000). Omit to stream through the end of the day. (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.NativeIEXAPI.V1NativeIexLevel1QuoteSymbolGet(context.Background(), symbol).Date(date).Limit(limit).Execute()
+	resp, r, err := apiClient.NativeIEXAPI.V1NativeIexLevel1QuoteSymbolGet(context.Background(), symbol).Date(date).TimeStart(timeStart).Limit(limit).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `NativeIEXAPI.V1NativeIexLevel1QuoteSymbolGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -211,8 +216,9 @@ Other parameters are passed through a pointer to a apiV1NativeIexLevel1QuoteSymb
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **date** | **time.Time** | Date in format YYYY-MM-DD | 
- **limit** | **int32** | Maximum number of records to return (1-10000, default 100) | [default to 100]
+ **date** | **time.Time** | UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. | 
+ **timeStart** | **string** | Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. | 
+ **limit** | **int32** | Optional cap on the number of records (1-10000). Omit to stream through the end of the day. | 
 
 ### Return type
 
@@ -234,7 +240,7 @@ Name | Type | Description  | Notes
 
 ## V1NativeIexLevel2PriceLevelUpdateSymbolGet
 
-> []IEXPriceLevelUpdatePriceLevelUpdateModel V1NativeIexLevel2PriceLevelUpdateSymbolGet(ctx, symbol).Date(date).Limit(limit).Execute()
+> []IEXPriceLevelUpdatePriceLevelUpdateModel V1NativeIexLevel2PriceLevelUpdateSymbolGet(ctx, symbol).Date(date).TimeStart(timeStart).Limit(limit).Execute()
 
 Get Level-2 Price Level Book
 
@@ -255,12 +261,13 @@ import (
 
 func main() {
 	symbol := "symbol_example" // string | The symbol identifier
-	date := time.Now() // time.Time | Date in format YYYY-MM-DD
-	limit := int32(56) // int32 | Maximum number of records to return (1-10000, default 100) (optional) (default to 100)
+	date := time.Now() // time.Time | UTC day (`YYYY-MM-DD`). Optional when `time_start` includes a calendar day. (optional)
+	timeStart := "timeStart_example" // string | Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when `date` is set. (optional)
+	limit := int32(56) // int32 | Optional cap on the number of records (1-10000). Omit to stream through the end of the day. (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.NativeIEXAPI.V1NativeIexLevel2PriceLevelUpdateSymbolGet(context.Background(), symbol).Date(date).Limit(limit).Execute()
+	resp, r, err := apiClient.NativeIEXAPI.V1NativeIexLevel2PriceLevelUpdateSymbolGet(context.Background(), symbol).Date(date).TimeStart(timeStart).Limit(limit).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `NativeIEXAPI.V1NativeIexLevel2PriceLevelUpdateSymbolGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -286,8 +293,9 @@ Other parameters are passed through a pointer to a apiV1NativeIexLevel2PriceLeve
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **date** | **time.Time** | Date in format YYYY-MM-DD | 
- **limit** | **int32** | Maximum number of records to return (1-10000, default 100) | [default to 100]
+ **date** | **time.Time** | UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. | 
+ **timeStart** | **string** | Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. | 
+ **limit** | **int32** | Optional cap on the number of records (1-10000). Omit to stream through the end of the day. | 
 
 ### Return type
 
@@ -309,7 +317,7 @@ Name | Type | Description  | Notes
 
 ## V1NativeIexLevel3OrderBookSymbolGet
 
-> []ModelsOrderBookModel V1NativeIexLevel3OrderBookSymbolGet(ctx, symbol).Date(date).Limit(limit).Execute()
+> []ModelsOrderBookModel V1NativeIexLevel3OrderBookSymbolGet(ctx, symbol).Date(date).TimeStart(timeStart).Limit(limit).Execute()
 
 Get Level-3 Order Book
 
@@ -330,12 +338,13 @@ import (
 
 func main() {
 	symbol := "symbol_example" // string | The symbol identifier
-	date := time.Now() // time.Time | Date in format YYYY-MM-DD
-	limit := int32(56) // int32 | Maximum number of records to return (1-10000, default 100) (optional) (default to 100)
+	date := time.Now() // time.Time | UTC day (`YYYY-MM-DD`). Optional when `time_start` includes a calendar day. (optional)
+	timeStart := "timeStart_example" // string | Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when `date` is set. (optional)
+	limit := int32(56) // int32 | Optional cap on the number of records (1-10000). Omit to stream through the end of the day. (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.NativeIEXAPI.V1NativeIexLevel3OrderBookSymbolGet(context.Background(), symbol).Date(date).Limit(limit).Execute()
+	resp, r, err := apiClient.NativeIEXAPI.V1NativeIexLevel3OrderBookSymbolGet(context.Background(), symbol).Date(date).TimeStart(timeStart).Limit(limit).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `NativeIEXAPI.V1NativeIexLevel3OrderBookSymbolGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -361,8 +370,9 @@ Other parameters are passed through a pointer to a apiV1NativeIexLevel3OrderBook
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **date** | **time.Time** | Date in format YYYY-MM-DD | 
- **limit** | **int32** | Maximum number of records to return (1-10000, default 100) | [default to 100]
+ **date** | **time.Time** | UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. | 
+ **timeStart** | **string** | Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. | 
+ **limit** | **int32** | Optional cap on the number of records (1-10000). Omit to stream through the end of the day. | 
 
 ### Return type
 
@@ -384,7 +394,7 @@ Name | Type | Description  | Notes
 
 ## V1NativeIexTradeSymbolGet
 
-> []IEXTradeTradeModel V1NativeIexTradeSymbolGet(ctx, symbol).Date(date).Limit(limit).Execute()
+> []IEXTradeTradeModel V1NativeIexTradeSymbolGet(ctx, symbol).Date(date).TimeStart(timeStart).Limit(limit).Execute()
 
 Get Trades
 
@@ -405,12 +415,13 @@ import (
 
 func main() {
 	symbol := "symbol_example" // string | The symbol identifier
-	date := time.Now() // time.Time | Date in format YYYY-MM-DD
-	limit := int32(56) // int32 | Maximum number of records to return (1-10000, default 100) (optional) (default to 100)
+	date := time.Now() // time.Time | UTC day (`YYYY-MM-DD`). Optional when `time_start` includes a calendar day. (optional)
+	timeStart := "timeStart_example" // string | Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when `date` is set. (optional)
+	limit := int32(56) // int32 | Optional cap on the number of records (1-10000). Omit to stream through the end of the day. (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.NativeIEXAPI.V1NativeIexTradeSymbolGet(context.Background(), symbol).Date(date).Limit(limit).Execute()
+	resp, r, err := apiClient.NativeIEXAPI.V1NativeIexTradeSymbolGet(context.Background(), symbol).Date(date).TimeStart(timeStart).Limit(limit).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `NativeIEXAPI.V1NativeIexTradeSymbolGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -436,8 +447,9 @@ Other parameters are passed through a pointer to a apiV1NativeIexTradeSymbolGetR
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **date** | **time.Time** | Date in format YYYY-MM-DD | 
- **limit** | **int32** | Maximum number of records to return (1-10000, default 100) | [default to 100]
+ **date** | **time.Time** | UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. | 
+ **timeStart** | **string** | Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. | 
+ **limit** | **int32** | Optional cap on the number of records (1-10000). Omit to stream through the end of the day. | 
 
 ### Return type
 

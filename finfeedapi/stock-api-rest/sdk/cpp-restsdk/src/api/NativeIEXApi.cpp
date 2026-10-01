@@ -36,7 +36,7 @@ NativeIEXApi::~NativeIEXApi()
 {
 }
 
-pplx::task<std::vector<std::shared_ptr<Models_AdminMessageModel>>> NativeIEXApi::v1NativeIexAdminMessagesSymbolGet(utility::string_t symbol, utility::datetime date, boost::optional<int32_t> limit) const
+pplx::task<std::vector<std::shared_ptr<Models_AdminMessageModel>>> NativeIEXApi::v1NativeIexAdminMessagesSymbolGet(utility::string_t symbol, boost::optional<utility::datetime> date, boost::optional<utility::string_t> timeStart, boost::optional<int32_t> limit) const
 {
 
 
@@ -78,8 +78,13 @@ pplx::task<std::vector<std::shared_ptr<Models_AdminMessageModel>>> NativeIEXApi:
 
     std::unordered_set<utility::string_t> localVarConsumeHttpContentTypes;
 
+    if (date)
     {
-        localVarQueryParams[utility::conversions::to_string_t("date")] = ApiClient::parameterToString(date);
+        localVarQueryParams[utility::conversions::to_string_t("date")] = ApiClient::parameterToString(*date);
+    }
+    if (timeStart)
+    {
+        localVarQueryParams[utility::conversions::to_string_t("time_start")] = ApiClient::parameterToString(*timeStart);
     }
     if (limit)
     {
@@ -179,7 +184,7 @@ pplx::task<std::vector<std::shared_ptr<Models_AdminMessageModel>>> NativeIEXApi:
         return localVarResult;
     });
 }
-pplx::task<std::vector<std::shared_ptr<IEXSystemEvent_SystemEventModel>>> NativeIEXApi::v1NativeIexAdminSystemEventGet(utility::datetime date, boost::optional<int32_t> limit) const
+pplx::task<std::vector<std::shared_ptr<IEXSystemEvent_SystemEventModel>>> NativeIEXApi::v1NativeIexAdminSystemEventGet(boost::optional<utility::datetime> date, boost::optional<utility::string_t> timeStart, boost::optional<int32_t> limit) const
 {
 
 
@@ -220,8 +225,13 @@ pplx::task<std::vector<std::shared_ptr<IEXSystemEvent_SystemEventModel>>> Native
 
     std::unordered_set<utility::string_t> localVarConsumeHttpContentTypes;
 
+    if (date)
     {
-        localVarQueryParams[utility::conversions::to_string_t("date")] = ApiClient::parameterToString(date);
+        localVarQueryParams[utility::conversions::to_string_t("date")] = ApiClient::parameterToString(*date);
+    }
+    if (timeStart)
+    {
+        localVarQueryParams[utility::conversions::to_string_t("time_start")] = ApiClient::parameterToString(*timeStart);
     }
     if (limit)
     {
@@ -321,7 +331,7 @@ pplx::task<std::vector<std::shared_ptr<IEXSystemEvent_SystemEventModel>>> Native
         return localVarResult;
     });
 }
-pplx::task<std::vector<std::shared_ptr<IEXQuoteUpdate_QuoteUpdateModel>>> NativeIEXApi::v1NativeIexLevel1QuoteSymbolGet(utility::string_t symbol, utility::datetime date, boost::optional<int32_t> limit) const
+pplx::task<std::vector<std::shared_ptr<IEXQuoteUpdate_QuoteUpdateModel>>> NativeIEXApi::v1NativeIexLevel1QuoteSymbolGet(utility::string_t symbol, boost::optional<utility::datetime> date, boost::optional<utility::string_t> timeStart, boost::optional<int32_t> limit) const
 {
 
 
@@ -363,8 +373,13 @@ pplx::task<std::vector<std::shared_ptr<IEXQuoteUpdate_QuoteUpdateModel>>> Native
 
     std::unordered_set<utility::string_t> localVarConsumeHttpContentTypes;
 
+    if (date)
     {
-        localVarQueryParams[utility::conversions::to_string_t("date")] = ApiClient::parameterToString(date);
+        localVarQueryParams[utility::conversions::to_string_t("date")] = ApiClient::parameterToString(*date);
+    }
+    if (timeStart)
+    {
+        localVarQueryParams[utility::conversions::to_string_t("time_start")] = ApiClient::parameterToString(*timeStart);
     }
     if (limit)
     {
@@ -464,7 +479,7 @@ pplx::task<std::vector<std::shared_ptr<IEXQuoteUpdate_QuoteUpdateModel>>> Native
         return localVarResult;
     });
 }
-pplx::task<std::vector<std::shared_ptr<IEXPriceLevelUpdate_PriceLevelUpdateModel>>> NativeIEXApi::v1NativeIexLevel2PriceLevelUpdateSymbolGet(utility::string_t symbol, utility::datetime date, boost::optional<int32_t> limit) const
+pplx::task<std::vector<std::shared_ptr<IEXPriceLevelUpdate_PriceLevelUpdateModel>>> NativeIEXApi::v1NativeIexLevel2PriceLevelUpdateSymbolGet(utility::string_t symbol, boost::optional<utility::datetime> date, boost::optional<utility::string_t> timeStart, boost::optional<int32_t> limit) const
 {
 
 
@@ -506,8 +521,13 @@ pplx::task<std::vector<std::shared_ptr<IEXPriceLevelUpdate_PriceLevelUpdateModel
 
     std::unordered_set<utility::string_t> localVarConsumeHttpContentTypes;
 
+    if (date)
     {
-        localVarQueryParams[utility::conversions::to_string_t("date")] = ApiClient::parameterToString(date);
+        localVarQueryParams[utility::conversions::to_string_t("date")] = ApiClient::parameterToString(*date);
+    }
+    if (timeStart)
+    {
+        localVarQueryParams[utility::conversions::to_string_t("time_start")] = ApiClient::parameterToString(*timeStart);
     }
     if (limit)
     {
@@ -607,7 +627,7 @@ pplx::task<std::vector<std::shared_ptr<IEXPriceLevelUpdate_PriceLevelUpdateModel
         return localVarResult;
     });
 }
-pplx::task<std::vector<std::shared_ptr<Models_OrderBookModel>>> NativeIEXApi::v1NativeIexLevel3OrderBookSymbolGet(utility::string_t symbol, utility::datetime date, boost::optional<int32_t> limit) const
+pplx::task<std::vector<std::shared_ptr<Models_OrderBookModel>>> NativeIEXApi::v1NativeIexLevel3OrderBookSymbolGet(utility::string_t symbol, boost::optional<utility::datetime> date, boost::optional<utility::string_t> timeStart, boost::optional<int32_t> limit) const
 {
 
 
@@ -649,8 +669,13 @@ pplx::task<std::vector<std::shared_ptr<Models_OrderBookModel>>> NativeIEXApi::v1
 
     std::unordered_set<utility::string_t> localVarConsumeHttpContentTypes;
 
+    if (date)
     {
-        localVarQueryParams[utility::conversions::to_string_t("date")] = ApiClient::parameterToString(date);
+        localVarQueryParams[utility::conversions::to_string_t("date")] = ApiClient::parameterToString(*date);
+    }
+    if (timeStart)
+    {
+        localVarQueryParams[utility::conversions::to_string_t("time_start")] = ApiClient::parameterToString(*timeStart);
     }
     if (limit)
     {
@@ -750,7 +775,7 @@ pplx::task<std::vector<std::shared_ptr<Models_OrderBookModel>>> NativeIEXApi::v1
         return localVarResult;
     });
 }
-pplx::task<std::vector<std::shared_ptr<IEXTrade_TradeModel>>> NativeIEXApi::v1NativeIexTradeSymbolGet(utility::string_t symbol, utility::datetime date, boost::optional<int32_t> limit) const
+pplx::task<std::vector<std::shared_ptr<IEXTrade_TradeModel>>> NativeIEXApi::v1NativeIexTradeSymbolGet(utility::string_t symbol, boost::optional<utility::datetime> date, boost::optional<utility::string_t> timeStart, boost::optional<int32_t> limit) const
 {
 
 
@@ -792,8 +817,13 @@ pplx::task<std::vector<std::shared_ptr<IEXTrade_TradeModel>>> NativeIEXApi::v1Na
 
     std::unordered_set<utility::string_t> localVarConsumeHttpContentTypes;
 
+    if (date)
     {
-        localVarQueryParams[utility::conversions::to_string_t("date")] = ApiClient::parameterToString(date);
+        localVarQueryParams[utility::conversions::to_string_t("date")] = ApiClient::parameterToString(*date);
+    }
+    if (timeStart)
+    {
+        localVarQueryParams[utility::conversions::to_string_t("time_start")] = ApiClient::parameterToString(*timeStart);
     }
     if (limit)
     {

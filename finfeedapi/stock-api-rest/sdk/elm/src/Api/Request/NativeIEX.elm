@@ -34,16 +34,16 @@ import Json.Encode
 
 {-| Get Admin Messages
 
-Streaming endpoint. Use `limit` to cap the number of records returned (default 100, max 10000).
+Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
 
 -}
-v1NativeIexAdminMessagesSymbolGet : String -> Posix -> Maybe Int -> String -> Api.Request (List Api.Data.ModelsAdminMessageModel)
-v1NativeIexAdminMessagesSymbolGet symbol_path date_query limit_query auth_token =
+v1NativeIexAdminMessagesSymbolGet : String -> Maybe Posix -> Maybe String -> Maybe Int -> String -> Api.Request (List Api.Data.ModelsAdminMessageModel)
+v1NativeIexAdminMessagesSymbolGet symbol_path date_query timeStart_query limit_query auth_token =
     Api.request
         "GET"
         "/v1/native/iex/admin/messages/{symbol}"
         [ ( "symbol", identity symbol_path ) ]
-        [ ( "date", Just <| Api.Time.dateTimeToString date_query ), ( "limit", Maybe.map String.fromInt limit_query ) ]
+        [ ( "date", Maybe.map Api.Time.dateTimeToString date_query ), ( "time_start", Maybe.map identity timeStart_query ), ( "limit", Maybe.map String.fromInt limit_query ) ]
         []
         Nothing
         (Json.Decode.list Api.Data.modelsAdminMessageModelDecoder)
@@ -51,16 +51,16 @@ v1NativeIexAdminMessagesSymbolGet symbol_path date_query limit_query auth_token 
 
 {-| Get System Events
 
-Streaming endpoint. Use `limit` to cap the number of records returned (default 100, max 10000).
+Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
 
 -}
-v1NativeIexAdminSystemEventGet : Posix -> Maybe Int -> String -> Api.Request (List Api.Data.IEXSystemEventSystemEventModel)
-v1NativeIexAdminSystemEventGet date_query limit_query auth_token =
+v1NativeIexAdminSystemEventGet : Maybe Posix -> Maybe String -> Maybe Int -> String -> Api.Request (List Api.Data.IEXSystemEventSystemEventModel)
+v1NativeIexAdminSystemEventGet date_query timeStart_query limit_query auth_token =
     Api.request
         "GET"
         "/v1/native/iex/admin/system-event"
         []
-        [ ( "date", Just <| Api.Time.dateTimeToString date_query ), ( "limit", Maybe.map String.fromInt limit_query ) ]
+        [ ( "date", Maybe.map Api.Time.dateTimeToString date_query ), ( "time_start", Maybe.map identity timeStart_query ), ( "limit", Maybe.map String.fromInt limit_query ) ]
         []
         Nothing
         (Json.Decode.list Api.Data.iEXSystemEventSystemEventModelDecoder)
@@ -68,16 +68,16 @@ v1NativeIexAdminSystemEventGet date_query limit_query auth_token =
 
 {-| Get Level-1 Quotes
 
-Streaming endpoint. Use `limit` to cap the number of records returned (default 100, max 10000).
+Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
 
 -}
-v1NativeIexLevel1QuoteSymbolGet : String -> Posix -> Maybe Int -> String -> Api.Request (List Api.Data.IEXQuoteUpdateQuoteUpdateModel)
-v1NativeIexLevel1QuoteSymbolGet symbol_path date_query limit_query auth_token =
+v1NativeIexLevel1QuoteSymbolGet : String -> Maybe Posix -> Maybe String -> Maybe Int -> String -> Api.Request (List Api.Data.IEXQuoteUpdateQuoteUpdateModel)
+v1NativeIexLevel1QuoteSymbolGet symbol_path date_query timeStart_query limit_query auth_token =
     Api.request
         "GET"
         "/v1/native/iex/level1-quote/{symbol}"
         [ ( "symbol", identity symbol_path ) ]
-        [ ( "date", Just <| Api.Time.dateTimeToString date_query ), ( "limit", Maybe.map String.fromInt limit_query ) ]
+        [ ( "date", Maybe.map Api.Time.dateTimeToString date_query ), ( "time_start", Maybe.map identity timeStart_query ), ( "limit", Maybe.map String.fromInt limit_query ) ]
         []
         Nothing
         (Json.Decode.list Api.Data.iEXQuoteUpdateQuoteUpdateModelDecoder)
@@ -85,16 +85,16 @@ v1NativeIexLevel1QuoteSymbolGet symbol_path date_query limit_query auth_token =
 
 {-| Get Level-2 Price Level Book
 
-Streaming endpoint. Use `limit` to cap the number of records returned (default 100, max 10000).
+Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
 
 -}
-v1NativeIexLevel2PriceLevelUpdateSymbolGet : String -> Posix -> Maybe Int -> String -> Api.Request (List Api.Data.IEXPriceLevelUpdatePriceLevelUpdateModel)
-v1NativeIexLevel2PriceLevelUpdateSymbolGet symbol_path date_query limit_query auth_token =
+v1NativeIexLevel2PriceLevelUpdateSymbolGet : String -> Maybe Posix -> Maybe String -> Maybe Int -> String -> Api.Request (List Api.Data.IEXPriceLevelUpdatePriceLevelUpdateModel)
+v1NativeIexLevel2PriceLevelUpdateSymbolGet symbol_path date_query timeStart_query limit_query auth_token =
     Api.request
         "GET"
         "/v1/native/iex/level2-price-level-update/{symbol}"
         [ ( "symbol", identity symbol_path ) ]
-        [ ( "date", Just <| Api.Time.dateTimeToString date_query ), ( "limit", Maybe.map String.fromInt limit_query ) ]
+        [ ( "date", Maybe.map Api.Time.dateTimeToString date_query ), ( "time_start", Maybe.map identity timeStart_query ), ( "limit", Maybe.map String.fromInt limit_query ) ]
         []
         Nothing
         (Json.Decode.list Api.Data.iEXPriceLevelUpdatePriceLevelUpdateModelDecoder)
@@ -102,16 +102,16 @@ v1NativeIexLevel2PriceLevelUpdateSymbolGet symbol_path date_query limit_query au
 
 {-| Get Level-3 Order Book
 
-Streaming endpoint. Use `limit` to cap the number of records returned (default 100, max 10000).
+Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
 
 -}
-v1NativeIexLevel3OrderBookSymbolGet : String -> Posix -> Maybe Int -> String -> Api.Request (List Api.Data.ModelsOrderBookModel)
-v1NativeIexLevel3OrderBookSymbolGet symbol_path date_query limit_query auth_token =
+v1NativeIexLevel3OrderBookSymbolGet : String -> Maybe Posix -> Maybe String -> Maybe Int -> String -> Api.Request (List Api.Data.ModelsOrderBookModel)
+v1NativeIexLevel3OrderBookSymbolGet symbol_path date_query timeStart_query limit_query auth_token =
     Api.request
         "GET"
         "/v1/native/iex/level3-order-book/{symbol}"
         [ ( "symbol", identity symbol_path ) ]
-        [ ( "date", Just <| Api.Time.dateTimeToString date_query ), ( "limit", Maybe.map String.fromInt limit_query ) ]
+        [ ( "date", Maybe.map Api.Time.dateTimeToString date_query ), ( "time_start", Maybe.map identity timeStart_query ), ( "limit", Maybe.map String.fromInt limit_query ) ]
         []
         Nothing
         (Json.Decode.list Api.Data.modelsOrderBookModelDecoder)
@@ -119,16 +119,16 @@ v1NativeIexLevel3OrderBookSymbolGet symbol_path date_query limit_query auth_toke
 
 {-| Get Trades
 
-Streaming endpoint. Use `limit` to cap the number of trade records returned (default 100, max 10000).
+Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
 
 -}
-v1NativeIexTradeSymbolGet : String -> Posix -> Maybe Int -> String -> Api.Request (List Api.Data.IEXTradeTradeModel)
-v1NativeIexTradeSymbolGet symbol_path date_query limit_query auth_token =
+v1NativeIexTradeSymbolGet : String -> Maybe Posix -> Maybe String -> Maybe Int -> String -> Api.Request (List Api.Data.IEXTradeTradeModel)
+v1NativeIexTradeSymbolGet symbol_path date_query timeStart_query limit_query auth_token =
     Api.request
         "GET"
         "/v1/native/iex/trade/{symbol}"
         [ ( "symbol", identity symbol_path ) ]
-        [ ( "date", Just <| Api.Time.dateTimeToString date_query ), ( "limit", Maybe.map String.fromInt limit_query ) ]
+        [ ( "date", Maybe.map Api.Time.dateTimeToString date_query ), ( "time_start", Maybe.map identity timeStart_query ), ( "limit", Maybe.map String.fromInt limit_query ) ]
         []
         Nothing
         (Json.Decode.list Api.Data.iEXTradeTradeModelDecoder)

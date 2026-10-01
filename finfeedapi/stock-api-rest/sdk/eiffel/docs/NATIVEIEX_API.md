@@ -13,12 +13,12 @@ Feature | HTTP request | Description
 
 
 # **v1_native_iex_admin_messages_symbol_get**
-> v1_native_iex_admin_messages_symbol_get (symbol: STRING_32 ; date: DATE_TIME ; limit:  detachable INTEGER_32 ): detachable LIST [MODELS_ADMIN_MESSAGE_MODEL]
+> v1_native_iex_admin_messages_symbol_get (symbol: STRING_32 ; date:  detachable DATE_TIME ; time_start:  detachable STRING_32 ; limit:  detachable INTEGER_32 ): detachable LIST [MODELS_ADMIN_MESSAGE_MODEL]
 
 
 Get Admin Messages
 
-Streaming endpoint. Use `limit` to cap the number of records returned (default 100, max 10000).
+Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
 
 
 ### Parameters
@@ -26,8 +26,9 @@ Streaming endpoint. Use `limit` to cap the number of records returned (default 1
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **symbol** | **STRING_32**| The symbol identifier | [default to null]
- **date** | **DATE_TIME**| Date in format YYYY-MM-DD | [default to null]
- **limit** | **INTEGER_32**| Maximum number of records to return (1-10000, default 100) | [optional] [default to 100]
+ **date** | **DATE_TIME**| UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. | [optional] [default to null]
+ **time_start** | **STRING_32**| Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. | [optional] [default to null]
+ **limit** | **INTEGER_32**| Optional cap on the number of records (1-10000). Omit to stream through the end of the day. | [optional] [default to null]
 
 ### Return type
 
@@ -45,20 +46,21 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_native_iex_admin_system_event_get**
-> v1_native_iex_admin_system_event_get (date: DATE_TIME ; limit:  detachable INTEGER_32 ): detachable LIST [IEX_SYSTEM_EVENT_SYSTEM_EVENT_MODEL]
+> v1_native_iex_admin_system_event_get (date:  detachable DATE_TIME ; time_start:  detachable STRING_32 ; limit:  detachable INTEGER_32 ): detachable LIST [IEX_SYSTEM_EVENT_SYSTEM_EVENT_MODEL]
 
 
 Get System Events
 
-Streaming endpoint. Use `limit` to cap the number of records returned (default 100, max 10000).
+Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
 
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **date** | **DATE_TIME**| Date in format YYYY-MM-DD | [default to null]
- **limit** | **INTEGER_32**| Maximum number of records to return (1-10000, default 100) | [optional] [default to 100]
+ **date** | **DATE_TIME**| UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. | [optional] [default to null]
+ **time_start** | **STRING_32**| Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. | [optional] [default to null]
+ **limit** | **INTEGER_32**| Optional cap on the number of records (1-10000). Omit to stream through the end of the day. | [optional] [default to null]
 
 ### Return type
 
@@ -76,12 +78,12 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_native_iex_level1_quote_symbol_get**
-> v1_native_iex_level1_quote_symbol_get (symbol: STRING_32 ; date: DATE_TIME ; limit:  detachable INTEGER_32 ): detachable LIST [IEX_QUOTE_UPDATE_QUOTE_UPDATE_MODEL]
+> v1_native_iex_level1_quote_symbol_get (symbol: STRING_32 ; date:  detachable DATE_TIME ; time_start:  detachable STRING_32 ; limit:  detachable INTEGER_32 ): detachable LIST [IEX_QUOTE_UPDATE_QUOTE_UPDATE_MODEL]
 
 
 Get Level-1 Quotes
 
-Streaming endpoint. Use `limit` to cap the number of records returned (default 100, max 10000).
+Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
 
 
 ### Parameters
@@ -89,8 +91,9 @@ Streaming endpoint. Use `limit` to cap the number of records returned (default 1
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **symbol** | **STRING_32**| The symbol identifier | [default to null]
- **date** | **DATE_TIME**| Date in format YYYY-MM-DD | [default to null]
- **limit** | **INTEGER_32**| Maximum number of records to return (1-10000, default 100) | [optional] [default to 100]
+ **date** | **DATE_TIME**| UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. | [optional] [default to null]
+ **time_start** | **STRING_32**| Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. | [optional] [default to null]
+ **limit** | **INTEGER_32**| Optional cap on the number of records (1-10000). Omit to stream through the end of the day. | [optional] [default to null]
 
 ### Return type
 
@@ -108,12 +111,12 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_native_iex_level2_price_level_update_symbol_get**
-> v1_native_iex_level2_price_level_update_symbol_get (symbol: STRING_32 ; date: DATE_TIME ; limit:  detachable INTEGER_32 ): detachable LIST [IEX_PRICE_LEVEL_UPDATE_PRICE_LEVEL_UPDATE_MODEL]
+> v1_native_iex_level2_price_level_update_symbol_get (symbol: STRING_32 ; date:  detachable DATE_TIME ; time_start:  detachable STRING_32 ; limit:  detachable INTEGER_32 ): detachable LIST [IEX_PRICE_LEVEL_UPDATE_PRICE_LEVEL_UPDATE_MODEL]
 
 
 Get Level-2 Price Level Book
 
-Streaming endpoint. Use `limit` to cap the number of records returned (default 100, max 10000).
+Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
 
 
 ### Parameters
@@ -121,8 +124,9 @@ Streaming endpoint. Use `limit` to cap the number of records returned (default 1
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **symbol** | **STRING_32**| The symbol identifier | [default to null]
- **date** | **DATE_TIME**| Date in format YYYY-MM-DD | [default to null]
- **limit** | **INTEGER_32**| Maximum number of records to return (1-10000, default 100) | [optional] [default to 100]
+ **date** | **DATE_TIME**| UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. | [optional] [default to null]
+ **time_start** | **STRING_32**| Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. | [optional] [default to null]
+ **limit** | **INTEGER_32**| Optional cap on the number of records (1-10000). Omit to stream through the end of the day. | [optional] [default to null]
 
 ### Return type
 
@@ -140,12 +144,12 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_native_iex_level3_order_book_symbol_get**
-> v1_native_iex_level3_order_book_symbol_get (symbol: STRING_32 ; date: DATE_TIME ; limit:  detachable INTEGER_32 ): detachable LIST [MODELS_ORDER_BOOK_MODEL]
+> v1_native_iex_level3_order_book_symbol_get (symbol: STRING_32 ; date:  detachable DATE_TIME ; time_start:  detachable STRING_32 ; limit:  detachable INTEGER_32 ): detachable LIST [MODELS_ORDER_BOOK_MODEL]
 
 
 Get Level-3 Order Book
 
-Streaming endpoint. Use `limit` to cap the number of records returned (default 100, max 10000).
+Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
 
 
 ### Parameters
@@ -153,8 +157,9 @@ Streaming endpoint. Use `limit` to cap the number of records returned (default 1
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **symbol** | **STRING_32**| The symbol identifier | [default to null]
- **date** | **DATE_TIME**| Date in format YYYY-MM-DD | [default to null]
- **limit** | **INTEGER_32**| Maximum number of records to return (1-10000, default 100) | [optional] [default to 100]
+ **date** | **DATE_TIME**| UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. | [optional] [default to null]
+ **time_start** | **STRING_32**| Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. | [optional] [default to null]
+ **limit** | **INTEGER_32**| Optional cap on the number of records (1-10000). Omit to stream through the end of the day. | [optional] [default to null]
 
 ### Return type
 
@@ -172,12 +177,12 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_native_iex_trade_symbol_get**
-> v1_native_iex_trade_symbol_get (symbol: STRING_32 ; date: DATE_TIME ; limit:  detachable INTEGER_32 ): detachable LIST [IEX_TRADE_TRADE_MODEL]
+> v1_native_iex_trade_symbol_get (symbol: STRING_32 ; date:  detachable DATE_TIME ; time_start:  detachable STRING_32 ; limit:  detachable INTEGER_32 ): detachable LIST [IEX_TRADE_TRADE_MODEL]
 
 
 Get Trades
 
-Streaming endpoint. Use `limit` to cap the number of trade records returned (default 100, max 10000).
+Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
 
 
 ### Parameters
@@ -185,8 +190,9 @@ Streaming endpoint. Use `limit` to cap the number of trade records returned (def
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **symbol** | **STRING_32**| The symbol identifier | [default to null]
- **date** | **DATE_TIME**| Date in format YYYY-MM-DD | [default to null]
- **limit** | **INTEGER_32**| Maximum number of records to return (1-10000, default 100) | [optional] [default to 100]
+ **date** | **DATE_TIME**| UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. | [optional] [default to null]
+ **time_start** | **STRING_32**| Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. | [optional] [default to null]
+ **limit** | **INTEGER_32**| Optional cap on the number of records (1-10000). Omit to stream through the end of the day. | [optional] [default to null]
 
 ### Return type
 

@@ -100,13 +100,14 @@ export class NativeIEXApi {
     }
 
     /**
-     * Streaming endpoint. Use `limit` to cap the number of records returned (default 100, max 10000).
+     * Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
      * @summary Get Admin Messages
      * @param symbol The symbol identifier
-     * @param date Date in format YYYY-MM-DD
-     * @param limit Maximum number of records to return (1-10000, default 100)
+     * @param date UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day.
+     * @param timeStart Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set.
+     * @param limit Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
      */
-    public async v1NativeIexAdminMessagesSymbolGet (symbol: string, date: Date, limit?: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<ModelsAdminMessageModel>;  }> {
+    public async v1NativeIexAdminMessagesSymbolGet (symbol: string, date?: Date, timeStart?: string, limit?: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<ModelsAdminMessageModel>;  }> {
         const localVarPath = this.basePath + '/v1/native/iex/admin/messages/{symbol}'
             .replace('{symbol}', encodeURIComponent(String(symbol)));
         let localVarQueryParameters: any = {};
@@ -125,13 +126,12 @@ export class NativeIEXApi {
             throw new Error('Required parameter symbol was null or undefined when calling v1NativeIexAdminMessagesSymbolGet.');
         }
 
-        // verify required parameter 'date' is not null or undefined
-        if (date === null || date === undefined) {
-            throw new Error('Required parameter date was null or undefined when calling v1NativeIexAdminMessagesSymbolGet.');
-        }
-
         if (date !== undefined) {
             localVarQueryParameters['date'] = ObjectSerializer.serialize(date, "Date");
+        }
+
+        if (timeStart !== undefined) {
+            localVarQueryParameters['time_start'] = ObjectSerializer.serialize(timeStart, "string");
         }
 
         if (limit !== undefined) {
@@ -190,12 +190,13 @@ export class NativeIEXApi {
         });
     }
     /**
-     * Streaming endpoint. Use `limit` to cap the number of records returned (default 100, max 10000).
+     * Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
      * @summary Get System Events
-     * @param date Date in format YYYY-MM-DD
-     * @param limit Maximum number of records to return (1-10000, default 100)
+     * @param date UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day.
+     * @param timeStart Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set.
+     * @param limit Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
      */
-    public async v1NativeIexAdminSystemEventGet (date: Date, limit?: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<IEXSystemEventSystemEventModel>;  }> {
+    public async v1NativeIexAdminSystemEventGet (date?: Date, timeStart?: string, limit?: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<IEXSystemEventSystemEventModel>;  }> {
         const localVarPath = this.basePath + '/v1/native/iex/admin/system-event';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -208,13 +209,12 @@ export class NativeIEXApi {
         }
         let localVarFormParams: any = {};
 
-        // verify required parameter 'date' is not null or undefined
-        if (date === null || date === undefined) {
-            throw new Error('Required parameter date was null or undefined when calling v1NativeIexAdminSystemEventGet.');
-        }
-
         if (date !== undefined) {
             localVarQueryParameters['date'] = ObjectSerializer.serialize(date, "Date");
+        }
+
+        if (timeStart !== undefined) {
+            localVarQueryParameters['time_start'] = ObjectSerializer.serialize(timeStart, "string");
         }
 
         if (limit !== undefined) {
@@ -273,13 +273,14 @@ export class NativeIEXApi {
         });
     }
     /**
-     * Streaming endpoint. Use `limit` to cap the number of records returned (default 100, max 10000).
+     * Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
      * @summary Get Level-1 Quotes
      * @param symbol The symbol identifier
-     * @param date Date in format YYYY-MM-DD
-     * @param limit Maximum number of records to return (1-10000, default 100)
+     * @param date UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day.
+     * @param timeStart Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set.
+     * @param limit Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
      */
-    public async v1NativeIexLevel1QuoteSymbolGet (symbol: string, date: Date, limit?: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<IEXQuoteUpdateQuoteUpdateModel>;  }> {
+    public async v1NativeIexLevel1QuoteSymbolGet (symbol: string, date?: Date, timeStart?: string, limit?: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<IEXQuoteUpdateQuoteUpdateModel>;  }> {
         const localVarPath = this.basePath + '/v1/native/iex/level1-quote/{symbol}'
             .replace('{symbol}', encodeURIComponent(String(symbol)));
         let localVarQueryParameters: any = {};
@@ -298,13 +299,12 @@ export class NativeIEXApi {
             throw new Error('Required parameter symbol was null or undefined when calling v1NativeIexLevel1QuoteSymbolGet.');
         }
 
-        // verify required parameter 'date' is not null or undefined
-        if (date === null || date === undefined) {
-            throw new Error('Required parameter date was null or undefined when calling v1NativeIexLevel1QuoteSymbolGet.');
-        }
-
         if (date !== undefined) {
             localVarQueryParameters['date'] = ObjectSerializer.serialize(date, "Date");
+        }
+
+        if (timeStart !== undefined) {
+            localVarQueryParameters['time_start'] = ObjectSerializer.serialize(timeStart, "string");
         }
 
         if (limit !== undefined) {
@@ -363,13 +363,14 @@ export class NativeIEXApi {
         });
     }
     /**
-     * Streaming endpoint. Use `limit` to cap the number of records returned (default 100, max 10000).
+     * Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
      * @summary Get Level-2 Price Level Book
      * @param symbol The symbol identifier
-     * @param date Date in format YYYY-MM-DD
-     * @param limit Maximum number of records to return (1-10000, default 100)
+     * @param date UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day.
+     * @param timeStart Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set.
+     * @param limit Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
      */
-    public async v1NativeIexLevel2PriceLevelUpdateSymbolGet (symbol: string, date: Date, limit?: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<IEXPriceLevelUpdatePriceLevelUpdateModel>;  }> {
+    public async v1NativeIexLevel2PriceLevelUpdateSymbolGet (symbol: string, date?: Date, timeStart?: string, limit?: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<IEXPriceLevelUpdatePriceLevelUpdateModel>;  }> {
         const localVarPath = this.basePath + '/v1/native/iex/level2-price-level-update/{symbol}'
             .replace('{symbol}', encodeURIComponent(String(symbol)));
         let localVarQueryParameters: any = {};
@@ -388,13 +389,12 @@ export class NativeIEXApi {
             throw new Error('Required parameter symbol was null or undefined when calling v1NativeIexLevel2PriceLevelUpdateSymbolGet.');
         }
 
-        // verify required parameter 'date' is not null or undefined
-        if (date === null || date === undefined) {
-            throw new Error('Required parameter date was null or undefined when calling v1NativeIexLevel2PriceLevelUpdateSymbolGet.');
-        }
-
         if (date !== undefined) {
             localVarQueryParameters['date'] = ObjectSerializer.serialize(date, "Date");
+        }
+
+        if (timeStart !== undefined) {
+            localVarQueryParameters['time_start'] = ObjectSerializer.serialize(timeStart, "string");
         }
 
         if (limit !== undefined) {
@@ -453,13 +453,14 @@ export class NativeIEXApi {
         });
     }
     /**
-     * Streaming endpoint. Use `limit` to cap the number of records returned (default 100, max 10000).
+     * Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
      * @summary Get Level-3 Order Book
      * @param symbol The symbol identifier
-     * @param date Date in format YYYY-MM-DD
-     * @param limit Maximum number of records to return (1-10000, default 100)
+     * @param date UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day.
+     * @param timeStart Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set.
+     * @param limit Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
      */
-    public async v1NativeIexLevel3OrderBookSymbolGet (symbol: string, date: Date, limit?: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<ModelsOrderBookModel>;  }> {
+    public async v1NativeIexLevel3OrderBookSymbolGet (symbol: string, date?: Date, timeStart?: string, limit?: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<ModelsOrderBookModel>;  }> {
         const localVarPath = this.basePath + '/v1/native/iex/level3-order-book/{symbol}'
             .replace('{symbol}', encodeURIComponent(String(symbol)));
         let localVarQueryParameters: any = {};
@@ -478,13 +479,12 @@ export class NativeIEXApi {
             throw new Error('Required parameter symbol was null or undefined when calling v1NativeIexLevel3OrderBookSymbolGet.');
         }
 
-        // verify required parameter 'date' is not null or undefined
-        if (date === null || date === undefined) {
-            throw new Error('Required parameter date was null or undefined when calling v1NativeIexLevel3OrderBookSymbolGet.');
-        }
-
         if (date !== undefined) {
             localVarQueryParameters['date'] = ObjectSerializer.serialize(date, "Date");
+        }
+
+        if (timeStart !== undefined) {
+            localVarQueryParameters['time_start'] = ObjectSerializer.serialize(timeStart, "string");
         }
 
         if (limit !== undefined) {
@@ -543,13 +543,14 @@ export class NativeIEXApi {
         });
     }
     /**
-     * Streaming endpoint. Use `limit` to cap the number of trade records returned (default 100, max 10000).
+     * Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
      * @summary Get Trades
      * @param symbol The symbol identifier
-     * @param date Date in format YYYY-MM-DD
-     * @param limit Maximum number of records to return (1-10000, default 100)
+     * @param date UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day.
+     * @param timeStart Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set.
+     * @param limit Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
      */
-    public async v1NativeIexTradeSymbolGet (symbol: string, date: Date, limit?: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<IEXTradeTradeModel>;  }> {
+    public async v1NativeIexTradeSymbolGet (symbol: string, date?: Date, timeStart?: string, limit?: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<IEXTradeTradeModel>;  }> {
         const localVarPath = this.basePath + '/v1/native/iex/trade/{symbol}'
             .replace('{symbol}', encodeURIComponent(String(symbol)));
         let localVarQueryParameters: any = {};
@@ -568,13 +569,12 @@ export class NativeIEXApi {
             throw new Error('Required parameter symbol was null or undefined when calling v1NativeIexTradeSymbolGet.');
         }
 
-        // verify required parameter 'date' is not null or undefined
-        if (date === null || date === undefined) {
-            throw new Error('Required parameter date was null or undefined when calling v1NativeIexTradeSymbolGet.');
-        }
-
         if (date !== undefined) {
             localVarQueryParameters['date'] = ObjectSerializer.serialize(date, "Date");
+        }
+
+        if (timeStart !== undefined) {
+            localVarQueryParameters['time_start'] = ObjectSerializer.serialize(timeStart, "string");
         }
 
         if (limit !== undefined) {

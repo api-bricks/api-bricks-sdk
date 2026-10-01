@@ -19,10 +19,13 @@ No description available.
 The symbol identifier
 
 .PARAMETER Date
-Date in format YYYY-MM-DD
+UTC day (`YYYY-MM-DD`). Optional when `time_start` includes a calendar day.
+
+.PARAMETER TimeStart
+Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when `date` is set.
 
 .PARAMETER Limit
-Maximum number of records to return (1-10000, default 100)
+Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
 
 .PARAMETER WithHttpInfo
 
@@ -39,9 +42,12 @@ function Invoke-V1NativeIexAdminMessagesSymbolGet {
         [String]
         ${Symbol},
         [Parameter(Position = 1, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
-        [System.DateTime]
+        [System.Nullable[System.DateTime]]
         ${Date},
         [Parameter(Position = 2, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
+        [String]
+        ${TimeStart},
+        [Parameter(Position = 3, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
         [System.Nullable[Int32]]
         ${Limit},
         [Switch]
@@ -71,10 +77,13 @@ function Invoke-V1NativeIexAdminMessagesSymbolGet {
         }
         $LocalVarUri = $LocalVarUri.replace('{symbol}', [System.Uri]::EscapeDataString([string]$Symbol))
 
-        if (!$Date) {
-            throw "Error! The required parameter `Date` missing when calling v1NativeIexAdminMessagesSymbolGet."
+        if ($Date) {
+            $LocalVarQueryParameters['date'] = $Date
         }
-        $LocalVarQueryParameters['date'] = $Date
+
+        if ($TimeStart) {
+            $LocalVarQueryParameters['time_start'] = $TimeStart
+        }
 
         if ($Limit) {
             $LocalVarQueryParameters['limit'] = $Limit
@@ -125,10 +134,13 @@ Get System Events
 No description available.
 
 .PARAMETER Date
-Date in format YYYY-MM-DD
+UTC day (`YYYY-MM-DD`). Optional when `time_start` includes a calendar day.
+
+.PARAMETER TimeStart
+Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when `date` is set.
 
 .PARAMETER Limit
-Maximum number of records to return (1-10000, default 100)
+Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
 
 .PARAMETER WithHttpInfo
 
@@ -142,9 +154,12 @@ function Invoke-V1NativeIexAdminSystemEventGet {
     [CmdletBinding()]
     Param (
         [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
-        [System.DateTime]
+        [System.Nullable[System.DateTime]]
         ${Date},
         [Parameter(Position = 1, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
+        [String]
+        ${TimeStart},
+        [Parameter(Position = 2, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
         [System.Nullable[Int32]]
         ${Limit},
         [Switch]
@@ -170,10 +185,13 @@ function Invoke-V1NativeIexAdminSystemEventGet {
 
         $LocalVarUri = '/v1/native/iex/admin/system-event'
 
-        if (!$Date) {
-            throw "Error! The required parameter `Date` missing when calling v1NativeIexAdminSystemEventGet."
+        if ($Date) {
+            $LocalVarQueryParameters['date'] = $Date
         }
-        $LocalVarQueryParameters['date'] = $Date
+
+        if ($TimeStart) {
+            $LocalVarQueryParameters['time_start'] = $TimeStart
+        }
 
         if ($Limit) {
             $LocalVarQueryParameters['limit'] = $Limit
@@ -227,10 +245,13 @@ No description available.
 The symbol identifier
 
 .PARAMETER Date
-Date in format YYYY-MM-DD
+UTC day (`YYYY-MM-DD`). Optional when `time_start` includes a calendar day.
+
+.PARAMETER TimeStart
+Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when `date` is set.
 
 .PARAMETER Limit
-Maximum number of records to return (1-10000, default 100)
+Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
 
 .PARAMETER WithHttpInfo
 
@@ -247,9 +268,12 @@ function Invoke-V1NativeIexLevel1QuoteSymbolGet {
         [String]
         ${Symbol},
         [Parameter(Position = 1, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
-        [System.DateTime]
+        [System.Nullable[System.DateTime]]
         ${Date},
         [Parameter(Position = 2, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
+        [String]
+        ${TimeStart},
+        [Parameter(Position = 3, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
         [System.Nullable[Int32]]
         ${Limit},
         [Switch]
@@ -279,10 +303,13 @@ function Invoke-V1NativeIexLevel1QuoteSymbolGet {
         }
         $LocalVarUri = $LocalVarUri.replace('{symbol}', [System.Uri]::EscapeDataString([string]$Symbol))
 
-        if (!$Date) {
-            throw "Error! The required parameter `Date` missing when calling v1NativeIexLevel1QuoteSymbolGet."
+        if ($Date) {
+            $LocalVarQueryParameters['date'] = $Date
         }
-        $LocalVarQueryParameters['date'] = $Date
+
+        if ($TimeStart) {
+            $LocalVarQueryParameters['time_start'] = $TimeStart
+        }
 
         if ($Limit) {
             $LocalVarQueryParameters['limit'] = $Limit
@@ -336,10 +363,13 @@ No description available.
 The symbol identifier
 
 .PARAMETER Date
-Date in format YYYY-MM-DD
+UTC day (`YYYY-MM-DD`). Optional when `time_start` includes a calendar day.
+
+.PARAMETER TimeStart
+Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when `date` is set.
 
 .PARAMETER Limit
-Maximum number of records to return (1-10000, default 100)
+Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
 
 .PARAMETER WithHttpInfo
 
@@ -356,9 +386,12 @@ function Invoke-V1NativeIexLevel2PriceLevelUpdateSymbolGet {
         [String]
         ${Symbol},
         [Parameter(Position = 1, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
-        [System.DateTime]
+        [System.Nullable[System.DateTime]]
         ${Date},
         [Parameter(Position = 2, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
+        [String]
+        ${TimeStart},
+        [Parameter(Position = 3, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
         [System.Nullable[Int32]]
         ${Limit},
         [Switch]
@@ -388,10 +421,13 @@ function Invoke-V1NativeIexLevel2PriceLevelUpdateSymbolGet {
         }
         $LocalVarUri = $LocalVarUri.replace('{symbol}', [System.Uri]::EscapeDataString([string]$Symbol))
 
-        if (!$Date) {
-            throw "Error! The required parameter `Date` missing when calling v1NativeIexLevel2PriceLevelUpdateSymbolGet."
+        if ($Date) {
+            $LocalVarQueryParameters['date'] = $Date
         }
-        $LocalVarQueryParameters['date'] = $Date
+
+        if ($TimeStart) {
+            $LocalVarQueryParameters['time_start'] = $TimeStart
+        }
 
         if ($Limit) {
             $LocalVarQueryParameters['limit'] = $Limit
@@ -445,10 +481,13 @@ No description available.
 The symbol identifier
 
 .PARAMETER Date
-Date in format YYYY-MM-DD
+UTC day (`YYYY-MM-DD`). Optional when `time_start` includes a calendar day.
+
+.PARAMETER TimeStart
+Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when `date` is set.
 
 .PARAMETER Limit
-Maximum number of records to return (1-10000, default 100)
+Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
 
 .PARAMETER WithHttpInfo
 
@@ -465,9 +504,12 @@ function Invoke-V1NativeIexLevel3OrderBookSymbolGet {
         [String]
         ${Symbol},
         [Parameter(Position = 1, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
-        [System.DateTime]
+        [System.Nullable[System.DateTime]]
         ${Date},
         [Parameter(Position = 2, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
+        [String]
+        ${TimeStart},
+        [Parameter(Position = 3, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
         [System.Nullable[Int32]]
         ${Limit},
         [Switch]
@@ -497,10 +539,13 @@ function Invoke-V1NativeIexLevel3OrderBookSymbolGet {
         }
         $LocalVarUri = $LocalVarUri.replace('{symbol}', [System.Uri]::EscapeDataString([string]$Symbol))
 
-        if (!$Date) {
-            throw "Error! The required parameter `Date` missing when calling v1NativeIexLevel3OrderBookSymbolGet."
+        if ($Date) {
+            $LocalVarQueryParameters['date'] = $Date
         }
-        $LocalVarQueryParameters['date'] = $Date
+
+        if ($TimeStart) {
+            $LocalVarQueryParameters['time_start'] = $TimeStart
+        }
 
         if ($Limit) {
             $LocalVarQueryParameters['limit'] = $Limit
@@ -554,10 +599,13 @@ No description available.
 The symbol identifier
 
 .PARAMETER Date
-Date in format YYYY-MM-DD
+UTC day (`YYYY-MM-DD`). Optional when `time_start` includes a calendar day.
+
+.PARAMETER TimeStart
+Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when `date` is set.
 
 .PARAMETER Limit
-Maximum number of records to return (1-10000, default 100)
+Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
 
 .PARAMETER WithHttpInfo
 
@@ -574,9 +622,12 @@ function Invoke-V1NativeIexTradeSymbolGet {
         [String]
         ${Symbol},
         [Parameter(Position = 1, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
-        [System.DateTime]
+        [System.Nullable[System.DateTime]]
         ${Date},
         [Parameter(Position = 2, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
+        [String]
+        ${TimeStart},
+        [Parameter(Position = 3, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
         [System.Nullable[Int32]]
         ${Limit},
         [Switch]
@@ -606,10 +657,13 @@ function Invoke-V1NativeIexTradeSymbolGet {
         }
         $LocalVarUri = $LocalVarUri.replace('{symbol}', [System.Uri]::EscapeDataString([string]$Symbol))
 
-        if (!$Date) {
-            throw "Error! The required parameter `Date` missing when calling v1NativeIexTradeSymbolGet."
+        if ($Date) {
+            $LocalVarQueryParameters['date'] = $Date
         }
-        $LocalVarQueryParameters['date'] = $Date
+
+        if ($TimeStart) {
+            $LocalVarQueryParameters['time_start'] = $TimeStart
+        }
 
         if ($Limit) {
             $LocalVarQueryParameters['limit'] = $Limit

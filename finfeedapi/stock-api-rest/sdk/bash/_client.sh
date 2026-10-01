@@ -334,16 +334,18 @@ case $state in
         local -a _op_arguments
         _op_arguments=(
           "symbol=:[PATH] The symbol identifier"
-          "date=:[QUERY] Date in format YYYY-MM-DD"
-"limit=:[QUERY] Maximum number of records to return (1-10000, default 100)"
+          "date=:[QUERY] UTC day (&#39;YYYY-MM-DD&#39;). Optional when &#39;time_start&#39; includes a calendar day."
+"time_start=:[QUERY] Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#39;date&#39; is set."
+"limit=:[QUERY] Optional cap on the number of records (1-10000). Omit to stream through the end of the day."
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       v1NativeIexAdminSystemEventGet)
         local -a _op_arguments
         _op_arguments=(
-                    "date=:[QUERY] Date in format YYYY-MM-DD"
-"limit=:[QUERY] Maximum number of records to return (1-10000, default 100)"
+                    "date=:[QUERY] UTC day (&#39;YYYY-MM-DD&#39;). Optional when &#39;time_start&#39; includes a calendar day."
+"time_start=:[QUERY] Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#39;date&#39; is set."
+"limit=:[QUERY] Optional cap on the number of records (1-10000). Omit to stream through the end of the day."
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
@@ -351,8 +353,9 @@ case $state in
         local -a _op_arguments
         _op_arguments=(
           "symbol=:[PATH] The symbol identifier"
-          "date=:[QUERY] Date in format YYYY-MM-DD"
-"limit=:[QUERY] Maximum number of records to return (1-10000, default 100)"
+          "date=:[QUERY] UTC day (&#39;YYYY-MM-DD&#39;). Optional when &#39;time_start&#39; includes a calendar day."
+"time_start=:[QUERY] Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#39;date&#39; is set."
+"limit=:[QUERY] Optional cap on the number of records (1-10000). Omit to stream through the end of the day."
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
@@ -360,8 +363,9 @@ case $state in
         local -a _op_arguments
         _op_arguments=(
           "symbol=:[PATH] The symbol identifier"
-          "date=:[QUERY] Date in format YYYY-MM-DD"
-"limit=:[QUERY] Maximum number of records to return (1-10000, default 100)"
+          "date=:[QUERY] UTC day (&#39;YYYY-MM-DD&#39;). Optional when &#39;time_start&#39; includes a calendar day."
+"time_start=:[QUERY] Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#39;date&#39; is set."
+"limit=:[QUERY] Optional cap on the number of records (1-10000). Omit to stream through the end of the day."
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
@@ -369,8 +373,9 @@ case $state in
         local -a _op_arguments
         _op_arguments=(
           "symbol=:[PATH] The symbol identifier"
-          "date=:[QUERY] Date in format YYYY-MM-DD"
-"limit=:[QUERY] Maximum number of records to return (1-10000, default 100)"
+          "date=:[QUERY] UTC day (&#39;YYYY-MM-DD&#39;). Optional when &#39;time_start&#39; includes a calendar day."
+"time_start=:[QUERY] Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#39;date&#39; is set."
+"limit=:[QUERY] Optional cap on the number of records (1-10000). Omit to stream through the end of the day."
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
@@ -378,8 +383,9 @@ case $state in
         local -a _op_arguments
         _op_arguments=(
           "symbol=:[PATH] The symbol identifier"
-          "date=:[QUERY] Date in format YYYY-MM-DD"
-"limit=:[QUERY] Maximum number of records to return (1-10000, default 100)"
+          "date=:[QUERY] UTC day (&#39;YYYY-MM-DD&#39;). Optional when &#39;time_start&#39; includes a calendar day."
+"time_start=:[QUERY] Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#39;date&#39; is set."
+"limit=:[QUERY] Optional cap on the number of records (1-10000). Omit to stream through the end of the day."
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;

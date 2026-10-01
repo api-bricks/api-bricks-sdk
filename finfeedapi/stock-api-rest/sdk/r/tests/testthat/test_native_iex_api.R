@@ -9,10 +9,11 @@ test_that("V1NativeIexAdminMessagesSymbolGet", {
   # tests for V1NativeIexAdminMessagesSymbolGet
   # base path: https://api-historical.stock.finfeedapi.com
   # Get Admin Messages
-  # Streaming endpoint. Use &#x60;limit&#x60; to cap the number of records returned (default 100, max 10000).
+  # Streams one UTC day. &#x60;time_start&#x60; may be a full timestamp (&#x60;2026-09-28T13:31:14.8560065Z&#x60;) or a time of day (&#x60;13:31:14.8560065Z&#x60;) when &#x60;date&#x60; is set. Events start at that instant, inclusive. Omit &#x60;limit&#x60; to stream through the end of the day.
   # @param symbol character The symbol identifier
-  # @param date character Date in format YYYY-MM-DD
-  # @param limit integer Maximum number of records to return (1-10000, default 100) (optional)
+  # @param date character UTC day (`YYYY-MM-DD`). Optional when `time_start` includes a calendar day. (optional)
+  # @param time_start character Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when `date` is set. (optional)
+  # @param limit integer Optional cap on the number of records (1-10000). Omit to stream through the end of the day. (optional)
   # @return [array[ModelsAdminMessageModel]]
 
   # uncomment below to test the operation
@@ -23,9 +24,10 @@ test_that("V1NativeIexAdminSystemEventGet", {
   # tests for V1NativeIexAdminSystemEventGet
   # base path: https://api-historical.stock.finfeedapi.com
   # Get System Events
-  # Streaming endpoint. Use &#x60;limit&#x60; to cap the number of records returned (default 100, max 10000).
-  # @param date character Date in format YYYY-MM-DD
-  # @param limit integer Maximum number of records to return (1-10000, default 100) (optional)
+  # Streams one UTC day. &#x60;time_start&#x60; may be a full timestamp (&#x60;2026-09-28T13:31:14.8560065Z&#x60;) or a time of day (&#x60;13:31:14.8560065Z&#x60;) when &#x60;date&#x60; is set. Events start at that instant, inclusive. Omit &#x60;limit&#x60; to stream through the end of the day.
+  # @param date character UTC day (`YYYY-MM-DD`). Optional when `time_start` includes a calendar day. (optional)
+  # @param time_start character Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when `date` is set. (optional)
+  # @param limit integer Optional cap on the number of records (1-10000). Omit to stream through the end of the day. (optional)
   # @return [array[IEXSystemEventSystemEventModel]]
 
   # uncomment below to test the operation
@@ -36,10 +38,11 @@ test_that("V1NativeIexLevel1QuoteSymbolGet", {
   # tests for V1NativeIexLevel1QuoteSymbolGet
   # base path: https://api-historical.stock.finfeedapi.com
   # Get Level-1 Quotes
-  # Streaming endpoint. Use &#x60;limit&#x60; to cap the number of records returned (default 100, max 10000).
+  # Streams one UTC day. &#x60;time_start&#x60; may be a full timestamp (&#x60;2026-09-28T13:31:14.8560065Z&#x60;) or a time of day (&#x60;13:31:14.8560065Z&#x60;) when &#x60;date&#x60; is set. Events start at that instant, inclusive. Omit &#x60;limit&#x60; to stream through the end of the day.
   # @param symbol character The symbol identifier
-  # @param date character Date in format YYYY-MM-DD
-  # @param limit integer Maximum number of records to return (1-10000, default 100) (optional)
+  # @param date character UTC day (`YYYY-MM-DD`). Optional when `time_start` includes a calendar day. (optional)
+  # @param time_start character Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when `date` is set. (optional)
+  # @param limit integer Optional cap on the number of records (1-10000). Omit to stream through the end of the day. (optional)
   # @return [array[IEXQuoteUpdateQuoteUpdateModel]]
 
   # uncomment below to test the operation
@@ -50,10 +53,11 @@ test_that("V1NativeIexLevel2PriceLevelUpdateSymbolGet", {
   # tests for V1NativeIexLevel2PriceLevelUpdateSymbolGet
   # base path: https://api-historical.stock.finfeedapi.com
   # Get Level-2 Price Level Book
-  # Streaming endpoint. Use &#x60;limit&#x60; to cap the number of records returned (default 100, max 10000).
+  # Streams one UTC day. &#x60;time_start&#x60; may be a full timestamp (&#x60;2026-09-28T13:31:14.8560065Z&#x60;) or a time of day (&#x60;13:31:14.8560065Z&#x60;) when &#x60;date&#x60; is set. Events start at that instant, inclusive. Omit &#x60;limit&#x60; to stream through the end of the day.
   # @param symbol character The symbol identifier
-  # @param date character Date in format YYYY-MM-DD
-  # @param limit integer Maximum number of records to return (1-10000, default 100) (optional)
+  # @param date character UTC day (`YYYY-MM-DD`). Optional when `time_start` includes a calendar day. (optional)
+  # @param time_start character Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when `date` is set. (optional)
+  # @param limit integer Optional cap on the number of records (1-10000). Omit to stream through the end of the day. (optional)
   # @return [array[IEXPriceLevelUpdatePriceLevelUpdateModel]]
 
   # uncomment below to test the operation
@@ -64,10 +68,11 @@ test_that("V1NativeIexLevel3OrderBookSymbolGet", {
   # tests for V1NativeIexLevel3OrderBookSymbolGet
   # base path: https://api-historical.stock.finfeedapi.com
   # Get Level-3 Order Book
-  # Streaming endpoint. Use &#x60;limit&#x60; to cap the number of records returned (default 100, max 10000).
+  # Streams one UTC day. &#x60;time_start&#x60; may be a full timestamp (&#x60;2026-09-28T13:31:14.8560065Z&#x60;) or a time of day (&#x60;13:31:14.8560065Z&#x60;) when &#x60;date&#x60; is set. Events start at that instant, inclusive. Omit &#x60;limit&#x60; to stream through the end of the day.
   # @param symbol character The symbol identifier
-  # @param date character Date in format YYYY-MM-DD
-  # @param limit integer Maximum number of records to return (1-10000, default 100) (optional)
+  # @param date character UTC day (`YYYY-MM-DD`). Optional when `time_start` includes a calendar day. (optional)
+  # @param time_start character Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when `date` is set. (optional)
+  # @param limit integer Optional cap on the number of records (1-10000). Omit to stream through the end of the day. (optional)
   # @return [array[ModelsOrderBookModel]]
 
   # uncomment below to test the operation
@@ -78,10 +83,11 @@ test_that("V1NativeIexTradeSymbolGet", {
   # tests for V1NativeIexTradeSymbolGet
   # base path: https://api-historical.stock.finfeedapi.com
   # Get Trades
-  # Streaming endpoint. Use &#x60;limit&#x60; to cap the number of trade records returned (default 100, max 10000).
+  # Streams one UTC day. &#x60;time_start&#x60; may be a full timestamp (&#x60;2026-09-28T13:31:14.8560065Z&#x60;) or a time of day (&#x60;13:31:14.8560065Z&#x60;) when &#x60;date&#x60; is set. Events start at that instant, inclusive. Omit &#x60;limit&#x60; to stream through the end of the day.
   # @param symbol character The symbol identifier
-  # @param date character Date in format YYYY-MM-DD
-  # @param limit integer Maximum number of records to return (1-10000, default 100) (optional)
+  # @param date character UTC day (`YYYY-MM-DD`). Optional when `time_start` includes a calendar day. (optional)
+  # @param time_start character Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when `date` is set. (optional)
+  # @param limit integer Optional cap on the number of records (1-10000). Omit to stream through the end of the day. (optional)
   # @return [array[IEXTradeTradeModel]]
 
   # uncomment below to test the operation

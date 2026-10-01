@@ -9,7 +9,7 @@
 Describe -tag 'PSOpenAPITools' -name 'NativeIEXApi' {
     Context 'Invoke-V1NativeIexAdminMessagesSymbolGet' {
         It 'Test Invoke-V1NativeIexAdminMessagesSymbolGet' {
-            #$TestResult = Invoke-V1NativeIexAdminMessagesSymbolGet -Symbol "TEST_VALUE" -Date "TEST_VALUE" -Limit "TEST_VALUE"
+            #$TestResult = Invoke-V1NativeIexAdminMessagesSymbolGet -Symbol "TEST_VALUE" -Date "TEST_VALUE" -TimeStart "TEST_VALUE" -Limit "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
@@ -17,7 +17,7 @@ Describe -tag 'PSOpenAPITools' -name 'NativeIEXApi' {
 
     Context 'Invoke-V1NativeIexAdminSystemEventGet' {
         It 'Test Invoke-V1NativeIexAdminSystemEventGet' {
-            #$TestResult = Invoke-V1NativeIexAdminSystemEventGet -Date "TEST_VALUE" -Limit "TEST_VALUE"
+            #$TestResult = Invoke-V1NativeIexAdminSystemEventGet -Date "TEST_VALUE" -TimeStart "TEST_VALUE" -Limit "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
@@ -25,7 +25,7 @@ Describe -tag 'PSOpenAPITools' -name 'NativeIEXApi' {
 
     Context 'Invoke-V1NativeIexLevel1QuoteSymbolGet' {
         It 'Test Invoke-V1NativeIexLevel1QuoteSymbolGet' {
-            #$TestResult = Invoke-V1NativeIexLevel1QuoteSymbolGet -Symbol "TEST_VALUE" -Date "TEST_VALUE" -Limit "TEST_VALUE"
+            #$TestResult = Invoke-V1NativeIexLevel1QuoteSymbolGet -Symbol "TEST_VALUE" -Date "TEST_VALUE" -TimeStart "TEST_VALUE" -Limit "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
@@ -33,7 +33,7 @@ Describe -tag 'PSOpenAPITools' -name 'NativeIEXApi' {
 
     Context 'Invoke-V1NativeIexLevel2PriceLevelUpdateSymbolGet' {
         It 'Test Invoke-V1NativeIexLevel2PriceLevelUpdateSymbolGet' {
-            #$TestResult = Invoke-V1NativeIexLevel2PriceLevelUpdateSymbolGet -Symbol "TEST_VALUE" -Date "TEST_VALUE" -Limit "TEST_VALUE"
+            #$TestResult = Invoke-V1NativeIexLevel2PriceLevelUpdateSymbolGet -Symbol "TEST_VALUE" -Date "TEST_VALUE" -TimeStart "TEST_VALUE" -Limit "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
@@ -41,7 +41,7 @@ Describe -tag 'PSOpenAPITools' -name 'NativeIEXApi' {
 
     Context 'Invoke-V1NativeIexLevel3OrderBookSymbolGet' {
         It 'Test Invoke-V1NativeIexLevel3OrderBookSymbolGet' {
-            #$TestResult = Invoke-V1NativeIexLevel3OrderBookSymbolGet -Symbol "TEST_VALUE" -Date "TEST_VALUE" -Limit "TEST_VALUE"
+            #$TestResult = Invoke-V1NativeIexLevel3OrderBookSymbolGet -Symbol "TEST_VALUE" -Date "TEST_VALUE" -TimeStart "TEST_VALUE" -Limit "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
@@ -49,7 +49,7 @@ Describe -tag 'PSOpenAPITools' -name 'NativeIEXApi' {
 
     Context 'Invoke-V1NativeIexTradeSymbolGet' {
         It 'Test Invoke-V1NativeIexTradeSymbolGet' {
-            #$TestResult = Invoke-V1NativeIexTradeSymbolGet -Symbol "TEST_VALUE" -Date "TEST_VALUE" -Limit "TEST_VALUE"
+            #$TestResult = Invoke-V1NativeIexTradeSymbolGet -Symbol "TEST_VALUE" -Date "TEST_VALUE" -TimeStart "TEST_VALUE" -Limit "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }

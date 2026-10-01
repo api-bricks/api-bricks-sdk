@@ -13,11 +13,11 @@ Method | HTTP request | Description
 
 
 # **v1_native_iex_admin_messages_symbol_get**
-> List[ModelsAdminMessageModel] v1_native_iex_admin_messages_symbol_get(symbol, var_date, limit=limit)
+> List[ModelsAdminMessageModel] v1_native_iex_admin_messages_symbol_get(symbol, var_date=var_date, time_start=time_start, limit=limit)
 
 Get Admin Messages
 
-Streaming endpoint. Use `limit` to cap the number of records returned (default 100, max 10000).
+Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
 
 ### Example
 
@@ -57,12 +57,13 @@ with api_bricks_stock_api_rest.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = api_bricks_stock_api_rest.NativeIEXApi(api_client)
     symbol = 'symbol_example' # str | The symbol identifier
-    var_date = '2013-10-20T19:20:30+01:00' # datetime | Date in format YYYY-MM-DD
-    limit = 100 # int | Maximum number of records to return (1-10000, default 100) (optional) (default to 100)
+    var_date = '2013-10-20T19:20:30+01:00' # datetime | UTC day (`YYYY-MM-DD`). Optional when `time_start` includes a calendar day. (optional)
+    time_start = 'time_start_example' # str | Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when `date` is set. (optional)
+    limit = 56 # int | Optional cap on the number of records (1-10000). Omit to stream through the end of the day. (optional)
 
     try:
         # Get Admin Messages
-        api_response = api_instance.v1_native_iex_admin_messages_symbol_get(symbol, var_date, limit=limit)
+        api_response = api_instance.v1_native_iex_admin_messages_symbol_get(symbol, var_date=var_date, time_start=time_start, limit=limit)
         print("The response of NativeIEXApi->v1_native_iex_admin_messages_symbol_get:\n")
         pprint(api_response)
     except Exception as e:
@@ -77,8 +78,9 @@ with api_bricks_stock_api_rest.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **symbol** | **str**| The symbol identifier | 
- **var_date** | **datetime**| Date in format YYYY-MM-DD | 
- **limit** | **int**| Maximum number of records to return (1-10000, default 100) | [optional] [default to 100]
+ **var_date** | **datetime**| UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. | [optional] 
+ **time_start** | **str**| Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. | [optional] 
+ **limit** | **int**| Optional cap on the number of records (1-10000). Omit to stream through the end of the day. | [optional] 
 
 ### Return type
 
@@ -102,11 +104,11 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_native_iex_admin_system_event_get**
-> List[IEXSystemEventSystemEventModel] v1_native_iex_admin_system_event_get(var_date, limit=limit)
+> List[IEXSystemEventSystemEventModel] v1_native_iex_admin_system_event_get(var_date=var_date, time_start=time_start, limit=limit)
 
 Get System Events
 
-Streaming endpoint. Use `limit` to cap the number of records returned (default 100, max 10000).
+Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
 
 ### Example
 
@@ -145,12 +147,13 @@ configuration = api_bricks_stock_api_rest.Configuration(
 with api_bricks_stock_api_rest.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = api_bricks_stock_api_rest.NativeIEXApi(api_client)
-    var_date = '2013-10-20T19:20:30+01:00' # datetime | Date in format YYYY-MM-DD
-    limit = 100 # int | Maximum number of records to return (1-10000, default 100) (optional) (default to 100)
+    var_date = '2013-10-20T19:20:30+01:00' # datetime | UTC day (`YYYY-MM-DD`). Optional when `time_start` includes a calendar day. (optional)
+    time_start = 'time_start_example' # str | Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when `date` is set. (optional)
+    limit = 56 # int | Optional cap on the number of records (1-10000). Omit to stream through the end of the day. (optional)
 
     try:
         # Get System Events
-        api_response = api_instance.v1_native_iex_admin_system_event_get(var_date, limit=limit)
+        api_response = api_instance.v1_native_iex_admin_system_event_get(var_date=var_date, time_start=time_start, limit=limit)
         print("The response of NativeIEXApi->v1_native_iex_admin_system_event_get:\n")
         pprint(api_response)
     except Exception as e:
@@ -164,8 +167,9 @@ with api_bricks_stock_api_rest.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **var_date** | **datetime**| Date in format YYYY-MM-DD | 
- **limit** | **int**| Maximum number of records to return (1-10000, default 100) | [optional] [default to 100]
+ **var_date** | **datetime**| UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. | [optional] 
+ **time_start** | **str**| Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. | [optional] 
+ **limit** | **int**| Optional cap on the number of records (1-10000). Omit to stream through the end of the day. | [optional] 
 
 ### Return type
 
@@ -189,11 +193,11 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_native_iex_level1_quote_symbol_get**
-> List[IEXQuoteUpdateQuoteUpdateModel] v1_native_iex_level1_quote_symbol_get(symbol, var_date, limit=limit)
+> List[IEXQuoteUpdateQuoteUpdateModel] v1_native_iex_level1_quote_symbol_get(symbol, var_date=var_date, time_start=time_start, limit=limit)
 
 Get Level-1 Quotes
 
-Streaming endpoint. Use `limit` to cap the number of records returned (default 100, max 10000).
+Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
 
 ### Example
 
@@ -233,12 +237,13 @@ with api_bricks_stock_api_rest.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = api_bricks_stock_api_rest.NativeIEXApi(api_client)
     symbol = 'symbol_example' # str | The symbol identifier
-    var_date = '2013-10-20T19:20:30+01:00' # datetime | Date in format YYYY-MM-DD
-    limit = 100 # int | Maximum number of records to return (1-10000, default 100) (optional) (default to 100)
+    var_date = '2013-10-20T19:20:30+01:00' # datetime | UTC day (`YYYY-MM-DD`). Optional when `time_start` includes a calendar day. (optional)
+    time_start = 'time_start_example' # str | Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when `date` is set. (optional)
+    limit = 56 # int | Optional cap on the number of records (1-10000). Omit to stream through the end of the day. (optional)
 
     try:
         # Get Level-1 Quotes
-        api_response = api_instance.v1_native_iex_level1_quote_symbol_get(symbol, var_date, limit=limit)
+        api_response = api_instance.v1_native_iex_level1_quote_symbol_get(symbol, var_date=var_date, time_start=time_start, limit=limit)
         print("The response of NativeIEXApi->v1_native_iex_level1_quote_symbol_get:\n")
         pprint(api_response)
     except Exception as e:
@@ -253,8 +258,9 @@ with api_bricks_stock_api_rest.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **symbol** | **str**| The symbol identifier | 
- **var_date** | **datetime**| Date in format YYYY-MM-DD | 
- **limit** | **int**| Maximum number of records to return (1-10000, default 100) | [optional] [default to 100]
+ **var_date** | **datetime**| UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. | [optional] 
+ **time_start** | **str**| Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. | [optional] 
+ **limit** | **int**| Optional cap on the number of records (1-10000). Omit to stream through the end of the day. | [optional] 
 
 ### Return type
 
@@ -278,11 +284,11 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_native_iex_level2_price_level_update_symbol_get**
-> List[IEXPriceLevelUpdatePriceLevelUpdateModel] v1_native_iex_level2_price_level_update_symbol_get(symbol, var_date, limit=limit)
+> List[IEXPriceLevelUpdatePriceLevelUpdateModel] v1_native_iex_level2_price_level_update_symbol_get(symbol, var_date=var_date, time_start=time_start, limit=limit)
 
 Get Level-2 Price Level Book
 
-Streaming endpoint. Use `limit` to cap the number of records returned (default 100, max 10000).
+Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
 
 ### Example
 
@@ -322,12 +328,13 @@ with api_bricks_stock_api_rest.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = api_bricks_stock_api_rest.NativeIEXApi(api_client)
     symbol = 'symbol_example' # str | The symbol identifier
-    var_date = '2013-10-20T19:20:30+01:00' # datetime | Date in format YYYY-MM-DD
-    limit = 100 # int | Maximum number of records to return (1-10000, default 100) (optional) (default to 100)
+    var_date = '2013-10-20T19:20:30+01:00' # datetime | UTC day (`YYYY-MM-DD`). Optional when `time_start` includes a calendar day. (optional)
+    time_start = 'time_start_example' # str | Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when `date` is set. (optional)
+    limit = 56 # int | Optional cap on the number of records (1-10000). Omit to stream through the end of the day. (optional)
 
     try:
         # Get Level-2 Price Level Book
-        api_response = api_instance.v1_native_iex_level2_price_level_update_symbol_get(symbol, var_date, limit=limit)
+        api_response = api_instance.v1_native_iex_level2_price_level_update_symbol_get(symbol, var_date=var_date, time_start=time_start, limit=limit)
         print("The response of NativeIEXApi->v1_native_iex_level2_price_level_update_symbol_get:\n")
         pprint(api_response)
     except Exception as e:
@@ -342,8 +349,9 @@ with api_bricks_stock_api_rest.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **symbol** | **str**| The symbol identifier | 
- **var_date** | **datetime**| Date in format YYYY-MM-DD | 
- **limit** | **int**| Maximum number of records to return (1-10000, default 100) | [optional] [default to 100]
+ **var_date** | **datetime**| UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. | [optional] 
+ **time_start** | **str**| Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. | [optional] 
+ **limit** | **int**| Optional cap on the number of records (1-10000). Omit to stream through the end of the day. | [optional] 
 
 ### Return type
 
@@ -367,11 +375,11 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_native_iex_level3_order_book_symbol_get**
-> List[ModelsOrderBookModel] v1_native_iex_level3_order_book_symbol_get(symbol, var_date, limit=limit)
+> List[ModelsOrderBookModel] v1_native_iex_level3_order_book_symbol_get(symbol, var_date=var_date, time_start=time_start, limit=limit)
 
 Get Level-3 Order Book
 
-Streaming endpoint. Use `limit` to cap the number of records returned (default 100, max 10000).
+Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
 
 ### Example
 
@@ -411,12 +419,13 @@ with api_bricks_stock_api_rest.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = api_bricks_stock_api_rest.NativeIEXApi(api_client)
     symbol = 'symbol_example' # str | The symbol identifier
-    var_date = '2013-10-20T19:20:30+01:00' # datetime | Date in format YYYY-MM-DD
-    limit = 100 # int | Maximum number of records to return (1-10000, default 100) (optional) (default to 100)
+    var_date = '2013-10-20T19:20:30+01:00' # datetime | UTC day (`YYYY-MM-DD`). Optional when `time_start` includes a calendar day. (optional)
+    time_start = 'time_start_example' # str | Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when `date` is set. (optional)
+    limit = 56 # int | Optional cap on the number of records (1-10000). Omit to stream through the end of the day. (optional)
 
     try:
         # Get Level-3 Order Book
-        api_response = api_instance.v1_native_iex_level3_order_book_symbol_get(symbol, var_date, limit=limit)
+        api_response = api_instance.v1_native_iex_level3_order_book_symbol_get(symbol, var_date=var_date, time_start=time_start, limit=limit)
         print("The response of NativeIEXApi->v1_native_iex_level3_order_book_symbol_get:\n")
         pprint(api_response)
     except Exception as e:
@@ -431,8 +440,9 @@ with api_bricks_stock_api_rest.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **symbol** | **str**| The symbol identifier | 
- **var_date** | **datetime**| Date in format YYYY-MM-DD | 
- **limit** | **int**| Maximum number of records to return (1-10000, default 100) | [optional] [default to 100]
+ **var_date** | **datetime**| UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. | [optional] 
+ **time_start** | **str**| Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. | [optional] 
+ **limit** | **int**| Optional cap on the number of records (1-10000). Omit to stream through the end of the day. | [optional] 
 
 ### Return type
 
@@ -456,11 +466,11 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_native_iex_trade_symbol_get**
-> List[IEXTradeTradeModel] v1_native_iex_trade_symbol_get(symbol, var_date, limit=limit)
+> List[IEXTradeTradeModel] v1_native_iex_trade_symbol_get(symbol, var_date=var_date, time_start=time_start, limit=limit)
 
 Get Trades
 
-Streaming endpoint. Use `limit` to cap the number of trade records returned (default 100, max 10000).
+Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
 
 ### Example
 
@@ -500,12 +510,13 @@ with api_bricks_stock_api_rest.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = api_bricks_stock_api_rest.NativeIEXApi(api_client)
     symbol = 'symbol_example' # str | The symbol identifier
-    var_date = '2013-10-20T19:20:30+01:00' # datetime | Date in format YYYY-MM-DD
-    limit = 100 # int | Maximum number of records to return (1-10000, default 100) (optional) (default to 100)
+    var_date = '2013-10-20T19:20:30+01:00' # datetime | UTC day (`YYYY-MM-DD`). Optional when `time_start` includes a calendar day. (optional)
+    time_start = 'time_start_example' # str | Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when `date` is set. (optional)
+    limit = 56 # int | Optional cap on the number of records (1-10000). Omit to stream through the end of the day. (optional)
 
     try:
         # Get Trades
-        api_response = api_instance.v1_native_iex_trade_symbol_get(symbol, var_date, limit=limit)
+        api_response = api_instance.v1_native_iex_trade_symbol_get(symbol, var_date=var_date, time_start=time_start, limit=limit)
         print("The response of NativeIEXApi->v1_native_iex_trade_symbol_get:\n")
         pprint(api_response)
     except Exception as e:
@@ -520,8 +531,9 @@ with api_bricks_stock_api_rest.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **symbol** | **str**| The symbol identifier | 
- **var_date** | **datetime**| Date in format YYYY-MM-DD | 
- **limit** | **int**| Maximum number of records to return (1-10000, default 100) | [optional] [default to 100]
+ **var_date** | **datetime**| UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. | [optional] 
+ **time_start** | **str**| Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. | [optional] 
+ **limit** | **int**| Optional cap on the number of records (1-10000). Omit to stream through the end of the day. | [optional] 
 
 ### Return type
 

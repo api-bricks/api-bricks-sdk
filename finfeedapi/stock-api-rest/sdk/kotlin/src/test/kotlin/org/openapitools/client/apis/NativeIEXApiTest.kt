@@ -43,18 +43,20 @@ class NativeIEXApiTest : ShouldSpec() {
         should("test v1NativeIexAdminMessagesSymbolGet") {
             // uncomment below to test v1NativeIexAdminMessagesSymbolGet
             //val symbol : kotlin.String = symbol_example // kotlin.String | The symbol identifier
-            //val date : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | Date in format YYYY-MM-DD
-            //val limit : kotlin.Int = 56 // kotlin.Int | Maximum number of records to return (1-10000, default 100)
-            //val result : kotlin.collections.List<ModelsAdminMessageModel> = apiInstance.v1NativeIexAdminMessagesSymbolGet(symbol, date, limit)
+            //val date : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | UTC day (`YYYY-MM-DD`). Optional when `time_start` includes a calendar day.
+            //val timeStart : kotlin.String = timeStart_example // kotlin.String | Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when `date` is set.
+            //val limit : kotlin.Int = 56 // kotlin.Int | Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
+            //val result : kotlin.collections.List<ModelsAdminMessageModel> = apiInstance.v1NativeIexAdminMessagesSymbolGet(symbol, date, timeStart, limit)
             //result shouldBe ("TODO")
         }
 
         // to test v1NativeIexAdminSystemEventGet
         should("test v1NativeIexAdminSystemEventGet") {
             // uncomment below to test v1NativeIexAdminSystemEventGet
-            //val date : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | Date in format YYYY-MM-DD
-            //val limit : kotlin.Int = 56 // kotlin.Int | Maximum number of records to return (1-10000, default 100)
-            //val result : kotlin.collections.List<IEXSystemEventSystemEventModel> = apiInstance.v1NativeIexAdminSystemEventGet(date, limit)
+            //val date : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | UTC day (`YYYY-MM-DD`). Optional when `time_start` includes a calendar day.
+            //val timeStart : kotlin.String = timeStart_example // kotlin.String | Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when `date` is set.
+            //val limit : kotlin.Int = 56 // kotlin.Int | Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
+            //val result : kotlin.collections.List<IEXSystemEventSystemEventModel> = apiInstance.v1NativeIexAdminSystemEventGet(date, timeStart, limit)
             //result shouldBe ("TODO")
         }
 
@@ -62,9 +64,10 @@ class NativeIEXApiTest : ShouldSpec() {
         should("test v1NativeIexLevel1QuoteSymbolGet") {
             // uncomment below to test v1NativeIexLevel1QuoteSymbolGet
             //val symbol : kotlin.String = symbol_example // kotlin.String | The symbol identifier
-            //val date : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | Date in format YYYY-MM-DD
-            //val limit : kotlin.Int = 56 // kotlin.Int | Maximum number of records to return (1-10000, default 100)
-            //val result : kotlin.collections.List<IEXQuoteUpdateQuoteUpdateModel> = apiInstance.v1NativeIexLevel1QuoteSymbolGet(symbol, date, limit)
+            //val date : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | UTC day (`YYYY-MM-DD`). Optional when `time_start` includes a calendar day.
+            //val timeStart : kotlin.String = timeStart_example // kotlin.String | Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when `date` is set.
+            //val limit : kotlin.Int = 56 // kotlin.Int | Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
+            //val result : kotlin.collections.List<IEXQuoteUpdateQuoteUpdateModel> = apiInstance.v1NativeIexLevel1QuoteSymbolGet(symbol, date, timeStart, limit)
             //result shouldBe ("TODO")
         }
 
@@ -72,9 +75,10 @@ class NativeIEXApiTest : ShouldSpec() {
         should("test v1NativeIexLevel2PriceLevelUpdateSymbolGet") {
             // uncomment below to test v1NativeIexLevel2PriceLevelUpdateSymbolGet
             //val symbol : kotlin.String = symbol_example // kotlin.String | The symbol identifier
-            //val date : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | Date in format YYYY-MM-DD
-            //val limit : kotlin.Int = 56 // kotlin.Int | Maximum number of records to return (1-10000, default 100)
-            //val result : kotlin.collections.List<IEXPriceLevelUpdatePriceLevelUpdateModel> = apiInstance.v1NativeIexLevel2PriceLevelUpdateSymbolGet(symbol, date, limit)
+            //val date : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | UTC day (`YYYY-MM-DD`). Optional when `time_start` includes a calendar day.
+            //val timeStart : kotlin.String = timeStart_example // kotlin.String | Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when `date` is set.
+            //val limit : kotlin.Int = 56 // kotlin.Int | Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
+            //val result : kotlin.collections.List<IEXPriceLevelUpdatePriceLevelUpdateModel> = apiInstance.v1NativeIexLevel2PriceLevelUpdateSymbolGet(symbol, date, timeStart, limit)
             //result shouldBe ("TODO")
         }
 
@@ -82,9 +86,10 @@ class NativeIEXApiTest : ShouldSpec() {
         should("test v1NativeIexLevel3OrderBookSymbolGet") {
             // uncomment below to test v1NativeIexLevel3OrderBookSymbolGet
             //val symbol : kotlin.String = symbol_example // kotlin.String | The symbol identifier
-            //val date : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | Date in format YYYY-MM-DD
-            //val limit : kotlin.Int = 56 // kotlin.Int | Maximum number of records to return (1-10000, default 100)
-            //val result : kotlin.collections.List<ModelsOrderBookModel> = apiInstance.v1NativeIexLevel3OrderBookSymbolGet(symbol, date, limit)
+            //val date : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | UTC day (`YYYY-MM-DD`). Optional when `time_start` includes a calendar day.
+            //val timeStart : kotlin.String = timeStart_example // kotlin.String | Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when `date` is set.
+            //val limit : kotlin.Int = 56 // kotlin.Int | Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
+            //val result : kotlin.collections.List<ModelsOrderBookModel> = apiInstance.v1NativeIexLevel3OrderBookSymbolGet(symbol, date, timeStart, limit)
             //result shouldBe ("TODO")
         }
 
@@ -92,9 +97,10 @@ class NativeIEXApiTest : ShouldSpec() {
         should("test v1NativeIexTradeSymbolGet") {
             // uncomment below to test v1NativeIexTradeSymbolGet
             //val symbol : kotlin.String = symbol_example // kotlin.String | The symbol identifier
-            //val date : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | Date in format YYYY-MM-DD
-            //val limit : kotlin.Int = 56 // kotlin.Int | Maximum number of records to return (1-10000, default 100)
-            //val result : kotlin.collections.List<IEXTradeTradeModel> = apiInstance.v1NativeIexTradeSymbolGet(symbol, date, limit)
+            //val date : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | UTC day (`YYYY-MM-DD`). Optional when `time_start` includes a calendar day.
+            //val timeStart : kotlin.String = timeStart_example // kotlin.String | Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when `date` is set.
+            //val limit : kotlin.Int = 56 // kotlin.Int | Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
+            //val result : kotlin.collections.List<IEXTradeTradeModel> = apiInstance.v1NativeIexTradeSymbolGet(symbol, date, timeStart, limit)
             //result shouldBe ("TODO")
         }
 

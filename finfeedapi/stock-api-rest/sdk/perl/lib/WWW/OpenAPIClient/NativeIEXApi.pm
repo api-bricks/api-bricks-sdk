@@ -54,8 +54,9 @@ sub new {
 # Get Admin Messages
 #
 # @param string $symbol The symbol identifier (required)
-# @param DATE_TIME $date Date in format YYYY-MM-DD (required)
-# @param int $limit Maximum number of records to return (1-10000, default 100) (optional, default to 100)
+# @param DATE_TIME $date UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. (optional)
+# @param string $time_start Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. (optional)
+# @param int $limit Optional cap on the number of records (1-10000). Omit to stream through the end of the day. (optional)
 {
     my $params = {
     'symbol' => {
@@ -65,12 +66,17 @@ sub new {
     },
     'date' => {
         data_type => 'DATE_TIME',
-        description => 'Date in format YYYY-MM-DD',
-        required => '1',
+        description => 'UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day.',
+        required => '0',
+    },
+    'time_start' => {
+        data_type => 'string',
+        description => 'Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set.',
+        required => '0',
     },
     'limit' => {
         data_type => 'int',
-        description => 'Maximum number of records to return (1-10000, default 100)',
+        description => 'Optional cap on the number of records (1-10000). Omit to stream through the end of the day.',
         required => '0',
     },
     };
@@ -88,11 +94,6 @@ sub v1_native_iex_admin_messages_symbol_get {
     # verify the required parameter 'symbol' is set
     unless (exists $args{'symbol'}) {
       croak("Missing the required parameter 'symbol' when calling v1_native_iex_admin_messages_symbol_get");
-    }
-
-    # verify the required parameter 'date' is set
-    unless (exists $args{'date'}) {
-      croak("Missing the required parameter 'date' when calling v1_native_iex_admin_messages_symbol_get");
     }
 
     # parse inputs
@@ -113,6 +114,11 @@ sub v1_native_iex_admin_messages_symbol_get {
     # query params
     if ( exists $args{'date'}) {
         $query_params->{'date'} = $self->{api_client}->to_query_value($args{'date'});
+    }
+
+    # query params
+    if ( exists $args{'time_start'}) {
+        $query_params->{'time_start'} = $self->{api_client}->to_query_value($args{'time_start'});
     }
 
     # query params
@@ -147,18 +153,24 @@ sub v1_native_iex_admin_messages_symbol_get {
 #
 # Get System Events
 #
-# @param DATE_TIME $date Date in format YYYY-MM-DD (required)
-# @param int $limit Maximum number of records to return (1-10000, default 100) (optional, default to 100)
+# @param DATE_TIME $date UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. (optional)
+# @param string $time_start Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. (optional)
+# @param int $limit Optional cap on the number of records (1-10000). Omit to stream through the end of the day. (optional)
 {
     my $params = {
     'date' => {
         data_type => 'DATE_TIME',
-        description => 'Date in format YYYY-MM-DD',
-        required => '1',
+        description => 'UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day.',
+        required => '0',
+    },
+    'time_start' => {
+        data_type => 'string',
+        description => 'Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set.',
+        required => '0',
     },
     'limit' => {
         data_type => 'int',
-        description => 'Maximum number of records to return (1-10000, default 100)',
+        description => 'Optional cap on the number of records (1-10000). Omit to stream through the end of the day.',
         required => '0',
     },
     };
@@ -172,11 +184,6 @@ sub v1_native_iex_admin_messages_symbol_get {
 #
 sub v1_native_iex_admin_system_event_get {
     my ($self, %args) = @_;
-
-    # verify the required parameter 'date' is set
-    unless (exists $args{'date'}) {
-      croak("Missing the required parameter 'date' when calling v1_native_iex_admin_system_event_get");
-    }
 
     # parse inputs
     my $_resource_path = '/v1/native/iex/admin/system-event';
@@ -196,6 +203,11 @@ sub v1_native_iex_admin_system_event_get {
     # query params
     if ( exists $args{'date'}) {
         $query_params->{'date'} = $self->{api_client}->to_query_value($args{'date'});
+    }
+
+    # query params
+    if ( exists $args{'time_start'}) {
+        $query_params->{'time_start'} = $self->{api_client}->to_query_value($args{'time_start'});
     }
 
     # query params
@@ -224,8 +236,9 @@ sub v1_native_iex_admin_system_event_get {
 # Get Level-1 Quotes
 #
 # @param string $symbol The symbol identifier (required)
-# @param DATE_TIME $date Date in format YYYY-MM-DD (required)
-# @param int $limit Maximum number of records to return (1-10000, default 100) (optional, default to 100)
+# @param DATE_TIME $date UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. (optional)
+# @param string $time_start Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. (optional)
+# @param int $limit Optional cap on the number of records (1-10000). Omit to stream through the end of the day. (optional)
 {
     my $params = {
     'symbol' => {
@@ -235,12 +248,17 @@ sub v1_native_iex_admin_system_event_get {
     },
     'date' => {
         data_type => 'DATE_TIME',
-        description => 'Date in format YYYY-MM-DD',
-        required => '1',
+        description => 'UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day.',
+        required => '0',
+    },
+    'time_start' => {
+        data_type => 'string',
+        description => 'Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set.',
+        required => '0',
     },
     'limit' => {
         data_type => 'int',
-        description => 'Maximum number of records to return (1-10000, default 100)',
+        description => 'Optional cap on the number of records (1-10000). Omit to stream through the end of the day.',
         required => '0',
     },
     };
@@ -258,11 +276,6 @@ sub v1_native_iex_level1_quote_symbol_get {
     # verify the required parameter 'symbol' is set
     unless (exists $args{'symbol'}) {
       croak("Missing the required parameter 'symbol' when calling v1_native_iex_level1_quote_symbol_get");
-    }
-
-    # verify the required parameter 'date' is set
-    unless (exists $args{'date'}) {
-      croak("Missing the required parameter 'date' when calling v1_native_iex_level1_quote_symbol_get");
     }
 
     # parse inputs
@@ -283,6 +296,11 @@ sub v1_native_iex_level1_quote_symbol_get {
     # query params
     if ( exists $args{'date'}) {
         $query_params->{'date'} = $self->{api_client}->to_query_value($args{'date'});
+    }
+
+    # query params
+    if ( exists $args{'time_start'}) {
+        $query_params->{'time_start'} = $self->{api_client}->to_query_value($args{'time_start'});
     }
 
     # query params
@@ -318,8 +336,9 @@ sub v1_native_iex_level1_quote_symbol_get {
 # Get Level-2 Price Level Book
 #
 # @param string $symbol The symbol identifier (required)
-# @param DATE_TIME $date Date in format YYYY-MM-DD (required)
-# @param int $limit Maximum number of records to return (1-10000, default 100) (optional, default to 100)
+# @param DATE_TIME $date UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. (optional)
+# @param string $time_start Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. (optional)
+# @param int $limit Optional cap on the number of records (1-10000). Omit to stream through the end of the day. (optional)
 {
     my $params = {
     'symbol' => {
@@ -329,12 +348,17 @@ sub v1_native_iex_level1_quote_symbol_get {
     },
     'date' => {
         data_type => 'DATE_TIME',
-        description => 'Date in format YYYY-MM-DD',
-        required => '1',
+        description => 'UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day.',
+        required => '0',
+    },
+    'time_start' => {
+        data_type => 'string',
+        description => 'Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set.',
+        required => '0',
     },
     'limit' => {
         data_type => 'int',
-        description => 'Maximum number of records to return (1-10000, default 100)',
+        description => 'Optional cap on the number of records (1-10000). Omit to stream through the end of the day.',
         required => '0',
     },
     };
@@ -352,11 +376,6 @@ sub v1_native_iex_level2_price_level_update_symbol_get {
     # verify the required parameter 'symbol' is set
     unless (exists $args{'symbol'}) {
       croak("Missing the required parameter 'symbol' when calling v1_native_iex_level2_price_level_update_symbol_get");
-    }
-
-    # verify the required parameter 'date' is set
-    unless (exists $args{'date'}) {
-      croak("Missing the required parameter 'date' when calling v1_native_iex_level2_price_level_update_symbol_get");
     }
 
     # parse inputs
@@ -377,6 +396,11 @@ sub v1_native_iex_level2_price_level_update_symbol_get {
     # query params
     if ( exists $args{'date'}) {
         $query_params->{'date'} = $self->{api_client}->to_query_value($args{'date'});
+    }
+
+    # query params
+    if ( exists $args{'time_start'}) {
+        $query_params->{'time_start'} = $self->{api_client}->to_query_value($args{'time_start'});
     }
 
     # query params
@@ -412,8 +436,9 @@ sub v1_native_iex_level2_price_level_update_symbol_get {
 # Get Level-3 Order Book
 #
 # @param string $symbol The symbol identifier (required)
-# @param DATE_TIME $date Date in format YYYY-MM-DD (required)
-# @param int $limit Maximum number of records to return (1-10000, default 100) (optional, default to 100)
+# @param DATE_TIME $date UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. (optional)
+# @param string $time_start Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. (optional)
+# @param int $limit Optional cap on the number of records (1-10000). Omit to stream through the end of the day. (optional)
 {
     my $params = {
     'symbol' => {
@@ -423,12 +448,17 @@ sub v1_native_iex_level2_price_level_update_symbol_get {
     },
     'date' => {
         data_type => 'DATE_TIME',
-        description => 'Date in format YYYY-MM-DD',
-        required => '1',
+        description => 'UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day.',
+        required => '0',
+    },
+    'time_start' => {
+        data_type => 'string',
+        description => 'Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set.',
+        required => '0',
     },
     'limit' => {
         data_type => 'int',
-        description => 'Maximum number of records to return (1-10000, default 100)',
+        description => 'Optional cap on the number of records (1-10000). Omit to stream through the end of the day.',
         required => '0',
     },
     };
@@ -446,11 +476,6 @@ sub v1_native_iex_level3_order_book_symbol_get {
     # verify the required parameter 'symbol' is set
     unless (exists $args{'symbol'}) {
       croak("Missing the required parameter 'symbol' when calling v1_native_iex_level3_order_book_symbol_get");
-    }
-
-    # verify the required parameter 'date' is set
-    unless (exists $args{'date'}) {
-      croak("Missing the required parameter 'date' when calling v1_native_iex_level3_order_book_symbol_get");
     }
 
     # parse inputs
@@ -471,6 +496,11 @@ sub v1_native_iex_level3_order_book_symbol_get {
     # query params
     if ( exists $args{'date'}) {
         $query_params->{'date'} = $self->{api_client}->to_query_value($args{'date'});
+    }
+
+    # query params
+    if ( exists $args{'time_start'}) {
+        $query_params->{'time_start'} = $self->{api_client}->to_query_value($args{'time_start'});
     }
 
     # query params
@@ -506,8 +536,9 @@ sub v1_native_iex_level3_order_book_symbol_get {
 # Get Trades
 #
 # @param string $symbol The symbol identifier (required)
-# @param DATE_TIME $date Date in format YYYY-MM-DD (required)
-# @param int $limit Maximum number of records to return (1-10000, default 100) (optional, default to 100)
+# @param DATE_TIME $date UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day. (optional)
+# @param string $time_start Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set. (optional)
+# @param int $limit Optional cap on the number of records (1-10000). Omit to stream through the end of the day. (optional)
 {
     my $params = {
     'symbol' => {
@@ -517,12 +548,17 @@ sub v1_native_iex_level3_order_book_symbol_get {
     },
     'date' => {
         data_type => 'DATE_TIME',
-        description => 'Date in format YYYY-MM-DD',
-        required => '1',
+        description => 'UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day.',
+        required => '0',
+    },
+    'time_start' => {
+        data_type => 'string',
+        description => 'Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set.',
+        required => '0',
     },
     'limit' => {
         data_type => 'int',
-        description => 'Maximum number of records to return (1-10000, default 100)',
+        description => 'Optional cap on the number of records (1-10000). Omit to stream through the end of the day.',
         required => '0',
     },
     };
@@ -540,11 +576,6 @@ sub v1_native_iex_trade_symbol_get {
     # verify the required parameter 'symbol' is set
     unless (exists $args{'symbol'}) {
       croak("Missing the required parameter 'symbol' when calling v1_native_iex_trade_symbol_get");
-    }
-
-    # verify the required parameter 'date' is set
-    unless (exists $args{'date'}) {
-      croak("Missing the required parameter 'date' when calling v1_native_iex_trade_symbol_get");
     }
 
     # parse inputs
@@ -565,6 +596,11 @@ sub v1_native_iex_trade_symbol_get {
     # query params
     if ( exists $args{'date'}) {
         $query_params->{'date'} = $self->{api_client}->to_query_value($args{'date'});
+    }
+
+    # query params
+    if ( exists $args{'time_start'}) {
+        $query_params->{'time_start'} = $self->{api_client}->to_query_value($args{'time_start'});
     }
 
     # query params

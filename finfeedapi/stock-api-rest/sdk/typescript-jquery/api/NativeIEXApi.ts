@@ -47,13 +47,14 @@ export class NativeIEXApi {
     }
 
     /**
-     * Streaming endpoint. Use `limit` to cap the number of records returned (default 100, max 10000).
+     * Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
      * @summary Get Admin Messages
      * @param symbol The symbol identifier
-     * @param date Date in format YYYY-MM-DD
-     * @param limit Maximum number of records to return (1-10000, default 100)
+     * @param date UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day.
+     * @param timeStart Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set.
+     * @param limit Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
      */
-    public v1NativeIexAdminMessagesSymbolGet(symbol: string, date: string, limit?: number, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    public v1NativeIexAdminMessagesSymbolGet(symbol: string, date?: string, timeStart?: string, limit?: number, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
     { response: JQueryXHR; body: Array<models.ModelsAdminMessageModel>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
@@ -66,13 +67,11 @@ export class NativeIEXApi {
             throw new Error('Required parameter symbol was null or undefined when calling v1NativeIexAdminMessagesSymbolGet.');
         }
 
-        // verify required parameter 'date' is not null or undefined
-        if (date === null || date === undefined) {
-            throw new Error('Required parameter date was null or undefined when calling v1NativeIexAdminMessagesSymbolGet.');
-        }
-
         if (date !== null && date !== undefined) {
             queryParameters['date'] = date.toISOString();
+        }
+        if (timeStart !== null && timeStart !== undefined) {
+            queryParameters['time_start'] = <string><any>timeStart;
         }
         if (limit !== null && limit !== undefined) {
             queryParameters['limit'] = <string><any>limit;
@@ -128,12 +127,13 @@ export class NativeIEXApi {
     }
 
     /**
-     * Streaming endpoint. Use `limit` to cap the number of records returned (default 100, max 10000).
+     * Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
      * @summary Get System Events
-     * @param date Date in format YYYY-MM-DD
-     * @param limit Maximum number of records to return (1-10000, default 100)
+     * @param date UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day.
+     * @param timeStart Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set.
+     * @param limit Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
      */
-    public v1NativeIexAdminSystemEventGet(date: string, limit?: number, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    public v1NativeIexAdminSystemEventGet(date?: string, timeStart?: string, limit?: number, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
     { response: JQueryXHR; body: Array<models.IEXSystemEventSystemEventModel>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
@@ -141,13 +141,11 @@ export class NativeIEXApi {
 
         let queryParameters: any = {};
         let headerParams: any = {};
-        // verify required parameter 'date' is not null or undefined
-        if (date === null || date === undefined) {
-            throw new Error('Required parameter date was null or undefined when calling v1NativeIexAdminSystemEventGet.');
-        }
-
         if (date !== null && date !== undefined) {
             queryParameters['date'] = date.toISOString();
+        }
+        if (timeStart !== null && timeStart !== undefined) {
+            queryParameters['time_start'] = <string><any>timeStart;
         }
         if (limit !== null && limit !== undefined) {
             queryParameters['limit'] = <string><any>limit;
@@ -203,13 +201,14 @@ export class NativeIEXApi {
     }
 
     /**
-     * Streaming endpoint. Use `limit` to cap the number of records returned (default 100, max 10000).
+     * Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
      * @summary Get Level-1 Quotes
      * @param symbol The symbol identifier
-     * @param date Date in format YYYY-MM-DD
-     * @param limit Maximum number of records to return (1-10000, default 100)
+     * @param date UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day.
+     * @param timeStart Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set.
+     * @param limit Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
      */
-    public v1NativeIexLevel1QuoteSymbolGet(symbol: string, date: string, limit?: number, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    public v1NativeIexLevel1QuoteSymbolGet(symbol: string, date?: string, timeStart?: string, limit?: number, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
     { response: JQueryXHR; body: Array<models.IEXQuoteUpdateQuoteUpdateModel>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
@@ -222,13 +221,11 @@ export class NativeIEXApi {
             throw new Error('Required parameter symbol was null or undefined when calling v1NativeIexLevel1QuoteSymbolGet.');
         }
 
-        // verify required parameter 'date' is not null or undefined
-        if (date === null || date === undefined) {
-            throw new Error('Required parameter date was null or undefined when calling v1NativeIexLevel1QuoteSymbolGet.');
-        }
-
         if (date !== null && date !== undefined) {
             queryParameters['date'] = date.toISOString();
+        }
+        if (timeStart !== null && timeStart !== undefined) {
+            queryParameters['time_start'] = <string><any>timeStart;
         }
         if (limit !== null && limit !== undefined) {
             queryParameters['limit'] = <string><any>limit;
@@ -284,13 +281,14 @@ export class NativeIEXApi {
     }
 
     /**
-     * Streaming endpoint. Use `limit` to cap the number of records returned (default 100, max 10000).
+     * Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
      * @summary Get Level-2 Price Level Book
      * @param symbol The symbol identifier
-     * @param date Date in format YYYY-MM-DD
-     * @param limit Maximum number of records to return (1-10000, default 100)
+     * @param date UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day.
+     * @param timeStart Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set.
+     * @param limit Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
      */
-    public v1NativeIexLevel2PriceLevelUpdateSymbolGet(symbol: string, date: string, limit?: number, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    public v1NativeIexLevel2PriceLevelUpdateSymbolGet(symbol: string, date?: string, timeStart?: string, limit?: number, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
     { response: JQueryXHR; body: Array<models.IEXPriceLevelUpdatePriceLevelUpdateModel>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
@@ -303,13 +301,11 @@ export class NativeIEXApi {
             throw new Error('Required parameter symbol was null or undefined when calling v1NativeIexLevel2PriceLevelUpdateSymbolGet.');
         }
 
-        // verify required parameter 'date' is not null or undefined
-        if (date === null || date === undefined) {
-            throw new Error('Required parameter date was null or undefined when calling v1NativeIexLevel2PriceLevelUpdateSymbolGet.');
-        }
-
         if (date !== null && date !== undefined) {
             queryParameters['date'] = date.toISOString();
+        }
+        if (timeStart !== null && timeStart !== undefined) {
+            queryParameters['time_start'] = <string><any>timeStart;
         }
         if (limit !== null && limit !== undefined) {
             queryParameters['limit'] = <string><any>limit;
@@ -365,13 +361,14 @@ export class NativeIEXApi {
     }
 
     /**
-     * Streaming endpoint. Use `limit` to cap the number of records returned (default 100, max 10000).
+     * Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
      * @summary Get Level-3 Order Book
      * @param symbol The symbol identifier
-     * @param date Date in format YYYY-MM-DD
-     * @param limit Maximum number of records to return (1-10000, default 100)
+     * @param date UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day.
+     * @param timeStart Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set.
+     * @param limit Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
      */
-    public v1NativeIexLevel3OrderBookSymbolGet(symbol: string, date: string, limit?: number, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    public v1NativeIexLevel3OrderBookSymbolGet(symbol: string, date?: string, timeStart?: string, limit?: number, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
     { response: JQueryXHR; body: Array<models.ModelsOrderBookModel>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
@@ -384,13 +381,11 @@ export class NativeIEXApi {
             throw new Error('Required parameter symbol was null or undefined when calling v1NativeIexLevel3OrderBookSymbolGet.');
         }
 
-        // verify required parameter 'date' is not null or undefined
-        if (date === null || date === undefined) {
-            throw new Error('Required parameter date was null or undefined when calling v1NativeIexLevel3OrderBookSymbolGet.');
-        }
-
         if (date !== null && date !== undefined) {
             queryParameters['date'] = date.toISOString();
+        }
+        if (timeStart !== null && timeStart !== undefined) {
+            queryParameters['time_start'] = <string><any>timeStart;
         }
         if (limit !== null && limit !== undefined) {
             queryParameters['limit'] = <string><any>limit;
@@ -446,13 +441,14 @@ export class NativeIEXApi {
     }
 
     /**
-     * Streaming endpoint. Use `limit` to cap the number of trade records returned (default 100, max 10000).
+     * Streams one UTC day. `time_start` may be a full timestamp (`2026-09-28T13:31:14.8560065Z`) or a time of day (`13:31:14.8560065Z`) when `date` is set. Events start at that instant, inclusive. Omit `limit` to stream through the end of the day.
      * @summary Get Trades
      * @param symbol The symbol identifier
-     * @param date Date in format YYYY-MM-DD
-     * @param limit Maximum number of records to return (1-10000, default 100)
+     * @param date UTC day (&#x60;YYYY-MM-DD&#x60;). Optional when &#x60;time_start&#x60; includes a calendar day.
+     * @param timeStart Inclusive start. Full ISO-8601 timestamp, or a UTC time of day when &#x60;date&#x60; is set.
+     * @param limit Optional cap on the number of records (1-10000). Omit to stream through the end of the day.
      */
-    public v1NativeIexTradeSymbolGet(symbol: string, date: string, limit?: number, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    public v1NativeIexTradeSymbolGet(symbol: string, date?: string, timeStart?: string, limit?: number, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
     { response: JQueryXHR; body: Array<models.IEXTradeTradeModel>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
@@ -465,13 +461,11 @@ export class NativeIEXApi {
             throw new Error('Required parameter symbol was null or undefined when calling v1NativeIexTradeSymbolGet.');
         }
 
-        // verify required parameter 'date' is not null or undefined
-        if (date === null || date === undefined) {
-            throw new Error('Required parameter date was null or undefined when calling v1NativeIexTradeSymbolGet.');
-        }
-
         if (date !== null && date !== undefined) {
             queryParameters['date'] = date.toISOString();
+        }
+        if (timeStart !== null && timeStart !== undefined) {
+            queryParameters['time_start'] = <string><any>timeStart;
         }
         if (limit !== null && limit !== undefined) {
             queryParameters['limit'] = <string><any>limit;
