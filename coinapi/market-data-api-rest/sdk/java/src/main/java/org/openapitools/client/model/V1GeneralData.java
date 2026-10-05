@@ -51,7 +51,7 @@ import org.openapitools.client.JSON;
 /**
  * Class representation of general metric data. This class is an XML type with name \&quot;general_data\&quot; and inherits from the BaseCsvModel class.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-10-02T06:04:32.852364408Z[Etc/UTC]", comments = "Generator version: 7.25.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-10-05T06:04:21.371131845Z[Etc/UTC]", comments = "Generator version: 7.25.0")
 public class V1GeneralData {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
