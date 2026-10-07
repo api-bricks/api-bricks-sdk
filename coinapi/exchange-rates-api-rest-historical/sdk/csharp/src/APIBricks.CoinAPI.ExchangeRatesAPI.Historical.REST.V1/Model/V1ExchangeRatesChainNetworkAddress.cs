@@ -192,7 +192,6 @@ namespace APIBricks.CoinAPI.ExchangeRatesAPI.Historical.REST.V1.Model
         /// <param name="writer"></param>
         /// <param name="v1ExchangeRatesChainNetworkAddress"></param>
         /// <param name="jsonSerializerOptions"></param>
-        /// <exception cref="NotImplementedException"></exception>
         public override void Write(Utf8JsonWriter writer, V1ExchangeRatesChainNetworkAddress v1ExchangeRatesChainNetworkAddress, JsonSerializerOptions jsonSerializerOptions)
         {
             writer.WriteStartObject();
@@ -207,7 +206,6 @@ namespace APIBricks.CoinAPI.ExchangeRatesAPI.Historical.REST.V1.Model
         /// <param name="writer"></param>
         /// <param name="v1ExchangeRatesChainNetworkAddress"></param>
         /// <param name="jsonSerializerOptions"></param>
-        /// <exception cref="NotImplementedException"></exception>
         public void WriteProperties(Utf8JsonWriter writer, V1ExchangeRatesChainNetworkAddress v1ExchangeRatesChainNetworkAddress, JsonSerializerOptions jsonSerializerOptions)
         {
             if (v1ExchangeRatesChainNetworkAddress.ChainIdOption.IsSet)
