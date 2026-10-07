@@ -589,7 +589,7 @@ namespace APIBricks.CoinAPI.ExchangeRatesAPI.Realtime.REST.V1.Model
             }
 
             if (typeIsCrypto.IsSet && typeIsCrypto.Value == null)
-                throw new ArgumentNullException(nameof(typeIsCrypto), "Property is not nullable for class V1Asset.");
+                throw new JsonException("Property is not nullable for class V1Asset: type_is_crypto.");
 
             return new V1Asset(assetId, name, typeIsCrypto, dataQuoteStart, dataQuoteEnd, dataOrderbookStart, dataOrderbookEnd, dataTradeStart, dataTradeEnd, dataSymbolsCount, volume1hrsUsd, volume1dayUsd, volume1mthUsd, priceUsd, idIcon, supplyCurrent, supplyTotal, supplyMax, chainAddresses, dataStart, dataEnd);
         }
@@ -600,7 +600,6 @@ namespace APIBricks.CoinAPI.ExchangeRatesAPI.Realtime.REST.V1.Model
         /// <param name="writer"></param>
         /// <param name="v1Asset"></param>
         /// <param name="jsonSerializerOptions"></param>
-        /// <exception cref="NotImplementedException"></exception>
         public override void Write(Utf8JsonWriter writer, V1Asset v1Asset, JsonSerializerOptions jsonSerializerOptions)
         {
             writer.WriteStartObject();
@@ -615,9 +614,11 @@ namespace APIBricks.CoinAPI.ExchangeRatesAPI.Realtime.REST.V1.Model
         /// <param name="writer"></param>
         /// <param name="v1Asset"></param>
         /// <param name="jsonSerializerOptions"></param>
-        /// <exception cref="NotImplementedException"></exception>
         public void WriteProperties(Utf8JsonWriter writer, V1Asset v1Asset, JsonSerializerOptions jsonSerializerOptions)
         {
+            if (v1Asset.TypeIsCryptoOption.IsSet && v1Asset.TypeIsCrypto == null)
+                throw new JsonException("Cannot write null property V1Asset.TypeIsCrypto to non-nullable JSON property 'type_is_crypto'.");
+
             if (v1Asset.AssetIdOption.IsSet)
                 if (v1Asset.AssetIdOption.Value != null)
                     writer.WriteString("asset_id", v1Asset.AssetId);
