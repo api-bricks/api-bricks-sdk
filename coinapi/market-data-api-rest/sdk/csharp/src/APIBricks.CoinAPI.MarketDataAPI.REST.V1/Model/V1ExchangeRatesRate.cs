@@ -189,10 +189,10 @@ namespace APIBricks.CoinAPI.MarketDataAPI.REST.V1.Model
             }
 
             if (time.IsSet && time.Value == null)
-                throw new ArgumentNullException(nameof(time), "Property is not nullable for class V1ExchangeRatesRate.");
+                throw new JsonException("Property is not nullable for class V1ExchangeRatesRate: time.");
 
             if (rate.IsSet && rate.Value == null)
-                throw new ArgumentNullException(nameof(rate), "Property is not nullable for class V1ExchangeRatesRate.");
+                throw new JsonException("Property is not nullable for class V1ExchangeRatesRate: rate.");
 
             return new V1ExchangeRatesRate(time, assetIdQuote, rate);
         }
@@ -203,7 +203,6 @@ namespace APIBricks.CoinAPI.MarketDataAPI.REST.V1.Model
         /// <param name="writer"></param>
         /// <param name="v1ExchangeRatesRate"></param>
         /// <param name="jsonSerializerOptions"></param>
-        /// <exception cref="NotImplementedException"></exception>
         public override void Write(Utf8JsonWriter writer, V1ExchangeRatesRate v1ExchangeRatesRate, JsonSerializerOptions jsonSerializerOptions)
         {
             writer.WriteStartObject();
@@ -218,9 +217,14 @@ namespace APIBricks.CoinAPI.MarketDataAPI.REST.V1.Model
         /// <param name="writer"></param>
         /// <param name="v1ExchangeRatesRate"></param>
         /// <param name="jsonSerializerOptions"></param>
-        /// <exception cref="NotImplementedException"></exception>
         public void WriteProperties(Utf8JsonWriter writer, V1ExchangeRatesRate v1ExchangeRatesRate, JsonSerializerOptions jsonSerializerOptions)
         {
+            if (v1ExchangeRatesRate.TimeOption.IsSet && v1ExchangeRatesRate.Time == null)
+                throw new JsonException("Cannot write null property V1ExchangeRatesRate.Time to non-nullable JSON property 'time'.");
+
+            if (v1ExchangeRatesRate.RateOption.IsSet && v1ExchangeRatesRate.Rate == null)
+                throw new JsonException("Cannot write null property V1ExchangeRatesRate.Rate to non-nullable JSON property 'rate'.");
+
             if (v1ExchangeRatesRate.TimeOption.IsSet)
                 writer.WriteString("time", v1ExchangeRatesRate.TimeOption.Value!.Value.ToString(TimeFormat));
 

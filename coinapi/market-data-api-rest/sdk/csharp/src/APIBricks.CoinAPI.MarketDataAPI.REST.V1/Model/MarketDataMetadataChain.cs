@@ -171,7 +171,6 @@ namespace APIBricks.CoinAPI.MarketDataAPI.REST.V1.Model
         /// <param name="writer"></param>
         /// <param name="marketDataMetadataChain"></param>
         /// <param name="jsonSerializerOptions"></param>
-        /// <exception cref="NotImplementedException"></exception>
         public override void Write(Utf8JsonWriter writer, MarketDataMetadataChain marketDataMetadataChain, JsonSerializerOptions jsonSerializerOptions)
         {
             writer.WriteStartObject();
@@ -186,7 +185,6 @@ namespace APIBricks.CoinAPI.MarketDataAPI.REST.V1.Model
         /// <param name="writer"></param>
         /// <param name="marketDataMetadataChain"></param>
         /// <param name="jsonSerializerOptions"></param>
-        /// <exception cref="NotImplementedException"></exception>
         public void WriteProperties(Utf8JsonWriter writer, MarketDataMetadataChain marketDataMetadataChain, JsonSerializerOptions jsonSerializerOptions)
         {
             if (marketDataMetadataChain.ChainIdOption.IsSet)

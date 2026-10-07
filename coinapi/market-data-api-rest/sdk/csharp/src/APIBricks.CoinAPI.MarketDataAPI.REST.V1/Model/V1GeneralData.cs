@@ -325,10 +325,10 @@ namespace APIBricks.CoinAPI.MarketDataAPI.REST.V1.Model
             }
 
             if (entryTime.IsSet && entryTime.Value == null)
-                throw new ArgumentNullException(nameof(entryTime), "Property is not nullable for class V1GeneralData.");
+                throw new JsonException("Property is not nullable for class V1GeneralData: entry_time.");
 
             if (recvTime.IsSet && recvTime.Value == null)
-                throw new ArgumentNullException(nameof(recvTime), "Property is not nullable for class V1GeneralData.");
+                throw new JsonException("Property is not nullable for class V1GeneralData: recv_time.");
 
             return new V1GeneralData(entryTime, recvTime, exchangeId, assetId, symbolId, metricId, valueDecimal, valueText, valueTime);
         }
@@ -339,7 +339,6 @@ namespace APIBricks.CoinAPI.MarketDataAPI.REST.V1.Model
         /// <param name="writer"></param>
         /// <param name="v1GeneralData"></param>
         /// <param name="jsonSerializerOptions"></param>
-        /// <exception cref="NotImplementedException"></exception>
         public override void Write(Utf8JsonWriter writer, V1GeneralData v1GeneralData, JsonSerializerOptions jsonSerializerOptions)
         {
             writer.WriteStartObject();
@@ -354,9 +353,14 @@ namespace APIBricks.CoinAPI.MarketDataAPI.REST.V1.Model
         /// <param name="writer"></param>
         /// <param name="v1GeneralData"></param>
         /// <param name="jsonSerializerOptions"></param>
-        /// <exception cref="NotImplementedException"></exception>
         public void WriteProperties(Utf8JsonWriter writer, V1GeneralData v1GeneralData, JsonSerializerOptions jsonSerializerOptions)
         {
+            if (v1GeneralData.EntryTimeOption.IsSet && v1GeneralData.EntryTime == null)
+                throw new JsonException("Cannot write null property V1GeneralData.EntryTime to non-nullable JSON property 'entry_time'.");
+
+            if (v1GeneralData.RecvTimeOption.IsSet && v1GeneralData.RecvTime == null)
+                throw new JsonException("Cannot write null property V1GeneralData.RecvTime to non-nullable JSON property 'recv_time'.");
+
             if (v1GeneralData.EntryTimeOption.IsSet)
                 writer.WriteString("entry_time", v1GeneralData.EntryTimeOption.Value!.Value.ToString(EntryTimeFormat));
 

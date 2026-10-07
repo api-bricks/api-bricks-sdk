@@ -278,10 +278,10 @@ namespace APIBricks.CoinAPI.MarketDataAPI.REST.V1.Model
             }
 
             if (timeExchange.IsSet && timeExchange.Value == null)
-                throw new ArgumentNullException(nameof(timeExchange), "Property is not nullable for class V1Quote.");
+                throw new JsonException("Property is not nullable for class V1Quote: time_exchange.");
 
             if (timeCoinapi.IsSet && timeCoinapi.Value == null)
-                throw new ArgumentNullException(nameof(timeCoinapi), "Property is not nullable for class V1Quote.");
+                throw new JsonException("Property is not nullable for class V1Quote: time_coinapi.");
 
             return new V1Quote(symbolId, timeExchange, timeCoinapi, askPrice, askSize, bidPrice, bidSize);
         }
@@ -292,7 +292,6 @@ namespace APIBricks.CoinAPI.MarketDataAPI.REST.V1.Model
         /// <param name="writer"></param>
         /// <param name="v1Quote"></param>
         /// <param name="jsonSerializerOptions"></param>
-        /// <exception cref="NotImplementedException"></exception>
         public override void Write(Utf8JsonWriter writer, V1Quote v1Quote, JsonSerializerOptions jsonSerializerOptions)
         {
             writer.WriteStartObject();
@@ -307,9 +306,14 @@ namespace APIBricks.CoinAPI.MarketDataAPI.REST.V1.Model
         /// <param name="writer"></param>
         /// <param name="v1Quote"></param>
         /// <param name="jsonSerializerOptions"></param>
-        /// <exception cref="NotImplementedException"></exception>
         public void WriteProperties(Utf8JsonWriter writer, V1Quote v1Quote, JsonSerializerOptions jsonSerializerOptions)
         {
+            if (v1Quote.TimeExchangeOption.IsSet && v1Quote.TimeExchange == null)
+                throw new JsonException("Cannot write null property V1Quote.TimeExchange to non-nullable JSON property 'time_exchange'.");
+
+            if (v1Quote.TimeCoinapiOption.IsSet && v1Quote.TimeCoinapi == null)
+                throw new JsonException("Cannot write null property V1Quote.TimeCoinapi to non-nullable JSON property 'time_coinapi'.");
+
             if (v1Quote.SymbolIdOption.IsSet)
                 if (v1Quote.SymbolIdOption.Value != null)
                     writer.WriteString("symbol_id", v1Quote.SymbolId);

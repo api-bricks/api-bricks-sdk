@@ -247,10 +247,10 @@ namespace APIBricks.CoinAPI.MarketDataAPI.REST.V1.Model
             }
 
             if (lengthSeconds.IsSet && lengthSeconds.Value == null)
-                throw new ArgumentNullException(nameof(lengthSeconds), "Property is not nullable for class V1TimeseriesPeriod.");
+                throw new JsonException("Property is not nullable for class V1TimeseriesPeriod: length_seconds.");
 
             if (lengthMonths.IsSet && lengthMonths.Value == null)
-                throw new ArgumentNullException(nameof(lengthMonths), "Property is not nullable for class V1TimeseriesPeriod.");
+                throw new JsonException("Property is not nullable for class V1TimeseriesPeriod: length_months.");
 
             return new V1TimeseriesPeriod(periodId, lengthSeconds, lengthMonths, unitCount, unitName, displayName);
         }
@@ -261,7 +261,6 @@ namespace APIBricks.CoinAPI.MarketDataAPI.REST.V1.Model
         /// <param name="writer"></param>
         /// <param name="v1TimeseriesPeriod"></param>
         /// <param name="jsonSerializerOptions"></param>
-        /// <exception cref="NotImplementedException"></exception>
         public override void Write(Utf8JsonWriter writer, V1TimeseriesPeriod v1TimeseriesPeriod, JsonSerializerOptions jsonSerializerOptions)
         {
             writer.WriteStartObject();
@@ -276,9 +275,14 @@ namespace APIBricks.CoinAPI.MarketDataAPI.REST.V1.Model
         /// <param name="writer"></param>
         /// <param name="v1TimeseriesPeriod"></param>
         /// <param name="jsonSerializerOptions"></param>
-        /// <exception cref="NotImplementedException"></exception>
         public void WriteProperties(Utf8JsonWriter writer, V1TimeseriesPeriod v1TimeseriesPeriod, JsonSerializerOptions jsonSerializerOptions)
         {
+            if (v1TimeseriesPeriod.LengthSecondsOption.IsSet && v1TimeseriesPeriod.LengthSeconds == null)
+                throw new JsonException("Cannot write null property V1TimeseriesPeriod.LengthSeconds to non-nullable JSON property 'length_seconds'.");
+
+            if (v1TimeseriesPeriod.LengthMonthsOption.IsSet && v1TimeseriesPeriod.LengthMonths == null)
+                throw new JsonException("Cannot write null property V1TimeseriesPeriod.LengthMonths to non-nullable JSON property 'length_months'.");
+
             if (v1TimeseriesPeriod.PeriodIdOption.IsSet)
                 if (v1TimeseriesPeriod.PeriodIdOption.Value != null)
                     writer.WriteString("period_id", v1TimeseriesPeriod.PeriodId);

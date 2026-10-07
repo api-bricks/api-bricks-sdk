@@ -189,10 +189,10 @@ namespace APIBricks.CoinAPI.MarketDataAPI.REST.V1.Model
             }
 
             if (time.IsSet && time.Value == null)
-                throw new ArgumentNullException(nameof(time), "Property is not nullable for class V1MetricData.");
+                throw new JsonException("Property is not nullable for class V1MetricData: time.");
 
             if (value.IsSet && value.Value == null)
-                throw new ArgumentNullException(nameof(value), "Property is not nullable for class V1MetricData.");
+                throw new JsonException("Property is not nullable for class V1MetricData: value.");
 
             return new V1MetricData(symbolId, time, value);
         }
@@ -203,7 +203,6 @@ namespace APIBricks.CoinAPI.MarketDataAPI.REST.V1.Model
         /// <param name="writer"></param>
         /// <param name="v1MetricData"></param>
         /// <param name="jsonSerializerOptions"></param>
-        /// <exception cref="NotImplementedException"></exception>
         public override void Write(Utf8JsonWriter writer, V1MetricData v1MetricData, JsonSerializerOptions jsonSerializerOptions)
         {
             writer.WriteStartObject();
@@ -218,9 +217,14 @@ namespace APIBricks.CoinAPI.MarketDataAPI.REST.V1.Model
         /// <param name="writer"></param>
         /// <param name="v1MetricData"></param>
         /// <param name="jsonSerializerOptions"></param>
-        /// <exception cref="NotImplementedException"></exception>
         public void WriteProperties(Utf8JsonWriter writer, V1MetricData v1MetricData, JsonSerializerOptions jsonSerializerOptions)
         {
+            if (v1MetricData.TimeOption.IsSet && v1MetricData.Time == null)
+                throw new JsonException("Cannot write null property V1MetricData.Time to non-nullable JSON property 'time'.");
+
+            if (v1MetricData.ValueOption.IsSet && v1MetricData.Value == null)
+                throw new JsonException("Cannot write null property V1MetricData.Value to non-nullable JSON property 'value'.");
+
             if (v1MetricData.SymbolIdOption.IsSet)
                 if (v1MetricData.SymbolIdOption.Value != null)
                     writer.WriteString("symbol_id", v1MetricData.SymbolId);

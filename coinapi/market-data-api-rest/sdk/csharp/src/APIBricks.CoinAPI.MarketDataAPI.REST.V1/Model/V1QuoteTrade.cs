@@ -298,13 +298,13 @@ namespace APIBricks.CoinAPI.MarketDataAPI.REST.V1.Model
             }
 
             if (timeExchange.IsSet && timeExchange.Value == null)
-                throw new ArgumentNullException(nameof(timeExchange), "Property is not nullable for class V1QuoteTrade.");
+                throw new JsonException("Property is not nullable for class V1QuoteTrade: time_exchange.");
 
             if (timeCoinapi.IsSet && timeCoinapi.Value == null)
-                throw new ArgumentNullException(nameof(timeCoinapi), "Property is not nullable for class V1QuoteTrade.");
+                throw new JsonException("Property is not nullable for class V1QuoteTrade: time_coinapi.");
 
             if (lastTrade.IsSet && lastTrade.Value == null)
-                throw new ArgumentNullException(nameof(lastTrade), "Property is not nullable for class V1QuoteTrade.");
+                throw new JsonException("Property is not nullable for class V1QuoteTrade: last_trade.");
 
             return new V1QuoteTrade(symbolId, timeExchange, timeCoinapi, askPrice, askSize, bidPrice, bidSize, lastTrade);
         }
@@ -315,7 +315,6 @@ namespace APIBricks.CoinAPI.MarketDataAPI.REST.V1.Model
         /// <param name="writer"></param>
         /// <param name="v1QuoteTrade"></param>
         /// <param name="jsonSerializerOptions"></param>
-        /// <exception cref="NotImplementedException"></exception>
         public override void Write(Utf8JsonWriter writer, V1QuoteTrade v1QuoteTrade, JsonSerializerOptions jsonSerializerOptions)
         {
             writer.WriteStartObject();
@@ -330,11 +329,16 @@ namespace APIBricks.CoinAPI.MarketDataAPI.REST.V1.Model
         /// <param name="writer"></param>
         /// <param name="v1QuoteTrade"></param>
         /// <param name="jsonSerializerOptions"></param>
-        /// <exception cref="NotImplementedException"></exception>
         public void WriteProperties(Utf8JsonWriter writer, V1QuoteTrade v1QuoteTrade, JsonSerializerOptions jsonSerializerOptions)
         {
+            if (v1QuoteTrade.TimeExchangeOption.IsSet && v1QuoteTrade.TimeExchange == null)
+                throw new JsonException("Cannot write null property V1QuoteTrade.TimeExchange to non-nullable JSON property 'time_exchange'.");
+
+            if (v1QuoteTrade.TimeCoinapiOption.IsSet && v1QuoteTrade.TimeCoinapi == null)
+                throw new JsonException("Cannot write null property V1QuoteTrade.TimeCoinapi to non-nullable JSON property 'time_coinapi'.");
+
             if (v1QuoteTrade.LastTradeOption.IsSet && v1QuoteTrade.LastTrade == null)
-                throw new ArgumentNullException(nameof(v1QuoteTrade.LastTrade), "Property is required for class V1QuoteTrade.");
+                throw new JsonException("Cannot write null property V1QuoteTrade.LastTrade to non-nullable JSON property 'last_trade'.");
 
             if (v1QuoteTrade.SymbolIdOption.IsSet)
                 if (v1QuoteTrade.SymbolIdOption.Value != null)

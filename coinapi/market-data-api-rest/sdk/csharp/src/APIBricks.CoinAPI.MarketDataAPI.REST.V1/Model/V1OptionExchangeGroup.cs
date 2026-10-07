@@ -231,7 +231,7 @@ namespace APIBricks.CoinAPI.MarketDataAPI.REST.V1.Model
             }
 
             if (timeExpiration.IsSet && timeExpiration.Value == null)
-                throw new ArgumentNullException(nameof(timeExpiration), "Property is not nullable for class V1OptionExchangeGroup.");
+                throw new JsonException("Property is not nullable for class V1OptionExchangeGroup: time_expiration.");
 
             return new V1OptionExchangeGroup(assetIdBase, assetIdQuote, underlyingPrice, timeExpiration, strikes);
         }
@@ -242,7 +242,6 @@ namespace APIBricks.CoinAPI.MarketDataAPI.REST.V1.Model
         /// <param name="writer"></param>
         /// <param name="v1OptionExchangeGroup"></param>
         /// <param name="jsonSerializerOptions"></param>
-        /// <exception cref="NotImplementedException"></exception>
         public override void Write(Utf8JsonWriter writer, V1OptionExchangeGroup v1OptionExchangeGroup, JsonSerializerOptions jsonSerializerOptions)
         {
             writer.WriteStartObject();
@@ -257,9 +256,11 @@ namespace APIBricks.CoinAPI.MarketDataAPI.REST.V1.Model
         /// <param name="writer"></param>
         /// <param name="v1OptionExchangeGroup"></param>
         /// <param name="jsonSerializerOptions"></param>
-        /// <exception cref="NotImplementedException"></exception>
         public void WriteProperties(Utf8JsonWriter writer, V1OptionExchangeGroup v1OptionExchangeGroup, JsonSerializerOptions jsonSerializerOptions)
         {
+            if (v1OptionExchangeGroup.TimeExpirationOption.IsSet && v1OptionExchangeGroup.TimeExpiration == null)
+                throw new JsonException("Cannot write null property V1OptionExchangeGroup.TimeExpiration to non-nullable JSON property 'time_expiration'.");
+
             if (v1OptionExchangeGroup.AssetIdBaseOption.IsSet)
                 if (v1OptionExchangeGroup.AssetIdBaseOption.Value != null)
                     writer.WriteString("asset_id_base", v1OptionExchangeGroup.AssetIdBase);

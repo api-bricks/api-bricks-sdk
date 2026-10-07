@@ -182,13 +182,13 @@ namespace APIBricks.CoinAPI.MarketDataAPI.REST.V1.Model
             }
 
             if (strikePrice.IsSet && strikePrice.Value == null)
-                throw new ArgumentNullException(nameof(strikePrice), "Property is not nullable for class V1Strike.");
+                throw new JsonException("Property is not nullable for class V1Strike: strike_price.");
 
             if (call.IsSet && call.Value == null)
-                throw new ArgumentNullException(nameof(call), "Property is not nullable for class V1Strike.");
+                throw new JsonException("Property is not nullable for class V1Strike: call.");
 
             if (put.IsSet && put.Value == null)
-                throw new ArgumentNullException(nameof(put), "Property is not nullable for class V1Strike.");
+                throw new JsonException("Property is not nullable for class V1Strike: put.");
 
             return new V1Strike(strikePrice, call, put);
         }
@@ -199,7 +199,6 @@ namespace APIBricks.CoinAPI.MarketDataAPI.REST.V1.Model
         /// <param name="writer"></param>
         /// <param name="v1Strike"></param>
         /// <param name="jsonSerializerOptions"></param>
-        /// <exception cref="NotImplementedException"></exception>
         public override void Write(Utf8JsonWriter writer, V1Strike v1Strike, JsonSerializerOptions jsonSerializerOptions)
         {
             writer.WriteStartObject();
@@ -214,14 +213,16 @@ namespace APIBricks.CoinAPI.MarketDataAPI.REST.V1.Model
         /// <param name="writer"></param>
         /// <param name="v1Strike"></param>
         /// <param name="jsonSerializerOptions"></param>
-        /// <exception cref="NotImplementedException"></exception>
         public void WriteProperties(Utf8JsonWriter writer, V1Strike v1Strike, JsonSerializerOptions jsonSerializerOptions)
         {
+            if (v1Strike.StrikePriceOption.IsSet && v1Strike.StrikePrice == null)
+                throw new JsonException("Cannot write null property V1Strike.StrikePrice to non-nullable JSON property 'strike_price'.");
+
             if (v1Strike.CallOption.IsSet && v1Strike.Call == null)
-                throw new ArgumentNullException(nameof(v1Strike.Call), "Property is required for class V1Strike.");
+                throw new JsonException("Cannot write null property V1Strike.Call to non-nullable JSON property 'call'.");
 
             if (v1Strike.PutOption.IsSet && v1Strike.Put == null)
-                throw new ArgumentNullException(nameof(v1Strike.Put), "Property is required for class V1Strike.");
+                throw new JsonException("Cannot write null property V1Strike.Put to non-nullable JSON property 'put'.");
 
             if (v1Strike.StrikePriceOption.IsSet)
                 writer.WriteNumber("strike_price", v1Strike.StrikePriceOption.Value!.Value);

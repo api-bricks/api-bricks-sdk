@@ -236,10 +236,10 @@ namespace APIBricks.CoinAPI.MarketDataAPI.REST.V1.Model
             }
 
             if (timeExchange.IsSet && timeExchange.Value == null)
-                throw new ArgumentNullException(nameof(timeExchange), "Property is not nullable for class V1OrderBookBase.");
+                throw new JsonException("Property is not nullable for class V1OrderBookBase: time_exchange.");
 
             if (timeCoinapi.IsSet && timeCoinapi.Value == null)
-                throw new ArgumentNullException(nameof(timeCoinapi), "Property is not nullable for class V1OrderBookBase.");
+                throw new JsonException("Property is not nullable for class V1OrderBookBase: time_coinapi.");
 
             return new V1OrderBookBase(symbolId, timeExchange, timeCoinapi, asks, bids);
         }
@@ -250,7 +250,6 @@ namespace APIBricks.CoinAPI.MarketDataAPI.REST.V1.Model
         /// <param name="writer"></param>
         /// <param name="v1OrderBookBase"></param>
         /// <param name="jsonSerializerOptions"></param>
-        /// <exception cref="NotImplementedException"></exception>
         public override void Write(Utf8JsonWriter writer, V1OrderBookBase v1OrderBookBase, JsonSerializerOptions jsonSerializerOptions)
         {
             writer.WriteStartObject();
@@ -265,9 +264,14 @@ namespace APIBricks.CoinAPI.MarketDataAPI.REST.V1.Model
         /// <param name="writer"></param>
         /// <param name="v1OrderBookBase"></param>
         /// <param name="jsonSerializerOptions"></param>
-        /// <exception cref="NotImplementedException"></exception>
         public void WriteProperties(Utf8JsonWriter writer, V1OrderBookBase v1OrderBookBase, JsonSerializerOptions jsonSerializerOptions)
         {
+            if (v1OrderBookBase.TimeExchangeOption.IsSet && v1OrderBookBase.TimeExchange == null)
+                throw new JsonException("Cannot write null property V1OrderBookBase.TimeExchange to non-nullable JSON property 'time_exchange'.");
+
+            if (v1OrderBookBase.TimeCoinapiOption.IsSet && v1OrderBookBase.TimeCoinapi == null)
+                throw new JsonException("Cannot write null property V1OrderBookBase.TimeCoinapi to non-nullable JSON property 'time_coinapi'.");
+
             if (v1OrderBookBase.SymbolIdOption.IsSet)
                 if (v1OrderBookBase.SymbolIdOption.Value != null)
                     writer.WriteString("symbol_id", v1OrderBookBase.SymbolId);

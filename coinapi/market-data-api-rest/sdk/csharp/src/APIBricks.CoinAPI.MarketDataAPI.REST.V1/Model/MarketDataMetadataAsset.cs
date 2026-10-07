@@ -610,7 +610,7 @@ namespace APIBricks.CoinAPI.MarketDataAPI.REST.V1.Model
             }
 
             if (typeIsCrypto.IsSet && typeIsCrypto.Value == null)
-                throw new ArgumentNullException(nameof(typeIsCrypto), "Property is not nullable for class MarketDataMetadataAsset.");
+                throw new JsonException("Property is not nullable for class MarketDataMetadataAsset: type_is_crypto.");
 
             return new MarketDataMetadataAsset(assetId, name, typeIsCrypto, dataQuoteStart, dataQuoteEnd, dataOrderbookStart, dataOrderbookEnd, dataTradeStart, dataTradeEnd, dataSymbolsCount, volume1hrsUsd, volume1dayUsd, volume1mthUsd, priceUsd, idIcon, supplyCurrent, supplyTotal, supplyMax, chainAddresses, assetType, dataStart, dataEnd);
         }
@@ -621,7 +621,6 @@ namespace APIBricks.CoinAPI.MarketDataAPI.REST.V1.Model
         /// <param name="writer"></param>
         /// <param name="marketDataMetadataAsset"></param>
         /// <param name="jsonSerializerOptions"></param>
-        /// <exception cref="NotImplementedException"></exception>
         public override void Write(Utf8JsonWriter writer, MarketDataMetadataAsset marketDataMetadataAsset, JsonSerializerOptions jsonSerializerOptions)
         {
             writer.WriteStartObject();
@@ -636,9 +635,11 @@ namespace APIBricks.CoinAPI.MarketDataAPI.REST.V1.Model
         /// <param name="writer"></param>
         /// <param name="marketDataMetadataAsset"></param>
         /// <param name="jsonSerializerOptions"></param>
-        /// <exception cref="NotImplementedException"></exception>
         public void WriteProperties(Utf8JsonWriter writer, MarketDataMetadataAsset marketDataMetadataAsset, JsonSerializerOptions jsonSerializerOptions)
         {
+            if (marketDataMetadataAsset.TypeIsCryptoOption.IsSet && marketDataMetadataAsset.TypeIsCrypto == null)
+                throw new JsonException("Cannot write null property MarketDataMetadataAsset.TypeIsCrypto to non-nullable JSON property 'type_is_crypto'.");
+
             if (marketDataMetadataAsset.AssetIdOption.IsSet)
                 if (marketDataMetadataAsset.AssetIdOption.Value != null)
                     writer.WriteString("asset_id", marketDataMetadataAsset.AssetId);

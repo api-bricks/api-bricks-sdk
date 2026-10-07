@@ -351,16 +351,16 @@ namespace APIBricks.CoinAPI.MarketDataAPI.REST.V1.Model
             }
 
             if (timePeriodStart.IsSet && timePeriodStart.Value == null)
-                throw new ArgumentNullException(nameof(timePeriodStart), "Property is not nullable for class V1TimeseriesItem.");
+                throw new JsonException("Property is not nullable for class V1TimeseriesItem: time_period_start.");
 
             if (timePeriodEnd.IsSet && timePeriodEnd.Value == null)
-                throw new ArgumentNullException(nameof(timePeriodEnd), "Property is not nullable for class V1TimeseriesItem.");
+                throw new JsonException("Property is not nullable for class V1TimeseriesItem: time_period_end.");
 
             if (volumeTraded.IsSet && volumeTraded.Value == null)
-                throw new ArgumentNullException(nameof(volumeTraded), "Property is not nullable for class V1TimeseriesItem.");
+                throw new JsonException("Property is not nullable for class V1TimeseriesItem: volume_traded.");
 
             if (tradesCount.IsSet && tradesCount.Value == null)
-                throw new ArgumentNullException(nameof(tradesCount), "Property is not nullable for class V1TimeseriesItem.");
+                throw new JsonException("Property is not nullable for class V1TimeseriesItem: trades_count.");
 
             return new V1TimeseriesItem(timePeriodStart, timePeriodEnd, timeOpen, timeClose, priceOpen, priceHigh, priceLow, priceClose, volumeTraded, tradesCount);
         }
@@ -371,7 +371,6 @@ namespace APIBricks.CoinAPI.MarketDataAPI.REST.V1.Model
         /// <param name="writer"></param>
         /// <param name="v1TimeseriesItem"></param>
         /// <param name="jsonSerializerOptions"></param>
-        /// <exception cref="NotImplementedException"></exception>
         public override void Write(Utf8JsonWriter writer, V1TimeseriesItem v1TimeseriesItem, JsonSerializerOptions jsonSerializerOptions)
         {
             writer.WriteStartObject();
@@ -386,9 +385,20 @@ namespace APIBricks.CoinAPI.MarketDataAPI.REST.V1.Model
         /// <param name="writer"></param>
         /// <param name="v1TimeseriesItem"></param>
         /// <param name="jsonSerializerOptions"></param>
-        /// <exception cref="NotImplementedException"></exception>
         public void WriteProperties(Utf8JsonWriter writer, V1TimeseriesItem v1TimeseriesItem, JsonSerializerOptions jsonSerializerOptions)
         {
+            if (v1TimeseriesItem.TimePeriodStartOption.IsSet && v1TimeseriesItem.TimePeriodStart == null)
+                throw new JsonException("Cannot write null property V1TimeseriesItem.TimePeriodStart to non-nullable JSON property 'time_period_start'.");
+
+            if (v1TimeseriesItem.TimePeriodEndOption.IsSet && v1TimeseriesItem.TimePeriodEnd == null)
+                throw new JsonException("Cannot write null property V1TimeseriesItem.TimePeriodEnd to non-nullable JSON property 'time_period_end'.");
+
+            if (v1TimeseriesItem.VolumeTradedOption.IsSet && v1TimeseriesItem.VolumeTraded == null)
+                throw new JsonException("Cannot write null property V1TimeseriesItem.VolumeTraded to non-nullable JSON property 'volume_traded'.");
+
+            if (v1TimeseriesItem.TradesCountOption.IsSet && v1TimeseriesItem.TradesCount == null)
+                throw new JsonException("Cannot write null property V1TimeseriesItem.TradesCount to non-nullable JSON property 'trades_count'.");
+
             if (v1TimeseriesItem.TimePeriodStartOption.IsSet)
                 writer.WriteString("time_period_start", v1TimeseriesItem.TimePeriodStartOption.Value!.Value.ToString(TimePeriodStartFormat));
 

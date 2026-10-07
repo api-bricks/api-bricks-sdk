@@ -310,7 +310,7 @@ namespace APIBricks.CoinAPI.MarketDataAPI.REST.V1.Model
             }
 
             if (coinapiDatainfoId.IsSet && coinapiDatainfoId.Value == null)
-                throw new ArgumentNullException(nameof(coinapiDatainfoId), "Property is not nullable for class V1SymbolMapping.");
+                throw new JsonException("Property is not nullable for class V1SymbolMapping: coinapi_datainfo_id.");
 
             return new V1SymbolMapping(symbolId, symbolIdExchange, coinapiDatainfoId, assetIdBaseExchange, assetIdQuoteExchange, assetIdBase, assetIdQuote, pricePrecision, sizePrecision);
         }
@@ -321,7 +321,6 @@ namespace APIBricks.CoinAPI.MarketDataAPI.REST.V1.Model
         /// <param name="writer"></param>
         /// <param name="v1SymbolMapping"></param>
         /// <param name="jsonSerializerOptions"></param>
-        /// <exception cref="NotImplementedException"></exception>
         public override void Write(Utf8JsonWriter writer, V1SymbolMapping v1SymbolMapping, JsonSerializerOptions jsonSerializerOptions)
         {
             writer.WriteStartObject();
@@ -336,9 +335,11 @@ namespace APIBricks.CoinAPI.MarketDataAPI.REST.V1.Model
         /// <param name="writer"></param>
         /// <param name="v1SymbolMapping"></param>
         /// <param name="jsonSerializerOptions"></param>
-        /// <exception cref="NotImplementedException"></exception>
         public void WriteProperties(Utf8JsonWriter writer, V1SymbolMapping v1SymbolMapping, JsonSerializerOptions jsonSerializerOptions)
         {
+            if (v1SymbolMapping.CoinapiDatainfoIdOption.IsSet && v1SymbolMapping.CoinapiDatainfoId == null)
+                throw new JsonException("Cannot write null property V1SymbolMapping.CoinapiDatainfoId to non-nullable JSON property 'coinapi_datainfo_id'.");
+
             if (v1SymbolMapping.SymbolIdOption.IsSet)
                 if (v1SymbolMapping.SymbolIdOption.Value != null)
                     writer.WriteString("symbol_id", v1SymbolMapping.SymbolId);

@@ -65,7 +65,14 @@ class TestV1OptionExchangeGroup(unittest.TestCase):
                             ask_price = 1.337, 
                             ask_size = 1.337, 
                             bid_price = 1.337, 
-                            bid_size = 1.337, ), )
+                            bid_size = 1.337, 
+                            last_trade = api_bricks_coinapi_market_data_api_rest.models.v1/last_trade.v1.LastTrade(
+                                time_exchange = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
+                                time_coinapi = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
+                                uuid = '', 
+                                price = 1.337, 
+                                size = 1.337, 
+                                taker_side = '', ), ), )
                     ]
             )
         else:

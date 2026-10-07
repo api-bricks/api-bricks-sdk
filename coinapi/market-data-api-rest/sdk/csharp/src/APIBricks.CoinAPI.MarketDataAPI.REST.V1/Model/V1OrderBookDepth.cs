@@ -278,22 +278,22 @@ namespace APIBricks.CoinAPI.MarketDataAPI.REST.V1.Model
             }
 
             if (timeExchange.IsSet && timeExchange.Value == null)
-                throw new ArgumentNullException(nameof(timeExchange), "Property is not nullable for class V1OrderBookDepth.");
+                throw new JsonException("Property is not nullable for class V1OrderBookDepth: time_exchange.");
 
             if (timeCoinapi.IsSet && timeCoinapi.Value == null)
-                throw new ArgumentNullException(nameof(timeCoinapi), "Property is not nullable for class V1OrderBookDepth.");
+                throw new JsonException("Property is not nullable for class V1OrderBookDepth: time_coinapi.");
 
             if (askLevels.IsSet && askLevels.Value == null)
-                throw new ArgumentNullException(nameof(askLevels), "Property is not nullable for class V1OrderBookDepth.");
+                throw new JsonException("Property is not nullable for class V1OrderBookDepth: ask_levels.");
 
             if (bidLevels.IsSet && bidLevels.Value == null)
-                throw new ArgumentNullException(nameof(bidLevels), "Property is not nullable for class V1OrderBookDepth.");
+                throw new JsonException("Property is not nullable for class V1OrderBookDepth: bid_levels.");
 
             if (askDepth.IsSet && askDepth.Value == null)
-                throw new ArgumentNullException(nameof(askDepth), "Property is not nullable for class V1OrderBookDepth.");
+                throw new JsonException("Property is not nullable for class V1OrderBookDepth: ask_depth.");
 
             if (bidDepth.IsSet && bidDepth.Value == null)
-                throw new ArgumentNullException(nameof(bidDepth), "Property is not nullable for class V1OrderBookDepth.");
+                throw new JsonException("Property is not nullable for class V1OrderBookDepth: bid_depth.");
 
             return new V1OrderBookDepth(symbolId, timeExchange, timeCoinapi, askLevels, bidLevels, askDepth, bidDepth);
         }
@@ -304,7 +304,6 @@ namespace APIBricks.CoinAPI.MarketDataAPI.REST.V1.Model
         /// <param name="writer"></param>
         /// <param name="v1OrderBookDepth"></param>
         /// <param name="jsonSerializerOptions"></param>
-        /// <exception cref="NotImplementedException"></exception>
         public override void Write(Utf8JsonWriter writer, V1OrderBookDepth v1OrderBookDepth, JsonSerializerOptions jsonSerializerOptions)
         {
             writer.WriteStartObject();
@@ -319,9 +318,26 @@ namespace APIBricks.CoinAPI.MarketDataAPI.REST.V1.Model
         /// <param name="writer"></param>
         /// <param name="v1OrderBookDepth"></param>
         /// <param name="jsonSerializerOptions"></param>
-        /// <exception cref="NotImplementedException"></exception>
         public void WriteProperties(Utf8JsonWriter writer, V1OrderBookDepth v1OrderBookDepth, JsonSerializerOptions jsonSerializerOptions)
         {
+            if (v1OrderBookDepth.TimeExchangeOption.IsSet && v1OrderBookDepth.TimeExchange == null)
+                throw new JsonException("Cannot write null property V1OrderBookDepth.TimeExchange to non-nullable JSON property 'time_exchange'.");
+
+            if (v1OrderBookDepth.TimeCoinapiOption.IsSet && v1OrderBookDepth.TimeCoinapi == null)
+                throw new JsonException("Cannot write null property V1OrderBookDepth.TimeCoinapi to non-nullable JSON property 'time_coinapi'.");
+
+            if (v1OrderBookDepth.AskLevelsOption.IsSet && v1OrderBookDepth.AskLevels == null)
+                throw new JsonException("Cannot write null property V1OrderBookDepth.AskLevels to non-nullable JSON property 'ask_levels'.");
+
+            if (v1OrderBookDepth.BidLevelsOption.IsSet && v1OrderBookDepth.BidLevels == null)
+                throw new JsonException("Cannot write null property V1OrderBookDepth.BidLevels to non-nullable JSON property 'bid_levels'.");
+
+            if (v1OrderBookDepth.AskDepthOption.IsSet && v1OrderBookDepth.AskDepth == null)
+                throw new JsonException("Cannot write null property V1OrderBookDepth.AskDepth to non-nullable JSON property 'ask_depth'.");
+
+            if (v1OrderBookDepth.BidDepthOption.IsSet && v1OrderBookDepth.BidDepth == null)
+                throw new JsonException("Cannot write null property V1OrderBookDepth.BidDepth to non-nullable JSON property 'bid_depth'.");
+
             if (v1OrderBookDepth.SymbolIdOption.IsSet)
                 if (v1OrderBookDepth.SymbolIdOption.Value != null)
                     writer.WriteString("symbol_id", v1OrderBookDepth.SymbolId);

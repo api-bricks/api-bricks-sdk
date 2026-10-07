@@ -569,7 +569,7 @@ namespace APIBricks.CoinAPI.MarketDataAPI.REST.V1.Model
             }
 
             if (rank.IsSet && rank.Value == null)
-                throw new ArgumentNullException(nameof(rank), "Property is not nullable for class MarketDataMetadataExchange.");
+                throw new JsonException("Property is not nullable for class MarketDataMetadataExchange: rank.");
 
             return new MarketDataMetadataExchange(exchangeId, website, name, dataStart, dataEnd, dataQuoteStart, dataQuoteEnd, dataOrderbookStart, dataOrderbookEnd, dataTradeStart, dataTradeEnd, dataTradeCount, dataSymbolsCount, volume1hrsUsd, volume1dayUsd, volume1mthUsd, metricId, icons, rank, integrationStatus);
         }
@@ -580,7 +580,6 @@ namespace APIBricks.CoinAPI.MarketDataAPI.REST.V1.Model
         /// <param name="writer"></param>
         /// <param name="marketDataMetadataExchange"></param>
         /// <param name="jsonSerializerOptions"></param>
-        /// <exception cref="NotImplementedException"></exception>
         public override void Write(Utf8JsonWriter writer, MarketDataMetadataExchange marketDataMetadataExchange, JsonSerializerOptions jsonSerializerOptions)
         {
             writer.WriteStartObject();
@@ -595,9 +594,11 @@ namespace APIBricks.CoinAPI.MarketDataAPI.REST.V1.Model
         /// <param name="writer"></param>
         /// <param name="marketDataMetadataExchange"></param>
         /// <param name="jsonSerializerOptions"></param>
-        /// <exception cref="NotImplementedException"></exception>
         public void WriteProperties(Utf8JsonWriter writer, MarketDataMetadataExchange marketDataMetadataExchange, JsonSerializerOptions jsonSerializerOptions)
         {
+            if (marketDataMetadataExchange.RankOption.IsSet && marketDataMetadataExchange.Rank == null)
+                throw new JsonException("Cannot write null property MarketDataMetadataExchange.Rank to non-nullable JSON property 'rank'.");
+
             if (marketDataMetadataExchange.ExchangeIdOption.IsSet)
                 if (marketDataMetadataExchange.ExchangeIdOption.Value != null)
                     writer.WriteString("exchange_id", marketDataMetadataExchange.ExchangeId);

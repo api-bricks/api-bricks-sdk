@@ -383,19 +383,19 @@ namespace APIBricks.CoinAPI.MarketDataAPI.REST.V1.Model
             }
 
             if (timeExchange.IsSet && timeExchange.Value == null)
-                throw new ArgumentNullException(nameof(timeExchange), "Property is not nullable for class V1Trade.");
+                throw new JsonException("Property is not nullable for class V1Trade: time_exchange.");
 
             if (timeCoinapi.IsSet && timeCoinapi.Value == null)
-                throw new ArgumentNullException(nameof(timeCoinapi), "Property is not nullable for class V1Trade.");
+                throw new JsonException("Property is not nullable for class V1Trade: time_coinapi.");
 
             if (uuid.IsSet && uuid.Value == null)
-                throw new ArgumentNullException(nameof(uuid), "Property is not nullable for class V1Trade.");
+                throw new JsonException("Property is not nullable for class V1Trade: uuid.");
 
             if (price.IsSet && price.Value == null)
-                throw new ArgumentNullException(nameof(price), "Property is not nullable for class V1Trade.");
+                throw new JsonException("Property is not nullable for class V1Trade: price.");
 
             if (size.IsSet && size.Value == null)
-                throw new ArgumentNullException(nameof(size), "Property is not nullable for class V1Trade.");
+                throw new JsonException("Property is not nullable for class V1Trade: size.");
 
             return new V1Trade(symbolId, timeExchange, timeCoinapi, uuid, price, size, takerSide, idTrade, idOrderMaker, idOrderTaker, userTaker, userMaker);
         }
@@ -406,7 +406,6 @@ namespace APIBricks.CoinAPI.MarketDataAPI.REST.V1.Model
         /// <param name="writer"></param>
         /// <param name="v1Trade"></param>
         /// <param name="jsonSerializerOptions"></param>
-        /// <exception cref="NotImplementedException"></exception>
         public override void Write(Utf8JsonWriter writer, V1Trade v1Trade, JsonSerializerOptions jsonSerializerOptions)
         {
             writer.WriteStartObject();
@@ -421,9 +420,23 @@ namespace APIBricks.CoinAPI.MarketDataAPI.REST.V1.Model
         /// <param name="writer"></param>
         /// <param name="v1Trade"></param>
         /// <param name="jsonSerializerOptions"></param>
-        /// <exception cref="NotImplementedException"></exception>
         public void WriteProperties(Utf8JsonWriter writer, V1Trade v1Trade, JsonSerializerOptions jsonSerializerOptions)
         {
+            if (v1Trade.TimeExchangeOption.IsSet && v1Trade.TimeExchange == null)
+                throw new JsonException("Cannot write null property V1Trade.TimeExchange to non-nullable JSON property 'time_exchange'.");
+
+            if (v1Trade.TimeCoinapiOption.IsSet && v1Trade.TimeCoinapi == null)
+                throw new JsonException("Cannot write null property V1Trade.TimeCoinapi to non-nullable JSON property 'time_coinapi'.");
+
+            if (v1Trade.UuidOption.IsSet && v1Trade.Uuid == null)
+                throw new JsonException("Cannot write null property V1Trade.Uuid to non-nullable JSON property 'uuid'.");
+
+            if (v1Trade.PriceOption.IsSet && v1Trade.Price == null)
+                throw new JsonException("Cannot write null property V1Trade.Price to non-nullable JSON property 'price'.");
+
+            if (v1Trade.SizeOption.IsSet && v1Trade.Size == null)
+                throw new JsonException("Cannot write null property V1Trade.Size to non-nullable JSON property 'size'.");
+
             if (v1Trade.SymbolIdOption.IsSet)
                 if (v1Trade.SymbolIdOption.Value != null)
                     writer.WriteString("symbol_id", v1Trade.SymbolId);

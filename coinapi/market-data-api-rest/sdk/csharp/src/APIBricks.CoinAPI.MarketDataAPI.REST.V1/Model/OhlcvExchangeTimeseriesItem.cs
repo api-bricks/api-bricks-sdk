@@ -391,16 +391,16 @@ namespace APIBricks.CoinAPI.MarketDataAPI.REST.V1.Model
             }
 
             if (timePeriodStart.IsSet && timePeriodStart.Value == null)
-                throw new ArgumentNullException(nameof(timePeriodStart), "Property is not nullable for class OhlcvExchangeTimeseriesItem.");
+                throw new JsonException("Property is not nullable for class OhlcvExchangeTimeseriesItem: time_period_start.");
 
             if (timePeriodEnd.IsSet && timePeriodEnd.Value == null)
-                throw new ArgumentNullException(nameof(timePeriodEnd), "Property is not nullable for class OhlcvExchangeTimeseriesItem.");
+                throw new JsonException("Property is not nullable for class OhlcvExchangeTimeseriesItem: time_period_end.");
 
             if (volumeTraded.IsSet && volumeTraded.Value == null)
-                throw new ArgumentNullException(nameof(volumeTraded), "Property is not nullable for class OhlcvExchangeTimeseriesItem.");
+                throw new JsonException("Property is not nullable for class OhlcvExchangeTimeseriesItem: volume_traded.");
 
             if (tradesCount.IsSet && tradesCount.Value == null)
-                throw new ArgumentNullException(nameof(tradesCount), "Property is not nullable for class OhlcvExchangeTimeseriesItem.");
+                throw new JsonException("Property is not nullable for class OhlcvExchangeTimeseriesItem: trades_count.");
 
             return new OhlcvExchangeTimeseriesItem(timePeriodStart, timePeriodEnd, timeOpen, timeClose, priceOpen, priceHigh, priceLow, priceClose, volumeTraded, tradesCount, symbolIdExchange, symbolIdCoinapi);
         }
@@ -411,7 +411,6 @@ namespace APIBricks.CoinAPI.MarketDataAPI.REST.V1.Model
         /// <param name="writer"></param>
         /// <param name="ohlcvExchangeTimeseriesItem"></param>
         /// <param name="jsonSerializerOptions"></param>
-        /// <exception cref="NotImplementedException"></exception>
         public override void Write(Utf8JsonWriter writer, OhlcvExchangeTimeseriesItem ohlcvExchangeTimeseriesItem, JsonSerializerOptions jsonSerializerOptions)
         {
             writer.WriteStartObject();
@@ -426,9 +425,20 @@ namespace APIBricks.CoinAPI.MarketDataAPI.REST.V1.Model
         /// <param name="writer"></param>
         /// <param name="ohlcvExchangeTimeseriesItem"></param>
         /// <param name="jsonSerializerOptions"></param>
-        /// <exception cref="NotImplementedException"></exception>
         public void WriteProperties(Utf8JsonWriter writer, OhlcvExchangeTimeseriesItem ohlcvExchangeTimeseriesItem, JsonSerializerOptions jsonSerializerOptions)
         {
+            if (ohlcvExchangeTimeseriesItem.TimePeriodStartOption.IsSet && ohlcvExchangeTimeseriesItem.TimePeriodStart == null)
+                throw new JsonException("Cannot write null property OhlcvExchangeTimeseriesItem.TimePeriodStart to non-nullable JSON property 'time_period_start'.");
+
+            if (ohlcvExchangeTimeseriesItem.TimePeriodEndOption.IsSet && ohlcvExchangeTimeseriesItem.TimePeriodEnd == null)
+                throw new JsonException("Cannot write null property OhlcvExchangeTimeseriesItem.TimePeriodEnd to non-nullable JSON property 'time_period_end'.");
+
+            if (ohlcvExchangeTimeseriesItem.VolumeTradedOption.IsSet && ohlcvExchangeTimeseriesItem.VolumeTraded == null)
+                throw new JsonException("Cannot write null property OhlcvExchangeTimeseriesItem.VolumeTraded to non-nullable JSON property 'volume_traded'.");
+
+            if (ohlcvExchangeTimeseriesItem.TradesCountOption.IsSet && ohlcvExchangeTimeseriesItem.TradesCount == null)
+                throw new JsonException("Cannot write null property OhlcvExchangeTimeseriesItem.TradesCount to non-nullable JSON property 'trades_count'.");
+
             if (ohlcvExchangeTimeseriesItem.TimePeriodStartOption.IsSet)
                 writer.WriteString("time_period_start", ohlcvExchangeTimeseriesItem.TimePeriodStartOption.Value!.Value.ToString(TimePeriodStartFormat));
 
