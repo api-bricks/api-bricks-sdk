@@ -171,7 +171,6 @@ namespace APIBricks.FinFeedAPI.CurrenciesAPI.REST.V1.Historical.Model
         /// <param name="writer"></param>
         /// <param name="v1ExchangeRates"></param>
         /// <param name="jsonSerializerOptions"></param>
-        /// <exception cref="NotImplementedException"></exception>
         public override void Write(Utf8JsonWriter writer, V1ExchangeRates v1ExchangeRates, JsonSerializerOptions jsonSerializerOptions)
         {
             writer.WriteStartObject();
@@ -186,7 +185,6 @@ namespace APIBricks.FinFeedAPI.CurrenciesAPI.REST.V1.Historical.Model
         /// <param name="writer"></param>
         /// <param name="v1ExchangeRates"></param>
         /// <param name="jsonSerializerOptions"></param>
-        /// <exception cref="NotImplementedException"></exception>
         public void WriteProperties(Utf8JsonWriter writer, V1ExchangeRates v1ExchangeRates, JsonSerializerOptions jsonSerializerOptions)
         {
             if (v1ExchangeRates.AssetIdBaseOption.IsSet)
