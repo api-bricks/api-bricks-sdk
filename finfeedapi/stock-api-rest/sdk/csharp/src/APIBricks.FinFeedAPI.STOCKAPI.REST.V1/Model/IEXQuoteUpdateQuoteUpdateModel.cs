@@ -315,28 +315,28 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Model
             }
 
             if (timestampNanos.IsSet && timestampNanos.Value == null)
-                throw new ArgumentNullException(nameof(timestampNanos), "Property is not nullable for class IEXQuoteUpdateQuoteUpdateModel.");
+                throw new JsonException("Property is not nullable for class IEXQuoteUpdateQuoteUpdateModel: timestamp_nanos.");
 
             if (timestamp.IsSet && timestamp.Value == null)
-                throw new ArgumentNullException(nameof(timestamp), "Property is not nullable for class IEXQuoteUpdateQuoteUpdateModel.");
+                throw new JsonException("Property is not nullable for class IEXQuoteUpdateQuoteUpdateModel: timestamp.");
 
             if (isSymbolAvailable.IsSet && isSymbolAvailable.Value == null)
-                throw new ArgumentNullException(nameof(isSymbolAvailable), "Property is not nullable for class IEXQuoteUpdateQuoteUpdateModel.");
+                throw new JsonException("Property is not nullable for class IEXQuoteUpdateQuoteUpdateModel: is_symbol_available.");
 
             if (isPrePostMarketSession.IsSet && isPrePostMarketSession.Value == null)
-                throw new ArgumentNullException(nameof(isPrePostMarketSession), "Property is not nullable for class IEXQuoteUpdateQuoteUpdateModel.");
+                throw new JsonException("Property is not nullable for class IEXQuoteUpdateQuoteUpdateModel: is_pre_post_market_session.");
 
             if (askSize.IsSet && askSize.Value == null)
-                throw new ArgumentNullException(nameof(askSize), "Property is not nullable for class IEXQuoteUpdateQuoteUpdateModel.");
+                throw new JsonException("Property is not nullable for class IEXQuoteUpdateQuoteUpdateModel: ask_size.");
 
             if (askPrice.IsSet && askPrice.Value == null)
-                throw new ArgumentNullException(nameof(askPrice), "Property is not nullable for class IEXQuoteUpdateQuoteUpdateModel.");
+                throw new JsonException("Property is not nullable for class IEXQuoteUpdateQuoteUpdateModel: ask_price.");
 
             if (bidPrice.IsSet && bidPrice.Value == null)
-                throw new ArgumentNullException(nameof(bidPrice), "Property is not nullable for class IEXQuoteUpdateQuoteUpdateModel.");
+                throw new JsonException("Property is not nullable for class IEXQuoteUpdateQuoteUpdateModel: bid_price.");
 
             if (bidSize.IsSet && bidSize.Value == null)
-                throw new ArgumentNullException(nameof(bidSize), "Property is not nullable for class IEXQuoteUpdateQuoteUpdateModel.");
+                throw new JsonException("Property is not nullable for class IEXQuoteUpdateQuoteUpdateModel: bid_size.");
 
             return new IEXQuoteUpdateQuoteUpdateModel(symbol, timestampNanos, timestamp, isSymbolAvailable, isPrePostMarketSession, askSize, askPrice, bidPrice, bidSize);
         }
@@ -347,7 +347,6 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Model
         /// <param name="writer"></param>
         /// <param name="iEXQuoteUpdateQuoteUpdateModel"></param>
         /// <param name="jsonSerializerOptions"></param>
-        /// <exception cref="NotImplementedException"></exception>
         public override void Write(Utf8JsonWriter writer, IEXQuoteUpdateQuoteUpdateModel iEXQuoteUpdateQuoteUpdateModel, JsonSerializerOptions jsonSerializerOptions)
         {
             writer.WriteStartObject();
@@ -362,9 +361,32 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Model
         /// <param name="writer"></param>
         /// <param name="iEXQuoteUpdateQuoteUpdateModel"></param>
         /// <param name="jsonSerializerOptions"></param>
-        /// <exception cref="NotImplementedException"></exception>
         public void WriteProperties(Utf8JsonWriter writer, IEXQuoteUpdateQuoteUpdateModel iEXQuoteUpdateQuoteUpdateModel, JsonSerializerOptions jsonSerializerOptions)
         {
+            if (iEXQuoteUpdateQuoteUpdateModel.TimestampNanosOption.IsSet && iEXQuoteUpdateQuoteUpdateModel.TimestampNanos == null)
+                throw new JsonException("Cannot write null property IEXQuoteUpdateQuoteUpdateModel.TimestampNanos to non-nullable JSON property 'timestamp_nanos'.");
+
+            if (iEXQuoteUpdateQuoteUpdateModel.TimestampOption.IsSet && iEXQuoteUpdateQuoteUpdateModel.Timestamp == null)
+                throw new JsonException("Cannot write null property IEXQuoteUpdateQuoteUpdateModel.Timestamp to non-nullable JSON property 'timestamp'.");
+
+            if (iEXQuoteUpdateQuoteUpdateModel.IsSymbolAvailableOption.IsSet && iEXQuoteUpdateQuoteUpdateModel.IsSymbolAvailable == null)
+                throw new JsonException("Cannot write null property IEXQuoteUpdateQuoteUpdateModel.IsSymbolAvailable to non-nullable JSON property 'is_symbol_available'.");
+
+            if (iEXQuoteUpdateQuoteUpdateModel.IsPrePostMarketSessionOption.IsSet && iEXQuoteUpdateQuoteUpdateModel.IsPrePostMarketSession == null)
+                throw new JsonException("Cannot write null property IEXQuoteUpdateQuoteUpdateModel.IsPrePostMarketSession to non-nullable JSON property 'is_pre_post_market_session'.");
+
+            if (iEXQuoteUpdateQuoteUpdateModel.AskSizeOption.IsSet && iEXQuoteUpdateQuoteUpdateModel.AskSize == null)
+                throw new JsonException("Cannot write null property IEXQuoteUpdateQuoteUpdateModel.AskSize to non-nullable JSON property 'ask_size'.");
+
+            if (iEXQuoteUpdateQuoteUpdateModel.AskPriceOption.IsSet && iEXQuoteUpdateQuoteUpdateModel.AskPrice == null)
+                throw new JsonException("Cannot write null property IEXQuoteUpdateQuoteUpdateModel.AskPrice to non-nullable JSON property 'ask_price'.");
+
+            if (iEXQuoteUpdateQuoteUpdateModel.BidPriceOption.IsSet && iEXQuoteUpdateQuoteUpdateModel.BidPrice == null)
+                throw new JsonException("Cannot write null property IEXQuoteUpdateQuoteUpdateModel.BidPrice to non-nullable JSON property 'bid_price'.");
+
+            if (iEXQuoteUpdateQuoteUpdateModel.BidSizeOption.IsSet && iEXQuoteUpdateQuoteUpdateModel.BidSize == null)
+                throw new JsonException("Cannot write null property IEXQuoteUpdateQuoteUpdateModel.BidSize to non-nullable JSON property 'bid_size'.");
+
             if (iEXQuoteUpdateQuoteUpdateModel.SymbolOption.IsSet)
                 if (iEXQuoteUpdateQuoteUpdateModel.SymbolOption.Value != null)
                     writer.WriteString("symbol", iEXQuoteUpdateQuoteUpdateModel.Symbol);

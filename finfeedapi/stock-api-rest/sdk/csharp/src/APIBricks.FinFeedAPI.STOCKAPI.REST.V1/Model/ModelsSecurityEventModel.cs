@@ -294,19 +294,19 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Model
             }
 
             if (timestampNanos.IsSet && timestampNanos.Value == null)
-                throw new ArgumentNullException(nameof(timestampNanos), "Property is not nullable for class ModelsSecurityEventModel.");
+                throw new JsonException("Property is not nullable for class ModelsSecurityEventModel: timestamp_nanos.");
 
             if (timestamp.IsSet && timestamp.Value == null)
-                throw new ArgumentNullException(nameof(timestamp), "Property is not nullable for class ModelsSecurityEventModel.");
+                throw new JsonException("Property is not nullable for class ModelsSecurityEventModel: timestamp.");
 
             if (securityEvent.IsSet && securityEvent.Value == null)
-                throw new ArgumentNullException(nameof(securityEvent), "Property is not nullable for class ModelsSecurityEventModel.");
+                throw new JsonException("Property is not nullable for class ModelsSecurityEventModel: security_event.");
 
             if (isOpeningProcessComplete.IsSet && isOpeningProcessComplete.Value == null)
-                throw new ArgumentNullException(nameof(isOpeningProcessComplete), "Property is not nullable for class ModelsSecurityEventModel.");
+                throw new JsonException("Property is not nullable for class ModelsSecurityEventModel: is_opening_process_complete.");
 
             if (isClosingProcessComplete.IsSet && isClosingProcessComplete.Value == null)
-                throw new ArgumentNullException(nameof(isClosingProcessComplete), "Property is not nullable for class ModelsSecurityEventModel.");
+                throw new JsonException("Property is not nullable for class ModelsSecurityEventModel: is_closing_process_complete.");
 
             return new ModelsSecurityEventModel(symbol, timestampNanos, timestamp, securityEvent, securityEventCode, securityEventText, isOpeningProcessComplete, isClosingProcessComplete);
         }
@@ -317,7 +317,6 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Model
         /// <param name="writer"></param>
         /// <param name="modelsSecurityEventModel"></param>
         /// <param name="jsonSerializerOptions"></param>
-        /// <exception cref="NotImplementedException"></exception>
         public override void Write(Utf8JsonWriter writer, ModelsSecurityEventModel modelsSecurityEventModel, JsonSerializerOptions jsonSerializerOptions)
         {
             writer.WriteStartObject();
@@ -332,9 +331,23 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Model
         /// <param name="writer"></param>
         /// <param name="modelsSecurityEventModel"></param>
         /// <param name="jsonSerializerOptions"></param>
-        /// <exception cref="NotImplementedException"></exception>
         public void WriteProperties(Utf8JsonWriter writer, ModelsSecurityEventModel modelsSecurityEventModel, JsonSerializerOptions jsonSerializerOptions)
         {
+            if (modelsSecurityEventModel.TimestampNanosOption.IsSet && modelsSecurityEventModel.TimestampNanos == null)
+                throw new JsonException("Cannot write null property ModelsSecurityEventModel.TimestampNanos to non-nullable JSON property 'timestamp_nanos'.");
+
+            if (modelsSecurityEventModel.TimestampOption.IsSet && modelsSecurityEventModel.Timestamp == null)
+                throw new JsonException("Cannot write null property ModelsSecurityEventModel.Timestamp to non-nullable JSON property 'timestamp'.");
+
+            if (modelsSecurityEventModel.SecurityEventOption.IsSet && modelsSecurityEventModel.SecurityEvent == null)
+                throw new JsonException("Cannot write null property ModelsSecurityEventModel.SecurityEvent to non-nullable JSON property 'security_event'.");
+
+            if (modelsSecurityEventModel.IsOpeningProcessCompleteOption.IsSet && modelsSecurityEventModel.IsOpeningProcessComplete == null)
+                throw new JsonException("Cannot write null property ModelsSecurityEventModel.IsOpeningProcessComplete to non-nullable JSON property 'is_opening_process_complete'.");
+
+            if (modelsSecurityEventModel.IsClosingProcessCompleteOption.IsSet && modelsSecurityEventModel.IsClosingProcessComplete == null)
+                throw new JsonException("Cannot write null property ModelsSecurityEventModel.IsClosingProcessComplete to non-nullable JSON property 'is_closing_process_complete'.");
+
             if (modelsSecurityEventModel.SymbolOption.IsSet)
                 if (modelsSecurityEventModel.SymbolOption.Value != null)
                     writer.WriteString("symbol", modelsSecurityEventModel.Symbol);

@@ -357,31 +357,31 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Model
             }
 
             if (timestampNanos.IsSet && timestampNanos.Value == null)
-                throw new ArgumentNullException(nameof(timestampNanos), "Property is not nullable for class IEXSystemEventSystemEventModel.");
+                throw new JsonException("Property is not nullable for class IEXSystemEventSystemEventModel: timestamp_nanos.");
 
             if (timestamp.IsSet && timestamp.Value == null)
-                throw new ArgumentNullException(nameof(timestamp), "Property is not nullable for class IEXSystemEventSystemEventModel.");
+                throw new JsonException("Property is not nullable for class IEXSystemEventSystemEventModel: timestamp.");
 
             if (systemEvent.IsSet && systemEvent.Value == null)
-                throw new ArgumentNullException(nameof(systemEvent), "Property is not nullable for class IEXSystemEventSystemEventModel.");
+                throw new JsonException("Property is not nullable for class IEXSystemEventSystemEventModel: system_event.");
 
             if (isSystemEventStartOfMessages.IsSet && isSystemEventStartOfMessages.Value == null)
-                throw new ArgumentNullException(nameof(isSystemEventStartOfMessages), "Property is not nullable for class IEXSystemEventSystemEventModel.");
+                throw new JsonException("Property is not nullable for class IEXSystemEventSystemEventModel: is_system_event_start_of_messages.");
 
             if (isSystemEventStartOfSystemHours.IsSet && isSystemEventStartOfSystemHours.Value == null)
-                throw new ArgumentNullException(nameof(isSystemEventStartOfSystemHours), "Property is not nullable for class IEXSystemEventSystemEventModel.");
+                throw new JsonException("Property is not nullable for class IEXSystemEventSystemEventModel: is_system_event_start_of_system_hours.");
 
             if (isSystemEventStartOfRegularMarketHours.IsSet && isSystemEventStartOfRegularMarketHours.Value == null)
-                throw new ArgumentNullException(nameof(isSystemEventStartOfRegularMarketHours), "Property is not nullable for class IEXSystemEventSystemEventModel.");
+                throw new JsonException("Property is not nullable for class IEXSystemEventSystemEventModel: is_system_event_start_of_regular_market_hours.");
 
             if (isSystemEventEndOfRegularMarketHours.IsSet && isSystemEventEndOfRegularMarketHours.Value == null)
-                throw new ArgumentNullException(nameof(isSystemEventEndOfRegularMarketHours), "Property is not nullable for class IEXSystemEventSystemEventModel.");
+                throw new JsonException("Property is not nullable for class IEXSystemEventSystemEventModel: is_system_event_end_of_regular_market_hours.");
 
             if (isSystemEventEndOfSystemHours.IsSet && isSystemEventEndOfSystemHours.Value == null)
-                throw new ArgumentNullException(nameof(isSystemEventEndOfSystemHours), "Property is not nullable for class IEXSystemEventSystemEventModel.");
+                throw new JsonException("Property is not nullable for class IEXSystemEventSystemEventModel: is_system_event_end_of_system_hours.");
 
             if (isSystemEventEndOfMessages.IsSet && isSystemEventEndOfMessages.Value == null)
-                throw new ArgumentNullException(nameof(isSystemEventEndOfMessages), "Property is not nullable for class IEXSystemEventSystemEventModel.");
+                throw new JsonException("Property is not nullable for class IEXSystemEventSystemEventModel: is_system_event_end_of_messages.");
 
             return new IEXSystemEventSystemEventModel(timestampNanos, timestamp, systemEvent, systemEventCode, systemEventText, isSystemEventStartOfMessages, isSystemEventStartOfSystemHours, isSystemEventStartOfRegularMarketHours, isSystemEventEndOfRegularMarketHours, isSystemEventEndOfSystemHours, isSystemEventEndOfMessages);
         }
@@ -392,7 +392,6 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Model
         /// <param name="writer"></param>
         /// <param name="iEXSystemEventSystemEventModel"></param>
         /// <param name="jsonSerializerOptions"></param>
-        /// <exception cref="NotImplementedException"></exception>
         public override void Write(Utf8JsonWriter writer, IEXSystemEventSystemEventModel iEXSystemEventSystemEventModel, JsonSerializerOptions jsonSerializerOptions)
         {
             writer.WriteStartObject();
@@ -407,9 +406,35 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Model
         /// <param name="writer"></param>
         /// <param name="iEXSystemEventSystemEventModel"></param>
         /// <param name="jsonSerializerOptions"></param>
-        /// <exception cref="NotImplementedException"></exception>
         public void WriteProperties(Utf8JsonWriter writer, IEXSystemEventSystemEventModel iEXSystemEventSystemEventModel, JsonSerializerOptions jsonSerializerOptions)
         {
+            if (iEXSystemEventSystemEventModel.TimestampNanosOption.IsSet && iEXSystemEventSystemEventModel.TimestampNanos == null)
+                throw new JsonException("Cannot write null property IEXSystemEventSystemEventModel.TimestampNanos to non-nullable JSON property 'timestamp_nanos'.");
+
+            if (iEXSystemEventSystemEventModel.TimestampOption.IsSet && iEXSystemEventSystemEventModel.Timestamp == null)
+                throw new JsonException("Cannot write null property IEXSystemEventSystemEventModel.Timestamp to non-nullable JSON property 'timestamp'.");
+
+            if (iEXSystemEventSystemEventModel.SystemEventOption.IsSet && iEXSystemEventSystemEventModel.SystemEvent == null)
+                throw new JsonException("Cannot write null property IEXSystemEventSystemEventModel.SystemEvent to non-nullable JSON property 'system_event'.");
+
+            if (iEXSystemEventSystemEventModel.IsSystemEventStartOfMessagesOption.IsSet && iEXSystemEventSystemEventModel.IsSystemEventStartOfMessages == null)
+                throw new JsonException("Cannot write null property IEXSystemEventSystemEventModel.IsSystemEventStartOfMessages to non-nullable JSON property 'is_system_event_start_of_messages'.");
+
+            if (iEXSystemEventSystemEventModel.IsSystemEventStartOfSystemHoursOption.IsSet && iEXSystemEventSystemEventModel.IsSystemEventStartOfSystemHours == null)
+                throw new JsonException("Cannot write null property IEXSystemEventSystemEventModel.IsSystemEventStartOfSystemHours to non-nullable JSON property 'is_system_event_start_of_system_hours'.");
+
+            if (iEXSystemEventSystemEventModel.IsSystemEventStartOfRegularMarketHoursOption.IsSet && iEXSystemEventSystemEventModel.IsSystemEventStartOfRegularMarketHours == null)
+                throw new JsonException("Cannot write null property IEXSystemEventSystemEventModel.IsSystemEventStartOfRegularMarketHours to non-nullable JSON property 'is_system_event_start_of_regular_market_hours'.");
+
+            if (iEXSystemEventSystemEventModel.IsSystemEventEndOfRegularMarketHoursOption.IsSet && iEXSystemEventSystemEventModel.IsSystemEventEndOfRegularMarketHours == null)
+                throw new JsonException("Cannot write null property IEXSystemEventSystemEventModel.IsSystemEventEndOfRegularMarketHours to non-nullable JSON property 'is_system_event_end_of_regular_market_hours'.");
+
+            if (iEXSystemEventSystemEventModel.IsSystemEventEndOfSystemHoursOption.IsSet && iEXSystemEventSystemEventModel.IsSystemEventEndOfSystemHours == null)
+                throw new JsonException("Cannot write null property IEXSystemEventSystemEventModel.IsSystemEventEndOfSystemHours to non-nullable JSON property 'is_system_event_end_of_system_hours'.");
+
+            if (iEXSystemEventSystemEventModel.IsSystemEventEndOfMessagesOption.IsSet && iEXSystemEventSystemEventModel.IsSystemEventEndOfMessages == null)
+                throw new JsonException("Cannot write null property IEXSystemEventSystemEventModel.IsSystemEventEndOfMessages to non-nullable JSON property 'is_system_event_end_of_messages'.");
+
             if (iEXSystemEventSystemEventModel.TimestampNanosOption.IsSet)
                 writer.WriteNumber("timestamp_nanos", iEXSystemEventSystemEventModel.TimestampNanosOption.Value!.Value);
 

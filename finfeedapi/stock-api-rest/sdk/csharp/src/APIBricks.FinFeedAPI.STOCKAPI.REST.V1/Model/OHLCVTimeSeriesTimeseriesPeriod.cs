@@ -247,10 +247,10 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Model
             }
 
             if (lengthSeconds.IsSet && lengthSeconds.Value == null)
-                throw new ArgumentNullException(nameof(lengthSeconds), "Property is not nullable for class OHLCVTimeSeriesTimeseriesPeriod.");
+                throw new JsonException("Property is not nullable for class OHLCVTimeSeriesTimeseriesPeriod: length_seconds.");
 
             if (lengthMonths.IsSet && lengthMonths.Value == null)
-                throw new ArgumentNullException(nameof(lengthMonths), "Property is not nullable for class OHLCVTimeSeriesTimeseriesPeriod.");
+                throw new JsonException("Property is not nullable for class OHLCVTimeSeriesTimeseriesPeriod: length_months.");
 
             return new OHLCVTimeSeriesTimeseriesPeriod(periodId, lengthSeconds, lengthMonths, unitCount, unitName, displayName);
         }
@@ -261,7 +261,6 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Model
         /// <param name="writer"></param>
         /// <param name="oHLCVTimeSeriesTimeseriesPeriod"></param>
         /// <param name="jsonSerializerOptions"></param>
-        /// <exception cref="NotImplementedException"></exception>
         public override void Write(Utf8JsonWriter writer, OHLCVTimeSeriesTimeseriesPeriod oHLCVTimeSeriesTimeseriesPeriod, JsonSerializerOptions jsonSerializerOptions)
         {
             writer.WriteStartObject();
@@ -276,9 +275,14 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Model
         /// <param name="writer"></param>
         /// <param name="oHLCVTimeSeriesTimeseriesPeriod"></param>
         /// <param name="jsonSerializerOptions"></param>
-        /// <exception cref="NotImplementedException"></exception>
         public void WriteProperties(Utf8JsonWriter writer, OHLCVTimeSeriesTimeseriesPeriod oHLCVTimeSeriesTimeseriesPeriod, JsonSerializerOptions jsonSerializerOptions)
         {
+            if (oHLCVTimeSeriesTimeseriesPeriod.LengthSecondsOption.IsSet && oHLCVTimeSeriesTimeseriesPeriod.LengthSeconds == null)
+                throw new JsonException("Cannot write null property OHLCVTimeSeriesTimeseriesPeriod.LengthSeconds to non-nullable JSON property 'length_seconds'.");
+
+            if (oHLCVTimeSeriesTimeseriesPeriod.LengthMonthsOption.IsSet && oHLCVTimeSeriesTimeseriesPeriod.LengthMonths == null)
+                throw new JsonException("Cannot write null property OHLCVTimeSeriesTimeseriesPeriod.LengthMonths to non-nullable JSON property 'length_months'.");
+
             if (oHLCVTimeSeriesTimeseriesPeriod.PeriodIdOption.IsSet)
                 if (oHLCVTimeSeriesTimeseriesPeriod.PeriodIdOption.Value != null)
                     writer.WriteString("period_id", oHLCVTimeSeriesTimeseriesPeriod.PeriodId);

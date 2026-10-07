@@ -273,22 +273,22 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Model
             }
 
             if (timestampNanos.IsSet && timestampNanos.Value == null)
-                throw new ArgumentNullException(nameof(timestampNanos), "Property is not nullable for class ModelsModifyOrderModel.");
+                throw new JsonException("Property is not nullable for class ModelsModifyOrderModel: timestamp_nanos.");
 
             if (timestamp.IsSet && timestamp.Value == null)
-                throw new ArgumentNullException(nameof(timestamp), "Property is not nullable for class ModelsModifyOrderModel.");
+                throw new JsonException("Property is not nullable for class ModelsModifyOrderModel: timestamp.");
 
             if (orderIdReference.IsSet && orderIdReference.Value == null)
-                throw new ArgumentNullException(nameof(orderIdReference), "Property is not nullable for class ModelsModifyOrderModel.");
+                throw new JsonException("Property is not nullable for class ModelsModifyOrderModel: order_id_reference.");
 
             if (isPriorityReset.IsSet && isPriorityReset.Value == null)
-                throw new ArgumentNullException(nameof(isPriorityReset), "Property is not nullable for class ModelsModifyOrderModel.");
+                throw new JsonException("Property is not nullable for class ModelsModifyOrderModel: is_priority_reset.");
 
             if (size.IsSet && size.Value == null)
-                throw new ArgumentNullException(nameof(size), "Property is not nullable for class ModelsModifyOrderModel.");
+                throw new JsonException("Property is not nullable for class ModelsModifyOrderModel: size.");
 
             if (price.IsSet && price.Value == null)
-                throw new ArgumentNullException(nameof(price), "Property is not nullable for class ModelsModifyOrderModel.");
+                throw new JsonException("Property is not nullable for class ModelsModifyOrderModel: price.");
 
             return new ModelsModifyOrderModel(symbol, timestampNanos, timestamp, orderIdReference, isPriorityReset, size, price);
         }
@@ -299,7 +299,6 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Model
         /// <param name="writer"></param>
         /// <param name="modelsModifyOrderModel"></param>
         /// <param name="jsonSerializerOptions"></param>
-        /// <exception cref="NotImplementedException"></exception>
         public override void Write(Utf8JsonWriter writer, ModelsModifyOrderModel modelsModifyOrderModel, JsonSerializerOptions jsonSerializerOptions)
         {
             writer.WriteStartObject();
@@ -314,9 +313,26 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Model
         /// <param name="writer"></param>
         /// <param name="modelsModifyOrderModel"></param>
         /// <param name="jsonSerializerOptions"></param>
-        /// <exception cref="NotImplementedException"></exception>
         public void WriteProperties(Utf8JsonWriter writer, ModelsModifyOrderModel modelsModifyOrderModel, JsonSerializerOptions jsonSerializerOptions)
         {
+            if (modelsModifyOrderModel.TimestampNanosOption.IsSet && modelsModifyOrderModel.TimestampNanos == null)
+                throw new JsonException("Cannot write null property ModelsModifyOrderModel.TimestampNanos to non-nullable JSON property 'timestamp_nanos'.");
+
+            if (modelsModifyOrderModel.TimestampOption.IsSet && modelsModifyOrderModel.Timestamp == null)
+                throw new JsonException("Cannot write null property ModelsModifyOrderModel.Timestamp to non-nullable JSON property 'timestamp'.");
+
+            if (modelsModifyOrderModel.OrderIdReferenceOption.IsSet && modelsModifyOrderModel.OrderIdReference == null)
+                throw new JsonException("Cannot write null property ModelsModifyOrderModel.OrderIdReference to non-nullable JSON property 'order_id_reference'.");
+
+            if (modelsModifyOrderModel.IsPriorityResetOption.IsSet && modelsModifyOrderModel.IsPriorityReset == null)
+                throw new JsonException("Cannot write null property ModelsModifyOrderModel.IsPriorityReset to non-nullable JSON property 'is_priority_reset'.");
+
+            if (modelsModifyOrderModel.SizeOption.IsSet && modelsModifyOrderModel.Size == null)
+                throw new JsonException("Cannot write null property ModelsModifyOrderModel.Size to non-nullable JSON property 'size'.");
+
+            if (modelsModifyOrderModel.PriceOption.IsSet && modelsModifyOrderModel.Price == null)
+                throw new JsonException("Cannot write null property ModelsModifyOrderModel.Price to non-nullable JSON property 'price'.");
+
             if (modelsModifyOrderModel.SymbolOption.IsSet)
                 if (modelsModifyOrderModel.SymbolOption.Value != null)
                     writer.WriteString("symbol", modelsModifyOrderModel.Symbol);

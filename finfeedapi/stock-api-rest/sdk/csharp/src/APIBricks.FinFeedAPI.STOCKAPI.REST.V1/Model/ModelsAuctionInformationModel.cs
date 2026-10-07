@@ -719,73 +719,73 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Model
             }
 
             if (timestampNanos.IsSet && timestampNanos.Value == null)
-                throw new ArgumentNullException(nameof(timestampNanos), "Property is not nullable for class ModelsAuctionInformationModel.");
+                throw new JsonException("Property is not nullable for class ModelsAuctionInformationModel: timestamp_nanos.");
 
             if (timestamp.IsSet && timestamp.Value == null)
-                throw new ArgumentNullException(nameof(timestamp), "Property is not nullable for class ModelsAuctionInformationModel.");
+                throw new JsonException("Property is not nullable for class ModelsAuctionInformationModel: timestamp.");
 
             if (auctionType.IsSet && auctionType.Value == null)
-                throw new ArgumentNullException(nameof(auctionType), "Property is not nullable for class ModelsAuctionInformationModel.");
+                throw new JsonException("Property is not nullable for class ModelsAuctionInformationModel: auction_type.");
 
             if (isAuctionTypeOpening.IsSet && isAuctionTypeOpening.Value == null)
-                throw new ArgumentNullException(nameof(isAuctionTypeOpening), "Property is not nullable for class ModelsAuctionInformationModel.");
+                throw new JsonException("Property is not nullable for class ModelsAuctionInformationModel: is_auction_type_opening.");
 
             if (isAuctionTypeClosing.IsSet && isAuctionTypeClosing.Value == null)
-                throw new ArgumentNullException(nameof(isAuctionTypeClosing), "Property is not nullable for class ModelsAuctionInformationModel.");
+                throw new JsonException("Property is not nullable for class ModelsAuctionInformationModel: is_auction_type_closing.");
 
             if (isAuctionTypeIpo.IsSet && isAuctionTypeIpo.Value == null)
-                throw new ArgumentNullException(nameof(isAuctionTypeIpo), "Property is not nullable for class ModelsAuctionInformationModel.");
+                throw new JsonException("Property is not nullable for class ModelsAuctionInformationModel: is_auction_type_ipo.");
 
             if (isAuctionTypeHalt.IsSet && isAuctionTypeHalt.Value == null)
-                throw new ArgumentNullException(nameof(isAuctionTypeHalt), "Property is not nullable for class ModelsAuctionInformationModel.");
+                throw new JsonException("Property is not nullable for class ModelsAuctionInformationModel: is_auction_type_halt.");
 
             if (isAuctionTypeVolatility.IsSet && isAuctionTypeVolatility.Value == null)
-                throw new ArgumentNullException(nameof(isAuctionTypeVolatility), "Property is not nullable for class ModelsAuctionInformationModel.");
+                throw new JsonException("Property is not nullable for class ModelsAuctionInformationModel: is_auction_type_volatility.");
 
             if (pairedShares.IsSet && pairedShares.Value == null)
-                throw new ArgumentNullException(nameof(pairedShares), "Property is not nullable for class ModelsAuctionInformationModel.");
+                throw new JsonException("Property is not nullable for class ModelsAuctionInformationModel: paired_shares.");
 
             if (referencePrice.IsSet && referencePrice.Value == null)
-                throw new ArgumentNullException(nameof(referencePrice), "Property is not nullable for class ModelsAuctionInformationModel.");
+                throw new JsonException("Property is not nullable for class ModelsAuctionInformationModel: reference_price.");
 
             if (indicativeClearingPrice.IsSet && indicativeClearingPrice.Value == null)
-                throw new ArgumentNullException(nameof(indicativeClearingPrice), "Property is not nullable for class ModelsAuctionInformationModel.");
+                throw new JsonException("Property is not nullable for class ModelsAuctionInformationModel: indicative_clearing_price.");
 
             if (imbalanceShares.IsSet && imbalanceShares.Value == null)
-                throw new ArgumentNullException(nameof(imbalanceShares), "Property is not nullable for class ModelsAuctionInformationModel.");
+                throw new JsonException("Property is not nullable for class ModelsAuctionInformationModel: imbalance_shares.");
 
             if (imbalanceSide.IsSet && imbalanceSide.Value == null)
-                throw new ArgumentNullException(nameof(imbalanceSide), "Property is not nullable for class ModelsAuctionInformationModel.");
+                throw new JsonException("Property is not nullable for class ModelsAuctionInformationModel: imbalance_side.");
 
             if (isImbalanceSideBuy.IsSet && isImbalanceSideBuy.Value == null)
-                throw new ArgumentNullException(nameof(isImbalanceSideBuy), "Property is not nullable for class ModelsAuctionInformationModel.");
+                throw new JsonException("Property is not nullable for class ModelsAuctionInformationModel: is_imbalance_side_buy.");
 
             if (isImbalanceSideSell.IsSet && isImbalanceSideSell.Value == null)
-                throw new ArgumentNullException(nameof(isImbalanceSideSell), "Property is not nullable for class ModelsAuctionInformationModel.");
+                throw new JsonException("Property is not nullable for class ModelsAuctionInformationModel: is_imbalance_side_sell.");
 
             if (isImbalanceSideNone.IsSet && isImbalanceSideNone.Value == null)
-                throw new ArgumentNullException(nameof(isImbalanceSideNone), "Property is not nullable for class ModelsAuctionInformationModel.");
+                throw new JsonException("Property is not nullable for class ModelsAuctionInformationModel: is_imbalance_side_none.");
 
             if (extensionNumber.IsSet && extensionNumber.Value == null)
-                throw new ArgumentNullException(nameof(extensionNumber), "Property is not nullable for class ModelsAuctionInformationModel.");
+                throw new JsonException("Property is not nullable for class ModelsAuctionInformationModel: extension_number.");
 
             if (scheduledAuctionTimeSeconds.IsSet && scheduledAuctionTimeSeconds.Value == null)
-                throw new ArgumentNullException(nameof(scheduledAuctionTimeSeconds), "Property is not nullable for class ModelsAuctionInformationModel.");
+                throw new JsonException("Property is not nullable for class ModelsAuctionInformationModel: scheduled_auction_time_seconds.");
 
             if (scheduledAuctionTime.IsSet && scheduledAuctionTime.Value == null)
-                throw new ArgumentNullException(nameof(scheduledAuctionTime), "Property is not nullable for class ModelsAuctionInformationModel.");
+                throw new JsonException("Property is not nullable for class ModelsAuctionInformationModel: scheduled_auction_time.");
 
             if (auctionBookClearingPrice.IsSet && auctionBookClearingPrice.Value == null)
-                throw new ArgumentNullException(nameof(auctionBookClearingPrice), "Property is not nullable for class ModelsAuctionInformationModel.");
+                throw new JsonException("Property is not nullable for class ModelsAuctionInformationModel: auction_book_clearing_price.");
 
             if (collarReferencePrice.IsSet && collarReferencePrice.Value == null)
-                throw new ArgumentNullException(nameof(collarReferencePrice), "Property is not nullable for class ModelsAuctionInformationModel.");
+                throw new JsonException("Property is not nullable for class ModelsAuctionInformationModel: collar_reference_price.");
 
             if (lowerAuctionCollar.IsSet && lowerAuctionCollar.Value == null)
-                throw new ArgumentNullException(nameof(lowerAuctionCollar), "Property is not nullable for class ModelsAuctionInformationModel.");
+                throw new JsonException("Property is not nullable for class ModelsAuctionInformationModel: lower_auction_collar.");
 
             if (upperAuctionCollar.IsSet && upperAuctionCollar.Value == null)
-                throw new ArgumentNullException(nameof(upperAuctionCollar), "Property is not nullable for class ModelsAuctionInformationModel.");
+                throw new JsonException("Property is not nullable for class ModelsAuctionInformationModel: upper_auction_collar.");
 
             return new ModelsAuctionInformationModel(symbol, timestampNanos, timestamp, auctionType, auctionTypeCode, auctionTypeText, isAuctionTypeOpening, isAuctionTypeClosing, isAuctionTypeIpo, isAuctionTypeHalt, isAuctionTypeVolatility, pairedShares, referencePrice, indicativeClearingPrice, imbalanceShares, imbalanceSide, imbalanceSideCode, imbalanceSideText, isImbalanceSideBuy, isImbalanceSideSell, isImbalanceSideNone, extensionNumber, scheduledAuctionTimeSeconds, scheduledAuctionTime, auctionBookClearingPrice, collarReferencePrice, lowerAuctionCollar, upperAuctionCollar);
         }
@@ -796,7 +796,6 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Model
         /// <param name="writer"></param>
         /// <param name="modelsAuctionInformationModel"></param>
         /// <param name="jsonSerializerOptions"></param>
-        /// <exception cref="NotImplementedException"></exception>
         public override void Write(Utf8JsonWriter writer, ModelsAuctionInformationModel modelsAuctionInformationModel, JsonSerializerOptions jsonSerializerOptions)
         {
             writer.WriteStartObject();
@@ -811,9 +810,77 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Model
         /// <param name="writer"></param>
         /// <param name="modelsAuctionInformationModel"></param>
         /// <param name="jsonSerializerOptions"></param>
-        /// <exception cref="NotImplementedException"></exception>
         public void WriteProperties(Utf8JsonWriter writer, ModelsAuctionInformationModel modelsAuctionInformationModel, JsonSerializerOptions jsonSerializerOptions)
         {
+            if (modelsAuctionInformationModel.TimestampNanosOption.IsSet && modelsAuctionInformationModel.TimestampNanos == null)
+                throw new JsonException("Cannot write null property ModelsAuctionInformationModel.TimestampNanos to non-nullable JSON property 'timestamp_nanos'.");
+
+            if (modelsAuctionInformationModel.TimestampOption.IsSet && modelsAuctionInformationModel.Timestamp == null)
+                throw new JsonException("Cannot write null property ModelsAuctionInformationModel.Timestamp to non-nullable JSON property 'timestamp'.");
+
+            if (modelsAuctionInformationModel.AuctionTypeOption.IsSet && modelsAuctionInformationModel.AuctionType == null)
+                throw new JsonException("Cannot write null property ModelsAuctionInformationModel.AuctionType to non-nullable JSON property 'auction_type'.");
+
+            if (modelsAuctionInformationModel.IsAuctionTypeOpeningOption.IsSet && modelsAuctionInformationModel.IsAuctionTypeOpening == null)
+                throw new JsonException("Cannot write null property ModelsAuctionInformationModel.IsAuctionTypeOpening to non-nullable JSON property 'is_auction_type_opening'.");
+
+            if (modelsAuctionInformationModel.IsAuctionTypeClosingOption.IsSet && modelsAuctionInformationModel.IsAuctionTypeClosing == null)
+                throw new JsonException("Cannot write null property ModelsAuctionInformationModel.IsAuctionTypeClosing to non-nullable JSON property 'is_auction_type_closing'.");
+
+            if (modelsAuctionInformationModel.IsAuctionTypeIpoOption.IsSet && modelsAuctionInformationModel.IsAuctionTypeIpo == null)
+                throw new JsonException("Cannot write null property ModelsAuctionInformationModel.IsAuctionTypeIpo to non-nullable JSON property 'is_auction_type_ipo'.");
+
+            if (modelsAuctionInformationModel.IsAuctionTypeHaltOption.IsSet && modelsAuctionInformationModel.IsAuctionTypeHalt == null)
+                throw new JsonException("Cannot write null property ModelsAuctionInformationModel.IsAuctionTypeHalt to non-nullable JSON property 'is_auction_type_halt'.");
+
+            if (modelsAuctionInformationModel.IsAuctionTypeVolatilityOption.IsSet && modelsAuctionInformationModel.IsAuctionTypeVolatility == null)
+                throw new JsonException("Cannot write null property ModelsAuctionInformationModel.IsAuctionTypeVolatility to non-nullable JSON property 'is_auction_type_volatility'.");
+
+            if (modelsAuctionInformationModel.PairedSharesOption.IsSet && modelsAuctionInformationModel.PairedShares == null)
+                throw new JsonException("Cannot write null property ModelsAuctionInformationModel.PairedShares to non-nullable JSON property 'paired_shares'.");
+
+            if (modelsAuctionInformationModel.ReferencePriceOption.IsSet && modelsAuctionInformationModel.ReferencePrice == null)
+                throw new JsonException("Cannot write null property ModelsAuctionInformationModel.ReferencePrice to non-nullable JSON property 'reference_price'.");
+
+            if (modelsAuctionInformationModel.IndicativeClearingPriceOption.IsSet && modelsAuctionInformationModel.IndicativeClearingPrice == null)
+                throw new JsonException("Cannot write null property ModelsAuctionInformationModel.IndicativeClearingPrice to non-nullable JSON property 'indicative_clearing_price'.");
+
+            if (modelsAuctionInformationModel.ImbalanceSharesOption.IsSet && modelsAuctionInformationModel.ImbalanceShares == null)
+                throw new JsonException("Cannot write null property ModelsAuctionInformationModel.ImbalanceShares to non-nullable JSON property 'imbalance_shares'.");
+
+            if (modelsAuctionInformationModel.ImbalanceSideOption.IsSet && modelsAuctionInformationModel.ImbalanceSide == null)
+                throw new JsonException("Cannot write null property ModelsAuctionInformationModel.ImbalanceSide to non-nullable JSON property 'imbalance_side'.");
+
+            if (modelsAuctionInformationModel.IsImbalanceSideBuyOption.IsSet && modelsAuctionInformationModel.IsImbalanceSideBuy == null)
+                throw new JsonException("Cannot write null property ModelsAuctionInformationModel.IsImbalanceSideBuy to non-nullable JSON property 'is_imbalance_side_buy'.");
+
+            if (modelsAuctionInformationModel.IsImbalanceSideSellOption.IsSet && modelsAuctionInformationModel.IsImbalanceSideSell == null)
+                throw new JsonException("Cannot write null property ModelsAuctionInformationModel.IsImbalanceSideSell to non-nullable JSON property 'is_imbalance_side_sell'.");
+
+            if (modelsAuctionInformationModel.IsImbalanceSideNoneOption.IsSet && modelsAuctionInformationModel.IsImbalanceSideNone == null)
+                throw new JsonException("Cannot write null property ModelsAuctionInformationModel.IsImbalanceSideNone to non-nullable JSON property 'is_imbalance_side_none'.");
+
+            if (modelsAuctionInformationModel.ExtensionNumberOption.IsSet && modelsAuctionInformationModel.ExtensionNumber == null)
+                throw new JsonException("Cannot write null property ModelsAuctionInformationModel.ExtensionNumber to non-nullable JSON property 'extension_number'.");
+
+            if (modelsAuctionInformationModel.ScheduledAuctionTimeSecondsOption.IsSet && modelsAuctionInformationModel.ScheduledAuctionTimeSeconds == null)
+                throw new JsonException("Cannot write null property ModelsAuctionInformationModel.ScheduledAuctionTimeSeconds to non-nullable JSON property 'scheduled_auction_time_seconds'.");
+
+            if (modelsAuctionInformationModel.ScheduledAuctionTimeOption.IsSet && modelsAuctionInformationModel.ScheduledAuctionTime == null)
+                throw new JsonException("Cannot write null property ModelsAuctionInformationModel.ScheduledAuctionTime to non-nullable JSON property 'scheduled_auction_time'.");
+
+            if (modelsAuctionInformationModel.AuctionBookClearingPriceOption.IsSet && modelsAuctionInformationModel.AuctionBookClearingPrice == null)
+                throw new JsonException("Cannot write null property ModelsAuctionInformationModel.AuctionBookClearingPrice to non-nullable JSON property 'auction_book_clearing_price'.");
+
+            if (modelsAuctionInformationModel.CollarReferencePriceOption.IsSet && modelsAuctionInformationModel.CollarReferencePrice == null)
+                throw new JsonException("Cannot write null property ModelsAuctionInformationModel.CollarReferencePrice to non-nullable JSON property 'collar_reference_price'.");
+
+            if (modelsAuctionInformationModel.LowerAuctionCollarOption.IsSet && modelsAuctionInformationModel.LowerAuctionCollar == null)
+                throw new JsonException("Cannot write null property ModelsAuctionInformationModel.LowerAuctionCollar to non-nullable JSON property 'lower_auction_collar'.");
+
+            if (modelsAuctionInformationModel.UpperAuctionCollarOption.IsSet && modelsAuctionInformationModel.UpperAuctionCollar == null)
+                throw new JsonException("Cannot write null property ModelsAuctionInformationModel.UpperAuctionCollar to non-nullable JSON property 'upper_auction_collar'.");
+
             if (modelsAuctionInformationModel.SymbolOption.IsSet)
                 if (modelsAuctionInformationModel.SymbolOption.Value != null)
                     writer.WriteString("symbol", modelsAuctionInformationModel.Symbol);

@@ -315,22 +315,22 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Model
             }
 
             if (timestampNanos.IsSet && timestampNanos.Value == null)
-                throw new ArgumentNullException(nameof(timestampNanos), "Property is not nullable for class ModelsOfficialPriceModel.");
+                throw new JsonException("Property is not nullable for class ModelsOfficialPriceModel: timestamp_nanos.");
 
             if (timestamp.IsSet && timestamp.Value == null)
-                throw new ArgumentNullException(nameof(timestamp), "Property is not nullable for class ModelsOfficialPriceModel.");
+                throw new JsonException("Property is not nullable for class ModelsOfficialPriceModel: timestamp.");
 
             if (priceType.IsSet && priceType.Value == null)
-                throw new ArgumentNullException(nameof(priceType), "Property is not nullable for class ModelsOfficialPriceModel.");
+                throw new JsonException("Property is not nullable for class ModelsOfficialPriceModel: price_type.");
 
             if (isPriceTypeOpening.IsSet && isPriceTypeOpening.Value == null)
-                throw new ArgumentNullException(nameof(isPriceTypeOpening), "Property is not nullable for class ModelsOfficialPriceModel.");
+                throw new JsonException("Property is not nullable for class ModelsOfficialPriceModel: is_price_type_opening.");
 
             if (isPriceTypeClosing.IsSet && isPriceTypeClosing.Value == null)
-                throw new ArgumentNullException(nameof(isPriceTypeClosing), "Property is not nullable for class ModelsOfficialPriceModel.");
+                throw new JsonException("Property is not nullable for class ModelsOfficialPriceModel: is_price_type_closing.");
 
             if (officialPrice.IsSet && officialPrice.Value == null)
-                throw new ArgumentNullException(nameof(officialPrice), "Property is not nullable for class ModelsOfficialPriceModel.");
+                throw new JsonException("Property is not nullable for class ModelsOfficialPriceModel: official_price.");
 
             return new ModelsOfficialPriceModel(symbol, timestampNanos, timestamp, priceType, priceTypeCode, priceTypeText, isPriceTypeOpening, isPriceTypeClosing, officialPrice);
         }
@@ -341,7 +341,6 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Model
         /// <param name="writer"></param>
         /// <param name="modelsOfficialPriceModel"></param>
         /// <param name="jsonSerializerOptions"></param>
-        /// <exception cref="NotImplementedException"></exception>
         public override void Write(Utf8JsonWriter writer, ModelsOfficialPriceModel modelsOfficialPriceModel, JsonSerializerOptions jsonSerializerOptions)
         {
             writer.WriteStartObject();
@@ -356,9 +355,26 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Model
         /// <param name="writer"></param>
         /// <param name="modelsOfficialPriceModel"></param>
         /// <param name="jsonSerializerOptions"></param>
-        /// <exception cref="NotImplementedException"></exception>
         public void WriteProperties(Utf8JsonWriter writer, ModelsOfficialPriceModel modelsOfficialPriceModel, JsonSerializerOptions jsonSerializerOptions)
         {
+            if (modelsOfficialPriceModel.TimestampNanosOption.IsSet && modelsOfficialPriceModel.TimestampNanos == null)
+                throw new JsonException("Cannot write null property ModelsOfficialPriceModel.TimestampNanos to non-nullable JSON property 'timestamp_nanos'.");
+
+            if (modelsOfficialPriceModel.TimestampOption.IsSet && modelsOfficialPriceModel.Timestamp == null)
+                throw new JsonException("Cannot write null property ModelsOfficialPriceModel.Timestamp to non-nullable JSON property 'timestamp'.");
+
+            if (modelsOfficialPriceModel.PriceTypeOption.IsSet && modelsOfficialPriceModel.PriceType == null)
+                throw new JsonException("Cannot write null property ModelsOfficialPriceModel.PriceType to non-nullable JSON property 'price_type'.");
+
+            if (modelsOfficialPriceModel.IsPriceTypeOpeningOption.IsSet && modelsOfficialPriceModel.IsPriceTypeOpening == null)
+                throw new JsonException("Cannot write null property ModelsOfficialPriceModel.IsPriceTypeOpening to non-nullable JSON property 'is_price_type_opening'.");
+
+            if (modelsOfficialPriceModel.IsPriceTypeClosingOption.IsSet && modelsOfficialPriceModel.IsPriceTypeClosing == null)
+                throw new JsonException("Cannot write null property ModelsOfficialPriceModel.IsPriceTypeClosing to non-nullable JSON property 'is_price_type_closing'.");
+
+            if (modelsOfficialPriceModel.OfficialPriceOption.IsSet && modelsOfficialPriceModel.OfficialPrice == null)
+                throw new JsonException("Cannot write null property ModelsOfficialPriceModel.OfficialPrice to non-nullable JSON property 'official_price'.");
+
             if (modelsOfficialPriceModel.SymbolOption.IsSet)
                 if (modelsOfficialPriceModel.SymbolOption.Value != null)
                     writer.WriteString("symbol", modelsOfficialPriceModel.Symbol);

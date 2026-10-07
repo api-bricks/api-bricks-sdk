@@ -351,16 +351,16 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Model
             }
 
             if (timePeriodStart.IsSet && timePeriodStart.Value == null)
-                throw new ArgumentNullException(nameof(timePeriodStart), "Property is not nullable for class OHLCVTimeSeriesTimeseriesItem.");
+                throw new JsonException("Property is not nullable for class OHLCVTimeSeriesTimeseriesItem: time_period_start.");
 
             if (timePeriodEnd.IsSet && timePeriodEnd.Value == null)
-                throw new ArgumentNullException(nameof(timePeriodEnd), "Property is not nullable for class OHLCVTimeSeriesTimeseriesItem.");
+                throw new JsonException("Property is not nullable for class OHLCVTimeSeriesTimeseriesItem: time_period_end.");
 
             if (volumeTraded.IsSet && volumeTraded.Value == null)
-                throw new ArgumentNullException(nameof(volumeTraded), "Property is not nullable for class OHLCVTimeSeriesTimeseriesItem.");
+                throw new JsonException("Property is not nullable for class OHLCVTimeSeriesTimeseriesItem: volume_traded.");
 
             if (tradesCount.IsSet && tradesCount.Value == null)
-                throw new ArgumentNullException(nameof(tradesCount), "Property is not nullable for class OHLCVTimeSeriesTimeseriesItem.");
+                throw new JsonException("Property is not nullable for class OHLCVTimeSeriesTimeseriesItem: trades_count.");
 
             return new OHLCVTimeSeriesTimeseriesItem(timePeriodStart, timePeriodEnd, timeOpen, timeClose, priceOpen, priceHigh, priceLow, priceClose, volumeTraded, tradesCount);
         }
@@ -371,7 +371,6 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Model
         /// <param name="writer"></param>
         /// <param name="oHLCVTimeSeriesTimeseriesItem"></param>
         /// <param name="jsonSerializerOptions"></param>
-        /// <exception cref="NotImplementedException"></exception>
         public override void Write(Utf8JsonWriter writer, OHLCVTimeSeriesTimeseriesItem oHLCVTimeSeriesTimeseriesItem, JsonSerializerOptions jsonSerializerOptions)
         {
             writer.WriteStartObject();
@@ -386,9 +385,20 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Model
         /// <param name="writer"></param>
         /// <param name="oHLCVTimeSeriesTimeseriesItem"></param>
         /// <param name="jsonSerializerOptions"></param>
-        /// <exception cref="NotImplementedException"></exception>
         public void WriteProperties(Utf8JsonWriter writer, OHLCVTimeSeriesTimeseriesItem oHLCVTimeSeriesTimeseriesItem, JsonSerializerOptions jsonSerializerOptions)
         {
+            if (oHLCVTimeSeriesTimeseriesItem.TimePeriodStartOption.IsSet && oHLCVTimeSeriesTimeseriesItem.TimePeriodStart == null)
+                throw new JsonException("Cannot write null property OHLCVTimeSeriesTimeseriesItem.TimePeriodStart to non-nullable JSON property 'time_period_start'.");
+
+            if (oHLCVTimeSeriesTimeseriesItem.TimePeriodEndOption.IsSet && oHLCVTimeSeriesTimeseriesItem.TimePeriodEnd == null)
+                throw new JsonException("Cannot write null property OHLCVTimeSeriesTimeseriesItem.TimePeriodEnd to non-nullable JSON property 'time_period_end'.");
+
+            if (oHLCVTimeSeriesTimeseriesItem.VolumeTradedOption.IsSet && oHLCVTimeSeriesTimeseriesItem.VolumeTraded == null)
+                throw new JsonException("Cannot write null property OHLCVTimeSeriesTimeseriesItem.VolumeTraded to non-nullable JSON property 'volume_traded'.");
+
+            if (oHLCVTimeSeriesTimeseriesItem.TradesCountOption.IsSet && oHLCVTimeSeriesTimeseriesItem.TradesCount == null)
+                throw new JsonException("Cannot write null property OHLCVTimeSeriesTimeseriesItem.TradesCount to non-nullable JSON property 'trades_count'.");
+
             if (oHLCVTimeSeriesTimeseriesItem.TimePeriodStartOption.IsSet)
                 writer.WriteString("time_period_start", oHLCVTimeSeriesTimeseriesItem.TimePeriodStartOption.Value!.Value.ToString(TimePeriodStartFormat));
 

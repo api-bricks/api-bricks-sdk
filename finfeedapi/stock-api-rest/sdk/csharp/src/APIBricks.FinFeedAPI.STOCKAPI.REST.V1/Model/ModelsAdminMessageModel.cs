@@ -301,31 +301,31 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Model
             }
 
             if (tradingStatus.IsSet && tradingStatus.Value == null)
-                throw new ArgumentNullException(nameof(tradingStatus), "Property is not nullable for class ModelsAdminMessageModel.");
+                throw new JsonException("Property is not nullable for class ModelsAdminMessageModel: trading_status.");
 
             if (officialPrice.IsSet && officialPrice.Value == null)
-                throw new ArgumentNullException(nameof(officialPrice), "Property is not nullable for class ModelsAdminMessageModel.");
+                throw new JsonException("Property is not nullable for class ModelsAdminMessageModel: official_price.");
 
             if (securityEvent.IsSet && securityEvent.Value == null)
-                throw new ArgumentNullException(nameof(securityEvent), "Property is not nullable for class ModelsAdminMessageModel.");
+                throw new JsonException("Property is not nullable for class ModelsAdminMessageModel: security_event.");
 
             if (auctionInformation.IsSet && auctionInformation.Value == null)
-                throw new ArgumentNullException(nameof(auctionInformation), "Property is not nullable for class ModelsAdminMessageModel.");
+                throw new JsonException("Property is not nullable for class ModelsAdminMessageModel: auction_information.");
 
             if (shortSalePriceTest.IsSet && shortSalePriceTest.Value == null)
-                throw new ArgumentNullException(nameof(shortSalePriceTest), "Property is not nullable for class ModelsAdminMessageModel.");
+                throw new JsonException("Property is not nullable for class ModelsAdminMessageModel: short_sale_price_test.");
 
             if (operationalHaltStatus.IsSet && operationalHaltStatus.Value == null)
-                throw new ArgumentNullException(nameof(operationalHaltStatus), "Property is not nullable for class ModelsAdminMessageModel.");
+                throw new JsonException("Property is not nullable for class ModelsAdminMessageModel: operational_halt_status.");
 
             if (retailLiquidityIndicator.IsSet && retailLiquidityIndicator.Value == null)
-                throw new ArgumentNullException(nameof(retailLiquidityIndicator), "Property is not nullable for class ModelsAdminMessageModel.");
+                throw new JsonException("Property is not nullable for class ModelsAdminMessageModel: retail_liquidity_indicator.");
 
             if (systemEvent.IsSet && systemEvent.Value == null)
-                throw new ArgumentNullException(nameof(systemEvent), "Property is not nullable for class ModelsAdminMessageModel.");
+                throw new JsonException("Property is not nullable for class ModelsAdminMessageModel: system_event.");
 
             if (securityDirectory.IsSet && securityDirectory.Value == null)
-                throw new ArgumentNullException(nameof(securityDirectory), "Property is not nullable for class ModelsAdminMessageModel.");
+                throw new JsonException("Property is not nullable for class ModelsAdminMessageModel: security_directory.");
 
             return new ModelsAdminMessageModel(tradingStatus, officialPrice, securityEvent, auctionInformation, shortSalePriceTest, operationalHaltStatus, retailLiquidityIndicator, systemEvent, securityDirectory);
         }
@@ -336,7 +336,6 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Model
         /// <param name="writer"></param>
         /// <param name="modelsAdminMessageModel"></param>
         /// <param name="jsonSerializerOptions"></param>
-        /// <exception cref="NotImplementedException"></exception>
         public override void Write(Utf8JsonWriter writer, ModelsAdminMessageModel modelsAdminMessageModel, JsonSerializerOptions jsonSerializerOptions)
         {
             writer.WriteStartObject();
@@ -351,35 +350,34 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Model
         /// <param name="writer"></param>
         /// <param name="modelsAdminMessageModel"></param>
         /// <param name="jsonSerializerOptions"></param>
-        /// <exception cref="NotImplementedException"></exception>
         public void WriteProperties(Utf8JsonWriter writer, ModelsAdminMessageModel modelsAdminMessageModel, JsonSerializerOptions jsonSerializerOptions)
         {
             if (modelsAdminMessageModel.TradingStatusOption.IsSet && modelsAdminMessageModel.TradingStatus == null)
-                throw new ArgumentNullException(nameof(modelsAdminMessageModel.TradingStatus), "Property is required for class ModelsAdminMessageModel.");
+                throw new JsonException("Cannot write null property ModelsAdminMessageModel.TradingStatus to non-nullable JSON property 'trading_status'.");
 
             if (modelsAdminMessageModel.OfficialPriceOption.IsSet && modelsAdminMessageModel.OfficialPrice == null)
-                throw new ArgumentNullException(nameof(modelsAdminMessageModel.OfficialPrice), "Property is required for class ModelsAdminMessageModel.");
+                throw new JsonException("Cannot write null property ModelsAdminMessageModel.OfficialPrice to non-nullable JSON property 'official_price'.");
 
             if (modelsAdminMessageModel.SecurityEventOption.IsSet && modelsAdminMessageModel.SecurityEvent == null)
-                throw new ArgumentNullException(nameof(modelsAdminMessageModel.SecurityEvent), "Property is required for class ModelsAdminMessageModel.");
+                throw new JsonException("Cannot write null property ModelsAdminMessageModel.SecurityEvent to non-nullable JSON property 'security_event'.");
 
             if (modelsAdminMessageModel.AuctionInformationOption.IsSet && modelsAdminMessageModel.AuctionInformation == null)
-                throw new ArgumentNullException(nameof(modelsAdminMessageModel.AuctionInformation), "Property is required for class ModelsAdminMessageModel.");
+                throw new JsonException("Cannot write null property ModelsAdminMessageModel.AuctionInformation to non-nullable JSON property 'auction_information'.");
 
             if (modelsAdminMessageModel.ShortSalePriceTestOption.IsSet && modelsAdminMessageModel.ShortSalePriceTest == null)
-                throw new ArgumentNullException(nameof(modelsAdminMessageModel.ShortSalePriceTest), "Property is required for class ModelsAdminMessageModel.");
+                throw new JsonException("Cannot write null property ModelsAdminMessageModel.ShortSalePriceTest to non-nullable JSON property 'short_sale_price_test'.");
 
             if (modelsAdminMessageModel.OperationalHaltStatusOption.IsSet && modelsAdminMessageModel.OperationalHaltStatus == null)
-                throw new ArgumentNullException(nameof(modelsAdminMessageModel.OperationalHaltStatus), "Property is required for class ModelsAdminMessageModel.");
+                throw new JsonException("Cannot write null property ModelsAdminMessageModel.OperationalHaltStatus to non-nullable JSON property 'operational_halt_status'.");
 
             if (modelsAdminMessageModel.RetailLiquidityIndicatorOption.IsSet && modelsAdminMessageModel.RetailLiquidityIndicator == null)
-                throw new ArgumentNullException(nameof(modelsAdminMessageModel.RetailLiquidityIndicator), "Property is required for class ModelsAdminMessageModel.");
+                throw new JsonException("Cannot write null property ModelsAdminMessageModel.RetailLiquidityIndicator to non-nullable JSON property 'retail_liquidity_indicator'.");
 
             if (modelsAdminMessageModel.SystemEventOption.IsSet && modelsAdminMessageModel.SystemEvent == null)
-                throw new ArgumentNullException(nameof(modelsAdminMessageModel.SystemEvent), "Property is required for class ModelsAdminMessageModel.");
+                throw new JsonException("Cannot write null property ModelsAdminMessageModel.SystemEvent to non-nullable JSON property 'system_event'.");
 
             if (modelsAdminMessageModel.SecurityDirectoryOption.IsSet && modelsAdminMessageModel.SecurityDirectory == null)
-                throw new ArgumentNullException(nameof(modelsAdminMessageModel.SecurityDirectory), "Property is required for class ModelsAdminMessageModel.");
+                throw new JsonException("Cannot write null property ModelsAdminMessageModel.SecurityDirectory to non-nullable JSON property 'security_directory'.");
 
             if (modelsAdminMessageModel.TradingStatusOption.IsSet)
             {

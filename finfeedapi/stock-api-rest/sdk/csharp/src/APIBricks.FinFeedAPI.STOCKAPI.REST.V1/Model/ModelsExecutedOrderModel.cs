@@ -399,40 +399,40 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Model
             }
 
             if (timestampNanos.IsSet && timestampNanos.Value == null)
-                throw new ArgumentNullException(nameof(timestampNanos), "Property is not nullable for class ModelsExecutedOrderModel.");
+                throw new JsonException("Property is not nullable for class ModelsExecutedOrderModel: timestamp_nanos.");
 
             if (timestamp.IsSet && timestamp.Value == null)
-                throw new ArgumentNullException(nameof(timestamp), "Property is not nullable for class ModelsExecutedOrderModel.");
+                throw new JsonException("Property is not nullable for class ModelsExecutedOrderModel: timestamp.");
 
             if (orderIdReference.IsSet && orderIdReference.Value == null)
-                throw new ArgumentNullException(nameof(orderIdReference), "Property is not nullable for class ModelsExecutedOrderModel.");
+                throw new JsonException("Property is not nullable for class ModelsExecutedOrderModel: order_id_reference.");
 
             if (saleConditionFlags.IsSet && saleConditionFlags.Value == null)
-                throw new ArgumentNullException(nameof(saleConditionFlags), "Property is not nullable for class ModelsExecutedOrderModel.");
+                throw new JsonException("Property is not nullable for class ModelsExecutedOrderModel: sale_condition_flags.");
 
             if (isIntermarketSweep.IsSet && isIntermarketSweep.Value == null)
-                throw new ArgumentNullException(nameof(isIntermarketSweep), "Property is not nullable for class ModelsExecutedOrderModel.");
+                throw new JsonException("Property is not nullable for class ModelsExecutedOrderModel: is_intermarket_sweep.");
 
             if (isExtendedHoursTrade.IsSet && isExtendedHoursTrade.Value == null)
-                throw new ArgumentNullException(nameof(isExtendedHoursTrade), "Property is not nullable for class ModelsExecutedOrderModel.");
+                throw new JsonException("Property is not nullable for class ModelsExecutedOrderModel: is_extended_hours_trade.");
 
             if (isOddLotTrade.IsSet && isOddLotTrade.Value == null)
-                throw new ArgumentNullException(nameof(isOddLotTrade), "Property is not nullable for class ModelsExecutedOrderModel.");
+                throw new JsonException("Property is not nullable for class ModelsExecutedOrderModel: is_odd_lot_trade.");
 
             if (isTradeThroughExempt.IsSet && isTradeThroughExempt.Value == null)
-                throw new ArgumentNullException(nameof(isTradeThroughExempt), "Property is not nullable for class ModelsExecutedOrderModel.");
+                throw new JsonException("Property is not nullable for class ModelsExecutedOrderModel: is_trade_through_exempt.");
 
             if (isSinglePriceCrossTrade.IsSet && isSinglePriceCrossTrade.Value == null)
-                throw new ArgumentNullException(nameof(isSinglePriceCrossTrade), "Property is not nullable for class ModelsExecutedOrderModel.");
+                throw new JsonException("Property is not nullable for class ModelsExecutedOrderModel: is_single_price_cross_trade.");
 
             if (size.IsSet && size.Value == null)
-                throw new ArgumentNullException(nameof(size), "Property is not nullable for class ModelsExecutedOrderModel.");
+                throw new JsonException("Property is not nullable for class ModelsExecutedOrderModel: size.");
 
             if (price.IsSet && price.Value == null)
-                throw new ArgumentNullException(nameof(price), "Property is not nullable for class ModelsExecutedOrderModel.");
+                throw new JsonException("Property is not nullable for class ModelsExecutedOrderModel: price.");
 
             if (tradeId.IsSet && tradeId.Value == null)
-                throw new ArgumentNullException(nameof(tradeId), "Property is not nullable for class ModelsExecutedOrderModel.");
+                throw new JsonException("Property is not nullable for class ModelsExecutedOrderModel: trade_id.");
 
             return new ModelsExecutedOrderModel(symbol, timestampNanos, timestamp, orderIdReference, saleConditionFlags, isIntermarketSweep, isExtendedHoursTrade, isOddLotTrade, isTradeThroughExempt, isSinglePriceCrossTrade, size, price, tradeId);
         }
@@ -443,7 +443,6 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Model
         /// <param name="writer"></param>
         /// <param name="modelsExecutedOrderModel"></param>
         /// <param name="jsonSerializerOptions"></param>
-        /// <exception cref="NotImplementedException"></exception>
         public override void Write(Utf8JsonWriter writer, ModelsExecutedOrderModel modelsExecutedOrderModel, JsonSerializerOptions jsonSerializerOptions)
         {
             writer.WriteStartObject();
@@ -458,9 +457,44 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Model
         /// <param name="writer"></param>
         /// <param name="modelsExecutedOrderModel"></param>
         /// <param name="jsonSerializerOptions"></param>
-        /// <exception cref="NotImplementedException"></exception>
         public void WriteProperties(Utf8JsonWriter writer, ModelsExecutedOrderModel modelsExecutedOrderModel, JsonSerializerOptions jsonSerializerOptions)
         {
+            if (modelsExecutedOrderModel.TimestampNanosOption.IsSet && modelsExecutedOrderModel.TimestampNanos == null)
+                throw new JsonException("Cannot write null property ModelsExecutedOrderModel.TimestampNanos to non-nullable JSON property 'timestamp_nanos'.");
+
+            if (modelsExecutedOrderModel.TimestampOption.IsSet && modelsExecutedOrderModel.Timestamp == null)
+                throw new JsonException("Cannot write null property ModelsExecutedOrderModel.Timestamp to non-nullable JSON property 'timestamp'.");
+
+            if (modelsExecutedOrderModel.OrderIdReferenceOption.IsSet && modelsExecutedOrderModel.OrderIdReference == null)
+                throw new JsonException("Cannot write null property ModelsExecutedOrderModel.OrderIdReference to non-nullable JSON property 'order_id_reference'.");
+
+            if (modelsExecutedOrderModel.SaleConditionFlagsOption.IsSet && modelsExecutedOrderModel.SaleConditionFlags == null)
+                throw new JsonException("Cannot write null property ModelsExecutedOrderModel.SaleConditionFlags to non-nullable JSON property 'sale_condition_flags'.");
+
+            if (modelsExecutedOrderModel.IsIntermarketSweepOption.IsSet && modelsExecutedOrderModel.IsIntermarketSweep == null)
+                throw new JsonException("Cannot write null property ModelsExecutedOrderModel.IsIntermarketSweep to non-nullable JSON property 'is_intermarket_sweep'.");
+
+            if (modelsExecutedOrderModel.IsExtendedHoursTradeOption.IsSet && modelsExecutedOrderModel.IsExtendedHoursTrade == null)
+                throw new JsonException("Cannot write null property ModelsExecutedOrderModel.IsExtendedHoursTrade to non-nullable JSON property 'is_extended_hours_trade'.");
+
+            if (modelsExecutedOrderModel.IsOddLotTradeOption.IsSet && modelsExecutedOrderModel.IsOddLotTrade == null)
+                throw new JsonException("Cannot write null property ModelsExecutedOrderModel.IsOddLotTrade to non-nullable JSON property 'is_odd_lot_trade'.");
+
+            if (modelsExecutedOrderModel.IsTradeThroughExemptOption.IsSet && modelsExecutedOrderModel.IsTradeThroughExempt == null)
+                throw new JsonException("Cannot write null property ModelsExecutedOrderModel.IsTradeThroughExempt to non-nullable JSON property 'is_trade_through_exempt'.");
+
+            if (modelsExecutedOrderModel.IsSinglePriceCrossTradeOption.IsSet && modelsExecutedOrderModel.IsSinglePriceCrossTrade == null)
+                throw new JsonException("Cannot write null property ModelsExecutedOrderModel.IsSinglePriceCrossTrade to non-nullable JSON property 'is_single_price_cross_trade'.");
+
+            if (modelsExecutedOrderModel.SizeOption.IsSet && modelsExecutedOrderModel.Size == null)
+                throw new JsonException("Cannot write null property ModelsExecutedOrderModel.Size to non-nullable JSON property 'size'.");
+
+            if (modelsExecutedOrderModel.PriceOption.IsSet && modelsExecutedOrderModel.Price == null)
+                throw new JsonException("Cannot write null property ModelsExecutedOrderModel.Price to non-nullable JSON property 'price'.");
+
+            if (modelsExecutedOrderModel.TradeIdOption.IsSet && modelsExecutedOrderModel.TradeId == null)
+                throw new JsonException("Cannot write null property ModelsExecutedOrderModel.TradeId to non-nullable JSON property 'trade_id'.");
+
             if (modelsExecutedOrderModel.SymbolOption.IsSet)
                 if (modelsExecutedOrderModel.SymbolOption.Value != null)
                     writer.WriteString("symbol", modelsExecutedOrderModel.Symbol);

@@ -504,55 +504,55 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Model
             }
 
             if (timestampNanos.IsSet && timestampNanos.Value == null)
-                throw new ArgumentNullException(nameof(timestampNanos), "Property is not nullable for class ModelsTradingStatusModel.");
+                throw new JsonException("Property is not nullable for class ModelsTradingStatusModel: timestamp_nanos.");
 
             if (timestamp.IsSet && timestamp.Value == null)
-                throw new ArgumentNullException(nameof(timestamp), "Property is not nullable for class ModelsTradingStatusModel.");
+                throw new JsonException("Property is not nullable for class ModelsTradingStatusModel: timestamp.");
 
             if (isTradingLive.IsSet && isTradingLive.Value == null)
-                throw new ArgumentNullException(nameof(isTradingLive), "Property is not nullable for class ModelsTradingStatusModel.");
+                throw new JsonException("Property is not nullable for class ModelsTradingStatusModel: is_trading_live.");
 
             if (isTradingHalted.IsSet && isTradingHalted.Value == null)
-                throw new ArgumentNullException(nameof(isTradingHalted), "Property is not nullable for class ModelsTradingStatusModel.");
+                throw new JsonException("Property is not nullable for class ModelsTradingStatusModel: is_trading_halted.");
 
             if (isTradingInOrderAcceptancePeriod.IsSet && isTradingInOrderAcceptancePeriod.Value == null)
-                throw new ArgumentNullException(nameof(isTradingInOrderAcceptancePeriod), "Property is not nullable for class ModelsTradingStatusModel.");
+                throw new JsonException("Property is not nullable for class ModelsTradingStatusModel: is_trading_in_order_acceptance_period.");
 
             if (isTradingPaused.IsSet && isTradingPaused.Value == null)
-                throw new ArgumentNullException(nameof(isTradingPaused), "Property is not nullable for class ModelsTradingStatusModel.");
+                throw new JsonException("Property is not nullable for class ModelsTradingStatusModel: is_trading_paused.");
 
             if (isReasonHaltNewsPending.IsSet && isReasonHaltNewsPending.Value == null)
-                throw new ArgumentNullException(nameof(isReasonHaltNewsPending), "Property is not nullable for class ModelsTradingStatusModel.");
+                throw new JsonException("Property is not nullable for class ModelsTradingStatusModel: is_reason_halt_news_pending.");
 
             if (isReasonIpoNotYetTrading.IsSet && isReasonIpoNotYetTrading.Value == null)
-                throw new ArgumentNullException(nameof(isReasonIpoNotYetTrading), "Property is not nullable for class ModelsTradingStatusModel.");
+                throw new JsonException("Property is not nullable for class ModelsTradingStatusModel: is_reason_ipo_not_yet_trading.");
 
             if (isReasonIpoDeferred.IsSet && isReasonIpoDeferred.Value == null)
-                throw new ArgumentNullException(nameof(isReasonIpoDeferred), "Property is not nullable for class ModelsTradingStatusModel.");
+                throw new JsonException("Property is not nullable for class ModelsTradingStatusModel: is_reason_ipo_deferred.");
 
             if (isReasonHaltNewsDissemination.IsSet && isReasonHaltNewsDissemination.Value == null)
-                throw new ArgumentNullException(nameof(isReasonHaltNewsDissemination), "Property is not nullable for class ModelsTradingStatusModel.");
+                throw new JsonException("Property is not nullable for class ModelsTradingStatusModel: is_reason_halt_news_dissemination.");
 
             if (isReasonIpoOrderAcceptancePeriod.IsSet && isReasonIpoOrderAcceptancePeriod.Value == null)
-                throw new ArgumentNullException(nameof(isReasonIpoOrderAcceptancePeriod), "Property is not nullable for class ModelsTradingStatusModel.");
+                throw new JsonException("Property is not nullable for class ModelsTradingStatusModel: is_reason_ipo_order_acceptance_period.");
 
             if (isReasonIpoPreLaunchPeriod.IsSet && isReasonIpoPreLaunchPeriod.Value == null)
-                throw new ArgumentNullException(nameof(isReasonIpoPreLaunchPeriod), "Property is not nullable for class ModelsTradingStatusModel.");
+                throw new JsonException("Property is not nullable for class ModelsTradingStatusModel: is_reason_ipo_pre_launch_period.");
 
             if (isReasonMarketWideCircuitBreakerLevel1.IsSet && isReasonMarketWideCircuitBreakerLevel1.Value == null)
-                throw new ArgumentNullException(nameof(isReasonMarketWideCircuitBreakerLevel1), "Property is not nullable for class ModelsTradingStatusModel.");
+                throw new JsonException("Property is not nullable for class ModelsTradingStatusModel: is_reason_market_wide_circuit_breaker_level1.");
 
             if (isReasonMarketWideCircuitBreakerLevel2.IsSet && isReasonMarketWideCircuitBreakerLevel2.Value == null)
-                throw new ArgumentNullException(nameof(isReasonMarketWideCircuitBreakerLevel2), "Property is not nullable for class ModelsTradingStatusModel.");
+                throw new JsonException("Property is not nullable for class ModelsTradingStatusModel: is_reason_market_wide_circuit_breaker_level2.");
 
             if (isReasonMarketWideCircuitBreakerLevel3.IsSet && isReasonMarketWideCircuitBreakerLevel3.Value == null)
-                throw new ArgumentNullException(nameof(isReasonMarketWideCircuitBreakerLevel3), "Property is not nullable for class ModelsTradingStatusModel.");
+                throw new JsonException("Property is not nullable for class ModelsTradingStatusModel: is_reason_market_wide_circuit_breaker_level3.");
 
             if (isReasonNotApplicable.IsSet && isReasonNotApplicable.Value == null)
-                throw new ArgumentNullException(nameof(isReasonNotApplicable), "Property is not nullable for class ModelsTradingStatusModel.");
+                throw new JsonException("Property is not nullable for class ModelsTradingStatusModel: is_reason_not_applicable.");
 
             if (isReasonNotAvailable.IsSet && isReasonNotAvailable.Value == null)
-                throw new ArgumentNullException(nameof(isReasonNotAvailable), "Property is not nullable for class ModelsTradingStatusModel.");
+                throw new JsonException("Property is not nullable for class ModelsTradingStatusModel: is_reason_not_available.");
 
             return new ModelsTradingStatusModel(symbol, timestampNanos, timestamp, isTradingLive, isTradingHalted, isTradingInOrderAcceptancePeriod, isTradingPaused, isReasonHaltNewsPending, isReasonIpoNotYetTrading, isReasonIpoDeferred, isReasonHaltNewsDissemination, isReasonIpoOrderAcceptancePeriod, isReasonIpoPreLaunchPeriod, isReasonMarketWideCircuitBreakerLevel1, isReasonMarketWideCircuitBreakerLevel2, isReasonMarketWideCircuitBreakerLevel3, isReasonNotApplicable, isReasonNotAvailable);
         }
@@ -563,7 +563,6 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Model
         /// <param name="writer"></param>
         /// <param name="modelsTradingStatusModel"></param>
         /// <param name="jsonSerializerOptions"></param>
-        /// <exception cref="NotImplementedException"></exception>
         public override void Write(Utf8JsonWriter writer, ModelsTradingStatusModel modelsTradingStatusModel, JsonSerializerOptions jsonSerializerOptions)
         {
             writer.WriteStartObject();
@@ -578,9 +577,59 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Model
         /// <param name="writer"></param>
         /// <param name="modelsTradingStatusModel"></param>
         /// <param name="jsonSerializerOptions"></param>
-        /// <exception cref="NotImplementedException"></exception>
         public void WriteProperties(Utf8JsonWriter writer, ModelsTradingStatusModel modelsTradingStatusModel, JsonSerializerOptions jsonSerializerOptions)
         {
+            if (modelsTradingStatusModel.TimestampNanosOption.IsSet && modelsTradingStatusModel.TimestampNanos == null)
+                throw new JsonException("Cannot write null property ModelsTradingStatusModel.TimestampNanos to non-nullable JSON property 'timestamp_nanos'.");
+
+            if (modelsTradingStatusModel.TimestampOption.IsSet && modelsTradingStatusModel.Timestamp == null)
+                throw new JsonException("Cannot write null property ModelsTradingStatusModel.Timestamp to non-nullable JSON property 'timestamp'.");
+
+            if (modelsTradingStatusModel.IsTradingLiveOption.IsSet && modelsTradingStatusModel.IsTradingLive == null)
+                throw new JsonException("Cannot write null property ModelsTradingStatusModel.IsTradingLive to non-nullable JSON property 'is_trading_live'.");
+
+            if (modelsTradingStatusModel.IsTradingHaltedOption.IsSet && modelsTradingStatusModel.IsTradingHalted == null)
+                throw new JsonException("Cannot write null property ModelsTradingStatusModel.IsTradingHalted to non-nullable JSON property 'is_trading_halted'.");
+
+            if (modelsTradingStatusModel.IsTradingInOrderAcceptancePeriodOption.IsSet && modelsTradingStatusModel.IsTradingInOrderAcceptancePeriod == null)
+                throw new JsonException("Cannot write null property ModelsTradingStatusModel.IsTradingInOrderAcceptancePeriod to non-nullable JSON property 'is_trading_in_order_acceptance_period'.");
+
+            if (modelsTradingStatusModel.IsTradingPausedOption.IsSet && modelsTradingStatusModel.IsTradingPaused == null)
+                throw new JsonException("Cannot write null property ModelsTradingStatusModel.IsTradingPaused to non-nullable JSON property 'is_trading_paused'.");
+
+            if (modelsTradingStatusModel.IsReasonHaltNewsPendingOption.IsSet && modelsTradingStatusModel.IsReasonHaltNewsPending == null)
+                throw new JsonException("Cannot write null property ModelsTradingStatusModel.IsReasonHaltNewsPending to non-nullable JSON property 'is_reason_halt_news_pending'.");
+
+            if (modelsTradingStatusModel.IsReasonIpoNotYetTradingOption.IsSet && modelsTradingStatusModel.IsReasonIpoNotYetTrading == null)
+                throw new JsonException("Cannot write null property ModelsTradingStatusModel.IsReasonIpoNotYetTrading to non-nullable JSON property 'is_reason_ipo_not_yet_trading'.");
+
+            if (modelsTradingStatusModel.IsReasonIpoDeferredOption.IsSet && modelsTradingStatusModel.IsReasonIpoDeferred == null)
+                throw new JsonException("Cannot write null property ModelsTradingStatusModel.IsReasonIpoDeferred to non-nullable JSON property 'is_reason_ipo_deferred'.");
+
+            if (modelsTradingStatusModel.IsReasonHaltNewsDisseminationOption.IsSet && modelsTradingStatusModel.IsReasonHaltNewsDissemination == null)
+                throw new JsonException("Cannot write null property ModelsTradingStatusModel.IsReasonHaltNewsDissemination to non-nullable JSON property 'is_reason_halt_news_dissemination'.");
+
+            if (modelsTradingStatusModel.IsReasonIpoOrderAcceptancePeriodOption.IsSet && modelsTradingStatusModel.IsReasonIpoOrderAcceptancePeriod == null)
+                throw new JsonException("Cannot write null property ModelsTradingStatusModel.IsReasonIpoOrderAcceptancePeriod to non-nullable JSON property 'is_reason_ipo_order_acceptance_period'.");
+
+            if (modelsTradingStatusModel.IsReasonIpoPreLaunchPeriodOption.IsSet && modelsTradingStatusModel.IsReasonIpoPreLaunchPeriod == null)
+                throw new JsonException("Cannot write null property ModelsTradingStatusModel.IsReasonIpoPreLaunchPeriod to non-nullable JSON property 'is_reason_ipo_pre_launch_period'.");
+
+            if (modelsTradingStatusModel.IsReasonMarketWideCircuitBreakerLevel1Option.IsSet && modelsTradingStatusModel.IsReasonMarketWideCircuitBreakerLevel1 == null)
+                throw new JsonException("Cannot write null property ModelsTradingStatusModel.IsReasonMarketWideCircuitBreakerLevel1 to non-nullable JSON property 'is_reason_market_wide_circuit_breaker_level1'.");
+
+            if (modelsTradingStatusModel.IsReasonMarketWideCircuitBreakerLevel2Option.IsSet && modelsTradingStatusModel.IsReasonMarketWideCircuitBreakerLevel2 == null)
+                throw new JsonException("Cannot write null property ModelsTradingStatusModel.IsReasonMarketWideCircuitBreakerLevel2 to non-nullable JSON property 'is_reason_market_wide_circuit_breaker_level2'.");
+
+            if (modelsTradingStatusModel.IsReasonMarketWideCircuitBreakerLevel3Option.IsSet && modelsTradingStatusModel.IsReasonMarketWideCircuitBreakerLevel3 == null)
+                throw new JsonException("Cannot write null property ModelsTradingStatusModel.IsReasonMarketWideCircuitBreakerLevel3 to non-nullable JSON property 'is_reason_market_wide_circuit_breaker_level3'.");
+
+            if (modelsTradingStatusModel.IsReasonNotApplicableOption.IsSet && modelsTradingStatusModel.IsReasonNotApplicable == null)
+                throw new JsonException("Cannot write null property ModelsTradingStatusModel.IsReasonNotApplicable to non-nullable JSON property 'is_reason_not_applicable'.");
+
+            if (modelsTradingStatusModel.IsReasonNotAvailableOption.IsSet && modelsTradingStatusModel.IsReasonNotAvailable == null)
+                throw new JsonException("Cannot write null property ModelsTradingStatusModel.IsReasonNotAvailable to non-nullable JSON property 'is_reason_not_available'.");
+
             if (modelsTradingStatusModel.SymbolOption.IsSet)
                 if (modelsTradingStatusModel.SymbolOption.Value != null)
                     writer.WriteString("symbol", modelsTradingStatusModel.Symbol);

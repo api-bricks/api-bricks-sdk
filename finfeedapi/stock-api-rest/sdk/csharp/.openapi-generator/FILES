@@ -90,6 +90,7 @@ src/APIBricks.FinFeedAPI.STOCKAPI.REST.V1/Client/RateLimitProvider`1.cs
 src/APIBricks.FinFeedAPI.STOCKAPI.REST.V1/Client/TokenBase.cs
 src/APIBricks.FinFeedAPI.STOCKAPI.REST.V1/Client/TokenContainer`1.cs
 src/APIBricks.FinFeedAPI.STOCKAPI.REST.V1/Client/TokenProvider`1.cs
+src/APIBricks.FinFeedAPI.STOCKAPI.REST.V1/Extensions/IHostApplicationBuilderExtensions.cs
 src/APIBricks.FinFeedAPI.STOCKAPI.REST.V1/Extensions/IHostBuilderExtensions.cs
 src/APIBricks.FinFeedAPI.STOCKAPI.REST.V1/Extensions/IHttpClientBuilderExtensions.cs
 src/APIBricks.FinFeedAPI.STOCKAPI.REST.V1/Extensions/IServiceCollectionExtensions.cs

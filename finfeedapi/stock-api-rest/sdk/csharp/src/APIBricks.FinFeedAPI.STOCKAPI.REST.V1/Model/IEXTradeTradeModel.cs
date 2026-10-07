@@ -378,37 +378,37 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Model
             }
 
             if (isTradeBreak.IsSet && isTradeBreak.Value == null)
-                throw new ArgumentNullException(nameof(isTradeBreak), "Property is not nullable for class IEXTradeTradeModel.");
+                throw new JsonException("Property is not nullable for class IEXTradeTradeModel: is_trade_break.");
 
             if (timestampNanos.IsSet && timestampNanos.Value == null)
-                throw new ArgumentNullException(nameof(timestampNanos), "Property is not nullable for class IEXTradeTradeModel.");
+                throw new JsonException("Property is not nullable for class IEXTradeTradeModel: timestamp_nanos.");
 
             if (timestamp.IsSet && timestamp.Value == null)
-                throw new ArgumentNullException(nameof(timestamp), "Property is not nullable for class IEXTradeTradeModel.");
+                throw new JsonException("Property is not nullable for class IEXTradeTradeModel: timestamp.");
 
             if (size.IsSet && size.Value == null)
-                throw new ArgumentNullException(nameof(size), "Property is not nullable for class IEXTradeTradeModel.");
+                throw new JsonException("Property is not nullable for class IEXTradeTradeModel: size.");
 
             if (price.IsSet && price.Value == null)
-                throw new ArgumentNullException(nameof(price), "Property is not nullable for class IEXTradeTradeModel.");
+                throw new JsonException("Property is not nullable for class IEXTradeTradeModel: price.");
 
             if (tradeId.IsSet && tradeId.Value == null)
-                throw new ArgumentNullException(nameof(tradeId), "Property is not nullable for class IEXTradeTradeModel.");
+                throw new JsonException("Property is not nullable for class IEXTradeTradeModel: trade_id.");
 
             if (isIntermarketSweep.IsSet && isIntermarketSweep.Value == null)
-                throw new ArgumentNullException(nameof(isIntermarketSweep), "Property is not nullable for class IEXTradeTradeModel.");
+                throw new JsonException("Property is not nullable for class IEXTradeTradeModel: is_intermarket_sweep.");
 
             if (isExtendedHoursTrade.IsSet && isExtendedHoursTrade.Value == null)
-                throw new ArgumentNullException(nameof(isExtendedHoursTrade), "Property is not nullable for class IEXTradeTradeModel.");
+                throw new JsonException("Property is not nullable for class IEXTradeTradeModel: is_extended_hours_trade.");
 
             if (isOddLotTrade.IsSet && isOddLotTrade.Value == null)
-                throw new ArgumentNullException(nameof(isOddLotTrade), "Property is not nullable for class IEXTradeTradeModel.");
+                throw new JsonException("Property is not nullable for class IEXTradeTradeModel: is_odd_lot_trade.");
 
             if (isTradeThroughExempt.IsSet && isTradeThroughExempt.Value == null)
-                throw new ArgumentNullException(nameof(isTradeThroughExempt), "Property is not nullable for class IEXTradeTradeModel.");
+                throw new JsonException("Property is not nullable for class IEXTradeTradeModel: is_trade_through_exempt.");
 
             if (isSinglePriceCrossTrade.IsSet && isSinglePriceCrossTrade.Value == null)
-                throw new ArgumentNullException(nameof(isSinglePriceCrossTrade), "Property is not nullable for class IEXTradeTradeModel.");
+                throw new JsonException("Property is not nullable for class IEXTradeTradeModel: is_single_price_cross_trade.");
 
             return new IEXTradeTradeModel(isTradeBreak, symbol, timestampNanos, timestamp, size, price, tradeId, isIntermarketSweep, isExtendedHoursTrade, isOddLotTrade, isTradeThroughExempt, isSinglePriceCrossTrade);
         }
@@ -419,7 +419,6 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Model
         /// <param name="writer"></param>
         /// <param name="iEXTradeTradeModel"></param>
         /// <param name="jsonSerializerOptions"></param>
-        /// <exception cref="NotImplementedException"></exception>
         public override void Write(Utf8JsonWriter writer, IEXTradeTradeModel iEXTradeTradeModel, JsonSerializerOptions jsonSerializerOptions)
         {
             writer.WriteStartObject();
@@ -434,9 +433,41 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Model
         /// <param name="writer"></param>
         /// <param name="iEXTradeTradeModel"></param>
         /// <param name="jsonSerializerOptions"></param>
-        /// <exception cref="NotImplementedException"></exception>
         public void WriteProperties(Utf8JsonWriter writer, IEXTradeTradeModel iEXTradeTradeModel, JsonSerializerOptions jsonSerializerOptions)
         {
+            if (iEXTradeTradeModel.IsTradeBreakOption.IsSet && iEXTradeTradeModel.IsTradeBreak == null)
+                throw new JsonException("Cannot write null property IEXTradeTradeModel.IsTradeBreak to non-nullable JSON property 'is_trade_break'.");
+
+            if (iEXTradeTradeModel.TimestampNanosOption.IsSet && iEXTradeTradeModel.TimestampNanos == null)
+                throw new JsonException("Cannot write null property IEXTradeTradeModel.TimestampNanos to non-nullable JSON property 'timestamp_nanos'.");
+
+            if (iEXTradeTradeModel.TimestampOption.IsSet && iEXTradeTradeModel.Timestamp == null)
+                throw new JsonException("Cannot write null property IEXTradeTradeModel.Timestamp to non-nullable JSON property 'timestamp'.");
+
+            if (iEXTradeTradeModel.SizeOption.IsSet && iEXTradeTradeModel.Size == null)
+                throw new JsonException("Cannot write null property IEXTradeTradeModel.Size to non-nullable JSON property 'size'.");
+
+            if (iEXTradeTradeModel.PriceOption.IsSet && iEXTradeTradeModel.Price == null)
+                throw new JsonException("Cannot write null property IEXTradeTradeModel.Price to non-nullable JSON property 'price'.");
+
+            if (iEXTradeTradeModel.TradeIdOption.IsSet && iEXTradeTradeModel.TradeId == null)
+                throw new JsonException("Cannot write null property IEXTradeTradeModel.TradeId to non-nullable JSON property 'trade_id'.");
+
+            if (iEXTradeTradeModel.IsIntermarketSweepOption.IsSet && iEXTradeTradeModel.IsIntermarketSweep == null)
+                throw new JsonException("Cannot write null property IEXTradeTradeModel.IsIntermarketSweep to non-nullable JSON property 'is_intermarket_sweep'.");
+
+            if (iEXTradeTradeModel.IsExtendedHoursTradeOption.IsSet && iEXTradeTradeModel.IsExtendedHoursTrade == null)
+                throw new JsonException("Cannot write null property IEXTradeTradeModel.IsExtendedHoursTrade to non-nullable JSON property 'is_extended_hours_trade'.");
+
+            if (iEXTradeTradeModel.IsOddLotTradeOption.IsSet && iEXTradeTradeModel.IsOddLotTrade == null)
+                throw new JsonException("Cannot write null property IEXTradeTradeModel.IsOddLotTrade to non-nullable JSON property 'is_odd_lot_trade'.");
+
+            if (iEXTradeTradeModel.IsTradeThroughExemptOption.IsSet && iEXTradeTradeModel.IsTradeThroughExempt == null)
+                throw new JsonException("Cannot write null property IEXTradeTradeModel.IsTradeThroughExempt to non-nullable JSON property 'is_trade_through_exempt'.");
+
+            if (iEXTradeTradeModel.IsSinglePriceCrossTradeOption.IsSet && iEXTradeTradeModel.IsSinglePriceCrossTrade == null)
+                throw new JsonException("Cannot write null property IEXTradeTradeModel.IsSinglePriceCrossTrade to non-nullable JSON property 'is_single_price_cross_trade'.");
+
             if (iEXTradeTradeModel.IsTradeBreakOption.IsSet)
                 writer.WriteBoolean("is_trade_break", iEXTradeTradeModel.IsTradeBreakOption.Value!.Value);
 

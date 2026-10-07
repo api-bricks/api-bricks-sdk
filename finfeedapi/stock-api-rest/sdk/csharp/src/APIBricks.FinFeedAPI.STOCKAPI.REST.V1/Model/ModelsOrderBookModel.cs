@@ -221,19 +221,19 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Model
             }
 
             if (addOrder.IsSet && addOrder.Value == null)
-                throw new ArgumentNullException(nameof(addOrder), "Property is not nullable for class ModelsOrderBookModel.");
+                throw new JsonException("Property is not nullable for class ModelsOrderBookModel: add_order.");
 
             if (deleteOrder.IsSet && deleteOrder.Value == null)
-                throw new ArgumentNullException(nameof(deleteOrder), "Property is not nullable for class ModelsOrderBookModel.");
+                throw new JsonException("Property is not nullable for class ModelsOrderBookModel: delete_order.");
 
             if (modifyOrder.IsSet && modifyOrder.Value == null)
-                throw new ArgumentNullException(nameof(modifyOrder), "Property is not nullable for class ModelsOrderBookModel.");
+                throw new JsonException("Property is not nullable for class ModelsOrderBookModel: modify_order.");
 
             if (executedOrder.IsSet && executedOrder.Value == null)
-                throw new ArgumentNullException(nameof(executedOrder), "Property is not nullable for class ModelsOrderBookModel.");
+                throw new JsonException("Property is not nullable for class ModelsOrderBookModel: executed_order.");
 
             if (clearBook.IsSet && clearBook.Value == null)
-                throw new ArgumentNullException(nameof(clearBook), "Property is not nullable for class ModelsOrderBookModel.");
+                throw new JsonException("Property is not nullable for class ModelsOrderBookModel: clear_book.");
 
             return new ModelsOrderBookModel(addOrder, deleteOrder, modifyOrder, executedOrder, clearBook);
         }
@@ -244,7 +244,6 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Model
         /// <param name="writer"></param>
         /// <param name="modelsOrderBookModel"></param>
         /// <param name="jsonSerializerOptions"></param>
-        /// <exception cref="NotImplementedException"></exception>
         public override void Write(Utf8JsonWriter writer, ModelsOrderBookModel modelsOrderBookModel, JsonSerializerOptions jsonSerializerOptions)
         {
             writer.WriteStartObject();
@@ -259,23 +258,22 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Model
         /// <param name="writer"></param>
         /// <param name="modelsOrderBookModel"></param>
         /// <param name="jsonSerializerOptions"></param>
-        /// <exception cref="NotImplementedException"></exception>
         public void WriteProperties(Utf8JsonWriter writer, ModelsOrderBookModel modelsOrderBookModel, JsonSerializerOptions jsonSerializerOptions)
         {
             if (modelsOrderBookModel.AddOrderOption.IsSet && modelsOrderBookModel.AddOrder == null)
-                throw new ArgumentNullException(nameof(modelsOrderBookModel.AddOrder), "Property is required for class ModelsOrderBookModel.");
+                throw new JsonException("Cannot write null property ModelsOrderBookModel.AddOrder to non-nullable JSON property 'add_order'.");
 
             if (modelsOrderBookModel.DeleteOrderOption.IsSet && modelsOrderBookModel.DeleteOrder == null)
-                throw new ArgumentNullException(nameof(modelsOrderBookModel.DeleteOrder), "Property is required for class ModelsOrderBookModel.");
+                throw new JsonException("Cannot write null property ModelsOrderBookModel.DeleteOrder to non-nullable JSON property 'delete_order'.");
 
             if (modelsOrderBookModel.ModifyOrderOption.IsSet && modelsOrderBookModel.ModifyOrder == null)
-                throw new ArgumentNullException(nameof(modelsOrderBookModel.ModifyOrder), "Property is required for class ModelsOrderBookModel.");
+                throw new JsonException("Cannot write null property ModelsOrderBookModel.ModifyOrder to non-nullable JSON property 'modify_order'.");
 
             if (modelsOrderBookModel.ExecutedOrderOption.IsSet && modelsOrderBookModel.ExecutedOrder == null)
-                throw new ArgumentNullException(nameof(modelsOrderBookModel.ExecutedOrder), "Property is required for class ModelsOrderBookModel.");
+                throw new JsonException("Cannot write null property ModelsOrderBookModel.ExecutedOrder to non-nullable JSON property 'executed_order'.");
 
             if (modelsOrderBookModel.ClearBookOption.IsSet && modelsOrderBookModel.ClearBook == null)
-                throw new ArgumentNullException(nameof(modelsOrderBookModel.ClearBook), "Property is required for class ModelsOrderBookModel.");
+                throw new JsonException("Cannot write null property ModelsOrderBookModel.ClearBook to non-nullable JSON property 'clear_book'.");
 
             if (modelsOrderBookModel.AddOrderOption.IsSet)
             {

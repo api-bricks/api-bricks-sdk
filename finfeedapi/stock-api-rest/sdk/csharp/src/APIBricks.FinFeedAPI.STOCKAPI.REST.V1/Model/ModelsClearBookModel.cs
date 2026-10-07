@@ -189,10 +189,10 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Model
             }
 
             if (timestampNanos.IsSet && timestampNanos.Value == null)
-                throw new ArgumentNullException(nameof(timestampNanos), "Property is not nullable for class ModelsClearBookModel.");
+                throw new JsonException("Property is not nullable for class ModelsClearBookModel: timestamp_nanos.");
 
             if (timestamp.IsSet && timestamp.Value == null)
-                throw new ArgumentNullException(nameof(timestamp), "Property is not nullable for class ModelsClearBookModel.");
+                throw new JsonException("Property is not nullable for class ModelsClearBookModel: timestamp.");
 
             return new ModelsClearBookModel(symbol, timestampNanos, timestamp);
         }
@@ -203,7 +203,6 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Model
         /// <param name="writer"></param>
         /// <param name="modelsClearBookModel"></param>
         /// <param name="jsonSerializerOptions"></param>
-        /// <exception cref="NotImplementedException"></exception>
         public override void Write(Utf8JsonWriter writer, ModelsClearBookModel modelsClearBookModel, JsonSerializerOptions jsonSerializerOptions)
         {
             writer.WriteStartObject();
@@ -218,9 +217,14 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Model
         /// <param name="writer"></param>
         /// <param name="modelsClearBookModel"></param>
         /// <param name="jsonSerializerOptions"></param>
-        /// <exception cref="NotImplementedException"></exception>
         public void WriteProperties(Utf8JsonWriter writer, ModelsClearBookModel modelsClearBookModel, JsonSerializerOptions jsonSerializerOptions)
         {
+            if (modelsClearBookModel.TimestampNanosOption.IsSet && modelsClearBookModel.TimestampNanos == null)
+                throw new JsonException("Cannot write null property ModelsClearBookModel.TimestampNanos to non-nullable JSON property 'timestamp_nanos'.");
+
+            if (modelsClearBookModel.TimestampOption.IsSet && modelsClearBookModel.Timestamp == null)
+                throw new JsonException("Cannot write null property ModelsClearBookModel.Timestamp to non-nullable JSON property 'timestamp'.");
+
             if (modelsClearBookModel.SymbolOption.IsSet)
                 if (modelsClearBookModel.SymbolOption.Value != null)
                     writer.WriteString("symbol", modelsClearBookModel.Symbol);

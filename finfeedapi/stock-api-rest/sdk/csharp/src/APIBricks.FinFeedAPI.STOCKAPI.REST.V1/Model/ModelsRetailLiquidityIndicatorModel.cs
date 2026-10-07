@@ -336,25 +336,25 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Model
             }
 
             if (timestampNanos.IsSet && timestampNanos.Value == null)
-                throw new ArgumentNullException(nameof(timestampNanos), "Property is not nullable for class ModelsRetailLiquidityIndicatorModel.");
+                throw new JsonException("Property is not nullable for class ModelsRetailLiquidityIndicatorModel: timestamp_nanos.");
 
             if (timestamp.IsSet && timestamp.Value == null)
-                throw new ArgumentNullException(nameof(timestamp), "Property is not nullable for class ModelsRetailLiquidityIndicatorModel.");
+                throw new JsonException("Property is not nullable for class ModelsRetailLiquidityIndicatorModel: timestamp.");
 
             if (retailLiquidityIndicator.IsSet && retailLiquidityIndicator.Value == null)
-                throw new ArgumentNullException(nameof(retailLiquidityIndicator), "Property is not nullable for class ModelsRetailLiquidityIndicatorModel.");
+                throw new JsonException("Property is not nullable for class ModelsRetailLiquidityIndicatorModel: retail_liquidity_indicator.");
 
             if (isRetailIndicatorNotApplicable.IsSet && isRetailIndicatorNotApplicable.Value == null)
-                throw new ArgumentNullException(nameof(isRetailIndicatorNotApplicable), "Property is not nullable for class ModelsRetailLiquidityIndicatorModel.");
+                throw new JsonException("Property is not nullable for class ModelsRetailLiquidityIndicatorModel: is_retail_indicator_not_applicable.");
 
             if (isRetailIndicatorBuyInterest.IsSet && isRetailIndicatorBuyInterest.Value == null)
-                throw new ArgumentNullException(nameof(isRetailIndicatorBuyInterest), "Property is not nullable for class ModelsRetailLiquidityIndicatorModel.");
+                throw new JsonException("Property is not nullable for class ModelsRetailLiquidityIndicatorModel: is_retail_indicator_buy_interest.");
 
             if (isRetailIndicatorSellInterest.IsSet && isRetailIndicatorSellInterest.Value == null)
-                throw new ArgumentNullException(nameof(isRetailIndicatorSellInterest), "Property is not nullable for class ModelsRetailLiquidityIndicatorModel.");
+                throw new JsonException("Property is not nullable for class ModelsRetailLiquidityIndicatorModel: is_retail_indicator_sell_interest.");
 
             if (isRetailIndicatorBuyAndSellInterest.IsSet && isRetailIndicatorBuyAndSellInterest.Value == null)
-                throw new ArgumentNullException(nameof(isRetailIndicatorBuyAndSellInterest), "Property is not nullable for class ModelsRetailLiquidityIndicatorModel.");
+                throw new JsonException("Property is not nullable for class ModelsRetailLiquidityIndicatorModel: is_retail_indicator_buy_and_sell_interest.");
 
             return new ModelsRetailLiquidityIndicatorModel(symbol, timestampNanos, timestamp, retailLiquidityIndicator, retailLiquidityIndicatorCode, retailLiquidityIndicatorText, isRetailIndicatorNotApplicable, isRetailIndicatorBuyInterest, isRetailIndicatorSellInterest, isRetailIndicatorBuyAndSellInterest);
         }
@@ -365,7 +365,6 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Model
         /// <param name="writer"></param>
         /// <param name="modelsRetailLiquidityIndicatorModel"></param>
         /// <param name="jsonSerializerOptions"></param>
-        /// <exception cref="NotImplementedException"></exception>
         public override void Write(Utf8JsonWriter writer, ModelsRetailLiquidityIndicatorModel modelsRetailLiquidityIndicatorModel, JsonSerializerOptions jsonSerializerOptions)
         {
             writer.WriteStartObject();
@@ -380,9 +379,29 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Model
         /// <param name="writer"></param>
         /// <param name="modelsRetailLiquidityIndicatorModel"></param>
         /// <param name="jsonSerializerOptions"></param>
-        /// <exception cref="NotImplementedException"></exception>
         public void WriteProperties(Utf8JsonWriter writer, ModelsRetailLiquidityIndicatorModel modelsRetailLiquidityIndicatorModel, JsonSerializerOptions jsonSerializerOptions)
         {
+            if (modelsRetailLiquidityIndicatorModel.TimestampNanosOption.IsSet && modelsRetailLiquidityIndicatorModel.TimestampNanos == null)
+                throw new JsonException("Cannot write null property ModelsRetailLiquidityIndicatorModel.TimestampNanos to non-nullable JSON property 'timestamp_nanos'.");
+
+            if (modelsRetailLiquidityIndicatorModel.TimestampOption.IsSet && modelsRetailLiquidityIndicatorModel.Timestamp == null)
+                throw new JsonException("Cannot write null property ModelsRetailLiquidityIndicatorModel.Timestamp to non-nullable JSON property 'timestamp'.");
+
+            if (modelsRetailLiquidityIndicatorModel.RetailLiquidityIndicatorOption.IsSet && modelsRetailLiquidityIndicatorModel.RetailLiquidityIndicator == null)
+                throw new JsonException("Cannot write null property ModelsRetailLiquidityIndicatorModel.RetailLiquidityIndicator to non-nullable JSON property 'retail_liquidity_indicator'.");
+
+            if (modelsRetailLiquidityIndicatorModel.IsRetailIndicatorNotApplicableOption.IsSet && modelsRetailLiquidityIndicatorModel.IsRetailIndicatorNotApplicable == null)
+                throw new JsonException("Cannot write null property ModelsRetailLiquidityIndicatorModel.IsRetailIndicatorNotApplicable to non-nullable JSON property 'is_retail_indicator_not_applicable'.");
+
+            if (modelsRetailLiquidityIndicatorModel.IsRetailIndicatorBuyInterestOption.IsSet && modelsRetailLiquidityIndicatorModel.IsRetailIndicatorBuyInterest == null)
+                throw new JsonException("Cannot write null property ModelsRetailLiquidityIndicatorModel.IsRetailIndicatorBuyInterest to non-nullable JSON property 'is_retail_indicator_buy_interest'.");
+
+            if (modelsRetailLiquidityIndicatorModel.IsRetailIndicatorSellInterestOption.IsSet && modelsRetailLiquidityIndicatorModel.IsRetailIndicatorSellInterest == null)
+                throw new JsonException("Cannot write null property ModelsRetailLiquidityIndicatorModel.IsRetailIndicatorSellInterest to non-nullable JSON property 'is_retail_indicator_sell_interest'.");
+
+            if (modelsRetailLiquidityIndicatorModel.IsRetailIndicatorBuyAndSellInterestOption.IsSet && modelsRetailLiquidityIndicatorModel.IsRetailIndicatorBuyAndSellInterest == null)
+                throw new JsonException("Cannot write null property ModelsRetailLiquidityIndicatorModel.IsRetailIndicatorBuyAndSellInterest to non-nullable JSON property 'is_retail_indicator_buy_and_sell_interest'.");
+
             if (modelsRetailLiquidityIndicatorModel.SymbolOption.IsSet)
                 if (modelsRetailLiquidityIndicatorModel.SymbolOption.Value != null)
                     writer.WriteString("symbol", modelsRetailLiquidityIndicatorModel.Symbol);

@@ -378,31 +378,31 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Model
             }
 
             if (timestampNanos.IsSet && timestampNanos.Value == null)
-                throw new ArgumentNullException(nameof(timestampNanos), "Property is not nullable for class ModelsSecurityDirectoryModel.");
+                throw new JsonException("Property is not nullable for class ModelsSecurityDirectoryModel: timestamp_nanos.");
 
             if (timestamp.IsSet && timestamp.Value == null)
-                throw new ArgumentNullException(nameof(timestamp), "Property is not nullable for class ModelsSecurityDirectoryModel.");
+                throw new JsonException("Property is not nullable for class ModelsSecurityDirectoryModel: timestamp.");
 
             if (flags.IsSet && flags.Value == null)
-                throw new ArgumentNullException(nameof(flags), "Property is not nullable for class ModelsSecurityDirectoryModel.");
+                throw new JsonException("Property is not nullable for class ModelsSecurityDirectoryModel: flags.");
 
             if (roundLotSize.IsSet && roundLotSize.Value == null)
-                throw new ArgumentNullException(nameof(roundLotSize), "Property is not nullable for class ModelsSecurityDirectoryModel.");
+                throw new JsonException("Property is not nullable for class ModelsSecurityDirectoryModel: round_lot_size.");
 
             if (adjustedPocPrice.IsSet && adjustedPocPrice.Value == null)
-                throw new ArgumentNullException(nameof(adjustedPocPrice), "Property is not nullable for class ModelsSecurityDirectoryModel.");
+                throw new JsonException("Property is not nullable for class ModelsSecurityDirectoryModel: adjusted_poc_price.");
 
             if (luldTier.IsSet && luldTier.Value == null)
-                throw new ArgumentNullException(nameof(luldTier), "Property is not nullable for class ModelsSecurityDirectoryModel.");
+                throw new JsonException("Property is not nullable for class ModelsSecurityDirectoryModel: luld_tier.");
 
             if (isLuldTierNotApplicable.IsSet && isLuldTierNotApplicable.Value == null)
-                throw new ArgumentNullException(nameof(isLuldTierNotApplicable), "Property is not nullable for class ModelsSecurityDirectoryModel.");
+                throw new JsonException("Property is not nullable for class ModelsSecurityDirectoryModel: is_luld_tier_not_applicable.");
 
             if (isLuldTier1.IsSet && isLuldTier1.Value == null)
-                throw new ArgumentNullException(nameof(isLuldTier1), "Property is not nullable for class ModelsSecurityDirectoryModel.");
+                throw new JsonException("Property is not nullable for class ModelsSecurityDirectoryModel: is_luld_tier1.");
 
             if (isLuldTier2.IsSet && isLuldTier2.Value == null)
-                throw new ArgumentNullException(nameof(isLuldTier2), "Property is not nullable for class ModelsSecurityDirectoryModel.");
+                throw new JsonException("Property is not nullable for class ModelsSecurityDirectoryModel: is_luld_tier2.");
 
             return new ModelsSecurityDirectoryModel(symbol, timestampNanos, timestamp, flags, roundLotSize, adjustedPocPrice, luldTier, luldTierCode, luldTierText, isLuldTierNotApplicable, isLuldTier1, isLuldTier2);
         }
@@ -413,7 +413,6 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Model
         /// <param name="writer"></param>
         /// <param name="modelsSecurityDirectoryModel"></param>
         /// <param name="jsonSerializerOptions"></param>
-        /// <exception cref="NotImplementedException"></exception>
         public override void Write(Utf8JsonWriter writer, ModelsSecurityDirectoryModel modelsSecurityDirectoryModel, JsonSerializerOptions jsonSerializerOptions)
         {
             writer.WriteStartObject();
@@ -428,9 +427,35 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Model
         /// <param name="writer"></param>
         /// <param name="modelsSecurityDirectoryModel"></param>
         /// <param name="jsonSerializerOptions"></param>
-        /// <exception cref="NotImplementedException"></exception>
         public void WriteProperties(Utf8JsonWriter writer, ModelsSecurityDirectoryModel modelsSecurityDirectoryModel, JsonSerializerOptions jsonSerializerOptions)
         {
+            if (modelsSecurityDirectoryModel.TimestampNanosOption.IsSet && modelsSecurityDirectoryModel.TimestampNanos == null)
+                throw new JsonException("Cannot write null property ModelsSecurityDirectoryModel.TimestampNanos to non-nullable JSON property 'timestamp_nanos'.");
+
+            if (modelsSecurityDirectoryModel.TimestampOption.IsSet && modelsSecurityDirectoryModel.Timestamp == null)
+                throw new JsonException("Cannot write null property ModelsSecurityDirectoryModel.Timestamp to non-nullable JSON property 'timestamp'.");
+
+            if (modelsSecurityDirectoryModel.FlagsOption.IsSet && modelsSecurityDirectoryModel.Flags == null)
+                throw new JsonException("Cannot write null property ModelsSecurityDirectoryModel.Flags to non-nullable JSON property 'flags'.");
+
+            if (modelsSecurityDirectoryModel.RoundLotSizeOption.IsSet && modelsSecurityDirectoryModel.RoundLotSize == null)
+                throw new JsonException("Cannot write null property ModelsSecurityDirectoryModel.RoundLotSize to non-nullable JSON property 'round_lot_size'.");
+
+            if (modelsSecurityDirectoryModel.AdjustedPocPriceOption.IsSet && modelsSecurityDirectoryModel.AdjustedPocPrice == null)
+                throw new JsonException("Cannot write null property ModelsSecurityDirectoryModel.AdjustedPocPrice to non-nullable JSON property 'adjusted_poc_price'.");
+
+            if (modelsSecurityDirectoryModel.LuldTierOption.IsSet && modelsSecurityDirectoryModel.LuldTier == null)
+                throw new JsonException("Cannot write null property ModelsSecurityDirectoryModel.LuldTier to non-nullable JSON property 'luld_tier'.");
+
+            if (modelsSecurityDirectoryModel.IsLuldTierNotApplicableOption.IsSet && modelsSecurityDirectoryModel.IsLuldTierNotApplicable == null)
+                throw new JsonException("Cannot write null property ModelsSecurityDirectoryModel.IsLuldTierNotApplicable to non-nullable JSON property 'is_luld_tier_not_applicable'.");
+
+            if (modelsSecurityDirectoryModel.IsLuldTier1Option.IsSet && modelsSecurityDirectoryModel.IsLuldTier1 == null)
+                throw new JsonException("Cannot write null property ModelsSecurityDirectoryModel.IsLuldTier1 to non-nullable JSON property 'is_luld_tier1'.");
+
+            if (modelsSecurityDirectoryModel.IsLuldTier2Option.IsSet && modelsSecurityDirectoryModel.IsLuldTier2 == null)
+                throw new JsonException("Cannot write null property ModelsSecurityDirectoryModel.IsLuldTier2 to non-nullable JSON property 'is_luld_tier2'.");
+
             if (modelsSecurityDirectoryModel.SymbolOption.IsSet)
                 if (modelsSecurityDirectoryModel.SymbolOption.Value != null)
                     writer.WriteString("symbol", modelsSecurityDirectoryModel.Symbol);

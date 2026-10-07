@@ -516,7 +516,6 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Model
         /// <param name="writer"></param>
         /// <param name="finFeedAPISymbolModel"></param>
         /// <param name="jsonSerializerOptions"></param>
-        /// <exception cref="NotImplementedException"></exception>
         public override void Write(Utf8JsonWriter writer, FinFeedAPISymbolModel finFeedAPISymbolModel, JsonSerializerOptions jsonSerializerOptions)
         {
             writer.WriteStartObject();
@@ -531,7 +530,6 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Model
         /// <param name="writer"></param>
         /// <param name="finFeedAPISymbolModel"></param>
         /// <param name="jsonSerializerOptions"></param>
-        /// <exception cref="NotImplementedException"></exception>
         public void WriteProperties(Utf8JsonWriter writer, FinFeedAPISymbolModel finFeedAPISymbolModel, JsonSerializerOptions jsonSerializerOptions)
         {
             if (finFeedAPISymbolModel.SymbolIdOption.IsSet)

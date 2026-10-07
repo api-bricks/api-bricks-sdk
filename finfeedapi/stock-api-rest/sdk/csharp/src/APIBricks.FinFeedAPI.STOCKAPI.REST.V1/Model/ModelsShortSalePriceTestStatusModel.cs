@@ -462,37 +462,37 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Model
             }
 
             if (timestampNanos.IsSet && timestampNanos.Value == null)
-                throw new ArgumentNullException(nameof(timestampNanos), "Property is not nullable for class ModelsShortSalePriceTestStatusModel.");
+                throw new JsonException("Property is not nullable for class ModelsShortSalePriceTestStatusModel: timestamp_nanos.");
 
             if (timestamp.IsSet && timestamp.Value == null)
-                throw new ArgumentNullException(nameof(timestamp), "Property is not nullable for class ModelsShortSalePriceTestStatusModel.");
+                throw new JsonException("Property is not nullable for class ModelsShortSalePriceTestStatusModel: timestamp.");
 
             if (shortSalePriceTestStatus.IsSet && shortSalePriceTestStatus.Value == null)
-                throw new ArgumentNullException(nameof(shortSalePriceTestStatus), "Property is not nullable for class ModelsShortSalePriceTestStatusModel.");
+                throw new JsonException("Property is not nullable for class ModelsShortSalePriceTestStatusModel: short_sale_price_test_status.");
 
             if (isShortSalePriceTestNotInEffect.IsSet && isShortSalePriceTestNotInEffect.Value == null)
-                throw new ArgumentNullException(nameof(isShortSalePriceTestNotInEffect), "Property is not nullable for class ModelsShortSalePriceTestStatusModel.");
+                throw new JsonException("Property is not nullable for class ModelsShortSalePriceTestStatusModel: is_short_sale_price_test_not_in_effect.");
 
             if (isShortSalePriceTestInEffect.IsSet && isShortSalePriceTestInEffect.Value == null)
-                throw new ArgumentNullException(nameof(isShortSalePriceTestInEffect), "Property is not nullable for class ModelsShortSalePriceTestStatusModel.");
+                throw new JsonException("Property is not nullable for class ModelsShortSalePriceTestStatusModel: is_short_sale_price_test_in_effect.");
 
             if (detail.IsSet && detail.Value == null)
-                throw new ArgumentNullException(nameof(detail), "Property is not nullable for class ModelsShortSalePriceTestStatusModel.");
+                throw new JsonException("Property is not nullable for class ModelsShortSalePriceTestStatusModel: detail.");
 
             if (isDetailNoPriceTest.IsSet && isDetailNoPriceTest.Value == null)
-                throw new ArgumentNullException(nameof(isDetailNoPriceTest), "Property is not nullable for class ModelsShortSalePriceTestStatusModel.");
+                throw new JsonException("Property is not nullable for class ModelsShortSalePriceTestStatusModel: is_detail_no_price_test.");
 
             if (isDetailActivated.IsSet && isDetailActivated.Value == null)
-                throw new ArgumentNullException(nameof(isDetailActivated), "Property is not nullable for class ModelsShortSalePriceTestStatusModel.");
+                throw new JsonException("Property is not nullable for class ModelsShortSalePriceTestStatusModel: is_detail_activated.");
 
             if (isDetailContinued.IsSet && isDetailContinued.Value == null)
-                throw new ArgumentNullException(nameof(isDetailContinued), "Property is not nullable for class ModelsShortSalePriceTestStatusModel.");
+                throw new JsonException("Property is not nullable for class ModelsShortSalePriceTestStatusModel: is_detail_continued.");
 
             if (isDetailDeactivated.IsSet && isDetailDeactivated.Value == null)
-                throw new ArgumentNullException(nameof(isDetailDeactivated), "Property is not nullable for class ModelsShortSalePriceTestStatusModel.");
+                throw new JsonException("Property is not nullable for class ModelsShortSalePriceTestStatusModel: is_detail_deactivated.");
 
             if (isDetailNotAvailable.IsSet && isDetailNotAvailable.Value == null)
-                throw new ArgumentNullException(nameof(isDetailNotAvailable), "Property is not nullable for class ModelsShortSalePriceTestStatusModel.");
+                throw new JsonException("Property is not nullable for class ModelsShortSalePriceTestStatusModel: is_detail_not_available.");
 
             return new ModelsShortSalePriceTestStatusModel(symbol, timestampNanos, timestamp, shortSalePriceTestStatus, shortSalePriceTestStatusCode, shortSalePriceTestStatusText, isShortSalePriceTestNotInEffect, isShortSalePriceTestInEffect, detail, detailCode, detailText, isDetailNoPriceTest, isDetailActivated, isDetailContinued, isDetailDeactivated, isDetailNotAvailable);
         }
@@ -503,7 +503,6 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Model
         /// <param name="writer"></param>
         /// <param name="modelsShortSalePriceTestStatusModel"></param>
         /// <param name="jsonSerializerOptions"></param>
-        /// <exception cref="NotImplementedException"></exception>
         public override void Write(Utf8JsonWriter writer, ModelsShortSalePriceTestStatusModel modelsShortSalePriceTestStatusModel, JsonSerializerOptions jsonSerializerOptions)
         {
             writer.WriteStartObject();
@@ -518,9 +517,41 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Model
         /// <param name="writer"></param>
         /// <param name="modelsShortSalePriceTestStatusModel"></param>
         /// <param name="jsonSerializerOptions"></param>
-        /// <exception cref="NotImplementedException"></exception>
         public void WriteProperties(Utf8JsonWriter writer, ModelsShortSalePriceTestStatusModel modelsShortSalePriceTestStatusModel, JsonSerializerOptions jsonSerializerOptions)
         {
+            if (modelsShortSalePriceTestStatusModel.TimestampNanosOption.IsSet && modelsShortSalePriceTestStatusModel.TimestampNanos == null)
+                throw new JsonException("Cannot write null property ModelsShortSalePriceTestStatusModel.TimestampNanos to non-nullable JSON property 'timestamp_nanos'.");
+
+            if (modelsShortSalePriceTestStatusModel.TimestampOption.IsSet && modelsShortSalePriceTestStatusModel.Timestamp == null)
+                throw new JsonException("Cannot write null property ModelsShortSalePriceTestStatusModel.Timestamp to non-nullable JSON property 'timestamp'.");
+
+            if (modelsShortSalePriceTestStatusModel.ShortSalePriceTestStatusOption.IsSet && modelsShortSalePriceTestStatusModel.ShortSalePriceTestStatus == null)
+                throw new JsonException("Cannot write null property ModelsShortSalePriceTestStatusModel.ShortSalePriceTestStatus to non-nullable JSON property 'short_sale_price_test_status'.");
+
+            if (modelsShortSalePriceTestStatusModel.IsShortSalePriceTestNotInEffectOption.IsSet && modelsShortSalePriceTestStatusModel.IsShortSalePriceTestNotInEffect == null)
+                throw new JsonException("Cannot write null property ModelsShortSalePriceTestStatusModel.IsShortSalePriceTestNotInEffect to non-nullable JSON property 'is_short_sale_price_test_not_in_effect'.");
+
+            if (modelsShortSalePriceTestStatusModel.IsShortSalePriceTestInEffectOption.IsSet && modelsShortSalePriceTestStatusModel.IsShortSalePriceTestInEffect == null)
+                throw new JsonException("Cannot write null property ModelsShortSalePriceTestStatusModel.IsShortSalePriceTestInEffect to non-nullable JSON property 'is_short_sale_price_test_in_effect'.");
+
+            if (modelsShortSalePriceTestStatusModel.DetailOption.IsSet && modelsShortSalePriceTestStatusModel.Detail == null)
+                throw new JsonException("Cannot write null property ModelsShortSalePriceTestStatusModel.Detail to non-nullable JSON property 'detail'.");
+
+            if (modelsShortSalePriceTestStatusModel.IsDetailNoPriceTestOption.IsSet && modelsShortSalePriceTestStatusModel.IsDetailNoPriceTest == null)
+                throw new JsonException("Cannot write null property ModelsShortSalePriceTestStatusModel.IsDetailNoPriceTest to non-nullable JSON property 'is_detail_no_price_test'.");
+
+            if (modelsShortSalePriceTestStatusModel.IsDetailActivatedOption.IsSet && modelsShortSalePriceTestStatusModel.IsDetailActivated == null)
+                throw new JsonException("Cannot write null property ModelsShortSalePriceTestStatusModel.IsDetailActivated to non-nullable JSON property 'is_detail_activated'.");
+
+            if (modelsShortSalePriceTestStatusModel.IsDetailContinuedOption.IsSet && modelsShortSalePriceTestStatusModel.IsDetailContinued == null)
+                throw new JsonException("Cannot write null property ModelsShortSalePriceTestStatusModel.IsDetailContinued to non-nullable JSON property 'is_detail_continued'.");
+
+            if (modelsShortSalePriceTestStatusModel.IsDetailDeactivatedOption.IsSet && modelsShortSalePriceTestStatusModel.IsDetailDeactivated == null)
+                throw new JsonException("Cannot write null property ModelsShortSalePriceTestStatusModel.IsDetailDeactivated to non-nullable JSON property 'is_detail_deactivated'.");
+
+            if (modelsShortSalePriceTestStatusModel.IsDetailNotAvailableOption.IsSet && modelsShortSalePriceTestStatusModel.IsDetailNotAvailable == null)
+                throw new JsonException("Cannot write null property ModelsShortSalePriceTestStatusModel.IsDetailNotAvailable to non-nullable JSON property 'is_detail_not_available'.");
+
             if (modelsShortSalePriceTestStatusModel.SymbolOption.IsSet)
                 if (modelsShortSalePriceTestStatusModel.SymbolOption.Value != null)
                     writer.WriteString("symbol", modelsShortSalePriceTestStatusModel.Symbol);

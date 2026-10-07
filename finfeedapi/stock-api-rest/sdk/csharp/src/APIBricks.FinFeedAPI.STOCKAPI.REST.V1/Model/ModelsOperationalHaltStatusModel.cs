@@ -294,19 +294,19 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Model
             }
 
             if (timestampNanos.IsSet && timestampNanos.Value == null)
-                throw new ArgumentNullException(nameof(timestampNanos), "Property is not nullable for class ModelsOperationalHaltStatusModel.");
+                throw new JsonException("Property is not nullable for class ModelsOperationalHaltStatusModel: timestamp_nanos.");
 
             if (timestamp.IsSet && timestamp.Value == null)
-                throw new ArgumentNullException(nameof(timestamp), "Property is not nullable for class ModelsOperationalHaltStatusModel.");
+                throw new JsonException("Property is not nullable for class ModelsOperationalHaltStatusModel: timestamp.");
 
             if (operationalHaltStatus.IsSet && operationalHaltStatus.Value == null)
-                throw new ArgumentNullException(nameof(operationalHaltStatus), "Property is not nullable for class ModelsOperationalHaltStatusModel.");
+                throw new JsonException("Property is not nullable for class ModelsOperationalHaltStatusModel: operational_halt_status.");
 
             if (isOperationallyHalted.IsSet && isOperationallyHalted.Value == null)
-                throw new ArgumentNullException(nameof(isOperationallyHalted), "Property is not nullable for class ModelsOperationalHaltStatusModel.");
+                throw new JsonException("Property is not nullable for class ModelsOperationalHaltStatusModel: is_operationally_halted.");
 
             if (isNotOperationallyHalted.IsSet && isNotOperationallyHalted.Value == null)
-                throw new ArgumentNullException(nameof(isNotOperationallyHalted), "Property is not nullable for class ModelsOperationalHaltStatusModel.");
+                throw new JsonException("Property is not nullable for class ModelsOperationalHaltStatusModel: is_not_operationally_halted.");
 
             return new ModelsOperationalHaltStatusModel(symbol, timestampNanos, timestamp, operationalHaltStatus, operationalHaltStatusCode, operationalHaltStatusText, isOperationallyHalted, isNotOperationallyHalted);
         }
@@ -317,7 +317,6 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Model
         /// <param name="writer"></param>
         /// <param name="modelsOperationalHaltStatusModel"></param>
         /// <param name="jsonSerializerOptions"></param>
-        /// <exception cref="NotImplementedException"></exception>
         public override void Write(Utf8JsonWriter writer, ModelsOperationalHaltStatusModel modelsOperationalHaltStatusModel, JsonSerializerOptions jsonSerializerOptions)
         {
             writer.WriteStartObject();
@@ -332,9 +331,23 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Model
         /// <param name="writer"></param>
         /// <param name="modelsOperationalHaltStatusModel"></param>
         /// <param name="jsonSerializerOptions"></param>
-        /// <exception cref="NotImplementedException"></exception>
         public void WriteProperties(Utf8JsonWriter writer, ModelsOperationalHaltStatusModel modelsOperationalHaltStatusModel, JsonSerializerOptions jsonSerializerOptions)
         {
+            if (modelsOperationalHaltStatusModel.TimestampNanosOption.IsSet && modelsOperationalHaltStatusModel.TimestampNanos == null)
+                throw new JsonException("Cannot write null property ModelsOperationalHaltStatusModel.TimestampNanos to non-nullable JSON property 'timestamp_nanos'.");
+
+            if (modelsOperationalHaltStatusModel.TimestampOption.IsSet && modelsOperationalHaltStatusModel.Timestamp == null)
+                throw new JsonException("Cannot write null property ModelsOperationalHaltStatusModel.Timestamp to non-nullable JSON property 'timestamp'.");
+
+            if (modelsOperationalHaltStatusModel.OperationalHaltStatusOption.IsSet && modelsOperationalHaltStatusModel.OperationalHaltStatus == null)
+                throw new JsonException("Cannot write null property ModelsOperationalHaltStatusModel.OperationalHaltStatus to non-nullable JSON property 'operational_halt_status'.");
+
+            if (modelsOperationalHaltStatusModel.IsOperationallyHaltedOption.IsSet && modelsOperationalHaltStatusModel.IsOperationallyHalted == null)
+                throw new JsonException("Cannot write null property ModelsOperationalHaltStatusModel.IsOperationallyHalted to non-nullable JSON property 'is_operationally_halted'.");
+
+            if (modelsOperationalHaltStatusModel.IsNotOperationallyHaltedOption.IsSet && modelsOperationalHaltStatusModel.IsNotOperationallyHalted == null)
+                throw new JsonException("Cannot write null property ModelsOperationalHaltStatusModel.IsNotOperationallyHalted to non-nullable JSON property 'is_not_operationally_halted'.");
+
             if (modelsOperationalHaltStatusModel.SymbolOption.IsSet)
                 if (modelsOperationalHaltStatusModel.SymbolOption.Value != null)
                     writer.WriteString("symbol", modelsOperationalHaltStatusModel.Symbol);

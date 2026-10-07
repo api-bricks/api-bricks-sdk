@@ -273,22 +273,22 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Model
             }
 
             if (timestampNanos.IsSet && timestampNanos.Value == null)
-                throw new ArgumentNullException(nameof(timestampNanos), "Property is not nullable for class ModelsAddOrderModel.");
+                throw new JsonException("Property is not nullable for class ModelsAddOrderModel: timestamp_nanos.");
 
             if (timestamp.IsSet && timestamp.Value == null)
-                throw new ArgumentNullException(nameof(timestamp), "Property is not nullable for class ModelsAddOrderModel.");
+                throw new JsonException("Property is not nullable for class ModelsAddOrderModel: timestamp.");
 
             if (isSideBuy.IsSet && isSideBuy.Value == null)
-                throw new ArgumentNullException(nameof(isSideBuy), "Property is not nullable for class ModelsAddOrderModel.");
+                throw new JsonException("Property is not nullable for class ModelsAddOrderModel: is_side_buy.");
 
             if (size.IsSet && size.Value == null)
-                throw new ArgumentNullException(nameof(size), "Property is not nullable for class ModelsAddOrderModel.");
+                throw new JsonException("Property is not nullable for class ModelsAddOrderModel: size.");
 
             if (price.IsSet && price.Value == null)
-                throw new ArgumentNullException(nameof(price), "Property is not nullable for class ModelsAddOrderModel.");
+                throw new JsonException("Property is not nullable for class ModelsAddOrderModel: price.");
 
             if (orderId.IsSet && orderId.Value == null)
-                throw new ArgumentNullException(nameof(orderId), "Property is not nullable for class ModelsAddOrderModel.");
+                throw new JsonException("Property is not nullable for class ModelsAddOrderModel: order_id.");
 
             return new ModelsAddOrderModel(symbol, timestampNanos, timestamp, isSideBuy, size, price, orderId);
         }
@@ -299,7 +299,6 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Model
         /// <param name="writer"></param>
         /// <param name="modelsAddOrderModel"></param>
         /// <param name="jsonSerializerOptions"></param>
-        /// <exception cref="NotImplementedException"></exception>
         public override void Write(Utf8JsonWriter writer, ModelsAddOrderModel modelsAddOrderModel, JsonSerializerOptions jsonSerializerOptions)
         {
             writer.WriteStartObject();
@@ -314,9 +313,26 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Model
         /// <param name="writer"></param>
         /// <param name="modelsAddOrderModel"></param>
         /// <param name="jsonSerializerOptions"></param>
-        /// <exception cref="NotImplementedException"></exception>
         public void WriteProperties(Utf8JsonWriter writer, ModelsAddOrderModel modelsAddOrderModel, JsonSerializerOptions jsonSerializerOptions)
         {
+            if (modelsAddOrderModel.TimestampNanosOption.IsSet && modelsAddOrderModel.TimestampNanos == null)
+                throw new JsonException("Cannot write null property ModelsAddOrderModel.TimestampNanos to non-nullable JSON property 'timestamp_nanos'.");
+
+            if (modelsAddOrderModel.TimestampOption.IsSet && modelsAddOrderModel.Timestamp == null)
+                throw new JsonException("Cannot write null property ModelsAddOrderModel.Timestamp to non-nullable JSON property 'timestamp'.");
+
+            if (modelsAddOrderModel.IsSideBuyOption.IsSet && modelsAddOrderModel.IsSideBuy == null)
+                throw new JsonException("Cannot write null property ModelsAddOrderModel.IsSideBuy to non-nullable JSON property 'is_side_buy'.");
+
+            if (modelsAddOrderModel.SizeOption.IsSet && modelsAddOrderModel.Size == null)
+                throw new JsonException("Cannot write null property ModelsAddOrderModel.Size to non-nullable JSON property 'size'.");
+
+            if (modelsAddOrderModel.PriceOption.IsSet && modelsAddOrderModel.Price == null)
+                throw new JsonException("Cannot write null property ModelsAddOrderModel.Price to non-nullable JSON property 'price'.");
+
+            if (modelsAddOrderModel.OrderIdOption.IsSet && modelsAddOrderModel.OrderId == null)
+                throw new JsonException("Cannot write null property ModelsAddOrderModel.OrderId to non-nullable JSON property 'order_id'.");
+
             if (modelsAddOrderModel.SymbolOption.IsSet)
                 if (modelsAddOrderModel.SymbolOption.Value != null)
                     writer.WriteString("symbol", modelsAddOrderModel.Symbol);

@@ -210,13 +210,13 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Model
             }
 
             if (timestampNanos.IsSet && timestampNanos.Value == null)
-                throw new ArgumentNullException(nameof(timestampNanos), "Property is not nullable for class ModelsDeleteOrderModel.");
+                throw new JsonException("Property is not nullable for class ModelsDeleteOrderModel: timestamp_nanos.");
 
             if (timestamp.IsSet && timestamp.Value == null)
-                throw new ArgumentNullException(nameof(timestamp), "Property is not nullable for class ModelsDeleteOrderModel.");
+                throw new JsonException("Property is not nullable for class ModelsDeleteOrderModel: timestamp.");
 
             if (orderIdReference.IsSet && orderIdReference.Value == null)
-                throw new ArgumentNullException(nameof(orderIdReference), "Property is not nullable for class ModelsDeleteOrderModel.");
+                throw new JsonException("Property is not nullable for class ModelsDeleteOrderModel: order_id_reference.");
 
             return new ModelsDeleteOrderModel(symbol, timestampNanos, timestamp, orderIdReference);
         }
@@ -227,7 +227,6 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Model
         /// <param name="writer"></param>
         /// <param name="modelsDeleteOrderModel"></param>
         /// <param name="jsonSerializerOptions"></param>
-        /// <exception cref="NotImplementedException"></exception>
         public override void Write(Utf8JsonWriter writer, ModelsDeleteOrderModel modelsDeleteOrderModel, JsonSerializerOptions jsonSerializerOptions)
         {
             writer.WriteStartObject();
@@ -242,9 +241,17 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Model
         /// <param name="writer"></param>
         /// <param name="modelsDeleteOrderModel"></param>
         /// <param name="jsonSerializerOptions"></param>
-        /// <exception cref="NotImplementedException"></exception>
         public void WriteProperties(Utf8JsonWriter writer, ModelsDeleteOrderModel modelsDeleteOrderModel, JsonSerializerOptions jsonSerializerOptions)
         {
+            if (modelsDeleteOrderModel.TimestampNanosOption.IsSet && modelsDeleteOrderModel.TimestampNanos == null)
+                throw new JsonException("Cannot write null property ModelsDeleteOrderModel.TimestampNanos to non-nullable JSON property 'timestamp_nanos'.");
+
+            if (modelsDeleteOrderModel.TimestampOption.IsSet && modelsDeleteOrderModel.Timestamp == null)
+                throw new JsonException("Cannot write null property ModelsDeleteOrderModel.Timestamp to non-nullable JSON property 'timestamp'.");
+
+            if (modelsDeleteOrderModel.OrderIdReferenceOption.IsSet && modelsDeleteOrderModel.OrderIdReference == null)
+                throw new JsonException("Cannot write null property ModelsDeleteOrderModel.OrderIdReference to non-nullable JSON property 'order_id_reference'.");
+
             if (modelsDeleteOrderModel.SymbolOption.IsSet)
                 if (modelsDeleteOrderModel.SymbolOption.Value != null)
                     writer.WriteString("symbol", modelsDeleteOrderModel.Symbol);

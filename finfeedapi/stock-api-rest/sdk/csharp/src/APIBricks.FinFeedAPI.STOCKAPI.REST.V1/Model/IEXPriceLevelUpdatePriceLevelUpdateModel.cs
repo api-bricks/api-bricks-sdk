@@ -273,22 +273,22 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Model
             }
 
             if (timestampNanos.IsSet && timestampNanos.Value == null)
-                throw new ArgumentNullException(nameof(timestampNanos), "Property is not nullable for class IEXPriceLevelUpdatePriceLevelUpdateModel.");
+                throw new JsonException("Property is not nullable for class IEXPriceLevelUpdatePriceLevelUpdateModel: timestamp_nanos.");
 
             if (timestamp.IsSet && timestamp.Value == null)
-                throw new ArgumentNullException(nameof(timestamp), "Property is not nullable for class IEXPriceLevelUpdatePriceLevelUpdateModel.");
+                throw new JsonException("Property is not nullable for class IEXPriceLevelUpdatePriceLevelUpdateModel: timestamp.");
 
             if (isSideBuy.IsSet && isSideBuy.Value == null)
-                throw new ArgumentNullException(nameof(isSideBuy), "Property is not nullable for class IEXPriceLevelUpdatePriceLevelUpdateModel.");
+                throw new JsonException("Property is not nullable for class IEXPriceLevelUpdatePriceLevelUpdateModel: is_side_buy.");
 
             if (isEventProcessingComplete.IsSet && isEventProcessingComplete.Value == null)
-                throw new ArgumentNullException(nameof(isEventProcessingComplete), "Property is not nullable for class IEXPriceLevelUpdatePriceLevelUpdateModel.");
+                throw new JsonException("Property is not nullable for class IEXPriceLevelUpdatePriceLevelUpdateModel: is_event_processing_complete.");
 
             if (size.IsSet && size.Value == null)
-                throw new ArgumentNullException(nameof(size), "Property is not nullable for class IEXPriceLevelUpdatePriceLevelUpdateModel.");
+                throw new JsonException("Property is not nullable for class IEXPriceLevelUpdatePriceLevelUpdateModel: size.");
 
             if (price.IsSet && price.Value == null)
-                throw new ArgumentNullException(nameof(price), "Property is not nullable for class IEXPriceLevelUpdatePriceLevelUpdateModel.");
+                throw new JsonException("Property is not nullable for class IEXPriceLevelUpdatePriceLevelUpdateModel: price.");
 
             return new IEXPriceLevelUpdatePriceLevelUpdateModel(symbol, timestampNanos, timestamp, isSideBuy, isEventProcessingComplete, size, price);
         }
@@ -299,7 +299,6 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Model
         /// <param name="writer"></param>
         /// <param name="iEXPriceLevelUpdatePriceLevelUpdateModel"></param>
         /// <param name="jsonSerializerOptions"></param>
-        /// <exception cref="NotImplementedException"></exception>
         public override void Write(Utf8JsonWriter writer, IEXPriceLevelUpdatePriceLevelUpdateModel iEXPriceLevelUpdatePriceLevelUpdateModel, JsonSerializerOptions jsonSerializerOptions)
         {
             writer.WriteStartObject();
@@ -314,9 +313,26 @@ namespace APIBricks.FinFeedAPI.STOCKAPI.REST.V1.Model
         /// <param name="writer"></param>
         /// <param name="iEXPriceLevelUpdatePriceLevelUpdateModel"></param>
         /// <param name="jsonSerializerOptions"></param>
-        /// <exception cref="NotImplementedException"></exception>
         public void WriteProperties(Utf8JsonWriter writer, IEXPriceLevelUpdatePriceLevelUpdateModel iEXPriceLevelUpdatePriceLevelUpdateModel, JsonSerializerOptions jsonSerializerOptions)
         {
+            if (iEXPriceLevelUpdatePriceLevelUpdateModel.TimestampNanosOption.IsSet && iEXPriceLevelUpdatePriceLevelUpdateModel.TimestampNanos == null)
+                throw new JsonException("Cannot write null property IEXPriceLevelUpdatePriceLevelUpdateModel.TimestampNanos to non-nullable JSON property 'timestamp_nanos'.");
+
+            if (iEXPriceLevelUpdatePriceLevelUpdateModel.TimestampOption.IsSet && iEXPriceLevelUpdatePriceLevelUpdateModel.Timestamp == null)
+                throw new JsonException("Cannot write null property IEXPriceLevelUpdatePriceLevelUpdateModel.Timestamp to non-nullable JSON property 'timestamp'.");
+
+            if (iEXPriceLevelUpdatePriceLevelUpdateModel.IsSideBuyOption.IsSet && iEXPriceLevelUpdatePriceLevelUpdateModel.IsSideBuy == null)
+                throw new JsonException("Cannot write null property IEXPriceLevelUpdatePriceLevelUpdateModel.IsSideBuy to non-nullable JSON property 'is_side_buy'.");
+
+            if (iEXPriceLevelUpdatePriceLevelUpdateModel.IsEventProcessingCompleteOption.IsSet && iEXPriceLevelUpdatePriceLevelUpdateModel.IsEventProcessingComplete == null)
+                throw new JsonException("Cannot write null property IEXPriceLevelUpdatePriceLevelUpdateModel.IsEventProcessingComplete to non-nullable JSON property 'is_event_processing_complete'.");
+
+            if (iEXPriceLevelUpdatePriceLevelUpdateModel.SizeOption.IsSet && iEXPriceLevelUpdatePriceLevelUpdateModel.Size == null)
+                throw new JsonException("Cannot write null property IEXPriceLevelUpdatePriceLevelUpdateModel.Size to non-nullable JSON property 'size'.");
+
+            if (iEXPriceLevelUpdatePriceLevelUpdateModel.PriceOption.IsSet && iEXPriceLevelUpdatePriceLevelUpdateModel.Price == null)
+                throw new JsonException("Cannot write null property IEXPriceLevelUpdatePriceLevelUpdateModel.Price to non-nullable JSON property 'price'.");
+
             if (iEXPriceLevelUpdatePriceLevelUpdateModel.SymbolOption.IsSet)
                 if (iEXPriceLevelUpdatePriceLevelUpdateModel.SymbolOption.Value != null)
                     writer.WriteString("symbol", iEXPriceLevelUpdatePriceLevelUpdateModel.Symbol);
