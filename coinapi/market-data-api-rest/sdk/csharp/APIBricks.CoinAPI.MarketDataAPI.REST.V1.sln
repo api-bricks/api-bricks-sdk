@@ -2,7 +2,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 VisualStudioVersion = 12.0.0.0
 MinimumVisualStudioVersion = 10.0.0.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APIBricks.CoinAPI.MarketDataAPI.REST.V1", "src\APIBricks.CoinAPI.MarketDataAPI.REST.V1\APIBricks.CoinAPI.MarketDataAPI.REST.V1.csproj", "{A81ECD2B-9237-416C-994D-4508A7BF042A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APIBricks.CoinAPI.MarketDataAPI.REST.V1", "src\APIBricks.CoinAPI.MarketDataAPI.REST.V1\APIBricks.CoinAPI.MarketDataAPI.REST.V1.csproj", "{12BCB092-54F9-4A07-BC90-F58FEC816AFF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APIBricks.CoinAPI.MarketDataAPI.REST.V1.Test", "src\APIBricks.CoinAPI.MarketDataAPI.REST.V1.Test\APIBricks.CoinAPI.MarketDataAPI.REST.V1.Test.csproj", "{19F1DEBC-DE5E-4517-8062-F000CD499087}"
 EndProject
@@ -12,10 +12,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{A81ECD2B-9237-416C-994D-4508A7BF042A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A81ECD2B-9237-416C-994D-4508A7BF042A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A81ECD2B-9237-416C-994D-4508A7BF042A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A81ECD2B-9237-416C-994D-4508A7BF042A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12BCB092-54F9-4A07-BC90-F58FEC816AFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12BCB092-54F9-4A07-BC90-F58FEC816AFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12BCB092-54F9-4A07-BC90-F58FEC816AFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12BCB092-54F9-4A07-BC90-F58FEC816AFF}.Release|Any CPU.Build.0 = Release|Any CPU
 		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Release|Any CPU.ActiveCfg = Release|Any CPU
