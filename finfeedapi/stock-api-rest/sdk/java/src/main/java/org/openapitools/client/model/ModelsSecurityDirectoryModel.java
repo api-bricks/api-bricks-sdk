@@ -51,7 +51,7 @@ import org.openapitools.client.JSON;
 /**
  * Represents the response DTO for security directory information
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-10-16T06:09:04.995989428Z[Etc/UTC]", comments = "Generator version: 7.26.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-10-19T06:09:06.063293836Z[Etc/UTC]", comments = "Generator version: 7.26.0")
 public class ModelsSecurityDirectoryModel {
   public static final String SERIALIZED_NAME_SYMBOL = "symbol";
   @SerializedName(SERIALIZED_NAME_SYMBOL)
