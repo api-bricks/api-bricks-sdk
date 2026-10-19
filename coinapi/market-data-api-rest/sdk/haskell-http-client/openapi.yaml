@@ -100,7 +100,7 @@ paths:
               examples:
                 Example response:
                   value:
-                    time: 2026-10-16T06:03:41.7801237Z
+                    time: 2026-10-19T06:03:36.6688658Z
                     asset_id_base: BTC
                     asset_id_quote: USD
                     rate: 10000.0
@@ -110,7 +110,7 @@ paths:
               examples:
                 Example response:
                   value:
-                    time: 2026-10-16T06:03:41.7801237Z
+                    time: 2026-10-19T06:03:36.6688658Z
                     asset_id_base: BTC
                     asset_id_quote: USD
                     rate: 10000.0
@@ -120,7 +120,7 @@ paths:
               examples:
                 Example response:
                   value:
-                    time: 2026-10-16T06:03:41.7801237Z
+                    time: 2026-10-19T06:03:36.6688658Z
                     asset_id_base: BTC
                     asset_id_quote: USD
                     rate: 10000.0
@@ -130,7 +130,7 @@ paths:
               examples:
                 Example response:
                   value:
-                    time: 2026-10-16T06:03:41.7801237Z
+                    time: 2026-10-19T06:03:36.6688658Z
                     asset_id_base: BTC
                     asset_id_quote: USD
                     rate: 10000.0
@@ -8538,10 +8538,8 @@ components:
           type: string
         asks:
           description: Gets or sets the asks made by market makers.
-          nullable: true
         bids:
           description: Gets or sets the bids made by market makers.
-          nullable: true
       type: object
     v1.OrderBookBase:
       additionalProperties: false
@@ -8567,10 +8565,8 @@ components:
           type: string
         asks:
           description: Gets or sets the asks made by market makers.
-          nullable: true
         bids:
           description: Gets or sets the bids made by market makers.
-          nullable: true
       type: object
     v1.OrderBookDepth:
       additionalProperties: false
