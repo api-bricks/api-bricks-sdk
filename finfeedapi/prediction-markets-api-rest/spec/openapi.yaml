@@ -1347,8 +1347,7 @@ components:
           nullable: true
         source_specific_data:
           type: object
-          additionalProperties:
-            nullable: true
+          additionalProperties: { }
           description: A flexible dictionary to store any source-specific raw data.
           nullable: true
       additionalProperties: false
@@ -1537,10 +1536,8 @@ components:
           format: date-time
         asks:
           description: Gets or sets the asks made by market makers.
-          nullable: true
         bids:
           description: Gets or sets the bids made by market makers.
-          nullable: true
       additionalProperties: false
       description: Represents an order book with additional information and functionality.
     QuoteTicks.QuoteTick:
