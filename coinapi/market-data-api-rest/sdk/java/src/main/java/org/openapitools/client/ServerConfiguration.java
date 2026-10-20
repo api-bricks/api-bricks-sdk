@@ -18,7 +18,7 @@ import java.util.Map;
 /**
  * Representing a Server configuration.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-10-19T06:04:18.867753259Z[Etc/UTC]", comments = "Generator version: 7.26.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-10-20T06:04:31.913713816Z[Etc/UTC]", comments = "Generator version: 7.26.0")
 public class ServerConfiguration {
     public String URL;
     public String description;
