@@ -1169,6 +1169,35 @@
           "Multi-Asset Weights"
         ],
         "summary": "Get all multi-asset weights",
+        "parameters": [
+          {
+            "name": "time",
+            "in": "query",
+            "description": "Optional - when given, only weights valid at that time are returned",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "from",
+            "in": "query",
+            "description": "Optional - when given, only weights valid at or after that time are returned (cannot be combined with time)",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "to",
+            "in": "query",
+            "description": "Optional - when given, only weights valid before that time are returned (cannot be combined with time)",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "successful operation",
@@ -1220,9 +1249,37 @@
           {
             "name": "index_id",
             "in": "path",
+            "description": "Index identifier",
             "required": true,
             "schema": {
               "type": "string"
+            }
+          },
+          {
+            "name": "time",
+            "in": "query",
+            "description": "Optional - when given, only weights valid at that time are returned",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "from",
+            "in": "query",
+            "description": "Optional - when given, only weights valid at or after that time are returned (cannot be combined with time)",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "to",
+            "in": "query",
+            "description": "Optional - when given, only weights valid before that time are returned (cannot be combined with time)",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
             }
           }
         ],
@@ -1548,6 +1605,18 @@
           "weight": {
             "type": "number",
             "format": "double"
+          },
+          "validFrom": {
+            "type": "string",
+            "description": "Start of validity (inclusive), null means unbounded",
+            "format": "date-time",
+            "nullable": true
+          },
+          "validTo": {
+            "type": "string",
+            "description": "End of validity (exclusive), null means unbounded",
+            "format": "date-time",
+            "nullable": true
           }
         },
         "additionalProperties": false
