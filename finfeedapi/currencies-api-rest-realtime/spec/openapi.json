@@ -58,7 +58,7 @@
                 "examples": {
                   "Example response": {
                     "value": {
-                      "time": "2026-10-26T06:08:08.9476702Z",
+                      "time": "2026-10-27T06:10:28.5666705Z",
                       "asset_id_base": "BTC",
                       "asset_id_quote": "USD",
                       "rate": 10000.0
@@ -73,7 +73,7 @@
                 "examples": {
                   "Example response": {
                     "value": {
-                      "time": "2026-10-26T06:08:08.9476702Z",
+                      "time": "2026-10-27T06:10:28.5666705Z",
                       "asset_id_base": "BTC",
                       "asset_id_quote": "USD",
                       "rate": 10000.0
@@ -88,7 +88,7 @@
                 "examples": {
                   "Example response": {
                     "value": {
-                      "time": "2026-10-26T06:08:08.9476702Z",
+                      "time": "2026-10-27T06:10:28.5666705Z",
                       "asset_id_base": "BTC",
                       "asset_id_quote": "USD",
                       "rate": 10000.0
@@ -103,7 +103,7 @@
                 "examples": {
                   "Example response": {
                     "value": {
-                      "time": "2026-10-26T06:08:08.9476702Z",
+                      "time": "2026-10-27T06:10:28.5666705Z",
                       "asset_id_base": "BTC",
                       "asset_id_quote": "USD",
                       "rate": 10000.0
@@ -1318,7 +1318,7 @@
     "securitySchemes": {
       "APIKey": {
         "type": "apiKey",
-        "description": "API Key is required to access the endpoints",
+        "description": "API key. Send it in the Authorization header. X-CoinAPI-Key, X-APIBricks-Key and X-APIKey are also accepted.",
         "name": "Authorization",
         "in": "header"
       },
