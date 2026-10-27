@@ -1028,7 +1028,7 @@
     "securitySchemes": {
       "APIKey": {
         "type": "apiKey",
-        "description": "API Key is required to access the endpoints",
+        "description": "API key. Send it in the Authorization header. X-CoinAPI-Key, X-APIBricks-Key and X-APIKey are also accepted.",
         "name": "Authorization",
         "in": "header"
       },
