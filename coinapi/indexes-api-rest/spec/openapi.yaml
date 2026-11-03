@@ -55,22 +55,22 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/Models.IndexDefinitionSnapshotEntry'
+                  $ref: '#/components/schemas/Models.IndexDefinitionInputData'
             application/json:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/Models.IndexDefinitionSnapshotEntry'
+                  $ref: '#/components/schemas/Models.IndexDefinitionInputData'
             text/json:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/Models.IndexDefinitionSnapshotEntry'
+                  $ref: '#/components/schemas/Models.IndexDefinitionInputData'
             application/x-msgpack:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/Models.IndexDefinitionSnapshotEntry'
+                  $ref: '#/components/schemas/Models.IndexDefinitionInputData'
   '/v1/indexdef/input-data/{index_definition_id}/all':
     get:
       tags:
