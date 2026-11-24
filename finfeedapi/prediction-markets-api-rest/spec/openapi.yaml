@@ -17,6 +17,7 @@ paths:
       tags:
         - Exchanges
       summary: Gets a list of all supported exchanges.
+      operationId: predictionmarkets_list_exchanges
       responses:
         '200':
           description: A list of all supported exchanges.
@@ -166,6 +167,7 @@ paths:
       tags:
         - Exchanges
       summary: Gets a specific exchange by its unique identifier.
+      operationId: predictionmarkets_get_exchange
       parameters:
         - name: exchange_id
           in: path
@@ -220,6 +222,7 @@ paths:
       tags:
         - Market Activity
       summary: Returns the latest trade and the latest quote for a market.
+      operationId: predictionmarkets_get_activity_current
       parameters:
         - name: exchange_id
           in: path
@@ -255,6 +258,7 @@ paths:
         - Market Activity
       summary: Returns recent trades and recent quotes for a market.
       description: "Trades and quotes are returned as separate lists. The `limit` applies independently to each list\n(default 100, max 10000 per list)."
+      operationId: predictionmarkets_get_activity_latest
       parameters:
         - name: exchange_id
           in: path
@@ -299,6 +303,7 @@ paths:
         - Market Activity
       summary: Returns historical trades for a market from flat files.
       description: "Retrieves historical trade data from flat files stored in external storage (S3).\nSupports hourly granularity with automatic fallback to daily files.\nUse either 'date' for full day or 'time_start'/'time_end' for specific time ranges.\nThe `limit` parameter applies in both cases (default 100, max 10000), including when `date` selects a full day.\n            \n**Important:** Results are filtered by data processing time (time_coinapi) - the time when CoinAPI\nreceived and processed the data from the exchange. Each trade also includes time_exchange showing\nwhen the trade actually occurred on the exchange. Due to API polling delays, time_exchange may be\nearlier than time_coinapi."
+      operationId: predictionmarkets_list_activity_trades_history
       parameters:
         - name: exchange_id
           in: path
@@ -362,6 +367,7 @@ paths:
         - Market Activity
       summary: Returns historical quotes for a market from flat files.
       description: "Retrieves historical quote (bid/ask) data from flat files stored in external storage (S3).\nSupports hourly granularity with automatic fallback to daily files.\nUse either 'date' for full day or 'time_start'/'time_end' for specific time ranges.\nThe `limit` parameter applies in both cases (default 100, max 10000), including when `date` selects a full day.\n            \n**Important:** Results are filtered by data processing time (time_coinapi) - the time when CoinAPI\nreceived and processed the data from the exchange. Each quote also includes time_exchange showing\nwhen the quote was created on the exchange. Due to API polling delays, time_exchange may be\nearlier than time_coinapi."
+      operationId: predictionmarkets_list_activity_quotes_history
       parameters:
         - name: exchange_id
           in: path
@@ -425,6 +431,7 @@ paths:
         - Market Activity
       summary: Returns historical OHLCV bars for a market from flat files.
       description: "Retrieves historical OHLCV (Open/High/Low/Close/Volume) bar data - generated from prediction-market\ntrades - from flat files stored in external storage (S3). Supports hourly granularity with automatic\nfallback to daily files. Use either 'date' for full day or 'time_start'/'time_end' for specific time ranges.\nThe `limit` parameter applies in both cases (default 100, max 10000), including when `date` selects a full day.\n            \n**Important:** `period` is required and must be one of `1SEC`, `1MIN`, `1HRS` - the only bar periods the\nprediction-market flat-file pipeline generates today. This differs from the DB-backed `v1/ohlcv` endpoints,\nwhich support the full set of periods (see `GET v1/ohlcv/periods`)."
+      operationId: predictionmarkets_list_activity_ohlcv_history
       parameters:
         - name: exchange_id
           in: path
@@ -493,6 +500,7 @@ paths:
       tags:
         - Markets
       summary: Lists markets for a specific exchange using cursor-based pagination.
+      operationId: predictionmarkets_list_markets_history
       parameters:
         - name: exchange_id
           in: path
@@ -610,6 +618,7 @@ paths:
         - Markets
       summary: Lists active market IDs for a specific exchange.
       description: "Returns only market IDs (not full market objects) because this data is derived from recent quotes and transactions only.\nUse the /history endpoint to retrieve full market details."
+      operationId: predictionmarkets_list_markets_active
       parameters:
         - name: exchange_id
           in: path
@@ -696,6 +705,7 @@ paths:
       tags:
         - Markets
       summary: Gets a specific market by its unique identifier.
+      operationId: predictionmarkets_get_market
       parameters:
         - name: exchange_id
           in: path
@@ -805,6 +815,7 @@ paths:
         - OHLCV
       summary: List all periods
       description: "Get full list of supported time periods available for requesting OHLCV timeseries data.\n            \n### Available periods\n            \nTime unit | Period identifiers\n--------- | -----------\nSecond | 1SEC, 2SEC, 3SEC, 4SEC, 5SEC, 6SEC, 10SEC, 15SEC, 20SEC, 30SEC\nMinute | 1MIN, 2MIN, 3MIN, 4MIN, 5MIN, 6MIN, 10MIN, 15MIN, 20MIN, 30MIN\nHour | 1HRS, 2HRS, 3HRS, 4HRS, 6HRS, 8HRS, 12HRS\nDay | 1DAY, 2DAY, 3DAY, 5DAY, 7DAY, 10DAY\nMonth | 1MTH, 2MTH, 3MTH, 4MTH, 6MTH\nYear | 1YRS, 2YRS, 3YRS, 4YRS, 5YRS\n            \n:::tip\nYou can assume that we will not remove any periods from this response, however, we may add new ones.\n:::"
+      operationId: predictionmarkets_list_ohlcv_periods
       responses:
         '200':
           description: successful operation
@@ -919,6 +930,7 @@ paths:
         - OHLCV
       summary: Historical data for an exchange
       description: "Get OHLCV timeseries data for an exchange, returned in time ascending order.\nTime range is limited to 24 hours. Use `limit` to cap the number of market rows returned."
+      operationId: predictionmarkets_list_ohlcv_exchange_history
       parameters:
         - name: exchange_id
           in: path
@@ -979,6 +991,7 @@ paths:
         - OHLCV
       summary: Historical data for a specific market
       description: 'Get OHLCV timeseries data for a specific market, returned in time ascending order.'
+      operationId: predictionmarkets_list_ohlcv_market_history
       parameters:
         - name: exchange_id
           in: path
@@ -1045,6 +1058,7 @@ paths:
         - OHLCV
       summary: Latest data for a market
       description: 'Get OHLCV latest timeseries data for a specific market, returned in time descending order.'
+      operationId: predictionmarkets_list_ohlcv_market_latest
       parameters:
         - name: exchange_id
           in: path
@@ -1100,6 +1114,8 @@ paths:
       tags:
         - Orderbooks
       summary: Gets the current order book snapshot for a specific market outcome.
+      description: "Returns the latest full order book snapshot when one is available. Otherwise the book is built from the\nlatest quote, so it holds at most one ask and one bid level.\n            \nThe response is always 200. When there is neither a snapshot nor a quote for the market (including an\nunknown market), `asks` and `bids` are empty and `time_exchange`/`time_coinapi` are set to the current time."
+      operationId: predictionmarkets_get_orderbook_current
       parameters:
         - name: exchange_id
           in: path
@@ -1115,7 +1131,7 @@ paths:
             type: string
       responses:
         '200':
-          description: The current order book snapshot for the specified market outcome.
+          description: The current order book snapshot for the specified market outcome. Empty asks and bids when no data is available.
           content:
             text/plain:
               schema:
@@ -1165,14 +1181,13 @@ paths:
                     time_coinapi: '0001-01-01T00:00:00.0000000Z'
                     asks: [ ]
                     bids: [ ]
-        '404':
-          description: Market or outcome not found
   '/v1/orderbook/{exchange_id}/{market_id}/history':
     get:
       tags:
         - Orderbooks
       summary: Returns historical orderbook limit orders for a market from flat files.
       description: "Retrieves historical limit order data from flat files stored in external storage (S3).\nReturns raw limit order updates (adds, updates, deletes) rather than reconstructed snapshots.\nSupports hourly granularity with automatic fallback to daily files.\nUse either 'date' for full day or 'time_start'/'time_end' for specific time ranges.\nThe `limit` parameter applies in both cases (default 100, max 10000), including when `date` selects a full day.\n            \n**Important:** Results are filtered by data processing time (time_coinapi) - the time when CoinAPI\nreceived and processed the data from the exchange. Each order also includes time_exchange showing\nwhen the order was created/updated on the exchange. Due to API polling delays, time_exchange may be\nearlier than time_coinapi."
+      operationId: predictionmarkets_list_orderbook_history
       parameters:
         - name: exchange_id
           in: path
@@ -1213,19 +1228,25 @@ paths:
             text/plain:
               schema:
                 type: array
-                items: { }
+                items:
+                  $ref: '#/components/schemas/Orderbooks.OrderbookHistoryItem'
             application/json:
               schema:
                 type: array
-                items: { }
+                items:
+                  $ref: '#/components/schemas/Orderbooks.OrderbookHistoryItem'
             text/json:
               schema:
                 type: array
-                items: { }
+                items:
+                  $ref: '#/components/schemas/Orderbooks.OrderbookHistoryItem'
             application/x-msgpack:
               schema:
                 type: array
-                items: { }
+                items:
+                  $ref: '#/components/schemas/Orderbooks.OrderbookHistoryItem'
+        '400':
+          description: 'Neither date nor time_start provided, date is not a full day, time_end is before time_start, or limit is outside 1-10000'
 components:
   schemas:
     Exchanges.ExchangeModel:
@@ -1515,6 +1536,19 @@ components:
           nullable: true
       additionalProperties: false
       description: Represents a timeseries period used in exchange rate data.
+    Orderbooks.AskBidItem:
+      type: object
+      properties:
+        price:
+          type: number
+          description: Gets or sets the price of the ask/bid item.
+          format: double
+        size:
+          type: number
+          description: Gets or sets the size of the ask/bid item.
+          format: double
+      additionalProperties: false
+      description: Represents an item in the ask/bid list of the order book.
     Orderbooks.OrderBook:
       type: object
       properties:
@@ -1535,11 +1569,52 @@ components:
           description: Gets or sets the CoinAPI time when the order book was received.
           format: date-time
         asks:
-          description: Gets or sets the asks made by market makers.
+          type: array
+          items:
+            $ref: '#/components/schemas/Orderbooks.AskBidItem'
+          description: 'The ask levels, ordered from the best (lowest) price.'
+          nullable: true
         bids:
-          description: Gets or sets the bids made by market makers.
+          type: array
+          items:
+            $ref: '#/components/schemas/Orderbooks.AskBidItem'
+          description: 'The bid levels, ordered from the best (highest) price.'
+          nullable: true
       additionalProperties: false
       description: Represents an order book with additional information and functionality.
+    Orderbooks.OrderbookHistoryItem:
+      type: object
+      properties:
+        symbol_id:
+          type: string
+          description: 'The market identifier as stored in flat files (e.g., `will-it-rain-tomorrow_YES`).'
+          nullable: true
+        time_exchange:
+          type: string
+          description: The time of the update on the exchange (UTC).
+          format: date-time
+        price:
+          type: number
+          description: The price of the limit order.
+          format: double
+        size:
+          type: number
+          description: The size of the limit order.
+          format: double
+        is_sell_ask:
+          type: boolean
+          description: 'True for the ask (sell) side, false for the bid (buy) side.'
+        update_type:
+          type: integer
+          description: "The numeric update type: 0 = ADD, 1 = SET, 2 = SUB, 3 = SNAPSHOT, 4 = DELETE,\n5 = DELETE_IF_EXISTS, 6 = SUB_IF_EXISTS, 7 = MATCH, 8 = MATCH_IF_EXISTS, 9 = SET_IF_EXISTS.\nOmitted when not set."
+          format: int32
+          nullable: true
+        id:
+          type: string
+          description: The order identifier on the exchange. May be empty when the exchange does not provide one.
+          nullable: true
+      additionalProperties: false
+      description: 'A single historical limit order update for a market outcome, as stored in flat files.'
     QuoteTicks.QuoteTick:
       type: object
       properties:
