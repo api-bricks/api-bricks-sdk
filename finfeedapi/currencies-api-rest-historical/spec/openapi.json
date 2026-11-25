@@ -49,9 +49,11 @@
           {
             "name": "time",
             "in": "query",
-            "description": "Time at which exchange rate is calculated (optional, if not supplied then current rate is returned)",
+            "description": "Time at which exchange rate is calculated in ISO 8601 (required)",
+            "required": true,
             "schema": {
-              "type": "string"
+              "type": "string",
+              "format": "date-time"
             }
           }
         ],
@@ -66,7 +68,7 @@
                 "examples": {
                   "Example response": {
                     "value": {
-                      "time": "2026-11-20T06:21:09.0923481Z",
+                      "time": "2026-11-25T06:25:26.1929413Z",
                       "asset_id_base": "BTC",
                       "asset_id_quote": "USD",
                       "rate": 10000.0
@@ -81,7 +83,7 @@
                 "examples": {
                   "Example response": {
                     "value": {
-                      "time": "2026-11-20T06:21:09.0923481Z",
+                      "time": "2026-11-25T06:25:26.1929413Z",
                       "asset_id_base": "BTC",
                       "asset_id_quote": "USD",
                       "rate": 10000.0
@@ -96,7 +98,7 @@
                 "examples": {
                   "Example response": {
                     "value": {
-                      "time": "2026-11-20T06:21:09.0923481Z",
+                      "time": "2026-11-25T06:25:26.1929413Z",
                       "asset_id_base": "BTC",
                       "asset_id_quote": "USD",
                       "rate": 10000.0
@@ -146,9 +148,11 @@
           {
             "name": "time",
             "in": "query",
-            "description": "Time for historical rates (optional)",
+            "description": "Time for historical rates in ISO 8601 (required)",
+            "required": true,
             "schema": {
-              "type": "string"
+              "type": "string",
+              "format": "date-time"
             }
           }
         ],
@@ -423,6 +427,7 @@
             "name": "period_id",
             "in": "query",
             "description": "Identifier of requested timeseries period (required, e.g. `5SEC` or `1HRS`)",
+            "required": true,
             "schema": {
               "type": "string"
             }
@@ -430,17 +435,19 @@
           {
             "name": "time_start",
             "in": "query",
-            "description": "Timeseries starting time in ISO 8601 (required)",
+            "description": "Timeseries starting time in ISO 8601 (optional, if not supplied then calculated from time_end and limit)",
             "schema": {
-              "type": "string"
+              "type": "string",
+              "format": "date-time"
             }
           },
           {
             "name": "time_end",
             "in": "query",
-            "description": "Timeseries ending time in ISO 8601 (required)",
+            "description": "Timeseries ending time in ISO 8601 (optional, if not supplied then calculated from time_start and limit, or current time when time_start is not supplied either)",
             "schema": {
-              "type": "string"
+              "type": "string",
+              "format": "date-time"
             }
           },
           {
